@@ -1,0 +1,44 @@
+{
+  "tipo": "tabla",
+  "id": "etcl-coste-salarial-trimestral",
+  "title": "Encuesta Trimestral de Coste Laboral: coste salarial por trabajador y mes, trimestral (2008-T1 a 2026-T2)",
+  "description": "Coste salarial medio por trabajador y mes (euros), total nacional, industria, construcción y servicios (secciones B a S), por tipo de jornada y componente (total, ordinario, pagos extraordinarios, pagos atrasados). Definición del INE: el coste salarial comprende todas las percepciones económicas a los trabajadores, en efectivo o en especie, por la prestación de servicios por cuenta ajena (salario base, complementos, horas extraordinarias, gratificaciones…), antes de cotizaciones; el total incluye el ordinario, los pagos extraordinarios y los atrasados. La unidad es euros por trabajador y mes: la media anual (siguiente tabla) es la de los cuatro trimestres y NO equivale a 12 mensualidades más extras sin más.",
+  "columnas": [
+    {
+      "id": "periodo",
+      "descripcion": "Trimestre (AAAA-Tn)",
+      "unidad": null
+    },
+    {
+      "id": "jornada",
+      "descripcion": "ambas, completa o parcial",
+      "unidad": null
+    },
+    {
+      "id": "componente",
+      "descripcion": "total, ordinario, extraordinarios o atrasados",
+      "unidad": null
+    },
+    {
+      "id": "euros_trabajador_mes",
+      "descripcion": "Coste salarial por trabajador",
+      "unidad": "euros/mes"
+    }
+  ],
+  "filas": 888,
+  "source": {
+    "title": "Encuesta Trimestral de Coste Laboral: coste salarial por trabajador, tipo de jornada y sectores (tabla 6038)",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=6038",
+    "docId": "INE-6038"
+  },
+  "origenes": [
+    {
+      "period": "2026",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=6038",
+      "sha256": "ce2c78c2b127a6c002319ad7eb015d2313776263d72150f225caeab4f98835dd"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta"
+}

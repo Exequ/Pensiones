@@ -1,0 +1,45 @@
+{
+  "tipo": "tabla",
+  "id": "eaes-salario-sexo-edad",
+  "title": "Encuesta Anual de Estructura Salarial: salario medio bruto anual por trabajador, sexo y edad (2008-2024)",
+  "description": "Salario medio bruto anual (euros por trabajador) por sexo y grupo de edad, total nacional. Definición del INE: «ganancia bruta anual por asalariado» (percepciones salariales en dinero y en especie, devengos brutos antes de cotizaciones del trabajador e IRPF; sin atrasos de años anteriores ni percepciones no salariales). Cobertura: trabajadores por cuenta ajena en centros de cotización de industria, construcción y servicios, de alta en la Seguridad Social todo el mes de octubre del año de referencia; quedan excluidas agricultura, ganadería y pesca, parcialmente la Administración Pública y Defensa, el personal doméstico y los organismos extraterritoriales; se excluyen presidentes, consejeros y personal con remuneración principalmente en comisiones o beneficios.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año de referencia",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "grupo_edad",
+      "descripcion": "total, <20, 20-24, …, 60-64, 65+",
+      "unidad": null
+    },
+    {
+      "id": "salario_medio_bruto_anual",
+      "descripcion": "Salario medio bruto anual por trabajador",
+      "unidad": "euros/año"
+    }
+  ],
+  "filas": 608,
+  "source": {
+    "title": "Encuesta Anual de Estructura Salarial: salario medio bruto por sexo y edad (tabla 28189)",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=28189",
+    "docId": "INE-28189"
+  },
+  "origenes": [
+    {
+      "period": "2024",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=28189",
+      "sha256": "b7300ce4f9716912af3c3e6e67fd2648368011a7ff296e00f2417348021e147a"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "La encuesta tiene antecedentes cuatrienales (1995, 2002, 2006) con otro ámbito (1995: centros de 10 o más trabajadores; 2006: se incorporan los de 1 a 9); esos años no están en la tabla anual utilizada y quedan en docs/PENDIENTE_DATOS.md."
+}

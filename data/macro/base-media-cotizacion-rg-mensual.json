@@ -1,0 +1,60 @@
+{
+  "tipo": "tabla",
+  "id": "base-media-cotizacion-rg-mensual",
+  "title": "Base media de cotización por contingencias comunes del Régimen General: cotizantes y base media por sexo y edad, mensual (2018-01 a 2026-06)",
+  "description": "Cotizantes (personas físicas con al menos un día cotizado en el mes) e importe total de sus bases de cotización por contingencias comunes, por sexo y tramo de edad, Régimen General (código 0111) excluidos el Sistema Especial de Trabajadores por Cuenta Ajena Agrarios, el de Empleados de Hogar y el Régimen Especial de Artistas. «base_media_eur_mes» = base total / cotizantes (definición literal de la fuente: «la base media se calcula dividiendo el importe total de las bases de cotización de contingencias comunes del periodo de liquidación entre el número de cotizantes (persona física)»). Las filas «total» (ambos sexos, hombres, mujeres) se han calculado sumando los tramos de edad (dato derivado). No incluye bases de períodos de alta no laboral (convenios especiales, desempleados con prestación). La base está topada por la base máxima y no incluye el efecto de los topes por contingencias profesionales; las percepciones de vencimiento superior al mes se prorratean en los doce meses.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año del período de liquidación",
+      "unidad": null
+    },
+    {
+      "id": "mes",
+      "descripcion": "Mes del período de liquidación",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "tramo_edad",
+      "descripcion": "Tramo de edad de la fuente (en minúsculas) o «total»",
+      "unidad": null
+    },
+    {
+      "id": "cotizantes",
+      "descripcion": "Cotizantes (personas físicas)",
+      "unidad": "personas"
+    },
+    {
+      "id": "base_total_eur",
+      "descripcion": "Suma de las bases de cotización por contingencias comunes",
+      "unidad": "euros"
+    },
+    {
+      "id": "base_media_eur_mes",
+      "descripcion": "Base media de cotización",
+      "unidad": "euros/mes"
+    }
+  ],
+  "filas": 2346,
+  "source": {
+    "title": "Estadística de Bases de Cotización al Régimen General: tablas de bases medias y cotizantes (hoja DATOS_EDAD)",
+    "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+    "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/c9bd51e5-79bc-44f2-9618-14d6094eb585",
+    "docId": "TGSS-bases-medias-RG"
+  },
+  "origenes": [
+    {
+      "period": "2026",
+      "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/c9bd51e5-79bc-44f2-9618-14d6094eb585",
+      "sha256": "76bf8d28676406a790e7a51b255a94d7251a56a23bf678d5106696a4111f3afc"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Los datos anteriores a 2018 no están en este fichero (ver docs/PENDIENTE_DATOS.md). El fichero es la versión «CNAE 25» de la fuente (desde enero de 2026), que recoge toda la serie por edad desde 2018-01."
+}

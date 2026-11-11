@@ -1,0 +1,860 @@
+{
+  "tipo": "datos",
+  "id": "pib-ine",
+  "title": "PIB anual de España: precios corrientes, volumen y deflactor (INE, 1995-2025)",
+  "description": "Contabilidad Nacional anual del INE (Revisión Estadística 2024, base 2020): PIB a precios corrientes, índice de volumen encadenado, y el volumen en euros de 2020 y el deflactor implícito derivados.",
+  "series": [
+    {
+      "id": "pib-corriente",
+      "title": "PIB a precios de mercado, precios corrientes",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: PIB a precios de mercado y sus componentes",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+        "docId": "INE-CNA-pib95_25"
+      },
+      "confidence": "alta",
+      "notes": "Tabla 1, fila «PRODUCTO INTERIOR BRUTO A PRECIOS DE MERCADO» (demanda). Serie 1995-2025; 2024 provisional y 2025 avance.",
+      "points": [
+        {
+          "period": "1995",
+          "value": 460259
+        },
+        {
+          "period": "1996",
+          "value": 488946
+        },
+        {
+          "period": "1997",
+          "value": 518971
+        },
+        {
+          "period": "1998",
+          "value": 555559
+        },
+        {
+          "period": "1999",
+          "value": 595242
+        },
+        {
+          "period": "2000",
+          "value": 647569
+        },
+        {
+          "period": "2001",
+          "value": 700958
+        },
+        {
+          "period": "2002",
+          "value": 749744
+        },
+        {
+          "period": "2003",
+          "value": 802683
+        },
+        {
+          "period": "2004",
+          "value": 860059
+        },
+        {
+          "period": "2005",
+          "value": 928122
+        },
+        {
+          "period": "2006",
+          "value": 1004976
+        },
+        {
+          "period": "2007",
+          "value": 1077541
+        },
+        {
+          "period": "2008",
+          "value": 1112432
+        },
+        {
+          "period": "2009",
+          "value": 1072990
+        },
+        {
+          "period": "2010",
+          "value": 1077145
+        },
+        {
+          "period": "2011",
+          "value": 1068690
+        },
+        {
+          "period": "2012",
+          "value": 1035964
+        },
+        {
+          "period": "2013",
+          "value": 1025652
+        },
+        {
+          "period": "2014",
+          "value": 1038949
+        },
+        {
+          "period": "2015",
+          "value": 1087112
+        },
+        {
+          "period": "2016",
+          "value": 1122967
+        },
+        {
+          "period": "2017",
+          "value": 1170024
+        },
+        {
+          "period": "2018",
+          "value": 1212276
+        },
+        {
+          "period": "2019",
+          "value": 1253710
+        },
+        {
+          "period": "2020",
+          "value": 1129214
+        },
+        {
+          "period": "2021",
+          "value": 1235474
+        },
+        {
+          "period": "2022",
+          "value": 1375863
+        },
+        {
+          "period": "2023",
+          "value": 1496277
+        },
+        {
+          "period": "2024",
+          "value": 1598588,
+          "notes": "Estimación provisional (P) según el INE"
+        },
+        {
+          "period": "2025",
+          "value": 1690012,
+          "notes": "Estimación avance (A) según el INE"
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "pib-volumen-indice-2020",
+      "title": "PIB a precios de mercado, índice de volumen encadenado (2020 = 100)",
+      "unit": "índice 2020 = 100",
+      "source": {
+        "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: PIB a precios de mercado y sus componentes",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+        "docId": "INE-CNA-pib95_25"
+      },
+      "confidence": "alta",
+      "notes": "Tabla 4, fila «PRODUCTO INTERIOR BRUTO A PRECIOS DE MERCADO». El INE publica el volumen como índice encadenado con referencia 2020.",
+      "points": [
+        {
+          "period": "1995",
+          "value": 67.624971
+        },
+        {
+          "period": "1996",
+          "value": 69.388255
+        },
+        {
+          "period": "1997",
+          "value": 71.877425
+        },
+        {
+          "period": "1998",
+          "value": 74.969574
+        },
+        {
+          "period": "1999",
+          "value": 78.274902
+        },
+        {
+          "period": "2000",
+          "value": 82.345646
+        },
+        {
+          "period": "2001",
+          "value": 85.57287
+        },
+        {
+          "period": "2002",
+          "value": 87.930843
+        },
+        {
+          "period": "2003",
+          "value": 90.515367
+        },
+        {
+          "period": "2004",
+          "value": 93.334518
+        },
+        {
+          "period": "2005",
+          "value": 96.648968
+        },
+        {
+          "period": "2006",
+          "value": 100.556905
+        },
+        {
+          "period": "2007",
+          "value": 104.110101
+        },
+        {
+          "period": "2008",
+          "value": 104.908844
+        },
+        {
+          "period": "2009",
+          "value": 100.955731
+        },
+        {
+          "period": "2010",
+          "value": 101.05076
+        },
+        {
+          "period": "2011",
+          "value": 100.404104
+        },
+        {
+          "period": "2012",
+          "value": 97.527429
+        },
+        {
+          "period": "2013",
+          "value": 96.135356
+        },
+        {
+          "period": "2014",
+          "value": 97.59709
+        },
+        {
+          "period": "2015",
+          "value": 101.560347
+        },
+        {
+          "period": "2016",
+          "value": 104.520988
+        },
+        {
+          "period": "2017",
+          "value": 107.547998
+        },
+        {
+          "period": "2018",
+          "value": 110.124225
+        },
+        {
+          "period": "2019",
+          "value": 112.283967
+        },
+        {
+          "period": "2020",
+          "value": 100
+        },
+        {
+          "period": "2021",
+          "value": 106.683144
+        },
+        {
+          "period": "2022",
+          "value": 113.479232
+        },
+        {
+          "period": "2023",
+          "value": 116.157229
+        },
+        {
+          "period": "2024",
+          "value": 120.4225,
+          "notes": "Estimación provisional (P) según el INE"
+        },
+        {
+          "period": "2025",
+          "value": 123.543897,
+          "notes": "Estimación avance (A) según el INE"
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "pib-volumen-derivado-2020",
+      "title": "PIB en volumen, millones de euros de 2020 (derivado)",
+      "unit": "millones de euros de 2020",
+      "source": {
+        "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: PIB a precios de mercado y sus componentes",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+        "docId": "INE-CNA-pib95_25"
+      },
+      "confidence": "media",
+      "notes": "Dato derivado (no publicado por el INE): PIB corriente de 2020 × índice de volumen / 100. Equivale al nivel en euros encadenados de referencia 2020.",
+      "points": [
+        {
+          "period": "1995",
+          "value": 763630.6
+        },
+        {
+          "period": "1996",
+          "value": 783541.9
+        },
+        {
+          "period": "1997",
+          "value": 811649.9
+        },
+        {
+          "period": "1998",
+          "value": 846566.9
+        },
+        {
+          "period": "1999",
+          "value": 883891.1
+        },
+        {
+          "period": "2000",
+          "value": 929858.6
+        },
+        {
+          "period": "2001",
+          "value": 966300.8
+        },
+        {
+          "period": "2002",
+          "value": 992927.4
+        },
+        {
+          "period": "2003",
+          "value": 1022112.2
+        },
+        {
+          "period": "2004",
+          "value": 1053946.4
+        },
+        {
+          "period": "2005",
+          "value": 1091373.7
+        },
+        {
+          "period": "2006",
+          "value": 1135502.7
+        },
+        {
+          "period": "2007",
+          "value": 1175625.8
+        },
+        {
+          "period": "2008",
+          "value": 1184645.4
+        },
+        {
+          "period": "2009",
+          "value": 1140006.3
+        },
+        {
+          "period": "2010",
+          "value": 1141079.3
+        },
+        {
+          "period": "2011",
+          "value": 1133777.2
+        },
+        {
+          "period": "2012",
+          "value": 1101293.4
+        },
+        {
+          "period": "2013",
+          "value": 1085573.9
+        },
+        {
+          "period": "2014",
+          "value": 1102080.0
+        },
+        {
+          "period": "2015",
+          "value": 1146833.7
+        },
+        {
+          "period": "2016",
+          "value": 1180265.6
+        },
+        {
+          "period": "2017",
+          "value": 1214447.0
+        },
+        {
+          "period": "2018",
+          "value": 1243538.2
+        },
+        {
+          "period": "2019",
+          "value": 1267926.3
+        },
+        {
+          "period": "2020",
+          "value": 1129214.0
+        },
+        {
+          "period": "2021",
+          "value": 1204681.0
+        },
+        {
+          "period": "2022",
+          "value": 1281423.4
+        },
+        {
+          "period": "2023",
+          "value": 1311663.7
+        },
+        {
+          "period": "2024",
+          "value": 1359827.7,
+          "notes": "Estimación provisional (P) según el INE"
+        },
+        {
+          "period": "2025",
+          "value": 1395075.0,
+          "notes": "Estimación avance (A) según el INE"
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "pib-deflactor-derivado-2020",
+      "title": "Deflactor implícito del PIB, índice 2020 = 100 (derivado)",
+      "unit": "índice 2020 = 100",
+      "source": {
+        "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: PIB a precios de mercado y sus componentes",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+        "docId": "INE-CNA-pib95_25"
+      },
+      "confidence": "media",
+      "notes": "Dato derivado (no publicado por el INE): 100 × PIB corriente / PIB en volumen (referencia 2020).",
+      "points": [
+        {
+          "period": "1995",
+          "value": 60.2725
+        },
+        {
+          "period": "1996",
+          "value": 62.402
+        },
+        {
+          "period": "1997",
+          "value": 63.9402
+        },
+        {
+          "period": "1998",
+          "value": 65.6249
+        },
+        {
+          "period": "1999",
+          "value": 67.3434
+        },
+        {
+          "period": "2000",
+          "value": 69.6417
+        },
+        {
+          "period": "2001",
+          "value": 72.5403
+        },
+        {
+          "period": "2002",
+          "value": 75.5084
+        },
+        {
+          "period": "2003",
+          "value": 78.5318
+        },
+        {
+          "period": "2004",
+          "value": 81.6037
+        },
+        {
+          "period": "2005",
+          "value": 85.0416
+        },
+        {
+          "period": "2006",
+          "value": 88.5049
+        },
+        {
+          "period": "2007",
+          "value": 91.6568
+        },
+        {
+          "period": "2008",
+          "value": 93.9042
+        },
+        {
+          "period": "2009",
+          "value": 94.1214
+        },
+        {
+          "period": "2010",
+          "value": 94.397
+        },
+        {
+          "period": "2011",
+          "value": 94.2593
+        },
+        {
+          "period": "2012",
+          "value": 94.0679
+        },
+        {
+          "period": "2013",
+          "value": 94.4802
+        },
+        {
+          "period": "2014",
+          "value": 94.2716
+        },
+        {
+          "period": "2015",
+          "value": 94.7925
+        },
+        {
+          "period": "2016",
+          "value": 95.1453
+        },
+        {
+          "period": "2017",
+          "value": 96.3421
+        },
+        {
+          "period": "2018",
+          "value": 97.486
+        },
+        {
+          "period": "2019",
+          "value": 98.8788
+        },
+        {
+          "period": "2020",
+          "value": 100.0
+        },
+        {
+          "period": "2021",
+          "value": 102.5561
+        },
+        {
+          "period": "2022",
+          "value": 107.3699
+        },
+        {
+          "period": "2023",
+          "value": 114.0747
+        },
+        {
+          "period": "2024",
+          "value": 117.5581,
+          "notes": "Estimación provisional (P) según el INE"
+        },
+        {
+          "period": "2025",
+          "value": 121.1413,
+          "notes": "Estimación avance (A) según el INE"
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "pib-per-capita",
+      "title": "PIB per cápita",
+      "unit": "euros",
+      "source": {
+        "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: PIB a precios de mercado y sus componentes",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+        "docId": "INE-CNA-pib95_25"
+      },
+      "confidence": "alta",
+      "notes": "Tabla 1, fila «PIB per cápita (*)»; (*) población media anual residente (ECP del INE).",
+      "points": [
+        {
+          "period": "1995",
+          "value": 11588
+        },
+        {
+          "period": "1996",
+          "value": 12259
+        },
+        {
+          "period": "1997",
+          "value": 12958
+        },
+        {
+          "period": "1998",
+          "value": 13815
+        },
+        {
+          "period": "1999",
+          "value": 14745
+        },
+        {
+          "period": "2000",
+          "value": 15968
+        },
+        {
+          "period": "2001",
+          "value": 17195
+        },
+        {
+          "period": "2002",
+          "value": 18099
+        },
+        {
+          "period": "2003",
+          "value": 19023
+        },
+        {
+          "period": "2004",
+          "value": 20067
+        },
+        {
+          "period": "2005",
+          "value": 21257
+        },
+        {
+          "period": "2006",
+          "value": 22655
+        },
+        {
+          "period": "2007",
+          "value": 23820
+        },
+        {
+          "period": "2008",
+          "value": 24192
+        },
+        {
+          "period": "2009",
+          "value": 23141
+        },
+        {
+          "period": "2010",
+          "value": 23133
+        },
+        {
+          "period": "2011",
+          "value": 22866
+        },
+        {
+          "period": "2012",
+          "value": 22160
+        },
+        {
+          "period": "2013",
+          "value": 22019
+        },
+        {
+          "period": "2014",
+          "value": 22375
+        },
+        {
+          "period": "2015",
+          "value": 23437
+        },
+        {
+          "period": "2016",
+          "value": 24188
+        },
+        {
+          "period": "2017",
+          "value": 25156
+        },
+        {
+          "period": "2018",
+          "value": 25950
+        },
+        {
+          "period": "2019",
+          "value": 26625
+        },
+        {
+          "period": "2020",
+          "value": 23851
+        },
+        {
+          "period": "2021",
+          "value": 26094
+        },
+        {
+          "period": "2022",
+          "value": 28792
+        },
+        {
+          "period": "2023",
+          "value": 30945
+        },
+        {
+          "period": "2024",
+          "value": 32708,
+          "notes": "Estimación provisional (P) según el INE"
+        },
+        {
+          "period": "2025",
+          "value": 34365,
+          "notes": "Estimación avance (A) según el INE"
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "poblacion-media-anual",
+      "title": "Población media anual residente (denominador del PIB per cápita)",
+      "unit": "miles de personas",
+      "source": {
+        "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: PIB a precios de mercado y sus componentes",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+        "docId": "INE-CNA-pib95_25"
+      },
+      "confidence": "alta",
+      "notes": "Tabla 1, fila «Población total (miles de habitantes) (*)».",
+      "points": [
+        {
+          "period": "1995",
+          "value": 39719
+        },
+        {
+          "period": "1996",
+          "value": 39884
+        },
+        {
+          "period": "1997",
+          "value": 40050
+        },
+        {
+          "period": "1998",
+          "value": 40214
+        },
+        {
+          "period": "1999",
+          "value": 40370
+        },
+        {
+          "period": "2000",
+          "value": 40554
+        },
+        {
+          "period": "2001",
+          "value": 40766
+        },
+        {
+          "period": "2002",
+          "value": 41424
+        },
+        {
+          "period": "2003",
+          "value": 42196
+        },
+        {
+          "period": "2004",
+          "value": 42859
+        },
+        {
+          "period": "2005",
+          "value": 43663
+        },
+        {
+          "period": "2006",
+          "value": 44361
+        },
+        {
+          "period": "2007",
+          "value": 45236
+        },
+        {
+          "period": "2008",
+          "value": 45983
+        },
+        {
+          "period": "2009",
+          "value": 46368
+        },
+        {
+          "period": "2010",
+          "value": 46562
+        },
+        {
+          "period": "2011",
+          "value": 46736
+        },
+        {
+          "period": "2012",
+          "value": 46749
+        },
+        {
+          "period": "2013",
+          "value": 46581
+        },
+        {
+          "period": "2014",
+          "value": 46433
+        },
+        {
+          "period": "2015",
+          "value": 46384
+        },
+        {
+          "period": "2016",
+          "value": 46427
+        },
+        {
+          "period": "2017",
+          "value": 46510
+        },
+        {
+          "period": "2018",
+          "value": 46715
+        },
+        {
+          "period": "2019",
+          "value": 47088
+        },
+        {
+          "period": "2020",
+          "value": 47345
+        },
+        {
+          "period": "2021",
+          "value": 47347
+        },
+        {
+          "period": "2022",
+          "value": 47786
+        },
+        {
+          "period": "2023",
+          "value": 48353
+        },
+        {
+          "period": "2024",
+          "value": 48874,
+          "notes": "Estimación provisional (P) según el INE"
+        },
+        {
+          "period": "2025",
+          "value": 49362,
+          "notes": "Estimación avance (A) según el INE"
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}
