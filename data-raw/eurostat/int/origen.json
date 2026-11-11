@@ -1,0 +1,30 @@
+{
+ "spr_exp_func": {
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/spr_exp_func?geo=ES&geo=DE&geo=FR&geo=IT&geo=SE&geo=PT&geo=NL&geo=DK&geo=PL&geo=UK&geo=EU27_2020&spfunc=OLD&spfunc=SRV&spfunc=OLD_SRV&spfunc=TOTAL&unit=PC_GDP&unit=MIO_EUR&format=JSON&lang=EN",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "2ad367f8d1171bdfda9227b63d81b431087642d1320fe11f09b459037dc946b7",
+  "actualizado": "2026-10-26"
+ },
+ "ilc_peps01n": {
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_peps01n?geo=ES&geo=DE&geo=FR&geo=IT&geo=SE&geo=PT&geo=NL&geo=DK&geo=PL&geo=UK&geo=EU27_2020&age=Y_GE65&age=TOTAL&sex=T&unit=PC&format=JSON&lang=EN",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "2e49bee9e72bd196f493c683be8a9c779945b18ba607c99a914d2e59c2759d76",
+  "actualizado": "2026-10-20"
+ },
+ "lfsi_emp_a": {
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsi_emp_a?geo=ES&geo=DE&geo=FR&geo=IT&geo=SE&geo=PT&geo=NL&geo=DK&geo=PL&geo=UK&geo=EU27_2020&age=Y55-64&indic_em=EMP_LFS&unit=PC_POP&format=JSON&lang=EN",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_a/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "ab725f9f523a7690746d00cd683b579db7e35aeb98798013f7ba14da8cc601ae",
+  "actualizado": "2026-11-06"
+ },
+ "lfsi_dwl_a": {
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsi_dwl_a?geo=ES&geo=DE&geo=FR&geo=IT&geo=SE&geo=PT&geo=NL&geo=DK&geo=PL&geo=UK&geo=EU27_2020&format=JSON&lang=EN",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_dwl_a/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "b0a6682f08aa935b18fcd7f47e5f5c307d6a290e23a0c64ffaf898ae82c00191",
+  "actualizado": "2026-04-17"
+ }
+}

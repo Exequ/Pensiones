@@ -1,0 +1,80 @@
+dimension,codigo,literal_en
+AGE,BIRTH,At birth
+AGE,Y55T59,From 55 to 59 years
+AGE,Y60T64,From 60 to 64 years
+AGE,Y65,65 years
+AGE,Y65T69,From 65 to 69 years
+AGE,Y66T75,From 66 to 75 years
+AGE,Y_GE65,65 years or over
+AGE,Y_GE66,66 years or over
+AGE,Y_GE76,76 years or over
+AGE,_T,Total
+AGE,_Z,Not applicable
+MEASURE,ATRAEP,Average tax rate of average earner pensioners
+MEASURE,ATRPPAE,Average tax rate of pensioners with pension equal to average earnings
+MEASURE,ATRW,Average tax rate of workers
+MEASURE,AWGW,Average worker gross wage
+MEASURE,CIOP,Capital income of older people
+MEASURE,CRPLF22,Current retirement age for a person who entered the labour force at age 22
+MEASURE,EDIOP,Equivalised disposable income of older people
+MEASURE,EIOP,Employment income of older people
+MEASURE,ELMEA,Effective labour market exit age
+MEASURE,ER,Employment rate
+MEASURE,EYLME,Expected years after labour market exit
+MEASURE,FR,Fertility rate
+MEASURE,FRPLF22,Future retirement age for a person who entered the labour force at age 22
+MEASURE,GPRR100,Gross pension replacement rate at 100% of average wage
+MEASURE,GPRR200,Gross pension replacement rate at 200% of average wage
+MEASURE,GPRR50,Gross pension replacement rate at 50% of average wage
+MEASURE,GPW100,Gross pension wealth at 100% of average wage
+MEASURE,GPW200,Gross pension wealth at 200% of average wage
+MEASURE,GPW50,Gross pension wealth at 50% of average wage
+MEASURE,LE,Life expectancy
+MEASURE,NPRR100,Net pension replacement rate at 100% of average wage
+MEASURE,NPRR200,Net pension replacement rate at 200% of average wage
+MEASURE,NPRR50,Net pension replacement rate at 50% of average wage
+MEASURE,NPW100,Net pension wealth at 100% of average wage
+MEASURE,NPW200,Net pension wealth at 200% of average wage
+MEASURE,NPW50,Net pension wealth at 50% of average wage
+MEASURE,OAIP,Old age income poverty rate below 50% of median income
+MEASURE,OAWAR,Old-age to working-age ratio
+MEASURE,OCOP,Occupational transfers to older people
+MEASURE,PEP,Public expenditure on pensions
+MEASURE,PPEP,Projections of public expenditure on pensions
+MEASURE,PTOP,Public transfers to older people
+OPTIONALITY,M,Mandatory
+OPTIONALITY,MV,Mandatory and voluntary
+OPTIONALITY,_Z,Not applicable
+REF_AREA,DEU,Germany
+REF_AREA,DNK,Denmark
+REF_AREA,ESP,Spain
+REF_AREA,EU27,European Union (27 countries)
+REF_AREA,FRA,France
+REF_AREA,GBR,United Kingdom
+REF_AREA,ITA,Italy
+REF_AREA,NLD,Netherlands
+REF_AREA,OECD_REP,OECD average country
+REF_AREA,POL,Poland
+REF_AREA,PRT,Portugal
+REF_AREA,SWE,Sweden
+REF_AREA,USA,United States
+SEX,F,Female
+SEX,M,Male
+SEX,_T,Total
+SEX,_Z,Not applicable
+UNIT_MEASURE,CH_W,Children per woman
+UNIT_MEASURE,FCTR_WG_SAL_G_I_INC,Factor of gross individual wage at the same income level
+UNIT_MEASURE,FCTR_WG_SAL_N_I_INC,Factor of net individual wage at the same income level
+UNIT_MEASURE,PT_B1GQ,Percentage of GDP
+UNIT_MEASURE,PT_B6G_A_POP_Y_GT65,Percentage of gross disposable income of the population aged over 65 years
+UNIT_MEASURE,PT_B6N_A,Percentage of average disposable income
+UNIT_MEASURE,PT_EARN_A,Percentage of average earnings
+UNIT_MEASURE,PT_EARN_G_PRE_RET_INC,Percentage of gross pre-retirement earnings at the same income level
+UNIT_MEASURE,PT_EARN_N_PRE_RET_INC,Percentage of net pre-retirement earnings at the same income level
+UNIT_MEASURE,PT_PENS,Percentage of pension
+UNIT_MEASURE,PT_POP_AGE,Percentage of population in the same age
+UNIT_MEASURE,PT_POP_SEX_AGE,Percentage of population in the same sex and age
+UNIT_MEASURE,PT_POP_Y20T64,Percentage of population aged 20-64 years
+UNIT_MEASURE,USD_EXC,"US dollars, exchange rate converted"
+UNIT_MEASURE,XDC,National currency
+UNIT_MEASURE,Y,Years

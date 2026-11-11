@@ -1,0 +1,2601 @@
+{
+  "tipo": "datos",
+  "id": "ocde-espana",
+  "title": "OCDE, Pensions at a Glance: indicadores de España (series y datos de un año)",
+  "description": "Indicadores de España del flujo «Pensions at a Glance» de la OCDE: series con cuatro o más años y datos de un año (por ejemplo tasas de reposición teóricas y edad de jubilación de 2024). Cada elemento lleva el literal del indicador.",
+  "series": [
+    {
+      "id": "ciop-no-aplica-y-ge66-z-pt-b6g-a-pop-y-gt65",
+      "title": "Capital income of older people (España; sexo: no-aplica; edad: Y_GE66; opcionalidad: _Z; unidad: Percentage of gross disposable income of the population aged over 65 years)",
+      "unit": "Percentage of gross disposable income of the population aged over 65 years",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE CIOP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2014",
+          "value": 11.1
+        },
+        {
+          "period": "2016",
+          "value": 8.3
+        },
+        {
+          "period": "2018",
+          "value": 8.3
+        },
+        {
+          "period": "2020",
+          "value": 8.6
+        },
+        {
+          "period": "2022",
+          "value": 8.0
+        }
+      ]
+    },
+    {
+      "id": "ediop-no-aplica-y66t75-z-pt-b6n-a",
+      "title": "Equivalised disposable income of older people (España; sexo: no-aplica; edad: Y66T75; opcionalidad: _Z; unidad: Percentage of average disposable income)",
+      "unit": "Percentage of average disposable income",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE EDIOP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2014",
+          "value": 106.2
+        },
+        {
+          "period": "2016",
+          "value": 102.9
+        },
+        {
+          "period": "2018",
+          "value": 102.4
+        },
+        {
+          "period": "2020",
+          "value": 107.7
+        },
+        {
+          "period": "2022",
+          "value": 105.3
+        }
+      ]
+    },
+    {
+      "id": "ediop-no-aplica-y-ge66-z-pt-b6n-a",
+      "title": "Equivalised disposable income of older people (España; sexo: no-aplica; edad: Y_GE66; opcionalidad: _Z; unidad: Percentage of average disposable income)",
+      "unit": "Percentage of average disposable income",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE EDIOP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2014",
+          "value": 98.8
+        },
+        {
+          "period": "2016",
+          "value": 95.3
+        },
+        {
+          "period": "2018",
+          "value": 95.8
+        },
+        {
+          "period": "2020",
+          "value": 99.0
+        },
+        {
+          "period": "2022",
+          "value": 96.7
+        }
+      ]
+    },
+    {
+      "id": "ediop-no-aplica-y-ge76-z-pt-b6n-a",
+      "title": "Equivalised disposable income of older people (España; sexo: no-aplica; edad: Y_GE76; opcionalidad: _Z; unidad: Percentage of average disposable income)",
+      "unit": "Percentage of average disposable income",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE EDIOP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2014",
+          "value": 90.9
+        },
+        {
+          "period": "2016",
+          "value": 86.9
+        },
+        {
+          "period": "2018",
+          "value": 88.1
+        },
+        {
+          "period": "2020",
+          "value": 89.2
+        },
+        {
+          "period": "2022",
+          "value": 86.5
+        }
+      ]
+    },
+    {
+      "id": "eiop-no-aplica-y-ge66-z-pt-b6g-a-pop-y-gt65",
+      "title": "Employment income of older people (España; sexo: no-aplica; edad: Y_GE66; opcionalidad: _Z; unidad: Percentage of gross disposable income of the population aged over 65 years)",
+      "unit": "Percentage of gross disposable income of the population aged over 65 years",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE EIOP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2014",
+          "value": 18.3
+        },
+        {
+          "period": "2016",
+          "value": 20.3
+        },
+        {
+          "period": "2018",
+          "value": 20.4
+        },
+        {
+          "period": "2020",
+          "value": 19.5
+        },
+        {
+          "period": "2022",
+          "value": 22.2
+        }
+      ]
+    },
+    {
+      "id": "elmea-mujeres-z-z-y",
+      "title": "Effective labour market exit age (España; sexo: mujeres; edad: _Z; opcionalidad: _Z; unidad: Years)",
+      "unit": "Years",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE ELMEA. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "1970",
+          "value": 66.8
+        },
+        {
+          "period": "1971",
+          "value": 69.3
+        },
+        {
+          "period": "1972",
+          "value": 71.2
+        },
+        {
+          "period": "1973",
+          "value": 72.7
+        },
+        {
+          "period": "1974",
+          "value": 70.4
+        },
+        {
+          "period": "1975",
+          "value": 71.1
+        },
+        {
+          "period": "1976",
+          "value": 70.3
+        },
+        {
+          "period": "1977",
+          "value": 67.6
+        },
+        {
+          "period": "1978",
+          "value": 65.8
+        },
+        {
+          "period": "1979",
+          "value": 62.2
+        },
+        {
+          "period": "1980",
+          "value": 65.0
+        },
+        {
+          "period": "1981",
+          "value": 63.3
+        },
+        {
+          "period": "1982",
+          "value": 62.9
+        },
+        {
+          "period": "1983",
+          "value": 63.0
+        },
+        {
+          "period": "1984",
+          "value": 62.4
+        },
+        {
+          "period": "1985",
+          "value": 61.6
+        },
+        {
+          "period": "1986",
+          "value": 62.4
+        },
+        {
+          "period": "1987",
+          "value": 64.1
+        },
+        {
+          "period": "1988",
+          "value": 64.5
+        },
+        {
+          "period": "1989",
+          "value": 64.7
+        },
+        {
+          "period": "1990",
+          "value": 64.2
+        },
+        {
+          "period": "1991",
+          "value": 63.8
+        },
+        {
+          "period": "1992",
+          "value": 63.3
+        },
+        {
+          "period": "1993",
+          "value": 62.0
+        },
+        {
+          "period": "1994",
+          "value": 62.4
+        },
+        {
+          "period": "1995",
+          "value": 62.2
+        },
+        {
+          "period": "1996",
+          "value": 62.0
+        },
+        {
+          "period": "1997",
+          "value": 62.3
+        },
+        {
+          "period": "1998",
+          "value": 62.3
+        },
+        {
+          "period": "1999",
+          "value": 60.3
+        },
+        {
+          "period": "2000",
+          "value": 60.9
+        },
+        {
+          "period": "2001",
+          "value": 61.2
+        },
+        {
+          "period": "2002",
+          "value": 60.5
+        },
+        {
+          "period": "2003",
+          "value": 61.6
+        },
+        {
+          "period": "2004",
+          "value": 62.4
+        },
+        {
+          "period": "2005",
+          "value": 62.6
+        },
+        {
+          "period": "2006",
+          "value": 62.5
+        },
+        {
+          "period": "2007",
+          "value": 62.4
+        },
+        {
+          "period": "2008",
+          "value": 62.6
+        },
+        {
+          "period": "2009",
+          "value": 62.8
+        },
+        {
+          "period": "2010",
+          "value": 62.5
+        },
+        {
+          "period": "2011",
+          "value": 63.0
+        },
+        {
+          "period": "2012",
+          "value": 62.8
+        },
+        {
+          "period": "2013",
+          "value": 62.9
+        },
+        {
+          "period": "2014",
+          "value": 62.6
+        },
+        {
+          "period": "2015",
+          "value": 62.1
+        },
+        {
+          "period": "2016",
+          "value": 61.9
+        },
+        {
+          "period": "2017",
+          "value": 60.9
+        },
+        {
+          "period": "2018",
+          "value": 60.6
+        },
+        {
+          "period": "2019",
+          "value": 61.2
+        },
+        {
+          "period": "2020",
+          "value": 60.4
+        },
+        {
+          "period": "2021",
+          "value": 61.2
+        },
+        {
+          "period": "2022",
+          "value": 61.8
+        },
+        {
+          "period": "2023",
+          "value": 62.6
+        },
+        {
+          "period": "2024",
+          "value": 63.0
+        }
+      ]
+    },
+    {
+      "id": "elmea-hombres-z-z-y",
+      "title": "Effective labour market exit age (España; sexo: hombres; edad: _Z; opcionalidad: _Z; unidad: Years)",
+      "unit": "Years",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE ELMEA. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "1970",
+          "value": 67.7
+        },
+        {
+          "period": "1971",
+          "value": 67.1
+        },
+        {
+          "period": "1972",
+          "value": 66.5
+        },
+        {
+          "period": "1973",
+          "value": 65.9
+        },
+        {
+          "period": "1974",
+          "value": 65.8
+        },
+        {
+          "period": "1975",
+          "value": 65.2
+        },
+        {
+          "period": "1976",
+          "value": 64.9
+        },
+        {
+          "period": "1977",
+          "value": 64.9
+        },
+        {
+          "period": "1978",
+          "value": 64.8
+        },
+        {
+          "period": "1979",
+          "value": 63.0
+        },
+        {
+          "period": "1980",
+          "value": 63.2
+        },
+        {
+          "period": "1981",
+          "value": 63.8
+        },
+        {
+          "period": "1982",
+          "value": 63.4
+        },
+        {
+          "period": "1983",
+          "value": 62.8
+        },
+        {
+          "period": "1984",
+          "value": 62.2
+        },
+        {
+          "period": "1985",
+          "value": 62.2
+        },
+        {
+          "period": "1986",
+          "value": 62.1
+        },
+        {
+          "period": "1987",
+          "value": 62.3
+        },
+        {
+          "period": "1988",
+          "value": 62.3
+        },
+        {
+          "period": "1989",
+          "value": 62.6
+        },
+        {
+          "period": "1990",
+          "value": 62.5
+        },
+        {
+          "period": "1991",
+          "value": 61.9
+        },
+        {
+          "period": "1992",
+          "value": 60.7
+        },
+        {
+          "period": "1993",
+          "value": 60.6
+        },
+        {
+          "period": "1994",
+          "value": 60.4
+        },
+        {
+          "period": "1995",
+          "value": 60.1
+        },
+        {
+          "period": "1996",
+          "value": 60.2
+        },
+        {
+          "period": "1997",
+          "value": 60.7
+        },
+        {
+          "period": "1998",
+          "value": 60.7
+        },
+        {
+          "period": "1999",
+          "value": 60.8
+        },
+        {
+          "period": "2000",
+          "value": 60.9
+        },
+        {
+          "period": "2001",
+          "value": 61.0
+        },
+        {
+          "period": "2002",
+          "value": 60.6
+        },
+        {
+          "period": "2003",
+          "value": 60.6
+        },
+        {
+          "period": "2004",
+          "value": 60.4
+        },
+        {
+          "period": "2005",
+          "value": 60.3
+        },
+        {
+          "period": "2006",
+          "value": 60.7
+        },
+        {
+          "period": "2007",
+          "value": 60.9
+        },
+        {
+          "period": "2008",
+          "value": 61.0
+        },
+        {
+          "period": "2009",
+          "value": 61.1
+        },
+        {
+          "period": "2010",
+          "value": 61.6
+        },
+        {
+          "period": "2011",
+          "value": 61.6
+        },
+        {
+          "period": "2012",
+          "value": 61.7
+        },
+        {
+          "period": "2013",
+          "value": 61.6
+        },
+        {
+          "period": "2014",
+          "value": 61.6
+        },
+        {
+          "period": "2015",
+          "value": 61.6
+        },
+        {
+          "period": "2016",
+          "value": 61.6
+        },
+        {
+          "period": "2017",
+          "value": 61.6
+        },
+        {
+          "period": "2018",
+          "value": 61.5
+        },
+        {
+          "period": "2019",
+          "value": 61.5
+        },
+        {
+          "period": "2020",
+          "value": 61.0
+        },
+        {
+          "period": "2021",
+          "value": 61.5
+        },
+        {
+          "period": "2022",
+          "value": 62.1
+        },
+        {
+          "period": "2023",
+          "value": 62.1
+        },
+        {
+          "period": "2024",
+          "value": 62.4
+        }
+      ]
+    },
+    {
+      "id": "eylme-mujeres-z-z-y",
+      "title": "Expected years after labour market exit (España; sexo: mujeres; edad: _Z; opcionalidad: _Z; unidad: Years)",
+      "unit": "Years",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE EYLME. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "1970",
+          "value": 14.7
+        },
+        {
+          "period": "1971",
+          "value": 12.9
+        },
+        {
+          "period": "1972",
+          "value": 11.7
+        },
+        {
+          "period": "1973",
+          "value": 10.8
+        },
+        {
+          "period": "1974",
+          "value": 12.3
+        },
+        {
+          "period": "1975",
+          "value": 12.4
+        },
+        {
+          "period": "1976",
+          "value": 13.0
+        },
+        {
+          "period": "1977",
+          "value": 15.1
+        },
+        {
+          "period": "1978",
+          "value": 16.6
+        },
+        {
+          "period": "1979",
+          "value": 19.7
+        },
+        {
+          "period": "1980",
+          "value": 18.1
+        },
+        {
+          "period": "1981",
+          "value": 19.6
+        },
+        {
+          "period": "1982",
+          "value": 20.0
+        },
+        {
+          "period": "1983",
+          "value": 19.9
+        },
+        {
+          "period": "1984",
+          "value": 20.5
+        },
+        {
+          "period": "1985",
+          "value": 21.7
+        },
+        {
+          "period": "1986",
+          "value": 21.1
+        },
+        {
+          "period": "1987",
+          "value": 19.7
+        },
+        {
+          "period": "1988",
+          "value": 19.4
+        },
+        {
+          "period": "1989",
+          "value": 19.3
+        },
+        {
+          "period": "1990",
+          "value": 19.9
+        },
+        {
+          "period": "1991",
+          "value": 20.7
+        },
+        {
+          "period": "1992",
+          "value": 21.2
+        },
+        {
+          "period": "1993",
+          "value": 22.3
+        },
+        {
+          "period": "1994",
+          "value": 22.1
+        },
+        {
+          "period": "1995",
+          "value": 22.5
+        },
+        {
+          "period": "1996",
+          "value": 22.9
+        },
+        {
+          "period": "1997",
+          "value": 22.7
+        },
+        {
+          "period": "1998",
+          "value": 22.8
+        },
+        {
+          "period": "1999",
+          "value": 24.6
+        },
+        {
+          "period": "2000",
+          "value": 24.3
+        },
+        {
+          "period": "2001",
+          "value": 24.3
+        },
+        {
+          "period": "2002",
+          "value": 25.0
+        },
+        {
+          "period": "2003",
+          "value": 24.1
+        },
+        {
+          "period": "2004",
+          "value": 23.4
+        },
+        {
+          "period": "2005",
+          "value": 23.3
+        },
+        {
+          "period": "2006",
+          "value": 23.9
+        },
+        {
+          "period": "2007",
+          "value": 24.0
+        },
+        {
+          "period": "2008",
+          "value": 24.0
+        },
+        {
+          "period": "2009",
+          "value": 24.1
+        },
+        {
+          "period": "2010",
+          "value": 24.6
+        },
+        {
+          "period": "2011",
+          "value": 24.2
+        },
+        {
+          "period": "2012",
+          "value": 24.3
+        },
+        {
+          "period": "2013",
+          "value": 24.6
+        },
+        {
+          "period": "2014",
+          "value": 25.0
+        },
+        {
+          "period": "2015",
+          "value": 25.2
+        },
+        {
+          "period": "2016",
+          "value": 25.7
+        },
+        {
+          "period": "2017",
+          "value": 26.5
+        },
+        {
+          "period": "2018",
+          "value": 26.9
+        },
+        {
+          "period": "2019",
+          "value": 26.7
+        },
+        {
+          "period": "2020",
+          "value": 26.3
+        },
+        {
+          "period": "2021",
+          "value": 26.3
+        },
+        {
+          "period": "2022",
+          "value": 25.6
+        },
+        {
+          "period": "2023",
+          "value": 25.5
+        },
+        {
+          "period": "2024",
+          "value": 25.3
+        }
+      ]
+    },
+    {
+      "id": "eylme-hombres-z-z-y",
+      "title": "Expected years after labour market exit (España; sexo: hombres; edad: _Z; opcionalidad: _Z; unidad: Years)",
+      "unit": "Years",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE EYLME. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "1970",
+          "value": 11.6
+        },
+        {
+          "period": "1971",
+          "value": 12.1
+        },
+        {
+          "period": "1972",
+          "value": 12.5
+        },
+        {
+          "period": "1973",
+          "value": 12.9
+        },
+        {
+          "period": "1974",
+          "value": 13.0
+        },
+        {
+          "period": "1975",
+          "value": 13.8
+        },
+        {
+          "period": "1976",
+          "value": 14.1
+        },
+        {
+          "period": "1977",
+          "value": 14.1
+        },
+        {
+          "period": "1978",
+          "value": 14.3
+        },
+        {
+          "period": "1979",
+          "value": 15.6
+        },
+        {
+          "period": "1980",
+          "value": 16.0
+        },
+        {
+          "period": "1981",
+          "value": 15.6
+        },
+        {
+          "period": "1982",
+          "value": 16.0
+        },
+        {
+          "period": "1983",
+          "value": 16.5
+        },
+        {
+          "period": "1984",
+          "value": 17.0
+        },
+        {
+          "period": "1985",
+          "value": 17.3
+        },
+        {
+          "period": "1986",
+          "value": 17.4
+        },
+        {
+          "period": "1987",
+          "value": 17.4
+        },
+        {
+          "period": "1988",
+          "value": 17.4
+        },
+        {
+          "period": "1989",
+          "value": 17.2
+        },
+        {
+          "period": "1990",
+          "value": 17.3
+        },
+        {
+          "period": "1991",
+          "value": 18.1
+        },
+        {
+          "period": "1992",
+          "value": 19.1
+        },
+        {
+          "period": "1993",
+          "value": 19.2
+        },
+        {
+          "period": "1994",
+          "value": 19.3
+        },
+        {
+          "period": "1995",
+          "value": 19.8
+        },
+        {
+          "period": "1996",
+          "value": 19.8
+        },
+        {
+          "period": "1997",
+          "value": 19.5
+        },
+        {
+          "period": "1998",
+          "value": 19.5
+        },
+        {
+          "period": "1999",
+          "value": 19.6
+        },
+        {
+          "period": "2000",
+          "value": 19.8
+        },
+        {
+          "period": "2001",
+          "value": 19.9
+        },
+        {
+          "period": "2002",
+          "value": 20.3
+        },
+        {
+          "period": "2003",
+          "value": 20.4
+        },
+        {
+          "period": "2004",
+          "value": 20.6
+        },
+        {
+          "period": "2005",
+          "value": 20.8
+        },
+        {
+          "period": "2006",
+          "value": 21.0
+        },
+        {
+          "period": "2007",
+          "value": 20.8
+        },
+        {
+          "period": "2008",
+          "value": 21.0
+        },
+        {
+          "period": "2009",
+          "value": 21.1
+        },
+        {
+          "period": "2010",
+          "value": 21.0
+        },
+        {
+          "period": "2011",
+          "value": 21.1
+        },
+        {
+          "period": "2012",
+          "value": 21.0
+        },
+        {
+          "period": "2013",
+          "value": 21.5
+        },
+        {
+          "period": "2014",
+          "value": 21.6
+        },
+        {
+          "period": "2015",
+          "value": 21.4
+        },
+        {
+          "period": "2016",
+          "value": 21.7
+        },
+        {
+          "period": "2017",
+          "value": 21.7
+        },
+        {
+          "period": "2018",
+          "value": 21.8
+        },
+        {
+          "period": "2019",
+          "value": 22.2
+        },
+        {
+          "period": "2020",
+          "value": 21.3
+        },
+        {
+          "period": "2021",
+          "value": 21.5
+        },
+        {
+          "period": "2022",
+          "value": 20.8
+        },
+        {
+          "period": "2023",
+          "value": 21.7
+        },
+        {
+          "period": "2024",
+          "value": 21.7
+        }
+      ]
+    },
+    {
+      "id": "oaip-mujeres-y-ge66-z-pt-pop-sex-age",
+      "title": "Old age income poverty rate below 50% of median income (España; sexo: mujeres; edad: Y_GE66; opcionalidad: _Z; unidad: Percentage of population in the same sex and age)",
+      "unit": "Percentage of population in the same sex and age",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE OAIP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2014",
+          "value": 6.7
+        },
+        {
+          "period": "2016",
+          "value": 10.6
+        },
+        {
+          "period": "2018",
+          "value": 10.2
+        },
+        {
+          "period": "2020",
+          "value": 12.2
+        },
+        {
+          "period": "2022",
+          "value": 15.0
+        }
+      ]
+    },
+    {
+      "id": "oaip-hombres-y-ge66-z-pt-pop-sex-age",
+      "title": "Old age income poverty rate below 50% of median income (España; sexo: hombres; edad: Y_GE66; opcionalidad: _Z; unidad: Percentage of population in the same sex and age)",
+      "unit": "Percentage of population in the same sex and age",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE OAIP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2014",
+          "value": 3.7
+        },
+        {
+          "period": "2016",
+          "value": 7.8
+        },
+        {
+          "period": "2018",
+          "value": 10.1
+        },
+        {
+          "period": "2020",
+          "value": 10.1
+        },
+        {
+          "period": "2022",
+          "value": 10.7
+        }
+      ]
+    },
+    {
+      "id": "oaip-total-y66t75-z-pt-pop-sex-age",
+      "title": "Old age income poverty rate below 50% of median income (España; sexo: total; edad: Y66T75; opcionalidad: _Z; unidad: Percentage of population in the same sex and age)",
+      "unit": "Percentage of population in the same sex and age",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE OAIP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2014",
+          "value": 4.7
+        },
+        {
+          "period": "2016",
+          "value": 8.7
+        },
+        {
+          "period": "2018",
+          "value": 9.2
+        },
+        {
+          "period": "2020",
+          "value": 9.9
+        },
+        {
+          "period": "2022",
+          "value": 11.5
+        }
+      ]
+    },
+    {
+      "id": "oaip-total-y-ge66-z-pt-pop-sex-age",
+      "title": "Old age income poverty rate below 50% of median income (España; sexo: total; edad: Y_GE66; opcionalidad: _Z; unidad: Percentage of population in the same sex and age)",
+      "unit": "Percentage of population in the same sex and age",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE OAIP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2014",
+          "value": 5.4
+        },
+        {
+          "period": "2016",
+          "value": 9.4
+        },
+        {
+          "period": "2018",
+          "value": 10.2
+        },
+        {
+          "period": "2020",
+          "value": 11.3
+        },
+        {
+          "period": "2022",
+          "value": 13.1
+        }
+      ]
+    },
+    {
+      "id": "oaip-total-y-ge76-z-pt-pop-sex-age",
+      "title": "Old age income poverty rate below 50% of median income (España; sexo: total; edad: Y_GE76; opcionalidad: _Z; unidad: Percentage of population in the same sex and age)",
+      "unit": "Percentage of population in the same sex and age",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE OAIP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2014",
+          "value": 6.2
+        },
+        {
+          "period": "2016",
+          "value": 10.1
+        },
+        {
+          "period": "2018",
+          "value": 11.3
+        },
+        {
+          "period": "2020",
+          "value": 12.8
+        },
+        {
+          "period": "2022",
+          "value": 15.1
+        }
+      ]
+    },
+    {
+      "id": "oaip-total-t-z-pt-pop-sex-age",
+      "title": "Old age income poverty rate below 50% of median income (España; sexo: total; edad: _T; opcionalidad: _Z; unidad: Percentage of population in the same sex and age)",
+      "unit": "Percentage of population in the same sex and age",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE OAIP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2014",
+          "value": 15.3
+        },
+        {
+          "period": "2016",
+          "value": 15.5
+        },
+        {
+          "period": "2018",
+          "value": 14.2
+        },
+        {
+          "period": "2020",
+          "value": 15.4
+        },
+        {
+          "period": "2022",
+          "value": 13.7
+        }
+      ]
+    },
+    {
+      "id": "oawar-no-aplica-y-ge65-z-pt-pop-y20t64",
+      "title": "Old-age to working-age ratio (España; sexo: no-aplica; edad: Y_GE65; opcionalidad: _Z; unidad: Percentage of population aged 20-64 years)",
+      "unit": "Percentage of population aged 20-64 years",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE OAWAR. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "1950",
+          "value": 12.8
+        },
+        {
+          "period": "1951",
+          "value": 12.9
+        },
+        {
+          "period": "1953",
+          "value": 13.2
+        },
+        {
+          "period": "1954",
+          "value": 13.4
+        },
+        {
+          "period": "1955",
+          "value": 13.5
+        },
+        {
+          "period": "1956",
+          "value": 13.7
+        },
+        {
+          "period": "1957",
+          "value": 13.9
+        },
+        {
+          "period": "1958",
+          "value": 14.1
+        },
+        {
+          "period": "1959",
+          "value": 14.3
+        },
+        {
+          "period": "1960",
+          "value": 14.5
+        },
+        {
+          "period": "1961",
+          "value": 14.8
+        },
+        {
+          "period": "1963",
+          "value": 15.3
+        },
+        {
+          "period": "1964",
+          "value": 15.5
+        },
+        {
+          "period": "1965",
+          "value": 15.8
+        },
+        {
+          "period": "1966",
+          "value": 16.2
+        },
+        {
+          "period": "1967",
+          "value": 16.6
+        },
+        {
+          "period": "1968",
+          "value": 17.0
+        },
+        {
+          "period": "1969",
+          "value": 17.3
+        },
+        {
+          "period": "1970",
+          "value": 17.7
+        },
+        {
+          "period": "1971",
+          "value": 18.0
+        },
+        {
+          "period": "1972",
+          "value": 18.3
+        },
+        {
+          "period": "1973",
+          "value": 18.6
+        },
+        {
+          "period": "1974",
+          "value": 18.9
+        },
+        {
+          "period": "1975",
+          "value": 19.0
+        },
+        {
+          "period": "1976",
+          "value": 19.5
+        },
+        {
+          "period": "1977",
+          "value": 19.8
+        },
+        {
+          "period": "1978",
+          "value": 20.1
+        },
+        {
+          "period": "1979",
+          "value": 20.4
+        },
+        {
+          "period": "1980",
+          "value": 20.6
+        },
+        {
+          "period": "1981",
+          "value": 20.7
+        },
+        {
+          "period": "1982",
+          "value": 20.8
+        },
+        {
+          "period": "1983",
+          "value": 21.0
+        },
+        {
+          "period": "1984",
+          "value": 21.1
+        },
+        {
+          "period": "1985",
+          "value": 21.4
+        },
+        {
+          "period": "1986",
+          "value": 21.7
+        },
+        {
+          "period": "1987",
+          "value": 22.1
+        },
+        {
+          "period": "1988",
+          "value": 22.6
+        },
+        {
+          "period": "1989",
+          "value": 23.1
+        },
+        {
+          "period": "1991",
+          "value": 24.0
+        },
+        {
+          "period": "1993",
+          "value": 24.8
+        },
+        {
+          "period": "1994",
+          "value": 25.2
+        },
+        {
+          "period": "1996",
+          "value": 26.1
+        },
+        {
+          "period": "1997",
+          "value": 26.5
+        },
+        {
+          "period": "1998",
+          "value": 26.9
+        },
+        {
+          "period": "1999",
+          "value": 27.1
+        },
+        {
+          "period": "2001",
+          "value": 27.2
+        },
+        {
+          "period": "2002",
+          "value": 27.0
+        },
+        {
+          "period": "2003",
+          "value": 26.8
+        },
+        {
+          "period": "2004",
+          "value": 26.5
+        },
+        {
+          "period": "2024",
+          "value": 34.9
+        },
+        {
+          "period": "2054",
+          "value": 76.2
+        },
+        {
+          "period": "2084",
+          "value": 76.8
+        }
+      ]
+    },
+    {
+      "id": "ocop-no-aplica-y-ge66-z-pt-b6g-a-pop-y-gt65",
+      "title": "Occupational transfers to older people (España; sexo: no-aplica; edad: Y_GE66; opcionalidad: _Z; unidad: Percentage of gross disposable income of the population aged over 65 years)",
+      "unit": "Percentage of gross disposable income of the population aged over 65 years",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE OCOP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2014",
+          "value": 0.0
+        },
+        {
+          "period": "2016",
+          "value": 0.0
+        },
+        {
+          "period": "2018",
+          "value": 0.0
+        },
+        {
+          "period": "2020",
+          "value": 0.0
+        },
+        {
+          "period": "2022",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "id": "pep-no-aplica-z-z-pt-b1gq",
+      "title": "Public expenditure on pensions (España; sexo: no-aplica; edad: _Z; opcionalidad: _Z; unidad: Percentage of GDP)",
+      "unit": "Percentage of GDP",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE PEP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "1990",
+          "value": 7.7
+        },
+        {
+          "period": "2000",
+          "value": 8.1
+        },
+        {
+          "period": "2010",
+          "value": 9.1
+        },
+        {
+          "period": "2020",
+          "value": 12.8
+        },
+        {
+          "period": "2021",
+          "value": 12.3
+        }
+      ]
+    },
+    {
+      "id": "ppep-no-aplica-z-z-pt-b1gq",
+      "title": "Projections of public expenditure on pensions (España; sexo: no-aplica; edad: _Z; opcionalidad: _Z; unidad: Percentage of GDP)",
+      "unit": "Percentage of GDP",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE PPEP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2023",
+          "value": 13.6
+        },
+        {
+          "period": "2025",
+          "value": 13.7
+        },
+        {
+          "period": "2030",
+          "value": 14.3
+        },
+        {
+          "period": "2035",
+          "value": 15.4
+        },
+        {
+          "period": "2040",
+          "value": 16.2
+        },
+        {
+          "period": "2045",
+          "value": 16.9
+        },
+        {
+          "period": "2050",
+          "value": 17.3
+        },
+        {
+          "period": "2055",
+          "value": 17.2
+        },
+        {
+          "period": "2060",
+          "value": 16.9
+        }
+      ]
+    },
+    {
+      "id": "ptop-no-aplica-y-ge66-z-pt-b6g-a-pop-y-gt65",
+      "title": "Public transfers to older people (España; sexo: no-aplica; edad: Y_GE66; opcionalidad: _Z; unidad: Percentage of gross disposable income of the population aged over 65 years)",
+      "unit": "Percentage of gross disposable income of the population aged over 65 years",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Medida OCDE PTOP. Puede incluir años proyectados.",
+      "points": [
+        {
+          "period": "2014",
+          "value": 70.6
+        },
+        {
+          "period": "2016",
+          "value": 71.4
+        },
+        {
+          "period": "2018",
+          "value": 71.4
+        },
+        {
+          "period": "2020",
+          "value": 71.9
+        },
+        {
+          "period": "2022",
+          "value": 69.8
+        }
+      ]
+    }
+  ],
+  "data": [
+    {
+      "id": "atraep-hombres-z-z-pt-pens-2024",
+      "value": 16.8,
+      "unit": "Percentage of pension",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Average tax rate of average earner pensioners. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: ATRAEP = 16.8 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "atrppae-hombres-z-z-pt-earn-a-2024",
+      "value": 18.9,
+      "unit": "Percentage of average earnings",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Average tax rate of pensioners with pension equal to average earnings. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: ATRPPAE = 18.9 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "atrw-hombres-z-z-pt-earn-a-2024",
+      "value": 5.6,
+      "unit": "Percentage of average earnings",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Average tax rate of workers. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: ATRW = 5.6 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "awgw-no-aplica-z-z-usd-exc-2024",
+      "value": 32984.4,
+      "unit": "US dollars, exchange rate converted",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Average worker gross wage. Sexo: no-aplica; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: AWGW = 32984.4 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "awgw-no-aplica-z-z-xdc-2024",
+      "value": 31698.0,
+      "unit": "National currency",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Average worker gross wage. Sexo: no-aplica; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: AWGW = 31698 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "crplf22-mujeres-z-z-y-2024",
+      "value": 65.0,
+      "unit": "Years",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Current retirement age for a person who entered the labour force at age 22. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: CRPLF22 = 65 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "crplf22-hombres-z-z-y-2024",
+      "value": 65.0,
+      "unit": "Years",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Current retirement age for a person who entered the labour force at age 22. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: CRPLF22 = 65 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "ediop-mujeres-y-ge66-z-pt-b6n-a-2022",
+      "value": 92.4,
+      "unit": "Percentage of average disposable income",
+      "period": "2022",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Equivalised disposable income of older people. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: EDIOP = 92.4 (2022)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "ediop-hombres-y-ge66-z-pt-b6n-a-2022",
+      "value": 102.1,
+      "unit": "Percentage of average disposable income",
+      "period": "2022",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Equivalised disposable income of older people. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: EDIOP = 102.1 (2022)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "er-no-aplica-y55t59-z-pt-pop-age-2024",
+      "value": 70.2,
+      "unit": "Percentage of population in the same age",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Employment rate. Sexo: no-aplica; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: ER = 70.2 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "er-no-aplica-y60t64-z-pt-pop-age-2024",
+      "value": 50.9,
+      "unit": "Percentage of population in the same age",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Employment rate. Sexo: no-aplica; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: ER = 50.9 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "er-no-aplica-y65t69-z-pt-pop-age-2024",
+      "value": 10.7,
+      "unit": "Percentage of population in the same age",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Employment rate. Sexo: no-aplica; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: ER = 10.7 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "fr-no-aplica-z-z-ch-w-2024",
+      "value": 1.2,
+      "unit": "Children per woman",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Fertility rate. Sexo: no-aplica; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: FR = 1.2 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "frplf22-mujeres-z-z-y-2024",
+      "value": 65.0,
+      "unit": "Years",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Future retirement age for a person who entered the labour force at age 22. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: FRPLF22 = 65 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "frplf22-hombres-z-z-y-2024",
+      "value": 65.0,
+      "unit": "Years",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Future retirement age for a person who entered the labour force at age 22. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: FRPLF22 = 65 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gprr100-mujeres-z-m-pt-earn-g-pre-ret-inc-2024",
+      "value": 80.4,
+      "unit": "Percentage of gross pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension replacement rate at 100% of average wage. Sexo: mujeres; opcionalidad: M. Literal de la fuente.",
+      "quote": "ESP: GPRR100 = 80.4 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024",
+      "value": 80.4,
+      "unit": "Percentage of gross pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension replacement rate at 100% of average wage. Sexo: hombres; opcionalidad: M. Literal de la fuente.",
+      "quote": "ESP: GPRR100 = 80.4 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gprr100-hombres-z-mv-pt-earn-g-pre-ret-inc-2024",
+      "value": 80.4,
+      "unit": "Percentage of gross pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension replacement rate at 100% of average wage. Sexo: hombres; opcionalidad: MV. Literal de la fuente.",
+      "quote": "ESP: GPRR100 = 80.4 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gprr200-mujeres-z-m-pt-earn-g-pre-ret-inc-2024",
+      "value": 49.9,
+      "unit": "Percentage of gross pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension replacement rate at 200% of average wage. Sexo: mujeres; opcionalidad: M. Literal de la fuente.",
+      "quote": "ESP: GPRR200 = 49.9 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gprr200-hombres-z-m-pt-earn-g-pre-ret-inc-2024",
+      "value": 49.9,
+      "unit": "Percentage of gross pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension replacement rate at 200% of average wage. Sexo: hombres; opcionalidad: M. Literal de la fuente.",
+      "quote": "ESP: GPRR200 = 49.9 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gprr200-hombres-z-mv-pt-earn-g-pre-ret-inc-2024",
+      "value": 49.9,
+      "unit": "Percentage of gross pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension replacement rate at 200% of average wage. Sexo: hombres; opcionalidad: MV. Literal de la fuente.",
+      "quote": "ESP: GPRR200 = 49.9 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gprr50-mujeres-z-m-pt-earn-g-pre-ret-inc-2024",
+      "value": 80.6,
+      "unit": "Percentage of gross pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension replacement rate at 50% of average wage. Sexo: mujeres; opcionalidad: M. Literal de la fuente.",
+      "quote": "ESP: GPRR50 = 80.6 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gprr50-hombres-z-m-pt-earn-g-pre-ret-inc-2024",
+      "value": 80.6,
+      "unit": "Percentage of gross pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension replacement rate at 50% of average wage. Sexo: hombres; opcionalidad: M. Literal de la fuente.",
+      "quote": "ESP: GPRR50 = 80.6 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gprr50-hombres-z-mv-pt-earn-g-pre-ret-inc-2024",
+      "value": 80.6,
+      "unit": "Percentage of gross pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension replacement rate at 50% of average wage. Sexo: hombres; opcionalidad: MV. Literal de la fuente.",
+      "quote": "ESP: GPRR50 = 80.6 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gpw100-mujeres-z-z-fctr-wg-sal-g-i-inc-2024",
+      "value": 18.7,
+      "unit": "Factor of gross individual wage at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension wealth at 100% of average wage. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: GPW100 = 18.7 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gpw100-hombres-z-z-fctr-wg-sal-g-i-inc-2024",
+      "value": 16.3,
+      "unit": "Factor of gross individual wage at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension wealth at 100% of average wage. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: GPW100 = 16.3 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gpw200-mujeres-z-z-fctr-wg-sal-g-i-inc-2024",
+      "value": 11.6,
+      "unit": "Factor of gross individual wage at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension wealth at 200% of average wage. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: GPW200 = 11.6 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gpw200-hombres-z-z-fctr-wg-sal-g-i-inc-2024",
+      "value": 10.1,
+      "unit": "Factor of gross individual wage at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension wealth at 200% of average wage. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: GPW200 = 10.1 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gpw50-mujeres-z-z-fctr-wg-sal-g-i-inc-2024",
+      "value": 18.8,
+      "unit": "Factor of gross individual wage at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension wealth at 50% of average wage. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: GPW50 = 18.8 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "gpw50-hombres-z-z-fctr-wg-sal-g-i-inc-2024",
+      "value": 16.3,
+      "unit": "Factor of gross individual wage at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Gross pension wealth at 50% of average wage. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: GPW50 = 16.3 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "le-mujeres-birth-z-y-2024",
+      "value": 86.4,
+      "unit": "Years",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Life expectancy. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: LE = 86.4 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "le-mujeres-y65-z-y-2024",
+      "value": 88.5,
+      "unit": "Years",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Life expectancy. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: LE = 88.5 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "le-mujeres-y65-z-y-2065",
+      "value": 92.5,
+      "unit": "Years",
+      "period": "2065",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Life expectancy. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: LE = 92.5 (2065)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "le-hombres-birth-z-y-2024",
+      "value": 81.1,
+      "unit": "Years",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Life expectancy. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: LE = 81.1 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "le-hombres-y65-z-y-2024",
+      "value": 84.6,
+      "unit": "Years",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Life expectancy. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: LE = 84.6 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "le-hombres-y65-z-y-2065",
+      "value": 88.6,
+      "unit": "Years",
+      "period": "2065",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Life expectancy. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: LE = 88.6 (2065)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "nprr100-mujeres-z-m-pt-earn-n-pre-ret-inc-2024",
+      "value": 86.3,
+      "unit": "Percentage of net pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension replacement rate at 100% of average wage. Sexo: mujeres; opcionalidad: M. Literal de la fuente.",
+      "quote": "ESP: NPRR100 = 86.3 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024",
+      "value": 86.3,
+      "unit": "Percentage of net pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension replacement rate at 100% of average wage. Sexo: hombres; opcionalidad: M. Literal de la fuente.",
+      "quote": "ESP: NPRR100 = 86.3 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "nprr100-hombres-z-mv-pt-earn-n-pre-ret-inc-2024",
+      "value": 86.3,
+      "unit": "Percentage of net pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension replacement rate at 100% of average wage. Sexo: hombres; opcionalidad: MV. Literal de la fuente.",
+      "quote": "ESP: NPRR100 = 86.3 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "nprr200-mujeres-z-m-pt-earn-n-pre-ret-inc-2024",
+      "value": 57.9,
+      "unit": "Percentage of net pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension replacement rate at 200% of average wage. Sexo: mujeres; opcionalidad: M. Literal de la fuente.",
+      "quote": "ESP: NPRR200 = 57.9 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "nprr200-hombres-z-m-pt-earn-n-pre-ret-inc-2024",
+      "value": 57.9,
+      "unit": "Percentage of net pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension replacement rate at 200% of average wage. Sexo: hombres; opcionalidad: M. Literal de la fuente.",
+      "quote": "ESP: NPRR200 = 57.9 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "nprr200-hombres-z-mv-pt-earn-n-pre-ret-inc-2024",
+      "value": 57.9,
+      "unit": "Percentage of net pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension replacement rate at 200% of average wage. Sexo: hombres; opcionalidad: MV. Literal de la fuente.",
+      "quote": "ESP: NPRR200 = 57.9 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "nprr50-mujeres-z-m-pt-earn-n-pre-ret-inc-2024",
+      "value": 78.6,
+      "unit": "Percentage of net pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension replacement rate at 50% of average wage. Sexo: mujeres; opcionalidad: M. Literal de la fuente.",
+      "quote": "ESP: NPRR50 = 78.6 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "nprr50-hombres-z-m-pt-earn-n-pre-ret-inc-2024",
+      "value": 78.6,
+      "unit": "Percentage of net pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension replacement rate at 50% of average wage. Sexo: hombres; opcionalidad: M. Literal de la fuente.",
+      "quote": "ESP: NPRR50 = 78.6 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "nprr50-hombres-z-mv-pt-earn-n-pre-ret-inc-2024",
+      "value": 78.6,
+      "unit": "Percentage of net pre-retirement earnings at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension replacement rate at 50% of average wage. Sexo: hombres; opcionalidad: MV. Literal de la fuente.",
+      "quote": "ESP: NPRR50 = 78.6 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "npw100-mujeres-z-z-fctr-wg-sal-n-i-inc-2024",
+      "value": 20.1,
+      "unit": "Factor of net individual wage at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension wealth at 100% of average wage. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: NPW100 = 20.1 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "npw100-hombres-z-z-fctr-wg-sal-n-i-inc-2024",
+      "value": 17.5,
+      "unit": "Factor of net individual wage at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension wealth at 100% of average wage. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: NPW100 = 17.5 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "npw200-mujeres-z-z-fctr-wg-sal-n-i-inc-2024",
+      "value": 13.5,
+      "unit": "Factor of net individual wage at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension wealth at 200% of average wage. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: NPW200 = 13.5 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "npw200-hombres-z-z-fctr-wg-sal-n-i-inc-2024",
+      "value": 11.7,
+      "unit": "Factor of net individual wage at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension wealth at 200% of average wage. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: NPW200 = 11.7 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "npw50-mujeres-z-z-fctr-wg-sal-n-i-inc-2024",
+      "value": 18.3,
+      "unit": "Factor of net individual wage at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension wealth at 50% of average wage. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: NPW50 = 18.3 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "npw50-hombres-z-z-fctr-wg-sal-n-i-inc-2024",
+      "value": 15.9,
+      "unit": "Factor of net individual wage at the same income level",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Net pension wealth at 50% of average wage. Sexo: hombres; opcionalidad: _Z. Literal de la fuente.",
+      "quote": "ESP: NPW50 = 15.9 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    }
+  ]
+}

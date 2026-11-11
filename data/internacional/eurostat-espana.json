@@ -1,0 +1,1924 @@
+{
+  "tipo": "datos",
+  "id": "eurostat-espana",
+  "title": "Eurostat: indicadores de pensiones, pobreza de mayores y empleo para España",
+  "description": "Series de España de Eurostat: gasto en pensiones de vejez y supervivencia (% del PIB y millones de euros), riesgo de pobreza o exclusión de mayores de 65 años, tasa de empleo de 55 a 64 años y duración de la vida laboral.",
+  "series": [
+    {
+      "id": "duracion-vida-laboral-hombres-y15-yr",
+      "title": "duracion-vida-laboral (España; sexo hombres; edad Y15+; unidad YR)",
+      "unit": "años",
+      "source": {
+        "title": "Duration of working life (lfsi_dwl_a)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_dwl_a/default/table?lang=en",
+        "docId": "eurostat-lfsi_dwl_a"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2000",
+          "value": 37.1
+        },
+        {
+          "period": "2001",
+          "value": 36.8
+        },
+        {
+          "period": "2002",
+          "value": 37.0
+        },
+        {
+          "period": "2003",
+          "value": 37.3
+        },
+        {
+          "period": "2004",
+          "value": 37.4
+        },
+        {
+          "period": "2005",
+          "value": 37.9
+        },
+        {
+          "period": "2006",
+          "value": 38.1
+        },
+        {
+          "period": "2007",
+          "value": 38.2
+        },
+        {
+          "period": "2008",
+          "value": 38.3
+        },
+        {
+          "period": "2009",
+          "value": 37.9
+        },
+        {
+          "period": "2010",
+          "value": 37.7
+        },
+        {
+          "period": "2011",
+          "value": 37.4
+        },
+        {
+          "period": "2012",
+          "value": 37.3
+        },
+        {
+          "period": "2013",
+          "value": 37.2
+        },
+        {
+          "period": "2014",
+          "value": 37.1
+        },
+        {
+          "period": "2015",
+          "value": 37.3
+        },
+        {
+          "period": "2016",
+          "value": 37.2
+        },
+        {
+          "period": "2017",
+          "value": 37.3
+        },
+        {
+          "period": "2018",
+          "value": 37.4
+        },
+        {
+          "period": "2019",
+          "value": 37.5
+        },
+        {
+          "period": "2020",
+          "value": 36.7
+        },
+        {
+          "period": "2021",
+          "value": 37.4
+        },
+        {
+          "period": "2022",
+          "value": 37.8
+        },
+        {
+          "period": "2023",
+          "value": 38.1
+        },
+        {
+          "period": "2024",
+          "value": 38.3
+        },
+        {
+          "period": "2025",
+          "value": 38.5
+        }
+      ]
+    },
+    {
+      "id": "duracion-vida-laboral-mujeres-y15-yr",
+      "title": "duracion-vida-laboral (España; sexo mujeres; edad Y15+; unidad YR)",
+      "unit": "años",
+      "source": {
+        "title": "Duration of working life (lfsi_dwl_a)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_dwl_a/default/table?lang=en",
+        "docId": "eurostat-lfsi_dwl_a"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2000",
+          "value": 24.2
+        },
+        {
+          "period": "2001",
+          "value": 23.5
+        },
+        {
+          "period": "2002",
+          "value": 24.9
+        },
+        {
+          "period": "2003",
+          "value": 25.7
+        },
+        {
+          "period": "2004",
+          "value": 26.5
+        },
+        {
+          "period": "2005",
+          "value": 27.5
+        },
+        {
+          "period": "2006",
+          "value": 28.4
+        },
+        {
+          "period": "2007",
+          "value": 29.0
+        },
+        {
+          "period": "2008",
+          "value": 29.9
+        },
+        {
+          "period": "2009",
+          "value": 30.6
+        },
+        {
+          "period": "2010",
+          "value": 31.1
+        },
+        {
+          "period": "2011",
+          "value": 31.6
+        },
+        {
+          "period": "2012",
+          "value": 32.1
+        },
+        {
+          "period": "2013",
+          "value": 32.3
+        },
+        {
+          "period": "2014",
+          "value": 32.4
+        },
+        {
+          "period": "2015",
+          "value": 32.5
+        },
+        {
+          "period": "2016",
+          "value": 32.8
+        },
+        {
+          "period": "2017",
+          "value": 32.8
+        },
+        {
+          "period": "2018",
+          "value": 32.8
+        },
+        {
+          "period": "2019",
+          "value": 33.1
+        },
+        {
+          "period": "2020",
+          "value": 32.6
+        },
+        {
+          "period": "2021",
+          "value": 33.7
+        },
+        {
+          "period": "2022",
+          "value": 33.9
+        },
+        {
+          "period": "2023",
+          "value": 34.5
+        },
+        {
+          "period": "2024",
+          "value": 34.6
+        },
+        {
+          "period": "2025",
+          "value": 35.1
+        }
+      ]
+    },
+    {
+      "id": "duracion-vida-laboral-total-y15-yr",
+      "title": "duracion-vida-laboral (España; sexo total; edad Y15+; unidad YR)",
+      "unit": "años",
+      "source": {
+        "title": "Duration of working life (lfsi_dwl_a)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_dwl_a/default/table?lang=en",
+        "docId": "eurostat-lfsi_dwl_a"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2000",
+          "value": 30.9
+        },
+        {
+          "period": "2001",
+          "value": 30.4
+        },
+        {
+          "period": "2002",
+          "value": 31.1
+        },
+        {
+          "period": "2003",
+          "value": 31.7
+        },
+        {
+          "period": "2004",
+          "value": 32.1
+        },
+        {
+          "period": "2005",
+          "value": 32.9
+        },
+        {
+          "period": "2006",
+          "value": 33.4
+        },
+        {
+          "period": "2007",
+          "value": 33.7
+        },
+        {
+          "period": "2008",
+          "value": 34.2
+        },
+        {
+          "period": "2009",
+          "value": 34.3
+        },
+        {
+          "period": "2010",
+          "value": 34.5
+        },
+        {
+          "period": "2011",
+          "value": 34.6
+        },
+        {
+          "period": "2012",
+          "value": 34.8
+        },
+        {
+          "period": "2013",
+          "value": 34.8
+        },
+        {
+          "period": "2014",
+          "value": 34.8
+        },
+        {
+          "period": "2015",
+          "value": 35.0
+        },
+        {
+          "period": "2016",
+          "value": 35.1
+        },
+        {
+          "period": "2017",
+          "value": 35.1
+        },
+        {
+          "period": "2018",
+          "value": 35.2
+        },
+        {
+          "period": "2019",
+          "value": 35.4
+        },
+        {
+          "period": "2020",
+          "value": 34.7
+        },
+        {
+          "period": "2021",
+          "value": 35.6
+        },
+        {
+          "period": "2022",
+          "value": 35.9
+        },
+        {
+          "period": "2023",
+          "value": 36.3
+        },
+        {
+          "period": "2024",
+          "value": 36.5
+        },
+        {
+          "period": "2025",
+          "value": 36.8
+        }
+      ]
+    },
+    {
+      "id": "empleo-55-64-hombres-y55-64-pc-pop",
+      "title": "empleo-55-64 (España; sexo hombres; edad Y55-64; unidad PC_POP)",
+      "unit": "% de la población",
+      "source": {
+        "title": "Employment and labour force by sex and age, annual data (lfsi_emp_a)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_a/default/table?lang=en",
+        "docId": "eurostat-lfsi_emp_a"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2009",
+          "value": 56.4
+        },
+        {
+          "period": "2010",
+          "value": 54.5
+        },
+        {
+          "period": "2011",
+          "value": 53.8
+        },
+        {
+          "period": "2012",
+          "value": 52.1
+        },
+        {
+          "period": "2013",
+          "value": 50.5
+        },
+        {
+          "period": "2014",
+          "value": 51.2
+        },
+        {
+          "period": "2015",
+          "value": 54.0
+        },
+        {
+          "period": "2016",
+          "value": 55.7
+        },
+        {
+          "period": "2017",
+          "value": 57.8
+        },
+        {
+          "period": "2018",
+          "value": 59.7
+        },
+        {
+          "period": "2019",
+          "value": 61.1
+        },
+        {
+          "period": "2020",
+          "value": 61.6
+        },
+        {
+          "period": "2021",
+          "value": 62.7
+        },
+        {
+          "period": "2022",
+          "value": 64.7
+        },
+        {
+          "period": "2023",
+          "value": 66.3
+        },
+        {
+          "period": "2024",
+          "value": 68.0
+        },
+        {
+          "period": "2025",
+          "value": 68.7
+        }
+      ]
+    },
+    {
+      "id": "empleo-55-64-mujeres-y55-64-pc-pop",
+      "title": "empleo-55-64 (España; sexo mujeres; edad Y55-64; unidad PC_POP)",
+      "unit": "% de la población",
+      "source": {
+        "title": "Employment and labour force by sex and age, annual data (lfsi_emp_a)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_a/default/table?lang=en",
+        "docId": "eurostat-lfsi_emp_a"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2009",
+          "value": 32.1
+        },
+        {
+          "period": "2010",
+          "value": 33.1
+        },
+        {
+          "period": "2011",
+          "value": 35.6
+        },
+        {
+          "period": "2012",
+          "value": 36.0
+        },
+        {
+          "period": "2013",
+          "value": 36.3
+        },
+        {
+          "period": "2014",
+          "value": 37.8
+        },
+        {
+          "period": "2015",
+          "value": 40.2
+        },
+        {
+          "period": "2016",
+          "value": 42.8
+        },
+        {
+          "period": "2017",
+          "value": 43.5
+        },
+        {
+          "period": "2018",
+          "value": 44.9
+        },
+        {
+          "period": "2019",
+          "value": 46.9
+        },
+        {
+          "period": "2020",
+          "value": 48.0
+        },
+        {
+          "period": "2021",
+          "value": 49.2
+        },
+        {
+          "period": "2022",
+          "value": 50.9
+        },
+        {
+          "period": "2023",
+          "value": 53.0
+        },
+        {
+          "period": "2024",
+          "value": 54.5
+        },
+        {
+          "period": "2025",
+          "value": 56.4
+        }
+      ]
+    },
+    {
+      "id": "empleo-55-64-total-y55-64-pc-pop",
+      "title": "empleo-55-64 (España; sexo total; edad Y55-64; unidad PC_POP)",
+      "unit": "% de la población",
+      "source": {
+        "title": "Employment and labour force by sex and age, annual data (lfsi_emp_a)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_a/default/table?lang=en",
+        "docId": "eurostat-lfsi_emp_a"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2009",
+          "value": 44.0
+        },
+        {
+          "period": "2010",
+          "value": 43.5
+        },
+        {
+          "period": "2011",
+          "value": 44.5
+        },
+        {
+          "period": "2012",
+          "value": 43.9
+        },
+        {
+          "period": "2013",
+          "value": 43.2
+        },
+        {
+          "period": "2014",
+          "value": 44.3
+        },
+        {
+          "period": "2015",
+          "value": 46.9
+        },
+        {
+          "period": "2016",
+          "value": 49.1
+        },
+        {
+          "period": "2017",
+          "value": 50.5
+        },
+        {
+          "period": "2018",
+          "value": 52.2
+        },
+        {
+          "period": "2019",
+          "value": 53.8
+        },
+        {
+          "period": "2020",
+          "value": 54.7
+        },
+        {
+          "period": "2021",
+          "value": 55.8
+        },
+        {
+          "period": "2022",
+          "value": 57.7
+        },
+        {
+          "period": "2023",
+          "value": 59.5
+        },
+        {
+          "period": "2024",
+          "value": 61.1
+        },
+        {
+          "period": "2025",
+          "value": 62.4
+        }
+      ]
+    },
+    {
+      "id": "gasto-old-no-aplica-no-aplica-mio-eur",
+      "title": "gasto-old (España; sexo no-aplica; edad no-aplica; unidad MIO_EUR)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Expenditure on social benefits by function (spr_exp_func)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+        "docId": "eurostat-spr_exp_func"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1990",
+          "value": 29625.5
+        },
+        {
+          "period": "1991",
+          "value": 33529.67
+        },
+        {
+          "period": "1992",
+          "value": 36508.47
+        },
+        {
+          "period": "1993",
+          "value": 35448.05
+        },
+        {
+          "period": "1994",
+          "value": 35377.67
+        },
+        {
+          "period": "1995",
+          "value": 37830.57
+        },
+        {
+          "period": "1996",
+          "value": 41447.07
+        },
+        {
+          "period": "1997",
+          "value": 42320.79
+        },
+        {
+          "period": "1998",
+          "value": 44473.36
+        },
+        {
+          "period": "1999",
+          "value": 47174.23
+        },
+        {
+          "period": "2000",
+          "value": 42894.14
+        },
+        {
+          "period": "2001",
+          "value": 45035.53
+        },
+        {
+          "period": "2002",
+          "value": 48409.47
+        },
+        {
+          "period": "2003",
+          "value": 51343.15
+        },
+        {
+          "period": "2004",
+          "value": 54625.34
+        },
+        {
+          "period": "2005",
+          "value": 59033.32
+        },
+        {
+          "period": "2006",
+          "value": 63702.87
+        },
+        {
+          "period": "2007",
+          "value": 71005.28
+        },
+        {
+          "period": "2008",
+          "value": 76990.16
+        },
+        {
+          "period": "2009",
+          "value": 83160.59
+        },
+        {
+          "period": "2010",
+          "value": 87999.31
+        },
+        {
+          "period": "2011",
+          "value": 91341.91
+        },
+        {
+          "period": "2012",
+          "value": 94277.68
+        },
+        {
+          "period": "2013",
+          "value": 98097.07
+        },
+        {
+          "period": "2014",
+          "value": 101580.15
+        },
+        {
+          "period": "2015",
+          "value": 104439.74
+        },
+        {
+          "period": "2016",
+          "value": 107964.91
+        },
+        {
+          "period": "2017",
+          "value": 109374.81
+        },
+        {
+          "period": "2018",
+          "value": 116548.66
+        },
+        {
+          "period": "2019",
+          "value": 122380.46
+        },
+        {
+          "period": "2020",
+          "value": 126318.89
+        },
+        {
+          "period": "2021",
+          "value": 132456.11
+        },
+        {
+          "period": "2022",
+          "value": 140274.77
+        },
+        {
+          "period": "2023",
+          "value": 156113.81
+        },
+        {
+          "period": "2024",
+          "value": 169118.33
+        },
+        {
+          "period": "2025",
+          "value": 180784.08
+        }
+      ]
+    },
+    {
+      "id": "gasto-old-no-aplica-no-aplica-pc-gdp",
+      "title": "gasto-old (España; sexo no-aplica; edad no-aplica; unidad PC_GDP)",
+      "unit": "% del PIB",
+      "source": {
+        "title": "Expenditure on social benefits by function (spr_exp_func)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+        "docId": "eurostat-spr_exp_func"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1995",
+          "value": 8.05
+        },
+        {
+          "period": "1996",
+          "value": 8.19
+        },
+        {
+          "period": "1997",
+          "value": 8.13
+        },
+        {
+          "period": "1998",
+          "value": 8.04
+        },
+        {
+          "period": "1999",
+          "value": 7.93
+        },
+        {
+          "period": "2000",
+          "value": 6.62
+        },
+        {
+          "period": "2001",
+          "value": 6.42
+        },
+        {
+          "period": "2002",
+          "value": 6.46
+        },
+        {
+          "period": "2003",
+          "value": 6.4
+        },
+        {
+          "period": "2004",
+          "value": 6.35
+        },
+        {
+          "period": "2005",
+          "value": 6.36
+        },
+        {
+          "period": "2006",
+          "value": 6.34
+        },
+        {
+          "period": "2007",
+          "value": 6.59
+        },
+        {
+          "period": "2008",
+          "value": 6.92
+        },
+        {
+          "period": "2009",
+          "value": 7.75
+        },
+        {
+          "period": "2010",
+          "value": 8.17
+        },
+        {
+          "period": "2011",
+          "value": 8.55
+        },
+        {
+          "period": "2012",
+          "value": 9.1
+        },
+        {
+          "period": "2013",
+          "value": 9.56
+        },
+        {
+          "period": "2014",
+          "value": 9.78
+        },
+        {
+          "period": "2015",
+          "value": 9.61
+        },
+        {
+          "period": "2016",
+          "value": 9.61
+        },
+        {
+          "period": "2017",
+          "value": 9.35
+        },
+        {
+          "period": "2018",
+          "value": 9.61
+        },
+        {
+          "period": "2019",
+          "value": 9.76
+        },
+        {
+          "period": "2020",
+          "value": 11.19
+        },
+        {
+          "period": "2021",
+          "value": 10.72
+        },
+        {
+          "period": "2022",
+          "value": 10.2
+        },
+        {
+          "period": "2023",
+          "value": 10.43
+        },
+        {
+          "period": "2024",
+          "value": 10.58
+        },
+        {
+          "period": "2025",
+          "value": 10.7
+        }
+      ]
+    },
+    {
+      "id": "gasto-old-srv-no-aplica-no-aplica-mio-eur",
+      "title": "gasto-old-srv (España; sexo no-aplica; edad no-aplica; unidad MIO_EUR)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Expenditure on social benefits by function (spr_exp_func)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+        "docId": "eurostat-spr_exp_func"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1990",
+          "value": 33176.47
+        },
+        {
+          "period": "1991",
+          "value": 37488.17
+        },
+        {
+          "period": "1992",
+          "value": 40752.85
+        },
+        {
+          "period": "1993",
+          "value": 39361.77
+        },
+        {
+          "period": "1994",
+          "value": 39394.19
+        },
+        {
+          "period": "1995",
+          "value": 41974.12
+        },
+        {
+          "period": "1996",
+          "value": 45864.57
+        },
+        {
+          "period": "1997",
+          "value": 46712.93
+        },
+        {
+          "period": "1998",
+          "value": 48022.49
+        },
+        {
+          "period": "1999",
+          "value": 50738.7
+        },
+        {
+          "period": "2000",
+          "value": 55865.88
+        },
+        {
+          "period": "2001",
+          "value": 58465.53
+        },
+        {
+          "period": "2002",
+          "value": 62827.66
+        },
+        {
+          "period": "2003",
+          "value": 66827.46
+        },
+        {
+          "period": "2004",
+          "value": 71609.88
+        },
+        {
+          "period": "2005",
+          "value": 77342.86
+        },
+        {
+          "period": "2006",
+          "value": 82959.72
+        },
+        {
+          "period": "2007",
+          "value": 91445.28
+        },
+        {
+          "period": "2008",
+          "value": 98551.06
+        },
+        {
+          "period": "2009",
+          "value": 105599.5
+        },
+        {
+          "period": "2010",
+          "value": 111344.44
+        },
+        {
+          "period": "2011",
+          "value": 115215.32
+        },
+        {
+          "period": "2012",
+          "value": 118660.83
+        },
+        {
+          "period": "2013",
+          "value": 123214.57
+        },
+        {
+          "period": "2014",
+          "value": 127143.69
+        },
+        {
+          "period": "2015",
+          "value": 130125.04
+        },
+        {
+          "period": "2016",
+          "value": 133951.32
+        },
+        {
+          "period": "2017",
+          "value": 135670.9
+        },
+        {
+          "period": "2018",
+          "value": 144206.74
+        },
+        {
+          "period": "2019",
+          "value": 151536.33
+        },
+        {
+          "period": "2020",
+          "value": 155962.11
+        },
+        {
+          "period": "2021",
+          "value": 162874.93
+        },
+        {
+          "period": "2022",
+          "value": 171818.78
+        },
+        {
+          "period": "2023",
+          "value": 190308.8
+        },
+        {
+          "period": "2024",
+          "value": 205009.77
+        },
+        {
+          "period": "2025",
+          "value": 218085.65
+        }
+      ]
+    },
+    {
+      "id": "gasto-old-srv-no-aplica-no-aplica-pc-gdp",
+      "title": "gasto-old-srv (España; sexo no-aplica; edad no-aplica; unidad PC_GDP)",
+      "unit": "% del PIB",
+      "source": {
+        "title": "Expenditure on social benefits by function (spr_exp_func)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+        "docId": "eurostat-spr_exp_func"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1995",
+          "value": 8.93
+        },
+        {
+          "period": "1996",
+          "value": 9.06
+        },
+        {
+          "period": "1997",
+          "value": 8.97
+        },
+        {
+          "period": "1998",
+          "value": 8.69
+        },
+        {
+          "period": "1999",
+          "value": 8.52
+        },
+        {
+          "period": "2000",
+          "value": 8.63
+        },
+        {
+          "period": "2001",
+          "value": 8.34
+        },
+        {
+          "period": "2002",
+          "value": 8.38
+        },
+        {
+          "period": "2003",
+          "value": 8.33
+        },
+        {
+          "period": "2004",
+          "value": 8.33
+        },
+        {
+          "period": "2005",
+          "value": 8.33
+        },
+        {
+          "period": "2006",
+          "value": 8.25
+        },
+        {
+          "period": "2007",
+          "value": 8.49
+        },
+        {
+          "period": "2008",
+          "value": 8.86
+        },
+        {
+          "period": "2009",
+          "value": 9.84
+        },
+        {
+          "period": "2010",
+          "value": 10.34
+        },
+        {
+          "period": "2011",
+          "value": 10.78
+        },
+        {
+          "period": "2012",
+          "value": 11.45
+        },
+        {
+          "period": "2013",
+          "value": 12.01
+        },
+        {
+          "period": "2014",
+          "value": 12.24
+        },
+        {
+          "period": "2015",
+          "value": 11.97
+        },
+        {
+          "period": "2016",
+          "value": 11.93
+        },
+        {
+          "period": "2017",
+          "value": 11.6
+        },
+        {
+          "period": "2018",
+          "value": 11.9
+        },
+        {
+          "period": "2019",
+          "value": 12.09
+        },
+        {
+          "period": "2020",
+          "value": 13.81
+        },
+        {
+          "period": "2021",
+          "value": 13.18
+        },
+        {
+          "period": "2022",
+          "value": 12.49
+        },
+        {
+          "period": "2023",
+          "value": 12.72
+        },
+        {
+          "period": "2024",
+          "value": 12.82
+        },
+        {
+          "period": "2025",
+          "value": 12.9
+        }
+      ]
+    },
+    {
+      "id": "gasto-srv-no-aplica-no-aplica-mio-eur",
+      "title": "gasto-srv (España; sexo no-aplica; edad no-aplica; unidad MIO_EUR)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Expenditure on social benefits by function (spr_exp_func)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+        "docId": "eurostat-spr_exp_func"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1990",
+          "value": 3550.97
+        },
+        {
+          "period": "1991",
+          "value": 3958.49
+        },
+        {
+          "period": "1992",
+          "value": 4244.38
+        },
+        {
+          "period": "1993",
+          "value": 3913.73
+        },
+        {
+          "period": "1994",
+          "value": 4016.51
+        },
+        {
+          "period": "1995",
+          "value": 4143.55
+        },
+        {
+          "period": "1996",
+          "value": 4417.5
+        },
+        {
+          "period": "1997",
+          "value": 4392.14
+        },
+        {
+          "period": "1998",
+          "value": 3549.12
+        },
+        {
+          "period": "1999",
+          "value": 3564.47
+        },
+        {
+          "period": "2000",
+          "value": 12971.75
+        },
+        {
+          "period": "2001",
+          "value": 13430
+        },
+        {
+          "period": "2002",
+          "value": 14418.19
+        },
+        {
+          "period": "2003",
+          "value": 15484.31
+        },
+        {
+          "period": "2004",
+          "value": 16984.54
+        },
+        {
+          "period": "2005",
+          "value": 18309.54
+        },
+        {
+          "period": "2006",
+          "value": 19256.85
+        },
+        {
+          "period": "2007",
+          "value": 20440.01
+        },
+        {
+          "period": "2008",
+          "value": 21560.9
+        },
+        {
+          "period": "2009",
+          "value": 22438.91
+        },
+        {
+          "period": "2010",
+          "value": 23345.14
+        },
+        {
+          "period": "2011",
+          "value": 23873.41
+        },
+        {
+          "period": "2012",
+          "value": 24383.14
+        },
+        {
+          "period": "2013",
+          "value": 25117.5
+        },
+        {
+          "period": "2014",
+          "value": 25563.54
+        },
+        {
+          "period": "2015",
+          "value": 25685.3
+        },
+        {
+          "period": "2016",
+          "value": 25986.41
+        },
+        {
+          "period": "2017",
+          "value": 26296.08
+        },
+        {
+          "period": "2018",
+          "value": 27658.07
+        },
+        {
+          "period": "2019",
+          "value": 29155.87
+        },
+        {
+          "period": "2020",
+          "value": 29643.22
+        },
+        {
+          "period": "2021",
+          "value": 30418.82
+        },
+        {
+          "period": "2022",
+          "value": 31544.02
+        },
+        {
+          "period": "2023",
+          "value": 34195
+        },
+        {
+          "period": "2024",
+          "value": 35891.43
+        },
+        {
+          "period": "2025",
+          "value": 37301.57
+        }
+      ]
+    },
+    {
+      "id": "gasto-srv-no-aplica-no-aplica-pc-gdp",
+      "title": "gasto-srv (España; sexo no-aplica; edad no-aplica; unidad PC_GDP)",
+      "unit": "% del PIB",
+      "source": {
+        "title": "Expenditure on social benefits by function (spr_exp_func)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+        "docId": "eurostat-spr_exp_func"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1995",
+          "value": 0.88
+        },
+        {
+          "period": "1996",
+          "value": 0.87
+        },
+        {
+          "period": "1997",
+          "value": 0.84
+        },
+        {
+          "period": "1998",
+          "value": 0.64
+        },
+        {
+          "period": "1999",
+          "value": 0.6
+        },
+        {
+          "period": "2000",
+          "value": 2
+        },
+        {
+          "period": "2001",
+          "value": 1.92
+        },
+        {
+          "period": "2002",
+          "value": 1.92
+        },
+        {
+          "period": "2003",
+          "value": 1.93
+        },
+        {
+          "period": "2004",
+          "value": 1.97
+        },
+        {
+          "period": "2005",
+          "value": 1.97
+        },
+        {
+          "period": "2006",
+          "value": 1.92
+        },
+        {
+          "period": "2007",
+          "value": 1.9
+        },
+        {
+          "period": "2008",
+          "value": 1.94
+        },
+        {
+          "period": "2009",
+          "value": 2.09
+        },
+        {
+          "period": "2010",
+          "value": 2.17
+        },
+        {
+          "period": "2011",
+          "value": 2.23
+        },
+        {
+          "period": "2012",
+          "value": 2.35
+        },
+        {
+          "period": "2013",
+          "value": 2.45
+        },
+        {
+          "period": "2014",
+          "value": 2.46
+        },
+        {
+          "period": "2015",
+          "value": 2.36
+        },
+        {
+          "period": "2016",
+          "value": 2.31
+        },
+        {
+          "period": "2017",
+          "value": 2.25
+        },
+        {
+          "period": "2018",
+          "value": 2.28
+        },
+        {
+          "period": "2019",
+          "value": 2.33
+        },
+        {
+          "period": "2020",
+          "value": 2.63
+        },
+        {
+          "period": "2021",
+          "value": 2.46
+        },
+        {
+          "period": "2022",
+          "value": 2.29
+        },
+        {
+          "period": "2023",
+          "value": 2.29
+        },
+        {
+          "period": "2024",
+          "value": 2.25
+        },
+        {
+          "period": "2025",
+          "value": 2.21
+        }
+      ]
+    },
+    {
+      "id": "gasto-total-no-aplica-no-aplica-mio-eur",
+      "title": "gasto-total (España; sexo no-aplica; edad no-aplica; unidad MIO_EUR)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Expenditure on social benefits by function (spr_exp_func)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+        "docId": "eurostat-spr_exp_func"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1990",
+          "value": 77412.7
+        },
+        {
+          "period": "1991",
+          "value": 90491.68
+        },
+        {
+          "period": "1992",
+          "value": 99923.72
+        },
+        {
+          "period": "1993",
+          "value": 98176.67
+        },
+        {
+          "period": "1994",
+          "value": 93496.01
+        },
+        {
+          "period": "1995",
+          "value": 95544.76
+        },
+        {
+          "period": "1996",
+          "value": 102695.05
+        },
+        {
+          "period": "1997",
+          "value": 102544.3
+        },
+        {
+          "period": "1998",
+          "value": 105603.08
+        },
+        {
+          "period": "1999",
+          "value": 111650.77
+        },
+        {
+          "period": "2000",
+          "value": 123077.1
+        },
+        {
+          "period": "2001",
+          "value": 130883.45
+        },
+        {
+          "period": "2002",
+          "value": 142528.62
+        },
+        {
+          "period": "2003",
+          "value": 155063.55
+        },
+        {
+          "period": "2004",
+          "value": 166992.58
+        },
+        {
+          "period": "2005",
+          "value": 182509.46
+        },
+        {
+          "period": "2006",
+          "value": 196942.26
+        },
+        {
+          "period": "2007",
+          "value": 213812.76
+        },
+        {
+          "period": "2008",
+          "value": 234129.82
+        },
+        {
+          "period": "2009",
+          "value": 258474.73
+        },
+        {
+          "period": "2010",
+          "value": 261066.63
+        },
+        {
+          "period": "2011",
+          "value": 266227.29
+        },
+        {
+          "period": "2012",
+          "value": 259844.89
+        },
+        {
+          "period": "2013",
+          "value": 259735.77
+        },
+        {
+          "period": "2014",
+          "value": 258681.51
+        },
+        {
+          "period": "2015",
+          "value": 261400.23
+        },
+        {
+          "period": "2016",
+          "value": 260942.57
+        },
+        {
+          "period": "2017",
+          "value": 267435.03
+        },
+        {
+          "period": "2018",
+          "value": 280354.22
+        },
+        {
+          "period": "2019",
+          "value": 296879
+        },
+        {
+          "period": "2020",
+          "value": 332678.61
+        },
+        {
+          "period": "2021",
+          "value": 339301.14
+        },
+        {
+          "period": "2022",
+          "value": 346594.78
+        },
+        {
+          "period": "2023",
+          "value": 370436.46
+        },
+        {
+          "period": "2024",
+          "value": 401818.51
+        },
+        {
+          "period": "2025",
+          "value": 427072.22
+        }
+      ]
+    },
+    {
+      "id": "gasto-total-no-aplica-no-aplica-pc-gdp",
+      "title": "gasto-total (España; sexo no-aplica; edad no-aplica; unidad PC_GDP)",
+      "unit": "% del PIB",
+      "source": {
+        "title": "Expenditure on social benefits by function (spr_exp_func)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+        "docId": "eurostat-spr_exp_func"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1995",
+          "value": 20.34
+        },
+        {
+          "period": "1996",
+          "value": 20.29
+        },
+        {
+          "period": "1997",
+          "value": 19.7
+        },
+        {
+          "period": "1998",
+          "value": 19.1
+        },
+        {
+          "period": "1999",
+          "value": 18.76
+        },
+        {
+          "period": "2000",
+          "value": 19.01
+        },
+        {
+          "period": "2001",
+          "value": 18.67
+        },
+        {
+          "period": "2002",
+          "value": 19.01
+        },
+        {
+          "period": "2003",
+          "value": 19.32
+        },
+        {
+          "period": "2004",
+          "value": 19.42
+        },
+        {
+          "period": "2005",
+          "value": 19.66
+        },
+        {
+          "period": "2006",
+          "value": 19.6
+        },
+        {
+          "period": "2007",
+          "value": 19.84
+        },
+        {
+          "period": "2008",
+          "value": 21.05
+        },
+        {
+          "period": "2009",
+          "value": 24.09
+        },
+        {
+          "period": "2010",
+          "value": 24.24
+        },
+        {
+          "period": "2011",
+          "value": 24.91
+        },
+        {
+          "period": "2012",
+          "value": 25.08
+        },
+        {
+          "period": "2013",
+          "value": 25.32
+        },
+        {
+          "period": "2014",
+          "value": 24.9
+        },
+        {
+          "period": "2015",
+          "value": 24.05
+        },
+        {
+          "period": "2016",
+          "value": 23.24
+        },
+        {
+          "period": "2017",
+          "value": 22.86
+        },
+        {
+          "period": "2018",
+          "value": 23.13
+        },
+        {
+          "period": "2019",
+          "value": 23.68
+        },
+        {
+          "period": "2020",
+          "value": 29.46
+        },
+        {
+          "period": "2021",
+          "value": 27.46
+        },
+        {
+          "period": "2022",
+          "value": 25.19
+        },
+        {
+          "period": "2023",
+          "value": 24.76
+        },
+        {
+          "period": "2024",
+          "value": 25.14
+        },
+        {
+          "period": "2025",
+          "value": 25.27
+        }
+      ]
+    },
+    {
+      "id": "pobreza-o-exclusion-total-total-pc",
+      "title": "pobreza-o-exclusion (España; sexo total; edad TOTAL; unidad PC)",
+      "unit": "%",
+      "source": {
+        "title": "Persons at risk of poverty or social exclusion by age and sex (ilc_peps01n)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en",
+        "docId": "eurostat-ilc_peps01n"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2015",
+          "value": 28.7
+        },
+        {
+          "period": "2016",
+          "value": 28.8
+        },
+        {
+          "period": "2017",
+          "value": 27.5
+        },
+        {
+          "period": "2018",
+          "value": 27.3
+        },
+        {
+          "period": "2019",
+          "value": 26.2
+        },
+        {
+          "period": "2020",
+          "value": 27.0
+        },
+        {
+          "period": "2021",
+          "value": 27.8
+        },
+        {
+          "period": "2022",
+          "value": 26.0
+        },
+        {
+          "period": "2023",
+          "value": 26.5
+        },
+        {
+          "period": "2024",
+          "value": 25.8
+        },
+        {
+          "period": "2025",
+          "value": 25.7
+        }
+      ]
+    },
+    {
+      "id": "pobreza-o-exclusion-total-y-ge65-pc",
+      "title": "pobreza-o-exclusion (España; sexo total; edad Y_GE65; unidad PC)",
+      "unit": "%",
+      "source": {
+        "title": "Persons at risk of poverty or social exclusion by age and sex (ilc_peps01n)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en",
+        "docId": "eurostat-ilc_peps01n"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2015",
+          "value": 14.5
+        },
+        {
+          "period": "2016",
+          "value": 16.0
+        },
+        {
+          "period": "2017",
+          "value": 18.9
+        },
+        {
+          "period": "2018",
+          "value": 20.7
+        },
+        {
+          "period": "2019",
+          "value": 18.1
+        },
+        {
+          "period": "2020",
+          "value": 21.6
+        },
+        {
+          "period": "2021",
+          "value": 20.5
+        },
+        {
+          "period": "2022",
+          "value": 21.3
+        },
+        {
+          "period": "2023",
+          "value": 20.9
+        },
+        {
+          "period": "2024",
+          "value": 19.5
+        },
+        {
+          "period": "2025",
+          "value": 19.2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "tipo": "tabla",
+  "id": "ocde-pag",
+  "title": "OCDE, Pensions at a Glance: indicadores de pensiones por país (11 países, media OCDE y UE-27)",
+  "description": "Observaciones del flujo SDMX «Pensions at a Glance» (OCDE) para España, Alemania, Francia, Italia, Suecia, Portugal, Países Bajos, Dinamarca, Polonia, Reino Unido, Estados Unidos, la media OCDE (OECD_REP) y la UE-27 (EU27). Incluye, con el código y el literal de `ocde-pag-codigos`: tasas de reposición bruta y neta (GPRR, NPRR) al 50 %, 100 % y 200 % del salario medio, riqueza de pensiones (GPW, NPW), edad de jubilación actual y futura de quien entra en el mercado laboral a los 22 años (CRPLF22, FRPLF22), gasto público en pensiones sobre el PIB (PEP, proyecciones PPEP), pobreza de renta de los mayores (OAIP), ratio de dependencia de mayores (OAWAR), esperanza de vida (LE), tasa de empleo (ER), edad efectiva de salida del mercado laboral (ELMEA) y años esperados de pensión (EYLME), entre otros. Las tasas de reposición de la OCDE son teóricas (carrera completa desde los 22 años, pensión obligatoria, parámetros de 2024) y los niveles de renta son 0,5, 1 y 2 veces el salario medio (la fuente no ofrece 1,5). Los años y unidades son los de cada observación.",
+  "columnas": [
+    {
+      "id": "pais",
+      "descripcion": "Código de área de la OCDE (ISO 3 o agregado: OECD_REP = media OCDE, EU27 = UE-27)",
+      "unidad": null
+    },
+    {
+      "id": "medida",
+      "descripcion": "Código de la medida (literal en ocde-pag-codigos)",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "hombres, mujeres, total o no-aplica",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Código de edad de la fuente (_Z = no aplicable)",
+      "unidad": null
+    },
+    {
+      "id": "opcionalidad",
+      "descripcion": "M = obligatoria, MV = obligatoria y voluntaria, _Z = no aplicable",
+      "unidad": null
+    },
+    {
+      "id": "unidad",
+      "descripcion": "Código de unidad (literal en ocde-pag-codigos)",
+      "unidad": null
+    },
+    {
+      "id": "anio",
+      "descripcion": "Año de la observación (puede ser proyección)",
+      "unidad": null
+    },
+    {
+      "id": "valor",
+      "descripcion": "Valor de la observación",
+      "unidad": null
+    }
+  ],
+  "filas": 4923,
+  "source": {
+    "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+    "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+    "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+    "docId": "OECD-DSD_PAG-DF_PAG"
+  },
+  "origenes": [
+    {
+      "period": "2024",
+      "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+      "sha256": "5c0fa6cb7bbe762dd50ac8fec2d064bc7baaa1fd13e00574e73f64f30db7ce6e"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Descargado de la API SDMX pública de la OCDE el 2026-11-11 (todas las observaciones del flujo; aquí solo las de 13 áreas). Todas las observaciones tienen estado «A: Normal value». Los datos brutos están comprimidos en data-raw/oecd/."
+}
