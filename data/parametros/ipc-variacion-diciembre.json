@@ -1,0 +1,450 @@
+{
+  "tipo": "datos",
+  "id": "ipc-variacion-diciembre",
+  "title": "IPC: variación de diciembre a diciembre",
+  "description": "Tasa de variación anual del IPC general nacional en el mes de diciembre, publicada por el INE.",
+  "data": [
+    {
+      "id": "2000",
+      "value": 4.0,
+      "unit": "%",
+      "period": "2000",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2000: 4,0",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2001",
+      "value": 2.7,
+      "unit": "%",
+      "period": "2001",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2001: 2,7",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2002",
+      "value": 4.0,
+      "unit": "%",
+      "period": "2002",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2002: 4,0",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2003",
+      "value": 2.6,
+      "unit": "%",
+      "period": "2003",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2003: 2,6",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2004",
+      "value": 3.2,
+      "unit": "%",
+      "period": "2004",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2004: 3,2",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2005",
+      "value": 3.7,
+      "unit": "%",
+      "period": "2005",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2005: 3,7",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2006",
+      "value": 2.7,
+      "unit": "%",
+      "period": "2006",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2006: 2,7",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2007",
+      "value": 4.2,
+      "unit": "%",
+      "period": "2007",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2007: 4,2",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2008",
+      "value": 1.4,
+      "unit": "%",
+      "period": "2008",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2008: 1,4",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2009",
+      "value": 0.8,
+      "unit": "%",
+      "period": "2009",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2009: 0,8",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2010",
+      "value": 3.0,
+      "unit": "%",
+      "period": "2010",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2010: 3,0",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2011",
+      "value": 2.4,
+      "unit": "%",
+      "period": "2011",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2011: 2,4",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2012",
+      "value": 2.9,
+      "unit": "%",
+      "period": "2012",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2012: 2,9",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2013",
+      "value": 0.3,
+      "unit": "%",
+      "period": "2013",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2013: 0,3",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2014",
+      "value": -1.0,
+      "unit": "%",
+      "period": "2014",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2014: -1,0",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2015",
+      "value": 0.0,
+      "unit": "%",
+      "period": "2015",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2015: 0,0",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2016",
+      "value": 1.6,
+      "unit": "%",
+      "period": "2016",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2016: 1,6",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2017",
+      "value": 1.1,
+      "unit": "%",
+      "period": "2017",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2017: 1,1",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2018",
+      "value": 1.2,
+      "unit": "%",
+      "period": "2018",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2018: 1,2",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2019",
+      "value": 0.8,
+      "unit": "%",
+      "period": "2019",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2019: 0,8",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2020",
+      "value": -0.5,
+      "unit": "%",
+      "period": "2020",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2020: -0,5",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2021",
+      "value": 6.5,
+      "unit": "%",
+      "period": "2021",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2021: 6,5",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2022",
+      "value": 5.7,
+      "unit": "%",
+      "period": "2022",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2022: 5,7",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2023",
+      "value": 3.1,
+      "unit": "%",
+      "period": "2023",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2023: 3,1",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2024",
+      "value": 2.8,
+      "unit": "%",
+      "period": "2024",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2024: 2,8",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    },
+    {
+      "id": "2025",
+      "value": 2.9,
+      "unit": "%",
+      "period": "2025",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+        "docId": "IPC290750"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Variación anual del índice general en diciembre (de diciembre a diciembre).",
+      "quote": "Diciembre de 2025: 2,9",
+      "location": "serie IPC290750 del INE (Tempus3), mes de diciembre"
+    }
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "tipo": "datos",
+  "id": "ipc-indice-medio-anual",
+  "title": "IPC: índice medio anual (base 2025)",
+  "description": "Media anual del índice general nacional del IPC (base 2025 = 100), calculada con los índices mensuales del INE. Es la serie que usa el motor para convertir euros corrientes a euros constantes (src/engine/euros-constantes.ts). Cubre los años completos disponibles en la base vigente.",
+  "data": [
+    {
+      "id": "2002",
+      "value": 60.036,
+      "unit": "índice (base 2025)",
+      "period": "2002",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2002 (mes: valor): 1: 58,717; 2: 58,768; 3: 59,253; 4: 60,058; 5: 60,274; 6: 60,277; 7: 59,858; 8: 60,03; 9: 60,255; 10: 60,851; 11: 60,946; 12: 61,148",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2003",
+      "value": 61.861,
+      "unit": "índice (base 2025)",
+      "period": "2003",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2003 (mes: valor): 1: 60,896; 2: 61,026; 3: 61,449; 4: 61,949; 5: 61,892; 6: 61,933; 7: 61,545; 8: 61,827; 9: 62,011; 10: 62,429; 11: 62,633; 12: 62,74",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2004",
+      "value": 63.741,
+      "unit": "índice (base 2025)",
+      "period": "2004",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2004 (mes: valor): 1: 62,3; 2: 62,329; 3: 62,764; 4: 63,623; 5: 63,999; 6: 64,1; 7: 63,614; 8: 63,895; 9: 64,009; 10: 64,667; 11: 64,828; 12: 64,765",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2005",
+      "value": 65.888,
+      "unit": "índice (base 2025)",
+      "period": "2005",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2005 (mes: valor): 1: 64,219; 2: 64,386; 3: 64,895; 4: 65,83; 5: 65,956; 6: 66,11; 7: 65,705; 8: 65,994; 9: 66,399; 10: 66,939; 11: 67,04; 12: 67,184",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2006",
+      "value": 68.205,
+      "unit": "índice (base 2025)",
+      "period": "2006",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2006 (mes: valor): 1: 66,912; 2: 66,944; 3: 67,418; 4: 68,369; 5: 68,615; 6: 68,719; 7: 68,31; 8: 68,45; 9: 68,337; 10: 68,618; 11: 68,787; 12: 68,976",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2007",
+      "value": 70.105,
+      "unit": "índice (base 2025)",
+      "period": "2007",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2007 (mes: valor): 1: 68,512; 2: 68,559; 3: 69,079; 4: 70,033; 5: 70,225; 6: 70,354; 7: 69,843; 8: 69,938; 9: 70,168; 10: 71,077; 11: 71,587; 12: 71,887",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2008",
+      "value": 72.962,
+      "unit": "índice (base 2025)",
+      "period": "2008",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2008 (mes: valor): 1: 71,442; 2: 71,553; 3: 72,188; 4: 72,965; 5: 73,458; 6: 73,881; 7: 73,526; 8: 73,368; 9: 73,353; 10: 73,605; 11: 73,293; 12: 72,917",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2009",
+      "value": 72.752,
+      "unit": "índice (base 2025)",
+      "period": "2009",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2009 (mes: valor): 1: 72,018; 2: 72,026; 3: 72,144; 4: 72,849; 5: 72,823; 6: 73,144; 7: 72,52; 8: 72,773; 9: 72,601; 10: 73,119; 11: 73,515; 12: 73,496",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2010",
+      "value": 74.062,
+      "unit": "índice (base 2025)",
+      "period": "2010",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2010 (mes: valor): 1: 72,759; 2: 72,627; 3: 73,165; 4: 73,944; 5: 74,109; 6: 74,241; 7: 73,909; 8: 74,095; 9: 74,146; 10: 74,824; 11: 75,23; 12: 75,692",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2011",
+      "value": 76.429,
+      "unit": "índice (base 2025)",
+      "period": "2011",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2011 (mes: valor): 1: 75,138; 2: 75,234; 3: 75,796; 4: 76,739; 5: 76,714; 6: 76,606; 7: 76,194; 8: 76,289; 9: 76,475; 10: 77,078; 11: 77,391; 12: 77,492",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2012",
+      "value": 78.298,
+      "unit": "índice (base 2025)",
+      "period": "2012",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2012 (mes: valor): 1: 76,639; 2: 76,719; 3: 77,235; 4: 78,32; 5: 78,204; 6: 78,058; 7: 77,876; 8: 78,314; 9: 79,085; 10: 79,757; 11: 79,658; 12: 79,714",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2013",
+      "value": 79.401,
+      "unit": "índice (base 2025)",
+      "period": "2013",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2013 (mes: valor): 1: 78,695; 2: 78,832; 3: 79,109; 4: 79,405; 5: 79,551; 6: 79,669; 7: 79,258; 8: 79,504; 9: 79,355; 10: 79,678; 11: 79,844; 12: 79,915",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2014",
+      "value": 79.281,
+      "unit": "índice (base 2025)",
+      "period": "2014",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2014 (mes: valor): 1: 78,852; 2: 78,818; 3: 78,994; 4: 79,697; 5: 79,715; 6: 79,737; 7: 78,987; 8: 79,112; 9: 79,233; 10: 79,602; 11: 79,547; 12: 79,083",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2015",
+      "value": 78.885,
+      "unit": "índice (base 2025)",
+      "period": "2015",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2015 (mes: valor): 1: 77,812; 2: 77,972; 3: 78,47; 4: 79,191; 5: 79,569; 6: 79,782; 7: 79,041; 8: 78,779; 9: 78,536; 10: 79,039; 11: 79,329; 12: 79,097",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2016",
+      "value": 78.725,
+      "unit": "índice (base 2025)",
+      "period": "2016",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2016 (mes: valor): 1: 77,588; 2: 77,314; 3: 77,81; 4: 78,355; 5: 78,783; 6: 79,148; 7: 78,572; 8: 78,673; 9: 78,677; 10: 79,576; 11: 79,864; 12: 80,338",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2017",
+      "value": 80.264,
+      "unit": "índice (base 2025)",
+      "period": "2017",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2017 (mes: valor): 1: 79,896; 2: 79,608; 3: 79,592; 4: 80,356; 5: 80,308; 6: 80,343; 7: 79,788; 8: 79,947; 9: 80,086; 10: 80,825; 11: 81,194; 12: 81,231",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2018",
+      "value": 81.609,
+      "unit": "índice (base 2025)",
+      "period": "2018",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2018 (mes: valor): 1: 80,355; 2: 80,463; 3: 80,558; 4: 81,224; 5: 81,956; 6: 82,17; 7: 81,581; 8: 81,697; 9: 81,897; 10: 82,654; 11: 82,563; 12: 82,193",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2019",
+      "value": 82.18,
+      "unit": "índice (base 2025)",
+      "period": "2019",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2019 (mes: valor): 1: 81,142; 2: 81,34; 3: 81,636; 4: 82,459; 5: 82,619; 6: 82,522; 7: 82,011; 8: 81,965; 9: 81,965; 10: 82,76; 11: 82,9; 12: 82,84",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2020",
+      "value": 81.915,
+      "unit": "índice (base 2025)",
+      "period": "2020",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2020 (mes: valor): 1: 82,032; 2: 81,935; 3: 81,621; 4: 81,868; 5: 81,863; 6: 82,24; 7: 81,502; 8: 81,54; 9: 81,662; 10: 82,09; 11: 82,225; 12: 82,4",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2021",
+      "value": 84.448,
+      "unit": "índice (base 2025)",
+      "period": "2021",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2021 (mes: valor): 1: 82,407; 2: 81,922; 3: 82,716; 4: 83,693; 5: 84,087; 6: 84,487; 7: 83,85; 8: 84,232; 9: 84,934; 10: 86,496; 11: 86,761; 12: 87,797",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2022",
+      "value": 91.534,
+      "unit": "índice (base 2025)",
+      "period": "2022",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2022 (mes: valor): 1: 87,46; 2: 88,167; 3: 90,837; 4: 90,676; 5: 91,426; 6: 93,118; 7: 92,881; 8: 93,117; 9: 92,47; 10: 92,78; 11: 92,669; 12: 92,808",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2023",
+      "value": 94.767,
+      "unit": "índice (base 2025)",
+      "period": "2023",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2023 (mes: valor): 1: 92,613; 2: 93,487; 3: 93,831; 4: 94,39; 5: 94,345; 6: 94,881; 7: 95,042; 8: 95,552; 9: 95,721; 10: 95,998; 11: 95,663; 12: 95,687",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2024",
+      "value": 97.396,
+      "unit": "índice (base 2025)",
+      "period": "2024",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2024 (mes: valor): 1: 95,768; 2: 96,108; 3: 96,84; 4: 97,514; 5: 97,771; 6: 98,139; 7: 97,673; 8: 97,713; 9: 97,123; 10: 97,729; 11: 97,968; 12: 98,411",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    },
+    {
+      "id": "2025",
+      "value": 100.0,
+      "unit": "índice (base 2025)",
+      "period": "2025",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Media aritmética de los 12 índices mensuales publicados por el INE, redondeada a 3 decimales. El INE no publica este promedio como serie propia en esta base.",
+      "quote": "Índices mensuales 2025 (mes: valor): 1: 98,579; 2: 98,966; 3: 99,024; 4: 99,647; 5: 99,714; 6: 100,382; 7: 100,305; 8: 100,345; 9: 100,059; 10: 100,748; 11: 100,943; 12: 101,289",
+      "location": "serie IPC290751 del INE (Tempus3)"
+    }
+  ]
+}
