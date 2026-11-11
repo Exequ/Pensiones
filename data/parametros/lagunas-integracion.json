@@ -1,0 +1,274 @@
+{
+  "tipo": "datos",
+  "id": "lagunas-integracion",
+  "title": "Integración de lagunas de cotización en el cálculo de la base reguladora de jubilación (por versión)",
+  "description": "Parámetros numéricos de cada versión de la regla: meses del primer tramo, porcentaje de la base mínima del primer tramo y porcentaje del resto. El periodo es el año desde el que rige la versión.",
+  "data": [
+    {
+      "id": "2010-tramo1-meses",
+      "value": 180,
+      "unit": "meses (todos los de la ventana de 180)",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, TRLGSS: artículo 162, versión en vigor el 31/12/2010",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20101231"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Hasta 2012 (versión más antigua leída): todas las lagunas al 100 % de la base mínima, sin tramo al 50 %. No se han leído versiones anteriores a 2010.",
+      "quote": "dichas lagunas se integrarán con la base mínima de entre todas las existentes en cada momento para trabajadores mayores de dieciocho años",
+      "location": "art. 162.1.1.2 TRLGSS 1994 (versión de 31/12/2010; en vigor desde 13/01/2010 hasta 31/12/2012)"
+    },
+    {
+      "id": "2010-tramo1-pct-base-minima",
+      "value": 100,
+      "unit": "% de la base mínima",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, TRLGSS: artículo 162, versión en vigor el 31/12/2010",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20101231"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Hasta 2012 (versión más antigua leída): todas las lagunas al 100 % de la base mínima, sin tramo al 50 %. No se han leído versiones anteriores a 2010.",
+      "quote": "dichas lagunas se integrarán con la base mínima de entre todas las existentes en cada momento para trabajadores mayores de dieciocho años",
+      "location": "art. 162.1.1.2 TRLGSS 1994 (versión de 31/12/2010; en vigor desde 13/01/2010 hasta 31/12/2012)"
+    },
+    {
+      "id": "2013-tramo1-meses",
+      "value": 48,
+      "unit": "meses (los primeros con laguna, contados desde el hecho causante hacia atrás)",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, TRLGSS: artículo 162, versión en vigor el 01/04/2013",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20130401"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2013: primeras 48 mensualidades al 100 % de la base mínima y el resto al 50 %. La Ley 3/2012 sustituyó antes de su entrada en vigor la regla de tres tramos (24+24+resto) del texto original de la Ley 27/2011.",
+      "quote": "las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento, y el resto de mensualidades con el 50 por 100 de dicha base mínima",
+      "location": "art. 162.1 TRLGSS 1994, versión de 01/04/2013 (introducida por el art. 4.3 de la Ley 27/2011 en la redacción del art. 4 de la Ley 3/2012; en vigor desde 01/01/2013)",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 3/2012, de 6 de julio, de medidas urgentes para la reforma del mercado laboral",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2012-9110"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Ley 3/2012, disposición que da nueva redacción al apartado Tres del artículo 4 de la Ley 27/2011. Cita comprobada en el texto: «las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento»."
+      }
+    },
+    {
+      "id": "2013-tramo1-pct-base-minima",
+      "value": 100,
+      "unit": "% de la base mínima",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, TRLGSS: artículo 162, versión en vigor el 01/04/2013",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20130401"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2013: primeras 48 mensualidades al 100 % de la base mínima y el resto al 50 %. La Ley 3/2012 sustituyó antes de su entrada en vigor la regla de tres tramos (24+24+resto) del texto original de la Ley 27/2011.",
+      "quote": "las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento, y el resto de mensualidades con el 50 por 100 de dicha base mínima",
+      "location": "art. 162.1 TRLGSS 1994, versión de 01/04/2013 (introducida por el art. 4.3 de la Ley 27/2011 en la redacción del art. 4 de la Ley 3/2012; en vigor desde 01/01/2013)",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 3/2012, de 6 de julio, de medidas urgentes para la reforma del mercado laboral",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2012-9110"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Ley 3/2012, disposición que da nueva redacción al apartado Tres del artículo 4 de la Ley 27/2011. Cita comprobada en el texto: «las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento»."
+      }
+    },
+    {
+      "id": "2013-tramo2-pct-base-minima",
+      "value": 50,
+      "unit": "% de la base mínima (el resto de los meses con laguna)",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, TRLGSS: artículo 162, versión en vigor el 01/04/2013",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20130401"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2013: primeras 48 mensualidades al 100 % de la base mínima y el resto al 50 %. La Ley 3/2012 sustituyó antes de su entrada en vigor la regla de tres tramos (24+24+resto) del texto original de la Ley 27/2011.",
+      "quote": "las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento, y el resto de mensualidades con el 50 por 100 de dicha base mínima",
+      "location": "art. 162.1 TRLGSS 1994, versión de 01/04/2013 (introducida por el art. 4.3 de la Ley 27/2011 en la redacción del art. 4 de la Ley 3/2012; en vigor desde 01/01/2013)",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 3/2012, de 6 de julio, de medidas urgentes para la reforma del mercado laboral",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2012-9110"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Ley 3/2012, disposición que da nueva redacción al apartado Tres del artículo 4 de la Ley 27/2011. Cita comprobada en el texto: «las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento»."
+      }
+    },
+    {
+      "id": "2016-tramo1-meses",
+      "value": 48,
+      "unit": "meses (los primeros con laguna, contados desde el hecho causante hacia atrás)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Texto refundido de 2015: mismos parámetros que 2013.",
+      "quote": "las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento, y el resto de mensualidades con el 50 por ciento de dicha base mínima",
+      "location": "art. 209.1.b TRLGSS 2015, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 1/1994, TRLGSS: artículo 162, versión en vigor el 01/04/2013",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20130401"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 162.1 TRLGSS 1994, versión de 01/04/2013 (cita con «50 por 100»). Cita comprobada en el texto: «las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento, y el resto de mensualidades con el 50 por 100 de dicha base mínima»."
+      }
+    },
+    {
+      "id": "2016-tramo1-pct-base-minima",
+      "value": 100,
+      "unit": "% de la base mínima",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Texto refundido de 2015: mismos parámetros que 2013.",
+      "quote": "las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento, y el resto de mensualidades con el 50 por ciento de dicha base mínima",
+      "location": "art. 209.1.b TRLGSS 2015, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 1/1994, TRLGSS: artículo 162, versión en vigor el 01/04/2013",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20130401"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 162.1 TRLGSS 1994, versión de 01/04/2013 (cita con «50 por 100»). Cita comprobada en el texto: «las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento, y el resto de mensualidades con el 50 por 100 de dicha base mínima»."
+      }
+    },
+    {
+      "id": "2016-tramo2-pct-base-minima",
+      "value": 50,
+      "unit": "% de la base mínima (el resto de los meses con laguna)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Texto refundido de 2015: mismos parámetros que 2013.",
+      "quote": "las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento, y el resto de mensualidades con el 50 por ciento de dicha base mínima",
+      "location": "art. 209.1.b TRLGSS 2015, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 1/1994, TRLGSS: artículo 162, versión en vigor el 01/04/2013",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20130401"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 162.1 TRLGSS 1994, versión de 01/04/2013 (cita con «50 por 100»). Cita comprobada en el texto: «las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento, y el resto de mensualidades con el 50 por 100 de dicha base mínima»."
+      }
+    },
+    {
+      "id": "2026-tramo1-meses",
+      "value": 48,
+      "unit": "meses (los primeros con laguna, contados desde el hecho causante hacia atrás)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2026: mismos parámetros numéricos; la base mínima de referencia es la del Régimen General del mes respectivo.",
+      "quote": "las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de cotización del Régimen General que corresponda al mes respectivo y el resto de las mensualidades con el 50 por ciento de dicha base mínima",
+      "location": "art. 209.1.b TRLGSS (art. único.23 RDL 2/2023), en vigor desde 01/01/2026",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.23 (art. 209.1.b TRLGSS). Cita comprobada en el texto: «las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de cotización del Régimen General que corresponda al mes respectivo y el resto de las mensualidades con el 50 por ciento de dicha base mínima»."
+      }
+    },
+    {
+      "id": "2026-tramo1-pct-base-minima",
+      "value": 100,
+      "unit": "% de la base mínima",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2026: mismos parámetros numéricos; la base mínima de referencia es la del Régimen General del mes respectivo.",
+      "quote": "las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de cotización del Régimen General que corresponda al mes respectivo y el resto de las mensualidades con el 50 por ciento de dicha base mínima",
+      "location": "art. 209.1.b TRLGSS (art. único.23 RDL 2/2023), en vigor desde 01/01/2026",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.23 (art. 209.1.b TRLGSS). Cita comprobada en el texto: «las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de cotización del Régimen General que corresponda al mes respectivo y el resto de las mensualidades con el 50 por ciento de dicha base mínima»."
+      }
+    },
+    {
+      "id": "2026-tramo2-pct-base-minima",
+      "value": 50,
+      "unit": "% de la base mínima (el resto de los meses con laguna)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2026: mismos parámetros numéricos; la base mínima de referencia es la del Régimen General del mes respectivo.",
+      "quote": "las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de cotización del Régimen General que corresponda al mes respectivo y el resto de las mensualidades con el 50 por ciento de dicha base mínima",
+      "location": "art. 209.1.b TRLGSS (art. único.23 RDL 2/2023), en vigor desde 01/01/2026",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.23 (art. 209.1.b TRLGSS). Cita comprobada en el texto: «las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de cotización del Régimen General que corresponda al mes respectivo y el resto de las mensualidades con el 50 por ciento de dicha base mínima»."
+      }
+    }
+  ]
+}

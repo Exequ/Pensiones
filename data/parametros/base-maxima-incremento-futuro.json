@@ -1,0 +1,710 @@
+{
+  "tipo": "datos",
+  "id": "base-maxima-incremento-futuro",
+  "title": "Incremento anual de la base máxima de cotización sobre el IPC (2024-2050)",
+  "description": "Puntos porcentuales que la ley suma, cada año de 2024 a 2050, al porcentaje de revalorización de las pensiones (art. 58.2 TRLGSS) para fijar el tope máximo de las bases de cotización. Un dato por año; el incremento total del año es la revalorización más este valor.",
+  "data": [
+    {
+      "id": "2024",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2025",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2026",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2027",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2028",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2028",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2029",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2029",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2030",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2030",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2031",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2031",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2032",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2032",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2033",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2033",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2034",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2034",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2035",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2035",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2036",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2036",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2037",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2037",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2038",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2038",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2039",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2039",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2040",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2040",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2041",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2041",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2042",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2042",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2043",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2043",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2044",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2044",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2045",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2045",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2046",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2046",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2047",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2047",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2048",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2048",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2049",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2049",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    },
+    {
+      "id": "2050",
+      "value": 1.2,
+      "unit": "puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)",
+      "period": "2050",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Incremento anual del tope máximo de cotización = porcentaje de revalorización del art. 58.2 (valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre del año anterior) + 1,2 puntos porcentuales. Lo fija cada año la Ley de Presupuestos (art. 19.3); la DT 38.ª rige de 2024 a 2050 (27 años). Cada cinco años el Gobierno evalúa el impacto (DT 38.ª.2). Dato de la ley, no una previsión.",
+      "quote": "Desde el año 2024 hasta el año 2050, las sucesivas leyes de Presupuestos Generales del Estado aprobadas para ese período fijarán el tope máximo de las bases de cotización de los distintos regímenes de Seguridad de Social conforme a lo establecido en el artículo 19.3, si bien al porcentaje al que se refiere dicho artículo se le sumará una cuantía fija anual de 1,2 puntos porcentuales",
+      "location": "DT 38.ª.1 TRLGSS (art. único.38 del RDL 2/2023); art. 19.3 TRLGSS (art. único.1 RDL 2/2023, en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.38 (DT 38.ª TRLGSS). Cita comprobada en el texto: «se le sumará una cuantía fija anual de 1,2 puntos porcentuales»."
+      }
+    }
+  ]
+}

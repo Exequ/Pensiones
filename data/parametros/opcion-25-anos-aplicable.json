@@ -1,0 +1,502 @@
+{
+  "tipo": "datos",
+  "id": "opcion-25-anos-aplicable",
+  "title": "Opción de 25 años (DT 4.ª.7 TRLGSS): años en que está disponible (2026-2044)",
+  "description": "Indicador por año del hecho causante: 1 si la opción está disponible, 0 en 2044, primer año sin opción.",
+  "data": [
+    {
+      "id": "2026",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2027",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2028",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2028",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2029",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2029",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2030",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2030",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2031",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2031",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2032",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2032",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2033",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2033",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2034",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2034",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2035",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2035",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2036",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2036",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2037",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2037",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2038",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2038",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2039",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2039",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2040",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2040",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción del art. 209.1 vigente el 01/01/2023 (25 años) cuando resulte más favorable que la regla vigente al causar la pensión. Literalmente: hechos causantes posteriores al 31/12/2025 y anteriores al 31/12/2040 (el propio 31/12/2040 queda sin cubrir en el texto); se modela 2026-2040 completo. Ventana de 300 meses (25 años) y divisor 350 (= 300 × 14/12), según el art. 209.1 de la redacción de 2016-2025: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante».  Las 24 bases más recientes en valor nominal, el resto actualizadas con el IPC; lagunas: 48 meses al 100 % de la base mínima y el resto al 50 % (art. 209.1.b, texto 2016-2025).",
+      "quote": "cuando el hecho causante se produzca con posterioridad al 31 de diciembre de 2025 y antes de 31 de diciembre de 2040, la entidad gestora aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable que el vigente en la fecha en que se cause la pensión",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: art. 209.1 TRLGSS, texto original (redacción vigente el 01/01/2023). Cita comprobada en el texto: «dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante»."
+      }
+    },
+    {
+      "id": "2041",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2041",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción de 01/01/2023, con base reguladora de los últimos 306 meses entre 357 (se computan todas las bases de la ventana, sin descartar ninguna). ",
+      "quote": "Para los hechos causantes que se produzcan durante el año 2041, la entidad gestora aplicará, en su integridad, lo previsto en el artículo 209.1, en su redacción vigente el día 1 de enero de 2023, con una la base reguladora que comprenderá las bases de cotización de los últimos 306 meses entre 357, cuando dicho cálculo resulte más favorable",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.36 (DT 4.ª.7 TRLGSS). Cita comprobada en el texto: «los últimos 306 meses entre 357»."
+      }
+    },
+    {
+      "id": "2042",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2042",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción de 01/01/2023, con base reguladora de los últimos 312 meses entre 364 (se computan todas las bases de la ventana, sin descartar ninguna). ",
+      "quote": "En 2042, la entidad gestora aplicará, en su integridad, lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023, con una base reguladora que comprenderá las bases de cotización de los últimos 312 meses entre 364, cuando dicho cálculo resulte más favorable",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.36 (DT 4.ª.7 TRLGSS). Cita comprobada en el texto: «los últimos 312 meses entre 364»."
+      }
+    },
+    {
+      "id": "2043",
+      "value": 1,
+      "unit": "indicador (1 = la opción está disponible)",
+      "period": "2043",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Opción por la redacción de 01/01/2023, con base reguladora de los últimos 318 meses entre 371 (se computan todas las bases de la ventana, sin descartar ninguna). ",
+      "quote": "En 2043, la entidad gestora aplicará, en su integridad, lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023, con una base reguladora que comprenderá las bases de cotización de los últimos 318 meses entre 371, cuando dicho cálculo resulte más favorable",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.36 (DT 4.ª.7 TRLGSS). Cita comprobada en el texto: «los últimos 318 meses entre 371»."
+      }
+    },
+    {
+      "id": "2044",
+      "value": 0,
+      "unit": "indicador (0 = la opción deja de existir)",
+      "period": "2044",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2044 solo rige el art. 209.1 en la redacción vigente desde el 01/01/2026 y su calendario de la DT 40.ª.",
+      "quote": "A partir de 2044, se aplicará lo previsto en el artículo 209.1 en la redacción vigente desde el 1 de enero de 2026.",
+      "location": "DT 4.ª.7 TRLGSS (art. único.36 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.36. Cita comprobada en el texto: «A partir de 2044, se aplicará lo previsto en el artículo 209.1 en la redacción vigente desde el 1 de enero de 2026»."
+      }
+    }
+  ]
+}
