@@ -1,0 +1,450 @@
+{
+  "tipo": "datos",
+  "id": "pension-maxima",
+  "title": "Pensión máxima (límite máximo de percepción de pensiones públicas)",
+  "description": "Importe mensual (14 pagas) fijado cada año en la norma de revalorización.",
+  "data": [
+    {
+      "id": "2000",
+      "value": 1826.84,
+      "unit": "euros/mes",
+      "period": "2000",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "La norma del año (RD 2064/1999, art. 2.2) fija el límite solo en pesetas: 'limitado a la cantidad de 303.960 pesetas, entendiendo esta cantidad referida al importe de una mensualidad ordinaria' (4.255.440 pesetas/año). El equivalente en euros (1.826,84) se lee en el RD 3475/2000 del año siguiente.",
+      "quote": "Pensionistas cuyas pensiones se hubiesen causado en 2000 y estuviesen limitadas, en su importe, a la cantidad de 303.960 pesetas (1.826,84 euros) mensuales.",
+      "location": "RD 3475/2000, disposición adicional primera.1.b)"
+    },
+    {
+      "id": "2001",
+      "value": 1901.74,
+      "unit": "euros/mes",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Pesetas: 316.422/mes.",
+      "quote": "estará limitado a la cantidad de 316.422 pesetas (1.901,74 euros), entendiendo esta cantidad referida al importe de una mensualidad ordinaria [...] 4.429.908 pesetas (26.624,36 euros), en cómputo anual.",
+      "location": "Artículo 2.2"
+    },
+    {
+      "id": "2002",
+      "value": 1953.1,
+      "unit": "euros/mes",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto 1464/2001, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2002.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24969",
+        "docId": "BOE-A-2001-24969"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 1.953,10 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2003",
+      "value": 2029.27,
+      "unit": "euros/mes",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto 1425/2002, de 27 de diciembre, sobre revalorización de las pensiones del Sistema de la Seguridad Social para el ejercicio 2003.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-25416",
+        "docId": "BOE-A-2002-25416"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 2.029,27 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2004",
+      "value": 2086.1,
+      "unit": "euros/mes",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto 2/2004, de 9 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2004.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-507",
+        "docId": "BOE-A-2004-507"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 2.086,10 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2005",
+      "value": 2159.12,
+      "unit": "euros/mes",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto 2350/2004, de 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21839",
+        "docId": "BOE-A-2004-21839"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 2.159,12 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2006",
+      "value": 2232.54,
+      "unit": "euros/mes",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto 1611/2005, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21608",
+        "docId": "BOE-A-2005-21608"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 2.232,54 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2007",
+      "value": 2290.59,
+      "unit": "euros/mes",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto 1578/2006, de 22 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22958",
+        "docId": "BOE-A-2006-22958"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 2.290,59 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2008",
+      "value": 2384.51,
+      "unit": "euros/mes",
+      "period": "2008",
+      "source": {
+        "title": "Real Decreto 1764/2007, de 28 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2008.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2007-22452",
+        "docId": "BOE-A-2007-22452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 2.384,51 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2009",
+      "value": 2441.75,
+      "unit": "euros/mes",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto 2127/2008, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20957",
+        "docId": "BOE-A-2008-20957"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 2.441,75 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2010",
+      "value": 2466.2,
+      "unit": "euros/mes",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto 2007/2009, 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21052",
+        "docId": "BOE-A-2009-21052"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 2.466,20 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2012",
+      "value": 2522.89,
+      "unit": "euros/mes",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20638",
+        "docId": "BOE-A-2011-20638"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "Límite máximo de percepción de pensión pública: 2.522,89 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2013",
+      "value": 2548.12,
+      "unit": "euros/mes",
+      "period": "2013",
+      "source": {
+        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
+        "docId": "BOE-A-2012-15651"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía íntegra anual 35.673,68 euros (14 pagas).",
+      "quote": "no podrá superar, durante el año 2013, la cuantía íntegra de 2.548,12 euros mensuales, sin perjuicio de las pagas extraordinarias que pudieran corresponder a su titular",
+      "location": "Artículo 42.Uno"
+    },
+    {
+      "id": "2014",
+      "value": 2554.49,
+      "unit": "euros/mes",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto 1045/2013, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13763",
+        "docId": "BOE-A-2013-13763"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 2.554,49 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2015",
+      "value": 2560.88,
+      "unit": "euros/mes",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto 1107/2014, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13680",
+        "docId": "BOE-A-2014-13680"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 2.560,88 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2016",
+      "value": 2567.28,
+      "unit": "euros/mes",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto 1170/2015, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-14272",
+        "docId": "BOE-A-2015-14272"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 2.567,28 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2017",
+      "value": 2573.7,
+      "unit": "euros/mes",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto 746/2016, de 30 de diciembre, sobre revalorización y complementos de pensiones de Clases Pasivas y sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-12605",
+        "docId": "BOE-A-2016-12605"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "Límite máximo de percepción de pensión pública: 2.573,70 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2018",
+      "value": 2580.13,
+      "unit": "euros/mes",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 1079/2017, de 29 de diciembre, sobre revalorización de pensiones de Clases Pasivas, de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-15854",
+        "docId": "BOE-A-2017-15854"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "Límite máximo de percepción de pensión pública: 2.580,13 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2019",
+      "value": 2659.41,
+      "unit": "euros/mes",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "límite máximo establecido para la percepción de pensiones públicas para 2019 será de 2.659,41 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2020",
+      "value": 2683.34,
+      "unit": "euros/mes",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "límite máximo establecido para la percepción de pensiones públicas para 2020 será de 2.683,34 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2021",
+      "value": 2707.49,
+      "unit": "euros/mes",
+      "period": "2021",
+      "source": {
+        "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-1135",
+        "docId": "BOE-A-2021-1135"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 2.707,49 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2022",
+      "value": 2819.18,
+      "unit": "euros/mes",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 2.819,18 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2023",
+      "value": 3058.81,
+      "unit": "euros/mes",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "limitado a la cantidad de 3.058,81 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2024",
+      "value": 3175.04,
+      "unit": "euros/mes",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "límite máximo establecido para la percepción de las pensiones públicas en 2024 en 3.175,04 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2025",
+      "value": 3267.6,
+      "unit": "euros/mes",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto-ley 1/2025, de 28 de enero, por el que se aprueban medidas urgentes en materia económica, de transporte, de Seguridad Social, y para hacer frente a situaciones de vulnerabilidad.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-1560",
+        "docId": "BOE-A-2025-1560"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "límite máximo establecido para la percepción de las pensiones públicas del sistema de Seguridad social y clases pasivas causadas en 2025 será de 3.267,60 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    },
+    {
+      "id": "2026",
+      "value": 3359.6,
+      "unit": "euros/mes",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-2548",
+        "docId": "BOE-A-2026-2548"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe de una mensualidad ordinaria (14 pagas anuales).",
+      "quote": "límite máximo para la percepción de las pensiones públicas del sistema de la Seguridad Social y de Clases Pasivas del Estado causadas en 2026 será de 3.359,60 euros",
+      "location": "Artículo sobre el importe de la revalorización (límite máximo de percepción)"
+    }
+  ]
+}

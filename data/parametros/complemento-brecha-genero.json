@@ -1,0 +1,76 @@
+{
+  "tipo": "datos",
+  "id": "complemento-brecha-genero",
+  "title": "Complemento para la reducción de la brecha de género: importe mensual por hijo",
+  "description": "Importe mensual del complemento (art. 60 TRLGSS) fijado en la norma de revalorización de cada año. Los años 2021 y 2022 constan en PENDIENTE_DATOS.md.",
+  "data": [
+    {
+      "id": "2023",
+      "value": 30.4,
+      "unit": "euros/mes",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe mensual por hijo (art. 60 TRLGSS), 14 pagas.",
+      "quote": "Con efectos de 1 de enero de 2023, la cuantía del complemento de pensiones para la reducción de la brecha de género queda establecida en 30,40 euros/mes",
+      "location": "Artículo sobre el complemento para la reducción de la brecha de género"
+    },
+    {
+      "id": "2024",
+      "value": 33.2,
+      "unit": "euros/mes",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe mensual por hijo (art. 60 TRLGSS), 14 pagas.",
+      "quote": "mporte para 2024 del complemento de pensiones contributivas y de las pensiones del Régimen de Clases Pasivas del Estado para la reducción de brecha de género, que queda fijado para 2024 en 33,20 euros mensuales gracias a la aplicación a la cuantía establecida para 2023 del resultado de sumar al referido porcentaje general de rev",
+      "location": "Artículo sobre el complemento para la reducción de la brecha de género"
+    },
+    {
+      "id": "2025",
+      "value": 35.9,
+      "unit": "euros/mes",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe mensual por hijo (art. 60 TRLGSS), 14 pagas.",
+      "quote": "Con efectos de 1 de enero de 2025, la cuantía del complemento para la reducción de la brecha de género queda establecida en 35,90 euros mensuales, conforme a los dispuesto en el artículo 65",
+      "location": "Artículo sobre el complemento para la reducción de la brecha de género"
+    },
+    {
+      "id": "2026",
+      "value": 36.9,
+      "unit": "euros/mes",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe mensual por hijo (art. 60 TRLGSS), 14 pagas.",
+      "quote": "Con efectos de 1 de enero de 2026, la cuantía del complemento para la reducción de la brecha de género queda establecida en 36,90 euros mensuales, conforme a los dispuesto en el artículo 2 del Real Decreto-ley 3/2026, de 3 de",
+      "location": "Artículo sobre el complemento para la reducción de la brecha de género"
+    }
+  ]
+}

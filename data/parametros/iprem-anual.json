@@ -1,0 +1,298 @@
+{
+  "tipo": "datos",
+  "id": "iprem-anual",
+  "title": "IPREM anual",
+  "description": "Indicador público de renta de efectos múltiples, importe anual.",
+  "data": [
+    {
+      "id": "2004",
+      "value": 5526.0,
+      "unit": "euros/año",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto-ley 3/2004, de 25 de junio, para la racionalización de la regulación del salario mínimo interprofesional y para el incremento de su cuantía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-12010",
+        "docId": "BOE-A-2004-12010"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) El IPREM diario, 15,35 euros. b) El IPREM mensual, 460,50 euros. c) El IPREM anual, 5.526 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2005",
+      "value": 5637.6,
+      "unit": "euros/año",
+      "period": "2005",
+      "source": {
+        "title": "Ley 2/2004, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21688",
+        "docId": "BOE-A-2004-21688"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) El IPREM diario: 15,66 euros. b) El IPREM mensual: 469,80 euros. c) El IPREM anual: 5.637,60 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2006",
+      "value": 5749.2,
+      "unit": "euros/año",
+      "period": "2006",
+      "source": {
+        "title": "Ley 30/2005, de 29 de diciembre, de Presupuestos Generales del Estado para el año 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21525",
+        "docId": "BOE-A-2005-21525"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) El IPREM diario, 15,97 euros. b) El IPREM mensual, 479,10 euros. c) El IPREM anual, 5.749,20 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2007",
+      "value": 5990.4,
+      "unit": "euros/año",
+      "period": "2007",
+      "source": {
+        "title": "Ley 42/2006, de 28 de diciembre, de Presupuestos Generales del Estado para el año 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22865",
+        "docId": "BOE-A-2006-22865"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) El IPREM diario, 16,64 euros. b) El IPREM mensual, 499,20 euros. c) El IPREM anual, 5.990,40 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2008",
+      "value": 6202.8,
+      "unit": "euros/año",
+      "period": "2008",
+      "source": {
+        "title": "Real Decreto-ley 1/2008, de 18 de enero, por el que se determina el Indicador Público de Renta de Efectos Múltiples (IPREM) para 2008 y se concede un crédito extraordinario en el Presupuesto del Ministerio de Trabajo y Asuntos Sociales, por importe de 200.000.000 euros con destino a la acogida e integración de inmigrantes, así como al refuerzo educativo de los mismos.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-977",
+        "docId": "BOE-A-2008-977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "El RDL 1/2008 sustituye al importe de la Ley 51/2007 de PGE 2008 (509,40 euros/mes).",
+      "quote": "a) El IPREM diario, 17,23 euros. b) El IPREM mensual, 516,90 euros. c) El IPREM anual, 6.202,80 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2009",
+      "value": 6326.86,
+      "unit": "euros/año",
+      "period": "2009",
+      "source": {
+        "title": "Ley 2/2008, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20744",
+        "docId": "BOE-A-2008-20744"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) EL IPREM diario, 17,57 euros. b) El IPREM mensual, 527,24 euros. c) El IPREM anual, 6.326,86 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2010",
+      "value": 6390.13,
+      "unit": "euros/año",
+      "period": "2010",
+      "source": {
+        "title": "Ley 26/2009, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-20765",
+        "docId": "BOE-A-2009-20765"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) EL IPREM diario, 17,75 euros. b) El IPREM mensual, 532,51 euros. c) El IPREM anual, 6.390,13 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2011",
+      "value": 6390.13,
+      "unit": "euros/año",
+      "period": "2011",
+      "source": {
+        "title": "Ley 39/2010, de 22 de diciembre, de Presupuestos Generales del Estado para el año 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-19703",
+        "docId": "BOE-A-2010-19703"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) El IPREM diario, 17,75 euros. b) El IPREM mensual, 532,51 euros. c) El IPREM anual, 6.390,13 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2012",
+      "value": 6390.13,
+      "unit": "euros/año",
+      "period": "2012",
+      "source": {
+        "title": "Ley 2/2012, de 29 de junio, de Presupuestos Generales del Estado para el año 2012.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-8745",
+        "docId": "BOE-A-2012-8745"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) El IPREM diario, 17,75 euros. b) El IPREM mensual, 532,51 euros. c) El IPREM anual, 6.390,13 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2013",
+      "value": 6390.13,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
+        "docId": "BOE-A-2012-15651"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) El IPREM diario, 17,75 euros. b) El IPREM mensual, 532,51 euros. c) El IPREM anual, 6.390,13 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2014",
+      "value": 6390.13,
+      "unit": "euros/año",
+      "period": "2014",
+      "source": {
+        "title": "Ley 22/2013, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13616",
+        "docId": "BOE-A-2013-13616"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) EL IPREM diario, 17,75 euros. b) El IPREM mensual, 532,51 euros. c) El IPREM anual, 6.390,13 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2015",
+      "value": 6390.13,
+      "unit": "euros/año",
+      "period": "2015",
+      "source": {
+        "title": "Ley 36/2014, de 26 de diciembre, de Presupuestos Generales del Estado para el año 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13612",
+        "docId": "BOE-A-2014-13612"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) EL IPREM diario, 17,75 euros. b) El IPREM mensual, 532,51 euros. c) El IPREM anual, 6.390,13 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2016",
+      "value": 6390.13,
+      "unit": "euros/año",
+      "period": "2016",
+      "source": {
+        "title": "Ley 48/2015, de 29 de octubre, de Presupuestos Generales del Estado para el año 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-11644",
+        "docId": "BOE-A-2015-11644"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) El IPREM diario, 17,75 euros. b) El IPREM mensual, 532,51 euros. c) El IPREM anual, 6.390,13 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2017",
+      "value": 6454.03,
+      "unit": "euros/año",
+      "period": "2017",
+      "source": {
+        "title": "Ley 3/2017, de 27 de junio, de Presupuestos Generales del Estado para el año 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-7387",
+        "docId": "BOE-A-2017-7387"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "La Ley 3/2017 lo fija «durante la vigencia de esta ley».",
+      "quote": "a) EL IPREM diario, 17,93 euros. b) El IPREM mensual, 537,84 euros. c) El IPREM anual, 6.454,03 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2018",
+      "value": 6454.03,
+      "unit": "euros/año",
+      "period": "2018",
+      "source": {
+        "title": "Ley 6/2018, de 3 de julio, de Presupuestos Generales del Estado para el año 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-9268",
+        "docId": "BOE-A-2018-9268"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) El IPREM diario, 17,93 euros. b) El IPREM mensual, 537,84 euros. c) El IPREM anual, 6.454,03 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2021",
+      "value": 6778.8,
+      "unit": "euros/año",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339",
+        "docId": "BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) EL IPREM diario, 18,83 euros. b) El IPREM mensual, 564,90 euros. c) El IPREM anual, 6.778,80 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2022",
+      "value": 6948.24,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Ley 22/2021, de 28 de diciembre, de Presupuestos Generales del Estado para el año 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-21653",
+        "docId": "BOE-A-2021-21653"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) EL IPREM diario, 19,30 euros. b) El IPREM mensual, 579,02 euros. c) El IPREM anual, 6.948,24 euros",
+      "location": "Artículo sobre el IPREM"
+    },
+    {
+      "id": "2023",
+      "value": 7200.0,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Ley 31/2022, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22128",
+        "docId": "BOE-A-2022-22128"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "a) El IPREM diario, 20 euros. b) El IPREM mensual, 600 euros. c) El IPREM anual, 7.200 euros",
+      "location": "Artículo sobre el IPREM"
+    }
+  ]
+}

@@ -170,3 +170,15 @@ Resultado: ΔL\* mínimo 7,3 (verde/gris); ΔE mínimo 26,6 en visión típica, 
 ### Flujo de trabajo
 
 - Rama `feat/fase-0-cimientos`, como se pidió para esta fase.
+
+## Fase 1A, parte 2: método y decisiones
+
+- **Extracción con scripts**: las tablas (órdenes de cotización, revalorización, mínimas, SMI, IPREM) se extraen con scripts de `scripts/etl/` desde los documentos descargados. Los datos que el parser no resuelve se completan solo con la recogida manual previa si la cita literal consta en el documento (se comprueba por código); si no, quedan en `docs/PENDIENTE_DATOS.md`.
+- **Unidades**: las cuantías mínimas se guardan en euros/año (como figuran en el Anexo I); la pensión máxima y las bases, en euros/mes. Se descartan los importes de 2000 en pesetas sin equivalencia en euros en el texto.
+- **Varias normas por año**: cuando dos normas del mismo año fijan el mismo importe (Ley de PGE, real decreto-ley y real decreto) se toma la posterior y las demás figuran como contraste; si difieren (viudedad menor de 60 años en 2013) se documenta en `docs/DISCREPANCIAS.md`.
+- **Modificaciones de las órdenes de cotización**: para 2023 y 2024 la base mínima es la de la orden modificadora (PCM/313/2023 y PJC/281/2024), con efectos desde el 1 de enero.
+- **Prórrogas presupuestarias**: sin orden anual en 2020; la base máxima de 2020 se toma por remisión del RDL 18/2019 al RDL 28/2018 (confianza media) y las bases mínimas y tipos de 2020 quedan pendientes.
+- **Series retiradas por incompletas**: el límite de ingresos con cónyuge a cargo no se publica hasta ampliar el extractor.
+- **Cronología y prestaciones**: `antes` es `null` cuando el documento descargado no recoge el régimen anterior (no se completa de memoria). El RETA queda fuera.
+- **Tests**: el test de series sin huecos admite solo los huecos listados en el propio test, cada uno documentado en `PENDIENTE_DATOS.md`.
+- **Tests (aclaración)**: el recuento de pruebas pasó de 68 a 63 en un resumen anterior por una ejecución parcial; revisando el historial de git no se eliminó ninguna prueba (68 al inicio de la Fase 1A y 79 antes de esta parte, contando bloques `it`). Ahora hay más por la cobertura de datos.

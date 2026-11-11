@@ -1,0 +1,936 @@
+{
+  "tipo": "cronologia",
+  "id": "cronologia-reformas",
+  "title": "Cronología de las reformas de las pensiones públicas (1985-2026)",
+  "description": "Normas que han modificado los parámetros de las pensiones contributivas del sistema de la Seguridad Social: qué cambió, antes y después, y con qué transición. Cada cambio lleva la cita literal del BOE.",
+  "normas": [
+    {
+      "id": "ley-26-1985",
+      "titulo": "Ley 26/1985, de 31 de julio, medidas urgentes para la racionalización de la estructura y de la acción protectora de la Seguridad Social.",
+      "rango": "Ley",
+      "fecha": "1985-07-31",
+      "fechaPublicacion": "1985-08-01",
+      "boeId": "BOE-A-1985-16119",
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "resumen": "Primera gran reforma de las pensiones contributivas en democracia: eleva la carencia de jubilación a quince años, amplía el periodo de cálculo de la base reguladora a los últimos ocho años (96 meses entre 112) y establece la revalorización anual según el IPC previsto.",
+      "cambios": [
+        {
+          "parametro": "carencia",
+          "antes": "La Ley no cifra el periodo anterior; se remite al «período mínimo establecido en la legislación anterior».",
+          "despues": "Quince años de cotización para la pensión de jubilación, de los cuales al menos dos dentro de los ocho años inmediatamente anteriores al hecho causante.",
+          "transicion": "Disposición transitoria segunda: para el Régimen General y otros regímenes por cuenta ajena, el periodo exigible es el mínimo de la legislación anterior más la mitad del tiempo transcurrido desde la entrada en vigor hasta el hecho causante, hasta alcanzar quince años.",
+          "articulos": "Artículo segundo.1; disposición transitoria segunda",
+          "evidencia": "El periodo mínimo de cotización exigible para causar derecho a pensión de jubilación será de quince años, de los cuales, al menos, dos deberán estar comprendidos dentro de los ocho años inmediatamente anteriores al momento de causar el derecho."
+        },
+        {
+          "parametro": "periodo-calculo",
+          "antes": "Según la disposición transitoria tercera, en algunos regímenes la legislación anterior tomaba «períodos inferiores a sesenta meses» (sin precisar cifra).",
+          "despues": "Base reguladora = bases de cotización de los 96 meses anteriores al hecho causante divididas por 112; las de los 24 meses más recientes a valor nominal y el resto actualizadas con el IPC.",
+          "transicion": "Disposición transitoria tercera: primer año de vigencia 60 meses/70; segundo año 72 meses/84; tercer año 84 meses/98; después 96/112.",
+          "articulos": "Artículo tercero.1; disposición transitoria tercera; anexo",
+          "evidencia": "La base reguladora de las pensiones de jubilación e invalidez permanente derivada de enfermedad común será el cociente que resulte dividir por 112 las bases de cotización del interesado durante los noventa y seis meses inmediatamente anteriores a aquél en que se produzca el hecho causante."
+        },
+        {
+          "parametro": "revalorizacion",
+          "antes": null,
+          "despues": "Las pensiones causadas conforme a la Ley se revalorizan al comienzo de cada año según el IPC previsto para ese año; las desviaciones se tienen en cuenta al año siguiente para mejorar las pensiones inferiores al SMI.",
+          "transicion": "aplicación inmediata",
+          "articulos": "Artículo cuarto; disposición adicional quinta",
+          "evidencia": "Las pensiones que se causen con aplicación de las modificaciones introducidas en la presente Ley, serán revalorizadas al comienzo de cada año, de acuerdo con el Índice de Precios al Consumo previsto para dicho año."
+        },
+        {
+          "parametro": "otros",
+          "antes": "Se exigía estar en alta en el momento del hecho causante (según la exposición de motivos: «suprimir el requisito, hoy existente, de estar en alta»).",
+          "despues": "Las pensiones de jubilación e incapacidad permanente absoluta o gran invalidez por contingencias comunes pueden causarse desde situación de no alta, con 65 años cumplidos (jubilación) y la carencia exigida.",
+          "transicion": "aplicación inmediata",
+          "articulos": "Artículo primero",
+          "evidencia": "podrán causarse, aunque los interesados no se encuentren en el momento del hecho causante en alta o situación asimilada a la de alta"
+        }
+      ],
+      "modulos": ["Reformas", "Cómo se calcula"],
+      "estado": "derogada",
+      "notas": "Según los metadatos del BOE, estatus de derogación «S» con fecha de derogación 1994-09-01 (fecha de vigencia del texto refundido de la LGSS de 1994, RDLeg 1/1994). El «antes» numérico de carencia y periodo de cálculo no figura en la propia norma, por lo que no se afirma. La exposición de motivos confirma que la revalorización era según la evolución del IPC.",
+      "source": {
+        "title": "Ley 26/1985, de 31 de julio, medidas urgentes para la racionalización de la estructura y de la acción protectora de la Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1985-16119",
+        "docId": "BOE-A-1985-16119"
+      }
+    },
+    {
+      "id": "rdleg-1-1994",
+      "titulo": "Real Decreto Legislativo 1/1994, de 20 de junio, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+      "rango": "Real Decreto Legislativo",
+      "fecha": "1994-06-20",
+      "fechaPublicacion": "1994-06-29",
+      "boeId": "BOE-A-1994-14960",
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "resumen": "Texto refundido de la LGSS que integró la Ley 26/1985 y el resto de la legislación vigente; fue el marco sobre el que actuaron las reformas de 1997 a 2013 hasta su sustitución por el texto refundido de 2015.",
+      "cambios": [
+        {
+          "parametro": "edad-ordinaria",
+          "antes": null,
+          "despues": "Sesenta y cinco años para la pensión de jubilación contributiva del Régimen General.",
+          "transicion": "Vigencia desde 1994-09-01 (metadatos BOE).",
+          "articulos": "Artículo 161.1.a) (redacción original)",
+          "evidencia": "a) Haber cumplido sesenta y cinco años de edad."
+        },
+        {
+          "parametro": "carencia",
+          "antes": null,
+          "despues": "Quince años, al menos dos dentro de los ocho inmediatamente anteriores al hecho causante (recoge la regla de la Ley 26/1985).",
+          "transicion": "Vigencia desde 1994-09-01.",
+          "articulos": "Artículo 161.1.b) (redacción original)",
+          "evidencia": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los ocho años inmediatamente anteriores al momento de causar el derecho."
+        },
+        {
+          "parametro": "periodo-calculo",
+          "antes": null,
+          "despues": "La base reguladora de jubilación se determina como la de invalidez del art. 140: bases de los 96 meses anteriores divididas por 112.",
+          "transicion": "Vigencia desde 1994-09-01.",
+          "articulos": "Artículos 162.1 y 140.1 (redacción original)",
+          "evidencia": "será el cociente que resulte de dividir por 112 las bases de cotización del interesado durante los noventa y seis meses inmediatamente anteriores a aquel en que se produzca el hecho causante."
+        },
+        {
+          "parametro": "escala-porcentajes",
+          "antes": null,
+          "despues": "La Ley no fija la escala: remite a «la escala que se fije en los Reglamentos generales».",
+          "transicion": "Vigencia desde 1994-09-01.",
+          "articulos": "Artículo 163 (redacción original)",
+          "evidencia": "aplicando a la base reguladora el porcentaje procedente de acuerdo con la escala que se fije en los Reglamentos generales, en función de los años de cotización que le correspondan."
+        },
+        {
+          "parametro": "revalorizacion",
+          "antes": null,
+          "despues": "Pensiones de jubilación e invalidez calculadas con los arts. 162.1 y 140 se revalorizan al comienzo de cada año según el IPC previsto; las desviaciones se usan al año siguiente para mejorar las pensiones inferiores al SMI.",
+          "transicion": "Vigencia desde 1994-09-01.",
+          "articulos": "Artículo 48 (redacción original)",
+          "evidencia": "serán revalorizadas al comienzo de cada año, de acuerdo con el Indice de Precios al Consumo previsto para dicho año."
+        }
+      ],
+      "modulos": ["Reformas", "Cómo se calcula"],
+      "estado": "derogada",
+      "notas": "Metadatos BOE: vigencia 1994-09-01; estatus de derogación «S» con fecha 2016-01-02 (entrada en vigor del RDLeg 8/2015). Las reglas citadas son las de la redacción original publicada; fueron modificadas después por las Leyes 24/1997, 35/2002, 40/2007, 27/2011, RDL 5/2013 y Ley 23/2013. No figuraba en la lista orientativa; se añade por ser la norma sobre la que operan las reformas de 1997-2013. La escala de porcentajes previa a 1997 estaba en reglamentos que no se han descargado (por eso antes = null en la escala de la Ley 24/1997).",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1994-14960",
+        "docId": "BOE-A-1994-14960"
+      }
+    },
+    {
+      "id": "ley-24-1997",
+      "titulo": "Ley 24/1997, de 15 de julio, de Consolidación y Racionalización del Sistema de Seguridad Social.",
+      "rango": "Ley",
+      "fecha": "1997-07-15",
+      "fechaPublicacion": "1997-07-16",
+      "boeId": "BOE-A-1997-15810",
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "resumen": "Primera reforma derivada del Pacto de Toledo: separa las fuentes de financiación, prevé un Fondo de Reserva, amplía el periodo de cálculo a 15 años, fija por ley la escala de porcentajes (50 % a los 15 años, 100 % a los 35) y establece la revalorización automática según IPC previsto con cláusula de desviación.",
+      "cambios": [
+        {
+          "parametro": "periodo-calculo",
+          "antes": "Últimos ocho años: bases de 96 meses divididas por 112 (art. 140.1 LGSS 1994, al que remitía el art. 162.1; la exposición de motivos habla de «los ocho previstos en la actual normativa»).",
+          "despues": "Bases de cotización de los 180 meses anteriores al hecho causante divididas por 210 (24 últimos meses a valor nominal, resto actualizados con IPC).",
+          "transicion": "Desde la entrada en vigor: 108 meses/126; desde 1-1-1998: 120/140; desde 1-1-1999: 132/154; desde 1-1-2000: 144/168; 2001: 156/182; desde 1-1-2002: 180/210.",
+          "articulos": "Artículo 5 (nueva redacción art. 162.1 LGSS y disp. trans. 5ª.1 LGSS)",
+          "evidencia": "será el cociente que resulte de dividir por 210, las bases de cotización del interesado durante los 180 meses inmediatamente anteriores a aquel en que se produzca el hecho causante."
+        },
+        {
+          "parametro": "carencia",
+          "antes": "Quince años con al menos dos dentro de los ocho inmediatamente anteriores (art. 161.1.b LGSS 1994, redacción original).",
+          "despues": "Quince años, de los cuales al menos dos dentro de los quince inmediatamente anteriores al hecho causante.",
+          "transicion": "Durante 1997, los dos años debían estar dentro de los diez anteriores; desde 1998 dentro de los quince.",
+          "articulos": "Artículo 4 (art. 161.1.b LGSS y disp. trans. 4ª.4 LGSS)",
+          "evidencia": "Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho."
+        },
+        {
+          "parametro": "escala-porcentajes",
+          "antes": "La LGSS 1994 remitía a la escala de los reglamentos generales (no descargados). La exposición de motivos indica que ya se percibía el 100 % con 35 años de cotización.",
+          "despues": "50 % por los primeros 15 años; 3 % por cada año entre el 16º y el 25º; 2 % por cada año desde el 26º; máximo 100 % (35 años).",
+          "transicion": "aplicación inmediata",
+          "articulos": "Artículo 6 (nueva redacción art. 163 LGSS)",
+          "evidencia": "Por los primeros quince años cotizados: el 50 por 100. Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100"
+        },
+        {
+          "parametro": "coeficientes-reductores",
+          "antes": null,
+          "despues": "Mutualistas a 1-1-1967 jubilados desde los 60 años: reducción del 8 % por año que falte hasta la edad ordinaria; 7 % si acreditan 40 o más años cotizados y el cese no es voluntario.",
+          "transicion": "aplicación inmediata",
+          "articulos": "Artículo 7 (disp. trans. 3ª.1.2ª LGSS)",
+          "evidencia": "el porcentaje de reducción de la cuantía de la pensión a que se refiere el párrafo anterior, será de un 7 por 100."
+        },
+        {
+          "parametro": "revalorizacion",
+          "antes": "Revalorización al comienzo del año según IPC previsto solo para pensiones calculadas con arts. 162.1 y 140; el resto, revalorización discrecional del Gobierno; desviaciones solo para pensiones inferiores al SMI (art. 48 LGSS 1994 original).",
+          "despues": "Todas las pensiones contributivas, incluida la mínima, se revalorizan a comienzo de año según el IPC previsto; si el IPC noviembre-noviembre supera el previsto, se abona la diferencia en pago único antes del 1 de abril; si es inferior, la diferencia se absorbe en la revalorización siguiente.",
+          "transicion": "aplicación inmediata",
+          "articulos": "Artículo 11 (art. 48 LGSS)",
+          "evidencia": "Las pensiones de la Seguridad Social en su modalidad contributiva, incluido el importe de la pensión mínima, serán revalorizadas al comienzo de cada año, en función del correspondiente índice de precios al consumo previsto para dicho año."
+        },
+        {
+          "parametro": "fondo-reserva",
+          "antes": "El art. 91.1 LGSS 1994 solo preveía que el Gobierno determinase la materialización financiera del superávit, si lo hubiera.",
+          "despues": "Con cargo a los excedentes de cotizaciones sociales de la liquidación presupuestaria se dotará el Fondo de Reserva para atender necesidades futuras del sistema.",
+          "transicion": "aplicación inmediata (la regulación específica llegó con la Ley 28/2003)",
+          "articulos": "Artículo 2 (art. 91.1 LGSS)",
+          "evidencia": "Con cargo a los excedentes de cotizaciones sociales que puedan resultar de la liquidación de los Presupuestos de la Seguridad Social, de cada ejercicio económico, se dotará el correspondiente Fondo de Reserva, con la finalidad de atender a las necesidades futuras del sistema."
+        },
+        {
+          "parametro": "otros",
+          "antes": null,
+          "despues": "Separación de fuentes de financiación: prestaciones no contributivas y universales (incluidos complementos a mínimos) financiadas con aportaciones del Estado; contributivas con cotizaciones.",
+          "transicion": "De modo paulatino antes del ejercicio 2000; los complementos a mínimos según cada Ley de PGE hasta que se fije su naturaleza.",
+          "articulos": "Artículo 1 (art. 86.2 y disp. trans. 14ª LGSS)",
+          "evidencia": "La acción protectora de la Seguridad Social, en su modalidad no contributiva y universal, se financiará mediante aportaciones del Estado al Presupuesto de la Seguridad Social"
+        },
+        {
+          "parametro": "bases-cotizacion",
+          "antes": null,
+          "despues": "Equiparación gradual de las bases máximas de los grupos 5 a 11 con el tope máximo único, para alcanzarla en 2002.",
+          "transicion": "Gradual según Leyes de PGE hasta 2002.",
+          "articulos": "Artículo 3 (disp. trans. 15ª LGSS)",
+          "evidencia": "de modo que en el año 2002 se alcance la equiparación de los importes de las bases máximas de cotización de los indicados grupos, con la cuantía del tope máximo."
+        },
+        {
+          "parametro": "pension-maxima",
+          "antes": null,
+          "despues": "El tope máximo de cobertura de las pensiones contributivas se fijará legalmente.",
+          "transicion": "aplicación inmediata",
+          "articulos": "Disposición final primera",
+          "evidencia": "El tope máximo de cobertura de las pensiones contributivas se fijará legalmente."
+        }
+      ],
+      "modulos": ["Reformas", "Cómo se calcula", "Financiación y déficit", "La «hucha»"],
+      "estado": "modificada",
+      "notas": "Metadatos BOE: estatus de derogación «N». Sus preceptos se integraron como modificaciones de la LGSS 1994, posteriormente derogada por el RDLeg 8/2015; por eso se marca como «modificada» (sus reglas fueron superadas por reformas posteriores). También amplía la orfandad (21/23 años) y unifica la terminología de incapacidad permanente.",
+      "source": {
+        "title": "Ley 24/1997, de 15 de julio, de Consolidación y Racionalización del Sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1997-15810",
+        "docId": "BOE-A-1997-15810"
+      }
+    },
+    {
+      "id": "ley-24-2001",
+      "titulo": "Ley 24/2001, de 27 de diciembre, de Medidas Fiscales, Administrativas y del Orden Social.",
+      "rango": "Ley",
+      "fecha": "2001-12-27",
+      "fechaPublicacion": "2001-12-31",
+      "boeId": "BOE-A-2001-24965",
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "resumen": "Ley de acompañamiento de los PGE 2002 que constituye formalmente el Fondo de Reserva de la Seguridad Social en la Tesorería General y amplía la jubilación parcial (hasta cinco años antes de la edad ordinaria, y desde la edad ordinaria sin contrato de relevo).",
+      "cambios": [
+        {
+          "parametro": "fondo-reserva",
+          "antes": "Art. 91.1 LGSS (redacción Ley 24/1997): «se dotará el correspondiente Fondo de Reserva» con cargo a excedentes de cotizaciones.",
+          "despues": "Se constituye en la TGSS un fondo de reserva dotado con los excedentes de ingresos que financian gastos contributivos; el Gobierno fija cada año la dotación y su materialización; los rendimientos se integran en el fondo.",
+          "transicion": "Vigencia 1-1-2002",
+          "articulos": "Artículo 34.Dos (art. 91.1 LGSS 1994)",
+          "evidencia": "En la Tesorería General de la Seguridad Social se constituirá un fondo de reserva de la Seguridad Social con la finalidad de atender a las necesidades futuras del Sistema de la Seguridad Social"
+        },
+        {
+          "parametro": "jubilacion-parcial",
+          "antes": "Edad inferior a la exigida en tres años como máximo (art. 166.1 LGSS 1994, redacción original).",
+          "despues": "Jubilación parcial desde la edad ordinaria sin contrato de relevo, y anticipada hasta cinco años antes de la edad general en las condiciones del art. 12.6 ET.",
+          "transicion": "Vigencia 1-1-2002",
+          "articulos": "Artículo 34.Seis (art. 166 LGSS 1994)",
+          "evidencia": "que habrá de ser inferior en cinco años, como máximo, a la exigida con carácter general, podrán acceder a la jubilación parcial"
+        },
+        {
+          "parametro": "otros",
+          "antes": "Orfandad hasta 21 años (23 sin ambos padres) sin trabajo lucrativo (art. 175.2 en redacción de la Ley 24/1997).",
+          "despues": "Orfandad hasta 22 años (24 sin ambos padres) si no trabaja o sus ingresos son inferiores al 75 % del SMI.",
+          "transicion": "Vigencia 1-1-2002",
+          "articulos": "Artículo 34.Ocho (art. 175.2 LGSS 1994)",
+          "evidencia": "fuera menor de 22 años de edad, o de 24 si no sobreviviera ninguno de los padres."
+        }
+      ],
+      "modulos": ["La «hucha»", "Reformas", "Tipos de pensión"],
+      "estado": "modificada",
+      "notas": "No figuraba en la lista orientativa. La exposición de motivos de la Ley 28/2003 confirma que fue este art. 34.Dos de la Ley 24/2001 el que «constituyó» el Fondo de Reserva en la TGSS, y que hubo dotaciones por acuerdos del Consejo de Ministros en 2000, 2001 y 2002 (no se han descargado esos acuerdos). Metadatos BOE: estatus de derogación «N».",
+      "source": {
+        "title": "Ley 24/2001, de 27 de diciembre, de Medidas Fiscales, Administrativas y del Orden Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24965",
+        "docId": "BOE-A-2001-24965"
+      }
+    },
+    {
+      "id": "ley-35-2002",
+      "titulo": "Ley 35/2002, de 12 de julio, de medidas para el establecimiento de un sistema de jubilación gradual y flexible.",
+      "rango": "Ley",
+      "fecha": "2002-07-12",
+      "fechaPublicacion": "2002-07-13",
+      "boeId": "BOE-A-2002-13972",
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "resumen": "Desarrolla el Acuerdo de 2001: abre la jubilación anticipada a los 61 años a los no mutualistas con coeficientes reductores según años cotizados, introduce un incentivo del 2 % anual por demorar la jubilación más allá de los 65 y permite compatibilizar pensión y trabajo a tiempo parcial (jubilación flexible).",
+      "cambios": [
+        {
+          "parametro": "coeficientes-reductores",
+          "antes": "Solo los mutualistas a 1-1-1967 podían anticipar (desde 60) con reducción del 8 % por año, o 7 % con 40 o más años cotizados y cese involuntario (disp. trans. 3ª LGSS en la redacción de la Ley 24/1997).",
+          "despues": "Nueva jubilación anticipada desde los 61 años (30 años cotizados efectivos, 6 meses inscrito como demandante de empleo y cese involuntario) con reducción por año que falte hasta 65: 8 % (30 años), 7,5 % (31-34), 7 % (35-37), 6,5 % (38-39), 6 % (40 o más). Para mutualistas con cese involuntario y más de 30 años cotizados la reducción pasa a 7,5 %/7 %/6,5 %/6 % según años cotizados.",
+          "transicion": "aplicación inmediata (entrada en vigor al día siguiente de su publicación)",
+          "articulos": "Artículos 3 y 4 (art. 161.3 y disp. trans. 3ª.1.2ª LGSS 1994)",
+          "evidencia": "1.º Con treinta años completos de cotización acreditados: 8 por 100. [...] 5.º Con cuarenta o más años completos de cotización acreditados: 6 por 100."
+        },
+        {
+          "parametro": "incentivos-demora",
+          "antes": "Porcentaje máximo del 100 % de la base reguladora (art. 163 LGSS en redacción de la Ley 24/1997).",
+          "despues": "Jubilación después de los 65 con 35 años cotizados: 2 % adicional por cada año completo cotizado desde los 65, pudiendo superar el 100 %.",
+          "transicion": "aplicación inmediata",
+          "articulos": "Artículo 10 (art. 163.2 LGSS 1994)",
+          "evidencia": "el porcentaje aplicable a la respectiva base reguladora será el resultante de sumar al 100 por 100 un 2 por 100 adicional por cada año completo que, en la fecha del hecho causante de la pensión, se haya cotizado desde el cumplimiento de los sesenta y cinco años"
+        },
+        {
+          "parametro": "tipos-cotizacion",
+          "antes": null,
+          "despues": "Exención de cotizar por contingencias comunes (salvo IT) para empresarios y trabajadores con contrato indefinido de 65 o más años y 35 o más años cotizados; bonificación del 50 % de la cuota empresarial para indefinidos de 60 o más años con 5 de antigüedad, creciendo un 10 % anual hasta el 100 %.",
+          "transicion": "Bonificación sobre cuotas devengadas desde 1-1-2002, +10 % por ejercicio.",
+          "articulos": "Artículos 11, 13 y 14 (art. 112 bis LGSS 1994)",
+          "evidencia": "Los empresarios y trabajadores quedarán exentos de cotizar a la Seguridad Social por contingencias comunes, salvo por incapacidad temporal derivada de las mismas"
+        },
+        {
+          "parametro": "jubilacion-activa",
+          "antes": "El disfrute de la pensión era incompatible con el trabajo del pensionista, con las salvedades legales o reglamentarias (art. 165.1 LGSS 1994 original).",
+          "despues": "Jubilación flexible: compatibilidad de la pensión con un trabajo a tiempo parcial, minorando la pensión en proporción inversa a la reducción de jornada.",
+          "transicion": "En los términos que se establezcan reglamentariamente.",
+          "articulos": "Artículo 1 (art. 165.1 párrafo segundo LGSS 1994)",
+          "evidencia": "las personas que accedan a la jubilación podrán compatibilizar el percibo de la pensión con un trabajo a tiempo parcial en los términos que reglamentariamente se establezcan."
+        },
+        {
+          "parametro": "jubilacion-parcial",
+          "antes": "Jubilación parcial hasta tres años antes de la edad exigida, en las condiciones de la Ley 10/1994 (art. 166 LGSS 1994 original).",
+          "despues": "Se remite su régimen jurídico al desarrollo reglamentario.",
+          "transicion": "aplicación inmediata",
+          "articulos": "Artículo 2 (art. 166.4 LGSS 1994)",
+          "evidencia": "El régimen jurídico de la jubilación parcial a que se refieren los apartados anteriores será el que reglamentariamente se establezca."
+        },
+        {
+          "parametro": "edad-ordinaria",
+          "antes": null,
+          "despues": "Se habilita a rebajar por Real Decreto la edad de jubilación de personas con discapacidad igual o superior al 65 %.",
+          "transicion": "Según el Real Decreto que se dicte.",
+          "articulos": "Disposición adicional primera (art. 161.2 LGSS 1994)",
+          "evidencia": "la edad mínima a que se refiere el párrafo a) del apartado anterior podrá ser reducida en el caso de personas minusválidas en un grado de minusvalía igual o superior al 65 por 100"
+        }
+      ],
+      "modulos": ["Reformas", "Tipos de pensión", "Cómo se calcula"],
+      "estado": "modificada",
+      "notas": "Metadatos BOE: estatus de derogación «N»; vigencia 2002-07-14. Sus reglas sobre anticipada, demora y compatibilidad fueron reformadas después (Leyes 40/2007, 27/2011, RDL 5/2013, Ley 21/2021, RDL 11/2024).",
+      "source": {
+        "title": "Ley 35/2002, de 12 de julio, de medidas para el establecimiento de un sistema de jubilación gradual y flexible.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-13972",
+        "docId": "BOE-A-2002-13972"
+      }
+    },
+    {
+      "id": "ley-28-2003",
+      "titulo": "Ley 28/2003, de 29 de septiembre, reguladora del Fondo de Reserva de la Seguridad Social.",
+      "rango": "Ley",
+      "fecha": "2003-09-29",
+      "fechaPublicacion": "2003-09-30",
+      "boeId": "BOE-A-2003-18089",
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "resumen": "Ley específica del Fondo de Reserva: los excedentes contributivos se destinan prioritaria y mayoritariamente al Fondo, que solo puede usarse para pagar pensiones contributivas en situaciones estructurales de déficit y con un límite anual del 3 %.",
+      "cambios": [
+        {
+          "parametro": "fondo-reserva",
+          "antes": "Art. 91.1 LGSS en la redacción de la Ley 24/2001: el Gobierno fijaba cada ejercicio la cuantía de excedentes destinada al fondo (según la exposición de motivos de esta Ley, las dotaciones de 2000-2002 se fijaron por acuerdos del Consejo de Ministros y superaban «ya los seis mil millones de euros»).",
+          "despues": "Excedentes contributivos destinados «prioritaria y mayoritariamente» al Fondo; dotación acordada al menos una vez al año por el Consejo de Ministros; rendimientos se integran en el Fondo; inversión en títulos de personas jurídicas públicas; disposición solo para pensiones contributivas en déficit estructural, con límite anual del 3 % de la suma de pensiones contributivas y gastos de gestión, previa autorización del Consejo de Ministros; informe anual a las Cortes.",
+          "transicion": "Entrada en vigor al día siguiente de su publicación",
+          "articulos": "Artículos 1 a 9; disposiciones adicionales primera y tercera",
+          "evidencia": "sólo será posible en situaciones estructurales de déficit por operaciones no financieras del sistema de la Seguridad Social, no podrá exceder en cada año del tres por ciento de la suma de ambos conceptos"
+        }
+      ],
+      "modulos": ["La «hucha»", "Financiación y déficit"],
+      "estado": "derogada",
+      "notas": "Metadatos BOE: estatus de derogación «S», fecha 2016-01-02 (entrada en vigor del RDLeg 8/2015, que integra el Fondo de Reserva en la LGSS). La lista orientativa preguntaba por la norma que «creó» el Fondo: la Ley 24/1997 lo previó (art. 91.1), la Ley 24/2001 lo constituyó en la TGSS y la Ley 28/2003 lo reguló. Pendiente verificar las normas que suspendieron temporalmente el límite del 3 % (no descargadas).",
+      "source": {
+        "title": "Ley 28/2003, de 29 de septiembre, reguladora del Fondo de Reserva de la Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2003-18089",
+        "docId": "BOE-A-2003-18089"
+      }
+    },
+    {
+      "id": "ley-40-2007",
+      "titulo": "Ley 40/2007, de 4 de diciembre, de medidas en materia de Seguridad Social.",
+      "rango": "Ley",
+      "fecha": "2007-12-04",
+      "fechaPublicacion": "2007-12-05",
+      "boeId": "BOE-A-2007-20910",
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "resumen": "Desarrolla el Acuerdo de 13 de julio de 2006: exige que los 15 años de carencia sean días efectivos (sin pagas extra), eleva el incentivo por demora (2 % o 3 % anual), endurece la jubilación parcial (61 años, 6 de antigüedad, 30 cotizados), suaviza los coeficientes reductores para 30-34 años cotizados y reconoce la viudedad a parejas de hecho.",
+      "cambios": [
+        {
+          "parametro": "carencia",
+          "antes": "Quince años, al menos dos dentro de los últimos quince (art. 161.1.b LGSS en redacción de la Ley 24/1997); según el preámbulo, se computaban también los días de pagas extraordinarias.",
+          "despues": "Quince años efectivos: no se computa la parte proporcional de pagas extraordinarias (5.475 días).",
+          "transicion": "Disposición transitoria cuarta LGSS: por semestres desde la entrada en vigor, 4.700 días en el primer semestre, +77 días por semestre (4.777, 4.854, ... 5.393 en el décimo) y 5.475 días a partir del sexto año.",
+          "articulos": "Artículo 3.Uno y Seis (art. 161.1.b y disp. trans. 4ª LGSS 1994)",
+          "evidencia": "A efectos del cómputo de los años cotizados no se tendrá en cuenta la parte proporcional correspondiente por pagas extraordinarias."
+        },
+        {
+          "parametro": "incentivos-demora",
+          "antes": "2 % adicional por año cotizado desde los 65 con 35 años cotizados (art. 163.2 en redacción de la Ley 35/2002).",
+          "despues": "2 % por cada año completo entre los 65 y el hecho causante (con carencia mínima cumplida a los 65); 3 % si se acreditan 40 años cotizados a los 65. Si se alcanza la pensión máxima, se cobra una cantidad anual equivalente al porcentaje no utilizado aplicado al límite, con tope del tope máximo de cotización.",
+          "transicion": "Entrada en vigor 1-1-2008",
+          "articulos": "Artículo 3.Cuatro (art. 163.2 LGSS 1994)",
+          "evidencia": "se reconocerá al interesado un porcentaje adicional consistente en un 2 por ciento por cada año completo transcurrido entre la fecha en que cumplió dicha edad y la del hecho causante de la pensión. Dicho porcentaje se elevará al 3 por ciento cuando el interesado hubiera acreditado al menos cuarenta años de cotización al cumplir 65 años."
+        },
+        {
+          "parametro": "coeficientes-reductores",
+          "antes": "Anticipada desde 61: 8 % con 30 años cotizados; 7,5 % con 31-34; 7 % 35-37; 6,5 % 38-39; 6 % 40 o más (art. 161.3 en redacción de la Ley 35/2002).",
+          "despues": "Nuevo art. 161 bis: 7,5 % con 30-34 años cotizados; 7 % 35-37; 6,5 % 38-39; 6 % 40 o más, por año o fracción que falte hasta los 65. Se computa como cotizado hasta un año de servicio militar/prestación social. Edad mínima absoluta de 52 años con coeficientes reductores de edad por actividades penosas o discapacidad.",
+          "transicion": "Entrada en vigor 1-1-2008",
+          "articulos": "Artículo 3.Tres y Cinco (art. 161 bis y disp. trans. 3ª LGSS 1994)",
+          "evidencia": "1.º Entre treinta y treinta y cuatro años de cotización acreditados: 7,5 por ciento."
+        },
+        {
+          "parametro": "jubilacion-parcial",
+          "antes": "Hasta cinco años antes de la edad general en condiciones del art. 12.6 ET (art. 166 en redacción de la Ley 24/2001).",
+          "despues": "Con contrato de relevo: 61 años (60 para mutualistas), 6 años de antigüedad, 30 años cotizados y reducción de jornada entre 25 % y 75 % (85 % con relevista indefinido a jornada completa). Desde 65 años sin relevo con reducción de jornada entre 25 % y 75 %.",
+          "transicion": "Disp. trans. 17ª LGSS: edad 60 años el 1er año, +2 meses por año hasta 61 a partir del 7º; antigüedad 2→6 años; reducción máxima 85 %→75 %; cotización 18→30 años en cinco años; régimen anterior aplicable a compromisos colectivos previos hasta 31-12-2009.",
+          "articulos": "Artículo 4 (art. 166 y disp. trans. 17ª LGSS 1994)",
+          "evidencia": "Haber cumplido la edad de 61 años, o de 60 si se trata de los trabajadores a que se refiere la norma 2.ª del apartado 1 de la disposición transitoria tercera"
+        },
+        {
+          "parametro": "viudedad",
+          "antes": null,
+          "despues": "Pensión de viudedad para parejas de hecho con 5 años de convivencia y dependencia económica (ingresos <50 % de la suma, o <25 % sin hijos comunes, o < 1,5 SMI); exigencia de un año de matrimonio o hijos comunes si la muerte deriva de enfermedad común previa; separados/divorciados condicionados a pensión compensatoria; garantía del 40 % al cónyuge superviviente o conviviente en concurrencia.",
+          "transicion": "Entrada en vigor 1-1-2008",
+          "articulos": "Artículo 5.Tres (art. 174 LGSS 1994)",
+          "evidencia": "tendrá asimismo derecho a la pensión de viudedad quien se encontrase unido al causante en el momento de su fallecimiento, formando una pareja de hecho"
+        },
+        {
+          "parametro": "incapacidad",
+          "antes": null,
+          "despues": "Se flexibiliza la carencia de los jóvenes y el cálculo de la incapacidad permanente por enfermedad común se aproxima al de jubilación (según el preámbulo); el complemento de gran invalidez se desvincula de la pensión de incapacidad absoluta.",
+          "transicion": "Entrada en vigor 1-1-2008",
+          "articulos": "Artículo 2 (arts. 138, 139, 140 LGSS 1994)",
+          "evidencia": "se modifica la forma de cálculo del importe de las pensiones de incapacidad permanente derivada de enfermedad común, para aproximarla a la establecida para la pensión de jubilación"
+        }
+      ],
+      "modulos": ["Reformas", "Cómo se calcula", "Tipos de pensión"],
+      "estado": "modificada",
+      "notas": "Entrada en vigor el día 1 del mes siguiente a su publicación (1-1-2008; metadatos BOE: vigencia 2008-01-01), salvo la DA 4ª. Además: DA 18ª crea un informe anual de evaluación del sistema de pensiones a las Cortes; DA 20ª exonera de cotización (salvo IT) a trabajadores de 65+ con 35 años cotizados; DA 24ª prevé subidas adicionales de los complementos a mínimos de pensionistas que viven solos durante cuatro años. Metadatos BOE: estatus de derogación «N». Los cambios de incapacidad se describen según el preámbulo; no se ha extraído el detalle de los nuevos arts. 139-140.",
+      "source": {
+        "title": "Ley 40/2007, de 4 de diciembre, de medidas en materia de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2007-20910",
+        "docId": "BOE-A-2007-20910"
+      }
+    },
+    {
+      "id": "ley-27-2011",
+      "titulo": "Ley 27/2011, de 1 de agosto, sobre actualización, adecuación y modernización del sistema de Seguridad Social.",
+      "rango": "Ley",
+      "fecha": "2011-08-01",
+      "fechaPublicacion": "2011-08-02",
+      "boeId": "BOE-A-2011-13242",
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "resumen": "Gran reforma paramétrica de 2011: retrasa gradualmente la edad ordinaria de 65 a 67 años (65 con 38 años y 6 meses cotizados), amplía el periodo de cálculo de 15 a 25 años, exige 37 años para el 100 %, rediseña la jubilación anticipada y prevé un factor de sostenibilidad a partir de 2027.",
+      "cambios": [
+        {
+          "parametro": "edad-ordinaria",
+          "antes": "65 años (art. 161.1.a LGSS 1994; la propia Ley 27/2011 sustituye esa letra a).",
+          "despues": "67 años, o 65 años con 38 años y 6 meses cotizados (sin pagas extraordinarias).",
+          "transicion": "Disp. trans. 20ª LGSS: 2013: 65 años con 35a3m o más, si no 65a1m; 2014: 35a6m / 65a2m; 2015: 35a9m / 65a3m; 2016: 36a / 65a4m; 2017: 36a3m / 65a5m; 2018: 36a6m / 65a6m; 2019: 36a9m / 65a8m; 2020: 37a / 65a10m; 2021: 37a3m / 66a; 2022: 37a6m / 66a2m; 2023: 37a9m / 66a4m; 2024: 38a / 66a6m; 2025: 38a3m / 66a8m; 2026: 38a3m / 66a10m; desde 2027: 38a6m / 67 años.",
+          "articulos": "Artículo 4.Uno y Dos (art. 161.1.a y disp. trans. 20ª LGSS 1994)",
+          "evidencia": "a) Haber cumplido 67 años de edad, o 65 años cuando se acrediten 38 años y 6 meses de cotización, sin que se tenga en cuenta la parte proporcional correspondiente a las pagas extraordinarias."
+        },
+        {
+          "parametro": "periodo-calculo",
+          "antes": "180 meses divididos por 210 (art. 162.1 LGSS en redacción de la Ley 24/1997).",
+          "despues": "Bases de los 300 meses (25 años) anteriores al mes previo al hecho causante divididas por 350; nuevas reglas de integración de lagunas (24 meses al 100 % de la base mínima, resto al 50 %).",
+          "transicion": "Disp. trans. 5ª LGSS: 2013: 192 meses/224; 2014: 204/238; 2015: 216/252; 2016: 228/266; 2017: 240/280; 2018: 252/294; 2019: 264/308; 2020: 276/322; 2021: 288/336; desde 2022: 300/350. Opción de 240/280 (2013-2016) o 300/350 (2017-2021) para despedidos desde los 55 con reducción de bases.",
+          "articulos": "Artículo 4.Tres y Cuatro (art. 162.1 y disp. trans. 5ª LGSS 1994)",
+          "evidencia": "será el cociente que resulte de dividir por 350, las bases de cotización del beneficiario durante los 300 meses inmediatamente anteriores al mes previo al del hecho causante."
+        },
+        {
+          "parametro": "escala-porcentajes",
+          "antes": "50 % por 15 años, 3 % por año del 16º al 25º y 2 % por año desde el 26º, máximo 100 % (35 años) (art. 163 LGSS en redacción de las Leyes 24/1997 y 35/2002).",
+          "despues": "50 % por los primeros 15 años; desde el año 16, 0,19 % por cada mes adicional entre los meses 1 y 248 y 0,18 % por los que rebasen el mes 248; máximo 100 % (37 años).",
+          "transicion": "Disp. trans. 21ª LGSS: 2013-2019: 0,21 % meses 1-163 y 0,19 % los 83 siguientes; 2020-2022: 0,21 % meses 1-106 y 0,19 % los 146 siguientes; 2023-2026: 0,21 % meses 1-49 y 0,19 % los 209 siguientes; desde 2027: 0,19 % meses 1-248 y 0,18 % los 16 siguientes.",
+          "articulos": "Artículo 4.Cinco y Seis (art. 163.1 y disp. trans. 21ª LGSS 1994)",
+          "evidencia": "A partir del año decimosexto, por cada mes adicional de cotización, comprendidos entre los meses 1 y 248, se añadirá el 0,19 por 100, y por los que rebasen el mes 248, se añadirá el 0,18 por 100"
+        },
+        {
+          "parametro": "incentivos-demora",
+          "antes": "2 % por año desde los 65 (3 % con 40 años cotizados) (art. 163.2 en redacción de la Ley 40/2007).",
+          "despues": "Por cada año completo cotizado tras la edad ordinaria: 2 % con hasta 25 años cotizados; 2,75 % entre 25 y 37; 4 % a partir de 37.",
+          "transicion": "Entrada en vigor 1-1-2013",
+          "articulos": "Artículo 4.Cinco (art. 163.2 LGSS 1994)",
+          "evidencia": "– Hasta 25 años cotizados, el 2 por 100. – Entre 25 y 37 años cotizados, el 2,75 por 100. – A partir de 37 años cotizados, el 4 por 100."
+        },
+        {
+          "parametro": "coeficientes-reductores",
+          "antes": "Anticipada involuntaria desde 61 años con 30 cotizados y reducción anual del 7,5 % al 6 % según años cotizados (art. 161 bis.2 en redacción de la Ley 40/2007).",
+          "despues": "Dos modalidades: (A) involuntaria por crisis o cierre de empresa desde 61 años con 33 cotizados; (B) voluntaria desde 63 años con 33 cotizados y pensión superior a la mínima. En ambas, reducción por trimestre de anticipación respecto de la edad legal: 1,875 % (menos de 38a6m cotizados) o 1,625 % (38a6m o más). Tras aplicar coeficientes, la pensión no puede superar el tope máximo reducido un 0,25 % por trimestre de anticipación.",
+          "transicion": "Entrada en vigor 1-1-2013",
+          "articulos": "Artículo 5 (art. 161 bis.2 LGSS 1994); artículo 4.Cinco (art. 163.3)",
+          "evidencia": "de un coeficiente del 1,875 por 100 por trimestre para los trabajadores con menos de 38 años y 6 meses cotizados, y del 1,625 por 100 por trimestre para los trabajadores con 38 años y 6 meses cotizados o más."
+        },
+        {
+          "parametro": "factor-sostenibilidad",
+          "antes": null,
+          "despues": "A partir de 2027 los parámetros fundamentales del sistema se revisarán cada 5 años según la diferencia entre la esperanza de vida a los 67 años en el año de revisión y la de 2027.",
+          "transicion": "A partir de 2027 (nunca llegó a aplicarse en estos términos: la Ley 23/2013 lo reguló de otro modo).",
+          "articulos": "Artículo 8 (disp. adic. 59ª LGSS 1994)",
+          "evidencia": "a partir de 2027 los parámetros fundamentales del sistema se revisarán por las diferencias entre la evolución de la esperanza de vida a los 67 años de la población en el año en que se efectúe la revisión y la esperanza de vida a los 67 años en 2027."
+        },
+        {
+          "parametro": "jubilacion-parcial",
+          "antes": "Con relevo desde 61 años; sin relevo desde 65 (art. 166 en redacción de la Ley 40/2007).",
+          "despues": "Edades referidas a la edad ordinaria variable; cotización durante la jubilación parcial por la base a jornada completa; base del relevista no inferior al 65 % del promedio de las 6 últimas bases del jubilado parcial.",
+          "transicion": "Disp. trans. 22ª: base de cotización 30 % de la de jornada completa en 2013, +5 puntos anuales desde 2014 hasta el 100 %.",
+          "articulos": "Artículo 6 (art. 166 y disp. trans. 22ª LGSS 1994)",
+          "evidencia": "durante el periodo de disfrute de la jubilación parcial, empresa y trabajador cotizarán por la base de cotización que, en su caso, hubiere correspondido de seguir trabajando éste a jornada completa."
+        },
+        {
+          "parametro": "pension-minima",
+          "antes": null,
+          "despues": "Los complementos a mínimos no pueden superar la cuantía de la pensión no contributiva de jubilación/invalidez y exigen residencia en España.",
+          "transicion": "Solo para pensiones causadas desde 1-1-2013 (disp. adic. 54ª LGSS).",
+          "articulos": "Artículo 1 (art. 50 y disp. adic. 54ª LGSS 1994)",
+          "evidencia": "El importe de dichos complementos en ningún caso podrá superar la cuantía establecida en cada ejercicio para las pensiones de jubilación e invalidez en su modalidad no contributiva."
+        },
+        {
+          "parametro": "jubilacion-activa",
+          "antes": null,
+          "despues": "Pensión compatible con trabajo por cuenta propia con ingresos anuales no superiores al SMI, sin obligación de cotizar ni generar nuevos derechos.",
+          "transicion": "En vigor desde la publicación (2-8-2011)",
+          "articulos": "Disposición adicional trigésima primera (art. 165.4 LGSS 1994)",
+          "evidencia": "El percibo de la pensión de jubilación será compatible con la realización de trabajos por cuenta propia cuyos ingresos anuales totales no superen el Salario Mínimo Interprofesional, en cómputo anual."
+        },
+        {
+          "parametro": "otros",
+          "antes": null,
+          "despues": "Beneficio por cuidado de hijos: se computan como cotizados 112 días por hijo en interrupciones de cotización alrededor del nacimiento, creciendo hasta 270 días en 2019 (máx. 5 años por beneficiario).",
+          "transicion": "Incremento anual 2013-2018 hasta 270 días en 2019.",
+          "articulos": "Artículo 9 (disp. adic. 60ª LGSS 1994)",
+          "evidencia": "La duración de este cómputo como periodo cotizado será de 112 días por cada hijo o menor adoptado o acogido."
+        }
+      ],
+      "modulos": ["Reformas", "Cómo se calcula", "Tu pensión", "Tipos de pensión"],
+      "estado": "modificada",
+      "notas": "Entrada en vigor general el 1-1-2013 (disp. final 12ª), con excepciones. En la tabla de la disp. trans. 20ª tal como se publicó en el BOE, los años 2025 y 2026 figuran ambos con «38 años y 3 meses o más»; se transcribe literalmente. Parte de su contenido (jubilación anticipada y parcial) fue modificado antes de aplicarse por el RDL 5/2013, y el factor de sostenibilidad por la Ley 23/2013. Metadatos BOE: estatus de derogación «N».",
+      "source": {
+        "title": "Ley 27/2011, de 1 de agosto, sobre actualización, adecuación y modernización del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-13242",
+        "docId": "BOE-A-2011-13242"
+      }
+    },
+    {
+      "id": "rdl-28-2012",
+      "titulo": "Real Decreto-ley 28/2012, de 30 de noviembre, de medidas de consolidación y garantía del sistema de la Seguridad Social.",
+      "rango": "Real Decreto-ley",
+      "fecha": "2012-11-30",
+      "fechaPublicacion": "2012-12-01",
+      "boeId": "BOE-A-2012-14695",
+      "confidence": "alta",
+      "resumen": "Suspende para 2013 la revalorización por IPC previsto y fija un incremento general del 1 % (con un punto adicional para las pensiones más bajas).",
+      "cambios": [
+        {
+          "parametro": "revalorizacion",
+          "antes": null,
+          "despues": "Incremento general del 1 % en 2013, tomando como referencia la cuantía a 31 de diciembre de 2012.",
+          "transicion": "Solo para 2013; el texto indica que las pensiones que no superen el umbral fijado se incrementan un punto adicional.",
+          "articulos": "Artículo sobre revalorización de pensiones en 2013",
+          "evidencia": "Las pensiones abonadas por el sistema de la Seguridad Social, así como de Clases Pasivas, se incrementarán en 2013 un uno por ciento tomando como referencia la cuantía legalmente establecida a 31 de diciembre de 2012."
+        }
+      ],
+      "modulos": ["Reformas", "Cómo se calcula"],
+      "estado": "modificada",
+      "source": {
+        "title": "Real Decreto-ley 28/2012, de 30 de noviembre, de medidas de consolidación y garantía del sistema de la Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-14695",
+        "docId": "BOE-A-2012-14695"
+      },
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "rdl-5-2013",
+      "titulo": "Real Decreto-ley 5/2013, de 15 de marzo, de medidas para favorecer la continuidad de la vida laboral de los trabajadores de mayor edad y promover el envejecimiento activo.",
+      "rango": "Real Decreto-ley",
+      "fecha": "2013-03-15",
+      "fechaPublicacion": "2013-03-16",
+      "boeId": "BOE-A-2013-2874",
+      "confidence": "alta",
+      "resumen": "Regula la compatibilidad entre pensión de jubilación y trabajo, endurece la jubilación anticipada y modifica la jubilación parcial.",
+      "cambios": [
+        {
+          "parametro": "jubilacion-activa",
+          "antes": null,
+          "despues": "La pensión de jubilación es compatible con el trabajo por cuenta ajena o propia si se accede a la edad ordinaria, con porcentaje del 100 % de la base reguladora; la pensión se abona al 50 %.",
+          "transicion": "Solo regímenes del sistema de la Seguridad Social; no aplica a Clases Pasivas.",
+          "articulos": "Artículos 1 a 3",
+          "evidencia": "La cuantía de la pensión de jubilación compatible con el trabajo será equivalente al 50 por 100 del importe resultante en el reconocimiento inicial"
+        },
+        {
+          "parametro": "jubilacion-anticipada",
+          "antes": null,
+          "despues": "Dos modalidades: por cese no imputable al trabajador (hasta cuatro años antes de la edad ordinaria, 33 años de cotización efectiva) y por voluntad del interesado.",
+          "transicion": "Disposición transitoria: se mantiene la regulación anterior para las pensiones causadas antes del 1 de enero de 2019 en los supuestos que enumera.",
+          "articulos": "Artículo 6 (nueva redacción del artículo 161 bis LGSS)",
+          "evidencia": "Tener cumplida una edad que sea inferior en cuatro años, como máximo, a la edad que en cada caso resulte de aplicación"
+        },
+        {
+          "parametro": "jubilacion-parcial",
+          "antes": null,
+          "despues": "Reducción de jornada entre el 25 % y el 50 % sin contrato de relevo para quien ha alcanzado la edad ordinaria; con relevo, para trabajadores a tiempo completo con requisitos de edad y cotización.",
+          "transicion": "Normas transitorias del artículo 8.",
+          "articulos": "Artículo 7 (nueva redacción del artículo 166 LGSS)",
+          "evidencia": "siempre que se produzca una reducción de su jornada de trabajo comprendida entre un mínimo del 25 por 100 y un máximo del 50 por 100"
+        }
+      ],
+      "modulos": ["Tipos de pensión", "Reformas"],
+      "estado": "modificada",
+      "source": {
+        "title": "Real Decreto-ley 5/2013, de 15 de marzo, de medidas para favorecer la continuidad de la vida laboral de los trabajadores de mayor edad y promover el envejecimiento activo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-2874",
+        "docId": "BOE-A-2013-2874"
+      },
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "ley-23-2013",
+      "titulo": "Ley 23/2013, de 23 de diciembre, reguladora del Factor de Sostenibilidad y del Índice de Revalorización del Sistema de Pensiones de la Seguridad Social.",
+      "rango": "Ley",
+      "fecha": "2013-12-23",
+      "fechaPublicacion": "2013-12-26",
+      "boeId": "BOE-A-2013-13617",
+      "confidence": "alta",
+      "resumen": "Crea el factor de sostenibilidad y el índice de revalorización de las pensiones (IRP).",
+      "cambios": [
+        {
+          "parametro": "revalorizacion",
+          "antes": null,
+          "despues": "Incremento anual no inferior al 0,25 % ni superior a la variación del IPC más 0,50 puntos.",
+          "transicion": "Sustituye la revalorización por IPC previsto; aplicable desde 2014.",
+          "articulos": "Artículo 7",
+          "evidencia": "En ningún caso el resultado obtenido podrá dar lugar a un incremento anual de las pensiones inferior al 0,25 por ciento ni superior a la variación porcentual del índice de precios de consumo en el periodo anual anterior a diciembre del año t, más 0,50 por ciento."
+        },
+        {
+          "parametro": "factor-sostenibilidad",
+          "antes": null,
+          "despues": "Factor que ajusta la pensión inicial de jubilación a la evolución de la esperanza de vida a los 67 años, revisado cada cinco años.",
+          "transicion": "Aplicable a las pensiones de jubilación causadas a partir del 1 de enero de 2019.",
+          "articulos": "Artículos 4 a 6",
+          "evidencia": "El factor de sostenibilidad se aplicará a las pensiones de jubilación del sistema de la Seguridad Social que se causen a partir del 1 de enero de 2019."
+        }
+      ],
+      "modulos": ["Reformas", "Cómo se calcula"],
+      "estado": "derogada",
+      "notas": "El factor de sostenibilidad y el IRP fueron sustituidos por la Ley 21/2021 (revalorización por IPC medio) y por el MEI (RDL 2/2023).",
+      "source": {
+        "title": "Ley 23/2013, de 23 de diciembre, reguladora del Factor de Sostenibilidad y del Índice de Revalorización del Sistema de Pensiones de la Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13617",
+        "docId": "BOE-A-2013-13617"
+      },
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "rdleg-8-2015",
+      "titulo": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+      "rango": "Real Decreto Legislativo",
+      "fecha": "2015-10-30",
+      "fechaPublicacion": "2015-10-31",
+      "boeId": "BOE-A-2015-11724",
+      "confidence": "alta",
+      "resumen": "Aprueba el texto refundido de la Ley General de la Seguridad Social, que renumera los artículos de la LGSS de 1994.",
+      "cambios": [
+        {
+          "parametro": "otros",
+          "antes": null,
+          "despues": "Texto refundido vigente de la LGSS (TRLGSS): los artículos citados en la web remiten a esta numeración.",
+          "transicion": "Refundición sin cambio de contenido; sustituye al Real Decreto Legislativo 1/1994.",
+          "articulos": "Artículo único",
+          "evidencia": "Se aprueba el texto refundido de la Ley General de la Seguridad Social que se inserta a continuación."
+        }
+      ],
+      "modulos": ["Metodología", "Reformas"],
+      "estado": "vigente",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "rdl-28-2018",
+      "titulo": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+      "rango": "Real Decreto-ley",
+      "fecha": "2018-12-28",
+      "fechaPublicacion": "2018-12-29",
+      "boeId": "BOE-A-2018-17992",
+      "confidence": "alta",
+      "resumen": "Revaloriza las pensiones un 1,6 % en 2019 y eleva el tope máximo y las bases mínimas de cotización.",
+      "cambios": [
+        {
+          "parametro": "revalorizacion",
+          "antes": null,
+          "despues": "Incremento del 1,6 % en 2019 sobre el importe que habrían tenido en 2018 si se hubieran revalorizado en ese porcentaje.",
+          "transicion": "Solo para 2019.",
+          "articulos": "Artículo sobre revalorización de pensiones en 2019",
+          "evidencia": "experimentarán en 2019 un incremento del 1,6 por ciento"
+        },
+        {
+          "parametro": "bases-cotizacion",
+          "antes": null,
+          "despues": "Tope máximo de la base de cotización de 4.070,10 euros mensuales (incremento del 7 %) y bases mínimas actualizadas según el SMI.",
+          "transicion": "Para 2019.",
+          "articulos": "Artículo 3",
+          "evidencia": "se establece en 4.070,10 euros mensuales"
+        }
+      ],
+      "modulos": ["Reformas", "Cómo se calcula"],
+      "estado": "modificada",
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "rdl-3-2021",
+      "titulo": "Real Decreto-ley 3/2021, de 2 de febrero, por el que se adoptan medidas para la reducción de la brecha de género y otras materias en los ámbitos de la Seguridad Social y económico.",
+      "rango": "Real Decreto-ley",
+      "fecha": "2021-02-02",
+      "fechaPublicacion": "2021-02-03",
+      "boeId": "BOE-A-2021-1529",
+      "confidence": "alta",
+      "resumen": "Sustituye el complemento de maternidad por aportación demográfica por un complemento para la reducción de la brecha de género.",
+      "cambios": [
+        {
+          "parametro": "complemento-brecha-genero",
+          "antes": null,
+          "despues": "El complemento de maternidad por aportación demográfica pasa a ser un complemento dirigido a la reducción de la brecha de género, con el número de hijos como criterio objetivo.",
+          "transicion": "Se aplica a pensiones causadas desde su entrada en vigor.",
+          "articulos": "Disposición adicional decimoctava del TRLGSS (modificada)",
+          "evidencia": "sustituye el complemento de maternidad por aportación demográfica por un complemento dirigido a la reducción de la brecha de género"
+        }
+      ],
+      "modulos": ["Tipos de pensión", "Reformas"],
+      "estado": "modificada",
+      "source": {
+        "title": "Real Decreto-ley 3/2021, de 2 de febrero, por el que se adoptan medidas para la reducción de la brecha de género y otras materias en los ámbitos de la Seguridad Social y económico.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-1529",
+        "docId": "BOE-A-2021-1529"
+      },
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "ley-21-2021",
+      "titulo": "Ley 21/2021, de 28 de diciembre, de garantía del poder adquisitivo de las pensiones y de otras medidas de refuerzo de la sostenibilidad financiera y social del sistema público de pensiones.",
+      "rango": "Ley",
+      "fecha": "2021-12-28",
+      "fechaPublicacion": "2021-12-29",
+      "boeId": "BOE-A-2021-21652",
+      "confidence": "alta",
+      "resumen": "Revalorización por IPC medio, derogación del factor de sostenibilidad, nuevos incentivos a la demora y revisión de los coeficientes de la jubilación anticipada voluntaria.",
+      "cambios": [
+        {
+          "parametro": "revalorizacion",
+          "antes": null,
+          "despues": "Revalorización anual en el porcentaje equivalente al valor medio de las tasas de variación interanual del IPC de los doce meses previos a diciembre del año anterior.",
+          "transicion": "Desde el 1 de enero de 2022.",
+          "articulos": "Artículo 58 TRLGSS (nueva redacción)",
+          "evidencia": "se revalorizarán al comienzo de cada año en el porcentaje equivalente al valor medio de las tasas de variación interanual expresadas en tanto por ciento del Índice de Precios al Consumo de los doce meses previos a diciembre del año anterior."
+        },
+        {
+          "parametro": "factor-sostenibilidad",
+          "antes": null,
+          "despues": "Se deroga el factor de sostenibilidad de la Ley 23/2013 y se sustituye por un mecanismo de equidad intergeneracional.",
+          "transicion": "El mecanismo se concretó en el RDL 2/2023.",
+          "articulos": "Exposición de motivos",
+          "evidencia": "se opta por la derogación del factor de sostenibilidad introducido por la Ley 23/2013, de 23 de diciembre, y su sustitución por un nuevo mecanismo de equidad intergeneracional."
+        },
+        {
+          "parametro": "incentivos-demora",
+          "antes": null,
+          "despues": "Complemento por demora: porcentaje adicional del 4 % por cada año completo cotizado entre la edad ordinaria y el hecho causante (alternativas a elección del interesado).",
+          "transicion": "Aplicable a las pensiones causadas desde la entrada en vigor.",
+          "articulos": "Artículo 210 TRLGSS (nueva redacción)",
+          "evidencia": "Un porcentaje adicional del 4 por ciento por cada año completo cotizado entre la fecha en que cumplió dicha edad y la del hecho causante de la pensión."
+        },
+        {
+          "parametro": "coeficientes-reductores",
+          "antes": null,
+          "despues": "Se revisan los coeficientes reductores de la jubilación anticipada voluntaria para acercarla a la edad legal y favorecer carreras largas.",
+          "transicion": "Aplicación gradual según la disposición transitoria correspondiente.",
+          "articulos": "Artículos 208 y 210 TRLGSS",
+          "evidencia": "en materia de jubilación anticipada voluntaria, se revisan los coeficientes reductores aplicables"
+        }
+      ],
+      "modulos": ["Reformas", "Cómo se calcula", "Tipos de pensión"],
+      "estado": "vigente",
+      "source": {
+        "title": "Ley 21/2021, de 28 de diciembre, de garantía del poder adquisitivo de las pensiones y de otras medidas de refuerzo de la sostenibilidad financiera y social del sistema público de pensiones.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-21652",
+        "docId": "BOE-A-2021-21652"
+      },
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "rdl-2-2023",
+      "titulo": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones.",
+      "rango": "Real Decreto-ley",
+      "fecha": "2023-03-16",
+      "fechaPublicacion": "2023-03-17",
+      "boeId": "BOE-A-2023-6967",
+      "confidence": "alta",
+      "resumen": "Crea el Mecanismo de Equidad Intergeneracional, la cotización adicional de solidaridad y amplía el periodo de cálculo de la base reguladora (régimen transitorio).",
+      "cambios": [
+        {
+          "parametro": "mei",
+          "antes": null,
+          "despues": "Cotización finalista de hasta 1,2 puntos porcentuales sobre las bases de contingencias comunes, creciente de 2023 a 2029, que nutre el Fondo de Reserva.",
+          "transicion": "Escala de la disposición transitoria cuadragésima tercera TRLGSS: de 0,6 puntos en 2023 a 1,2 en 2029; vigente hasta 2050.",
+          "articulos": "Artículo 127 bis y DT 43.ª TRLGSS",
+          "evidencia": "Dicho mecanismo consiste en una cotización finalista de 1,2 puntos porcentuales, que nutrirá el Fondo de Reserva de la Seguridad Social"
+        },
+        {
+          "parametro": "cuota-solidaridad",
+          "antes": null,
+          "despues": "Cotización adicional sobre la retribución que supera la base máxima, gradual y moderada.",
+          "transicion": "Se incrementa desde 2025 hasta alcanzar en 2045 el tipo definitivo (DT 42.ª TRLGSS).",
+          "articulos": "Artículo 19 bis y DT 42.ª TRLGSS",
+          "evidencia": "Conforme a la disposición transitoria cuadragésima segunda, la cotización adicional de solidaridad se incrementará desde el año 2025 hasta alcanzar en 2045 el tipo definitivo."
+        },
+        {
+          "parametro": "periodo-calculo",
+          "antes": null,
+          "despues": "Periodo de 29 años anteriores al mes previo al hecho causante, del que se eliminan de oficio las 24 bases de menor importe (27 años efectivos).",
+          "transicion": "Régimen transitorio hacia la regla definitiva; ver la disposición transitoria correspondiente.",
+          "articulos": "Artículo 209 TRLGSS (nueva redacción)",
+          "evidencia": "amplía a 27 años el período a tener en cuenta para el cálculo de la base reguladora de la pensión de jubilación"
+        }
+      ],
+      "modulos": ["Reformas", "Financiación y déficit", "La «hucha»", "Cómo se calcula"],
+      "estado": "vigente",
+      "source": {
+        "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967",
+        "docId": "BOE-A-2023-6967"
+      },
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "rdl-11-2024",
+      "titulo": "Real Decreto-ley 11/2024, de 23 de diciembre, para la mejora de la compatibilidad de la pensión de jubilación con el trabajo.",
+      "rango": "Real Decreto-ley",
+      "fecha": "2024-12-23",
+      "fechaPublicacion": "2024-12-24",
+      "boeId": "BOE-A-2024-26917",
+      "confidence": "alta",
+      "resumen": "Mejora la compatibilidad de la pensión de jubilación con el trabajo (jubilación activa) y el complemento por demora.",
+      "cambios": [
+        {
+          "parametro": "jubilacion-activa",
+          "antes": null,
+          "despues": "La pensión compatible con el trabajo se incrementa 5 puntos porcentuales por cada 12 meses de jubilación activa, hasta el 100 %; el complemento de demora es compatible.",
+          "transicion": "Aplicable según su disposición transitoria y de entrada en vigor.",
+          "articulos": "Artículo 214 TRLGSS (nueva redacción)",
+          "evidencia": "este porcentaje de la pensión se va incrementando 5 puntos porcentuales por cada 12 meses ininterrumpidos en los que el pensionista permanezca en situación de jubilación activa, pero sin que el pensionista pueda superar el 100 por ciento de su pensión."
+        },
+        {
+          "parametro": "incentivos-demora",
+          "antes": null,
+          "despues": "Porcentaje adicional del 2 % cuando se demora el acceso en dos o más años completos tras la edad ordinaria.",
+          "transicion": "Aplicable según la disposición transitoria.",
+          "articulos": "Artículo 210 TRLGSS",
+          "evidencia": "establecer un porcentaje adicional del 2 por ciento en los supuestos en que se haya demorado en dos o más años completos el acceso a la pensión de jubilación"
+        }
+      ],
+      "modulos": ["Tipos de pensión", "Reformas"],
+      "estado": "vigente",
+      "source": {
+        "title": "Real Decreto-ley 11/2024, de 23 de diciembre, para la mejora de la compatibilidad de la pensión de jubilación con el trabajo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26917",
+        "docId": "BOE-A-2024-26917"
+      },
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "rd-316-2025",
+      "titulo": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+      "rango": "Real Decreto",
+      "fecha": "2025-04-15",
+      "fechaPublicacion": "2025-04-16",
+      "boeId": "BOE-A-2025-7660",
+      "confidence": "alta",
+      "resumen": "Revalorización general de las pensiones del 2,8 % en 2025.",
+      "cambios": [
+        {
+          "parametro": "revalorizacion",
+          "antes": null,
+          "despues": "Revalorización general del 2,8 % en 2025.",
+          "transicion": "Solo para 2025.",
+          "articulos": "Artículo 3",
+          "evidencia": "se revalorizarán en un 2,8 por ciento, de acuerdo con lo dispuesto en el artículo 65 del Real Decreto-ley 1/2025, de 28 de enero"
+        }
+      ],
+      "modulos": ["Reformas"],
+      "estado": "vigente",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "rd-241-2026",
+      "titulo": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+      "rango": "Real Decreto",
+      "fecha": "2026-03-25",
+      "fechaPublicacion": "2026-03-26",
+      "boeId": "BOE-A-2026-6977",
+      "confidence": "alta",
+      "resumen": "Revalorización general de las pensiones del 2,7 % en 2026.",
+      "cambios": [
+        {
+          "parametro": "revalorizacion",
+          "antes": null,
+          "despues": "Revalorización general del 2,7 % en 2026.",
+          "transicion": "Solo para 2026.",
+          "articulos": "Artículo 3",
+          "evidencia": "se revalorizarán en un 2,7 por ciento, de acuerdo con lo dispuesto en el artículo 2 del Real Decreto-ley 3/2026, de 3 de febrero"
+        }
+      ],
+      "modulos": ["Reformas"],
+      "estado": "vigente",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}

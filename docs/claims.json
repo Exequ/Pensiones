@@ -1,5 +1,1147 @@
 {
   "version": 1,
-  "descripcion": "Registro de afirmaciones factuales que aparecen en el texto de la web, con sus fuentes. Lo valida npm run validate:data (esquema RegistroAfirmaciones de src/engine/esquema-datos.ts). Fase 0: sin afirmaciones.",
-  "claims": []
+  "descripcion": "Registro de afirmaciones factuales con sus fuentes. Lo valida npm run validate:data. Generado por scripts/etl/fuentes_claims.py a partir de /data; todas con revisionActuarial pendiente.",
+  "claims": [
+    {
+      "id": "norma-ley-26-1985",
+      "texto": "Primera gran reforma de las pensiones contributivas en democracia: eleva la carencia de jubilación a quince años, amplía el periodo de cálculo de la base reguladora a los últimos ocho años (96 meses entre 112) y establece la revalorización anual según el IPC previsto.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#ley-26-1985"],
+      "fuentes": [
+        {
+          "title": "Ley 26/1985, de 31 de julio, medidas urgentes para la racionalización de la estructura y de la acción protectora de la Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1985-16119",
+          "docId": "BOE-A-1985-16119"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-rdleg-1-1994",
+      "texto": "Texto refundido de la LGSS que integró la Ley 26/1985 y el resto de la legislación vigente; fue el marco sobre el que actuaron las reformas de 1997 a 2013 hasta su sustitución por el texto refundido de 2015.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#rdleg-1-1994"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 1/1994, de 20 de junio, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1994-14960",
+          "docId": "BOE-A-1994-14960"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-ley-24-1997",
+      "texto": "Primera reforma derivada del Pacto de Toledo: separa las fuentes de financiación, prevé un Fondo de Reserva, amplía el periodo de cálculo a 15 años, fija por ley la escala de porcentajes (50 % a los 15 años, 100 % a los 35) y establece la revalorización automática según IPC previsto con cláusula de desviación.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#ley-24-1997"],
+      "fuentes": [
+        {
+          "title": "Ley 24/1997, de 15 de julio, de Consolidación y Racionalización del Sistema de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1997-15810",
+          "docId": "BOE-A-1997-15810"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-ley-24-2001",
+      "texto": "Ley de acompañamiento de los PGE 2002 que constituye formalmente el Fondo de Reserva de la Seguridad Social en la Tesorería General y amplía la jubilación parcial (hasta cinco años antes de la edad ordinaria, y desde la edad ordinaria sin contrato de relevo).",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#ley-24-2001"],
+      "fuentes": [
+        {
+          "title": "Ley 24/2001, de 27 de diciembre, de Medidas Fiscales, Administrativas y del Orden Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24965",
+          "docId": "BOE-A-2001-24965"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-ley-35-2002",
+      "texto": "Desarrolla el Acuerdo de 2001: abre la jubilación anticipada a los 61 años a los no mutualistas con coeficientes reductores según años cotizados, introduce un incentivo del 2 % anual por demorar la jubilación más allá de los 65 y permite compatibilizar pensión y trabajo a tiempo parcial (jubilación flexible).",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#ley-35-2002"],
+      "fuentes": [
+        {
+          "title": "Ley 35/2002, de 12 de julio, de medidas para el establecimiento de un sistema de jubilación gradual y flexible.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-13972",
+          "docId": "BOE-A-2002-13972"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-ley-28-2003",
+      "texto": "Ley específica del Fondo de Reserva: los excedentes contributivos se destinan prioritaria y mayoritariamente al Fondo, que solo puede usarse para pagar pensiones contributivas en situaciones estructurales de déficit y con un límite anual del 3 %.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#ley-28-2003"],
+      "fuentes": [
+        {
+          "title": "Ley 28/2003, de 29 de septiembre, reguladora del Fondo de Reserva de la Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2003-18089",
+          "docId": "BOE-A-2003-18089"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-ley-40-2007",
+      "texto": "Desarrolla el Acuerdo de 13 de julio de 2006: exige que los 15 años de carencia sean días efectivos (sin pagas extra), eleva el incentivo por demora (2 % o 3 % anual), endurece la jubilación parcial (61 años, 6 de antigüedad, 30 cotizados), suaviza los coeficientes reductores para 30-34 años cotizados y reconoce la viudedad a parejas de hecho.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#ley-40-2007"],
+      "fuentes": [
+        {
+          "title": "Ley 40/2007, de 4 de diciembre, de medidas en materia de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2007-20910",
+          "docId": "BOE-A-2007-20910"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-ley-27-2011",
+      "texto": "Gran reforma paramétrica de 2011: retrasa gradualmente la edad ordinaria de 65 a 67 años (65 con 38 años y 6 meses cotizados), amplía el periodo de cálculo de 15 a 25 años, exige 37 años para el 100 %, rediseña la jubilación anticipada y prevé un factor de sostenibilidad a partir de 2027.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#ley-27-2011"],
+      "fuentes": [
+        {
+          "title": "Ley 27/2011, de 1 de agosto, sobre actualización, adecuación y modernización del sistema de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-13242",
+          "docId": "BOE-A-2011-13242"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-rdl-28-2012",
+      "texto": "Suspende para 2013 la revalorización por IPC previsto y fija un incremento general del 1 % (con un punto adicional para las pensiones más bajas).",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#rdl-28-2012"],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 28/2012, de 30 de noviembre, de medidas de consolidación y garantía del sistema de la Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-14695",
+          "docId": "BOE-A-2012-14695"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-rdl-5-2013",
+      "texto": "Regula la compatibilidad entre pensión de jubilación y trabajo, endurece la jubilación anticipada y modifica la jubilación parcial.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#rdl-5-2013"],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 5/2013, de 15 de marzo, de medidas para favorecer la continuidad de la vida laboral de los trabajadores de mayor edad y promover el envejecimiento activo.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-2874",
+          "docId": "BOE-A-2013-2874"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-ley-23-2013",
+      "texto": "Crea el factor de sostenibilidad y el índice de revalorización de las pensiones (IRP).",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#ley-23-2013"],
+      "fuentes": [
+        {
+          "title": "Ley 23/2013, de 23 de diciembre, reguladora del Factor de Sostenibilidad y del Índice de Revalorización del Sistema de Pensiones de la Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13617",
+          "docId": "BOE-A-2013-13617"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-rdleg-8-2015",
+      "texto": "Aprueba el texto refundido de la Ley General de la Seguridad Social, que renumera los artículos de la LGSS de 1994.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#rdleg-8-2015"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-rdl-28-2018",
+      "texto": "Revaloriza las pensiones un 1,6 % en 2019 y eleva el tope máximo y las bases mínimas de cotización.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#rdl-28-2018"],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+          "docId": "BOE-A-2018-17992"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-rdl-3-2021",
+      "texto": "Sustituye el complemento de maternidad por aportación demográfica por un complemento para la reducción de la brecha de género.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#rdl-3-2021"],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 3/2021, de 2 de febrero, por el que se adoptan medidas para la reducción de la brecha de género y otras materias en los ámbitos de la Seguridad Social y económico.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-1529",
+          "docId": "BOE-A-2021-1529"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-ley-21-2021",
+      "texto": "Revalorización por IPC medio, derogación del factor de sostenibilidad, nuevos incentivos a la demora y revisión de los coeficientes de la jubilación anticipada voluntaria.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#ley-21-2021"],
+      "fuentes": [
+        {
+          "title": "Ley 21/2021, de 28 de diciembre, de garantía del poder adquisitivo de las pensiones y de otras medidas de refuerzo de la sostenibilidad financiera y social del sistema público de pensiones.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-21652",
+          "docId": "BOE-A-2021-21652"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-rdl-2-2023",
+      "texto": "Crea el Mecanismo de Equidad Intergeneracional, la cotización adicional de solidaridad y amplía el periodo de cálculo de la base reguladora (régimen transitorio).",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#rdl-2-2023"],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967",
+          "docId": "BOE-A-2023-6967"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-rdl-11-2024",
+      "texto": "Mejora la compatibilidad de la pensión de jubilación con el trabajo (jubilación activa) y el complemento por demora.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#rdl-11-2024"],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 11/2024, de 23 de diciembre, para la mejora de la compatibilidad de la pensión de jubilación con el trabajo.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26917",
+          "docId": "BOE-A-2024-26917"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-rd-316-2025",
+      "texto": "Revalorización general de las pensiones del 2,8 % en 2025.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#rd-316-2025"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+          "docId": "BOE-A-2025-7660"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "norma-rd-241-2026",
+      "texto": "Revalorización general de las pensiones del 2,7 % en 2026.",
+      "ubicacion": "Módulo «Reformas» (cronología)",
+      "datos": ["normativa/cronologia.json#rd-241-2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-jubilacion-ordinaria",
+      "texto": "Personas incluidas en el Régimen General que alcanzan la edad ordinaria de jubilación y acreditan el periodo mínimo de cotización (art. 205 TRLGSS).",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#jubilacion-ordinaria"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-jubilacion-anticipada-involuntaria",
+      "texto": "Trabajadores del Régimen General cuyo cese en el trabajo se produce por causa no imputable a su libre voluntad (despidos colectivos u objetivos, extinción por resolución judicial concursal, muerte/jubilación/incapacidad del empresario, fuerza mayor, extinción por causas de los arts. 40.1, 41.3 y 50 ET, víctimas de violencia de género o sexual).",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#jubilacion-anticipada-involuntaria"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-jubilacion-anticipada-voluntaria",
+      "texto": "Trabajadores del Régimen General que deciden voluntariamente adelantar la jubilación hasta 2 años antes de la edad ordinaria y acreditan una larga carrera de cotización.",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#jubilacion-anticipada-voluntaria"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-jubilacion-demorada",
+      "texto": "Personas que acceden a la pensión de jubilación a una edad superior a la ordinaria del art. 205.1.a), habiendo reunido al cumplir dicha edad el periodo mínimo de cotización.",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#jubilacion-demorada"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-jubilacion-activa",
+      "texto": "Pensionistas de jubilación contributiva que, habiendo demorado al menos un año el acceso a la pensión desde la edad ordinaria, compatibilizan la pensión con cualquier trabajo por cuenta ajena (a tiempo completo o parcial) o por cuenta propia.",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#jubilacion-activa"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-jubilacion-flexible",
+      "texto": "Pensionistas de jubilación que, una vez causada la pensión, compatibilizan su percepción con un trabajo a tiempo parcial (jornada entre el 33 % y el 80 % de la de un trabajador a tiempo completo comparable) o con una actividad por cuenta propia (si en los 3 años anteriores al hecho causante no estuvieron de alta como trabajadores por cuenta propia).",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#jubilacion-flexible"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 416/2026, de 27 de mayo, por el que se regula el régimen jurídico de la jubilación flexible y otros aspectos comunes a las modalidades de compatibilidad de la pensión contributiva de jubilación con el trabajo, y se modifica el régimen de la jubilación demorada",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-11474",
+          "docId": "BOE-A-2026-11474"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-jubilacion-parcial",
+      "texto": "Trabajadores por cuenta ajena (y socios trabajadores de cooperativas) que reducen su jornada y perciben simultáneamente una pensión parcial: a) a partir de la edad ordinaria sin necesidad de contrato de relevo; b) antes de la edad ordinaria (hasta 3 años antes) con contrato de relevo simultáneo.",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#jubilacion-parcial"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-incapacidad-permanente",
+      "texto": "Personas incluidas en el Régimen General declaradas en situación de incapacidad permanente tras el tratamiento prescrito, con reducciones anatómicas o funcionales graves, previsiblemente definitivas, que disminuyan o anulen su capacidad laboral (art. 193 y 195.1 TRLGSS).",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#incapacidad-permanente"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-viudedad",
+      "texto": "Cónyuge superviviente (y, en los términos del artículo 221, sobreviviente de una pareja de hecho; en separación o divorcio, art. 220) de personas incluidas en el Régimen General o pensionistas de jubilación e incapacidad permanente (arts. 217 y 219 TRLGSS).",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#viudedad"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-orfandad",
+      "texto": "Hijos e hijas del causante fallecido, con independencia de la naturaleza de su filiación, menores de veintiún años o incapacitados para el trabajo en el momento de la muerte (art. 224.1 TRLGSS).",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#orfandad"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-favor-de-familiares",
+      "texto": "Familiares o asimilados del causante que, previa prueba de su dependencia económica, tengan derecho a pensión o subsidio por su muerte según las normas de desarrollo; en todo caso, hijos o hermanos de pensionistas de jubilación e incapacidad permanente que reúnan las condiciones reglamentarias (art. 226 TRLGSS).",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#favor-de-familiares"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-pnc-incapacidad",
+      "texto": "Personas de 18 a 64 años con discapacidad o enfermedad crónica en grado igual o superior al 65 % y sin rentas suficientes (art. 363 TRLGSS).",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#pnc-incapacidad"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-pnc-jubilacion",
+      "texto": "Personas de 65 o más años sin rentas o ingresos en cuantía superior a los límites del artículo 363 y con residencia legal en España (art. 369 TRLGSS).",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#pnc-jubilacion"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-complemento-minimos",
+      "texto": "Beneficiarios de pensiones contributivas del sistema de la Seguridad Social que no perciban otros rendimientos o que no superen el límite anual de la Ley de PGE, y residan en España (art. 59.1 TRLGSS).",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#complemento-minimos"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-complemento-brecha-genero",
+      "texto": "Mujeres con uno o más hijos o hijas beneficiarias de pensión contributiva de jubilación, incapacidad permanente o viudedad; los hombres solo si concurren los requisitos del artículo 60.1 (art. 60 TRLGSS).",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#complemento-brecha-genero"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "prest-clases-pasivas",
+      "texto": "Pensiones del Régimen de Clases Pasivas del Estado, regulado por el texto refundido de la Ley de Clases Pasivas del Estado, aprobado por Real Decreto Legislativo 670/1987, de 30 de abril; se describe solo como contexto y la web no modela sus reglas.",
+      "ubicacion": "Módulo «Tipos de pensión»",
+      "datos": ["normativa/prestaciones.json#clases-pasivas"],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+          "docId": "BOE-A-2018-17992"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-base-maxima-rg",
+      "texto": "Base máxima de cotización del Régimen General: 5101,2 (euros/mes) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/base-maxima-rg.json#2026"],
+      "fuentes": [
+        {
+          "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+          "docId": "BOE-A-2026-7296"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-base-minima-rg",
+      "texto": "Base mínima de cotización del Régimen General (grupos 4 a 7): 1424,4 (euros/mes) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/base-minima-rg.json#2026"],
+      "fuentes": [
+        {
+          "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+          "docId": "BOE-A-2026-7296"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-carencia-jubilacion",
+      "texto": "Periodo mínimo de cotización (carencia) de la jubilación: 180 (meses cotizados) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/carencia-jubilacion.json#2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-carrera-jubilacion-65",
+      "texto": "Cotización exigida para jubilarse a los 65 años: 462 (meses cotizados) en 2027.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/carrera-jubilacion-65.json#2027"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-complemento-brecha-genero",
+      "texto": "Complemento para la reducción de la brecha de género: importe mensual por hijo: 36,9 (euros/mes) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/complemento-brecha-genero.json#2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-cotizacion-para-100",
+      "texto": "Años cotizados necesarios para el 100 % de la base reguladora: 444 (meses cotizados) en 2027.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/cotizacion-para-100.json#2027"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-cuota-solidaridad-tipos",
+      "texto": "Cotización adicional de solidaridad: tipos por tramo: 1,46 (%) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/cuota-solidaridad-tipos.json#2026-tramo-c"],
+      "fuentes": [
+        {
+          "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+          "docId": "BOE-A-2026-7296"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-divisor-base-reguladora",
+      "texto": "Divisor de la base reguladora de jubilación: 378 (divisor) en 2037.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/divisor-base-reguladora.json#2037"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-edad-ordinaria-jubilacion",
+      "texto": "Edad ordinaria de jubilación (general): 804 (meses de edad) en 2027.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/edad-ordinaria-jubilacion.json#2027"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-escala-porcentajes-jubilacion",
+      "texto": "Escala de porcentajes por años cotizados (jubilación): 50 % por los primeros 15 años; desde el año 16,º, 0,19 % por cada mes entre el 1 y el 248 y 0,18 % por cada uno de los 16 meses siguientes; máximo 100 % (regla) en 2027.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/escala-porcentajes-jubilacion.json#2027"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-ipc-indice-medio-anual",
+      "texto": "IPC: índice medio anual (base 2025): 100,0 (índice (base 2025)) en 2025.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/ipc-indice-medio-anual.json#2025"],
+      "fuentes": [
+        {
+          "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+          "docId": "IPC290751"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-ipc-variacion-diciembre",
+      "texto": "IPC: variación de diciembre a diciembre: 2,9 (%) en 2025.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/ipc-variacion-diciembre.json#2025"],
+      "fuentes": [
+        {
+          "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+          "docId": "IPC290750"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-ipc-variacion-media-anual",
+      "texto": "IPC: variación de la media anual: 2,7 (%) en 2025.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/ipc-variacion-media-anual.json#2025"],
+      "fuentes": [
+        {
+          "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+          "docId": "IPC290751"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-iprem-anual",
+      "texto": "IPREM anual: 7200,0 (euros/año) en 2023.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/iprem-anual.json#2023"],
+      "fuentes": [
+        {
+          "title": "Ley 31/2022, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2023.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22128",
+          "docId": "BOE-A-2022-22128"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-iprem-diario",
+      "texto": "IPREM diario: 20,0 (euros/día) en 2023.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/iprem-diario.json#2023"],
+      "fuentes": [
+        {
+          "title": "Ley 31/2022, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2023.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22128",
+          "docId": "BOE-A-2022-22128"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-iprem-mensual",
+      "texto": "IPREM mensual: 600,0 (euros/mes) en 2023.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/iprem-mensual.json#2023"],
+      "fuentes": [
+        {
+          "title": "Ley 31/2022, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2023.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22128",
+          "docId": "BOE-A-2022-22128"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-limite-ingresos-complementos-minimos",
+      "texto": "Límite de ingresos para los complementos por mínimos (sin cónyuge a cargo o límite único): 9442,0 (euros/año) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/limite-ingresos-complementos-minimos.json#2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-mei-tipo-empresa",
+      "texto": "MEI: parte a cargo de la empresa: 1,0 (puntos porcentuales) en 2029.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/mei-tipo-empresa.json#2029"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-mei-tipo-total",
+      "texto": "Tipo de cotización del Mecanismo de Equidad Intergeneracional (MEI): 1,2 (puntos porcentuales) en 2029.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/mei-tipo-total.json#2029"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-mei-tipo-trabajador",
+      "texto": "MEI: parte a cargo del trabajador: 0,2 (puntos porcentuales) en 2029.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/mei-tipo-trabajador.json#2029"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-pension-maxima",
+      "texto": "Pensión máxima (límite máximo de percepción de pensiones públicas): 3359,6 (euros/mes) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/pension-maxima.json#2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-2548",
+          "docId": "BOE-A-2026-2548"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-pension-minima-incapacidad",
+      "texto": "Pensiones mínimas de incapacidad permanente: 9662,8 (euros/año) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": [
+        "parametros/pension-minima-incapacidad.json#2026-ip-total-enf-comun-menor60-unipersonal"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-pension-minima-jubilacion",
+      "texto": "Pensiones mínimas de jubilación: 13106,8 (euros/año) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/pension-minima-jubilacion.json#2026-jub65-unipersonal"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-pension-minima-orfandad-familiares",
+      "texto": "Pensiones mínimas de orfandad y en favor de familiares: 7882,0 (euros/año) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/pension-minima-orfandad-familiares.json#2026-orf-discapacidad65-unico"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-pension-minima-viudedad",
+      "texto": "Pensiones mínimas de viudedad: 9931,6 (euros/año) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/pension-minima-viudedad.json#2026-viud-menor60-unipersonal"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-periodo-calculo-base-reguladora",
+      "texto": "Periodo de cálculo de la base reguladora de jubilación: 348 (meses) en 2037.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/periodo-calculo-base-reguladora.json#2037"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-pnc-importe-anual",
+      "texto": "Pensión no contributiva: importe anual: 8803,2 (euros/año) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/pnc-importe-anual.json#2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-revalorizacion-general",
+      "texto": "Revalorización general anual de las pensiones contributivas: 2,7 (%) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/revalorizacion-general.json#2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-smi-diario",
+      "texto": "Salario mínimo interprofesional diario: 40,7 (euros/día) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/smi-diario.json#2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 126/2026, de 18 de febrero, por el que se fija el salario mínimo interprofesional para 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-3815",
+          "docId": "BOE-A-2026-3815"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-smi-mensual",
+      "texto": "Salario mínimo interprofesional mensual: 1221,0 (euros/mes) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/smi-mensual.json#2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 126/2026, de 18 de febrero, por el que se fija el salario mínimo interprofesional para 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-3815",
+          "docId": "BOE-A-2026-3815"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-tipo-cc-empresa",
+      "texto": "Tipo de cotización por contingencias comunes: empresa: 23,6 (%) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/tipo-cc-empresa.json#2026"],
+      "fuentes": [
+        {
+          "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+          "docId": "BOE-A-2026-7296"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-tipo-cc-trabajador",
+      "texto": "Tipo de cotización por contingencias comunes: trabajador: 4,7 (%) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/tipo-cc-trabajador.json#2026"],
+      "fuentes": [
+        {
+          "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+          "docId": "BOE-A-2026-7296"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    }
+  ]
 }

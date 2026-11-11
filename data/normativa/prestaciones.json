@@ -1,0 +1,907 @@
+{
+  "tipo": "prestaciones",
+  "id": "prestaciones-reglas",
+  "title": "Reglas de las prestaciones contributivas y no contributivas",
+  "description": "A quién cubre cada prestación, requisitos, fórmula, límites, duración y compatibilidades, con el artículo del texto refundido de la Ley General de la Seguridad Social. Cada regla lleva citas literales del BOE.",
+  "vigenteA": "2026-11-11",
+  "prestaciones": [
+    {
+      "id": "jubilacion-ordinaria",
+      "nombre": "Pensión de jubilación ordinaria (modalidad contributiva, Régimen General)",
+      "familia": "jubilacion",
+      "modalidad": "contributiva",
+      "aQuienCubre": "Personas incluidas en el Régimen General que alcanzan la edad ordinaria de jubilación y acreditan el periodo mínimo de cotización (art. 205 TRLGSS).",
+      "requisitos": [
+        {
+          "tipo": "alta",
+          "descripcion": "Afiliación y alta o situación asimilada al alta al sobrevenir la contingencia (requisito general del art. 165.1), aunque la pensión puede causarse también sin estar en alta si se reúnen edad y cotización (art. 205.3); en ese caso, para causar pensión en el Régimen General y en otro régimen, las cotizaciones de cada uno deben superponerse al menos 15 años.",
+          "articulo": "art. 165.1 y art. 205.1 y 205.3 TRLGSS"
+        },
+        {
+          "tipo": "edad",
+          "descripcion": "Haber cumplido 67 años, o 65 años cuando se acrediten 38 años y 6 meses de cotización (sin computar la parte proporcional de pagas extraordinarias). Se computan años y meses completos. Aplicación gradual según DT 7.ª: en 2026, 65 años con 38 años y 3 meses o más cotizados; con menos de 38 años y 3 meses, 66 años y 10 meses; a partir de 2027, 65 años con 38 años y 6 meses o más; con menos, 67 años.",
+          "articulo": "art. 205.1.a) y disposición transitoria séptima TRLGSS"
+        },
+        {
+          "tipo": "carencia",
+          "descripcion": "Periodo mínimo de cotización de 15 años (carencia genérica), de los cuales al menos 2 dentro de los 15 años inmediatamente anteriores al hecho causante (carencia específica). No se computa la parte proporcional de pagas extraordinarias. Si se accede desde alta o asimilada sin obligación de cotizar, los 2 años deben estar dentro de los 15 anteriores a la fecha en que cesó la obligación de cotizar.",
+          "articulo": "art. 205.1.b) TRLGSS"
+        }
+      ],
+      "calculo": {
+        "baseReguladora": "Texto vigente (desde 01/01/2026): cociente de dividir entre 378 la suma de las 324 bases de cotización de mayor importe elegidas de oficio de entre los 348 meses consecutivos inmediatamente anteriores al mes previo al del hecho causante. Las 24 bases más recientes se computan en valor nominal; las restantes se actualizan con el IPC. Lagunas (meses sin obligación de cotizar): las primeras 48 mensualidades se integran con la base mínima del Régimen General del mes respectivo y el resto con el 50 % de dicha base mínima (art. 209.1.b; para mujeres —y hombres que cumplan reglas 1.ª o 2.ª del art. 60.1.b)— la DT 41.ª eleva la integración al 100 % de la base mínima de la mensualidad 49 a la 60 y al 80 % de la 61 a la 84, mientras la brecha de género supere el 5 %). Régimen transitorio (DT 40.ª): en 2026 se divide entre 352,33 la suma de las 302 bases de mayor importe dentro de los 304 meses anteriores; en 2027, 354,67 / 304 bases / 308 meses; 2028, 357,00 / 306 / 312; 2029, 359,33 / 308 / 316; 2030, 361,67 / 310 / 320; 2031, 364 / 312 / 324; 2032, 366,33 / 314 / 328; 2033, 368,67 / 316 / 332; 2034, 371,00 / 318 / 336; 2035, 373,33 / 320 / 340; 2036, 375,67 / 322 / 344; desde 2037, art. 209.1 en su integridad. Además, para hechos causantes entre el 31/12/2025 y el 31/12/2040 se aplica el art. 209.1 en su redacción vigente el 1 de enero de 2023 si resulta más favorable; en 2041: 306 meses entre 357; 2042: 312 entre 364; 2043: 318 entre 371; desde 2044 solo la redacción vigente desde 2026 (DT 4.ª.7).",
+        "porcentaje": "Por los primeros 15 años cotizados, 50 %. A partir del año 16, por cada mes adicional entre los meses 1 y 248, 0,19 %, y por cada mes que rebase el 248, 0,18 %, sin superar el 100 % (salvo demora, art. 210.2). Escala transitoria (DT 9.ª): 2023 a 2026: 0,21 % por cada mes adicional entre los meses 1 y 49 y 0,19 % por cada uno de los 209 meses siguientes; a partir de 2027: 0,19 % meses 1 a 248 y 0,18 % los 16 meses siguientes.",
+        "formula": "BR (art. 209.1, texto vigente) = [ Σ(i=1..24) B_i + Σ(i=25..348) B_i · I_25 / I_i ] / 378, donde las 24 bases descartadas (las de menor importe) toman valor 0. Pensión = BR × porcentaje por años cotizados (art. 210.1), con límite máximo del art. 57 y, en su caso, complemento a mínimos (art. 59).",
+        "articulos": "arts. 209, 210.1 TRLGSS; DT 4.ª.7, 9.ª, 40.ª y 41.ª TRLGSS"
+      },
+      "limites": "Importe inicial limitado a la cuantía íntegra mensual máxima que fije cada año la Ley de Presupuestos Generales del Estado (art. 57); entre 2025 y 2050 esa cuantía máxima se incrementa cada año en la revalorización del art. 58.2 más 0,115 puntos porcentuales acumulativos (DT 39.ª). La BR no puede rebasar el tope máximo de la base de cotización (art. 161.2). Complemento a mínimos si procede (art. 59). Las cuantías anuales concretas se fijan en la LPGE/normas de revalorización (no recogidas en este bloque).",
+      "duracion": "Vitalicia. El derecho al reconocimiento es imprescriptible; en jubilación desde alta, los efectos se retrotraen como máximo a 3 meses antes de la solicitud (art. 212).",
+      "extincion": [
+        "Fallecimiento del pensionista (la pensión es vitalicia).",
+        "Suspensión (no extinción) por desempeño de puesto en el sector público o alto cargo (art. 213.2 y 213.3)."
+      ],
+      "compatibilidades": "Incompatible con el trabajo del pensionista con las salvedades legales o reglamentarias; compatible con trabajo a tiempo parcial en los términos reglamentarios (jubilación flexible) y con la jubilación activa (art. 214). Incompatible con puesto en el sector público (art. 213.2) y con altos cargos de la AGE (art. 213.3). Compatible con trabajos por cuenta propia cuyos ingresos anuales no superen el SMI en cómputo anual, sin obligación de cotizar ni generación de nuevos derechos (art. 213.4). Las pensiones del Régimen General son incompatibles entre sí salvo disposición expresa (art. 163).",
+      "articulos": [
+        "art. 165 TRLGSS",
+        "art. 205 TRLGSS",
+        "art. 209 TRLGSS",
+        "art. 210.1 TRLGSS",
+        "art. 212 TRLGSS",
+        "art. 213 TRLGSS",
+        "art. 57 TRLGSS",
+        "art. 59 TRLGSS",
+        "DT 7.ª TRLGSS",
+        "DT 9.ª TRLGSS",
+        "DT 40.ª TRLGSS",
+        "DT 41.ª TRLGSS",
+        "DT 4.ª.7 TRLGSS"
+      ],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "evidencia": [
+        "«Haber cumplido sesenta y siete años de edad, o sesenta y cinco años cuando se acrediten treinta y ocho años y seis meses de cotización» (art. 205.1.a)",
+        "«Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho» (art. 205.1.b)",
+        "«La base reguladora de la pensión de jubilación será el cociente que resulte de dividir entre 378, la suma de las bases de cotización del interesado durante 324 meses anteriores al del mes previo al del hecho causante» (art. 209.1)",
+        "«Desde 1 de enero de 2026, la base reguladora de la pensión de jubilación será el resultado de dividir entre 352,33 la suma de las 302 bases de cotización de mayor importe comprendidas dentro del período de los 304 meses inmediatamente anteriores al mes previo al del hecho causante» (DT 40.ª)",
+        "«a) Por los primeros quince años cotizados, el 50 por ciento. b) A partir del año decimosexto, por cada mes adicional de cotización, comprendido entre los meses uno y doscientos cuarenta y ocho, se añadirá el 0,19 por ciento, y por cada uno de los que rebasen el mes doscientos cuarenta y ocho, se añadirá el 0,18 por ciento» (art. 210.1)",
+        "«Durante los años 2023 a 2026. | Por cada mes adicional de cotización entre los meses 1 y 49, el 0,21 por ciento y por cada uno de los 209 meses siguientes, el 0,19 por ciento.» (DT 9.ª)",
+        "«2026 | 38 años y 3 meses o más. | 65 años. | Menos de 38 años y 3 meses. | 66 años y 10 meses.» (DT 7.ª)"
+      ],
+      "notas": "La redacción del art. 209.1 vigente desde 01/01/2026 (RDL 2/2023) se aplica gradualmente por la DT 40.ª; la DT 4.ª.7 garantiza hasta 2040 la opción por la redacción vigente a 1/1/2023 (no transcrita en el texto consolidado actual; debe consultarse la versión histórica del art. 209.1). La fórmula del art. 209.1 figura como imagen en el BOE (/datos/imagenes/disp/2023/65/6967_12946619_1.png), transcrita aquí. Coeficientes reductores de edad por actividad (art. 206) y por discapacidad (art. 206 bis) existen pero no se detallan. La DT 4.ª.5 mantiene la regulación anterior a la Ley 27/2011 para ciertos ceses anteriores al 1/4/2013. La DT 7.ª indica para 2026 el mismo umbral (38 años y 3 meses) que para 2025, copiado tal cual. [tablaEdadTransitoria_DT7] [{\"año\": \"2013\", \"periodoCotizado\": \"35 años y 3 meses o más.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2013\", \"periodoCotizado\": \"Menos de 35 años y 3 meses.\", \"edadExigida\": \"65 años y 1 mes.\"}, {\"año\": \"2014\", \"periodoCotizado\": \"35 años y 6 meses o más.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2014\", \"periodoCotizado\": \"Menos de 35 años y 6 meses.\", \"edadExigida\": \"65 años y 2 meses.\"}, {\"año\": \"2015\", \"periodoCotizado\": \"35 años y 9 meses o más.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2015\", \"periodoCotizado\": \"Menos de 35 años y 9 meses.\", \"edadExigida\": \"65 años y 3 meses.\"}, {\"año\": \"2016\", \"periodoCotizado\": \"36 o más años.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2016\", \"periodoCotizado\": \"Menos de 36 años.\", \"edadExigida\": \"65 años y 4 meses.\"}, {\"año\": \"2017\", \"periodoCotizado\": \"36 años y 3 meses o más.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2017\", \"periodoCotizado\": \"Menos de 36 años y 3 meses.\", \"edadExigida\": \"65 años y 5 meses.\"}, {\"año\": \"2018\", \"periodoCotizado\": \"36 años y 6 meses o más.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2018\", \"periodoCotizado\": \"Menos de 36 años y 6 meses.\", \"edadExigida\": \"65 años y 6 meses.\"}, {\"año\": \"2019\", \"periodoCotizado\": \"36 años y 9 meses o más.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2019\", \"periodoCotizado\": \"Menos de 36 años y 9 meses.\", \"edadExigida\": \"65 años y 8 meses.\"}, {\"año\": \"2020\", \"periodoCotizado\": \"37 o más años.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2020\", \"periodoCotizado\": \"Menos de 37 años.\", \"edadExigida\": \"65 años y 10 meses.\"}, {\"año\": \"2021\", \"periodoCotizado\": \"37 años y 3 meses o más.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2021\", \"periodoCotizado\": \"Menos de 37 años y 3 meses.\", \"edadExigida\": \"66 años.\"}, {\"año\": \"2022\", \"periodoCotizado\": \"37 años y 6 meses o más.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2022\", \"periodoCotizado\": \"Menos de 37 años y 6 meses.\", \"edadExigida\": \"66 años y 2 meses.\"}, {\"año\": \"2023\", \"periodoCotizado\": \"37 años y 9 meses o más.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2023\", \"periodoCotizado\": \"Menos de 37 años y 9 meses.\", \"edadExigida\": \"66 años y 4 meses.\"}, {\"año\": \"2024\", \"periodoCotizado\": \"38 o más años.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2024\", \"periodoCotizado\": \"Menos de 38 años.\", \"edadExigida\": \"66 años y 6 meses.\"}, {\"año\": \"2025\", \"periodoCotizado\": \"38 años y 3 meses o más.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2025\", \"periodoCotizado\": \"Menos de 38 años y 3 meses.\", \"edadExigida\": \"66 años y 8 meses.\"}, {\"año\": \"2026\", \"periodoCotizado\": \"38 años y 3 meses o más.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"2026\", \"periodoCotizado\": \"Menos de 38 años y 3 meses.\", \"edadExigida\": \"66 años y 10 meses.\"}, {\"año\": \"A partir del año 2027\", \"periodoCotizado\": \"38 años y 6 meses o más.\", \"edadExigida\": \"65 años.\"}, {\"año\": \"A partir del año 2027\", \"periodoCotizado\": \"Menos de 38 años y 6 meses.\", \"edadExigida\": \"67 años.\"}]",
+      "modulos": ["Tipos de pensión", "Cómo se calcula"]
+    },
+    {
+      "id": "jubilacion-anticipada-involuntaria",
+      "nombre": "Jubilación anticipada por causa no imputable al trabajador (involuntaria)",
+      "familia": "jubilacion",
+      "modalidad": "contributiva",
+      "aQuienCubre": "Trabajadores del Régimen General cuyo cese en el trabajo se produce por causa no imputable a su libre voluntad (despidos colectivos u objetivos, extinción por resolución judicial concursal, muerte/jubilación/incapacidad del empresario, fuerza mayor, extinción por causas de los arts. 40.1, 41.3 y 50 ET, víctimas de violencia de género o sexual).",
+      "requisitos": [
+        {
+          "tipo": "edad",
+          "descripcion": "Edad inferior en 4 años, como máximo, a la edad ordinaria del art. 205.1.a) que corresponda, sin aplicar coeficientes reductores de los arts. 206 y 206 bis.",
+          "articulo": "art. 207.1.a) TRLGSS"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "Inscripción como demandante de empleo durante al menos 6 meses inmediatamente anteriores a la solicitud.",
+          "articulo": "art. 207.1.b) TRLGSS"
+        },
+        {
+          "tipo": "cotizacion-previa",
+          "descripcion": "Periodo mínimo de cotización efectiva de 33 años, sin parte proporcional de pagas extraordinarias; del servicio militar obligatorio, prestación social sustitutoria o servicio social femenino solo se computa como máximo 1 año.",
+          "articulo": "art. 207.1.c) TRLGSS"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "Cese por alguna de las 7 causas tasadas: 1.ª despido colectivo (art. 51 ET); 2.ª despido objetivo (art. 52 ET); 3.ª extinción por resolución judicial en supuestos de la Ley concursal (RDLeg 1/2020); 4.ª muerte, jubilación o incapacidad del empresario individual o extinción de la personalidad jurídica del contratante; 5.ª fuerza mayor constatada (art. 51.7 ET); 6.ª extinción por voluntad del trabajador por las causas de los arts. 40.1, 41.3 y 50 ET; 7.ª extinción por voluntad de la trabajadora víctima de violencia de género o sexual (art. 49.1.m ET). En las causas 1.ª, 2.ª y 6.ª debe acreditarse haber percibido la indemnización (transferencia bancaria o documento equivalente) o haber interpuesto demanda judicial reclamándola o impugnando la extinción.",
+          "articulo": "art. 207.1.d) TRLGSS"
+        },
+        {
+          "tipo": "carencia",
+          "descripcion": "Además, los requisitos generales de la pensión de jubilación (15 años con 2 en los últimos 15) y alta o asimilada.",
+          "articulo": "arts. 165.1 y 205.1.b) TRLGSS"
+        }
+      ],
+      "calculo": {
+        "baseReguladora": "La de la jubilación ordinaria (art. 209 y DT 40.ª).",
+        "porcentaje": "Porcentaje por años cotizados del art. 210.1 (y DT 9.ª), al que se aplica un coeficiente reductor por cada mes o fracción de mes de anticipación respecto a la edad legal que correspondería al trabajador de haber seguido cotizando hasta cumplirla, según el cuadro del art. 207.2 (48 meses máximo; p. ej. 48 meses: 30,00 % con menos de 38 años y 6 meses cotizados; 28,00 % de 38a6m a <41a6m; 26,00 % de 41a6m a <44a6m; 24,00 % con 44a6m o más; 1 mes: 0,63 / 0,58 / 0,54 / 0,50 %).",
+        "formula": "Pensión = min[ BR × %años × (1 − coef. reductor art. 207.2/100) ; pensión máxima × (1 − 0,50 % × nº de trimestres o fracción de anticipación) ]. Los coeficientes se aplican sobre el importe resultante de aplicar a la BR el porcentaje por meses cotizados (art. 210.4).",
+        "articulos": "arts. 207.2, 209, 210.1 y 210.4 TRLGSS"
+      },
+      "limites": "Tras aplicar los coeficientes, la pensión no puede superar el tope máximo de pensión reducido en un 0,50 % por cada trimestre o fracción de trimestre de anticipación (art. 210.4); este 0,50 % no se aplica a anticipaciones por arts. 206 y 206 bis (art. 210.5). Límite máximo del art. 57. Complemento a mínimos según art. 59 (la cuantía mínima concreta la fija la LPGE).",
+      "duracion": "Vitalicia.",
+      "extincion": ["Fallecimiento del pensionista."],
+      "compatibilidades": "Mismo régimen que la jubilación ordinaria (art. 213 TRLGSS): incompatible con el trabajo salvo excepciones legales/reglamentarias. La jubilación activa del art. 214 exige haber demorado al menos un año desde la edad ordinaria y no admite jubilaciones con anticipaciones, por lo que no es accesible desde una anticipada.",
+      "articulos": [
+        "art. 207 TRLGSS",
+        "art. 210.4 TRLGSS",
+        "art. 210.5 TRLGSS",
+        "art. 209 TRLGSS",
+        "art. 205 TRLGSS",
+        "DT 7.ª TRLGSS"
+      ],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "evidencia": [
+        "«Tener cumplida una edad que sea inferior en cuatro años, como máximo, a la edad que en cada caso resulte de aplicación según lo establecido en el artículo 205.1.a)» (art. 207.1.a)",
+        "«Acreditar un período mínimo de cotización efectiva de 33 años» (art. 207.1.c)",
+        "«| 48 | 30,00 | 28,00 | 26,00 | 24,00 |» (cuadro art. 207.2)",
+        "«el importe resultante de la pensión no podrá ser superior a la cuantía que resulte de reducir el tope máximo de pensión en un 0,50 por ciento por cada trimestre o fracción de trimestre de anticipación» (art. 210.4)"
+      ],
+      "notas": "La edad legal de referencia es la que le hubiera correspondido de haber seguido cotizando hasta cumplirla (art. 207.2, último párrafo). Para periodos de cotización se toman periodos completos. Regla transitoria para mutualistas a 1/1/1967 (jubilación desde 60 años con reducción del 8 % por año, o 7,5/7/6,5/6 % en cese involuntario con 30 o más años cotizados) en DT 4.ª.1.2.ª. Se observa en el cuadro del art. 207.2 que la fila de 21 meses (12,57/12,00/11,38/10,00) es igual o inferior en algunas columnas a la del art. 208.2 (12,57/12,00/11,43/10,00); se copia tal cual. [tablaCoeficientesReductores] {\"fuente\": \"art. 207.2 TRLGSS\", \"unidad\": \"% de reducción según meses de anticipación y periodo cotizado\", \"filas\": [{\"mesesAnticipo\": 48, \"menos_38a6m\": \"30,00\", \"de_38a6m_a_menos_41a6m\": \"28,00\", \"de_41a6m_a_menos_44a6m\": \"26,00\", \"44a6m_o_mas\": \"24,00\"}, {\"mesesAnticipo\": 47, \"menos_38a6m\": \"29,38\", \"de_38a6m_a_menos_41a6m\": \"27,42\", \"de_41a6m_a_menos_44a6m\": \"25,46\", \"44a6m_o_mas\": \"23,50\"}, {\"mesesAnticipo\": 46, \"menos_38a6m\": \"28,75\", \"de_38a6m_a_menos_41a6m\": \"26,83\", \"de_41a6m_a_menos_44a6m\": \"24,92\", \"44a6m_o_mas\": \"23,00\"}, {\"mesesAnticipo\": 45, \"menos_38a6m\": \"28,13\", \"de_38a6m_a_menos_41a6m\": \"26,25\", \"de_41a6m_a_menos_44a6m\": \"24,38\", \"44a6m_o_mas\": \"22,50\"}, {\"mesesAnticipo\": 44, \"menos_38a6m\": \"27,50\", \"de_38a6m_a_menos_41a6m\": \"25,67\", \"de_41a6m_a_menos_44a6m\": \"23,83\", \"44a6m_o_mas\": \"22,00\"}, {\"mesesAnticipo\": 43, \"menos_38a6m\": \"26,88\", \"de_38a6m_a_menos_41a6m\": \"25,08\", \"de_41a6m_a_menos_44a6m\": \"23,29\", \"44a6m_o_mas\": \"21,50\"}, {\"mesesAnticipo\": 42, \"menos_38a6m\": \"26,25\", \"de_38a6m_a_menos_41a6m\": \"24,50\", \"de_41a6m_a_menos_44a6m\": \"22,75\", \"44a6m_o_mas\": \"21,00\"}, {\"mesesAnticipo\": 41, \"menos_38a6m\": \"25,63\", \"de_38a6m_a_menos_41a6m\": \"23,92\", \"de_41a6m_a_menos_44a6m\": \"22,21\", \"44a6m_o_mas\": \"20,50\"}, {\"mesesAnticipo\": 40, \"menos_38a6m\": \"25,00\", \"de_38a6m_a_menos_41a6m\": \"23,33\", \"de_41a6m_a_menos_44a6m\": \"21,67\", \"44a6m_o_mas\": \"20,00\"}, {\"mesesAnticipo\": 39, \"menos_38a6m\": \"24,38\", \"de_38a6m_a_menos_41a6m\": \"22,75\", \"de_41a6m_a_menos_44a6m\": \"21,13\", \"44a6m_o_mas\": \"19,50\"}, {\"mesesAnticipo\": 38, \"menos_38a6m\": \"23,75\", \"de_38a6m_a_menos_41a6m\": \"22,17\", \"de_41a6m_a_menos_44a6m\": \"20,58\", \"44a6m_o_mas\": \"19,00\"}, {\"mesesAnticipo\": 37, \"menos_38a6m\": \"23,13\", \"de_38a6m_a_menos_41a6m\": \"21,58\", \"de_41a6m_a_menos_44a6m\": \"20,04\", \"44a6m_o_mas\": \"18,50\"}, {\"mesesAnticipo\": 36, \"menos_38a6m\": \"22,50\", \"de_38a6m_a_menos_41a6m\": \"21,00\", \"de_41a6m_a_menos_44a6m\": \"19,50\", \"44a6m_o_mas\": \"18,00\"}, {\"mesesAnticipo\": 35, \"menos_38a6m\": \"21,88\", \"de_38a6m_a_menos_41a6m\": \"20,42\", \"de_41a6m_a_menos_44a6m\": \"18,96\", \"44a6m_o_mas\": \"17,50\"}, {\"mesesAnticipo\": 34, \"menos_38a6m\": \"21,25\", \"de_38a6m_a_menos_41a6m\": \"19,83\", \"de_41a6m_a_menos_44a6m\": \"18,42\", \"44a6m_o_mas\": \"17,00\"}, {\"mesesAnticipo\": 33, \"menos_38a6m\": \"20,63\", \"de_38a6m_a_menos_41a6m\": \"19,25\", \"de_41a6m_a_menos_44a6m\": \"17,88\", \"44a6m_o_mas\": \"16,50\"}, {\"mesesAnticipo\": 32, \"menos_38a6m\": \"20,00\", \"de_38a6m_a_menos_41a6m\": \"18,67\", \"de_41a6m_a_menos_44a6m\": \"17,33\", \"44a6m_o_mas\": \"16,00\"}, {\"mesesAnticipo\": 31, \"menos_38a6m\": \"19,38\", \"de_38a6m_a_menos_41a6m\": \"18,08\", \"de_41a6m_a_menos_44a6m\": \"16,79\", \"44a6m_o_mas\": \"15,50\"}, {\"mesesAnticipo\": 30, \"menos_38a6m\": \"18,75\", \"de_38a6m_a_menos_41a6m\": \"17,50\", \"de_41a6m_a_menos_44a6m\": \"16,25\", \"44a6m_o_mas\": \"15,00\"}, {\"mesesAnticipo\": 29, \"menos_38a6m\": \"18,13\", \"de_38a6m_a_menos_41a6m\": \"16,92\", \"de_41a6m_a_menos_44a6m\": \"15,71\", \"44a6m_o_mas\": \"14,50\"}, {\"mesesAnticipo\": 28, \"menos_38a6m\": \"17,50\", \"de_38a6m_a_menos_41a6m\": \"16,33\", \"de_41a6m_a_menos_44a6m\": \"15,17\", \"44a6m_o_mas\": \"14,00\"}, {\"mesesAnticipo\": 27, \"menos_38a6m\": \"16,88\", \"de_38a6m_a_menos_41a6m\": \"15,75\", \"de_41a6m_a_menos_44a6m\": \"14,63\", \"44a6m_o_mas\": \"13,50\"}, {\"mesesAnticipo\": 26, \"menos_38a6m\": \"16,25\", \"de_38a6m_a_menos_41a6m\": \"15,17\", \"de_41a6m_a_menos_44a6m\": \"14,08\", \"44a6m_o_mas\": \"13,00\"}, {\"mesesAnticipo\": 25, \"menos_38a6m\": \"15,63\", \"de_38a6m_a_menos_41a6m\": \"14,58\", \"de_41a6m_a_menos_44a6m\": \"13,54\", \"44a6m_o_mas\": \"12,50\"}, {\"mesesAnticipo\": 24, \"menos_38a6m\": \"15,00\", \"de_38a6m_a_menos_41a6m\": \"14,00\", \"de_41a6m_a_menos_44a6m\": \"13,00\", \"44a6m_o_mas\": \"12,00\"}, {\"mesesAnticipo\": 23, \"menos_38a6m\": \"14,38\", \"de_38a6m_a_menos_41a6m\": \"13,42\", \"de_41a6m_a_menos_44a6m\": \"12,46\", \"44a6m_o_mas\": \"11,50\"}, {\"mesesAnticipo\": 22, \"menos_38a6m\": \"13,75\", \"de_38a6m_a_menos_41a6m\": \"12,83\", \"de_41a6m_a_menos_44a6m\": \"11,92\", \"44a6m_o_mas\": \"11,00\"}, {\"mesesAnticipo\": 21, \"menos_38a6m\": \"12,57\", \"de_38a6m_a_menos_41a6m\": \"12,00\", \"de_41a6m_a_menos_44a6m\": \"11,38\", \"44a6m_o_mas\": \"10,00\"}, {\"mesesAnticipo\": 20, \"menos_38a6m\": \"11,00\", \"de_38a6m_a_menos_41a6m\": \"10,50\", \"de_41a6m_a_menos_44a6m\": \"10,00\", \"44a6m_o_mas\": \"9,20\"}, {\"mesesAnticipo\": 19, \"menos_38a6m\": \"9,78\", \"de_38a6m_a_menos_41a6m\": \"9,33\", \"de_41a6m_a_menos_44a6m\": \"8,89\", \"44a6m_o_mas\": \"8,40\"}, {\"mesesAnticipo\": 18, \"menos_38a6m\": \"8,80\", \"de_38a6m_a_menos_41a6m\": \"8,40\", \"de_41a6m_a_menos_44a6m\": \"8,00\", \"44a6m_o_mas\": \"7,60\"}, {\"mesesAnticipo\": 17, \"menos_38a6m\": \"8,00\", \"de_38a6m_a_menos_41a6m\": \"7,64\", \"de_41a6m_a_menos_44a6m\": \"7,27\", \"44a6m_o_mas\": \"6,91\"}, {\"mesesAnticipo\": 16, \"menos_38a6m\": \"7,33\", \"de_38a6m_a_menos_41a6m\": \"7,00\", \"de_41a6m_a_menos_44a6m\": \"6,67\", \"44a6m_o_mas\": \"6,33\"}, {\"mesesAnticipo\": 15, \"menos_38a6m\": \"6,77\", \"de_38a6m_a_menos_41a6m\": \"6,46\", \"de_41a6m_a_menos_44a6m\": \"6,15\", \"44a6m_o_mas\": \"5,85\"}, {\"mesesAnticipo\": 14, \"menos_38a6m\": \"6,29\", \"de_38a6m_a_menos_41a6m\": \"6,00\", \"de_41a6m_a_menos_44a6m\": \"5,71\", \"44a6m_o_mas\": \"5,43\"}, {\"mesesAnticipo\": 13, \"menos_38a6m\": \"5,87\", \"de_38a6m_a_menos_41a6m\": \"5,60\", \"de_41a6m_a_menos_44a6m\": \"5,33\", \"44a6m_o_mas\": \"5,07\"}, {\"mesesAnticipo\": 12, \"menos_38a6m\": \"5,50\", \"de_38a6m_a_menos_41a6m\": \"5,25\", \"de_41a6m_a_menos_44a6m\": \"5,00\", \"44a6m_o_mas\": \"4,75\"}, {\"mesesAnticipo\": 11, \"menos_38a6m\": \"5,18\", \"de_38a6m_a_menos_41a6m\": \"4,94\", \"de_41a6m_a_menos_44a6m\": \"4,71\", \"44a6m_o_mas\": \"4,47\"}, {\"mesesAnticipo\": 10, \"menos_38a6m\": \"4,89\", \"de_38a6m_a_menos_41a6m\": \"4,67\", \"de_41a6m_a_menos_44a6m\": \"4,44\", \"44a6m_o_mas\": \"4,22\"}, {\"mesesAnticipo\": 9, \"menos_38a6m\": \"4,63\", \"de_38a6m_a_menos_41a6m\": \"4,42\", \"de_41a6m_a_menos_44a6m\": \"4,21\", \"44a6m_o_mas\": \"4,00\"}, {\"mesesAnticipo\": 8, \"menos_38a6m\": \"4,40\", \"de_38a6m_a_menos_41a6m\": \"4,20\", \"de_41a6m_a_menos_44a6m\": \"4,00\", \"44a6m_o_mas\": \"3,80\"}, {\"mesesAnticipo\": 7, \"menos_38a6m\": \"4,19\", \"de_38a6m_a_menos_41a6m\": \"4,00\", \"de_41a6m_a_menos_44a6m\": \"3,81\", \"44a6m_o_mas\": \"3,62\"}, {\"mesesAnticipo\": 6, \"menos_38a6m\": \"3,75\", \"de_38a6m_a_menos_41a6m\": \"3,50\", \"de_41a6m_a_menos_44a6m\": \"3,25\", \"44a6m_o_mas\": \"3,00\"}, {\"mesesAnticipo\": 5, \"menos_38a6m\": \"3,13\", \"de_38a6m_a_menos_41a6m\": \"2,92\", \"de_41a6m_a_menos_44a6m\": \"2,71\", \"44a6m_o_mas\": \"2,50\"}, {\"mesesAnticipo\": 4, \"menos_38a6m\": \"2,50\", \"de_38a6m_a_menos_41a6m\": \"2,33\", \"de_41a6m_a_menos_44a6m\": \"2,17\", \"44a6m_o_mas\": \"2,00\"}, {\"mesesAnticipo\": 3, \"menos_38a6m\": \"1,88\", \"de_38a6m_a_menos_41a6m\": \"1,75\", \"de_41a6m_a_menos_44a6m\": \"1,63\", \"44a6m_o_mas\": \"1,50\"}, {\"mesesAnticipo\": 2, \"menos_38a6m\": \"1,25\", \"de_38a6m_a_menos_41a6m\": \"1,17\", \"de_41a6m_a_menos_44a6m\": \"1,08\", \"44a6m_o_mas\": \"1,00\"}, {\"mesesAnticipo\": 1, \"menos_38a6m\": \"0,63\", \"de_38a6m_a_menos_41a6m\": \"0,58\", \"de_41a6m_a_menos_44a6m\": \"0,54\", \"44a6m_o_mas\": \"0,50\"}]}",
+      "modulos": ["Tipos de pensión", "Cómo se calcula"]
+    },
+    {
+      "id": "jubilacion-anticipada-voluntaria",
+      "nombre": "Jubilación anticipada por voluntad del interesado",
+      "familia": "jubilacion",
+      "modalidad": "contributiva",
+      "aQuienCubre": "Trabajadores del Régimen General que deciden voluntariamente adelantar la jubilación hasta 2 años antes de la edad ordinaria y acreditan una larga carrera de cotización.",
+      "requisitos": [
+        {
+          "tipo": "edad",
+          "descripcion": "Edad inferior en 2 años, como máximo, a la edad ordinaria del art. 205.1.a), sin aplicar coeficientes reductores de los arts. 206 y 206 bis.",
+          "articulo": "art. 208.1.a) TRLGSS"
+        },
+        {
+          "tipo": "cotizacion-previa",
+          "descripcion": "Periodo mínimo de cotización efectiva de 35 años, sin parte proporcional de pagas extraordinarias; servicio militar/prestación social sustitutoria/servicio social femenino computable como máximo 1 año.",
+          "articulo": "art. 208.1.b) TRLGSS"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "El importe de la pensión a percibir debe resultar superior a la pensión mínima que correspondería al interesado por su situación familiar al cumplir 65 años; si no, no puede accederse a esta modalidad.",
+          "articulo": "art. 208.1.c) TRLGSS"
+        },
+        {
+          "tipo": "carencia",
+          "descripcion": "Requisitos generales de jubilación (15 años, 2 en los últimos 15) y alta o asimilada.",
+          "articulo": "arts. 165.1 y 205.1.b) TRLGSS"
+        }
+      ],
+      "calculo": {
+        "baseReguladora": "La de la jubilación ordinaria (art. 209 y DT 40.ª).",
+        "porcentaje": "Porcentaje por años cotizados (art. 210.1, DT 9.ª) reducido por cada mes o fracción de mes de anticipación según el cuadro del art. 208.2 (24 meses: 21,00 % con menos de 38a6m cotizados; 19,00 % de 38a6m a <41a6m; 17,00 % de 41a6m a <44a6m; 13,00 % con 44a6m o más; 1 mes: 3,26 / 3,11 / 2,96 / 2,81 %). Si al acogerse el trabajador percibe el subsidio por desempleo del art. 274 durante al menos 3 meses, se aplican los coeficientes de la jubilación involuntaria (art. 208.3).",
+        "formula": "Pensión = BR × %años × (1 − coef. art. 208.2/100). Si BR × %años supera el límite del art. 57, los coeficientes se aplican sobre dicho límite (art. 210.3, párrafo 2.º), con aplicación gradual 2024-2033 según la DT 34.ª. En el caso del art. 208.3, además tope: pensión máxima reducida un 0,50 % por trimestre o fracción de anticipación (art. 210.4).",
+        "articulos": "arts. 208.2, 208.3, 210.3, 210.4 TRLGSS; DT 34.ª TRLGSS"
+      },
+      "limites": "Límite máximo del art. 57. No cabe complemento a mínimos en la práctica de acceso, ya que la pensión debe superar la mínima a los 65 años (art. 208.1.c). Coeficiente del 0,50 % por trimestre (art. 210.4) solo en el supuesto del art. 208.3.",
+      "duracion": "Vitalicia.",
+      "extincion": ["Fallecimiento del pensionista."],
+      "compatibilidades": "Mismo régimen que la jubilación ordinaria (art. 213 TRLGSS): incompatible con el trabajo salvo excepciones legales/reglamentarias. La jubilación activa del art. 214 exige haber demorado al menos un año desde la edad ordinaria y no admite jubilaciones con anticipaciones, por lo que no es accesible desde una anticipada.",
+      "articulos": [
+        "art. 208 TRLGSS",
+        "art. 210.3 TRLGSS",
+        "art. 210.4 TRLGSS",
+        "art. 210.5 TRLGSS",
+        "DT 34.ª TRLGSS"
+      ],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "evidencia": [
+        "«Tener cumplida una edad que sea inferior en dos años, como máximo, a la edad que en cada caso resulte de aplicación según lo establecido en el artículo 205.1.a)» (art. 208.1.a)",
+        "«Acreditar un período mínimo de cotización efectiva de treinta y cinco años» (art. 208.1.b)",
+        "«| 24 | 21,00 | 19,00 | 17,00 | 13,00 |» (cuadro art. 208.2)",
+        "«en el supuesto de que el importe de la pensión resultante de aplicar a la base reguladora el porcentaje que corresponda en función de los meses de cotización acreditados fuese superior al límite de la cuantía inicial de las pensiones, establecido en el artículo 57, los coeficientes reductores por edad se aplicarán sobre el indicado límite» (art. 210.3)",
+        "«| 24 | 5,70 | 7,40 | 9,10 | 10,80 | 12,50 | 14,20 | 15,90 | 17,60 | 19,30 | 21,00 |» (DT 34.ª, tramo inferior a 38a6m; columna 2026 = 9,10)"
+      ],
+      "notas": "DT 34.ª.3 mantiene las reglas de acceso anteriores para extinciones previas al 1/1/2022 (sin nueva inclusión superior a 12 meses) o derivadas de ERE/convenios/acuerdos aprobados antes de esa fecha. La tabla DT 34.ª contiene 4 tramos de cotización × 24 meses × 10 años (2024-2033), extraída íntegra. [tablaCoeficientesReductores] {\"fuente\": \"art. 208.2 TRLGSS\", \"unidad\": \"% de reducción según meses de anticipación y periodo cotizado\", \"filas\": [{\"mesesAnticipo\": 24, \"menos_38a6m\": \"21,00\", \"de_38a6m_a_menos_41a6m\": \"19,00\", \"de_41a6m_a_menos_44a6m\": \"17,00\", \"44a6m_o_mas\": \"13,00\"}, {\"mesesAnticipo\": 23, \"menos_38a6m\": \"17,60\", \"de_38a6m_a_menos_41a6m\": \"16,50\", \"de_41a6m_a_menos_44a6m\": \"15,00\", \"44a6m_o_mas\": \"12,00\"}, {\"mesesAnticipo\": 22, \"menos_38a6m\": \"14,67\", \"de_38a6m_a_menos_41a6m\": \"14,00\", \"de_41a6m_a_menos_44a6m\": \"13,33\", \"44a6m_o_mas\": \"11,00\"}, {\"mesesAnticipo\": 21, \"menos_38a6m\": \"12,57\", \"de_38a6m_a_menos_41a6m\": \"12,00\", \"de_41a6m_a_menos_44a6m\": \"11,43\", \"44a6m_o_mas\": \"10,00\"}, {\"mesesAnticipo\": 20, \"menos_38a6m\": \"11,00\", \"de_38a6m_a_menos_41a6m\": \"10,50\", \"de_41a6m_a_menos_44a6m\": \"10,00\", \"44a6m_o_mas\": \"9,20\"}, {\"mesesAnticipo\": 19, \"menos_38a6m\": \"9,78\", \"de_38a6m_a_menos_41a6m\": \"9,33\", \"de_41a6m_a_menos_44a6m\": \"8,89\", \"44a6m_o_mas\": \"8,40\"}, {\"mesesAnticipo\": 18, \"menos_38a6m\": \"8,80\", \"de_38a6m_a_menos_41a6m\": \"8,40\", \"de_41a6m_a_menos_44a6m\": \"8,00\", \"44a6m_o_mas\": \"7,60\"}, {\"mesesAnticipo\": 17, \"menos_38a6m\": \"8,00\", \"de_38a6m_a_menos_41a6m\": \"7,64\", \"de_41a6m_a_menos_44a6m\": \"7,27\", \"44a6m_o_mas\": \"6,91\"}, {\"mesesAnticipo\": 16, \"menos_38a6m\": \"7,33\", \"de_38a6m_a_menos_41a6m\": \"7,00\", \"de_41a6m_a_menos_44a6m\": \"6,67\", \"44a6m_o_mas\": \"6,33\"}, {\"mesesAnticipo\": 15, \"menos_38a6m\": \"6,77\", \"de_38a6m_a_menos_41a6m\": \"6,46\", \"de_41a6m_a_menos_44a6m\": \"6,15\", \"44a6m_o_mas\": \"5,85\"}, {\"mesesAnticipo\": 14, \"menos_38a6m\": \"6,29\", \"de_38a6m_a_menos_41a6m\": \"6,00\", \"de_41a6m_a_menos_44a6m\": \"5,71\", \"44a6m_o_mas\": \"5,43\"}, {\"mesesAnticipo\": 13, \"menos_38a6m\": \"5,87\", \"de_38a6m_a_menos_41a6m\": \"5,60\", \"de_41a6m_a_menos_44a6m\": \"5,33\", \"44a6m_o_mas\": \"5,07\"}, {\"mesesAnticipo\": 12, \"menos_38a6m\": \"5,50\", \"de_38a6m_a_menos_41a6m\": \"5,25\", \"de_41a6m_a_menos_44a6m\": \"5,00\", \"44a6m_o_mas\": \"4,75\"}, {\"mesesAnticipo\": 11, \"menos_38a6m\": \"5,18\", \"de_38a6m_a_menos_41a6m\": \"4,94\", \"de_41a6m_a_menos_44a6m\": \"4,71\", \"44a6m_o_mas\": \"4,47\"}, {\"mesesAnticipo\": 10, \"menos_38a6m\": \"4,89\", \"de_38a6m_a_menos_41a6m\": \"4,67\", \"de_41a6m_a_menos_44a6m\": \"4,44\", \"44a6m_o_mas\": \"4,22\"}, {\"mesesAnticipo\": 9, \"menos_38a6m\": \"4,63\", \"de_38a6m_a_menos_41a6m\": \"4,42\", \"de_41a6m_a_menos_44a6m\": \"4,21\", \"44a6m_o_mas\": \"4,00\"}, {\"mesesAnticipo\": 8, \"menos_38a6m\": \"4,40\", \"de_38a6m_a_menos_41a6m\": \"4,20\", \"de_41a6m_a_menos_44a6m\": \"4,00\", \"44a6m_o_mas\": \"3,80\"}, {\"mesesAnticipo\": 7, \"menos_38a6m\": \"4,19\", \"de_38a6m_a_menos_41a6m\": \"4,00\", \"de_41a6m_a_menos_44a6m\": \"3,81\", \"44a6m_o_mas\": \"3,62\"}, {\"mesesAnticipo\": 6, \"menos_38a6m\": \"4,00\", \"de_38a6m_a_menos_41a6m\": \"3,82\", \"de_41a6m_a_menos_44a6m\": \"3,64\", \"44a6m_o_mas\": \"3,45\"}, {\"mesesAnticipo\": 5, \"menos_38a6m\": \"3,83\", \"de_38a6m_a_menos_41a6m\": \"3,65\", \"de_41a6m_a_menos_44a6m\": \"3,48\", \"44a6m_o_mas\": \"3,30\"}, {\"mesesAnticipo\": 4, \"menos_38a6m\": \"3,67\", \"de_38a6m_a_menos_41a6m\": \"3,50\", \"de_41a6m_a_menos_44a6m\": \"3,33\", \"44a6m_o_mas\": \"3,17\"}, {\"mesesAnticipo\": 3, \"menos_38a6m\": \"3,52\", \"de_38a6m_a_menos_41a6m\": \"3,36\", \"de_41a6m_a_menos_44a6m\": \"3,20\", \"44a6m_o_mas\": \"3,04\"}, {\"mesesAnticipo\": 2, \"menos_38a6m\": \"3,38\", \"de_38a6m_a_menos_41a6m\": \"3,23\", \"de_41a6m_a_menos_44a6m\": \"3,08\", \"44a6m_o_mas\": \"2,92\"}, {\"mesesAnticipo\": 1, \"menos_38a6m\": \"3,26\", \"de_38a6m_a_menos_41a6m\": \"3,11\", \"de_41a6m_a_menos_44a6m\": \"2,96\", \"44a6m_o_mas\": \"2,81\"}]} [tablaTransitoriaPensionesSuperioresMaxima_DT34] {\"fuente\": \"DT 34.ª.2 TRLGSS\", \"descripcion\": \"Coeficientes reductores aplicables, de forma gradual entre 2024 y 2033, cuando el importe BR × %años supera la pensión máxima (art. 210.3, párrafo 2.º). Solo se aplica en la medida en que la evolución de la pensión máxima absorba completamente el efecto del aumento de coeficientes respecto a 2021, sin que la pensión resulte inferior a la que habría correspondido con las normas de 2021 (DT 34.ª.1).\", \"tramos\": {\"Período cotizado inferior a treinta y ocho años y seis meses\": [{\"mesesAnticipo\": 24, \"2024\": \"5,70\", \"2025\": \"7,40\", \"2026\": \"9,10\", \"2027\": \"10,80\", \"2028\": \"12,50\", \"2029\": \"14,20\", \"2030\": \"15,90\", \"2031\": \"17,60\", \"2032\": \"19,30\", \"2033\": \"21,00\"}, {\"mesesAnticipo\": 23, \"2024\": \"5,36\", \"2025\": \"6,72\", \"2026\": \"8,08\", \"2027\": \"9,44\", \"2028\": \"10,80\", \"2029\": \"12,16\", \"2030\": \"13,52\", \"2031\": \"14,88\", \"2032\": \"16,24\", \"2033\": \"17,60\"}, {\"mesesAnticipo\": 22, \"2024\": \"5,07\", \"2025\": \"6,13\", \"2026\": \"7,20\", \"2027\": \"8,27\", \"2028\": \"9,34\", \"2029\": \"10,40\", \"2030\": \"11,47\", \"2031\": \"12,54\", \"2032\": \"13,60\", \"2033\": \"14,67\"}, {\"mesesAnticipo\": 21, \"2024\": \"4,41\", \"2025\": \"5,31\", \"2026\": \"6,22\", \"2027\": \"7,13\", \"2028\": \"8,04\", \"2029\": \"8,94\", \"2030\": \"9,85\", \"2031\": \"10,76\", \"2032\": \"11,66\", \"2033\": \"12,57\"}, {\"mesesAnticipo\": 20, \"2024\": \"4,25\", \"2025\": \"5,00\", \"2026\": \"5,75\", \"2027\": \"6,50\", \"2028\": \"7,25\", \"2029\": \"8,00\", \"2030\": \"8,75\", \"2031\": \"9,50\", \"2032\": \"10,25\", \"2033\": \"11,00\"}, {\"mesesAnticipo\": 19, \"2024\": \"4,13\", \"2025\": \"4,76\", \"2026\": \"5,38\", \"2027\": \"6,01\", \"2028\": \"6,64\", \"2029\": \"7,27\", \"2030\": \"7,90\", \"2031\": \"8,52\", \"2032\": \"9,15\", \"2033\": \"9,78\"}, {\"mesesAnticipo\": 18, \"2024\": \"3,58\", \"2025\": \"4,16\", \"2026\": \"4,74\", \"2027\": \"5,32\", \"2028\": \"5,90\", \"2029\": \"6,48\", \"2030\": \"7,06\", \"2031\": \"7,64\", \"2032\": \"8,22\", \"2033\": \"8,80\"}, {\"mesesAnticipo\": 17, \"2024\": \"3,50\", \"2025\": \"4,00\", \"2026\": \"4,50\", \"2027\": \"5,00\", \"2028\": \"5,50\", \"2029\": \"6,00\", \"2030\": \"6,50\", \"2031\": \"7,00\", \"2032\": \"7,50\", \"2033\": \"8,00\"}, {\"mesesAnticipo\": 16, \"2024\": \"3,43\", \"2025\": \"3,87\", \"2026\": \"4,30\", \"2027\": \"4,73\", \"2028\": \"5,17\", \"2029\": \"5,60\", \"2030\": \"6,03\", \"2031\": \"6,46\", \"2032\": \"6,90\", \"2033\": \"7,33\"}, {\"mesesAnticipo\": 15, \"2024\": \"2,93\", \"2025\": \"3,35\", \"2026\": \"3,78\", \"2027\": \"4,21\", \"2028\": \"4,64\", \"2029\": \"5,06\", \"2030\": \"5,49\", \"2031\": \"5,92\", \"2032\": \"6,34\", \"2033\": \"6,77\"}, {\"mesesAnticipo\": 14, \"2024\": \"2,88\", \"2025\": \"3,26\", \"2026\": \"3,64\", \"2027\": \"4,02\", \"2028\": \"4,40\", \"2029\": \"4,77\", \"2030\": \"5,15\", \"2031\": \"5,53\", \"2032\": \"5,91\", \"2033\": \"6,29\"}, {\"mesesAnticipo\": 13, \"2024\": \"2,84\", \"2025\": \"3,17\", \"2026\": \"3,51\", \"2027\": \"3,85\", \"2028\": \"4,19\", \"2029\": \"4,52\", \"2030\": \"4,86\", \"2031\": \"5,20\", \"2032\": \"5,53\", \"2033\": \"5,87\"}, {\"mesesAnticipo\": 12, \"2024\": \"2,35\", \"2025\": \"2,70\", \"2026\": \"3,05\", \"2027\": \"3,40\", \"2028\": \"3,75\", \"2029\": \"4,10\", \"2030\": \"4,45\", \"2031\": \"4,80\", \"2032\": \"5,15\", \"2033\": \"5,50\"}, {\"mesesAnticipo\": 11, \"2024\": \"2,32\", \"2025\": \"2,64\", \"2026\": \"2,95\", \"2027\": \"3,27\", \"2028\": \"3,59\", \"2029\": \"3,91\", \"2030\": \"4,23\", \"2031\": \"4,54\", \"2032\": \"4,86\", \"2033\": \"5,18\"}, {\"mesesAnticipo\": 10, \"2024\": \"2,29\", \"2025\": \"2,58\", \"2026\": \"2,87\", \"2027\": \"3,16\", \"2028\": \"3,45\", \"2029\": \"3,73\", \"2030\": \"4,02\", \"2031\": \"4,31\", \"2032\": \"4,60\", \"2033\": \"4,89\"}, {\"mesesAnticipo\": 9, \"2024\": \"1,81\", \"2025\": \"2,13\", \"2026\": \"2,44\", \"2027\": \"2,75\", \"2028\": \"3,07\", \"2029\": \"3,38\", \"2030\": \"3,69\", \"2031\": \"4,00\", \"2032\": \"4,32\", \"2033\": \"4,63\"}, {\"mesesAnticipo\": 8, \"2024\": \"1,79\", \"2025\": \"2,08\", \"2026\": \"2,37\", \"2027\": \"2,66\", \"2028\": \"2,95\", \"2029\": \"3,24\", \"2030\": \"3,53\", \"2031\": \"3,82\", \"2032\": \"4,11\", \"2033\": \"4,40\"}, {\"mesesAnticipo\": 7, \"2024\": \"1,77\", \"2025\": \"2,04\", \"2026\": \"2,31\", \"2027\": \"2,58\", \"2028\": \"2,85\", \"2029\": \"3,11\", \"2030\": \"3,38\", \"2031\": \"3,65\", \"2032\": \"3,92\", \"2033\": \"4,19\"}, {\"mesesAnticipo\": 6, \"2024\": \"1,30\", \"2025\": \"1,60\", \"2026\": \"1,90\", \"2027\": \"2,20\", \"2028\": \"2,50\", \"2029\": \"2,80\", \"2030\": \"3,10\", \"2031\": \"3,40\", \"2032\": \"3,70\", \"2033\": \"4,00\"}, {\"mesesAnticipo\": 5, \"2024\": \"1,28\", \"2025\": \"1,57\", \"2026\": \"1,85\", \"2027\": \"2,13\", \"2028\": \"2,42\", \"2029\": \"2,70\", \"2030\": \"2,98\", \"2031\": \"3,26\", \"2032\": \"3,55\", \"2033\": \"3,83\"}, {\"mesesAnticipo\": 4, \"2024\": \"1,27\", \"2025\": \"1,53\", \"2026\": \"1,80\", \"2027\": \"2,07\", \"2028\": \"2,34\", \"2029\": \"2,60\", \"2030\": \"2,87\", \"2031\": \"3,14\", \"2032\": \"3,40\", \"2033\": \"3,67\"}, {\"mesesAnticipo\": 3, \"2024\": \"0,80\", \"2025\": \"1,10\", \"2026\": \"1,41\", \"2027\": \"1,71\", \"2028\": \"2,01\", \"2029\": \"2,31\", \"2030\": \"2,61\", \"2031\": \"2,92\", \"2032\": \"3,22\", \"2033\": \"3,52\"}, {\"mesesAnticipo\": 2, \"2024\": \"0,79\", \"2025\": \"1,08\", \"2026\": \"1,36\", \"2027\": \"1,65\", \"2028\": \"1,94\", \"2029\": \"2,23\", \"2030\": \"2,52\", \"2031\": \"2,80\", \"2032\": \"3,09\", \"2033\": \"3,38\"}, {\"mesesAnticipo\": 1, \"2024\": \"0,78\", \"2025\": \"1,05\", \"2026\": \"1,33\", \"2027\": \"1,60\", \"2028\": \"1,88\", \"2029\": \"2,16\", \"2030\": \"2,43\", \"2031\": \"2,71\", \"2032\": \"2,98\", \"2033\": \"3,26\"}], \"Período cotizado igual o superior a treinta y ocho años y seis meses e inferior a cuarenta y un años y seis meses\": [{\"mesesAnticipo\": 24, \"2024\": \"5,50\", \"2025\": \"7,00\", \"2026\": \"8,50\", \"2027\": \"10,00\", \"2028\": \"11,50\", \"2029\": \"13,00\", \"2030\": \"14,50\", \"2031\": \"16,00\", \"2032\": \"17,50\", \"2033\": \"19,00\"}, {\"mesesAnticipo\": 23, \"2024\": \"5,25\", \"2025\": \"6,50\", \"2026\": \"7,75\", \"2027\": \"9,00\", \"2028\": \"10,25\", \"2029\": \"11,50\", \"2030\": \"12,75\", \"2031\": \"14,00\", \"2032\": \"15,25\", \"2033\": \"16,50\"}, {\"mesesAnticipo\": 22, \"2024\": \"5,00\", \"2025\": \"6,00\", \"2026\": \"7,00\", \"2027\": \"8,00\", \"2028\": \"9,00\", \"2029\": \"10,00\", \"2030\": \"11,00\", \"2031\": \"12,00\", \"2032\": \"13,00\", \"2033\": \"14,00\"}, {\"mesesAnticipo\": 21, \"2024\": \"4,35\", \"2025\": \"5,20\", \"2026\": \"6,05\", \"2027\": \"6,90\", \"2028\": \"7,75\", \"2029\": \"8,60\", \"2030\": \"9,45\", \"2031\": \"10,30\", \"2032\": \"11,15\", \"2033\": \"12,00\"}, {\"mesesAnticipo\": 20, \"2024\": \"4,20\", \"2025\": \"4,90\", \"2026\": \"5,60\", \"2027\": \"6,30\", \"2028\": \"7,00\", \"2029\": \"7,70\", \"2030\": \"8,40\", \"2031\": \"9,10\", \"2032\": \"9,80\", \"2033\": \"10,50\"}, {\"mesesAnticipo\": 19, \"2024\": \"4,08\", \"2025\": \"4,67\", \"2026\": \"5,25\", \"2027\": \"5,83\", \"2028\": \"6,42\", \"2029\": \"7,00\", \"2030\": \"7,58\", \"2031\": \"8,16\", \"2032\": \"8,75\", \"2033\": \"9,33\"}, {\"mesesAnticipo\": 18, \"2024\": \"3,54\", \"2025\": \"4,08\", \"2026\": \"4,62\", \"2027\": \"5,16\", \"2028\": \"5,70\", \"2029\": \"6,24\", \"2030\": \"6,78\", \"2031\": \"7,32\", \"2032\": \"7,86\", \"2033\": \"8,40\"}, {\"mesesAnticipo\": 17, \"2024\": \"3,46\", \"2025\": \"3,93\", \"2026\": \"4,39\", \"2027\": \"4,86\", \"2028\": \"5,32\", \"2029\": \"5,78\", \"2030\": \"6,25\", \"2031\": \"6,71\", \"2032\": \"7,18\", \"2033\": \"7,64\"}, {\"mesesAnticipo\": 16, \"2024\": \"3,40\", \"2025\": \"3,80\", \"2026\": \"4,20\", \"2027\": \"4,60\", \"2028\": \"5,00\", \"2029\": \"5,40\", \"2030\": \"5,80\", \"2031\": \"6,20\", \"2032\": \"6,60\", \"2033\": \"7,00\"}, {\"mesesAnticipo\": 15, \"2024\": \"2,90\", \"2025\": \"3,29\", \"2026\": \"3,69\", \"2027\": \"4,08\", \"2028\": \"4,48\", \"2029\": \"4,88\", \"2030\": \"5,27\", \"2031\": \"5,67\", \"2032\": \"6,06\", \"2033\": \"6,46\"}, {\"mesesAnticipo\": 14, \"2024\": \"2,85\", \"2025\": \"3,20\", \"2026\": \"3,55\", \"2027\": \"3,90\", \"2028\": \"4,25\", \"2029\": \"4,60\", \"2030\": \"4,95\", \"2031\": \"5,30\", \"2032\": \"5,65\", \"2033\": \"6,00\"}, {\"mesesAnticipo\": 13, \"2024\": \"2,81\", \"2025\": \"3,12\", \"2026\": \"3,43\", \"2027\": \"3,74\", \"2028\": \"4,05\", \"2029\": \"4,36\", \"2030\": \"4,67\", \"2031\": \"4,98\", \"2032\": \"5,29\", \"2033\": \"5,60\"}, {\"mesesAnticipo\": 12, \"2024\": \"2,33\", \"2025\": \"2,65\", \"2026\": \"2,98\", \"2027\": \"3,30\", \"2028\": \"3,63\", \"2029\": \"3,95\", \"2030\": \"4,28\", \"2031\": \"4,60\", \"2032\": \"4,93\", \"2033\": \"5,25\"}, {\"mesesAnticipo\": 11, \"2024\": \"2,29\", \"2025\": \"2,59\", \"2026\": \"2,88\", \"2027\": \"3,18\", \"2028\": \"3,47\", \"2029\": \"3,76\", \"2030\": \"4,06\", \"2031\": \"4,35\", \"2032\": \"4,65\", \"2033\": \"4,94\"}, {\"mesesAnticipo\": 10, \"2024\": \"2,27\", \"2025\": \"2,53\", \"2026\": \"2,80\", \"2027\": \"3,07\", \"2028\": \"3,34\", \"2029\": \"3,60\", \"2030\": \"3,87\", \"2031\": \"4,14\", \"2032\": \"4,40\", \"2033\": \"4,67\"}, {\"mesesAnticipo\": 9, \"2024\": \"1,79\", \"2025\": \"2,08\", \"2026\": \"2,38\", \"2027\": \"2,67\", \"2028\": \"2,96\", \"2029\": \"3,25\", \"2030\": \"3,54\", \"2031\": \"3,84\", \"2032\": \"4,13\", \"2033\": \"4,42\"}, {\"mesesAnticipo\": 8, \"2024\": \"1,77\", \"2025\": \"2,04\", \"2026\": \"2,31\", \"2027\": \"2,58\", \"2028\": \"2,85\", \"2029\": \"3,12\", \"2030\": \"3,39\", \"2031\": \"3,66\", \"2032\": \"3,93\", \"2033\": \"4,20\"}, {\"mesesAnticipo\": 7, \"2024\": \"1,75\", \"2025\": \"2,00\", \"2026\": \"2,25\", \"2027\": \"2,50\", \"2028\": \"2,75\", \"2029\": \"3,00\", \"2030\": \"3,25\", \"2031\": \"3,50\", \"2032\": \"3,75\", \"2033\": \"4,00\"}, {\"mesesAnticipo\": 6, \"2024\": \"1,28\", \"2025\": \"1,56\", \"2026\": \"1,85\", \"2027\": \"2,13\", \"2028\": \"2,41\", \"2029\": \"2,69\", \"2030\": \"2,97\", \"2031\": \"3,26\", \"2032\": \"3,54\", \"2033\": \"3,82\"}, {\"mesesAnticipo\": 5, \"2024\": \"1,27\", \"2025\": \"1,53\", \"2026\": \"1,80\", \"2027\": \"2,06\", \"2028\": \"2,33\", \"2029\": \"2,59\", \"2030\": \"2,86\", \"2031\": \"3,12\", \"2032\": \"3,39\", \"2033\": \"3,65\"}, {\"mesesAnticipo\": 4, \"2024\": \"1,25\", \"2025\": \"1,50\", \"2026\": \"1,75\", \"2027\": \"2,00\", \"2028\": \"2,25\", \"2029\": \"2,50\", \"2030\": \"2,75\", \"2031\": \"3,00\", \"2032\": \"3,25\", \"2033\": \"3,50\"}, {\"mesesAnticipo\": 3, \"2024\": \"0,79\", \"2025\": \"1,07\", \"2026\": \"1,36\", \"2027\": \"1,64\", \"2028\": \"1,93\", \"2029\": \"2,22\", \"2030\": \"2,50\", \"2031\": \"2,79\", \"2032\": \"3,07\", \"2033\": \"3,36\"}, {\"mesesAnticipo\": 2, \"2024\": \"0,77\", \"2025\": \"1,05\", \"2026\": \"1,32\", \"2027\": \"1,59\", \"2028\": \"1,87\", \"2029\": \"2,14\", \"2030\": \"2,41\", \"2031\": \"2,68\", \"2032\": \"2,96\", \"2033\": \"3,23\"}, {\"mesesAnticipo\": 1, \"2024\": \"0,76\", \"2025\": \"1,02\", \"2026\": \"1,28\", \"2027\": \"1,54\", \"2028\": \"1,81\", \"2029\": \"2,07\", \"2030\": \"2,33\", \"2031\": \"2,59\", \"2032\": \"2,85\", \"2033\": \"3,11\"}], \"Período cotizado igual o superior a cuarenta y un años y seis meses e inferior a cuarenta y cuatro años y seis meses\": [{\"mesesAnticipo\": 24, \"2024\": \"5,30\", \"2025\": \"6,60\", \"2026\": \"7,90\", \"2027\": \"9,20\", \"2028\": \"10,50\", \"2029\": \"11,80\", \"2030\": \"13,10\", \"2031\": \"14,40\", \"2032\": \"15,70\", \"2033\": \"17,00\"}, {\"mesesAnticipo\": 23, \"2024\": \"5,10\", \"2025\": \"6,20\", \"2026\": \"7,30\", \"2027\": \"8,40\", \"2028\": \"9,50\", \"2029\": \"10,60\", \"2030\": \"11,70\", \"2031\": \"12,80\", \"2032\": \"13,90\", \"2033\": \"15,00\"}, {\"mesesAnticipo\": 22, \"2024\": \"4,93\", \"2025\": \"5,87\", \"2026\": \"6,80\", \"2027\": \"7,73\", \"2028\": \"8,67\", \"2029\": \"9,60\", \"2030\": \"10,53\", \"2031\": \"11,46\", \"2032\": \"12,40\", \"2033\": \"13,33\"}, {\"mesesAnticipo\": 21, \"2024\": \"4,29\", \"2025\": \"5,09\", \"2026\": \"5,88\", \"2027\": \"6,67\", \"2028\": \"7,47\", \"2029\": \"8,26\", \"2030\": \"9,05\", \"2031\": \"9,84\", \"2032\": \"10,64\", \"2033\": \"11,43\"}, {\"mesesAnticipo\": 20, \"2024\": \"4,15\", \"2025\": \"4,80\", \"2026\": \"5,45\", \"2027\": \"6,10\", \"2028\": \"6,75\", \"2029\": \"7,40\", \"2030\": \"8,05\", \"2031\": \"8,70\", \"2032\": \"9,35\", \"2033\": \"10,00\"}, {\"mesesAnticipo\": 19, \"2024\": \"4,04\", \"2025\": \"4,58\", \"2026\": \"5,12\", \"2027\": \"5,66\", \"2028\": \"6,20\", \"2029\": \"6,73\", \"2030\": \"7,27\", \"2031\": \"7,81\", \"2032\": \"8,35\", \"2033\": \"8,89\"}, {\"mesesAnticipo\": 18, \"2024\": \"3,50\", \"2025\": \"4,00\", \"2026\": \"4,50\", \"2027\": \"5,00\", \"2028\": \"5,50\", \"2029\": \"6,00\", \"2030\": \"6,50\", \"2031\": \"7,00\", \"2032\": \"7,50\", \"2033\": \"8,00\"}, {\"mesesAnticipo\": 17, \"2024\": \"3,43\", \"2025\": \"3,85\", \"2026\": \"4,28\", \"2027\": \"4,71\", \"2028\": \"5,14\", \"2029\": \"5,56\", \"2030\": \"5,99\", \"2031\": \"6,42\", \"2032\": \"6,84\", \"2033\": \"7,27\"}, {\"mesesAnticipo\": 16, \"2024\": \"3,37\", \"2025\": \"3,73\", \"2026\": \"4,10\", \"2027\": \"4,47\", \"2028\": \"4,84\", \"2029\": \"5,20\", \"2030\": \"5,57\", \"2031\": \"5,94\", \"2032\": \"6,30\", \"2033\": \"6,67\"}, {\"mesesAnticipo\": 15, \"2024\": \"2,87\", \"2025\": \"3,23\", \"2026\": \"3,60\", \"2027\": \"3,96\", \"2028\": \"4,33\", \"2029\": \"4,69\", \"2030\": \"5,06\", \"2031\": \"5,42\", \"2032\": \"5,79\", \"2033\": \"6,15\"}, {\"mesesAnticipo\": 14, \"2024\": \"2,82\", \"2025\": \"3,14\", \"2026\": \"3,46\", \"2027\": \"3,78\", \"2028\": \"4,11\", \"2029\": \"4,43\", \"2030\": \"4,75\", \"2031\": \"5,07\", \"2032\": \"5,39\", \"2033\": \"5,71\"}, {\"mesesAnticipo\": 13, \"2024\": \"2,78\", \"2025\": \"3,07\", \"2026\": \"3,35\", \"2027\": \"3,63\", \"2028\": \"3,92\", \"2029\": \"4,20\", \"2030\": \"4,48\", \"2031\": \"4,76\", \"2032\": \"5,05\", \"2033\": \"5,33\"}, {\"mesesAnticipo\": 12, \"2024\": \"2,30\", \"2025\": \"2,60\", \"2026\": \"2,90\", \"2027\": \"3,20\", \"2028\": \"3,50\", \"2029\": \"3,80\", \"2030\": \"4,10\", \"2031\": \"4,40\", \"2032\": \"4,70\", \"2033\": \"5,00\"}, {\"mesesAnticipo\": 11, \"2024\": \"2,27\", \"2025\": \"2,54\", \"2026\": \"2,81\", \"2027\": \"3,08\", \"2028\": \"3,36\", \"2029\": \"3,63\", \"2030\": \"3,90\", \"2031\": \"4,17\", \"2032\": \"4,44\", \"2033\": \"4,71\"}, {\"mesesAnticipo\": 10, \"2024\": \"2,24\", \"2025\": \"2,49\", \"2026\": \"2,73\", \"2027\": \"2,98\", \"2028\": \"3,22\", \"2029\": \"3,46\", \"2030\": \"3,71\", \"2031\": \"3,95\", \"2032\": \"4,20\", \"2033\": \"4,44\"}, {\"mesesAnticipo\": 9, \"2024\": \"1,77\", \"2025\": \"2,04\", \"2026\": \"2,31\", \"2027\": \"2,58\", \"2028\": \"2,86\", \"2029\": \"3,13\", \"2030\": \"3,40\", \"2031\": \"3,67\", \"2032\": \"3,94\", \"2033\": \"4,21\"}, {\"mesesAnticipo\": 8, \"2024\": \"1,75\", \"2025\": \"2,00\", \"2026\": \"2,25\", \"2027\": \"2,50\", \"2028\": \"2,75\", \"2029\": \"3,00\", \"2030\": \"3,25\", \"2031\": \"3,50\", \"2032\": \"3,75\", \"2033\": \"4,00\"}, {\"mesesAnticipo\": 7, \"2024\": \"1,73\", \"2025\": \"1,96\", \"2026\": \"2,19\", \"2027\": \"2,42\", \"2028\": \"2,66\", \"2029\": \"2,89\", \"2030\": \"3,12\", \"2031\": \"3,35\", \"2032\": \"3,58\", \"2033\": \"3,81\"}, {\"mesesAnticipo\": 6, \"2024\": \"1,26\", \"2025\": \"1,53\", \"2026\": \"1,79\", \"2027\": \"2,06\", \"2028\": \"2,32\", \"2029\": \"2,58\", \"2030\": \"2,85\", \"2031\": \"3,11\", \"2032\": \"3,38\", \"2033\": \"3,64\"}, {\"mesesAnticipo\": 5, \"2024\": \"1,25\", \"2025\": \"1,50\", \"2026\": \"1,74\", \"2027\": \"1,99\", \"2028\": \"2,24\", \"2029\": \"2,49\", \"2030\": \"2,74\", \"2031\": \"2,98\", \"2032\": \"3,23\", \"2033\": \"3,48\"}, {\"mesesAnticipo\": 4, \"2024\": \"1,23\", \"2025\": \"1,47\", \"2026\": \"1,70\", \"2027\": \"1,93\", \"2028\": \"2,17\", \"2029\": \"2,40\", \"2030\": \"2,63\", \"2031\": \"2,86\", \"2032\": \"3,10\", \"2033\": \"3,33\"}, {\"mesesAnticipo\": 3, \"2024\": \"0,77\", \"2025\": \"1,04\", \"2026\": \"1,31\", \"2027\": \"1,58\", \"2028\": \"1,85\", \"2029\": \"2,12\", \"2030\": \"2,39\", \"2031\": \"2,66\", \"2032\": \"2,93\", \"2033\": \"3,20\"}, {\"mesesAnticipo\": 2, \"2024\": \"0,76\", \"2025\": \"1,02\", \"2026\": \"1,27\", \"2027\": \"1,53\", \"2028\": \"1,79\", \"2029\": \"2,05\", \"2030\": \"2,31\", \"2031\": \"2,56\", \"2032\": \"2,82\", \"2033\": \"3,08\"}, {\"mesesAnticipo\": 1, \"2024\": \"0,75\", \"2025\": \"0,99\", \"2026\": \"1,24\", \"2027\": \"1,48\", \"2028\": \"1,73\", \"2029\": \"1,98\", \"2030\": \"2,22\", \"2031\": \"2,47\", \"2032\": \"2,71\", \"2033\": \"2,96\"}], \"Período cotizado igual o superior a cuarenta y cuatro años y seis meses\": [{\"mesesAnticipo\": 24, \"2024\": \"4,90\", \"2025\": \"5,80\", \"2026\": \"6,70\", \"2027\": \"7,60\", \"2028\": \"8,50\", \"2029\": \"9,40\", \"2030\": \"10,30\", \"2031\": \"11,20\", \"2032\": \"12,10\", \"2033\": \"13,00\"}, {\"mesesAnticipo\": 23, \"2024\": \"4,80\", \"2025\": \"5,60\", \"2026\": \"6,40\", \"2027\": \"7,20\", \"2028\": \"8,00\", \"2029\": \"8,80\", \"2030\": \"9,60\", \"2031\": \"10,40\", \"2032\": \"11,20\", \"2033\": \"12,00\"}, {\"mesesAnticipo\": 22, \"2024\": \"4,70\", \"2025\": \"5,40\", \"2026\": \"6,10\", \"2027\": \"6,80\", \"2028\": \"7,50\", \"2029\": \"8,20\", \"2030\": \"8,90\", \"2031\": \"9,60\", \"2032\": \"10,30\", \"2033\": \"11,00\"}, {\"mesesAnticipo\": 21, \"2024\": \"4,15\", \"2025\": \"4,80\", \"2026\": \"5,45\", \"2027\": \"6,10\", \"2028\": \"6,75\", \"2029\": \"7,40\", \"2030\": \"8,05\", \"2031\": \"8,70\", \"2032\": \"9,35\", \"2033\": \"10,00\"}, {\"mesesAnticipo\": 20, \"2024\": \"4,07\", \"2025\": \"4,64\", \"2026\": \"5,21\", \"2027\": \"5,78\", \"2028\": \"6,35\", \"2029\": \"6,92\", \"2030\": \"7,49\", \"2031\": \"8,06\", \"2032\": \"8,63\", \"2033\": \"9,20\"}, {\"mesesAnticipo\": 19, \"2024\": \"3,99\", \"2025\": \"4,48\", \"2026\": \"4,97\", \"2027\": \"5,46\", \"2028\": \"5,95\", \"2029\": \"6,44\", \"2030\": \"6,93\", \"2031\": \"7,42\", \"2032\": \"7,91\", \"2033\": \"8,40\"}, {\"mesesAnticipo\": 18, \"2024\": \"3,46\", \"2025\": \"3,92\", \"2026\": \"4,38\", \"2027\": \"4,84\", \"2028\": \"5,30\", \"2029\": \"5,76\", \"2030\": \"6,22\", \"2031\": \"6,68\", \"2032\": \"7,14\", \"2033\": \"7,60\"}, {\"mesesAnticipo\": 17, \"2024\": \"3,39\", \"2025\": \"3,78\", \"2026\": \"4,17\", \"2027\": \"4,56\", \"2028\": \"4,96\", \"2029\": \"5,35\", \"2030\": \"5,74\", \"2031\": \"6,13\", \"2032\": \"6,52\", \"2033\": \"6,91\"}, {\"mesesAnticipo\": 16, \"2024\": \"3,33\", \"2025\": \"3,67\", \"2026\": \"4,00\", \"2027\": \"4,33\", \"2028\": \"4,67\", \"2029\": \"5,00\", \"2030\": \"5,33\", \"2031\": \"5,66\", \"2032\": \"6,00\", \"2033\": \"6,33\"}, {\"mesesAnticipo\": 15, \"2024\": \"2,84\", \"2025\": \"3,17\", \"2026\": \"3,51\", \"2027\": \"3,84\", \"2028\": \"4,18\", \"2029\": \"4,51\", \"2030\": \"4,85\", \"2031\": \"5,18\", \"2032\": \"5,52\", \"2033\": \"5,85\"}, {\"mesesAnticipo\": 14, \"2024\": \"2,79\", \"2025\": \"3,09\", \"2026\": \"3,38\", \"2027\": \"3,67\", \"2028\": \"3,97\", \"2029\": \"4,26\", \"2030\": \"4,55\", \"2031\": \"4,84\", \"2032\": \"5,14\", \"2033\": \"5,43\"}, {\"mesesAnticipo\": 13, \"2024\": \"2,76\", \"2025\": \"3,01\", \"2026\": \"3,27\", \"2027\": \"3,53\", \"2028\": \"3,79\", \"2029\": \"4,04\", \"2030\": \"4,30\", \"2031\": \"4,56\", \"2032\": \"4,81\", \"2033\": \"5,07\"}, {\"mesesAnticipo\": 12, \"2024\": \"2,28\", \"2025\": \"2,55\", \"2026\": \"2,83\", \"2027\": \"3,10\", \"2028\": \"3,38\", \"2029\": \"3,65\", \"2030\": \"3,93\", \"2031\": \"4,20\", \"2032\": \"4,48\", \"2033\": \"4,75\"}, {\"mesesAnticipo\": 11, \"2024\": \"2,25\", \"2025\": \"2,49\", \"2026\": \"2,74\", \"2027\": \"2,99\", \"2028\": \"3,24\", \"2029\": \"3,48\", \"2030\": \"3,73\", \"2031\": \"3,98\", \"2032\": \"4,22\", \"2033\": \"4,47\"}, {\"mesesAnticipo\": 10, \"2024\": \"2,22\", \"2025\": \"2,44\", \"2026\": \"2,67\", \"2027\": \"2,89\", \"2028\": \"3,11\", \"2029\": \"3,33\", \"2030\": \"3,55\", \"2031\": \"3,78\", \"2032\": \"4,00\", \"2033\": \"4,22\"}, {\"mesesAnticipo\": 9, \"2024\": \"1,75\", \"2025\": \"2,00\", \"2026\": \"2,25\", \"2027\": \"2,50\", \"2028\": \"2,75\", \"2029\": \"3,00\", \"2030\": \"3,25\", \"2031\": \"3,50\", \"2032\": \"3,75\", \"2033\": \"4,00\"}, {\"mesesAnticipo\": 8, \"2024\": \"1,73\", \"2025\": \"1,96\", \"2026\": \"2,19\", \"2027\": \"2,42\", \"2028\": \"2,65\", \"2029\": \"2,88\", \"2030\": \"3,11\", \"2031\": \"3,34\", \"2032\": \"3,57\", \"2033\": \"3,80\"}, {\"mesesAnticipo\": 7, \"2024\": \"1,71\", \"2025\": \"1,92\", \"2026\": \"2,14\", \"2027\": \"2,35\", \"2028\": \"2,56\", \"2029\": \"2,77\", \"2030\": \"2,98\", \"2031\": \"3,20\", \"2032\": \"3,41\", \"2033\": \"3,62\"}, {\"mesesAnticipo\": 6, \"2024\": \"1,25\", \"2025\": \"1,49\", \"2026\": \"1,74\", \"2027\": \"1,98\", \"2028\": \"2,23\", \"2029\": \"2,47\", \"2030\": \"2,72\", \"2031\": \"2,96\", \"2032\": \"3,21\", \"2033\": \"3,45\"}, {\"mesesAnticipo\": 5, \"2024\": \"1,23\", \"2025\": \"1,46\", \"2026\": \"1,69\", \"2027\": \"1,92\", \"2028\": \"2,15\", \"2029\": \"2,38\", \"2030\": \"2,61\", \"2031\": \"2,84\", \"2032\": \"3,07\", \"2033\": \"3,30\"}, {\"mesesAnticipo\": 4, \"2024\": \"1,22\", \"2025\": \"1,43\", \"2026\": \"1,65\", \"2027\": \"1,87\", \"2028\": \"2,09\", \"2029\": \"2,30\", \"2030\": \"2,52\", \"2031\": \"2,74\", \"2032\": \"2,95\", \"2033\": \"3,17\"}, {\"mesesAnticipo\": 3, \"2024\": \"0,75\", \"2025\": \"1,01\", \"2026\": \"1,26\", \"2027\": \"1,52\", \"2028\": \"1,77\", \"2029\": \"2,02\", \"2030\": \"2,28\", \"2031\": \"2,53\", \"2032\": \"2,79\", \"2033\": \"3,04\"}, {\"mesesAnticipo\": 2, \"2024\": \"0,74\", \"2025\": \"0,98\", \"2026\": \"1,23\", \"2027\": \"1,47\", \"2028\": \"1,71\", \"2029\": \"1,95\", \"2030\": \"2,19\", \"2031\": \"2,44\", \"2032\": \"2,68\", \"2033\": \"2,92\"}, {\"mesesAnticipo\": 1, \"2024\": \"0,73\", \"2025\": \"0,96\", \"2026\": \"1,19\", \"2027\": \"1,42\", \"2028\": \"1,66\", \"2029\": \"1,89\", \"2030\": \"2,12\", \"2031\": \"2,35\", \"2032\": \"2,58\", \"2033\": \"2,81\"}]}}",
+      "modulos": ["Tipos de pensión", "Cómo se calcula"]
+    },
+    {
+      "id": "jubilacion-demorada",
+      "nombre": "Jubilación demorada (complemento económico por demora)",
+      "familia": "jubilacion",
+      "modalidad": "contributiva",
+      "aQuienCubre": "Personas que acceden a la pensión de jubilación a una edad superior a la ordinaria del art. 205.1.a), habiendo reunido al cumplir dicha edad el periodo mínimo de cotización.",
+      "requisitos": [
+        {
+          "tipo": "edad",
+          "descripcion": "Acceder a la pensión a una edad superior a la ordinaria que corresponda (art. 205.1.a y DT 7.ª).",
+          "articulo": "art. 210.2 TRLGSS; art. 1 RD 371/2023"
+        },
+        {
+          "tipo": "carencia",
+          "descripcion": "Haber reunido el periodo mínimo de cotización del art. 205.1.b) (15 años, 2 en los últimos 15) al cumplir la edad ordinaria.",
+          "articulo": "art. 210.2 TRLGSS"
+        },
+        {
+          "tipo": "cotizacion-previa",
+          "descripcion": "Se computa cada año completo cotizado entre la fecha en que se cumplió la edad ordinaria y el hecho causante; a partir del segundo año completo de demora también periodos superiores a 6 meses e inferiores a un año. No se computan periodos en situaciones asimiladas al alta sin trabajo efectivo (art. 2.2 RD 371/2023).",
+          "articulo": "art. 210.2 TRLGSS; art. 2.2 RD 371/2023"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "No se aplica en jubilación parcial, ni en la jubilación flexible del art. 213.1 párrafo 2.º, ni cuando se accede desde situación asimilada al alta. Para la opción mixta se exigen al menos 2 años completos cotizados tras la edad ordinaria.",
+          "articulo": "art. 210.2 TRLGSS; art. 3 RD 371/2023"
+        }
+      ],
+      "calculo": {
+        "baseReguladora": "La de la jubilación ordinaria (art. 209).",
+        "porcentaje": "a) Porcentaje adicional: 4 % por cada año completo cotizado tras la edad ordinaria; a partir del segundo año completo, 2 % por periodos de más de 6 meses y menos de un año. Se suma al porcentaje por años cotizados (art. 210.1) y puede superar el 100 %, con el límite del art. 57; si la pensión alcanza el límite, se abona anualmente una cantidad = pensión máxima × porcentaje adicional no utilizado (redondeada a la unidad más próxima por exceso), en 14 pagas, sin que pensión + cantidad superen en cómputo anual el tope máximo de la base de cotización. b) Cantidad a tanto alzado por cada año completo de demora (0,5 veces la cuantía por periodos de más de 6 meses y menos de un año a partir del segundo año). c) Opción mixta (RD 371/2023, art. 3, redacción desde 28/08/2026): con entre 2 y 8 años y 6 meses cotizados tras la edad ordinaria, los años completos se dividen en dos partes: por la parte entera, 4 % adicional; por los años restantes, cantidad a tanto alzado; un semestre completo se computa en la cantidad a tanto alzado (×0,5). Con 9 o más años: cantidad a tanto alzado por 5 años + 4 % adicional por cada uno de los años restantes (2 % por semestre completo).",
+        "formula": "Tanto alzado por año completo de demora: Pago único = 800 × (Pensión inicial anual / 500)^(1/1,65) si se han cotizado menos de 44 años y 6 meses; Pago único = 880 × (Pensión inicial anual / 500)^(1/1,65) si se han cotizado al menos 44 años y 6 meses (cifra anterior +10 %). Complemento total = Pago único × nº de años completos de demora (+ 0,5 × Pago único por un periodo de más de 6 meses e inferior a un año, desde el 2.º año). Si la pensión supera el límite del art. 57, se toma como pensión inicial anual la pensión máxima (art. 2.1.b RD 371/2023). Porcentaje adicional: Pensión = BR × (%años + 4 % × años de demora [+2 % por fracción > 6 meses desde el 2.º año]) ≤ pensión máxima.",
+        "articulos": "art. 210.2 TRLGSS; arts. 2, 3 y 5 RD 371/2023"
+      },
+      "limites": "Porcentaje adicional: pensión no superior al límite del art. 57; exceso compensado con cantidad anual, con tope de la base máxima de cotización en cómputo anual. Tanto alzado: si la pensión supera el límite del art. 57 se usa la pensión máxima como pensión inicial anual; en concurrencia de pensiones, la pensión ya minorada.",
+      "duracion": "El porcentaje adicional se integra en la pensión vitalicia; la cantidad a tanto alzado es un pago único.",
+      "extincion": [
+        "La elección de modalidad se hace una sola vez al solicitar la pensión y no puede modificarse; a falta de elección se aplica el porcentaje adicional (art. 210.2 TRLGSS; art. 5 RD 371/2023).",
+        "La pensión se extingue por fallecimiento."
+      ],
+      "compatibilidades": "Compatible en todas sus modalidades con la jubilación activa (art. 214), sin que durante esta se genere incremento del complemento (art. 210.2). Incompatible con la jubilación flexible: si se eligió porcentaje adicional, su percibo queda suspendido durante la jubilación flexible; si se eligió tanto alzado o mixta, no se puede acceder a la jubilación flexible (art. 6.2 RD 416/2026).",
+      "articulos": [
+        "art. 210.2 TRLGSS",
+        "art. 57 TRLGSS",
+        "art. 214 TRLGSS",
+        "arts. 2-5 RD 371/2023",
+        "art. 6.2 RD 416/2026"
+      ],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fuentesAdicionales": [
+        {
+          "title": "Real Decreto 371/2023, de 16 de mayo, por el que se desarrolla el régimen jurídico del complemento económico establecido en el artículo 210.2 del texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 28/05/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-11645",
+          "docId": "BOE-A-2023-11645"
+        },
+        {
+          "title": "Real Decreto 416/2026, de 27 de mayo, por el que se regula el régimen jurídico de la jubilación flexible y otros aspectos comunes a las modalidades de compatibilidad de la pensión contributiva de jubilación con el trabajo, y se modifica el régimen de la jubilación demorada",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-11474",
+          "docId": "BOE-A-2026-11474"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "evidencia": [
+        "«Un porcentaje adicional de un 4 por ciento por cada año completo cotizado entre la fecha en que cumplió dicha edad y la del hecho causante de la pensión» (art. 210.2.a)",
+        "«A partir del segundo año completo de demora, para el cálculo del porcentaje se podrán computar periodos superiores a 6 meses e inferiores a un año, correspondiendo a dichos periodos un 2 por ciento adicional» (art. 210.2.a)",
+        "«Si ha cotizado menos de 44 años y 6 meses: [Pago único = 800 (Pensión inicial anual/500)^(1/1,65)] Si ha cotizado, al menos, 44 años y 6 meses la cifra anterior se aumenta en un 10 %: [Pago único = 880 (Pensión inicial anual/500)^(1/1,65)]» (art. 210.2.b; fórmulas en imágenes BOE 26917_15156830_1.png y _2.png)",
+        "«Cuando entre la fecha de cumplimiento de la edad ordinaria de jubilación aplicable y la del hecho causante de la pensión se acredite un periodo de nueve o más años cotizados, el complemento consistirá en la suma de: a) Una cantidad a tanto alzado por cinco años de ese periodo» (art. 3.3 RD 371/2023)"
+      ],
+      "notas": "Art. 210.2 en redacción del RDL 11/2024, en vigor desde 01/04/2025. Art. 3 del RD 371/2023 (opción mixta) en redacción del RD 416/2026, en vigor desde 28/08/2026; el texto original de 2023 no se ha consultado. La DT única del RD 371/2023 mantiene la incompatibilidad complemento/envejecimiento activo vigente a 31/03/2025 para quienes en esa fecha compatibilizaban pensión y trabajo. Las fórmulas del tanto alzado figuran como imágenes en el BOE y se han transcrito tras su visualización.",
+      "modulos": ["Tipos de pensión", "Cómo se calcula"]
+    },
+    {
+      "id": "jubilacion-activa",
+      "nombre": "Jubilación activa (compatibilidad de la pensión con el trabajo)",
+      "familia": "jubilacion",
+      "modalidad": "contributiva",
+      "aQuienCubre": "Pensionistas de jubilación contributiva que, habiendo demorado al menos un año el acceso a la pensión desde la edad ordinaria, compatibilizan la pensión con cualquier trabajo por cuenta ajena (a tiempo completo o parcial) o por cuenta propia.",
+      "requisitos": [
+        {
+          "tipo": "edad",
+          "descripcion": "Que entre la fecha de cumplimiento de la edad ordinaria (art. 205.1.a) y la del hecho causante haya transcurrido al menos un año; no se admiten jubilaciones acogidas a bonificaciones o anticipaciones. Si el periodo mínimo de cotización se reúne después de la edad ordinaria, el año se cuenta desde esa fecha.",
+          "articulo": "art. 214.1 TRLGSS"
+        },
+        {
+          "tipo": "carencia",
+          "descripcion": "Haber reunido el periodo mínimo de cotización del art. 205.1.b) al cumplir la edad ordinaria.",
+          "articulo": "art. 214.1 TRLGSS"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "No aplicable a puestos de trabajo o altos cargos en el sector público (art. 1.1 Ley 53/1984).",
+          "articulo": "art. 214.9 TRLGSS"
+        }
+      ],
+      "calculo": {
+        "baseReguladora": "No se recalcula: se parte del importe de la pensión reconocida (art. 210) o la que se esté percibiendo, incluido el complemento de maternidad o de brecha de género y excluido el complemento a mínimos.",
+        "porcentaje": "Según años de demora: 1 año, 45 %; 2 años, 55 %; 3 años, 65 %; 4 años, 80 %; 5 o más años, 100 %. Se incrementa 5 puntos por cada 12 meses ininterrumpidos en jubilación activa, con máximo del 100 %. Por cuenta propia con al menos un trabajador indefinido con antigüedad mínima de 18 meses (o contratación indefinida de un nuevo trabajador sin vínculo en los 2 años anteriores): 75 % con demora de 1 a 3 años; desde el 4.º año, la escala general; también con incremento de 5 puntos por cada 12 meses.",
+        "formula": "Pensión compatible = (pensión inicial o actual + revalorizaciones acumuladas, sin mínimos) × porcentaje de la escala (+5 p.p. por cada 12 meses ininterrumpidos, máx. 100 %). Años completos, sin fracciones.",
+        "articulos": "art. 214.2, 214.3 y 214.5 TRLGSS"
+      },
+      "limites": "Sin complemento a mínimos mientras se compatibiliza (art. 214.6). La cotización durante la jubilación activa no aumenta el porcentaje aplicable a la BR ni el complemento por demora (art. 214.4).",
+      "duracion": "Mientras dure el trabajo compatible; al finalizar, se restablece el percibo íntegro de la pensión (art. 214.8).",
+      "extincion": [
+        "Cese en el trabajo por cuenta ajena o propia: se restablece la pensión íntegra (art. 214.8).",
+        "Fallecimiento."
+      ],
+      "compatibilidades": "Compatible con cualquier trabajo por cuenta ajena o propia; compatible con el complemento por demora en todas sus modalidades (art. 210.2). El beneficiario tiene la consideración de pensionista a todos los efectos (art. 214.7). Incompatible con puesto o alto cargo en el sector público (art. 214.9). Aspectos comunes (carencia con cotizaciones posteriores, IT, muerte y supervivencia) en arts. 8-10 RD 416/2026.",
+      "articulos": ["art. 214 TRLGSS", "art. 210.2 TRLGSS", "arts. 8-10 RD 416/2026"],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fuentesAdicionales": [
+        {
+          "title": "Real Decreto 416/2026, de 27 de mayo, por el que se regula el régimen jurídico de la jubilación flexible y otros aspectos comunes a las modalidades de compatibilidad de la pensión contributiva de jubilación con el trabajo, y se modifica el régimen de la jubilación demorada",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-11474",
+          "docId": "BOE-A-2026-11474"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "evidencia": [
+        "«a) Si se demora un año el acceso a la pensión de jubilación de acuerdo con lo establecido en el apartado 1.a), el porcentaje será del 45 por ciento de la pensión.» (art. 214.2)",
+        "«e) Si se demora cinco años o más el acceso a la pensión de jubilación, el porcentaje será del 100 por ciento de la pensión.» (art. 214.2)",
+        "«El porcentaje que resulte de la escala anterior se incrementará 5 puntos porcentuales por cada 12 meses ininterrumpidos que permanezca en la situación de jubilación activa, con el máximo del 100 por ciento de la pensión.» (art. 214.2)",
+        "«la cuantía de la pensión compatible con el trabajo alcanzará el 75 por ciento, cuando la demora en el acceso a la pensión de jubilación haya sido entre uno y tres años» (art. 214.3)"
+      ],
+      "notas": "Redacción del RDL 11/2024, en vigor desde 01/04/2025. La escala del art. 214.2 cita «el apartado 1.a)», aunque el apartado 1 no tiene letras en el texto vigente; se copia tal cual. La DT 35.ª [sic] TRLGSS contiene un régimen especial para médicos de familia y pediatras de atención primaria (no detallado). El incremento comienza a percibirse el día primero del mes siguiente a cumplir los 12 meses.",
+      "modulos": ["Tipos de pensión"]
+    },
+    {
+      "id": "jubilacion-flexible",
+      "nombre": "Jubilación flexible",
+      "familia": "jubilacion",
+      "modalidad": "contributiva",
+      "aQuienCubre": "Pensionistas de jubilación que, una vez causada la pensión, compatibilizan su percepción con un trabajo a tiempo parcial (jornada entre el 33 % y el 80 % de la de un trabajador a tiempo completo comparable) o con una actividad por cuenta propia (si en los 3 años anteriores al hecho causante no estuvieron de alta como trabajadores por cuenta propia).",
+      "requisitos": [
+        {
+          "tipo": "otros",
+          "descripcion": "Ser pensionista de jubilación (pensión ya causada).",
+          "articulo": "art. 213.1 TRLGSS; art. 3.1 RD 416/2026"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "Trabajo a tiempo parcial con jornada comprendida entre un 33 y un 80 % de la de un trabajador a tiempo completo comparable (art. 12.1 ET); o actividad por cuenta propia si no se estuvo de alta como autónomo en los 3 años inmediatamente anteriores al hecho causante de la pensión.",
+          "articulo": "art. 3.1 y 3.2 RD 416/2026"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "Comunicación previa a la entidad gestora del inicio, modificación de jornada y cese; su falta convierte en indebida la pensión en el importe correspondiente, con obligación de reintegro.",
+          "articulo": "art. 5 RD 416/2026"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "No haber optado por el complemento por demora en las modalidades de tanto alzado o mixta.",
+          "articulo": "art. 6.2.b) RD 416/2026"
+        }
+      ],
+      "calculo": {
+        "baseReguladora": "No se recalcula durante la compatibilidad (salvo regla del art. 7.4 RD 416/2026 al cesar, para jubilados anticipados involuntarios).",
+        "porcentaje": "Por cuenta ajena: la pensión se reduce en proporción inversa a la reducción de jornada. Si la actividad por cuenta ajena se inicia por primera vez transcurridos al menos 6 meses desde el hecho causante: incremento adicional del 25 % (jornada ≥55 % y ≤80 %) o del 15 % (jornada ≥33 % y <55 %), calculado sobre la pensión que se percibía antes. Por cuenta propia: la pensión a percibir es el 25 %.",
+        "formula": "Por cuenta ajena: Pensión flexible = Pensión × (1 − % de jornada realizada) [+ 25 % o 15 % de la pensión previa si el trabajo se inicia tras ≥6 meses de jubilación, según jornada]. Por cuenta propia: Pensión × 25 %. El complemento de maternidad o brecha de género se reduce/aumenta en la misma proporción; se excluye el complemento a mínimos.",
+        "articulos": "art. 4 RD 416/2026"
+      },
+      "limites": "Sin complemento a mínimos durante la compatibilidad (art. 6.4 RD 416/2026). Las cotizaciones durante la jubilación flexible no mejoran la pensión ni el complemento por demora (art. 7.2).",
+      "duracion": "Mientras dure la actividad compatible; la minoración surte efectos desde el día 1 del mes siguiente al inicio y la reposición desde el día 1 del mes siguiente al cese (art. 4.5).",
+      "extincion": [
+        "Cese en el trabajo: se restablece el percibo íntegro (art. 7.3); en jubilación anticipada involuntaria anterior a la edad ordinaria se recalculan BR y porcentaje con las nuevas cotizaciones si es más favorable (art. 7.4)."
+      ],
+      "compatibilidades": "Incompatible con la pensión de incapacidad permanente por la actividad posterior a la jubilación (art. 6.1) y con el complemento por demora (art. 6.2). Compatible con IT y nacimiento y cuidado de menor derivados de la actividad compatible (art. 6.3). Mantiene la condición de pensionista a efectos de prestaciones sanitarias (art. 7.1).",
+      "articulos": ["art. 213.1 TRLGSS", "arts. 3-7 RD 416/2026", "DT única RD 416/2026"],
+      "source": {
+        "title": "Real Decreto 416/2026, de 27 de mayo, por el que se regula el régimen jurídico de la jubilación flexible y otros aspectos comunes a las modalidades de compatibilidad de la pensión contributiva de jubilación con el trabajo, y se modifica el régimen de la jubilación demorada",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-11474",
+        "docId": "BOE-A-2026-11474"
+      },
+      "fuentesAdicionales": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "evidencia": [
+        "«La jornada de trabajo realizada por la persona pensionista deberá estar comprendida entre un 33 y un 80 por ciento, en relación con la de una persona trabajadora a tiempo completo comparable» (art. 3.1 RD 416/2026)",
+        "«el importe de la pensión a percibir se reducirá en proporción inversa a la reducción de la jornada de trabajo» (art. 4.1)",
+        "«Cuando la jornada de trabajo a tiempo parcial sea igual o superior al 55 por ciento e igual o inferior al 80 por ciento, el importe de la pensión compatible con el trabajo se incrementará en un 25 por ciento adicional» (art. 4.2.a)",
+        "«En aquellos supuestos en que se compatibilice la pensión de jubilación con una actividad por cuenta propia, el importe de la pensión a percibir se corresponderá con un porcentaje del 25 por ciento.» (art. 4.3)"
+      ],
+      "notas": "El RD 1132/2002 (BOE-A-2002-23038) ha sido derogado por el RD 416/2026 (disposición derogatoria única), que entró en vigor a los tres meses de su publicación (BOE 28/05/2026), es decir, el 28/08/2026 según las notas de vigencia del texto consolidado del RD 371/2023. Las jubilaciones flexibles iniciadas antes se rigen por la normativa anterior (DT única). El capítulo II no se aplica a los regímenes especiales de funcionarios civiles del Estado, Fuerzas Armadas y Administración de Justicia (art. 2). La fórmula 'proporción inversa' se ha expresado de forma interpretativa como Pensión × (1 − % jornada).",
+      "modulos": ["Tipos de pensión"]
+    },
+    {
+      "id": "jubilacion-parcial",
+      "nombre": "Jubilación parcial",
+      "familia": "jubilacion",
+      "modalidad": "contributiva",
+      "aQuienCubre": "Trabajadores por cuenta ajena (y socios trabajadores de cooperativas) que reducen su jornada y perciben simultáneamente una pensión parcial: a) a partir de la edad ordinaria sin necesidad de contrato de relevo; b) antes de la edad ordinaria (hasta 3 años antes) con contrato de relevo simultáneo.",
+      "requisitos": [
+        {
+          "tipo": "edad",
+          "descripcion": "Sin relevo: haber cumplido la edad ordinaria del art. 205.1.a) y reunir los requisitos para causar pensión de jubilación. Con relevo: edad inferior en 3 años, como máximo, a la ordinaria (sin bonificaciones o anticipaciones), referida a la edad que correspondería de haber seguido cotizando.",
+          "articulo": "art. 215.1 y 215.2.a) TRLGSS"
+        },
+        {
+          "tipo": "cotizacion-previa",
+          "descripcion": "Con relevo: 33 años cotizados (25 años con discapacidad igual o superior al 33 %), sin pagas extraordinarias; servicio militar/prestación social sustitutoria computable hasta 1 año.",
+          "articulo": "art. 215.2.a) TRLGSS"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "Con relevo: trabajador a tiempo completo; antigüedad mínima de 6 años inmediatamente anteriores en la empresa (incluida sucesión de empresa o grupo).",
+          "articulo": "art. 215.2 y 215.2.b) TRLGSS"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "Reducción de jornada entre un mínimo del 25 % y un máximo del 75 %. Si la anticipación supera 2 años, durante el primer año la reducción debe estar entre el 20 y el 33 %; a partir del segundo año, dentro de los márgenes generales.",
+          "articulo": "art. 215.1 y 215.2.c) TRLGSS"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "Contrato de relevo indefinido y a tiempo completo, mantenido al menos 2 años tras la extinción de la jubilación parcial; base de cotización del relevista no inferior al 65 % del promedio de las bases de los 6 últimos meses del periodo de BR del jubilado parcial. Durante la jubilación parcial, empresa y trabajador cotizan por la base que correspondería a jornada completa.",
+          "articulo": "art. 215.2.d), e) y f) TRLGSS"
+        }
+      ],
+      "calculo": {
+        "baseReguladora": "La de la pensión de jubilación según las normas generales (art. 209 TRLGSS); en pluriempleo solo las bases del trabajo objeto de reducción (art. 12.3 RD 1131/2002).",
+        "porcentaje": "Se aplica el porcentaje de reducción de jornada al importe de pensión que correspondería según los años cotizados; antes de la edad ordinaria no se aplican coeficientes reductores por edad (art. 12.1 RD 1131/2002).",
+        "formula": "Pensión parcial = (BR × % por años cotizados) × % de reducción de jornada; mínimo: % de reducción de jornada × pensión mínima vigente para jubilados mayores de 65 años según circunstancias familiares (art. 12.1 RD 1131/2002).",
+        "articulos": "art. 215 TRLGSS; art. 12 RD 1131/2002"
+      },
+      "limites": "No da derecho al complemento por demora (art. 210.2) ni al complemento de brecha de género hasta el acceso a la jubilación plena (art. 60.4).",
+      "duracion": "Temporal: hasta el acceso a la jubilación plena en cualquiera de sus modalidades.",
+      "extincion": [
+        "Fallecimiento del pensionista (art. 16.a RD 1131/2002).",
+        "Reconocimiento de la jubilación ordinaria o anticipada (art. 16.b).",
+        "Reconocimiento de una pensión de incapacidad permanente incompatible (art. 16.c).",
+        "Extinción del contrato a tiempo parcial, salvo derecho a desempleo u otras prestaciones sustitutorias compatibles, o despido declarado improcedente (art. 16.d).",
+        "Si el empresario incumple las obligaciones del contrato de relevo, responde del reintegro de la pensión percibida (art. 215.2.e TRLGSS)."
+      ],
+      "compatibilidades": "Compatible con el puesto a tiempo parcial resultante de la reducción de jornada (art. 215.4 TRLGSS) y, sin aumentar jornada, con otros trabajos a tiempo parcial, con la pensión de viudedad y la prestación de desempleo (art. 14.1 RD 1131/2002). Incompatible con IP absoluta y gran invalidez, con otra pensión de jubilación por actividad distinta y con IP total para el trabajo objeto del contrato a tiempo parcial (art. 14.2 RD 1131/2002). Antes de la edad ordinaria, se permite acumular el tiempo de trabajo (art. 215.3 TRLGSS).",
+      "articulos": [
+        "art. 215 TRLGSS",
+        "DT 4.ª.6 TRLGSS",
+        "art. 60.4 TRLGSS",
+        "art. 210.2 TRLGSS",
+        "arts. 12, 14, 15 y 16 RD 1131/2002"
+      ],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "evidencia": [
+        "«siempre que se produzca una reducción de su jornada de trabajo comprendida entre un mínimo del 25 por ciento y un máximo del 75 por ciento, podrán acceder a la jubilación parcial sin necesidad de la celebración simultánea de un contrato de relevo» (art. 215.1)",
+        "«Tener cumplida en la fecha del hecho causante una edad que sea inferior en tres años, como máximo, a la edad que en cada caso resulte de aplicación» (art. 215.2.a)",
+        "«En los supuestos de anticipación del acceso a la jubilación parcial en más de dos años respecto de la edad ordinaria de jubilación, la reducción de jornada de trabajo durante el primer año se fijará entre un 20 y un 33 por ciento.» (art. 215.2.c)",
+        "«Durante el año 2026, la base de cotización será equivalente al 50 por ciento de la base de cotización que hubiera correspondido a jornada completa.» (DT 4.ª.6.g)",
+        "«La cuantía de la pensión de jubilación parcial será el resultado de aplicar el porcentaje de reducción de jornada al importe de pensión que le correspondería, de acuerdo con los años de cotización que acredite el trabajador en el momento del hecho causante» (art. 12.1 RD 1131/2002)"
+      ],
+      "notas": "Redacción del RDL 11/2024, en vigor desde 01/04/2025. Régimen transitorio (DT 4.ª.6): para pensiones causadas antes del 1/1/2030 en la industria manufacturera (funciones con esfuerzo físico o alta atención; más del 75 % de plantilla indefinida; antigüedad 6 años; 33 años cotizados o 25 con discapacidad ≥33 %) se mantiene la regulación anterior a la Ley 27/2011, con reducción de jornada del 25 % al 67 % (80 % si el relevista es indefinido a jornada completa) y cotización gradual: 40 % de la base a jornada completa en 2025, 50 % en 2026, 60 % en 2027, 70 % en 2028 y 80 % en 2029. Confianza media: el texto consolidado del RD 1131/2002 que ofrece el BOE figura sin actualizar desde 2002 (menciona referencias derogadas, p. ej. 'coeficiente adicional del 2 por 100' del antiguo art. 163.2 LGSS y edades de 60/65 años), por lo que algunas de sus reglas pueden haber quedado desplazadas por el art. 215 TRLGSS vigente.",
+      "fuentesAdicionales": [
+        {
+          "title": "Real Decreto 1131/2002, de 31 de octubre, por el que se regula la Seguridad Social de los trabajadores contratados a tiempo parcial, así como la jubilación parcial (texto consolidado; el BOE indica última actualización publicada el 27/11/2002)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-23037",
+          "docId": "BOE-A-2002-23037"
+        }
+      ],
+      "modulos": ["Tipos de pensión"]
+    },
+    {
+      "id": "incapacidad-permanente",
+      "nombre": "Incapacidad permanente contributiva (grados parcial, total, absoluta y gran incapacidad)",
+      "familia": "incapacidad",
+      "modalidad": "contributiva",
+      "aQuienCubre": "Personas incluidas en el Régimen General declaradas en situación de incapacidad permanente tras el tratamiento prescrito, con reducciones anatómicas o funcionales graves, previsiblemente definitivas, que disminuyan o anulen su capacidad laboral (art. 193 y 195.1 TRLGSS).",
+      "requisitos": [
+        {
+          "tipo": "alta",
+          "descripcion": "Condición general del artículo 165.1 (alta o situación asimilada al alta).",
+          "articulo": "art. 195.1 TRLGSS"
+        },
+        {
+          "tipo": "carencia",
+          "descripcion": "Incapacidad permanente parcial: 1.800 días de cotización dentro de los diez años anteriores a la extinción de la incapacidad temporal. Pensiones de incapacidad permanente: periodo mínimo según la edad del causante (art. 195.3). Si la causa es accidente (laboral o no) o enfermedad profesional no se exige cotización previa.",
+          "articulo": "art. 195.2 y 195.3 TRLGSS"
+        },
+        {
+          "tipo": "edad",
+          "descripcion": "No se reconoce incapacidad permanente por contingencias comunes a quien, en la fecha del hecho causante, tenga la edad del artículo 205.1.a) y reúna los requisitos para acceder a la jubilación.",
+          "articulo": "art. 195.1 TRLGSS"
+        }
+      ],
+      "calculo": {
+        "baseReguladora": "Enfermedad común: cociente de dividir por 112 las bases de cotización de los 96 meses anteriores al mes previo al hecho causante (24 meses en valor nominal y el resto actualizado con el IPC).",
+        "porcentaje": "Porcentaje según años de cotización con la escala del artículo 210.1 (para la pensión derivada de enfermedad común).",
+        "formula": "Parcial: cantidad a tanto alzado. Total: pensión vitalicia (con posible incremento por dificultad de empleo y, en enfermedad común, importe no inferior al mínimo anual fijado en la Ley de PGE). Absoluta: pensión vitalicia. Gran incapacidad: pensión vitalicia más un complemento equivalente a la suma del 45 % de la base mínima de cotización vigente en el hecho causante y el 30 % de la última base de cotización de la persona trabajadora por contingencias comunes (art. 196.4); porcentajes del grado y baremo, por desarrollo reglamentario.",
+        "articulos": "arts. 194, 196 y 197 TRLGSS"
+      },
+      "limites": "La cuantía de la pensión de incapacidad permanente total derivada de enfermedad común no puede ser inferior al mínimo anual de la Ley de PGE para titulares menores de sesenta años con cónyuge no a cargo (art. 196.2). La lista de enfermedades y la valoración de los grados se desarrollan por reglamento (art. 194.3).",
+      "duracion": "Total, absoluta y gran incapacidad: pensión vitalicia; la total puede sustituirse excepcionalmente por una indemnización a tanto alzado si el beneficiario es menor de sesenta años. Parcial: pago único (art. 196).",
+      "extincion": [],
+      "compatibilidades": "La pensión de incapacidad permanente total es compatible con el salario en la misma empresa o en otra siempre que las funciones no coincidan con las que dieron lugar a la incapacidad; las pensiones de absoluta y gran incapacidad no impiden actividades compatibles con el estado del incapacitado que no representen un cambio en su capacidad de trabajo (art. 198).",
+      "articulos": ["arts. 193 a 200 TRLGSS"],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "confidence": "alta",
+      "evidencia": [
+        "«La incapacidad permanente, cualquiera que sea su causa determinante, se clasificará, en función del porcentaje de reducción de la capacidad de trabajo del interesado» (art. 194.1)",
+        "«a) Incapacidad permanente parcial. b) Incapacidad permanente total. c) Incapacidad permanente absoluta. d) Gran incapacidad.» (art. 194.1)",
+        "«el período mínimo de cotización exigible será de mil ochocientos días» (art. 195.2)",
+        "«La prestación económica correspondiente a la incapacidad permanente parcial, consistirá en una cantidad a tanto alzado.» (art. 196.1)",
+        "«Se hallará el cociente que resulte de dividir por 112 las bases de cotización del interesado durante los 96 meses anteriores al mes previo al del hecho causante» (art. 197.1.a)",
+        "«sumar el 45 por ciento de la base mínima de cotización vigente en el momento del hecho causante» (art. 196.4)"
+      ],
+      "modulos": ["Tipos de pensión", "Cómo se calcula"],
+      "notas": "Texto consolidado del TRLGSS descargado el 2026-11-11; la numeración es la del TRLGSS de 2015. Los porcentajes de la base reguladora por grado y la carencia por tramos de edad (art. 195.3) no se transcriben aquí: quedan en PENDIENTE_DATOS.md.",
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "viudedad",
+      "nombre": "Pensión de viudedad (cónyuge superviviente)",
+      "familia": "muerte-supervivencia",
+      "modalidad": "contributiva",
+      "aQuienCubre": "Cónyuge superviviente (y, en los términos del artículo 221, sobreviviente de una pareja de hecho; en separación o divorcio, art. 220) de personas incluidas en el Régimen General o pensionistas de jubilación e incapacidad permanente (arts. 217 y 219 TRLGSS).",
+      "requisitos": [
+        {
+          "tipo": "cotizacion-previa",
+          "descripcion": "Si el causante estaba en alta o situación asimilada: 500 días de cotización dentro de los cinco años anteriores al hecho causante; si no estaba en alta, 15 años de cotización. Si la causa es un accidente o una enfermedad profesional no se exige periodo previo.",
+          "articulo": "art. 219.1 TRLGSS"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "Si la muerte deriva de enfermedad común no sobrevenida tras el vínculo conyugal: matrimonio con al menos un año de antelación o hijos comunes (no se exige duración si, sumada la convivencia previa, se superan dos años).",
+          "articulo": "art. 219.2 TRLGSS"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "Separación o divorcio: ser acreedor de la pensión compensatoria que se extingue con la muerte del causante (con las excepciones del artículo 220).",
+          "articulo": "art. 220.1 TRLGSS"
+        }
+      ],
+      "calculo": {
+        "baseReguladora": "La del causante (según su situación: alta, pensionista).",
+        "formula": "Porcentaje de la base reguladora fijado en el desarrollo reglamentario; en los supuestos de separación o divorcio, la pensión se reduce hasta la cuantía de la pensión compensatoria si esta es menor (art. 220.1). El porcentaje no consta en el texto del TRLGSS descargado.",
+        "articulos": "arts. 219 a 222 TRLGSS"
+      },
+      "limites": "Existe un auxilio por defunción y, en su caso, una prestación temporal de viudedad (art. 216.1). Mínimos anuales en la Ley de PGE o norma de revalorización (ver series de pensiones mínimas).",
+      "duracion": "Vitalicia, salvo causas de extinción legales o reglamentarias (art. 219.1).",
+      "extincion": [
+        "El derecho se extingue en todo caso cuando el beneficiario contrae matrimonio o constituye una pareja de hecho, sin perjuicio de las excepciones reglamentarias (art. 223.2)."
+      ],
+      "compatibilidades": "Compatible con cualesquiera rentas de trabajo; incompatible con otra pensión de viudedad de otro régimen salvo que las cotizaciones se superpongan al menos quince años en los supuestos del segundo párrafo del artículo 219.1 (art. 223.1).",
+      "articulos": ["arts. 216 a 223 TRLGSS"],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "confidence": "alta",
+      "evidencia": [
+        "«Tendrá derecho a la pensión de viudedad, con carácter vitalicio, salvo que se produzca alguna de las causas de extinción que legal o reglamentariamente se establezcan» (art. 219.1)",
+        "«hubiera completado un período de cotización de quinientos días, dentro de los cinco años inmediatamente anteriores a la fecha del hecho causante de la pensión» (art. 219.1)",
+        "«que el matrimonio se hubiera celebrado con un año de antelación como mínimo a la fecha del fallecimiento o, alternativamente, la existencia de hijos comunes» (art. 219.2)",
+        "«La pensión de viudedad será compatible con cualesquiera rentas de trabajo.» (art. 223.1)",
+        "«El derecho a pensión de viudedad se extinguirá, en todo caso, cuando el beneficiario contraiga matrimonio o constituya una pareja de hecho» (art. 223.2)"
+      ],
+      "modulos": ["Tipos de pensión", "Cómo se calcula"],
+      "notas": "Texto consolidado del TRLGSS descargado el 2026-11-11; la numeración es la del TRLGSS de 2015. El porcentaje de la base reguladora (regulado reglamentariamente) y las reglas de pareja de hecho (art. 221) no se transcriben: PENDIENTE_DATOS.md.",
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "orfandad",
+      "nombre": "Pensión y prestación de orfandad",
+      "familia": "muerte-supervivencia",
+      "modalidad": "contributiva",
+      "aQuienCubre": "Hijos e hijas del causante fallecido, con independencia de la naturaleza de su filiación, menores de veintiún años o incapacitados para el trabajo en el momento de la muerte (art. 224.1 TRLGSS).",
+      "requisitos": [
+        {
+          "tipo": "edad",
+          "descripcion": "Ser menor de veintiún años o estar incapacitado para el trabajo al fallecer el causante.",
+          "articulo": "art. 224.1 TRLGSS"
+        },
+        {
+          "tipo": "alta",
+          "descripcion": "Que el causante estuviese en alta o situación asimilada, o fuera pensionista en los términos del artículo 217.1.c).",
+          "articulo": "art. 224.1 TRLGSS"
+        }
+      ],
+      "calculo": {
+        "formula": "Porcentaje de la base reguladora fijado reglamentariamente (no consta en el texto descargado). La suma de las pensiones de orfandad no puede superar el 48 % de la base reguladora cuando concurren con una pensión de viudedad de porcentaje superior al 52 %. Prestación de orfandad (víctimas de violencia contra la mujer sin derecho a pensión): doble del SMI mensual, repartido entre los beneficiarios.",
+        "articulos": "arts. 224 y 225 TRLGSS"
+      },
+      "limites": "En violencia contra la mujer, el importe mínimo mensual de la pensión de orfandad es el doble del SMI mensual vigente, con tope conjunto si hay varios beneficiarios (art. 224.1).",
+      "duracion": "Mientras se cumplan los requisitos de edad o incapacidad.",
+      "extincion": [],
+      "compatibilidades": "Compatible con cualquier renta del trabajo del cónyuge del causante o del propio huérfano y con la pensión de viudedad que aquel perciba (art. 225.1).",
+      "articulos": ["arts. 224 y 225 TRLGSS"],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "confidence": "alta",
+      "evidencia": [
+        "«Tendrán derecho a la pensión de orfandad, en régimen de igualdad, cada uno de los hijos e hijas del causante o de la causante fallecida, cualquiera que sea la naturaleza de su filiación, siempre que, en el momento de la muerte, sean menores de veintiún años o estén incapacitados para el trabajo» (art. 224.1)",
+        "«el importe mínimo mensual de la pensión de orfandad será el equivalente al doble del salario mínimo interprofesional mensual vigente en cada momento» (art. 224.1)",
+        "«la suma de las pensiones de orfandad podrá superar el 48 por ciento de la base reguladora que corresponda»",
+        "«la pensión o prestación de orfandad será compatible con cualquier renta del trabajo de quien sea o haya sido cónyuge del causante, o del propio huérfano» (art. 225.1)"
+      ],
+      "modulos": ["Tipos de pensión"],
+      "notas": "Texto consolidado del TRLGSS descargado el 2026-11-11; la numeración es la del TRLGSS de 2015. El porcentaje de la base reguladora (20 % según el desarrollo reglamentario) no consta en el texto descargado: PENDIENTE_DATOS.md.",
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "favor-de-familiares",
+      "nombre": "Prestaciones en favor de familiares",
+      "familia": "muerte-supervivencia",
+      "modalidad": "contributiva",
+      "aQuienCubre": "Familiares o asimilados del causante que, previa prueba de su dependencia económica, tengan derecho a pensión o subsidio por su muerte según las normas de desarrollo; en todo caso, hijos o hermanos de pensionistas de jubilación e incapacidad permanente que reúnan las condiciones reglamentarias (art. 226 TRLGSS).",
+      "requisitos": [
+        {
+          "tipo": "otros",
+          "descripcion": "Dependencia económica del causante y condiciones establecidas reglamentariamente para cada familiar.",
+          "articulo": "art. 226.1 TRLGSS"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "Hijos o hermanos de pensionistas de jubilación e incapacidad permanente: haber convivido con el causante y a sus expensas, entre otras circunstancias fijadas reglamentariamente.",
+          "articulo": "art. 226.2 TRLGSS"
+        }
+      ],
+      "calculo": {
+        "formula": "La cuantía se fija en las normas de desarrollo (art. 226.1); las cuantías mínimas anuales figuran en las series de pensiones mínimas.",
+        "articulos": "arts. 226 y 227 TRLGSS"
+      },
+      "limites": "Indemnización especial a tanto alzado en muerte por accidente de trabajo o enfermedad profesional (art. 227).",
+      "duracion": "Pensión vitalicia o subsidio temporal, según el caso (art. 216.1.e).",
+      "extincion": [],
+      "compatibilidades": "Se aplica lo establecido en el segundo párrafo del artículo 219.1 (art. 226.1).",
+      "articulos": ["arts. 226 y 227 TRLGSS"],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "confidence": "alta",
+      "evidencia": [
+        "«previa prueba de su dependencia económica del causante, tendrán derecho a pensión o subsidio por muerte de este, en la cuantía que respectivamente se fije» (art. 226.1)",
+        "«Una pensión vitalicia o, en su caso, subsidio temporal en favor de familiares.» (art. 216.1.e)"
+      ],
+      "modulos": ["Tipos de pensión"],
+      "notas": "Texto consolidado del TRLGSS descargado el 2026-11-11; la numeración es la del TRLGSS de 2015. La regulación detallada (familiares y cuantía) es reglamentaria y no se ha descargado: PENDIENTE_DATOS.md.",
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "pnc-incapacidad",
+      "nombre": "Pensión de incapacidad no contributiva",
+      "familia": "no-contributiva",
+      "modalidad": "no-contributiva",
+      "aQuienCubre": "Personas de 18 a 64 años con discapacidad o enfermedad crónica en grado igual o superior al 65 % y sin rentas suficientes (art. 363 TRLGSS).",
+      "requisitos": [
+        {
+          "tipo": "edad",
+          "descripcion": "Ser mayor de dieciocho y menor de sesenta y cinco años.",
+          "articulo": "art. 363.1.a) TRLGSS"
+        },
+        {
+          "tipo": "residencia",
+          "descripcion": "Residir legalmente en España durante cinco años, dos de ellos inmediatamente anteriores a la solicitud.",
+          "articulo": "art. 363.1.b) TRLGSS"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "Discapacidad o enfermedad crónica en grado igual o superior al 65 %.",
+          "articulo": "art. 363.1.c) TRLGSS"
+        },
+        {
+          "tipo": "rentas",
+          "descripcion": "Carecer de rentas o ingresos suficientes: suma anual inferior al importe anual de la pensión; si hay convivencia en una unidad económica, se aplica el límite de acumulación de recursos.",
+          "articulo": "art. 363.1.d) TRLGSS"
+        }
+      ],
+      "calculo": {
+        "formula": "Importe anual fijado cada año (series «pensión no contributiva: importe anual»). Si en una unidad económica hay varios beneficiarios: al importe anual se suma el 70 % de esa cuantía por cada beneficiario adicional y el total se reparte por igual (art. 364.1). Las rentas propias son compatibles hasta el 35 % de la pensión; el exceso se deduce (art. 364.2).",
+        "articulos": "arts. 363 y 364 TRLGSS"
+      },
+      "limites": "Límite de acumulación de recursos de la unidad económica (art. 363 apartados siguientes); las rentas que superen el 35 % del importe se deducen de la pensión.",
+      "duracion": "Mientras se mantengan los requisitos (rentas, residencia y discapacidad condicionan el derecho y su conservación).",
+      "extincion": [],
+      "compatibilidades": "Compatible con rentas propias hasta el 35 % del importe anual de la pensión (art. 364.2).",
+      "articulos": ["arts. 363 a 368 TRLGSS"],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "confidence": "alta",
+      "evidencia": [
+        "«Ser mayor de dieciocho y menor de sesenta y cinco años de edad.» (art. 363.1.a)",
+        "«haberlo hecho durante cinco años, de los cuales dos deberán ser inmediatamente anteriores a la fecha de solicitud de la pensión» (art. 363.1.b)",
+        "«Estar afectadas por una discapacidad o por una enfermedad crónica, en un grado igual o superior al 65 por ciento.» (art. 363.1.c)",
+        "«Al importe referido en el primer párrafo de este apartado se le sumará el 70 por ciento de esa misma cuantía, tantas veces como número de beneficiarios, menos uno, existan en la unidad económica.» (art. 364.1.a)",
+        "«siempre que los mismos no excedan del 35 por ciento del importe, en cómputo anual, de la pensión no contributiva» (art. 364.2)"
+      ],
+      "modulos": ["Tipos de pensión"],
+      "notas": "Texto consolidado del TRLGSS descargado el 2026-11-11; la numeración es la del TRLGSS de 2015.",
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "pnc-jubilacion",
+      "nombre": "Pensión de jubilación no contributiva",
+      "familia": "no-contributiva",
+      "modalidad": "no-contributiva",
+      "aQuienCubre": "Personas de 65 o más años sin rentas o ingresos en cuantía superior a los límites del artículo 363 y con residencia legal en España (art. 369 TRLGSS).",
+      "requisitos": [
+        {
+          "tipo": "edad",
+          "descripcion": "Haber cumplido sesenta y cinco años.",
+          "articulo": "art. 369.1 TRLGSS"
+        },
+        {
+          "tipo": "residencia",
+          "descripcion": "Residir legalmente en España durante diez años entre los dieciséis años y la edad de devengo, dos de ellos consecutivos e inmediatamente anteriores a la solicitud.",
+          "articulo": "art. 369.1 TRLGSS"
+        },
+        {
+          "tipo": "rentas",
+          "descripcion": "No superar los límites de rentas o ingresos del artículo 363 (propios y, en su caso, de la unidad económica).",
+          "articulo": "art. 369.1 TRLGSS"
+        }
+      ],
+      "calculo": {
+        "formula": "La cuantía se determina conforme a lo dispuesto para la pensión de invalidez no contributiva (art. 364): importe anual fijado cada año, incremento del 70 % por beneficiario adicional en la unidad económica y deducción de rentas que superen el 35 %.",
+        "articulos": "arts. 369 y 370 TRLGSS"
+      },
+      "limites": "Rentas, ingresos propios y ajenos computables y residencia condicionan el derecho, su conservación y la cuantía (art. 369.2).",
+      "duracion": "Mientras se mantengan los requisitos.",
+      "extincion": [],
+      "compatibilidades": "Rentas propias compatibles hasta el 35 % del importe anual (por remisión al art. 364.2).",
+      "articulos": ["arts. 369 a 372 TRLGSS"],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "confidence": "alta",
+      "evidencia": [
+        "«habiendo cumplido sesenta y cinco años de edad, carezcan de rentas o ingresos en cuantía superior a los límites establecidos en el artículo 363, residan legalmente en territorio español y lo hayan hecho durante diez años entre la edad de dieciséis años y la edad de devengo de la pensión» (art. 369.1)",
+        "«Para la determinación de la cuantía de la pensión de jubilación en su modalidad no contributiva, se estará a lo dispuesto para la pensión de invalidez en el artículo 364.» (art. 370)"
+      ],
+      "modulos": ["Tipos de pensión"],
+      "notas": "Texto consolidado del TRLGSS descargado el 2026-11-11; la numeración es la del TRLGSS de 2015.",
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "complemento-minimos",
+      "nombre": "Complemento para pensiones inferiores a la mínima (complemento por mínimos)",
+      "familia": "complementos",
+      "modalidad": "contributiva",
+      "aQuienCubre": "Beneficiarios de pensiones contributivas del sistema de la Seguridad Social que no perciban otros rendimientos o que no superen el límite anual de la Ley de PGE, y residan en España (art. 59.1 TRLGSS).",
+      "requisitos": [
+        {
+          "tipo": "rentas",
+          "descripcion": "No percibir rendimientos del trabajo, del capital, de actividades económicas, de atribución de rentas y ganancias patrimoniales (concepto del IRPF), o no exceder la cuantía anual fijada en la Ley de PGE.",
+          "articulo": "art. 59.1 TRLGSS"
+        },
+        {
+          "tipo": "residencia",
+          "descripcion": "Residir en territorio español en los términos legales o reglamentarios.",
+          "articulo": "art. 59.1 TRLGSS"
+        }
+      ],
+      "calculo": {
+        "formula": "Complemento igual a la diferencia necesaria para alcanzar la cuantía mínima anual de la clase de pensión (series de pensiones mínimas). Los límites de ingresos de cada año figuran en las series «límite de ingresos para los complementos por mínimos».",
+        "articulos": "art. 59 TRLGSS"
+      },
+      "limites": "Incompatible con rendimientos cuya suma, excluida la pensión que se complementa, exceda el límite fijado en la Ley de PGE para cada ejercicio (art. 59.1).",
+      "duracion": "Mientras se mantengan los requisitos de rentas y residencia.",
+      "extincion": [],
+      "compatibilidades": "Se computan los rendimientos íntegros excluidos los gastos deducibles según la legislación fiscal (art. 59.1). Las pensiones prorrateadas por normas internacionales reciben el complemento proporcional (art. 59.2).",
+      "articulos": ["art. 59 TRLGSS"],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "confidence": "alta",
+      "evidencia": [
+        "«tendrán derecho a percibir los complementos necesarios para alcanzar la cuantía mínima de las pensiones, siempre que residan en territorio español en los términos que legal o reglamentariamente se determinen» (art. 59.1)",
+        "«Los complementos por mínimos serán incompatibles con la percepción por el pensionista de los rendimientos indicados en el párrafo anterior cuando la suma de todas las percepciones mencionadas, excluida la pensión que se vaya a complementar, exceda el límite fijado en la correspondiente Ley de Presupuestos Generales del Estado para cada ejercicio.» (art. 59.1)"
+      ],
+      "modulos": ["Tipos de pensión", "Cómo se calcula"],
+      "notas": "Texto consolidado del TRLGSS descargado el 2026-11-11; la numeración es la del TRLGSS de 2015.",
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "complemento-brecha-genero",
+      "nombre": "Complemento de pensiones contributivas para la reducción de la brecha de género",
+      "familia": "complementos",
+      "modalidad": "contributiva",
+      "aQuienCubre": "Mujeres con uno o más hijos o hijas beneficiarias de pensión contributiva de jubilación, incapacidad permanente o viudedad; los hombres solo si concurren los requisitos del artículo 60.1 (art. 60 TRLGSS).",
+      "requisitos": [
+        {
+          "tipo": "otros",
+          "descripcion": "Haber tenido uno o más hijos o hijas y ser beneficiaria de una pensión contributiva de jubilación, de incapacidad permanente o de viudedad.",
+          "articulo": "art. 60.1 TRLGSS"
+        },
+        {
+          "tipo": "otros",
+          "descripcion": "Hombres: pensión de viudedad por fallecimiento del otro progenitor con hijo con derecho a orfandad, o pensión de jubilación o incapacidad con carrera afectada por el nacimiento o adopción según las condiciones del artículo.",
+          "articulo": "art. 60.1.a) y b) TRLGSS"
+        }
+      ],
+      "calculo": {
+        "formula": "Importe mensual por hijo o hija fijado cada año en la norma de revalorización (serie «complemento para la reducción de la brecha de género»).",
+        "articulos": "art. 60 TRLGSS"
+      },
+      "limites": "Si no hay solicitud y reconocimiento en favor del otro progenitor y este también es mujer, se reconoce a la titular de pensiones públicas de menor cuantía (art. 60.1).",
+      "duracion": "Mientras se perciba la pensión que se complementa.",
+      "extincion": [],
+      "compatibilidades": "Un solo complemento por hijo o hija entre progenitores (art. 60.1).",
+      "articulos": ["art. 60 TRLGSS"],
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "confidence": "alta",
+      "evidencia": [
+        "«Las mujeres que hayan tenido uno o más hijos o hijas y que sean beneficiarias de una pensión contributiva de jubilación, de incapacidad permanente o de viudedad, tendrán derecho a un complemento por cada hijo o hija»"
+      ],
+      "modulos": ["Tipos de pensión", "Cómo se calcula"],
+      "notas": "Texto consolidado del TRLGSS descargado el 2026-11-11; la numeración es la del TRLGSS de 2015.",
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "clases-pasivas",
+      "nombre": "Régimen de Clases Pasivas del Estado (solo descripción)",
+      "familia": "clases-pasivas",
+      "modalidad": "clases-pasivas",
+      "aQuienCubre": "Pensiones del Régimen de Clases Pasivas del Estado, regulado por el texto refundido de la Ley de Clases Pasivas del Estado, aprobado por Real Decreto Legislativo 670/1987, de 30 de abril; se describe solo como contexto y la web no modela sus reglas.",
+      "requisitos": [],
+      "calculo": {
+        "formula": "No se modela. Se revalorizan junto con las del sistema de la Seguridad Social y tienen cuantías mínimas propias (anexos de las normas anuales de revalorización).",
+        "articulos": "RDLeg 670/1987"
+      },
+      "limites": "Límite máximo de percepción de pensiones públicas común con el sistema de la Seguridad Social (normas anuales de revalorización).",
+      "duracion": "No se describe.",
+      "extincion": [],
+      "compatibilidades": "No se describe.",
+      "articulos": ["RDLeg 670/1987"],
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "confidence": "media",
+      "evidencia": [
+        "«el artículo 27 de la Ley de Clases Pasivas del Estado, aprobado por Real Decreto Legislativo 670/1987, de 30 de abril»"
+      ],
+      "modulos": ["Otros sistemas", "Tipos de pensión"],
+      "notas": "Entrada de contexto: el texto refundido de Clases Pasivas no se ha descargado; sus requisitos y fórmulas quedan en PENDIENTE_DATOS.md.",
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}

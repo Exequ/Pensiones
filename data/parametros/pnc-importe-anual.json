@@ -1,0 +1,450 @@
+{
+  "tipo": "datos",
+  "id": "pnc-importe-anual",
+  "title": "Pensión no contributiva: importe anual",
+  "description": "Importe anual íntegro de la pensión no contributiva de jubilación e invalidez fijado cada año en la norma de revalorización. Es también el límite de rentas individual del beneficiario (art. 363 TRLGSS).",
+  "data": [
+    {
+      "id": "2001",
+      "value": 3526.46,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Pesetas: 586.740/año.",
+      "quote": "queda fijada en la cuantía de 586.740 pesetas (3.526,46 euros) anuales.",
+      "location": "Artículo 16"
+    },
+    {
+      "id": "2002",
+      "value": 3621.52,
+      "unit": "euros/año",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto 1464/2001, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2002.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24969",
+        "docId": "BOE-A-2001-24969"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "La cuantía de las pensiones de la Seguridad Social por jubilación e invalidez, en su modalidad no contributiva, que se hayan reconocido con anterioridad a 1 de enero del 2002 o puedan reconocerse a partir de dicha fecha, queda fijada en la cuantía de 3.621,52 euros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2003",
+      "value": 3762.78,
+      "unit": "euros/año",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto 1425/2002, de 27 de diciembre, sobre revalorización de las pensiones del Sistema de la Seguridad Social para el ejercicio 2003.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-25416",
+        "docId": "BOE-A-2002-25416"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "La cuantía de las pensiones de la Seguridad Social por jubilación e invalidez, en su modalidad no contributiva, que se hayan reconocido con anterioridad a 1 de enero del 2003 o puedan reconocerse a partir de dicha fecha, queda fijada en la cuantía de 3.762,78 euros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2004",
+      "value": 3868.2,
+      "unit": "euros/año",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto 2/2004, de 9 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2004.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-507",
+        "docId": "BOE-A-2004-507"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "La cuantía de las pensiones de la Seguridad Social por jubilación e invalidez, en su modalidad no contributiva, que se hayan reconocido con anterioridad al 1 de enero de 2004 o puedan reconocerse a partir de dicha fecha, queda fijada en la cuantía de 3.868,20 euros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2005",
+      "value": 4043.06,
+      "unit": "euros/año",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto 2350/2004, de 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21839",
+        "docId": "BOE-A-2004-21839"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "La cuantía de las pensiones de la Seguridad Social por jubilación e invalidez, en su modalidad no contributiva, que se hayan reconocido con anterioridad al 1 de enero de 2005 o puedan reconocerse a partir de dicha fecha, queda fijada en 4.043,06 euros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2006",
+      "value": 4221.7,
+      "unit": "euros/año",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto 1611/2005, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21608",
+        "docId": "BOE-A-2005-21608"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2006, la cuantía de las pensiones de jubilación e invalidez, en su modalidad no contributiva, queda fijada en 4.221,70 euros íntegros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2007",
+      "value": 4374.02,
+      "unit": "euros/año",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto 1578/2006, de 22 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22958",
+        "docId": "BOE-A-2006-22958"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2007, la cuantía de las pensiones de jubilación e invalidez, en su modalidad no contributiva, queda fijada en 4.374,02 euros íntegros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2008",
+      "value": 4598.16,
+      "unit": "euros/año",
+      "period": "2008",
+      "source": {
+        "title": "Real Decreto 1764/2007, de 28 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2008.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2007-22452",
+        "docId": "BOE-A-2007-22452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2008, la cuantía de las pensiones de jubilación e invalidez, en su modalidad no contributiva, queda fijada en 4.598,16 euros íntegros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2009",
+      "value": 4708.62,
+      "unit": "euros/año",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto 2127/2008, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20957",
+        "docId": "BOE-A-2008-20957"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2009, la cuantía de las pensiones de jubilación e invalidez, en su modalidad no contributiva, queda fijada en 4.708,62 euros íntegros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2010",
+      "value": 4755.8,
+      "unit": "euros/año",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto 2007/2009, 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21052",
+        "docId": "BOE-A-2009-21052"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2010, la cuantía de las pensiones de jubilación e invalidez, en su modalidad no contributiva, queda fijada en 4.755,80 euros íntegros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2011",
+      "value": 4866.4,
+      "unit": "euros/año",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+        "docId": "BOE-A-2010-20149"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2011, la cuantía de las pensiones de la Seguridad Social por jubilación e invalidez, en su modalidad no contributiva, que se hayan reconocido con anterioridad a 1 de enero de 2011 o puedan reconocerse a partir de dicha fecha, queda fijada en 4.866,40 euros íntegros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2012",
+      "value": 5007.8,
+      "unit": "euros/año",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20638",
+        "docId": "BOE-A-2011-20638"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas). La norma recoge también 4.957,40 euros/año, que corresponde a 2011 una vez aplicada la compensación por desviación del IPC.",
+      "quote": "Pensiones de la Seguridad Social en su modalidad no contributiva: 5.007,80 euros/año",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2013",
+      "value": 5108.6,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Pensiones de la Seguridad Social en su modalidad no contributiva: 5.108,60 euros/año",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2014",
+      "value": 5122.6,
+      "unit": "euros/año",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto 1045/2013, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13763",
+        "docId": "BOE-A-2013-13763"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2014, la cuantía de las pensiones de jubilación e invalidez, en su modalidad no contributiva, queda fijada en 5.122,60 euros íntegros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2015",
+      "value": 5136.6,
+      "unit": "euros/año",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto 1107/2014, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13680",
+        "docId": "BOE-A-2014-13680"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2015, la cuantía de las pensiones de jubilación e invalidez, en su modalidad no contributiva, queda fijada en 5.136,60 euros íntegros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2016",
+      "value": 5150.6,
+      "unit": "euros/año",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto 1170/2015, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-14272",
+        "docId": "BOE-A-2015-14272"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2016, la cuantía de las pensiones de jubilación e invalidez, en su modalidad no contributiva, queda fijada en 5.150,60 euros íntegros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2017",
+      "value": 5164.6,
+      "unit": "euros/año",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto 746/2016, de 30 de diciembre, sobre revalorización y complementos de pensiones de Clases Pasivas y sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-12605",
+        "docId": "BOE-A-2016-12605"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Pensiones de la Seguridad Social en su modalidad no contributiva: 5.164,60 euros/año",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2018",
+      "value": 5178.6,
+      "unit": "euros/año",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 1079/2017, de 29 de diciembre, sobre revalorización de pensiones de Clases Pasivas, de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-15854",
+        "docId": "BOE-A-2017-15854"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Pensiones de la Seguridad Social en su modalidad no contributiva: 5.178,60 euros/año",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2019",
+      "value": 5488.0,
+      "unit": "euros/año",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Pensiones de la Seguridad Social en su modalidad no contributiva: 5.488,00 euros/año",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2020",
+      "value": 5538.4,
+      "unit": "euros/año",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Pensiones de la Seguridad Social en su modalidad no contributiva: 5.538,40 euros/año",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2021",
+      "value": 5639.2,
+      "unit": "euros/año",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339",
+        "docId": "BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2021, la cuantía de las pensiones de jubilación e invalidez del sistema de la Seguridad Social, en su modalidad no contributiva, se incrementará en el 1,8 por ciento respecto de la cuantía establecida para 2020, quedando en un importe anual de 5.639,20 euros",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2022",
+      "value": 5899.6,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2022, la cuantía de las pensiones de jubilación e invalidez, en su modalidad no contributiva, se incrementará en el 3 por 100 respecto de la cuantía determinada para 2021, quedando establecida en 5.899,60 euros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2023",
+      "value": 6402.2,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2023, la cuantía de las pensiones de jubilación e invalidez en su modalidad no contributiva queda establecida en 6.402,20 euros anuales",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2024",
+      "value": 7250.6,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "182,00 euros Las pensiones no contributivas del sistema de la Seguridad Social de invalidez y jubilación tendrán un importe anual de 7.250,60 euros, resultado de aplicar sobre el importe extraordinario estab",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2025",
+      "value": 7905.8,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2025, la cuantía de las pensiones de jubilación e invalidez, en su modalidad no contributiva, queda establecida en 7.905,80 euros anuales, conforme al artículo 65",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    },
+    {
+      "id": "2026",
+      "value": 8803.2,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
+      "quote": "Para el año 2026, la cuantía de las pensiones de jubilación e incapacidad, en su modalidad no contributiva, queda establecida en 8.803,20 euros anuales, conforme al artículo 2 del Real Decreto-ley 3/2026, de 3 d",
+      "location": "Artículo o anexo sobre la pensión no contributiva"
+    }
+  ]
+}
