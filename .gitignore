@@ -11,3 +11,5 @@ capturas
 __pycache__/
 data-raw/seg-social/paginas/
 data-raw/seg-social/AFI/Afiliacion-*.xlsx
+data-raw/seg-social-fin/paginas/
+data-raw/seg-social-fin/ejecucion/
