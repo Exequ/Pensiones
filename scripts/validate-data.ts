@@ -20,7 +20,8 @@ const { ficheros, errores } = await validarDirectorio(directorio);
 const todos = [...errores];
 if (argumento === undefined) {
   const claims = path.resolve('docs/claims.json');
-  if (existsSync(claims)) todos.push(...(await validarAfirmaciones(claims)));
+  if (existsSync(claims))
+    todos.push(...(await validarAfirmaciones(claims, process.cwd(), directorio)));
 }
 
 console.log(

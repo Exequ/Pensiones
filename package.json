@@ -12,7 +12,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b",
-    "lint": "eslint . && prettier --check . && npm run check:estilos && npm run check:contraste",
+    "lint": "eslint . && prettier --check . && npm run check:estilos && npm run check:contraste && npm run validate:data",
     "check:estilos": "tsx scripts/check-styles.ts",
     "check:contraste": "tsx scripts/check-contrast.ts",
     "format": "prettier --write .",
