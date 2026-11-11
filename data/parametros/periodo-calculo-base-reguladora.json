@@ -1,0 +1,648 @@
+{
+  "tipo": "datos",
+  "id": "periodo-calculo-base-reguladora",
+  "title": "Periodo de cálculo de la base reguladora de jubilación",
+  "description": "Número de meses de bases de cotización que entran en la ventana de cálculo de la base reguladora de la pensión de jubilación, por año del hecho causante. Desde 2026 no se computan todas: se toman las de mayor importe (véase notes). El divisor correspondiente está en divisor-base-reguladora.",
+  "data": [
+    {
+      "id": "2000",
+      "value": 144,
+      "unit": "meses",
+      "period": "2000",
+      "source": {
+        "title": "Ley 24/1997, de 15 de julio, de Consolidación y Racionalización del Sistema de Seguridad Social",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1997-15810",
+        "docId": "BOE-A-1997-15810"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "A partir de 1 de enero de 2000, la base reguladora de la pensión de jubilación será el resultado de dividir por 168 las bases de cotización de los 144 meses inmediatamente anteriores al hecho causante.",
+      "location": "art. 5.Dos Ley 24/1997 (nuevo apartado 1 de la DT 5.ª LGSS 1994)"
+    },
+    {
+      "id": "2001",
+      "value": 156,
+      "unit": "meses",
+      "period": "2001",
+      "source": {
+        "title": "Ley 24/1997, de 15 de julio, de Consolidación y Racionalización del Sistema de Seguridad Social",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1997-15810",
+        "docId": "BOE-A-1997-15810"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "A partir de 1 de enero de 2001 y hasta el 31 de diciembre de 2001, la base reguladora de la pensión de jubilación será el resultado de dividir por 182 las bases de cotización de los 156 meses inmediatamente anteriores al hecho causante.",
+      "location": "art. 5.Dos Ley 24/1997 (nuevo apartado 1 de la DT 5.ª LGSS 1994)"
+    },
+    {
+      "id": "2002",
+      "value": 180,
+      "unit": "meses",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Regla plena desde 2002 según la Ley 24/1997 («A partir de 1 de enero del año 2002 … se calculará aplicando, en su integridad, lo establecido en el apartado 1 del artículo 162»).",
+      "quote": "La base reguladora de la pensión de jubilación, en su modalidad contributiva, será el cociente que resulte de dividir por 210, las bases de cotización del interesado durante los 180 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "art. 162.1 LGSS 1994"
+    },
+    {
+      "id": "2003",
+      "value": 180,
+      "unit": "meses",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Regla plena desde 2002 según la Ley 24/1997 («A partir de 1 de enero del año 2002 … se calculará aplicando, en su integridad, lo establecido en el apartado 1 del artículo 162»).",
+      "quote": "La base reguladora de la pensión de jubilación, en su modalidad contributiva, será el cociente que resulte de dividir por 210, las bases de cotización del interesado durante los 180 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "art. 162.1 LGSS 1994"
+    },
+    {
+      "id": "2004",
+      "value": 180,
+      "unit": "meses",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Regla plena desde 2002 según la Ley 24/1997 («A partir de 1 de enero del año 2002 … se calculará aplicando, en su integridad, lo establecido en el apartado 1 del artículo 162»).",
+      "quote": "La base reguladora de la pensión de jubilación, en su modalidad contributiva, será el cociente que resulte de dividir por 210, las bases de cotización del interesado durante los 180 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "art. 162.1 LGSS 1994"
+    },
+    {
+      "id": "2005",
+      "value": 180,
+      "unit": "meses",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Regla plena desde 2002 según la Ley 24/1997 («A partir de 1 de enero del año 2002 … se calculará aplicando, en su integridad, lo establecido en el apartado 1 del artículo 162»).",
+      "quote": "La base reguladora de la pensión de jubilación, en su modalidad contributiva, será el cociente que resulte de dividir por 210, las bases de cotización del interesado durante los 180 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "art. 162.1 LGSS 1994"
+    },
+    {
+      "id": "2006",
+      "value": 180,
+      "unit": "meses",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Regla plena desde 2002 según la Ley 24/1997 («A partir de 1 de enero del año 2002 … se calculará aplicando, en su integridad, lo establecido en el apartado 1 del artículo 162»).",
+      "quote": "La base reguladora de la pensión de jubilación, en su modalidad contributiva, será el cociente que resulte de dividir por 210, las bases de cotización del interesado durante los 180 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "art. 162.1 LGSS 1994"
+    },
+    {
+      "id": "2007",
+      "value": 180,
+      "unit": "meses",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Regla plena desde 2002 según la Ley 24/1997 («A partir de 1 de enero del año 2002 … se calculará aplicando, en su integridad, lo establecido en el apartado 1 del artículo 162»).",
+      "quote": "La base reguladora de la pensión de jubilación, en su modalidad contributiva, será el cociente que resulte de dividir por 210, las bases de cotización del interesado durante los 180 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "art. 162.1 LGSS 1994"
+    },
+    {
+      "id": "2008",
+      "value": 180,
+      "unit": "meses",
+      "period": "2008",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Regla plena desde 2002 según la Ley 24/1997 («A partir de 1 de enero del año 2002 … se calculará aplicando, en su integridad, lo establecido en el apartado 1 del artículo 162»).",
+      "quote": "La base reguladora de la pensión de jubilación, en su modalidad contributiva, será el cociente que resulte de dividir por 210, las bases de cotización del interesado durante los 180 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "art. 162.1 LGSS 1994"
+    },
+    {
+      "id": "2009",
+      "value": 180,
+      "unit": "meses",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Regla plena desde 2002 según la Ley 24/1997 («A partir de 1 de enero del año 2002 … se calculará aplicando, en su integridad, lo establecido en el apartado 1 del artículo 162»).",
+      "quote": "La base reguladora de la pensión de jubilación, en su modalidad contributiva, será el cociente que resulte de dividir por 210, las bases de cotización del interesado durante los 180 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "art. 162.1 LGSS 1994"
+    },
+    {
+      "id": "2010",
+      "value": 180,
+      "unit": "meses",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Regla plena desde 2002 según la Ley 24/1997 («A partir de 1 de enero del año 2002 … se calculará aplicando, en su integridad, lo establecido en el apartado 1 del artículo 162»).",
+      "quote": "La base reguladora de la pensión de jubilación, en su modalidad contributiva, será el cociente que resulte de dividir por 210, las bases de cotización del interesado durante los 180 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "art. 162.1 LGSS 1994"
+    },
+    {
+      "id": "2011",
+      "value": 180,
+      "unit": "meses",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Regla plena desde 2002 según la Ley 24/1997 («A partir de 1 de enero del año 2002 … se calculará aplicando, en su integridad, lo establecido en el apartado 1 del artículo 162»).",
+      "quote": "La base reguladora de la pensión de jubilación, en su modalidad contributiva, será el cociente que resulte de dividir por 210, las bases de cotización del interesado durante los 180 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "art. 162.1 LGSS 1994"
+    },
+    {
+      "id": "2012",
+      "value": 180,
+      "unit": "meses",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Regla plena desde 2002 según la Ley 24/1997 («A partir de 1 de enero del año 2002 … se calculará aplicando, en su integridad, lo establecido en el apartado 1 del artículo 162»).",
+      "quote": "La base reguladora de la pensión de jubilación, en su modalidad contributiva, será el cociente que resulte de dividir por 210, las bases de cotización del interesado durante los 180 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "art. 162.1 LGSS 1994"
+    },
+    {
+      "id": "2013",
+      "value": 192,
+      "unit": "meses",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Hasta 2015 la regla figuraba en la DT 5.ª de la LGSS de 1994 (redacción de la Ley 27/2011); el TRLGSS la recoge en su DT 8.ª.",
+      "quote": "A partir de 1 de enero de 2013, la base reguladora de la pensión de jubilación será el resultado de dividir por 224 las bases de cotización durante los 192 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 8.ª.1 TRLGSS"
+    },
+    {
+      "id": "2014",
+      "value": 204,
+      "unit": "meses",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Hasta 2015 la regla figuraba en la DT 5.ª de la LGSS de 1994 (redacción de la Ley 27/2011); el TRLGSS la recoge en su DT 8.ª.",
+      "quote": "A partir de 1 de enero de 2014, la base reguladora de la pensión de jubilación será el resultado de dividir por 238 las bases de cotización durante los 204 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 8.ª.1 TRLGSS"
+    },
+    {
+      "id": "2015",
+      "value": 216,
+      "unit": "meses",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Hasta 2015 la regla figuraba en la DT 5.ª de la LGSS de 1994 (redacción de la Ley 27/2011); el TRLGSS la recoge en su DT 8.ª.",
+      "quote": "A partir de 1 de enero de 2015, la base reguladora de la pensión de jubilación será el resultado de dividir por 252 las bases de cotización durante los 216 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 8.ª.1 TRLGSS"
+    },
+    {
+      "id": "2016",
+      "value": 228,
+      "unit": "meses",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Hasta 2015 la regla figuraba en la DT 5.ª de la LGSS de 1994 (redacción de la Ley 27/2011); el TRLGSS la recoge en su DT 8.ª.",
+      "quote": "A partir de 1 de enero de 2016, la base reguladora de la pensión de jubilación será el resultado de dividir por 266 las bases de cotización durante los 228 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 8.ª.1 TRLGSS"
+    },
+    {
+      "id": "2017",
+      "value": 240,
+      "unit": "meses",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Hasta 2015 la regla figuraba en la DT 5.ª de la LGSS de 1994 (redacción de la Ley 27/2011); el TRLGSS la recoge en su DT 8.ª.",
+      "quote": "A partir de 1 de enero de 2017, la base reguladora de la pensión de jubilación será el resultado de dividir por 280 las bases de cotización durante los 240 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 8.ª.1 TRLGSS"
+    },
+    {
+      "id": "2018",
+      "value": 252,
+      "unit": "meses",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Hasta 2015 la regla figuraba en la DT 5.ª de la LGSS de 1994 (redacción de la Ley 27/2011); el TRLGSS la recoge en su DT 8.ª.",
+      "quote": "A partir de 1 de enero de 2018, la base reguladora de la pensión de jubilación será el resultado de dividir por 294 las bases de cotización durante los 252 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 8.ª.1 TRLGSS"
+    },
+    {
+      "id": "2019",
+      "value": 264,
+      "unit": "meses",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Hasta 2015 la regla figuraba en la DT 5.ª de la LGSS de 1994 (redacción de la Ley 27/2011); el TRLGSS la recoge en su DT 8.ª.",
+      "quote": "A partir de 1 de enero de 2019, la base reguladora de la pensión de jubilación será el resultado de dividir por 308 las bases de cotización durante los 264 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 8.ª.1 TRLGSS"
+    },
+    {
+      "id": "2020",
+      "value": 276,
+      "unit": "meses",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Hasta 2015 la regla figuraba en la DT 5.ª de la LGSS de 1994 (redacción de la Ley 27/2011); el TRLGSS la recoge en su DT 8.ª.",
+      "quote": "A partir de 1 de enero de 2020, la base reguladora de la pensión de jubilación será el resultado de dividir por 322 las bases de cotización durante los 276 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 8.ª.1 TRLGSS"
+    },
+    {
+      "id": "2021",
+      "value": 288,
+      "unit": "meses",
+      "period": "2021",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Hasta 2015 la regla figuraba en la DT 5.ª de la LGSS de 1994 (redacción de la Ley 27/2011); el TRLGSS la recoge en su DT 8.ª.",
+      "quote": "A partir de 1 de enero de 2021, la base reguladora de la pensión de jubilación será el resultado de dividir por 336 las bases de cotización durante los 288 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 8.ª.1 TRLGSS"
+    },
+    {
+      "id": "2022",
+      "value": 300,
+      "unit": "meses",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1. La base reguladora de la pensión de jubilación será el cociente que resulte de dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante",
+      "location": "art. 209.1 TRLGSS (texto original) y DT 8.ª.1: «A partir de 1 de enero de 2022 … aplicando, en su integridad, lo establecido en el artículo 209.1»"
+    },
+    {
+      "id": "2023",
+      "value": 300,
+      "unit": "meses",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1. La base reguladora de la pensión de jubilación será el cociente que resulte de dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante",
+      "location": "art. 209.1 TRLGSS (texto original) y DT 8.ª.1: «A partir de 1 de enero de 2022 … aplicando, en su integridad, lo establecido en el artículo 209.1»"
+    },
+    {
+      "id": "2024",
+      "value": 300,
+      "unit": "meses",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1. La base reguladora de la pensión de jubilación será el cociente que resulte de dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante",
+      "location": "art. 209.1 TRLGSS (texto original) y DT 8.ª.1: «A partir de 1 de enero de 2022 … aplicando, en su integridad, lo establecido en el artículo 209.1»"
+    },
+    {
+      "id": "2025",
+      "value": 300,
+      "unit": "meses",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1. La base reguladora de la pensión de jubilación será el cociente que resulte de dividir por trescientos cincuenta, las bases de cotización del interesado durante los trescientos meses inmediatamente anteriores al mes previo al del hecho causante",
+      "location": "art. 209.1 TRLGSS (texto original) y DT 8.ª.1: «A partir de 1 de enero de 2022 … aplicando, en su integridad, lo establecido en el artículo 209.1»"
+    },
+    {
+      "id": "2026",
+      "value": 304,
+      "unit": "meses",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se computan las 302 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "quote": "Desde 1 de enero de 2026, la base reguladora de la pensión de jubilación será el resultado de dividir entre 352,33 la suma de las 302 bases de cotización de mayor importe comprendidas dentro del período de los 304 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 40.ª TRLGSS"
+    },
+    {
+      "id": "2027",
+      "value": 308,
+      "unit": "meses",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se computan las 304 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "quote": "Desde 1 de enero de 2027, la base reguladora de la pensión de jubilación será el resultado de dividir entre 354,67 la suma de las 304 bases de cotización de mayor importe comprendidas dentro del período de los 308 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 40.ª TRLGSS"
+    },
+    {
+      "id": "2028",
+      "value": 312,
+      "unit": "meses",
+      "period": "2028",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se computan las 306 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "quote": "Desde 1 de enero de 2028, la base reguladora de la pensión de jubilación será el resultado de dividir entre 357,00 la suma de las 306 bases de cotización de mayor importe comprendidas dentro del período de los 312 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 40.ª TRLGSS"
+    },
+    {
+      "id": "2029",
+      "value": 316,
+      "unit": "meses",
+      "period": "2029",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se computan las 308 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "quote": "Desde 1 de enero de 2029, la base reguladora de la pensión de jubilación será el resultado de dividir entre 359,33 la suma de las 308 bases de cotización de mayor importe comprendidas dentro del período de los 316 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 40.ª TRLGSS"
+    },
+    {
+      "id": "2030",
+      "value": 320,
+      "unit": "meses",
+      "period": "2030",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se computan las 310 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "quote": "Desde 1 de enero de 2030, la base reguladora de la pensión de jubilación será el resultado de dividir entre 361,67 la suma de las 310 bases de cotización de mayor importe comprendidas dentro del período de los 320 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 40.ª TRLGSS"
+    },
+    {
+      "id": "2031",
+      "value": 324,
+      "unit": "meses",
+      "period": "2031",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se computan las 312 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "quote": "Desde 1 de enero de 2031, la base reguladora de la pensión de jubilación será el resultado de dividir entre 364 la suma de las 312 bases de cotización de mayor importe comprendidas dentro del período de los 324 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 40.ª TRLGSS"
+    },
+    {
+      "id": "2032",
+      "value": 328,
+      "unit": "meses",
+      "period": "2032",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se computan las 314 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "quote": "Desde 1 de enero de 2032, la base reguladora de la pensión de jubilación será el resultado de dividir entre 366,33 la suma de las 314 bases de cotización de mayor importe comprendidas dentro del período de los 328 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 40.ª TRLGSS"
+    },
+    {
+      "id": "2033",
+      "value": 332,
+      "unit": "meses",
+      "period": "2033",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se computan las 316 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "quote": "Desde 1 de enero de 2033, la base reguladora de la pensión de jubilación será el resultado de dividir entre 368,67 la suma de las 316 bases de cotización de mayor importe comprendidas dentro del período de los 332 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 40.ª TRLGSS"
+    },
+    {
+      "id": "2034",
+      "value": 336,
+      "unit": "meses",
+      "period": "2034",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se computan las 318 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "quote": "Desde 1 de enero de 2034, la base reguladora de la pensión de jubilación será el resultado de dividir entre 371,00 la suma de las 318 bases de cotización de mayor importe comprendidas dentro del período de los 336 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 40.ª TRLGSS"
+    },
+    {
+      "id": "2035",
+      "value": 340,
+      "unit": "meses",
+      "period": "2035",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se computan las 320 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "quote": "Desde 1 de enero de 2035, la base reguladora de la pensión de jubilación será el resultado de dividir entre 373,33 la suma de las 320 bases de cotización de mayor importe comprendidas dentro del período de los 340 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 40.ª TRLGSS"
+    },
+    {
+      "id": "2036",
+      "value": 344,
+      "unit": "meses",
+      "period": "2036",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se computan las 322 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "quote": "Desde 1 de enero de 2036, la base reguladora de la pensión de jubilación será el resultado de dividir entre 375,67 la suma de las 322 bases de cotización de mayor importe comprendidas dentro del período de los 344 meses inmediatamente anteriores al mes previo al del hecho causante.",
+      "location": "disposición transitoria 40.ª TRLGSS"
+    },
+    {
+      "id": "2037",
+      "value": 348,
+      "unit": "meses",
+      "period": "2037",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Ventana de 348 meses de la que se toman las 324 bases de mayor importe (se descartan 24). Hasta 2043 coexiste con la opción de la DT 4.ª.7. Calendario legal vigente.",
+      "quote": "La base reguladora de la pensión de jubilación será el cociente que resulte de dividir entre 378, la suma de las bases de cotización del interesado durante 324 meses anteriores al del mes previo al del hecho causante obtenidos de la siguiente forma: a) Se seleccionarán los 348 meses consecutivos e inmediatamente anteriores al del mes previo al del hecho causante.",
+      "location": "art. 209.1 TRLGSS (redacción del RDL 2/2023, en vigor el 01/01/2026) y DT 40.ª: «Desde de 1 de enero de 2037 … aplicando, en su integridad, lo establecido en el artículo 209.1»"
+    }
+  ]
+}

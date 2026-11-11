@@ -1,0 +1,456 @@
+{
+  "tipo": "datos",
+  "id": "escala-porcentajes-jubilacion",
+  "title": "Escala de porcentajes por años cotizados (jubilación)",
+  "description": "Regla vigente cada año para el porcentaje aplicable a la base reguladora según los años cotizados.",
+  "data": [
+    {
+      "id": "2000",
+      "value": "50 % por los primeros 15 años; 3 % por cada año del 16.º al 25.º; 2 % por cada año desde el 26.º; máximo 100 %",
+      "unit": "regla",
+      "period": "2000",
+      "source": {
+        "title": "Ley 24/1997, de 15 de julio, de Consolidación y Racionalización del Sistema de Seguridad Social",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1997-15810",
+        "docId": "BOE-A-1997-15810"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por los primeros quince años cotizados: el 50 por 100. Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100",
+      "location": "art. 6 Ley 24/1997 (nueva redacción del art. 163 LGSS 1994)"
+    },
+    {
+      "id": "2001",
+      "value": "50 % por los primeros 15 años; 3 % por cada año del 16.º al 25.º; 2 % por cada año desde el 26.º; máximo 100 %",
+      "unit": "regla",
+      "period": "2001",
+      "source": {
+        "title": "Ley 24/1997, de 15 de julio, de Consolidación y Racionalización del Sistema de Seguridad Social",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1997-15810",
+        "docId": "BOE-A-1997-15810"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por los primeros quince años cotizados: el 50 por 100. Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100",
+      "location": "art. 6 Ley 24/1997 (nueva redacción del art. 163 LGSS 1994)"
+    },
+    {
+      "id": "2002",
+      "value": "50 % por los primeros 15 años; 3 % por cada año del 16.º al 25.º; 2 % por cada año desde el 26.º; máximo 100 %",
+      "unit": "regla",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1.º Por los primeros quince años cotizados: el 50 por 100. 2.º Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. 3.º Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100",
+      "location": "art. 163.1 LGSS 1994"
+    },
+    {
+      "id": "2003",
+      "value": "50 % por los primeros 15 años; 3 % por cada año del 16.º al 25.º; 2 % por cada año desde el 26.º; máximo 100 %",
+      "unit": "regla",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1.º Por los primeros quince años cotizados: el 50 por 100. 2.º Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. 3.º Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100",
+      "location": "art. 163.1 LGSS 1994"
+    },
+    {
+      "id": "2004",
+      "value": "50 % por los primeros 15 años; 3 % por cada año del 16.º al 25.º; 2 % por cada año desde el 26.º; máximo 100 %",
+      "unit": "regla",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1.º Por los primeros quince años cotizados: el 50 por 100. 2.º Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. 3.º Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100",
+      "location": "art. 163.1 LGSS 1994"
+    },
+    {
+      "id": "2005",
+      "value": "50 % por los primeros 15 años; 3 % por cada año del 16.º al 25.º; 2 % por cada año desde el 26.º; máximo 100 %",
+      "unit": "regla",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1.º Por los primeros quince años cotizados: el 50 por 100. 2.º Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. 3.º Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100",
+      "location": "art. 163.1 LGSS 1994"
+    },
+    {
+      "id": "2006",
+      "value": "50 % por los primeros 15 años; 3 % por cada año del 16.º al 25.º; 2 % por cada año desde el 26.º; máximo 100 %",
+      "unit": "regla",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1.º Por los primeros quince años cotizados: el 50 por 100. 2.º Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. 3.º Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100",
+      "location": "art. 163.1 LGSS 1994"
+    },
+    {
+      "id": "2007",
+      "value": "50 % por los primeros 15 años; 3 % por cada año del 16.º al 25.º; 2 % por cada año desde el 26.º; máximo 100 %",
+      "unit": "regla",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1.º Por los primeros quince años cotizados: el 50 por 100. 2.º Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. 3.º Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100",
+      "location": "art. 163.1 LGSS 1994"
+    },
+    {
+      "id": "2008",
+      "value": "50 % por los primeros 15 años; 3 % por cada año del 16.º al 25.º; 2 % por cada año desde el 26.º; máximo 100 %",
+      "unit": "regla",
+      "period": "2008",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1.º Por los primeros quince años cotizados: el 50 por 100. 2.º Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. 3.º Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100",
+      "location": "art. 163.1 LGSS 1994"
+    },
+    {
+      "id": "2009",
+      "value": "50 % por los primeros 15 años; 3 % por cada año del 16.º al 25.º; 2 % por cada año desde el 26.º; máximo 100 %",
+      "unit": "regla",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1.º Por los primeros quince años cotizados: el 50 por 100. 2.º Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. 3.º Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100",
+      "location": "art. 163.1 LGSS 1994"
+    },
+    {
+      "id": "2010",
+      "value": "50 % por los primeros 15 años; 3 % por cada año del 16.º al 25.º; 2 % por cada año desde el 26.º; máximo 100 %",
+      "unit": "regla",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1.º Por los primeros quince años cotizados: el 50 por 100. 2.º Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. 3.º Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100",
+      "location": "art. 163.1 LGSS 1994"
+    },
+    {
+      "id": "2011",
+      "value": "50 % por los primeros 15 años; 3 % por cada año del 16.º al 25.º; 2 % por cada año desde el 26.º; máximo 100 %",
+      "unit": "regla",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1.º Por los primeros quince años cotizados: el 50 por 100. 2.º Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. 3.º Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100",
+      "location": "art. 163.1 LGSS 1994"
+    },
+    {
+      "id": "2012",
+      "value": "50 % por los primeros 15 años; 3 % por cada año del 16.º al 25.º; 2 % por cada año desde el 26.º; máximo 100 %",
+      "unit": "regla",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, Ley General de la Seguridad Social (texto consolidado, versión publicada el 31/12/2010)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&p=20101231&tn=0",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1.º Por los primeros quince años cotizados: el 50 por 100. 2.º Por cada año adicional de cotización, comprendido entre el decimosexto y el vigésimo quinto, ambos incluidos: el 3 por 100. 3.º Por cada año adicional de cotización, a partir del vigésimo sexto: el 2 por 100",
+      "location": "art. 163.1 LGSS 1994"
+    },
+    {
+      "id": "2013",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 163 y 0,19 % por cada uno de los 83 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2013 a 2019. | Por cada mes adicional de cotización entre los meses 1 y 163, el 0,21 por ciento y por cada uno de los 83 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2014",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 163 y 0,19 % por cada uno de los 83 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2013 a 2019. | Por cada mes adicional de cotización entre los meses 1 y 163, el 0,21 por ciento y por cada uno de los 83 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2015",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 163 y 0,19 % por cada uno de los 83 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2013 a 2019. | Por cada mes adicional de cotización entre los meses 1 y 163, el 0,21 por ciento y por cada uno de los 83 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2016",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 163 y 0,19 % por cada uno de los 83 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2013 a 2019. | Por cada mes adicional de cotización entre los meses 1 y 163, el 0,21 por ciento y por cada uno de los 83 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2017",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 163 y 0,19 % por cada uno de los 83 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2013 a 2019. | Por cada mes adicional de cotización entre los meses 1 y 163, el 0,21 por ciento y por cada uno de los 83 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2018",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 163 y 0,19 % por cada uno de los 83 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2013 a 2019. | Por cada mes adicional de cotización entre los meses 1 y 163, el 0,21 por ciento y por cada uno de los 83 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2019",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 163 y 0,19 % por cada uno de los 83 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2013 a 2019. | Por cada mes adicional de cotización entre los meses 1 y 163, el 0,21 por ciento y por cada uno de los 83 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2020",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 106 y 0,19 % por cada uno de los 146 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2020 a 2022. | Por cada mes adicional de cotización entre los meses 1 y 106, el 0,21 por ciento y por cada uno de los 146 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2021",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 106 y 0,19 % por cada uno de los 146 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2021",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2020 a 2022. | Por cada mes adicional de cotización entre los meses 1 y 106, el 0,21 por ciento y por cada uno de los 146 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2022",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 106 y 0,19 % por cada uno de los 146 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2020 a 2022. | Por cada mes adicional de cotización entre los meses 1 y 106, el 0,21 por ciento y por cada uno de los 146 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2023",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 49 y 0,19 % por cada uno de los 209 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2023 a 2026. | Por cada mes adicional de cotización entre los meses 1 y 49, el 0,21 por ciento y por cada uno de los 209 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2024",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 49 y 0,19 % por cada uno de los 209 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2023 a 2026. | Por cada mes adicional de cotización entre los meses 1 y 49, el 0,21 por ciento y por cada uno de los 209 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2025",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 49 y 0,19 % por cada uno de los 209 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2023 a 2026. | Por cada mes adicional de cotización entre los meses 1 y 49, el 0,21 por ciento y por cada uno de los 209 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2026",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,21 % por cada mes entre el 1 y el 49 y 0,19 % por cada uno de los 209 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Durante los años 2023 a 2026. | Por cada mes adicional de cotización entre los meses 1 y 49, el 0,21 por ciento y por cada uno de los 209 meses siguientes, el 0,19 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    },
+    {
+      "id": "2027",
+      "value": "50 % por los primeros 15 años; desde el año 16.º, 0,19 % por cada mes entre el 1 y el 248 y 0,18 % por cada uno de los 16 meses siguientes; máximo 100 %",
+      "unit": "regla",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "A partir del año 2027. | Por cada mes adicional de cotización entre los meses 1 y 248, el 0,19 por ciento y por cada uno de los 16 meses siguientes, el 0,18 por ciento.",
+      "location": "disposición transitoria 9.ª TRLGSS"
+    }
+  ]
+}

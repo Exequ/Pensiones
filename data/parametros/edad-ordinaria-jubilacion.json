@@ -1,0 +1,634 @@
+{
+  "tipo": "datos",
+  "id": "edad-ordinaria-jubilacion",
+  "title": "Edad ordinaria de jubilación (general)",
+  "description": "Edad exigida para la jubilación ordinaria en el Régimen General en cada año de jubilación, en meses de edad (780 = 65 años). Desde 2013 es la edad aplicable a quien no alcanza la carrera de cotización de la serie carrera-jubilacion-65; con esa carrera, la edad es 65 años. No incluye jubilaciones anticipadas ni edades reducidas.",
+  "data": [
+    {
+      "id": "2000",
+      "value": 780,
+      "unit": "meses de edad",
+      "period": "2000",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 16/07/1997 (en vigor desde el 05/08/1997)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=19970716",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "65 años. Edad única; no dependía de la carrera de cotización.",
+      "quote": "a) Haber cumplido sesenta y cinco años de edad.",
+      "location": "art. 161.1.a) LGSS 1994"
+    },
+    {
+      "id": "2001",
+      "value": 780,
+      "unit": "meses de edad",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 16/07/1997 (en vigor desde el 05/08/1997)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=19970716",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "65 años. Edad única; no dependía de la carrera de cotización.",
+      "quote": "a) Haber cumplido sesenta y cinco años de edad.",
+      "location": "art. 161.1.a) LGSS 1994"
+    },
+    {
+      "id": "2002",
+      "value": 780,
+      "unit": "meses de edad",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 31/12/2001 (en vigor desde el 01/01/2002)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20011231",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "65 años. Edad única; no dependía de la carrera de cotización.",
+      "quote": "a) Haber cumplido sesenta y cinco años de edad.",
+      "location": "art. 161.1.a) LGSS 1994"
+    },
+    {
+      "id": "2003",
+      "value": 780,
+      "unit": "meses de edad",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 13/07/2002 (en vigor desde el 14/07/2002)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20020713",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "65 años. Edad única; no dependía de la carrera de cotización.",
+      "quote": "a) Haber cumplido sesenta y cinco años de edad.",
+      "location": "art. 161.1.a) LGSS 1994"
+    },
+    {
+      "id": "2004",
+      "value": 780,
+      "unit": "meses de edad",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 11/12/2003 (en vigor desde el 01/01/2004)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20031211",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "65 años. Edad única; no dependía de la carrera de cotización.",
+      "quote": "a) Haber cumplido sesenta y cinco años de edad.",
+      "location": "art. 161.1.a) LGSS 1994"
+    },
+    {
+      "id": "2005",
+      "value": 780,
+      "unit": "meses de edad",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 11/12/2003 (en vigor desde el 01/01/2004)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20031211",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "65 años. Edad única; no dependía de la carrera de cotización.",
+      "quote": "a) Haber cumplido sesenta y cinco años de edad.",
+      "location": "art. 161.1.a) LGSS 1994"
+    },
+    {
+      "id": "2006",
+      "value": 780,
+      "unit": "meses de edad",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 11/12/2003 (en vigor desde el 01/01/2004)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20031211",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "65 años. Edad única; no dependía de la carrera de cotización.",
+      "quote": "a) Haber cumplido sesenta y cinco años de edad.",
+      "location": "art. 161.1.a) LGSS 1994"
+    },
+    {
+      "id": "2007",
+      "value": 780,
+      "unit": "meses de edad",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 11/12/2003 (en vigor desde el 01/01/2004)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20031211",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "65 años. Edad única; no dependía de la carrera de cotización.",
+      "quote": "a) Haber cumplido sesenta y cinco años de edad.",
+      "location": "art. 161.1.a) LGSS 1994"
+    },
+    {
+      "id": "2008",
+      "value": 780,
+      "unit": "meses de edad",
+      "period": "2008",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 05/12/2007 (en vigor desde el 01/01/2008)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20071205",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "65 años. Edad única; no dependía de la carrera de cotización.",
+      "quote": "a) Haber cumplido sesenta y cinco años de edad.",
+      "location": "art. 161.1.a) LGSS 1994"
+    },
+    {
+      "id": "2009",
+      "value": 780,
+      "unit": "meses de edad",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 05/12/2007 (en vigor desde el 01/01/2008)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20071205",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "65 años. Edad única; no dependía de la carrera de cotización.",
+      "quote": "a) Haber cumplido sesenta y cinco años de edad.",
+      "location": "art. 161.1.a) LGSS 1994"
+    },
+    {
+      "id": "2010",
+      "value": 780,
+      "unit": "meses de edad",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 05/12/2007 (en vigor desde el 01/01/2008)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20071205",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "65 años. Edad única; no dependía de la carrera de cotización.",
+      "quote": "a) Haber cumplido sesenta y cinco años de edad.",
+      "location": "art. 161.1.a) LGSS 1994"
+    },
+    {
+      "id": "2011",
+      "value": 780,
+      "unit": "meses de edad",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 05/12/2007 (en vigor desde el 01/01/2008)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20071205",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "65 años. Edad única; no dependía de la carrera de cotización.",
+      "quote": "a) Haber cumplido sesenta y cinco años de edad.",
+      "location": "art. 161.1.a) LGSS 1994"
+    },
+    {
+      "id": "2012",
+      "value": 780,
+      "unit": "meses de edad",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 05/12/2007 (en vigor desde el 01/01/2008)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20071205",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "65 años. Edad única; no dependía de la carrera de cotización.",
+      "quote": "a) Haber cumplido sesenta y cinco años de edad.",
+      "location": "art. 161.1.a) LGSS 1994"
+    },
+    {
+      "id": "2013",
+      "value": 781,
+      "unit": "meses de edad",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 35 años y 3 meses cotizados: 65 años y 1 mes. Con 35 años y 3 meses o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2013 | 35 años y 3 meses o más. | 65 años. | Menos de 35 años y 3 meses. | 65 años y 1 mes.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2014",
+      "value": 782,
+      "unit": "meses de edad",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 35 años y 6 meses cotizados: 65 años y 2 meses. Con 35 años y 6 meses o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2014 | 35 años y 6 meses o más. | 65 años. | Menos de 35 años y 6 meses. | 65 años y 2 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2015",
+      "value": 783,
+      "unit": "meses de edad",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 35 años y 9 meses cotizados: 65 años y 3 meses. Con 35 años y 9 meses o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2015 | 35 años y 9 meses o más. | 65 años. | Menos de 35 años y 9 meses. | 65 años y 3 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2016",
+      "value": 784,
+      "unit": "meses de edad",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 36 años cotizados: 65 años y 4 meses. Con 36 años o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2016 | 36 años o más. | 65 años. | Menos de 36 años. | 65 años y 4 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2017",
+      "value": 785,
+      "unit": "meses de edad",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 36 años y 3 meses cotizados: 65 años y 5 meses. Con 36 años y 3 meses o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2017 | 36 años y 3 meses o más. | 65 años. | Menos de 36 años y 3 meses. | 65 años y 5 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2018",
+      "value": 786,
+      "unit": "meses de edad",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 36 años y 6 meses cotizados: 65 años y 6 meses. Con 36 años y 6 meses o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2018 | 36 años y 6 meses o más. | 65 años. | Menos de 36 años y 6 meses. | 65 años y 6 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2019",
+      "value": 788,
+      "unit": "meses de edad",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 36 años y 9 meses cotizados: 65 años y 8 meses. Con 36 años y 9 meses o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2019 | 36 años y 9 meses o más. | 65 años. | Menos de 36 años y 9 meses. | 65 años y 8 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2020",
+      "value": 790,
+      "unit": "meses de edad",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 37 años cotizados: 65 años y 10 meses. Con 37 años o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2020 | 37 años o más. | 65 años. | Menos de 37 años. | 65 años y 10 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2021",
+      "value": 792,
+      "unit": "meses de edad",
+      "period": "2021",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 37 años y 3 meses cotizados: 66 años. Con 37 años y 3 meses o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2021 | 37 años y 3 meses o más. | 65 años. | Menos de 37 años y 3 meses. | 66 años.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2022",
+      "value": 794,
+      "unit": "meses de edad",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 37 años y 6 meses cotizados: 66 años y 2 meses. Con 37 años y 6 meses o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2022 | 37 años y 6 meses o más. | 65 años. | Menos de 37 años y 6 meses. | 66 años y 2 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2023",
+      "value": 796,
+      "unit": "meses de edad",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 37 años y 9 meses cotizados: 66 años y 4 meses. Con 37 años y 9 meses o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2023 | 37 años y 9 meses o más. | 65 años. | Menos de 37 años y 9 meses. | 66 años y 4 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2024",
+      "value": 798,
+      "unit": "meses de edad",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 38 años cotizados: 66 años y 6 meses. Con 38 años o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2024 | 38 años o más. | 65 años. | Menos de 38 años. | 66 años y 6 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2025",
+      "value": 800,
+      "unit": "meses de edad",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 38 años y 3 meses cotizados: 66 años y 8 meses. Con 38 años y 3 meses o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2025 | 38 años y 3 meses o más. | 65 años. | Menos de 38 años y 3 meses. | 66 años y 8 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2026",
+      "value": 802,
+      "unit": "meses de edad",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 38 años y 3 meses cotizados: 66 años y 10 meses. Con 38 años y 3 meses o más, 65 años (serie carrera-jubilacion-65).",
+      "quote": "2026 | 38 años y 3 meses o más. | 65 años. | Menos de 38 años y 3 meses. | 66 años y 10 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2027",
+      "value": 804,
+      "unit": "meses de edad",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad exigida con menos de 38 años y 6 meses cotizados: 67 años. Con 38 años y 6 meses o más, 65 años (serie carrera-jubilacion-65). Valor que rige «a partir del año 2027» según la DT 7.ª (calendario legal vigente).",
+      "quote": "A partir del año 2027 | 38 años y 6 meses o más. | 65 años. | Menos de 38 años y 6 meses. | 67 años.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    }
+  ]
+}
