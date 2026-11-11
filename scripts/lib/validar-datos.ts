@@ -7,6 +7,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import {
   ArchivoCronologia,
+  ArchivoMitos,
   ArchivoDatos,
   ArchivoPrestaciones,
   ArchivoTabla,
@@ -94,7 +95,9 @@ export function validarContenido(json: unknown, fichero: string): ErrorValidacio
         ? ArchivoPrestaciones
         : tipo === 'tabla'
           ? ArchivoTabla
-          : ArchivoDatos;
+          : tipo === 'mitos'
+            ? ArchivoMitos
+            : ArchivoDatos;
   const resultado = esquema.safeParse(json);
   if (!resultado.success) {
     for (const problema of resultado.error.issues) {
@@ -265,6 +268,55 @@ export async function validarAfirmaciones(
           ruta: `claims[${i}].datos[${j}]`,
           mensaje: `La referencia ${referencia} no existe en /data`,
         });
+      }
+    }
+  }
+  return errores;
+}
+
+/** Referencias («carpeta/fichero.json» o «carpeta/fichero.json#id») de un catálogo de afirmaciones circulantes. */
+function referenciasDeMitos(json: unknown): { ruta: string; referencia: string }[] {
+  const out: { ruta: string; referencia: string }[] = [];
+  if (!esObjeto(json) || json['tipo'] !== 'mitos' || !Array.isArray(json['mitos'])) return out;
+  json['mitos'].forEach((m, i) => {
+    if (!esObjeto(m)) return;
+    const lista = (v: unknown, ruta: string) => {
+      if (Array.isArray(v))
+        v.forEach((r, j) => {
+          if (typeof r === 'string') out.push({ ruta: `${ruta}[${j}]`, referencia: r });
+        });
+    };
+    lista(m['datos'], `mitos[${i}].datos`);
+    if (Array.isArray(m['definiciones']))
+      m['definiciones'].forEach((d, k) => {
+        if (esObjeto(d)) lista(d['datos'], `mitos[${i}].definiciones[${k}].datos`);
+      });
+  });
+  return out;
+}
+
+/** Comprueba que cada referencia de los catálogos de afirmaciones circulantes existe en /data. */
+export async function validarReferenciasMitos(
+  directorio: string,
+  raiz = process.cwd(),
+): Promise<ErrorValidacion[]> {
+  const errores: ErrorValidacion[] = [];
+  const carpeta = path.join(directorio, 'mitos');
+  if (!existsSync(carpeta)) return errores;
+  const cache = new Map<string, Set<string> | null>();
+  for (const fichero of await listarJson(carpeta)) {
+    const relativo = path.relative(raiz, fichero);
+    const leido = await leerJson(fichero, relativo);
+    if ('error' in leido) continue;
+    for (const { ruta, referencia } of referenciasDeMitos(leido.json)) {
+      const [rutaDato = '', id] = referencia.split('#');
+      if (!cache.has(rutaDato)) {
+        const dato = await leerJson(path.join(directorio, rutaDato), rutaDato);
+        cache.set(rutaDato, 'error' in dato ? null : idsDeArchivo(dato.json));
+      }
+      const ids = cache.get(rutaDato);
+      if (ids === null || ids === undefined || (id !== undefined && !ids.has(id))) {
+        errores.push({ fichero: relativo, ruta, mensaje: `La referencia ${referencia} no existe en /data` });
       }
     }
   }

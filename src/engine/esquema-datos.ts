@@ -232,6 +232,47 @@ export const RegistroAfirmaciones = z
   });
 
 // ---------------------------------------------------------------------------
+// Catálogo de afirmaciones circulantes («mitos»): datos y definiciones, sin veredicto
+// ---------------------------------------------------------------------------
+
+/** Referencia a un fichero de /data («carpeta/fichero.json») o a un elemento («carpeta/fichero.json#id»). */
+export const PATRON_REFERENCIA_FICHERO =
+  /^[a-z0-9-]+\/[a-z0-9-]+\.json(?:#[a-z0-9]+(?:[-_.][a-z0-9]+)*)?$/;
+
+const ReferenciaFichero = z.string().regex(PATRON_REFERENCIA_FICHERO, {
+  error: 'Referencia con formato no válido (carpeta/fichero.json o carpeta/fichero.json#id)',
+});
+
+export const Definicion = z.strictObject({
+  nombre: textoObligatorio('definicion.nombre'),
+  /** Cómo se mide, con las palabras de la fuente o una explicación neutral. */
+  literal: textoObligatorio('definicion.literal'),
+  datos: z.array(ReferenciaFichero).optional(),
+});
+
+export const Mito = z.strictObject({
+  id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
+  /** Afirmación tal como circula, formulada de forma neutral. */
+  enunciado: textoObligatorio('enunciado'),
+  datos: z.array(ReferenciaFichero).min(1, { error: 'Cada afirmación necesita datos de /data' }),
+  definiciones: z.array(Definicion).min(1, { error: 'Cada afirmación necesita definiciones alternativas' }),
+  noSePuedeConcluir: z.array(textoObligatorio('noSePuedeConcluir')).min(1),
+  /** Datos que harían falta y no están en /data (se anotan también en docs/PENDIENTE_DATOS.md). */
+  faltan: z.array(textoObligatorio('faltan')).optional(),
+  revisionActuarial: z.literal('pendiente'),
+  preguntaActuarial: textoObligatorio('preguntaActuarial'),
+});
+
+export const ArchivoMitos = z.strictObject({
+  tipo: z.literal('mitos'),
+  id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
+  title: textoObligatorio('title'),
+  description: textoObligatorio('description'),
+  mitos: z.array(Mito).min(10, { error: 'El catálogo debe tener entre 10 y 12 afirmaciones' }).max(12),
+});
+export type ArchivoMitos = z.infer<typeof ArchivoMitos>;
+
+// ---------------------------------------------------------------------------
 // Normativa: cronología de reformas y reglas de prestaciones
 // ---------------------------------------------------------------------------
 
