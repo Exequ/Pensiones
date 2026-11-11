@@ -182,8 +182,6 @@ for fam, datos in SALIDA.items():
     fusionar('parametros', f'pension-minima-{fam}', datos, TIT[fam],
              'Cuantías mínimas anuales del Anexo I de la norma de revalorización de cada año (modalidad contributiva), por clase de pensión y situación familiar. Identificador: año-clase-situación.')
 
-with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'pendientes_revalorizacion.json'), 'w', encoding='utf-8') as f:
-    json.dump(PEND, f, ensure_ascii=False, indent=1)
 print('PENDIENTES', len(PEND))
 for p in PEND:
     print(' ', p)
