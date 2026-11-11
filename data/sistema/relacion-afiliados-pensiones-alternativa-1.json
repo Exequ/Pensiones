@@ -1,0 +1,312 @@
+{
+  "tipo": "datos",
+  "id": "relacion-afiliados-pensiones-alternativa-1",
+  "title": "Relación afiliados/pensiones, Alternativa 1: afiliados a último día de diciembre entre pensiones a 1 de enero siguiente (2008-2025)",
+  "description": "Quinta definición de la relación entre afiliados y pensiones, que se suma a las cuatro de relacion-afiliados-pensiones sin sustituirlas: afiliados a último día de diciembre del año t entre las pensiones contributivas en vigor a 1 de enero de t+1 (y entre los pensionistas, solo para t = 2025). Literal: «afiliados en alta a último día del mes de diciembre ÷ número de pensiones contributivas en vigor el día 1 del mes de enero siguiente». El numerador es un stock a una fecha y el denominador otro stock a la fecha inmediatamente posterior, por lo que no hay desfase de medio año entre ambos.",
+  "series": [
+    {
+      "id": "afiliados-ultimo-dia-diciembre",
+      "title": "Afiliados en alta a último día de diciembre, total sistema",
+      "unit": "afiliados",
+      "source": {
+        "title": "Afiliados último día: serie de afiliados a último día por regímenes 1985-septiembre 2026 (fila de diciembre, columna TOTAL SISTEMA)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST305/EST306",
+        "docId": "SS-afiliados-ultimo-dia"
+      },
+      "confidence": "alta",
+      "notes": "Dato publicado de la serie «Afiliados último día» (total sistema, incluye el Sistema Especial de Empleados de Hogar y los regímenes especiales; no es la afiliación media mensual).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 18305613
+        },
+        {
+          "period": "2009",
+          "value": 17640018
+        },
+        {
+          "period": "2010",
+          "value": 17478095
+        },
+        {
+          "period": "2011",
+          "value": 17111792
+        },
+        {
+          "period": "2012",
+          "value": 16332488
+        },
+        {
+          "period": "2013",
+          "value": 16258042
+        },
+        {
+          "period": "2014",
+          "value": 16651884
+        },
+        {
+          "period": "2015",
+          "value": 17180590
+        },
+        {
+          "period": "2016",
+          "value": 17741897
+        },
+        {
+          "period": "2017",
+          "value": 18331107
+        },
+        {
+          "period": "2018",
+          "value": 18914563
+        },
+        {
+          "period": "2019",
+          "value": 19261636
+        },
+        {
+          "period": "2020",
+          "value": 18904852
+        },
+        {
+          "period": "2021",
+          "value": 19703812
+        },
+        {
+          "period": "2022",
+          "value": 20159317
+        },
+        {
+          "period": "2023",
+          "value": 20733042
+        },
+        {
+          "period": "2024",
+          "value": 21201126
+        },
+        {
+          "period": "2025",
+          "value": 21679951
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "pensiones-vigor-1-enero-siguiente",
+      "title": "Pensiones contributivas en vigor a 1 de enero del año siguiente, total sistema",
+      "unit": "pensiones",
+      "source": {
+        "title": "Pensiones contributivas en vigor (fichero REG de enero de cada año: número de pensiones, total sistema)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24",
+        "docId": "SS-REG-enero"
+      },
+      "confidence": "alta",
+      "notes": "Dato publicado del fichero REG de enero de t+1 (número de pensiones, total del sistema). Período = t (año anterior al del fichero).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 8473927.0
+        },
+        {
+          "period": "2009",
+          "value": 8614876.0
+        },
+        {
+          "period": "2010",
+          "value": 8749054.0
+        },
+        {
+          "period": "2011",
+          "value": 8871435.0
+        },
+        {
+          "period": "2012",
+          "value": 9008348.0
+        },
+        {
+          "period": "2013",
+          "value": 9154617.0
+        },
+        {
+          "period": "2014",
+          "value": 9282732.0
+        },
+        {
+          "period": "2015",
+          "value": 9353988.0
+        },
+        {
+          "period": "2016",
+          "value": 9465328.0
+        },
+        {
+          "period": "2017",
+          "value": 9572422.0
+        },
+        {
+          "period": "2018",
+          "value": 9695870.0
+        },
+        {
+          "period": "2019",
+          "value": 9801016.0
+        },
+        {
+          "period": "2020",
+          "value": 9811067.0
+        },
+        {
+          "period": "2021",
+          "value": 9922000.0
+        },
+        {
+          "period": "2022",
+          "value": 10009106.0
+        },
+        {
+          "period": "2023",
+          "value": 10132479.0
+        },
+        {
+          "period": "2024",
+          "value": 10294786.0
+        },
+        {
+          "period": "2025",
+          "value": 10452674.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "afiliados-por-pension-alternativa-1",
+      "title": "Alternativa 1: afiliados a último día de diciembre ÷ pensiones en vigor a 1 de enero siguiente",
+      "unit": "afiliados por pensión",
+      "source": {
+        "title": "Afiliados último día: serie de afiliados a último día por regímenes 1985-septiembre 2026 (fila de diciembre, columna TOTAL SISTEMA)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST305/EST306",
+        "docId": "SS-afiliados-ultimo-dia"
+      },
+      "confidence": "media",
+      "notes": "Período t = año de los afiliados (último día de diciembre de t); las pensiones y los pensionistas son los vigentes a 1 de enero de t+1. Dato derivado (cociente) a partir de datos publicados. Elimina el desfase temporal de las cuatro definiciones anteriores (afiliados medios o de diciembre frente a pensiones a 1 de diciembre).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 2.1602
+        },
+        {
+          "period": "2009",
+          "value": 2.0476
+        },
+        {
+          "period": "2010",
+          "value": 1.9977
+        },
+        {
+          "period": "2011",
+          "value": 1.9289
+        },
+        {
+          "period": "2012",
+          "value": 1.813
+        },
+        {
+          "period": "2013",
+          "value": 1.7759
+        },
+        {
+          "period": "2014",
+          "value": 1.7939
+        },
+        {
+          "period": "2015",
+          "value": 1.8367
+        },
+        {
+          "period": "2016",
+          "value": 1.8744
+        },
+        {
+          "period": "2017",
+          "value": 1.915
+        },
+        {
+          "period": "2018",
+          "value": 1.9508
+        },
+        {
+          "period": "2019",
+          "value": 1.9653
+        },
+        {
+          "period": "2020",
+          "value": 1.9269
+        },
+        {
+          "period": "2021",
+          "value": 1.9859
+        },
+        {
+          "period": "2022",
+          "value": 2.0141
+        },
+        {
+          "period": "2023",
+          "value": 2.0462
+        },
+        {
+          "period": "2024",
+          "value": 2.0594
+        },
+        {
+          "period": "2025",
+          "value": 2.0741
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "afiliados-por-pensionista-alternativa-1",
+      "title": "Alternativa 1: afiliados a último día de diciembre ÷ pensionistas de enero siguiente",
+      "unit": "afiliados por pensionista",
+      "source": {
+        "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas», fila de enero de 2026)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271",
+        "docId": "SS-PTAS"
+      },
+      "confidence": "media",
+      "notes": "Período t = año de los afiliados (último día de diciembre de t); las pensiones y los pensionistas son los vigentes a 1 de enero de t+1. Dato derivado (cociente) a partir de datos publicados. Solo existe un año: la Seguridad Social publica el número de pensionistas por mes únicamente para el año en curso (2026); para años anteriores solo el de diciembre (ver docs/PENDIENTE_DATOS.md).",
+      "points": [
+        {
+          "period": "2025",
+          "value": 2.2929
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "pensionistas-enero-2026",
+      "title": "Pensionistas (personas) de enero de 2026",
+      "unit": "personas",
+      "source": {
+        "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas», fila de enero de 2026)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271",
+        "docId": "SS-PTAS"
+      },
+      "confidence": "alta",
+      "notes": "Dato publicado: hoja «Pnes y ptas», fila de enero de 2026. Período = 2025 por coherencia con la serie de afiliados (año t del cociente).",
+      "points": [
+        {
+          "period": "2025",
+          "value": 9455429
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}
