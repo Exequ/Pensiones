@@ -1,0 +1,25 @@
+{
+  "tipo": "datos",
+  "id": "defunciones-2025-estimadas",
+  "title": "Defunciones de 2025: estimación semanal del INE (EDeS)",
+  "description": "Defunciones totales de 2025 estimadas por el INE a partir de las defunciones semanales (dato provisional de otra estadística que el Movimiento Natural de la Población).",
+  "data": [
+    {
+      "id": "defunciones-2025-acumuladas-edes",
+      "value": 443314.0,
+      "unit": "personas",
+      "period": "2025",
+      "source": {
+        "title": "Estimación del número de defunciones semanales (EDeS): defunciones semanales y acumuladas, total nacional (tabla 35177)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=35177",
+        "docId": "INE-35177"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Defunciones acumuladas a la semana SM52 de 2025 según las estimaciones semanales del INE (tipo de dato «Estimados»), todas las edades y ambos sexos. No son las defunciones definitivas del Movimiento Natural de la Población, que aún no se publican para 2025. La descarga solo cubre las últimas 60 semanas.",
+      "quote": "Total Nacional. Total. Todas las edades. Acumulado en lo que va de año: 443314.0 (SM52, 2025)",
+      "location": "tabla 35177, serie «Acumulado en lo que va de año»"
+    }
+  ]
+}

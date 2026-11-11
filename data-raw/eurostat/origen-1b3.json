@@ -54,5 +54,19 @@
   "web": "https://ec.europa.eu/eurostat/databrowser/view/irt_lt_mcby_a/default/table?lang=en",
   "fetchedAt": "2026-11-11",
   "sha256": "88a54883744e83913ea63caf87118ac3dc6ea9a57cd9c33792a73f2ba433c56e"
+ },
+ "demo_magec_ES": {
+  "dataset": "demo_magec",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_magec?format=JSON&lang=EN&geo=ES",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/demo_magec/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "ce27ac0be033477ad11e7ced626e606e497cc4e2494a42fecfb6fdb3d9b24b3e"
+ },
+ "demo_mager_ES": {
+  "dataset": "demo_mager",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_mager?format=JSON&lang=EN&geo=ES",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/demo_mager/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "1622bf78328c545ef3069f9e3611ac00c3775b795519de2b28a2e0da33a2f547"
  }
 }

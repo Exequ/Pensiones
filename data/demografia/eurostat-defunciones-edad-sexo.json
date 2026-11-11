@@ -1,0 +1,44 @@
+{
+  "tipo": "tabla",
+  "id": "eurostat-defunciones-edad-sexo",
+  "title": "Defunciones por edad y sexo, España (Eurostat, demo_magec, 1960-2024)",
+  "description": "Defunciones por edad en años cumplidos al fallecer (0 = menores de un año; 100 = «100 y más») y sexo. Los datos son los que el INE envía a Eurostat; las defunciones de edad desconocida (UNK) no se incluyen en las edades.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Edad (0 = menores de un año; 100 = «100 y más»)",
+      "unidad": "años"
+    },
+    {
+      "id": "defunciones",
+      "descripcion": "Defunciones",
+      "unidad": "personas"
+    }
+  ],
+  "filas": 15150,
+  "source": {
+    "title": "Defunciones por edad en años cumplidos al fallecer (0 = menores de un año; 100 = «100 y más») y sexo",
+    "publisher": "Eurostat",
+    "url": "https://ec.europa.eu/eurostat/databrowser/view/demo_magec/default/table?lang=en",
+    "docId": "eurostat-demo_magec"
+  },
+  "origenes": [
+    {
+      "period": "2025",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_magec?format=JSON&lang=EN&geo=ES",
+      "sha256": "ce27ac0be033477ad11e7ced626e606e497cc4e2494a42fecfb6fdb3d9b24b3e"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta"
+}

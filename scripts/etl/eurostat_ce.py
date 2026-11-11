@@ -22,6 +22,8 @@ CONJUNTOS = {  # nombre del fichero: (dataset, filtros extra)
     'proj_25nanmig_ES_BSL': ('proj_25nanmig', '&projection=BSL'),
     'nama_10_gdp_ES_B1GQ': ('nama_10_gdp', '&na_item=B1GQ'),
     'irt_lt_mcby_a_ES': ('irt_lt_mcby_a', ''),
+    'demo_magec_ES': ('demo_magec', ''),
+    'demo_mager_ES': ('demo_mager', ''),
 }
 
 
