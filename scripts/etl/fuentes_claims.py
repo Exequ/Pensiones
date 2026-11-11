@@ -19,7 +19,7 @@ def anota(src, fichero, fecha=HOY):
 
 claims = []
 huellas = []
-SERIES_CLAIM = {'pensionistas', 'pensiones', 'total-ambos', 'jubilacion-ambos', 'media-anual-total-sistema', 'diciembre-total-sistema', 'afiliados-diciembre-por-pensionista', 'afiliados-media-anual-por-pension', 'edad-media-altas-jubilacion'}
+SERIES_CLAIM = {'pensionistas', 'pensiones', 'total-ambos', 'jubilacion-ambos', 'media-anual-total-sistema', 'diciembre-total-sistema', 'afiliados-diciembre-por-pensionista', 'afiliados-media-anual-por-pension', 'edad-media-altas-jubilacion', 'valor-fin-ano', 'saldo-presupuestario-no-financiero', 'b9-mio-eur', 'pasivos-financieros', 'transferencias-estado-corrientes'}
 
 
 def añade(id_, texto, ubic, datos, src, conf):

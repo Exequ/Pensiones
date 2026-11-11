@@ -1,0 +1,49 @@
+{
+  "tipo": "datos",
+  "id": "mei-destino",
+  "title": "Destino de la cotización finalista del MEI (art. 127 bis TRLGSS)",
+  "description": "Indicadores legales sobre el destino del Mecanismo de Equidad Intergeneracional.",
+  "data": [
+    {
+      "id": "destino-fondo-reserva",
+      "value": 1,
+      "unit": "indicador (1 = la recaudación del MEI nutre el Fondo de Reserva)",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "El MEI es una cotización finalista, no computable a efectos de prestaciones, cuya recaudación nutre el Fondo de Reserva. Las dotaciones efectivas al Fondo con cargo al MEI están en data/sistema/fondo-reserva-anual.json y la recaudación en data/sistema/presupuesto-ss-ejecucion.json (concepto «MECANISMO DE EQUIDAD INTERGENERACIONAL»).",
+      "quote": "una cotización finalista aplicable en todos los regímenes y en todos los supuestos en los que se cotice por la contingencia de jubilación, que no será computable a efectos de prestaciones y que nutrirá el Fondo de Reserva de la Seguridad Social",
+      "location": "art. 127 bis.1 TRLGSS (art. único.16 RDL 2/2023); DT 43.ª: efectos del 01/01/2023 al 31/12/2050",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "no-computable-prestaciones",
+      "value": 1,
+      "unit": "indicador (1 = no computa para prestaciones)",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "que no será computable a efectos de prestaciones",
+      "location": "art. 127 bis.1 TRLGSS"
+    }
+  ]
+}

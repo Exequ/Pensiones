@@ -117,3 +117,51 @@ Resultado: **129 de 129** contrastes con segunda fuente coinciden.
 | `actualizacion-bases`              | 8     | 2 de 2                       | BOE-A-2023-6967                                    | 2010-meses-nominales, 2010-mes-indice-referencia, 2013-meses-nominales, 2013-mes-indice-referencia, 2016-meses-nominales, 2016-mes-indice-referencia |
 
 Sin segunda fuente: la versión de 2010 de la integración de lagunas y las versiones de 2010, 2013 y 2016 de la actualización de bases (cada una consta solo en su texto consolidado; los textos de 2010 y 2013 coinciden entre sí en los 24 meses nominales), el suelo del art. 58.3 y los indicadores de aplicación de la revalorización (el RDL 2/2023 no modificó el apartado 3), y el factor sobre la mínima del art. 58.2.
+
+## Fase 1B-2: financiación
+
+Fecha: 2026-11-11. Método: cada dato clave se contrasta con **otra publicación** de la misma fuente oficial (la liquidación del presupuesto frente a la ejecución a diciembre; el fichero REG frente a la tabla por edades; la identidad B.9 = TR − TE de Eurostat). No hay segunda fuente independiente: la IGAE, la AIReF y Hacienda no son accesibles desde el entorno (`docs/DESCARGAS_MANUALES.md`). Además, el Fondo de Reserva se genera cruzando tres informes a las Cortes que se solapan (2017 en los tres; 2018-2024 en dos) y el proceso falla si alguna cifra difiere: no hubo diferencias.
+
+Resultado: **37 de 37** contrastes coinciden.
+
+| Dato                                                                          | Valor      | Segunda publicación                     | Valor      | Coincide |
+| ----------------------------------------------------------------------------- | ---------- | --------------------------------------- | ---------- | -------- |
+| Cotizaciones sociales (derechos reconocidos netos), 2020                      | 119.952,25 | Liquidación del presupuesto (99SISTEMA) | 119.952,25 | sí       |
+| Transferencias corrientes, ingresos (derechos reconocidos netos), 2020        | 45.577,83  | Liquidación del presupuesto (99SISTEMA) | 45.577,82  | sí       |
+| Pasivos financieros, ingresos (derechos reconocidos netos), 2020              | 30.330,09  | Liquidación del presupuesto (99SISTEMA) | 30.330,09  | sí       |
+| Total ingresos (derechos reconocidos netos), 2020                             | 199.700,90 | Liquidación del presupuesto (99SISTEMA) | 199.700,89 | sí       |
+| Transferencias corrientes, gastos (obligaciones reconocidas), 2020            | 175.900,44 | Liquidación del presupuesto (99SISTEMA) | 175.900,44 | sí       |
+| Total gastos (obligaciones reconocidas), 2020                                 | 182.023,57 | Liquidación del presupuesto (99SISTEMA) | 182.023,56 | sí       |
+| Cotizaciones sociales (derechos reconocidos netos), 2021                      | 131.856,51 | Liquidación del presupuesto (99SISTEMA) | 131.856,51 | sí       |
+| Transferencias corrientes, ingresos (derechos reconocidos netos), 2021        | 48.002,14  | Liquidación del presupuesto (99SISTEMA) | 48.002,13  | sí       |
+| Pasivos financieros, ingresos (derechos reconocidos netos), 2021              | 13.830,09  | Liquidación del presupuesto (99SISTEMA) | 13.830,09  | sí       |
+| Total ingresos (derechos reconocidos netos), 2021                             | 194.796,62 | Liquidación del presupuesto (99SISTEMA) | 194.796,60 | sí       |
+| Transferencias corrientes, gastos (obligaciones reconocidas), 2021            | 188.028,68 | Liquidación del presupuesto (99SISTEMA) | 188.028,68 | sí       |
+| Total gastos (obligaciones reconocidas), 2021                                 | 192.149,13 | Liquidación del presupuesto (99SISTEMA) | 192.149,13 | sí       |
+| Cotizaciones sociales (derechos reconocidos netos), 2022                      | 140.247,68 | Liquidación del presupuesto (99SISTEMA) | 140.247,68 | sí       |
+| Transferencias corrientes, ingresos (derechos reconocidos netos), 2022        | 42.696,95  | Liquidación del presupuesto (99SISTEMA) | 42.696,95  | sí       |
+| Pasivos financieros, ingresos (derechos reconocidos netos), 2022              | 6.981,59   | Liquidación del presupuesto (99SISTEMA) | 6.981,59   | sí       |
+| Total ingresos (derechos reconocidos netos), 2022                             | 193.767,30 | Liquidación del presupuesto (99SISTEMA) | 193.767,29 | sí       |
+| Transferencias corrientes, gastos (obligaciones reconocidas), 2022            | 187.092,17 | Liquidación del presupuesto (99SISTEMA) | 187.092,17 | sí       |
+| Total gastos (obligaciones reconocidas), 2022                                 | 194.063,82 | Liquidación del presupuesto (99SISTEMA) | 194.063,82 | sí       |
+| Cotizaciones sociales (derechos reconocidos netos), 2023                      | 154.399,60 | Liquidación del presupuesto (99SISTEMA) | 154.399,60 | sí       |
+| Transferencias corrientes, ingresos (derechos reconocidos netos), 2023        | 43.985,97  | Liquidación del presupuesto (99SISTEMA) | 43.985,97  | sí       |
+| Pasivos financieros, ingresos (derechos reconocidos netos), 2023              | 10.003,81  | Liquidación del presupuesto (99SISTEMA) | 10.003,81  | sí       |
+| Total ingresos (derechos reconocidos netos), 2023                             | 211.536,47 | Liquidación del presupuesto (99SISTEMA) | 211.536,47 | sí       |
+| Transferencias corrientes, gastos (obligaciones reconocidas), 2023            | 204.092,62 | Liquidación del presupuesto (99SISTEMA) | 204.092,62 | sí       |
+| Total gastos (obligaciones reconocidas), 2023                                 | 213.341,31 | Liquidación del presupuesto (99SISTEMA) | 213.341,31 | sí       |
+| Cotizaciones sociales (derechos reconocidos netos), 2024                      | 165.577,07 | Liquidación del presupuesto (99SISTEMA) | 165.577,07 | sí       |
+| Transferencias corrientes, ingresos (derechos reconocidos netos), 2024        | 48.120,85  | Liquidación del presupuesto (99SISTEMA) | 48.120,85  | sí       |
+| Pasivos financieros, ingresos (derechos reconocidos netos), 2024              | 10.003,81  | Liquidación del presupuesto (99SISTEMA) | 10.003,81  | sí       |
+| Total ingresos (derechos reconocidos netos), 2024                             | 228.473,92 | Liquidación del presupuesto (99SISTEMA) | 228.473,92 | sí       |
+| Transferencias corrientes, gastos (obligaciones reconocidas), 2024            | 220.480,34 | Liquidación del presupuesto (99SISTEMA) | 220.480,34 | sí       |
+| Total gastos (obligaciones reconocidas), 2024                                 | 231.866,86 | Liquidación del presupuesto (99SISTEMA) | 231.866,86 | sí       |
+| Pensiones en vigor octubre 2026, por edad, clase «total», total               | 10.565.782 | Fichero REG del mismo mes (por clase)   | 10.565.782 | sí       |
+| Pensiones en vigor octubre 2026, por edad, clase «incapacidad», total         | 1.062.509  | Fichero REG del mismo mes (por clase)   | 1.062.509  | sí       |
+| Pensiones en vigor octubre 2026, por edad, clase «jubilacion», total          | 6.777.927  | Fichero REG del mismo mes (por clase)   | 6.777.927  | sí       |
+| Pensiones en vigor octubre 2026, por edad, clase «viudedad», total            | 2.344.467  | Fichero REG del mismo mes (por clase)   | 2.344.467  | sí       |
+| Pensiones en vigor octubre 2026, por edad, clase «orfandad», total            | 333.841    | Fichero REG del mismo mes (por clase)   | 333.841    | sí       |
+| Pensiones en vigor octubre 2026, por edad, clase «favor-familiares», total    | 47.038     | Fichero REG del mismo mes (por clase)   | 47.038     | sí       |
+| Eurostat S.1314: B.9 = ingresos totales − gastos totales (26 años, 2000-2025) | 26         | Series TR y TE del mismo conjunto       | 26         | sí       |
+
+Comprobaciones internas adicionales (`scripts/coherencia-financiacion.test.ts`): ingresos y gastos igual a la suma de operaciones, cotizaciones por régimen igual al total, pensiones por clase igual a «SUMA DE PENSIONES», acumulados trimestrales crecientes, valor del Fondo igual a dotaciones + rendimientos + disposiciones, pasivos financieros igual al importe autorizado por las leyes de PGE de 2021-2023 y razón entre gasto en pensiones y número × pensión media × 14.

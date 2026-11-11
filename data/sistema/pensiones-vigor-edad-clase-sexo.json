@@ -1,0 +1,54 @@
+{
+  "tipo": "tabla",
+  "id": "pensiones-vigor-edad-clase-sexo",
+  "title": "Pensiones contributivas en vigor a 1 de 10/2026 por grupo de edad, clase y sexo (total sistema)",
+  "description": "Número de pensiones y pensión media mensual por grupo de edad quinquenal del pensionista, clase de pensión y sexo, a la fecha indicada. «ambos» es la columna «Ambos sexos» de la fuente (incluye sexo no consta). Foto de un único mes: el portal solo publica por edades el mes más reciente.",
+  "columnas": [
+    {
+      "id": "mes",
+      "descripcion": "Mes de la foto (AAAA-MM), pensiones a día 1",
+      "unidad": null
+    },
+    {
+      "id": "grupo_edad",
+      "descripcion": "Grupo de edad (0-4, 5-9, …, total, no-consta)",
+      "unidad": null
+    },
+    {
+      "id": "clase",
+      "descripcion": "total, incapacidad, jubilacion, viudedad, orfandad o favor-familiares",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "numero",
+      "descripcion": "Número de pensiones en vigor",
+      "unidad": "pensiones"
+    },
+    {
+      "id": "pension_media_eur_mes",
+      "descripcion": "Pensión media mensual",
+      "unidad": "euros/mes"
+    }
+  ],
+  "filas": 302,
+  "source": {
+    "title": "Pensiones contributivas en vigor: por edades (total sistema)",
+    "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+    "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+  },
+  "origenes": [
+    {
+      "period": "2026",
+      "url": "https://www.seg-social.es/wps/wcm/connect/wss/9a130d7f-83d3-4009-aece-d56ab3b81aa0/ED202610.xlsx",
+      "sha256": "f7ec7f2afa7b1aff64d71e7c467c4e01db754c3e50097c8b1d008fe6e3591ddd"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Solo un mes (el último publicado): el histórico por edades no está en el portal (ver docs/PENDIENTE_DATOS.md). La edad es la del pensionista en la fecha, no la de acceso a la pensión."
+}

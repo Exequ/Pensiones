@@ -1,0 +1,229 @@
+{
+  "tipo": "tabla",
+  "id": "presupuesto-ss-ejecucion",
+  "title": "Ejecución del presupuesto del Sistema de la Seguridad Social, acumulada a fin de trimestre (2018 en adelante), en millones de euros",
+  "description": "Ingresos (derechos reconocidos netos y recaudación) y gastos (obligaciones reconocidas y pagos) del Sistema de la Seguridad Social por clasificación económica, acumulados hasta fin de marzo (T1), junio (T2), septiembre (T3) y diciembre (T4; T4 es el año completo). «ingresos» y «gastos» son los capítulos; las demás tablas desarrollan el capítulo 4 (transferencias corrientes, con las pensiones por clase) y el capítulo 1 de ingresos. «columna»: «principal» es el ejercicio del propio fichero; «comparativa» es el mismo periodo del ejercicio anterior tal como figura en el fichero del año siguiente (solo si no hay fichero principal). «definitivo»: «sí» si el fichero se titula «Definitivo». Los conceptos conservan los nombres de la fuente, que cambian entre años (por ejemplo, partidas derivadas de la DANA en 2024-2025).",
+  "columnas": [
+    {
+      "id": "ejercicio",
+      "descripcion": "Ejercicio presupuestario",
+      "unidad": null
+    },
+    {
+      "id": "periodo",
+      "descripcion": "Periodo de cierre de la ejecución acumulada (AAAA-T1..T4)",
+      "unidad": null
+    },
+    {
+      "id": "tabla",
+      "descripcion": "ingresos, ingresos-cap1-cap4, gastos, gastos-cap4 o gastos-cap4-no-contributivas",
+      "unidad": null
+    },
+    {
+      "id": "concepto",
+      "descripcion": "Concepto de la clasificación económica, tal como lo nombra la fuente",
+      "unidad": null
+    },
+    {
+      "id": "columna",
+      "descripcion": "principal o comparativa",
+      "unidad": null
+    },
+    {
+      "id": "definitivo",
+      "descripcion": "sí o no (fichero «Definitivo»); vacío en las comparativas",
+      "unidad": null
+    },
+    {
+      "id": "prevision_o_presupuesto_meur",
+      "descripcion": "Previsiones de ingresos (ingresos) o presupuesto total (gastos)",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "derechos_u_obligaciones_meur",
+      "descripcion": "Derechos reconocidos netos (ingresos) u obligaciones reconocidas (gastos)",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "recaudacion_o_pagos_meur",
+      "descripcion": "Recaudación neta (ingresos) o pagos realizados (gastos)",
+      "unidad": "millones de euros"
+    }
+  ],
+  "filas": 3328,
+  "source": {
+    "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+    "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+    "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+  },
+  "origenes": [
+    {
+      "period": "2018",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Septiembre_2018.xlsx",
+      "sha256": "7fef0669b4b8db9b4aafa3e010316b076bc859ddfbd03450be186924c819a3e8"
+    },
+    {
+      "period": "2018",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Diciembre_2018.xlsx",
+      "sha256": "0376ed8f3c5ce670c999a27c18b0e5ca9c8d3fc7ebcac55a813db9a81781e707"
+    },
+    {
+      "period": "2019",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Marzo_2019.xlsx",
+      "sha256": "87951a6e6148f535d2c01f4e46bba999deae1655efea234c18009307892d5cfa"
+    },
+    {
+      "period": "2019",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Junio_2019.xlsx",
+      "sha256": "5c20d28ef40dfbad91990eb0b36fa97031c5a4213d3fe0fee433f5b68d1d81db"
+    },
+    {
+      "period": "2019",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Septiembre_2019.xlsx",
+      "sha256": "4d8ca4d473dff32f3e95f3554152b5474e1f147e4b18f31a331e9e197cf7f7c3"
+    },
+    {
+      "period": "2019",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_DiciembreDefinitivo_2019.xlsx",
+      "sha256": "0ae8b0368aada778e5aeab1eba9bab81f4de3fbd7c1738e557b9cef7f64e4b5b"
+    },
+    {
+      "period": "2020",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Marzo_2020.xlsx",
+      "sha256": "12554801a2b9bd9a7406d228e30d2e77e8865c6982e6910db2384947e7fb501a"
+    },
+    {
+      "period": "2020",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Junio_2020.xlsx",
+      "sha256": "f742e12b8b69d243b18b81ff20a206a7726dbc7f17c9f4669e4f67f22c981952"
+    },
+    {
+      "period": "2020",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Septiembre_2020.xlsx",
+      "sha256": "5528ba86d57f0add19ea1fdebdb723a3181b2c3c875478d81d2be56cbd3e4edb"
+    },
+    {
+      "period": "2020",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_DiciembreDefinitivo_2020.xlsx",
+      "sha256": "98bed1f86ca3aae5198d4a0e62a923b3bbae2fa87bc705ecb82a05abf42db520"
+    },
+    {
+      "period": "2021",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Marzo_2021.xlsx",
+      "sha256": "fa373de05751c15744698e1cadf86b72eab857f8e987a24f0cae0ddcdee6be05"
+    },
+    {
+      "period": "2021",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Junio_2021.xlsx",
+      "sha256": "11d6449757a298f9083289085ba98b38f77206ee4551179019bff769753cdc39"
+    },
+    {
+      "period": "2021",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Septiembre_2021.xlsx",
+      "sha256": "59edd8b17dabd30d573ccced3013b716d7dcaf3e1531696d1be52e7badbc9418"
+    },
+    {
+      "period": "2021",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_DiciembreDefinitivo_2021D.xlsx",
+      "sha256": "2bf712ed751940185ae57ed9b7d4d70b9a30443e45510140b891ef8ed2528ce1"
+    },
+    {
+      "period": "2022",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Marzo_2022.xlsx",
+      "sha256": "a328550754b57d4d599d3a128f4be02366d84cc7e93d6dded7e9a9654e2bd15c"
+    },
+    {
+      "period": "2022",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Junio_2022.xlsx",
+      "sha256": "64b29d8568de7729eb9a3d804c28a4de006bd7e3e4388bb6333373e3837ed42d"
+    },
+    {
+      "period": "2022",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Septiembre_2022.xlsx",
+      "sha256": "208b00eb97f0bdc82a8ac5ba1c281064b2d5374e23bbbd8f76fcafd2d921fdc6"
+    },
+    {
+      "period": "2022",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_DiciembreDefinitivo_2022.xlsx",
+      "sha256": "14c4a0bb73a067b1371d49e65a48031aa5c13c368ffad0f362c5c26016ccddd5"
+    },
+    {
+      "period": "2023",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Marzo_2023.xlsx",
+      "sha256": "d97a766d17d54d23ab1fad3fc54b7fdb904923e5386e3a10fc83c3d8bfd68fe2"
+    },
+    {
+      "period": "2023",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Junio_2023.xlsx",
+      "sha256": "7f45ef59af4f81d466022db76ce3b4d7e4cbb337a427415a93de7a614cac1dc3"
+    },
+    {
+      "period": "2023",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Septiembre_2023.xlsx",
+      "sha256": "1259d5eef6a08370564bdd7eae459b36731757950d2ae578db657c2a3ca74e39"
+    },
+    {
+      "period": "2023",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_DiciembreDefinitivo_2023.xlsx",
+      "sha256": "a1a96b675829636fa4938f1a2e2a121f3879a3582eb510a74e0ea7fc68aa747a"
+    },
+    {
+      "period": "2024",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Marzo_2024.xlsx",
+      "sha256": "67af937d321d5be590a76aeff50dceaf9ce3d536f193425eaf0f86550d152a23"
+    },
+    {
+      "period": "2024",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Junio_2024.xlsx",
+      "sha256": "7098c8466e917bc311b5cced44a83dbf7f1bf4c78badbf9906da72b917468328"
+    },
+    {
+      "period": "2024",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Septiembre_2024.xlsx",
+      "sha256": "51723349762f04ff565b1e9c8dbd0c25d092c5e31da3a1e77c85d0ef17bc936e"
+    },
+    {
+      "period": "2024",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_DiciembreDefinitivo_2024.xlsx",
+      "sha256": "4ba8e9f2035dd62a16b56550d7ed4bbf9da8311ff7fd7dc835b70c1abfb67b15"
+    },
+    {
+      "period": "2025",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Marzo_2025.xlsx",
+      "sha256": "2f6f3302fc16cf81828ffe5c7be6cb211befe27f246ba32779129361ff86475e"
+    },
+    {
+      "period": "2025",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Junio_2025.xlsx",
+      "sha256": "671adb647e2116198fb747a60195f5ba8b431bdaf875be5faf774575de36b7be"
+    },
+    {
+      "period": "2025",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Septiembre_2025.xlsx",
+      "sha256": "6dd8f0b7a559f31be3f4705b17114f733efd86687899b48589e1d4a046e9a422"
+    },
+    {
+      "period": "2025",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_DiciembreDefinitivo_2025.xlsx",
+      "sha256": "bb16b337593400961d06f4dc6156d05561aa642aab37598329a413d49e4eaebc"
+    },
+    {
+      "period": "2026",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Marzo_2026.xlsx",
+      "sha256": "99b2387c6494dc3784d18538e34cfbfe1e650aedfb134ce221f8cc63e5d44b7e"
+    },
+    {
+      "period": "2026",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Junio_2026.xlsx",
+      "sha256": "e270e59654ec8af353a4a8051fa8efc67a127795e53f0dfbca68dc18ad0befc8"
+    },
+    {
+      "period": "2026",
+      "url": "https://www.seg-social.es/descarga/es/ResSISTEMA_Septiembre_2026.xlsx",
+      "sha256": "ca8e47ced85017536b6b36cbc8191daaaec9467a86d70956650e48291fc84fa3"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "En los ficheros de 2018 el cierre de diciembre no es «Definitivo». Las cifras de los ficheros mensuales pueden revisarse en los siguientes; cada fila procede del fichero indicado en «origenes»."
+}

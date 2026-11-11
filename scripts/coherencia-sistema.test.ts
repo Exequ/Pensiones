@@ -7,6 +7,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { ArchivoDatos, ArchivoTabla } from '../src/engine/esquema-datos.ts';
+import { celdasCsv } from './lib/validar-datos.ts';
 
 const SISTEMA = path.resolve(import.meta.dirname, '../data/sistema');
 
@@ -20,7 +21,7 @@ function csv(nombre: string): Fila[] {
     .split('\n')
     .filter((l) => l !== '');
   const columnas = cab.split(',');
-  return resto.map((l) => Object.fromEntries(l.split(',').map((v, i) => [columnas[i] ?? '', v])));
+  return resto.map((l) => Object.fromEntries(celdasCsv(l).map((v, i) => [columnas[i] ?? '', v])));
 }
 
 function num(fila: Fila | undefined, campo: string): number {
@@ -47,6 +48,7 @@ describe('tablas del sistema: cabecera y filas', () => {
     'complementos-minimos-regimen-clase-sexo',
     'afiliacion-media-mensual-regimen',
     'afiliados-sexo-edad',
+    'pensiones-vigor-edad-clase-sexo',
   ]) {
     it(`${nombre}: el JSON hermano describe el CSV`, () => {
       const t = ArchivoTabla.parse(json(nombre));
@@ -243,5 +245,43 @@ describe('complementos por mínimos', () => {
         0.6,
       );
     }
+  });
+});
+
+describe('pensiones en vigor por edad', () => {
+  const filas = csv('pensiones-vigor-edad-clase-sexo');
+  const dato = (edad: string, cl: string, sx: string) =>
+    filas.find((f) => f.grupo_edad === edad && f.clase === cl && f.sexo === sx);
+
+  it('los grupos de edad suman el total de cada clase y sexo', () => {
+    for (const cl of ['total', ...CLASES]) {
+      for (const sx of ['ambos', 'hombres', 'mujeres']) {
+        const suma = filas
+          .filter((f) => f.clase === cl && f.sexo === sx && f.grupo_edad !== 'total')
+          .reduce((s, f) => s + Number(f.numero || 0), 0);
+        expect(suma, `${cl} ${sx}`).toBe(num(dato('total', cl, sx), 'numero'));
+      }
+    }
+  });
+
+  it('las clases suman el total y hombres + mujeres = ambos', () => {
+    for (const edad of ['total', '65-69', '80-84']) {
+      const suma = CLASES.reduce((s, c) => s + Number(dato(edad, c, 'ambos')?.numero || 0), 0);
+      expect(suma, edad).toBe(num(dato(edad, 'total', 'ambos'), 'numero'));
+    }
+    const h = num(dato('total', 'total', 'hombres'), 'numero');
+    const m = num(dato('total', 'total', 'mujeres'), 'numero');
+    expect(num(dato('total', 'total', 'ambos'), 'numero') - h - m).toBeGreaterThanOrEqual(0);
+  });
+
+  it('la pensión media de jubilación es positiva y razonable en los grupos con datos', () => {
+    for (const f of filas.filter((x) => x.clase === 'jubilacion' && x.numero !== '')) {
+      expect(Number(f.pension_media_eur_mes)).toBeGreaterThan(300);
+      expect(Number(f.pension_media_eur_mes)).toBeLessThan(5000);
+    }
+  });
+
+  it('coincide con el total del fichero REG del mismo mes (segunda publicación)', () => {
+    expect(num(dato('total', 'total', 'ambos'), 'numero')).toBe(10565782);
   });
 });

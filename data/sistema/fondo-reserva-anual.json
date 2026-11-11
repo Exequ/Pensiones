@@ -1,0 +1,89 @@
+{
+  "tipo": "tabla",
+  "id": "fondo-reserva-anual",
+  "title": "Fondo de Reserva de la Seguridad Social: valor, dotaciones, rendimientos y disposiciones a 31 de diciembre (2009-2025), millones de euros",
+  "description": "Datos acumulados desde 2000 a 31 de diciembre de cada año, tal como los publican los informes a las Cortes Generales (valor a precio de adquisición). Las disposiciones son negativas. Las columnas «anuales» son la diferencia entre dos años consecutivos de las acumuladas publicadas (dato derivado; la primera fila no tiene diferencia). Los años 2009-2017 proceden del informe de 2017 (2009 acumula desde 2000), 2018-2025 de los informes de 2024 y 2025 (coinciden entre sí y con el de 2017 en 2017).",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año (a 31 de diciembre)",
+      "unidad": null
+    },
+    {
+      "id": "valor_fondo_meur",
+      "descripcion": "Valor del Fondo de Reserva",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "dotaciones_acumuladas_meur",
+      "descripcion": "Dotaciones acumuladas desde 2000",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "dotaciones_excedentes_entidades_acum_meur",
+      "descripcion": "Dotaciones acumuladas de excedentes de entidades gestoras y servicios comunes (acuerdo de Consejo de Ministros)",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "dotaciones_excedentes_mutuas_acum_meur",
+      "descripcion": "Dotaciones acumuladas de excedentes de las mutuas",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "dotaciones_mei_acum_meur",
+      "descripcion": "Dotaciones acumuladas con cargo a la cotización finalista del MEI",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "rendimientos_netos_acum_meur",
+      "descripcion": "Rendimientos netos acumulados (tras ajustes por amortización/desinversión)",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "disposiciones_acum_meur",
+      "descripcion": "Disposiciones acumuladas (negativas)",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "dotaciones_anuales_meur",
+      "descripcion": "Dotaciones del año (derivado)",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "dotaciones_mei_anuales_meur",
+      "descripcion": "Dotaciones del año con cargo al MEI (derivado)",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "disposiciones_anuales_meur",
+      "descripcion": "Disposiciones del año (derivado, negativas)",
+      "unidad": "millones de euros"
+    }
+  ],
+  "filas": 17,
+  "source": {
+    "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+    "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+    "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+  },
+  "origenes": [
+    {
+      "period": "2017",
+      "url": "https://www.seg-social.es/descarga/en/20180719FR2017DI",
+      "sha256": "a17f79c918824ba0f9ef8f47b75d74964479f1591aa612148778df1b8e600d3d"
+    },
+    {
+      "period": "2024",
+      "url": "https://www.seg-social.es/descarga/en/15072025_Report%20to%20Parliament%202024",
+      "sha256": "e7a117649be893faac68978d9a3d657074a1ddc815a7dba433dfb296a46b5c5c"
+    },
+    {
+      "period": "2025",
+      "url": "https://www.seg-social.es/descarga/en/Report%20to%20Parliament%202025",
+      "sha256": "306701a7c6531d762aed25a4c35649e71bb40d597711c86496be7b36cee52d28"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Las dotaciones de excedentes de entidades no varían desde 2010 (52.113); las de mutuas siguen la gestión de la incapacidad temporal por contingencias comunes y de las contingencias profesionales. Datos anteriores a 2009 solo por año acumulado en los informes antiguos (ver docs/PENDIENTE_DATOS.md)."
+}

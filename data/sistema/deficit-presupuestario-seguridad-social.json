@@ -1,0 +1,416 @@
+{
+  "tipo": "datos",
+  "id": "deficit-presupuestario-seguridad-social",
+  "title": "Saldos del presupuesto del Sistema de la Seguridad Social (2017-2025)",
+  "description": "Derechos reconocidos y obligaciones reconocidas del Sistema de la Seguridad Social a diciembre y saldos derivados, según la clasificación económica de la fuente.",
+  "series": [
+    {
+      "id": "derechos-no-financieros",
+      "title": "Derechos reconocidos netos por operaciones no financieras (ingresos)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+      },
+      "confidence": "alta",
+      "notes": "Ejecución acumulada a diciembre (T4) de data/sistema/presupuesto-ss-ejecucion.csv.",
+      "points": [
+        {
+          "period": "2017",
+          "value": 127977.24
+        },
+        {
+          "period": "2018",
+          "value": 135127.8
+        },
+        {
+          "period": "2019",
+          "value": 145530.63
+        },
+        {
+          "period": "2020",
+          "value": 166678.14
+        },
+        {
+          "period": "2021",
+          "value": 180932.4
+        },
+        {
+          "period": "2022",
+          "value": 184373.24
+        },
+        {
+          "period": "2023",
+          "value": 201222.3
+        },
+        {
+          "period": "2024",
+          "value": 215991.88
+        },
+        {
+          "period": "2025",
+          "value": 232882.47
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "obligaciones-no-financieras",
+      "title": "Obligaciones reconocidas por operaciones no financieras (gastos)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+      },
+      "confidence": "alta",
+      "notes": "Ejecución acumulada a diciembre (T4) de data/sistema/presupuesto-ss-ejecucion.csv.",
+      "points": [
+        {
+          "period": "2017",
+          "value": 146488.67
+        },
+        {
+          "period": "2018",
+          "value": 151961.95
+        },
+        {
+          "period": "2019",
+          "value": 162143.18
+        },
+        {
+          "period": "2020",
+          "value": 179809.48
+        },
+        {
+          "period": "2021",
+          "value": 192029.22
+        },
+        {
+          "period": "2022",
+          "value": 191325.39
+        },
+        {
+          "period": "2023",
+          "value": 209861.08
+        },
+        {
+          "period": "2024",
+          "value": 225587.15
+        },
+        {
+          "period": "2025",
+          "value": 240070.36
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "saldo-presupuestario-no-financiero",
+      "title": "Saldo presupuestario no financiero (derechos reconocidos netos menos obligaciones reconocidas por operaciones no financieras)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+      },
+      "confidence": "media",
+      "notes": "Ejecución acumulada a diciembre (T4) de data/sistema/presupuesto-ss-ejecucion.csv. Dato derivado (diferencia de dos líneas de la fuente: «SUMA DE OPERACIONES NO FINANCIERAS» en ingresos y en gastos); la Seguridad Social no publica este saldo en los ficheros descargados.",
+      "points": [
+        {
+          "period": "2017",
+          "value": -18511.43
+        },
+        {
+          "period": "2018",
+          "value": -16834.15
+        },
+        {
+          "period": "2019",
+          "value": -16612.55
+        },
+        {
+          "period": "2020",
+          "value": -13131.34
+        },
+        {
+          "period": "2021",
+          "value": -11096.82
+        },
+        {
+          "period": "2022",
+          "value": -6952.15
+        },
+        {
+          "period": "2023",
+          "value": -8638.78
+        },
+        {
+          "period": "2024",
+          "value": -9595.27
+        },
+        {
+          "period": "2025",
+          "value": -7187.89
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "derechos-totales",
+      "title": "Total derechos reconocidos netos (ingresos), incluidas operaciones financieras",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+      },
+      "confidence": "alta",
+      "notes": "Ejecución acumulada a diciembre (T4) de data/sistema/presupuesto-ss-ejecucion.csv.",
+      "points": [
+        {
+          "period": "2017",
+          "value": 145046.61
+        },
+        {
+          "period": "2018",
+          "value": 152158.11
+        },
+        {
+          "period": "2019",
+          "value": 162569.75
+        },
+        {
+          "period": "2020",
+          "value": 199700.9
+        },
+        {
+          "period": "2021",
+          "value": 194796.62
+        },
+        {
+          "period": "2022",
+          "value": 193767.3
+        },
+        {
+          "period": "2023",
+          "value": 211536.47
+        },
+        {
+          "period": "2024",
+          "value": 228473.92
+        },
+        {
+          "period": "2025",
+          "value": 243019.25
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "obligaciones-totales",
+      "title": "Total obligaciones reconocidas (gastos), incluidas operaciones financieras",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+      },
+      "confidence": "alta",
+      "notes": "Ejecución acumulada a diciembre (T4) de data/sistema/presupuesto-ss-ejecucion.csv.",
+      "points": [
+        {
+          "period": "2017",
+          "value": 146531.12
+        },
+        {
+          "period": "2018",
+          "value": 152007.11
+        },
+        {
+          "period": "2019",
+          "value": 162181.74
+        },
+        {
+          "period": "2020",
+          "value": 182023.57
+        },
+        {
+          "period": "2021",
+          "value": 192149.13
+        },
+        {
+          "period": "2022",
+          "value": 194063.82
+        },
+        {
+          "period": "2023",
+          "value": 213341.31
+        },
+        {
+          "period": "2024",
+          "value": 231866.86
+        },
+        {
+          "period": "2025",
+          "value": 244816.94
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "saldo-presupuestario-total",
+      "title": "Saldo presupuestario total (TOTAL INGRESOS menos TOTAL GASTOS)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+      },
+      "confidence": "media",
+      "notes": "Ejecución acumulada a diciembre (T4) de data/sistema/presupuesto-ss-ejecucion.csv. Dato derivado; incluye operaciones financieras (activos y pasivos financieros, entre ellos los préstamos del Estado).",
+      "points": [
+        {
+          "period": "2017",
+          "value": -1484.51
+        },
+        {
+          "period": "2018",
+          "value": 151.0
+        },
+        {
+          "period": "2019",
+          "value": 388.01
+        },
+        {
+          "period": "2020",
+          "value": 17677.33
+        },
+        {
+          "period": "2021",
+          "value": 2647.49
+        },
+        {
+          "period": "2022",
+          "value": -296.52
+        },
+        {
+          "period": "2023",
+          "value": -1804.84
+        },
+        {
+          "period": "2024",
+          "value": -3392.94
+        },
+        {
+          "period": "2025",
+          "value": -1797.69
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "pasivos-financieros",
+      "title": "9. Pasivos financieros (ingresos): derechos reconocidos netos",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+      },
+      "confidence": "alta",
+      "notes": "Ejecución acumulada a diciembre (T4) de data/sistema/presupuesto-ss-ejecucion.csv. Capítulo 9 de ingresos; incluye los préstamos del Estado a la Tesorería (véase parametros/prestamos-estado-seguridad-social).",
+      "points": [
+        {
+          "period": "2017",
+          "value": 10194.57
+        },
+        {
+          "period": "2018",
+          "value": 13830.09
+        },
+        {
+          "period": "2019",
+          "value": 13830.09
+        },
+        {
+          "period": "2020",
+          "value": 30330.09
+        },
+        {
+          "period": "2021",
+          "value": 13830.09
+        },
+        {
+          "period": "2022",
+          "value": 6981.59
+        },
+        {
+          "period": "2023",
+          "value": 10003.81
+        },
+        {
+          "period": "2024",
+          "value": 10003.81
+        },
+        {
+          "period": "2025",
+          "value": 10003.81
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "transferencias-estado-corrientes",
+      "title": "Transferencias corrientes del Estado y organismos autónomos (ingresos): derechos reconocidos netos",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+      },
+      "confidence": "alta",
+      "notes": "Ejecución acumulada a diciembre (T4) de data/sistema/presupuesto-ss-ejecucion.csv.",
+      "points": [
+        {
+          "period": "2017",
+          "value": 12902.7
+        },
+        {
+          "period": "2018",
+          "value": 14650.33
+        },
+        {
+          "period": "2019",
+          "value": 15645.19
+        },
+        {
+          "period": "2020",
+          "value": 35795.25
+        },
+        {
+          "period": "2021",
+          "value": 36112.43
+        },
+        {
+          "period": "2022",
+          "value": 36537.95
+        },
+        {
+          "period": "2023",
+          "value": 39298.82
+        },
+        {
+          "period": "2024",
+          "value": 43084.62
+        },
+        {
+          "period": "2025",
+          "value": 47815.68
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}
