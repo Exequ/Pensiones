@@ -7,6 +7,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { ArchivoDatos, ArchivoTabla } from '../src/engine/esquema-datos.ts';
+import { celdasCsv } from './lib/validar-datos.ts';
 
 const SISTEMA = path.resolve(import.meta.dirname, '../data/sistema');
 
@@ -20,7 +21,7 @@ function csv(nombre: string): Fila[] {
     .split('\n')
     .filter((l) => l !== '');
   const columnas = cab.split(',');
-  return resto.map((l) => Object.fromEntries(l.split(',').map((v, i) => [columnas[i] ?? '', v])));
+  return resto.map((l) => Object.fromEntries(celdasCsv(l).map((v, i) => [columnas[i] ?? '', v])));
 }
 
 function num(fila: Fila | undefined, campo: string): number {

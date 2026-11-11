@@ -128,6 +128,29 @@ async function leerJson(
   }
 }
 
+/** Divide una línea CSV (RFC 4180 simplificado: comillas dobles con «""» como comilla escapada). */
+export function celdasCsv(linea: string): string[] {
+  const celdas: string[] = [];
+  let actual = '';
+  let entrecomillado = false;
+  for (let i = 0; i < linea.length; i++) {
+    const c = linea[i];
+    if (entrecomillado) {
+      if (c === '"' && linea[i + 1] === '"') {
+        actual += '"';
+        i++;
+      } else if (c === '"') entrecomillado = false;
+      else actual += c;
+    } else if (c === '"') entrecomillado = true;
+    else if (c === ',') {
+      celdas.push(actual);
+      actual = '';
+    } else actual += c ?? '';
+  }
+  celdas.push(actual);
+  return celdas;
+}
+
 /**
  * Comprueba el CSV hermano de una tabla: existe, su cabecera coincide con `columnas`, el número
  * de filas coincide con `filas` y cada fila tiene tantas celdas como columnas.
@@ -145,7 +168,7 @@ export async function validarCsvHermano(
   ];
   if (!existsSync(csv)) return error(`Falta el CSV hermano ${path.basename(csv)}`);
   const lineas = (await readFile(csv, 'utf8')).split('\n').filter((l) => l.trim() !== '');
-  const cabecera = (lineas[0] ?? '').split(',');
+  const cabecera = celdasCsv(lineas[0] ?? '');
   const esperada = resultado.data.columnas.map((c) => c.id);
   if (cabecera.join(',') !== esperada.join(',')) {
     return error(`La cabecera del CSV no coincide con «columnas»: ${cabecera.join(',')}`);
@@ -153,7 +176,7 @@ export async function validarCsvHermano(
   if (lineas.length - 1 !== resultado.data.filas) {
     return error(`«filas» indica ${resultado.data.filas} y el CSV tiene ${lineas.length - 1}`);
   }
-  const mala = lineas.findIndex((l) => l.split(',').length !== esperada.length);
+  const mala = lineas.findIndex((l) => celdasCsv(l).length !== esperada.length);
   if (mala >= 0) return error(`La fila ${mala} del CSV no tiene ${esperada.length} columnas`);
   return [];
 }
