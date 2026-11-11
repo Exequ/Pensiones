@@ -30,8 +30,11 @@ def main():
     filas = []
     for mov, pref in (('alta-inicial', 'EVO_altas_'), ('baja-definitiva', 'EVO_bajas_')):
         for sexo, suf in (('ambos', 'ambos_sexos'), ('hombres', 'hombres'), ('mujeres', 'mujeres')):
+            vistos = set()
             for r in wb[pref + suf].iter_rows(values_only=True):
-                if isinstance(r[0], int) and r[1] is None and r[2] is not None:
+                # La hoja repite los años en un segundo bloque de variaciones porcentuales: solo el primero.
+                if isinstance(r[0], int) and r[1] is None and r[2] is not None and r[0] not in vistos:
+                    vistos.add(r[0])
                     for k, cl in enumerate(CLASES):
                         n, pm = r[2 + 2 * k], r[3 + 2 * k]
                         filas.append((r[0], mov, cl, sexo, int(n), round(float(pm), 2)))
