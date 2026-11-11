@@ -1,0 +1,561 @@
+{
+  "tipo": "datos",
+  "id": "contraste-espana",
+  "title": "Contraste de España: OCDE frente a datos propios (series derivadas)",
+  "description": "Series derivadas que permiten comparar los indicadores de España de la OCDE (tasas de reposición teóricas, edad de jubilación, gasto sobre el PIB) con los datos propios del proyecto. Son cocientes de definiciones distintas, no equivalentes: la tasa de reposición teórica de la OCDE (carrera completa desde los 22, 100 % del salario medio, parámetros de 2024) no tiene equivalente directo en los datos publicados; los cocientes pensión media / salario medio de este fichero son una referencia empírica distinta. Las diferencias de definición se explican en docs/DISCREPANCIAS.md.",
+  "series": [
+    {
+      "id": "gasto-pensiones-contributivas-sobre-pib",
+      "title": "Obligaciones reconocidas por «suma de pensiones» (contributivas) del Sistema de la Seguridad Social sobre el PIB",
+      "unit": "% del PIB",
+      "source": {
+        "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Dato derivado, no publicado por la fuente: obligaciones reconocidas de la fila «SUMA DE PENSIONES» (capítulo 4, T4, data/sistema/presupuesto-ss-ejecucion) ÷ PIB corriente del INE (data/macro/pib-ine). Solo pensiones contributivas del Sistema de la Seguridad Social: excluye Clases Pasivas y pensiones no contributivas, que otras definiciones (OCDE, Eurostat, Ageing Report) sí pueden incluir.",
+      "points": [
+        {
+          "period": "2017",
+          "value": 9.891
+        },
+        {
+          "period": "2018",
+          "value": 10.005
+        },
+        {
+          "period": "2019",
+          "value": 10.222
+        },
+        {
+          "period": "2020",
+          "value": 11.683
+        },
+        {
+          "period": "2021",
+          "value": 11.206
+        },
+        {
+          "period": "2022",
+          "value": 10.558
+        },
+        {
+          "period": "2023",
+          "value": 10.765
+        },
+        {
+          "period": "2024",
+          "value": 10.8
+        },
+        {
+          "period": "2025",
+          "value": 10.8
+        }
+      ]
+    },
+    {
+      "id": "pension-altas-sobre-salario-eaes",
+      "title": "Cociente entre la pensión media de las altas iniciales de jubilación (ambos sexos) × 14 pagas y el salario medio «eaes»",
+      "unit": "razón",
+      "source": {
+        "title": "Altas y bajas de pensiones contributivas: evolución 2022-2026 (fichero EVO)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Dato derivado, no publicado por la fuente: pensión media de las altas iniciales de jubilación (ambos sexos) × 14 ÷ salario medio anual de la definición «eaes» de data/macro/salario-medio-definiciones. NO es una tasa de reposición: compara medias de colectivos distintos (pensionistas o nuevos jubilados con carreras de distinta duración frente a todos los trabajadores del ámbito de cada fuente), no sigue a una persona ni a una carrera completa y no descuenta impuestos ni cotizaciones.",
+      "points": [
+        {
+          "period": "2021",
+          "value": 0.7506
+        },
+        {
+          "period": "2022",
+          "value": 0.7412
+        },
+        {
+          "period": "2023",
+          "value": 0.7253
+        },
+        {
+          "period": "2024",
+          "value": 0.7423
+        }
+      ]
+    },
+    {
+      "id": "pension-altas-sobre-salario-etcl-x12",
+      "title": "Cociente entre la pensión media de las altas iniciales de jubilación (ambos sexos) × 14 pagas y el salario medio «etcl-x12»",
+      "unit": "razón",
+      "source": {
+        "title": "Altas y bajas de pensiones contributivas: evolución 2022-2026 (fichero EVO)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Dato derivado, no publicado por la fuente: pensión media de las altas iniciales de jubilación (ambos sexos) × 14 ÷ salario medio anual de la definición «etcl-x12» de data/macro/salario-medio-definiciones. NO es una tasa de reposición: compara medias de colectivos distintos (pensionistas o nuevos jubilados con carreras de distinta duración frente a todos los trabajadores del ámbito de cada fuente), no sigue a una persona ni a una carrera completa y no descuenta impuestos ni cotizaciones.",
+      "points": [
+        {
+          "period": "2021",
+          "value": 0.8008
+        },
+        {
+          "period": "2022",
+          "value": 0.787
+        },
+        {
+          "period": "2023",
+          "value": 0.7648
+        },
+        {
+          "period": "2024",
+          "value": 0.7939
+        },
+        {
+          "period": "2025",
+          "value": 0.7994
+        }
+      ]
+    },
+    {
+      "id": "pension-altas-sobre-salario-cn-puesto",
+      "title": "Cociente entre la pensión media de las altas iniciales de jubilación (ambos sexos) × 14 pagas y el salario medio «cn-puesto»",
+      "unit": "razón",
+      "source": {
+        "title": "Altas y bajas de pensiones contributivas: evolución 2022-2026 (fichero EVO)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Dato derivado, no publicado por la fuente: pensión media de las altas iniciales de jubilación (ambos sexos) × 14 ÷ salario medio anual de la definición «cn-puesto» de data/macro/salario-medio-definiciones. NO es una tasa de reposición: compara medias de colectivos distintos (pensionistas o nuevos jubilados con carreras de distinta duración frente a todos los trabajadores del ámbito de cada fuente), no sigue a una persona ni a una carrera completa y no descuenta impuestos ni cotizaciones.",
+      "points": [
+        {
+          "period": "2021",
+          "value": 0.556
+        },
+        {
+          "period": "2022",
+          "value": 0.5506
+        },
+        {
+          "period": "2023",
+          "value": 0.5352
+        },
+        {
+          "period": "2024",
+          "value": 0.5555
+        },
+        {
+          "period": "2025",
+          "value": 0.5543
+        }
+      ]
+    },
+    {
+      "id": "pension-altas-sobre-salario-base-media-x12",
+      "title": "Cociente entre la pensión media de las altas iniciales de jubilación (ambos sexos) × 14 pagas y el salario medio «base-media-x12»",
+      "unit": "razón",
+      "source": {
+        "title": "Altas y bajas de pensiones contributivas: evolución 2022-2026 (fichero EVO)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Dato derivado, no publicado por la fuente: pensión media de las altas iniciales de jubilación (ambos sexos) × 14 ÷ salario medio anual de la definición «base-media-x12» de data/macro/salario-medio-definiciones. NO es una tasa de reposición: compara medias de colectivos distintos (pensionistas o nuevos jubilados con carreras de distinta duración frente a todos los trabajadores del ámbito de cada fuente), no sigue a una persona ni a una carrera completa y no descuenta impuestos ni cotizaciones.",
+      "points": [
+        {
+          "period": "2021",
+          "value": 0.8313
+        },
+        {
+          "period": "2022",
+          "value": 0.833
+        },
+        {
+          "period": "2023",
+          "value": 0.8019
+        },
+        {
+          "period": "2024",
+          "value": 0.8287
+        },
+        {
+          "period": "2025",
+          "value": 0.831
+        }
+      ]
+    },
+    {
+      "id": "pension-vigor-sobre-salario-eaes",
+      "title": "Cociente entre la pensión media de las pensiones de jubilación en vigor a 1 de diciembre (ambos sexos) × 14 pagas y el salario medio «eaes»",
+      "unit": "razón",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Dato derivado, no publicado por la fuente: pensión media de las pensiones de jubilación en vigor a 1 de diciembre (ambos sexos) × 14 ÷ salario medio anual de la definición «eaes» de data/macro/salario-medio-definiciones. NO es una tasa de reposición: compara medias de colectivos distintos (pensionistas o nuevos jubilados con carreras de distinta duración frente a todos los trabajadores del ámbito de cada fuente), no sigue a una persona ni a una carrera completa y no descuenta impuestos ni cotizaciones.",
+      "points": [
+        {
+          "period": "2008",
+          "value": 0.5231
+        },
+        {
+          "period": "2009",
+          "value": 0.5334
+        },
+        {
+          "period": "2010",
+          "value": 0.5459
+        },
+        {
+          "period": "2011",
+          "value": 0.5622
+        },
+        {
+          "period": "2012",
+          "value": 0.5885
+        },
+        {
+          "period": "2013",
+          "value": 0.6091
+        },
+        {
+          "period": "2014",
+          "value": 0.6172
+        },
+        {
+          "period": "2015",
+          "value": 0.6238
+        },
+        {
+          "period": "2016",
+          "value": 0.6353
+        },
+        {
+          "period": "2017",
+          "value": 0.6341
+        },
+        {
+          "period": "2018",
+          "value": 0.6458
+        },
+        {
+          "period": "2019",
+          "value": 0.6563
+        },
+        {
+          "period": "2020",
+          "value": 0.6511
+        },
+        {
+          "period": "2021",
+          "value": 0.6467
+        },
+        {
+          "period": "2022",
+          "value": 0.6545
+        },
+        {
+          "period": "2023",
+          "value": 0.688
+        },
+        {
+          "period": "2024",
+          "value": 0.6871
+        }
+      ]
+    },
+    {
+      "id": "pension-vigor-sobre-salario-etcl-x12",
+      "title": "Cociente entre la pensión media de las pensiones de jubilación en vigor a 1 de diciembre (ambos sexos) × 14 pagas y el salario medio «etcl-x12»",
+      "unit": "razón",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Dato derivado, no publicado por la fuente: pensión media de las pensiones de jubilación en vigor a 1 de diciembre (ambos sexos) × 14 ÷ salario medio anual de la definición «etcl-x12» de data/macro/salario-medio-definiciones. NO es una tasa de reposición: compara medias de colectivos distintos (pensionistas o nuevos jubilados con carreras de distinta duración frente a todos los trabajadores del ámbito de cada fuente), no sigue a una persona ni a una carrera completa y no descuenta impuestos ni cotizaciones.",
+      "points": [
+        {
+          "period": "2008",
+          "value": 0.5299
+        },
+        {
+          "period": "2009",
+          "value": 0.5386
+        },
+        {
+          "period": "2010",
+          "value": 0.5529
+        },
+        {
+          "period": "2011",
+          "value": 0.5662
+        },
+        {
+          "period": "2012",
+          "value": 0.5918
+        },
+        {
+          "period": "2013",
+          "value": 0.6116
+        },
+        {
+          "period": "2014",
+          "value": 0.6247
+        },
+        {
+          "period": "2015",
+          "value": 0.6314
+        },
+        {
+          "period": "2016",
+          "value": 0.6461
+        },
+        {
+          "period": "2017",
+          "value": 0.6576
+        },
+        {
+          "period": "2018",
+          "value": 0.6732
+        },
+        {
+          "period": "2019",
+          "value": 0.6824
+        },
+        {
+          "period": "2020",
+          "value": 0.7173
+        },
+        {
+          "period": "2021",
+          "value": 0.69
+        },
+        {
+          "period": "2022",
+          "value": 0.6949
+        },
+        {
+          "period": "2023",
+          "value": 0.7255
+        },
+        {
+          "period": "2024",
+          "value": 0.7348
+        },
+        {
+          "period": "2025",
+          "value": 0.7426
+        }
+      ]
+    },
+    {
+      "id": "pension-vigor-sobre-salario-cn-puesto",
+      "title": "Cociente entre la pensión media de las pensiones de jubilación en vigor a 1 de diciembre (ambos sexos) × 14 pagas y el salario medio «cn-puesto»",
+      "unit": "razón",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Dato derivado, no publicado por la fuente: pensión media de las pensiones de jubilación en vigor a 1 de diciembre (ambos sexos) × 14 ÷ salario medio anual de la definición «cn-puesto» de data/macro/salario-medio-definiciones. NO es una tasa de reposición: compara medias de colectivos distintos (pensionistas o nuevos jubilados con carreras de distinta duración frente a todos los trabajadores del ámbito de cada fuente), no sigue a una persona ni a una carrera completa y no descuenta impuestos ni cotizaciones.",
+      "points": [
+        {
+          "period": "2008",
+          "value": 0.3924
+        },
+        {
+          "period": "2009",
+          "value": 0.3963
+        },
+        {
+          "period": "2010",
+          "value": 0.4037
+        },
+        {
+          "period": "2011",
+          "value": 0.4181
+        },
+        {
+          "period": "2012",
+          "value": 0.4399
+        },
+        {
+          "period": "2013",
+          "value": 0.4552
+        },
+        {
+          "period": "2014",
+          "value": 0.4635
+        },
+        {
+          "period": "2015",
+          "value": 0.4687
+        },
+        {
+          "period": "2016",
+          "value": 0.4808
+        },
+        {
+          "period": "2017",
+          "value": 0.487
+        },
+        {
+          "period": "2018",
+          "value": 0.4947
+        },
+        {
+          "period": "2019",
+          "value": 0.4916
+        },
+        {
+          "period": "2020",
+          "value": 0.4697
+        },
+        {
+          "period": "2021",
+          "value": 0.4791
+        },
+        {
+          "period": "2022",
+          "value": 0.4862
+        },
+        {
+          "period": "2023",
+          "value": 0.5076
+        },
+        {
+          "period": "2024",
+          "value": 0.5142
+        },
+        {
+          "period": "2025",
+          "value": 0.5149
+        }
+      ]
+    },
+    {
+      "id": "pension-vigor-sobre-salario-base-media-x12",
+      "title": "Cociente entre la pensión media de las pensiones de jubilación en vigor a 1 de diciembre (ambos sexos) × 14 pagas y el salario medio «base-media-x12»",
+      "unit": "razón",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Dato derivado, no publicado por la fuente: pensión media de las pensiones de jubilación en vigor a 1 de diciembre (ambos sexos) × 14 ÷ salario medio anual de la definición «base-media-x12» de data/macro/salario-medio-definiciones. NO es una tasa de reposición: compara medias de colectivos distintos (pensionistas o nuevos jubilados con carreras de distinta duración frente a todos los trabajadores del ámbito de cada fuente), no sigue a una persona ni a una carrera completa y no descuenta impuestos ni cotizaciones.",
+      "points": [
+        {
+          "period": "2018",
+          "value": 0.7285
+        },
+        {
+          "period": "2019",
+          "value": 0.7225
+        },
+        {
+          "period": "2020",
+          "value": 0.709
+        },
+        {
+          "period": "2021",
+          "value": 0.7162
+        },
+        {
+          "period": "2022",
+          "value": 0.7355
+        },
+        {
+          "period": "2023",
+          "value": 0.7606
+        },
+        {
+          "period": "2024",
+          "value": 0.7671
+        },
+        {
+          "period": "2025",
+          "value": 0.772
+        }
+      ]
+    }
+  ],
+  "data": [
+    {
+      "id": "edad-jubilacion-ocde-hombres-2024",
+      "value": 65.0,
+      "unit": "años",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad de jubilación actual (CRPLF22) de la OCDE para quien entra en el mercado laboral a los 22 años; copiada de ocde-espana (misma cifra para mujeres)."
+    },
+    {
+      "id": "edad-ordinaria-propia-2025",
+      "value": 800,
+      "unit": "meses de edad",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Edad ordinaria de jubilación de 2025 de data/parametros/edad-ordinaria-jubilacion (800 meses = 66 años y 8 meses): es la edad exigible a quien NO alcanza el periodo cotizado de la serie carrera-jubilacion-65."
+    },
+    {
+      "id": "carrera-jubilacion-65-propia-2025",
+      "value": 459,
+      "unit": "meses cotizados",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Meses cotizados que dan acceso a la jubilación ordinaria a los 65 años en 2025 (data/parametros/carrera-jubilacion-65)."
+    },
+    {
+      "id": "meses-carrera-completa-desde-22-hasta-65",
+      "value": 516,
+      "unit": "meses",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Dato derivado: (65 − 22) × 12 meses de una carrera ininterrumpida desde los 22 años hasta los 65, la que supone la OCDE. Es superior a los meses de carrera-jubilacion-65-propia-2025, por eso la edad de la OCDE (65) y la edad ordinaria propia (66 años y 8 meses en 2025) no se contradicen: responden a carreras distintas."
+    }
+  ]
+}
