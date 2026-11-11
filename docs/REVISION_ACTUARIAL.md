@@ -321,3 +321,53 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 **Qué debe comprobar el actuario**: Comprobar la contribución relativa de fecundidad, mortalidad, migración y empleo a la tasa de dependencia y al gasto en pensiones (análisis de sensibilidad del Ageing Report y variantes de EUROPOP2025) y qué hipótesis de empleo y productividad hacen falta para pasar de la dependencia demográfica a la económica.
 
 **Datos**: demografia/fecundidad-indicadores.json#icf-ambas, demografia/proyecciones-hipotesis.json#icf-proyectado, demografia/proyecciones-hipotesis.json#tasa-dependencia-proyectada, demografia/europop2025-indicadores.json#europop2025-olddep1, macro/pib-ine.json#pib-corriente, demografia/migraciones-exterior-anual.json#saldo-exterior-ambos-publicado-emcr
+
+## Mortalidad en edades altas y supuestos de la OCDE
+
+### 39. `demografia-triangulacion-mortalidad-supervivencia-publicada-sobre-qx-hombres-85-2010-2020`
+
+**Afirmación**: Dato derivado: supervivencia publicada a 10 años de los hombres de 85 años en 2010 dividida por Π(1 − qx) (tablas del INE); un valor inferior a 1 significa que la población publicada pierde más efectivos que los que implica qx aplicado a la población a 1 de enero.: 0,8726 (razón) en 2020.
+
+**Qué debe comprobar el actuario**: Comprobar que el desfase entre la supervivencia publicada y Π(1 − qx) se debe a la convención de edades: qx es la probabilidad entre las edades exactas x y x+1, y la cohorte con x años cumplidos a 1 de enero pasa durante el año de edad exacta media x+0,5 a x+1,5. Reproducir con data/demografia/triangulacion-cohortes y triangulacion-factor-qx el factor medio (defunciones registradas de la generación / población × qx, 1,04 a 1,08) y compararlo con (qx + qx+1)/2 ÷ qx; decidir si el modelo debe usar qx desplazado, la probabilidad de Lexis o una conversión desde la tasa central mx.
+
+**Datos**: demografia/triangulacion-mortalidad.json#supervivencia-publicada-sobre-qx-hombres-85-2010-2020
+
+### 40. `demografia-triangulacion-mortalidad-supervivencia-publicada-sobre-qx-lexis-hombres-85-2010-2020`
+
+**Afirmación**: Dato derivado: ídem con (qx + qx+1)/2 en lugar de qx (convención de Lexis).: 0,9528 (razón) en 2020.
+
+**Qué debe comprobar el actuario**: Valorar el residuo que queda en hombres de 85 años en 2010-2020 tras la convención de Lexis (supervivencia publicada algo inferior a la de la tabla y a la de las defunciones registradas de la generación): comprobar si se debe al ajuste intercensal de 2012-2020, a la migración o a la población de partida, comparando las ventanas de data/demografia/triangulacion-cohortes (2000-2010, 2010-2020, 2015-2020 y 2021-2024) y decidir si el modelo debe corregir la población de edades altas o solo qx.
+
+**Datos**: demografia/triangulacion-mortalidad.json#supervivencia-publicada-sobre-qx-lexis-hombres-85-2010-2020
+
+### 41. `demografia-triangulacion-mortalidad-factor-real-sobre-qx-mujeres-85-2010-2019`
+
+**Afirmación**: Dato derivado: ídem para mujeres.: 1,0751 (razón) en 2019.
+
+**Qué debe comprobar el actuario**: Comprobar el factor entre las defunciones registradas de la cohorte y población × qx (mujeres de 85 años, media 2010-2019) y su estabilidad por edad y año (mínimo y máximo en data/demografia/triangulacion-factor-qx); decidir si un factor constante desde los 75 años (como el 1,07 a 1,10 del modelo) es una aproximación aceptable de la corrección de Lexis o si debe variar con la edad (la pendiente de qx).
+
+**Datos**: demografia/triangulacion-mortalidad.json#factor-real-sobre-qx-mujeres-85-2010-2019
+
+### 42. `demografia-triangulacion-mortalidad-muertes-implicitas-pensiones-jubilacion-lexis`
+
+**Afirmación**: Dato derivado: ídem con (qx + qx+1)/2.: 263776 (personas) en 2025.
+
+**Qué debe comprobar el actuario**: Conciliar las muertes implícitas en las tablas entre las pensiones de jubilación (aproximación con la distribución por edad de octubre de 2026) con las bajas definitivas de jubilación de 2025 de la Seguridad Social: la fuente no desglosa las causas de baja (fallecimiento u otras) y las pensiones no son pensionistas. Determinar qué dato haría falta (pensionistas por edad simple y causa de baja) y si la diferencia restante es relevante para el modelo.
+
+**Datos**: demografia/triangulacion-mortalidad.json#muertes-implicitas-pensiones-jubilacion-lexis
+
+### 43. `demografia-triangulacion-mortalidad-ine-tablas-recalculo-censo-2021`
+
+**Afirmación**: Con el censo de 2021 se calcularon en 2023 nuevas series intercensales (2012-2020) y en noviembre de 2023 se publicaron las tablas de mortalidad sobre la nueva base poblacional.
+
+**Qué debe comprobar el actuario**: Confirmar con el INE qué años de la serie de tablas 1991-2024 cambiaron en la edición de noviembre de 2023 (la metodología indica que se recalcularon las series intercensales de 2012-2020 con el censo de 2021 y que las de 1981-2001 se recalcularon en 2014) y comparar las tablas actuales con la edición anterior para medir el cambio en qx de las edades altas.
+
+**Datos**: demografia/triangulacion-mortalidad.json#ine-tablas-recalculo-censo-2021
+
+### 44. `internacional-ocde-supuestos-reposicion-ocde-pag-entrada-mercado-laboral-22`
+
+**Afirmación**: Los indicadores de «Pensions at a Glance» se calculan para trabajadores que entran en el mercado laboral a los 22 años en el año especificado.
+
+**Qué debe comprobar el actuario**: Los metadatos accesibles de la OCDE solo dicen que la tasa de reposición teórica se calcula para trabajadores que entran en el mercado laboral a los 22 años; no figuran el crecimiento real de los salarios, la inflación ni la carrera. Obtener la metodología de «Pensions at a Glance» y comprobar esos supuestos antes de comparar la tasa teórica de la OCDE con una tasa calculada con las reglas propias.
+
+**Datos**: internacional/ocde-supuestos-reposicion.json#ocde-pag-entrada-mercado-laboral-22

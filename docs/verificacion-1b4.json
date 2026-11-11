@@ -1,0 +1,74 @@
+[
+  {
+    "id": "B1-ine-eurostat-defunciones",
+    "titulo": "Defunciones por edad y sexo: INE (tabla 6547) frente a Eurostat (demo_magec), 1975-2024",
+    "estado": "diferencia",
+    "detalle": "hasta 2000 coinciden salvo 2 celdas (1986, ambos, 73 años: INE menos Eurostat = -100; 1986, mujeres, 73 años: INE menos Eurostat = -100); desde 2001 el INE da más defunciones que Eurostat: 0-14 1,66 % a 4,69 %, 15-64 0,85 % a 2,13 %, 65-84 0,32 % a 0,86 %, 85+ 0,07 % a 0,14 % (INE menos Eurostat, ambos sexos)"
+  },
+  {
+    "id": "B1-defunciones-tablas",
+    "titulo": "Defunciones registradas ÷ defunciones implícitas en las tablas, 2010-2019 (hombres y mujeres, grupos de edad)",
+    "estado": "diferencia",
+    "detalle": "65-74: tasa central 1,008-1,014; qx×población 1 ene 1,010-1,051 | 75-84: tasa central 1,005-1,011; qx×población 1 ene 1,017-1,053 | 85-94: tasa central 1,007-1,016; qx×población 1 ene 1,087-1,135 | 95-99: tasa central 1,013-1,030; qx×población 1 ene 1,172-1,258"
+  },
+  {
+    "id": "B2-cohortes-qx",
+    "titulo": "Supervivencia a 10 años publicada ÷ supervivencia con qx (2010-2020): reproduce el desfase del modelo",
+    "estado": "diferencia",
+    "detalle": "hombres 2010-2020 (publicada ÷ Π(1−qx)): 65 años 0,991, 75 años 0,955, 80 años 0,921, 85 años 0,873 | mujeres 2010-2020 (publicada ÷ Π(1−qx)): 65 años 0,990, 75 años 0,972, 80 años 0,948, 85 años 0,909"
+  },
+  {
+    "id": "B2-cohortes-lexis",
+    "titulo": "Supervivencia a 10 años publicada ÷ supervivencia con (qx + qx+1)/2 (2010-2020)",
+    "estado": "diferencia",
+    "detalle": "hombres: 65 años 1,001, 75 años 0,990, 80 años 0,984, 85 años 0,953 | mujeres: 65 años 0,996, 75 años 0,998, 80 años 1,002, 85 años 0,992"
+  },
+  {
+    "id": "B2-cohortes-defunciones",
+    "titulo": "Supervivencia a 10 años publicada ÷ supervivencia con las defunciones registradas de cada generación (2010-2020)",
+    "estado": "diferencia",
+    "detalle": "hombres: 65 años 1,000, 75 años 0,989, 80 años 0,987, 85 años 0,967 | mujeres: 65 años 0,996, 75 años 0,999, 80 años 1,002, 85 años 0,997"
+  },
+  {
+    "id": "B2-factor",
+    "titulo": "Factor sobre qx implícito en las defunciones registradas (media 2010-2019) frente al factor de Lexis",
+    "estado": "diferencia",
+    "detalle": "hombres: 65: 1,038 (Lexis 1,042), 75: 1,056 (Lexis 1,053), 85: 1,063 (Lexis 1,058), 95: 1,054 (Lexis 1,029) | mujeres: 65: 1,049 (Lexis 1,050), 75: 1,065 (Lexis 1,066), 85: 1,075 (Lexis 1,075), 95: 1,062 (Lexis 1,042)"
+  },
+  {
+    "id": "B3-eurostat",
+    "titulo": "Población de 85 o más, 90 o más y 100 o más años: INE frente a Eurostat (1981-2025, por sexo)",
+    "estado": "ok",
+    "detalle": "diferencia máxima 6 (85+), 5 (90+) y 4 (100+) personas; Eurostat recibe las cifras del INE"
+  },
+  {
+    "id": "B3-pensiones-persona",
+    "titulo": "Pensiones de jubilación y de viudedad en vigor (octubre de 2026) por persona de la población de 1 de julio de 2026, por grupo de edad (ambos sexos)",
+    "estado": "diferencia",
+    "detalle": "65-69: jubilación 0,557, viudedad 0,069, suma 0,626 pensiones por persona; 70-74: jubilación 0,692, viudedad 0,112, suma 0,805 pensiones por persona; 75-79: jubilación 0,657, viudedad 0,178, suma 0,836 pensiones por persona; 80-84: jubilación 0,641, viudedad 0,281, suma 0,923 pensiones por persona; 85-y-más: jubilación 0,581, viudedad 0,483, suma 1,065 pensiones por persona. Grupos con más pensiones de jubilación o de viudedad por separado que personas: hombres 85-y-más: jubilación 517.528 + viudedad 49.671 frente a 559.778 personas; mujeres 85-y-más: jubilación 431.269 + viudedad 739.259 frente a 1.072.061 personas. La suma de jubilación y viudedad supera 1 en: 85-y-más (una misma persona puede cobrar las dos pensiones, por lo que no es una incoherencia)"
+  },
+  {
+    "id": "B4-centenarios",
+    "titulo": "Población de 100 o más años (INE) y defunciones de 100 o más años: tasa implícita frente a la de la tabla",
+    "estado": "diferencia",
+    "detalle": "población de 100+ a 1 de enero de 2025: 17.038; de 2026 (provisional): 18.750; defunciones de 100+ en 2024: 7.332 (44,5 % de la población media; tasa central de la tabla de 2024: 44,1 %). La Seguridad Social solo publica pensiones por grupos de edad hasta «85 y más»: no hay estadística de centenarios contrastable en /data"
+  },
+  {
+    "id": "B3-pensionistas",
+    "titulo": "Defunciones de 2025 entre las pensiones de jubilación implícitas en las tablas frente a las bajas definitivas de jubilación de la Seguridad Social",
+    "estado": "diferencia",
+    "detalle": "con qx de 2024 y la distribución por edad de las pensiones de jubilación de octubre de 2026 (ponderando por población de 1 de enero de 2026 dentro de cada grupo): 247.621 muertes; con (qx + qx+1)/2: 263.776; bajas definitivas de jubilación de 2025 en la Seguridad Social: 269.250. Cociente bajas ÷ esperadas con qx: 1,087; con (qx + qx+1)/2: 1,021"
+  },
+  {
+    "id": "B3-bajas-fallecidos",
+    "titulo": "Bajas definitivas de la Seguridad Social frente a defunciones del INE (2021-2025)",
+    "estado": "diferencia",
+    "detalle": "2021: bajas de jubilación 282.156 frente a 387.562 defunciones de 65 o más años; 2022: bajas de jubilación 299.127 frente a 401.678 defunciones de 65 o más años; 2023: bajas de jubilación 265.060 frente a 376.190 defunciones de 65 o más años; 2024: bajas de jubilación 273.346 frente a 377.179 defunciones de 65 o más años; 2025: 269.250 bajas de jubilación y 455.090 bajas en total frente a 443.314 defunciones estimadas de todas las edades (EDeS, dato provisional)"
+  },
+  {
+    "id": "F-ine-metodologia",
+    "titulo": "Metodología del INE: ¿se recalcularon las tablas 1991-2024 con la población revisada tras el censo de 2021?",
+    "estado": "ok",
+    "detalle": "Según la fuente, en noviembre de 2023 se publicaron las tablas «calculadas sobre la base poblacional de las nuevas intercensales y de los censos anuales» (series intercensales de 2012-2020 calculadas en 2023 con el censo de 2021). La fuente no dice expresamente qué años de la serie 1991-2024 cambiaron: indica que las series de población de 1981-2001 se recalcularon en 2014 (tablas publicadas en diciembre de 2015) y las de 1971-1980 en 2015. Citas literales en data/demografia/triangulacion-mortalidad"
+  }
+]

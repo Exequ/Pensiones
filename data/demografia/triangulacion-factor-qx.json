@@ -1,0 +1,59 @@
+{
+  "tipo": "tabla",
+  "id": "triangulacion-factor-qx",
+  "title": "Triangulación 2b: factor entre las defunciones registradas de la cohorte y qx × población a 1 de enero (2010-2019, por edad y sexo) — datos derivados",
+  "description": "factor_real = defunciones de la generación de edad x a 1 de enero (Eurostat, demo_mager, edad alcanzada x+1 en el año) / (población de edad x a 1 de enero × qx del año); se da la media de 2010-2019 y el mínimo y el máximo anuales. factor_lexis = (qx + qx+1)/2 / qx, media 2010-2019, el factor que implica tratar la cohorte con edad exacta media x+1 durante el año. Dato derivado.",
+  "columnas": [
+    {
+      "id": "sexo",
+      "descripcion": "hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Edad a 1 de enero",
+      "unidad": "años"
+    },
+    {
+      "id": "factor_real_medio_2010_2019",
+      "descripcion": "Media de defunciones registradas / (población × qx)",
+      "unidad": "razón"
+    },
+    {
+      "id": "factor_real_minimo",
+      "descripcion": "Mínimo anual",
+      "unidad": "razón"
+    },
+    {
+      "id": "factor_real_maximo",
+      "descripcion": "Máximo anual",
+      "unidad": "razón"
+    },
+    {
+      "id": "factor_lexis_medio",
+      "descripcion": "Media de (qx + qx+1)/2 / qx",
+      "unidad": "razón"
+    }
+  ],
+  "filas": 14,
+  "source": {
+    "title": "Población (tabla 59583), tablas de mortalidad (tabla 27153) del INE y defunciones por generación de Eurostat (demo_mager); cálculo propio",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=59583",
+    "docId": "INE-59583"
+  },
+  "origenes": [
+    {
+      "period": "2026",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=59583",
+      "sha256": "82d8572f3b1da7bb43a0b3e0275a4bf7e5fd94ad924d7e97529eb51e4b3022d0"
+    },
+    {
+      "period": "2024",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+      "sha256": "e408674582ff98063c325ec31e723627e2b0d258281a729ec1dae0fec0e9ec4e"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "media"
+}

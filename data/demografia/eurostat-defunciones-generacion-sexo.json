@@ -1,0 +1,44 @@
+{
+  "tipo": "tabla",
+  "id": "eurostat-defunciones-generacion-sexo",
+  "title": "Defunciones por generación (edad alcanzada en el año) y sexo, España (Eurostat, demo_mager, 1960-2024)",
+  "description": "Defunciones del año por edad alcanzada en el año (año de ocurrencia menos año de nacimiento; 0 = menores de un año; 100 = «100 y más»), es decir, por año de nacimiento de la persona fallecida, y sexo. La generación nacida en g y fallecida en el año t tiene edad alcanzada t − g.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad_alcanzada",
+      "descripcion": "Edad (0 = menores de un año; 100 = «100 y más»)",
+      "unidad": "años"
+    },
+    {
+      "id": "defunciones",
+      "descripcion": "Defunciones",
+      "unidad": "personas"
+    }
+  ],
+  "filas": 15150,
+  "source": {
+    "title": "Defunciones del año por edad alcanzada en el año (año de ocurrencia menos año de nacimiento; 0 = menores de un año; 100 = «100 y más»), es decir, por año de nacimiento de la persona fallecida, y sexo",
+    "publisher": "Eurostat",
+    "url": "https://ec.europa.eu/eurostat/databrowser/view/demo_mager/default/table?lang=en",
+    "docId": "eurostat-demo_mager"
+  },
+  "origenes": [
+    {
+      "period": "2025",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_mager?format=JSON&lang=EN&geo=ES",
+      "sha256": "1622bf78328c545ef3069f9e3611ac00c3775b795519de2b28a2e0da33a2f547"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta"
+}

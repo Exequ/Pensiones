@@ -1,0 +1,50 @@
+{
+  "tipo": "tabla",
+  "id": "defunciones-edad-sexo",
+  "title": "Defunciones por año, sexo y edad simple, España (INE, Movimiento Natural de la Población, 1975-2024)",
+  "description": "Defunciones de residentes en España por edad en años cumplidos al fallecer (0 = menores de un año; 100 = «100 y más años») y sexo, por año de ocurrencia y lugar de residencia, total nacional. Es la estadística de la que el INE calcula las tablas de mortalidad. La tabla 58700 (por nacionalidad, 2009-2024) da el mismo total.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Edad al fallecer; 0 = menores de un año, 100 = «100 y más»",
+      "unidad": "años"
+    },
+    {
+      "id": "defunciones",
+      "descripcion": "Defunciones",
+      "unidad": "personas"
+    }
+  ],
+  "filas": 15150,
+  "source": {
+    "title": "Movimiento Natural de la Población, defunciones por lugar de residencia, sexo y edad (tabla 6547)",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=6547",
+    "docId": "INE-6547"
+  },
+  "origenes": [
+    {
+      "period": "2024",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=6547",
+      "sha256": "6aea0eae75d854e68d57425cbf00bf9277d7a0a2bcdf13c49ded3284480dc1c8"
+    },
+    {
+      "period": "2024",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=58700",
+      "sha256": "ffea5c1191c234558bf47a81951fec9fb7572ea8da917d2433bcca06ceb372a8"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Resultados definitivos hasta 2024. No hay todavía defunciones definitivas de 2025 (ver defunciones-2025-estimadas)."
+}
