@@ -1,0 +1,44 @@
+{
+  "tipo": "tabla",
+  "id": "europop2025-poblacion",
+  "title": "EUROPOP2025: población proyectada a 1 de enero por edad simple y sexo, España (2025-2100), escenario de referencia",
+  "description": "Proyección de población de Eurostat (EUROPOP2025, proj_25np, publicada el 11/06/2026) para España, escenario de referencia «BSL», por edad simple (0 a «100 y más», edad 100) y sexo. Es una proyección independiente de la del INE, con hipótesis propias de Eurostat y la Comisión Europea. Las variantes (fecundidad, mortalidad y migración altas o bajas) no se descargan.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año (1 de enero)",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Edad simple; 100 = «100 y más»",
+      "unidad": "años"
+    },
+    {
+      "id": "poblacion",
+      "descripcion": "Población proyectada",
+      "unidad": "personas"
+    }
+  ],
+  "filas": 22800,
+  "source": {
+    "title": "Population on 1st January by age, sex and type of projection (proj_25np)",
+    "publisher": "Eurostat",
+    "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25np/default/table?lang=en",
+    "docId": "eurostat-proj_25np"
+  },
+  "origenes": [
+    {
+      "period": "2025",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/proj_25np?format=JSON&lang=EN&geo=ES&projection=BSL",
+      "sha256": "ee66f4cf41324bfa0005918c1d83fb717783adc6ad5a36634f5d9627ee1c4d8b"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta"
+}

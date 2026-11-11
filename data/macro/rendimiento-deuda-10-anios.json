@@ -1,0 +1,215 @@
+{
+  "tipo": "datos",
+  "id": "rendimiento-deuda-10-anios",
+  "title": "Rendimiento de la deuda pública a 10 años, España (Eurostat, criterio de convergencia de Maastricht)",
+  "description": "Serie anual de tipos de interés a largo plazo (bonos del Estado a 10 años) usada como criterio de convergencia de la UEM (irt_lt_mcby_a).",
+  "series": [
+    {
+      "id": "rendimiento-deuda-10-anios",
+      "title": "Tipo de interés a largo plazo (deuda pública a 10 años), media anual",
+      "unit": "% anual",
+      "source": {
+        "title": "EMU convergence criterion series - annual data (irt_lt_mcby_a)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/irt_lt_mcby_a/default/table?lang=en",
+        "docId": "eurostat-irt_lt_mcby_a"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1978",
+          "value": 12.03
+        },
+        {
+          "period": "1979",
+          "value": 13.31
+        },
+        {
+          "period": "1980",
+          "value": 15.96
+        },
+        {
+          "period": "1981",
+          "value": 15.81
+        },
+        {
+          "period": "1982",
+          "value": 15.99
+        },
+        {
+          "period": "1983",
+          "value": 16.91
+        },
+        {
+          "period": "1984",
+          "value": 16.52
+        },
+        {
+          "period": "1985",
+          "value": 13.37
+        },
+        {
+          "period": "1986",
+          "value": 11.36
+        },
+        {
+          "period": "1987",
+          "value": 12.81
+        },
+        {
+          "period": "1988",
+          "value": 11.75
+        },
+        {
+          "period": "1989",
+          "value": 13.7
+        },
+        {
+          "period": "1990",
+          "value": 14.68
+        },
+        {
+          "period": "1991",
+          "value": 11.38
+        },
+        {
+          "period": "1992",
+          "value": 11.72
+        },
+        {
+          "period": "1993",
+          "value": 10.21
+        },
+        {
+          "period": "1994",
+          "value": 9.99
+        },
+        {
+          "period": "1995",
+          "value": 11.27
+        },
+        {
+          "period": "1996",
+          "value": 8.74
+        },
+        {
+          "period": "1997",
+          "value": 6.4
+        },
+        {
+          "period": "1998",
+          "value": 4.83
+        },
+        {
+          "period": "1999",
+          "value": 4.73
+        },
+        {
+          "period": "2000",
+          "value": 5.53
+        },
+        {
+          "period": "2001",
+          "value": 5.12
+        },
+        {
+          "period": "2002",
+          "value": 4.96
+        },
+        {
+          "period": "2003",
+          "value": 4.12
+        },
+        {
+          "period": "2004",
+          "value": 4.1
+        },
+        {
+          "period": "2005",
+          "value": 3.39
+        },
+        {
+          "period": "2006",
+          "value": 3.78
+        },
+        {
+          "period": "2007",
+          "value": 4.31
+        },
+        {
+          "period": "2008",
+          "value": 4.37
+        },
+        {
+          "period": "2009",
+          "value": 3.98
+        },
+        {
+          "period": "2010",
+          "value": 4.25
+        },
+        {
+          "period": "2011",
+          "value": 5.44
+        },
+        {
+          "period": "2012",
+          "value": 5.85
+        },
+        {
+          "period": "2013",
+          "value": 4.56
+        },
+        {
+          "period": "2014",
+          "value": 2.72
+        },
+        {
+          "period": "2015",
+          "value": 1.73
+        },
+        {
+          "period": "2016",
+          "value": 1.39
+        },
+        {
+          "period": "2017",
+          "value": 1.56
+        },
+        {
+          "period": "2018",
+          "value": 1.42
+        },
+        {
+          "period": "2019",
+          "value": 0.66
+        },
+        {
+          "period": "2020",
+          "value": 0.38
+        },
+        {
+          "period": "2021",
+          "value": 0.35
+        },
+        {
+          "period": "2022",
+          "value": 2.18
+        },
+        {
+          "period": "2023",
+          "value": 3.48
+        },
+        {
+          "period": "2024",
+          "value": 3.15
+        },
+        {
+          "period": "2025",
+          "value": 3.21381
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}

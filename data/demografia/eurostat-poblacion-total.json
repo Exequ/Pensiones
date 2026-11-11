@@ -1,0 +1,845 @@
+{
+  "tipo": "datos",
+  "id": "eurostat-poblacion-total",
+  "title": "Población total a 1 de enero según Eurostat, España (1960-2025)",
+  "description": "Total publicado por Eurostat en demo_pjan (age = TOTAL), por sexo.",
+  "series": [
+    {
+      "id": "poblacion-total-ambos",
+      "title": "Población total a 1 de enero, ambos (Eurostat)",
+      "unit": "personas",
+      "source": {
+        "title": "Population on 1 January by age and sex (demo_pjan)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/demo_pjan/default/table?lang=en",
+        "docId": "eurostat-demo_pjan"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1960",
+          "value": 30327000
+        },
+        {
+          "period": "1961",
+          "value": 30583000
+        },
+        {
+          "period": "1962",
+          "value": 30895500
+        },
+        {
+          "period": "1963",
+          "value": 31151231
+        },
+        {
+          "period": "1964",
+          "value": 31442070
+        },
+        {
+          "period": "1965",
+          "value": 31776320
+        },
+        {
+          "period": "1966",
+          "value": 32132264
+        },
+        {
+          "period": "1967",
+          "value": 32434123
+        },
+        {
+          "period": "1968",
+          "value": 32931771
+        },
+        {
+          "period": "1969",
+          "value": 33294497
+        },
+        {
+          "period": "1970",
+          "value": 33587610
+        },
+        {
+          "period": "1971",
+          "value": 34040642
+        },
+        {
+          "period": "1972",
+          "value": 34408338
+        },
+        {
+          "period": "1973",
+          "value": 34800600
+        },
+        {
+          "period": "1974",
+          "value": 35177294
+        },
+        {
+          "period": "1975",
+          "value": 35569375
+        },
+        {
+          "period": "1976",
+          "value": 35946425
+        },
+        {
+          "period": "1977",
+          "value": 36329199
+        },
+        {
+          "period": "1978",
+          "value": 36694077
+        },
+        {
+          "period": "1979",
+          "value": 37035719
+        },
+        {
+          "period": "1980",
+          "value": 37346940
+        },
+        {
+          "period": "1981",
+          "value": 37635389
+        },
+        {
+          "period": "1982",
+          "value": 37881873
+        },
+        {
+          "period": "1983",
+          "value": 38090151
+        },
+        {
+          "period": "1984",
+          "value": 38252899
+        },
+        {
+          "period": "1985",
+          "value": 38407829
+        },
+        {
+          "period": "1986",
+          "value": 38531195
+        },
+        {
+          "period": "1987",
+          "value": 38638052
+        },
+        {
+          "period": "1988",
+          "value": 38731578
+        },
+        {
+          "period": "1989",
+          "value": 38802300
+        },
+        {
+          "period": "1990",
+          "value": 38853227
+        },
+        {
+          "period": "1991",
+          "value": 38881416
+        },
+        {
+          "period": "1992",
+          "value": 39051336
+        },
+        {
+          "period": "1993",
+          "value": 39264034
+        },
+        {
+          "period": "1994",
+          "value": 39458489
+        },
+        {
+          "period": "1995",
+          "value": 39639726
+        },
+        {
+          "period": "1996",
+          "value": 39808374
+        },
+        {
+          "period": "1997",
+          "value": 39971329
+        },
+        {
+          "period": "1998",
+          "value": 40143449
+        },
+        {
+          "period": "1999",
+          "value": 40303568
+        },
+        {
+          "period": "2000",
+          "value": 40470182
+        },
+        {
+          "period": "2001",
+          "value": 40665545
+        },
+        {
+          "period": "2002",
+          "value": 41035278
+        },
+        {
+          "period": "2003",
+          "value": 41827838
+        },
+        {
+          "period": "2004",
+          "value": 42547451
+        },
+        {
+          "period": "2005",
+          "value": 43296338
+        },
+        {
+          "period": "2006",
+          "value": 44009971
+        },
+        {
+          "period": "2007",
+          "value": 44784666
+        },
+        {
+          "period": "2008",
+          "value": 45668939
+        },
+        {
+          "period": "2009",
+          "value": 46239273
+        },
+        {
+          "period": "2010",
+          "value": 46486619
+        },
+        {
+          "period": "2011",
+          "value": 46667174
+        },
+        {
+          "period": "2012",
+          "value": 46818219
+        },
+        {
+          "period": "2013",
+          "value": 46712650
+        },
+        {
+          "period": "2014",
+          "value": 46495744
+        },
+        {
+          "period": "2015",
+          "value": 46425722
+        },
+        {
+          "period": "2016",
+          "value": 46418884
+        },
+        {
+          "period": "2017",
+          "value": 46497393
+        },
+        {
+          "period": "2018",
+          "value": 46645070
+        },
+        {
+          "period": "2019",
+          "value": 46918951
+        },
+        {
+          "period": "2020",
+          "value": 47318050
+        },
+        {
+          "period": "2021",
+          "value": 47400798
+        },
+        {
+          "period": "2022",
+          "value": 47486843
+        },
+        {
+          "period": "2023",
+          "value": 48085361
+        },
+        {
+          "period": "2024",
+          "value": 48619695
+        },
+        {
+          "period": "2025",
+          "value": 49128297
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "poblacion-total-hombres",
+      "title": "Población total a 1 de enero, hombres (Eurostat)",
+      "unit": "personas",
+      "source": {
+        "title": "Population on 1 January by age and sex (demo_pjan)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/demo_pjan/default/table?lang=en",
+        "docId": "eurostat-demo_pjan"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1960",
+          "value": 14831040
+        },
+        {
+          "period": "1961",
+          "value": 14956240
+        },
+        {
+          "period": "1962",
+          "value": 15029826
+        },
+        {
+          "period": "1963",
+          "value": 15166264
+        },
+        {
+          "period": "1964",
+          "value": 15320452
+        },
+        {
+          "period": "1965",
+          "value": 15496498
+        },
+        {
+          "period": "1966",
+          "value": 15683942
+        },
+        {
+          "period": "1967",
+          "value": 15874608
+        },
+        {
+          "period": "1968",
+          "value": 16083110
+        },
+        {
+          "period": "1969",
+          "value": 16265389
+        },
+        {
+          "period": "1970",
+          "value": 16414300
+        },
+        {
+          "period": "1971",
+          "value": 16641744
+        },
+        {
+          "period": "1972",
+          "value": 16827942
+        },
+        {
+          "period": "1973",
+          "value": 17027972
+        },
+        {
+          "period": "1974",
+          "value": 17220063
+        },
+        {
+          "period": "1975",
+          "value": 17419371
+        },
+        {
+          "period": "1976",
+          "value": 17612561
+        },
+        {
+          "period": "1977",
+          "value": 17807322
+        },
+        {
+          "period": "1978",
+          "value": 17993218
+        },
+        {
+          "period": "1979",
+          "value": 18167281
+        },
+        {
+          "period": "1980",
+          "value": 18323513
+        },
+        {
+          "period": "1981",
+          "value": 18467449
+        },
+        {
+          "period": "1982",
+          "value": 18591423
+        },
+        {
+          "period": "1983",
+          "value": 18695393
+        },
+        {
+          "period": "1984",
+          "value": 18775089
+        },
+        {
+          "period": "1985",
+          "value": 18849258
+        },
+        {
+          "period": "1986",
+          "value": 18906124
+        },
+        {
+          "period": "1987",
+          "value": 18954956
+        },
+        {
+          "period": "1988",
+          "value": 18995710
+        },
+        {
+          "period": "1989",
+          "value": 19023679
+        },
+        {
+          "period": "1990",
+          "value": 19039785
+        },
+        {
+          "period": "1991",
+          "value": 19042818
+        },
+        {
+          "period": "1992",
+          "value": 19126029
+        },
+        {
+          "period": "1993",
+          "value": 19231389
+        },
+        {
+          "period": "1994",
+          "value": 19328299
+        },
+        {
+          "period": "1995",
+          "value": 19417999
+        },
+        {
+          "period": "1996",
+          "value": 19500458
+        },
+        {
+          "period": "1997",
+          "value": 19579778
+        },
+        {
+          "period": "1998",
+          "value": 19664565
+        },
+        {
+          "period": "1999",
+          "value": 19744257
+        },
+        {
+          "period": "2000",
+          "value": 19826339
+        },
+        {
+          "period": "2001",
+          "value": 19923892
+        },
+        {
+          "period": "2002",
+          "value": 20115524
+        },
+        {
+          "period": "2003",
+          "value": 20542467
+        },
+        {
+          "period": "2004",
+          "value": 20924577
+        },
+        {
+          "period": "2005",
+          "value": 21335287
+        },
+        {
+          "period": "2006",
+          "value": 21719318
+        },
+        {
+          "period": "2007",
+          "value": 22118976
+        },
+        {
+          "period": "2008",
+          "value": 22591483
+        },
+        {
+          "period": "2009",
+          "value": 22880534
+        },
+        {
+          "period": "2010",
+          "value": 22982272
+        },
+        {
+          "period": "2011",
+          "value": 23049480
+        },
+        {
+          "period": "2012",
+          "value": 23099012
+        },
+        {
+          "period": "2013",
+          "value": 23013226
+        },
+        {
+          "period": "2014",
+          "value": 22874710
+        },
+        {
+          "period": "2015",
+          "value": 22822721
+        },
+        {
+          "period": "2016",
+          "value": 22806445
+        },
+        {
+          "period": "2017",
+          "value": 22831107
+        },
+        {
+          "period": "2018",
+          "value": 22889600
+        },
+        {
+          "period": "2019",
+          "value": 23016783
+        },
+        {
+          "period": "2020",
+          "value": 23210668
+        },
+        {
+          "period": "2021",
+          "value": 23248611
+        },
+        {
+          "period": "2022",
+          "value": 23288797
+        },
+        {
+          "period": "2023",
+          "value": 23565593
+        },
+        {
+          "period": "2024",
+          "value": 23826871
+        },
+        {
+          "period": "2025",
+          "value": 24090369
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "poblacion-total-mujeres",
+      "title": "Población total a 1 de enero, mujeres (Eurostat)",
+      "unit": "personas",
+      "source": {
+        "title": "Population on 1 January by age and sex (demo_pjan)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/demo_pjan/default/table?lang=en",
+        "docId": "eurostat-demo_pjan"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1960",
+          "value": 15495960
+        },
+        {
+          "period": "1961",
+          "value": 15626760
+        },
+        {
+          "period": "1962",
+          "value": 15865674
+        },
+        {
+          "period": "1963",
+          "value": 15984967
+        },
+        {
+          "period": "1964",
+          "value": 16121618
+        },
+        {
+          "period": "1965",
+          "value": 16279822
+        },
+        {
+          "period": "1966",
+          "value": 16448322
+        },
+        {
+          "period": "1967",
+          "value": 16559515
+        },
+        {
+          "period": "1968",
+          "value": 16848661
+        },
+        {
+          "period": "1969",
+          "value": 17029108
+        },
+        {
+          "period": "1970",
+          "value": 17173310
+        },
+        {
+          "period": "1971",
+          "value": 17398898
+        },
+        {
+          "period": "1972",
+          "value": 17580396
+        },
+        {
+          "period": "1973",
+          "value": 17772628
+        },
+        {
+          "period": "1974",
+          "value": 17957231
+        },
+        {
+          "period": "1975",
+          "value": 18150004
+        },
+        {
+          "period": "1976",
+          "value": 18333864
+        },
+        {
+          "period": "1977",
+          "value": 18521877
+        },
+        {
+          "period": "1978",
+          "value": 18700859
+        },
+        {
+          "period": "1979",
+          "value": 18868438
+        },
+        {
+          "period": "1980",
+          "value": 19023427
+        },
+        {
+          "period": "1981",
+          "value": 19167940
+        },
+        {
+          "period": "1982",
+          "value": 19290450
+        },
+        {
+          "period": "1983",
+          "value": 19394758
+        },
+        {
+          "period": "1984",
+          "value": 19477810
+        },
+        {
+          "period": "1985",
+          "value": 19558571
+        },
+        {
+          "period": "1986",
+          "value": 19625071
+        },
+        {
+          "period": "1987",
+          "value": 19683096
+        },
+        {
+          "period": "1988",
+          "value": 19735868
+        },
+        {
+          "period": "1989",
+          "value": 19778621
+        },
+        {
+          "period": "1990",
+          "value": 19813442
+        },
+        {
+          "period": "1991",
+          "value": 19838598
+        },
+        {
+          "period": "1992",
+          "value": 19925307
+        },
+        {
+          "period": "1993",
+          "value": 20032645
+        },
+        {
+          "period": "1994",
+          "value": 20130190
+        },
+        {
+          "period": "1995",
+          "value": 20221727
+        },
+        {
+          "period": "1996",
+          "value": 20307916
+        },
+        {
+          "period": "1997",
+          "value": 20391551
+        },
+        {
+          "period": "1998",
+          "value": 20478884
+        },
+        {
+          "period": "1999",
+          "value": 20559311
+        },
+        {
+          "period": "2000",
+          "value": 20643843
+        },
+        {
+          "period": "2001",
+          "value": 20741653
+        },
+        {
+          "period": "2002",
+          "value": 20919754
+        },
+        {
+          "period": "2003",
+          "value": 21285371
+        },
+        {
+          "period": "2004",
+          "value": 21622874
+        },
+        {
+          "period": "2005",
+          "value": 21961051
+        },
+        {
+          "period": "2006",
+          "value": 22290653
+        },
+        {
+          "period": "2007",
+          "value": 22665690
+        },
+        {
+          "period": "2008",
+          "value": 23077456
+        },
+        {
+          "period": "2009",
+          "value": 23358739
+        },
+        {
+          "period": "2010",
+          "value": 23504347
+        },
+        {
+          "period": "2011",
+          "value": 23617694
+        },
+        {
+          "period": "2012",
+          "value": 23719207
+        },
+        {
+          "period": "2013",
+          "value": 23699424
+        },
+        {
+          "period": "2014",
+          "value": 23621034
+        },
+        {
+          "period": "2015",
+          "value": 23603001
+        },
+        {
+          "period": "2016",
+          "value": 23612439
+        },
+        {
+          "period": "2017",
+          "value": 23666286
+        },
+        {
+          "period": "2018",
+          "value": 23755470
+        },
+        {
+          "period": "2019",
+          "value": 23902168
+        },
+        {
+          "period": "2020",
+          "value": 24107382
+        },
+        {
+          "period": "2021",
+          "value": 24152187
+        },
+        {
+          "period": "2022",
+          "value": 24198046
+        },
+        {
+          "period": "2023",
+          "value": 24519768
+        },
+        {
+          "period": "2024",
+          "value": 24792824
+        },
+        {
+          "period": "2025",
+          "value": 25037928
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}

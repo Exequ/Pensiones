@@ -1,0 +1,58 @@
+{
+ "demo_pjan_ES": {
+  "dataset": "demo_pjan",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjan?format=JSON&lang=EN&geo=ES",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/demo_pjan/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "9f271cd0b4d15f3efb86446256ddb904aacc9343d317ef2550cb6106a8e72991"
+ },
+ "proj_25np_ES_BSL": {
+  "dataset": "proj_25np",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/proj_25np?format=JSON&lang=EN&geo=ES&projection=BSL",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/proj_25np/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "ee66f4cf41324bfa0005918c1d83fb717783adc6ad5a36634f5d9627ee1c4d8b"
+ },
+ "proj_25naasfr_ES_BSL": {
+  "dataset": "proj_25naasfr",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/proj_25naasfr?format=JSON&lang=EN&geo=ES&projection=BSL",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/proj_25naasfr/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "6bddfd5463f027e230894a3eb0cad4a872951cbf1e4e457544cec953523b3dec"
+ },
+ "proj_25nalexp_ES_BSL": {
+  "dataset": "proj_25nalexp",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/proj_25nalexp?format=JSON&lang=EN&geo=ES&projection=BSL",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/proj_25nalexp/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "b1f4ed9f0a396b9f09e06387cbdc751bd42fcf1522c777c328e0a6b7cbb8033c"
+ },
+ "proj_25nanmig_ES_BSL": {
+  "dataset": "proj_25nanmig",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/proj_25nanmig?format=JSON&lang=EN&geo=ES&projection=BSL",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/proj_25nanmig/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "b47fad4ef7b63cc27718bab6532adb5e20095f2762df0bbd604964ba8303f5ac"
+ },
+ "proj_25ndbi_ES_BSL": {
+  "dataset": "proj_25ndbi",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/proj_25ndbi?format=JSON&lang=EN&geo=ES&projection=BSL",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "ab4806996951fce3218b396ea1b78bc8c98caf832d124fc06abc1f1a5d256fe7"
+ },
+ "nama_10_gdp_ES_B1GQ": {
+  "dataset": "nama_10_gdp",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&geo=ES&na_item=B1GQ",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "310a66d302d789d7e72e1fcd4fd80793d60876553ed62de7024316fbc6231792"
+ },
+ "irt_lt_mcby_a_ES": {
+  "dataset": "irt_lt_mcby_a",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/irt_lt_mcby_a?format=JSON&lang=EN&geo=ES",
+  "web": "https://ec.europa.eu/eurostat/databrowser/view/irt_lt_mcby_a/default/table?lang=en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "88a54883744e83913ea63caf87118ac3dc6ea9a57cd9c33792a73f2ba433c56e"
+ }
+}
