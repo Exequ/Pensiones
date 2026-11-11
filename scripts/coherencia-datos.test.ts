@@ -44,11 +44,13 @@ const MULTIPLES_POR_ANIO = [
   'actualizacion-bases',
   'lagunas-integracion',
   'revalorizacion-regla',
+  'prestamos-',
+  'mei-destino',
 ];
 /** Ficheros por versión de una regla (el periodo es el año desde el que rige): sin exigir años seguidos. */
 const POR_VERSION = ['actualizacion-bases', 'lagunas-integracion', 'revalorizacion-regla'];
 /** Ficheros de reglas con varios parámetros (unidades distintas) en un mismo fichero. */
-const VARIAS_UNIDADES = [...POR_VERSION, 'pension-minima-regla'];
+const VARIAS_UNIDADES = [...POR_VERSION, 'pension-minima-regla', 'prestamos-', 'mei-destino'];
 /** Años sin dato por falta de fuente descargada; cada uno consta en docs/PENDIENTE_DATOS.md. */
 const HUECOS_DOCUMENTADOS: Record<string, string[]> = {
   'base-minima-rg.json': ['2020', '2021'],

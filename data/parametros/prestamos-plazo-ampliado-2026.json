@@ -1,0 +1,132 @@
+{
+  "tipo": "datos",
+  "id": "prestamos-plazo-ampliado-2026",
+  "title": "Nuevo plazo de cancelación de préstamos antiguos del Estado a la Seguridad Social (RDL 3/2026, DA 2.ª)",
+  "description": "Préstamos de 1992, 1994 y 1995 cuyo plazo de cancelación se renueva o amplía en diez años desde 2026. Los apartados 3 y 4 tratan el mismo préstamo de 1995 en dos etapas.",
+  "data": [
+    {
+      "id": "apartado-1-importe",
+      "value": 1686187539.81,
+      "unit": "euros (importe del préstamo)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-2548"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Préstamo de Real Decreto-ley 6/1992, de 13 de noviembre, sobre concesión de un crédito extraordinario por importe de 280.558.000.000 de pesetas.",
+      "quote": "(1.686.187.539,81 euros)",
+      "location": "DA 2.ª.1 RDL 3/2026"
+    },
+    {
+      "id": "apartado-1-plazo-anios",
+      "value": 10,
+      "unit": "años de nuevo plazo (o de ampliación) a partir de 2026",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-2548"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Se concede un nuevo plazo de diez años, a partir de 2026, para la cancelación",
+      "location": "DA 2.ª.1 RDL 3/2026"
+    },
+    {
+      "id": "apartado-2-importe",
+      "value": 2073491760.12,
+      "unit": "euros (importe del préstamo)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-2548"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Préstamo de 345.000.000.000 pesetas.",
+      "quote": "(2.073.491.760,12 euros)",
+      "location": "DA 2.ª.2 RDL 3/2026"
+    },
+    {
+      "id": "apartado-2-plazo-anios",
+      "value": 10,
+      "unit": "años de nuevo plazo (o de ampliación) a partir de 2026",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-2548"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Se concede un nuevo plazo de diez años, a partir de 2026, para la cancelación",
+      "location": "DA 2.ª.2 RDL 3/2026"
+    },
+    {
+      "id": "apartado-3-importe",
+      "value": 2670561225.1,
+      "unit": "euros (importe del préstamo)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-2548"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Préstamo de 444.344.000.000 pesetas.",
+      "quote": "(2.670.561.225,10 euros)",
+      "location": "DA 2.ª.3 RDL 3/2026"
+    },
+    {
+      "id": "apartado-3-plazo-anios",
+      "value": 10,
+      "unit": "años de nuevo plazo (o de ampliación) a partir de 2026",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-2548"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Se concede un nuevo plazo de diez años, a partir de 2026, para la cancelación",
+      "location": "DA 2.ª.3 RDL 3/2026"
+    },
+    {
+      "id": "apartado-4-importe",
+      "value": 2670561225.1,
+      "unit": "euros (importe del préstamo)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-2548"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Préstamo de 444.344.000.000 pesetas; prorrogada para 1996. Se repite el importe del apartado 3 en el 4 porque amplía el mismo préstamo (otro plazo).",
+      "quote": "(2.670.561.225,10 euros)",
+      "location": "DA 2.ª.4 RDL 3/2026"
+    },
+    {
+      "id": "apartado-4-plazo-anios",
+      "value": 10,
+      "unit": "años de nuevo plazo (o de ampliación) a partir de 2026",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-2548"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Se amplía en diez años, a partir de 2026, el plazo",
+      "location": "DA 2.ª.4 RDL 3/2026"
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+{
+  "tipo": "datos",
+  "id": "fondo-reserva-desembolso-maximo",
+  "title": "Límite máximo del desembolso anual del Fondo de Reserva (2033-2053)",
+  "description": "Límite del desembolso anual del Fondo de Reserva de la Seguridad Social, en % del PIB, que fija el art. 121.2 TRLGSS para cada año de 2033 a 2053.",
+  "data": [
+    {
+      "id": "2033",
+      "value": 0.1,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2033",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2033 | 0,10% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)"
+    },
+    {
+      "id": "2034",
+      "value": 0.12,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2034",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2034 | 0,12% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2035",
+      "value": 0.15,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2035",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2035 | 0,15% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2036",
+      "value": 0.17,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2036",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2036 | 0,17% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2037",
+      "value": 0.19,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2037",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2037 | 0,19% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2038",
+      "value": 0.22,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2038",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2038 | 0,22% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2039",
+      "value": 0.25,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2039",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2039 | 0,25% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2040",
+      "value": 0.28,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2040",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2040 | 0,28% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2041",
+      "value": 0.46,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2041",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2041 | 0,46% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2042",
+      "value": 0.5,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2042",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2042 | 0,50% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2043",
+      "value": 0.54,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2043",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2043 | 0,54% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2044",
+      "value": 0.77,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2044",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2044 | 0,77% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2045",
+      "value": 0.82,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2045",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2045 | 0,82% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2046",
+      "value": 0.87,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2046",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2046 | 0,87% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2047",
+      "value": 0.91,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2047",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2047 | 0,91% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2048",
+      "value": 0.86,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2048",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2048 | 0,86% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2049",
+      "value": 0.84,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2049",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2049 | 0,84% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2050",
+      "value": 0.82,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2050",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2050 | 0,82% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2051",
+      "value": 0.53,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2051",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2051 | 0,53% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2052",
+      "value": 0.51,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2052",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2052 | 0,51% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Cita localizada en el texto de la segunda norma (RDL 2/2023, art. único)."
+      }
+    },
+    {
+      "id": "2053",
+      "value": 0.5,
+      "unit": "% del PIB (límite máximo del desembolso anual)",
+      "period": "2053",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Desde 2033 la Ley de Presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas (art. 121.1), con este límite máximo en porcentaje del PIB. El RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3).",
+      "quote": "| 2053 | 0,50% |",
+      "location": "art. 121.2 TRLGSS (art. único.15 RDL 2/2023)"
+    }
+  ]
+}

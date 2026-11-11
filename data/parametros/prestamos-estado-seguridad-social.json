@@ -1,0 +1,146 @@
+{
+  "tipo": "datos",
+  "id": "prestamos-estado-seguridad-social",
+  "title": "Préstamos del Estado a la Tesorería General de la Seguridad Social autorizados por las leyes de presupuestos (2021-2023)",
+  "description": "Importe máximo, plazo máximo de cancelación y tipo de interés de los préstamos del Estado a la TGSS que autorizan las leyes de PGE de 2021, 2022 y 2023.",
+  "data": [
+    {
+      "id": "2021-importe-maximo",
+      "value": 13830.09,
+      "unit": "millones de euros (importe máximo autorizable en el ejercicio)",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Autorización a favor del Gobierno, no importe concedido; lo concedido figura en «9. PASIVOS FINANCIEROS» de data/sistema/presupuesto-ss-ejecucion.json.",
+      "quote": "podrá autorizar la concesión por parte del Estado de préstamos a la Tesorería General de la Seguridad Social por un importe de hasta 13.830.090,00 miles de euros",
+      "location": "Disposición adicional quinta. Préstamos del Estado a la Tesorería General de la Seguridad Social. Durante la vigencia de"
+    },
+    {
+      "id": "2021-plazo-maximo-anios",
+      "value": 10,
+      "unit": "años desde el 1 de enero del año siguiente al de concesión",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Estos préstamos no devengarán intereses y su cancelación se producirá en un plazo máximo de diez años contados a partir del 1 de enero del año siguiente al de su concesión",
+      "location": "Disposición adicional quinta. Préstamos del Estado a la Tesorería General de la Seguridad Social. Durante la vigencia de"
+    },
+    {
+      "id": "2021-tipo-interes",
+      "value": 0,
+      "unit": "% (no devengan intereses)",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Estos préstamos no devengarán intereses y su cancelación se producirá en un plazo máximo de diez años contados a partir del 1 de enero del año siguiente al de su concesión",
+      "location": "Disposición adicional quinta. Préstamos del Estado a la Tesorería General de la Seguridad Social. Durante la vigencia de"
+    },
+    {
+      "id": "2022-importe-maximo",
+      "value": 6981.59,
+      "unit": "millones de euros (importe máximo autorizable en el ejercicio)",
+      "period": "2022",
+      "source": {
+        "title": "Ley 22/2021, de 28 de diciembre, de Presupuestos Generales del Estado para el año 2022",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-21653"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Autorización a favor del Gobierno, no importe concedido; lo concedido figura en «9. PASIVOS FINANCIEROS» de data/sistema/presupuesto-ss-ejecucion.json.",
+      "quote": "podrá autorizar la concesión por parte del Estado de préstamos a la Tesorería General de la Seguridad Social por un importe de hasta 6.981.590,00 miles de euros",
+      "location": "Disposición adicional tercera. Préstamo del Estado a la Tesorería General de la Seguridad Social. Durante la vigencia de"
+    },
+    {
+      "id": "2022-plazo-maximo-anios",
+      "value": 10,
+      "unit": "años desde el 1 de enero del año siguiente al de concesión",
+      "period": "2022",
+      "source": {
+        "title": "Ley 22/2021, de 28 de diciembre, de Presupuestos Generales del Estado para el año 2022",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-21653"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Estos préstamos no devengarán intereses y su cancelación se producirá en un plazo máximo de diez años contados a partir del 1 de enero del año siguiente al de su concesión",
+      "location": "Disposición adicional tercera. Préstamo del Estado a la Tesorería General de la Seguridad Social. Durante la vigencia de"
+    },
+    {
+      "id": "2022-tipo-interes",
+      "value": 0,
+      "unit": "% (no devengan intereses)",
+      "period": "2022",
+      "source": {
+        "title": "Ley 22/2021, de 28 de diciembre, de Presupuestos Generales del Estado para el año 2022",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-21653"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Estos préstamos no devengarán intereses y su cancelación se producirá en un plazo máximo de diez años contados a partir del 1 de enero del año siguiente al de su concesión",
+      "location": "Disposición adicional tercera. Préstamo del Estado a la Tesorería General de la Seguridad Social. Durante la vigencia de"
+    },
+    {
+      "id": "2023-importe-maximo",
+      "value": 10003.81,
+      "unit": "millones de euros (importe máximo autorizable en el ejercicio)",
+      "period": "2023",
+      "source": {
+        "title": "Ley 31/2022, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2023",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22128"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Autorización a favor del Gobierno, no importe concedido; lo concedido figura en «9. PASIVOS FINANCIEROS» de data/sistema/presupuesto-ss-ejecucion.json.",
+      "quote": "podrá autorizar la concesión por parte del Estado de préstamos a la Tesorería General de la Seguridad Social por un importe de hasta 10.003.806,15 miles de euros",
+      "location": "Disposición adicional tercera. Préstamos del Estado a la Tesorería General de la Seguridad Social. Durante la vigencia d"
+    },
+    {
+      "id": "2023-plazo-maximo-anios",
+      "value": 10,
+      "unit": "años desde el 1 de enero del año siguiente al de concesión",
+      "period": "2023",
+      "source": {
+        "title": "Ley 31/2022, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2023",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22128"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Estos préstamos no devengarán intereses y su cancelación se producirá en un plazo máximo de diez años contados a partir del 1 de enero del año siguiente al de su concesión",
+      "location": "Disposición adicional tercera. Préstamos del Estado a la Tesorería General de la Seguridad Social. Durante la vigencia d"
+    },
+    {
+      "id": "2023-tipo-interes",
+      "value": 0,
+      "unit": "% (no devengan intereses)",
+      "period": "2023",
+      "source": {
+        "title": "Ley 31/2022, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2023",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22128"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Estos préstamos no devengarán intereses y su cancelación se producirá en un plazo máximo de diez años contados a partir del 1 de enero del año siguiente al de su concesión",
+      "location": "Disposición adicional tercera. Préstamos del Estado a la Tesorería General de la Seguridad Social. Durante la vigencia d"
+    }
+  ]
+}
