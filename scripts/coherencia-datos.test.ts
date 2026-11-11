@@ -218,12 +218,12 @@ describe('cotización 2013-2026, MEI y cuota de solidaridad', () => {
     }
   });
 
-  it('los tramos de solidaridad reparten el tipo entre empresa y trabajador en los datos y crecen con el tramo', () => {
+  it('los tipos de la cuota de solidaridad crecen con el tramo', () => {
     const archivo = porId.get('cuota-solidaridad-tipos');
-    expect(archivo?.data.length).toBe(6);
+    expect((archivo?.data ?? []).length).toBe(6);
     for (const anio of ['2025', '2026']) {
       const t = ['a', 'b', 'c'].map((l) =>
-        numero(archivo?.data.find((d) => d.id === `${anio}-tramo-${l}`) as DatoConId),
+        numero((archivo?.data ?? []).find((d) => d.id === `${anio}-tramo-${l}`) as DatoConId),
       );
       expect(t[0]).toBeLessThan(t[1] as number);
       expect(t[1]).toBeLessThan(t[2] as number);
