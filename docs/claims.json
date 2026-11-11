@@ -1142,6 +1142,182 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-afiliacion-anual-media-anual-total-sistema",
+      "texto": "Afiliados medios anuales: total-sistema: 21635194,4 (afiliados) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/afiliacion-anual.json#media-anual-total-sistema"],
+      "fuentes": [
+        {
+          "title": "Afiliados medios en alta por regímenes (serie 2001-2026, total sistema)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST290/EST291"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-afiliacion-anual-diciembre-total-sistema",
+      "texto": "Afiliados medios de diciembre: total-sistema: 21844413,7 (afiliados) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/afiliacion-anual.json#diciembre-total-sistema"],
+      "fuentes": [
+        {
+          "title": "Afiliados medios en alta por regímenes (serie 2001-2026, total sistema)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST290/EST291"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-edad-media-altas-jubilacion-edad-media-altas-jubilacion",
+      "texto": "Edad media de las altas iniciales de jubilación: 65,33 (años) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/edad-media-altas-jubilacion.json#edad-media-altas-jubilacion"],
+      "fuentes": [
+        {
+          "title": "Altas y bajas de pensiones contributivas: evolución 2022-2026 (fichero EVO), hoja EVO_acumula_altas_jub_edad",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-pensiones-vigor-numero-total-ambos",
+      "texto": "Número de pensiones contributivas en vigor: todas las clases, ambos: 10434856,0 (pensiones) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/pensiones-vigor-numero.json#total-ambos"],
+      "fuentes": [
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-pensiones-vigor-numero-jubilacion-ambos",
+      "texto": "Número de pensiones contributivas en vigor: jubilación, ambos: 6646331,0 (pensiones) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/pensiones-vigor-numero.json#jubilacion-ambos"],
+      "fuentes": [
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-pensiones-vigor-pension-media-total-ambos",
+      "texto": "Pensión media mensual: todas las clases, ambos: 1317,71 (euros/mes) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/pensiones-vigor-pension-media.json#total-ambos"],
+      "fuentes": [
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-pensiones-vigor-pension-media-jubilacion-ambos",
+      "texto": "Pensión media mensual: jubilación, ambos: 1512,73 (euros/mes) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/pensiones-vigor-pension-media.json#jubilacion-ambos"],
+      "fuentes": [
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-pensionistas-pensiones-historico-pensionistas",
+      "texto": "Pensionistas del sistema contributivo (personas) a diciembre: 9438579 (personas) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/pensionistas-pensiones-historico.json#pensionistas"],
+      "fuentes": [
+        {
+          "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-pensionistas-pensiones-historico-pensiones",
+      "texto": "Pensiones contributivas en vigor a diciembre: 10434856 (pensiones) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/pensionistas-pensiones-historico.json#pensiones"],
+      "fuentes": [
+        {
+          "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-relacion-afiliados-pensiones-afiliados-diciembre-por-pensionista",
+      "texto": "Afiliados medios de diciembre (total sistema) por pensionista (personas) a diciembre: 2,31 (razón (afiliados por pensionista o por pensión)) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/relacion-afiliados-pensiones.json#afiliados-diciembre-por-pensionista"],
+      "fuentes": [
+        {
+          "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-relacion-afiliados-pensiones-afiliados-media-anual-por-pension",
+      "texto": "Afiliados medios del año (media de doce meses, total sistema) por pensión contributiva a diciembre: 2,07 (razón (afiliados por pensionista o por pensión)) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/relacion-afiliados-pensiones.json#afiliados-media-anual-por-pension"],
+      "fuentes": [
+        {
+          "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente"
     }
   ]
 }

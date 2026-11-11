@@ -38,6 +38,23 @@ Los ejemplos de los tests están en `scripts/fixtures/` y **no** deben copiarse 
 
 Los huecos y lo que no se pudo descargar están en [`docs/PENDIENTE_DATOS.md`](../docs/PENDIENTE_DATOS.md). Toda la extracción de tablas la hacen los scripts de [`scripts/etl/`](../scripts/etl) (Python, con `python3 -I`) a partir de los documentos descargados; cada dato lleva la cita literal (`quote`) y su localización. `docs/INFORME_VERIFICACION.md` y `docs/DISCREPANCIAS.md` recogen el contraste con segundas fuentes.
 
+## Contenido (Fase 1B-1: `sistema/`)
+
+| Fichero                                                   | Contenido                                                                       | Periodo   | Unidad                  |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------- | --------- | ----------------------- |
+| `pensiones-vigor-regimen-clase-sexo` (tabla)              | Pensiones en vigor y pensión media, por régimen, clase y sexo, a 1 de diciembre | 2008-2025 | pensiones; euros/mes    |
+| `pensiones-vigor-numero`, `pensiones-vigor-pension-media` | Series del total del sistema por clase y sexo                                   | 2008-2025 | pensiones; euros/mes    |
+| `pensionistas-pensiones-historico`                        | Pensionistas (personas) y pensiones a diciembre                                 | 2006-2025 | personas; pensiones     |
+| `altas-bajas-anual-clase-sexo` (tabla)                    | Altas iniciales y bajas definitivas del año, con pensión media                  | 2021-2025 | pensiones; euros/mes    |
+| `edad-media-altas-jubilacion`                             | Edad media de las altas iniciales de jubilación                                 | 2022-2025 | años                    |
+| `complementos-minimos-regimen-clase-sexo` (tabla)         | Pensiones con complemento por mínimos, porcentaje, pensión y complemento medios | 2022-2025 | pensiones; %; euros/mes |
+| `afiliacion-media-mensual-regimen` (tabla)                | Afiliados medios mensuales por régimen                                          | 2001-2026 | afiliados               |
+| `afiliacion-anual`                                        | Afiliados: media anual (derivada) y diciembre                                   | 2001-2025 | afiliados               |
+| `afiliados-sexo-edad` (tabla)                             | Afiliados de diciembre por sexo y tramo de edad                                 | 2021-2025 | afiliados               |
+| `relacion-afiliados-pensiones`                            | Cuatro definiciones de afiliados por pensionista o por pensión                  | 2006-2025 | razón                   |
+
+Las **tablas** (`tipo: "tabla"`) son un CSV más un JSON hermano con el mismo nombre (título, descripción, columnas y unidades, fuente, `fetchedAt`, confianza y SHA-256 de cada fichero de origen). `validate:data` comprueba ambos. Las definiciones de cada dato están en las notas de su JSON; las limitaciones, en `docs/DECISIONES.md` y `docs/PENDIENTE_DATOS.md`.
+
 ## Formato
 
 ```jsonc

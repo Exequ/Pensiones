@@ -59,3 +59,41 @@ La página de requisitos de la jubilación de la Seguridad Social (descargada) c
 
 - Las series anteriores a 2021 se contrastaron ya durante la extracción con la Ley de PGE de cada año (campo `crossCheck` de cada dato); este informe añade un contraste independiente de los años recientes.
 - La presencia del valor en el texto no garantiza que corresponda al mismo concepto: las coincidencias sin contexto deben revisarse por muestreo (actuario).
+
+## Fase 1B-1: sistema (pensiones, afiliación, altas y bajas)
+
+Fecha: 2026-11-11. Método: cada dato clave se contrasta con **otra publicación de la misma fuente oficial** (otro fichero de la Seguridad Social). No hay segunda fuente independiente porque MITES (anuario y boletín de estadísticas laborales) no es accesible desde el entorno (ver `docs/DESCARGAS_MANUALES.md`). La prueba es mecánica (`scripts/etl/verificacion_1b1.py`).
+
+Resultado: **24 de 27** datos coinciden exactamente con la segunda publicación.
+
+| Dato                                            | Valor      | Segunda publicación                              | Valor      | Coincide |
+| ----------------------------------------------- | ---------- | ------------------------------------------------ | ---------- | -------- |
+| Pensiones contributivas en vigor a 1 dic. 2008  | 8.464.342  | PTAS, serie histórica (Pnes y ptas)              | 8.464.342  | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2009  | 8.604.119  | PTAS, serie histórica (Pnes y ptas)              | 8.604.119  | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2010  | 8.739.732  | PTAS, serie histórica (Pnes y ptas)              | 8.739.732  | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2011  | 8.866.277  | PTAS, serie histórica (Pnes y ptas)              | 8.866.277  | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2012  | 8.999.045  | PTAS, serie histórica (Pnes y ptas)              | 8.999.045  | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2013  | 9.145.966  | PTAS, serie histórica (Pnes y ptas)              | 9.145.966  | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2014  | 9.270.942  | PTAS, serie histórica (Pnes y ptas)              | 9.270.942  | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2015  | 9.360.799  | PTAS, serie histórica (Pnes y ptas)              | 9.360.799  | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2016  | 9.473.482  | PTAS, serie histórica (Pnes y ptas)              | 9.473.482  | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2017  | 9.581.770  | PTAS, serie histórica (Pnes y ptas)              | 9.581.770  | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2018  | 9.696.272  | PTAS, serie histórica (Pnes y ptas)              | 9.696.272  | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2019  | 9.801.379  | PTAS, serie histórica (Pnes y ptas)              | 9.801.379  | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2020  | 9.809.019  | PTAS, serie histórica (Pnes y ptas)              | 9.809.019  | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2021  | 9.916.915  | PTAS, serie histórica (Pnes y ptas)              | 9.916.966  | no       |
+| Pensiones contributivas en vigor a 1 dic. 2022  | 9.994.793  | PTAS, serie histórica (Pnes y ptas)              | 9.994.836  | no       |
+| Pensiones contributivas en vigor a 1 dic. 2023  | 10.111.955 | PTAS, serie histórica (Pnes y ptas)              | 10.111.991 | no       |
+| Pensiones contributivas en vigor a 1 dic. 2024  | 10.281.477 | PTAS, serie histórica (Pnes y ptas)              | 10.281.477 | sí       |
+| Pensiones contributivas en vigor a 1 dic. 2025  | 10.434.856 | PTAS, serie histórica (Pnes y ptas)              | 10.434.856 | sí       |
+| Afiliados medios diciembre 2021 (total sistema) | 19.824.911 | Fichero «Afiliados Medios» del año, hoja 1. EDAD | 19.824.911 | sí       |
+| Afiliados medios diciembre 2022 (total sistema) | 20.296.271 | Fichero «Afiliados Medios» del año, hoja 1. EDAD | 20.296.271 | sí       |
+| Afiliados medios diciembre 2023 (total sistema) | 20.836.010 | Fichero «Afiliados Medios» del año, hoja 1. EDAD | 20.836.010 | sí       |
+| Afiliados medios diciembre 2024 (total sistema) | 21.337.962 | Fichero «Afiliados Medios» del año, hoja 1. EDAD | 21.337.962 | sí       |
+| Afiliados medios diciembre 2025 (total sistema) | 21.844.414 | Fichero «Afiliados Medios» del año, hoja 1. EDAD | 21.844.414 | sí       |
+| Altas iniciales de jubilación 2022              | 327.872    | EVO, hoja de altas de jubilación por edad        | 327.872    | sí       |
+| Altas iniciales de jubilación 2023              | 326.949    | EVO, hoja de altas de jubilación por edad        | 326.949    | sí       |
+| Altas iniciales de jubilación 2024              | 368.065    | EVO, hoja de altas de jubilación por edad        | 368.065    | sí       |
+| Altas iniciales de jubilación 2025              | 375.324    | EVO, hoja de altas de jubilación por edad        | 375.324    | sí       |
+
+Comprobaciones internas adicionales (tests de coherencia, `scripts/coherencia-sistema.test.ts`): suma de clases, regímenes y sexos igual al total; afiliados mensuales igual a la suma de regímenes; ratios entre 1,5 y 3.
