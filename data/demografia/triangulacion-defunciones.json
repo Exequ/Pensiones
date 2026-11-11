@@ -1,0 +1,74 @@
+{
+  "tipo": "tabla",
+  "id": "triangulacion-defunciones",
+  "title": "Triangulación 1: defunciones registradas frente a las que implican las tablas de mortalidad del INE (1991-2024, edades de 65 y más) — datos derivados",
+  "description": "Por año, sexo y grupo de edad: defunciones registradas (INE) y defunciones esperadas con dos construcciones: (1) tasa central mx de la tabla del año × población media (media de la población a 1 de enero del año y del siguiente) de cada edad; (2) qx de la tabla × población a 1 de enero de la misma edad. «cociente» = registradas / esperadas. Dato derivado (no publicado por la fuente); el grupo «100+» es la edad de cierre de la tabla.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año de la tabla",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "grupo_edad",
+      "descripcion": "65-74, 75-84, 85-94, 95-99 o 100+",
+      "unidad": null
+    },
+    {
+      "id": "registradas",
+      "descripcion": "Defunciones registradas (por edad al fallecer)",
+      "unidad": "personas"
+    },
+    {
+      "id": "esperadas_tasa_central",
+      "descripcion": "Σ mx × población media",
+      "unidad": "personas"
+    },
+    {
+      "id": "esperadas_qx_poblacion_1_enero",
+      "descripcion": "Σ qx × población a 1 de enero",
+      "unidad": "personas"
+    },
+    {
+      "id": "cociente_tasa_central",
+      "descripcion": "registradas / esperadas con la tasa central",
+      "unidad": "razón"
+    },
+    {
+      "id": "cociente_qx",
+      "descripcion": "registradas / esperadas con qx y la población a 1 de enero",
+      "unidad": "razón"
+    }
+  ],
+  "filas": 340,
+  "source": {
+    "title": "Defunciones (tabla 6547), tablas de mortalidad (tabla 27153) y población (tabla 59583) del INE; cálculo propio",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=6547",
+    "docId": "INE-6547"
+  },
+  "origenes": [
+    {
+      "period": "2024",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=6547",
+      "sha256": "6aea0eae75d854e68d57425cbf00bf9277d7a0a2bcdf13c49ded3284480dc1c8"
+    },
+    {
+      "period": "2024",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+      "sha256": "e408674582ff98063c325ec31e723627e2b0d258281a729ec1dae0fec0e9ec4e"
+    },
+    {
+      "period": "2026",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=59583",
+      "sha256": "82d8572f3b1da7bb43a0b3e0275a4bf7e5fd94ad924d7e97529eb51e4b3022d0"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "media"
+}

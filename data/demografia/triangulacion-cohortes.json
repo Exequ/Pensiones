@@ -1,0 +1,89 @@
+{
+  "tipo": "tabla",
+  "id": "triangulacion-cohortes",
+  "title": "Triangulación 2: supervivencia de las cohortes de 65 a 85 años según la población publicada, las tablas de mortalidad y las defunciones registradas por generación — datos derivados",
+  "description": "Para la cohorte de edad inicial x a 1 de enero del primer año de la ventana: supervivencia publicada = población de edad x+k a 1 de enero k años después / población inicial (INE, sin ajustar por migración); supervivencia_qx = Π (1 − qx) con la edad y la tabla de cada año; supervivencia_qx_lexis = Π (1 − (qx + qx+1)/2), que tiene en cuenta que durante el año la cohorte pasa de edad exacta media x+0,5 a x+1,5; supervivencia_defunciones_generacion = Π (1 − defunciones de la generación en el año / población de la cohorte a 1 de enero), con las defunciones por año de nacimiento de Eurostat (demo_mager, que recoge datos del INE). Los tres últimos campos son el cociente entre la supervivencia publicada y cada una de las otras. Dato derivado.",
+  "columnas": [
+    {
+      "id": "ventana",
+      "descripcion": "Años inicial-final (1 de enero)",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad_inicial",
+      "descripcion": "Edad a 1 de enero del primer año",
+      "unidad": "años"
+    },
+    {
+      "id": "poblacion_inicial",
+      "descripcion": "Población inicial de la cohorte",
+      "unidad": "personas"
+    },
+    {
+      "id": "poblacion_final",
+      "descripcion": "Población de la misma cohorte k años después",
+      "unidad": "personas"
+    },
+    {
+      "id": "supervivencia_publicada",
+      "descripcion": "Población final / inicial",
+      "unidad": "razón"
+    },
+    {
+      "id": "supervivencia_qx",
+      "descripcion": "Π(1 − qx)",
+      "unidad": "razón"
+    },
+    {
+      "id": "supervivencia_qx_lexis",
+      "descripcion": "Π(1 − (qx + qx+1)/2)",
+      "unidad": "razón"
+    },
+    {
+      "id": "supervivencia_defunciones_generacion",
+      "descripcion": "Π(1 − defunciones de la generación / población de la cohorte)",
+      "unidad": "razón"
+    },
+    {
+      "id": "publicada_sobre_qx",
+      "descripcion": "Publicada / Π(1 − qx)",
+      "unidad": "razón"
+    },
+    {
+      "id": "publicada_sobre_qx_lexis",
+      "descripcion": "Publicada / Π(1 − (qx + qx+1)/2)",
+      "unidad": "razón"
+    },
+    {
+      "id": "publicada_sobre_defunciones",
+      "descripcion": "Publicada / defunciones por generación",
+      "unidad": "razón"
+    }
+  ],
+  "filas": 60,
+  "source": {
+    "title": "Población (tabla 59583), tablas de mortalidad (tabla 27153) del INE y defunciones por generación de Eurostat (demo_mager); cálculo propio",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=59583",
+    "docId": "INE-59583"
+  },
+  "origenes": [
+    {
+      "period": "2026",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=59583",
+      "sha256": "82d8572f3b1da7bb43a0b3e0275a4bf7e5fd94ad924d7e97529eb51e4b3022d0"
+    },
+    {
+      "period": "2024",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+      "sha256": "e408674582ff98063c325ec31e723627e2b0d258281a729ec1dae0fec0e9ec4e"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "media"
+}

@@ -58,3 +58,14 @@ Fecha: 2026-11-11.
 - **URL de fuente que no responde desde el entorno (2026-11-11)**: https://www.mites.gob.es/estadisticas/bel/PEN/index.htm → HTTP 000 (curl: (60) SSL certificate problem: unable to get local issuer certificate).
 
 <!-- discrepancias-1c:fin -->
+
+<!-- discrepancias-1b4:inicio -->
+
+## Fase 1B-4
+
+- **Modelo de cohortes frente a las tablas de mortalidad del INE (65-90 años, 2010-2020)**: aplicar qx de la tabla a la población de edad x a 1 de enero deja una supervivencia a 10 años inferior en la población publicada (0,991 a los 65, 0,955 a los 75, 0,921 a los 80 y 0,873 a los 85 en hombres; 0,909 a los 85 en mujeres). La diferencia procede sobre todo de la convención de edades (la cohorte con x años a 1 de enero envejece de x+0,5 a x+1,5 durante el año): el factor medio entre las defunciones registradas y población × qx es de 1,04 a 1,08 y coincide con (qx + qx+1)/2 ÷ qx. No es un error de la población ni de las tablas.
+- **Residuo en hombres de 85 años (2010-2020)**: con la convención de Lexis la población publicada conserva un 4,7 % menos de efectivos que la tabla (0,953) y un 3,3 % menos que las defunciones registradas de la generación; en mujeres el residuo es inferior al 1 %. No se puede atribuir con los datos a la población, a la migración o al ajuste intercensal de 2012-2020.
+- **Bajas definitivas de jubilación frente a muertes implícitas (2025)**: 269.250 bajas registradas frente a 247.621 muertes con qx y 263.776 con (qx + qx+1)/2 (aproximación con la distribución por edad de octubre de 2026). Con la corrección de Lexis la diferencia pasa de un 8,7 % a un 2,1 %; la Seguridad Social no desglosa las causas de baja ni se conocen los pensionistas por edad simple.
+- **Defunciones registradas frente a tasa central × población media (65-99 años)**: las registradas superan a las esperadas entre un 0,5 % y un 3 % (más en 95-99); el INE calcula la exposición con los tiempos vividos por los fallecidos (b1 y b2 de su metodología) y no con la población media, por lo que no se espera una igualdad exacta.
+
+<!-- discrepancias-1b4:fin -->
