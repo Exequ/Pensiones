@@ -453,7 +453,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Se computan las 302 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "notes": "Se computan las 302 bases de mayor importe de esa ventana. Opción de 25 años (art. 209.1 en su redacción de 1-1-2023, DT 4.ª.7 TRLGSS) disponible si resulta más favorable en los hechos causantes de 2026 a 2040 (ventana 300 y divisor 350; parámetros por año en opcion-25-anos-*.json). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
       "quote": "Desde 1 de enero de 2026, la base reguladora de la pensión de jubilación será el resultado de dividir entre 352,33 la suma de las 302 bases de cotización de mayor importe comprendidas dentro del período de los 304 meses inmediatamente anteriores al mes previo al del hecho causante.",
       "location": "disposición transitoria 40.ª TRLGSS"
     },
@@ -470,7 +470,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Se computan las 304 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "notes": "Se computan las 304 bases de mayor importe de esa ventana. Opción de 25 años (art. 209.1 en su redacción de 1-1-2023, DT 4.ª.7 TRLGSS) disponible si resulta más favorable en los hechos causantes de 2026 a 2040 (ventana 300 y divisor 350; parámetros por año en opcion-25-anos-*.json). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
       "quote": "Desde 1 de enero de 2027, la base reguladora de la pensión de jubilación será el resultado de dividir entre 354,67 la suma de las 304 bases de cotización de mayor importe comprendidas dentro del período de los 308 meses inmediatamente anteriores al mes previo al del hecho causante.",
       "location": "disposición transitoria 40.ª TRLGSS"
     },
@@ -487,7 +487,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Se computan las 306 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "notes": "Se computan las 306 bases de mayor importe de esa ventana. Opción de 25 años (art. 209.1 en su redacción de 1-1-2023, DT 4.ª.7 TRLGSS) disponible si resulta más favorable en los hechos causantes de 2026 a 2040 (ventana 300 y divisor 350; parámetros por año en opcion-25-anos-*.json). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
       "quote": "Desde 1 de enero de 2028, la base reguladora de la pensión de jubilación será el resultado de dividir entre 357,00 la suma de las 306 bases de cotización de mayor importe comprendidas dentro del período de los 312 meses inmediatamente anteriores al mes previo al del hecho causante.",
       "location": "disposición transitoria 40.ª TRLGSS"
     },
@@ -504,7 +504,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Se computan las 308 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "notes": "Se computan las 308 bases de mayor importe de esa ventana. Opción de 25 años (art. 209.1 en su redacción de 1-1-2023, DT 4.ª.7 TRLGSS) disponible si resulta más favorable en los hechos causantes de 2026 a 2040 (ventana 300 y divisor 350; parámetros por año en opcion-25-anos-*.json). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
       "quote": "Desde 1 de enero de 2029, la base reguladora de la pensión de jubilación será el resultado de dividir entre 359,33 la suma de las 308 bases de cotización de mayor importe comprendidas dentro del período de los 316 meses inmediatamente anteriores al mes previo al del hecho causante.",
       "location": "disposición transitoria 40.ª TRLGSS"
     },
@@ -521,7 +521,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Se computan las 310 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "notes": "Se computan las 310 bases de mayor importe de esa ventana. Opción de 25 años (art. 209.1 en su redacción de 1-1-2023, DT 4.ª.7 TRLGSS) disponible si resulta más favorable en los hechos causantes de 2026 a 2040 (ventana 300 y divisor 350; parámetros por año en opcion-25-anos-*.json). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
       "quote": "Desde 1 de enero de 2030, la base reguladora de la pensión de jubilación será el resultado de dividir entre 361,67 la suma de las 310 bases de cotización de mayor importe comprendidas dentro del período de los 320 meses inmediatamente anteriores al mes previo al del hecho causante.",
       "location": "disposición transitoria 40.ª TRLGSS"
     },
@@ -538,7 +538,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Se computan las 312 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "notes": "Se computan las 312 bases de mayor importe de esa ventana. Opción de 25 años (art. 209.1 en su redacción de 1-1-2023, DT 4.ª.7 TRLGSS) disponible si resulta más favorable en los hechos causantes de 2026 a 2040 (ventana 300 y divisor 350; parámetros por año en opcion-25-anos-*.json). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
       "quote": "Desde 1 de enero de 2031, la base reguladora de la pensión de jubilación será el resultado de dividir entre 364 la suma de las 312 bases de cotización de mayor importe comprendidas dentro del período de los 324 meses inmediatamente anteriores al mes previo al del hecho causante.",
       "location": "disposición transitoria 40.ª TRLGSS"
     },
@@ -555,7 +555,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Se computan las 314 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "notes": "Se computan las 314 bases de mayor importe de esa ventana. Opción de 25 años (art. 209.1 en su redacción de 1-1-2023, DT 4.ª.7 TRLGSS) disponible si resulta más favorable en los hechos causantes de 2026 a 2040 (ventana 300 y divisor 350; parámetros por año en opcion-25-anos-*.json). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
       "quote": "Desde 1 de enero de 2032, la base reguladora de la pensión de jubilación será el resultado de dividir entre 366,33 la suma de las 314 bases de cotización de mayor importe comprendidas dentro del período de los 328 meses inmediatamente anteriores al mes previo al del hecho causante.",
       "location": "disposición transitoria 40.ª TRLGSS"
     },
@@ -572,7 +572,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Se computan las 316 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "notes": "Se computan las 316 bases de mayor importe de esa ventana. Opción de 25 años (art. 209.1 en su redacción de 1-1-2023, DT 4.ª.7 TRLGSS) disponible si resulta más favorable en los hechos causantes de 2026 a 2040 (ventana 300 y divisor 350; parámetros por año en opcion-25-anos-*.json). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
       "quote": "Desde 1 de enero de 2033, la base reguladora de la pensión de jubilación será el resultado de dividir entre 368,67 la suma de las 316 bases de cotización de mayor importe comprendidas dentro del período de los 332 meses inmediatamente anteriores al mes previo al del hecho causante.",
       "location": "disposición transitoria 40.ª TRLGSS"
     },
@@ -589,7 +589,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Se computan las 318 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "notes": "Se computan las 318 bases de mayor importe de esa ventana. Opción de 25 años (art. 209.1 en su redacción de 1-1-2023, DT 4.ª.7 TRLGSS) disponible si resulta más favorable en los hechos causantes de 2026 a 2040 (ventana 300 y divisor 350; parámetros por año en opcion-25-anos-*.json). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
       "quote": "Desde 1 de enero de 2034, la base reguladora de la pensión de jubilación será el resultado de dividir entre 371,00 la suma de las 318 bases de cotización de mayor importe comprendidas dentro del período de los 336 meses inmediatamente anteriores al mes previo al del hecho causante.",
       "location": "disposición transitoria 40.ª TRLGSS"
     },
@@ -606,7 +606,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Se computan las 320 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "notes": "Se computan las 320 bases de mayor importe de esa ventana. Opción de 25 años (art. 209.1 en su redacción de 1-1-2023, DT 4.ª.7 TRLGSS) disponible si resulta más favorable en los hechos causantes de 2026 a 2040 (ventana 300 y divisor 350; parámetros por año en opcion-25-anos-*.json). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
       "quote": "Desde 1 de enero de 2035, la base reguladora de la pensión de jubilación será el resultado de dividir entre 373,33 la suma de las 320 bases de cotización de mayor importe comprendidas dentro del período de los 340 meses inmediatamente anteriores al mes previo al del hecho causante.",
       "location": "disposición transitoria 40.ª TRLGSS"
     },
@@ -623,7 +623,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Se computan las 322 bases de mayor importe de esa ventana. Hasta 2040 se aplica la regla de 25 años (art. 209.1 en su redacción de 1-1-2023) si resulta más favorable (DT 4.ª.7 TRLGSS). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
+      "notes": "Se computan las 322 bases de mayor importe de esa ventana. Opción de 25 años (art. 209.1 en su redacción de 1-1-2023, DT 4.ª.7 TRLGSS) disponible si resulta más favorable en los hechos causantes de 2026 a 2040 (ventana 300 y divisor 350; parámetros por año en opcion-25-anos-*.json). Calendario legal vigente: los años futuros pueden cambiar por reformas posteriores.",
       "quote": "Desde 1 de enero de 2036, la base reguladora de la pensión de jubilación será el resultado de dividir entre 375,67 la suma de las 322 bases de cotización de mayor importe comprendidas dentro del período de los 344 meses inmediatamente anteriores al mes previo al del hecho causante.",
       "location": "disposición transitoria 40.ª TRLGSS"
     },
@@ -640,7 +640,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Ventana de 348 meses de la que se toman las 324 bases de mayor importe (se descartan 24). Hasta 2043 coexiste con la opción de la DT 4.ª.7. Calendario legal vigente.",
+      "notes": "Ventana de 348 meses de la que se toman las 324 bases de mayor importe (se descartan 24). Hasta 2043 coexiste con la opción de la DT 4.ª.7 (en 2041-2043 con ventanas de 306, 312 y 318 meses; véase opcion-25-anos-*.json). Calendario legal vigente.",
       "quote": "La base reguladora de la pensión de jubilación será el cociente que resulte de dividir entre 378, la suma de las bases de cotización del interesado durante 324 meses anteriores al del mes previo al del hecho causante obtenidos de la siguiente forma: a) Se seleccionarán los 348 meses consecutivos e inmediatamente anteriores al del mes previo al del hecho causante.",
       "location": "art. 209.1 TRLGSS (redacción del RDL 2/2023, en vigor el 01/01/2026) y DT 40.ª: «Desde de 1 de enero de 2037 … aplicando, en su integridad, lo establecido en el artículo 209.1»"
     }

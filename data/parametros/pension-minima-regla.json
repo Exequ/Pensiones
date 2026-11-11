@@ -1,0 +1,231 @@
+{
+  "tipo": "datos",
+  "id": "pension-minima-regla",
+  "title": "Regla de evolución de las pensiones mínimas (art. 58.2, DA 53.ª TRLGSS)",
+  "description": "Mandato legal numérico de evolución de las cuantías mínimas: revalorización general más reducción progresiva de la brecha con el umbral de pobreza (2024-2027) y parámetros del umbral. Las cuantías concretas las fijan las leyes de presupuestos.",
+  "data": [
+    {
+      "id": "2024-brecha-reducida",
+      "value": 20,
+      "unit": "% de la brecha entre la cuantía de referencia y el umbral de pobreza de un hogar de dos adultos que se reduce ese año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía de referencia = mínima de jubilación (titular mayor de 65 años con cónyuge a cargo) ya revalorizada según el art. 58.2. Desde 2027 el valor 100 significa «hasta alcanzar» el umbral (si fuese necesario), y esa cuantía no podrá ser inferior al umbral (apartado 1). Las cuantías las fijan las leyes de presupuestos de cada año (apartado 6); este dato es el mandato legal, no el importe.",
+      "quote": "El 1 de enero de 2024 la cuantía de referencia se incrementará adicionalmente en el porcentaje necesario para reducir en un 20 por ciento la brecha que exista",
+      "location": "DA 53.ª TRLGSS (art. único.35 RDL 2/2023; en vigor desde 01/04/2023), apartado 2",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.35. Cita comprobada en el texto: «El 1 de enero de 2024 la cuantía de referencia se incrementará adicionalmente en el porcentaje necesario para reducir en un 20 por ciento la brecha que exista»."
+      }
+    },
+    {
+      "id": "2024-umbral-multiplicador-hogar-unipersonal",
+      "value": 1.5,
+      "unit": "veces el umbral de pobreza del hogar unipersonal (ECV, INE)",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Umbral del hogar de dos adultos = 1,5 × umbral unipersonal, con el último dato disponible de la Encuesta de Condiciones de Vida del INE actualizado con el crecimiento medio interanual de esa renta en los últimos ocho años.",
+      "quote": "se multiplicará por 1,5 el umbral de la pobreza correspondiente a un hogar unipersonal",
+      "location": "DA 53.ª TRLGSS (art. único.35 RDL 2/2023; en vigor desde 01/04/2023), apartado 1",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.35. Cita comprobada en el texto: «se multiplicará por 1,5 el umbral de la pobreza correspondiente a un hogar unipersonal»."
+      }
+    },
+    {
+      "id": "2024-anios-crecimiento-renta-umbral",
+      "value": 8,
+      "unit": "años (crecimiento medio interanual de la renta para actualizar el umbral)",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "de acuerdo con el crecimiento medio interanual de esa renta en los últimos ocho años",
+      "location": "DA 53.ª TRLGSS (art. único.35 RDL 2/2023; en vigor desde 01/04/2023), apartado 1",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.35. Cita comprobada en el texto: «de acuerdo con el crecimiento medio interanual de esa renta en los últimos ocho años»."
+      }
+    },
+    {
+      "id": "2024-factor-resto-minimas",
+      "value": 50,
+      "unit": "% de los porcentajes de reducción de la brecha (apartado 2) que se añaden a las demás cuantías mínimas",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se refiere a las mínimas distintas de las de cuantía de referencia (viudedad con cargas familiares y pensiones con cónyuge a cargo, excepto IP total de menores de 60 años, que igualan la de referencia desde 2024: apartado 3).",
+      "quote": "El resto de las cuantías mínimas de las pensiones contributivas, una vez revalorizadas, se incrementarán adicionalmente cada año y en el mismo periodo en un porcentaje equivalente al 50 por ciento de los porcentajes resultantes del apartado 2",
+      "location": "DA 53.ª TRLGSS (art. único.35 RDL 2/2023; en vigor desde 01/04/2023), apartado 4",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.35. Cita comprobada en el texto: «en un porcentaje equivalente al 50 por ciento de los porcentajes resultantes del apartado 2»."
+      }
+    },
+    {
+      "id": "2024-pnc-multiplicador-umbral-unipersonal",
+      "value": 0.75,
+      "unit": "veces el umbral de pobreza del hogar unipersonal (referencia de las pensiones no contributivas)",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Las pensiones no contributivas, revalorizadas conforme al art. 62, se incrementan adicionalmente cada año por el mismo procedimiento del apartado 2.",
+      "quote": "con la referencia de multiplicar por 0,75 el umbral de la pobreza de un hogar unipersonal",
+      "location": "DA 53.ª TRLGSS (art. único.35 RDL 2/2023; en vigor desde 01/04/2023), apartado 5",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.35. Cita comprobada en el texto: «con la referencia de multiplicar por 0,75 el umbral de la pobreza de un hogar unipersonal»."
+      }
+    },
+    {
+      "id": "2024-pp-adicionales-sobre-revalorizacion-general",
+      "value": 0,
+      "unit": "puntos porcentuales (ninguno: la mínima se actualiza con el mismo porcentaje del art. 58.2 antes de los incrementos adicionales de la DA 53.ª)",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Regla general: la mínima se actualiza cada año en el porcentaje del art. 58.2; sobre ella operan los incrementos adicionales de 2024 a 2027 de esta DA. Desde 2028 no hay mandato adicional en el texto y rige solo el art. 58.2 y el tope del art. 59.4 (complementos ≤ cuantía de la PNC).",
+      "quote": "la cuantía mínima de las pensiones prevista en el artículo 59",
+      "location": "art. 58.2 TRLGSS (art. único.5 RDL 2/2023)"
+    },
+    {
+      "id": "2025-brecha-reducida",
+      "value": 30,
+      "unit": "% de la brecha entre la cuantía de referencia y el umbral de pobreza de un hogar de dos adultos que se reduce ese año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía de referencia = mínima de jubilación (titular mayor de 65 años con cónyuge a cargo) ya revalorizada según el art. 58.2. Desde 2027 el valor 100 significa «hasta alcanzar» el umbral (si fuese necesario), y esa cuantía no podrá ser inferior al umbral (apartado 1). Las cuantías las fijan las leyes de presupuestos de cada año (apartado 6); este dato es el mandato legal, no el importe.",
+      "quote": "El 1 de enero de 2025 la cuantía de referencia se incrementará adicionalmente en el porcentaje necesario para reducir en un 30 por ciento la brecha que exista",
+      "location": "DA 53.ª TRLGSS (art. único.35 RDL 2/2023; en vigor desde 01/04/2023), apartado 2",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.35. Cita comprobada en el texto: «El 1 de enero de 2025 la cuantía de referencia se incrementará adicionalmente en el porcentaje necesario para reducir en un 30 por ciento la brecha que exista»."
+      }
+    },
+    {
+      "id": "2026-brecha-reducida",
+      "value": 50,
+      "unit": "% de la brecha entre la cuantía de referencia y el umbral de pobreza de un hogar de dos adultos que se reduce ese año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía de referencia = mínima de jubilación (titular mayor de 65 años con cónyuge a cargo) ya revalorizada según el art. 58.2. Desde 2027 el valor 100 significa «hasta alcanzar» el umbral (si fuese necesario), y esa cuantía no podrá ser inferior al umbral (apartado 1). Las cuantías las fijan las leyes de presupuestos de cada año (apartado 6); este dato es el mandato legal, no el importe.",
+      "quote": "El 1 de enero de 2026 la cuantía de referencia se incrementará adicionalmente en el porcentaje necesario para reducir en un 50 por ciento la brecha que exista",
+      "location": "DA 53.ª TRLGSS (art. único.35 RDL 2/2023; en vigor desde 01/04/2023), apartado 2",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.35. Cita comprobada en el texto: «El 1 de enero de 2026 la cuantía de referencia se incrementará adicionalmente en el porcentaje necesario para reducir en un 50 por ciento la brecha que exista»."
+      }
+    },
+    {
+      "id": "2027-brecha-reducida",
+      "value": 100,
+      "unit": "% de la brecha entre la cuantía de referencia y el umbral de pobreza de un hogar de dos adultos que se reduce ese año",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía de referencia = mínima de jubilación (titular mayor de 65 años con cónyuge a cargo) ya revalorizada según el art. 58.2. Desde 2027 el valor 100 significa «hasta alcanzar» el umbral (si fuese necesario), y esa cuantía no podrá ser inferior al umbral (apartado 1). Las cuantías las fijan las leyes de presupuestos de cada año (apartado 6); este dato es el mandato legal, no el importe.",
+      "quote": "El 1 de enero de 2027 la cuantía de referencia se incrementará adicionalmente, si ello fuese necesario, hasta alcanzar el umbral de pobreza calculado para un hogar de dos adultos",
+      "location": "DA 53.ª TRLGSS (art. único.35 RDL 2/2023; en vigor desde 01/04/2023), apartado 2",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.35. Cita comprobada en el texto: «El 1 de enero de 2027 la cuantía de referencia se incrementará adicionalmente, si ello fuese necesario, hasta alcanzar el umbral de pobreza calculado para un hogar de dos adultos»."
+      }
+    }
+  ]
+}

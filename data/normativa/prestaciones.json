@@ -273,6 +273,12 @@
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-11474",
           "docId": "BOE-A-2026-11474"
+        },
+        {
+          "title": "Ley 21/2021, de 28 de diciembre, de garantía del poder adquisitivo de las pensiones y de otras medidas de refuerzo de la sostenibilidad financiera y social del sistema público de pensiones (PDF oficial; art. 1, apartado Ocho)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/boe/dias/2021/12/29/pdfs/BOE-A-2021-21652.pdf",
+          "docId": "BOE-A-2021-21652"
         }
       ],
       "fetchedAt": "2026-11-11",
@@ -280,10 +286,10 @@
       "evidencia": [
         "«Un porcentaje adicional de un 4 por ciento por cada año completo cotizado entre la fecha en que cumplió dicha edad y la del hecho causante de la pensión» (art. 210.2.a)",
         "«A partir del segundo año completo de demora, para el cálculo del porcentaje se podrán computar periodos superiores a 6 meses e inferiores a un año, correspondiendo a dichos periodos un 2 por ciento adicional» (art. 210.2.a)",
-        "«Si ha cotizado menos de 44 años y 6 meses: [Pago único = 800 (Pensión inicial anual/500)^(1/1,65)] Si ha cotizado, al menos, 44 años y 6 meses la cifra anterior se aumenta en un 10 %: [Pago único = 880 (Pensión inicial anual/500)^(1/1,65)]» (art. 210.2.b; fórmulas en imágenes BOE 26917_15156830_1.png y _2.png)",
-        "«Cuando entre la fecha de cumplimiento de la edad ordinaria de jubilación aplicable y la del hecho causante de la pensión se acredite un periodo de nueve o más años cotizados, el complemento consistirá en la suma de: a) Una cantidad a tanto alzado por cinco años de ese periodo» (art. 3.3 RD 371/2023)"
+        "«Cuando entre la fecha de cumplimiento de la edad ordinaria de jubilación aplicable y la del hecho causante de la pensión se acredite un periodo de nueve o más años cotizados, el complemento consistirá en la suma de: a) Una cantidad a tanto alzado por cinco años de ese periodo» (art. 3.3 RD 371/2023)",
+        "«1.º Si ha cotizado menos de 44 años y 6 meses: Pago único = 800 × (Pensión inicial anual / 500)^(1/1,65) · 2.º Si ha cotizado, al menos, 44 años y 6 meses la cifra anterior se aumenta en un 10%: Pago único = 880 × (Pensión inicial anual / 500)^(1/1,65)» (Ley 21/2021, art. 1, apartado Ocho, que da nueva redacción al art. 210.2.b TRLGSS; texto extraído del PDF oficial del BOE con pdftotext, donde la fórmula es texto y no imagen; el texto consolidado del TRLGSS conserva «Si ha cotizado menos de 44 años y 6 meses:» y «la cifra anterior se aumenta en un 10 %», con la fórmula como imagen)"
       ],
-      "notas": "Art. 210.2 en redacción del RDL 11/2024, en vigor desde 01/04/2025. Art. 3 del RD 371/2023 (opción mixta) en redacción del RD 416/2026, en vigor desde 28/08/2026; el texto original de 2023 no se ha consultado. La DT única del RD 371/2023 mantiene la incompatibilidad complemento/envejecimiento activo vigente a 31/03/2025 para quienes en esa fecha compatibilizaban pensión y trabajo. Las fórmulas del tanto alzado figuran como imágenes en el BOE y se han transcrito tras su visualización.",
+      "notas": "Art. 210.2 en redacción del RDL 11/2024, en vigor desde 01/04/2025. Art. 3 del RD 371/2023 (opción mixta) en redacción del RD 416/2026, en vigor desde 28/08/2026; el texto original de 2023 no se ha consultado. La DT única del RD 371/2023 mantiene la incompatibilidad complemento/envejecimiento activo vigente a 31/03/2025 para quienes en esa fecha compatibilizaban pensión y trabajo. La fórmula del tanto alzado (800 y 880, exponente 1/1,65, divisor 500) se ha contrastado con el texto del PDF oficial de la Ley 21/2021 (BOE-A-2021-21652, art. 1.Ocho), no solo con las imágenes del texto consolidado; el texto consolidado confirma los umbrales de 44 años y 6 meses y el incremento del 10 %. Si una norma posterior hubiera modificado la fórmula no se habría detectado en el consolidado (su fórmula es una imagen).",
       "modulos": ["Tipos de pensión", "Cómo se calcula"]
     },
     {

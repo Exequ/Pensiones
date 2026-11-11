@@ -1,0 +1,42 @@
+{
+ "trlgss-1994-art162-v20101231.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20101231",
+  "sha256_original": "12713095368d55675272661e8dc2e22dacdbc93ab78786fd3d977c91003434f0",
+  "nota": "Texto plano del artículo extraído de la página descargada"
+ },
+ "trlgss-1994-art162-v20130401.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20130401",
+  "sha256_original": "6a4837d2761a424eea837d493f2c8fa25bbbedb72fe0546038f92b170216ae19",
+  "nota": "Texto plano del artículo extraído de la página descargada"
+ },
+ "trlgss-2015-art209-v20151031.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031",
+  "sha256_original": "587d23259dc25c57289003aa703cae83a68350302839c6df97912660c5a5640c",
+  "nota": "Texto plano del artículo extraído de la página descargada"
+ },
+ "ley-3-2012.txt": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2012-9110",
+  "sha256_original": "46e51180949ffcb5ea5421ebd19b2903d37d7582e15ee33e3866fbe37c3132e5",
+  "nota": "Ley 3/2012, de 6 de julio (BOE-A-2012-9110), texto plano del XML"
+ },
+ "ley-21-2021.pdf": {
+  "url": "https://www.boe.es/boe/dias/2021/12/29/pdfs/BOE-A-2021-21652.pdf",
+  "sha256_original": "21b5ceaeaf39acbbe937bbe31b7c83afb7c0d916b6bb81371c7f096fbabcd05d",
+  "nota": "Ley 21/2021 (BOE-A-2021-21652), PDF original"
+ },
+ "ley-21-2021.txt": {
+  "url": "https://www.boe.es/boe/dias/2021/12/29/pdfs/BOE-A-2021-21652.pdf",
+  "sha256_original": "21b5ceaeaf39acbbe937bbe31b7c83afb7c0d916b6bb81371c7f096fbabcd05d",
+  "nota": "pdftotext -layout del PDF anterior"
+ },
+ "trlgss-2015-consolidado.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+  "sha256_original": "678e76deee3aa782b54a4b5b5bb1e68c2c7768b55b2f38b49bc225dc51b8facc",
+  "nota": "Texto plano descargado en la Fase 1A (misma fecha de descarga)"
+ },
+ "rdl-2-2023.txt": {
+  "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967",
+  "sha256_original": "68978b317cef146f57e2fc3d7a29a6d7389ae4d6229f53797da26a0bb8c9edbc",
+  "nota": "Texto plano descargado en la Fase 1A (misma fecha de descarga)"
+ }
+}

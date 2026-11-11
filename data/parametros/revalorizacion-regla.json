@@ -1,0 +1,108 @@
+{
+  "tipo": "datos",
+  "id": "revalorizacion-regla",
+  "title": "Regla vigente de revalorización anual de las pensiones contributivas (art. 58 TRLGSS)",
+  "description": "Parámetros numéricos de la regla de revalorización en vigor: referencia (IPC), periodo de medición, suelo e indicadores de aplicación. Los años 2020-2022 se revalorizaron con normas especiales (véase revalorizacion-general).",
+  "data": [
+    {
+      "id": "2024-meses-medicion",
+      "value": 12,
+      "unit": "meses",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Referencia: IPC (índice general), tasas de variación interanual. Periodo de medición: doce meses previos a diciembre del año anterior, es decir, de diciembre del año t-2 a noviembre del año t-1; la revalorización se aplica «al comienzo de cada año». Rige desde 2024 (la derogación del apartado 4 produce efectos el 01/01/2025).",
+      "quote": "se revalorizarán al comienzo de cada año en el porcentaje equivalente al valor medio de las tasas de variación interanual expresadas en tanto por ciento del Índice de Precios al Consumo de los doce meses previos a diciembre del año anterior",
+      "location": "art. 58.2 TRLGSS (art. único.5 RDL 2/2023; en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.5. Cita comprobada en el texto: «el porcentaje equivalente al valor medio de las tasas de variación interanual expresadas en tanto por ciento del Índice de Precios al Consumo de los doce meses previos a diciembre del año anterior»."
+      }
+    },
+    {
+      "id": "2024-ultimo-mes-medicion",
+      "value": 11,
+      "unit": "mes del año anterior (1-12): noviembre",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Deducido del texto: los doce meses previos a diciembre terminan en noviembre del año anterior a la revalorización.",
+      "quote": "se revalorizarán al comienzo de cada año en el porcentaje equivalente al valor medio de las tasas de variación interanual expresadas en tanto por ciento del Índice de Precios al Consumo de los doce meses previos a diciembre del año anterior",
+      "location": "art. 58.2 TRLGSS (art. único.5 RDL 2/2023; en vigor el 01/01/2024)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.5. Cita comprobada en el texto: «el porcentaje equivalente al valor medio de las tasas de variación interanual expresadas en tanto por ciento del Índice de Precios al Consumo de los doce meses previos a diciembre del año anterior»."
+      }
+    },
+    {
+      "id": "2024-suelo",
+      "value": 0,
+      "unit": "% (la revalorización no puede ser negativa)",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Único límite del texto vigente: si el valor medio es negativo, las pensiones no varían. No hay techo (el apartado 4 del art. 58 consta «(Derogado)», con efectos desde el 01/01/2025).",
+      "quote": "Si el valor medio al que se refiere el apartado anterior fuera negativo, el importe de las pensiones no variará al comienzo del año.",
+      "location": "art. 58.3 TRLGSS (art. único.5 RDL 2/2023)"
+    },
+    {
+      "id": "2024-incluye-complemento-brecha-genero",
+      "value": 1,
+      "unit": "indicador (1 = sí)",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "El complemento para la reducción de la brecha de género se revaloriza igual que la pensión.",
+      "quote": "todas las pensiones de Seguridad Social, en su modalidad contributiva, incluido el complemento de brecha de género",
+      "location": "art. 58.2 TRLGSS (art. único.5 RDL 2/2023; en vigor el 01/01/2024)"
+    },
+    {
+      "id": "2024-actualiza-pension-maxima",
+      "value": 1,
+      "unit": "indicador (1 = sí)",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "La pensión máxima y las mínimas se actualizan con el mismo porcentaje; sobre la máxima se suma además lo previsto en DT 39.ª (véase pension-maxima-incremento-futuro) y sobre las mínimas lo de la DA 53.ª (pension-minima-regla).",
+      "quote": "En ese mismo porcentaje se actualizarán anualmente en la correspondiente Ley de Presupuestos Generales del Estado la cuantía máxima de las pensiones a que se refiere el artículo 57 y la cuantía mínima de las pensiones prevista en el artículo 59",
+      "location": "art. 58.2 TRLGSS (art. único.5 RDL 2/2023; en vigor el 01/01/2024)"
+    }
+  ]
+}

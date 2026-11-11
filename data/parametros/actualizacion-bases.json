@@ -1,0 +1,156 @@
+{
+  "tipo": "datos",
+  "id": "actualizacion-bases",
+  "title": "Actualización de las bases de cotización en el cálculo de la base reguladora de jubilación (por versión)",
+  "description": "Parámetros numéricos de la actualización: meses que se computan en valor nominal y mes del índice de referencia. El periodo es el año desde el que rige la versión.",
+  "data": [
+    {
+      "id": "2010-meses-nominales",
+      "value": 24,
+      "unit": "meses más recientes (anteriores al mes previo al del hecho causante) que se computan sin actualizar",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, TRLGSS: artículo 162, versión en vigor el 31/12/2010",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20101231"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Estas bases entran por su valor nominal; las anteriores se actualizan con el IPC general hasta el mes inmediato anterior al inicio de ese tramo de 24 meses.",
+      "quote": "Las bases correspondientes a los 24 meses anteriores al mes previo al del hecho causante se computarán en su valor nominal.",
+      "location": "art. 162.1.1.1.ª TRLGSS 1994 (versión de 31/12/2010)"
+    },
+    {
+      "id": "2010-mes-indice-referencia",
+      "value": 25,
+      "unit": "mes anterior al previo al hecho causante cuyo IPC es el índice de referencia (I25)",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, TRLGSS: artículo 162, versión en vigor el 31/12/2010",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20101231"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "En la fórmula, cada base Bi anterior a esos 24 meses se multiplica por I25 / Ii (IPC del mes 25 / IPC del mes i). Índice: IPC general (INE).",
+      "quote": "Las bases correspondientes a los 24 meses anteriores al mes previo al del hecho causante se computarán en su valor nominal.",
+      "location": "art. 162.1.1.1.ª TRLGSS 1994 (versión de 31/12/2010)"
+    },
+    {
+      "id": "2013-meses-nominales",
+      "value": 24,
+      "unit": "meses más recientes (anteriores al mes previo al del hecho causante) que se computan sin actualizar",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, TRLGSS: artículo 162, versión en vigor el 01/04/2013",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20130401"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Estas bases entran por su valor nominal; las anteriores se actualizan con el IPC general hasta el mes inmediato anterior al inicio de ese tramo de 24 meses.",
+      "quote": "Las bases correspondientes a los 24 meses anteriores al mes previo al del hecho causante se computarán en su valor nominal.",
+      "location": "art. 162.1.1.1.ª TRLGSS 1994 (versión de 01/04/2013)"
+    },
+    {
+      "id": "2013-mes-indice-referencia",
+      "value": 25,
+      "unit": "mes anterior al previo al hecho causante cuyo IPC es el índice de referencia (I25)",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, TRLGSS: artículo 162, versión en vigor el 01/04/2013",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=255&tn=1&p=20130401"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "En la fórmula, cada base Bi anterior a esos 24 meses se multiplica por I25 / Ii (IPC del mes 25 / IPC del mes i). Índice: IPC general (INE). Texto idéntico al de 2010 en este extremo.",
+      "quote": "Las bases correspondientes a los 24 meses anteriores al mes previo al del hecho causante se computarán en su valor nominal.",
+      "location": "art. 162.1.1.1.ª TRLGSS 1994 (versión de 01/04/2013)"
+    },
+    {
+      "id": "2016-meses-nominales",
+      "value": 24,
+      "unit": "meses más recientes (anteriores al mes previo al del hecho causante) que se computan sin actualizar",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Estas bases entran por su valor nominal; las anteriores se actualizan con el IPC general hasta el mes inmediato anterior al inicio de ese tramo de 24 meses.",
+      "quote": "Las bases correspondientes a los veinticuatro meses anteriores al mes previo al del hecho causante se computarán en su valor nominal.",
+      "location": "art. 209.1.a).1.ª TRLGSS 2015, texto original"
+    },
+    {
+      "id": "2016-mes-indice-referencia",
+      "value": 25,
+      "unit": "mes anterior al previo al hecho causante cuyo IPC es el índice de referencia (I25)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724&b=289&tn=1&p=20151031"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "En la fórmula, cada base Bi anterior a esos 24 meses se multiplica por I25 / Ii (IPC del mes 25 / IPC del mes i). Índice: IPC general (INE).",
+      "quote": "Las bases correspondientes a los veinticuatro meses anteriores al mes previo al del hecho causante se computarán en su valor nominal.",
+      "location": "art. 209.1.a).1.ª TRLGSS 2015, texto original"
+    },
+    {
+      "id": "2026-meses-nominales",
+      "value": 24,
+      "unit": "meses más recientes (anteriores al mes previo al del hecho causante) que se computan sin actualizar",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Estas bases entran por su valor nominal; las anteriores se actualizan con el IPC general hasta el mes inmediato anterior al inicio de ese tramo de 24 meses.",
+      "quote": "Las bases correspondientes a los veinticuatro meses inmediatamente anteriores al mes previo al del hecho causante se computarán en su valor nominal.",
+      "location": "art. 209.1.c) TRLGSS (RDL 2/2023), en vigor desde 01/01/2026",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.23 (art. 209.1.c TRLGSS). Cita comprobada en el texto: «Las bases correspondientes a los veinticuatro meses inmediatamente anteriores al mes previo al del hecho causante se computarán en su valor nominal»."
+      }
+    },
+    {
+      "id": "2026-mes-indice-referencia",
+      "value": 25,
+      "unit": "mes anterior al previo al hecho causante cuyo IPC es el índice de referencia (I25)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "En la fórmula, cada base Bi anterior a esos 24 meses se multiplica por I25 / Ii (IPC del mes 25 / IPC del mes i). Índice: IPC general (INE).",
+      "quote": "Las bases correspondientes a los veinticuatro meses inmediatamente anteriores al mes previo al del hecho causante se computarán en su valor nominal.",
+      "location": "art. 209.1.c) TRLGSS (RDL 2/2023), en vigor desde 01/01/2026",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: RDL 2/2023, art. único.23 (art. 209.1.c TRLGSS). Cita comprobada en el texto: «Las bases correspondientes a los veinticuatro meses inmediatamente anteriores al mes previo al del hecho causante se computarán en su valor nominal»."
+      }
+    }
+  ]
+}

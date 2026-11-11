@@ -97,3 +97,23 @@ Resultado: **24 de 27** datos coinciden exactamente con la segunda publicación.
 | Altas iniciales de jubilación 2025              | 375.324    | EVO, hoja de altas de jubilación por edad        | 375.324    | sí       |
 
 Comprobaciones internas adicionales (tests de coherencia, `scripts/coherencia-sistema.test.ts`): suma de clases, regímenes y sexos igual al total; afiliados mensuales igual a la suma de regímenes; ratios entre 1,5 y 3.
+
+## Fase 1A-bis: reglas de evolución futura y de cálculo
+
+Fecha: 2026-11-11. Método: cada dato se contrasta con una segunda fuente descargada (RDL 2/2023 en su texto original para los puntos 1, 2 y 5; el art. 209 de 2016 para 300/350; la Ley 3/2012 para las lagunas de 2013) buscando la cita literal en su texto, y los resultados numéricos se comprueban contra los datos observados (test `scripts/coherencia-reglas-futuras.test.ts`: la base máxima de 2024-2026 crece la revalorización más 1,2 puntos y la pensión máxima de 2025-2026 la revalorización más 0,115 puntos).
+
+Resultado: **129 de 129** contrastes con segunda fuente coinciden.
+
+| Fichero                            | Datos | Contraste con segunda fuente | Segunda fuente (BOE)                               | Sin segunda fuente                                                                                                                                   |
+| ---------------------------------- | ----- | ---------------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `base-maxima-incremento-futuro`    | 27    | 27 de 27                     | BOE-A-2023-6967                                    | —                                                                                                                                                    |
+| `pension-maxima-incremento-futuro` | 26    | 26 de 26                     | BOE-A-2023-6967                                    | —                                                                                                                                                    |
+| `revalorizacion-regla`             | 5     | 2 de 2                       | BOE-A-2023-6967                                    | 2024-suelo, 2024-incluye-complemento-brecha-genero, 2024-actualiza-pension-maxima                                                                    |
+| `pension-minima-regla`             | 9     | 8 de 8                       | BOE-A-2023-6967                                    | 2024-pp-adicionales-sobre-revalorizacion-general                                                                                                     |
+| `opcion-25-anos-ventana`           | 18    | 18 de 18                     | BOE-A-2015-11724, BOE-A-2023-6967                  | —                                                                                                                                                    |
+| `opcion-25-anos-divisor`           | 18    | 18 de 18                     | BOE-A-2015-11724, BOE-A-2023-6967                  | —                                                                                                                                                    |
+| `opcion-25-anos-aplicable`         | 19    | 19 de 19                     | BOE-A-2015-11724, BOE-A-2023-6967                  | —                                                                                                                                                    |
+| `lagunas-integracion`              | 11    | 9 de 9                       | BOE-A-1994-14960, BOE-A-2012-9110, BOE-A-2023-6967 | 2010-tramo1-meses, 2010-tramo1-pct-base-minima                                                                                                       |
+| `actualizacion-bases`              | 8     | 2 de 2                       | BOE-A-2023-6967                                    | 2010-meses-nominales, 2010-mes-indice-referencia, 2013-meses-nominales, 2013-mes-indice-referencia, 2016-meses-nominales, 2016-mes-indice-referencia |
+
+Sin segunda fuente: la versión de 2010 de la integración de lagunas y las versiones de 2010, 2013 y 2016 de la actualización de bases (cada una consta solo en su texto consolidado; los textos de 2010 y 2013 coinciden entre sí en los 24 meses nominales), el suelo del art. 58.3 y los indicadores de aplicación de la revalorización (el RDL 2/2023 no modificó el apartado 3), y el factor sobre la mínima del art. 58.2.

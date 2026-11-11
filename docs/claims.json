@@ -598,6 +598,38 @@
       "revisionActuarial": "pendiente"
     },
     {
+      "id": "param-actualizacion-bases",
+      "texto": "Actualización de las bases de cotización en el cálculo de la base reguladora de jubilación (por versión): 24 (meses más recientes (anteriores al mes previo al del hecho causante) que se computan sin actualizar) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/actualizacion-bases.json#2026-meses-nominales"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-base-maxima-incremento-futuro",
+      "texto": "Incremento anual de la base máxima de cotización sobre el IPC (2024-2050): 1,2 (puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)) en 2050.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/base-maxima-incremento-futuro.json#2050"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
       "id": "param-base-maxima-rg",
       "texto": "Base máxima de cotización del Régimen General: 5101,2 (euros/mes) en 2026.",
       "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
@@ -870,6 +902,22 @@
       "revisionActuarial": "pendiente"
     },
     {
+      "id": "param-lagunas-integracion",
+      "texto": "Integración de lagunas de cotización en el cálculo de la base reguladora de jubilación (por versión): 50 (% de la base mínima (el resto de los meses con laguna)) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/lagunas-integracion.json#2026-tramo2-pct-base-minima"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
       "id": "param-limite-ingresos-complementos-minimos",
       "texto": "Límite de ingresos para los complementos por mínimos (sin cónyuge a cargo o límite único): 9442,0 (euros/año) en 2026.",
       "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
@@ -931,6 +979,70 @@
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
           "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-opcion-25-anos-aplicable",
+      "texto": "Opción de 25 años (DT 4.ª.7 TRLGSS): años en que está disponible (2026-2044): 0 (indicador (1 = la opción está disponible; 0 = no disponible)) en 2044.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/opcion-25-anos-aplicable.json#2044"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-opcion-25-anos-divisor",
+      "texto": "Opción de 25 años (DT 4.ª.7 TRLGSS): divisor por año del hecho causante (2026-2043): 371 (divisor (14 pagas: meses × 14/12)) en 2043.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/opcion-25-anos-divisor.json#2043"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-opcion-25-anos-ventana",
+      "texto": "Opción de 25 años (DT 4.ª.7 TRLGSS): ventana de cálculo por año del hecho causante (2026-2043): 318 (meses) en 2043.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/opcion-25-anos-ventana.json#2043"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-pension-maxima-incremento-futuro",
+      "texto": "Incremento anual de la pensión máxima inicial sobre el IPC (2025-2050): 0,115 (puntos porcentuales sobre el porcentaje de revalorización de las pensiones (art. 58.2)) en 2050.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/pension-maxima-incremento-futuro.json#2050"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
       ],
       "fetchedAt": "2026-11-11",
@@ -1008,6 +1120,22 @@
       "revisionActuarial": "pendiente"
     },
     {
+      "id": "param-pension-minima-regla",
+      "texto": "Regla de evolución de las pensiones mínimas (art. 58.2, DA 53.ª TRLGSS): 100 (% de la brecha entre la cuantía de referencia y el umbral de pobreza de un hogar de dos adultos que se reduce ese año) en 2027.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/pension-minima-regla.json#2027-brecha-reducida"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
       "id": "param-pension-minima-viudedad",
       "texto": "Pensiones mínimas de viudedad: 9931,6 (euros/año) en 2026.",
       "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
@@ -1069,6 +1197,22 @@
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
           "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-revalorizacion-regla",
+      "texto": "Regla vigente de revalorización anual de las pensiones contributivas (art. 58 TRLGSS): 11 (mes del año anterior (1-12): noviembre) en 2024.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/revalorizacion-regla.json#2024-ultimo-mes-medicion"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
       ],
       "fetchedAt": "2026-11-11",
