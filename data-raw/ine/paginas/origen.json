@@ -1,0 +1,92 @@
+{
+ "ecp-metodologia": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177095&menu=metodologia&idp=1254735572981",
+  "fetchedAt": "2026-11-11",
+  "sha256": "eb65335072fd971189fda5dd4077ea12404abbe5528e8fcd54762c9333ae702f"
+ },
+ "ecp-resultados": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177095&menu=resultados&idp=1254735572981",
+  "fetchedAt": "2026-11-11",
+  "sha256": "e54345d770d49c4f084bb03650de33ef3c103416ca68c90a4da7bfa5ef2db4c6"
+ },
+ "tablas-mortalidad-metodologia": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177004&menu=metodologia&idp=1254735573002",
+  "fetchedAt": "2026-11-11",
+  "sha256": "be4d6f81a2124df17205bec08fe931d39d9b6161e86875cbc4ee23f6a66a31e2"
+ },
+ "tablas-mortalidad-resultados": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177004&menu=resultados&idp=1254735573002",
+  "fetchedAt": "2026-11-11",
+  "sha256": "ee6308298179675effa02b440df724cb927fb3bba16462efe08cbd3e9d0a07a9"
+ },
+ "migraciones-emcr-metodologia": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177098&menu=metodologia&idp=1254735573002",
+  "fetchedAt": "2026-11-11",
+  "sha256": "2f1e7f42ed6f5df60d6c748b7ba17fe0994a28ffb950058238854f0890556ad7"
+ },
+ "migraciones-emcr-resultados": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177098&menu=resultados&idp=1254735573002",
+  "fetchedAt": "2026-11-11",
+  "sha256": "479a3718232fcd281775b66743c68c2bbed29cf75f66cd699880d0eba80038a7"
+ },
+ "proyecciones-poblacion-metodologia": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736176953&menu=metodologia&idp=1254735572981",
+  "fetchedAt": "2026-11-11",
+  "sha256": "3cc402b6973553cc5199d163ce0dc2c859d92ec16b3a3c041fdd4c26c05dda01"
+ },
+ "proyecciones-poblacion-resultados": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736176953&menu=resultados&idp=1254735572981",
+  "fetchedAt": "2026-11-11",
+  "sha256": "5e5db0ce51fe30d4577879d8b2edb007369deeb320ea82bb8a3cc37820f4310d"
+ },
+ "epa-metodologia": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736176918&menu=metodologia&idp=1254735976595",
+  "fetchedAt": "2026-11-11",
+  "sha256": "5477841d94b0a51340d2a5696d1179cd2830a6bb02f1ad7653025f5fb7c1f6e1"
+ },
+ "epa-resultados": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736176918&menu=resultados&idp=1254735976595",
+  "fetchedAt": "2026-11-11",
+  "sha256": "7e77b787908c4b2087cc17b3a01e9f8eb77a539555c15799bded958bbaeb1674"
+ },
+ "eaes-metodologia": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177025&menu=metodologia&idp=1254735976596",
+  "fetchedAt": "2026-11-11",
+  "sha256": "5980424e1b8dc577a13b066d311bafe7ba8aad85363c401ec174829501821347"
+ },
+ "eaes-resultados": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177025&menu=resultados&idp=1254735976596",
+  "fetchedAt": "2026-11-11",
+  "sha256": "5b7092b2cd8c762f33bea52f7eab7ae68f83b3a317fced4d39ceadc60dd898d4"
+ },
+ "etcl-metodologia": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736045053&menu=metodologia&idp=1254735976596",
+  "fetchedAt": "2026-11-11",
+  "sha256": "db15aca92b2160f022b4749a7ea4efaf371b012d5ca44607b8534b6f8a695395"
+ },
+ "etcl-resultados": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736045053&menu=resultados&idp=1254735976596",
+  "fetchedAt": "2026-11-11",
+  "sha256": "09366aa4774e663977df4ae09004cb1bbf25e041754bd006576f3b4753f27ac7"
+ },
+ "idb-metodologia": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177003&menu=metodologia&idp=1254735573002",
+  "fetchedAt": "2026-11-11",
+  "sha256": "8f8f156bb7bd2748b43e75950b89115feb63375a12a93b6a07198dff981adbbf"
+ },
+ "idb-resultados": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177003&menu=resultados&idp=1254735573002",
+  "fetchedAt": "2026-11-11",
+  "sha256": "538506e5fe4d6006a076e40e8bb3e8af116ee65a08b08eb2cadbf6135e3b7e23"
+ },
+ "cna-metodologia": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=metodologia&idp=1254735576581",
+  "fetchedAt": "2026-11-11",
+  "sha256": "1352584c6211a6cf45df4fb94c41949e3a6e70c285f1a942c6c95d7e0bd2c5b1"
+ },
+ "cna-resultados": {
+  "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+  "fetchedAt": "2026-11-11",
+  "sha256": "69eb4fb6a392b03d387279e1b530845530724725d73a1c42aff4d512ce150a93"
+ }
+}

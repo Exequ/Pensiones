@@ -1,0 +1,1304 @@
+{
+  "tipo": "datos",
+  "id": "esperanza-vida-anual",
+  "title": "Esperanza de vida al nacer y a los 65 años por sexo (1975-2024)",
+  "description": "Serie anual de la esperanza de vida (función ex de las tablas de mortalidad del INE) al nacer y a los 65 años, por sexo.",
+  "series": [
+    {
+      "id": "esperanza-vida-0-ambos",
+      "title": "Esperanza de vida al nacer, ambos",
+      "unit": "años",
+      "source": {
+        "title": "Tablas de mortalidad por año, sexo, edad y funciones (tablas 27153 y 27150)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+        "docId": "INE-27153"
+      },
+      "confidence": "alta",
+      "notes": "Función ex de la tabla de mortalidad del INE del año indicado (dato publicado, no derivado).",
+      "points": [
+        {
+          "period": "1975",
+          "value": 73.437728
+        },
+        {
+          "period": "1976",
+          "value": 73.755442
+        },
+        {
+          "period": "1977",
+          "value": 74.242345
+        },
+        {
+          "period": "1978",
+          "value": 74.435123
+        },
+        {
+          "period": "1979",
+          "value": 74.906291
+        },
+        {
+          "period": "1980",
+          "value": 75.439346
+        },
+        {
+          "period": "1981",
+          "value": 75.613243
+        },
+        {
+          "period": "1982",
+          "value": 76.223209
+        },
+        {
+          "period": "1983",
+          "value": 76.015013
+        },
+        {
+          "period": "1984",
+          "value": 76.385796
+        },
+        {
+          "period": "1985",
+          "value": 76.340187
+        },
+        {
+          "period": "1986",
+          "value": 76.613353
+        },
+        {
+          "period": "1987",
+          "value": 76.844883
+        },
+        {
+          "period": "1988",
+          "value": 76.859342
+        },
+        {
+          "period": "1989",
+          "value": 76.902755
+        },
+        {
+          "period": "1990",
+          "value": 76.905492
+        },
+        {
+          "period": "1991",
+          "value": 77.065475
+        },
+        {
+          "period": "1992",
+          "value": 77.514166
+        },
+        {
+          "period": "1993",
+          "value": 77.65726
+        },
+        {
+          "period": "1994",
+          "value": 78.034754
+        },
+        {
+          "period": "1995",
+          "value": 78.123066
+        },
+        {
+          "period": "1996",
+          "value": 78.262819
+        },
+        {
+          "period": "1997",
+          "value": 78.763737
+        },
+        {
+          "period": "1998",
+          "value": 78.867464
+        },
+        {
+          "period": "1999",
+          "value": 78.870477
+        },
+        {
+          "period": "2000",
+          "value": 79.336624
+        },
+        {
+          "period": "2001",
+          "value": 79.670455
+        },
+        {
+          "period": "2002",
+          "value": 79.761154
+        },
+        {
+          "period": "2003",
+          "value": 79.703708
+        },
+        {
+          "period": "2004",
+          "value": 80.286329
+        },
+        {
+          "period": "2005",
+          "value": 80.280039
+        },
+        {
+          "period": "2006",
+          "value": 80.943087
+        },
+        {
+          "period": "2007",
+          "value": 80.969752
+        },
+        {
+          "period": "2008",
+          "value": 81.29772
+        },
+        {
+          "period": "2009",
+          "value": 81.663335
+        },
+        {
+          "period": "2010",
+          "value": 82.067939
+        },
+        {
+          "period": "2011",
+          "value": 82.250433
+        },
+        {
+          "period": "2012",
+          "value": 82.262408
+        },
+        {
+          "period": "2013",
+          "value": 82.770819
+        },
+        {
+          "period": "2014",
+          "value": 82.9062
+        },
+        {
+          "period": "2015",
+          "value": 82.67328
+        },
+        {
+          "period": "2016",
+          "value": 83.078504
+        },
+        {
+          "period": "2017",
+          "value": 83.054179
+        },
+        {
+          "period": "2018",
+          "value": 83.150685
+        },
+        {
+          "period": "2019",
+          "value": 83.533503
+        },
+        {
+          "period": "2020",
+          "value": 82.283645
+        },
+        {
+          "period": "2021",
+          "value": 83.025778
+        },
+        {
+          "period": "2022",
+          "value": 83.080876
+        },
+        {
+          "period": "2023",
+          "value": 83.774459
+        },
+        {
+          "period": "2024",
+          "value": 84.009718
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "esperanza-vida-0-hombres",
+      "title": "Esperanza de vida al nacer, hombres",
+      "unit": "años",
+      "source": {
+        "title": "Tablas de mortalidad por año, sexo, edad y funciones (tablas 27153 y 27150)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+        "docId": "INE-27153"
+      },
+      "confidence": "alta",
+      "notes": "Función ex de la tabla de mortalidad del INE del año indicado (dato publicado, no derivado).",
+      "points": [
+        {
+          "period": "1975",
+          "value": 70.534952
+        },
+        {
+          "period": "1976",
+          "value": 70.811126
+        },
+        {
+          "period": "1977",
+          "value": 71.272511
+        },
+        {
+          "period": "1978",
+          "value": 71.410236
+        },
+        {
+          "period": "1979",
+          "value": 71.813823
+        },
+        {
+          "period": "1980",
+          "value": 72.362035
+        },
+        {
+          "period": "1981",
+          "value": 72.507141
+        },
+        {
+          "period": "1982",
+          "value": 73.150056
+        },
+        {
+          "period": "1983",
+          "value": 72.937331
+        },
+        {
+          "period": "1984",
+          "value": 73.176777
+        },
+        {
+          "period": "1985",
+          "value": 73.081703
+        },
+        {
+          "period": "1986",
+          "value": 73.401986
+        },
+        {
+          "period": "1987",
+          "value": 73.55195
+        },
+        {
+          "period": "1988",
+          "value": 73.521885
+        },
+        {
+          "period": "1989",
+          "value": 73.424616
+        },
+        {
+          "period": "1990",
+          "value": 73.396845
+        },
+        {
+          "period": "1991",
+          "value": 73.487287
+        },
+        {
+          "period": "1992",
+          "value": 73.888807
+        },
+        {
+          "period": "1993",
+          "value": 74.089323
+        },
+        {
+          "period": "1994",
+          "value": 74.466313
+        },
+        {
+          "period": "1995",
+          "value": 74.532792
+        },
+        {
+          "period": "1996",
+          "value": 74.659576
+        },
+        {
+          "period": "1997",
+          "value": 75.287185
+        },
+        {
+          "period": "1998",
+          "value": 75.417725
+        },
+        {
+          "period": "1999",
+          "value": 75.425013
+        },
+        {
+          "period": "2000",
+          "value": 75.926322
+        },
+        {
+          "period": "2001",
+          "value": 76.268321
+        },
+        {
+          "period": "2002",
+          "value": 76.378391
+        },
+        {
+          "period": "2003",
+          "value": 76.414092
+        },
+        {
+          "period": "2004",
+          "value": 76.979463
+        },
+        {
+          "period": "2005",
+          "value": 77.017514
+        },
+        {
+          "period": "2006",
+          "value": 77.705417
+        },
+        {
+          "period": "2007",
+          "value": 77.782112
+        },
+        {
+          "period": "2008",
+          "value": 78.222961
+        },
+        {
+          "period": "2009",
+          "value": 78.622421
+        },
+        {
+          "period": "2010",
+          "value": 79.04719
+        },
+        {
+          "period": "2011",
+          "value": 79.301966
+        },
+        {
+          "period": "2012",
+          "value": 79.364178
+        },
+        {
+          "period": "2013",
+          "value": 79.923813
+        },
+        {
+          "period": "2014",
+          "value": 80.095819
+        },
+        {
+          "period": "2015",
+          "value": 79.889368
+        },
+        {
+          "period": "2016",
+          "value": 80.264826
+        },
+        {
+          "period": "2017",
+          "value": 80.321801
+        },
+        {
+          "period": "2018",
+          "value": 80.398753
+        },
+        {
+          "period": "2019",
+          "value": 80.783108
+        },
+        {
+          "period": "2020",
+          "value": 79.517027
+        },
+        {
+          "period": "2021",
+          "value": 80.195135
+        },
+        {
+          "period": "2022",
+          "value": 80.36303
+        },
+        {
+          "period": "2023",
+          "value": 81.112008
+        },
+        {
+          "period": "2024",
+          "value": 81.384766
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "esperanza-vida-0-mujeres",
+      "title": "Esperanza de vida al nacer, mujeres",
+      "unit": "años",
+      "source": {
+        "title": "Tablas de mortalidad por año, sexo, edad y funciones (tablas 27153 y 27150)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+        "docId": "INE-27153"
+      },
+      "confidence": "alta",
+      "notes": "Función ex de la tabla de mortalidad del INE del año indicado (dato publicado, no derivado).",
+      "points": [
+        {
+          "period": "1975",
+          "value": 76.248591
+        },
+        {
+          "period": "1976",
+          "value": 76.611769
+        },
+        {
+          "period": "1977",
+          "value": 77.116641
+        },
+        {
+          "period": "1978",
+          "value": 77.368276
+        },
+        {
+          "period": "1979",
+          "value": 77.907891
+        },
+        {
+          "period": "1980",
+          "value": 78.414679
+        },
+        {
+          "period": "1981",
+          "value": 78.626851
+        },
+        {
+          "period": "1982",
+          "value": 79.186184
+        },
+        {
+          "period": "1983",
+          "value": 78.998002
+        },
+        {
+          "period": "1984",
+          "value": 79.514032
+        },
+        {
+          "period": "1985",
+          "value": 79.539571
+        },
+        {
+          "period": "1986",
+          "value": 79.751197
+        },
+        {
+          "period": "1987",
+          "value": 80.070813
+        },
+        {
+          "period": "1988",
+          "value": 80.146836
+        },
+        {
+          "period": "1989",
+          "value": 80.358981
+        },
+        {
+          "period": "1990",
+          "value": 80.405819
+        },
+        {
+          "period": "1991",
+          "value": 80.649806
+        },
+        {
+          "period": "1992",
+          "value": 81.144618
+        },
+        {
+          "period": "1993",
+          "value": 81.226085
+        },
+        {
+          "period": "1994",
+          "value": 81.59828
+        },
+        {
+          "period": "1995",
+          "value": 81.721377
+        },
+        {
+          "period": "1996",
+          "value": 81.882296
+        },
+        {
+          "period": "1997",
+          "value": 82.225998
+        },
+        {
+          "period": "1998",
+          "value": 82.311221
+        },
+        {
+          "period": "1999",
+          "value": 82.3248
+        },
+        {
+          "period": "2000",
+          "value": 82.732117
+        },
+        {
+          "period": "2001",
+          "value": 83.053229
+        },
+        {
+          "period": "2002",
+          "value": 83.135444
+        },
+        {
+          "period": "2003",
+          "value": 82.989673
+        },
+        {
+          "period": "2004",
+          "value": 83.574144
+        },
+        {
+          "period": "2005",
+          "value": 83.538105
+        },
+        {
+          "period": "2006",
+          "value": 84.150684
+        },
+        {
+          "period": "2007",
+          "value": 84.136629
+        },
+        {
+          "period": "2008",
+          "value": 84.331684
+        },
+        {
+          "period": "2009",
+          "value": 84.65492
+        },
+        {
+          "period": "2010",
+          "value": 85.02707
+        },
+        {
+          "period": "2011",
+          "value": 85.131491
+        },
+        {
+          "period": "2012",
+          "value": 85.101808
+        },
+        {
+          "period": "2013",
+          "value": 85.534791
+        },
+        {
+          "period": "2014",
+          "value": 85.631136
+        },
+        {
+          "period": "2015",
+          "value": 85.394006
+        },
+        {
+          "period": "2016",
+          "value": 85.818135
+        },
+        {
+          "period": "2017",
+          "value": 85.707669
+        },
+        {
+          "period": "2018",
+          "value": 85.82744
+        },
+        {
+          "period": "2019",
+          "value": 86.194771
+        },
+        {
+          "period": "2020",
+          "value": 85.035269
+        },
+        {
+          "period": "2021",
+          "value": 85.807239
+        },
+        {
+          "period": "2022",
+          "value": 85.735847
+        },
+        {
+          "period": "2023",
+          "value": 86.339057
+        },
+        {
+          "period": "2024",
+          "value": 86.528421
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "esperanza-vida-65-ambos",
+      "title": "Esperanza de vida a los 65 años, ambos",
+      "unit": "años",
+      "source": {
+        "title": "Tablas de mortalidad por año, sexo, edad y funciones (tablas 27153 y 27150)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+        "docId": "INE-27153"
+      },
+      "confidence": "alta",
+      "notes": "Función ex de la tabla de mortalidad del INE del año indicado (dato publicado, no derivado).",
+      "points": [
+        {
+          "period": "1975",
+          "value": 15.192919
+        },
+        {
+          "period": "1976",
+          "value": 15.311757
+        },
+        {
+          "period": "1977",
+          "value": 15.619642
+        },
+        {
+          "period": "1978",
+          "value": 15.773294
+        },
+        {
+          "period": "1979",
+          "value": 16.10545
+        },
+        {
+          "period": "1980",
+          "value": 16.321684
+        },
+        {
+          "period": "1981",
+          "value": 16.397571
+        },
+        {
+          "period": "1982",
+          "value": 16.773099
+        },
+        {
+          "period": "1983",
+          "value": 16.583675
+        },
+        {
+          "period": "1984",
+          "value": 16.885964
+        },
+        {
+          "period": "1985",
+          "value": 16.749286
+        },
+        {
+          "period": "1986",
+          "value": 17.019269
+        },
+        {
+          "period": "1987",
+          "value": 17.280374
+        },
+        {
+          "period": "1988",
+          "value": 17.311573
+        },
+        {
+          "period": "1989",
+          "value": 17.403313
+        },
+        {
+          "period": "1990",
+          "value": 17.404615
+        },
+        {
+          "period": "1991",
+          "value": 17.569268
+        },
+        {
+          "period": "1992",
+          "value": 17.92122
+        },
+        {
+          "period": "1993",
+          "value": 17.899794
+        },
+        {
+          "period": "1994",
+          "value": 18.158921
+        },
+        {
+          "period": "1995",
+          "value": 18.198943
+        },
+        {
+          "period": "1996",
+          "value": 18.276793
+        },
+        {
+          "period": "1997",
+          "value": 18.438283
+        },
+        {
+          "period": "1998",
+          "value": 18.36648
+        },
+        {
+          "period": "1999",
+          "value": 18.324048
+        },
+        {
+          "period": "2000",
+          "value": 18.736215
+        },
+        {
+          "period": "2001",
+          "value": 18.971467
+        },
+        {
+          "period": "2002",
+          "value": 19.010215
+        },
+        {
+          "period": "2003",
+          "value": 18.930679
+        },
+        {
+          "period": "2004",
+          "value": 19.365432
+        },
+        {
+          "period": "2005",
+          "value": 19.252297
+        },
+        {
+          "period": "2006",
+          "value": 19.825287
+        },
+        {
+          "period": "2007",
+          "value": 19.785881
+        },
+        {
+          "period": "2008",
+          "value": 20.021022
+        },
+        {
+          "period": "2009",
+          "value": 20.238157
+        },
+        {
+          "period": "2010",
+          "value": 20.541544
+        },
+        {
+          "period": "2011",
+          "value": 20.671209
+        },
+        {
+          "period": "2012",
+          "value": 20.586708
+        },
+        {
+          "period": "2013",
+          "value": 20.999507
+        },
+        {
+          "period": "2014",
+          "value": 21.096048
+        },
+        {
+          "period": "2015",
+          "value": 20.8051
+        },
+        {
+          "period": "2016",
+          "value": 21.179269
+        },
+        {
+          "period": "2017",
+          "value": 21.117734
+        },
+        {
+          "period": "2018",
+          "value": 21.206301
+        },
+        {
+          "period": "2019",
+          "value": 21.52153
+        },
+        {
+          "period": "2020",
+          "value": 20.354342
+        },
+        {
+          "period": "2021",
+          "value": 21.093087
+        },
+        {
+          "period": "2022",
+          "value": 21.110134
+        },
+        {
+          "period": "2023",
+          "value": 21.684928
+        },
+        {
+          "period": "2024",
+          "value": 21.867925
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "esperanza-vida-65-hombres",
+      "title": "Esperanza de vida a los 65 años, hombres",
+      "unit": "años",
+      "source": {
+        "title": "Tablas de mortalidad por año, sexo, edad y funciones (tablas 27153 y 27150)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+        "docId": "INE-27153"
+      },
+      "confidence": "alta",
+      "notes": "Función ex de la tabla de mortalidad del INE del año indicado (dato publicado, no derivado).",
+      "points": [
+        {
+          "period": "1975",
+          "value": 13.615294
+        },
+        {
+          "period": "1976",
+          "value": 13.704686
+        },
+        {
+          "period": "1977",
+          "value": 13.999911
+        },
+        {
+          "period": "1978",
+          "value": 14.125558
+        },
+        {
+          "period": "1979",
+          "value": 14.395381
+        },
+        {
+          "period": "1980",
+          "value": 14.602133
+        },
+        {
+          "period": "1981",
+          "value": 14.643757
+        },
+        {
+          "period": "1982",
+          "value": 15.009954
+        },
+        {
+          "period": "1983",
+          "value": 14.829925
+        },
+        {
+          "period": "1984",
+          "value": 15.037714
+        },
+        {
+          "period": "1985",
+          "value": 14.892544
+        },
+        {
+          "period": "1986",
+          "value": 15.190286
+        },
+        {
+          "period": "1987",
+          "value": 15.393712
+        },
+        {
+          "period": "1988",
+          "value": 15.405377
+        },
+        {
+          "period": "1989",
+          "value": 15.456369
+        },
+        {
+          "period": "1990",
+          "value": 15.431956
+        },
+        {
+          "period": "1991",
+          "value": 15.574615
+        },
+        {
+          "period": "1992",
+          "value": 15.881408
+        },
+        {
+          "period": "1993",
+          "value": 15.844071
+        },
+        {
+          "period": "1994",
+          "value": 16.087008
+        },
+        {
+          "period": "1995",
+          "value": 16.096
+        },
+        {
+          "period": "1996",
+          "value": 16.158537
+        },
+        {
+          "period": "1997",
+          "value": 16.299746
+        },
+        {
+          "period": "1998",
+          "value": 16.215089
+        },
+        {
+          "period": "1999",
+          "value": 16.166991
+        },
+        {
+          "period": "2000",
+          "value": 16.607801
+        },
+        {
+          "period": "2001",
+          "value": 16.814853
+        },
+        {
+          "period": "2002",
+          "value": 16.859732
+        },
+        {
+          "period": "2003",
+          "value": 16.831004
+        },
+        {
+          "period": "2004",
+          "value": 17.217053
+        },
+        {
+          "period": "2005",
+          "value": 17.125355
+        },
+        {
+          "period": "2006",
+          "value": 17.698184
+        },
+        {
+          "period": "2007",
+          "value": 17.637529
+        },
+        {
+          "period": "2008",
+          "value": 17.940719
+        },
+        {
+          "period": "2009",
+          "value": 18.116032
+        },
+        {
+          "period": "2010",
+          "value": 18.401749
+        },
+        {
+          "period": "2011",
+          "value": 18.550457
+        },
+        {
+          "period": "2012",
+          "value": 18.501623
+        },
+        {
+          "period": "2013",
+          "value": 18.908904
+        },
+        {
+          "period": "2014",
+          "value": 19.031288
+        },
+        {
+          "period": "2015",
+          "value": 18.757179
+        },
+        {
+          "period": "2016",
+          "value": 19.094945
+        },
+        {
+          "period": "2017",
+          "value": 19.066613
+        },
+        {
+          "period": "2018",
+          "value": 19.14912
+        },
+        {
+          "period": "2019",
+          "value": 19.437844
+        },
+        {
+          "period": "2020",
+          "value": 18.262071
+        },
+        {
+          "period": "2021",
+          "value": 18.941577
+        },
+        {
+          "period": "2022",
+          "value": 19.063307
+        },
+        {
+          "period": "2023",
+          "value": 19.653002
+        },
+        {
+          "period": "2024",
+          "value": 19.868122
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "esperanza-vida-65-mujeres",
+      "title": "Esperanza de vida a los 65 años, mujeres",
+      "unit": "años",
+      "source": {
+        "title": "Tablas de mortalidad por año, sexo, edad y funciones (tablas 27153 y 27150)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+        "docId": "INE-27153"
+      },
+      "confidence": "alta",
+      "notes": "Función ex de la tabla de mortalidad del INE del año indicado (dato publicado, no derivado).",
+      "points": [
+        {
+          "period": "1975",
+          "value": 16.487511
+        },
+        {
+          "period": "1976",
+          "value": 16.629665
+        },
+        {
+          "period": "1977",
+          "value": 16.939317
+        },
+        {
+          "period": "1978",
+          "value": 17.113947
+        },
+        {
+          "period": "1979",
+          "value": 17.495567
+        },
+        {
+          "period": "1980",
+          "value": 17.711332
+        },
+        {
+          "period": "1981",
+          "value": 17.81846
+        },
+        {
+          "period": "1982",
+          "value": 18.187389
+        },
+        {
+          "period": "1983",
+          "value": 17.993135
+        },
+        {
+          "period": "1984",
+          "value": 18.376665
+        },
+        {
+          "period": "1985",
+          "value": 18.254524
+        },
+        {
+          "period": "1986",
+          "value": 18.492898
+        },
+        {
+          "period": "1987",
+          "value": 18.80976
+        },
+        {
+          "period": "1988",
+          "value": 18.867929
+        },
+        {
+          "period": "1989",
+          "value": 19.004904
+        },
+        {
+          "period": "1990",
+          "value": 19.041164
+        },
+        {
+          "period": "1991",
+          "value": 19.22954
+        },
+        {
+          "period": "1992",
+          "value": 19.621545
+        },
+        {
+          "period": "1993",
+          "value": 19.62543
+        },
+        {
+          "period": "1994",
+          "value": 19.899046
+        },
+        {
+          "period": "1995",
+          "value": 19.977443
+        },
+        {
+          "period": "1996",
+          "value": 20.079974
+        },
+        {
+          "period": "1997",
+          "value": 20.262486
+        },
+        {
+          "period": "1998",
+          "value": 20.218052
+        },
+        {
+          "period": "1999",
+          "value": 20.195169
+        },
+        {
+          "period": "2000",
+          "value": 20.564943
+        },
+        {
+          "period": "2001",
+          "value": 20.827024
+        },
+        {
+          "period": "2002",
+          "value": 20.871898
+        },
+        {
+          "period": "2003",
+          "value": 20.756343
+        },
+        {
+          "period": "2004",
+          "value": 21.22651
+        },
+        {
+          "period": "2005",
+          "value": 21.110423
+        },
+        {
+          "period": "2006",
+          "value": 21.666021
+        },
+        {
+          "period": "2007",
+          "value": 21.667162
+        },
+        {
+          "period": "2008",
+          "value": 21.833168
+        },
+        {
+          "period": "2009",
+          "value": 22.096833
+        },
+        {
+          "period": "2010",
+          "value": 22.41439
+        },
+        {
+          "period": "2011",
+          "value": 22.533621
+        },
+        {
+          "period": "2012",
+          "value": 22.430074
+        },
+        {
+          "period": "2013",
+          "value": 22.838982
+        },
+        {
+          "period": "2014",
+          "value": 22.914167
+        },
+        {
+          "period": "2015",
+          "value": 22.632743
+        },
+        {
+          "period": "2016",
+          "value": 23.03389
+        },
+        {
+          "period": "2017",
+          "value": 22.94748
+        },
+        {
+          "period": "2018",
+          "value": 23.044578
+        },
+        {
+          "period": "2019",
+          "value": 23.378023
+        },
+        {
+          "period": "2020",
+          "value": 22.285218
+        },
+        {
+          "period": "2021",
+          "value": 23.045607
+        },
+        {
+          "period": "2022",
+          "value": 22.956814
+        },
+        {
+          "period": "2023",
+          "value": 23.493686
+        },
+        {
+          "period": "2024",
+          "value": 23.64142
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}

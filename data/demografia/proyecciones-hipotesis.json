@@ -1,0 +1,6255 @@
+{
+  "tipo": "datos",
+  "id": "proyecciones-hipotesis",
+  "title": "Hipótesis y resultados agregados de las proyecciones de población del INE 2026-2076",
+  "description": "Indicador coyuntural de fecundidad, saldo migratorio, flujos de inmigración y emigración exteriores, esperanza de vida y tasas de dependencia proyectados por el INE (escenario principal, edición 2026-2076).",
+  "series": [
+    {
+      "id": "icf-proyectado",
+      "title": "Indicador coyuntural de fecundidad proyectado (hipótesis)",
+      "unit": "hijos por mujer",
+      "source": {
+        "title": "Proyecciones de Población: indicador coyuntural de fecundidad por año (tabla 36655)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36655",
+        "docId": "INE-36655"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 1.106238
+        },
+        {
+          "period": "2027",
+          "value": 1.10817
+        },
+        {
+          "period": "2028",
+          "value": 1.109837
+        },
+        {
+          "period": "2029",
+          "value": 1.111426
+        },
+        {
+          "period": "2030",
+          "value": 1.113137
+        },
+        {
+          "period": "2031",
+          "value": 1.115169
+        },
+        {
+          "period": "2032",
+          "value": 1.117686
+        },
+        {
+          "period": "2033",
+          "value": 1.120805
+        },
+        {
+          "period": "2034",
+          "value": 1.12456
+        },
+        {
+          "period": "2035",
+          "value": 1.128941
+        },
+        {
+          "period": "2036",
+          "value": 1.1339
+        },
+        {
+          "period": "2037",
+          "value": 1.139331
+        },
+        {
+          "period": "2038",
+          "value": 1.145104
+        },
+        {
+          "period": "2039",
+          "value": 1.151059
+        },
+        {
+          "period": "2040",
+          "value": 1.157031
+        },
+        {
+          "period": "2041",
+          "value": 1.16154
+        },
+        {
+          "period": "2042",
+          "value": 1.165746
+        },
+        {
+          "period": "2043",
+          "value": 1.169526
+        },
+        {
+          "period": "2044",
+          "value": 1.172811
+        },
+        {
+          "period": "2045",
+          "value": 1.175561
+        },
+        {
+          "period": "2046",
+          "value": 1.177762
+        },
+        {
+          "period": "2047",
+          "value": 1.179433
+        },
+        {
+          "period": "2048",
+          "value": 1.180598
+        },
+        {
+          "period": "2049",
+          "value": 1.181279
+        },
+        {
+          "period": "2050",
+          "value": 1.181504
+        },
+        {
+          "period": "2051",
+          "value": 1.181332
+        },
+        {
+          "period": "2052",
+          "value": 1.180837
+        },
+        {
+          "period": "2053",
+          "value": 1.180111
+        },
+        {
+          "period": "2054",
+          "value": 1.179268
+        },
+        {
+          "period": "2055",
+          "value": 1.178436
+        },
+        {
+          "period": "2056",
+          "value": 1.177735
+        },
+        {
+          "period": "2057",
+          "value": 1.177271
+        },
+        {
+          "period": "2058",
+          "value": 1.177124
+        },
+        {
+          "period": "2059",
+          "value": 1.177338
+        },
+        {
+          "period": "2060",
+          "value": 1.177925
+        },
+        {
+          "period": "2061",
+          "value": 1.178871
+        },
+        {
+          "period": "2062",
+          "value": 1.180137
+        },
+        {
+          "period": "2063",
+          "value": 1.181671
+        },
+        {
+          "period": "2064",
+          "value": 1.183427
+        },
+        {
+          "period": "2065",
+          "value": 1.185366
+        },
+        {
+          "period": "2066",
+          "value": 1.187455
+        },
+        {
+          "period": "2067",
+          "value": 1.189671
+        },
+        {
+          "period": "2068",
+          "value": 1.191994
+        },
+        {
+          "period": "2069",
+          "value": 1.19441
+        },
+        {
+          "period": "2070",
+          "value": 1.196905
+        },
+        {
+          "period": "2071",
+          "value": 1.199463
+        },
+        {
+          "period": "2072",
+          "value": 1.202061
+        },
+        {
+          "period": "2073",
+          "value": 1.20467
+        },
+        {
+          "period": "2074",
+          "value": 1.207266
+        },
+        {
+          "period": "2075",
+          "value": 1.209829
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "saldo-migratorio-exterior-por-mil-proyectado",
+      "title": "Saldo de migración con el exterior proyectado (por mil habitantes)",
+      "unit": "por mil habitantes",
+      "source": {
+        "title": "Proyecciones de Población: saldo migratorio por mil habitantes (tabla 36662)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36662",
+        "docId": "INE-36662"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 12.34841
+        },
+        {
+          "period": "2027",
+          "value": 11.973166
+        },
+        {
+          "period": "2028",
+          "value": 11.325929
+        },
+        {
+          "period": "2029",
+          "value": 10.531064
+        },
+        {
+          "period": "2030",
+          "value": 9.683639
+        },
+        {
+          "period": "2031",
+          "value": 8.852673
+        },
+        {
+          "period": "2032",
+          "value": 8.084661
+        },
+        {
+          "period": "2033",
+          "value": 7.407763
+        },
+        {
+          "period": "2034",
+          "value": 6.835419
+        },
+        {
+          "period": "2035",
+          "value": 6.369937
+        },
+        {
+          "period": "2036",
+          "value": 6.005637
+        },
+        {
+          "period": "2037",
+          "value": 5.731411
+        },
+        {
+          "period": "2038",
+          "value": 5.533204
+        },
+        {
+          "period": "2039",
+          "value": 5.395756
+        },
+        {
+          "period": "2040",
+          "value": 5.304066
+        },
+        {
+          "period": "2041",
+          "value": 5.244564
+        },
+        {
+          "period": "2042",
+          "value": 5.205654
+        },
+        {
+          "period": "2043",
+          "value": 5.178083
+        },
+        {
+          "period": "2044",
+          "value": 5.155141
+        },
+        {
+          "period": "2045",
+          "value": 5.13251
+        },
+        {
+          "period": "2046",
+          "value": 5.107798
+        },
+        {
+          "period": "2047",
+          "value": 5.080298
+        },
+        {
+          "period": "2048",
+          "value": 5.050558
+        },
+        {
+          "period": "2049",
+          "value": 5.019704
+        },
+        {
+          "period": "2050",
+          "value": 4.989213
+        },
+        {
+          "period": "2051",
+          "value": 4.960478
+        },
+        {
+          "period": "2052",
+          "value": 4.934543
+        },
+        {
+          "period": "2053",
+          "value": 4.911919
+        },
+        {
+          "period": "2054",
+          "value": 4.892615
+        },
+        {
+          "period": "2055",
+          "value": 4.876035
+        },
+        {
+          "period": "2056",
+          "value": 4.86117
+        },
+        {
+          "period": "2057",
+          "value": 4.846824
+        },
+        {
+          "period": "2058",
+          "value": 4.831806
+        },
+        {
+          "period": "2059",
+          "value": 4.815023
+        },
+        {
+          "period": "2060",
+          "value": 4.795957
+        },
+        {
+          "period": "2061",
+          "value": 4.774509
+        },
+        {
+          "period": "2062",
+          "value": 4.751346
+        },
+        {
+          "period": "2063",
+          "value": 4.727573
+        },
+        {
+          "period": "2064",
+          "value": 4.704676
+        },
+        {
+          "period": "2065",
+          "value": 4.68418
+        },
+        {
+          "period": "2066",
+          "value": 4.667216
+        },
+        {
+          "period": "2067",
+          "value": 4.654226
+        },
+        {
+          "period": "2068",
+          "value": 4.644344
+        },
+        {
+          "period": "2069",
+          "value": 4.635497
+        },
+        {
+          "period": "2070",
+          "value": 4.624345
+        },
+        {
+          "period": "2071",
+          "value": 4.607182
+        },
+        {
+          "period": "2072",
+          "value": 4.581658
+        },
+        {
+          "period": "2073",
+          "value": 4.549586
+        },
+        {
+          "period": "2074",
+          "value": 4.521629
+        },
+        {
+          "period": "2075",
+          "value": 4.524315
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-proyectada-ambos-total",
+      "title": "Emigración exterior proyectada, ambos, lugar de nacimiento total",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de emigración exterior (tabla 36777)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36777",
+        "docId": "INE-36777"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 734043.0
+        },
+        {
+          "period": "2027",
+          "value": 726080.0
+        },
+        {
+          "period": "2028",
+          "value": 711606.0
+        },
+        {
+          "period": "2029",
+          "value": 692448.0
+        },
+        {
+          "period": "2030",
+          "value": 670591.0
+        },
+        {
+          "period": "2031",
+          "value": 647886.0
+        },
+        {
+          "period": "2032",
+          "value": 625886.0
+        },
+        {
+          "period": "2033",
+          "value": 605758.0
+        },
+        {
+          "period": "2034",
+          "value": 588277.0
+        },
+        {
+          "period": "2035",
+          "value": 573845.0
+        },
+        {
+          "period": "2036",
+          "value": 562547.0
+        },
+        {
+          "period": "2037",
+          "value": 554221.0
+        },
+        {
+          "period": "2038",
+          "value": 548531.0
+        },
+        {
+          "period": "2039",
+          "value": 545035.0
+        },
+        {
+          "period": "2040",
+          "value": 543249.0
+        },
+        {
+          "period": "2041",
+          "value": 542695.0
+        },
+        {
+          "period": "2042",
+          "value": 542940.0
+        },
+        {
+          "period": "2043",
+          "value": 543626.0
+        },
+        {
+          "period": "2044",
+          "value": 544476.0
+        },
+        {
+          "period": "2045",
+          "value": 545300.0
+        },
+        {
+          "period": "2046",
+          "value": 545992.0
+        },
+        {
+          "period": "2047",
+          "value": 546515.0
+        },
+        {
+          "period": "2048",
+          "value": 546880.0
+        },
+        {
+          "period": "2049",
+          "value": 547138.0
+        },
+        {
+          "period": "2050",
+          "value": 547352.0
+        },
+        {
+          "period": "2051",
+          "value": 547586.0
+        },
+        {
+          "period": "2052",
+          "value": 547892.0
+        },
+        {
+          "period": "2053",
+          "value": 548299.0
+        },
+        {
+          "period": "2054",
+          "value": 548810.0
+        },
+        {
+          "period": "2055",
+          "value": 549403.0
+        },
+        {
+          "period": "2056",
+          "value": 550039.0
+        },
+        {
+          "period": "2057",
+          "value": 550663.0
+        },
+        {
+          "period": "2058",
+          "value": 551222.0
+        },
+        {
+          "period": "2059",
+          "value": 551674.0
+        },
+        {
+          "period": "2060",
+          "value": 551992.0
+        },
+        {
+          "period": "2061",
+          "value": 552183.0
+        },
+        {
+          "period": "2062",
+          "value": 552276.0
+        },
+        {
+          "period": "2063",
+          "value": 552329.0
+        },
+        {
+          "period": "2064",
+          "value": 552420.0
+        },
+        {
+          "period": "2065",
+          "value": 552624.0
+        },
+        {
+          "period": "2066",
+          "value": 553006.0
+        },
+        {
+          "period": "2067",
+          "value": 553587.0
+        },
+        {
+          "period": "2068",
+          "value": 554335.0
+        },
+        {
+          "period": "2069",
+          "value": 555148.0
+        },
+        {
+          "period": "2070",
+          "value": 555869.0
+        },
+        {
+          "period": "2071",
+          "value": 556319.0
+        },
+        {
+          "period": "2072",
+          "value": 556378.0
+        },
+        {
+          "period": "2073",
+          "value": 556135.0
+        },
+        {
+          "period": "2074",
+          "value": 556112.0
+        },
+        {
+          "period": "2075",
+          "value": 557609.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-proyectada-hombres-total",
+      "title": "Emigración exterior proyectada, hombres, lugar de nacimiento total",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de emigración exterior (tabla 36777)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36777",
+        "docId": "INE-36777"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 393341.461549
+        },
+        {
+          "period": "2027",
+          "value": 389102.628256
+        },
+        {
+          "period": "2028",
+          "value": 381399.287364
+        },
+        {
+          "period": "2029",
+          "value": 371201.710593
+        },
+        {
+          "period": "2030",
+          "value": 359565.791404
+        },
+        {
+          "period": "2031",
+          "value": 347476.948134
+        },
+        {
+          "period": "2032",
+          "value": 335762.4138
+        },
+        {
+          "period": "2033",
+          "value": 325044.057492
+        },
+        {
+          "period": "2034",
+          "value": 315735.114562
+        },
+        {
+          "period": "2035",
+          "value": 308050.098017
+        },
+        {
+          "period": "2036",
+          "value": 302034.564983
+        },
+        {
+          "period": "2037",
+          "value": 297602.45903
+        },
+        {
+          "period": "2038",
+          "value": 294574.912884
+        },
+        {
+          "period": "2039",
+          "value": 292716.527664
+        },
+        {
+          "period": "2040",
+          "value": 291769.445396
+        },
+        {
+          "period": "2041",
+          "value": 291478.970521
+        },
+        {
+          "period": "2042",
+          "value": 291614.353809
+        },
+        {
+          "period": "2043",
+          "value": 291984.819226
+        },
+        {
+          "period": "2044",
+          "value": 292442.726349
+        },
+        {
+          "period": "2045",
+          "value": 292886.75963
+        },
+        {
+          "period": "2046",
+          "value": 293260.44116
+        },
+        {
+          "period": "2047",
+          "value": 293544.050113
+        },
+        {
+          "period": "2048",
+          "value": 293743.433473
+        },
+        {
+          "period": "2049",
+          "value": 293885.753682
+        },
+        {
+          "period": "2050",
+          "value": 294004.632257
+        },
+        {
+          "period": "2051",
+          "value": 294134.141712
+        },
+        {
+          "period": "2052",
+          "value": 294302.05658
+        },
+        {
+          "period": "2053",
+          "value": 294523.818486
+        },
+        {
+          "period": "2054",
+          "value": 294801.022062
+        },
+        {
+          "period": "2055",
+          "value": 295121.946491
+        },
+        {
+          "period": "2056",
+          "value": 295465.807859
+        },
+        {
+          "period": "2057",
+          "value": 295803.26385
+        },
+        {
+          "period": "2058",
+          "value": 296106.062085
+        },
+        {
+          "period": "2059",
+          "value": 296351.824018
+        },
+        {
+          "period": "2060",
+          "value": 296526.117414
+        },
+        {
+          "period": "2061",
+          "value": 296632.716779
+        },
+        {
+          "period": "2062",
+          "value": 296687.063738
+        },
+        {
+          "period": "2063",
+          "value": 296720.06839
+        },
+        {
+          "period": "2064",
+          "value": 296773.352261
+        },
+        {
+          "period": "2065",
+          "value": 296886.861698
+        },
+        {
+          "period": "2066",
+          "value": 297095.281306
+        },
+        {
+          "period": "2067",
+          "value": 297409.827207
+        },
+        {
+          "period": "2068",
+          "value": 297813.409446
+        },
+        {
+          "period": "2069",
+          "value": 298251.649441
+        },
+        {
+          "period": "2070",
+          "value": 298640.826294
+        },
+        {
+          "period": "2071",
+          "value": 298885.525139
+        },
+        {
+          "period": "2072",
+          "value": 298921.719055
+        },
+        {
+          "period": "2073",
+          "value": 298796.876552
+        },
+        {
+          "period": "2074",
+          "value": 298789.349615
+        },
+        {
+          "period": "2075",
+          "value": 299592.320213
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-proyectada-mujeres-total",
+      "title": "Emigración exterior proyectada, mujeres, lugar de nacimiento total",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de emigración exterior (tabla 36777)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36777",
+        "docId": "INE-36777"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 340701.538451
+        },
+        {
+          "period": "2027",
+          "value": 336977.371744
+        },
+        {
+          "period": "2028",
+          "value": 330206.712636
+        },
+        {
+          "period": "2029",
+          "value": 321246.289407
+        },
+        {
+          "period": "2030",
+          "value": 311025.208596
+        },
+        {
+          "period": "2031",
+          "value": 300409.051866
+        },
+        {
+          "period": "2032",
+          "value": 290123.5862
+        },
+        {
+          "period": "2033",
+          "value": 280713.942508
+        },
+        {
+          "period": "2034",
+          "value": 272541.885438
+        },
+        {
+          "period": "2035",
+          "value": 265794.901983
+        },
+        {
+          "period": "2036",
+          "value": 260512.435017
+        },
+        {
+          "period": "2037",
+          "value": 256618.54097
+        },
+        {
+          "period": "2038",
+          "value": 253956.087116
+        },
+        {
+          "period": "2039",
+          "value": 252318.472336
+        },
+        {
+          "period": "2040",
+          "value": 251479.554604
+        },
+        {
+          "period": "2041",
+          "value": 251216.029479
+        },
+        {
+          "period": "2042",
+          "value": 251325.646191
+        },
+        {
+          "period": "2043",
+          "value": 251641.180774
+        },
+        {
+          "period": "2044",
+          "value": 252033.273651
+        },
+        {
+          "period": "2045",
+          "value": 252413.24037
+        },
+        {
+          "period": "2046",
+          "value": 252731.55884
+        },
+        {
+          "period": "2047",
+          "value": 252970.949887
+        },
+        {
+          "period": "2048",
+          "value": 253136.566527
+        },
+        {
+          "period": "2049",
+          "value": 253252.246318
+        },
+        {
+          "period": "2050",
+          "value": 253347.367743
+        },
+        {
+          "period": "2051",
+          "value": 253451.858288
+        },
+        {
+          "period": "2052",
+          "value": 253589.94342
+        },
+        {
+          "period": "2053",
+          "value": 253775.181514
+        },
+        {
+          "period": "2054",
+          "value": 254008.977938
+        },
+        {
+          "period": "2055",
+          "value": 254281.053509
+        },
+        {
+          "period": "2056",
+          "value": 254573.192141
+        },
+        {
+          "period": "2057",
+          "value": 254859.73615
+        },
+        {
+          "period": "2058",
+          "value": 255115.937915
+        },
+        {
+          "period": "2059",
+          "value": 255322.175982
+        },
+        {
+          "period": "2060",
+          "value": 255465.882586
+        },
+        {
+          "period": "2061",
+          "value": 255550.283221
+        },
+        {
+          "period": "2062",
+          "value": 255588.936262
+        },
+        {
+          "period": "2063",
+          "value": 255608.93161
+        },
+        {
+          "period": "2064",
+          "value": 255646.647739
+        },
+        {
+          "period": "2065",
+          "value": 255737.138302
+        },
+        {
+          "period": "2066",
+          "value": 255910.718694
+        },
+        {
+          "period": "2067",
+          "value": 256177.172793
+        },
+        {
+          "period": "2068",
+          "value": 256521.590554
+        },
+        {
+          "period": "2069",
+          "value": 256896.350559
+        },
+        {
+          "period": "2070",
+          "value": 257228.173706
+        },
+        {
+          "period": "2071",
+          "value": 257433.474861
+        },
+        {
+          "period": "2072",
+          "value": 257456.280945
+        },
+        {
+          "period": "2073",
+          "value": 257338.123448
+        },
+        {
+          "period": "2074",
+          "value": 257322.650385
+        },
+        {
+          "period": "2075",
+          "value": 258016.679787
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-proyectada-ambos-espana",
+      "title": "Emigración exterior proyectada, ambos, lugar de nacimiento españa",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de emigración exterior (tabla 36777)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36777",
+        "docId": "INE-36777"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 117893.0
+        },
+        {
+          "period": "2027",
+          "value": 117664.0
+        },
+        {
+          "period": "2028",
+          "value": 117300.0
+        },
+        {
+          "period": "2029",
+          "value": 116769.0
+        },
+        {
+          "period": "2030",
+          "value": 116100.0
+        },
+        {
+          "period": "2031",
+          "value": 115350.0
+        },
+        {
+          "period": "2032",
+          "value": 114584.0
+        },
+        {
+          "period": "2033",
+          "value": 113860.0
+        },
+        {
+          "period": "2034",
+          "value": 113226.0
+        },
+        {
+          "period": "2035",
+          "value": 112713.0
+        },
+        {
+          "period": "2036",
+          "value": 112335.0
+        },
+        {
+          "period": "2037",
+          "value": 112094.0
+        },
+        {
+          "period": "2038",
+          "value": 111980.0
+        },
+        {
+          "period": "2039",
+          "value": 111976.0
+        },
+        {
+          "period": "2040",
+          "value": 112060.0
+        },
+        {
+          "period": "2041",
+          "value": 112209.0
+        },
+        {
+          "period": "2042",
+          "value": 112401.0
+        },
+        {
+          "period": "2043",
+          "value": 112618.0
+        },
+        {
+          "period": "2044",
+          "value": 112845.0
+        },
+        {
+          "period": "2045",
+          "value": 113070.0
+        },
+        {
+          "period": "2046",
+          "value": 113288.0
+        },
+        {
+          "period": "2047",
+          "value": 113497.0
+        },
+        {
+          "period": "2048",
+          "value": 113697.0
+        },
+        {
+          "period": "2049",
+          "value": 113890.0
+        },
+        {
+          "period": "2050",
+          "value": 114081.0
+        },
+        {
+          "period": "2051",
+          "value": 114272.0
+        },
+        {
+          "period": "2052",
+          "value": 114468.0
+        },
+        {
+          "period": "2053",
+          "value": 114670.0
+        },
+        {
+          "period": "2054",
+          "value": 114878.0
+        },
+        {
+          "period": "2055",
+          "value": 115091.0
+        },
+        {
+          "period": "2056",
+          "value": 115307.0
+        },
+        {
+          "period": "2057",
+          "value": 115522.0
+        },
+        {
+          "period": "2058",
+          "value": 115733.0
+        },
+        {
+          "period": "2059",
+          "value": 115938.0
+        },
+        {
+          "period": "2060",
+          "value": 116134.0
+        },
+        {
+          "period": "2061",
+          "value": 116323.0
+        },
+        {
+          "period": "2062",
+          "value": 116506.0
+        },
+        {
+          "period": "2063",
+          "value": 116686.0
+        },
+        {
+          "period": "2064",
+          "value": 116869.0
+        },
+        {
+          "period": "2065",
+          "value": 117058.0
+        },
+        {
+          "period": "2066",
+          "value": 117258.0
+        },
+        {
+          "period": "2067",
+          "value": 117471.0
+        },
+        {
+          "period": "2068",
+          "value": 117694.0
+        },
+        {
+          "period": "2069",
+          "value": 117921.0
+        },
+        {
+          "period": "2070",
+          "value": 118142.0
+        },
+        {
+          "period": "2071",
+          "value": 118347.0
+        },
+        {
+          "period": "2072",
+          "value": 118527.0
+        },
+        {
+          "period": "2073",
+          "value": 118688.0
+        },
+        {
+          "period": "2074",
+          "value": 118863.0
+        },
+        {
+          "period": "2075",
+          "value": 119133.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-proyectada-hombres-espana",
+      "title": "Emigración exterior proyectada, hombres, lugar de nacimiento españa",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de emigración exterior (tabla 36777)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36777",
+        "docId": "INE-36777"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 65830.625949
+        },
+        {
+          "period": "2027",
+          "value": 65702.753952
+        },
+        {
+          "period": "2028",
+          "value": 65499.4989
+        },
+        {
+          "period": "2029",
+          "value": 65202.992217
+        },
+        {
+          "period": "2030",
+          "value": 64829.4273
+        },
+        {
+          "period": "2031",
+          "value": 64410.63255
+        },
+        {
+          "period": "2032",
+          "value": 63982.903512
+        },
+        {
+          "period": "2033",
+          "value": 63578.62698
+        },
+        {
+          "period": "2034",
+          "value": 63224.605818
+        },
+        {
+          "period": "2035",
+          "value": 62938.150209
+        },
+        {
+          "period": "2036",
+          "value": 62727.077655
+        },
+        {
+          "period": "2037",
+          "value": 62592.504942
+        },
+        {
+          "period": "2038",
+          "value": 62528.84814
+        },
+        {
+          "period": "2039",
+          "value": 62526.614568
+        },
+        {
+          "period": "2040",
+          "value": 62573.51958
+        },
+        {
+          "period": "2041",
+          "value": 62656.720137
+        },
+        {
+          "period": "2042",
+          "value": 62763.931593
+        },
+        {
+          "period": "2043",
+          "value": 62885.102874
+        },
+        {
+          "period": "2044",
+          "value": 63011.858085
+        },
+        {
+          "period": "2045",
+          "value": 63137.49651
+        },
+        {
+          "period": "2046",
+          "value": 63259.226184
+        },
+        {
+          "period": "2047",
+          "value": 63375.930321
+        },
+        {
+          "period": "2048",
+          "value": 63487.608921
+        },
+        {
+          "period": "2049",
+          "value": 63595.37877
+        },
+        {
+          "period": "2050",
+          "value": 63702.031833
+        },
+        {
+          "period": "2051",
+          "value": 63808.684896
+        },
+        {
+          "period": "2052",
+          "value": 63918.129924
+        },
+        {
+          "period": "2053",
+          "value": 64030.92531
+        },
+        {
+          "period": "2054",
+          "value": 64147.071054
+        },
+        {
+          "period": "2055",
+          "value": 64266.008763
+        },
+        {
+          "period": "2056",
+          "value": 64386.621651
+        },
+        {
+          "period": "2057",
+          "value": 64506.676146
+        },
+        {
+          "period": "2058",
+          "value": 64624.497069
+        },
+        {
+          "period": "2059",
+          "value": 64738.967634
+        },
+        {
+          "period": "2060",
+          "value": 64848.412662
+        },
+        {
+          "period": "2061",
+          "value": 64953.948939
+        },
+        {
+          "period": "2062",
+          "value": 65056.134858
+        },
+        {
+          "period": "2063",
+          "value": 65156.645598
+        },
+        {
+          "period": "2064",
+          "value": 65258.831517
+        },
+        {
+          "period": "2065",
+          "value": 65364.367794
+        },
+        {
+          "period": "2066",
+          "value": 65476.046394
+        },
+        {
+          "period": "2067",
+          "value": 65594.984103
+        },
+        {
+          "period": "2068",
+          "value": 65719.505742
+        },
+        {
+          "period": "2069",
+          "value": 65846.260953
+        },
+        {
+          "period": "2070",
+          "value": 65969.665806
+        },
+        {
+          "period": "2071",
+          "value": 66084.136371
+        },
+        {
+          "period": "2072",
+          "value": 66184.647111
+        },
+        {
+          "period": "2073",
+          "value": 66274.548384
+        },
+        {
+          "period": "2074",
+          "value": 66372.267159
+        },
+        {
+          "period": "2075",
+          "value": 66523.033269
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-proyectada-mujeres-espana",
+      "title": "Emigración exterior proyectada, mujeres, lugar de nacimiento españa",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de emigración exterior (tabla 36777)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36777",
+        "docId": "INE-36777"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 52062.374051
+        },
+        {
+          "period": "2027",
+          "value": 51961.246048
+        },
+        {
+          "period": "2028",
+          "value": 51800.5011
+        },
+        {
+          "period": "2029",
+          "value": 51566.007783
+        },
+        {
+          "period": "2030",
+          "value": 51270.5727
+        },
+        {
+          "period": "2031",
+          "value": 50939.36745
+        },
+        {
+          "period": "2032",
+          "value": 50601.096488
+        },
+        {
+          "period": "2033",
+          "value": 50281.37302
+        },
+        {
+          "period": "2034",
+          "value": 50001.394182
+        },
+        {
+          "period": "2035",
+          "value": 49774.849791
+        },
+        {
+          "period": "2036",
+          "value": 49607.922345
+        },
+        {
+          "period": "2037",
+          "value": 49501.495058
+        },
+        {
+          "period": "2038",
+          "value": 49451.15186
+        },
+        {
+          "period": "2039",
+          "value": 49449.385432
+        },
+        {
+          "period": "2040",
+          "value": 49486.48042
+        },
+        {
+          "period": "2041",
+          "value": 49552.279863
+        },
+        {
+          "period": "2042",
+          "value": 49637.068407
+        },
+        {
+          "period": "2043",
+          "value": 49732.897126
+        },
+        {
+          "period": "2044",
+          "value": 49833.141915
+        },
+        {
+          "period": "2045",
+          "value": 49932.50349
+        },
+        {
+          "period": "2046",
+          "value": 50028.773816
+        },
+        {
+          "period": "2047",
+          "value": 50121.069679
+        },
+        {
+          "period": "2048",
+          "value": 50209.391079
+        },
+        {
+          "period": "2049",
+          "value": 50294.62123
+        },
+        {
+          "period": "2050",
+          "value": 50378.968167
+        },
+        {
+          "period": "2051",
+          "value": 50463.315104
+        },
+        {
+          "period": "2052",
+          "value": 50549.870076
+        },
+        {
+          "period": "2053",
+          "value": 50639.07469
+        },
+        {
+          "period": "2054",
+          "value": 50730.928946
+        },
+        {
+          "period": "2055",
+          "value": 50824.991237
+        },
+        {
+          "period": "2056",
+          "value": 50920.378349
+        },
+        {
+          "period": "2057",
+          "value": 51015.323854
+        },
+        {
+          "period": "2058",
+          "value": 51108.502931
+        },
+        {
+          "period": "2059",
+          "value": 51199.032366
+        },
+        {
+          "period": "2060",
+          "value": 51285.587338
+        },
+        {
+          "period": "2061",
+          "value": 51369.051061
+        },
+        {
+          "period": "2062",
+          "value": 51449.865142
+        },
+        {
+          "period": "2063",
+          "value": 51529.354402
+        },
+        {
+          "period": "2064",
+          "value": 51610.168483
+        },
+        {
+          "period": "2065",
+          "value": 51693.632206
+        },
+        {
+          "period": "2066",
+          "value": 51781.953606
+        },
+        {
+          "period": "2067",
+          "value": 51876.015897
+        },
+        {
+          "period": "2068",
+          "value": 51974.494258
+        },
+        {
+          "period": "2069",
+          "value": 52074.739047
+        },
+        {
+          "period": "2070",
+          "value": 52172.334194
+        },
+        {
+          "period": "2071",
+          "value": 52262.863629
+        },
+        {
+          "period": "2072",
+          "value": 52342.352889
+        },
+        {
+          "period": "2073",
+          "value": 52413.451616
+        },
+        {
+          "period": "2074",
+          "value": 52490.732841
+        },
+        {
+          "period": "2075",
+          "value": 52609.966731
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-proyectada-ambos-extranjero",
+      "title": "Emigración exterior proyectada, ambos, lugar de nacimiento extranjero",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de emigración exterior (tabla 36777)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36777",
+        "docId": "INE-36777"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 616150.0
+        },
+        {
+          "period": "2027",
+          "value": 608416.0
+        },
+        {
+          "period": "2028",
+          "value": 594306.0
+        },
+        {
+          "period": "2029",
+          "value": 575679.0
+        },
+        {
+          "period": "2030",
+          "value": 554491.0
+        },
+        {
+          "period": "2031",
+          "value": 532536.0
+        },
+        {
+          "period": "2032",
+          "value": 511302.0
+        },
+        {
+          "period": "2033",
+          "value": 491898.0
+        },
+        {
+          "period": "2034",
+          "value": 475051.0
+        },
+        {
+          "period": "2035",
+          "value": 461132.0
+        },
+        {
+          "period": "2036",
+          "value": 450212.0
+        },
+        {
+          "period": "2037",
+          "value": 442127.0
+        },
+        {
+          "period": "2038",
+          "value": 436551.0
+        },
+        {
+          "period": "2039",
+          "value": 433059.0
+        },
+        {
+          "period": "2040",
+          "value": 431189.0
+        },
+        {
+          "period": "2041",
+          "value": 430486.0
+        },
+        {
+          "period": "2042",
+          "value": 430539.0
+        },
+        {
+          "period": "2043",
+          "value": 431008.0
+        },
+        {
+          "period": "2044",
+          "value": 431631.0
+        },
+        {
+          "period": "2045",
+          "value": 432230.0
+        },
+        {
+          "period": "2046",
+          "value": 432704.0
+        },
+        {
+          "period": "2047",
+          "value": 433018.0
+        },
+        {
+          "period": "2048",
+          "value": 433183.0
+        },
+        {
+          "period": "2049",
+          "value": 433248.0
+        },
+        {
+          "period": "2050",
+          "value": 433271.0
+        },
+        {
+          "period": "2051",
+          "value": 433314.0
+        },
+        {
+          "period": "2052",
+          "value": 433424.0
+        },
+        {
+          "period": "2053",
+          "value": 433629.0
+        },
+        {
+          "period": "2054",
+          "value": 433932.0
+        },
+        {
+          "period": "2055",
+          "value": 434312.0
+        },
+        {
+          "period": "2056",
+          "value": 434732.0
+        },
+        {
+          "period": "2057",
+          "value": 435141.0
+        },
+        {
+          "period": "2058",
+          "value": 435489.0
+        },
+        {
+          "period": "2059",
+          "value": 435736.0
+        },
+        {
+          "period": "2060",
+          "value": 435858.0
+        },
+        {
+          "period": "2061",
+          "value": 435860.0
+        },
+        {
+          "period": "2062",
+          "value": 435770.0
+        },
+        {
+          "period": "2063",
+          "value": 435643.0
+        },
+        {
+          "period": "2064",
+          "value": 435551.0
+        },
+        {
+          "period": "2065",
+          "value": 435566.0
+        },
+        {
+          "period": "2066",
+          "value": 435748.0
+        },
+        {
+          "period": "2067",
+          "value": 436116.0
+        },
+        {
+          "period": "2068",
+          "value": 436641.0
+        },
+        {
+          "period": "2069",
+          "value": 437227.0
+        },
+        {
+          "period": "2070",
+          "value": 437727.0
+        },
+        {
+          "period": "2071",
+          "value": 437972.0
+        },
+        {
+          "period": "2072",
+          "value": 437851.0
+        },
+        {
+          "period": "2073",
+          "value": 437447.0
+        },
+        {
+          "period": "2074",
+          "value": 437249.0
+        },
+        {
+          "period": "2075",
+          "value": 438476.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-proyectada-hombres-extranjero",
+      "title": "Emigración exterior proyectada, hombres, lugar de nacimiento extranjero",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de emigración exterior (tabla 36777)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36777",
+        "docId": "INE-36777"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 327510.8356
+        },
+        {
+          "period": "2027",
+          "value": 323399.874304
+        },
+        {
+          "period": "2028",
+          "value": 315899.788464
+        },
+        {
+          "period": "2029",
+          "value": 305998.718376
+        },
+        {
+          "period": "2030",
+          "value": 294736.364104
+        },
+        {
+          "period": "2031",
+          "value": 283066.315584
+        },
+        {
+          "period": "2032",
+          "value": 271779.510288
+        },
+        {
+          "period": "2033",
+          "value": 261465.430512
+        },
+        {
+          "period": "2034",
+          "value": 252510.508744
+        },
+        {
+          "period": "2035",
+          "value": 245111.947808
+        },
+        {
+          "period": "2036",
+          "value": 239307.487328
+        },
+        {
+          "period": "2037",
+          "value": 235009.954088
+        },
+        {
+          "period": "2038",
+          "value": 232046.064744
+        },
+        {
+          "period": "2039",
+          "value": 230189.913096
+        },
+        {
+          "period": "2040",
+          "value": 229195.925816
+        },
+        {
+          "period": "2041",
+          "value": 228822.250384
+        },
+        {
+          "period": "2042",
+          "value": 228850.422216
+        },
+        {
+          "period": "2043",
+          "value": 229099.716352
+        },
+        {
+          "period": "2044",
+          "value": 229430.868264
+        },
+        {
+          "period": "2045",
+          "value": 229749.26312
+        },
+        {
+          "period": "2046",
+          "value": 230001.214976
+        },
+        {
+          "period": "2047",
+          "value": 230168.119792
+        },
+        {
+          "period": "2048",
+          "value": 230255.824552
+        },
+        {
+          "period": "2049",
+          "value": 230290.374912
+        },
+        {
+          "period": "2050",
+          "value": 230302.600424
+        },
+        {
+          "period": "2051",
+          "value": 230325.456816
+        },
+        {
+          "period": "2052",
+          "value": 230383.926656
+        },
+        {
+          "period": "2053",
+          "value": 230492.893176
+        },
+        {
+          "period": "2054",
+          "value": 230653.951008
+        },
+        {
+          "period": "2055",
+          "value": 230855.937728
+        },
+        {
+          "period": "2056",
+          "value": 231079.186208
+        },
+        {
+          "period": "2057",
+          "value": 231296.587704
+        },
+        {
+          "period": "2058",
+          "value": 231481.565016
+        },
+        {
+          "period": "2059",
+          "value": 231612.856384
+        },
+        {
+          "period": "2060",
+          "value": 231677.704752
+        },
+        {
+          "period": "2061",
+          "value": 231678.76784
+        },
+        {
+          "period": "2062",
+          "value": 231630.92888
+        },
+        {
+          "period": "2063",
+          "value": 231563.422792
+        },
+        {
+          "period": "2064",
+          "value": 231514.520744
+        },
+        {
+          "period": "2065",
+          "value": 231522.493904
+        },
+        {
+          "period": "2066",
+          "value": 231619.234912
+        },
+        {
+          "period": "2067",
+          "value": 231814.843104
+        },
+        {
+          "period": "2068",
+          "value": 232093.903704
+        },
+        {
+          "period": "2069",
+          "value": 232405.388488
+        },
+        {
+          "period": "2070",
+          "value": 232671.160488
+        },
+        {
+          "period": "2071",
+          "value": 232801.388768
+        },
+        {
+          "period": "2072",
+          "value": 232737.071944
+        },
+        {
+          "period": "2073",
+          "value": 232522.328168
+        },
+        {
+          "period": "2074",
+          "value": 232417.082456
+        },
+        {
+          "period": "2075",
+          "value": 233069.286944
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-proyectada-mujeres-extranjero",
+      "title": "Emigración exterior proyectada, mujeres, lugar de nacimiento extranjero",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de emigración exterior (tabla 36777)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36777",
+        "docId": "INE-36777"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 288639.1644
+        },
+        {
+          "period": "2027",
+          "value": 285016.125696
+        },
+        {
+          "period": "2028",
+          "value": 278406.211536
+        },
+        {
+          "period": "2029",
+          "value": 269680.281624
+        },
+        {
+          "period": "2030",
+          "value": 259754.635896
+        },
+        {
+          "period": "2031",
+          "value": 249469.684416
+        },
+        {
+          "period": "2032",
+          "value": 239522.489712
+        },
+        {
+          "period": "2033",
+          "value": 230432.569488
+        },
+        {
+          "period": "2034",
+          "value": 222540.491256
+        },
+        {
+          "period": "2035",
+          "value": 216020.052192
+        },
+        {
+          "period": "2036",
+          "value": 210904.512672
+        },
+        {
+          "period": "2037",
+          "value": 207117.045912
+        },
+        {
+          "period": "2038",
+          "value": 204504.935256
+        },
+        {
+          "period": "2039",
+          "value": 202869.086904
+        },
+        {
+          "period": "2040",
+          "value": 201993.074184
+        },
+        {
+          "period": "2041",
+          "value": 201663.749616
+        },
+        {
+          "period": "2042",
+          "value": 201688.577784
+        },
+        {
+          "period": "2043",
+          "value": 201908.283648
+        },
+        {
+          "period": "2044",
+          "value": 202200.131736
+        },
+        {
+          "period": "2045",
+          "value": 202480.73688
+        },
+        {
+          "period": "2046",
+          "value": 202702.785024
+        },
+        {
+          "period": "2047",
+          "value": 202849.880208
+        },
+        {
+          "period": "2048",
+          "value": 202927.175448
+        },
+        {
+          "period": "2049",
+          "value": 202957.625088
+        },
+        {
+          "period": "2050",
+          "value": 202968.399576
+        },
+        {
+          "period": "2051",
+          "value": 202988.543184
+        },
+        {
+          "period": "2052",
+          "value": 203040.073344
+        },
+        {
+          "period": "2053",
+          "value": 203136.106824
+        },
+        {
+          "period": "2054",
+          "value": 203278.048992
+        },
+        {
+          "period": "2055",
+          "value": 203456.062272
+        },
+        {
+          "period": "2056",
+          "value": 203652.813792
+        },
+        {
+          "period": "2057",
+          "value": 203844.412296
+        },
+        {
+          "period": "2058",
+          "value": 204007.434984
+        },
+        {
+          "period": "2059",
+          "value": 204123.143616
+        },
+        {
+          "period": "2060",
+          "value": 204180.295248
+        },
+        {
+          "period": "2061",
+          "value": 204181.23216
+        },
+        {
+          "period": "2062",
+          "value": 204139.07112
+        },
+        {
+          "period": "2063",
+          "value": 204079.577208
+        },
+        {
+          "period": "2064",
+          "value": 204036.479256
+        },
+        {
+          "period": "2065",
+          "value": 204043.506096
+        },
+        {
+          "period": "2066",
+          "value": 204128.765088
+        },
+        {
+          "period": "2067",
+          "value": 204301.156896
+        },
+        {
+          "period": "2068",
+          "value": 204547.096296
+        },
+        {
+          "period": "2069",
+          "value": 204821.611512
+        },
+        {
+          "period": "2070",
+          "value": 205055.839512
+        },
+        {
+          "period": "2071",
+          "value": 205170.611232
+        },
+        {
+          "period": "2072",
+          "value": 205113.928056
+        },
+        {
+          "period": "2073",
+          "value": 204924.671832
+        },
+        {
+          "period": "2074",
+          "value": 204831.917544
+        },
+        {
+          "period": "2075",
+          "value": 205406.713056
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-proyectada-ambos-total",
+      "title": "Inmigración exterior proyectada, ambos, lugar de nacimiento total",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de inmigración exterior (tabla 36776)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36776",
+        "docId": "INE-36776"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 1349419.0
+        },
+        {
+          "period": "2027",
+          "value": 1328526.0
+        },
+        {
+          "period": "2028",
+          "value": 1286709.0
+        },
+        {
+          "period": "2029",
+          "value": 1231708.0
+        },
+        {
+          "period": "2030",
+          "value": 1170240.0
+        },
+        {
+          "period": "2031",
+          "value": 1107758.0
+        },
+        {
+          "period": "2032",
+          "value": 1048370.0
+        },
+        {
+          "period": "2033",
+          "value": 994894.0
+        },
+        {
+          "period": "2034",
+          "value": 948992.0
+        },
+        {
+          "period": "2035",
+          "value": 911350.0
+        },
+        {
+          "period": "2036",
+          "value": 881887.0
+        },
+        {
+          "period": "2037",
+          "value": 859957.0
+        },
+        {
+          "period": "2038",
+          "value": 844555.0
+        },
+        {
+          "period": "2039",
+          "value": 834481.0
+        },
+        {
+          "period": "2040",
+          "value": 828485.0
+        },
+        {
+          "period": "2041",
+          "value": 825384.0
+        },
+        {
+          "period": "2042",
+          "value": 824135.0
+        },
+        {
+          "period": "2043",
+          "value": 823886.0
+        },
+        {
+          "period": "2044",
+          "value": 823998.0
+        },
+        {
+          "period": "2045",
+          "value": 824045.0
+        },
+        {
+          "period": "2046",
+          "value": 823787.0
+        },
+        {
+          "period": "2047",
+          "value": 823144.0
+        },
+        {
+          "period": "2048",
+          "value": 822153.0
+        },
+        {
+          "period": "2049",
+          "value": 820925.0
+        },
+        {
+          "period": "2050",
+          "value": 819604.0
+        },
+        {
+          "period": "2051",
+          "value": 818331.0
+        },
+        {
+          "period": "2052",
+          "value": 817217.0
+        },
+        {
+          "period": "2053",
+          "value": 816322.0
+        },
+        {
+          "period": "2054",
+          "value": 815654.0
+        },
+        {
+          "period": "2055",
+          "value": 815163.0
+        },
+        {
+          "period": "2056",
+          "value": 814760.0
+        },
+        {
+          "period": "2057",
+          "value": 814330.0
+        },
+        {
+          "period": "2058",
+          "value": 813761.0
+        },
+        {
+          "period": "2059",
+          "value": 812958.0
+        },
+        {
+          "period": "2060",
+          "value": 811872.0
+        },
+        {
+          "period": "2061",
+          "value": 810511.0
+        },
+        {
+          "period": "2062",
+          "value": 808946.0
+        },
+        {
+          "period": "2063",
+          "value": 807300.0
+        },
+        {
+          "period": "2064",
+          "value": 805736.0
+        },
+        {
+          "period": "2065",
+          "value": 804416.0
+        },
+        {
+          "period": "2066",
+          "value": 803470.0
+        },
+        {
+          "period": "2067",
+          "value": 802946.0
+        },
+        {
+          "period": "2068",
+          "value": 802769.0
+        },
+        {
+          "period": "2069",
+          "value": 802729.0
+        },
+        {
+          "period": "2070",
+          "value": 802493.0
+        },
+        {
+          "period": "2071",
+          "value": 801686.0
+        },
+        {
+          "period": "2072",
+          "value": 800064.0
+        },
+        {
+          "period": "2073",
+          "value": 797813.0
+        },
+        {
+          "period": "2074",
+          "value": 796022.0
+        },
+        {
+          "period": "2075",
+          "value": 797400.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-proyectada-hombres-total",
+      "title": "Inmigración exterior proyectada, hombres, lugar de nacimiento total",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de inmigración exterior (tabla 36776)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36776",
+        "docId": "INE-36776"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 696033.116609
+        },
+        {
+          "period": "2027",
+          "value": 685326.078216
+        },
+        {
+          "period": "2028",
+          "value": 663894.996554
+        },
+        {
+          "period": "2029",
+          "value": 635706.573168
+        },
+        {
+          "period": "2030",
+          "value": 604203.25762
+        },
+        {
+          "period": "2031",
+          "value": 572180.020248
+        },
+        {
+          "period": "2032",
+          "value": 541742.41968
+        },
+        {
+          "period": "2033",
+          "value": 514334.848964
+        },
+        {
+          "period": "2034",
+          "value": 490809.270002
+        },
+        {
+          "period": "2035",
+          "value": 471517.363495
+        },
+        {
+          "period": "2036",
+          "value": 456417.697417
+        },
+        {
+          "period": "2037",
+          "value": 445179.133707
+        },
+        {
+          "period": "2038",
+          "value": 437286.622865
+        },
+        {
+          "period": "2039",
+          "value": 432125.136841
+        },
+        {
+          "period": "2040",
+          "value": 429053.885875
+        },
+        {
+          "period": "2041",
+          "value": 427466.572539
+        },
+        {
+          "period": "2042",
+          "value": 426828.59012
+        },
+        {
+          "period": "2043",
+          "value": 426703.172781
+        },
+        {
+          "period": "2044",
+          "value": 426762.777423
+        },
+        {
+          "period": "2045",
+          "value": 426789.083685
+        },
+        {
+          "period": "2046",
+          "value": 426659.044252
+        },
+        {
+          "period": "2047",
+          "value": 426331.657254
+        },
+        {
+          "period": "2048",
+          "value": 425825.924633
+        },
+        {
+          "period": "2049",
+          "value": 425198.685395
+        },
+        {
+          "period": "2050",
+          "value": 424523.767929
+        },
+        {
+          "period": "2051",
+          "value": 423873.459926
+        },
+        {
+          "period": "2052",
+          "value": 423304.642097
+        },
+        {
+          "period": "2053",
+          "value": 422848.086697
+        },
+        {
+          "period": "2054",
+          "value": 422507.902254
+        },
+        {
+          "period": "2055",
+          "value": 422258.410468
+        },
+        {
+          "period": "2056",
+          "value": 422054.070785
+        },
+        {
+          "period": "2057",
+          "value": 421835.86482
+        },
+        {
+          "period": "2058",
+          "value": 421546.440001
+        },
+        {
+          "period": "2059",
+          "value": 421137.049263
+        },
+        {
+          "period": "2060",
+          "value": 420582.569577
+        },
+        {
+          "period": "2061",
+          "value": 419887.151176
+        },
+        {
+          "period": "2062",
+          "value": 419087.173836
+        },
+        {
+          "period": "2063",
+          "value": 418245.639355
+        },
+        {
+          "period": "2064",
+          "value": 417446.175581
+        },
+        {
+          "period": "2065",
+          "value": 416771.771681
+        },
+        {
+          "period": "2066",
+          "value": 416289.06612
+        },
+        {
+          "period": "2067",
+          "value": 416022.710066
+        },
+        {
+          "period": "2068",
+          "value": 415934.186069
+        },
+        {
+          "period": "2069",
+          "value": 415915.895499
+        },
+        {
+          "period": "2070",
+          "value": 415797.154518
+        },
+        {
+          "period": "2071",
+          "value": 415385.709516
+        },
+        {
+          "period": "2072",
+          "value": 414556.500619
+        },
+        {
+          "period": "2073",
+          "value": 413404.884283
+        },
+        {
+          "period": "2074",
+          "value": 412489.007847
+        },
+        {
+          "period": "2075",
+          "value": 413197.619305
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-proyectada-mujeres-total",
+      "title": "Inmigración exterior proyectada, mujeres, lugar de nacimiento total",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de inmigración exterior (tabla 36776)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36776",
+        "docId": "INE-36776"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 653385.883391
+        },
+        {
+          "period": "2027",
+          "value": 643199.921784
+        },
+        {
+          "period": "2028",
+          "value": 622814.003446
+        },
+        {
+          "period": "2029",
+          "value": 596001.426832
+        },
+        {
+          "period": "2030",
+          "value": 566036.74238
+        },
+        {
+          "period": "2031",
+          "value": 535577.979752
+        },
+        {
+          "period": "2032",
+          "value": 506627.58032
+        },
+        {
+          "period": "2033",
+          "value": 480559.151036
+        },
+        {
+          "period": "2034",
+          "value": 458182.729998
+        },
+        {
+          "period": "2035",
+          "value": 439832.636505
+        },
+        {
+          "period": "2036",
+          "value": 425469.302583
+        },
+        {
+          "period": "2037",
+          "value": 414777.866293
+        },
+        {
+          "period": "2038",
+          "value": 407268.377135
+        },
+        {
+          "period": "2039",
+          "value": 402355.863159
+        },
+        {
+          "period": "2040",
+          "value": 399431.114125
+        },
+        {
+          "period": "2041",
+          "value": 397917.427461
+        },
+        {
+          "period": "2042",
+          "value": 397306.40988
+        },
+        {
+          "period": "2043",
+          "value": 397182.827219
+        },
+        {
+          "period": "2044",
+          "value": 397235.222577
+        },
+        {
+          "period": "2045",
+          "value": 397255.916315
+        },
+        {
+          "period": "2046",
+          "value": 397127.955748
+        },
+        {
+          "period": "2047",
+          "value": 396812.342746
+        },
+        {
+          "period": "2048",
+          "value": 396327.075367
+        },
+        {
+          "period": "2049",
+          "value": 395726.314605
+        },
+        {
+          "period": "2050",
+          "value": 395080.232071
+        },
+        {
+          "period": "2051",
+          "value": 394457.540074
+        },
+        {
+          "period": "2052",
+          "value": 393912.357903
+        },
+        {
+          "period": "2053",
+          "value": 393473.913303
+        },
+        {
+          "period": "2054",
+          "value": 393146.097746
+        },
+        {
+          "period": "2055",
+          "value": 392904.589532
+        },
+        {
+          "period": "2056",
+          "value": 392705.929215
+        },
+        {
+          "period": "2057",
+          "value": 392494.13518
+        },
+        {
+          "period": "2058",
+          "value": 392214.559999
+        },
+        {
+          "period": "2059",
+          "value": 391820.950737
+        },
+        {
+          "period": "2060",
+          "value": 391289.430423
+        },
+        {
+          "period": "2061",
+          "value": 390623.848824
+        },
+        {
+          "period": "2062",
+          "value": 389858.826164
+        },
+        {
+          "period": "2063",
+          "value": 389054.360645
+        },
+        {
+          "period": "2064",
+          "value": 388289.824419
+        },
+        {
+          "period": "2065",
+          "value": 387644.228319
+        },
+        {
+          "period": "2066",
+          "value": 387180.93388
+        },
+        {
+          "period": "2067",
+          "value": 386923.289934
+        },
+        {
+          "period": "2068",
+          "value": 386834.813931
+        },
+        {
+          "period": "2069",
+          "value": 386813.104501
+        },
+        {
+          "period": "2070",
+          "value": 386695.845482
+        },
+        {
+          "period": "2071",
+          "value": 386300.290484
+        },
+        {
+          "period": "2072",
+          "value": 385507.499381
+        },
+        {
+          "period": "2073",
+          "value": 384408.115717
+        },
+        {
+          "period": "2074",
+          "value": 383532.992153
+        },
+        {
+          "period": "2075",
+          "value": 384202.380695
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-proyectada-ambos-espana",
+      "title": "Inmigración exterior proyectada, ambos, lugar de nacimiento españa",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de inmigración exterior (tabla 36776)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36776",
+        "docId": "INE-36776"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 72351.0
+        },
+        {
+          "period": "2027",
+          "value": 72900.0
+        },
+        {
+          "period": "2028",
+          "value": 73972.0
+        },
+        {
+          "period": "2029",
+          "value": 75368.0
+        },
+        {
+          "period": "2030",
+          "value": 76916.0
+        },
+        {
+          "period": "2031",
+          "value": 78484.0
+        },
+        {
+          "period": "2032",
+          "value": 79972.0
+        },
+        {
+          "period": "2033",
+          "value": 81312.0
+        },
+        {
+          "period": "2034",
+          "value": 82466.0
+        },
+        {
+          "period": "2035",
+          "value": 83419.0
+        },
+        {
+          "period": "2036",
+          "value": 84175.0
+        },
+        {
+          "period": "2037",
+          "value": 84749.0
+        },
+        {
+          "period": "2038",
+          "value": 85167.0
+        },
+        {
+          "period": "2039",
+          "value": 85459.0
+        },
+        {
+          "period": "2040",
+          "value": 85653.0
+        },
+        {
+          "period": "2041",
+          "value": 85779.0
+        },
+        {
+          "period": "2042",
+          "value": 85862.0
+        },
+        {
+          "period": "2043",
+          "value": 85921.0
+        },
+        {
+          "period": "2044",
+          "value": 85971.0
+        },
+        {
+          "period": "2045",
+          "value": 86023.0
+        },
+        {
+          "period": "2046",
+          "value": 86082.0
+        },
+        {
+          "period": "2047",
+          "value": 86150.0
+        },
+        {
+          "period": "2048",
+          "value": 86227.0
+        },
+        {
+          "period": "2049",
+          "value": 86309.0
+        },
+        {
+          "period": "2050",
+          "value": 86393.0
+        },
+        {
+          "period": "2051",
+          "value": 86476.0
+        },
+        {
+          "period": "2052",
+          "value": 86555.0
+        },
+        {
+          "period": "2053",
+          "value": 86629.0
+        },
+        {
+          "period": "2054",
+          "value": 86698.0
+        },
+        {
+          "period": "2055",
+          "value": 86762.0
+        },
+        {
+          "period": "2056",
+          "value": 86825.0
+        },
+        {
+          "period": "2057",
+          "value": 86888.0
+        },
+        {
+          "period": "2058",
+          "value": 86955.0
+        },
+        {
+          "period": "2059",
+          "value": 87027.0
+        },
+        {
+          "period": "2060",
+          "value": 87105.0
+        },
+        {
+          "period": "2061",
+          "value": 87190.0
+        },
+        {
+          "period": "2062",
+          "value": 87280.0
+        },
+        {
+          "period": "2063",
+          "value": 87371.0
+        },
+        {
+          "period": "2064",
+          "value": 87461.0
+        },
+        {
+          "period": "2065",
+          "value": 87545.0
+        },
+        {
+          "period": "2066",
+          "value": 87620.0
+        },
+        {
+          "period": "2067",
+          "value": 87686.0
+        },
+        {
+          "period": "2068",
+          "value": 87743.0
+        },
+        {
+          "period": "2069",
+          "value": 87797.0
+        },
+        {
+          "period": "2070",
+          "value": 87856.0
+        },
+        {
+          "period": "2071",
+          "value": 87928.0
+        },
+        {
+          "period": "2072",
+          "value": 88019.0
+        },
+        {
+          "period": "2073",
+          "value": 88125.0
+        },
+        {
+          "period": "2074",
+          "value": 88219.0
+        },
+        {
+          "period": "2075",
+          "value": 88241.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-proyectada-hombres-espana",
+      "title": "Inmigración exterior proyectada, hombres, lugar de nacimiento españa",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de inmigración exterior (tabla 36776)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36776",
+        "docId": "INE-36776"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 40174.412121
+        },
+        {
+          "period": "2027",
+          "value": 40479.2559
+        },
+        {
+          "period": "2028",
+          "value": 41074.506412
+        },
+        {
+          "period": "2029",
+          "value": 41849.664728
+        },
+        {
+          "period": "2030",
+          "value": 42709.224236
+        },
+        {
+          "period": "2031",
+          "value": 43579.889164
+        },
+        {
+          "period": "2032",
+          "value": 44406.132412
+        },
+        {
+          "period": "2033",
+          "value": 45150.195552
+        },
+        {
+          "period": "2034",
+          "value": 45790.978286
+        },
+        {
+          "period": "2035",
+          "value": 46320.151549
+        },
+        {
+          "period": "2036",
+          "value": 46739.936425
+        },
+        {
+          "period": "2037",
+          "value": 47058.661979
+        },
+        {
+          "period": "2038",
+          "value": 47290.765257
+        },
+        {
+          "period": "2039",
+          "value": 47452.904389
+        },
+        {
+          "period": "2040",
+          "value": 47560.626963
+        },
+        {
+          "period": "2041",
+          "value": 47630.591109
+        },
+        {
+          "period": "2042",
+          "value": 47676.678602
+        },
+        {
+          "period": "2043",
+          "value": 47709.439591
+        },
+        {
+          "period": "2044",
+          "value": 47737.203141
+        },
+        {
+          "period": "2045",
+          "value": 47766.077233
+        },
+        {
+          "period": "2046",
+          "value": 47798.838222
+        },
+        {
+          "period": "2047",
+          "value": 47836.59665
+        },
+        {
+          "period": "2048",
+          "value": 47879.352517
+        },
+        {
+          "period": "2049",
+          "value": 47924.884739
+        },
+        {
+          "period": "2050",
+          "value": 47971.527503
+        },
+        {
+          "period": "2051",
+          "value": 48017.614996
+        },
+        {
+          "period": "2052",
+          "value": 48061.481405
+        },
+        {
+          "period": "2053",
+          "value": 48102.571459
+        },
+        {
+          "period": "2054",
+          "value": 48140.885158
+        },
+        {
+          "period": "2055",
+          "value": 48176.422502
+        },
+        {
+          "period": "2056",
+          "value": 48211.404575
+        },
+        {
+          "period": "2057",
+          "value": 48246.386648
+        },
+        {
+          "period": "2058",
+          "value": 48283.589805
+        },
+        {
+          "period": "2059",
+          "value": 48323.569317
+        },
+        {
+          "period": "2060",
+          "value": 48366.880455
+        },
+        {
+          "period": "2061",
+          "value": 48414.07849
+        },
+        {
+          "period": "2062",
+          "value": 48464.05288
+        },
+        {
+          "period": "2063",
+          "value": 48514.582541
+        },
+        {
+          "period": "2064",
+          "value": 48564.556931
+        },
+        {
+          "period": "2065",
+          "value": 48611.199695
+        },
+        {
+          "period": "2066",
+          "value": 48652.84502
+        },
+        {
+          "period": "2067",
+          "value": 48689.492906
+        },
+        {
+          "period": "2068",
+          "value": 48721.143353
+        },
+        {
+          "period": "2069",
+          "value": 48751.127987
+        },
+        {
+          "period": "2070",
+          "value": 48783.888976
+        },
+        {
+          "period": "2071",
+          "value": 48823.868488
+        },
+        {
+          "period": "2072",
+          "value": 48874.398149
+        },
+        {
+          "period": "2073",
+          "value": 48933.256875
+        },
+        {
+          "period": "2074",
+          "value": 48985.452349
+        },
+        {
+          "period": "2075",
+          "value": 48997.668311
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-proyectada-mujeres-espana",
+      "title": "Inmigración exterior proyectada, mujeres, lugar de nacimiento españa",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de inmigración exterior (tabla 36776)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36776",
+        "docId": "INE-36776"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 32176.587879
+        },
+        {
+          "period": "2027",
+          "value": 32420.7441
+        },
+        {
+          "period": "2028",
+          "value": 32897.493588
+        },
+        {
+          "period": "2029",
+          "value": 33518.335272
+        },
+        {
+          "period": "2030",
+          "value": 34206.775764
+        },
+        {
+          "period": "2031",
+          "value": 34904.110836
+        },
+        {
+          "period": "2032",
+          "value": 35565.867588
+        },
+        {
+          "period": "2033",
+          "value": 36161.804448
+        },
+        {
+          "period": "2034",
+          "value": 36675.021714
+        },
+        {
+          "period": "2035",
+          "value": 37098.848451
+        },
+        {
+          "period": "2036",
+          "value": 37435.063575
+        },
+        {
+          "period": "2037",
+          "value": 37690.338021
+        },
+        {
+          "period": "2038",
+          "value": 37876.234743
+        },
+        {
+          "period": "2039",
+          "value": 38006.095611
+        },
+        {
+          "period": "2040",
+          "value": 38092.373037
+        },
+        {
+          "period": "2041",
+          "value": 38148.408891
+        },
+        {
+          "period": "2042",
+          "value": 38185.321398
+        },
+        {
+          "period": "2043",
+          "value": 38211.560409
+        },
+        {
+          "period": "2044",
+          "value": 38233.796859
+        },
+        {
+          "period": "2045",
+          "value": 38256.922767
+        },
+        {
+          "period": "2046",
+          "value": 38283.161778
+        },
+        {
+          "period": "2047",
+          "value": 38313.40335
+        },
+        {
+          "period": "2048",
+          "value": 38347.647483
+        },
+        {
+          "period": "2049",
+          "value": 38384.115261
+        },
+        {
+          "period": "2050",
+          "value": 38421.472497
+        },
+        {
+          "period": "2051",
+          "value": 38458.385004
+        },
+        {
+          "period": "2052",
+          "value": 38493.518595
+        },
+        {
+          "period": "2053",
+          "value": 38526.428541
+        },
+        {
+          "period": "2054",
+          "value": 38557.114842
+        },
+        {
+          "period": "2055",
+          "value": 38585.577498
+        },
+        {
+          "period": "2056",
+          "value": 38613.595425
+        },
+        {
+          "period": "2057",
+          "value": 38641.613352
+        },
+        {
+          "period": "2058",
+          "value": 38671.410195
+        },
+        {
+          "period": "2059",
+          "value": 38703.430683
+        },
+        {
+          "period": "2060",
+          "value": 38738.119545
+        },
+        {
+          "period": "2061",
+          "value": 38775.92151
+        },
+        {
+          "period": "2062",
+          "value": 38815.94712
+        },
+        {
+          "period": "2063",
+          "value": 38856.417459
+        },
+        {
+          "period": "2064",
+          "value": 38896.443069
+        },
+        {
+          "period": "2065",
+          "value": 38933.800305
+        },
+        {
+          "period": "2066",
+          "value": 38967.15498
+        },
+        {
+          "period": "2067",
+          "value": 38996.507094
+        },
+        {
+          "period": "2068",
+          "value": 39021.856647
+        },
+        {
+          "period": "2069",
+          "value": 39045.872013
+        },
+        {
+          "period": "2070",
+          "value": 39072.111024
+        },
+        {
+          "period": "2071",
+          "value": 39104.131512
+        },
+        {
+          "period": "2072",
+          "value": 39144.601851
+        },
+        {
+          "period": "2073",
+          "value": 39191.743125
+        },
+        {
+          "period": "2074",
+          "value": 39233.547651
+        },
+        {
+          "period": "2075",
+          "value": 39243.331689
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-proyectada-ambos-extranjero",
+      "title": "Inmigración exterior proyectada, ambos, lugar de nacimiento extranjero",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de inmigración exterior (tabla 36776)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36776",
+        "docId": "INE-36776"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 1277068.0
+        },
+        {
+          "period": "2027",
+          "value": 1255626.0
+        },
+        {
+          "period": "2028",
+          "value": 1212737.0
+        },
+        {
+          "period": "2029",
+          "value": 1156340.0
+        },
+        {
+          "period": "2030",
+          "value": 1093324.0
+        },
+        {
+          "period": "2031",
+          "value": 1029274.0
+        },
+        {
+          "period": "2032",
+          "value": 968398.0
+        },
+        {
+          "period": "2033",
+          "value": 913582.0
+        },
+        {
+          "period": "2034",
+          "value": 866526.0
+        },
+        {
+          "period": "2035",
+          "value": 827931.0
+        },
+        {
+          "period": "2036",
+          "value": 797712.0
+        },
+        {
+          "period": "2037",
+          "value": 775208.0
+        },
+        {
+          "period": "2038",
+          "value": 759388.0
+        },
+        {
+          "period": "2039",
+          "value": 749022.0
+        },
+        {
+          "period": "2040",
+          "value": 742832.0
+        },
+        {
+          "period": "2041",
+          "value": 739605.0
+        },
+        {
+          "period": "2042",
+          "value": 738273.0
+        },
+        {
+          "period": "2043",
+          "value": 737965.0
+        },
+        {
+          "period": "2044",
+          "value": 738027.0
+        },
+        {
+          "period": "2045",
+          "value": 738022.0
+        },
+        {
+          "period": "2046",
+          "value": 737705.0
+        },
+        {
+          "period": "2047",
+          "value": 736994.0
+        },
+        {
+          "period": "2048",
+          "value": 735926.0
+        },
+        {
+          "period": "2049",
+          "value": 734616.0
+        },
+        {
+          "period": "2050",
+          "value": 733211.0
+        },
+        {
+          "period": "2051",
+          "value": 731855.0
+        },
+        {
+          "period": "2052",
+          "value": 730662.0
+        },
+        {
+          "period": "2053",
+          "value": 729693.0
+        },
+        {
+          "period": "2054",
+          "value": 728956.0
+        },
+        {
+          "period": "2055",
+          "value": 728401.0
+        },
+        {
+          "period": "2056",
+          "value": 727935.0
+        },
+        {
+          "period": "2057",
+          "value": 727442.0
+        },
+        {
+          "period": "2058",
+          "value": 726806.0
+        },
+        {
+          "period": "2059",
+          "value": 725931.0
+        },
+        {
+          "period": "2060",
+          "value": 724767.0
+        },
+        {
+          "period": "2061",
+          "value": 723321.0
+        },
+        {
+          "period": "2062",
+          "value": 721666.0
+        },
+        {
+          "period": "2063",
+          "value": 719929.0
+        },
+        {
+          "period": "2064",
+          "value": 718275.0
+        },
+        {
+          "period": "2065",
+          "value": 716871.0
+        },
+        {
+          "period": "2066",
+          "value": 715850.0
+        },
+        {
+          "period": "2067",
+          "value": 715260.0
+        },
+        {
+          "period": "2068",
+          "value": 715026.0
+        },
+        {
+          "period": "2069",
+          "value": 714932.0
+        },
+        {
+          "period": "2070",
+          "value": 714637.0
+        },
+        {
+          "period": "2071",
+          "value": 713758.0
+        },
+        {
+          "period": "2072",
+          "value": 712045.0
+        },
+        {
+          "period": "2073",
+          "value": 709688.0
+        },
+        {
+          "period": "2074",
+          "value": 707803.0
+        },
+        {
+          "period": "2075",
+          "value": 709159.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-proyectada-hombres-extranjero",
+      "title": "Inmigración exterior proyectada, hombres, lugar de nacimiento extranjero",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de inmigración exterior (tabla 36776)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36776",
+        "docId": "INE-36776"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 655858.704488
+        },
+        {
+          "period": "2027",
+          "value": 644846.822316
+        },
+        {
+          "period": "2028",
+          "value": 622820.490142
+        },
+        {
+          "period": "2029",
+          "value": 593856.90844
+        },
+        {
+          "period": "2030",
+          "value": 561494.033384
+        },
+        {
+          "period": "2031",
+          "value": 528600.131084
+        },
+        {
+          "period": "2032",
+          "value": 497336.287268
+        },
+        {
+          "period": "2033",
+          "value": 469184.653412
+        },
+        {
+          "period": "2034",
+          "value": 445018.291716
+        },
+        {
+          "period": "2035",
+          "value": 425197.211946
+        },
+        {
+          "period": "2036",
+          "value": 409677.760992
+        },
+        {
+          "period": "2037",
+          "value": 398120.471728
+        },
+        {
+          "period": "2038",
+          "value": 389995.857608
+        },
+        {
+          "period": "2039",
+          "value": 384672.232452
+        },
+        {
+          "period": "2040",
+          "value": 381493.258912
+        },
+        {
+          "period": "2041",
+          "value": 379835.98143
+        },
+        {
+          "period": "2042",
+          "value": 379151.911518
+        },
+        {
+          "period": "2043",
+          "value": 378993.73319
+        },
+        {
+          "period": "2044",
+          "value": 379025.574282
+        },
+        {
+          "period": "2045",
+          "value": 379023.006452
+        },
+        {
+          "period": "2046",
+          "value": 378860.20603
+        },
+        {
+          "period": "2047",
+          "value": 378495.060604
+        },
+        {
+          "period": "2048",
+          "value": 377946.572116
+        },
+        {
+          "period": "2049",
+          "value": 377273.800656
+        },
+        {
+          "period": "2050",
+          "value": 376552.240426
+        },
+        {
+          "period": "2051",
+          "value": 375855.84493
+        },
+        {
+          "period": "2052",
+          "value": 375243.160692
+        },
+        {
+          "period": "2053",
+          "value": 374745.515238
+        },
+        {
+          "period": "2054",
+          "value": 374367.017096
+        },
+        {
+          "period": "2055",
+          "value": 374081.987966
+        },
+        {
+          "period": "2056",
+          "value": 373842.66621
+        },
+        {
+          "period": "2057",
+          "value": 373589.478172
+        },
+        {
+          "period": "2058",
+          "value": 373262.850196
+        },
+        {
+          "period": "2059",
+          "value": 372813.479946
+        },
+        {
+          "period": "2060",
+          "value": 372215.689122
+        },
+        {
+          "period": "2061",
+          "value": 371473.072686
+        },
+        {
+          "period": "2062",
+          "value": 370623.120956
+        },
+        {
+          "period": "2063",
+          "value": 369731.056814
+        },
+        {
+          "period": "2064",
+          "value": 368881.61865
+        },
+        {
+          "period": "2065",
+          "value": 368160.571986
+        },
+        {
+          "period": "2066",
+          "value": 367636.2211
+        },
+        {
+          "period": "2067",
+          "value": 367333.21716
+        },
+        {
+          "period": "2068",
+          "value": 367213.042716
+        },
+        {
+          "period": "2069",
+          "value": 367164.767512
+        },
+        {
+          "period": "2070",
+          "value": 367013.265542
+        },
+        {
+          "period": "2071",
+          "value": 366561.841028
+        },
+        {
+          "period": "2072",
+          "value": 365682.10247
+        },
+        {
+          "period": "2073",
+          "value": 364471.627408
+        },
+        {
+          "period": "2074",
+          "value": 363503.555498
+        },
+        {
+          "period": "2075",
+          "value": 364199.950994
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-proyectada-mujeres-extranjero",
+      "title": "Inmigración exterior proyectada, mujeres, lugar de nacimiento extranjero",
+      "unit": "personas",
+      "source": {
+        "title": "Proyecciones de Población: flujos de inmigración exterior (tabla 36776)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36776",
+        "docId": "INE-36776"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 621209.295512
+        },
+        {
+          "period": "2027",
+          "value": 610779.177684
+        },
+        {
+          "period": "2028",
+          "value": 589916.509858
+        },
+        {
+          "period": "2029",
+          "value": 562483.09156
+        },
+        {
+          "period": "2030",
+          "value": 531829.966616
+        },
+        {
+          "period": "2031",
+          "value": 500673.868916
+        },
+        {
+          "period": "2032",
+          "value": 471061.712732
+        },
+        {
+          "period": "2033",
+          "value": 444397.346588
+        },
+        {
+          "period": "2034",
+          "value": 421507.708284
+        },
+        {
+          "period": "2035",
+          "value": 402733.788054
+        },
+        {
+          "period": "2036",
+          "value": 388034.239008
+        },
+        {
+          "period": "2037",
+          "value": 377087.528272
+        },
+        {
+          "period": "2038",
+          "value": 369392.142392
+        },
+        {
+          "period": "2039",
+          "value": 364349.767548
+        },
+        {
+          "period": "2040",
+          "value": 361338.741088
+        },
+        {
+          "period": "2041",
+          "value": 359769.01857
+        },
+        {
+          "period": "2042",
+          "value": 359121.088482
+        },
+        {
+          "period": "2043",
+          "value": 358971.26681
+        },
+        {
+          "period": "2044",
+          "value": 359001.425718
+        },
+        {
+          "period": "2045",
+          "value": 358998.993548
+        },
+        {
+          "period": "2046",
+          "value": 358844.79397
+        },
+        {
+          "period": "2047",
+          "value": 358498.939396
+        },
+        {
+          "period": "2048",
+          "value": 357979.427884
+        },
+        {
+          "period": "2049",
+          "value": 357342.199344
+        },
+        {
+          "period": "2050",
+          "value": 356658.759574
+        },
+        {
+          "period": "2051",
+          "value": 355999.15507
+        },
+        {
+          "period": "2052",
+          "value": 355418.839308
+        },
+        {
+          "period": "2053",
+          "value": 354947.484762
+        },
+        {
+          "period": "2054",
+          "value": 354588.982904
+        },
+        {
+          "period": "2055",
+          "value": 354319.012034
+        },
+        {
+          "period": "2056",
+          "value": 354092.33379
+        },
+        {
+          "period": "2057",
+          "value": 353852.521828
+        },
+        {
+          "period": "2058",
+          "value": 353543.149804
+        },
+        {
+          "period": "2059",
+          "value": 353117.520054
+        },
+        {
+          "period": "2060",
+          "value": 352551.310878
+        },
+        {
+          "period": "2061",
+          "value": 351847.927314
+        },
+        {
+          "period": "2062",
+          "value": 351042.879044
+        },
+        {
+          "period": "2063",
+          "value": 350197.943186
+        },
+        {
+          "period": "2064",
+          "value": 349393.38135
+        },
+        {
+          "period": "2065",
+          "value": 348710.428014
+        },
+        {
+          "period": "2066",
+          "value": 348213.7789
+        },
+        {
+          "period": "2067",
+          "value": 347926.78284
+        },
+        {
+          "period": "2068",
+          "value": 347812.957284
+        },
+        {
+          "period": "2069",
+          "value": 347767.232488
+        },
+        {
+          "period": "2070",
+          "value": 347623.734458
+        },
+        {
+          "period": "2071",
+          "value": 347196.158972
+        },
+        {
+          "period": "2072",
+          "value": 346362.89753
+        },
+        {
+          "period": "2073",
+          "value": 345216.372592
+        },
+        {
+          "period": "2074",
+          "value": 344299.444502
+        },
+        {
+          "period": "2075",
+          "value": 344959.049006
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "esperanza-vida-0-ambos-proyectada",
+      "title": "Esperanza de vida al nacer proyectada, ambos",
+      "unit": "años",
+      "source": {
+        "title": "Proyecciones de Población: tablas de mortalidad proyectadas (tabla 36659)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36659",
+        "docId": "INE-36659"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 84.073568
+        },
+        {
+          "period": "2027",
+          "value": 84.202808
+        },
+        {
+          "period": "2028",
+          "value": 84.329376
+        },
+        {
+          "period": "2029",
+          "value": 84.456095
+        },
+        {
+          "period": "2030",
+          "value": 84.581215
+        },
+        {
+          "period": "2031",
+          "value": 84.705296
+        },
+        {
+          "period": "2032",
+          "value": 84.827624
+        },
+        {
+          "period": "2033",
+          "value": 84.949449
+        },
+        {
+          "period": "2034",
+          "value": 85.069753
+        },
+        {
+          "period": "2035",
+          "value": 85.188524
+        },
+        {
+          "period": "2036",
+          "value": 85.305006
+        },
+        {
+          "period": "2037",
+          "value": 85.421108
+        },
+        {
+          "period": "2038",
+          "value": 85.5353
+        },
+        {
+          "period": "2039",
+          "value": 85.650991
+        },
+        {
+          "period": "2040",
+          "value": 85.75733
+        },
+        {
+          "period": "2041",
+          "value": 85.86991
+        },
+        {
+          "period": "2042",
+          "value": 85.978409
+        },
+        {
+          "period": "2043",
+          "value": 86.083793
+        },
+        {
+          "period": "2044",
+          "value": 86.189787
+        },
+        {
+          "period": "2045",
+          "value": 86.293591
+        },
+        {
+          "period": "2046",
+          "value": 86.392868
+        },
+        {
+          "period": "2047",
+          "value": 86.489358
+        },
+        {
+          "period": "2048",
+          "value": 86.583144
+        },
+        {
+          "period": "2049",
+          "value": 86.677139
+        },
+        {
+          "period": "2050",
+          "value": 86.769619
+        },
+        {
+          "period": "2051",
+          "value": 86.860066
+        },
+        {
+          "period": "2052",
+          "value": 86.948158
+        },
+        {
+          "period": "2053",
+          "value": 87.035181
+        },
+        {
+          "period": "2054",
+          "value": 87.120959
+        },
+        {
+          "period": "2055",
+          "value": 87.20446
+        },
+        {
+          "period": "2056",
+          "value": 87.286866
+        },
+        {
+          "period": "2057",
+          "value": 87.366926
+        },
+        {
+          "period": "2058",
+          "value": 87.446235
+        },
+        {
+          "period": "2059",
+          "value": 87.524141
+        },
+        {
+          "period": "2060",
+          "value": 87.60035
+        },
+        {
+          "period": "2061",
+          "value": 87.675747
+        },
+        {
+          "period": "2062",
+          "value": 87.749794
+        },
+        {
+          "period": "2063",
+          "value": 87.822368
+        },
+        {
+          "period": "2064",
+          "value": 87.89269
+        },
+        {
+          "period": "2065",
+          "value": 87.962581
+        },
+        {
+          "period": "2066",
+          "value": 88.028123
+        },
+        {
+          "period": "2067",
+          "value": 88.09167
+        },
+        {
+          "period": "2068",
+          "value": 88.154138
+        },
+        {
+          "period": "2069",
+          "value": 88.215033
+        },
+        {
+          "period": "2070",
+          "value": 88.274678
+        },
+        {
+          "period": "2071",
+          "value": 88.332833
+        },
+        {
+          "period": "2072",
+          "value": 88.389428
+        },
+        {
+          "period": "2073",
+          "value": 88.445162
+        },
+        {
+          "period": "2074",
+          "value": 88.49925
+        },
+        {
+          "period": "2075",
+          "value": 88.552286
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "esperanza-vida-0-hombres-proyectada",
+      "title": "Esperanza de vida al nacer proyectada, hombres",
+      "unit": "años",
+      "source": {
+        "title": "Proyecciones de Población: tablas de mortalidad proyectadas (tabla 36659)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36659",
+        "docId": "INE-36659"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 81.500628
+        },
+        {
+          "period": "2027",
+          "value": 81.656132
+        },
+        {
+          "period": "2028",
+          "value": 81.807818
+        },
+        {
+          "period": "2029",
+          "value": 81.960062
+        },
+        {
+          "period": "2030",
+          "value": 82.110754
+        },
+        {
+          "period": "2031",
+          "value": 82.258876
+        },
+        {
+          "period": "2032",
+          "value": 82.406212
+        },
+        {
+          "period": "2033",
+          "value": 82.552321
+        },
+        {
+          "period": "2034",
+          "value": 82.696562
+        },
+        {
+          "period": "2035",
+          "value": 82.839211
+        },
+        {
+          "period": "2036",
+          "value": 82.979601
+        },
+        {
+          "period": "2037",
+          "value": 83.118925
+        },
+        {
+          "period": "2038",
+          "value": 83.255812
+        },
+        {
+          "period": "2039",
+          "value": 83.392961
+        },
+        {
+          "period": "2040",
+          "value": 83.52373
+        },
+        {
+          "period": "2041",
+          "value": 83.657227
+        },
+        {
+          "period": "2042",
+          "value": 83.787461
+        },
+        {
+          "period": "2043",
+          "value": 83.914806
+        },
+        {
+          "period": "2044",
+          "value": 84.041657
+        },
+        {
+          "period": "2045",
+          "value": 84.166403
+        },
+        {
+          "period": "2046",
+          "value": 84.290051
+        },
+        {
+          "period": "2047",
+          "value": 84.411202
+        },
+        {
+          "period": "2048",
+          "value": 84.530024
+        },
+        {
+          "period": "2049",
+          "value": 84.648018
+        },
+        {
+          "period": "2050",
+          "value": 84.764146
+        },
+        {
+          "period": "2051",
+          "value": 84.87814
+        },
+        {
+          "period": "2052",
+          "value": 84.989872
+        },
+        {
+          "period": "2053",
+          "value": 85.100066
+        },
+        {
+          "period": "2054",
+          "value": 85.208462
+        },
+        {
+          "period": "2055",
+          "value": 85.314423
+        },
+        {
+          "period": "2056",
+          "value": 85.418879
+        },
+        {
+          "period": "2057",
+          "value": 85.521083
+        },
+        {
+          "period": "2058",
+          "value": 85.621907
+        },
+        {
+          "period": "2059",
+          "value": 85.721134
+        },
+        {
+          "period": "2060",
+          "value": 85.818479
+        },
+        {
+          "period": "2061",
+          "value": 85.914313
+        },
+        {
+          "period": "2062",
+          "value": 86.008605
+        },
+        {
+          "period": "2063",
+          "value": 86.101133
+        },
+        {
+          "period": "2064",
+          "value": 86.191572
+        },
+        {
+          "period": "2065",
+          "value": 86.280751
+        },
+        {
+          "period": "2066",
+          "value": 86.362665
+        },
+        {
+          "period": "2067",
+          "value": 86.442651
+        },
+        {
+          "period": "2068",
+          "value": 86.520885
+        },
+        {
+          "period": "2069",
+          "value": 86.597189
+        },
+        {
+          "period": "2070",
+          "value": 86.671888
+        },
+        {
+          "period": "2071",
+          "value": 86.744753
+        },
+        {
+          "period": "2072",
+          "value": 86.815833
+        },
+        {
+          "period": "2073",
+          "value": 86.885518
+        },
+        {
+          "period": "2074",
+          "value": 86.953545
+        },
+        {
+          "period": "2075",
+          "value": 87.020183
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "esperanza-vida-0-mujeres-proyectada",
+      "title": "Esperanza de vida al nacer proyectada, mujeres",
+      "unit": "años",
+      "source": {
+        "title": "Proyecciones de Población: tablas de mortalidad proyectadas (tabla 36659)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36659",
+        "docId": "INE-36659"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 86.545525
+        },
+        {
+          "period": "2027",
+          "value": 86.647831
+        },
+        {
+          "period": "2028",
+          "value": 86.748911
+        },
+        {
+          "period": "2029",
+          "value": 86.849574
+        },
+        {
+          "period": "2030",
+          "value": 86.948624
+        },
+        {
+          "period": "2031",
+          "value": 87.048258
+        },
+        {
+          "period": "2032",
+          "value": 87.145279
+        },
+        {
+          "period": "2033",
+          "value": 87.242566
+        },
+        {
+          "period": "2034",
+          "value": 87.338646
+        },
+        {
+          "period": "2035",
+          "value": 87.433312
+        },
+        {
+          "period": "2036",
+          "value": 87.525726
+        },
+        {
+          "period": "2037",
+          "value": 87.618473
+        },
+        {
+          "period": "2038",
+          "value": 87.709849
+        },
+        {
+          "period": "2039",
+          "value": 87.803754
+        },
+        {
+          "period": "2040",
+          "value": 87.88612
+        },
+        {
+          "period": "2041",
+          "value": 87.977801
+        },
+        {
+          "period": "2042",
+          "value": 88.064781
+        },
+        {
+          "period": "2043",
+          "value": 88.148671
+        },
+        {
+          "period": "2044",
+          "value": 88.234157
+        },
+        {
+          "period": "2045",
+          "value": 88.317435
+        },
+        {
+          "period": "2046",
+          "value": 88.392377
+        },
+        {
+          "period": "2047",
+          "value": 88.464438
+        },
+        {
+          "period": "2048",
+          "value": 88.533638
+        },
+        {
+          "period": "2049",
+          "value": 88.604007
+        },
+        {
+          "period": "2050",
+          "value": 88.673214
+        },
+        {
+          "period": "2051",
+          "value": 88.740597
+        },
+        {
+          "period": "2052",
+          "value": 88.805754
+        },
+        {
+          "period": "2053",
+          "value": 88.870298
+        },
+        {
+          "period": "2054",
+          "value": 88.93409
+        },
+        {
+          "period": "2055",
+          "value": 88.995906
+        },
+        {
+          "period": "2056",
+          "value": 89.057049
+        },
+        {
+          "period": "2057",
+          "value": 89.115808
+        },
+        {
+          "period": "2058",
+          "value": 89.174454
+        },
+        {
+          "period": "2059",
+          "value": 89.23188
+        },
+        {
+          "period": "2060",
+          "value": 89.287759
+        },
+        {
+          "period": "2061",
+          "value": 89.343417
+        },
+        {
+          "period": "2062",
+          "value": 89.397912
+        },
+        {
+          "period": "2063",
+          "value": 89.451242
+        },
+        {
+          "period": "2064",
+          "value": 89.502156
+        },
+        {
+          "period": "2065",
+          "value": 89.553375
+        },
+        {
+          "period": "2066",
+          "value": 89.6034
+        },
+        {
+          "period": "2067",
+          "value": 89.651318
+        },
+        {
+          "period": "2068",
+          "value": 89.698766
+        },
+        {
+          "period": "2069",
+          "value": 89.744958
+        },
+        {
+          "period": "2070",
+          "value": 89.790227
+        },
+        {
+          "period": "2071",
+          "value": 89.834328
+        },
+        {
+          "period": "2072",
+          "value": 89.877144
+        },
+        {
+          "period": "2073",
+          "value": 89.919649
+        },
+        {
+          "period": "2074",
+          "value": 89.960546
+        },
+        {
+          "period": "2075",
+          "value": 90.000752
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "esperanza-vida-65-ambos-proyectada",
+      "title": "Esperanza de vida a los 65 años proyectada, ambos",
+      "unit": "años",
+      "source": {
+        "title": "Proyecciones de Población: tablas de mortalidad proyectadas (tabla 36659)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36659",
+        "docId": "INE-36659"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 21.876441
+        },
+        {
+          "period": "2027",
+          "value": 21.96202
+        },
+        {
+          "period": "2028",
+          "value": 22.045534
+        },
+        {
+          "period": "2029",
+          "value": 22.129873
+        },
+        {
+          "period": "2030",
+          "value": 22.213321
+        },
+        {
+          "period": "2031",
+          "value": 22.296281
+        },
+        {
+          "period": "2032",
+          "value": 22.378014
+        },
+        {
+          "period": "2033",
+          "value": 22.459911
+        },
+        {
+          "period": "2034",
+          "value": 22.540804
+        },
+        {
+          "period": "2035",
+          "value": 22.62073
+        },
+        {
+          "period": "2036",
+          "value": 22.698865
+        },
+        {
+          "period": "2037",
+          "value": 22.77726
+        },
+        {
+          "period": "2038",
+          "value": 22.854287
+        },
+        {
+          "period": "2039",
+          "value": 22.933677
+        },
+        {
+          "period": "2040",
+          "value": 23.003734
+        },
+        {
+          "period": "2041",
+          "value": 23.081259
+        },
+        {
+          "period": "2042",
+          "value": 23.155024
+        },
+        {
+          "period": "2043",
+          "value": 23.226251
+        },
+        {
+          "period": "2044",
+          "value": 23.299011
+        },
+        {
+          "period": "2045",
+          "value": 23.3702
+        },
+        {
+          "period": "2046",
+          "value": 23.438467
+        },
+        {
+          "period": "2047",
+          "value": 23.504562
+        },
+        {
+          "period": "2048",
+          "value": 23.56856
+        },
+        {
+          "period": "2049",
+          "value": 23.633508
+        },
+        {
+          "period": "2050",
+          "value": 23.697484
+        },
+        {
+          "period": "2051",
+          "value": 23.759999
+        },
+        {
+          "period": "2052",
+          "value": 23.820684
+        },
+        {
+          "period": "2053",
+          "value": 23.88081
+        },
+        {
+          "period": "2054",
+          "value": 23.940217
+        },
+        {
+          "period": "2055",
+          "value": 23.997887
+        },
+        {
+          "period": "2056",
+          "value": 24.055011
+        },
+        {
+          "period": "2057",
+          "value": 24.11025
+        },
+        {
+          "period": "2058",
+          "value": 24.165272
+        },
+        {
+          "period": "2059",
+          "value": 24.219401
+        },
+        {
+          "period": "2060",
+          "value": 24.272361
+        },
+        {
+          "period": "2061",
+          "value": 24.325035
+        },
+        {
+          "period": "2062",
+          "value": 24.376879
+        },
+        {
+          "period": "2063",
+          "value": 24.427675
+        },
+        {
+          "period": "2064",
+          "value": 24.476697
+        },
+        {
+          "period": "2065",
+          "value": 24.52577
+        },
+        {
+          "period": "2066",
+          "value": 24.571921
+        },
+        {
+          "period": "2067",
+          "value": 24.616528
+        },
+        {
+          "period": "2068",
+          "value": 24.660505
+        },
+        {
+          "period": "2069",
+          "value": 24.703349
+        },
+        {
+          "period": "2070",
+          "value": 24.74535
+        },
+        {
+          "period": "2071",
+          "value": 24.786252
+        },
+        {
+          "period": "2072",
+          "value": 24.825962
+        },
+        {
+          "period": "2073",
+          "value": 24.865293
+        },
+        {
+          "period": "2074",
+          "value": 24.903301
+        },
+        {
+          "period": "2075",
+          "value": 24.940717
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "esperanza-vida-65-hombres-proyectada",
+      "title": "Esperanza de vida a los 65 años proyectada, hombres",
+      "unit": "años",
+      "source": {
+        "title": "Proyecciones de Población: tablas de mortalidad proyectadas (tabla 36659)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36659",
+        "docId": "INE-36659"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 19.899102
+        },
+        {
+          "period": "2027",
+          "value": 19.998472
+        },
+        {
+          "period": "2028",
+          "value": 20.094615
+        },
+        {
+          "period": "2029",
+          "value": 20.19213
+        },
+        {
+          "period": "2030",
+          "value": 20.288807
+        },
+        {
+          "period": "2031",
+          "value": 20.383545
+        },
+        {
+          "period": "2032",
+          "value": 20.478248
+        },
+        {
+          "period": "2033",
+          "value": 20.572474
+        },
+        {
+          "period": "2034",
+          "value": 20.665424
+        },
+        {
+          "period": "2035",
+          "value": 20.757582
+        },
+        {
+          "period": "2036",
+          "value": 20.84823
+        },
+        {
+          "period": "2037",
+          "value": 20.938543
+        },
+        {
+          "period": "2038",
+          "value": 21.027077
+        },
+        {
+          "period": "2039",
+          "value": 21.116849
+        },
+        {
+          "period": "2040",
+          "value": 21.200494
+        },
+        {
+          "period": "2041",
+          "value": 21.288097
+        },
+        {
+          "period": "2042",
+          "value": 21.372882
+        },
+        {
+          "period": "2043",
+          "value": 21.455467
+        },
+        {
+          "period": "2044",
+          "value": 21.53848
+        },
+        {
+          "period": "2045",
+          "value": 21.620034
+        },
+        {
+          "period": "2046",
+          "value": 21.701164
+        },
+        {
+          "period": "2047",
+          "value": 21.780527
+        },
+        {
+          "period": "2048",
+          "value": 21.858281
+        },
+        {
+          "period": "2049",
+          "value": 21.936003
+        },
+        {
+          "period": "2050",
+          "value": 22.012502
+        },
+        {
+          "period": "2051",
+          "value": 22.08762
+        },
+        {
+          "period": "2052",
+          "value": 22.161161
+        },
+        {
+          "period": "2053",
+          "value": 22.233831
+        },
+        {
+          "period": "2054",
+          "value": 22.305402
+        },
+        {
+          "period": "2055",
+          "value": 22.375253
+        },
+        {
+          "period": "2056",
+          "value": 22.444325
+        },
+        {
+          "period": "2057",
+          "value": 22.511757
+        },
+        {
+          "period": "2058",
+          "value": 22.578515
+        },
+        {
+          "period": "2059",
+          "value": 22.644344
+        },
+        {
+          "period": "2060",
+          "value": 22.708983
+        },
+        {
+          "period": "2061",
+          "value": 22.77277
+        },
+        {
+          "period": "2062",
+          "value": 22.83567
+        },
+        {
+          "period": "2063",
+          "value": 22.897461
+        },
+        {
+          "period": "2064",
+          "value": 22.957789
+        },
+        {
+          "period": "2065",
+          "value": 23.017512
+        },
+        {
+          "period": "2066",
+          "value": 23.072401
+        },
+        {
+          "period": "2067",
+          "value": 23.125961
+        },
+        {
+          "period": "2068",
+          "value": 23.178341
+        },
+        {
+          "period": "2069",
+          "value": 23.229444
+        },
+        {
+          "period": "2070",
+          "value": 23.279494
+        },
+        {
+          "period": "2071",
+          "value": 23.328268
+        },
+        {
+          "period": "2072",
+          "value": 23.375795
+        },
+        {
+          "period": "2073",
+          "value": 23.422531
+        },
+        {
+          "period": "2074",
+          "value": 23.468113
+        },
+        {
+          "period": "2075",
+          "value": 23.512877
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "esperanza-vida-65-mujeres-proyectada",
+      "title": "Esperanza de vida a los 65 años proyectada, mujeres",
+      "unit": "años",
+      "source": {
+        "title": "Proyecciones de Población: tablas de mortalidad proyectadas (tabla 36659)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36659",
+        "docId": "INE-36659"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 23.636961
+        },
+        {
+          "period": "2027",
+          "value": 23.711416
+        },
+        {
+          "period": "2028",
+          "value": 23.785228
+        },
+        {
+          "period": "2029",
+          "value": 23.859139
+        },
+        {
+          "period": "2030",
+          "value": 23.931949
+        },
+        {
+          "period": "2031",
+          "value": 24.00578
+        },
+        {
+          "period": "2032",
+          "value": 24.077338
+        },
+        {
+          "period": "2033",
+          "value": 24.149649
+        },
+        {
+          "period": "2034",
+          "value": 24.221275
+        },
+        {
+          "period": "2035",
+          "value": 24.291894
+        },
+        {
+          "period": "2036",
+          "value": 24.360619
+        },
+        {
+          "period": "2037",
+          "value": 24.430213
+        },
+        {
+          "period": "2038",
+          "value": 24.498852
+        },
+        {
+          "period": "2039",
+          "value": 24.570636
+        },
+        {
+          "period": "2040",
+          "value": 24.630812
+        },
+        {
+          "period": "2041",
+          "value": 24.701311
+        },
+        {
+          "period": "2042",
+          "value": 24.767196
+        },
+        {
+          "period": "2043",
+          "value": 24.830333
+        },
+        {
+          "period": "2044",
+          "value": 24.895568
+        },
+        {
+          "period": "2045",
+          "value": 24.958968
+        },
+        {
+          "period": "2046",
+          "value": 25.016674
+        },
+        {
+          "period": "2047",
+          "value": 25.07183
+        },
+        {
+          "period": "2048",
+          "value": 25.124407
+        },
+        {
+          "period": "2049",
+          "value": 25.178647
+        },
+        {
+          "period": "2050",
+          "value": 25.23209
+        },
+        {
+          "period": "2051",
+          "value": 25.284024
+        },
+        {
+          "period": "2052",
+          "value": 25.334099
+        },
+        {
+          "period": "2053",
+          "value": 25.383934
+        },
+        {
+          "period": "2054",
+          "value": 25.433313
+        },
+        {
+          "period": "2055",
+          "value": 25.481059
+        },
+        {
+          "period": "2056",
+          "value": 25.528535
+        },
+        {
+          "period": "2057",
+          "value": 25.573913
+        },
+        {
+          "period": "2058",
+          "value": 25.61945
+        },
+        {
+          "period": "2059",
+          "value": 25.664096
+        },
+        {
+          "period": "2060",
+          "value": 25.707515
+        },
+        {
+          "period": "2061",
+          "value": 25.751041
+        },
+        {
+          "period": "2062",
+          "value": 25.793731
+        },
+        {
+          "period": "2063",
+          "value": 25.835527
+        },
+        {
+          "period": "2064",
+          "value": 25.875227
+        },
+        {
+          "period": "2065",
+          "value": 25.915503
+        },
+        {
+          "period": "2066",
+          "value": 25.954855
+        },
+        {
+          "period": "2067",
+          "value": 25.992364
+        },
+        {
+          "period": "2068",
+          "value": 26.029728
+        },
+        {
+          "period": "2069",
+          "value": 26.066071
+        },
+        {
+          "period": "2070",
+          "value": 26.101744
+        },
+        {
+          "period": "2071",
+          "value": 26.136459
+        },
+        {
+          "period": "2072",
+          "value": 26.17013
+        },
+        {
+          "period": "2073",
+          "value": 26.203841
+        },
+        {
+          "period": "2074",
+          "value": 26.236054
+        },
+        {
+          "period": "2075",
+          "value": 26.267846
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "tasa-dependencia-proyectada",
+      "title": "Tasa de dependencia (proyección INE)",
+      "unit": "%",
+      "source": {
+        "title": "Proyecciones de Población: tasa de dependencia por año (tabla 36668)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36668",
+        "docId": "INE-36668"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 53.108093
+        },
+        {
+          "period": "2027",
+          "value": 53.095795
+        },
+        {
+          "period": "2028",
+          "value": 53.169405
+        },
+        {
+          "period": "2029",
+          "value": 53.373914
+        },
+        {
+          "period": "2030",
+          "value": 53.839589
+        },
+        {
+          "period": "2031",
+          "value": 54.241749
+        },
+        {
+          "period": "2032",
+          "value": 54.706504
+        },
+        {
+          "period": "2033",
+          "value": 55.300824
+        },
+        {
+          "period": "2034",
+          "value": 55.972918
+        },
+        {
+          "period": "2035",
+          "value": 56.790467
+        },
+        {
+          "period": "2036",
+          "value": 57.724336
+        },
+        {
+          "period": "2037",
+          "value": 58.798144
+        },
+        {
+          "period": "2038",
+          "value": 59.954329
+        },
+        {
+          "period": "2039",
+          "value": 61.167491
+        },
+        {
+          "period": "2040",
+          "value": 62.541722
+        },
+        {
+          "period": "2041",
+          "value": 63.95208
+        },
+        {
+          "period": "2042",
+          "value": 65.382453
+        },
+        {
+          "period": "2043",
+          "value": 66.748705
+        },
+        {
+          "period": "2044",
+          "value": 68.0557
+        },
+        {
+          "period": "2045",
+          "value": 69.18966
+        },
+        {
+          "period": "2046",
+          "value": 70.205103
+        },
+        {
+          "period": "2047",
+          "value": 71.043779
+        },
+        {
+          "period": "2048",
+          "value": 71.719018
+        },
+        {
+          "period": "2049",
+          "value": 72.202487
+        },
+        {
+          "period": "2050",
+          "value": 72.563963
+        },
+        {
+          "period": "2051",
+          "value": 72.788597
+        },
+        {
+          "period": "2052",
+          "value": 72.895458
+        },
+        {
+          "period": "2053",
+          "value": 72.906028
+        },
+        {
+          "period": "2054",
+          "value": 72.855386
+        },
+        {
+          "period": "2055",
+          "value": 72.734801
+        },
+        {
+          "period": "2056",
+          "value": 72.554959
+        },
+        {
+          "period": "2057",
+          "value": 72.331275
+        },
+        {
+          "period": "2058",
+          "value": 72.112055
+        },
+        {
+          "period": "2059",
+          "value": 71.827866
+        },
+        {
+          "period": "2060",
+          "value": 71.482676
+        },
+        {
+          "period": "2061",
+          "value": 71.124786
+        },
+        {
+          "period": "2062",
+          "value": 70.784581
+        },
+        {
+          "period": "2063",
+          "value": 70.498352
+        },
+        {
+          "period": "2064",
+          "value": 70.216984
+        },
+        {
+          "period": "2065",
+          "value": 70.033799
+        },
+        {
+          "period": "2066",
+          "value": 69.954716
+        },
+        {
+          "period": "2067",
+          "value": 69.924595
+        },
+        {
+          "period": "2068",
+          "value": 69.965166
+        },
+        {
+          "period": "2069",
+          "value": 70.13231
+        },
+        {
+          "period": "2070",
+          "value": 70.384965
+        },
+        {
+          "period": "2071",
+          "value": 70.705399
+        },
+        {
+          "period": "2072",
+          "value": 71.121297
+        },
+        {
+          "period": "2073",
+          "value": 71.588279
+        },
+        {
+          "period": "2074",
+          "value": 72.171913
+        },
+        {
+          "period": "2075",
+          "value": 72.694355
+        },
+        {
+          "period": "2076",
+          "value": 73.204808
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "tasa-dependencia-menores-16-proyectada",
+      "title": "Tasa de dependencia de la población menor de 16 años (proyección INE)",
+      "unit": "%",
+      "source": {
+        "title": "Proyecciones de Población: tasa de dependencia de la población menor de 16 años por año (tabla 36669)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36669",
+        "docId": "INE-36669"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 20.878289
+        },
+        {
+          "period": "2027",
+          "value": 20.39915
+        },
+        {
+          "period": "2028",
+          "value": 19.960149
+        },
+        {
+          "period": "2029",
+          "value": 19.569974
+        },
+        {
+          "period": "2030",
+          "value": 19.28928
+        },
+        {
+          "period": "2031",
+          "value": 18.988051
+        },
+        {
+          "period": "2032",
+          "value": 18.718845
+        },
+        {
+          "period": "2033",
+          "value": 18.499681
+        },
+        {
+          "period": "2034",
+          "value": 18.354329
+        },
+        {
+          "period": "2035",
+          "value": 18.299639
+        },
+        {
+          "period": "2036",
+          "value": 18.313127
+        },
+        {
+          "period": "2037",
+          "value": 18.40356
+        },
+        {
+          "period": "2038",
+          "value": 18.527575
+        },
+        {
+          "period": "2039",
+          "value": 18.687682
+        },
+        {
+          "period": "2040",
+          "value": 18.918932
+        },
+        {
+          "period": "2041",
+          "value": 19.168761
+        },
+        {
+          "period": "2042",
+          "value": 19.420305
+        },
+        {
+          "period": "2043",
+          "value": 19.671421
+        },
+        {
+          "period": "2044",
+          "value": 19.914442
+        },
+        {
+          "period": "2045",
+          "value": 20.131934
+        },
+        {
+          "period": "2046",
+          "value": 20.326704
+        },
+        {
+          "period": "2047",
+          "value": 20.488531
+        },
+        {
+          "period": "2048",
+          "value": 20.616148
+        },
+        {
+          "period": "2049",
+          "value": 20.70383
+        },
+        {
+          "period": "2050",
+          "value": 20.758053
+        },
+        {
+          "period": "2051",
+          "value": 20.775814
+        },
+        {
+          "period": "2052",
+          "value": 20.758979
+        },
+        {
+          "period": "2053",
+          "value": 20.710444
+        },
+        {
+          "period": "2054",
+          "value": 20.635382
+        },
+        {
+          "period": "2055",
+          "value": 20.534485
+        },
+        {
+          "period": "2056",
+          "value": 20.411549
+        },
+        {
+          "period": "2057",
+          "value": 20.271455
+        },
+        {
+          "period": "2058",
+          "value": 20.125003
+        },
+        {
+          "period": "2059",
+          "value": 19.967893
+        },
+        {
+          "period": "2060",
+          "value": 19.804614
+        },
+        {
+          "period": "2061",
+          "value": 19.644593
+        },
+        {
+          "period": "2062",
+          "value": 19.494724
+        },
+        {
+          "period": "2063",
+          "value": 19.362092
+        },
+        {
+          "period": "2064",
+          "value": 19.243529
+        },
+        {
+          "period": "2065",
+          "value": 19.151414
+        },
+        {
+          "period": "2066",
+          "value": 19.087496
+        },
+        {
+          "period": "2067",
+          "value": 19.046313
+        },
+        {
+          "period": "2068",
+          "value": 19.030491
+        },
+        {
+          "period": "2069",
+          "value": 19.045892
+        },
+        {
+          "period": "2070",
+          "value": 19.087097
+        },
+        {
+          "period": "2071",
+          "value": 19.150809
+        },
+        {
+          "period": "2072",
+          "value": 19.238366
+        },
+        {
+          "period": "2073",
+          "value": 19.342641
+        },
+        {
+          "period": "2074",
+          "value": 19.468668
+        },
+        {
+          "period": "2075",
+          "value": 19.594055
+        },
+        {
+          "period": "2076",
+          "value": 19.72238
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "tasa-dependencia-mayores-64-proyectada",
+      "title": "Tasa de dependencia de la población mayor de 64 años (proyección INE)",
+      "unit": "%",
+      "source": {
+        "title": "Proyecciones de Población: tasa de dependencia de la población mayor de 64 años por año (tabla 36670)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36670",
+        "docId": "INE-36670"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2026",
+          "value": 32.229804
+        },
+        {
+          "period": "2027",
+          "value": 32.696645
+        },
+        {
+          "period": "2028",
+          "value": 33.209257
+        },
+        {
+          "period": "2029",
+          "value": 33.803939
+        },
+        {
+          "period": "2030",
+          "value": 34.55031
+        },
+        {
+          "period": "2031",
+          "value": 35.253698
+        },
+        {
+          "period": "2032",
+          "value": 35.987658
+        },
+        {
+          "period": "2033",
+          "value": 36.801143
+        },
+        {
+          "period": "2034",
+          "value": 37.618589
+        },
+        {
+          "period": "2035",
+          "value": 38.490829
+        },
+        {
+          "period": "2036",
+          "value": 39.411209
+        },
+        {
+          "period": "2037",
+          "value": 40.394584
+        },
+        {
+          "period": "2038",
+          "value": 41.426754
+        },
+        {
+          "period": "2039",
+          "value": 42.479809
+        },
+        {
+          "period": "2040",
+          "value": 43.62279
+        },
+        {
+          "period": "2041",
+          "value": 44.78332
+        },
+        {
+          "period": "2042",
+          "value": 45.962149
+        },
+        {
+          "period": "2043",
+          "value": 47.077284
+        },
+        {
+          "period": "2044",
+          "value": 48.141258
+        },
+        {
+          "period": "2045",
+          "value": 49.057726
+        },
+        {
+          "period": "2046",
+          "value": 49.878398
+        },
+        {
+          "period": "2047",
+          "value": 50.555248
+        },
+        {
+          "period": "2048",
+          "value": 51.10287
+        },
+        {
+          "period": "2049",
+          "value": 51.498657
+        },
+        {
+          "period": "2050",
+          "value": 51.80591
+        },
+        {
+          "period": "2051",
+          "value": 52.012783
+        },
+        {
+          "period": "2052",
+          "value": 52.136479
+        },
+        {
+          "period": "2053",
+          "value": 52.195583
+        },
+        {
+          "period": "2054",
+          "value": 52.220004
+        },
+        {
+          "period": "2055",
+          "value": 52.200316
+        },
+        {
+          "period": "2056",
+          "value": 52.14341
+        },
+        {
+          "period": "2057",
+          "value": 52.05982
+        },
+        {
+          "period": "2058",
+          "value": 51.987053
+        },
+        {
+          "period": "2059",
+          "value": 51.859973
+        },
+        {
+          "period": "2060",
+          "value": 51.678062
+        },
+        {
+          "period": "2061",
+          "value": 51.480193
+        },
+        {
+          "period": "2062",
+          "value": 51.289857
+        },
+        {
+          "period": "2063",
+          "value": 51.136259
+        },
+        {
+          "period": "2064",
+          "value": 50.973454
+        },
+        {
+          "period": "2065",
+          "value": 50.882385
+        },
+        {
+          "period": "2066",
+          "value": 50.86722
+        },
+        {
+          "period": "2067",
+          "value": 50.878282
+        },
+        {
+          "period": "2068",
+          "value": 50.934676
+        },
+        {
+          "period": "2069",
+          "value": 51.086418
+        },
+        {
+          "period": "2070",
+          "value": 51.297867
+        },
+        {
+          "period": "2071",
+          "value": 51.554589
+        },
+        {
+          "period": "2072",
+          "value": 51.882931
+        },
+        {
+          "period": "2073",
+          "value": 52.245637
+        },
+        {
+          "period": "2074",
+          "value": 52.703245
+        },
+        {
+          "period": "2075",
+          "value": 53.1003
+        },
+        {
+          "period": "2076",
+          "value": 53.482428
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}

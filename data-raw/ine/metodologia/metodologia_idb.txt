@@ -1,0 +1,2664 @@
+Indicadores
+Demográficos Básicos
+
+Metodología
+
+
+
+
+              Noviembre 2024
+    Índice
+
+
+
+
+1   Introducción                               3
+
+
+2   Definiciones y Conceptos                   4
+
+
+3   Ámbito                                     5
+
+3.1 Ámbito poblacional                         5
+
+3.2 Variables de clasificación                 5
+
+3.3 Ámbito geográfico                          5
+
+3.4 Ámbito temporal                            5
+
+
+4   Cálculo de Indicadores                     7
+
+4.1 Natalidad y Fecundidad                     7
+
+4.2 Mortalidad                                12
+
+4.3 Nupcialidad                               20
+
+4.4 Divorcialidad                             24
+
+4.5 Movimiento Migratorio                     26
+
+4.6 Crecimento y Estructura de la población   37
+
+
+
+
+                                                       INE. Instituto Nacional de Estadística
+5   Indicadores a nivel municipal             43
+
+
+6   Publicación de resultados                 46
+
+
+    Anexo: Diccionario de conceptos           49
+
+
+
+
+                                                   2
+1 Introducción
+
+
+
+
+  Los Indicadores Demográficos Básicos constituyen una operación estadística
+  conformada por una colección de indicadores que permiten analizar cómo inciden los
+  fenómenos demográficos básicos en España.
+  Su objetivo es proporcionar la intensidad, las principales características, la dinámica y
+  la evolución de los fenómenos demográficos sobre la población residente en España.
+  Los indicadores proporcionados resumen la evolución histórica del comportamiento de
+  los fenómenos demográficos básicos en España (natalidad, fecundidad, mortalidad,
+  nupcialidad, divorcialidad, movimientos migratorios) y la del crecimiento y estructura de
+  la población residente en el país.
+  Se calculan a partir de los resultados de las estadísticas de Nacimientos, Defunciones
+  y Matrimonios del Movimiento Natural de la Población, de la Estadística de nulidades,
+  separaciones y divorcios, de la Estadística de migraciones, de la Estadística de
+  Migraciones y Cambios de Residencia y de las cifras de población residente en España
+  de referencia (Estimaciones Intercensales de Población, hasta 2020, y Censos anuales,
+  desde 2021, así como la Estadística del Padrón Continuo, para el periodo 2014-2020,en el
+  caso de los indicadores a nivel municipal).
+
+
+
+
+                                                                                              INE. Instituto Nacional de Estadística
+
+
+
+
+                                                                                         3
+2 Definiciones y Conceptos
+
+
+
+
+  Todos los indicadores están referidos a la Población Residente en un determinado
+  ámbito geográfico, entendiendo como tal a aquellas personas que en la fecha de
+  referencia tienen establecida su residencia habitual en el mismo.
+  La Residencia Habitual se define como el lugar donde una persona normalmente pasa
+  los periodos diarios de descanso, sin tener en cuenta las ausencias temporales por
+  viajes de ocio, vacaciones, visitas a familiares y amigos, negocios, tratamiento médico
+  o peregrinación religiosa. No obstante, se ha de puntualizar que sólo se considerarán
+  residentes habituales en una circunscripción territorial:
+  – Aquellos que, según la definición anterior, hubieran residido habitualmente en la
+    misma por un periodo continuado de al menos doce meses.
+  – Aquellos que, según la definición anterior, hubieran establecido su residencia
+    habitual en la misma hace menos de doce meses pero tuvieran intención de
+    permanecer en ella al menos un año.
+  A efecto de cálculo de los indicadores demográficos se requiere la Población
+  Residente Media durante el año de referencia. A este respecto la población residente
+  media del colectivo considerado en el año de referencia se considera:
+  – igual al stock de población residente perteneciente a dicho colectivo a mitad del
+    periodo, es decir, a 1 de julio de ese año, para el periodo 1975-2020.
+  – igual a la semisuma entre los stock de población residente perteneciente a dicho
+    colectivo a 1 de enero de los años t y t+1, para el cálculo de los indicadores del año
+    t a partir de 2021.
+
+
+
+
+                                                                                             INE. Instituto Nacional de Estadística
+
+
+
+
+                                                                                        4
+3 Ámbito
+
+
+
+
+3.1 Ámbito poblacional
+   La población objeto de estudio de los Indicadores Demográficos Básicos (IDB) está
+   constituida por:
+   – Las personas residentes en España
+   – Los nacimientos de madre residente en España
+   – Las defunciones de residentes en España
+   – Los matrimonios que establecen su residencia en España
+   – Los divorcios de los matrimonios residentes en España
+   – Los movimientos migratorios que tienen España como origen o como destino
+
+
+
+3.2 Variables de clasificación
+   Los indicadores relacionados con los diferentes sucesos demográficos se desglosan en
+   función de las siguientes características de la población:
+   – Sexo
+   – Edad
+   – Nacionalidad (española/extranjera)
+   – Lugar de residencia
+   En el caso de los nacimientos, se considera además la variable:
+   – Orden de nacimiento
+   En el caso de los matrimonios se considera además la variable:
+   – Estado civil previo al matrimonio
+
+
+
+                                                                                          INE. Instituto Nacional de Estadística
+   En el caso de los divorcios se considera además la variable:
+   – Duración del matrimonio
+
+
+
+3.3 Ámbito geográfico
+   Se proporcionan indicadores demográficos nacionales, autonómicos, provinciales y
+   municipales.
+
+
+
+3.4 Ámbito temporal
+   Todos los indicadores demográficos que obtiene el INE tienen referencia anual.
+   La mayor parte de las series de indicadores demográficos básicos se inician en 1975,
+   salvo las siguientes excepciones:
+   – Los indicadores de nupcialidad que están disponibles a partir de 1976.
+
+
+                                                                                     5
+– Los indicadores de divorcios que están disponibles a partir de 2005.
+– Los indicadores de migraciones que están disponibles a partir de 2008.
+– Los indicadores a nivel municipal que están disponibles a partir de 2014.
+Además, existen una serie de especificaciones sobre la disponibilidad de determinados
+datos y agregaciones en las series de los indicadores que se detallan en el anexo.
+
+
+
+
+                                                                                        INE. Instituto Nacional de Estadística
+
+
+
+
+                                                                                   6
+4 Cálculo de Indicadores
+
+
+
+
+        Los indicadores se clasifican en seis grupos según su temática:
+        – Natalidad y Fecundidad
+        – Mortalidad
+        – Nupcialidad
+        – Divorcialidad
+        – Movimiento Migratorio
+        – Crecimiento y Estructura de la Población
+
+
+
+4.1 Natalidad y Fecundidad
+        Se distinguen:
+        Indicadores de Natalidad: referentes a los nacimientos ocurridos en una población.
+        Indicadores de Fecundidad: referentes a los nacimientos en relación con la población
+        en la que tienen lugar, es decir, las mujeres en edad fértil.
+
+
+4.1.1     INDICADORES DE NATALIDAD
+
+
+4.1.1.1   Tasa (bruta) de Natalidad
+        Se define como el total de nacimientos de madre perteneciente a un determinado
+        ámbito en el año t por cada 1.000 habitantes. Es decir:
+
+                                                    Nt
+                                           TBNt =        .1000
+                                                    Pt
+
+
+                                                                                                 INE. Instituto Nacional de Estadística
+        donde:
+
+        Nt = Nacimientos registrados durante el año t de madres pertenecientes al ámbito de
+        estudio
+
+        Pt = Población residente media en el ámbito de estudio, en el año t
+        En general el término “Tasa Bruta de Natalidad” se emplea cuando el indicador se
+        refiere al total de nacimientos ocurridos en un determinado ámbito geográfico (total
+        nacional, comunidad autónoma o provincia), mientras que cuando se evalúa el
+        fenómeno restringido a un subconjunto poblacional, dentro del ámbito geográfico
+        considerado, el indicador se denomina simplemente “Tasa de Natalidad”.
+        Así, por ejemplo, la colección de Indicadores Demográficos Básicos del INE incluye
+        entre sus indicadores la “Tasa de Natalidad según nacionalidad (española / extranjera)
+        de la madre”.
+
+
+
+
+                                                                                             7
+4.1.1.2   Ratio de masculinidad al nacimiento
+        Se define como el total de nacimientos de niños por cada 100 nacimientos de niñas,
+        registrados entre los nacimientos de madres pertenecientes a un determinado ámbito,
+        durante el año t:
+                                                        NtHombres
+                                               RMNt =                   .100
+                                                            NtMujeres
+        donde:
+        NtHombres = Nacimientos de hombres registrados durante el año t de madres
+        pertenecientes al ámbito de estudio
+        NtMujeres = Nacimientos de mujeres registrados durante el año t de madres
+        pertenecientes al ámbito de studio
+
+
+4.1.2     INDICADORES DE FECUNDIDAD
+
+
+
+4.1.2.1   Tasa Global de fecundidad
+        Se define como el total de nacimientos, de madre de un determinado ámbito ocurridos
+        en un año t, por cada 1.000 mujeres en edad fértil (de 15 a 49 años de edad) de dicho
+        ámbito. Es decir:
+                                                        t     Nt
+                                                  TGF =            .1000
+                                                             Mt
+        donde:
+        Nt = Nacimientos registrados durante el año t de mujeres de 15 a 49 años de edad,
+        pertenecientes al ámbito de estudio
+
+
+                                                                                                                     INE. Instituto Nacional de Estadística
+        Mt = Población residente media de mujeres, de 15 a 49 años de edad pertenecientes al
+        ámbito de estudio
+
+
+4.1.2.2   Tasas de fecundidad por grupo quinquenal de edad de la madre 1
+        Se definen como el total de nacimientos de madres con edad 2 comprendida entre x y
+        x+4 años, pertenecientes al ámbito de estudio, a lo largo del año t por cada 1.000
+
+
+1 Las tasas de fecundidad de las adolescentes (entre 10 y 14 años y entre 15 y 19 años) por cada 1.000 mujeres
+
+de ese grupo de edad, se engloban dentro del Objetivo 3. Garantizar una vida sana y promover el bienestar de
+todos a todas las edades, de la Agenda 2030 para el Desarrollo Sostenible de Naciones Unidas. En concreto se
+trata del indicador 3.7.2 de la estadística “Indicadores de la Agenda 2030 para el Desarrollo Sostenible” del INE
+(IOE 30800), incluido dentro de la meta 3.7 De aquí a 2030, garantizar el acceso universal a los servicios de
+salud sexual y reproductiva, incluidos los de planificación familiar, información y educación, y la integración de
+la salud reproductiva en las estrategias y los programas nacionales, del Objetivo 3 de la Agenda 2030.
+2 Para el grupo de edad de la madre de 10 a 14 años, en el numerador se incluyen los nacimientos de madre de
+
+14 y menos años, en el denominador se considera exclusivamente la población de mujeres de entre 10 y 14
+años, ambas edades incluidas.
+
+
+                                                                                                                8
+     Se definen como el total de nacimientos de madres con edad 3 comprendida entre x y
+     x+4 años, pertenecientes al ámbito de estudio, a lo largo del año t por cada 1.000
+     mujeres de dicho colectivo poblacional. Es decir:
+
+                                             t      Ntx,x+4
+                                          TEFx,x+4 = t      .1000
+                                                    Mx,x+4
+
+     donde:
+
+     Ntx,x+4 = Nacimientos registrados durante el año t de madres de edad comprendida
+     entre x y x+4 años en el ámbito de estudio
+
+     Mtx,x+4 = Población residente media de mujeres de edad comprendida entre x y x+4
+     años, pertenecientes al ámbito de estudio en el año t
+     x= Edad. Toma valores comprendidos entre 10 y 50 años
+
+
+4.1.2.3   Tasas de fecundidad por edad de la madre
+     Se definen como el total de nacimientos de madres de edad 4 x, pertenecientes al
+     ámbito de estudio, a lo largo del año t por cada 1.000 mujeres de dicho colectivo
+     poblacional. Es decir:
+
+                                                 t  Ntx
+                                              TEFx = t .1000
+                                                    Mx
+     donde:
+
+     Ntx = Nacimientos registrados durante el año t de madres de edad x en el ámbito de
+     estudio
+
+
+
+                                                                                                               INE. Instituto Nacional de Estadística
+     Mtx = Población residente media de mujeres de edad x, pertenecientes al ámbito de
+     estudio en el año t
+     x= Edad. Toma valores comprendidos entre 15 y 49 años (edad fértil)
+
+
+
+
+Para el grupo de edad de la madre de 50 años y más, en el numerador se incluyen los nacimientos de madre de
+50 y más años, en el denominador se considera exclusivamente la población de mujeres de 50 años.
+3 Para el grupo de edad de la madre de 10 a 14 años, en el numerador se incluyen los nacimientos de madre de
+
+14 y menos años, en el denominador se considera exclusivamente la población de mujeres de entre 10 y 14
+años, ambas edades incluidas.
+Para el grupo de edad de la madre de 50 años y más, en el numerador se incluyen los nacimientos de madre de
+50 y más años, en el denominador se considera exclusivamente la población de mujeres de 50 años.
+4 Para la edad de la madre 15 años, en el numerador se incluyen los nacimientos de madre de 15 y menos años,
+
+en el denominador se considera exclusivamente la población de mujeres de 15 años.
+Para la edad de la madre 49, en el numerador se incluyen los nacimientos de madre de 49 y más años, en el
+denominador se considera exclusivamente la población de mujeres de 49 años.
+
+
+                                                                                                          9
+4.1.2.4   Indicador coyuntural de fecundidad
+     Se define como el número medio de hijos que tendría una mujer perteneciente a un
+     determinado ámbito a lo largo de su vida fértil en caso de mantener la misma intensidad
+     fecunda por edad que la observada en el año t, en ese ámbito. Se calcula como la suma
+     de las tasas de fecundidad por edad 5 (expresadas en tanto por uno), extendida al rango
+     de edades fértiles (de 15 a 49 años 6):
+                                                             49
+                                               ICFt = �              f tx
+                                                              X=15
+
+
+     donde:
+      t        Ntx
+     fx =            = Tasa de fecundidad a la edad x en el ámbito de estudio, expresadas en tanto
+               Mtx
+     por uno
+
+
+4.1.2.5   Edad media a la maternidad
+     Se define como la edad media a la que una mujer de un determinado ámbito tendría
+     sus hijos, en caso de mantener la misma intensidad fecunda por edad que la observada
+     en el año t en ese ámbito. Se calcula como la media de las edades7 a las que las
+     mujeres tienen sus hijos ponderada por las tasas de fecundidad por edad expresadas
+     en tanto por uno, es decir:
+
+                                               t
+                                                      49                     f tx
+                                          EMM = �             (x+0,5)∙              t
+                                                      x=15                  ICF
+
+     donde:
+      t        Ntx
+
+
+
+
+                                                                                                     INE. Instituto Nacional de Estadística
+     fx =            = Tasa de fecundidad a la edad x en el ámbito de estudio y en el año t,
+               Mtx
+     expresada en tanto por uno
+           t
+     ICF = Indicador Coyuntural de Fecundidad durante el año t en el ámbito de estudio
+
+
+4.1.2.6   Porcentaje de nacidos por orden de nacimiento
+     Se define como el porcentaje de nacimientos de orden r de madres pertenecientes a un
+     determinado ámbito sobre el total de nacimientos registrados en ese ámbito durante el
+     año t:
+
+                                                            Ntr
+                                                   PNtr =         .100
+                                                            Nt
+
+5 Véase nota 3.
+
+6 Véase nota 3.
+
+7 Véase nota 3.
+
+
+
+
+                                                                                               10
+     donde:
+
+     Ntr = Nacimientos de orden r, registrados durante el año t, de madres pertenecientes al
+     ámbito de estudio
+
+     Nt = Nacimientos registrados durante el año t de madres pertenecientes al ámbito de
+     estudio
+
+
+4.1.2.7   Porcentaje de nacidos por nacionalidad de la madre
+     Se define como el porcentaje de nacimientos de madre de nacionalidad n perteneciente
+     a un determinado ámbito sobre el total de nacimientos registrados en ese ámbito
+     durante el año t:
+                                                t
+                                            t Nn
+                                          PNn = t .100
+                                                   N
+
+     donde:
+
+     Ntn = Nacimientos de madre de nacionalidad n pertenecientes al ámbito de estudio,
+     registrados durante el año t
+
+     Nt = Nacimientos registrados durante el año t de madres pertenecientes al ámbito de
+     estudio
+
+
+4.1.2.8   Proporción de nacidos de madre no casada
+     Se define como el total de nacimientos de madres no casada (soltera, viuda o
+     divorciada) perteneciente a un determinado ámbito en relación al total de nacimientos
+     de madres de dicho ámbito. Es decir:
+
+
+                                                                                               INE. Instituto Nacional de Estadística
+                                                   NtMNC
+                                        PNtMNC =           .100
+                                                    Nt
+
+     donde:
+
+     NtMNC = Nacimientos registrados durante el año t, de madres no casadas
+     pertenecientes al ámbito de estudio
+
+     Nt = Nacimientos registrados durante el año t de madres pertenecientes al ámbito de
+     estudio
+
+
+
+
+                                                                                         11
+4.2 Mortalidad
+     Se distinguen:
+     Indicadores de Mortalidad: referentes a las defunciones ocurridas en una población.
+     Indicadores de Mortalidad infantil: referentes a las defunciones ocurridas antes de
+     cumplir el primer año de vida.
+
+
+4.2.1 INDICADORES DE MORTALIDAD
+
+
+
+4.2.1.1   Tasa (bruta) de mortalidad
+     Se define como el total de defunciones a lo largo del año t de personas pertenecientes
+     a un determinado ámbito por cada 1.000 habitantes de ese ámbito. Es decir:
+
+                                             t   Dt
+                                         TBM =        ∙1000
+                                                 Pt
+     donde:
+     Dt = Defunciones registradas durante el año t de personas pertenecientes al ámbito de
+     estudio
+     Pt = Población residente media en el ámbito de estudio en el año t
+     En general el término “Tasa Bruta de Mortalidad” se emplea cuando el indicador se
+     refiere al total de defunciones ocurridas en un determinado ámbito geográfico (total
+     nacional, comunidad autónoma o provincia), mientras que cuando se evalúa el
+     fenómeno restringido a un subconjunto poblacional, dentro del ámbito geográfico
+     considerado, el indicador se denomina simplemente “Tasa de Mortalidad”.
+
+
+
+                                                                                              INE. Instituto Nacional de Estadística
+     Así, por ejemplo, la colección de Indicadores Demográficos Básicos del INE incluye
+     entre sus indicadores la “Tasa de Mortalidad por sexo para el total de edades”.
+
+
+4.2.1.2   Tasas de mortalidad por sexo
+     Se definen como el total de defunciones de personas pertenecientes a un determinado
+     ámbito, de sexo s, registradas durante el año t por cada 1.000 habitantes de dicho
+     colectivo poblacional. Es decir,
+
+                                           t  Dts
+                                         TMs = t ∙1000
+                                              Ps
+
+     donde:
+     Dts = Defunciones registradas durante el año t de personas pertenecientes al ámbito de
+     estudio, de sexo s.
+     Pts = Población residente media en el ámbito de estudio de sexo s en el año t.
+
+
+                                                                                        12
+4.2.1.3   Tasas de mortalidad por edad
+     Se definen como el número de individuos, pertenecientes al ámbito de estudio, de la
+     cohorte ficticia que fallecen con x años cumplidos por tiempo de exposición al riesgo de
+     muerte que tiene dicha generación de dicho ámbito. Es decir, se trata del cociente entre el
+     número de defunciones de individuos con edad cumplida x y el tiempo total vivido (medido
+     en años) por los individuos de la generación ficticia con edad cumplida x, esto es:
+
+                                                          dtx
+                                                  mtx =         ∙1000
+                                                          Ltx
+
+     donde:
+
+     dtx = Defunciones teóricas en el año t de individuos de la cohorte ficticia pertenecientes
+     al ámbito de estudio, de edad x.
+
+     Ltx = Población estacionaria a la edad x en el año t.
+     x= Edad. En general, toma valores comprendidos entre “0” y “100 y más años” para el
+     total nacional y entre “0” y “95 y más años” para las comunidades autónomas y
+     provincias 8. Para comunidades y provincias las tasas se calculan por grupos
+     quinquenales y para el total nacional por edades simples. En el caso, del nivel educativo
+     la primera edad a considerar son los 25 años para todos los niveles territoriales no
+     habiendo cambios en el último grupo de edad.
+     Cuando se refieren al total de defunciones, su valor se extrae de los resultados
+     correspondientes a dicho año de las Tablas de Mortalidad del INE, cuya metodología
+     de cálculo se puede encontrar en: http://www.ine.es/metodologia/t20/t2020319a.pdf
+
+
+4.2.1.4   Esperanza de vida al nacimiento
+
+
+
+                                                                                                                   INE. Instituto Nacional de Estadística
+     Se define como el número medio de años que vivirían los componentes de una
+     generación de individuos sometidos en cada edad al patrón de mortalidad observada
+     sobre las personas de un determinado ámbito a lo largo del año t.
+     Su valor se extrae de los resultados correspondientes a dicho año de las Tablas de
+     Mortalidad del INE, cuya metodología de cálculo se puede encontrar en:
+     http://www.ine.es/metodologia/t20/t2020319a.pdf
+
+
+4.2.1.5   Esperanza de vida según edad
+     Se define como el número medio de años que vivirían con x años cumplidos los
+     componentes de una generación de individuos sometidos en cada edad al patrón de
+     mortalidad observada sobre las personas de un determinado ámbito, a lo largo del año t.
+
+
+
+8 Para el periodo de referencia 1975-1990, el límite superior es hasta “90 y más” para el total nacional y “85 y
+
+más” en el caso de comunidades autónomas y provincias.
+
+
+                                                                                                             13
+     Cuando se refieren al total de defunciones, su valor se extrae de los resultados
+     correspondientes a dicho año de las Tablas de Mortalidad del INE, cuya metodología
+     de cálculo se puede encontrar en: http://www.ine.es/metodologia/t20/t2020319a.pdf
+     En el caso, del nivel educativo la primera edad de la tabla de mortalidad son los 25 años
+     para todos los niveles territoriales y todos los niveles educativos.
+
+
+4.2.1.6   Ratio de masculinidad a la defunción
+     Se define como el número de defunciones de hombres pertenecientes a un determinado
+     ámbito por cada 100 defunciones de mujeres en el mismo ámbito. Es decir:
+
+                                             t   DtHombres
+                                        RMD =                ∙100
+                                                 DtMujeres
+
+     donde:
+
+     DtHombres = Defunciones registradas durante el año t de hombres pertenecientes al
+     ámbito de estudio
+
+     DtMujeres = Defunciones registradas durante el año t de mujeres pertenecientes al
+     ámbito de estudio
+
+
+4.2.2 INDICADORES DE MORTALIDAD INFANTIL
+
+
+
+4.2.2.1   Tasa de mortalidad infantil
+     Se define como el total de defunciones de menores de un año de vida, pertenecientes
+     a un determinado ámbito, por cada 1.000 nacidos vivos en ese ámbito. Es decir:
+
+
+
+                                                                                                 INE. Instituto Nacional de Estadística
+                                                   Dt0
+                                          TMIt =          ∙1000
+                                                   NV t
+     donde:
+
+     Dt0 =Defunciones registradas durante el año t, de menores de un año cumplido de vida,
+     que pertenecen al ámbito de estudio
+
+     NV t =Total de nacidos vivos registrados durante el año t, de madre perteneciente al
+     ámbito de estudio
+
+
+4.2.2.2   Tasa de mortalidad infantil neonatal
+     Se define como la relación entre las defunciones de menores de 28 días y los nacidos
+     vivos en un año determinado. Se calcula como el total de defunciones de menores de
+     28 días cumplidos de vida (de 0 a 27), pertenecientes a un determinado ámbito por
+     cada 1.000 nacidos vivos en dicho ámbito. Es decir:
+
+
+                                                                                           14
+                                              t       Dt<28 días
+                                        TMIN =                     ∙1000
+                                                        NV t
+
+     donde:
+
+     Dt<28 días = Defunciones registradas durante el año t, de menores de 28 días cumplidos
+     de vida, pertenecientes al ámbito de estudio
+
+     NV t =Total de nacidos vivos registrados durante el año t, de madre perteneciente al
+     ámbito de estudio
+
+
+4.2.2.3   Tasa de mortalidad infantil neonatal temprana
+     Se define como la relación entre las defunciones de menores de 7 días y los nacidos
+     vivos en un año determinado. Se calcula como el total de defunciones de menores de
+     7 días cumplidos de vida (de 0 a 6), perteneciente a un determinado ámbito por cada
+     1.000 nacidos vivos en dicho ámbito. Es decir:
+
+                                                          t   Dt<7 días
+                                   TMINtemprana =                         ∙1000
+                                                                NV t
+
+     donde:
+
+     Dt<7 días = Defunciones registradas durante el año t, de menores de 7 días cumplidos de
+     vida, pertenecientes al ámbito de estudio
+
+     NV t = Total de nacidos vivos registrados durante el año t, de madre perteneciente al
+     ámbito de estudio
+
+
+
+
+                                                                                                INE. Instituto Nacional de Estadística
+4.2.2.4   Tasa de mortalidad infantil neonatal tardía
+     Se define como la relación entre las defunciones de menores de un año con 7 o más
+     días de vida pero menos de 28 y los nacidos vivos en un año determinado. Se calcula
+     como el total de defunciones de menores de un año con 7 o más días cumplidos de
+     vida pero menos de 28, pertenecientes a un determinado ámbito por cada 1.000
+     nacidos vivos de dicho ámbito. Es decir:
+
+                                                  t    Dt7días-27 días
+                                   TMINtardía =                           ∙1000
+                                                              NV t
+
+     donde:
+
+     Dt7 días-27días = Defunciones registradas durante el año t, de menores de un año con 7 o
+     más días cumplidos de vida pero menos de 28, pertenecientes al ámbito de estudio
+
+     NV t = Total de nacidos vivos registrados durante el año t, de madre perteneciente al
+     ámbito de estudio
+
+
+                                                                                          15
+4.2.2.5   Tasa de mortalidad infantil postneonatal
+     Se define como la relación entre las defunciones de menores de un año que han
+     cumplido 28 días de vida y los nacidos vivos en un año determinado. Se calcula como
+     el total de defunciones de menores de un año pero con más de 27 días cumplidos de
+     vida, pertenecientes a un determinado ámbito por cada 1.000 nacidos vivos de dicho
+     ámbito. Es decir:
+                                                      t
+                                                     D28días-364 días
+                                         TMIPNt =                       ∙1000
+                                                           NV t
+
+     donde:
+
+     Dt28 días-364 días = Defunciones registradas durante el año t, de menores de un año pero
+     con más de 27 días cumplidos de vida, pertenecientes al ámbito de estudio
+
+     NV t = Total de nacidos vivos registrados durante el año t, de madre perteneciente al
+     ámbito de estudio
+
+
+4.2.2.6   Tasa de mortalidad fetal tardía
+     Se define como el total de muertes fetales tardías9 de madres pertecientes a un
+     determinado ámbito por cada 1.000 nacidos (nacidos vivos más muertes fetales tardías)
+     en dicho ámbito. Es decir:
+
+                                                          MFT t
+                                           TMFT t =                 ∙1000
+                                                      NV t +MFT t
+
+     donde:
+
+     MFT t = Muertes Fetales Tardías registradas durante el año t, de madre perteneciente
+
+
+                                                                                                                     INE. Instituto Nacional de Estadística
+     al ámbito de estudio
+
+     NV t = Total de nacidos vivos registrados durante el año t, de madre perteneciente al
+     ámbito de estudio
+
+
+4.2.2.7   Tasa de mortalidad perinatal
+     Se define como el total de muertes fetales tardías más las defunciones de menores de
+     un año con menos de 7 días cumplidos de vida, de madres pertenecientes a un
+     determinado ámbito por cada 1.000 nacidos (nacidos vivos más muertes fetales tardías)
+     en dicho ámbito. Es decir:
+
+9 Fallecimiento, antes de su completa expulsión o extracción del cuerpo de la madre, de un producto de la
+
+concepción viable. El criterio de viabilidad aplicado actualmente en la Estadística de Muertes Fetales Tardías del
+MNP es: se considera viable el feto que pesa 500 o más gramos. En ausencia del dato sobre el peso, se
+considera viable el feto con 22 o más semanas cumplidas de gestación. Si tampoco se dispone de las semanas
+de gestación del feto, se investiga si ha sido incorporado al legajo de abortos del Registro Civil, para, sólo en
+caso afirmativo, contarlo como muerte fetal tardía.
+
+
+                                                                                                               16
+                                         t   MFT t +Dt<7 días
+                                    TMP =                         ∙1000
+                                              NV t +MFT t
+
+     donde:
+
+     MFT t = Muertes Fetales Tardías registradas durante el año t, de madre perteneciente
+     al ámbito de estudio
+
+     Dt<7 días,s = Defunciones registradas durante el año t, de menores de 7 días cumplidos
+     de vida, pertenecientes al ámbito de estudio
+
+     NV t = Total de nacidos vivos registrados durante el año t, de madre perteneciente al
+     ámbito de estudio
+
+
+4.2.2.8   Porcentaje de fallecidos menores de 1 año respecto a las defunciones totales
+     Se define como el total de defunciones de menores de un año, pertenecientes a un
+     determinado ámbito, por cada 100 defunciones registradas en el mismo. Es decir:
+
+                                                     Dt<1 año
+                                       PDt<1 año =              ∙100
+                                                        Dt
+
+     donde:
+
+     Dt<1 año = Defunciones registradas durante el año t de menores de 1 año cumplido de
+     vida, pertenecientes al ámbito de estudio
+
+     Dt = Defunciones totales registradas durante el año t de personas pertenecientes al
+     ámbito de estudio
+
+
+
+                                                                                                INE. Instituto Nacional de Estadística
+4.2.2.9   Porcentaje de fallecidos menores de 28 días respecto a las defunciones totales
+     Se define como el total de defunciones de menores de 28 días cumplidos de vida,
+     pertenecientes a un determinado ámbito, por cada 100 defunciones registradas en el
+     mismo. Es decir:
+
+                                                     Dt<28 días
+                                     PDt<28 días =                ∙100
+                                                        Dt
+
+     donde:
+
+     Dt<28 días = Defunciones registradas durante el año t de menores de 28 días cumplidos
+     de vida, pertenecientes al ámbito de estudio
+
+     Dt = Defunciones totales registradas durante el año t de personas pertenecientes al
+     ámbito de estudio
+
+
+
+                                                                                           17
+4.2.2.10 Porcentaje de fallecidos menores de 7 días respecto a las defunciones totales
+
+    Se define como el total de defunciones de menores de 7 días cumplidos de vida,
+    pertenecientes a un determinado ámbito, por cada 100 defunciones registradas en el
+    mismo. Es decir:
+
+                                      t         Dt<7días, s
+                                    PD<7 días =       t
+                                                            ∙100
+                                                       D
+
+    donde:
+
+    Dt<7 días = Defunciones registradas durante el año t de menores de 7 días cumplidos de
+    vida, pertenecientes al ámbito de estudio
+
+    Dt = Defunciones totales registradas durante el año t de personas pertenecientes al
+    ámbito de estudio
+
+
+4.2.2.11 Porcentaje de fallecidos menores de 28 días respecto a las defunciones de menores
+    de 1 año
+    Se define como el total de defunciones de menores de 28 días cumplidos de vida,
+    pertenecientes a un determinado ámbito, por cada 100 defunciones de menores de 1
+    año registradas en el mismo. Es decir:
+
+                                                    Dt<28 días
+                                   PDIt<28 días =                ∙100
+                                                     Dt<1 año
+
+    donde:
+
+    Dt<28 días = Defunciones registradas durante el año t de menores de 28 días cumplidos
+
+
+
+                                                                                              INE. Instituto Nacional de Estadística
+    de vida, pertenecientes al ámbito de estudio
+
+    Dt<1 año = Defunciones registradas durante el año t de menores de 1 año cumplido de
+    vida, pertenecientes al ámbito de estudio
+
+
+4.2.2.12 Porcentaje de fallecidos menores de 7 días respecto a las defunciones de menores
+    de 1 año
+    Se define como el total de defunciones de menores de 7 días cumplidos de vida,
+    pertenecientes a un determinado ámbito, por cada 100 defunciones de menores de 1
+    año registradas en el mismo. Es decir:
+
+                                                   Dt<7 días,s
+                                   PDIt<7 días =                 ∙100
+                                                    Dt<1 año,s
+
+    donde:
+
+
+
+                                                                                         18
+     Dt<7 días = Defunciones registradas durante el año t de menores de 7 días cumplidos de
+     vida, pertenecientes al ámbito de estudio
+
+     Dt<1 año = Defunciones registradas durante el año t de menores de 1 año cumplido de
+     vida, pertenecientes al ámbito de estudio
+
+
+4.2.2.13 Porcentaje de fallecidos menores de 7 días respecto a las defunciones de menores
+     de 28 días
+     Se define como el total de defunciones de menores de 7 días cumplidos de vida,
+     pertenecientes a un determinado ámbito, por cada 100 defunciones de menores de 28
+     días registradas en el mismo. Es decir:
+
+                                              t        Dt<7días
+                                          PDIN<7 días = t        ∙100
+                                                       D<28 días
+
+     donde:
+
+     Dt<7 días = Defunciones registradas durante el año t de menores de 7 días cumplidos de
+     vida, pertenecientes al ámbito de estudio
+
+     Dt<28 días = Defunciones registradas durante el año t de menores de 28 días cumplidos
+     de vida, pertenecientes al ámbito de estudio
+
+
+4.2.2.14 Tasa de mortalidad de los menores de 5 años 10
+
+     Se define como el total de defunciones de menores de cinco años de vida,
+     pertenecientes a un determinado ámbito, por cada 1.000 nacidos vivos en ese ámbito.
+     Es decir:
+
+
+
+                                                                                                                  INE. Instituto Nacional de Estadística
+                                                          t
+                                                        D0-4
+                                               TMt0-4 =      ∙1000
+                                                        NV t
+
+     donde:
+
+     Dt0-4 =Defunciones registradas durante el año t, de menores de cinco años cumplidos
+     de vida, que pertenecen al ámbito de estudio
+
+     NV t =Total de nacidos vivos registrados durante el año t, de madre perteneciente al
+     ámbito de estudio
+
+
+10 La Tasa de Mortalidad de los niños menores de 5 años, se engloba dentro del Objetivo 3. Garantizar una vida
+
+sana y promover el bienestar de todos a todas las edades, de la Agenda 2030 para el Desarrollo Sostenible de
+Naciones Unidas. En concreto se trata del indicador 3.2.1 de la estadística “Indicadores de la Agenda 2030 para
+el Desarrollo Sostenible” del INE (IOE 30800), incluido dentro de la meta 3.2 De aquí a 2030, poner fin a las
+muertes evitables de recién nacidos y de niños menores de 5 años, logrando que todos los países intenten
+reducir la mortalidad neonatal al menos a 12 por cada 1.000 nacidos vivos y la mortalidad de los niños menores
+de 5 años al menos a 25 por cada 1.000 nacidos vivos, del Objetivo 3 de la Agenda 2030.
+
+
+                                                                                                            19
+4.3 Nupcialidad
+     Se distinguen:
+     Indicadores de Nupcialidad: referentes a los matrimonios ocurridos en una población.
+     Indicadores de Primo-Nupcialidad: referentes a los matrimonios de solteros ocurridos
+     en una población.
+
+
+4.3.1 INDICADORES DE NUPCIALIDAD
+
+
+
+4.3.1.1   Tasa bruta de nupcialidad
+     Se define como el total de matrimonios constituidos a lo largo del año t, pertenecientes
+     a un determinado ámbito por cada 1.000 habitantes de ese ámbito. Es decir:
+
+                                                            Mt
+                                                TBNupt =          ∙1000
+                                                             Pt
+
+     donde:
+
+     Mt = Matrimonios constituidos durante el año t, pertenecientes a un determinado ámbito
+
+     Pt = Población residente media en el ámbito de estudio, en el año t
+
+
+4.3.1.2   Tasa de nupcialidad
+     Se define como el total de personas que contraen matrimonio a lo largo del año t,
+     pertenecientes a un determinado ámbito por cada 1.000 habitantes de ese ámbito 11. Es
+
+
+                                                                                                                     INE. Instituto Nacional de Estadística
+     decir:
+
+                                                            Ct
+                                                 TNupt =         ∙1000
+                                                            Pt
+
+     donde:
+
+     Ct = Personas que contraen matrimonio durante el año t, pertenecientes al ámbito de
+     estudio
+
+     Pt = Población residente media en el ámbito de estudio, en el año t
+
+
+
+
+11 La colección de Indicadores Demográficos Básicos del INE incluye entre sus indicadores la “Tasa de Nupcialidad”
+
+según sexo y nacionalidad (española/extranjera)”.
+
+
+                                                                                                               20
+4.3.1.3   Tasa de nupcialidad por edad
+     Se definen como el total de personas de edad x que contraen matrimonio a lo largo del
+     año t, pertenecientes a un determinado ámbito por cada 1.000 habitantes de dicho
+     colectivo poblacional. Es decir:
+
+                                                    t  Ctx
+                                                TNupx = t ∙1000
+                                                       Px
+     donde:
+
+     Ctx = Personas de edad x, que contraen matrimonio durante el año t, pertenecientes al
+     ámbito de estudio
+
+     Pt = Población residente media en el ámbito de estudio, en el año t
+     x= Edad. Toma valores comprendidos entre 14 y 60 años de edad 12
+
+
+4.3.1.4   Indicador coyuntural de nupcialidad
+     Se define como el número medio de veces que un individuo, perteneciente a un
+     determinado ámbito se casaría a lo largo de su vida, en caso de mantenerse la misma
+     intensidad a la nupcialidad por edad que la observada en el año t en dicho ámbito. Se
+     calcula como la suma de las tasas de nupcialidad de la población estudiada, expresadas
+     en tanto por uno, extendida a todas las edades de 14 a 60 años 13. Es decir:
+                                                            60
+                                             ICNupt = �            fNuptx ∙
+                                                            x=14
+
+
+     donde:
+                t
+               Cx
+
+
+
+                                                                                                                    INE. Instituto Nacional de Estadística
+           t
+     fNupx =         = Tasa de nupcialidad a la edad x en el ámbito de estudio y en el año t,
+               Ptx
+     expresada en tanto por uno
+
+
+4.3.1.5   Edad media al matrimonio
+     Se define como la edad media a la que un individuo perteneciente a un determinado
+     ámbito, contraería matrimonio en caso de mantenerse las tasas de nupcialidad por edad
+     observadas en el año t en dicho colectivo poblacional.
+     Se calcula como media de las edades (de 14 a 60 años) a las que los individuos
+     pertenecientes a un determinado ámbito contraen matrimonio, ponderadas por las tasas
+
+
+
+12 Para la edad de 14 años, en el numerador se incluyen los contrayentes de 14 y menos años, en el denominador se
+
+considera exclusivamente la población de edad 14 años.
+Para la edad de 60 años, en el numerador se incluyen los contrayentes de 60 y más años, en el denominador se
+considera exclusivamente la población de edad 60 años.
+13 Véase nota 11.
+
+
+
+
+                                                                                                              21
+     de nupcialidad por edad 14 de dicho colectivo poblacional, expresadas en tanto por uno.
+     Es decir:
+                                                                                t
+                                                    60                  fNupx
+                                         EMNt = �          (x+0,5)∙
+                                                    x=14                ICNupt
+
+     donde:
+                    t
+           t       Cx
+     fNupx =             = Tasa de nupcialidad a la edad x en el ámbito de estudio, expresada en
+                   Ptx
+     tanto por uno
+               t
+     ICNup = Indicador Coyuntural de Nupcialidad durante el año t en el ámbito de estudio
+
+
+4.3.2 INDICADORES DE PRIMO-NUPCIALIDAD
+
+
+
+4.3.2.1   Tasa de primo-nupcialidad
+     Se define como el total de personas que contraen matrimonio por primera vez a lo largo
+     del año t, pertenecientes a un determinado ámbito por cada 1.000 habitantes de ese
+     ámbito 15. Es decir:
+
+                                                    t    Ctsolteros
+                                            TPNup =                   ∙1000
+                                                             Pt
+
+     donde:
+
+     Ctsolteros = Personas que contraen matrimonio por primera vez durante el año t,
+     pertenecientes al ámbito de estudio
+
+
+
+                                                                                                                INE. Instituto Nacional de Estadística
+     Pt = Población residente media en el ámbito de estudio, en el año t
+
+
+4.3.2.2   Tasas de primo-nupcialidad por edad
+     Se definen como el total de personas de edad x que contraen matrimonio por primera
+     vez a lo largo del año t, pertenecientes a un determinado ámbito por cada 1.000
+     habitantes de dicho colectivo poblacional. Es decir:
+
+                                                         Ctsolteros,x
+                                           TPNuptx =                    ∙1000
+                                                             Ptx
+
+     donde:
+
+
+14) Véase nota 11.
+
+15) La colección de Indicadores Demográficos Básicos del INE incluye entre sus indicadores la “Tasa de Primo-
+
+Nupcialidad” según sexo y nacionalidad (española/extranjera)”.
+
+
+                                                                                                          22
+     Ctsolteros,x = Personas de edad x, que contraen matrimonio por primera vez durante el
+     año t, pertenecientes al ámbito de estudio
+
+     Ptx = Población residente media de edad x perteneciente al ámbito de estudio, en el año t
+     x= Edad. Toma valores comprendidos entre 14 y 60 años de edad 16
+
+
+4.3.2.3   Indicador coyuntural de primo-nupcialidad
+     Se define como el número medio de veces que un individuo, perteneciente a un
+     determinado ámbito se casaría a lo largo de su vida, en caso de mantenerse la misma
+     intensidad a la nupcialidad por edad que la observada en el año t en dicho ámbito. Mide
+     la proporción de individuos solteros que acabarían casándose en caso de mantenerse
+     la intensidad de la primo-nupcialidad por edades del momento. Se calcula como la suma
+     de las tasas de primo-nupcialidad de la población estudiada, expresadas en tanto por
+     uno, extendida a todas las edades de 14 a 60 años 17. Es decir:
+                                                              60
+                                            ICPNupt = �              fPNuptx ∙
+                                                              x=14
+
+
+     donde:
+                   t
+                  Csolteros, x
+     fPNuptx =                   = Tasa de nupcialidad a la edad x en el ámbito de estudio y en el
+                       Ptx
+     año t, expresada en tanto por uno
+     Por construcción, dicho indicador puede tomar un valor superior a uno, a pesar de
+     tratarse de un fenómeno no renovable
+
+
+4.3.2.4   Edad media al primer matrimonio
+
+
+
+                                                                                                                    INE. Instituto Nacional de Estadística
+     Se define como la edad media a la que un individuo perteneciente a un determinado
+     ámbito, contraería matrimonio por primera vez en caso de mantenerse las tasas de
+     primo-nupcialidad por edad observadas en el año t en dicho colectivo poblacional.
+     Se calcula como media de las edades (de 14 a 60 años) a las que los individuos
+     pertenecientes a un determinado ámbito contraen matrimonio, ponderadas por las tasas
+     de primo-nupcialidad por edad 18, expresadas en tanto por uno. Es decir:
+                                                                                 t
+                                               t
+                                                      60                 fPNupx
+                                        EMPN = �             (x+0,5)∙                t
+                                                      x=14              ICPNup
+
+
+
+16 Para la edad de 14 años, en el numerador se incluyen los contrayentes en primeras nupcias de 14 y menos años,
+
+en el denominador se considera exclusivamente la población de edad 14 años.
+Para la edad de 60 años, en el numerador se incluyen los contrayentes en primeras nupcias de 60 y más años, en el
+denominador se considera exclusivamente la población de edad 60 años.
+17 Véase nota 15.
+
+18 Véase nota 15.
+
+
+
+
+                                                                                                              23
+     donde:
+                 Ctx
+     fPNuptx =    t    = Tasa de primo-nupcialidad a la edad x en el ámbito de estudio y en el año
+                 Px
+     t, expresada en tanto por uno
+     ICPNupt = Indicador Coyuntural de Primo-Nupcialidad durante el año t en el ámbito de
+     estudio
+
+
+
+4.4 Divorcialidad
+
+
+4.4.1 INDICADORES DE DIVORCIOS
+
+
+
+4.4.1.1   Tasa bruta de divorcios
+     Se define como el total de divorcios ocurridos a lo largo del año t, pertenecientes a un
+     determinado ámbito por cada 1.000 habitantes de ese ámbito. Es decir:
+
+                                                   t   Dt
+                                              TBD =         ∙1000
+                                                       Pt
+
+     donde:
+
+     Dt = Divorcios ocurridos durante el año t, pertenecientes a un determinado ámbito
+
+     Pt = Población residente media en el ámbito de estudio, en el año t
+
+
+          Proporción de divorcios según la duración del matrimonio
+
+
+                                                                                                     INE. Instituto Nacional de Estadística
+4.4.1.2
+
+     Se define como el porcentaje de divorcios de matrimonios de una duración de x años
+     pertenecientes a un determinado ámbito sobre el total de divorcios registrados en ese
+     ámbito durante el año t:
+                                                     t
+                                                 t Dx
+                                               PDx = t .100
+                                                       D
+
+     donde:
+
+     Dtx = Divorcios de matrimonios de una duración de entre x años, registrados durante el
+     año t, pertenecientes al ámbito de estudio
+
+     Dt = Divorcios registrados durante el año t de matrimonios pertenecientes al ámbito de
+     estudio
+
+
+
+
+                                                                                               24
+4.4.1.3   Tasa de divorcialidad
+     Se definen como el total de cónyuges de una edad de x años que se divorcian a lo largo
+     del año t, pertenecientes a un determinado ámbito por cada 1.000 habitantes de dicho
+     colectivo poblacional. Es decir:
+
+                                                    t   Divt
+                                              TDiv =           ∙1000
+                                                        Pt
+
+     donde:
+
+     Divt = Cónyuges que se divorcian durante el año t, pertenecientes al ámbito de estudio
+
+     Pt = Población residente media en el ámbito de estudio, en el año t
+
+
+4.4.1.4   Tasa de divorcialidad por edad
+     Se definen como el total de cónyuges de una edad de x años que se divorcian a lo largo
+     del año t, pertenecientes a un determinado ámbito por cada 1.000 habitantes de dicho
+     colectivo poblacional. Es decir:
+
+                                                    t  Divtx
+                                                TDivx = t ∙1
+                                                        Px
+
+     donde:
+
+     Divtx = Cónyuges de edad x, que se divorcian durante el año t, pertenecientes al ámbito
+     de estudio
+
+     Ptx = Población residente media en el ámbito de estudio de x años de edad, en el año t
+
+
+
+                                                                                                                INE. Instituto Nacional de Estadística
+     x= Edad. Toma valores quinquenales comprendidos entre 19 y 75 años de edad 19.
+
+
+4.4.1.5   Indicador coyuntural de divorcialidad
+     Se define como el número medio de veces que un individuo, perteneciente a un
+     determinado ámbito, se divorciaría a lo largo de su vida, en caso de mantenerse la
+     misma intensidad a la divorcialidad por edad que la observada en el año t en dicho
+     ámbito. Se calcula como la suma de las tasas de divorcialidad de la población
+     estudiada, expresadas en tanto por uno, extendida a todas las edades de 19 a 75
+     años 20. Es decir:
+
+
+
+19 Para la edad de 19 años, en el numerador se incluyen los divorciados de 19 y menos años, en el denominador
+
+se considera exclusivamente la población de edad 19 años.
+Para la edad de 75 años, en el numerador se incluyen los contrayentes de 75 y más años, en el denominador
+se considera exclusivamente la población de edad 75 años.
+20 Véase nota 19.
+
+
+
+
+                                                                                                          25
+                                                           75
+                                                  t
+                                                ICD = �         TDivtx ∙
+                                                           x=19
+
+
+     donde:
+                Divtx
+     TDivtx =           = Tasa de divorcialidad a la edad x en el ámbito de estudio y en el año t,
+                 Ptx
+     expresada en tanto por uno
+
+
+4.4.1.6   Edad media al divorcio
+     Se define como la edad media a la que un individuo perteneciente a un determinado
+     ámbito se divorciaría en caso de mantenerse las tasas de divorcialidad por edad
+     observadas en el año t en dicho colectivo poblacional.
+     Se calcula como media de las edades (de 19 a 75 años) a las que los individuos
+     pertenecientes a un determinado ámbito se divorcian, ponderadas por las tasas de
+     divorcialidad por edad21 de dicho colectivo poblacional, expresadas en tanto por uno.
+     Es decir:
+
+                                            t
+                                                      75
+                                                        n      TDivtx
+                                       EMD = �      (x + �2 )∙
+                                               x=19            ICDt
+
+     donde:
+                Divtx
+     TDivtx =           = Tasa de divorcialidad a la edad x en el ámbito de estudio, expresada en
+                 Ptx
+     tanto por uno
+           t
+     ICD = Indicador Coyuntural de Divorcialidad durante el año t en el ámbito de estudio
+
+
+
+4.5 Movimiento Migratorio                                                                            INE. Instituto Nacional de Estadística
+
+     En función de la situación del origen y destino se distinguen:
+     Indicadores de Migración Exterior: referentes a los movimientos migratorios en los
+     que la residencia habitual de los migrantes cambia de un país a otro.
+     Indicadores de Migración Interior: referentes a los movimientos migratorios se
+     realizan dentro del mismo país.
+
+
+
+
+21 Véase nota 19.
+
+
+
+
+                                                                                               26
+4.5.1     INDICADORES DE MIGRACIÓN EXTERIOR
+
+
+
+4.5.1.1   Tasa bruta de inmigración procedente del extranjero
+        Se define como el total de inmigraciones procedentes del extranjero, que llegan a un
+        determinado ámbito a lo largo del año t por cada 1.000 habitantes de dicho ámbito. Es
+        decir:
+
+                                                           It
+                                                 TBIt =         ∙1000
+                                                          Pt
+
+        donde:
+
+        It = Inmigraciones procedentes del extranjero, registradas durante el año t, de individuos
+        que llegan al ámbito de estudio
+
+        Pt = Población residente media en el ámbito de estudio, en el año t
+
+
+4.5.1.2   Tasa de inmigración procedente del extranjero por edad
+        Se definen como el total de inmigraciones procedentes del extranjero, de individuos de
+        edad x que llegan a un determinado ámbito a lo largo del año t, por cada 1.000
+        habitantes de dicho ámbito. Es decir:
+
+                                                          Itx
+                                                 TItx =         ∙1000
+                                                          Ptx
+
+        donde:
+
+
+
+                                                                                                     INE. Instituto Nacional de Estadística
+        Itx = Inmigraciones procedentes del extranjero, registradas durante el año t, de
+        individuos de edad x que llegan al ámbito de estudio
+
+        Ptx = Población residente media de edad x perteneciente al ámbito de estudio, en el año t
+        x= Edad. Toma valores comprendidos entre 0 y 75 años de edad 22
+        En el caso del INE, las tasas de inmigración procedentes del extranjero por
+        comunidades y provincias se calculan por grupos quinquenales de edad. Estas, se
+        definen como el total de inmigraciones procedentes del extranjero de individuos con
+        edad comprendida entre x y x+4 años, pertenecientes al ámbito de estudio, a lo largo
+        del año t por cada 1.000 habitantes de dicho ámbito. Es decir:
+
+                                                          Itx,x+4
+                                             TItx,x+4 =             .1000
+                                                          Ptx,x+4
+
+
+
+22 Para la edad 75 años se incluyen a los individuos de 75 y más años.
+
+
+
+
+                                                                                               27
+       donde:
+
+       Itx,x+4 = Inmigraciones procedentes del extranjero, registradas durante el año t de
+       individuos de edad comprendida entre x y x+4 años en el ámbito de estudio
+
+       Ptx,x+4 = Población residente media de edad comprendida entre x y x+4 años,
+       pertenecientes al ámbito de estudio en el año t
+       x= Edad. Toma valores comprendidos entre 0 y 75 años de edad 23
+
+
+4.5.1.3   Edad media de los inmigrantes procedentes del extranjero
+       Se define como el promedio de edades de los inmigrantes procedentes del extranjero
+       durante el año t que pertenecen a un determinado ámbito. Se calcula mediante la
+       expresión:
+                                                  ∑x �x + 1� � Itx
+                                                 t            2
+                                            EMI =                  ∙
+                                                       ∑x Itx
+
+       donde:
+       x= Edad. Toma valores comprendidos entre 0 y 90 años de edad24.
+
+       Itx = Inmigraciones procedentes del extranjero, registradas durante el año t, de
+       individuos de edad x que llegan al ámbito de estudio
+
+
+4.5.1.4   Tasa bruta de emigración con destino al extranjero
+       Se define como el total de emigraciones con destino al extranjero, de individuos que
+       salen de un determinado ámbito a lo largo del año t, por cada 1.000 habitantes de ese
+       ámbito. Es decir:
+
+
+                                                                                                  INE. Instituto Nacional de Estadística
+                                                         Et
+                                                TBEt =        ∙1000
+                                                         Pt
+
+       donde:
+
+       Et = Emigraciones con destino al extranjero, registradas durante el año t, de individuos
+       que salen del ámbito de estudio
+
+       Pt = Población residente media en el ámbito de estudio, en el año t
+
+
+
+
+23   Véase nota 22.
+24 Para la edad 90 años se incluyen a los individuos de 90 y más años.
+
+
+
+
+                                                                                            28
+4.5.1.5   Tasa de emigración con destino al extranjero por edad
+     Se definen como el total de emigraciones con destino al extranjero, de individuos de
+     edad x que salen de un determinado ámbito a lo largo del año t, por cada 1.000
+     habitantes de dicho ámbito. Es decir:
+
+                                             t  Etx
+                                           TEx = t ∙1000
+                                                Px
+
+     donde:
+     Etx = Emigraciones con destino al extranjero, registradas durante el año t, de individuos
+     de edad x que salen del ámbito de estudio
+
+     Ptx = Población residente media de edad x perteneciente al ámbito de estudio, en el año t
+     x= Edad. Toma valores comprendidos entre 0 y 75 años de edad 25
+     En el caso del INE, las tasas de emigración con destino al extranjero por comunidades
+     y provincias se calculan por grupos quinquenales de edad. Estas, se definen como el
+     total de emigraciones con destino al extranjero de individuos con edad comprendida
+     entre x y x+4 años, pertenecientes al ámbito de estudio, a lo largo del año t por cada
+     1.000 habitantes de dicho ámbito. Es decir:
+
+                                                    Etx,x+4
+                                       TEtx,x+4 =             .1000
+                                                    Ptx,x+4
+
+     donde:
+
+     Itx,x+4 = Emigraciones con destino al extranjero, registradas durante el año t de
+     individuos de edad comprendida entre x y x+4 años en el ámbito de estudio
+
+
+
+                                                                                                 INE. Instituto Nacional de Estadística
+     Ptx,x+4 = Población residente media de edad comprendida entre x y x+4 años,
+     pertenecientes al ámbito de estudio en el año t
+     x= Edad. Toma valores comprendidos entre 0 y 75 años de edad 26
+
+
+4.5.1.6   Indicador coyuntural de emigración con destino al extranjero
+     Se define como el número medio de veces que un individuo, perteneciente a un
+     determinado ámbito, emigraría con destino al extranjero a lo largo de su vida en caso
+     de mantener la misma intensidad a la emigración por edad que la observada en el año
+     t en dicho colectivo poblacional. Se calcula como la suma de las tasas de emigración
+     con destino al extranjero por edad, expresadas en tanto por uno, extendida a todas las
+     edades de 0 a 75 años 27. Es decir:
+
+
+25 Véase nota 22.
+
+26 Véase nota 22
+
+27 Véase nota 22.
+
+
+
+
+                                                                                           29
+                                                          75 y más
+                                               ICEt = �               fetx ∙
+                                                          x=0
+
+
+     donde:
+          t        Et
+     fex = xt = Tasa de emigración a la edad x en el ámbito de estudio y en el año t,
+                   Px
+     expresada en tanto por uno
+     En el caso del INE, puesto que las tasas de emigración con destino al extranjero por
+     comunidades y provincias se calculan por grupos quinquenales de edad entonces el
+     indicador coyuntural de emigración con destino al extranjero a estos niveles territoriales
+     se calcula utilizando dichas tasas ponderadas por el tamaño del intervalo de edad, que
+     en este caso es 5 por tratarse de grupos quinquenales. Es decir:
+                                                    75 y más
+                                         ICEt = �                 fe tx,x+4 ∙ 5
+                                                     x=0
+
+
+     donde:
+                            t
+                        E
+     fetx,x+4 = x,x+4
+                t     = Tasa de emigración para el grupo de edades comprendidas entre x y
+                        Px,x+4
+     x+4 años en el ámbito de estudio y en el año t, expresada en tanto por uno
+
+
+4.5.1.7       Edad media a la emigración con destino al extranjero
+     Se define como la edad media a la que un individuo saldría de un determinado ámbito
+     con destino al extranjero, en caso de mantener la misma intensidad a la emigración por
+     edad que la observada en el año t en ese ámbito. Se calcula como la media de las
+     edades 28 a las que los individuos emigran con destino al extranjero ponderada por las
+
+
+
+                                                                                                  INE. Instituto Nacional de Estadística
+     tasas de emigración por edad expresadas en tanto por uno, es decir:
+                                                                                  t
+                                                   75 y más                 fe x
+                                           t
+                                      EME = �                   (x+ 1�2 )∙
+                                                   x=0                     ICE t
+
+     donde:
+          t        Et
+     fex = xt = Tasa de emigración a la edad x en el ámbito de estudio y en el año t,
+                   Px
+     expresada en tanto por uno
+               t
+     ICE = Indicador Coyuntural de Emigración con destino al extranjero durante el año t en
+     el ámbito de estudio
+     En el caso del INE, este indicador a nivel de comunidades y provincias se calcula a
+     partir de las tasas de emigración por grupos quinquenales de edad y del indicador
+
+
+
+28 Véase nota 22.
+
+
+
+
+                                                                                            30
+     coyuntural de emigración con destino al extranjero calculado utilizando dichas tasas
+     quinquenales. Es decir,
+                  t
+              E
+     fetx,x+4 = x,x+4
+                t     = Tasa de emigración para el grupo de edades comprendidas entre x y x+4
+              Px,x+4
+     años en el ámbito de estudio y en el año t, expresada en tanto por uno
+
+
+4.5.1.8   Tasa de migración bruta con el extranjero
+     Se define como el total de migraciones (inmigraciones y emigraciones) con el
+     extranjero, realizadas en el año t por individuos de un determinado ámbito, por cada
+     1.000 habitantes de ese ámbito. Es decir:
+
+                                                  It +Et
+                                         TMBt =            ∙1000
+                                                   Pt
+
+     donde:
+
+     It = Inmigraciones procedentes del extranjero, registradas durante el año t, de individuos
+     que llegan al ámbito de estudio
+
+     Et = Emigraciones con destino al extranjero, registradas durante el año t, de individuos
+     que salen del ámbito de estudio
+
+     Pt = Población residente media en el ámbito de estudio, en el año t
+     Obsérvese que la Tasa de Migración Bruta no es sino la suma de la Tasa Bruta de
+     Inmigración más la Tasa Bruta de Emigración (véanse los apartados 4.4.1.1 y 4.4.1.3)
+
+                                         TMBt =TBIt +TBEt
+
+
+
+
+                                                                                                  INE. Instituto Nacional de Estadística
+4.5.1.9   Tasa de migración neta con el extranjero
+     Se define como el total de migraciones netas (inmigraciones menos emigraciones) con
+     el extranjero, realizadas en el año t por individuos de un determinado ámbito, por cada
+     1.000 habitantes de ese ámbito. Es decir:
+
+                                                  It -Et
+                                         TMNt =            ∙1000
+                                                   Pt
+
+     donde:
+
+     It = Inmigraciones procedentes del extranjero, registradas durante el año t, de individuos
+     que llegan al ámbito de estudio
+
+     Et = Emigraciones con destino al extranjero, registradas durante el año t, de individuos
+     que salen del ámbito de estudio
+
+     Pt = Población residente media en el ámbito de estudio, en el año t
+
+
+                                                                                            31
+     Obsérvese que la Tasa de Migración Neta es la diferencia entre la Tasa Bruta de
+     Inmigración y la Tasa Bruta de Emigración (véanse los apartados 4.4.1.1 y 4.4.1.3).
+
+                                         TMNt =TBIt − TBEt
+
+
+
+4.5.2 INDICADORES DE MIGRACIONES INTERIORES
+
+     Los indicadores de migración interior que obtiene el INE pueden estructurarse en varios
+     bloques:
+     Indicadores para el total nacional: permiten evaluar la incidencia de la migración
+     interior en el conjunto del territorio
+     Indicadores para comunidades autónomas y provincias: para evaluar la incidencia
+     de la migración interior bien por comunidades autónomas, bien por provincias.
+     Cabe destacar la diferente interpretación de las migraciones interiores desde el punto
+     de vista del total nacional y desde ámbitos geográficos interiores. Para el total nacional,
+     cada migración tiene su origen y destino dentro del territorio de referencia, con lo que
+     para contabilizar el volumen de movimientos migratorios interiores basta elegir uno de
+     los dos enfoques: el de emigración (según origen) o el de inmigración (según destino);
+     ambos serán equivalentes. Por eso, a nivel nacional, hablaremos genéricamente de
+     migraciones interiores. Sin embargo, cuando bajamos a niveles geográficos inferiores,
+     las emigraciones e inmigraciones en cada región son diferentes entre sí, por lo que
+     requieren tratamientos y, por lo tanto, indicadores, diferenciados.
+
+     Indicadores para el total nacional
+
+
+4.5.2.1   Tasas de migración interautonómica / interprovincial por edad
+
+
+
+                                                                                                   INE. Instituto Nacional de Estadística
+     Se definen como el total de migraciones de individuos de una determinada edad y de
+     un determinado ámbito procedentes de una determinada comunidad
+     autónoma/provincia que llegan a otra comunidad autónoma/provincia diferente a lo
+     largo del año t por cada 1.000 habitantes de dicho colectivo poblacional. Es decir:
+
+                                                    MInttx
+                                        TMInttx =            ∙1000
+                                                     Ptx
+
+     donde:
+
+     MInttx= Migraciones interiores de individuos del ámbito i que cambian de región de
+     residencia (comunidad autónoma o provincia) a lo largo del año t. A nivel nacional se
+     cumple la siguiente identidad:
+
+     MInttx=IInttx =EInttx
+
+     IInttx=Inmigraciones interiores ocurridas en la totalidad del territorio, de individuos de
+     edad x, pertenecientes al ámbito de estudio i a lo largo del año t
+
+
+                                                                                             32
+     EInttx= Emigraciones interiores ocurridas en la totalidad del territorio, de individuos de
+     edad x, pertenecientes al ámbito de estudio i, a lo largo del año t
+
+     Ptx =Población media de individuos de edad x, pertenecientes al ámbito de estudio, en
+     la totalidad del territorio en el año t
+     x= Edad. Toma valores comprendidos entre 0 y 75 años de edad 29.
+
+
+4.5.2.2   Indicador coyuntural de migración interautonómica / interprovincial
+     Se define como el número medio de veces que un individuo, perteneciente a un
+     determinado ámbito, cambiaría de comunidad autónoma/provincia de residencia a lo
+     largo de su vida en caso de mantener la misma intensidad a la migración por edad que
+     la observada en el año t. Se calcula como la suma de las tasas de migración
+     (interautonómicas/interprovinciales) por edad de individuos pertenecientes al ámbito de
+     estudio, expresadas en tanto por uno, extendida a todas las edades de 0 a 75 años 30.
+     Es decir:
+                                                           75+
+                                                     t
+                                          ICMInt = � fminttx
+                                                           x=0
+
+
+     donde:
+
+     fminttx= Tasas de migración interautonómica/interprovincial a la edad x, en el ámbito de
+     estudio, expresadas en tanto por uno
+
+     Indicadores por comunidades autónomas y provincias
+
+
+4.5.2.3   Tasa bruta de inmigración interautonómica / interprovincial
+
+
+                                                                                                  INE. Instituto Nacional de Estadística
+     Se define como el número total de inmigraciones procedentes de otras comunidades
+     autónomas/provincias de individuos pertenecientes a un determinado ámbito, que
+     llegan a una determinada comunidad autónoma/provincia a lo largo del año t, por cada
+     1.000 habitantes de dicho colectivo poblacional. Es decir:
+
+                                                         IIntt
+                                          TIIntt =               ∙1000
+                                                          Pt
+
+     donde:
+
+     IIntt = Inmigraciones interiores de individuos del ámbito de estudio, desde la región dada
+     (comunidad o provincia) a lo largo del año t
+
+     Pt = Población residente media, perteneciente al ámbito de estudio, en la región dada
+     (comunidad o provincia), en el año t
+
+29 Véase nota 22.
+
+30 Véase nota 22.
+
+
+
+
+                                                                                            33
+4.5.2.4   Tasa de inmigración interautonómica / interprovincial por edad
+     Se definen como el total de inmigraciones procedentes de otras comunidades
+     autónomas/provincias de individuos de edad x, pertenecientes a un determinado
+     ámbito, que llegan a una determinada comunidad autónoma/provincia a lo largo del año
+     t, por cada 1.000 habitantes de dicho colectivo poblacional.
+
+                                              t  IInttx
+                                         TIIntx = t ∙1000
+                                                  Px
+
+     donde:
+
+     IInttx = Inmigraciones interiores de individuos de edad x, pertenecientes al ámbito de
+     estudio, desde la región dada (comunidad o provincia) a lo largo del año t.
+
+     Ptx = Población residente media de edad x perteneciente al ámbito de estudio, en la
+     región dada (comunidad o provincia), en el año t
+     x= Edad. Toma valores comprendidos entre 0 y 75 años de edad 31
+
+
+4.5.2.5   Tasa bruta de emigración interautonómica / interprovincial
+     Se define como el total de emigraciones a otras comunidades autónomas/provincias de
+     individuos pertenecientes a un determinado ámbito, desde una determinada comunidad
+     autónoma/provincia a lo largo del año t por cada 1.000 habitantes de dicho colectivo
+     poblaciona. Es decir:
+
+                                                    EIntt
+                                         TEIntt =           ∙1000
+                                                     Pt
+
+
+
+
+                                                                                                 INE. Instituto Nacional de Estadística
+     donde:
+
+     EIntt = Emigraciones interiores de individuos del ámbito de estudio, hacia la región dada
+     (comunidad o provincia) a lo largo del año t
+
+     Pt = Población residente media, perteneciente al ámbito de estudio, en la región dada
+     (comunidad o provincia), en el año t
+
+
+4.5.2.6   Tasa de emigración interautonómica / interprovincial por edad
+     Se definen como el total de emigraciones a otras comunidades autónomas/provincias
+     de individuos de edad x, pertenecientes a un determinado ámbito, desde una
+     determinada comunidad autónoma/provincia a lo largo del año t por cada 1.000
+     habitantes de dicho colectivo poblacional. Es decir:
+
+
+
+
+31) Véase nota 22.
+
+
+
+
+                                                                                           34
+                                              t   EInttx
+                                         TEIntx =        ∙1000
+                                                   Ptx
+
+     donde:
+
+     EInttx = Emigraciones interiores de individuos de edad x, pertenecientes al ámbito de
+     estudio, hacia la región dada (comunidad o provincia) a lo largo del año t
+
+     Ptx = Población residente media de y edad x perteneciente al ámbito de estudio, en la
+     región dada (comunidad o provincia), en el año t
+     x= Edad. Toma valores comprendidos entre 0 y 75 años de edad 32.
+
+
+4.5.2.7   Indicador coyuntural de emigración interautonómica / interprovincial por edad
+     Se define como el número medio de veces que un individuo perteneciente a un
+     determinado ámbito y en una determinada comunidad autónoma/provincia, emigraría a
+     cualquier otra comunidad autónoma/provincia a lo largo de su vida, en caso de
+     mantener la misma intensidad a la emigración por edad que la observada en el año t
+     en dicho colectivo poblacional. Se calcula como la suma de las tasas de emigración
+     interautonómica/interprovincial por edad, expresadas en tanto por uno, extendida a
+     todas las edades de 0 a 75 años33. Es decir:
+                                                    90 y más
+                                      ICEIntt = �              feint tx ∙
+                                                    x=0
+
+
+     donde:
+            t   Et
+     feint x = xt = Tasas de emigración interautonómica/interprovincial a la edad x en el
+                Px
+
+
+
+
+                                                                                               INE. Instituto Nacional de Estadística
+     ámbito de estudio y en el año t, expresada en tanto por uno
+
+
+4.5.2.8   Tasa de migración interautonómica / interprovincial bruta
+     Se define como el número total de migraciones de individuos desde o hasta una
+     determinada comunidad autónoma (para el análisis de migración interautonómica), o
+     provincia (para el análisis de migración interprovincial), pertenecientes a un
+     determinado ámbito, a lo largo del año t, por cada 1.000 habitantes pertenecientes a
+     dicho ámbito. Es decir:
+
+                                             t   IIntt +EIntt
+                                     TMBInt =                   ∙1000
+                                                      Pt
+
+     donde:
+
+
+32 Véase nota 22.
+
+33 Véase nota 22.
+
+
+
+
+                                                                                          35
+     IIntt = Inmigraciones interiores de individuos del ámbito de estudio, en la región dada
+     (comunidad o provincia) a lo largo del año t
+
+     EIntt = Emigraciones interiores de individuos del ámbito de estudio, en la región dada
+     (comunidad o provincia) a lo largo del año t
+
+     Pt = Población residente media en el ámbito de estudio, en la región dada (comunidad
+     o provincia), en el año t
+     Obsérvese que la Tasa de Migración Interautonómica/Interprovincial Bruta no es sino
+     la suma de la Tasa Bruta de Inmigración Interautonómica/Interprovincial más la Tasa
+     Bruta de Emigración Interautonómica/Interprovincial (véanse los apartados 4.4.2.3 y
+     4.4.2.5).
+
+                                      TMBIntt =TBIIntt +TBEIntt
+
+
+
+4.5.2.9   Tasa de migración interautonómica / interprovincial neta
+     Se define como el saldo migratorio neto de una determinada comunidad
+     autónoma/provincia, esto es, la diferencia entre las entradas y las salidas de individuos
+     de esa comunidad autónoma/provincia, pertenecientes a un determinado ámbito, a lo
+     largo del año t por cada 1.000 habitantes de dicho colectivo poblacional. Es decir:
+
+                                             t   IIntt -EIntt
+                                      TMNInt =                  ∙1000
+                                                     Pt
+
+     donde:
+
+     IIntt = Inmigraciones interiores de individuos del ámbito de estudio, desde la región dada
+     (comunidad o provincia) a lo largo del año t
+
+
+
+                                                                                                  INE. Instituto Nacional de Estadística
+     EIntt = Emigraciones interiores de individuos del ámbito de estudio, hacia la región dada
+     (comunidad o provincia) a lo largo del año t
+
+     Pt = Población residente media en el ámbito de estudio, en la región dada (comunidad
+     o provincia), en el año t
+     Obsérvese que la Tasa de Migración Interautonómica/Interprovincial Bruta no es sino
+     la diferencia entre la Tasa Bruta de Inmigración Interautonómica/Interprovincial y la
+     Tasa Bruta de Emigración Interautonómica/Interprovincial (véanse los apartados
+     4.4.2.3 y 4.4.2.5)
+
+                                     TMNIntt =TBIIntt − TBEIntt
+
+
+
+
+                                                                                            36
+4.6 Crecimento y Estructura de la población
+     Se distinguen:
+     Indicadores de Crecimiento de la Población: referentes a las variaciones en el
+     tamaño de una población.
+     Indicadores de Estructura de la Población: referentes a las características y
+     composición de una población.
+
+
+4.6.1 INDICADORES DE CRECIMIENTO DE LA POBLACIÓN
+
+
+
+4.6.1.1   Crecimiento de la población por mil habitantes
+     Se define como el incremento en el número de individuos pertenecientes a un
+     determinado ámbito en el año t por cada 1.000 habitantes. Es decir:
+
+                                          P01-01-(t+1) − P01-01-t
+                                  CTt =                              ∙ 1000
+                                                 P01-07-t
+
+     donde:
+
+     P01-01-t = Población residente en el ámbito de estudio a 1 de enero del año t
+
+     P01-07-t = Población residente en el ámbito de estudio a 1 de julio del año t
+
+     P01-01-(t+1) = Población residente en el ámbito de estudio a 1 de enero del año t+1
+
+
+          Saldo vegetativo por mil habitantes
+
+
+                                                                                                INE. Instituto Nacional de Estadística
+4.6.1.2
+
+     Se define como la diferencia entre el número de nacimientos y el de defunciones de
+     individuos pertenecientes a un determinado ámbito en el año t, por cada 1.000
+     habitantes. Es decir:
+
+                                             t   Nt − Dt
+                                          SV =              ∙ 1000
+                                                    Pt
+
+     donde:
+
+     Nt = Nacimientos registrados durante el año t de madres pertenecientes al ámbito de
+     estudio
+
+     Dt = Defunciones registradas durante el año t de individuos pertenecientes al ámbito
+     de estudio
+
+     Pt = Población residente media en el ámbito de estudio, en el año t
+
+
+
+
+                                                                                           37
+4.6.1.3   Saldo migratorio por mil habitantes
+     Se define como la diferencia entre el número de inmigraciones procedentes del
+     extranjero y el número de emigraciones al extranjero de un determinado ámbito por
+     cada 1.000 habitantes a lo largo del año t. Es decir:
+
+                                             t   It − Et
+                                         SM =              ∙ 1000
+                                                   Pt
+
+     donde:
+
+     It = Inmigraciones procedentes del extranjero, registradas durante el año t, de individuos
+     que llegan al ámbito de estudio
+
+     Et = Emigraciones con destino al extranjero, registradas durante el año t, de individuos
+     que salen del ámbito de estudio
+
+     Pt = Población residente media en el ámbito de estudio, en el año t
+     Obsérvese que dicho indicador es igual a la diferencia entre la tasa bruta de inmigración
+     procedente del extranjero y la tasa bruta de emigración con destino al extranjero de un
+     determinado ámbito para el año t (véanse los apartados 4.4.1.1 y 4.4.1.3)
+
+                                        TMBt = TBIt − TBEt
+
+     donde:
+
+     TBIt =Tasa Bruta de Inmigración procedente del extranjero al ámbito de estudio en el año t.
+
+     TBEt =Tasa Bruta de Emigración con destino al extranjero desde el ámbito de estudio
+     en el año t.
+
+
+
+
+                                                                                                   INE. Instituto Nacional de Estadística
+4.6.1.4   Nacidos por cada mil defunciones
+     Se define como el número de nacimientos de madre perteneciente a un determinado
+     ámbito por cada 1.000 defunciones de individuos pertenecientes a dicho ámbito a lo
+     largo del año t. Es decir:
+
+                                                    Nt
+                                          RNDt =         ∙ 1000
+                                                    Dt
+
+     donde:
+
+     Nt = Nacimientos registrados durante el año t de madres pertenecientes al ámbito de
+     estudio
+
+     Dt = Defunciones registradas durante el año t de individuos pertenecientes al ámbito
+     de estudio
+
+
+
+                                                                                             38
+4.6.2     INDICADORES DE ESTRUCTURA DE LA POBLACIÓN
+
+
+
+4.6.2.1   Ratio de masculinidad de la población
+        Se define como número de hombres por cada 100 mujeres pertenecientes a un
+        determinado ámbito a 1 de enero del año t. Es decir:
+
+                                                  P01-01-
+                                                   Hombres
+                                                          t
+                                          RMt =               ∙ 100
+                                                  P01-01-
+                                                   Mujeres
+                                                          t
+
+
+
+        donde:
+
+        P01-01-t
+         Hombres = Población de hombres residentes en el ámbito de estudio a 1 de enero del
+        año t.
+
+        P01-01-t
+         Mujeres = Población de mujeres residentes en el ámbito de estudio a 1 de enero del
+        año t.
+
+
+4.6.2.2   Edad media de la población
+        Se define como el promedio de edades de los individuos pertenecientes a un
+        determinado ámbito a 1 de enero del año t. Se calcula mediante la expresión:
+
+                                              ∑x �x + 1� � P01-01- t
+                                             t          2 x
+                                     EMedia =
+                                                   ∑x P01-01-
+                                                       x
+                                                              t
+
+
+        donde:
+
+
+
+                                                                                                        INE. Instituto Nacional de Estadística
+        x= Edad cumplida a 1 de enero del año t.
+
+        P01-01-t
+         x       = Población residente en el ámbito de estudio de edad x, a 1 de enero del año t
+
+
+4.6.2.3   Edad mediana de la población
+        Se define como la edad exacta que divide la distribución por edades de la población
+        perteneciente a un determinado ámbito a 1 de enero del año t en dos grupos
+        numéricamente iguales, es decir, la mitad de la población tiene edad menor o igual que
+        la mediana y la otra mitad tiene edad mayor o igual que la mediana. Se calcula mediante
+        la expresión:
+
+                                                        01-01-t
+                                                        P       � � − P01-01-t
+                                                       � ⬚       2       [0,med-1]
+                                                ⎛                                  ⎞
+                           EMedianat =EDADmed + ⎜                01-01-t           ⎟
+                                                                Pmed
+                                                   ⎝                             ⎠
+
+
+
+                                                                                                   39
+     donde:
+     EDADmed =Edad en años enteros cumplidos tal que la mitad o más de la población,
+     perteneciente al ámbito de estudio a 1 de enero del año t, tiene EDADmed o más años
+     cumplidos y la mitad o más de la población tiene EDADmed o menos años cumplidos.
+
+     P01-01-t = Población residente en el ámbito de estudio a 1 de enero del año t.
+
+     P01-01-t
+      [0,med-1] = Número de individuos pertenecientes al ámbito de estudio a 1 de enero del
+     año t, con edad cumplida inferior a EDADmed años.
+
+     P01-01-t
+      med     = Número de individuos pertenecientes al ámbito de estudio, a 1 de enero del
+     año t con edad cumplida igual a EDADmed años.
+
+
+4.6.2.4   Proporción de población nacida en el extranjero
+     Se define como el porcentaje que representa la población perteneciente a un
+     determinado ámbito nacida en el extranjero, sobre la población total de dicho ámbito a
+     1 de enero del año t. Es decir:
+
+                                                      P01-01-t
+                                                       nacido ext
+                                  PROPtnacido ext =                 ∙ 100
+                                                       P01-01-t
+
+     donde:
+
+     P01-01-t
+      nacido ext = Población nacida en el extranjero perteneciente al ámbito de estudio a 1 de
+     enero del año t.
+
+     P01-01-t = Población residente en el ámbito de estudio a 1 de enero del año t
+
+
+
+
+                                                                                                 INE. Instituto Nacional de Estadística
+4.6.2.5   Proporción de población extranjera
+     Se define como el porcentaje que representa la población de nacionalidad extranjera
+     perteneciente a un determinado ámbito, sobre la población total de dicho ámbito a 1 de
+     enero del año t. Es decir:
+
+                                                      01-01-t
+                                                Pext
+                                      PROPtext = 01-01-t ∙ 100
+                                                 P
+
+     donde:
+
+     P01-01-t
+      ext     = Población de nacionalidad extranjera perteneciente al ámbito de estudio a 1
+     de enero del año t.
+
+     P01-01-t = Población residente en el ámbito de estudio a 1 de enero del año t
+
+
+
+
+                                                                                           40
+4.6.2.6   Proporción de personas mayores de cierta edad
+     Se define como el porcentaje que representa la población mayor de x años sobre la
+     población total a 1 de enero del año t. Es decir:
+
+                                         t   P01-01-t
+                                              x+
+                                     PROPx+ = 01-01-t ∙ 100
+                                                  P
+
+     donde:
+
+     P01-01-t
+      x+      =Población mayor de x años, perteneciente al ámbito de estudio a 1 de enero
+     del año t
+
+     P01-01-t = Población residente en el ámbito de estudio a 1 de enero del año t
+     x= Edad. Toma valores comprendidos entre 65 y 100 años de edad.
+
+
+4.6.2.7 Índice de envejecimiento
+
+     Se define como el porcentaje que representa la población mayor de 64 años sobre la
+     población menor de 16 años a 1 de enero del año t. Es decir:
+
+                                                          P01-01-t
+                                                           65+
+                            Indice de Envejecimientot =              ∙ 100
+                                                          P01-01-t
+                                                           0-15
+
+
+     donde:
+
+     P01-01-t
+      65+     =Población mayor de 64 años, perteneciente al ámbito de estudio a 1 de enero
+     del año t
+
+     P01-01-t =Población menor de 16 años perteneciente al ámbito de estudio a 1 de enero
+
+
+                                                                                             INE. Instituto Nacional de Estadística
+      0-15
+     del año t
+
+
+4.6.2.8   Tasa de dependencia
+     Se define como el cociente entre la población perteneciente a un determinado ámbito a
+     1 de enero del año t menor de 16 años o mayor de 64 entre la población de 16 a 64
+     años, expresado en tanto por cien. Se trata de un indicador con un claro significado
+     económico, pues representa la medida relativa de la población potencialmente inactiva
+     sobre la potencialmente activa. Es decir:
+
+                                              t   P01-01-t
+                                                   0-15    + P01-01-t
+                                                              65+
+                        Tasa de Dependencia =                            ∙ 100
+                                                        P01-01-t
+                                                         16-64
+
+
+     donde:
+
+     P01-01-t
+      65+     =Población mayor de 64 años, perteneciente al ámbito de estudio a 1 de enero
+     del año t
+
+                                                                                       41
+     P01-01-t
+      16-64 =Población mayor de 15 y menor de 65 años, perteneciente al ámbito de estudio
+     a 1 de enero del año t
+
+     P01-01-t
+      0-15    =Población menor de 16 años perteneciente al ámbito de estudio a 1 de enero
+     del año t
+
+
+4.6.2.9   Tasa de dependencia de la población menor de 16 años
+     Se define como el cociente entre la población perteneciente a un determinado ámbito a
+     1 de enero del año t menor de 16 años entre la población de 16 a 64 años, expresado
+     en tanto por cien. Es decir:
+
+                                                            P01-01-t
+                                                             0-15
+                        Tasa de Dependencia de Jóvenest =              ∙ 100
+                                                            P01-01-t
+                                                             16-64
+
+
+     donde:
+
+     Pt0-15 =Población menor de 16 años perteneciente al ámbito de estudio a 1 de enero
+     del año t .
+
+     Pt16-64 =Población perteneciente al ámbito de estudio a 1 de enero del año t mayor de
+     15 y menor de 65 años.
+
+
+4.6.2.10 Tasa de dependencia de la población mayor de 64 años
+
+     Se define como el cociente entre la población perteneciente a un determinado ámbito a
+     1 de enero del año t mayor de 64 entre la población de 16 a 64 años, expresado en
+     tanto por cien. Es decir:
+
+
+
+                                                                                             INE. Instituto Nacional de Estadística
+                                                        t   P01-01-t
+                                                             65+
+                       Tasa de Dependencia de Mayores =                ∙ 100
+                                                            P01-01-t
+                                                             16-64
+
+
+     donde:
+
+     Pt16-64 =Población perteneciente al ámbito de estudio a 1 de enero del año t mayor de
+     15 y menor de 65 años.
+
+     P01-01-t
+      65+     =Población m
+
+
+
+
+                                                                                       42
+5 Indicadores a nivel municipal
+
+
+
+
+  Los Indicadores Demográficos Básicos a nivel municipal siguen exactamente las
+  mismas definiciones que los que se publican a nivel nacional, autonómico y provincial
+  que se han detallado en los epígrafes anteriores. Las diferencias radican en su
+  metodología de cálculo inherente a los problemas que suscitan las poblaciones
+  pequeñas.
+  Las fuentes de información en las que se basan estos indicadores son las estadísticas
+  de Nacimientos, Defunciones y Matrimonios del Movimiento Natural de la Población, al
+  igual que para los indicadores de mayor nivel de desagregación territorial, y los
+  resultados de la Estadística del Padrón continuo que nos proporciona la población
+  residente en cada municipio de España a 1 de enero de cada año, para el periodo 2014-
+  2020, y los resultados de los Censos anuales de Población, a partir de 2021.
+  Para el periodo 2014-2020, se publican indicadores relativos a los fenómenos
+  demográficos de Natalidad, Fecundidad, Mortalidad, Nupcialidad y Crecimiento de la
+  Población para aquellos municipios para los que a mitad del periodo considerado
+  presenten más de 50.000 habitantes o se trate de una capital de provincia.
+  En el caso de los indicadores de Estructura de la Población el criterio para calcular
+  indicadores de un año será que a 1 de enero de ese año dicho municipio presente más
+  de 50.000 habitantes o se trate de una capital de provincia.
+  La metodología de cálculo de los Indicadores de Crecimiento y de Estructura de la
+  Población a nivel municipal es exactamente la misma que la detallada en el epígrafe
+  4.6 de este documento.
+  Sin embargo, en el caso de los fenómenos demográficos de natalidad, fecundidad,
+  mortalidad y nupcialidad se calculan indicadores trienales con el objetivo de minimizar
+  la posible variabilidad o aleatoriedad anual de algunos indicadores propia de
+  poblaciones pequeñas.
+  Con el objetivo de eludir distorsiones indeseables sobre los resultados que puedan
+  dificultar su interpretación y como consecuencia de la aleatoriedad de la coyuntura
+  demográfica propia de poblaciones pequeñas, para los fenómenos demográficos
+
+
+                                                                                              INE. Instituto Nacional de Estadística
+  básicos (natalidad, fecundidad, mortalidad y nupcialidad) se calcularán indicadores a
+  nivel municipal trienales que serán móviles para generar una serie temporal.
+  La metodología de cálculo de los indicadores de natalidad, fecundidad, mortalidad y
+  nupcialidad que elabora el INE a nivel municipal siguen las siguientes características
+  generales:
+  1. Todos los indicadores corresponden a periodos de tres años consecutivos y se
+     consideran referidos al año central del periodo.
+  2. Para calcular cualquier tasa, cociente entre un flujo y un stock, utilizaremos en el
+     numerador el flujo promedio de los flujos del fenómeno demográfico considerado
+     correspondientes a cada uno de los tres años y en el denominador el stock de
+     población a mitad del periodo de tres años considerado. Es decir, por ejemplo, la
+     tasa bruta de natalidad del año t del municipio m (siendo t el año central del periodo
+     de tres años considerado) se calcula como:
+
+                                      (Nt-1  t    t+1
+                                        m + Nm + Nm )/3
+                           TBNtm =                                  .1000
+                                     (P1-1-(t-1)
+                                       m
+                                                 + P1-1-(t+2)
+                                                    m         )/2
+
+
+                                                                                        43
+donde:
+ t-1
+Nm = Nacimientos registrados durante el año t -1 de madres residentes en el municipio m
+ 1-1-(t-1)
+Pm           = Población residente en el municipio m a 1 de enero del año t-1
+ 1-1-(t+2)
+Pm           = Población residente en el municipio m a 1 de enero del año t+2
+3. Las tasas específicas de mortalidad por sexo y grupo de edad y las esperanzas de
+   vida se extraen de las tablas de mortalidad abreviadas de periodo trienal construidas
+   únicamente para los individuos de nacionalidad española residentes en municipios
+   de más de 50.000 habitantes a mitad del período o que sean capital de provincia.
+   Estas tablas de mortalidad se elaboran acumulando los flujos de las defunciones
+   ocurridas en los tres años del periodo considerado y los stocks de población al inicio
+   y al final del periodo. La metodología de cálculo utilizada para obtener las funciones
+   biométricas es exactamente la misma que la detallada en la metodología de la
+   operación Tablas de Mortalidad que publica el INE anualmente.
+4. No se publican indicadores migratorios ni de divorcios a este nivel de desagregación
+   porque no se dispone de datos ni de migraciones ni de divorcios para niveles
+   territoriales inferiores a la provincia.
+Tras diversos análisis, a partir de 2021 los indicadores demográficos básicos de todos
+los fenómenos a excepción de la mortalidad, dejan de ser trienales y pasan a calcularse
+teniendo en cuenta únicamente el año de estudio, exactamente igual que lo que
+hacemos para los indicadores a nivel provincial, de comunidad autónoma y nacional.
+Otra novedad es que a partir de 2021 el listado de municipios para los que se ofrecen
+indicadores demográficos básicos es un listado fijo de 155 municipios.
+La batería de indicadores demográficos que elabora el INE a nivel municipal son los
+siguientes:
+1. Indicadores de Natalidad a nivel municipal
+   1.1. Tasa Bruta de Natalidad
+
+
+                                                                                               INE. Instituto Nacional de Estadística
+2. Indicadores de Fecundidad a nivel municipalTasa Global de Fecundidad
+   2.2. Tasas de Fecundidad por grupo de edad de la madre
+   2.3. Indicador Coyuntural de Fecundidad
+   2.4. Edad Media a la Maternidad
+   2.5. Tasas de Fecundidad al primer hijo por grupo de edad de la madre
+   2.6. Edad Media a la Maternidad al primer hijo
+   2.7. Porcentaje de nacidos por orden del nacimiento
+   2.8. Proporción de nacidos de madre no casada
+3. Indicadores de Mortalidad a nivel municipalTasa Bruta de Mortalidad
+   3.2. Tasas de Mortalidad según sexo y grupo de edad
+   3.3. Esperanza de Vida al nacimiento según sexo
+   3.4. Esperanza de Vida a los 65 años según sexo
+4. Indicadores de Nupcialidad a nivel municipal
+   1.2. Tasa Bruta de Nupcialidad
+
+
+                                                                                          44
+   1.3. Tasa de Nupcialidad según sexo
+   1.4. Tasas de Nupcialidad según sexo y grupo de edad
+   1.5. Edad Media al Matrimonio según sexo
+5. Indicadores de Primo-Nupcialidad a nivel municipalTasas de Primo-Nupcialidad
+   según sexo y grupo de edad
+   5.2. Edad Media al Primer Matrimonio según sexo
+6. Indicadores de Crecimiento de la Población a nivel municipaCrecimiento de la
+   Población por cada mil habitantes
+   6.2. Saldo Vegetativo por mil habitantes
+   6.3. Nacidos por cada mil defunciones
+7. Indicadores de Estructura de la Población a nivel municipalRatio de masculinidad
+   de la población
+   7.2. Edad Media de la Población según sexo
+   7.3. Edad Mediana de la Población según sexo
+   7.4. Proporción de personas mayores de cierta edad (>65;>75;>85)
+   7.5. Índice de Envejecimiento
+   7.6. Tasa de Dependencia
+   7.7. Tasa de Dependencia de la población menor de 16 años
+   7.8. Tasa de Dependencia de la población mayor de 64 años
+   7.9. Proporción de personas según lugar de nacimiento
+        7.9.1. Proporción de personas nacidas en el mismo municipio en el que residen
+               (autóctonos)
+        7.9.2. Proporción de personas nacidas en distinto municipio en el que residen
+               pero en la misma provincia
+        7.9.3. Proporción de personas nacidas en distinta provincia en la que residen
+               pero en la misma comunidad autónoma.
+
+
+
+                                                                                        INE. Instituto Nacional de Estadística
+        7.9.4. Proporción de personas nacidas en distinta comunidad autónoma en la
+               que residen pero en España
+        7.9.5. Proporción de personas residentes en España y nacidas fuera de España
+
+
+
+
+                                                                                  45
+6 Publicación de resultados
+
+
+
+
+  Los resultados definitivos de los Indicadores Demográficos Básicos a nivel nacional,
+  autonómico y provincial se publican 11 meses después de la finalización del año de
+  referencia.
+  Los resultados se difunden anualmente, en noviembre de cada año:
+  – Noviembre del año t+1: publicación de resultados definitivos del año t
+  Los resultados definitivos de los Indicadores Demográficos Básicos a nivel municipal se
+  publican varios meses después o antes de la finalización del año de referencia según
+  el fenómeno demográfico del que se trate.
+  Los resultados se difunden anualmente, en noviembre de cada año. Así, en Noviembre
+  del año t+1:
+  – Publicación de resultados definitivos del año t-1 de indicadores de Natalidad,
+    Fecundidad, Mortalidad, Nupcialidad y Crecimiento de la Población, 23 meses
+    después de finalizar el año de referencia.
+  – Publicación de resultados definitivos del año t+1 de indicadores de Estructura de
+    la Población, 1 mes antes de finalizar el año de referencia.
+  Disponibilidad de resultados
+  Además de las excepciones mencionadas, existen una serie de especificaciones sobre
+  la disponibilidad de determinados datos y agregaciones en las series de los IDB que se
+  detallan a continuación:
+  – Indicadores de Fecundidad no disponibles para las provincias de Canarias de 1978,
+    País Vasco de 1986 y Andalucía de 2007 por errores registrales en la variable orden
+    del nacimiento en las Estadísticas del Movimiento Natural de la Población.
+  – Indicadores de Muertes Fetales Tardías no disponibles para 1976.
+  – Los Indicadores de Nupcialidad del periodo 1980-1985 pueden estar afectados de
+    un subregistro de matrimonios en las Estadísticas del Movimiento Natural de la
+    Población localizado en las provincias de Murcia, Salamanca, Valladolid, Girona,
+
+
+
+                                                                                             INE. Instituto Nacional de Estadística
+    Alicante/Alacant y Guadalajara.
+  – Indicadores de Divorcios no disponibles para la ciudad autónoma de Ceuta de 2015
+    porque para ese año los juzgados de dicha provincia no han proporcionado dato.
+  – Desde 2002:
+    Se dispone de indicadores desagregados por nacionalidad para todos los
+    fenómenos demográficos excepto para el caso de divorcios.
+  – Desde 2005:
+    La normativa legal sobre el divorcio aparece recogida en el Código Civil así como en
+    la Ley de Enjuiciamiento Civil. La normativa actual se rige básicamente por la Ley
+    15/2005 de 8 de julio, por la que se modifica la anteriormente vigente ley 30/1981 de
+    7 de julio que fue la que introdujo la figura del divorcio en la legislación española.
+    Esta ley en comparación con la de 1981 amplía el ámbito de libertad de los cónyuges
+    en lo relativo al ejercicio de la facultad de solicitar la disolución de la relación
+    matrimonial y, a diferencia de la ley anterior, admite el divorcio sin necesidad de la
+    previa separación de hecho o judicial. Por lo tanto, la serie de indicadores de
+    divorcios comienza en 2005 con la nueva ley.
+
+
+                                                                                       46
+– Desde 2008:
+  Se dispone de datos de migraciones procedentes de la Estadística de Migraciones.
+  Como consecuencia, se calculan desde este año el indicador Saldo Migratorio por
+  1000 habitantes y todos los Indicadores de Movimiento Migratorio.
+– Desde 2011:
+  Se dispone de Indicadores de Divorcios desagregados por nacionalidad.
+  Se dispone de Indicadores de Divorcios relativos a todos los tipos de matrimonio
+  puesto que para los años anteriores (2005-2010) sólo estaban disponibles para los
+  divorcios de matrimonios entre personas de distinto sexo.
+– Desde 2014:
+– Los Indicadores relativos a la Mortalidad Infantil se adaptan al REGLAMENTO (UE)
+  Nº 328/2011 DE LA COMISIÓN de 5 de abril de 2011 por el que se aplica el
+  Reglamento (CE) nº 1338/2008 del Parlamento Europeo y del Consejo sobre
+  estadísticas comunitarias de salud pública y de salud y seguridad en el trabajo, por
+  lo que se refiere a las estadísticas sobre las causas de la muerte. Los cambios se
+  han aplicado a la totalidad de las series, en concreto se han realizado los siguientes
+  ajustes:
+  • Las muertes neonatales se consideran como aquellas ocurridas entre los nacidos
+    vivos durante los primeros 28 días de vida (días 0 a 27). Antes de 2014 se
+    consideraban aquellas ocurridas durante los 30 primeros días de vida, como
+    representativos del primer mes de vida.
+  • Las muertes neonatales tempranas se consideran como aquellas ocurridas entre
+    los nacidos vivos durante los primeros 7 días de vida (días 0 a 6). Antes de 2014
+    se consideraban los 8 días como representativos de una semana completa de
+    vida (días 0 a 7).
+  • Las muertes posneonatales se consideran como aquellas ocurridas entre los
+    nacidos vivos de más de 27 días de vida pero de menos de 1 año (días 28 a 364).
+
+
+                                                                                           INE. Instituto Nacional de Estadística
+    Antes de 2014 se consideraban de más de 30 días pero menos de 1 año.
+  • El cálculo de las tasas de Mortalidad Fetal Tardía así como el de las tasas de
+    Mortalidad Perinatal se ha modificado para adaptarse a las definiciones de
+    Eurostat, con la inclusión en el denominador de todos los nacidos, esto es, los
+    nacidos vivos más las muertes fetales tardías.
+– Desde 2016:
+  Entre 2014 y 2015 se recalcularon las series de población intercensales para el
+  periodo 1971-2001 a fin de obtener una serie continua y unificada de cifras de
+  población que se inicia el 1 de enero de 1971 y enlaza con el último periodo publicado
+  de la estadística Cifras de Población puesto que las series de estimaciones
+  Intercensales de la Población publicadas hasta 2015 habían sido elaboradas de
+  acuerdo a diversos procesos de suavizado por edades, de manera que no constituían
+  una serie homogénea. Esto supone que en 2016 se realiza una actualización de
+  todas las series de Indicadores Demográficos Básicos sobre la base poblacional de
+  las nuevas intercensales.
+
+
+
+
+                                                                                     47
+– Desde 2019:
+  En junio de 2019 se recalculan las series de Indicadores de Fecundidad según el orden
+  del nacimiento para los años 1996-2006 para tener en cuenta la modificación del método
+  de cálculo de esta variable en la Estadística de Nacimientos del Movimiento Natural de la
+  Población de dicho periodo. Así, para los años anteriores a 1996, todos los nacidos vivos
+  en un parto múltiple tenían el mismo orden (número de hijos nacidos vivos en partos
+  anteriores + número de hijos nacidos vivos en el parto actual). A partir del año 1996 se
+  modifica el método de cálculo de la variable orden del nacimiento de forma que cada
+  nacido vivo en un parto múltiple tiene el orden correlativo que le corresponda.
+  Por otro lado, en junio de 2019 se modifica también el nivel de desagregación de la variable
+  edad para los Indicadores de Movimientos Migratorios a nivel autonómico y provincial de
+  tal forma que se iguala al nivel de detalle publicado en la Estadística de Migraciones en
+  esta fecha. Como consecuencia, se han recalculado todos los Indicadores de Movimientos
+  Migratorios que utilizan las tasas específicas por edad para su elaboración.
+  Se publican por primera vez Indicadores Demográficos Básicos a nivel municipal
+  iniciándose las series en 2014.
+– Desde 2020:
+  En junio de 2020 se incluye en los Indicadores de Estructura de la Población a nivel
+  municipal la Proporción de personas según lugar de nacimiento constituida por cinco
+  indicadores o proporciones de “autoctonía” a distintos niveles territoriales en los que se
+  compara el lugar del nacimiento con el lugar de residencia.
+  En octubre de 2020 se incluye en los Indicadores de Mortalidad las Tasas de Mortalidad
+  por sexo, edad y nivel educativo para todos los niveles territoriales y las Esperanzas de
+  Vida por sexo, edad y nivel educativo. En ambos casos, se consideran 4 niveles
+  educativos por agregación de la Clasificación de programas, titulaciones y certificaciones
+  en niveles de formación alcanzados, CNED-A.
+– Desde 2023:
+
+
+
+                                                                                                 INE. Instituto Nacional de Estadística
+  Con motivo del nuevo Censo de Población de 2021, publicado en diciembre de 2022, a lo
+  largo del año 2023 se calcularon las series de población intercensales para el periodo
+  2012-2020, a fin de obtener una serie continua y unificada de cifras de población que se
+  inicia el 1 de enero de 1970 y enlaza con el primer periodo publicado de los Censos
+  anuales de Población a 1 de enero de 2021 y sucesivos.
+  En noviembre de 2023 se publican los Indicadores Demográficos Básicos del periodo
+  2012-2020 calculados sobre la base poblacional de las nuevas intercensales y de los
+  censos anuales.
+  En el caso de los indicadores de migraciones, los resultados relativos a 2021 se recalculan,
+  además, tomando como fuente la nueva Estadística de Migraciones y Cambios de
+  Residencia que pasa a ser la nueva fuente de información para dichos indicadores.
+  En noviembre de 2023 se publican los Indicadores Demográficos Básicos del periodo
+  2012-2020 calculados sobre la base poblacional de las nuevas intercensales y de los
+  censos anuales, así como de la nueva Estadística de Migraciones y Cambios de
+  Residencia.
+
+
+
+
+                                                                                           48
+Anexo: Diccionario de conceptos
+
+
+
+
+Autóctono: Individuo que ha nacido en el mismo lugar en que reside.
+Casado: Individuo que contrajo matrimonio civil con otro individuo del mismo o diferente
+sexo y está inscrito en el Registro Civil.
+Defunción: El concepto estadístico de defunción utilizado tradicionalmente en España
+comprendía a todos los fallecidos con más de 24 horas de vida. A partir de 1975 este
+concepto se amplió con la incorporación de los nacidos con vida fallecidos durante las
+primeras 24 horas. Este cambio es de gran trascendencia pues supone la adopción del
+criterio de defunción recomendado por los Organismos Internacionales.
+Divorciado: Individuo que disuelve su vínculo matrimonial con otro individuo del mismo
+o diferente sexo mediante una sentencia o decreto judicial o escritura notarial, inscritos
+en el Registro Civil.
+Duración del matrimonio: Número de años completos transcurridos desde que se
+contrae matrimonio legalmente hasta la fecha de la sentencia o decreto judicial o
+escritura notarial que disuelven el vínculo matrimonial.
+Edad: Número de años completos transcurridos desde el nacimiento.
+Emigración: Acción por la cual una persona, que habiendo sido previamente residente
+habitual de un territorio, deja de tener su residencia habitual en el mismo por un periodo
+que es, o se espera que sea, de al menos doce meses.
+Inmigración: Acción por la cual una persona fija su residencia habitual en un territorio
+por un periodo que es, o se espera que sea, de al menos doce meses, habiendo sido
+previamente residente habitual de otro territorio distinto.
+Matrimonio: A efectos del cálculo de los indicadores demográficos básicos se
+considera matrimonio a la unión estable entre dos personas del mismo o diferente sexo,
+como producto del acuerdo de voluntades de ambas, manifestado externamente con
+las formalidades legalmente establecidas e inscritas en el Registro civil.
+La Estadística de Matrimonios experimentó una importante variación en el año 2005
+
+
+                                                                                             INE. Instituto Nacional de Estadística
+con motivo de la entrada en vigor de la Ley 13/2005 de 1 de julio (B.O.E. de 2 de julio
+de 2005), por la que se modifica el Código Civil en materia de derecho a contraer
+matrimonio. En dicha ley, se permite que el matrimonio sea celebrado entre personas
+del mismo o distinto sexo, con plenitud e igualdad de derechos y obligaciones
+cualquiera que sea su composición. En el boletín estadístico se introdujo la variable
+sexo de cada uno de los contrayentes. Esta estadística recoge todos los matrimonios
+inscritos en el Registro Civil.
+Migrante: Persona que protagoniza una migración (inmigración o emigración).
+Muerte fetal tardía: fallecimiento, antes de su completa expulsión o extracción del
+cuerpo de la madre, de un producto de la concepción viable.
+El criterio de viabilidad aplicado actualmente en la Estadística de Muertes Fetales
+Tardías del Movimiento Natural de la Población es el siguiente: se considera viable el
+feto que pesa 500 o más gramos. En ausencia de este dato sobre el peso, se considera
+viable el feto con 22 o más semanas cumplidas de gestación. Por último, si no se
+dispone del dato del peso, ni tampoco de las semanas de gestación del feto, se
+investiga si ha sido incorporado al legajo de abortos del Registro Civil, para, sólo en
+caso afirmativo, contarlo como muerte fetal tardía.
+
+                                                                                       49
+Nacimiento: El concepto de nacimiento en la Estadística del Movimiento Natural de la
+Población queda identificado con el biológico de "nacido con vida".
+Nacionalidad: Vínculo jurídico particular entre un individuo y su Estado, adquirido
+mediante nacimiento, naturalización, declaración, opción, matrimonio y otras fórmulas
+acordes con la legislación nacional.
+Orden de nacimiento: Número de hijos nacidos vivos que ha tenido la madre a lo largo
+de su vida contando este parto.
+Población residente: se define como población residente en un determinado ámbito
+geográfico a aquellas personas que en la fecha de referencia tienen establecida su
+residencia habitual en el mismo.
+Conforme a la definición de residencia habitual establecida en el Reglamento 763/2008
+del Parlamento Europeo y del Consejo sobre Censos de Población y Vivienda,
+entendiéndose por residencia habitual el lugar donde una persona normalmente pasa
+los periodos diarios de descanso, sin tener en cuenta las ausencias temporales por
+viajes de ocio, vacaciones, visitas a familiares y amigos, negocios, tratamiento médico
+o peregrinación religiosa. No obstante, se ha de puntualizar que sólo se considerarán
+residentes habituales en una circunscripción territorial:
+– Aquellos que, según la definición anterior, hubieran residido habitualmente en la
+  misma por un periodo continuado de al menos doce meses.
+– Aquellos que, según la definición anterior, hubieran establecido su residencia
+  habitual en la misma hace menos de doce meses pero tuvieran intención de
+  permanecer en ella al menos un año.
+Sexo: El sexo se refiere al sexo biológico de la persona. Según la OMS, el "sexo" hace
+referencia a las características biológicas y fisiológicas que definen a hombres y
+mujeres, mientras que el "género" se refiere a los roles, conductas, actividades y
+atributos construidos socialmente que una cultura determinada considera apropiados
+para hombres y mujeres. De acuerdo con esta descripción, la OMS considera que
+"hombre" y "mujer" son categorías de sexo, mientras que "masculino" y "femenino" son
+
+
+                                                                                          INE. Instituto Nacional de Estadística
+categorías de género.
+
+
+
+
+                                                                                    50
+

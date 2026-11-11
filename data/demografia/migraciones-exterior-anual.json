@@ -1,0 +1,1037 @@
+{
+  "tipo": "datos",
+  "id": "migraciones-exterior-anual",
+  "title": "Inmigración, emigración y saldo migratorio exterior anuales (2008-2024)",
+  "description": "Totales anuales por sexo de los flujos migratorios con el extranjero. Dos series del INE no homogéneas (2008-2021 y 2021-2024).",
+  "series": [
+    {
+      "id": "inmigracion-ambos-em-2008-2021",
+      "title": "Inmigracion exterior, ambos, serie EM-2008-2021",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones (tablas 24282, 24296, 24304)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=24282",
+        "docId": "INE-24282"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie homogénea 2008-2021.",
+      "points": [
+        {
+          "period": "2008",
+          "value": 599071.0
+        },
+        {
+          "period": "2009",
+          "value": 392962.0
+        },
+        {
+          "period": "2010",
+          "value": 360702.0
+        },
+        {
+          "period": "2011",
+          "value": 371336.0
+        },
+        {
+          "period": "2012",
+          "value": 304054.0
+        },
+        {
+          "period": "2013",
+          "value": 280771.0
+        },
+        {
+          "period": "2014",
+          "value": 305456.0
+        },
+        {
+          "period": "2015",
+          "value": 342112.0
+        },
+        {
+          "period": "2016",
+          "value": 414747.0
+        },
+        {
+          "period": "2017",
+          "value": 532132.0
+        },
+        {
+          "period": "2018",
+          "value": 643684.0
+        },
+        {
+          "period": "2019",
+          "value": 750480.0
+        },
+        {
+          "period": "2020",
+          "value": 467918.0
+        },
+        {
+          "period": "2021",
+          "value": 528856.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-hombres-em-2008-2021",
+      "title": "Inmigracion exterior, hombres, serie EM-2008-2021",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones (tablas 24282, 24296, 24304)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=24282",
+        "docId": "INE-24282"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie homogénea 2008-2021.",
+      "points": [
+        {
+          "period": "2008",
+          "value": 310262.0
+        },
+        {
+          "period": "2009",
+          "value": 192282.0
+        },
+        {
+          "period": "2010",
+          "value": 176826.0
+        },
+        {
+          "period": "2011",
+          "value": 180946.0
+        },
+        {
+          "period": "2012",
+          "value": 149746.0
+        },
+        {
+          "period": "2013",
+          "value": 139474.0
+        },
+        {
+          "period": "2014",
+          "value": 151949.0
+        },
+        {
+          "period": "2015",
+          "value": 169626.0
+        },
+        {
+          "period": "2016",
+          "value": 204211.0
+        },
+        {
+          "period": "2017",
+          "value": 260161.0
+        },
+        {
+          "period": "2018",
+          "value": 319082.0
+        },
+        {
+          "period": "2019",
+          "value": 376035.0
+        },
+        {
+          "period": "2020",
+          "value": 236402.0
+        },
+        {
+          "period": "2021",
+          "value": 272986.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-mujeres-em-2008-2021",
+      "title": "Inmigracion exterior, mujeres, serie EM-2008-2021",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones (tablas 24282, 24296, 24304)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=24282",
+        "docId": "INE-24282"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie homogénea 2008-2021.",
+      "points": [
+        {
+          "period": "2008",
+          "value": 288805.0
+        },
+        {
+          "period": "2009",
+          "value": 200675.0
+        },
+        {
+          "period": "2010",
+          "value": 183876.0
+        },
+        {
+          "period": "2011",
+          "value": 190392.0
+        },
+        {
+          "period": "2012",
+          "value": 154304.0
+        },
+        {
+          "period": "2013",
+          "value": 141301.0
+        },
+        {
+          "period": "2014",
+          "value": 153505.0
+        },
+        {
+          "period": "2015",
+          "value": 172482.0
+        },
+        {
+          "period": "2016",
+          "value": 210541.0
+        },
+        {
+          "period": "2017",
+          "value": 271971.0
+        },
+        {
+          "period": "2018",
+          "value": 324602.0
+        },
+        {
+          "period": "2019",
+          "value": 374445.0
+        },
+        {
+          "period": "2020",
+          "value": 231516.0
+        },
+        {
+          "period": "2021",
+          "value": 255870.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-ambos-em-2008-2021",
+      "title": "Emigracion exterior, ambos, serie EM-2008-2021",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones (tablas 24282, 24296, 24304)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=24282",
+        "docId": "INE-24282"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie homogénea 2008-2021.",
+      "points": [
+        {
+          "period": "2008",
+          "value": 288434.0
+        },
+        {
+          "period": "2009",
+          "value": 380119.0
+        },
+        {
+          "period": "2010",
+          "value": 403380.0
+        },
+        {
+          "period": "2011",
+          "value": 409040.0
+        },
+        {
+          "period": "2012",
+          "value": 446605.0
+        },
+        {
+          "period": "2013",
+          "value": 532305.0
+        },
+        {
+          "period": "2014",
+          "value": 400426.0
+        },
+        {
+          "period": "2015",
+          "value": 343875.0
+        },
+        {
+          "period": "2016",
+          "value": 327328.0
+        },
+        {
+          "period": "2017",
+          "value": 368860.0
+        },
+        {
+          "period": "2018",
+          "value": 309526.0
+        },
+        {
+          "period": "2019",
+          "value": 296248.0
+        },
+        {
+          "period": "2020",
+          "value": 248561.0
+        },
+        {
+          "period": "2021",
+          "value": 380786.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-hombres-em-2008-2021",
+      "title": "Emigracion exterior, hombres, serie EM-2008-2021",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones (tablas 24282, 24296, 24304)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=24282",
+        "docId": "INE-24282"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie homogénea 2008-2021.",
+      "points": [
+        {
+          "period": "2008",
+          "value": 169460.0
+        },
+        {
+          "period": "2009",
+          "value": 226139.0
+        },
+        {
+          "period": "2010",
+          "value": 238195.0
+        },
+        {
+          "period": "2011",
+          "value": 240973.0
+        },
+        {
+          "period": "2012",
+          "value": 260040.0
+        },
+        {
+          "period": "2013",
+          "value": 299592.0
+        },
+        {
+          "period": "2014",
+          "value": 222782.0
+        },
+        {
+          "period": "2015",
+          "value": 190410.0
+        },
+        {
+          "period": "2016",
+          "value": 179817.0
+        },
+        {
+          "period": "2017",
+          "value": 201005.0
+        },
+        {
+          "period": "2018",
+          "value": 167137.0
+        },
+        {
+          "period": "2019",
+          "value": 159076.0
+        },
+        {
+          "period": "2020",
+          "value": 133623.0
+        },
+        {
+          "period": "2021",
+          "value": 206073.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-mujeres-em-2008-2021",
+      "title": "Emigracion exterior, mujeres, serie EM-2008-2021",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones (tablas 24282, 24296, 24304)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=24282",
+        "docId": "INE-24282"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie homogénea 2008-2021.",
+      "points": [
+        {
+          "period": "2008",
+          "value": 118975.0
+        },
+        {
+          "period": "2009",
+          "value": 153988.0
+        },
+        {
+          "period": "2010",
+          "value": 165184.0
+        },
+        {
+          "period": "2011",
+          "value": 168066.0
+        },
+        {
+          "period": "2012",
+          "value": 186566.0
+        },
+        {
+          "period": "2013",
+          "value": 232707.0
+        },
+        {
+          "period": "2014",
+          "value": 177647.0
+        },
+        {
+          "period": "2015",
+          "value": 153467.0
+        },
+        {
+          "period": "2016",
+          "value": 147506.0
+        },
+        {
+          "period": "2017",
+          "value": 167855.0
+        },
+        {
+          "period": "2018",
+          "value": 142389.0
+        },
+        {
+          "period": "2019",
+          "value": 137172.0
+        },
+        {
+          "period": "2020",
+          "value": 114938.0
+        },
+        {
+          "period": "2021",
+          "value": 174713.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "saldo-exterior-ambos-em-2008-2021",
+      "title": "Saldo exterior exterior, ambos, serie EM-2008-2021",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones (tablas 24282, 24296, 24304)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=24282",
+        "docId": "INE-24282"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie homogénea 2008-2021.",
+      "points": [
+        {
+          "period": "2008",
+          "value": 310640.0
+        },
+        {
+          "period": "2009",
+          "value": 12847.0
+        },
+        {
+          "period": "2010",
+          "value": -42674.0
+        },
+        {
+          "period": "2011",
+          "value": -37701.0
+        },
+        {
+          "period": "2012",
+          "value": -142549.0
+        },
+        {
+          "period": "2013",
+          "value": -251532.0
+        },
+        {
+          "period": "2014",
+          "value": -94978.0
+        },
+        {
+          "period": "2015",
+          "value": -1762.0
+        },
+        {
+          "period": "2016",
+          "value": 87418.0
+        },
+        {
+          "period": "2017",
+          "value": 163272.0
+        },
+        {
+          "period": "2018",
+          "value": 334158.0
+        },
+        {
+          "period": "2019",
+          "value": 454232.0
+        },
+        {
+          "period": "2020",
+          "value": 219357.0
+        },
+        {
+          "period": "2021",
+          "value": 148070.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "saldo-exterior-hombres-em-2008-2021",
+      "title": "Saldo exterior exterior, hombres, serie EM-2008-2021",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones (tablas 24282, 24296, 24304)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=24282",
+        "docId": "INE-24282"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie homogénea 2008-2021.",
+      "points": [
+        {
+          "period": "2008",
+          "value": 140806.0
+        },
+        {
+          "period": "2009",
+          "value": -33850.0
+        },
+        {
+          "period": "2010",
+          "value": -61367.0
+        },
+        {
+          "period": "2011",
+          "value": -60024.0
+        },
+        {
+          "period": "2012",
+          "value": -110289.0
+        },
+        {
+          "period": "2013",
+          "value": -160119.0
+        },
+        {
+          "period": "2014",
+          "value": -70835.0
+        },
+        {
+          "period": "2015",
+          "value": -20778.0
+        },
+        {
+          "period": "2016",
+          "value": 24387.0
+        },
+        {
+          "period": "2017",
+          "value": 59156.0
+        },
+        {
+          "period": "2018",
+          "value": 151945.0
+        },
+        {
+          "period": "2019",
+          "value": 216959.0
+        },
+        {
+          "period": "2020",
+          "value": 102779.0
+        },
+        {
+          "period": "2021",
+          "value": 66913.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "saldo-exterior-mujeres-em-2008-2021",
+      "title": "Saldo exterior exterior, mujeres, serie EM-2008-2021",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones (tablas 24282, 24296, 24304)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=24282",
+        "docId": "INE-24282"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie homogénea 2008-2021.",
+      "points": [
+        {
+          "period": "2008",
+          "value": 169830.0
+        },
+        {
+          "period": "2009",
+          "value": 46699.0
+        },
+        {
+          "period": "2010",
+          "value": 18693.0
+        },
+        {
+          "period": "2011",
+          "value": 22324.0
+        },
+        {
+          "period": "2012",
+          "value": -32262.0
+        },
+        {
+          "period": "2013",
+          "value": -91414.0
+        },
+        {
+          "period": "2014",
+          "value": -24142.0
+        },
+        {
+          "period": "2015",
+          "value": 19021.0
+        },
+        {
+          "period": "2016",
+          "value": 63033.0
+        },
+        {
+          "period": "2017",
+          "value": 104116.0
+        },
+        {
+          "period": "2018",
+          "value": 182213.0
+        },
+        {
+          "period": "2019",
+          "value": 237273.0
+        },
+        {
+          "period": "2020",
+          "value": 116578.0
+        },
+        {
+          "period": "2021",
+          "value": 81157.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-ambos-emcr-2021-2024",
+      "title": "Inmigracion exterior, ambos, serie EMCR-2021-2024",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones y Cambios de Residencia (tablas 69687, 69702, 69758)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69687",
+        "docId": "INE-69687"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie basada en la ECP; no es homogénea con EM-2008-2021.",
+      "points": [
+        {
+          "period": "2021",
+          "value": 887960.0
+        },
+        {
+          "period": "2022",
+          "value": 1258894.0
+        },
+        {
+          "period": "2023",
+          "value": 1250991.0
+        },
+        {
+          "period": "2024",
+          "value": 1288562.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-hombres-emcr-2021-2024",
+      "title": "Inmigracion exterior, hombres, serie EMCR-2021-2024",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones y Cambios de Residencia (tablas 69687, 69702, 69758)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69687",
+        "docId": "INE-69687"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie basada en la ECP; no es homogénea con EM-2008-2021.",
+      "points": [
+        {
+          "period": "2021",
+          "value": 467162.0
+        },
+        {
+          "period": "2022",
+          "value": 626804.0
+        },
+        {
+          "period": "2023",
+          "value": 641997.0
+        },
+        {
+          "period": "2024",
+          "value": 681606.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "inmigracion-mujeres-emcr-2021-2024",
+      "title": "Inmigracion exterior, mujeres, serie EMCR-2021-2024",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones y Cambios de Residencia (tablas 69687, 69702, 69758)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69687",
+        "docId": "INE-69687"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie basada en la ECP; no es homogénea con EM-2008-2021.",
+      "points": [
+        {
+          "period": "2021",
+          "value": 420798.0
+        },
+        {
+          "period": "2022",
+          "value": 632090.0
+        },
+        {
+          "period": "2023",
+          "value": 608994.0
+        },
+        {
+          "period": "2024",
+          "value": 606956.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-ambos-emcr-2021-2024",
+      "title": "Emigracion exterior, ambos, serie EMCR-2021-2024",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones y Cambios de Residencia (tablas 69687, 69702, 69758)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69687",
+        "docId": "INE-69687"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie basada en la ECP; no es homogénea con EM-2008-2021.",
+      "points": [
+        {
+          "period": "2021",
+          "value": 696866.0
+        },
+        {
+          "period": "2022",
+          "value": 531889.0
+        },
+        {
+          "period": "2023",
+          "value": 608695.0
+        },
+        {
+          "period": "2024",
+          "value": 662294.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-hombres-emcr-2021-2024",
+      "title": "Emigracion exterior, hombres, serie EMCR-2021-2024",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones y Cambios de Residencia (tablas 69687, 69702, 69758)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69687",
+        "docId": "INE-69687"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie basada en la ECP; no es homogénea con EM-2008-2021.",
+      "points": [
+        {
+          "period": "2021",
+          "value": 372847.0
+        },
+        {
+          "period": "2022",
+          "value": 287858.0
+        },
+        {
+          "period": "2023",
+          "value": 327662.0
+        },
+        {
+          "period": "2024",
+          "value": 351427.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "emigracion-mujeres-emcr-2021-2024",
+      "title": "Emigracion exterior, mujeres, serie EMCR-2021-2024",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones y Cambios de Residencia (tablas 69687, 69702, 69758)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69687",
+        "docId": "INE-69687"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie basada en la ECP; no es homogénea con EM-2008-2021.",
+      "points": [
+        {
+          "period": "2021",
+          "value": 324019.0
+        },
+        {
+          "period": "2022",
+          "value": 244031.0
+        },
+        {
+          "period": "2023",
+          "value": 281033.0
+        },
+        {
+          "period": "2024",
+          "value": 310867.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "saldo-exterior-derivado-ambos-emcr-2021-2024",
+      "title": "Saldo exterior derivado exterior, ambos, serie EMCR-2021-2024",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones y Cambios de Residencia (tablas 69687, 69702, 69758)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69687",
+        "docId": "INE-69687"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie basada en la ECP; no es homogénea con EM-2008-2021.",
+      "points": [
+        {
+          "period": "2021",
+          "value": 191094.0
+        },
+        {
+          "period": "2022",
+          "value": 727005.0
+        },
+        {
+          "period": "2023",
+          "value": 642296.0
+        },
+        {
+          "period": "2024",
+          "value": 626268.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "saldo-exterior-derivado-hombres-emcr-2021-2024",
+      "title": "Saldo exterior derivado exterior, hombres, serie EMCR-2021-2024",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones y Cambios de Residencia (tablas 69687, 69702, 69758)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69687",
+        "docId": "INE-69687"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie basada en la ECP; no es homogénea con EM-2008-2021.",
+      "points": [
+        {
+          "period": "2021",
+          "value": 94315.0
+        },
+        {
+          "period": "2022",
+          "value": 338946.0
+        },
+        {
+          "period": "2023",
+          "value": 314335.0
+        },
+        {
+          "period": "2024",
+          "value": 330179.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "saldo-exterior-derivado-mujeres-emcr-2021-2024",
+      "title": "Saldo exterior derivado exterior, mujeres, serie EMCR-2021-2024",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones y Cambios de Residencia (tablas 69687, 69702, 69758)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69687",
+        "docId": "INE-69687"
+      },
+      "confidence": "media",
+      "notes": "Suma de las edades simples de la tabla por edad (dato derivado). Serie basada en la ECP; no es homogénea con EM-2008-2021.",
+      "points": [
+        {
+          "period": "2021",
+          "value": 96779.0
+        },
+        {
+          "period": "2022",
+          "value": 388059.0
+        },
+        {
+          "period": "2023",
+          "value": 327961.0
+        },
+        {
+          "period": "2024",
+          "value": 296089.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "saldo-exterior-ambos-publicado-emcr",
+      "title": "Saldo migratorio exterior publicado por EMCR, ambos",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones y Cambios de Residencia: saldos (tabla 69758)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69758",
+        "docId": "INE-69758"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2021",
+          "value": 191094.0
+        },
+        {
+          "period": "2022",
+          "value": 727005.0
+        },
+        {
+          "period": "2023",
+          "value": 642296.0
+        },
+        {
+          "period": "2024",
+          "value": 626268.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "saldo-exterior-hombres-publicado-emcr",
+      "title": "Saldo migratorio exterior publicado por EMCR, hombres",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones y Cambios de Residencia: saldos (tabla 69758)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69758",
+        "docId": "INE-69758"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2021",
+          "value": 94315.0
+        },
+        {
+          "period": "2022",
+          "value": 338946.0
+        },
+        {
+          "period": "2023",
+          "value": 314335.0
+        },
+        {
+          "period": "2024",
+          "value": 330179.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "saldo-exterior-mujeres-publicado-emcr",
+      "title": "Saldo migratorio exterior publicado por EMCR, mujeres",
+      "unit": "personas",
+      "source": {
+        "title": "Estadística de Migraciones y Cambios de Residencia: saldos (tabla 69758)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69758",
+        "docId": "INE-69758"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2021",
+          "value": 96779.0
+        },
+        {
+          "period": "2022",
+          "value": 388059.0
+        },
+        {
+          "period": "2023",
+          "value": 327961.0
+        },
+        {
+          "period": "2024",
+          "value": 296089.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}

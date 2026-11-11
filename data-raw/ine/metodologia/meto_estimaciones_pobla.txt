@@ -1,0 +1,1292 @@
+Estimaciones
+Intercensales de
+Población
+
+Metodología
+
+
+
+
+                   Mayo 2023
+    Índice
+
+
+1   Introducción                                                3
+
+2   Insumos: Fuentes y tratamiento de los flujos demográficos   5
+
+2.1 Periodo 1971-2001                                           5
+
+2.2 Periodo 2001-2011                                           12
+
+2.3 Periodo 2011-2021                                           16
+
+3   Contabilidad de sucesos demográficos                        17
+
+3.1 Periodo 1971-2001                                           18
+
+3.2 Periodo 2001-2011                                           19
+
+3.3 Periodo 2011-2021                                           20
+
+4   Ajuste a los Censos de Población. Resultado final           21
+
+4.1 Periodo 1971-1981                                           22
+
+4.2 Periodo 1981-1991                                           23
+
+4.3 Periodo 1991-2001                                           23
+
+4.4 Periodo 2001-2011                                           24
+
+4.5 Periodo 2012-2021                                           25
+
+
+
+
+                                                                     2
+1   Introducción
+    El Censo de Población es la operación destinada a medir, cada diez años, la población
+    residente en España y en cada uno de sus municipios, de acuerdo a las definiciones
+    internacionalmente reconocidas. A partir de los mismos, el INE elabora estimaciones
+    de la población residente en España, en cada comunidad autónoma y en cada provincia
+    (y desde 2002 en cada isla) para los periodos entre censo y censo (Estimaciones
+    Intercensales de Población) y para el periodo posterior al último censo disponible. Son
+    estas cifras las que se utilizan como referentes en toda la producción estadística del
+    INE (Contabilidad Nacional, encuestas, indicadores, etc.) y se transmiten regularmente
+    como cifras oficiales de población de España y sus regiones a nivel internacional.
+
+    El Censo de Población y Viviendas de 2021 constituirá el inicio de la producción de
+    censos anuales, incluidos, a partir del censo de 2022, en la operación denominada
+    Censo de Población. Esta nueva operación se publicará por primera vez en diciembre
+    de 2023, proporcionando, por primera y única vez, dos censos juntos: el de 2022 y el
+    de 2023. En general, a final de cada año se publicará el censo a 1 de enero de ese año.
+
+    La estimación de las poblaciones posteriores al último censo disponible estaba
+    enmarcada en la operación Cifras de Población. Pero esta tuvo su última publicación
+    en noviembre de 2022, y será sustituida por la Estadística Continua de Población desde
+    mayo de 2023. Se realiza el cambio de operación, entre otras cosas, por el cambio
+    metodológico basado en la disponibilidad de censos anuales.
+
+    Con ese objetivo, se han ido calculando las Estimaciones Intercensales de Población,
+    de acuerdo con los sucesivos Censos de 1970, 1981, 1991, 2001, 2011 y 2021,
+    haciendo uso también de los datos sobre nacimientos, defunciones, migraciones y
+    adquisiciones de nacionalidad española disponibles para los correspondientes periodos
+    intercensales.
+
+    Las series de estimaciones intercensales de población alcanzan hasta el 1 de enero de
+    2021 y enlazan hacia atrás, tanto con los censos intermedios (1981, 1991, 2001, 2011
+    y 2021), como hacia delante con la nueva Estadística Continua de Población, que
+    englobará, por un lado, toda la serie de Censos y estimaciones intercensales hasta
+    2021 y, por otro, la serie de la población a partir de esa fecha. Se publica por primera
+    vez en mayo de 2023, a la vez que se publican las estimaciones intercensales del último
+    decenio. Todo ello constituye, junto a los censos anteriores a 1970, la serie estadística
+    histórica de cifras de población de España.
+
+    El censo anual que se publicará a final de cada año constituirá el cambio de carácter
+    provisional a definitivo de las poblaciones hasta dicha fecha (a 1 de enero y a fechas
+    intermedias del año previo), en un plazo de tiempo mucho menor, sin necesidad de
+    esperar 10 años. Por ese motivo, esta edición de las Estimaciones Intercensales de la
+    Población será la última.
+
+    Por lo tanto, las Estimaciones Intercensales de Población proporcionan la serie de cifras
+    de población residente durante el periodo que media entre dos Censos de Población
+    consecutivos. En concreto:
+
+
+
+
+                                                                                           3
+ las Estimaciones Intercensales de Población 2011-2021 constituyen una estimación
+  de la población residente en España, en cada comunidad autónoma y en cada
+  provincia (e isla, en las provincias insulares) a día 1 de enero y 1 de julio del periodo
+  que va desde el 1 de enero de 2012 hasta el 1 de enero de 2021, desagregadas
+  según sexo, año de nacimiento, edad, país de nacionalidad y país de nacimiento,
+  enlazando los resultados del Censo de Población de 2011 con los del Censo de
+  2021.
+ las Estimaciones Intercensales de Población 2001-2011 constituyen una estimación
+  de la población residente en España, en cada comunidad autónoma y en cada
+  provincia (e isla, en las provincias insulares) a día 1 de cada mes del periodo que va
+  desde el 1 de enero de 2002 hasta el 1 de enero de 2012, desagregadas según sexo,
+  año de nacimiento, edad, país de nacionalidad y país de nacimiento, enlazando los
+  resultados del Censo de Población de 2001 con los del Censo de 2011.
+ las Estimaciones Intercensales de Población 1991-2001 constituyen una estimación
+  de la población residente en España, en cada comunidad autónoma y en cada
+  provincia a día 1 de cada mes del periodo que va desde el 1 de marzo de 1991 hasta
+  el 1 de noviembre de 2001 desagregadas según sexo, año de nacimiento y edad,
+  enlazando los resultados del Censo de Población de 1991 con los del Censo de
+  2001.
+ las Estimaciones Intercensales de Población 1981-1991 constituyen una estimación
+  de la población residente en España, en cada comunidad autónoma y en cada
+  provincia a día 1 de cada mes del periodo que va desde el 1 de marzo de 1981 hasta
+  el 1 de marzo de 1991, desagregadas según sexo, año de nacimiento y edad,
+  enlazando los resultados del Censo de Población de 1981 con los del Censo de
+  1991.
+ y las Estimaciones Intercensales de Población 1970-1981 constituyen una
+  estimación de la población residente en España, en cada comunidad autónoma y en
+  cada provincia a día 1 de cada mes del periodo que va desde el 1 de enero de 1971
+  hasta el 1 de marzo de 1981, desagregadas según sexo, año de nacimiento y edad,
+  enlazando los resultados del Censo de Población de 1970 con los del Censo de
+  1981.
+
+Desde abril de 2013 y hasta diciembre de 2014, se disponía de estimaciones
+intercensales correspondientes a los periodos 1970-1981, 1981-1991, 1991-2001 y
+2001-2011. Pero las correspondientes a los tres primeros periodos habían sido
+elaboradas de acuerdo a diversos procesos de suavizado por edades, de manera que
+no constituían una serie homogénea.
+
+A lo largo del año 2014 se recalcularon las series intercensales 1981-1991 y 1991-2001,
+y a lo largo del año 2015 se recalcularon las series intercensales 1971-1981,
+obteniéndose así una serie continua y unificada de cifras de población que se inicia el
+1 de enero de 1971 y enlaza con el último periodo publicado de la estadística Cifras de
+Población.
+
+
+
+
+                                                                                         4
+      La metodología general de cálculo de las Estimaciones Intercensales de Población
+      1971-2021 consiste, básicamente, en:
+
+      1º. Llevar a cabo una contabilidad de los sucesos demográficos (nacimientos,
+      defunciones, migraciones y adquisiciones de nacionalidad española) acontecidos
+      durante el periodo intercensal, de manera que, partiendo de las cifras de población
+      residente en la fecha de referencia del Censo de Población inicial, se obtenga como
+      resultado una cifra de población residente en la fecha de referencia del segundo Censo.
+      Desde 2012, esta contabilidad ya está incluida en la operación Cifras de Población.
+
+      2º. Ajuste de los resultados del paso anterior a las cifras de población del segundo
+      Censo de Población, mediante un reparto de la diferencia entre las mismas a lo largo
+      de cada año del periodo considerado y en cada nivel de desagregación.
+
+
+
+
+2     Insumos: Fuentes y tratamiento de los flujos demográficos
+
+
+2.1 PERIODO 1971-2001
+
+      Las cifras de población proporcionadas por los respectivos Censos de Población se
+      toman como puntos de referencia, al nivel de desagregación ya mencionado.
+
+      Por otro lado, la contabilización de sucesos demográficos se lleva a cabo a partir de las
+      siguientes fuentes de información:
+       Nacimientos: resultados definitivos de las Estadísticas del Movimiento Natural de la
+        Población (MNP) de todos los años desde 1971.
+       Defunciones: resultados definitivos de las Estadísticas del Movimiento Natural de
+        la Población (MNP) de todos los años desde 1971.
+       Migraciones: para los años anteriores a 2001 no se ha realizado una contabilización
+        de las migraciones, puesto que para ese periodo de tiempo no existen fuentes de
+        información fiables.
+       Adquisiciones de nacionalidad española: desde 2001 y hasta 2011, se aproximan
+        a partir de los datos sobre concesiones de nacionalidad española otorgadas por el
+        Ministerio de Justicia y proporcionados por dicho organismo1, ajustados según los
+        criterios explicitados en el epígrafe 2.1.4. Y para los años anteriores a 2001 no se ha
+        realizado una contabilización de las adquisiciones de nacionalidad puesto que para
+        ese periodo de tiempo no existen fuentes de información fiables.
+
+
+
+
+1
+ Rigurosamente, la adquisición de la nacionalidad española no tiene efectos jurídicos hasta que no se produce su inscripción
+en el Registro Civil, una vez concedida por el Ministerio de Justicia.
+
+
+
+                                                                                                                          5
+2.1.1 Nacimientos
+
+Se han utilizado los resultados definitivos sobre nacimientos de madre residente en
+España del Movimiento Natural de la Población desde 1971.
+
+
+Periodo 1971-74
+MNP proporciona datos de nacimientos para el intervalo comprendido entre 1971 y
+1974 pero el nivel de desglose de estos es inferior al que se tiene a partir de 1975.
+En particular, para los nacimientos acontecidos entre 1971 y 1974:
+ Se dispone de datos desglosados por provincia de inscripción del nacimiento, pero
+  no por provincia de residencia de la madre.
+ Para cada provincia se dispone de datos anuales de nacimientos desagregados por
+  sexo.
+ Se dispone del total de nacimientos mensuales sin desglosar por sexo para todas
+  las provincias, excepto para Ceuta y Melilla.
+
+
+Por ello se aplica un tratamiento estadístico a la información sobre nacimientos
+disponible para el periodo 1971-1974, basado en la observación de la distribución de
+frecuencia de estos en periodos posteriores para los que se dispone de un mayor nivel
+de detalle, a fin de obtener el desglose necesario para la primera mitad del decenio.
+
+
+a) Estimación de nacimientos por provincia de residencia de la madre
+                      𝑡
+          𝑡      𝑁𝑎𝑐𝐼,𝑅
+    Sea 𝑓𝐼,𝑅 =          ⁄       , la distribución de nacimientos para cada provincia de
+                          𝑁𝑎𝑐𝐼𝑡
+    inscripción (I), en relación a la provincia de residencia de la madre (R).
+    Se obtiene una estimación de la distribución de frecuencias del par conformado por
+    las variables “provincia de inscripción (I)” y “provincia de residencia (R)” en función
+    de la distribución observada para el mismo durante el periodo 1975-1984. El
+    periodo observado se divide en dos tramos ,1975-1979 y 1980-1984, y se actúa de
+    acuerdo a los siguientes criterios:
+   a1) 𝑓̂𝐼,𝑅
+          𝑡
+             = 0 si ∑1979     𝑡
+                     𝑡=1975 𝑓𝐼,𝑅 < 1, ∀ 𝑡 ∈ [1971,1974]
+
+   a2) 𝑓̂𝐼,𝑅
+          𝑡
+             = 1/5 ∙ ∑1979     𝑡
+                      𝑡=1975 𝑓𝐼,𝑅 𝑠𝑖 𝐼 𝑦 𝑅 𝑠𝑜𝑛 𝑝𝑟𝑜𝑣𝑖𝑛𝑐𝑖𝑎𝑠 𝑙𝑖𝑚í𝑡𝑟𝑜𝑓𝑒𝑠, ∀ 𝑡 ∈ [1971,1974]
+
+   a3) 𝑓̂𝐼,𝑅
+          𝑡
+             = 1/5 ∙ ∑1979     𝑡
+                      𝑡=1975 𝑓𝐼,𝑅 si I y R son provincias no limítrofes
+
+                    y ∑1979     𝑡         1984     𝑡
+                       𝑡=1975 𝑓𝐼,𝑅 > 1 𝑦 ∑𝑡=1980 𝑓𝐼,𝑅 >1, ∀ 𝑡 ∈ [1971,1974]
+
+   a4) 𝑓̂𝐼,𝐼
+          𝑡
+             = 1 − ∑𝑅≠𝐼 𝑓̂𝐼,𝑅
+                           𝑡
+                              , ∀ 𝑡 ∈ [1971,1974]
+
+
+
+
+                                                                                          6
+b) Estimación de nacimientos mensuales inscritos en Ceuta y Melilla
+   Para el periodo 1971 a 1974 solo se dispone del total de nacimientos anuales
+   inscritos en las provincias de Ceuta y Melilla, pero se precisa su distribución
+   mensual.
+   Los nacimientos inscritos en cada provincia de Ceuta y de Melilla para cada año de
+   1971 a 1974, se estiman aplicando al total anual la distribución mensual promedio
+   obtenida durante el periodo 1975 a 1979. Es decir,
+                            𝑚,𝑡
+                         ̂ 𝐼𝑥
+                        𝑁𝑎𝑐          𝑡
+                                = 𝑁𝑎𝑐𝐼𝑥 ∗ 𝑓̂𝐼𝑥𝑚,𝑡 ∀ 𝑚 = 1 … . 12,
+                 𝐼𝑥 = 𝑝𝑟𝑜𝑣𝑖𝑛𝑐𝑖𝑎 𝑑𝑒 𝑖𝑛𝑠𝑐𝑟𝑖𝑝𝑐𝑖ó𝑛, 𝑥 = 𝐶𝑒𝑢𝑡𝑎 𝑜 𝑀𝑒𝑙𝑖𝑙𝑙𝑎,
+                                                     1979
+
+                                  𝑓̂𝐼𝑥𝑚,𝑡 = 1/5 ∙    ∑ 𝑓𝐼𝑥𝑚,𝑡 ,
+                                                    𝑡=1975
+
+   Finalmente se realiza un ajuste sobre el mes de mayor incidencia de nacimientos a
+   fin de que la suma de los nacimientos mensuales estimados coincida con el total
+   de nacimientos registrados:
+                                                   12
+                                   𝑡          𝑡           𝑚,𝑡
+                                                       ̂ 𝐼𝑥
+                             𝑆𝑒𝑎 𝐷𝐼𝑥 = 𝑁𝑎𝑐𝐼𝑥 − ∑ 𝑁𝑎𝑐
+                                                  𝑚=1
+                      ̂ 𝑃𝑀,𝑡 = 𝑁𝑎𝑐
+            𝑒𝑛𝑡𝑜𝑛𝑐𝑒𝑠 𝑁𝑎𝑐        ̂ 𝑃𝑀,𝑡 + 𝐷𝑃𝑡 , 𝑠𝑖𝑒𝑛𝑑𝑜 𝑁𝑎𝑐
+                                                       ̂ 𝑃𝑀,𝑡 = 𝑚𝑎𝑥𝑚 (𝑁𝑎𝑐
+                                                                       ̂ 𝑃𝑚,𝑡 )
+
+
+c) Estimación de nacimientos mensuales inscritos en cada provincia por sexo
+   Para el periodo 1971 a 1974 se dispone de los nacimientos anuales inscritos en las
+   provincias, desglosados por sexo. Para datos mensuales solo se dispone del total
+   de nacimientos y se precisa su distribución por sexo. Se obtiene del siguiente modo:
+                  𝑓𝐼𝑡 (𝑠) = 𝑁𝑎𝑐𝐼𝑡 (𝑠)/𝑁𝑎𝑐𝐼𝑡 ,        𝑠 ∈ {ℎ𝑜𝑚𝑏𝑟𝑒𝑠, 𝑚𝑢𝑗𝑒𝑟𝑒𝑠}
+                          ̂ 𝐼𝑚,𝑡 (𝑠) =𝑓𝐼𝑡 (𝑠) ∙ 𝑁𝑎𝑐𝐼𝑚,𝑡 , ∀ 𝑚 = 1 … . 12
+                         𝑁𝑎𝑐
+
+
+d) Obtención de los Nacimientos por Provincia de Residencia, sexo y mes.
+                              ̂ 𝑅𝑚,𝑡 (𝑠) = 𝑁𝑎𝑐
+                             𝑁𝑎𝑐            ̂ 𝐼𝑚,𝑡 (s) ∙ 𝑓̂𝐼,𝑅
+                                                            𝑡
+                                                               ,
+
+          ∀ 𝑚 = 1 … . 12,,     𝑠 ∈ {ℎ𝑜𝑚𝑏𝑟𝑒𝑠, 𝑚𝑢𝑗𝑒𝑟𝑒𝑠}, 𝑅 ∈ {01,02, … 51,52}
+
+
+Periodo 1975-2001
+MNP proporciona datos de nacimientos para el intervalo comprendido entre 1975 y
+2011 para todos los niveles de desagregación necesarios, por lo que no es necesario
+realizar ningún tipo de estimación adicional para este periodo.
+
+
+
+
+                                                                                     7
+2.1.2 Defunciones
+
+Se han empleado los resultados definitivos sobre defunciones de residentes en España
+del Movimiento Natural de la Población desde 1971.
+
+
+Periodo 1971-1974
+MNP proporciona datos de defunciones para el intervalo comprendido entre 1971 y
+1974, pero el nivel de desglose de estos es inferior al que se tiene a partir de 1975.
+En particular, para las defunciones acontecidas entre 1971 y 1974 se dispone de:
+ Defunciones anuales por sexo y edad inscritas en cada provincia, excepto en Ceuta
+  y Melilla.
+ Defunciones mensuales inscritas en cada provincia, excepto en Ceuta y Melilla.
+ Defunciones anuales por sexo inscritas en Ceuta y Melilla.
+Es por ello que se aplica un tratamiento estadístico a la información sobre las
+defunciones disponibles para el periodo 1971-1974, basado en la observación de la
+distribución de frecuencia de los mismos en periodos posteriores para los que se
+dispone de un mayor nivel de detalle, a fin de obtener el desglose necesario para la
+primera mitad del decenio.
+
+
+a) Estimación de defunciones mensuales por sexo, edad y provincia de inscripción (a
+   excepción de Ceuta y Melilla)
+  Dados:
+   𝐷𝑒𝑓𝐼𝑡 = 𝑑𝑒𝑓𝑢𝑛𝑐𝑖𝑜𝑛𝑒𝑠 𝑎𝑛𝑢𝑎𝑙𝑒𝑠 𝑒𝑛 𝑒𝑙 𝑎ñ𝑜 𝑡, 𝑖𝑛𝑠𝑐𝑟𝑖𝑡𝑎𝑠 𝑒𝑛 𝑙𝑎 𝑝𝑟𝑜𝑣𝑖𝑛𝑐𝑖𝑎 𝐼
+   𝐷𝑒𝑓𝐼𝑡 (𝑠) = 𝑑𝑒𝑓𝑢𝑛𝑐𝑖𝑜𝑛𝑒𝑠 𝑎𝑛𝑢𝑎𝑙𝑒𝑠 𝑒𝑛 𝑒𝑙 𝑎ñ𝑜 𝑡, 𝑖𝑛𝑠𝑐𝑟𝑖𝑡𝑎𝑠 𝑒𝑛 𝑙𝑎 𝑝𝑟𝑜𝑣𝑖𝑛𝑐𝑖𝑎 𝐼,
+              𝑑𝑒 𝑝𝑒𝑟𝑠𝑜𝑛𝑎𝑠 𝑑𝑒 𝑠𝑒𝑥𝑜 𝑠
+   𝐷𝑒𝑓𝐼𝑡 (𝑠, 𝑒) = 𝑑𝑒𝑓𝑢𝑛𝑐𝑖𝑜𝑛𝑒𝑠 𝑎𝑛𝑢𝑎𝑙𝑒𝑠 𝑒𝑛 𝑒𝑙 𝑎ñ𝑜 𝑡, 𝑖𝑛𝑠𝑐𝑟𝑖𝑡𝑎𝑠 𝑒𝑛 𝑙𝑎 𝑝𝑟𝑜𝑣𝑖𝑛𝑐𝑖𝑎 𝐼,
+                𝑑𝑒 𝑝𝑒𝑟𝑠𝑜𝑛𝑎𝑠 𝑑𝑒 𝑠𝑒𝑥𝑜 𝑠 𝑦 𝑒𝑑𝑎𝑑 𝑒
+
+   𝐷𝑒𝑓𝐼𝑚,𝑡 = 𝑑𝑒𝑓𝑢𝑛𝑐𝑖𝑜𝑛𝑒𝑠 𝑚𝑒𝑛𝑠𝑢𝑎𝑙𝑒𝑠 𝑒𝑛 𝑒𝑙 𝑚𝑒𝑠 𝑚 𝑑𝑒𝑙 𝑎ñ𝑜 𝑡, 𝑖𝑛𝑠𝑐𝑟𝑖𝑡𝑎𝑠 𝑒𝑛 𝑙𝑎 𝑝𝑟𝑜𝑣𝑖𝑛𝑐𝑖𝑎 𝐼
+   I=provincia de inscripción {01,02,…49,50}
+   s  {ℎ𝑜𝑚𝑏𝑟𝑒𝑠, 𝑚𝑢𝑗𝑒𝑟𝑒𝑠}
+   En primer lugar se obtienen las distribuciones por sexo y por edad de acuerdo a las
+   frecuencias anuales respectivas observadas en cada provincia de inscripción, es
+   decir:
+   Distribución estimada de defunciones por sexo,
+                                  𝑓̂𝐼𝑡 (𝑠) = 𝐷𝑒𝑓𝐼𝑡 (𝑠)/𝐷𝑒𝑓𝐼𝑡
+
+
+
+
+                                                                                    8
+   Distribución estimada de defunciones por sexo y edad
+                                     𝑓̂𝐼𝑡 (𝑠, 𝑒) = 𝐷𝑒𝑓𝐼𝑡 (𝑠, 𝑒)/𝐷𝑒𝑓𝐼𝑡 (𝑠)
+   Las defunciones mensuales por sexo y edad se estiman aplicando ambas
+   distribuciones a las defunciones mensuales totales:
+      ̂ 𝐼𝑚,𝑡 (𝑠, 𝑒) = 𝐷𝑒𝑓𝐼𝑚,𝑡 ∙ 𝑓̂𝐼𝑡 (𝑠) ∙ 𝑓̂𝐼𝑡 (𝑠, 𝑒), 𝑚 = 1 … . 12I=provincia de inscripción
+     𝐷𝑒𝑓
+                                           {01,02,…49,50}
+
+
+b) Estimación de defunciones anuales por sexo, edad en Ceuta y Melilla.
+  Dadas 𝐷𝑒𝑓𝐼𝑥𝑡 (𝑠) = 𝑑𝑒𝑓𝑢𝑛𝑐𝑖𝑜𝑛𝑒𝑠 𝑎𝑛𝑢𝑎𝑙𝑒𝑠 𝑖𝑛𝑠𝑐𝑟𝑖𝑡𝑎𝑠 𝑒𝑛 𝑙𝑎 𝑐𝑖𝑢𝑑𝑎𝑑 𝑎𝑢𝑡ó𝑛𝑜𝑚𝑎 𝑥,
+                     𝑑𝑒 𝑝𝑒𝑟𝑠𝑜𝑛𝑎𝑠 𝑑𝑒 𝑠𝑒𝑥𝑜 𝑠
+  Se obtiene la distribución de frecuencias de las defunciones por grupos quinquenales
+  de edad (Ge) para el periodo 1975-1979, en el que sí se dispone del desglose por
+  edades:
+  Distribución de frecuencias de defunciones por grupos quinquenales de edad
+                 ∑1979           𝑡
+                         𝐷𝑒𝑓𝐼𝑥 (𝑠, 𝐺𝑒)
+  𝑓̂𝐼𝑥𝑡 (𝑠, 𝐺𝑒) = 𝑡=1975             ⁄ 1979               , Ge  {0-4,5-9,…, 95-99, 100+}
+                                       ∑𝑡=1975 𝐷𝑒𝑓𝐼𝑥𝑡 (𝑠)
+  Distribución de defunciones por edades simples
+                1979
+                ∑            𝑡
+                        𝐷𝑒𝑓𝐼𝑥 (𝑠, 𝑒)
+  𝑓̂𝐼𝑥𝑡 (𝑠, 𝑒) = 𝑡=1975            ⁄ 1979                  , e  {0,1,,…, 99, 100+}
+                                     ∑𝑡=1975 𝐷𝑒𝑓𝐼𝑥𝑡 (𝑠, 𝐺𝑒)
+
+
+  Las defunciones anuales desglosadas por sexo y edad se estiman a partir de estas
+  distribuciones aplicadas sobre 𝐷𝑒𝑓𝐼𝑥𝑡 (𝑠)
+              ̂ 𝐼𝑥𝑡 (𝑠, 𝑒) = 𝐷𝑒𝑓𝐼𝑥𝑡 (𝑠) ∙ 𝑓̂𝐼𝑥𝑡 (𝑠, 𝐺𝑒) ∙ 𝑓̂𝐼𝑥𝑡 (𝑠, 𝑒), e  {0,1,,…, 99, 100+}
+             𝐷𝑒𝑓
+                 𝐼𝑥 = 𝑝𝑟𝑜𝑣𝑖𝑛𝑐𝑖𝑎 𝑑𝑒 𝑖𝑛𝑠𝑐𝑟𝑖𝑝𝑐𝑖ó𝑛,              𝑥 = 𝐶𝑒𝑢𝑡𝑎 ó 𝑀𝑒𝑙𝑖𝑙𝑙𝑎,
+
+  Las defunciones así estimadas se redondean y se ajusta el redondeo al total de
+  defunciones unidad a unidad en cada edad simple empezando por la mayoritaria
+  dentro del grupo quinquenal que más defunciones presenta.
+
+
+c) Estimación de defunciones mensuales por sexo y edad en Ceuta y Melilla.
+   La distribución mensual del promedio de las defunciones de 1975 a 1979 es la que
+   va a permitir estimar las defunciones mensuales para el periodo 1971-1974 en las
+   ciudades autónomas, es decir:
+  Distribución de frecuencias de defunciones por meses
+                                          1979        𝑚,𝑡
+                                      ∑       𝐷𝑒𝑓𝐼𝑥
+                             𝑓̂𝐼𝑥𝑚,𝑡 = 𝑡=1975       ⁄ 1979
+                                                     ∑𝑡=1975 𝐷𝑒𝑓𝐼𝑥𝑡
+   Se aplica esta distribución sobre las defunciones anuales por sexo y edad para
+   estimar las defunciones mensuales:
+
+                                                                                                 9
+                    ̂ 𝐼𝑥𝑚,𝑡 (𝑠, 𝑒) = 𝐷𝑒𝑓
+                   𝐷𝑒𝑓                ̂ 𝐼𝑥𝑡 (𝑠, 𝑒) ∙ 𝑓̂𝐼𝑥𝑚,𝑡   𝑚 = 1 … . 12
+                𝐼𝑥 = 𝑝𝑟𝑜𝑣𝑖𝑛𝑐𝑖𝑎 𝑑𝑒 𝑖𝑛𝑠𝑐𝑟𝑖𝑝𝑐𝑖ó𝑛, 𝑥 = 𝐶𝑒𝑢𝑡𝑎 ó 𝑀𝑒𝑙𝑖𝑙𝑙𝑎,
+
+
+d) Estimación de defunciones mensuales por sexo y generación
+  En un año de referencia t determinado, los individuos de una edad e determinada
+  pueden pertenecer a 2 generaciones:
+                                              g1= t - e
+                                             g2= g1 - 1
+  Las defunciones de cada edad que se producen en cada mes hay que repartirlas
+  entre las 2 generaciones que constituyen esa edad pero teniendo en cuenta el mes
+  de la defunción y los posibles meses de nacimiento. La mejor forma de verlo es
+  mediante el diagrama de Lexis:
+
+
+
+
+  De este esquema se desprende la siguiente distribución entre generaciones y
+  edades:
+                            ̂ 𝐼𝑚,𝑡 (𝑠, 𝑔1) = 𝐷𝑒𝑓
+                           𝐷𝑒𝑓                ̂ 𝐼𝑚,𝑡 (𝑠, 𝑒) ∙ 21/24
+
+                             ̂ 𝐼𝑚,𝑡 (𝑠, 𝑔2) = 𝐷𝑒𝑓
+                            𝐷𝑒𝑓                ̂ 𝐼𝑚,𝑡 (𝑠, 𝑒) ∙ 3/24
+
+                         e  {0,1,,…, 99, 100+}, g1=t-e; g2=g1-1
+
+
+
+
+                                                                               10
+e) Estimación de defunciones por provincia de residencia del fallecido
+                      𝑡
+             𝑡    𝐷𝑒𝑓𝐼,𝑅
+    Sea    𝑓𝐼,𝑅 =       ⁄      , la distribución de defunciones para cada provincia de
+                         𝐷𝑒𝑓𝐼𝑡
+    inscripción (I), en relación a la provincia de residencia del fallecido (R).
+    Se obtiene una estimación de la distribución de frecuencias del par conformado por
+    las variables “provincia de inscripción (I)” y “provincia de residencia (R)” en función
+    de la distribución observada para el mismo durante el periodo 1975-1984. El
+    periodo observado se divide en dos tramos ,1975-1979 y 1980-1984, y se actúa de
+    acuerdo a los siguientes criterios:
+    e1) 𝑓̂𝐼,𝑅
+           𝑡
+              = 0 si ∑1979     𝑡
+                      𝑡=1975 𝑓𝐼,𝑅 < 1, ∀ 𝑡 ∈ [1971,1974]
+
+    e2) 𝑓̂𝐼,𝑅
+           𝑡
+              = 1/5 ∙ ∑1979     𝑡
+                       𝑡=1975 𝑓𝐼,𝑅 𝑠𝑖 𝐼 𝑦 𝑅 𝑠𝑜𝑛 𝑝𝑟𝑜𝑣𝑖𝑛𝑐𝑖𝑎𝑠 𝑙𝑖𝑚í𝑡𝑟𝑜𝑓𝑒𝑠, ∀ 𝑡 ∈ [1971,1974]
+
+    e3) 𝑓̂𝐼,𝑅
+           𝑡
+              = 1/5 ∙ ∑1979     𝑡
+                       𝑡=1975 𝑓𝐼,𝑅 si I y R son provincias no limítrofes
+
+                     y ∑1979     𝑡         1984     𝑡
+                        𝑡=1975 𝑓𝐼,𝑅 > 1 𝑦 ∑𝑡=1980 𝑓𝐼,𝑅 >1, ∀ 𝑡 ∈ [1971,1974]
+
+    e4) 𝑓̂𝐼,𝐼
+           𝑡
+              = 1 − ∑𝑅≠𝐼 𝑓̂𝐼,𝑅
+                            𝑡
+                               , ∀ 𝑡 ∈ [1971,1974]
+
+
+  Para obtener las defunciones por provincia de residencia se aplica esta distribución
+  𝑓̂𝐼,𝑅
+     𝑡
+        a las defunciones por sexo, generación y mes inscritas en cada una de las 52
+  provincias de cada año de 1971 a 1974:
+                               ̂ 𝑅𝑚,𝑡 (𝑠, 𝑔) = 𝐷𝑒𝑓
+                              𝐷𝑒𝑓               ̂ 𝐼𝑚,𝑡 (s,g) ∙ 𝑓̂𝐼,𝑅
+                                                                  𝑡
+
+
+                            ∀ 𝑚 = 1 … . 12,       𝑡 ∈ {1971,1974},
+                       𝑠 ∈ {ℎ𝑜𝑚𝑏𝑟𝑒𝑠, 𝑚𝑢𝑗𝑒𝑟𝑒𝑠}, 𝑅 ∈ {01,02, … 51,52}
+
+
+Periodo 1975-2001
+MNP proporciona datos de defunciones para el intervalo comprendido entre 1975 y
+2011 para todos los niveles de desagregación necesarios, por lo que no es necesario
+realizar ningún tipo de estimación adicional.
+
+
+2.1.3 Migraciones
+Para los años anteriores a 2001, no se han tenido en cuenta las migraciones por la falta
+de fuentes de información fiable y de calidad.
+
+
+2.1.4 Adquisiciones de nacionalidad española
+Para los años anteriores a 2001, no se han tenido en cuenta las migraciones por la falta
+de información fiable y de calidad para esos años.
+
+
+
+
+                                                                                           11
+2.2 PERIODO 2001-2011
+
+         2.2.1 Nacimientos
+         En este periodo intercensal se incluye la desagregación de la población según
+         nacionalidad y lugar de nacimiento.
+
+         Por dicho motivo, se ha llevado a cabo una imputación previa de dicha variable para los
+         nacidos cuya nacionalidad no consta en los ficheros de MNP. Esta imputación se
+         establece en función de la normativa vigente sobre adquisición, de origen, de la
+         nacionalidad española. En este proceso de imputación hay que considerar las dos
+         situaciones siguientes:
+
+         a) Imputación de nacionalidad española del nacido: se tienen en cuenta las reglas
+            relativas a la declaración de la nacionalidad española que recoge el artículo 17.1
+            del Código Civil y las reglas que se han dictado en interpretación del mismo2. En
+            base a ello, se ha imputado la nacionalidad española cuando al menos uno de los
+            dos progenitores sea español o nacido en España.
+
+             Además, se ha imputado la nacionalidad española en los casos de nacidos en
+             España que a continuación se relacionan, en aplicación también de los criterios y
+             doctrina3 contenida en las Resoluciones de la Dirección General de los Registros y
+             del Notariado del Ministerio de Justicia en cuanto a los supuestos en los que
+             procede o no la declaración de la nacionalidad española, en particular, en los
+             supuestos previstos en el artículo 17.1.c del Código Civil:
+
+                  o    Cuando ambos progenitores tengan nacionalidad argentina, brasileña,
+                       colombiana, cubana, peruana o venezolana.
+                  o    Cuando ambos progenitores sean ecuatorianos pero ninguno nacido en
+                       Ecuador y el nacimiento es posterior al 15 de diciembre de 2008.
+                  o    Cuando ambos progenitores sean ecuatorianos y el nacimiento es anterior
+                       al 16 de diciembre de 2008.
+                  o    Cuando ambos progenitores sean chilenos y el nacimiento es anterior al 16
+                       de diciembre de 2008.
+
+2
+     Respecto a los nacidos en España, el mismo determina que “son españoles de origen:
+       a)   Los nacidos de padre o madre españoles.
+       b)   Los nacidos de padres extranjeros si, al menos uno, hubiera nacido en España. Se exceptúan los hijos de funcionario
+            diplomático o consular acreditado en España.
+c)     Los nacidos en España de padres extranjeros, si ambos carecieren de nacionalidad o si la legislación de ninguno de ellos
+       atribuye al hijo una nacionalidad.
+       d)   Los nacidos en España cuya filiación no resulte determinada. A estos efectos, se presumen nacidos en territorio
+            español los menores de edad cuyo primer lugar conocido de estancia sea territorio español.”
+3
+ Recopilada en la Instrucción de 28 de marzo de 2007, de la Dirección General de los Registros y del Notariado, sobre
+competencia de los Registros Civiles municipales y demás reglas relativas a los expedientes de declaración de nacionalidad
+española con valor de simple presunción, modificada por Circular de 16 de diciembre de 2008 de la Dirección General de
+Registros y el Notariado sobre aplicación del artículo 17 nº 1, c) del Código Civil respecto de los hijos de extranjeros nacidos
+en España y su complementaria de 21 de mayo de 2009.
+
+
+
+                                                                                                                            12
+       o   Cuando ambos progenitores sean bolivianos y el nacimiento anterior al 21
+           de mayo de 2009.
+       o   Cuando ambos progenitores sean apátridas.
+
+b) Imputación de nacionalidad extranjera del nacido: a los nacimientos a los que no se
+   les ha imputado la nacionalidad española, se les ha imputado la nacionalidad de la
+   madre.
+
+
+2.2.2 Defunciones
+Para este periodo intercensal se incluye la desagregación de la población según
+nacionalidad y país de nacimiento.
+
+Por este motivo, ha sido necesario imputar como nacionalidad del fallecido su país de
+nacimiento en los pocos casos en los que esta figura con código de país inválido, y si
+el país de nacimiento también tuviera un valor inválido, se han imputado ambas con la
+nacionalidad y el país de nacimiento de España.
+
+
+2.2.3 Migraciones
+Desde 2001 se utilizan datos elaborados a partir de la información registrada en el
+Padrón Municipal, a los que se ha aplicado el tratamiento estadístico que se detalla a
+continuación.
+
+La reconstrucción de los flujos migratorios exteriores e interiores de España durante los
+años 2001 a 2011 se ha llevado a cabo a partir de los movimientos registrados en el
+Padrón Municipal, tratados estadísticamente en la forma que se describe a
+continuación. Los datos obtenidos para el periodo 2008-2011 son coincidentes con los
+resultados de la Estadística de Migraciones.
+
+En primer lugar, se han recopilado los movimientos de los años 2001 a 2011 registrados
+en la base de datos del Padrón hasta enero de 2013, las cuales consideramos que
+deben estar asociadas con flujos migratorios reales de acuerdo a los siguientes
+criterios:
+
+Con inmigraciones exteriores:
+ Las Altas por Cambio de Residencia con procedencia en el extranjero.
+ Las Altas por Omisión sin procedencia o con procedencia en el extranjero de
+  individuos de nacionalidad extranjera, dado que en algún momento, aunque
+  desconozcamos exactamente cuándo, dicha población debió inmigrar a España.
+
+Con emigraciones exteriores:
+ Las Bajas por Cambio de Residencia con destino en el extranjero.
+ Las Bajas por Inscripción Indebida de extranjeros, entendiendo que si el
+  ayuntamiento ha detectado que el interesado ya no reside en el municipio y no se ha
+
+
+
+                                                                                      13
+           registrado su alta en ningún otro municipio, este debe haber abandonado España,
+           aunque no sepamos cuándo.
+         Las Bajas por Caducidad, pues el interesado no ha renovado su inscripción padronal,
+          el ayuntamiento ha detectado que la persona ya no reside en el municipio y no se ha
+          registrado su alta en ningún otro municipio, por lo que debe haber abandonado
+          España, aunque tampoco se tenga constancia de cuándo lo ha hecho.
+
+        Con migraciones interiores (interautonómicas, interprovinciales o interinsulares):
+         Las Altas (Bajas) por Cambio de Residencia con procedencia (origen) en otro
+          municipio español situado en una isla, provincia o comunidad autónoma distinta a la
+          de origen (procedencia).
+
+
+    Sobre dicha información, se han aplicado los siguientes procedimientos estadísticos:
+
+    1. Estimación de la fecha de ocurrencia de las emigraciones al extranjero cuantificadas
+       a partir de Bajas por Inscripción Indebida y Bajas por Caducidad. En general, dicha
+       estimación se ha realizado a partir de una asignación aleatoria entre la última
+       variación padronal anterior a la baja y la propia fecha de la baja, teniendo en cuenta
+       que en dicho espacio temporal debe haberse producido la correspondiente
+       emigración al extranjero4.
+
+    2. Ajuste a la definición de migración y, en coherencia con ella, a la definición de
+       residencia habitual, ambas internacionalmente reconocidas5. Según las mismas,
+
+4 En el caso de las Bajas por Inscripción Indebida procedentes del proceso de comprobación de residencia para
+
+comunitarios y no comunitarios con permiso de residencia permanente, si la persona está inscrita en el Registro
+Central de Extranjeros (RCE), entonces el extremo inferior del intervalo dentro del cual se elige aleatoriamente
+la fecha de emigración estimada es
+
+    -      El máximo entre la fecha de la última variación padronal anterior a la baja y la fecha de caducidad del
+           permiso de residencia permanente o de régimen comunitario, en caso de tenerlo.
+    -      El máximo entre la fecha de la última variación padronal anterior a la baja y la fecha de inscripción en
+           el RCE, en caso de no haber sido emitida la tarjeta de residencia permanente o de régimen comunitario.
+5 Según el Reglamento (CE) Nº 862/2007 del Parlamento Europeo y del Consejo de 11 de julio de 2007 sobre
+
+Estadísticas de Migraciones y Asilo, se define:
+
+    -      Inmigración: acción por la cual una persona fija su residencia habitual en el territorio de un Estado
+           miembro por un periodo que es, o se espera que sea, de al menos doce meses, habiendo sido
+           previamente residente habitual en otro Estado miembro o en un tercer país.
+
+    -      Emigración: acción por la cual una persona, que habiendo sido previamente residente habitual en el
+           territorio de un Estado miembro, deja de tener su residencia habitual en ese Estado miembro por un
+           periodo que es, o se espera que sea, de al menos doce meses.
+
+Consistentemente con el anterior, el Reglamento 763/2008 del Parlamento Europeo y del Consejo de 9 de julio
+de 2008 relativo a los Censos de Población y Viviendas define como residencia habitual el lugar en que una
+persona pasa normalmente el periodo diario de descanso, independientemente de ausencias temporales con
+fines de ocio, vacaciones, visitas a amigos o parientes, negocios, tratamiento médico o peregrinaje religioso.
+Deberán considerarse residentes habituales de la zona geográfica en cuestión únicamente:
+        i) aquellas personas que hayan vivido en su lugar de residencia habitual durante un periodo ininterrumpido
+        de al menos doce meses antes de la fecha de referencia, o
+
+
+
+                                                                                                               14
+         solo se consideran movimientos migratorios aquellos en los que se establece o se
+         tiene intención de establecer la residencia habitual en el lugar de destino por al
+         menos doce meses. Con el objetivo de aproximarnos de la forma más exacta
+         posible a la definición de migración, no se contabilizan como movimientos
+         migratorios los correspondientes a estancias en España inferiores a 12 meses.
+         Para ello, se eliminan las altas (entradas) y bajas (salidas) consecutivas de la
+         misma persona si entre ambas ha transcurrido menos de un año.
+
+        De forma simétrica, no se tendrán en cuenta las estancias en el extranjero de
+        menos de 12 meses, no considerando ni la baja al exterior ni su alta posterior.
+
+        El mismo criterio se aplica para las estancias en las distintas regiones de España.
+
+    3. Dado el desfase temporal existente entre la fecha de ocurrencia del movimiento
+       migratorio y el momento en que este acaba registrándose como variación en el
+       Padrón, en el momento de la estimación, solo disponemos de información parcial,
+       no completa, de los movimientos migratorios que han ocurrido en el pasado, tanto
+       más escasa cuanto más recientes sean estos. Se lleva, por ello, a cabo un
+       mecanismo de estimación que permita superar esta limitación del registro
+       administrativo para una descripción exhaustiva del fenómeno en los años más
+       recientes:
+
+         Así, los flujos migratorios que se producen en cada mes de un determinado año, a
+         partir del año 20066, se estiman, básicamente, a partir de las correspondientes
+         variaciones registradas en el Padrón Municipal hasta el momento de estimación,
+         multiplicándolas por un coeficiente de expansión que replica el ritmo de llegada de
+         tal información a los servicios centrales del INE en años anteriores, basándonos en
+         la regularidad observada de dicho ritmo de llegada de la información7.
+
+
+     ii) aquellas personas que hayan llegado a su lugar de residencia habitual durante los doce meses anteriores
+     a la fecha de referencia con la intención de permanecer en él durante al menos un año.
+
+Cuando no se puedan determinar las circunstancias descritas en los incisos i) o ii), se entenderá por «residencia
+habitual» el lugar de residencia legal o registrado;
+6 Desde el año 2009 en el caso de las Bajas por Caducidad, habida cuenta de que el procedimiento de caducidad
+
+de inscripciones padronales de ciudadanos no comunitarios sin autorización de residencia permanente no entra
+en vigor hasta finales de 2005 y, en consecuencia, el registro significativo de este tipo de bajas no tiene lugar
+hasta tiempo después.
+7 Tales estimaciones se consideran suficientemente precisas cuando el coeficiente de expansión a aplicar es
+
+inferior a 5. En otro caso, la estimación de las variaciones padronales de los meses más recientes se lleva a
+cabo a partir del comportamiento tendencial y estacional de la serie de variaciones mensuales estimadas para
+cada tipo de variación en el Padrón Municipal. Para ello, se define un coeficiente de crecimiento mensual de la
+serie, construido como la combinación lineal convexa de un coeficiente de tendencia y otro de estacionalidad. El
+primero, deducido como promedio, para los doce meses anteriores, de los coeficientes de crecimiento de cada
+mes sobre la suma de los dos que le preceden (coeficiente de tendencia), Ctend ; el segundo, deducido como
+el promedio, para el mismo mes de los dos años anteriores, de los coeficientes de crecimiento de cada mes
+sobre la suma de los dos meses que le preceden (coeficiente de estacionalidad), Cest . De esta forma, el
+coeficiente de crecimiento empleado en la estimación resulta de la expresión:
+
+C    Ctend  (1   )  Cest , con 0    1
+
+
+                                                                                                             15
+          En primer lugar, se define la variable retardo, 𝑟, como el número de meses que un
+          cierto tipo de variación padronal ocurrida en un determinado mes y registrada en el
+          Padrón tarda en ser confirmada e incorporada como tal variación en la base de datos
+          centralizada del Padrón Municipal. Sea entonces 𝑉   ̂𝑚,𝑎−1 el total de tales variaciones
+          que se estima que hayan ocurrido durante el mes 𝑚 del año 𝑎 − 18 (previamente
+                                                             𝑟
+          estimadas con esta misma metodología) y 𝑉𝑚,𝑎−1            el número de las mismas
+          incorporadas a la base de datos centralizada del Padrón Municipal hasta 𝑟 meses
+          después del mes 𝑚. Se define entonces el coeficiente de expansión correspondiente
+          al mes 𝑚 del año 𝑎 para el retardo 𝑟 como el cociente9:
+
+                                                          𝑟
+                                                                   𝑉̂𝑚,𝑎−1
+                                                        𝐶𝐸𝑚,𝑎 =      𝑟
+                                                                   𝑉𝑚,𝑎−1
+                            𝑟
+          Sea entonces 𝐶𝐸𝑚,𝑎   el número total de variaciones padronales registradas en el
+          Padrón ocurridas en el mes m del año a y recibidas en servicios centrales del INE
+          hasta r meses después del mes m . Entonces, la estimación del total de variaciones
+          ocurridas en el mes 𝑚del año 𝑎, 𝑉̂𝑚,𝑎 , resulta entonces de:
+
+                                                     𝑉̂𝑚,𝑎 = 𝐶𝐸𝑚,𝑎
+                                                               𝑟      𝑟
+                                                                   ∙ 𝑉𝑚,𝑎
+
+          Como resultados de estos tres pasos, se obtiene un fichero de variaciones
+          padronales ponderado. La ponderación de cada registro es el coeficiente de
+          expansión arriba definido correspondiente al tipo de variación padronal de que se
+          trate.
+
+
+       2.2.4 Adquisiciones de nacionalidad española
+
+       Se ha empleado, como aproximación a los datos de adquisiciones de nacionalidad
+       española, el registro de concesiones de nacionalidad española del Ministerio de Justicia
+       aprobadas entre los años 2001 y 2011. De tal registro, no se han tenido en cuenta el
+       pequeño número de casos en los que alguna de las variables de interés para el cálculo
+       estuviera en blanco o tuviera valores no válidos.
+
+
+2.3 PERIODO 2011-2021
+
+       Los flujos demográficos descritos en el apartado anterior ya se han derivado en
+       operaciones propias, con el nivel de detalle necesario para el cálculo de las
+       estimaciones intercensales de población:
+
+
+
+8
+    a  3 , en el caso de Bajas por Inscripción Indebida y de Bajas por Caducidad.
+                Vˆm,a 3
+9   CEmr ,a               , en el caso de Bajas por Inscripción Indebida y de Bajas por Caducidad.
+                Vmr,a 3
+
+
+
+                                                                                                      16
+      Las Estadísticas del Movimiento Natural10 de la Población (definitivas), como fuente
+       de los datos de nacimientos y defunciones de residentes en España (madres en el
+       caso de nacimientos).
+      La Estadística de Migraciones11, que proporcionará los datos de migración exterior
+       e interior.
+      Estadística de Adquisiciones de Nacionalidad Española de Residentes12, desde el
+       año 2013. Recoge los registros de adquisiciones de nacionalidad española del
+       Registro Civil. Hasta el año 2013, la única fuente disponible sobre nacionalizaciones
+       estaba constituida por la Estadística de Concesiones de Nacionalidad Española por
+       Residencia, elaborada por el Ministerio de Empleo y Seguridad Social, y que sigue
+       produciendo en la actualidad. Esta estadística difiere de la Estadística de
+       Adquisiciones de Nacionalidad Española de Residentes en dos puntos clave: solo
+       considera adquisiciones por residencia, y la referencia temporal es el momento de
+       la concesión de la nacionalidad, que es un trámite previo a la adquisición efectiva,
+       por lo que existe además un desfase temporal entre ambas estadísticas.
+
+
+
+
+3    Contabilidad de sucesos demográficos
+     Para calcular unas cifras de población intercensales de partida, se han de calcular
+     previamente los fenómenos demográficos de todos los periodos intercensales, con la
+     desagregación requerida para el cálculo de la población. Así, aplicaremos a la población
+     censal inicial de un periodo intercensal los fenómenos demográficos ocurridos en este,
+     para construir las poblaciones de todo el periodo, antes de hacer el ajuste al censo final.
+     Este apartado lo dedicaremos a explicar cómo se han obtenido estos flujos en cada
+     periodo.
+     La inclusión en 2002 de la desagregación por nacionalidad y lugar de nacimiento obliga
+     a llevar a cabo procesos distintos para el cálculo de las Estimaciones Intercensales de
+     la Población antes y después del Censo de Población de 2001. Por otra parte, a partir
+     del año 2011, los fenómenos demográficos estaban implícitamente recogidos en la
+     operación Cifras de Población, por lo que podemos dividir el proceso de cálculo en tres
+     tramos: periodo 1971-2001, periodo 2001-2011 y periodo 2011-2021.
+
+
+     Las fechas de referencia de los censos considerados son:
+      Censo 1970: 31 de diciembre de 1970 (equiparable a 1 de enero de 1971)
+      Censo 1981: 1 de marzo de 1981
+      Censo 1991: 1 de marzo de 1991
+      Censo 2001: 1 de noviembre de 2001
+      Censo 2011: 1 de noviembre de 2011
+
+10 Se puede consultar la metodología en https://ine.es/metodologia/t20/t2030301.pdf
+11 Se puede consultar la metodología en https://ine.es/metodologia/t20/t2030277.pdf
+12 Se puede consultar la metodología en https://ine.es/inebaseDYN/anes30279/docs/meto_anes.pdf
+
+
+
+
+                                                                                                 17
+    Censo 2021: 1 de enero de 2021
+
+
+   Por lo tanto, los periodos intercensales serán los siguientes, con un número de meses
+   diferente entre cada dos censos consecutivos.
+
+
+3.1 PERIODO 1971-2001
+
+   Por un lado, una contabilidad de los sucesos demográficos acontecidos (nacimientos y
+   defunciones) entre el 1 de enero de 1971 y el 1 de noviembre de 2001 determina la
+   población de cada sexo y año de nacimiento residente en España, en cada comunidad
+   autónoma y en cada provincia a 1 de noviembre de 2001, si tomamos como referencia
+   las cifras de población para cada una de esas desagregaciones proporcionadas por los
+   Censos de Población de 1970, 1981, 1991 y 2001. Para ello, se procede,
+   sucesivamente, según las ecuaciones:
+
+                                𝑚+1      𝑚        𝑚        𝑚
+                               𝑃𝑖,𝑠,𝑔 = 𝑃𝑖,𝑠,𝑔 + 𝑁𝑖,𝑠,𝑔 − 𝐷𝑖,𝑠,𝑔
+
+   Para 𝑚 = 1,2, … ,122 siendo 𝑚 = 1 el primer periodo, que corresponde a enero de 1971
+   y 𝑚 = 122 el penúltimo periodo, que corresponde a febrero de 1981, para el periodo
+   intercensal que va de 1971 a 1981.
+
+   Para 𝑚 = 1,2, … ,120 siendo 𝑚 = 1 el primer periodo, que corresponde a marzo de
+   1981 y 𝑚 = 120 el penúltimo periodo, que corresponde a febrero de 1991, para el
+   periodo intercensal que va de 1981 a 1991.
+
+   Y para 𝑚 = 1,2, … ,128 siendo 𝑚 = 1 el primer periodo, que corresponde a marzo de
+   1991 y 𝑚 = 128 el penúltimo periodo, que corresponde a octubre de 2001, para el
+   periodo intercensal que va de 1991 a 2001.
+
+   Donde:
+    𝑚
+   𝑃𝑖,𝑠,𝑔 es la población residente en la provincia 𝑖 , de sexo 𝑠 y año de nacimiento 𝑔 a
+   día 1 del mes 𝑚. Consideraremos la primera población coincidente con el censo de
+                                  1        𝐶𝑒𝑛𝑠𝑜 𝑖𝑛𝑖𝑐
+   inicio del periodo, es decir, 𝑃𝑖,𝑠,𝑔 = 𝑃𝑖,𝑠,𝑔      , de modo que la primera población que
+                          2
+   hay que estimar es 𝑃𝑖,𝑠,𝑔 .
+
+    𝑚
+   𝑁𝑖,𝑠,𝑔 son los nacimientos de madre residente en la provincia 𝑖 , de sexo 𝑠 y año de
+   nacimiento 𝑔 ocurridos a lo largo del mes 𝑚.
+    𝑚
+   𝐷𝑖,𝑠,𝑔 son las defunciones de residentes en la provincia 𝑖, de sexo 𝑠 y año de nacimiento
+   𝑔 ocurridas a lo largo del mes 𝑚.
+
+
+
+
+                                                                                         18
+3.2 PERIODO 2001-2011
+
+     Por otro lado, una contabilidad de los sucesos demográficos acontecidos (nacimientos,
+     defunciones, migraciones y adquisiciones de nacionalidad española) entre el 1 de
+     noviembre de 2001 y el 31 de diciembre de 201113 determina la población de cada sexo,
+     año de nacimiento, país de nacionalidad y país de nacimiento residente en España, en
+     cada comunidad autónoma y en cada provincia (islas, en las provincias insulares) a 1
+     de enero de 2012, si partimos de las cifras de población para cada una de esas
+     desagregaciones proporcionada por el Censo de Población de 2001. Para ello, se
+     procede, sucesivamente, según las ecuaciones:
+      𝑚+1               𝑚                 𝑚               𝑚                 𝑚
+     𝑃ℎ,𝑠,𝑔,𝐸𝑠𝑝𝑎ñ𝑎,𝑗 = 𝑃ℎ,𝑠,𝑔,𝐸𝑠𝑝𝑎ñ𝑎,𝑗 + 𝑁ℎ,𝑠,𝐸𝑠𝑝𝑎ñ𝑎,𝑗 − 𝐷ℎ,𝑠,𝑔,𝐸𝑠𝑝𝑎ñ𝑎,𝑗 + 𝐼ℎ,𝑠,𝑔,𝐸𝑠𝑝𝑎ñ𝑎,𝑗
+                         𝑚                  𝑚                  𝑚                     𝑚
+                      − 𝐸ℎ,𝑠,𝑔,𝐸𝑠𝑝𝑎ñ𝑎,𝑗 + 𝐼𝑖ℎ,𝑠,𝑔,𝐸𝑠𝑝𝑎ñ𝑎,𝑗 − 𝐸𝑖ℎ,𝑠,𝑔,𝐸𝑠𝑝𝑎ñ𝑎,𝑗 + ∑ 𝑁𝑎𝑐ℎ,𝑠,𝑔,𝑖,𝑗
+                                                                                         𝑖
+
+     Si 𝑖 ≠ 𝐸𝑠𝑝𝑎ñ𝑎
+      𝑚+1          𝑚            𝑚          𝑚            𝑚            𝑚             𝑚             𝑚
+     𝑃ℎ,𝑠,𝑔,𝑖,𝑗 = 𝑃ℎ,𝑠,𝑔,𝑖,𝑗 + 𝑁ℎ,𝑠,𝑖,𝑗 − 𝐷ℎ,𝑠,𝑔,𝑖,𝑗 + 𝐼ℎ,𝑠,𝑔,𝑖,𝑗 − 𝐸ℎ,𝑠,𝑔,𝑖,𝑗 + 𝐼𝑖ℎ,𝑠,𝑔,𝑖,𝑗 − 𝐸𝑖ℎ,𝑠,𝑔,𝑖,𝑗
+                               𝑚
+                       − 𝑁𝑎𝑐ℎ,𝑠,𝑔,𝑖,𝑗
+
+
+     Donde:
+       𝑚
+     𝑃ℎ,𝑠,𝑔,𝑖,𝑗 es la población residente en la provincia (isla, en el caso de las provincias
+     insulares) h , de sexo 𝑠, año de nacimiento 𝑔, país de nacionalidad 𝑖 y país de
+     nacimiento 𝑗 a día 1 del mes 𝑚. Consideraremos la primera población coincidente con
+                                                  1          𝐶𝑒𝑛𝑠𝑜 𝑖𝑛𝑖𝑐
+     el censo de inicio del periodo, es decir, 𝑃ℎ,𝑠,𝑔,𝑖,𝑗 = 𝑃ℎ,𝑠,𝑔,𝑖,𝑗  , de modo que la primera
+                                           2
+     población que hay que estimar es 𝑃ℎ,𝑠,𝑔,𝑖,𝑗 .
+
+       𝑚
+     𝑁ℎ,𝑠,𝑖,𝑗 son los nacimientos de madre residente en la provincia (isla, en el caso de las
+     provincias insulares) ℎ, de sexo s , país de nacionalidad i y país de nacimiento j
+     ocurridos a lo largo del mes m .
+       𝑚
+     𝐷ℎ,𝑠,𝑔,𝑖,𝑗 son las defunciones de residentes en la provincia (isla, en el caso de las
+     provincias insulares) ℎ, de sexo 𝑠, año de nacimiento 𝑔, país de nacionalidad 𝑖 y país
+     de nacimiento 𝑗 ocurridas a lo largo del mes 𝑚.
+      𝑚
+     𝐼ℎ,𝑠,𝑔,𝑖,𝑗 son las inmigraciones procedentes del extranjero en la provincia (isla, en el caso
+     de las provincias insulares) ℎ, de personas de sexo 𝑠, año de nacimiento 𝑔, país de
+     nacionalidad 𝑖 y país de nacimiento 𝑗 ocurridas a lo largo del mes 𝑚.
+      𝑚
+     𝐸ℎ,𝑠,𝑔,𝑖,𝑗 son las emigraciones al extranjero de residentes en la provincia (isla, en el caso
+     de las provincias insulares) ℎ, de sexo 𝑠, año de nacimiento 𝑔, país de nacionalidad 𝑖 y
+     país de nacimiento 𝑗 ocurridas a lo largo del mes 𝑚.
+
+13 A pesar de que la fecha de referencia de Censo 2011 es 1 de noviembre de 2011, se decidió estimar las
+
+poblaciones de dos meses más, en el ámbito de las Estimaciones Intercensales del decenio 2001-2011, para
+alcanzar la fecha de referencia 1 de enero de 2012 y fijar así dicha población.
+
+
+                                                                                                             19
+     𝑚
+   𝐼𝑖ℎ,𝑠,𝑔,𝑖,𝑗 son las inmigraciones procedentes del resto de España en la provincia (isla, en
+   el caso de las provincias insulares) ℎ, de personas de sexo 𝑠, año de nacimiento 𝑔, país
+   de nacionalidad 𝑖 y país de nacimiento 𝑗 ocurridas a lo largo del mes 𝑚.
+     𝑚
+   𝐸𝑖ℎ,𝑠,𝑔,𝑖,𝑗 son las emigraciones con destino al resto de España de residentes en la
+   provincia (isla, en el caso de las provincias insulares) ℎ, de sexo 𝑠, año de nacimiento
+   𝑔, país de nacionalidad 𝑖 y país de nacimiento 𝑗 ocurridas a lo largo del mes 𝑚.
+        𝑚
+   𝑁𝑎𝑐ℎ,𝑠,𝑔,𝑖,𝑗 son las adquisiciones de nacionalidad española de residentes en la provincia
+   (isla, en el caso de las provincias insulares) ℎ, de personas de sexo 𝑠, año de nacimiento
+   𝑔, país de nacionalidad 𝑖 y país de nacimiento 𝑗 ocurridas a lo largo mes 𝑚.
+
+
+   Para 𝑚 = 1,2, … ,120 siendo 𝑚 = 1 el primer periodo, que corresponde a noviembre de
+   2001 y 𝑚 = 120 el penúltimo periodo, que corresponde a octubre de 2011, para el
+   periodo intercensal que va de 2001 a 2011.
+
+
+
+3.3 PERIODO 2011-2021
+
+   La contabilidad de sucesos demográficos descrita para los anteriores periodos, ya se
+   recoge de forma sistemática para este periodo en la operación Cifras de Población.
+   Operación estadística Cifras de Población
+   La operación Cifras de Población se empezó a publicar en junio de 2013, con datos
+   desde el 1 de julio de 2012 (además de incluir toda la serie intercensal anterior hasta el
+   1 de enero de 2012). Se publica por última vez en diciembre de 2022, momento en el
+   que ya está publicado el Censo 2021. A partir de entonces, la operación Cifras de
+   Población pasa a ser sustituida por la Estadística Continua de Población, que contendrá
+   todas las estimaciones intercensales hasta el 1 de enero de 2021, y de ahí en adelante,
+   la estimación de la población provisional, que será definitiva cuando se publique un
+   nuevo censo, desde 2023 con carácter anual.
+   Las Cifras de Población se calculaban a 1 de enero y a 1 de julio de cada año,
+   desagregadas por sexo, año de nacimiento, edad, nacionalidad y país de nacimiento.
+   Se derivaban a partir de las Cifras de Población al inicio del semestre previo (o los
+   resultados de las Estimaciones Intercensales de Población a 1 de enero de 2012, en el
+   año de partida) y los fenómenos demográficos ocurridos a lo largo de dicho semestre.
+   Estos fenómenos demográficos se obtenían, como se mencionó anteriormente, de
+   operaciones estadísticas previamente elaboradas, como son las Estadísticas del
+   Movimiento Natural de la Población de nacimientos y defunciones, la Estadística de
+   Migraciones y la Estadística de Adquisiciones de Nacionalidad Española de Residentes.
+   De este modo, para obtener la población a 1 de julio del año t, se partía de la población
+   a 1 de enero del año t y se le aplicaban los fenómenos demográficos ocurridos en el
+   primer semestre de ese año; para obtener la población a 1 de enero del año t+1 se
+   partía de la población a 1 de julio del año anterior, t, y se le aplicaban los fenómenos
+   demográficos ocurridos en el segundo semestre del año t.
+
+
+
+                                                                                           20
+    El método de cálculo era el método de los componentes descrito en el apartado anterior,
+    con la diferencia de que se realizaban los cálculos semestrales en lugar de mensuales,
+    y se partía del 1 de enero de 2012 (como extrapolación del Censo 2011).
+    Con ello, se garantizaba la total consistencia de las informaciones relativas a flujos
+    demográficos y stocks de población, en todos los niveles territoriales considerados, así
+    como el cumplimiento de la ecuación compensadora, en la que se afirma que la
+    población final de un periodo está formada por la población inicial, tras aplicarle
+    (sumando o restando, según el caso) los fenómenos demográficos ocurridos en dicho
+    periodo.
+    A partir de las cifras resultantes de este proceso se derivan las cifras por edad bajo la
+    hipótesis de distribución uniforme de la incidencia de cada fenómeno en cada
+    generación entre las edades exactas que los individuos de cada generación tendrán en
+    algún momento del año.
+
+    Corrección de la población de 100 y más años
+    En junio de 2017 se aplicó una corrección sobre las Cifras de Población a 1 de enero
+    de 2016 para las edades de 100 y más años, a partir de mejoras en los enlaces del
+    padrón con los ficheros históricos de defunciones y con diversos registros
+    administrativos. Las Cifras de Población publicadas a partir de ese momento contenían
+    esta corrección que se realizó de forma integrada con el proceso de cálculo y se
+    aplicaba a la población que pasaba a tener 100 años en cada periodo. Esto implicaba
+    la necesidad de introducir una pequeña partida de ajuste para lograr explicar el
+    incremento de población como suma de sus componentes (nacimientos, defunciones,
+    inmigración, emigración y ajuste).
+    Del periodo intercensal 2012 – 2021 quedaron, pues, sin corregir, las poblaciones de
+    100 y más años para el periodo 2012 hasta 2015, ambos extremos a 1 de julio. Por este
+    motivo, en el contexto del cálculo de las Estimaciones Intercensales de Población,
+    primero se han corregido estas poblaciones.
+    Para ello se han calculado las probabilidades perspectivas de paso correspondientes a
+    las tablas de mortalidad de 2016, y han sido aplicadas a las poblaciones del periodo
+    anterior, diferenciando hombres y mujeres, enlazándolas hacia atrás para que llegasen
+    paulatinamente a los valores poblacionales de 2012.
+
+
+
+
+4   Ajuste a los Censos de Población. Resultado final
+    Como resultado de la contabilidad de sucesos demográficos ocurridos tras el primer
+    censo de cada periodo (ya integrada en la operación Cifras de Población para el periodo
+    intercensal 2011-2021), se obtienen unas cifras de población residente en España, en
+    cada comunidad autónoma y en cada provincia (e isla, en las provincias insulares) en
+    la fecha de referencia del segundo censo de dicho periodo intercensal, con cierto grado
+    de desagregación en cada periodo.
+
+    Dichas cifras difieren de las proporcionadas por el Censo de Población, siendo la
+    diferencia atribuible bien a errores de sobreestimación o subestimación de los
+
+
+                                                                                          21
+   respectivos censos o bien a errores en la medición de los sucesos demográficos
+   acontecidos en el periodo que media entra las fechas de referencia de estos. Dada la
+   imposibilidad de atribuir dicha diferencia a una u otra de tales causas, se lleva a cabo
+   un ajuste de los stocks de población derivados para cada periodo intercensal, a los
+   resultados del Censo de 1981, 1991, 2001, 2011 y 2021 respectivamente, mediante un
+   reparto uniforme de la mencionada diferencia, para cada nivel de desagregación
+   considerado, en cada fecha de referencia de los cuatro periodos intercensales.
+
+
+   Cada periodo intercensal tiene un número de meses (o semestres) a estimar diferente,
+   dependiendo de las fechas de referencia de los censos implicados en cada tramo, lo
+   cual implica un proceso de ajuste diferente para cada periodo.
+   Aunque en algunos periodos el cálculo de las poblaciones intercensales se realice por
+   meses, la serie publicada tiene como fechas de referencia el 1 de enero y el 1 de julio
+   de cada año.
+
+
+4.1 PERIODO 1971-1981
+
+   Se denota por:
+
+    1−3−1981
+   𝑃𝑖,𝑠,𝑔    la cifra de población residente en la provincia i, de sexo s y año de nacimiento
+   g a 1 de marzo de 1981, según el resultado del cálculo descrito en el punto 3 de este
+   documento.
+
+   𝑃̂𝑖,𝑠,𝑔
+     1−3−1981
+              la cifra de población según el Censo de Población de 1981.
+
+   Sea entonces la diferencia:
+
+                              𝐷𝑖,𝑠,𝑔 = 𝑃̂𝑖,𝑠,𝑔
+                                         1−3−1981    1−3−1981
+                                                  − 𝑃𝑖,𝑠,𝑔
+
+   La diferencia 𝐷𝑖,𝑠,𝑔 se distribuye uniformemente en cada mes del periodo que va desde
+   enero de 1971 a febrero de 1981, derivándose:
+
+
+    Para g ≤ 1970:
+
+    𝑚+1     𝑚
+   𝑑𝑖,𝑠,𝑔 = 122 𝐷𝑖,𝑠,𝑔 , para 𝑚 = 1,2, … ,122
+
+
+    Para 𝑔 = 1971,1972, … ,1981:
+
+    𝑚+1      𝑚−(12(𝑔−1971))
+   𝑑𝑖,𝑠,𝑔 = 122−(12(𝑔−1971)) 𝐷𝑖,𝑠,𝑔 , para 𝑚 = 122 − 12(𝑔 − 1971), … ,122
+
+                               𝑚+1                                            𝑚+1      𝑚+1
+   Y en ambos casos, la cifra 𝑃𝑖,𝑠,𝑔 resultante del punto 3 se reemplaza por 𝑃𝑖,𝑠,𝑔 + 𝑑𝑖,𝑠,𝑔
+
+
+
+
+                                                                                          22
+4.2 PERIODO 1981-1991
+
+   Se denota por:
+
+    1−3−1991
+   𝑃𝑖,𝑠,𝑔    la cifra de población residente en la provincia i, de sexo s y año de nacimiento
+   g a 1 de marzo de 1991, según el resultado del cálculo descrito en el punto 3 de este
+   documento.
+
+   𝑃̂𝑖,𝑠,𝑔
+     1−3−1991
+              la cifra de población según el Censo de Población de 1991.
+
+   Sea entonces la diferencia:
+
+                              𝐷𝑖,𝑠,𝑔 = 𝑃̂𝑖,𝑠,𝑔
+                                         1−3−1991    1−3−1991
+                                                  − 𝑃𝑖,𝑠,𝑔
+
+   La diferencia 𝐷𝑖,𝑠,𝑔 se distribuye uniformemente en cada mes del periodo que va desde
+   marzo de 1981 a febrero de 1991 (120 meses), derivándose:
+
+
+    Para g ≤ 1981:
+
+    𝑚+1      𝑚
+   𝑑𝑖,𝑠,𝑔 = 120 𝐷𝑖,𝑠,𝑔 , para 𝑚 = 1,2, … ,120
+
+
+    Para 𝑔 = 1982,1983, … ,1991:
+
+    𝑚+1      𝑚−(12(𝑔−1982)+10)
+   𝑑𝑖,𝑠,𝑔 = 120−(12(𝑔−1982)+10) 𝐷𝑖,𝑠,𝑔 , para 𝑚 = 120 − (12(𝑔 − 1982) + 10), … ,120
+                               𝑚+1                                            𝑚+1
+   Y en ambos casos, la cifra 𝑃𝑖,𝑠,𝑔 resultante del punto 3 se reemplaza por 𝑃𝑖,𝑠,𝑔 +
+     𝑚+1
+    𝑑𝑖,𝑠,𝑔
+
+
+4.3 PERIODO 1991-2001
+
+   Se denota por:
+
+    1−11−2001
+   𝑃𝑖,𝑠,𝑔     la cifra de población residente en la provincia i, de sexo s y año de
+   nacimiento g a 1 de noviembre de 2001, según el resultado del cálculo descrito en el
+   punto 3 de este documento.
+
+   𝑃̂𝑖,𝑠,𝑔
+     1−11−2001
+               la cifra de población según el Censo de Población de 2001.
+
+   Sea entonces la diferencia:
+
+                              𝐷𝑖,𝑠,𝑔 = 𝑃̂𝑖,𝑠,𝑔
+                                         1−11−2001    1−11−2001
+                                                   − 𝑃𝑖,𝑠,𝑔
+
+   La diferencia 𝐷𝑖,𝑠,𝑔 se distribuye uniformemente en cada mes del periodo que va
+   desde marzo de 1991 a octubre de 2001 (128 meses), derivándose:
+
+
+                                                                                          23
+    Para 𝑔 ≤ 1991:
+
+    𝑚+1      𝑚
+   𝑑𝑖,𝑠,𝑔 = 128 𝐷𝑖,𝑠,𝑔 , para 𝑚 = 1,2, … ,128
+
+
+    Para 𝑔 = 1992,1993, … ,2001:
+
+    𝑚+1       𝑚−(12(𝑔−1992)+10)
+   𝑑𝑖,𝑠,𝑔 = 128−(12(𝑔−1992)+10) 𝐷𝑖,𝑠,𝑔 , para 𝑚 = 128 − (12(𝑔 − 1982) + 10), … ,128
+
+                               𝑚+1                                                    𝑚+1
+   Y en ambos casos, la cifra 𝑃𝑖,𝑠,𝑔         resultante del punto 3 se reemplaza por 𝑃𝑖,𝑠,𝑔 +
+     𝑚+1
+    𝑑𝑖,𝑠,𝑔
+
+
+4.4 PERIODO 2001-2011
+
+    Se denota por:
+     1−11−2011
+   𝑃ℎ,𝑠,𝑔,𝑖,𝑗   la cifra de población residente en la provincia (isla, en el caso de las
+   provincias insulares) ℎ, de sexo 𝑠, año de nacimiento 𝑔, país de nacionalidad 𝑖 y país
+   de nacimiento 𝑗 a 1 de noviembre de 2011, según el resultado del cálculo descrito en
+   el punto 3 de este documento.
+      1−11−2011
+    𝑃̂ℎ,𝑠,𝑔,𝑖,𝑗 la cifra de población según el Censo de Población de 2011.
+
+    Sea entonces la diferencia:
+
+                                  𝐷ℎ,𝑠,𝑔,𝑖,𝑗 = 𝑃̂ℎ,𝑠,𝑔,𝑖,𝑗
+                                                 1−11−2011    1−11−2011
+                                                           − 𝑃ℎ,𝑠,𝑔,𝑖,𝑗
+
+   La diferencia 𝐷ℎ,𝑠,𝑔,𝑖,𝑗 se distribuye uniformemente en cada mes del periodo que va
+   desde noviembre de 2001 a octubre de 2011 (120 meses), derivándose:
+    Para 𝑔 ≤ 2001:
+
+
+       𝑚             𝐷ℎ,𝑠,𝑔,𝑖,𝑗             𝑚+1
+      𝑑ℎ,𝑠,𝑔,𝑖,𝑗 =              y la cifra 𝑃ℎ,𝑠,𝑔,𝑖,𝑗 resultante   del punto 3 se reemplaza por
+                      120
+       𝑚+1              𝑚
+      𝑃ℎ,𝑠,𝑔,𝑖,𝑗 + 𝑚 ∙ 𝑑ℎ,𝑠,𝑔,𝑖,𝑗 , para 𝑚 = 1, … ,120.
+
+
+    Para 𝑔 = 2002,2003, … ,2011:
+
+
+       𝑚                      𝐷
+                           ℎ,𝑠,𝑔,𝑖,𝑗               𝑚+1
+      𝑑ℎ,𝑠,𝑔,𝑖,𝑗 = 120−(12∙(𝑔−2002)+2) y la cifra 𝑃ℎ,𝑠,𝑔,𝑖,𝑗 resultante del punto 3 se reemplaza
+           𝑚+1                                        𝑚
+      por 𝑃ℎ,𝑠,𝑔,𝑖,𝑗 + (𝑚 − (12 ∙ (𝑔 − 2002) + 2)) ∙ 𝑑ℎ,𝑠,𝑔,𝑖,𝑗 , para 𝑚 = 120 − (12 ∙ (𝑔 −
+      2002) + 2), … ,120.
+
+
+                                                                                             24
+   Nota: las estimaciones intercensales 2001-2011 se extrapolan a futuro con el mismo
+   método, para acabar dos meses más allá del censo 2011 y llegar así a la fecha de
+   referencia 1 de enero de 2012. Para ello se parte del censo 2011 y se aplican los
+   fenómenos demográficos correspondientes a los meses de noviembre y diciembre de
+   2011. Por eso se dice a veces que el siguiente periodo intercensal es 2012-2021, en
+   lugar de 2011-2021.
+   Finalmente, con las cifras de población según año de nacimiento obtenidas para cada
+   fecha, ámbito geográfico y colectivo poblacional, se han derivado las cifras por edad bajo
+   la hipótesis de distribución uniforme de la fecha de cumpleaños de los individuos de cada
+   generación a lo largo de todo el año.
+
+
+4.5 PERIODO 2012-2021
+
+
+    Se denota por:
+
+     1−1−2021
+   𝑃ℎ,𝑠,𝑔,𝑖,𝑗  la cifra de población residente en la provincia (isla, en el caso de las
+   provincias insulares) ℎ, de sexo 𝑠, año de nacimiento 𝑔, país de nacionalidad 𝑖 y país
+   de nacimiento 𝑗 a 1 de enero de 2021, según el resultado del cálculo descrito en el
+   punto 3 de este documento.
+      1−1−2021
+    𝑃̂ℎ,𝑠,𝑔,𝑖,𝑗 la cifra de población según el Censo de Población de 2021.
+
+    Sea entonces la diferencia:
+
+                                  𝐷ℎ,𝑠,𝑔,𝑖,𝑗 = 𝑃̂ℎ,𝑠,𝑔,𝑖,𝑗
+                                                 1−1−2021     1−1−2021
+                                                           − 𝑃ℎ,𝑠,𝑔,𝑖,𝑗
+
+   La diferencia 𝐷ℎ,𝑠,𝑔,𝑖,𝑗 se distribuye uniformemente en cada semestre del periodo que
+   va desde el 1 de enero de 2012 al 1 de enero de 2021 (18 semestres), derivándose:
+
+
+    Para 𝑔 ≤ 2011:
+       𝑚             𝐷ℎ,𝑠,𝑔,𝑖,𝑗               𝑚+1
+      𝑑ℎ,𝑠,𝑔,𝑖,𝑗 =              , y la cifra 𝑃ℎ,𝑠,𝑔,𝑖,𝑗 resultante del punto 3 se reemplaza por
+                       18
+       𝑚+1              𝑚
+      𝑃ℎ,𝑠,𝑔,𝑖,𝑗 + 𝑚 ∙ 𝑑ℎ,𝑠,𝑔,𝑖,𝑗 , para 𝑚 = 1, … ,18, donde ahora 𝑚 se refiere a semestres en
+      lugar de meses, pero se deja como m por uniformidad en la notación.
+
+
+    Para 𝑔 = 2012, 2023, … , 2020:
+       𝑚               𝐷
+                      ℎ,𝑠,𝑔,𝑖,𝑗             𝑚+1
+      𝑑ℎ,𝑠,𝑔,𝑖,𝑗 = (2021−𝑔)∗2   y la cifra 𝑃ℎ,𝑠,𝑔,𝑖,𝑗 resultante del punto 3 se reemplaza por
+       𝑚+1             𝑚
+      𝑃ℎ,𝑠,𝑔,𝑖,𝑗 + 𝑚. 𝑑ℎ,𝑠,𝑔,𝑖,𝑗 , para 𝑚 = (𝑡 − 𝑔) ∗ 2, si estamos en enero y
+      𝑚 = ((𝑡 − 𝑔) ∗ 2) + 1, si estamos en julio, siendo t cada año del periodo
+      estimado, 𝑡 = 2012, … ,2020.
+
+                                                                                            25
+Estos resultados, además, a partir del 1 de julio de 2012 han sido redondeados, para
+ofrecer ya toda la serie desde esa fecha sin decimales.
+Finalmente, con las cifras de población según año de nacimiento obtenidas para cada
+fecha, provincia y colectivo poblacional, se han derivado las cifras por edad bajo la
+hipótesis de distribución uniforme de la fecha de cumpleaños de los individuos de cada
+generación a lo largo de todo el año.
+
+
+
+
+                                                                                   26
+

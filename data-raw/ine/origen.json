@@ -1,0 +1,268 @@
+{
+ "1381": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/1381?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=1381",
+  "fetchedAt": "2026-11-11",
+  "sha256": "48dcfbcfcf02015ba35322da08b3c394f167e8f7bf5f06616a920292d6723e88",
+  "bytes": 6563
+ },
+ "1406": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/1406?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=1406",
+  "fetchedAt": "2026-11-11",
+  "sha256": "f8e51b822f36c29c2566699163916d9c5767cb170a17da7f18a3e79e0193b5e4",
+  "bytes": 3544255
+ },
+ "1407": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/1407?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=1407",
+  "fetchedAt": "2026-11-11",
+  "sha256": "5fb70ec8d138570fa66eae914d5045876da3fc0da2daf30d52a215a86f3ad811",
+  "bytes": 99665
+ },
+ "1409": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/1409?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=1409",
+  "fetchedAt": "2026-11-11",
+  "sha256": "bb821c4fe92647d3881fcabf07a3b2a3a79492328783d3874fd5e030bdd42d76",
+  "bytes": 20305
+ },
+ "6038": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/6038?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=6038",
+  "fetchedAt": "2026-11-11",
+  "sha256": "ce2c78c2b127a6c002319ad7eb015d2313776263d72150f225caeab4f98835dd",
+  "bytes": 461888
+ },
+ "24282": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/24282?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=24282",
+  "fetchedAt": "2026-11-11",
+  "sha256": "20b540672faf0339e85480b63cfe368007ced4681e67476ff4359263f66a394f",
+  "bytes": 615125
+ },
+ "24296": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/24296?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=24296",
+  "fetchedAt": "2026-11-11",
+  "sha256": "542e670da25c3b15a70c24814b08ec4ad251764dc87ead0ca6be65902b3197ea",
+  "bytes": 613939
+ },
+ "24304": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/24304?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=24304",
+  "fetchedAt": "2026-11-11",
+  "sha256": "b3046297f3beeffea55cb2974fa42c138db258755b1724e57e5a05ea3537e656",
+  "bytes": 604464
+ },
+ "27150": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/27150?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=27150",
+  "fetchedAt": "2026-11-11",
+  "sha256": "694858c2c85010ecea2576a697e0b138032b6c06ef4a636cd25d4c93ee9a8348",
+  "bytes": 5556571
+ },
+ "27153": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/27153?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+  "fetchedAt": "2026-11-11",
+  "sha256": "e408674582ff98063c325ec31e723627e2b0d258281a729ec1dae0fec0e9ec4e",
+  "bytes": 11481967
+ },
+ "28185": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/28185?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=28185",
+  "fetchedAt": "2026-11-11",
+  "sha256": "afa112cbf6c855586756de2e4be9691ddafb75487da62d031610bf1cad1762c7",
+  "bytes": 160360
+ },
+ "28189": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/28189?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=28189",
+  "fetchedAt": "2026-11-11",
+  "sha256": "b7300ce4f9716912af3c3e6e67fd2648368011a7ff296e00f2417348021e147a",
+  "bytes": 106138
+ },
+ "29293": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/29293?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=29293",
+  "fetchedAt": "2026-11-11",
+  "sha256": "c7c646e4bf0b55c9c701993ff48c7d9e0779f1f1b7c82700ee478e6f438d4386",
+  "bytes": 127091
+ },
+ "36643": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36643?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36643",
+  "fetchedAt": "2026-11-11",
+  "sha256": "693b5a0440bcf615586f11579239dd37e076648291b36b25e8caea18aef124f2",
+  "bytes": 2131993
+ },
+ "36650": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36650?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36650",
+  "fetchedAt": "2026-11-11",
+  "sha256": "540955368cac3684cd24b468ed562445dc493509247080fe4d09378fc6e79e4a",
+  "bytes": 2141515
+ },
+ "36651": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36651?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36651",
+  "fetchedAt": "2026-11-11",
+  "sha256": "d3d0904b9ee68bda4d3afb8425f248fe11fcb9cbe80dc28887346ecf02ca6884",
+  "bytes": 1887366
+ },
+ "36654": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36654?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36654",
+  "fetchedAt": "2026-11-11",
+  "sha256": "4393663e2d0f456d631eabc28433a490cf2027dca38d1345f8fd381cfcae4ad1",
+  "bytes": 230955
+ },
+ "36655": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36655?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36655",
+  "fetchedAt": "2026-11-11",
+  "sha256": "3d28ad0d8508e63fa4154f847f2f4642f3a37122466a4b8741e2a837d02a10dd",
+  "bytes": 6479
+ },
+ "36659": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36659?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36659",
+  "fetchedAt": "2026-11-11",
+  "sha256": "5865389299150af8fb8ac0bfc1bccc54626478fb8e40e3793d6732bff4a9825f",
+  "bytes": 14265229
+ },
+ "36662": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36662?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36662",
+  "fetchedAt": "2026-11-11",
+  "sha256": "57c4e0bc5914cb1601acc88974402826f8bee34814f1f67c758068938ee7130b",
+  "bytes": 6508
+ },
+ "36668": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36668?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36668",
+  "fetchedAt": "2026-11-11",
+  "sha256": "6bda2ebfa82e0c3fcbe45513aba57dd4161b5d9c6341684d3a768909ccef5102",
+  "bytes": 6617
+ },
+ "36669": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36669?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36669",
+  "fetchedAt": "2026-11-11",
+  "sha256": "4ce9479634ae7733108c8e6e06e7210a03d1ccf9ff86b3a392e9a67ce2a9c45d",
+  "bytes": 6687
+ },
+ "36670": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36670?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36670",
+  "fetchedAt": "2026-11-11",
+  "sha256": "8eafcee3acd0c9d9cd1b9fccdec041499e27eee9429a57088cd7feeb17e4fe04",
+  "bytes": 6682
+ },
+ "36774": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36774?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36774",
+  "fetchedAt": "2026-11-11",
+  "sha256": "b784e4e9493391f588be93af50181f5e34c774dd205f583f543631ad164c6f0a",
+  "bytes": 1353440
+ },
+ "36775": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36775?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36775",
+  "fetchedAt": "2026-11-11",
+  "sha256": "5fc830241cc1dbe9f14d6a8122334ee5b551cb700e1c7d122a3794925beff858",
+  "bytes": 1353489
+ },
+ "36776": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36776?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36776",
+  "fetchedAt": "2026-11-11",
+  "sha256": "6d26aee104d4adf95c3ed9438632d9f836104fed2a8e5274961bd0c17d0b5f4a",
+  "bytes": 6384060
+ },
+ "36777": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/36777?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=36777",
+  "fetchedAt": "2026-11-11",
+  "sha256": "1f6df55f2e1aa4ae26dbfd437990d0f4c182c6f32dd08ef3c4924e0674611d95",
+  "bytes": 61960
+ },
+ "56934": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/56934?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=56934",
+  "fetchedAt": "2026-11-11",
+  "sha256": "62e4b00899a8b2b42f79b51b8c051e5000a97567f0fff0de495e8b5db8d26bfa",
+  "bytes": 4947150
+ },
+ "59583": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/59583?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=59583",
+  "fetchedAt": "2026-11-11",
+  "sha256": "82d8572f3b1da7bb43a0b3e0275a4bf7e5fd94ad924d7e97529eb51e4b3022d0",
+  "bytes": 5013652
+ },
+ "65080": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65080?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=65080",
+  "fetchedAt": "2026-11-11",
+  "sha256": "369e1fc4c3820acd73c1c0339fcbf6c0abfd4a8ac86b11a9857bce61e4a98dc5",
+  "bytes": 954461
+ },
+ "65081": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65081?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=65081",
+  "fetchedAt": "2026-11-11",
+  "sha256": "1ec530e6baf4c7905881f2062a65cb63daf824416b5067c9ab1dd7424e654c99",
+  "bytes": 474136
+ },
+ "65109": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65109?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=65109",
+  "fetchedAt": "2026-11-11",
+  "sha256": "e985388e256e02f8e7751b755a4a4980989868a7e832602950a64c273a5f3950",
+  "bytes": 954060
+ },
+ "65218": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65218?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=65218",
+  "fetchedAt": "2026-11-11",
+  "sha256": "e23e7675ddbd8b5ce8c59a9f350f4d35626bd3b25400d45b374ca34a11c95979",
+  "bytes": 950961
+ },
+ "65219": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65219?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=65219",
+  "fetchedAt": "2026-11-11",
+  "sha256": "c567774a80b0162cd3af564f980c2bf16a8ea7be8a8062a1d52cc1839454c256",
+  "bytes": 474216
+ },
+ "69687": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/69687?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=69687",
+  "fetchedAt": "2026-11-11",
+  "sha256": "29d4222b2537c34472dcbf0c5279a900a2376100c570bfdbee7119c37484613f",
+  "bytes": 277954
+ },
+ "69702": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/69702?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=69702",
+  "fetchedAt": "2026-11-11",
+  "sha256": "c5c6f48c408b76159712d2fd2f737a132b7f3a0005459c10f1c9fae63cb29a1f",
+  "bytes": 276560
+ },
+ "69758": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/69758?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=69758",
+  "fetchedAt": "2026-11-11",
+  "sha256": "6dc5d626c5a7d32b8d841aa46913b57bcd51f5d67180a15dee350220eab8d262",
+  "bytes": 581405
+ },
+ "79660": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/79660?tip=AM",
+  "web": "https://www.ine.es/jaxiT3/Tabla.htm?t=79660",
+  "fetchedAt": "2026-11-11",
+  "sha256": "ce2c78c2b127a6c002319ad7eb015d2313776263d72150f225caeab4f98835dd",
+  "bytes": 461888
+ }
+}

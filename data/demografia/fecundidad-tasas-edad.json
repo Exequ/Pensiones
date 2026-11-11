@@ -1,0 +1,44 @@
+{
+  "tipo": "tabla",
+  "id": "fecundidad-tasas-edad",
+  "title": "Tasas de fecundidad por edad de la madre (1975-2024)",
+  "description": "Nacimientos por 1.000 mujeres, por edad simple de la madre y nacionalidad (ambas, española, extranjera), todos los órdenes de nacimiento, 1975-2024. La edad 15 agrupa «15 y menos años» y la 49 agrupa «49 y más años», como en la fuente.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año",
+      "unidad": null
+    },
+    {
+      "id": "nacionalidad",
+      "descripcion": "ambas, espanola o extranjera (nacionalidad de la madre)",
+      "unidad": null
+    },
+    {
+      "id": "edad_madre",
+      "descripcion": "Edad de la madre; 15 = «15 y menos», 49 = «49 y más»",
+      "unidad": "años"
+    },
+    {
+      "id": "tasa_por_mil",
+      "descripcion": "Tasa de fecundidad",
+      "unidad": "nacimientos por 1.000 mujeres"
+    }
+  ],
+  "filas": 5250,
+  "source": {
+    "title": "Tasas de fecundidad según orden del nacimiento, nacionalidad y edad de la madre (tabla 1406)",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=1406",
+    "docId": "INE-1406"
+  },
+  "origenes": [
+    {
+      "period": "2024",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=1406",
+      "sha256": "f8e51b822f36c29c2566699163916d9c5767cb170a17da7f18a3e79e0193b5e4"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta"
+}

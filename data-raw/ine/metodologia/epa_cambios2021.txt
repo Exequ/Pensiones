@@ -1,0 +1,366 @@
+ Resumen de los cambios en la Encuesta de Población
+                Activa (EPA) en 2021
+
+
+La entrada en vigor del REGLAMENTO (UE) 2019/1700 DEL PARLAMENTO
+EUROPEO Y DEL CONSEJO de 10 de octubre de 2019, por el que se establece un
+marco común para las encuestas a hogares, y del REGLAMENTO DE EJECUCION
+(UE) 2019/2240 de 16 de diciembre de 2019 así como otros Reglamentos Delegados y
+de Ejecución por los que se establecen las variables a analizar, las definiciones a
+utilizar y las periodicidades para cada una de las variables de la Encuesta de Fuerza
+de Trabajo (EFT) europea afectan a la información que hay que proporcionar a partir
+del primer trimestre de 2021.
+Dado que la Encuesta de Población Activa (EPA) es la operación que recaba la
+información necesaria para obtener las variables exigidas en la Encuesta de Fuerza de
+Trabajo (EFT), ha habido que realizar las adaptaciones necesarias para poder dar
+respuesta a los nuevos requerimientos de información en 2021.
+Hay que decir que muchos de los requisitos que la nueva reglamentación europea
+impone con carácter obligatorio a partir de 2021 ya se vienen cumpliendo en la
+Encuesta de Población Activa (EPA) desde hace tiempo. Ejemplos destacados son la
+distribución homogénea de la muestra trimestral tanto por meses y semanas de
+referencia como por territorios, la utilización de cuestionarios electrónicos, la forma
+general de realizar el flujo de preguntas para determinar la relación con la actividad o
+los plazos para proporcionar la información (diez semanas después del final del
+periodo de referencia cuando en la EPA se obtiene resultados después de 4
+semanas).
+A continuación se ofrece un resumen de los cambios que se han introducido en la
+encuesta en 2021.
+
+
+
+Definición de hogar
+A partir de 2021, la EFT utilizará la definición común para todas las encuestas
+europeas dirigidas a la población. De esta forma, el hogar se determina no solo por la     INE. Instituto Nacional de Estadística
+residencia común sino también por compartir gastos generales y presupuesto.
+Así pues, a partir de 2021, en una misma vivienda podremos encontrar en la EPA más
+de un hogar. No obstante, el diseño de la encuesta sigue basándose en la selección
+de viviendas, encuestándose a todas las personas de un mismo lugar de residencia, si
+bien la información se estructura según los hogares detectados y se calculan las
+relaciones de parentesco por hogar.
+
+
+
+Ampliación de la información de la población de 15 años
+Como es de sobra conocido, si bien la EPA proporciona información general para toda
+la población residente en hogares familiares principales, el contenido principal de la
+encuesta se refiere a la población en edad de trabajar, cuya edad mínima establecida
+en la legislación laboral de nuestro país es de 16 años. En cambio, en el ámbito
+estadístico europeo, el umbral mínimo de edad se fija en los 15 años.
+En la EPA seguiremos recabando las preguntas sobre la relación con la actividad para
+las personas de 16 y más años como hasta ahora, considerando a la población de 15
+años como fuera del mercado de trabajo (inactivos) y estudiando (están en edad de
+escolarización obligatoria) pero a partir de 2021, para poder proporcionar información
+exigida en la EFT, se preguntará a este colectivo por los apartados sobre educación y
+aquellos otros de periodicidad anual, bienal o plurianual que resulten relevantes (por
+ejemplo, estado de salud o razones para migrar, en su caso).
+
+
+
+Obtención de determinada información directamente por encuesta
+Todas las preguntas dirigidas a determinar la situación de actividad de los
+entrevistados (ocupación, paro, inactividad) han de obtenerse por entrevista directa.
+Se elimina, por tanto, la posibilidad de utilizar información administrativa para ello.
+El tratamiento de la falta de respuesta total se ve también afectado por este requisito.
+En el caso de la EPA nos obliga a prescindir del tratamiento que veníamos aplicando
+hasta ahora, en virtud del cual, si no conseguíamos la información de un hogar, pero
+teníamos la recabada directamente por entrevista del trimestre anterior, se utilizaba
+dicha información para imputar la respuesta del trimestre en curso.
+Este cambio no produce variación en las series de las principales variables, pues, de
+hecho, a partir de las últimas semanas del primer trimestre, debido a la situación
+creada por la pandemia, no se aplicaba dicho tratamiento.
+
+
+
+Nuevos criterios de precisión
+Se establecen nuevos criterios de precisión para las estimaciones de las tasas de paro
+y de empleo de la población de 15 a 74 años y para la tasa de paro de la misma
+población por NUTS 2 (comunidades autónomas en el caso de España).
+A raíz de ello se ha optado por reestructurar el diseño de la EPA paulatinamente para
+cubrir un número mayor de secciones censales, disminuyendo el número de viviendas
+encuestadas por sección.
+El cambio de secciones se extenderá de forma gradual a lo largo de tres años desde el      INE. Instituto Nacional de Estadística
+primer trimestre de 2021.
+En 2020 el número de secciones de la muestra de la EPA es de 3.822 con un
+promedio de 22 viviendas teóricas a encuestar por sección y una vez concluido
+totalmente el cambio de seccionado (ya en el primer trimestre de 2024) tendremos
+5.298 secciones con 13 viviendas a encuestar por sección.
+
+
+
+Cálculo de los factores de elevación
+A partir de 2021 todos los miembros del hogar tienen que tener el mismo factor de
+elevación. Hasta 2020 las personas de 16 y más años del hogar tenían el mismo factor
+en la EPA, pero no los menores de 16.
+Por otro lado, al introducir a la población de 15 en las variables EFT es necesario
+adaptar los grupos de edad para acomodar esa población en su grupo quinquenal
+natural.
+Los resultados de aplicar el antiguo y nuevo cálculo de los factores de elevación no
+son significativamente diferentes.
+
+
+
+Armonización de elementos del diseño muestral con el resto de
+encuestas a hogares del INE
+Se armoniza la estratificación y el directorio de viviendas a utilizar con el resto de
+encuestas a hogares del INE.
+Más específicamente, se definen siete estratos por provincia, en vez de los nueve
+actuales y se utiliza el Marco de Direcciones Georreferenciadas como directorio para
+la extracción de la muestra. Debido al Covid-19 este directorio se está utilizando desde
+el segundo trimestre de 2020.
+
+
+Realización de entrevistas telefónicas en primera visita e introducción del canal
+CAWI
+Una vez se resuelva la pandemia se realizarán las primeras entrevistas por teléfono,
+visitándose personalmente las viviendas para las que no exista teléfono o no se haya
+podido contactar por ese medio. Además se utilizará el canal CAWI de forma residual,
+para aquellos hogares que soliciten la cumplimentación por esa vía. Desde marzo de
+2020, debido al Covid-19, todas las entrevistas son telefónicas utilizándose el CAWI en
+los casos descritos.
+
+
+
+Posibilidad de disminuir la carga de respuesta a determinados
+grupos de población
+A partir de 2021 (Reglamento de Ejecución 2019/2240, Anexo II, párrafo 18) es posible
+simplificar la recogida de información en sucesivas entrevistas para las personas de 70
+o más años en situación de inactividad, para los mayores de 89 años y para las
+personas con problemas de salud de larga duración.                                         INE. Instituto Nacional de Estadística
+
+Con el fin de reducir la carga de respuesta en el cuestionario de 2021 se ha
+aprovechado en lo posible esta facilidad.
+
+
+
+Nuevo tratamiento de ciertas ausencias del empleo
+En 2021, las personas ausentes de su empleo por excedencia parental por cuidado de
+hijos serán considerados ocupados siempre que reciban ingresos debidos a su
+relación laboral. En caso contrario, se aplicará el criterio de duración total de la
+ausencia. Si esta es superior a tres meses se consideran como no ocupados y si la
+duración es de hasta tres meses serán ocupados.
+Los trabajadores estacionales fuera del periodo de actividad se considerarán
+ocupados si continúan haciendo tareas asociadas a su actividad para mantener el
+negocio en temporada baja. Entre estas actividades no se consideran las tareas
+meramente administrativas.
+Las ausencias del empleo por recibir formación relacionada con el trabajo1 se
+consideran como ocupación.
+Para otras razones de ausencia completa del empleo durante la semana de referencia
+de la encuesta se aplica, en general, el criterio de duración: se consideran ocupados si
+la duración total de la ausencia es a lo sumo tres meses o no ocupado si es de más de
+tres meses.
+
+
+
+Ayudas familiares
+De acuerdo con la resolución OIT de 2013 sobre las Estadísticas de trabajo, la
+ocupación y la subutilización de la fuerza de trabajo, se elimina la exigencia de que la
+persona que trabaja como ayuda familiar conviva con el propietario del negocio
+(párrafo 30-f-i-ii de dicha resolución).
+
+
+
+Caracterización de la búsqueda de empleo activa
+En el periodo 2005-2020 la búsqueda activa de empleo se deriva de la combinación de
+los métodos de búsqueda utilizados por el informante. A tal efecto, la EFT exigía una
+relación de 13 posibles métodos de búsqueda, tanto activos como no activos,
+derivando de ahí la ‘búsqueda activa de empleo’. En principio, esta aproximación
+permitiría comparar las formas de búsqueda de empleo más utilizadas en los distintos
+países, pero en la práctica la forma de preguntar sobre las mismas en las distintas
+EFT nacionales impedía una comparación armonizada de dichos métodos.
+Por otra parte, en la citada resolución de la OIT de 2013, se establece la relación
+expresa de métodos de búsqueda de empleo activa (párrafo 47.b.i-vii).
+Así pues, a partir de 2021 la EFT se concentra en armonizar la búsqueda activa a
+través de los métodos activos expresamente mencionados en la resolución OIT
+mediante una pregunta cerrada, dejando de lado el intento de obtener información
+armonizada sobre los métodos de búsqueda.
+                                                                                                            INE. Instituto Nacional de Estadística
+En el caso de la EPA ha sido necesario adaptar las preguntas de búsqueda de empleo
+realizadas en 2005-2020 a los nuevos requerimientos.
+Con el fin de mantener cierta continuidad con las series de métodos de búsqueda
+existentes, en la EPA hemos optado por preguntar hasta tres métodos de búsqueda
+respondidos afirmativamente, habiendo hecho previamente una ordenación aleatoria
+en la aparición de los métodos de búsqueda durante la entrevista.
+
+
+
+1
+ Esta formación debe cumplir al menos una de las siguientes condiciones: a) es exigida por el
+empleador, b) se llevar a cabo dentro del horario de trabajo habitual, c) está relacionada con el trabajo
+que desempeña y o bien la paga el empleador o el empleado continúa recibiendo remuneración del
+empleador.
+Según el estudio piloto realizado durante trece semanas consecutivas a caballo entre
+los trimestres segundo y tercero de 2020, la caracterización de la búsqueda activa no
+se ve afectada y, por tanto, tampoco la caracterización del paro. Sí se producirán
+rupturas de series en los métodos concretos de búsqueda de empleo utilizados.
+
+
+
+Cambios en el contenido de la encuesta
+   A-Nuevas variables
+       1. Información sobre antecedentes migratorios y nacionalidad de los padres
+          o País de residencia previo
+          o País de nacimiento del padre
+          o País de nacimiento de la madre
+          o Razón principal de la migración (periodicidad bienal años impares)
+       2. Medición explícita de tiempo de ausencia parcial del empleo en la semana
+          de referencia, con el fin de mejorar la armonización de la medición del
+          tiempo de trabajo efectivo en la semana de referencia.
+          o Días de ausencia por vacaciones, permisos o días festivos
+          o Días de ausencia por enfermedad
+          o Días de ausencia por otras razones.
+       3. Detalle sobre experiencia profesional exigida para alcanzar el nivel de
+          estudios
+          o Experiencia profesional exigida en el lugar de trabajo por el nivel de
+              estudios
+       4. Variables de educación y formación en el último año (periodicidad bienal,
+          años pares).
+          o Cursa estudios reglados en el último año
+          o Nivel de los estudios reglados cursados en el último año
+          o Cursa formación no reglada en el último año
+       5. Variable para determinar la vinculación con el empleo de los trabajadores
+          estacionales.
+          o Ha realizado actividades fuera de temporada relacionadas con su
+              empleo estacional.
+       6. Variables sobre condiciones de trabajo y caracterización de contratistas
+          dependientes.
+          o Número e importancia de clientes en el empleo principal
+          o Decisión sobre el comienzo y final de la jornada
+       7. Eficacia de las gestiones para encontrar empleo.                              INE. Instituto Nacional de Estadística
+          o Método más efectivo para encontrar el empleo actual
+       8. Información adicional sobre tiempo de trabajo en el segundo empleo.
+          o Horas habituales en el segundo empleo (o el más importante de los
+              empleos adicionales en el caso de tener más de uno)
+       9. Variables del módulo europeo de salud (periodicidad bienal, años pares)
+          o Estado general de salud
+          o Limitación de actividades por problemas de salud
+
+   B-Adaptación de variables existentes y/o cambio de periodicidad
+       1. Variable trimestral ANORE años de residencia en España. Se amplía la
+          población objetivo de la variable a toda la población (no solo a los de
+          nacionalidad extranjera).
+2. Variable OBJFORM objetivo de la formación no reglada en las últimas
+   cuatro semanas. Antes era una variable anual pero ahora es trimestral pues
+   es necesaria para identificar las nuevas categorías de la EFT de ‘formación
+   no reglada relacionada o no con el empleo’.
+
+3. Adaptación de las variables trimestrales FORBUxx que recogen los
+   métodos de búsqueda de empleo según las categorías 2021.
+
+    En las cuatro últimas semanas, con objeto de encontrar trabajo,
+    1. ¿Ha puesto o contestado anuncios de empleo?
+    2. ¿Ha estudiado anuncios de empleo?
+    3. ¿Ha puesto o actualizado su curriculum en internet?
+    4. ¿Ha contactado con empresas o empleadores directamente?
+    5. ¿Ha preguntado a familiares o amigos?
+    6. ¿Ha contactado con una oficina pública de empleo?
+    7. ¿ Ha contactado con una oficina privada de empleo?
+    8. ¿Ha realizado alguna prueba, entrevista o participado en un proceso de selección?
+    9. ¿Ha hecho gestiones para crear su propio negocio?
+
+4. Adaptación de la variable trimestral RZNOTB. En el caso de ausencia del
+   empleo en la semana de referencia debido a formación relacionada con el
+   empleo, el tiempo dedicado a esa formación se considera tiempo de trabajo
+   y por tanto esta categoría desaparece de las razones por las que no se ha
+   trabajado en la semana de referencia.
+
+5. Mayor detalle de la variable trimestral OCUP que recoge, a partir de 2021,
+   el código de ocupación según CNO2011 al nivel del cuarto dígito. Ello
+   permitirá aumentar el nivel de detalle a la hora de calcular agrupaciones de
+   ocupaciones (empleo cultural, empleo en ocupaciones turísticas,
+   ocupaciones TIC, etc.)
+
+6. Variable anual NUMTRA número de trabajadores del establecimiento. La
+   modalidad que en 2005-2020 era 11-19 trabajadores pasa a ser, a partir de
+   2021, de 10-19 trabajadores.
+
+7. Variable DUCON3 ‘tipo de contrato temporal. La modalidad ‘De aprendizaje,
+   formación o práctica’ se desglosa en ‘De formación o aprendizaje’ y ‘De
+   prácticas (becarios, períodos de prácticas, asistentes de investigación,                INE. Instituto Nacional de Estadística
+   etc.)’.
+
+8. Variable anual MOTEMP ‘motivo del contrato temporal. Hay que añadir la
+   modalidad ‘el empleo solo está disponible como empleo temporal’.
+
+9. Variable CONTPB: se amplía el filtro a todos los ocupados (antes afectaba
+   a los asalariados)
+
+10. En las variables trimestrales PARCO2 ‘Motivo para tener jornada parcial’,
+    NBUSCA ‘Motivo por el que no busca empleo’ y RZNDIS ‘Razón para no
+    estar disponible para trabajar en dos semanas’ la modalidad ‘otras
+    obligaciones familiares o personales’ se desglosa en dos.
+   11. Variable HORASP ‘horas pactadas’. Hay que contemplar de forma
+      separada la modalidad ‘no tiene horas fijadas por contrato’.
+
+   12. Variable TRAPLU ‘existencia de segundo empleo’. Hay que detallas si se
+       tiene dos empleos o tres o más.
+
+   13. Variable anual RZULT ‘razón por la que dejó su último empleo’. Pasa a ser
+       trimestral.
+
+   14. Adaptación de la pregunta sobre situaciones diversas (situación
+       autodeclarada) para identificar la situación principal. En el periodo 2005-
+       2020 se admitían hasta tres modalidades. A partir de 2021 se pregunta
+       primero por la situación principal y después se pregunta por situaciones
+       adicionales hasta un máximo de dos.
+
+   15. Las variables del apartado de horarios atípicos SABAD, DOMING, TARDE,
+       NOCHE, TURNOS que en 2005-2020 tenían periodicidad anual pasan a ser
+       bienales de año impar en la nueva EFT. Transitoriamente, debido a la
+       pandemia, en 2021 se seguirán encuestando todos los trimestres. También
+       la variable DOMICI de periodicidad anual se encuestará en 2021
+       trimestralmente.
+
+   16. Información adicional de la variable anual ETT ‘en el empleo actual, ha sido
+       contratado a través de una empresa de trabajo temporal’, para determinar si
+       sigue trabajando o no para la ETT.
+
+   17. Reestructuración de las modalidades de las variables CADDIS
+       ‘disponibilidad de servicios de cuidados de adultos dependientes’ y
+       CNINOS ‘disponibilidad de servicios de cuidado de niños’ y extensión de
+       esta información para las personas que no están disponibles para trabajar o
+       para trabajar más (esto último en el caso de los ocupados que deseen
+       trabajar más horas) por ‘responsabilidades de cuidado de hijos u otros
+       familiares’.
+
+C-Relación de variables que desaparecen
+Para poder dar cabida a las variables nuevas de 2021 y mantener la carga de
+respuesta en niveles razonables, la EFT deja de exigir un conjunto de variables.
+De esta forma, en la EPA dejarán de obtenerse las siguientes:                         INE. Instituto Nacional de Estadística
+
+   1. Variable MASHOR3 ‘modo en el que trabajaría más horas’
+   2. Variable RZDIFH ‘razón principal de la diferencia de horas efectivas y
+      habituales en la semana de referencia’. Las nuevas variables sobre tiempo
+      de trabajo y días de ausencia en la semana de referencia la hacen
+      redundante.
+   3. Variable CONPAR ‘jornada continuada o partida’.
+   4. Variables RZBUS1, RZBUS2 y RZBUS3 sobre las razones por las que
+      busca otro empleo.
+   5. Variable SECTR ‘sector de estudios de los estudios reglados cursados’
+   6. Variable NCURNR ‘nivel de estudios de la formación no reglada cursada’
+   7. Variable SECTNR ‘ sector de estudios de la formación no reglada cursada’
+   8. Variables HCURNR ‘total de horas de estudios no reglados en las últimas
+      cuatro semanas’
+9. Variable ASALA ‘el empleo que busca o ha encontrado es como asalariado’
+10. Variable EMBUS ‘tipo de jornada en el empleo buscado o que ha
+    encontrado’
+11. Variable ANTBUS ‘situación en la que se encontraba antes de buscar
+    empleo o haberlo encontrado’
+12. Desaparece el desglose de los métodos para establecerse por su cuenta
+    (buscar medios, buscar financiación), que se consideran conjuntamente a
+    partir de 2021. Desaparece la información sobre los métodos de búsqueda
+    de empleo no activos (esperar resultados de solicitudes anteriores, preparar
+    oposiciones, esperar la llamada de la oficina de empleo pública, otros
+    métodos de búsqueda no activos).
+13. Desaparecen las variables sobre situación hace un año (lugar de
+    residencia, situación laboral, actividad del establecimiento para los
+    ocupados, situación profesional para los ocupados).
+
+
+                                                        Madrid, marzo de 2021
+                                                                        SGEML
+
+
+
+
+                                                                                   INE. Instituto Nacional de Estadística
+

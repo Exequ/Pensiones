@@ -1,0 +1,1653 @@
+
+
+
+                  𝑁 ℎ
+                 ∑𝑖=1𝑗∈𝑖 𝐷𝑖                𝐵
+         𝐹1𝑗 =    𝑛ℎ
+                                    𝐹2𝑗 = 𝑏 𝑖    𝑗∈𝑖
+                 ∑𝑖=1𝑗∈𝑖 𝐷𝑖                 𝑖
+
+
+
+                                                     𝑁ℎ
+                                                𝑛ℎ
+                                                               𝐷𝑖
+                                     𝐵𝑖
+                                                          𝑏𝑖
+
+
+
+
+
+
+
+
+                  𝑋̑𝐶 = ∑ 𝐹1𝑗 𝐹2𝑗 𝑋𝑗
+                          𝑗∈𝐶
+
+
+    Xj
+
+
+
+                      𝑍̑𝐶 = ∑ 𝐹1𝑗 𝐹2𝑗
+                              𝑗∈𝐶
+
+
+
+                                     𝐻̑𝐶 = ∑ 𝐹1𝑗 𝐹2𝑗 ℎ𝑗
+                                             𝑗∈𝐶
+
+
+
+
+      hj
+
+
+
+
+
+                                                   ∧
+                                        ∧          𝑋𝐶
+                                       𝐺𝑇𝐶 = ∧
+                                             𝑍𝐶
+
+
+                                                   ∧
+                                        ∧          𝑋𝐶
+                                       𝐺𝐻𝐶 = ∧
+                                             𝐻𝐶
+
+
+
+
+                                               ̂̂𝐶 )
+                                             √𝑉(𝑋
+                                 ̂ (𝑋𝑐 ) =
+                                 𝐶𝑉                      100
+                                                   𝑋̂𝐶
+
+                        ̂̂𝐶 )
+                       𝑉(𝑋
+
+
+                                   ̂           ̂
+                                    ̂𝐶 ) = ∑ℎ 𝑉(𝑋
+                                  𝑉(𝑋           ̂𝐶ℎ )
+    𝑋̑𝐶ℎ = ∑𝑗∈𝐶,𝐶∈ℎ 𝐹1𝑗 𝐹2𝑗 𝑋𝑗
+                                                              𝑛
+          𝑁  (𝑁  − 𝑛  ) ∑ 𝑛ℎ ̂
+                             ( 𝑋   − ̂ 𝐷𝑖 )2 𝑁 ℎ 𝐵 (𝐵 − 𝑏 )
+                                     𝑅
+ ̂         ℎ   ℎ    ℎ     𝑖=1   𝐶𝑖     𝐶ℎ      ℎ   𝑖 𝑖   𝑖
+  ̂𝐶ℎ ) =
+𝑉(𝑋                                         +    ∑          𝑆̂𝐶2 ′
+               𝑛ℎ               𝑛ℎ − 1        𝑛ℎ     𝑏𝑖         𝑖
+                                                             𝑖=1
+       𝐵𝑖  𝑏𝑖
+ 𝑋̂𝐶𝑖 = 𝑏 ∑𝑗=1 𝑋𝑗            Xj         j C
+         𝑖
+
+                                             𝑏𝑖 (𝑋 −   1 𝑏𝑖
+                        𝑛ℎ 𝑋
+                       ∑𝑖=1 ̂ 𝐶𝑖            ∑𝑗=1  𝑗      ∑   𝑋 )2
+                                                       𝑏𝑖 𝑗=1 𝑗
+              𝑅̂𝐶ℎ =     𝑛
+                         ℎ 𝐷
+                                   𝑆̂𝐶𝑖
+                                     2
+                                        =
+                       ∑𝑖=1  𝑖                    𝑏𝑖 −1
+
+
+
+
+
+
+
+
+Tabla 1. Tamaños muestrales por secciones y subsecciones de actividad de la CNAE-93
+                                                                                                       Unidades           Trabajadores
+TODAS LAS ACTIVIDADES                                                                                             18369              161454
+C. Industrias extractivas                                                                                           371                 2579
+CA. Extracción de productos energéticos                                                                             105                  862
+CB. Extracción de otros minerales excepto productos energéticos                                                     266                 1717
+D. Industria manufacturera                                                                                         5749                49652
+DA. Industria de la alimentación, bebidas y tabaco                                                                  558                 5654
+DB. Industria textil y de la confección                                                                             486                 3814
+DC. Industria del cuero y del calzado                                                                               220                 1529
+DD. Industria de la madera y del corcho                                                                             305                 2027
+DE. Industria del papel; edición, artes gráficas y reproducción                                                     525                 4142
+DF. Refino de petróleo y tratamiento de combustibles nucleares                                                       67                  645
+DG. Industria química                                                                                               335                 3438
+DH. Industria de transformación del caucho y materias plásticas                                                     262                 2360
+DI. Industrias de otros productos minerales no metálicos                                                            319                 2986
+DJ. Metalurgia y fabricación de productos metálicos                                                                 630                 5778
+DK. Industria de la construcción de maquinaria y equipo mecánico                                                    304                 2731
+DL. Industria de material y equipo eléctrico, electrónico y óptico                                                  712                 5596
+DM. Fabricación de material de transporte                                                                           512                 5591
+DN. Industrias manufactureras diversas                                                                              514                 3361
+E. Producción y distribución de energía electrica, gas y agua                                                       454                 3864
+F. Construcción                                                                                                    1883                14716
+G. Comercio y reparaciones                                                                                         1850                16592
+H. Hostelería                                                                                                       635                 5492
+I. Transporte, almacenamiento y comunicaciones                                                                     1165                 9974
+J. Intermediación financiera                                                                                       1049                 9882
+K. Actividades inmobiliarias y de alquiler; servicios empresariales                                                2339                21649
+M. Educación                                                                                                        476                 5378
+N. Actividades sanitarias y veterinarias, servicios sociales                                                        727                10914
+O. Otras actividades sociales y de servicios prestados a la comunidad, servicios personales                        1671                10762
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                   Unidades      Trabajadores
+TOTAL NACIONAL                                            18369                               161454
+Andalucía                                                   1489                               13860
+Aragón                                                       918                                7382
+Asturias (Principado de)                                     847                                6555
+Balears (Illes)                                              773                                5980
+Canarias                                                     980                                8231
+Cantabria                                                    670                                4669
+Castilla y León                                             1025                                8475
+Castilla-La Mancha                                           915                                7177
+Cataluña                                                    2112                               22334
+Comunitat Valenciana                                        1443                               13173
+Extremadura                                                  753                                5021
+Galicia                                                     1127                                9259
+Madrid (Comunidad de)                                       1960                               22708
+Murcia (Región de)                                           844                                6476
+Navarra (Comunidad Foral de)                                 726                                5673
+País Vasco                                                  1197                               10607
+Rioja (La)                                                   590                                3874
+Tabla 3. Muestra recogida y tasas de respuesta por secciones y subsecciones de
+actividad de la CNAE-93
+                                                                              Unidades    Tasa    Trabajadores   Tasa
+TODAS LAS ACTIVIDADES                                                               16780   91,35         140556  87,06
+C. Industrias extractivas                                                             335   90,30           2245  87,05
+CA. Extracción de productos energéticos                                                94   89,52            736  85,38
+CB. Extracción de otros minerales excepto productos energéticos                       241   90,60           1509  87,89
+D. Industria manufacturera                                                           5305   92,28          44126  88,87
+DA. Industria de la alimentación, bebidas y tabaco                                    523   93,73           5084  89,92
+DB. Industria textil y de la confección                                               443   91,15           3383  88,70
+DC. Industria del cuero y del calzado                                                 197   89,55           1312  85,81
+DD. Industria de la madera y del corcho                                               275   90,16           1810  89,29
+DE. Industria del papel; edición, artes gráficas y reproducción                       491   93,52           3744  90,39
+DF. Refino de petróleo y tratamiento de combustibles nucleares                         64   95,52            578  89,61
+DG. Industria química                                                                 310   92,54           3004  87,38
+DH. Industria de transformación del caucho y materias plásticas                       240   91,60           2057  87,16
+DI. Industrias de otros productos minerales no metálicos                              297   93,10           2728  91,36
+DJ. Metalurgia y fabricación de productos metálicos                                   589   93,49           5200  90,00
+DK. Industria de la construcción de maquinaria y equipo mecánico                      273   89,80           2356  86,27
+DL. Industria de material y equipo eléctrico, electrónico y óptico                    660   92,70           4943  88,33
+DM. Fabricación de material de transporte                                             476   92,97           4925  88,09
+DN. Industrias manufactureras diversas                                                467   90,86           3002  89,32
+E. Producción y distribución de energía electrica, gas y agua                         417   91,85           3366  87,11
+F. Construcción                                                                      1693   89,91          12550  85,28
+G. Comercio y reparaciones                                                           1689   91,30          14398  86,78
+H. Hostelería                                                                         560   88,19           4483  81,63
+I. Transporte, almacenamiento y comunicaciones                                       1124   96,48           9564  95,89
+J. Intermediación financiera                                                          987   94,09           9065  91,73
+K. Actividades inmobiliarias y de alquiler; servicios empresariales                  2109   90,17          17845  82,43
+M. Educación                                                                          444   93,28           4793  89,12
+N. Actividades sanitarias y veterinarias, servicios sociales                          624   85,83           8896  81,51
+O. Otras actividades sociales y de servicios prestados a                             1493   89,35           9225  85,72
+    la comunidad; servicios personales
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                           Unidades           Tasa             Trabajadores      Tasa
+
+TOTAL NACIONAL                                        16780           91,35             140556          87,06
+Andalucía                                              1367           91,81              12235          88,28
+Aragón                                                  860           93,68               6568          88,97
+Asturias (Principado de)                                804           94,92               6024          91,90
+Balears (Illes)                                         690           89,26               5010          83,78
+Canarias                                                804           82,04               6538          79,43
+Cantabria                                               612           91,34               4004          85,76
+Castilla y León                                         969           94,54               7797          92,00
+Castilla-La Mancha                                      851           93,01               6339          88,32
+Cataluña                                               1928           91,29              19018          85,15
+Comunitat Valenciana                                   1343           93,07              11839          89,87
+Extremadura                                             699           92,83               4477          89,17
+Galicia                                                1082           96,01               8596          92,84
+Madrid (Comunidad de)                                  1771           90,36              19240          84,73
+Murcia (Región de)                                      747           88,51               5431          83,86
+Navarra (Comunidad Foral de)                            606           83,47               4578          80,70
+País Vasco                                             1097           91,65               9477          89,35
+Rioja (La)                                              550           93,22               3385          87,38
+Tabla 1. Tamaños muestrales por secciones y subsecciones de actividad de la CNAE-93
+                                                                                                    Unidades            Trabajadores
+TODAS LAS ACTIVIDADES                                                                                          18.585              166.206
+C. Industrias extractivas                                                                                         374                2.570
+CA. Extracción de productos energéticos                                                                           104                  861
+CB. Extracción de otros minerales excepto productos energéticos                                                   270                1.709
+D. Industria manufacturera                                                                                      5.728               49.400
+DA. Industria de la alimentación, bebidas y tabaco                                                                561                5.641
+DB. Industria textil y de la confección                                                                           484                3.725
+DC. Industria del cuero y del calzado                                                                             223                1.544
+DD. Industria de la madera y del corcho                                                                           293                2.031
+DE. Industria del papel; edición, artes gráficas y reproducción                                                   537                4.149
+DF. Refino de petróleo y tratamiento de combustibles nucleares                                                     66                  639
+DG. Industria química                                                                                             336                3.460
+DH. Industria de transformación del caucho y materias plásticas                                                   266                2.469
+DI. Industrias de otros productos minerales no metálicos                                                          317                2.939
+DJ. Metalurgia y fabricación de productos metálicos                                                               635                5.776
+DK. Industria de la construcción de maquinaria y equipo mecánico                                                  300                2.725
+DL. Industria de material y equipo eléctrico, electrónico y óptico                                                698                5.459
+DM. Fabricación de material de transporte                                                                         498                5.385
+DN. Industrias manufactureras diversas                                                                            514                3.458
+E. Producción y distribución de energía electrica, gas y agua                                                     459                3.930
+F. Construcción                                                                                                 1.967               15.369
+G. Comercio y reparaciones                                                                                      1.865               17.001
+H. Hostelería                                                                                                     642                5.620
+I. Transporte, almacenamiento y comunicaciones                                                                  1.293               11.981
+J. Intermediación financiera                                                                                    1.068               10.023
+K. Actividades inmobiliarias y de alquiler; servicios empresariales                                             2.372               22.621
+M. Educación                                                                                                      476                5.479
+N. Actividades sanitarias y veterinarias, servicios sociales                                                      727               11.168
+O. Otras actividades sociales y de servicios prestados a la comunidad; servicios personales                     1.614               11.044
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                   Unidades      Trabajadores
+TOTAL NACIONAL                                            18.585                          166.206
+Andalucía                                                  1.524                           14.414
+Aragón                                                       945                            7.907
+Asturias (Principado de)                                     854                            6.647
+Balears (Illes)                                              775                            6.098
+Canarias                                                     984                            8.418
+Cantabria                                                    695                            4.915
+Castilla y León                                            1.052                            8.937
+Castilla-La Mancha                                           917                            7.426
+Cataluña                                                   2.098                           22.457
+Comunitat Valenciana                                       1.454                           13.487
+Extremadura                                                  762                            5.264
+Galicia                                                    1.131                            9.509
+Madrid (Comunidad de)                                      1.994                           23.578
+Murcia (Región de)                                           876                            6.817
+Navarra (Comunidad Foral de)                                 735                            5.824
+País Vasco                                                 1.188                           10.618
+Rioja (La)                                                   601                            3.890
+Tabla 3. Muestra recogida y tasas de respuesta por secciones y subsecciones de
+actividad de la CNAE-93
+                                                                              Unidades    Tasa   Trabajadores    Tasa
+TODAS LAS ACTIVIDADES                                                              16.543  89,01        141.158   84,93
+C. Industrias extractivas                                                             340  90,91           2.259  87,90
+CA. Extracción de productos energéticos                                                94  90,38             734  85,25
+CB. Extracción de otros minerales excepto productos energéticos                       246  91,11           1.525  89,23
+D. Industria manufacturera                                                          5.222  91,17         43.744   88,55
+DA. Industria de la alimentación, bebidas y tabaco                                    518  92,34           5.031  89,19
+DB. Industria textil y de la confección                                               438  90,50           3.294  88,43
+DC. Industria del cuero y del calzado                                                 199  89,24           1.318  85,36
+DD. Industria de la madera y del corcho                                               272  92,83           1.799  88,58
+DE. Industria del papel; edición, artes gráficas y reproducción                       493  91,81           3.711  89,44
+DF. Refino de petróleo y tratamiento de combustibles nucleares                         64  96,97             626  97,97
+DG. Industria química                                                                 311  92,56           3.109  89,86
+DH. Industria de transformación del caucho y materias plásticas                       237  89,10           2.162  87,57
+DI. Industrias de otros productos minerales no metálicos                              292  92,11           2.637  89,72
+DJ. Metalurgia y fabricación de productos metálicos                                   583  91,81           5.209  90,18
+DK. Industria de la construcción de maquinaria y equipo mecánico                      273  91,00           2.423  88,92
+DL. Industria de material y equipo eléctrico, electrónico y óptico                    626  89,68           4.762  87,23
+DM. Fabricación de material de transporte                                             445  89,36           4.647  86,30
+DN. Industrias manufactureras diversas                                                471  91,63           3.016  87,22
+E. Producción y distribución de energía electrica, gas y agua                         405  88,24           3.332  84,78
+F. Construcción                                                                     1.724  87,65         12.572   81,80
+G. Comercio y reparaciones                                                          1.714  91,90         15.152   89,12
+H. Hostelería                                                                         566  88,16           4.527  80,55
+I. Transporte, almacenamiento y comunicaciones                                      1.106  85,54           9.650  80,54
+J. Intermediación financiera                                                          985  92,23           9.125  91,04
+K. Actividades inmobiliarias y de alquiler; servicios empresariales                 2.032  85,67         17.814   78,75
+M. Educación                                                                          443  93,07           4.853  88,57
+N. Actividades sanitarias y veterinarias, servicios sociales                          624  85,83           9.239  82,73
+O. Otras actividades sociales y de servicios prestados a                             1382  85,63            8891  80,51
+    la comunidad; servicios personales
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                           Unidades       Tasa                 Trabajadores     Tasa
+TOTAL NACIONAL                                     16.543             89,01            141.158          84,93
+Andalucía                                           1.343             88,12              12.332         85,56
+Aragón                                                858             90,79               6.889         87,13
+Asturias (Principado de)                              813             95,20               6.203         93,32
+Balears (Illes)                                       661             85,29               4.868         79,83
+Canarias                                              755             76,73               6.038         71,73
+Cantabria                                             605             87,05               4.024         81,87
+Castilla y León                                       967             91,92               7.945         88,90
+Castilla-La Mancha                                    865             94,33               6.698         90,20
+Cataluña                                            1.865             88,89              18.869         84,02
+Comunitat Valenciana                                1.298             89,27              11.538         85,55
+Extremadura                                           696             91,34               4.698         89,25
+Galicia                                             1.039             91,87               8.368         88,00
+Madrid (Comunidad de)                               1.746             87,56              19.153         81,23
+Murcia (Región de)                                    704             80,37               5.134         75,31
+Navarra (Comunidad Foral de)                          695             94,56               5.236         89,90
+País Vasco                                          1.068             89,90               9.704         91,39
+Rioja (La)                                            565             94,01               3.461         88,97
+Tabla 1. Tamaños muestrales por secciones y subsecciones de actividad de la CNAE-93
+                                                                                                       Unidades           Trabajadores
+TODAS LAS ACTIVIDADES                                                                                             19544              163484
+C. Industrias extractivas                                                                                           379                 2363
+CA. Extracción de productos energéticos                                                                             109                  794
+CB. Extracción de otros minerales excepto productos energéticos                                                     270                 1569
+D. Industria manufacturera                                                                                         5933                48117
+DA. Industria de la alimentación, bebidas y tabaco                                                                  550                 5088
+DB. Industria textil y de la confección                                                                             481                 3414
+DC. Industria del cuero y del calzado                                                                               224                 1332
+DD. Industria de la madera y del corcho                                                                             297                 1956
+DE. Industria del papel; edición, artes gráficas y reproducción                                                     566                 4294
+DF. Refino de petróleo y tratamiento de combustibles nucleares                                                       70                  676
+DG. Industria química                                                                                               355                 3505
+DH. Industria de transformación del caucho y materias plásticas                                                     272                 2452
+DI. Industrias de otros productos minerales no metálicos                                                            321                 2820
+DJ. Metalurgia y fabricación de productos metálicos                                                                 645                 5573
+DK. Industria de la construcción de maquinaria y equipo mecánico                                                    330                 2835
+DL. Industria de material y equipo eléctrico, electrónico y óptico                                                  741                 5463
+DM. Fabricación de material de transporte                                                                           535                 5322
+DN. Industrias manufactureras diversas                                                                              546                 3387
+E. Producción y distribución de energía electrica, gas y agua                                                       483                 4001
+F. Construcción                                                                                                    2029                13838
+G. Comercio y reparaciones                                                                                         1927                16555
+H. Hostelería                                                                                                       708                 5156
+I. Transporte, almacenamiento y comunicaciones                                                                     1361                11724
+J. Intermediación financiera                                                                                       1104                 9864
+K. Actividades inmobiliarias y de alquiler; servicios empresariales                                                2612                22566
+M. Educación                                                                                                        518                 5834
+N. Actividades sanitarias y veterinarias, servicios sociales                                                        820                12442
+O. Otras actividades sociales y de servicios prestados a la comunidad; servicios personales                        1670                11024
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                   Unidades      Trabajadores
+TOTAL NACIONAL                                            19544                               163484
+Andalucía                                                   1628                               14313
+Aragón                                                      1000                                7780
+Asturias (Principado de)                                     879                                6411
+Balears (Illes)                                              851                                6160
+Canarias                                                    1016                                7780
+Cantabria                                                    727                                4955
+Castilla y León                                             1085                                8618
+Castilla-La Mancha                                           980                                7348
+Cataluña                                                    2190                               22146
+Comunitat Valenciana                                        1499                               12882
+Extremadura                                                  804                                5171
+Galicia                                                     1183                                9394
+Madrid (Comunidad de)                                       2156                               24460
+Murcia (Región de)                                           921                                6489
+Navarra (Comunidad Foral de)                                 786                                5697
+País Vasco                                                  1204                               10103
+Rioja (La)                                                   635                                3777
+Tabla 3. Muestra recogida y tasas de respuesta por secciones y subsecciones de
+actividad de la CNAE-93
+                                                                              Unidades    Tasa    Trabajadores   Tasa
+TODAS LAS ACTIVIDADES                                                               18087  92,55          151286  92,54
+C. Industrias extractivas                                                             339  89,45            2082  88,11
+CA. Extracción de productos energéticos                                                92  84,40             652  82,12
+CB. Extracción de otros minerales excepto productos energéticos                       247  91,48            1430  91,14
+D. Industria manufacturera                                                           5553  93,60           44911  93,34
+DA. Industria de la alimentación, bebidas y tabaco                                    525  95,45            4862  95,56
+DB. Industria textil y de la confección                                               444  92,31            3147  92,18
+DC. Industria del cuero y del calzado                                                 204  91,07            1192  89,49
+DD. Industria de la madera y del corcho                                               279  93,94            1814  92,74
+DE. Industria del papel; edición, artes gráficas y reproducción                       535  94,52            4074  94,88
+DF. Refino de petróleo y tratamiento de combustibles nucleares                         62  88,57             610  90,24
+DG. Industria química                                                                 326  91,83            3233  92,24
+DH. Industria de transformación del caucho y materias plásticas                       259  95,22            2324  94,78
+DI. Industrias de otros productos minerales no metálicos                              299  93,15            2631  93,30
+DJ. Metalurgia y fabricación de productos metálicos                                   600  93,02            5195  93,22
+DK. Industria de la construcción de maquinaria y equipo mecánico                      307  93,03            2616  92,28
+DL. Industria de material y equipo eléctrico, electrónico y óptico                    690  93,12            5004  91,60
+DM. Fabricación de material de transporte                                             500  93,46            4979  93,56
+DN. Industrias manufactureras diversas                                                523  95,79            3230  95,36
+E. Producción y distribución de energía electrica, gas y agua                         440  91,10            3562  89,03
+F. Construcción                                                                      1774  87,43           12202  88,18
+G. Comercio y reparaciones                                                           1811  93,98           15464  93,41
+H. Hostelería                                                                         652  92,09            4709  91,33
+I. Transporte, almacenamiento y comunicaciones                                       1276  93,75           11556  98,57
+J. Intermediación financiera                                                         1033  93,57            9164  92,90
+K. Actividades inmobiliarias y de alquiler; servicios empresariales                  2392  91,58           20380  90,31
+M. Educación                                                                          488  94,21            5405  92,65
+N. Actividades sanitarias y veterinarias, servicios sociales                          762  92,93           11515  92,55
+O. Otras actividades sociales y de servicios prestados a                             1567   93,83          10336  93,76
+    la comunidad; servicios personales
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                           Unidades           Tasa             Trabajadores      Tasa
+
+TOTAL NACIONAL                                        18087           92,55             151286          92,54
+Andalucía                                              1523           93,55              13608          95,07
+Aragón                                                  960           96,00               7479          96,13
+Asturias (Principado de)                                849           96,59               6213          96,91
+Balears (Illes)                                         814           95,65               5914          96,01
+Canarias                                                851           83,76               6606          84,91
+Cantabria                                               691           95,05               4716          95,18
+Castilla y León                                        1020           94,01               8199          95,14
+Castilla-La Mancha                                      889           90,71               6611          89,97
+Cataluña                                               2097           95,75              21206          95,76
+Comunitat Valenciana                                   1422           94,86              12308          95,54
+Extremadura                                             762           94,78               4888          94,53
+Galicia                                                1000           84,53               7779          82,81
+Madrid (Comunidad de)                                  1944           90,17              21734          88,86
+Murcia (Región de)                                      875           95,01               6224          95,92
+Navarra (Comunidad Foral de)                            717           91,22               5206          91,38
+País Vasco                                             1078           89,53               9078          89,85
+Rioja (La)                                              595           93,70               3517          93,12
+Tabla 1. Tamaños muestrales por secciones de actividad de la CNAE-09
+                                                                                                 Unidades           Trabajadores
+TODAS LAS ACTIVIDADES                                                                                       27710              241577
+B. Industrias extractivas                                                                                     336                 2119
+C. Industria manufacturera                                                                                   6553                58582
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                                           237                 2275
+E. Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación                     715                 6040
+F. Construcción                                                                                              2895                18581
+G. Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas                     2101                19361
+H. Transporte y almacenamiento                                                                               1321                12503
+I. Hostelería                                                                                                 912                 7909
+J. Información y comunicaciones                                                                              1473                12675
+K. Actividades financieras y de seguros                                                                      1100                10855
+L. Actividades inmobiliarias                                                                                  525                 1808
+M. Actividades profesionales, científicas y técnicas                                                         2599                16175
+N. Actividades administrativas y servicios auxiliares                                                        2052                21703
+O. Administración Pública y defensa; Seguridad Social obligatoria                                             680                11225
+P. Educación                                                                                                  550                 7342
+Q. Actividades sanitarias y de servicios sociales                                                            1331                18851
+R. Actividades artísticas, recreativas y de entretenimiento                                                  1138                 7113
+S.Otros servicios                                                                                            1192                 6460
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                 Unidades      Trabajadores
+TOTAL NACIONAL                                          27710                           241577
+Andalucía                                                 2561                           22853
+Aragón                                                    1311                           10879
+Asturias (Principado de)                                  1126                            8662
+Balears (Illes)                                           1174                            8699
+Canarias                                                  1391                           11261
+Cantabria                                                  959                            6821
+Castilla y León                                           1472                           12508
+Castilla-La Mancha                                        1312                           10382
+Cataluña                                                  3515                           35449
+Comunitat Valenciana                                      2209                           18812
+Extremadura                                               1044                            6966
+Galicia                                                   1579                           13057
+Madrid (Comunidad de)                                     3322                           38158
+Murcia (Región de)                                        1220                            8994
+Navarra (Comunidad Foral de)                              1036                            7920
+País Vasco                                                1641                           15125
+Rioja (La)                                                 838                            5031
+Tabla 3. Muestra recogida y tasas de respuesta por secciones de actividad de la CNAE-09
+                                                                              Unidades    Tasa    Trabajadores   Tasa
+TODAS LAS ACTIVIDADES                                                               26308  94,94          228146  94,44
+B. Industrias extractivas                                                             323  96,13            2030  95,80
+C. Industria manufacturera                                                           6300  96,14           56163  95,87
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                   229  96,62            2194  96,44
+E. Suministro de agua, actividades de saneamiento, gestión de                         691   96,64           5850  96,85
+    residuos y descontaminación
+F. Construcción                                                                     2656   91,74          17119   92,13
+G. Comercio al por mayor y al por menor; reparación de vehículos de                 2045   97,33          18641   96,28
+    motor y motocicletas
+H. Transporte y almacenamiento                                                      1246   94,32          11878   95,00
+I. Hostelería                                                                        870   95,39           7598   96,07
+J. Información y comunicaciones                                                     1365   92,67          11769   92,85
+K. Actividades financieras y de seguros                                             1068   97,09          10532   97,02
+L. Actividades inmobiliarias                                                         474   90,29           1645   90,98
+M. Actividades profesionales, científicas y técnicas                                2472   95,11          15216   94,07
+N. Actividades administrativas y servicios auxiliares                               1925   93,81          19995   92,13
+O. Administración Pública y defensa; Seguridad Social obligatoria                    605   88,97           9580   85,35
+P. Educación                                                                         539   98,00           7058   96,13
+Q. Actividades sanitarias y de servicios sociales                                   1288   96,77          17986   95,41
+R. Actividades artísticas, recreativas y de entretenimiento                         1075   94,46           6771   95,19
+S.Otros servicios                                                                   1137   95,39           6121   94,75
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                         Unidades           Tasa               Trabajadores     Tasa
+TOTAL NACIONAL                                      26308             94,94             228146          94,44
+Andalucía                                            2424             94,65               21732         95,09
+Aragón                                               1274             97,18               10535         96,84
+Asturias (Principado de)                             1087             96,54                8322         96,07
+Balears (Illes)                                      1125             95,83                8246         94,79
+Canarias                                             1275             91,66               10374         92,12
+Cantabria                                             927             96,66                6498         95,26
+Castilla y León                                      1422             96,60               11971         95,71
+Castilla-La Mancha                                   1254             95,58                9852         94,90
+Cataluña                                             3332             94,79               33927         95,71
+Comunitat Valenciana                                 2085             94,39               17823         94,74
+Extremadura                                          1013             97,03                6674         95,81
+Galicia                                              1492             94,49               12031         92,14
+Madrid (Comunidad de)                                3102             93,38               35300         92,51
+Murcia (Región de)                                   1178             96,56                8714         96,89
+Navarra (Comunidad Foral de)                          976             94,21                7366         93,01
+País Vasco                                           1530             93,24               13930         92,10
+Rioja (La)                                            812             96,90                4851         96,42
+Tabla 1. Tamaños muestrales por secciones de actividad de la CNAE-09
+                                                                                                    Unidades           Trabajadores
+TODAS LAS ACTIVIDADES                                                                                          26956              230257
+B. Industrias extractivas                                                                                        329                 2046
+C. Industria manufacturera                                                                                      6316                54162
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                                              241                 2311
+                                                                                                                 682                 5919
+E. Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación
+F. Construcción                                                                                                 2607               16084
+                                                                                                                2089               18503
+G. Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas
+H. Transporte y almacenamiento                                                                                  1325               12101
+I. Hostelería                                                                                                    947                7719
+J. Información y comunicaciones                                                                                 1469               12222
+K. Actividades financieras y de seguros                                                                         1051               10324
+L. Actividades inmobiliarias                                                                                     493                1557
+M. Actividades profesionales, científicas y técnicas                                                            2555               16052
+N. Actividades administrativas y servicios auxiliares                                                           2056               21184
+O. Administración Pública y defensa; Seguridad Social obligatoria                                                694               11129
+P. Educación                                                                                                     540                7144
+Q. Actividades sanitarias y de servicios sociales                                                               1369               19089
+R. Actividades artísticas, recreativas y de entretenimiento                                                     1063                6520
+S.Otros servicios                                                                                               1130                6191
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                   Unidades      Trabajadores
+TOTAL NACIONAL                                            26956                            230257
+Andalucía                                                   2616                            22624
+Aragón                                                      1240                             9842
+Asturias (Principado de)                                    1091                             8266
+Balears (Illes)                                             1106                             7982
+Canarias                                                    1325                            10583
+Cantabria                                                    911                             6287
+Castilla y León                                             1478                            11923
+Castilla-La Mancha                                          1262                             9880
+Cataluña                                                    3501                            34609
+Comunitat Valenciana                                        2167                            17843
+Extremadura                                                  974                             6500
+Galicia                                                     1563                            12548
+Madrid (Comunidad de)                                       3244                            36764
+Murcia (Región de)                                          1155                             8371
+Navarra (Comunidad Foral de)                                 976                             7360
+País Vasco                                                  1577                            14216
+Rioja (La)                                                   770                             4659
+Tabla 3. Muestra recogida y tasas de respuesta por secciones de actividad de la CNAE-09
+                                                                              Unidades    Tasa    Trabajadores   Tasa
+TODAS LAS ACTIVIDADES                                                               25861  95,94          218324  94,82
+B. Industrias extractivas                                                             317  96,35            1931  94,38
+C. Industria manufacturera                                                           6117  96,85           51761  95,57
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                   237  98,34            2271  98,27
+E. Suministro de agua, actividades de saneamiento, gestión de                         663   97,21           5795  97,91
+    residuos y descontaminación
+F. Construcción                                                                     2443   93,71          14939   92,88
+G. Comercio al por mayor y al por menor; reparación de vehículos de                 2028   97,08          17579   95,01
+    motor y motocicletas
+H. Transporte y almacenamiento                                                      1254   94,64          11442   94,55
+I. Hostelería                                                                        898   94,83           7282   94,34
+J. Información y comunicaciones                                                     1402   95,44          11693   95,67
+K. Actividades financieras y de seguros                                             1022   97,24           9992   96,78
+L. Actividades inmobiliarias                                                         464   94,12           1448   93,00
+M. Actividades profesionales, científicas y técnicas                                2437   95,38          15218   94,80
+N. Actividades administrativas y servicios auxiliares                               1956   95,14          19437   91,75
+O. Administración Pública y defensa; Seguridad Social obligatoria                    659   94,96          10291   92,47
+P. Educación                                                                         527   97,59           6862   96,05
+Q. Actividades sanitarias y de servicios sociales                                   1329   97,08          18220   95,45
+R. Actividades artísticas, recreativas y de entretenimiento                         1035   97,37           6247   95,81
+S.Otros servicios                                                                   1073   94,96           5916   95,56
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                         Unidades           Tasa               Trabajadores     Tasa
+TOTAL NACIONAL                                      25861             95,94             218324          94,82
+Andalucía                                            2533             96,83               21819         96,44
+Aragón                                               1215             97,98                9611         97,65
+Asturias (Principado de)                             1057             96,88                7861         95,10
+Balears (Illes)                                      1073             97,02                7651         95,85
+Canarias                                             1218             91,92                9627         90,97
+Cantabria                                             887             97,37                6020         95,75
+Castilla y León                                      1426             96,48               11339         95,10
+Castilla-La Mancha                                   1225             97,07                9502         96,17
+Cataluña                                             3395             96,97               33433         96,60
+Comunitat Valenciana                                 2066             95,34               16789         94,09
+Extremadura                                           941             96,61                6265         96,38
+Galicia                                              1464             93,67               11573         92,23
+Madrid (Comunidad de)                                3105             95,72               34851         94,80
+Murcia (Región de)                                   1108             95,93                7938         94,83
+Navarra (Comunidad Foral de)                          917             93,95                6704         91,09
+País Vasco                                           1480             93,85               12892         90,69
+Rioja (La)                                            751             97,53                4449         95,49
+Tabla 1. Tamaños muestrales por secciones de actividad de la CNAE-09
+                                                                                             Unidades      Trabajadores
+TODAS LAS ACTIVIDADES                                                                               27006            229381
+B. Industrias extractivas                                                                              327              2041
+C. Industria manufacturera                                                                            6313            54128
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                                    239              2214
+                                                                                                       733              6435
+E. Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación
+F. Construcción                                                                                      2571             15130
+                                                                                                     2067             18247
+G. Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas
+H. Transporte y almacenamiento                                                                       1309             11588
+I. Hostelería                                                                                         955              7839
+J. Información y comunicaciones                                                                      1528             12797
+K. Actividades financieras y de seguros                                                              1012              9617
+L. Actividades inmobiliarias                                                                          503              1706
+M. Actividades profesionales, científicas y técnicas                                                 2572             16465
+N. Actividades administrativas y servicios auxiliares                                                2087             21288
+O. Administración Pública y defensa; Seguridad Social obligatoria                                     686             10993
+P. Educación                                                                                          551              7489
+Q. Actividades sanitarias y de servicios sociales                                                    1349             18606
+R. Actividades artísticas, recreativas y de entretenimiento                                          1077              6755
+S.Otros servicios                                                                                    1127              6043
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                     Unidades     Trabajadores
+TOTAL NACIONAL                                             27006                            229381
+Andalucía                                                   2636                             22903
+Aragón                                                      1241                              9759
+Asturias (Principado de)                                    1086                              8106
+Balears (Illes)                                             1090                              7602
+Canarias                                                    1311                             10255
+Cantabria                                                     889                             5991
+Castilla y León                                             1467                             11837
+Castilla-La Mancha                                          1271                              9705
+Cataluña                                                    3562                             35324
+Comunitat Valenciana                                        2165                             17667
+Extremadura                                                   963                             6392
+Galicia                                                     1569                             12442
+Madrid (Comunidad de)                                       3265                             36809
+Murcia (Región de)                                          1143                              8118
+Navarra (Comunidad Foral de)                                  963                             7312
+País Vasco                                                  1598                             14537
+Rioja (La)                                                    787                             4622
+Tabla 3. Muestra recogida y tasas de respuesta por secciones de actividad de la
+CNAE-09
+                                                                      Unidades  Tasa   Trabajadores  Tasa
+TODAS LAS ACTIVIDADES                                                     26973  99,88        228604  99,66
+B. Industrias extractivas                                                   327 100,00          2040  99,95
+C. Industria manufacturera                                                 6306  99,89         54047  99,85
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado         239 100,00          2214 100,00
+E. Suministro de agua, actividades de saneamiento, gestión de               732  99,86          6424  99,83
+    residuos y descontaminación
+F. Construcción                                                            2571 100,00         15105   99,83
+G. Comercio al por mayor y al por menor; reparación de vehículos de        2063  99,81         18212   99,81
+    motor y motocicletas
+H. Transporte y almacenamiento                                             1305  99,69         11559   99,75
+I. Hostelería                                                               955 100,00          7813   99,67
+J. Información y comunicaciones                                            1525  99,80         12782   99,88
+K. Actividades financieras y de seguros                                    1011  99,90          9594   99,76
+L. Actividades inmobiliarias                                                502  99,80          1696   99,41
+M. Actividades profesionales, científicas y técnicas                       2570  99,92         16407   99,65
+N. Actividades administrativas y servicios auxiliares                      2085  99,90         20996   98,63
+O. Administración Pública y defensa; Seguridad Social obligatoria           685  99,85         10987   99,95
+P. Educación                                                                551 100,00          7457   99,57
+Q. Actividades sanitarias y de servicios sociales                          1348  99,93         18560   99,75
+R. Actividades artísticas, recreativas y de entretenimiento                1072  99,54          6704   99,25
+S.Otros servicios                                                          1126  99,91          6007   99,40
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                          Unidades      Tasa                   Trabajadores   Tasa
+TOTAL NACIONAL                                   26974                 99,88           228619          99,67
+Andalucía                                          2633                99,89            22801          99,55
+Aragón                                             1241               100,00             9738          99,78
+Asturias (Principado de)                           1083                99,72             8073          99,59
+Balears (Illes)                                    1089                99,91             7583          99,75
+Canarias                                           1306                99,62            10213          99,59
+Cantabria                                           887                99,78             5963          99,53
+Castilla y León                                    1466                99,93            11791          99,61
+Castilla-La Mancha                                 1269                99,84             9687          99,81
+Cataluña                                           3560                99,94            35209          99,67
+Comunitat Valenciana                               2161                99,82            17603          99,64
+Extremadura                                         963               100,00             6378          99,78
+Galicia                                            1568                99,94            12405          99,70
+Madrid (Comunidad de)                              3264                99,97            36729          99,78
+Murcia (Región de)                                 1143               100,00             8070          99,41
+Navarra (Comunidad Foral de)                        961                99,79             7269          99,41
+País Vasco                                         1593                99,69            14493          99,70
+Rioja (La)                                          787               100,00             4614          99,83
+Tabla 1. Tamaños muestrales por secciones de actividad de la CNAE-09
+                                                                                             Unidades      Trabajadores
+TODAS LAS ACTIVIDADES                                                                               26899            226825
+B. Industrias extractivas                                                                              323              2001
+C. Industria manufacturera                                                                            6275            53128
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                                    243              2238
+                                                                                                       748              6483
+E. Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación
+F. Construcción                                                                                      2502             14368
+                                                                                                     2064             18201
+G. Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas
+H. Transporte y almacenamiento                                                                       1300             11590
+I. Hostelería                                                                                         962              7855
+J. Información y comunicaciones                                                                      1510             12628
+K. Actividades financieras y de seguros                                                              1047             10217
+L. Actividades inmobiliarias                                                                          510              1717
+M. Actividades profesionales, científicas y técnicas                                                 2588             16541
+N. Actividades administrativas y servicios auxiliares                                                2064             20597
+O. Administración Pública y defensa; Seguridad Social obligatoria                                     676             10898
+P. Educación                                                                                          534              7156
+Q. Actividades sanitarias y de servicios sociales                                                    1359             18673
+R. Actividades artísticas, recreativas y de entretenimiento                                          1065              6667
+S.Otros servicios                                                                                    1129              5867
+
+
+
+
+ Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                      Unidades     Trabajadores
+ TOTAL NACIONAL                                             26899                           226825
+ Andalucía                                                   2601                            22476
+ Aragón                                                      1227                             9575
+ Asturias (Principado de)                                    1057                             7683
+ Balears (Illes)                                             1099                             7679
+ Canarias                                                    1282                             9877
+ Cantabria                                                     883                            5920
+ Castilla y León                                             1455                            11655
+ Castilla-La Mancha                                          1271                             9493
+ Cataluña                                                    3564                            35074
+ Comunitat Valenciana                                        2187                            17883
+ Extremadura                                                   953                            6265
+ Galicia                                                     1570                            12340
+ Madrid (Comunidad de)                                       3292                            36869
+ Murcia (Región de)                                          1137                             7953
+ Navarra (Comunidad Foral de)                                  962                            7227
+ País Vasco                                                  1596                            14380
+ Rioja (La)                                                    763                            4476
+Tabla 3. Muestra recogida y tasas de respuesta por secciones de actividad de la
+CNAE-09
+                                                                      Unidades    Tasa     Trabajadores  Tasa
+TODAS LAS ACTIVIDADES                                                     26878    99,92          226336  99,78
+B. Industrias extractivas                                                   323   100,00            2001 100,00
+C. Industria manufacturera                                                 6274    99,98           53095  99,94
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado         243   100,00            2237  99,96
+E. Suministro de agua, actividades de saneamiento, gestión de               748   100,00            6479  99,94
+    residuos y descontaminación
+F. Construcción                                                            2502 100,00            14364   99,97
+G. Comercio al por mayor y al por menor; reparación de vehículos de        2063  99,95            18176   99,86
+    motor y motocicletas
+H. Transporte y almacenamiento                                             1299  99,92            11568   99,81
+I. Hostelería                                                               960  99,79             7827   99,64
+J. Información y comunicaciones                                            1509  99,93            12619   99,93
+K. Actividades financieras y de seguros                                    1047 100,00            10210   99,93
+L. Actividades inmobiliarias                                                508  99,61             1710   99,59
+M. Actividades profesionales, científicas y técnicas                       2585  99,88            16500   99,75
+N. Actividades administrativas y servicios auxiliares                      2062  99,90            20419   99,14
+O. Administración Pública y defensa; Seguridad Social obligatoria           675  99,85            10896   99,98
+P. Educación                                                                533  99,81             7148   99,89
+Q. Actividades sanitarias y de servicios sociales                          1358  99,93            18630   99,77
+R. Actividades artísticas, recreativas y de entretenimiento                1061  99,62             6618   99,27
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                          Unidades      Tasa                   Trabajadores   Tasa
+TOTAL NACIONAL                                   26878                 99,92           226336             99,78
+Andalucía                                          2601               100,00            22415             99,73
+Aragón                                             1226                99,92             9550             99,74
+Asturias (Principado de)                           1056                99,91             7663             99,74
+Balears (Illes)                                    1096                99,73             7662             99,78
+Canarias                                           1280                99,84             9852             99,75
+Cantabria                                           882                99,89             5908             99,80
+Castilla y León                                    1453                99,86            11609             99,61
+Castilla-La Mancha                                 1269                99,84             9463             99,68
+Cataluña                                           3561                99,92            35020             99,85
+Comunitat Valenciana                               2184                99,86            17845             99,79
+Extremadura                                         953               100,00             6248             99,73
+Galicia                                            1569                99,94            12318             99,82
+Madrid (Comunidad de)                              3291                99,97            36830             99,89
+Murcia (Región de)                                 1137               100,00             7904             99,38
+Navarra (Comunidad Foral de)                        961                99,90             7210             99,76
+País Vasco                                         1596               100,00            14368             99,92
+Rioja (La)                                          763               100,00             4471             99,89
+Tabla 1. Tamaños muestrales por secciones de actividad de la CNAE-09
+                                                                                             Unidades      Trabajadores
+TODAS LAS ACTIVIDADES                                                                               26903            225280
+B. Industrias extractivas                                                                              319              1936
+C. Industria manufacturera                                                                            6240            52304
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                                    241              2221
+                                                                                                       764              6581
+E. Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación
+F. Construcción                                                                                      2539             14199
+                                                                                                     2070             18215
+G. Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas
+H. Transporte y almacenamiento                                                                       1307             11514
+I. Hostelería                                                                                         947              7586
+J. Información y comunicaciones                                                                      1500             12311
+K. Actividades financieras y de seguros                                                              1041             10055
+L. Actividades inmobiliarias                                                                          523              1786
+M. Actividades profesionales, científicas y técnicas                                                 2590             16737
+N. Actividades administrativas y servicios auxiliares                                                2081             20921
+O. Administración Pública y defensa; Seguridad Social obligatoria                                     667             10653
+P. Educación                                                                                          543              7347
+Q. Actividades sanitarias y de servicios sociales                                                    1342             18451
+R. Actividades artísticas, recreativas y de entretenimiento                                          1077              6701
+S.Otros servicios                                                                                    1112              5762
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                     Unidades     Trabajadores
+TOTAL NACIONAL                                             26903                            225280
+Andalucía                                                   2624                             22518
+Aragón                                                      1215                              9382
+Asturias (Principado de)                                    1044                              7535
+Balears (Illes)                                             1094                              7639
+Canarias                                                    1308                             10078
+Cantabria                                                     887                             5991
+Castilla y León                                             1450                             11377
+Castilla-La Mancha                                          1277                              9442
+Cataluña                                                    3562                             34929
+Comunitat Valenciana                                        2205                             17922
+Extremadura                                                   955                             6154
+Galicia                                                     1572                             12288
+Madrid (Comunidad de)                                       3268                             36381
+Murcia (Región de)                                          1146                              8000
+Navarra (Comunidad Foral de)                                  960                             7198
+País Vasco                                                  1578                             13965
+Rioja (La)                                                    758                             4481
+Tabla 3. Muestra recogida y tasas de respuesta por secciones de actividad de la
+CNAE-09
+                                                                      Unidades  Tasa   Trabajadores  Tasa
+TODAS LAS ACTIVIDADES                                                     26874  99,89        224647  99,72
+B. Industrias extractivas                                                   319 100,00          1935  99,95
+C. Industria manufacturera                                                 6238  99,97         52258  99,91
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado         241 100,00          2220  99,95
+E. Suministro de agua, actividades de saneamiento, gestión de               763  99,87          6577  99,94
+    residuos y descontaminación
+F. Construcción                                                            2537    99,92       14177   99,85
+G. Comercio al por mayor y al por menor; reparación de vehículos de        2066    99,81       18194   99,88
+    motor y motocicletas
+H. Transporte y almacenamiento                                             1303  99,69         11493   99,82
+I. Hostelería                                                               946  99,89          7567   99,75
+J. Información y comunicaciones                                            1500 100,00         12298   99,89
+K. Actividades financieras y de seguros                                    1039  99,81         10049   99,94
+L. Actividades inmobiliarias                                                522  99,81          1780   99,66
+M. Actividades profesionales, científicas y técnicas                       2588  99,92         16677   99,64
+N. Actividades administrativas y servicios auxiliares                      2080  99,95         20683   98,86
+O. Administración Pública y defensa; Seguridad Social obligatoria           666  99,85         10650   99,97
+P. Educación                                                                543 100,00          7336   99,85
+Q. Actividades sanitarias y de servicios sociales                          1342 100,00         18406   99,76
+R. Actividades artísticas, recreativas y de entretenimiento                1070  99,35          6616   98,73
+S.Otros servicios                                                          1111  99,91          5731   99,46
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                          Unidades      Tasa                   Trabajadores   Tasa
+TOTAL NACIONAL                                   26874                 99,89           224647          99,72
+Andalucía                                          2622                99,92            22430          99,61
+Aragón                                             1215               100,00             9357          99,73
+Asturias (Principado de)                           1043                99,90             7514          99,72
+Balears (Illes)                                    1094               100,00             7618          99,73
+Canarias                                           1304                99,69            10042          99,64
+Cantabria                                           886                99,89             5979          99,80
+Castilla y León                                    1449                99,93            11342          99,69
+Castilla-La Mancha                                 1276                99,92             9404          99,60
+Cataluña                                           3558                99,89            34852          99,78
+Comunitat Valenciana                               2203                99,91            17866          99,69
+Extremadura                                         954                99,90             6124          99,51
+Galicia                                            1571                99,94            12261          99,78
+Madrid (Comunidad de)                              3265                99,91            36338          99,88
+Murcia (Región de)                                 1144                99,83             7944          99,30
+Navarra (Comunidad Foral de)                        957                99,69             7172          99,64
+País Vasco                                         1575                99,81            13934          99,78
+Rioja (La)                                          758               100,00             4470          99,75
+Tabla 1. Tamaños muestrales por secciones de actividad de la CNAE-09
+                                                                                             Unidades      Trabajadores
+TODAS LAS ACTIVIDADES                                                                               27086            228800
+B. Industrias extractivas                                                                              323              1980
+C. Industria manufacturera                                                                            6282            52773
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                                    236              2082
+                                                                                                       765              6603
+E. Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación
+F. Construcción                                                                                      2516             13968
+                                                                                                     2066             18396
+G. Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas
+H. Transporte y almacenamiento                                                                       1303             11541
+I. Hostelería                                                                                         972              8116
+J. Información y comunicaciones                                                                      1538             12757
+K. Actividades financieras y de seguros                                                              1034              9718
+L. Actividades inmobiliarias                                                                          535              1998
+M. Actividades profesionales, científicas y técnicas                                                 2635             17377
+N. Actividades administrativas y servicios auxiliares                                                2097             21413
+O. Administración Pública y defensa; Seguridad Social obligatoria                                     652             10210
+P. Educación                                                                                          557              7696
+Q. Actividades sanitarias y de servicios sociales                                                    1352             18714
+R. Actividades artísticas, recreativas y de entretenimiento                                          1100              7475
+S.Otros servicios                                                                                    1123              5983
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                     Unidades     Trabajadores
+TOTAL NACIONAL                                             27086                            228800
+Andalucía                                                   2604                             22110
+Aragón                                                      1222                              9506
+Asturias (Principado de)                                    1054                              7608
+Balears (Illes)                                             1112                              7977
+Canarias                                                    1315                             10045
+Cantabria                                                     899                             6015
+Castilla y León                                             1457                             11639
+Castilla-La Mancha                                          1275                              9707
+Cataluña                                                    3563                             35452
+Comunitat Valenciana                                        2225                             18643
+Extremadura                                                   969                             6292
+Galicia                                                     1574                             12445
+Madrid (Comunidad de)                                       3317                             37473
+Murcia (Región de)                                          1150                              8097
+Navarra (Comunidad Foral de)                                  970                             7187
+País Vasco                                                  1584                             13875
+Rioja (La)                                                    796                             4729
+Tabla 3. Muestra recogida y tasas de respuesta por secciones de actividad de la
+CNAE-09
+                                                                      Unidades    Tasa   Trabajadores  Tasa
+TODAS LAS ACTIVIDADES                                                     27069    99,94        228560  99,90
+B. Industrias extractivas                                                   323   100,00          1979  99,95
+C. Industria manufacturera                                                 6280    99,97         52702  99,87
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado         236   100,00          2082 100,00
+E. Suministro de agua, actividades de saneamiento, gestión de               765   100,00          6601  99,97
+    residuos y descontaminación
+F. Construcción                                                            2512    99,84        13958    99,93
+G. Comercio al por mayor y al por menor; reparación de vehículos de        2062    99,81        18360    99,80
+    motor y motocicletas
+H. Transporte y almacenamiento                                             1303   100,00        11537  99,97
+I. Hostelería                                                               971    99,90         8113  99,96
+J. Información y comunicaciones                                            1535    99,80        12731  99,80
+K. Actividades financieras y de seguros                                    1034   100,00         9684  99,65
+L. Actividades inmobiliarias                                                534    99,81         1994  99,80
+M. Actividades profesionales, científicas y técnicas                       2634    99,96        17369  99,95
+N. Actividades administrativas y servicios auxiliares                      2096    99,95        21401  99,94
+O. Administración Pública y defensa; Seguridad Social obligatoria           652   100,00        10204  99,94
+P. Educación                                                                557   100,00         7692  99,95
+Q. Actividades sanitarias y de servicios sociales                          1352   100,00        18706  99,96
+R. Actividades artísticas, recreativas y de entretenimiento                1100   100,00         7464  99,85
+S.Otros servicios                                                          1123   100,00         5983 100,00
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                          Unidades      Tasa                   Trabajadores   Tasa
+TOTAL NACIONAL                                   27069                 99,94           228560            99,90
+Andalucía                                          2603                99,96            22091            99,91
+Aragón                                             1220                99,84             9490            99,83
+Asturias (Principado de)                           1054               100,00             7599            99,88
+Balears (Illes)                                    1110                99,82             7960            99,79
+Canarias                                           1315               100,00            10041            99,96
+Cantabria                                           899               100,00             6005            99,83
+Castilla y León                                    1456                99,93            11621            99,85
+Castilla-La Mancha                                 1275               100,00             9702            99,95
+Cataluña                                           3563               100,00            35439            99,96
+Comunitat Valenciana                               2222                99,87            18626            99,91
+Extremadura                                         969               100,00             6279            99,79
+Galicia                                            1572                99,87            12437            99,94
+Madrid (Comunidad de)                              3314                99,91            37438            99,91
+Murcia (Región de)                                 1147                99,74             8068            99,64
+Navarra (Comunidad Foral de)                        970               100,00             7178            99,87
+País Vasco                                         1584               100,00            13857            99,87
+Rioja (La)                                          796               100,00             4729           100,00
+Tabla 1. Tamaños muestrales por secciones de actividad de la CNAE-09
+                                                                                            Unidades       Trabajadores
+TODAS LAS ACTIVIDADES                                                                              27.202           230.337
+B. Industrias extractivas                                                                              321             1.972
+C. Industria manufacturera                                                                           6.257           52.447
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                                    237             2.072
+                                                                                                       778             6.688
+E. Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación
+F. Construcción                                                                                     2.538            13.935
+                                                                                                    2.082            18.606
+G. Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas
+H. Transporte y almacenamiento                                                                      1.317            11.702
+I. Hostelería                                                                                         990             8.396
+J. Información y comunicaciones                                                                     1.540            13.030
+K. Actividades financieras y de seguros                                                             1.030             9.692
+L. Actividades inmobiliarias                                                                          538             2.058
+M. Actividades profesionales, científicas y técnicas                                                2.641            17.519
+N. Actividades administrativas y servicios auxiliares                                               2.106            21.433
+O. Administración Pública y defensa; Seguridad Social obligatoria                                     639             9.840
+P. Educación                                                                                          566             8.373
+Q. Actividades sanitarias y de servicios sociales                                                   1.358            18.960
+R. Actividades artísticas, recreativas y de entretenimiento                                         1.123             7.495
+S.Otros servicios                                                                                   1.141             6.119
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                           Unidades              Trabajadores
+TOTAL NACIONAL                                                        27.202                    230.337
+Andalucía                                                              2.616                     22.364
+Aragón                                                                 1.226                      9.633
+Asturias (Principado de)                                               1.055                      7.636
+Balears (Illes)                                                        1.143                      8.310
+Canarias                                                               1.325                     10.246
+Cantabria                                                                889                      5.927
+Castilla y León                                                        1.470                     11.666
+Castilla-La Mancha                                                     1.288                      9.879
+Cataluña                                                               3.578                     35.826
+Comunitat Valenciana                                                   2.224                     18.445
+Extremadura                                                              982                      6.381
+Galicia                                                                1.567                     12.341
+Madrid (Comunidad de)                                                  3.328                     37.729
+Murcia (Región de)                                                     1.167                      8.183
+Navarra (Comunidad Foral de)                                             973                      7.233
+País Vasco                                                             1.579                     13.819
+Rioja (La)                                                               792                      4.719
+Tabla 3. Muestra recogida y tasas de respuesta por secciones de actividad de la
+CNAE-09
+                                                                      Unidades   Tasa   Trabajadores  Tasa
+TODAS LAS ACTIVIDADES                                                     27.190  99,96       230.250  99,96
+B. Industrias extractivas                                                    321 100,00         1.972 100,00
+C. Industria manufacturera                                                 6.252  99,92        52.397  99,90
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado          237 100,00         2.072 100,00
+E. Suministro de agua, actividades de saneamiento, gestión de                777  99,87         6.686  99,97
+    residuos y descontaminación
+F. Construcción                                                           2.537  99,96         13.930   99,96
+G. Comercio al por mayor y al por menor; reparación de vehículos de       2.082 100,00         18.604   99,99
+    motor y motocicletas
+H. Transporte y almacenamiento                                            1.317   100,00       11.701  99,99
+I. Hostelería                                                               990   100,00        8.395  99,99
+J. Información y comunicaciones                                           1.540   100,00       13.030 100,00
+K. Actividades financieras y de seguros                                   1.030   100,00        9.683  99,91
+L. Actividades inmobiliarias                                                537    99,81        2.057  99,95
+M. Actividades profesionales, científicas y técnicas                      2.640    99,96       17.518  99,99
+N. Actividades administrativas y servicios auxiliares                     2.104    99,91       21.429  99,98
+O. Administración Pública y defensa; Seguridad Social obligatoria           639   100,00        9.839  99,99
+P. Educación                                                                566   100,00        8.371  99,98
+Q. Actividades sanitarias y de servicios sociales                         1.358   100,00       18.954  99,97
+R. Actividades artísticas, recreativas y de entretenimiento               1.123   100,00        7.494  99,99
+S.Otros servicios                                                         1.140    99,91        6.118  99,98
+Tabla 1. Tamaños muestrales por secciones de actividad de la CNAE-09
+                                                                              Unidades       Trabajadores
+TODAS LAS ACTIVIDADES                                                                27.218           231.338
+B. Industrias extractivas                                                                317             1.887
+C. Industria manufacturera                                                             6.237           52.309
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                      234             2.008
+E. Suministro de agua, actividades de saneamiento, gestión de residuos y                 763             6.527
+descontaminación
+F. Construcción                                                                         2.549          14.096
+G. Comercio al por mayor y al por menor; reparación de vehículos de motor y             2.078          18.617
+motocicletas
+H. Transporte y almacenamiento                                                          1.315          11.880
+I. Hostelería                                                                             995           8.465
+J. Información y comunicaciones                                                         1.545          12.994
+K. Actividades financieras y de seguros                                                 1.024           9.453
+L. Actividades inmobiliarias                                                              537           2.059
+M. Actividades profesionales, científicas y técnicas                                    2.637          17.429
+N. Actividades administrativas y servicios auxiliares                                   2.124          21.993
+O. Administración Pública y defensa; Seguridad Social obligatoria                         652          10.154
+P. Educación                                                                              572           8.472
+Q. Actividades sanitarias y de servicios sociales                                       1.383          19.369
+R. Actividades artísticas, recreativas y de entretenimiento                             1.113           7.399
+S.Otros servicios                                                                       1.143           6.227
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                 Unidades     Trabajadores
+TOTAL NACIONAL                                         27.218                 231.338
+Andalucía                                               2.647                  22.638
+Aragón                                                  1.238                   9.894
+Asturias (Principado de)                                1.063                   7.698
+Balears (Illes)                                         1.150                   8.579
+Canarias                                                1.342                  10.326
+Cantabria                                                 903                   5.983
+Castilla y León                                         1.458                  11.628
+Castilla-La Mancha                                      1.283                   9.796
+Cataluña                                                3.568                  35.818
+Comunitat Valenciana                                    2.237                  18.799
+Extremadura                                               987                   6.480
+Galicia                                                 1.558                  12.331
+Madrid (Comunidad de)                                   3.296                  37.626
+Murcia (Región de)                                      1.159                   8.117
+Navarra (Comunidad Foral de)                              969                   7.229
+País Vasco                                              1.566                  13.642
+Rioja (La)                                                794                   4.754
+Tabla 3. Muestra recogida y tasas de respuesta por secciones de actividad de la CNAE-
+09
+                                                                      Unidades   Tasa    Trabajadores  Tasa
+TODAS LAS ACTIVIDADES                                                     27.214   99,99       231.267   99,97
+B. Industrias extractivas                                                    317 100,00          1.887 100,00
+C. Industria manufacturera                                                 6.237 100,00         52.297   99,98
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado          234 100,00          2.008 100,00
+E. Suministro de agua, actividades de saneamiento, gestión de                763 100,00          6.527 100,00
+    residuos y descontaminación
+F. Construcción                                                            2.549    100,00        14.091    99,96
+G. Comercio al por mayor y al por menor; reparación de vehículos de        2.078    100,00        18.607    99,95
+    motor y motocicletas
+H. Transporte y almacenamiento                                             1.313     99,85        11.873    99,94
+I. Hostelería                                                                995    100,00         8.465   100,00
+J. Información y comunicaciones                                            1.545    100,00        12.994   100,00
+K. Actividades financieras y de seguros                                    1.024    100,00         9.452    99,99
+L. Actividades inmobiliarias                                                 536     99,81         2.058    99,95
+M. Actividades profesionales, científicas y técnicas                       2.637    100,00        17.429   100,00
+N. Actividades administrativas y servicios auxiliares                      2.123     99,95        21.989    99,98
+O. Administración Pública y defensa; Seguridad Social obligatoria            652    100,00        10.133    99,79
+P. Educación                                                                 572    100,00         8.468    99,95
+Q. Actividades sanitarias y de servicios sociales                          1.383    100,00        19.366    99,98
+R. Actividades artísticas, recreativas y de entretenimiento                1.113    100,00         7.397    99,97
+S.Otros servicios                                                          1.143    100,00         6.226    99,98
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                               Unidades      Tasa                  Trabajadores    Tasa
+TOTAL NACIONAL                                       27.214              99,99            231.267           99,97
+Andalucía                                              2.646             99,96             22.616           99,90
+Aragón                                                 1.238            100,00               9.893          99,99
+Asturias (Principado de)                               1.063            100,00               7.695          99,96
+Balears (Illes)                                        1.150            100,00               8.579         100,00
+Canarias                                               1.342            100,00             10.324           99,98
+Cantabria                                                903            100,00               5.983         100,00
+Castilla y León                                        1.458            100,00             11.628          100,00
+Castilla-La Mancha                                     1.283            100,00               9.795          99,99
+Cataluña                                               3.568            100,00             35.814           99,99
+Comunitat Valenciana                                   2.236             99,96             18.795           99,98
+Extremadura                                              987            100,00               6.480         100,00
+Galicia                                                1.558            100,00             12.319           99,90
+Madrid (Comunidad de)                                  3.294             99,94             37.609           99,95
+Murcia (Región de)                                     1.159            100,00               8.115          99,98
+Navarra (Comunidad Foral de)                             969            100,00               7.229         100,00
+País Vasco                                             1.566            100,00             13.640           99,99
+Rioja (La)                                               794            100,00               4.753          99,98
+Tabla 1. Tamaños muestrales por secciones de actividad de la CNAE-09
+                                                                                           Unidades       Trabajadores
+TODAS LAS ACTIVIDADES                                                                             27.460           237.843
+B. Industrias extractivas                                                                             309             1.867
+C. Industria manufacturera                                                                          6.291           53.202
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                                   232             1.977
+E. Suministro de agua, actividades de saneamiento, gestión de residuos y                              743             6.258
+descontaminación
+F. Construcción                                                                                    2.551            14.424
+                                                                                                   2.081            19.081
+G. Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas
+H. Transporte y almacenamiento                                                                     1.344            12.276
+I. Hostelería                                                                                      1.013             8.910
+J. Información y comunicaciones                                                                    1.581            13.759
+K. Actividades financieras y de seguros                                                            1.014             9.343
+L. Actividades inmobiliarias                                                                         528             2.098
+M. Actividades profesionales, científicas y técnicas                                               2.700            18.388
+N. Actividades administrativas y servicios auxiliares                                              2.152            22.998
+O. Administración Pública y defensa; Seguridad Social obligatoria                                    634             9.924
+P. Educación                                                                                         603             9.082
+Q. Actividades sanitarias y de servicios sociales                                                  1.413            20.306
+R. Actividades artísticas, recreativas y de entretenimiento                                        1.122             7.504
+S.Otros servicios                                                                                  1.149             6.446
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                       Unidades     Trabajadores
+TOTAL NACIONAL                                               27.460                         237.843
+Andalucía                                                     2.659                          23.354
+Aragón                                                        1.244                          10.183
+Asturias (Principado de)                                      1.059                           7.776
+Balears (Illes)                                               1.156                           8.568
+Canarias                                                      1.355                          10.739
+Cantabria                                                       915                           6.252
+Castilla y León                                               1.470                          11.753
+Castilla-La Mancha                                            1.309                          10.208
+Cataluña                                                      3.584                          36.565
+Comunitat Valenciana                                          2.266                          19.631
+Extremadura                                                     999                           6.659
+Galicia                                                       1.578                          12.772
+Madrid (Comunidad de)                                         3.306                          38.376
+Murcia (Región de)                                            1.177                           8.553
+Navarra (Comunidad Foral de)                                    996                           7.649
+País Vasco                                                    1.582                          13.979
+Rioja (La)                                                      805                           4.826
+Tabla 3. Muestra recogida y tasas de respuesta por secciones de actividad de la CNAE-
+09
+                                                                      Unidades   Tasa   Trabajadores  Tasa
+TODAS LAS ACTIVIDADES                                                     27.460 100,00       237.812   99,99
+B. Industrias extractivas                                                    309 100,00         1.867 100,00
+C. Industria manufacturera                                                 6.291 100,00        53.200 100,00
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado          232 100,00         1.977 100,00
+E. Suministro de agua, actividades de saneamiento, gestión de                743 100,00         6.258 100,00
+    residuos y descontaminación
+F. Construcción                                                           2.551    100,00        14.420    99,97
+G. Comercio al por mayor y al por menor; reparación de vehículos de       2.081    100,00        19.077    99,98
+    motor y motocicletas
+H. Transporte y almacenamiento                                            1.344    100,00        12.262    99,89
+I. Hostelería                                                             1.013    100,00         8.909    99,99
+J. Información y comunicaciones                                           1.581    100,00        13.759   100,00
+K. Actividades financieras y de seguros                                   1.014    100,00         9.343   100,00
+L. Actividades inmobiliarias                                                528    100,00         2.098   100,00
+M. Actividades profesionales, científicas y técnicas                      2.700    100,00        18.387    99,99
+N. Actividades administrativas y servicios auxiliares                     2.152    100,00        22.998   100,00
+O. Administración Pública y defensa; Seguridad Social obligatoria           634    100,00         9.923    99,99
+P. Educación                                                                603    100,00         9.082   100,00
+Q. Actividades sanitarias y de servicios sociales                         1.413    100,00        20.303    99,99
+R. Actividades artísticas, recreativas y de entretenimiento               1.122    100,00         7.503    99,99
+S.Otros servicios                                                         1.149    100,00         6.446   100,00
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                               Unidades      Tasa                 Trabajadores    Tasa
+TOTAL NACIONAL                                       27.460             100,00           237.812           99,99
+Andalucía                                              2.659            100,00            23.353          100,00
+Aragón                                                 1.244            100,00            10.169           99,86
+Asturias (Principado de)                               1.059            100,00              7.776         100,00
+Balears (Illes)                                        1.156            100,00              8.563          99,94
+Canarias                                               1.355            100,00            10.737           99,98
+Cantabria                                                915            100,00              6.252         100,00
+Castilla y León                                        1.470            100,00            11.753          100,00
+Castilla-La Mancha                                     1.309            100,00            10.208          100,00
+Cataluña                                               3.584            100,00            36.558           99,98
+Comunitat Valenciana                                   2.266            100,00            19.631          100,00
+Extremadura                                              999            100,00              6.659         100,00
+Galicia                                                1.578            100,00            12.772          100,00
+Madrid (Comunidad de)                                  3.306            100,00            38.375          100,00
+Murcia (Región de)                                     1.177            100,00              8.553         100,00
+Navarra (Comunidad Foral de)                             996            100,00              7.648          99,99
+País Vasco                                             1.582            100,00            13.979          100,00
+Rioja (La)                                               805            100,00              4.826         100,00
+Tabla 1. Tamaños muestrales por secciones de actividad de la CNAE-09
+                                                                                           Unidades       Trabajadores
+TODAS LAS ACTIVIDADES                                                                             27.352           237.478
+B. Industrias extractivas                                                                             302             1.798
+C. Industria manufacturera                                                                          6.248           53.037
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                                   227             1.956
+E. Suministro de agua, actividades de saneamiento, gestión de residuos y                              774             6.493
+descontaminación
+F. Construcción                                                                                    2.560            14.429
+                                                                                                   2.084            19.096
+G. Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas
+H. Transporte y almacenamiento                                                                     1.338            11.995
+I. Hostelería                                                                                        973             8.393
+J. Información y comunicaciones                                                                    1.579            13.834
+K. Actividades financieras y de seguros                                                            1.011             9.267
+L. Actividades inmobiliarias                                                                         519             2.059
+M. Actividades profesionales, científicas y técnicas                                               2.693            18.499
+N. Actividades administrativas y servicios auxiliares                                              2.143            22.988
+O. Administración Pública y defensa; Seguridad Social obligatoria                                    650            10.210
+P. Educación                                                                                         606             9.257
+Q. Actividades sanitarias y de servicios sociales                                                  1.423            20.608
+R. Actividades artísticas, recreativas y de entretenimiento                                        1.100             7.427
+S.Otros servicios                                                                                  1.122             6.132
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                       Unidades     Trabajadores
+TOTAL NACIONAL                                               27.352                         237.478
+Andalucía                                                     2.648                          23.644
+Aragón                                                        1.237                          10.185
+Asturias (Principado de)                                      1.065                           7.680
+Balears (Illes)                                               1.123                           7.975
+Canarias                                                      1.351                          10.711
+Cantabria                                                       905                           6.265
+Castilla y León                                               1.470                          11.824
+Castilla-La Mancha                                            1.285                          10.110
+Cataluña                                                      3.580                          36.666
+Comunitat Valenciana                                          2.282                          20.048
+Extremadura                                                     994                           6.625
+Galicia                                                       1.568                          12.812
+Madrid (Comunidad de)                                         3.287                          37.920
+Murcia (Región de)                                            1.186                           8.630
+Navarra (Comunidad Foral de)                                  1.000                           7.584
+País Vasco                                                    1.573                          13.927
+Rioja (La)                                                      798                           4.872
+Tabla 3. Muestra recogida y tasas de respuesta por secciones de actividad de la CNAE-
+09
+                                                                      Unidades   Tasa    Trabajadores  Tasa
+TODAS LAS ACTIVIDADES                                                     27.349   99,99       237.408   99,97
+B. Industrias extractivas                                                    302 100,00          1.798 100,00
+C. Industria manufacturera                                                 6.248 100,00         53.003   99,94
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado          227 100,00          1.955   99,95
+E. Suministro de agua, actividades de saneamiento, gestión de                774 100,00          6.493 100,00
+    residuos y descontaminación
+F. Construcción                                                            2.560    100,00        14.425    99,97
+G. Comercio al por mayor y al por menor; reparación de vehículos de        2.084    100,00        19.092    99,98
+    motor y motocicletas
+H. Transporte y almacenamiento                                             1.337     99,93        11.983    99,90
+I. Hostelería                                                                973    100,00         8.391    99,98
+J. Información y comunicaciones                                            1.579    100,00        13.832    99,99
+K. Actividades financieras y de seguros                                    1.011    100,00         9.267   100,00
+L. Actividades inmobiliarias                                                 519    100,00         2.059   100,00
+M. Actividades profesionales, científicas y técnicas                       2.692     99,96        18.497    99,99
+N. Actividades administrativas y servicios auxiliares                      2.143    100,00        22.985    99,99
+O. Administración Pública y defensa; Seguridad Social obligatoria            649     99,85        10.208    99,98
+P. Educación                                                                 606    100,00         9.257   100,00
+Q. Actividades sanitarias y de servicios sociales                          1.423    100,00        20.607   100,00
+R. Actividades artísticas, recreativas y de entretenimiento                1.100    100,00         7.424    99,96
+S.Otros servicios                                                          1.122    100,00         6.132   100,00
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                               Unidades      Tasa                  Trabajadores    Tasa
+TOTAL NACIONAL                                       27.349              99,99            237.408           99,97
+Andalucía                                              2.648            100,00             23.642           99,99
+Aragón                                                 1.236             99,92             10.164           99,79
+Asturias (Principado de)                               1.065            100,00               7.679          99,99
+Balears (Illes)                                        1.123            100,00               7.973          99,97
+Canarias                                               1.351            100,00             10.707           99,96
+Cantabria                                                905            100,00               6.265         100,00
+Castilla y León                                        1.470            100,00             11.824          100,00
+Castilla-La Mancha                                     1.285            100,00             10.109           99,99
+Cataluña                                               3.580            100,00             36.662           99,99
+Comunitat Valenciana                                   2.282            100,00             20.041           99,97
+Extremadura                                              994            100,00               6.624          99,98
+Galicia                                                1.568            100,00             12.811           99,99
+Madrid (Comunidad de)                                  3.286             99,97             37.911           99,98
+Murcia (Región de)                                     1.186            100,00               8.628          99,98
+Navarra (Comunidad Foral de)                             999             99,90               7.583          99,99
+País Vasco                                             1.573            100,00             13.914           99,91
+Rioja (La)                                               798            100,00               4.871          99,98
+Tabla 1. Tamaños muestrales por secciones de actividad de la CNAE-09
+                                                                                           Unidades       Trabajadores
+TODAS LAS ACTIVIDADES                                                                             27.578           241.169
+B. Industrias extractivas                                                                             307             1.802
+C. Industria manufacturera                                                                          6.295           53.768
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                                   227             1.922
+E. Suministro de agua, actividades de saneamiento, gestión de residuos y                              774             6.572
+descontaminación
+F. Construcción                                                                                    2.541            14.385
+                                                                                                   2.100            19.349
+G. Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas
+H. Transporte y almacenamiento                                                                     1.345            12.331
+I. Hostelería                                                                                      1.001             8.899
+J. Información y comunicaciones                                                                    1.592            14.214
+K. Actividades financieras y de seguros                                                            1.000             9.147
+L. Actividades inmobiliarias                                                                         532             2.136
+M. Actividades profesionales, científicas y técnicas                                               2.717            18.824
+N. Actividades administrativas y servicios auxiliares                                              2.188            23.507
+O. Administración Pública y defensa; Seguridad Social obligatoria                                    652            10.273
+P. Educación                                                                                         614             9.488
+Q. Actividades sanitarias y de servicios sociales                                                  1.434            20.781
+R. Actividades artísticas, recreativas y de entretenimiento                                        1.123             7.519
+S.Otros servicios                                                                                  1.136             6.252
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                       Unidades     Trabajadores
+TOTAL NACIONAL                                               27.578                         241.169
+Andalucía                                                     2.677                          23.892
+Aragón                                                        1.269                          10.443
+Asturias (Principado de)                                      1.055                           7.635
+Balears (Illes)                                               1.136                           8.434
+Canarias                                                      1.350                          10.630
+Cantabria                                                       896                           6.290
+Castilla y León                                               1.486                          11.912
+Castilla-La Mancha                                            1.315                          10.437
+Cataluña                                                      3.599                          37.196
+Comunitat Valenciana                                          2.290                          20.352
+Extremadura                                                   1.013                           6.912
+Galicia                                                       1.578                          12.882
+Madrid (Comunidad de)                                         3.326                          38.673
+Murcia (Región de)                                            1.201                           8.839
+Navarra (Comunidad Foral de)                                  1.013                           7.846
+País Vasco                                                    1.568                          13.825
+Rioja (La)                                                      806                           4.971
+Tabla 3. Muestra recogida y tasas de respuesta por secciones de actividad de la CNAE-
+09
+                                                                      Unidades   Tasa    Trabajadores  Tasa
+TODAS LAS ACTIVIDADES                                                     27.574   99,99       241.098   99,97
+B. Industrias extractivas                                                    307 100,00          1.802 100,00
+C. Industria manufacturera                                                 6.295 100,00         53.731   99,93
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado          227 100,00          1.922 100,00
+E. Suministro de agua, actividades de saneamiento, gestión de                774 100,00          6.572 100,00
+    residuos y descontaminación
+F. Construcción                                                            2.541    100,00        14.383    99,99
+G. Comercio al por mayor y al por menor; reparación de vehículos de        2.099     99,95        19.339    99,95
+    motor y motocicletas
+H. Transporte y almacenamiento                                             1.344     99,93        12.328    99,98
+I. Hostelería                                                              1.001    100,00         8.898    99,99
+J. Información y comunicaciones                                            1.592    100,00        14.211    99,98
+K. Actividades financieras y de seguros                                      999     99,90         9.143    99,96
+L. Actividades inmobiliarias                                                 532    100,00         2.136   100,00
+M. Actividades profesionales, científicas y técnicas                       2.717    100,00        18.824   100,00
+N. Actividades administrativas y servicios auxiliares                      2.188    100,00        23.505    99,99
+O. Administración Pública y defensa; Seguridad Social obligatoria            652    100,00        10.271    99,98
+P. Educación                                                                 614    100,00         9.488   100,00
+Q. Actividades sanitarias y de servicios sociales                          1.434    100,00        20.781   100,00
+R. Actividades artísticas, recreativas y de entretenimiento                1.122     99,91         7.513    99,92
+S.Otros servicios                                                          1.136    100,00         6.251    99,98
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                               Unidades      Tasa                  Trabajadores    Tasa
+TOTAL NACIONAL                                       27.574              99,99            241.098           99,97
+Andalucía                                              2.677            100,00             23.890           99,99
+Aragón                                                 1.269            100,00             10.432           99,89
+Asturias (Principado de)                               1.055            100,00               7.635         100,00
+Balears (Illes)                                        1.135             99,91               8.432          99,98
+Canarias                                               1.350            100,00             10.626           99,96
+Cantabria                                                895             99,89               6.285          99,92
+Castilla y León                                        1.484             99,87             11.906           99,95
+Castilla-La Mancha                                     1.315            100,00             10.435           99,98
+Cataluña                                               3.599            100,00             37.193           99,99
+Comunitat Valenciana                                   2.290            100,00             20.352          100,00
+Extremadura                                            1.013            100,00               6.912         100,00
+Galicia                                                1.578            100,00             12.878           99,97
+Madrid (Comunidad de)                                  3.326            100,00             38.667           99,98
+Murcia (Región de)                                     1.201            100,00               8.825          99,84
+Navarra (Comunidad Foral de)                           1.013            100,00               7.843          99,96
+País Vasco                                             1.568            100,00             13.817           99,94
+Rioja (La)                                               806            100,00               4.970          99,98
+Tabla 1. Tamaños muestrales por secciones de actividad de la CNAE-09
+                                                                                           Unidades       Trabajadores
+TODAS LAS ACTIVIDADES                                                                             27.626           249.609
+B. Industrias extractivas                                                                             303             1.746
+C. Industria manufacturera                                                                          6.310           55.376
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                                   224             1.935
+E. Suministro de agua, actividades de saneamiento, gestión de residuos y                              786             6.767
+descontaminación
+F. Construcción                                                                                    2.393            14.080
+                                                                                                   2.058            19.815
+G. Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas
+H. Transporte y almacenamiento                                                                     1.364            13.151
+I. Hostelería                                                                                      1.066             9.988
+J. Información y comunicaciones                                                                    1.656            15.301
+K. Actividades financieras y de seguros                                                              995             9.202
+L. Actividades inmobiliarias                                                                         523             2.227
+M. Actividades profesionales, científicas y técnicas                                               2.664            19.605
+N. Actividades administrativas y servicios auxiliares                                              2.206            23.299
+O. Administración Pública y defensa; Seguridad Social obligatoria                                    682            10.729
+P. Educación                                                                                         646            10.072
+Q. Actividades sanitarias y de servicios sociales                                                  1.504            21.925
+R. Actividades artísticas, recreativas y de entretenimiento                                        1.133             7.854
+S.Otros servicios                                                                                  1.113             6.537
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                      Unidades     Trabajadores
+TOTAL NACIONAL                                              27.626                          249.609
+Andalucía                                                    2.671                           24.745
+Aragón                                                       1.263                           10.846
+Asturias (Principado de)                                     1.066                            7.926
+Balears (Illes)                                              1.183                            9.229
+Canarias                                                     1.378                           11.328
+Cantabria                                                      895                            6.304
+Castilla y León                                              1.474                           12.452
+Castilla-La Mancha                                           1.353                           11.034
+Cataluña                                                     3.616                           38.796
+Comunitat Valenciana                                         2.286                           20.892
+Extremadura                                                  1.023                            7.124
+Galicia                                                      1.606                           13.360
+Madrid (Comunidad de)                                        3.385                           40.722
+Murcia (Región de)                                           1.216                            9.191
+Navarra (Comunidad Foral de)                                 1.020                            7.874
+País Vasco                                                   1.374                           12.736
+Rioja (La)                                                     817                            5.050
+Tabla 3. Muestra recogida y tasas de respuesta por secciones de actividad de la CNAE-
+09
+                                                                      Unidades   Tasa    Trabajadores  Tasa
+TODAS LAS ACTIVIDADES                                                     27.607   99,93       249.207   99,84
+B. Industrias extractivas                                                    303 100,00          1.745   99,94
+C. Industria manufacturera                                                 6.310 100,00         55.357   99,97
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado          224 100,00          1.935 100,00
+E. Suministro de agua, actividades de saneamiento, gestión de                785   99,87         6.759   99,88
+    residuos y descontaminación
+F. Construcción                                                            2.393    100,00        14.073   99,95
+G. Comercio al por mayor y al por menor; reparación de vehículos de        2.058    100,00        19.795   99,90
+    motor y motocicletas
+H. Transporte y almacenamiento                                             1.361     99,78        13.132   99,86
+I. Hostelería                                                              1.066    100,00         9.978   99,90
+J. Información y comunicaciones                                            1.656    100,00        15.291   99,93
+K. Actividades financieras y de seguros                                      993     99,80         9.198   99,96
+L. Actividades inmobiliarias                                                 523    100,00         2.223   99,82
+M. Actividades profesionales, científicas y técnicas                       2.660     99,85        19.561   99,78
+N. Actividades administrativas y servicios auxiliares                      2.201     99,77        23.147   99,35
+O. Administración Pública y defensa; Seguridad Social obligatoria            682    100,00        10.728   99,99
+P. Educación                                                                 645     99,85        10.052   99,80
+Q. Actividades sanitarias y de servicios sociales                          1.504    100,00        21.899   99,88
+R. Actividades artísticas, recreativas y de entretenimiento                1.131     99,82         7.815   99,50
+S.Otros servicios                                                          1.112     99,91         6.519   99,72
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                               Unidades      Tasa                  Trabajadores    Tasa
+TOTAL NACIONAL                                       27.607              99,93            249.207          99,84
+Andalucía                                              2.668             99,89             24.713          99,87
+Aragón                                                 1.263            100,00             10.843          99,97
+Asturias (Principado de)                               1.064             99,81               7.904         99,72
+Balears (Illes)                                        1.183            100,00               9.220         99,90
+Canarias                                               1.378            100,00             11.312          99,86
+Cantabria                                                895            100,00               6.296         99,87
+Castilla y León                                        1.473             99,93             12.430          99,82
+Castilla-La Mancha                                     1.353            100,00             11.002          99,71
+Cataluña                                               3.614             99,94             38.725          99,82
+Comunitat Valenciana                                   2.284             99,91             20.867          99,88
+Extremadura                                            1.023            100,00               7.109         99,79
+Galicia                                                1.603             99,81             13.327          99,75
+Madrid (Comunidad de)                                  3.384             99,97             40.669          99,87
+Murcia (Región de)                                     1.215             99,92               9.173         99,80
+Navarra (Comunidad Foral de)                           1.017             99,71               7.858         99,80
+País Vasco                                             1.373             99,93             12.720          99,87
+Rioja (La)                                               817            100,00               5.039         99,78
+Tabla 1. Tamaños muestrales por secciones de actividad de la CNAE-09
+                                                                                           Unidades       Trabajadores
+TODAS LAS ACTIVIDADES                                                                             27.942           255.405
+B. Industrias extractivas                                                                             296             1.749
+C. Industria manufacturera                                                                          6.335           56.188
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado                                   229             1.999
+E. Suministro de agua, actividades de saneamiento, gestión de residuos y                              785             6.810
+descontaminación
+F. Construcción                                                                                    2.438            14.538
+                                                                                                   2.095            20.441
+G. Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas
+H. Transporte y almacenamiento                                                                     1.402            13.692
+I. Hostelería                                                                                      1.077            10.357
+J. Información y comunicaciones                                                                    1.657            15.379
+K. Actividades financieras y de seguros                                                              998             9.258
+L. Actividades inmobiliarias                                                                         533             2.320
+M. Actividades profesionales, científicas y técnicas                                               2.716            20.245
+N. Actividades administrativas y servicios auxiliares                                              2.235            23.906
+O. Administración Pública y defensa; Seguridad Social obligatoria                                    702            11.149
+P. Educación                                                                                         656            10.399
+Q. Actividades sanitarias y de servicios sociales                                                  1.526            22.576
+R. Actividades artísticas, recreativas y de entretenimiento                                        1.143             7.870
+S.Otros servicios                                                                                  1.119             6.529
+
+
+
+
+Tabla 2. Tamaños muestrales por Comunidades Autónomas
+                                                       Unidades     Trabajadores
+TOTAL NACIONAL                                               27.942                         255.405
+Andalucía                                                     2.694                          25.198
+Aragón                                                        1.284                          10.884
+Asturias (Principado de)                                      1.074                           8.008
+Balears (Illes)                                               1.181                           9.383
+Canarias                                                      1.366                          11.561
+Cantabria                                                       907                           6.420
+Castilla y León                                               1.488                          12.865
+Castilla-La Mancha                                            1.362                          11.332
+Cataluña                                                      3.630                          39.605
+Comunitat Valenciana                                          2.288                          21.144
+Extremadura                                                   1.035                           7.360
+Galicia                                                       1.579                          13.391
+Madrid (Comunidad de)                                         3.381                          41.295
+Murcia (Región de)                                            1.222                           9.466
+Navarra (Comunidad Foral de)                                  1.030                           8.068
+País Vasco                                                    1.606                          14.398
+Rioja (La)                                                      815                           5.027
+Tabla 3. Muestra recogida y tasas de respuesta por secciones de actividad de la CNAE-
+09
+                                                                      Unidades   Tasa    Trabajadores  Tasa
+TODAS LAS ACTIVIDADES                                                     27.922   99,93       254.856   99,79
+B. Industrias extractivas                                                    296 100,00          1.748   99,94
+C. Industria manufacturera                                                 6.334   99,98        56.151   99,93
+D. Suministro de energía eléctrica, gas, vapor y aire acondicionado          229 100,00          1.999 100,00
+E. Suministro de agua, actividades de saneamiento, gestión de                784   99,87         6.804   99,91
+    residuos y descontaminación
+F. Construcción                                                            2.438    100,00        14.529   99,94
+G. Comercio al por mayor y al por menor; reparación de vehículos de        2.094     99,95        20.409   99,84
+    motor y motocicletas
+H. Transporte y almacenamiento                                             1.399     99,79        13.672   99,85
+I. Hostelería                                                              1.077    100,00        10.341   99,85
+J. Información y comunicaciones                                            1.657    100,00        15.356   99,85
+K. Actividades financieras y de seguros                                      996     99,80         9.245   99,86
+L. Actividades inmobiliarias                                                 532     99,81         2.311   99,61
+M. Actividades profesionales, científicas y técnicas                       2.712     99,85        20.187   99,71
+N. Actividades administrativas y servicios auxiliares                      2.232     99,87        23.725   99,24
+O. Administración Pública y defensa; Seguridad Social obligatoria            702    100,00        11.143   99,95
+P. Educación                                                                 654     99,70        10.382   99,84
+Q. Actividades sanitarias y de servicios sociales                          1.526    100,00        22.532   99,81
+R. Actividades artísticas, recreativas y de entretenimiento                1.142     99,91         7.818   99,34
+S.Otros servicios                                                          1.118     99,91         6.504   99,62
+
+
+
+
+Tabla 4. Muestra recogida y tasas de respuesta por Comunidades Autónomas
+                                               Unidades      Tasa                  Trabajadores    Tasa
+TOTAL NACIONAL                                       27.922              99,93            254.856          99,79
+Andalucía                                              2.690             99,85             25.143          99,78
+Aragón                                                 1.284            100,00             10.863          99,81
+Asturias (Principado de)                               1.073             99,91               7.990         99,78
+Balears (Illes)                                        1.180             99,92               9.368         99,84
+Canarias                                               1.366            100,00             11.542          99,84
+Cantabria                                                907            100,00               6.410         99,84
+Castilla y León                                        1.487             99,93             12.838          99,79
+Castilla-La Mancha                                     1.362            100,00             11.304          99,75
+Cataluña                                               3.628             99,94             39.517          99,78
+Comunitat Valenciana                                   2.286             99,91             21.098          99,78
+Extremadura                                            1.035            100,00               7.339         99,71
+Galicia                                                1.578             99,94             13.360          99,77
+Madrid (Comunidad de)                                  3.380             99,97             41.220          99,82
+Murcia (Región de)                                     1.219             99,75               9.430         99,62
+Navarra (Comunidad Foral de)                           1.028             99,81               8.043         99,69
+País Vasco                                             1.605             99,94             14.377          99,85
+Rioja (La)                                               814             99,88               5.014         99,74
+

@@ -1,0 +1,90 @@
+{
+  "tipo": "tabla",
+  "id": "mortalidad-ine",
+  "title": "Tablas de mortalidad del INE por año, sexo y edad simple (1975-2024)",
+  "description": "Funciones de la tabla de mortalidad (mx, ax, qx, lx, dx, Lx, Tx, ex) por año, sexo y edad simple, total nacional. Dos ediciones del INE: 1975-1990 (edades 0 a 89 y «90 y más», que figura como edad 90) y 1991-2024 (edades 0 a 99 y «100 y más», que figura como edad 100). Cambia el tramo abierto final y, con él, las funciones de ese tramo (ver notas); no se han armonizado ni recalculado. Los valores son los del INE (dato base, tanto por mil en qx).",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año de la tabla",
+      "unidad": null
+    },
+    {
+      "id": "edicion",
+      "descripcion": "1975-1990 o 1991-2024 (tabla del INE de la que procede)",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Edad x; el último valor de cada edición es el tramo abierto",
+      "unidad": "años"
+    },
+    {
+      "id": "mx",
+      "descripcion": "Tasa central de mortalidad (tasa de mortalidad)",
+      "unidad": "por mil"
+    },
+    {
+      "id": "ax",
+      "descripcion": "Promedio de años vividos el último año de vida",
+      "unidad": "años"
+    },
+    {
+      "id": "qx_por_mil",
+      "descripcion": "Probabilidad de muerte entre las edades x y x+1 (riesgo de muerte), qx",
+      "unidad": "por mil"
+    },
+    {
+      "id": "lx",
+      "descripcion": "Supervivientes a la edad exacta x (raíz 100.000)",
+      "unidad": "personas"
+    },
+    {
+      "id": "dx",
+      "descripcion": "Defunciones teóricas entre x y x+1",
+      "unidad": "personas"
+    },
+    {
+      "id": "pob_estacionaria",
+      "descripcion": "Población estacionaria Lx entre x y x+1",
+      "unidad": "personas-año"
+    },
+    {
+      "id": "tiempo_por_vivir",
+      "descripcion": "Tiempo por vivir Tx desde la edad x",
+      "unidad": "personas-año"
+    },
+    {
+      "id": "ex",
+      "descripcion": "Esperanza de vida a la edad x",
+      "unidad": "años"
+    }
+  ],
+  "filas": 14670,
+  "source": {
+    "title": "Tablas de mortalidad por año, sexo, edad y funciones (tablas 27153 y 27150)",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+    "docId": "INE-27153"
+  },
+  "origenes": [
+    {
+      "period": "1990",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27150",
+      "sha256": "694858c2c85010ecea2576a697e0b138032b6c06ef4a636cd25d4c93ee9a8348"
+    },
+    {
+      "period": "2024",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+      "sha256": "e408674582ff98063c325ec31e723627e2b0d258281a729ec1dae0fec0e9ec4e"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Ediciones: 1991-2024 de la tabla 27153 (modificada 19/11/2025) y 1975-1990 de la tabla 27150 (modificada 11/04/2018). Las dos son del INE «Tablas de Mortalidad»; la serie 1975-1990 es la edición histórica que publica el INE. La tabla 67233 es idéntica a la 27153."
+}

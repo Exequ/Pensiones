@@ -1,0 +1,45 @@
+{
+  "tipo": "tabla",
+  "id": "proyecciones-poblacion",
+  "title": "Proyecciones de población del INE 2026-2076: población a 1 de enero por edad simple y sexo (escenario principal)",
+  "description": "Población residente en España a 1 de enero proyectada por el INE (edición 2026-2076, publicada el 17/06/2026) por edad simple (0 a «100 y más», que figura como edad 100) y sexo, escenario principal («proyección a largo plazo»). El INE publica los resultados con decimales para garantizar la coherencia entre flujos y stocks. La población de partida es la cifra provisional de 1 de enero de 2026 de la ECP.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año (1 de enero)",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Edad simple; 100 = «100 y más años»",
+      "unidad": "años"
+    },
+    {
+      "id": "poblacion",
+      "descripcion": "Población proyectada",
+      "unidad": "personas"
+    }
+  ],
+  "filas": 15453,
+  "source": {
+    "title": "Proyecciones de Población 2026-2076: población residente a 1 de enero por sexo, edad y año (tabla 36643)",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36643",
+    "docId": "INE-36643"
+  },
+  "origenes": [
+    {
+      "period": "2076",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36643",
+      "sha256": "693b5a0440bcf615586f11579239dd37e076648291b36b25e8caea18aef124f2"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "El INE actualiza cada dos años las proyecciones con un horizonte de 50 años; esta edición se basa en una encuesta a expertos de febrero de 2026. Los códigos Tempus de las tablas empiezan por PROY24 aunque contienen la edición 2026-2076 (el horizonte 2026-2076 y la metodología de junio de 2026 lo confirman)."
+}
