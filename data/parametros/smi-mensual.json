@@ -1,0 +1,443 @@
+{
+  "tipo": "datos",
+  "id": "smi-mensual",
+  "title": "Salario mínimo interprofesional mensual",
+  "description": "Importe mensual (para salarios fijados por meses) fijado cada año por real decreto. En 2021 constan dos periodos (ver notas).",
+  "data": [
+    {
+      "id": "2000",
+      "value": 424.8,
+      "unit": "euros/mes",
+      "period": "2000",
+      "source": {
+        "title": "Real Decreto 2065/1999, de 30 de diciembre, por el que se fija el salario mínimo interprofesional para 2000.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1999-24923",
+        "docId": "BOE-A-1999-24923"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "La norma expresa el importe en pesetas y, entre paréntesis, en euros; se recoge el importe en euros que consta en la norma.",
+      "quote": "queda fijado en 2.356 pesetas/día (14,16 euros/día) o 70.680 pesetas/mes (424,80 euros/mes)",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2001",
+      "value": 433.45,
+      "unit": "euros/mes",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3476/2000, de 29 de diciembre, por el que se fija el salario mínimo interprofesional para 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24365",
+        "docId": "BOE-A-2000-24365"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "La norma expresa el importe en pesetas y, entre paréntesis, en euros; se recoge el importe en euros que consta en la norma.",
+      "quote": "queda fijado en 2.404 pesetas/día (14,45 euros/día) o 72.120 pesetas/mes (433,45 euros/mes)",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2002",
+      "value": 442.2,
+      "unit": "euros/mes",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto 1466/2001, de 27 de diciembre, por el que se fija el salario mínimo interprofesional para 2002.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24745",
+        "docId": "BOE-A-2001-24745"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 14,74 euros/día o 442,20 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2003",
+      "value": 451.2,
+      "unit": "euros/mes",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto 1426/2002, de 27 de diciembre, por el que se fija el salario mínimo interprofesional para 2003.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-25290",
+        "docId": "BOE-A-2002-25290"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 15,04 euros/día o 451,20 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2004",
+      "value": 460.5,
+      "unit": "euros/mes",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto 1793/2003, de 26 de diciembre, por el que se fija el salario mínimo interprofesional para 2004.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2003-23711",
+        "docId": "BOE-A-2003-23711"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 15,35 euros/día o 460,50 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2005",
+      "value": 513.0,
+      "unit": "euros/mes",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto 2388/2004, de 30 de diciembre, por el que se fija el salario mínimo interprofesional para 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21909",
+        "docId": "BOE-A-2004-21909"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 17,10 euros/día o 513 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2006",
+      "value": 540.9,
+      "unit": "euros/mes",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto 1613/2005, de 30 de diciembre, por el que se fija el salario mínimo interprofesional para 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21610",
+        "docId": "BOE-A-2005-21610"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 18,03 euros/día o 540,90 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2007",
+      "value": 570.6,
+      "unit": "euros/mes",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto 1632/2006, de 29 de diciembre, por el que se fija el salario mínimo interprofesional para 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22959",
+        "docId": "BOE-A-2006-22959"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 19,02 euros/día o 570,60 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2008",
+      "value": 600.0,
+      "unit": "euros/mes",
+      "period": "2008",
+      "source": {
+        "title": "Real Decreto 1763/2007, de 28 de diciembre, por el que se fija el salario mínimo interprofesional para 2008.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2007-22451",
+        "docId": "BOE-A-2007-22451"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 20 euros/día o 600 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2009",
+      "value": 624.0,
+      "unit": "euros/mes",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto 2128/2008, de 26 de diciembre, por el que se fija el salario mínimo interprofesional para 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20958",
+        "docId": "BOE-A-2008-20958"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 20,80 euros/día o 624 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2010",
+      "value": 633.3,
+      "unit": "euros/mes",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto 2030/2009, de 30 de diciembre, por el que se fija el Salario Mínimo Interprofesional para 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21170",
+        "docId": "BOE-A-2009-21170"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 21,11 euros/día o 633,30 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2011",
+      "value": 641.4,
+      "unit": "euros/mes",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto 1795/2010, de 30 de diciembre, por el que se fija el salario mínimo interprofesional para 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20150",
+        "docId": "BOE-A-2010-20150"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 21,38 euros/día o 641,40 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2012",
+      "value": 641.4,
+      "unit": "euros/mes",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto 1888/2011, de 30 de diciembre, por el que se fija el salario mínimo interprofesional para 2012.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20645",
+        "docId": "BOE-A-2011-20645"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 21,38 euros/día o 641,40 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2013",
+      "value": 645.3,
+      "unit": "euros/mes",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto 1717/2012, de 28 de diciembre, por el que se fija el salario mínimo interprofesional para 2013.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15766",
+        "docId": "BOE-A-2012-15766"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 21,51 euros/día o 645,30 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2014",
+      "value": 645.3,
+      "unit": "euros/mes",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto 1046/2013, de 27 de diciembre, por el que se fija el salario mínimo interprofesional para 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13764",
+        "docId": "BOE-A-2013-13764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 21,51 euros/día o 645,30 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2015",
+      "value": 648.6,
+      "unit": "euros/mes",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto 1106/2014, de 26 de diciembre, por el que se fija el salario mínimo interprofesional para 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13518",
+        "docId": "BOE-A-2014-13518"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 21,62 euros/día o 648,60 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2016",
+      "value": 655.2,
+      "unit": "euros/mes",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto 1171/2015, de 29 de diciembre, por el que se fija el salario mínimo interprofesional para 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-14273",
+        "docId": "BOE-A-2015-14273"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 21,84 euros/día o 655,20 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2017",
+      "value": 707.7,
+      "unit": "euros/mes",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto 742/2016, de 30 de diciembre, por el que se fija el salario mínimo interprofesional para 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-12598",
+        "docId": "BOE-A-2016-12598"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 23,59 euros/día o 707,70 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2018",
+      "value": 735.9,
+      "unit": "euros/mes",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 1077/2017, de 29 de diciembre, por el que se fija el salario mínimo interprofesional para 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-15848",
+        "docId": "BOE-A-2017-15848"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 24,53 euros/día o 735,9 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2019",
+      "value": 900.0,
+      "unit": "euros/mes",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto 1462/2018, de 21 de diciembre, por el que se fija el salario mínimo interprofesional para 2019.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17773",
+        "docId": "BOE-A-2018-17773"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 30 euros/día o 900 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2020",
+      "value": 950.0,
+      "unit": "euros/mes",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto 231/2020, de 4 de febrero, por el que se fija el salario mínimo interprofesional para 2020.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-1652",
+        "docId": "BOE-A-2020-1652"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 31,66 euros/día o 950 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2021",
+      "value": 965.0,
+      "unit": "euros/mes",
+      "period": "2021",
+      "source": {
+        "title": "Real Decreto 817/2021, de 28 de septiembre, por el que se fija el salario mínimo interprofesional para 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-15770",
+        "docId": "BOE-A-2021-15770"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Fijado por el RD 817/2021 con efectos desde el 1 de septiembre de 2021; hasta el 31 de agosto regía el del RD 231/2020 (950 euros/mes).",
+      "quote": "queda fijado en 32,17 euros/día o 965 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2022",
+      "value": 1000.0,
+      "unit": "euros/mes",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 152/2022, de 22 de febrero, por el que se fija el salario mínimo interprofesional para 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-2851",
+        "docId": "BOE-A-2022-2851"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 33,33 euros/día o 1.000 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2023",
+      "value": 1080.0,
+      "unit": "euros/mes",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 99/2023, de 14 de febrero, por el que se fija el salario mínimo interprofesional para 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-3982",
+        "docId": "BOE-A-2023-3982"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 36 euros/día o 1080 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2024",
+      "value": 1134.0,
+      "unit": "euros/mes",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto 145/2024, de 6 de febrero, por el que se fija el salario mínimo interprofesional para 2024.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-2251",
+        "docId": "BOE-A-2024-2251"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 37,8 euros/día o 1.134 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2025",
+      "value": 1184.0,
+      "unit": "euros/mes",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 87/2025, de 11 de febrero, por el que se fija el salario mínimo interprofesional para 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-2576",
+        "docId": "BOE-A-2025-2576"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 39,47 euros/día o 1184 euros/mes",
+      "location": "Artículo 1"
+    },
+    {
+      "id": "2026",
+      "value": 1221.0,
+      "unit": "euros/mes",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 126/2026, de 18 de febrero, por el que se fija el salario mínimo interprofesional para 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-3815",
+        "docId": "BOE-A-2026-3815"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "queda fijado en 40,70 euros/día o 1 221 euros/mes",
+      "location": "Artículo 1"
+    }
+  ]
+}
