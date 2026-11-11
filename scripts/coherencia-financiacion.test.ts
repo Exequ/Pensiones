@@ -98,8 +98,8 @@ describe('ejecución del presupuesto de la Seguridad Social', () => {
           x.ejercicio === String(a) &&
           x.periodo === `${a}-T4` &&
           x.tabla === 'ingresos-cap1-cap4' &&
-          !x.concepto.startsWith('TOTAL') &&
-          !/^(DEL ESTADO|DE LA SEGURIDAD|DE COMUNIDADES|DE EMPRESAS)/.test(x.concepto),
+          !(x.concepto ?? '').startsWith('TOTAL') &&
+          !/^(DEL ESTADO|DE LA SEGURIDAD|DE COMUNIDADES|DE EMPRESAS)/.test(x.concepto ?? ''),
       );
       const suma = lineas.reduce((s, x) => s + Number(x.derechos_u_obligaciones_meur || 0), 0);
       expect(
@@ -125,7 +125,7 @@ describe('ejecución del presupuesto de la Seguridad Social', () => {
             'A FAVOR DE FAMILIARES',
             'FAVOR DE FAMILIARES',
             'PENSIONES DERIVADAS DANA',
-          ].includes(x.concepto),
+          ].includes(x.concepto ?? ''),
       );
       const suma = clases.reduce((s, x) => s + Number(x.derechos_u_obligaciones_meur || 0), 0);
       expect(Math.abs(suma - t4(a, 'gastos-cap4', 'SUMA DE PENSIONES')), String(a)).toBeLessThan(
@@ -172,7 +172,7 @@ describe('ejecución del presupuesto de la Seguridad Social', () => {
             x.ejercicio === String(a) &&
             x.periodo === `${a}-T4` &&
             x.tabla === 'gastos-cap4' &&
-            ns.includes(x.concepto),
+            ns.includes(x.concepto ?? ''),
         );
         const r = reg.find(
           (x) =>

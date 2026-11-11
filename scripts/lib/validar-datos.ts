@@ -140,7 +140,7 @@ export function celdasCsv(linea: string): string[] {
         actual += '"';
         i++;
       } else if (c === '"') entrecomillado = false;
-      else actual += c;
+      else actual += c ?? '';
     } else if (c === '"') entrecomillado = true;
     else if (c === ',') {
       celdas.push(actual);

@@ -1,11 +1,19 @@
 # Estado de la Fase 1B
 
-## 1B-1 Sistema (rama `feat/fase-1b-1-sistema`)
+## 1B-1 Sistema: hecha y fusionada
 
-Hecho: pensiones en vigor 2008-2025, pensionistas 2006-2025, altas y bajas 2021-2025, mínimos 2022-2025, afiliación 2001-2026 y por edad 2021-2025, relaciones afiliados/pensionistas, tests, verificación, docs.
-Pendiente: ver `docs/PENDIENTE_DATOS.md` y `docs/DESCARGAS_MANUALES.md` (PNC, MITES, años anteriores).
-Siguiente paso: merge del PR de 1B-1 y empezar 1B-2 (financiación).
+Pensiones, pensionistas, altas y bajas, mínimos, afiliación y razones (ver `data/README.md`).
 
-## 1B-2 y 1B-3
+## 1A-bis: hecha y fusionada
 
-No empezadas.
+Reglas de evolución futura y de cálculo (`data/parametros/`).
+
+## 1B-2 Financiación (rama `feat/fase-1b-2-financiacion`)
+
+Hecho: pensiones por edad (foto de octubre de 2026), ejecución trimestral del presupuesto 2018-2026, Fondo de Reserva 2009-2025, límite de desembolso, destino del MEI, préstamos, saldos y definiciones de déficit, tests, verificación y docs.
+Pendiente: `docs/PENDIENTE_DATOS.md` y `docs/DESCARGAS_MANUALES.md` (liquidación 2005-2017 en PDF, IGAE, AIReF, «gastos impropios», histórico por edades).
+Siguiente paso: merge del PR de 1B-2 y empezar 1B-3 (demografía y macro).
+
+## 1B-3 Demografía y macro
+
+No empezada.

@@ -52,6 +52,22 @@ Los huecos y lo que no se pudo descargar están en [`docs/PENDIENTE_DATOS.md`](.
 
 En los ficheros por versión, `period` es el año desde el que rige y el `id` empieza por ese año. Cada dato lleva cita literal verificada por código y, cuando existe, contraste con una segunda norma (`crossCheck`). Los textos de partida están en `data-raw/boe/` con su hash en `origen.json`.
 
+## Contenido (Fase 1B-2: financiación, en `sistema/` y `parametros/`)
+
+| Fichero                                                                         | Contenido                                                                                                                                                  | Periodo           | Unidad                         |
+| ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | ------------------------------ |
+| `pensiones-vigor-edad-clase-sexo` (tabla)                                       | Pensiones en vigor por grupo de edad, clase y sexo (foto de un mes)                                                                                        | octubre de 2026   | pensiones; euros/mes           |
+| `presupuesto-ss-ejecucion` (tabla)                                              | Ejecución acumulada a fin de trimestre del Sistema de la Seguridad Social: ingresos y gastos por clasificación económica, capítulo 4 y pensiones por clase | 2018-T1 a 2026-T3 | millones de euros              |
+| `fondo-reserva-anual` (tabla), `fondo-reserva-series`                           | Valor, dotaciones (excedentes y MEI), rendimientos y disposiciones del Fondo de Reserva                                                                    | 2009-2025         | millones de euros              |
+| `deficit-presupuestario-seguridad-social`                                       | Derechos y obligaciones por operaciones no financieras y totales, saldos derivados, pasivos financieros y transferencias del Estado                        | 2017-2025         | millones de euros              |
+| `deficit-sec-fondos-seguridad-social`                                           | Capacidad o necesidad de financiación SEC 2010, ingresos y gastos de los fondos de la Seguridad Social (Eurostat)                                          | 2000-2025         | millones de euros; % del PIB   |
+| `deficit-definiciones`                                                          | Definiciones con su literal y la fuente que las usa (no se elige ninguna)                                                                                  | —                 | texto                          |
+| `parametros/fondo-reserva-desembolso-maximo`                                    | Límite del desembolso anual del Fondo (art. 121.2 TRLGSS)                                                                                                  | 2033-2053         | % del PIB                      |
+| `parametros/mei-destino`                                                        | Destino de la cotización del MEI (art. 127 bis TRLGSS)                                                                                                     | desde 2023        | indicador                      |
+| `parametros/prestamos-estado-seguridad-social`, `prestamos-plazo-ampliado-2026` | Autorizaciones de préstamos del Estado (PGE 2021-2023) y nuevo plazo de préstamos antiguos (RDL 3/2026)                                                    | 2021-2026         | millones de euros; euros; años |
+
+La ejecución del presupuesto usa los rótulos de la fuente, que cambian entre años; «T4» es el ejercicio completo. Las cifras derivadas (saldos, flujos anuales del Fondo) están marcadas como tales en sus notas. Los CSV pueden llevar celdas entre comillas con comas.
+
 ## Contenido (Fase 1B-1: `sistema/`)
 
 | Fichero                                                   | Contenido                                                                       | Periodo   | Unidad                  |

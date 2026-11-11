@@ -800,6 +800,22 @@
       "revisionActuarial": "pendiente"
     },
     {
+      "id": "param-fondo-reserva-desembolso-maximo",
+      "texto": "Límite máximo del desembolso anual del Fondo de Reserva (2033-2053): 0,5 (% del PIB (límite máximo del desembolso anual)) en 2053.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/fondo-reserva-desembolso-maximo.json#2053"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
       "id": "param-ipc-indice-medio-anual",
       "texto": "IPC: índice medio anual (base 2025): 100,0 (índice (base 2025)) en 2025.",
       "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
@@ -928,6 +944,22 @@
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
           "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-mei-destino",
+      "texto": "Destino de la cotización finalista del MEI (art. 127 bis TRLGSS): 1 (indicador (1 = no computa para prestaciones)) en 2023.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/mei-destino.json#no-computable-prestaciones"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
       ],
       "fetchedAt": "2026-11-11",
@@ -1187,6 +1219,38 @@
       "revisionActuarial": "pendiente"
     },
     {
+      "id": "param-prestamos-estado-seguridad-social",
+      "texto": "Préstamos del Estado a la Tesorería General de la Seguridad Social autorizados por las leyes de presupuestos (2021-2023): 0 (% (no devengan intereses)) en 2023.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/prestamos-estado-seguridad-social.json#2023-tipo-interes"],
+      "fuentes": [
+        {
+          "title": "Ley 31/2022, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2023",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22128"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "param-prestamos-plazo-ampliado-2026",
+      "texto": "Nuevo plazo de cancelación de préstamos antiguos del Estado a la Seguridad Social (RDL 3/2026, DA 2.ª): 10 (años de nuevo plazo (o de ampliación) a partir de 2026) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/prestamos-plazo-ampliado-2026.json#apartado-4-plazo-anios"],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-2548"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
       "id": "param-revalorizacion-general",
       "texto": "Revalorización general anual de las pensiones contributivas: 2,7 (%) en 2026.",
       "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
@@ -1320,6 +1384,74 @@
       "revisionActuarial": "pendiente"
     },
     {
+      "id": "sistema-deficit-presupuestario-seguridad-social-saldo-presupuestario-no-financiero",
+      "texto": "Saldo presupuestario no financiero (derechos reconocidos netos menos obligaciones reconocidas por operaciones no financieras): -7187,89 (millones de euros) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-no-financiero"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-deficit-presupuestario-seguridad-social-pasivos-financieros",
+      "texto": "9. Pasivos financieros (ingresos): derechos reconocidos netos: 10003,81 (millones de euros) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/deficit-presupuestario-seguridad-social.json#pasivos-financieros"],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-deficit-presupuestario-seguridad-social-transferencias-estado-corrientes",
+      "texto": "Transferencias corrientes del Estado y organismos autónomos (ingresos): derechos reconocidos netos: 47815,68 (millones de euros) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-deficit-sec-fondos-seguridad-social-b9-mio-eur",
+      "texto": "Capacidad (+) / necesidad (-) de financiación (B.9) de los fondos de la Seguridad Social, SEC 2010: -5612,0 (millones de euros) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/deficit-sec-fondos-seguridad-social.json#b9-mio-eur"],
+      "fuentes": [
+        {
+          "title": "Government revenue, expenditure and main aggregates (gov_10a_main), sector S.1314 Social security funds, España",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
       "id": "sistema-edad-media-altas-jubilacion-edad-media-altas-jubilacion",
       "texto": "Edad media de las altas iniciales de jubilación: 65,33 (años) en 2025.",
       "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
@@ -1329,6 +1461,22 @@
           "title": "Altas y bajas de pensiones contributivas: evolución 2022-2026 (fichero EVO), hoja EVO_acumula_altas_jub_edad",
           "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
           "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente"
+    },
+    {
+      "id": "sistema-fondo-reserva-series-valor-fin-ano",
+      "texto": "Valor del Fondo de Reserva a 31 de diciembre: 14070 (millones de euros) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": ["sistema/fondo-reserva-series.json#valor-fin-ano"],
+      "fuentes": [
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
         }
       ],
       "fetchedAt": "2026-11-11",

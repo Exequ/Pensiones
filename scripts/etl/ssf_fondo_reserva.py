@@ -7,7 +7,7 @@ versionan: pesan hasta 12 MB; se guarda la huella). Texto con `pdftotext -layout
 Escribe data/sistema/fondo-reserva-anual.{csv,json} (millones de euros). `python3 -I`."""
 import csv, hashlib, json, os, re, subprocess, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from comun import REPO, escribe_tabla
+from comun import REPO, escribe_tabla, escribe_series
 
 RAW = f'{REPO}/data-raw/seg-social-fin/fondo-reserva'
 MODO = os.environ.get('MODO', 'descargar')
@@ -103,6 +103,12 @@ def main():
          ('disposiciones_anuales_meur', 'Disposiciones del año (derivado, negativas)', 'millones de euros')],
         len(filas), fuente, origenes, confidence='alta',
         notes='Las dotaciones de excedentes de entidades no varían desde 2010 (52.113); las de mutuas siguen la gestión de la incapacidad temporal por contingencias comunes y de las contingencias profesionales. Datos anteriores a 2009 solo por año acumulado en los informes antiguos (ver docs/PENDIENTE_DATOS.md).')
+    pts = lambda i, f=lambda x: x: [{'period': str(r[0]), 'value': f(r[i])} for r in filas if r[i] != '']
+    nota = 'Valor a 31 de diciembre a precio de adquisición, tal como lo publican los informes a las Cortes Generales; detalle y procedencia por año en data/sistema/fondo-reserva-anual.json.'
+    escribe_series('sistema', 'fondo-reserva-series', 'Fondo de Reserva de la Seguridad Social: valor y flujos anuales (2009-2025)', 'Series derivadas de la tabla fondo-reserva-anual.',
+        [{'id': 'valor-fin-ano', 'title': 'Valor del Fondo de Reserva a 31 de diciembre', 'unit': 'millones de euros', 'source': fuente, 'confidence': 'alta', 'notes': nota, 'points': pts(1)},
+         {'id': 'disposiciones-anuales', 'title': 'Disposiciones anuales del Fondo de Reserva (negativas)', 'unit': 'millones de euros', 'source': fuente, 'confidence': 'media', 'notes': nota + ' Dato derivado: diferencia de las disposiciones acumuladas publicadas.', 'points': pts(10)},
+         {'id': 'dotaciones-mei-anuales', 'title': 'Dotaciones anuales al Fondo de Reserva con cargo al MEI', 'unit': 'millones de euros', 'source': fuente, 'confidence': 'media', 'notes': nota + ' Dato derivado: diferencia de las dotaciones MEI acumuladas publicadas.', 'points': pts(9)}])
     print('años', anios[0], anios[-1], len(filas))
 
 
