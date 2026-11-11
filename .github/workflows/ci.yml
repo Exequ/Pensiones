@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    name: Lint, tipos, tests, datos y compilación
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Lint (ESLint, Prettier, estilos y contraste)
+        run: npm run lint
+      - name: Tipos
+        run: npm run typecheck
+      - name: Tests unitarios
+        run: npm test
+      - name: Validación de datos
+        run: npm run validate:data
+      - name: Compilación
+        run: npm run build
+
+  interfaz:
+    name: Interfaz (Playwright)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Instalar Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Pruebas de interfaz
+        run: npm run test:e2e
+      - name: Capturas (1360 px y 390 px)
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: capturas
+          path: capturas/
+          if-no-files-found: ignore
+      - name: Informe de Playwright
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: informe-playwright
+          path: playwright-report/
+          retention-days: 7

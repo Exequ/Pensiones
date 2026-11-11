@@ -1,0 +1,104 @@
+/*
+ * Tokens del sistema de diseño «Editorial».
+ *
+ * ÚNICO fichero del proyecto donde se permiten literales de color.
+ * Cualquier otro CSS o componente debe usar estas variables
+ * (lo comprueba `npm run check:estilos`). Los pares de contraste se
+ * verifican con `npm run check:contraste`.
+ */
+:root {
+  color-scheme: light;
+
+  /* Color · base */
+  --color-papel: #f6f1e7;
+  --color-tinta: #1b1a17;
+  --color-tinta-2: #3a372f;
+  --color-apagado: #6b6458;
+  --color-filete: #cfc7b6;
+  --color-acento: #8c2f1b;
+  --color-acento-oscuro: #5e1e10;
+
+  /*
+   * Color · paleta categórica para gráficos.
+   * Ajustada respecto a la propuesta inicial para que los cinco colores se
+   * distingan también por luminosidad (ver docs/DECISIONES.md).
+   * Orden de uso recomendado: 1 → 5 (maximiza la separación con pocas series).
+   */
+  --color-cat-granate: #8c2f1b;
+  --color-cat-azul: #173658;
+  --color-cat-ocre: #b4811e;
+  --color-cat-verde: #4f6d3c;
+  --color-cat-gris: #7e7667;
+  --color-cat-1: var(--color-cat-granate);
+  --color-cat-2: var(--color-cat-azul);
+  --color-cat-3: var(--color-cat-ocre);
+  --color-cat-4: var(--color-cat-verde);
+  --color-cat-5: var(--color-cat-gris);
+
+  /* Variantes para texto (etiquetas directas): ocre y gris no llegan a 4,5:1 sobre papel. */
+  --color-cat-ocre-texto: #875a00;
+  --color-cat-gris-texto: #6b6458;
+
+  /* Color · secuencial de papel a granate (interpolación en CIELAB). */
+  --color-sec-1: #e5c9ba;
+  --color-sec-2: #d2a28f;
+  --color-sec-3: #bd7b66;
+  --color-sec-4: #a6563f;
+  --color-sec-5: #8c2f1b;
+
+  /* Color · resaltado: un único elemento en acento; el resto en filete. */
+  --color-resaltado: var(--color-acento);
+  --color-resto: var(--color-filete);
+
+  /* Tipografía */
+  --fuente-lectura: 'Newsreader Variable', georgia, 'Times New Roman', serif;
+  --fuente-interfaz: 'Public Sans Variable', system-ui, 'Segoe UI', arial, sans-serif;
+
+  --texto-h1: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem);
+  --interlineado-h1: 1.05;
+  --tracking-h1: -0.02em;
+  --peso-h1: 500;
+  --texto-h2: clamp(1.5rem, 1.35rem + 0.6vw, 1.75rem);
+  --interlineado-h2: 1.2;
+  --peso-h2: 600;
+  --texto-h3: clamp(1.1875rem, 1.12rem + 0.3vw, 1.3125rem);
+  --texto-lead: clamp(1.1875rem, 1.1rem + 0.4vw, 1.375rem);
+  --interlineado-lead: 1.5;
+  --texto-cuerpo: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --interlineado-cuerpo: 1.6;
+  --texto-etiqueta: 0.875rem;
+  --texto-etiqueta-s: 0.8125rem;
+  --texto-mini: 0.75rem;
+  --interlineado-etiqueta: 1.4;
+  --tracking-kicker: 0.14em;
+  --peso-normal: 400;
+  --peso-medio: 500;
+  --peso-semi: 600;
+
+  /* Espaciado */
+  --espacio-1: 0.25rem;
+  --espacio-2: 0.5rem;
+  --espacio-3: 0.75rem;
+  --espacio-4: 1rem;
+  --espacio-5: 1.5rem;
+  --espacio-6: 2rem;
+  --espacio-7: 3rem;
+  --espacio-8: 4rem;
+  --espacio-9: 6rem;
+
+  /* Maquetación */
+  --ancho-contenedor: 1232px;
+  --margen-lateral: clamp(24px, 5vw, 64px);
+  --ancho-texto: 760px;
+  --ancho-notas: 280px;
+  --separacion-columnas: 64px;
+
+  /* Filetes, foco y controles */
+  --grosor-filete: 1px;
+  --grosor-filete-cabecera: 2px;
+  --grosor-filete-definicion: 3px;
+  --grosor-foco: 3px;
+  --separacion-foco: 2px;
+  --objetivo-tactil: 44px;
+  --radio: 0;
+}

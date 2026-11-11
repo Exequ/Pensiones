@@ -1,0 +1,51 @@
+{
+  "aviso": "DATOS FICTICIOS. Solo para el laboratorio de diseño (/diseno). No reproducen la normativa vigente ni ninguna estadística real. Es la única excepción a la regla de no escribir cifras a mano en la interfaz.",
+  "ficticio": true,
+  "aniosPorDefecto": 35,
+  "porcentajePorAnios": [
+    { "anios": 25, "porcentaje": 0.7 },
+    { "anios": 30, "porcentaje": 0.8 },
+    { "anios": 35, "porcentaje": 0.9 },
+    { "anios": 40, "porcentaje": 1 }
+  ],
+  "casos": [
+    { "caso": "Caso A (ficticio)", "baseReguladora": 1680, "anios": 25 },
+    { "caso": "Caso B (ficticio)", "baseReguladora": 2150, "anios": 35 },
+    { "caso": "Caso C (ficticio)", "baseReguladora": 1320, "anios": 40 }
+  ],
+  "series": [
+    { "serie": "Serie A", "valores": [12, 13, 15, 16, 18, 19] },
+    { "serie": "Serie B", "valores": [9, 10, 10, 12, 13, 15] },
+    { "serie": "Serie C", "valores": [7, 8, 9, 9, 10, 11] },
+    { "serie": "Serie D", "valores": [5, 5, 6, 7, 7, 8] },
+    { "serie": "Serie E", "valores": [3, 3, 4, 4, 5, 5] }
+  ],
+  "fuentes": [
+    {
+      "value": 0.9,
+      "unit": "fracción de la base reguladora",
+      "period": "2025",
+      "source": {
+        "title": "Documento ficticio de ejemplo",
+        "publisher": "Organismo ficticio",
+        "url": "https://example.org/documento-ficticio",
+        "docId": "EJ-001"
+      },
+      "fetchedAt": "2025-01-15",
+      "confidence": "alta",
+      "notes": "Dato inventado para probar la línea de fuente."
+    },
+    {
+      "value": 1680,
+      "unit": "euros/mes",
+      "period": "2025-T1",
+      "source": {
+        "title": "Otra fuente ficticia",
+        "publisher": "Instituto de ejemplo",
+        "url": "https://example.org/otra-fuente-ficticia"
+      },
+      "fetchedAt": "2025-02-03T10:00:00Z",
+      "confidence": "media"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+.definicion {
+  border-top: var(--grosor-filete-definicion) solid var(--color-tinta);
+  padding-top: var(--espacio-3);
+}
+
+.definicion-etiqueta {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-mini);
+  font-weight: var(--peso-semi);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-apagado);
+}
+
+.definicion-termino {
+  margin-top: var(--espacio-2);
+  font-size: var(--texto-h3);
+  font-weight: var(--peso-semi);
+  line-height: var(--interlineado-h2);
+}
+
+.definicion-termino dfn {
+  font-style: normal;
+}
+
+.definicion-texto {
+  margin-top: var(--espacio-2);
+  color: var(--color-tinta-2);
+}

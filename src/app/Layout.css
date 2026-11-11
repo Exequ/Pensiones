@@ -1,0 +1,24 @@
+.saltar-al-contenido {
+  position: absolute;
+  left: var(--espacio-4);
+  top: var(--espacio-2);
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--objetivo-tactil);
+  padding-inline: var(--espacio-4);
+  background: var(--color-papel);
+  color: var(--color-tinta);
+  border: var(--grosor-filete) solid var(--color-tinta);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  transform: translateY(-200%);
+}
+
+.saltar-al-contenido:focus {
+  transform: none;
+}
+
+.principal:focus {
+  outline: none;
+}

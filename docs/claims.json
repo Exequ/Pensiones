@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "descripcion": "Registro de afirmaciones factuales que aparecen en el texto de la web, con sus fuentes. Lo valida npm run validate:data (esquema RegistroAfirmaciones de src/engine/esquema-datos.ts). Fase 0: sin afirmaciones.",
+  "claims": []
+}

@@ -1,0 +1,6 @@
+.lead {
+  font-size: var(--texto-lead);
+  line-height: var(--interlineado-lead);
+  color: var(--color-tinta-2);
+  max-width: var(--ancho-texto);
+}

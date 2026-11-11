@@ -1,0 +1,19 @@
+.linea-fuente {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-apagado);
+}
+
+.linea-fuente-etiqueta {
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta-2);
+}
+
+.linea-fuente a {
+  color: var(--color-tinta-2);
+}
+
+.linea-fuente a:hover {
+  color: var(--color-acento);
+}
