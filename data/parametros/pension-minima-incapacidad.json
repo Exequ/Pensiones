@@ -1688,6 +1688,193 @@
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
+      "id": "2013-ip-gran-invalidez-conyuge-cargo",
+      "value": 16357.6,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Gran invalidez. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-ip-gran-invalidez-unipersonal",
+      "value": 13258.0,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Gran invalidez. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-ip-gran-invalidez-conyuge-no-cargo",
+      "value": 12574.8,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
+      "quote": "Gran invalidez. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-ip-absoluta-conyuge-cargo",
+      "value": 10904.6,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Absoluta. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-ip-absoluta-unipersonal",
+      "value": 8838.2,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Absoluta. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-ip-absoluta-conyuge-no-cargo",
+      "value": 8383.2,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
+      "quote": "Absoluta. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-ip-parcial-at-65-conyuge-cargo",
+      "value": 10904.6,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Titular con sesenta y cinco años. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-ip-parcial-at-65-unipersonal",
+      "value": 8838.2,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-ip-parcial-at-65-conyuge-no-cargo",
+      "value": 8383.2,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
+      "quote": "Titular con sesenta y cinco años. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-ip-total-enf-comun-menor60-conyuge-cargo",
+      "value": 5496.4,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-ip-total-enf-comun-menor60-unipersonal",
+      "value": 5496.4,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
       "id": "2014-ip-gran-invalidez-conyuge-cargo",
       "value": 16399.6,
       "unit": "euros/año",
@@ -3112,7 +3299,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Gran invalidez … 17.871,00, 14.484,40, 13.746,60",
+      "quote": "Gran invalidez … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3140,7 +3327,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Gran invalidez … 17.871,00, 14.484,40, 13.746,60",
+      "quote": "Gran invalidez … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3168,7 +3355,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Gran invalidez … 17.871,00, 14.484,40, 13.746,60",
+      "quote": "Gran invalidez … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3196,7 +3383,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Absoluta … 11.914,00, 9.655,80, 9.164,40",
+      "quote": "Absoluta … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3224,7 +3411,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Absoluta … 11.914,00, 9.655,80, 9.164,40",
+      "quote": "Absoluta … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3252,7 +3439,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Absoluta … 11.914,00, 9.655,80, 9.164,40",
+      "quote": "Absoluta … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3280,7 +3467,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Titular con sesenta y cinco años … 11.914,00, 9.655,80, 9.164,40",
+      "quote": "Titular con sesenta y cinco años … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3308,7 +3495,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con sesenta y cinco años … 11.914,00, 9.655,80, 9.164,40",
+      "quote": "Titular con sesenta y cinco años … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3336,7 +3523,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Titular con sesenta y cinco años … 11.914,00, 9.655,80, 9.164,40",
+      "quote": "Titular con sesenta y cinco años … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3364,7 +3551,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años … 7.119,00, 7.119,00, 7.056,00",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3392,7 +3579,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años … 7.119,00, 7.119,00, 7.056,00",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3420,7 +3607,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años … 7.119,00, 7.119,00, 7.056,00",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4060,7 +4247,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Gran invalidez. … 23.678,20, 18.362,40, 17.430,00",
+      "quote": "Gran invalidez. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4088,7 +4275,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Gran invalidez. … 23.678,20, 18.362,40, 17.430,00",
+      "quote": "Gran invalidez. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4116,7 +4303,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Gran invalidez. … 23.678,20, 18.362,40, 17.430,00",
+      "quote": "Gran invalidez. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4144,7 +4331,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Absoluta. … 15.786,40, 12.241,60, 11.620,00",
+      "quote": "Absoluta. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4172,7 +4359,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Absoluta. … 15.786,40, 12.241,60, 11.620,00",
+      "quote": "Absoluta. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4200,7 +4387,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Absoluta. … 15.786,40, 12.241,60, 11.620,00",
+      "quote": "Absoluta. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4228,7 +4415,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Titular con sesenta y cinco años. … 15.786,40, 12.241,60, 11.620,00",
+      "quote": "Titular con sesenta y cinco años. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4256,7 +4443,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con sesenta y cinco años. … 15.786,40, 12.241,60, 11.620,00",
+      "quote": "Titular con sesenta y cinco años. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4284,7 +4471,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Titular con sesenta y cinco años. … 15.786,40, 12.241,60, 11.620,00",
+      "quote": "Titular con sesenta y cinco años. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4312,7 +4499,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 9.024,40, 9.024,40, 8.947,40",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4340,7 +4527,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 9.024,40, 9.024,40, 8.947,40",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4368,7 +4555,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 9.024,40, 9.024,40, 8.947,40",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4376,6 +4563,90 @@
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26915",
           "docId": "BOE-A-2024-26915"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2026-ip-gran-invalidez-conyuge-cargo",
+      "value": 26385.8,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Gran incapacidad. … 9.126,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 16/2025, de 23 de diciembre, por el que se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social, y se adoptan medidas urgentes en materia tributaria y de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-26458",
+          "docId": "BOE-A-2025-26458"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2026-ip-gran-invalidez-unipersonal",
+      "value": 19660.2,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Gran incapacidad. … 9.126,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 16/2025, de 23 de diciembre, por el que se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social, y se adoptan medidas urgentes en materia tributaria y de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-26458",
+          "docId": "BOE-A-2025-26458"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2026-ip-gran-invalidez-conyuge-no-cargo",
+      "value": 18662.0,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
+      "quote": "Gran incapacidad. … 9.126,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 16/2025, de 23 de diciembre, por el que se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social, y se adoptan medidas urgentes en materia tributaria y de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-26458",
+          "docId": "BOE-A-2025-26458"
         },
         "fetchedAt": "2026-11-11",
         "matches": true,
@@ -4396,7 +4667,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Absoluta. … 17.592,40, 13.106,80, 12.441,80",
+      "quote": "Absoluta. … 9.126,60",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4424,7 +4695,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Absoluta. … 17.592,40, 13.106,80, 12.441,80",
+      "quote": "Absoluta. … 9.126,60",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4452,7 +4723,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Absoluta. … 17.592,40, 13.106,80, 12.441,80",
+      "quote": "Absoluta. … 9.126,60",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4480,7 +4751,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Titular con sesenta y cinco años. … 17.592,40, 13.106,80, 12.441,80",
+      "quote": "Titular con sesenta y cinco años. … 9.126,60",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4508,7 +4779,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con sesenta y cinco años. … 17.592,40, 13.106,80, 12.441,80",
+      "quote": "Titular con sesenta y cinco años. … 9.126,60",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4536,7 +4807,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Titular con sesenta y cinco años. … 17.592,40, 13.106,80, 12.441,80",
+      "quote": "Titular con sesenta y cinco años. … 9.126,60",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4564,7 +4835,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 9.662,80, 9.662,80, 9.580,20",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 9.126,60",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4592,7 +4863,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 9.662,80, 9.662,80, 9.580,20",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 9.126,60",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -4620,7 +4891,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 9.662,80, 9.662,80, 9.580,20",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 9.126,60",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {

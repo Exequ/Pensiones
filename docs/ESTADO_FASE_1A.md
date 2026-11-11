@@ -2,16 +2,13 @@
 
 ## Hecho
 
-- Parte 1 fusionada en `main` (PR 2): edad, carencia, periodo de cálculo, escala, IPC, bases y tipos 2000–2012, esquemas y tests.
-- Aviso programado de reanudación de subagentes cancelado.
+- Parte 1 fusionada (PR 2): jubilación (edad, carencia, periodo, escala), IPC, bases y tipos 2000-2012.
+- Parte 2 (rama `feat/fase-1a-parte-2`): cotización 2013-2026, MEI, cuota de solidaridad, revalorización, pensión máxima y mínimas, PNC, brecha de género, SMI, IPREM, cronología (19 normas), prestaciones (16), verificación (`docs/INFORME_VERIFICACION.md`, `docs/DISCREPANCIAS.md`), `FUENTES.md` y `claims.json`.
 
-## Pendiente (rama `feat/fase-1a-parte-2`)
+## Pendiente
 
-Bloques a–f del encargo, verificación, cierre. Los ficheros parciales de los subagentes están en
-`/tmp/claude-0/-home-user-Pensiones/518cadd7-c655-5da6-9b4d-7ec373ee2d3e/scratchpad/fase1a/brutos/`
-(cotizacion-2000-2012, cronologia, prestaciones, revalorizacion-2000-2012, revalorizacion-2013-2026).
-Descargas en `.../fase1a/descargas/`.
+Ver `docs/PENDIENTE_DATOS.md`.
 
 ## Siguiente paso
 
-Revisar los brutos con `validate:data` tras convertirlos al esquema; incorporar los que pasen.
+Merge del PR de la parte 2 y revisión actuarial (`claims.json`, `revisionActuarial: pendiente`).

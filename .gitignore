@@ -8,3 +8,4 @@ capturas
 .DS_Store
 *.log
 .vite
+__pycache__/

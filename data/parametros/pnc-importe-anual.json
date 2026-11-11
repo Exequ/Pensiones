@@ -210,19 +210,19 @@
     },
     {
       "id": "2013",
-      "value": 5058.2,
+      "value": 5108.6,
       "unit": "euros/año",
       "period": "2013",
       "source": {
-        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
         "publisher": "Boletín Oficial del Estado (BOE)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
-        "docId": "BOE-A-2012-15651"
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
-      "quote": "Para el año 2013, la cuantía de las pensiones de jubilación e invalidez del sistema de la Seguridad Social, en su modalidad no contributiva, se fijará en 5.058,20 euros íntegros anuales",
+      "quote": "Pensiones de la Seguridad Social en su modalidad no contributiva: 5.108,60 euros/año",
       "location": "Artículo o anexo sobre la pensión no contributiva"
     },
     {

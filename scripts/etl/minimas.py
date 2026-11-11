@@ -14,7 +14,7 @@ NORMAS = {
     2000: ['BOE-A-1999-24922'], 2001: ['BOE-A-2000-24364'], 2002: ['BOE-A-2001-24969'],
     2003: ['BOE-A-2002-25416'], 2004: ['BOE-A-2004-507'], 2005: ['BOE-A-2004-21839'],
     2006: ['BOE-A-2005-21608'], 2007: ['BOE-A-2006-22958'], 2008: ['BOE-A-2007-22452'],
-    2009: ['BOE-A-2008-20957'], 2010: ['BOE-A-2009-21052'], 2011: ['BOE-A-2010-20149'], 2012: ['BOE-A-2011-20638'], 2013: ['BOE-A-2012-15764', 'BOE-A-2012-15651'],
+    2009: ['BOE-A-2008-20957'], 2010: ['BOE-A-2009-21052'], 2011: ['BOE-A-2010-20149'], 2012: ['BOE-A-2011-20638'], 2013: ['BOE-A-2012-15651', 'BOE-A-2012-15764'],
     2014: ['BOE-A-2013-13763'], 2015: ['BOE-A-2014-13680'], 2016: ['BOE-A-2015-14272'],
     2017: ['BOE-A-2016-12605'], 2018: ['BOE-A-2017-15854'], 2019: ['BOE-A-2018-17992'],
     2020: ['BOE-A-2020-501'], 2021: ['BOE-A-2021-1135', 'BOE-A-2020-17339'], 2022: ['BOE-A-2022-1189'], 2023: ['BOE-A-2022-22694'],
@@ -28,7 +28,7 @@ NUM = re.compile(r'^(?:\d{1,3}(?:\.\d{3})*(?:,\d{1,2})?|[–—-])$')
 
 
 def norm(s):
-    s = s.lower().strip(' .:')
+    s = s.lower().strip(' .:').replace('gran incapacidad', 'gran invalidez')
     for a, b in (('ñ', 'n'), ('á', 'a'), ('é', 'e'), ('í', 'i'), ('ó', 'o'), ('ú', 'u')):
         s = s.replace(a, b)
     return re.sub(r'\s+', ' ', s)
@@ -122,10 +122,12 @@ def cuadro(t):
 def extrae(doc):
     t = texto(doc)
     r = cuadro(t)
+    i0 = t.find('Clase de pensión')
+    pesetas = 'esetas/año' in t[i0:i0 + 700]  # 2000-2001: columnas alternas pesetas/euros
     out = []
     for c, vals, lab in r:
-        if len(vals) == 4:  # 2000: pesetas y euros alternos
-            vals = [vals[1], vals[3]]
+        if pesetas:
+            vals = vals[1::2]
         if c.startswith(('viud', 'orf', 'fam', 'prest')) and len(vals) == 1:
             cols = {'unipersonal': vals[0]} if c.startswith('viud') else {'unico': vals[0]}
         elif len(vals) == 2:

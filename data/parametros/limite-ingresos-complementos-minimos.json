@@ -2,7 +2,7 @@
   "tipo": "datos",
   "id": "limite-ingresos-complementos-minimos",
   "title": "Límite de ingresos para los complementos por mínimos (sin cónyuge a cargo o límite único)",
-  "description": "Suma de rendimientos por encima de la cual no se reconoce complemento por mínimos. Hasta 2017 un único límite; desde 2018, uno sin cónyuge a cargo y otro con cónyuge a cargo.",
+  "description": "Suma de rendimientos por encima de la cual no se reconoce complemento por mínimos. Un único límite hasta 2017; desde 2018 la norma distingue además un límite con cónyuge a cargo, que no se recoge (ver PENDIENTE_DATOS.md).",
   "data": [
     {
       "id": "2002",
@@ -197,10 +197,10 @@
       "unit": "euros/año",
       "period": "2013",
       "source": {
-        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
         "publisher": "Boletín Oficial del Estado (BOE)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
-        "docId": "BOE-A-2012-15651"
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",

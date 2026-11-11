@@ -5,24 +5,7 @@
   "description": "Cuantías mínimas anuales del Anexo I de la norma de revalorización de cada año (modalidad contributiva), por clase de pensión y situación familiar. Identificador: año-clase-situación.",
   "data": [
     {
-      "id": "2001-orf-conyuge-cargo",
-      "value": 252980.0,
-      "unit": "euros/año",
-      "period": "2001",
-      "source": {
-        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
-        "publisher": "Boletín Oficial del Estado (BOE)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
-        "docId": "BOE-A-2000-24364"
-      },
-      "fetchedAt": "2026-11-11",
-      "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Por beneficiario … 252.980, 1.520,54",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
-    },
-    {
-      "id": "2001-orf-unipersonal",
+      "id": "2001-orf-unico",
       "value": 1520.54,
       "unit": "euros/año",
       "period": "2001",
@@ -34,29 +17,12 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Por beneficiario … 252.980, 1.520,54",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 1.520,54",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
-      "id": "2001-fam-conyuge-cargo",
-      "value": 252980.0,
-      "unit": "euros/año",
-      "period": "2001",
-      "source": {
-        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
-        "publisher": "Boletín Oficial del Estado (BOE)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
-        "docId": "BOE-A-2000-24364"
-      },
-      "fetchedAt": "2026-11-11",
-      "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Por beneficiario … 252.980, 1.520,54",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
-    },
-    {
-      "id": "2001-fam-unipersonal",
+      "id": "2001-fam-unico",
       "value": 1520.54,
       "unit": "euros/año",
       "period": "2001",
@@ -68,29 +34,12 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Por beneficiario … 252.980, 1.520,54",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 1.520,54",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
-      "id": "2001-fam1-65-conyuge-cargo",
-      "value": 651420.0,
-      "unit": "euros/año",
-      "period": "2001",
-      "source": {
-        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
-        "publisher": "Boletín Oficial del Estado (BOE)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
-        "docId": "BOE-A-2000-24364"
-      },
-      "fetchedAt": "2026-11-11",
-      "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Un solo beneficiario, con sesenta y cinco años … 651.420, 3.915,24",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
-    },
-    {
-      "id": "2001-fam1-65-unipersonal",
+      "id": "2001-fam1-65-unico",
       "value": 3915.24,
       "unit": "euros/año",
       "period": "2001",
@@ -102,29 +51,12 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Un solo beneficiario, con sesenta y cinco años … 651.420, 3.915,24",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, con sesenta y cinco años … 3.915,24",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
-      "id": "2001-fam1-menor65-conyuge-cargo",
-      "value": 613340.0,
-      "unit": "euros/año",
-      "period": "2001",
-      "source": {
-        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
-        "publisher": "Boletín Oficial del Estado (BOE)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
-        "docId": "BOE-A-2000-24364"
-      },
-      "fetchedAt": "2026-11-11",
-      "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Un solo beneficiario, menor de sesenta y cinco años … 613.340, 3.686,34",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
-    },
-    {
-      "id": "2001-fam1-menor65-unipersonal",
+      "id": "2001-fam1-menor65-unico",
       "value": 3686.34,
       "unit": "euros/año",
       "period": "2001",
@@ -136,8 +68,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Un solo beneficiario, menor de sesenta y cinco años … 613.340, 3.686,34",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, menor de sesenta y cinco años … 3.686,34",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
@@ -906,88 +838,88 @@
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
-      "id": "2013-orf-discapacidad65-conyuge-cargo",
-      "value": 2672.6,
+      "id": "2013-orf-unico",
+      "value": 2699.2,
       "unit": "euros/año",
       "period": "2013",
       "source": {
-        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
         "publisher": "Boletín Oficial del Estado (BOE)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
-        "docId": "BOE-A-2012-15651"
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-orf-discapacidad65-unico",
+      "value": 5311.6,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario discapacitado menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-fam-unico",
+      "value": 2699.2,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 1,00, 0,85, 1,85, 49",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-fam1-65-conyuge-cargo",
+      "value": 6525.4,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Por beneficiario discapacitado menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. … 2.672,60, 5.259,80",
+      "quote": "Un solo beneficiario con sesenta y cinco años. … 1,00, 0,85, 1,85, 49",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
-      "id": "2013-orf-discapacidad65-unipersonal",
-      "value": 5259.8,
+      "id": "2013-fam1-menor65-unico",
+      "value": 6146.0,
       "unit": "euros/año",
       "period": "2013",
       "source": {
-        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
         "publisher": "Boletín Oficial del Estado (BOE)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
-        "docId": "BOE-A-2012-15651"
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+        "docId": "BOE-A-2012-15764"
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Por beneficiario discapacitado menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. … 2.672,60, 5.259,80",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
-    },
-    {
-      "id": "2013-fam1-menor65-conyuge-cargo",
-      "value": 2672.6,
-      "unit": "euros/año",
-      "period": "2013",
-      "source": {
-        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
-        "publisher": "Boletín Oficial del Estado (BOE)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
-        "docId": "BOE-A-2012-15651"
-      },
-      "fetchedAt": "2026-11-11",
-      "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Un solo beneficiario menor de sesenta y cinco años Varios beneficiarios: El mínimo asignado a cada uno de ellos se incrementará en el importe que resulte de prorratear 3.952,20 euros/año entre el número de beneficiarios … 2.672,60, 6.461,00, 6.085,80",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
-    },
-    {
-      "id": "2013-fam1-menor65-unipersonal",
-      "value": 6461.0,
-      "unit": "euros/año",
-      "period": "2013",
-      "source": {
-        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
-        "publisher": "Boletín Oficial del Estado (BOE)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
-        "docId": "BOE-A-2012-15651"
-      },
-      "fetchedAt": "2026-11-11",
-      "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Un solo beneficiario menor de sesenta y cinco años Varios beneficiarios: El mínimo asignado a cada uno de ellos se incrementará en el importe que resulte de prorratear 3.952,20 euros/año entre el número de beneficiarios … 2.672,60, 6.461,00, 6.085,80",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
-    },
-    {
-      "id": "2013-fam1-menor65-conyuge-no-cargo",
-      "value": 6085.8,
-      "unit": "euros/año",
-      "period": "2013",
-      "source": {
-        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
-        "publisher": "Boletín Oficial del Estado (BOE)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
-        "docId": "BOE-A-2012-15651"
-      },
-      "fetchedAt": "2026-11-11",
-      "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Un solo beneficiario menor de sesenta y cinco años Varios beneficiarios: El mínimo asignado a cada uno de ellos se incrementará en el importe que resulte de prorratear 3.952,20 euros/año entre el número de beneficiarios … 2.672,60, 6.461,00, 6.085,80",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años. … 1,00, 0,85, 1,85, 49",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
@@ -1616,7 +1548,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario … 2.951,20",
+      "quote": "Por beneficiario … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -1644,7 +1576,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario menor de 18 años con una discapacidad en grado igual o superior al 65 por 100 … 5.805,80",
+      "quote": "Por beneficiario menor de 18 años con una discapacidad en grado igual o superior al 65 por 100 … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -1672,7 +1604,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario … 2.951,20",
+      "quote": "Por beneficiario … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -1700,7 +1632,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Un solo beneficiario con sesenta y cinco años … 7.131,60",
+      "quote": "Un solo beneficiario con sesenta y cinco años … 6.721,40",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2113,7 +2045,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario. … 3.745,00",
+      "quote": "Por beneficiario. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2141,7 +2073,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. … 7.361,20",
+      "quote": "Por beneficiario menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2169,7 +2101,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Un beneficiario. … 11.113,20",
+      "quote": "Un beneficiario. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2197,7 +2129,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Varios beneficiarios: a repartir entre número de beneficiarios. … 18.733,70",
+      "quote": "Varios beneficiarios: a repartir entre número de beneficiarios. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2225,7 +2157,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario. … 3.745,00",
+      "quote": "Por beneficiario. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2253,7 +2185,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Un solo beneficiario con sesenta y cinco años. … 9.044,00",
+      "quote": "Un solo beneficiario con sesenta y cinco años. … 8.523,20",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2309,7 +2241,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por persona beneficiaria menor de dieciocho años con una discapacidad en grado igual o superior al 65 por 100. … 7.882,00",
+      "quote": "Por persona beneficiaria menor de dieciocho años con una discapacidad en grado igual o superior al 65 por 100. … 9.126,60",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2337,7 +2269,7 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Una sola persona beneficiaria con sesenta y cinco años. … 9.683,80",
+      "quote": "Una sola persona beneficiaria con sesenta y cinco años. … 9.126,60",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {

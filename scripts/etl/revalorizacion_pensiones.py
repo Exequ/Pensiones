@@ -133,9 +133,7 @@ for y, docs in minimas.NORMAS.items():
                 L2.append(dato(y, num(c.group(1)), 'euros/año', src, c.group(0), 'Anexo I, límite de ingresos para el reconocimiento de complementos por mínimos', 'Con cónyuge a cargo.'))
             break
 fusionar('parametros', 'limite-ingresos-complementos-minimos', L1, 'Límite de ingresos para los complementos por mínimos (sin cónyuge a cargo o límite único)',
-         'Suma de rendimientos por encima de la cual no se reconoce complemento por mínimos. Hasta 2017 un único límite; desde 2018, uno sin cónyuge a cargo y otro con cónyuge a cargo.')
-fusionar('parametros', 'limite-ingresos-complementos-minimos-con-conyuge', L2, 'Límite de ingresos para los complementos por mínimos (con cónyuge a cargo)',
-         'Límite aplicable cuando hay cónyuge a cargo (desde 2018).')
+         'Suma de rendimientos por encima de la cual no se reconoce complemento por mínimos. Un único límite hasta 2017; desde 2018 la norma distingue además un límite con cónyuge a cargo, que no se recoge (ver PENDIENTE_DATOS.md).')
 
 # ---------------- cuadro de cuantías mínimas ----------------
 FAM = {'jubilacion': ('jub65', 'jub-menor65', 'jub65-gran-invalidez'),
@@ -164,10 +162,13 @@ for y, docs in sorted(minimas.NORMAS.items()):
                 continue
             cr = None
             for d2, r2 in otras:
-                d2v = {(c2, k2): v2 for c2, vv, _, _ in r2 for k2, v2 in vv.items()}
+                d2v = {}
+                for c2, vv, _, _ in r2:
+                    for k2, v2 in vv.items():
+                        d2v.setdefault((c2, k2), v2)
                 if (clave, col) in d2v:
                     cr = {'source': fuente(d2), 'fetchedAt': dato(y, 0, '', {}, '', '')['fetchedAt'], 'matches': d2v[(clave, col)] == v,
-                          'notes': 'Misma cuantía en otra norma del mismo año.'}
+                          'notes': 'Misma cuantía en otra norma del mismo año.' if d2v[(clave, col)] == v else 'Importe distinto en otra norma del mismo año; se toma la norma posterior (en el orden de NORMAS), que prevalece.'}
                     break
             x = dato(f'{y}-{clave}-{col}', v, 'euros/año', fuente(d), f'{lab.strip()} … {", ".join(str(n) for n in _)}',
                      'Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)',
