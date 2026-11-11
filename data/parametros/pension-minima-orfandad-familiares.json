@@ -1,0 +1,2383 @@
+{
+  "tipo": "datos",
+  "id": "pension-minima-orfandad-familiares",
+  "title": "Pensiones mínimas de orfandad y en favor de familiares",
+  "description": "Cuantías mínimas anuales del Anexo I de la norma de revalorización de cada año (modalidad contributiva), por clase de pensión y situación familiar. Identificador: año-clase-situación.",
+  "data": [
+    {
+      "id": "2001-orf-conyuge-cargo",
+      "value": 252980.0,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Por beneficiario … 252.980, 1.520,54",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-orf-unipersonal",
+      "value": 1520.54,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Por beneficiario … 252.980, 1.520,54",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-fam-conyuge-cargo",
+      "value": 252980.0,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Por beneficiario … 252.980, 1.520,54",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-fam-unipersonal",
+      "value": 1520.54,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Por beneficiario … 252.980, 1.520,54",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-fam1-65-conyuge-cargo",
+      "value": 651420.0,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Un solo beneficiario, con sesenta y cinco años … 651.420, 3.915,24",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-fam1-65-unipersonal",
+      "value": 3915.24,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Un solo beneficiario, con sesenta y cinco años … 651.420, 3.915,24",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-fam1-menor65-conyuge-cargo",
+      "value": 613340.0,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Un solo beneficiario, menor de sesenta y cinco años … 613.340, 3.686,34",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-fam1-menor65-unipersonal",
+      "value": 3686.34,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Un solo beneficiario, menor de sesenta y cinco años … 613.340, 3.686,34",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2002-orf-unico",
+      "value": 1561.56,
+      "unit": "euros/año",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto 1464/2001, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2002.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24969",
+        "docId": "BOE-A-2001-24969"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 1.561,56",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2002-fam-unico",
+      "value": 1561.56,
+      "unit": "euros/año",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto 1464/2001, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2002.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24969",
+        "docId": "BOE-A-2001-24969"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 1.561,56",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2002-fam1-65-unico",
+      "value": 4020.94,
+      "unit": "euros/año",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto 1464/2001, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2002.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24969",
+        "docId": "BOE-A-2001-24969"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, con sesenta y cinco años … 4.020,94",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2002-fam1-menor65-unico",
+      "value": 3785.88,
+      "unit": "euros/año",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto 1464/2001, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2002.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24969",
+        "docId": "BOE-A-2001-24969"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, menor de sesenta y cinco años … 3.785,88",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2003-orf-unico",
+      "value": 1646.4,
+      "unit": "euros/año",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto 1425/2002, de 27 de diciembre, sobre revalorización de las pensiones del Sistema de la Seguridad Social para el ejercicio 2003.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-25416",
+        "docId": "BOE-A-2002-25416"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 1.646,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2003-fam-unico",
+      "value": 1646.4,
+      "unit": "euros/año",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto 1425/2002, de 27 de diciembre, sobre revalorización de las pensiones del Sistema de la Seguridad Social para el ejercicio 2003.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-25416",
+        "docId": "BOE-A-2002-25416"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 1.646,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2003-fam1-65-unico",
+      "value": 4239.2,
+      "unit": "euros/año",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto 1425/2002, de 27 de diciembre, sobre revalorización de las pensiones del Sistema de la Seguridad Social para el ejercicio 2003.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-25416",
+        "docId": "BOE-A-2002-25416"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, con sesenta y cinco años. … 4.239,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2003-fam1-menor65-unico",
+      "value": 3991.4,
+      "unit": "euros/año",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto 1425/2002, de 27 de diciembre, sobre revalorización de las pensiones del Sistema de la Seguridad Social para el ejercicio 2003.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-25416",
+        "docId": "BOE-A-2002-25416"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, menor de sesenta y cinco años. … 3.991,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2004-orf-unico",
+      "value": 1742.44,
+      "unit": "euros/año",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto 2/2004, de 9 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2004.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-507",
+        "docId": "BOE-A-2004-507"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 1.742,44",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2004-fam1-65-unico",
+      "value": 4486.16,
+      "unit": "euros/año",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto 2/2004, de 9 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2004.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-507",
+        "docId": "BOE-A-2004-507"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, con 65 años. … 4.486,16",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2004-fam1-menor65-unico",
+      "value": 4223.94,
+      "unit": "euros/año",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto 2/2004, de 9 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2004.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-507",
+        "docId": "BOE-A-2004-507"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, menor de 65 años. … 4.223,94",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2005-orf-unico",
+      "value": 1856.68,
+      "unit": "euros/año",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto 2350/2004, de 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21839",
+        "docId": "BOE-A-2004-21839"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 1.856,68",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2005-fam-unico",
+      "value": 1856.68,
+      "unit": "euros/año",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto 2350/2004, de 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21839",
+        "docId": "BOE-A-2004-21839"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 1.856,68",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2005-fam1-65-unico",
+      "value": 4779.88,
+      "unit": "euros/año",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto 2350/2004, de 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21839",
+        "docId": "BOE-A-2004-21839"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, con 65 años. … 4.779,88",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2005-fam1-menor65-unico",
+      "value": 4500.44,
+      "unit": "euros/año",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto 2350/2004, de 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21839",
+        "docId": "BOE-A-2004-21839"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, menor de 65 años. … 4.500,44",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2006-orf-unico",
+      "value": 1976.52,
+      "unit": "euros/año",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto 1611/2005, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21608",
+        "docId": "BOE-A-2005-21608"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 1.976,52",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2006-orf-discapacidad65-unico",
+      "value": 2800.0,
+      "unit": "euros/año",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto 1611/2005, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21608",
+        "docId": "BOE-A-2005-21608"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario menor de 18 años con una minusvalía igual o superior al 65 por 100 … 2.800,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2006-fam-unico",
+      "value": 1976.52,
+      "unit": "euros/año",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto 1611/2005, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21608",
+        "docId": "BOE-A-2005-21608"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 1.976,52",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2006-fam1-65-unico",
+      "value": 5087.88,
+      "unit": "euros/año",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto 1611/2005, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21608",
+        "docId": "BOE-A-2005-21608"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, con 65 años. … 5.087,88",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2006-fam1-menor65-unico",
+      "value": 4790.52,
+      "unit": "euros/año",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto 1611/2005, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21608",
+        "docId": "BOE-A-2005-21608"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, menor de 65 años … 4.790,52",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2007-orf-unico",
+      "value": 2087.82,
+      "unit": "euros/año",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto 1578/2006, de 22 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22958",
+        "docId": "BOE-A-2006-22958"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.087,82",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2007-orf-discapacidad65-unico",
+      "value": 4374.02,
+      "unit": "euros/año",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto 1578/2006, de 22 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22958",
+        "docId": "BOE-A-2006-22958"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario menor de 18 años con una discapacidad igual o superior al 65 por 100 … 4.374,02",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2007-fam-unico",
+      "value": 2087.82,
+      "unit": "euros/año",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto 1578/2006, de 22 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22958",
+        "docId": "BOE-A-2006-22958"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.087,82",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2007-fam1-65-unico",
+      "value": 5373.76,
+      "unit": "euros/año",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto 1578/2006, de 22 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22958",
+        "docId": "BOE-A-2006-22958"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, con 65 años … 5.373,76",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2007-fam1-menor65-unico",
+      "value": 5059.74,
+      "unit": "euros/año",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto 1578/2006, de 22 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22958",
+        "docId": "BOE-A-2006-22958"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario, menor de 65 años … 5.059,74",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2009-orf-unico",
+      "value": 2461.48,
+      "unit": "euros/año",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto 2127/2008, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20957",
+        "docId": "BOE-A-2008-20957"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.461,48",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2009-orf-discapacidad65-unico",
+      "value": 4847.22,
+      "unit": "euros/año",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto 2127/2008, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20957",
+        "docId": "BOE-A-2008-20957"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario discapacitado menor de 18 años con una discapacidad en grado igual o superior al 65 por 100 … 4.847,22",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2009-fam-unico",
+      "value": 2461.48,
+      "unit": "euros/año",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto 2127/2008, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20957",
+        "docId": "BOE-A-2008-20957"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.461,48",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2009-fam1-65-unico",
+      "value": 5954.9,
+      "unit": "euros/año",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto 2127/2008, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20957",
+        "docId": "BOE-A-2008-20957"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años. … 5.954,90",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2009-fam1-menor65-unico",
+      "value": 5607.0,
+      "unit": "euros/año",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto 2127/2008, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20957",
+        "docId": "BOE-A-2008-20957"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años … 5.607,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2010-orf-unico",
+      "value": 2511.6,
+      "unit": "euros/año",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto 2007/2009, 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21052",
+        "docId": "BOE-A-2009-21052"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario . … 2.511,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2010-orf-discapacidad65-unico",
+      "value": 4944.8,
+      "unit": "euros/año",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto 2007/2009, 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21052",
+        "docId": "BOE-A-2009-21052"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario discapacitado menor de 18 años con una discapacidad en grado igual o superior al 65 por 100 . … 4.944,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2010-fam-unico",
+      "value": 2511.6,
+      "unit": "euros/año",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto 2007/2009, 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21052",
+        "docId": "BOE-A-2009-21052"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario . … 2.511,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2010-fam1-65-unico",
+      "value": 6074.6,
+      "unit": "euros/año",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto 2007/2009, 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21052",
+        "docId": "BOE-A-2009-21052"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años. … 6.074,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2010-fam1-menor65-unico",
+      "value": 5720.4,
+      "unit": "euros/año",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto 2007/2009, 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21052",
+        "docId": "BOE-A-2009-21052"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años. … 5.720,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2011-orf-unico",
+      "value": 2571.8,
+      "unit": "euros/año",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+        "docId": "BOE-A-2010-20149"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.571,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2011-orf-discapacidad65-unico",
+      "value": 5059.6,
+      "unit": "euros/año",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+        "docId": "BOE-A-2010-20149"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario discapacitado menor de 18 años con una discapacidad en grado igual o superior al 65 por 100 … 5.059,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2011-fam-unico",
+      "value": 2571.8,
+      "unit": "euros/año",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+        "docId": "BOE-A-2010-20149"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.571,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2011-fam1-65-unico",
+      "value": 6214.6,
+      "unit": "euros/año",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+        "docId": "BOE-A-2010-20149"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años … 6.214,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2011-fam1-menor65-unico",
+      "value": 5853.4,
+      "unit": "euros/año",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+        "docId": "BOE-A-2010-20149"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años … 5.853,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2012-orf-unico",
+      "value": 2646.0,
+      "unit": "euros/año",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20638",
+        "docId": "BOE-A-2011-20638"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.646,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2012-orf-discapacidad65-unico",
+      "value": 5206.6,
+      "unit": "euros/año",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20638",
+        "docId": "BOE-A-2011-20638"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario discapacitado menor de 18 años con una discapacidad en grado igual o superior al 65 por 100 … 5.206,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2012-fam-unico",
+      "value": 2646.0,
+      "unit": "euros/año",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20638",
+        "docId": "BOE-A-2011-20638"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.646,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2012-fam1-65-conyuge-cargo",
+      "value": 6396.6,
+      "unit": "euros/año",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20638",
+        "docId": "BOE-A-2011-20638"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Un solo beneficiario con sesenta y cinco años … 6.396,60, –",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2012-fam1-menor65-unico",
+      "value": 6024.2,
+      "unit": "euros/año",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20638",
+        "docId": "BOE-A-2011-20638"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años … 6.024,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-orf-discapacidad65-conyuge-cargo",
+      "value": 2672.6,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
+        "docId": "BOE-A-2012-15651"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Por beneficiario discapacitado menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. … 2.672,60, 5.259,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-orf-discapacidad65-unipersonal",
+      "value": 5259.8,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
+        "docId": "BOE-A-2012-15651"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Por beneficiario discapacitado menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. … 2.672,60, 5.259,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-fam1-menor65-conyuge-cargo",
+      "value": 2672.6,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
+        "docId": "BOE-A-2012-15651"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años Varios beneficiarios: El mínimo asignado a cada uno de ellos se incrementará en el importe que resulte de prorratear 3.952,20 euros/año entre el número de beneficiarios … 2.672,60, 6.461,00, 6.085,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-fam1-menor65-unipersonal",
+      "value": 6461.0,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
+        "docId": "BOE-A-2012-15651"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años Varios beneficiarios: El mínimo asignado a cada uno de ellos se incrementará en el importe que resulte de prorratear 3.952,20 euros/año entre el número de beneficiarios … 2.672,60, 6.461,00, 6.085,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-fam1-menor65-conyuge-no-cargo",
+      "value": 6085.8,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
+        "docId": "BOE-A-2012-15651"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años Varios beneficiarios: El mínimo asignado a cada uno de ellos se incrementará en el importe que resulte de prorratear 3.952,20 euros/año entre el número de beneficiarios … 2.672,60, 6.461,00, 6.085,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2014-orf-unico",
+      "value": 2706.2,
+      "unit": "euros/año",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto 1045/2013, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13763",
+        "docId": "BOE-A-2013-13763"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.706,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2014-fam-unico",
+      "value": 2706.2,
+      "unit": "euros/año",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto 1045/2013, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13763",
+        "docId": "BOE-A-2013-13763"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.706,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2014-fam1-65-unico",
+      "value": 6542.2,
+      "unit": "euros/año",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto 1045/2013, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13763",
+        "docId": "BOE-A-2013-13763"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años … 6.542,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2014-fam1-menor65-unico",
+      "value": 6161.4,
+      "unit": "euros/año",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto 1045/2013, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13763",
+        "docId": "BOE-A-2013-13763"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años … 6.161,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2015-orf-unico",
+      "value": 2713.2,
+      "unit": "euros/año",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto 1107/2014, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13680",
+        "docId": "BOE-A-2014-13680"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.713,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2015-orf-discapacidad65-unico",
+      "value": 5339.6,
+      "unit": "euros/año",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto 1107/2014, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13680",
+        "docId": "BOE-A-2014-13680"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario discapacitado menor de 18 años con una discapacidad en grado igual o superior al 65 por 100 … 5.339,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2015-fam-unico",
+      "value": 2713.2,
+      "unit": "euros/año",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto 1107/2014, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13680",
+        "docId": "BOE-A-2014-13680"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.713,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2015-fam1-65-conyuge-cargo",
+      "value": 6559.0,
+      "unit": "euros/año",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto 1107/2014, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13680",
+        "docId": "BOE-A-2014-13680"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Un solo beneficiario con sesenta y cinco años … 6.559,00, –",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2015-fam1-menor65-unico",
+      "value": 6178.2,
+      "unit": "euros/año",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto 1107/2014, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13680",
+        "docId": "BOE-A-2014-13680"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años … 6.178,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2016-orf-unico",
+      "value": 2720.2,
+      "unit": "euros/año",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto 1170/2015, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-14272",
+        "docId": "BOE-A-2015-14272"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.720,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2016-orf-discapacidad65-unico",
+      "value": 5353.6,
+      "unit": "euros/año",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto 1170/2015, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-14272",
+        "docId": "BOE-A-2015-14272"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario con discapacidad menor de 18 años con una discapacidad en grado igual o superior al 65 por 100 … 5.353,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2016-fam-unico",
+      "value": 2720.2,
+      "unit": "euros/año",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto 1170/2015, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-14272",
+        "docId": "BOE-A-2015-14272"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.720,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2016-fam1-65-unico",
+      "value": 6575.8,
+      "unit": "euros/año",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto 1170/2015, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-14272",
+        "docId": "BOE-A-2015-14272"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años … 6.575,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2016-fam1-menor65-unico",
+      "value": 6195.0,
+      "unit": "euros/año",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto 1170/2015, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-14272",
+        "docId": "BOE-A-2015-14272"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años … 6.195,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2017-orf-unico",
+      "value": 2727.2,
+      "unit": "euros/año",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto 746/2016, de 30 de diciembre, sobre revalorización y complementos de pensiones de Clases Pasivas y sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-12605",
+        "docId": "BOE-A-2016-12605"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.727,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2017-orf-discapacidad65-unico",
+      "value": 5367.6,
+      "unit": "euros/año",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto 746/2016, de 30 de diciembre, sobre revalorización y complementos de pensiones de Clases Pasivas y sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-12605",
+        "docId": "BOE-A-2016-12605"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario discapacitado menor de 18 años con una discapacidad en grado igual o superior al 65 por 100 … 5.367,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2017-fam-unico",
+      "value": 2727.2,
+      "unit": "euros/año",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto 746/2016, de 30 de diciembre, sobre revalorización y complementos de pensiones de Clases Pasivas y sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-12605",
+        "docId": "BOE-A-2016-12605"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.727,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2017-fam1-65-unico",
+      "value": 6592.6,
+      "unit": "euros/año",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto 746/2016, de 30 de diciembre, sobre revalorización y complementos de pensiones de Clases Pasivas y sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-12605",
+        "docId": "BOE-A-2016-12605"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años … 6.592,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2017-fam1-menor65-unico",
+      "value": 6211.8,
+      "unit": "euros/año",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto 746/2016, de 30 de diciembre, sobre revalorización y complementos de pensiones de Clases Pasivas y sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-12605",
+        "docId": "BOE-A-2016-12605"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años … 6.211,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2018-orf-unico",
+      "value": 2734.2,
+      "unit": "euros/año",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 1079/2017, de 29 de diciembre, sobre revalorización de pensiones de Clases Pasivas, de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-15854",
+        "docId": "BOE-A-2017-15854"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 2.734,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2018-orf-discapacidad65-unico",
+      "value": 5381.6,
+      "unit": "euros/año",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 1079/2017, de 29 de diciembre, sobre revalorización de pensiones de Clases Pasivas, de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-15854",
+        "docId": "BOE-A-2017-15854"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. … 5.381,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2018-fam-unico",
+      "value": 2734.2,
+      "unit": "euros/año",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 1079/2017, de 29 de diciembre, sobre revalorización de pensiones de Clases Pasivas, de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-15854",
+        "docId": "BOE-A-2017-15854"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 2.734,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2018-fam1-65-unico",
+      "value": 6609.4,
+      "unit": "euros/año",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 1079/2017, de 29 de diciembre, sobre revalorización de pensiones de Clases Pasivas, de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-15854",
+        "docId": "BOE-A-2017-15854"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años. … 6.609,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2018-fam1-menor65-unico",
+      "value": 6228.6,
+      "unit": "euros/año",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 1079/2017, de 29 de diciembre, sobre revalorización de pensiones de Clases Pasivas, de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-15854",
+        "docId": "BOE-A-2017-15854"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años. … 6.228,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2019-orf-unico",
+      "value": 2898.0,
+      "unit": "euros/año",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 2.898,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2019-orf-discapacidad65-unico",
+      "value": 5702.2,
+      "unit": "euros/año",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario menor de 18 años con discapacidad en grado igual o superior al 65 por 100. … 5.702,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2019-fam-unico",
+      "value": 2898.0,
+      "unit": "euros/año",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 2.898,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2019-fam1-65-unico",
+      "value": 7002.8,
+      "unit": "euros/año",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años. … 7.002,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2019-fam1-menor65-unico",
+      "value": 6601.0,
+      "unit": "euros/año",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años. … 6.601,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2020-orf-unico",
+      "value": 2924.6,
+      "unit": "euros/año",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 2.924,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2020-orf-discapacidad65-unico",
+      "value": 5754.0,
+      "unit": "euros/año",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario menor de 18 años con discapacidad en grado igual o superior al 65 por 100. … 5.754,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2020-prest-orf-1-unico",
+      "value": 8820.0,
+      "unit": "euros/año",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un beneficiario. … 8.820,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2020-prest-orf-varios-unico",
+      "value": 14868.0,
+      "unit": "euros/año",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Varios beneficiarios: a repartir entre número de beneficiarios 100. … 14.868,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2020-fam-unico",
+      "value": 2924.6,
+      "unit": "euros/año",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 2.924,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2020-fam1-65-unico",
+      "value": 7067.2,
+      "unit": "euros/año",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años. … 7.067,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2020-fam1-menor65-unico",
+      "value": 6661.2,
+      "unit": "euros/año",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años. … 6.661,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2021-orf-unico",
+      "value": 2951.2,
+      "unit": "euros/año",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339",
+        "docId": "BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.951,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-1135",
+          "docId": "BOE-A-2021-1135"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2021-orf-discapacidad65-unico",
+      "value": 5805.8,
+      "unit": "euros/año",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339",
+        "docId": "BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario menor de 18 años con una discapacidad en grado igual o superior al 65 por 100 … 5.805,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-1135",
+          "docId": "BOE-A-2021-1135"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2021-fam-unico",
+      "value": 2951.2,
+      "unit": "euros/año",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339",
+        "docId": "BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario … 2.951,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-1135",
+          "docId": "BOE-A-2021-1135"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2021-fam1-65-unico",
+      "value": 7131.6,
+      "unit": "euros/año",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339",
+        "docId": "BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años … 7.131,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-1135",
+          "docId": "BOE-A-2021-1135"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2021-fam1-menor65-unico",
+      "value": 6721.4,
+      "unit": "euros/año",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339",
+        "docId": "BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años … 6.721,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-1135",
+          "docId": "BOE-A-2021-1135"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2022-orf-unico",
+      "value": 3089.8,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 3.089,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-orf-discapacidad65-unico",
+      "value": 6076.0,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. … 6.076,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-prest-orf-1-unico",
+      "value": 9457.0,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un beneficiario. … 9.457,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-prest-orf-varios-unico",
+      "value": 15941.8,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Varios beneficiarios: a repartir entre número de beneficiarios. … 15.941,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-fam-unico",
+      "value": 3089.8,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 3.089,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-fam1-65-unico",
+      "value": 7463.4,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años. … 7.463,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-fam1-menor65-unico",
+      "value": 7033.6,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años. … 7.033,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-orf-unico",
+      "value": 3353.0,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 3.353,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-orf-discapacidad65-unico",
+      "value": 6592.6,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. … 6.592,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-prest-orf-1-unico",
+      "value": 9800.0,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un beneficiario. … 9.800,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-prest-orf-varios-unico",
+      "value": 16520.0,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Varios beneficiarios: a repartir entre número de beneficiarios. … 16.520,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-fam-unico",
+      "value": 3353.0,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 3.353,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-fam1-65-unico",
+      "value": 8099.0,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años. … 8.099,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-fam1-menor65-unico",
+      "value": 7632.8,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años. … 7.632,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-orf-unico",
+      "value": 3533.6,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 3.533,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-orf-discapacidad65-unico",
+      "value": 6946.8,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario menor de 18 años con discapacidad en grado igual o superior al 65 por 100. … 6.946,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-prest-orf-1-unico",
+      "value": 10584.0,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un beneficiario. … 10.584,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-prest-orf-varios-unico",
+      "value": 17841.6,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Varios beneficiarios: a repartir entre número de beneficiarios. … 17.841,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-fam-unico",
+      "value": 3533.6,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 3.533,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-fam1-65-unico",
+      "value": 8534.4,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años. … 8.534,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-fam1-menor65-unico",
+      "value": 8043.0,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años. … 8.043,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2025-orf-unico",
+      "value": 3745.0,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 3.745,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 9/2024, de 23 de diciembre, por el que se adoptan medidas urgentes en materia económica, tributaria, de transporte, y de Seguridad Social, y se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26915",
+          "docId": "BOE-A-2024-26915"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2025-orf-discapacidad65-unico",
+      "value": 7361.2,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. … 7.361,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 9/2024, de 23 de diciembre, por el que se adoptan medidas urgentes en materia económica, tributaria, de transporte, y de Seguridad Social, y se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26915",
+          "docId": "BOE-A-2024-26915"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2025-prest-orf-1-unico",
+      "value": 11113.2,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un beneficiario. … 11.113,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 9/2024, de 23 de diciembre, por el que se adoptan medidas urgentes en materia económica, tributaria, de transporte, y de Seguridad Social, y se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26915",
+          "docId": "BOE-A-2024-26915"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2025-prest-orf-varios-unico",
+      "value": 18733.7,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Varios beneficiarios: a repartir entre número de beneficiarios. … 18.733,70",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 9/2024, de 23 de diciembre, por el que se adoptan medidas urgentes en materia económica, tributaria, de transporte, y de Seguridad Social, y se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26915",
+          "docId": "BOE-A-2024-26915"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2025-fam-unico",
+      "value": 3745.0,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por beneficiario. … 3.745,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 9/2024, de 23 de diciembre, por el que se adoptan medidas urgentes en materia económica, tributaria, de transporte, y de Seguridad Social, y se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26915",
+          "docId": "BOE-A-2024-26915"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2025-fam1-65-unico",
+      "value": 9044.0,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario con sesenta y cinco años. … 9.044,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 9/2024, de 23 de diciembre, por el que se adoptan medidas urgentes en materia económica, tributaria, de transporte, y de Seguridad Social, y se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26915",
+          "docId": "BOE-A-2024-26915"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2025-fam1-menor65-unico",
+      "value": 8523.2,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Un solo beneficiario menor de sesenta y cinco años. … 8.523,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 9/2024, de 23 de diciembre, por el que se adoptan medidas urgentes en materia económica, tributaria, de transporte, y de Seguridad Social, y se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26915",
+          "docId": "BOE-A-2024-26915"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2026-orf-discapacidad65-unico",
+      "value": 7882.0,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Por persona beneficiaria menor de dieciocho años con una discapacidad en grado igual o superior al 65 por 100. … 7.882,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 16/2025, de 23 de diciembre, por el que se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social, y se adoptan medidas urgentes en materia tributaria y de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-26458",
+          "docId": "BOE-A-2025-26458"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2026-fam1-65-unico",
+      "value": 9683.8,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Una sola persona beneficiaria con sesenta y cinco años. … 9.683,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 16/2025, de 23 de diciembre, por el que se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social, y se adoptan medidas urgentes en materia tributaria y de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-26458",
+          "docId": "BOE-A-2025-26458"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2026-fam1-menor65-unico",
+      "value": 9126.6,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único).",
+      "quote": "Una sola persona beneficiaria menor de sesenta y cinco años. … 9.126,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 16/2025, de 23 de diciembre, por el que se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social, y se adoptan medidas urgentes en materia tributaria y de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-26458",
+          "docId": "BOE-A-2025-26458"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    }
+  ]
+}

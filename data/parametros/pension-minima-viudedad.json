@@ -1,0 +1,1868 @@
+{
+  "tipo": "datos",
+  "id": "pension-minima-viudedad",
+  "title": "Pensiones mínimas de viudedad",
+  "description": "Cuantías mínimas anuales del Anexo I de la norma de revalorización de cada año (modalidad contributiva), por clase de pensión y situación familiar. Identificador: año-clase-situación.",
+  "data": [
+    {
+      "id": "2001-viud-65-o-discapacidad65-conyuge-cargo",
+      "value": 874370.0,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Titular con sesenta y cinco años … 874.370, 5.255,18",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-viud-65-o-discapacidad65-unipersonal",
+      "value": 5255.18,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años … 874.370, 5.255,18",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-viud-60-64-conyuge-cargo",
+      "value": 768670.0,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años … 768.670, 4.619,86",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-viud-60-64-unipersonal",
+      "value": 4619.86,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años … 768.670, 4.619,86",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-viud-menor60-conyuge-cargo",
+      "value": 613340.0,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Titular con menos de sesenta años … 613.340, 3.686,34",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-viud-menor60-unipersonal",
+      "value": 3686.34,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años … 613.340, 3.686,34",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-viud-menor60-cargas-conyuge-cargo",
+      "value": 768670.0,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Titular con menos de sesenta años y cargas familiares … 768.670, 4.619,86",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2001-viud-menor60-cargas-unipersonal",
+      "value": 4619.86,
+      "unit": "euros/año",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 3475/2000, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24364",
+        "docId": "BOE-A-2000-24364"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años y cargas familiares … 768.670, 4.619,86",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2002-viud-65-o-discapacidad65-unipersonal",
+      "value": 5397.0,
+      "unit": "euros/año",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto 1464/2001, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2002.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24969",
+        "docId": "BOE-A-2001-24969"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años … 5.397,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2002-viud-60-64-unipersonal",
+      "value": 4814.18,
+      "unit": "euros/año",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto 1464/2001, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2002.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24969",
+        "docId": "BOE-A-2001-24969"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años … 4.814,18",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2002-viud-menor60-unipersonal",
+      "value": 3841.46,
+      "unit": "euros/año",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto 1464/2001, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2002.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24969",
+        "docId": "BOE-A-2001-24969"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años … 3.841,46",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2002-viud-menor60-cargas-unipersonal",
+      "value": 4814.18,
+      "unit": "euros/año",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto 1464/2001, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2002.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24969",
+        "docId": "BOE-A-2001-24969"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años y cargas familiares … 4.814,18",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2003-viud-65-o-discapacidad65-unipersonal",
+      "value": 5607.56,
+      "unit": "euros/año",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto 1425/2002, de 27 de diciembre, sobre revalorización de las pensiones del Sistema de la Seguridad Social para el ejercicio 2003.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-25416",
+        "docId": "BOE-A-2002-25416"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años. … 5.607,56",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2003-viud-60-64-unipersonal",
+      "value": 5075.56,
+      "unit": "euros/año",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto 1425/2002, de 27 de diciembre, sobre revalorización de las pensiones del Sistema de la Seguridad Social para el ejercicio 2003.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-25416",
+        "docId": "BOE-A-2002-25416"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años. … 5.075,56",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2003-viud-menor60-unipersonal",
+      "value": 4050.2,
+      "unit": "euros/año",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto 1425/2002, de 27 de diciembre, sobre revalorización de las pensiones del Sistema de la Seguridad Social para el ejercicio 2003.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-25416",
+        "docId": "BOE-A-2002-25416"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años. … 4.050,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2003-viud-menor60-cargas-unipersonal",
+      "value": 5075.56,
+      "unit": "euros/año",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto 1425/2002, de 27 de diciembre, sobre revalorización de las pensiones del Sistema de la Seguridad Social para el ejercicio 2003.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-25416",
+        "docId": "BOE-A-2002-25416"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años y cargas familiares. … 5.075,56",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2004-viud-65-o-discapacidad65-unipersonal",
+      "value": 5764.64,
+      "unit": "euros/año",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto 2/2004, de 9 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2004.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-507",
+        "docId": "BOE-A-2004-507"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con 65 años … 5.764,64",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2004-viud-60-64-unipersonal",
+      "value": 5371.24,
+      "unit": "euros/año",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto 2/2004, de 9 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2004.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-507",
+        "docId": "BOE-A-2004-507"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre 60 y 64 años … 5.371,24",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2004-viud-menor60-unipersonal",
+      "value": 4286.1,
+      "unit": "euros/año",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto 2/2004, de 9 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2004.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-507",
+        "docId": "BOE-A-2004-507"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de 60 años … 4.286,10",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2004-viud-menor60-cargas-unipersonal",
+      "value": 5371.24,
+      "unit": "euros/año",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto 2/2004, de 9 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2004.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-507",
+        "docId": "BOE-A-2004-507"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de 60 años y cargas familiares … 5.371,24",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2005-viud-65-o-discapacidad65-unipersonal",
+      "value": 6141.94,
+      "unit": "euros/año",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto 2350/2004, de 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21839",
+        "docId": "BOE-A-2004-21839"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con 65 años. … 6.141,94",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2005-viud-60-64-unipersonal",
+      "value": 5722.92,
+      "unit": "euros/año",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto 2350/2004, de 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21839",
+        "docId": "BOE-A-2004-21839"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre 60 y 64 años. … 5.722,92",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2005-viud-menor60-unipersonal",
+      "value": 4566.8,
+      "unit": "euros/año",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto 2350/2004, de 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21839",
+        "docId": "BOE-A-2004-21839"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de 60 años. … 4.566,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2005-viud-menor60-cargas-unipersonal",
+      "value": 5722.92,
+      "unit": "euros/año",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto 2350/2004, de 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21839",
+        "docId": "BOE-A-2004-21839"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de 60 años y cargas familiares. … 5.722,92",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2006-viud-65-o-discapacidad65-unipersonal",
+      "value": 6537.72,
+      "unit": "euros/año",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto 1611/2005, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21608",
+        "docId": "BOE-A-2005-21608"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con 65 años … 6.537,72",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2006-viud-60-64-unipersonal",
+      "value": 6091.68,
+      "unit": "euros/año",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto 1611/2005, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21608",
+        "docId": "BOE-A-2005-21608"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre 60 y 64 años. … 6.091,68",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2006-viud-menor60-unipersonal",
+      "value": 4861.08,
+      "unit": "euros/año",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto 1611/2005, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21608",
+        "docId": "BOE-A-2005-21608"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de 60 años … 4.861,08",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2006-viud-menor60-cargas-unipersonal",
+      "value": 6091.68,
+      "unit": "euros/año",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto 1611/2005, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21608",
+        "docId": "BOE-A-2005-21608"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de 60 años y cargas familiares … 6.091,68",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2007-viud-65-o-discapacidad65-unipersonal",
+      "value": 6905.08,
+      "unit": "euros/año",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto 1578/2006, de 22 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22958",
+        "docId": "BOE-A-2006-22958"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con 65 años, con cargas familiares o con discapacidad en grado igual o superior al 65 por 100 … 6.905,08",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2007-viud-60-64-unipersonal",
+      "value": 6433.98,
+      "unit": "euros/año",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto 1578/2006, de 22 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22958",
+        "docId": "BOE-A-2006-22958"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre 60 y 64 años. … 6.433,98",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2007-viud-menor60-unipersonal",
+      "value": 5134.36,
+      "unit": "euros/año",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto 1578/2006, de 22 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22958",
+        "docId": "BOE-A-2006-22958"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de 60 años … 5.134,36",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2009-viud-cargas-familiares-unipersonal",
+      "value": 9122.82,
+      "unit": "euros/año",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto 2127/2008, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20957",
+        "docId": "BOE-A-2008-20957"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares … -, 9.122,82, -",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2009-viud-65-o-discapacidad65-unipersonal",
+      "value": 7861.7,
+      "unit": "euros/año",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto 2127/2008, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20957",
+        "docId": "BOE-A-2008-20957"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100 … -, 7.861,70, -",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2009-viud-60-64-unipersonal",
+      "value": 7339.92,
+      "unit": "euros/año",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto 2127/2008, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20957",
+        "docId": "BOE-A-2008-20957"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años … -, 7.339,92, -",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2009-viud-menor60-unipersonal",
+      "value": 5899.74,
+      "unit": "euros/año",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto 2127/2008, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20957",
+        "docId": "BOE-A-2008-20957"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años … -, 5.899,74, -",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2010-viud-cargas-familiares-unipersonal",
+      "value": 9515.8,
+      "unit": "euros/año",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto 2007/2009, 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21052",
+        "docId": "BOE-A-2009-21052"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares. … 9.515,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2010-viud-65-o-discapacidad65-unipersonal",
+      "value": 8229.2,
+      "unit": "euros/año",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto 2007/2009, 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21052",
+        "docId": "BOE-A-2009-21052"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100. … 8.229,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2010-viud-60-64-unipersonal",
+      "value": 7697.2,
+      "unit": "euros/año",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto 2007/2009, 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21052",
+        "docId": "BOE-A-2009-21052"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años. … 7.697,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2010-viud-menor60-unipersonal",
+      "value": 6228.6,
+      "unit": "euros/año",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto 2007/2009, 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21052",
+        "docId": "BOE-A-2009-21052"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años. … 6.228,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2011-viud-cargas-familiares-unipersonal",
+      "value": 9735.6,
+      "unit": "euros/año",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+        "docId": "BOE-A-2010-20149"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares … 9.735,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2011-viud-65-o-discapacidad65-unipersonal",
+      "value": 8419.6,
+      "unit": "euros/año",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+        "docId": "BOE-A-2010-20149"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100 … 8.419,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2011-viud-60-64-unipersonal",
+      "value": 7875.0,
+      "unit": "euros/año",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+        "docId": "BOE-A-2010-20149"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años … 7.875,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2011-viud-menor60-unipersonal",
+      "value": 6374.2,
+      "unit": "euros/año",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+        "docId": "BOE-A-2010-20149"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años … 6.374,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2012-viud-cargas-familiares-unipersonal",
+      "value": 10018.4,
+      "unit": "euros/año",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20638",
+        "docId": "BOE-A-2011-20638"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares … 10.018,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2012-viud-65-o-discapacidad65-unipersonal",
+      "value": 8664.6,
+      "unit": "euros/año",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20638",
+        "docId": "BOE-A-2011-20638"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100 … 8.664,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2012-viud-60-64-unipersonal",
+      "value": 8104.6,
+      "unit": "euros/año",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20638",
+        "docId": "BOE-A-2011-20638"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años … 8.104,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2012-viud-menor60-unipersonal",
+      "value": 6559.0,
+      "unit": "euros/año",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20638",
+        "docId": "BOE-A-2011-20638"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años … 6.559,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-viud-menor60-conyuge-cargo",
+      "value": 8751.4,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
+        "docId": "BOE-A-2012-15651"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
+      "quote": "Titular con menos de sesenta años … 8.751,40, 6.624,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2013-viud-menor60-unipersonal",
+      "value": 6624.8,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
+        "docId": "BOE-A-2012-15651"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años … 8.751,40, 6.624,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+          "docId": "BOE-A-2012-15764"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": false,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2014-viud-cargas-familiares-unipersonal",
+      "value": 10246.6,
+      "unit": "euros/año",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto 1045/2013, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13763",
+        "docId": "BOE-A-2013-13763"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares … 10.246,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2014-viud-65-o-discapacidad65-unipersonal",
+      "value": 8860.6,
+      "unit": "euros/año",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto 1045/2013, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13763",
+        "docId": "BOE-A-2013-13763"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100 … 8.860,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2014-viud-60-64-unipersonal",
+      "value": 8288.0,
+      "unit": "euros/año",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto 1045/2013, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13763",
+        "docId": "BOE-A-2013-13763"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años … 8.288,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2014-viud-menor60-unipersonal",
+      "value": 6707.4,
+      "unit": "euros/año",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto 1045/2013, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13763",
+        "docId": "BOE-A-2013-13763"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años … 6.707,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2015-viud-cargas-familiares-unipersonal",
+      "value": 10273.2,
+      "unit": "euros/año",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto 1107/2014, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13680",
+        "docId": "BOE-A-2014-13680"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares … 10.273,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2015-viud-65-o-discapacidad65-unipersonal",
+      "value": 8883.0,
+      "unit": "euros/año",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto 1107/2014, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13680",
+        "docId": "BOE-A-2014-13680"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100 … 8.883,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2015-viud-60-64-unipersonal",
+      "value": 8309.0,
+      "unit": "euros/año",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto 1107/2014, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13680",
+        "docId": "BOE-A-2014-13680"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años … 8.309,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2015-viud-menor60-unipersonal",
+      "value": 6724.2,
+      "unit": "euros/año",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto 1107/2014, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13680",
+        "docId": "BOE-A-2014-13680"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años … 6.724,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2016-viud-cargas-familiares-unipersonal",
+      "value": 10299.8,
+      "unit": "euros/año",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto 1170/2015, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-14272",
+        "docId": "BOE-A-2015-14272"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares … 10.299,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2016-viud-65-o-discapacidad65-unipersonal",
+      "value": 8905.4,
+      "unit": "euros/año",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto 1170/2015, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-14272",
+        "docId": "BOE-A-2015-14272"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100 … 8.905,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2016-viud-60-64-unipersonal",
+      "value": 8330.0,
+      "unit": "euros/año",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto 1170/2015, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-14272",
+        "docId": "BOE-A-2015-14272"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años … 8.330,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2016-viud-menor60-unipersonal",
+      "value": 6742.4,
+      "unit": "euros/año",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto 1170/2015, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-14272",
+        "docId": "BOE-A-2015-14272"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años … 6.742,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2017-viud-cargas-familiares-unipersonal",
+      "value": 10326.4,
+      "unit": "euros/año",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto 746/2016, de 30 de diciembre, sobre revalorización y complementos de pensiones de Clases Pasivas y sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-12605",
+        "docId": "BOE-A-2016-12605"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares … 10.326,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2017-viud-65-o-discapacidad65-unipersonal",
+      "value": 8927.8,
+      "unit": "euros/año",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto 746/2016, de 30 de diciembre, sobre revalorización y complementos de pensiones de Clases Pasivas y sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-12605",
+        "docId": "BOE-A-2016-12605"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100 … 8.927,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2017-viud-60-64-unipersonal",
+      "value": 8351.0,
+      "unit": "euros/año",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto 746/2016, de 30 de diciembre, sobre revalorización y complementos de pensiones de Clases Pasivas y sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-12605",
+        "docId": "BOE-A-2016-12605"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años … 8.351,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2017-viud-menor60-unipersonal",
+      "value": 6760.6,
+      "unit": "euros/año",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto 746/2016, de 30 de diciembre, sobre revalorización y complementos de pensiones de Clases Pasivas y sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-12605",
+        "docId": "BOE-A-2016-12605"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años … 6.760,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2018-viud-cargas-familiares-unipersonal",
+      "value": 10353.0,
+      "unit": "euros/año",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 1079/2017, de 29 de diciembre, sobre revalorización de pensiones de Clases Pasivas, de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-15854",
+        "docId": "BOE-A-2017-15854"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares. … 10.353,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2018-viud-65-o-discapacidad65-unipersonal",
+      "value": 8950.2,
+      "unit": "euros/año",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 1079/2017, de 29 de diciembre, sobre revalorización de pensiones de Clases Pasivas, de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-15854",
+        "docId": "BOE-A-2017-15854"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100. … 8.950,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2018-viud-60-64-unipersonal",
+      "value": 8372.0,
+      "unit": "euros/año",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 1079/2017, de 29 de diciembre, sobre revalorización de pensiones de Clases Pasivas, de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-15854",
+        "docId": "BOE-A-2017-15854"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años. … 8.372,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2018-viud-menor60-unipersonal",
+      "value": 6778.8,
+      "unit": "euros/año",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 1079/2017, de 29 de diciembre, sobre revalorización de pensiones de Clases Pasivas, de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-15854",
+        "docId": "BOE-A-2017-15854"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años. … 6.778,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2019-viud-cargas-familiares-unipersonal",
+      "value": 10970.4,
+      "unit": "euros/año",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares. … 10.970,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2019-viud-65-o-discapacidad65-unipersonal",
+      "value": 9483.6,
+      "unit": "euros/año",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100. … 9.483,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2019-viud-60-64-unipersonal",
+      "value": 8871.8,
+      "unit": "euros/año",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años. … 8.871,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2019-viud-menor60-unipersonal",
+      "value": 7183.4,
+      "unit": "euros/año",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años. … 7.183,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2020-viud-cargas-familiares-unipersonal",
+      "value": 11069.8,
+      "unit": "euros/año",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares. … –, 11.069,80, –",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2020-viud-65-o-discapacidad65-unipersonal",
+      "value": 9569.0,
+      "unit": "euros/año",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100. … –, 9.569,00, –",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2020-viud-60-64-unipersonal",
+      "value": 8953.0,
+      "unit": "euros/año",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años. … –, 8.953,00, –",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2020-viud-menor60-unipersonal",
+      "value": 7249.2,
+      "unit": "euros/año",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años. … –, 7.249,20, –",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2021-viud-cargas-familiares-unipersonal",
+      "value": 11170.6,
+      "unit": "euros/año",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339",
+        "docId": "BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares … –, 11.170,60, –",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-1135",
+          "docId": "BOE-A-2021-1135"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2021-viud-65-o-discapacidad65-unipersonal",
+      "value": 9655.8,
+      "unit": "euros/año",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339",
+        "docId": "BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100 … –, 9.655,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-1135",
+          "docId": "BOE-A-2021-1135"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2021-viud-60-64-unipersonal",
+      "value": 9034.2,
+      "unit": "euros/año",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339",
+        "docId": "BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años … –, 9.034,20, –",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-1135",
+          "docId": "BOE-A-2021-1135"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2021-viud-menor60-unipersonal",
+      "value": 7315.0,
+      "unit": "euros/año",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339",
+        "docId": "BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años … –, 7.315,00, –",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-1135",
+          "docId": "BOE-A-2021-1135"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2022-viud-cargas-familiares-unipersonal",
+      "value": 11688.6,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares. … —, 11.688,60, —",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-viud-65-o-discapacidad65-unipersonal",
+      "value": 10103.8,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100. … —, 10.103,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-viud-60-64-unipersonal",
+      "value": 9452.8,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años. … —, 9.452,80, —",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-viud-menor60-unipersonal",
+      "value": 7655.2,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años. … —, 7.655,20, —",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-viud-cargas-familiares-unipersonal",
+      "value": 12682.6,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares. … –, 12.682,60, –",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-viud-65-o-discapacidad65-unipersonal",
+      "value": 10963.4,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100. … –, 10.963,40, –",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-viud-60-64-unipersonal",
+      "value": 10256.4,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años. … 10.256,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-viud-menor60-unipersonal",
+      "value": 8306.2,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años. … –, 8.306,20, –",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-viud-cargas-familiares-unipersonal",
+      "value": 14466.2,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares. … 14.466,20",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-viud-65-o-discapacidad65-unipersonal",
+      "value": 11552.8,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100. … 11.552,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-viud-60-64-unipersonal",
+      "value": 10808.0,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años. … 10.808,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-viud-menor60-unipersonal",
+      "value": 8752.8,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años. … 8.752,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2025-viud-cargas-familiares-unipersonal",
+      "value": 15786.4,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares. … 15.786,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 9/2024, de 23 de diciembre, por el que se adoptan medidas urgentes en materia económica, tributaria, de transporte, y de Seguridad Social, y se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26915",
+          "docId": "BOE-A-2024-26915"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2025-viud-65-o-discapacidad65-unipersonal",
+      "value": 12241.6,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100. … 12.241,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 9/2024, de 23 de diciembre, por el que se adoptan medidas urgentes en materia económica, tributaria, de transporte, y de Seguridad Social, y se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26915",
+          "docId": "BOE-A-2024-26915"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2025-viud-60-64-unipersonal",
+      "value": 11452.0,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años. … 11.452,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 9/2024, de 23 de diciembre, por el que se adoptan medidas urgentes en materia económica, tributaria, de transporte, y de Seguridad Social, y se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26915",
+          "docId": "BOE-A-2024-26915"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2025-viud-menor60-unipersonal",
+      "value": 9275.0,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años. … 9.275,00",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 9/2024, de 23 de diciembre, por el que se adoptan medidas urgentes en materia económica, tributaria, de transporte, y de Seguridad Social, y se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26915",
+          "docId": "BOE-A-2024-26915"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2026-viud-cargas-familiares-unipersonal",
+      "value": 17592.4,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con cargas familiares. … 17.592,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 16/2025, de 23 de diciembre, por el que se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social, y se adoptan medidas urgentes en materia tributaria y de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-26458",
+          "docId": "BOE-A-2025-26458"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2026-viud-65-o-discapacidad65-unipersonal",
+      "value": 13106.8,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100. … 13.106,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 16/2025, de 23 de diciembre, por el que se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social, y se adoptan medidas urgentes en materia tributaria y de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-26458",
+          "docId": "BOE-A-2025-26458"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2026-viud-60-64-unipersonal",
+      "value": 12262.6,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años. … 12.262,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 16/2025, de 23 de diciembre, por el que se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social, y se adoptan medidas urgentes en materia tributaria y de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-26458",
+          "docId": "BOE-A-2025-26458"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    },
+    {
+      "id": "2026-viud-menor60-unipersonal",
+      "value": 9931.6,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
+      "quote": "Titular con menos de sesenta años. … 9.931,60",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 16/2025, de 23 de diciembre, por el que se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social, y se adoptan medidas urgentes en materia tributaria y de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-26458",
+          "docId": "BOE-A-2025-26458"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Misma cuantía en otra norma del mismo año."
+      }
+    }
+  ]
+}

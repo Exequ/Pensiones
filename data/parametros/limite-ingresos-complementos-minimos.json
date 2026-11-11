@@ -1,0 +1,433 @@
+{
+  "tipo": "datos",
+  "id": "limite-ingresos-complementos-minimos",
+  "title": "Límite de ingresos para los complementos por mínimos (sin cónyuge a cargo o límite único)",
+  "description": "Suma de rendimientos por encima de la cual no se reconoce complemento por mínimos. Hasta 2017 un único límite; desde 2018, uno sin cónyuge a cargo y otro con cónyuge a cargo.",
+  "data": [
+    {
+      "id": "2002",
+      "value": 5538.38,
+      "unit": "euros/año",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto 1464/2001, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2002.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24969",
+        "docId": "BOE-A-2001-24969"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 5.538,38 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2003",
+      "value": 5754.37,
+      "unit": "euros/año",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto 1425/2002, de 27 de diciembre, sobre revalorización de las pensiones del Sistema de la Seguridad Social para el ejercicio 2003.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-25416",
+        "docId": "BOE-A-2002-25416"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 5.754,37 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2004",
+      "value": 5915.49,
+      "unit": "euros/año",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto 2/2004, de 9 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2004.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-507",
+        "docId": "BOE-A-2004-507"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 5.915,49 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2005",
+      "value": 6122.53,
+      "unit": "euros/año",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto 2350/2004, de 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21839",
+        "docId": "BOE-A-2004-21839"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 6.122,53 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2006",
+      "value": 6330.69,
+      "unit": "euros/año",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto 1611/2005, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21608",
+        "docId": "BOE-A-2005-21608"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 6.330,69 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2007",
+      "value": 6495.29,
+      "unit": "euros/año",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto 1578/2006, de 22 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22958",
+        "docId": "BOE-A-2006-22958"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 6.495,29 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2008",
+      "value": 6761.61,
+      "unit": "euros/año",
+      "period": "2008",
+      "source": {
+        "title": "Real Decreto 1764/2007, de 28 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2008.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2007-22452",
+        "docId": "BOE-A-2007-22452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 6.761,61 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2009",
+      "value": 6923.9,
+      "unit": "euros/año",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto 2127/2008, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20957",
+        "docId": "BOE-A-2008-20957"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 6.923,90 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2010",
+      "value": 6923.9,
+      "unit": "euros/año",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto 2007/2009, 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21052",
+        "docId": "BOE-A-2009-21052"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 6.923,90 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2011",
+      "value": 6923.9,
+      "unit": "euros/año",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+        "docId": "BOE-A-2010-20149"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 6.923,90 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2012",
+      "value": 6993.14,
+      "unit": "euros/año",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20638",
+        "docId": "BOE-A-2011-20638"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Sin cónyuge a cargo.",
+      "quote": "Sin cónyuge a cargo: 6.993,14 euros/año",
+      "location": "Anexo I, límite de ingresos para el reconocimiento de complementos por mínimos"
+    },
+    {
+      "id": "2013",
+      "value": 7063.07,
+      "unit": "euros/año",
+      "period": "2013",
+      "source": {
+        "title": "Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15651",
+        "docId": "BOE-A-2012-15651"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 7.063,07 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2014",
+      "value": 7080.73,
+      "unit": "euros/año",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto 1045/2013, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13763",
+        "docId": "BOE-A-2013-13763"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 7.080,73 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2015",
+      "value": 7098.43,
+      "unit": "euros/año",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto 1107/2014, de 26 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13680",
+        "docId": "BOE-A-2014-13680"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 7.098,43 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2016",
+      "value": 7116.18,
+      "unit": "euros/año",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto 1170/2015, de 29 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-14272",
+        "docId": "BOE-A-2015-14272"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 7.116,18 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2017",
+      "value": 7116.18,
+      "unit": "euros/año",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto 746/2016, de 30 de diciembre, sobre revalorización y complementos de pensiones de Clases Pasivas y sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-12605",
+        "docId": "BOE-A-2016-12605"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Sin cónyuge a cargo.",
+      "quote": "Sin cónyuge a cargo: 7.116,18 euros/año",
+      "location": "Anexo I, límite de ingresos para el reconocimiento de complementos por mínimos"
+    },
+    {
+      "id": "2018",
+      "value": 7133.97,
+      "unit": "euros/año",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 1079/2017, de 29 de diciembre, sobre revalorización de pensiones de Clases Pasivas, de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-15854",
+        "docId": "BOE-A-2017-15854"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Sin cónyuge a cargo.",
+      "quote": "Sin cónyuge a cargo: 7.133,97 euros/año",
+      "location": "Anexo I, límite de ingresos para el reconocimiento de complementos por mínimos"
+    },
+    {
+      "id": "2019",
+      "value": 7569.0,
+      "unit": "euros/año",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
+        "docId": "BOE-A-2018-17992"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Sin cónyuge a cargo.",
+      "quote": "Sin cónyuge a cargo: 7.569,00 euros/año",
+      "location": "Anexo I, límite de ingresos para el reconocimiento de complementos por mínimos"
+    },
+    {
+      "id": "2020",
+      "value": 7638.0,
+      "unit": "euros/año",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto-ley 1/2020, de 14 de enero, por el que se establece la revalorización y mantenimiento de las pensiones y prestaciones públicas del sistema de Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-501",
+        "docId": "BOE-A-2020-501"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Sin cónyuge a cargo.",
+      "quote": "Sin cónyuge a cargo: 7.638,00 euros/año",
+      "location": "Anexo I, límite de ingresos para el reconocimiento de complementos por mínimos"
+    },
+    {
+      "id": "2021",
+      "value": 7707.0,
+      "unit": "euros/año",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339",
+        "docId": "BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 7.707,00 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2022",
+      "value": 7939.0,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 7.939,00 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2023",
+      "value": 8614.0,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Límite único (sin distinción por cónyuge a cargo) hasta 2017.",
+      "quote": "inferior a la suma de 8.614,00 euros",
+      "location": "Artículo sobre el límite de ingresos de los complementos por mínimos"
+    },
+    {
+      "id": "2024",
+      "value": 8942.0,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Sin cónyuge a cargo.",
+      "quote": "Sin cónyuge a cargo 8.942,00 euros/año",
+      "location": "Anexo I, límite de ingresos para el reconocimiento de complementos por mínimos"
+    },
+    {
+      "id": "2025",
+      "value": 9193.0,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Sin cónyuge a cargo.",
+      "quote": "Sin cónyuge a cargo 9.193,00 euros/año",
+      "location": "Anexo I, límite de ingresos para el reconocimiento de complementos por mínimos"
+    },
+    {
+      "id": "2026",
+      "value": 9442.0,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Sin cónyuge a cargo.",
+      "quote": "Sin cónyuge a cargo 9.442,00 euros/año",
+      "location": "Anexo I, límite de ingresos para el reconocimiento de complementos por mínimos"
+    }
+  ]
+}
