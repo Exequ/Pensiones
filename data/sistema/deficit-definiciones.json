@@ -1,0 +1,72 @@
+{
+  "tipo": "datos",
+  "id": "deficit-definiciones",
+  "title": "Definiciones de déficit y saldo de la Seguridad Social recogidas de fuentes oficiales descargadas",
+  "description": "Catálogo de definiciones con su literal y la fuente que las usa. No se elige ninguna como «la buena». Las definiciones de AIReF, IGAE y Ministerio (saldo contributivo ajustado, «gastos impropios») no se han podido descargar: docs/DESCARGAS_MANUALES.md.",
+  "data": [
+    {
+      "id": "saldo-presupuestario-no-financiero",
+      "value": "SUMA DE OPERACIONES NO FINANCIERAS",
+      "unit": "rótulo literal de la fuente (ingresos y gastos)",
+      "period": "2025",
+      "source": {
+        "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "La Seguridad Social presenta las «operaciones no financieras» (capítulos 1 a 7) en la ejecución de ingresos y de gastos, pero no publica un «saldo» con ese nombre en los ficheros descargados; en deficit-presupuestario-seguridad-social se calcula la diferencia entre ambas líneas (dato derivado, sin interpretación).",
+      "quote": "SUMA DE OPERACIONES NO FINANCIERAS",
+      "location": "ResSISTEMA_DiciembreDefinitivo_2025.xlsx, hojas ResumenPI y ResumenPG"
+    },
+    {
+      "id": "saldo-presupuestario-total",
+      "value": "TOTAL INGRESOS / TOTAL GASTOS",
+      "unit": "rótulos literales de la fuente",
+      "period": "2025",
+      "source": {
+        "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Saldo derivado de los totales de ingresos y gastos, que incluyen activos y pasivos financieros (préstamos del Estado a la Tesorería).",
+      "quote": "TOTAL INGRESOS",
+      "location": "hoja ResumenPI (y «TOTAL GASTOS» en ResumenPG)"
+    },
+    {
+      "id": "necesidad-financiacion-sec-s1314",
+      "value": "The difference between total revenue and total expenditure equals net lending/net borrowing (B.9).",
+      "unit": "definición literal",
+      "period": "2026",
+      "source": {
+        "title": "Government revenue, expenditure and main aggregates (gov_10a_main): metadatos de referencia (ESMS)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/cache/metadata/en/gov_10a_main_esms.htm"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Capacidad (+) o necesidad (-) de financiación en contabilidad nacional (SEC 2010) del subsector fondos de la Seguridad Social (S.1314); datos en deficit-sec-fondos-seguridad-social. Los datos de Eurostat proceden de la transmisión de cada país; la fuente nacional (IGAE) no se ha podido descargar (ver docs/DESCARGAS_MANUALES.md).",
+      "quote": "The difference between total revenue and total expenditure equals net lending/net borrowing (B.9).",
+      "location": "ESMS gov_10a_main, apartado de conceptos y definiciones (sección 3.3)"
+    },
+    {
+      "id": "nota-espana-sanidad-2002",
+      "value": "ES Health competencies were transferred from Social security funds (S.1314) to State government (S.1312) in 2002.",
+      "unit": "nota literal de la fuente",
+      "period": "2026",
+      "source": {
+        "title": "Government revenue, expenditure and main aggregates (gov_10a_main): metadatos de referencia (ESMS)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/cache/metadata/en/gov_10a_main_esms.htm"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Ruptura de perímetro del subsector S.1314 en España.",
+      "quote": "ES Health competencies were transferred from Social security funds (S.1314) to State government (S.1312) in 2002.",
+      "location": "ESMS gov_10a_main, notas por país"
+    }
+  ]
+}

@@ -89,7 +89,9 @@ def main():
         k = fila[:4]
         if k not in por or fila[4] == 'principal':
             por[k] = fila
-    out = sorted(por.values(), key=lambda x: (x[0], x[1], x[2]))
+    con_principal = {(f[0], f[1], f[2]) for f in por.values() if f[4] == 'principal'}
+    # una comparativa solo se conserva si no hay fichero principal de ese ejercicio, periodo y tabla (evita duplicar con otro rótulo)
+    out = sorted((f for f in por.values() if f[4] == 'principal' or (f[0], f[1], f[2]) not in con_principal), key=lambda x: (x[0], x[1], x[2]))
     with open(f'{REPO}/data/sistema/presupuesto-ss-ejecucion.csv', 'w', encoding='utf-8', newline='') as fh:
         w = csv.writer(fh, lineterminator='\n')
         w.writerow(['ejercicio', 'periodo', 'tabla', 'concepto', 'columna', 'definitivo', 'prevision_o_presupuesto_meur', 'derechos_u_obligaciones_meur', 'recaudacion_o_pagos_meur'])

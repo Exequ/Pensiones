@@ -439,9 +439,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2018,2018-T4,gastos-cap4,A COMUNIDADES AUTÓNOMAS,principal,no,245.15,240.07,239.7
 2018,2018-T4,gastos-cap4,A EMPRESAS PRIVADAS Y OTRAS,principal,no,112.66,89.4,88.61
 2018,2018-T4,gastos-cap4,AL EXTERIOR,principal,no,7.56,4.26,4.12
-2018,2018-T4,gastos-cap4,"PREST.NACIM.,CUIDADO MENOR,CORRESP.,RIESGO EMB.,LACTANCIA",comparativa,,,2387.45,
-2018,2018-T4,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,comparativa,,,3390.32,
-2018,2018-T4,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,comparativa,,,134961.02,
 2018,2018-T4,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,no,1096.52,1072.9,1072.9
 2018,2018-T4,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,no,1283.48,1274.77,1274.77
 2018,2018-T4,gastos-cap4-no-contributivas,COMPL. A MÍNIMOS PENSIONES CONTRIBUTIVAS,principal,no,7148.32,7119.35,7117.55
@@ -524,9 +521,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2019,2019-T1,gastos-cap4,A COMUNIDADES AUTÓNOMAS,principal,no,335.72,1.01,0.92
 2019,2019-T1,gastos-cap4,A EMPRESAS PRIVADAS Y OTRAS,principal,no,118.75,0.68,0.6
 2019,2019-T1,gastos-cap4,AL EXTERIOR,principal,no,7.56,1.76,1.58
-2019,2019-T1,gastos-cap4,PRESTACIÓN CESE ACTIVIDAD,comparativa,,,2.34,2.28
-2019,2019-T1,gastos-cap4,CUOTAS BENEF.PRESTACIÓN CESE ACTIVIDAD,comparativa,,,1.02,1.01
-2019,2019-T1,gastos-cap4,RESTO DE PRESTACIONES E INDEMNIZACIONES,comparativa,,,17.22,16.39
 2019,2019-T1,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,no,1096.52,240.27,240.27
 2019,2019-T1,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,no,1283.48,290.15,290.15
 2019,2019-T1,gastos-cap4-no-contributivas,COMPL. A MÍNIMOS PENSIONES CONTRIBUTIVAS,principal,no,7318.92,1545.26,1544.23
@@ -609,12 +603,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2019,2019-T2,gastos-cap4,A COMUNIDADES AUTÓNOMAS,principal,no,335.72,136.08,74.98
 2019,2019-T2,gastos-cap4,A EMPRESAS PRIVADAS Y OTRAS,principal,no,179.9,118.85,118.39
 2019,2019-T2,gastos-cap4,AL EXTERIOR,principal,no,7.52,3.61,3.6
-2019,2019-T2,gastos-cap4,"PREST.NACIM.,CUIDADO MENOR,CORRESP.,RIESGO EMB.,LACTANCIA",comparativa,,,1232.28,
-2019,2019-T2,gastos-cap4,PRESTACIÓN CESE ACTIVIDAD,comparativa,,,5.01,
-2019,2019-T2,gastos-cap4,CUOTAS BENEF.PRESTACIÓN CESE ACTIVIDAD,comparativa,,,2.21,
-2019,2019-T2,gastos-cap4,RESTO DE PRESTACIONES E INDEMNIZACIONES,comparativa,,,35.64,
-2019,2019-T2,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,comparativa,,,2017.99,
-2019,2019-T2,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,comparativa,,,62532.62,
 2019,2019-T2,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,no,1096.52,556.87,556.87
 2019,2019-T2,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,no,1283.48,675.57,675.57
 2019,2019-T2,gastos-cap4-no-contributivas,COMPL. A MÍNIMOS PENSIONES CONTRIBUTIVAS,principal,no,7318.92,3090.9,3089.9
@@ -633,8 +621,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2019,2019-T2,gastos-cap4-no-contributivas,A COMUNIDADES AUTÓNOMAS,principal,no,1315.2,701.54,701.54
 2019,2019-T2,gastos-cap4-no-contributivas,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,no,1488.96,788.18,788.18
 2019,2019-T2,gastos-cap4-no-contributivas,TOTAL,principal,no,12885.28,5962.22,5958.75
-2019,2019-T2,gastos-cap4-no-contributivas,INGRESO MÍNIMO VITAL Y PRESTAC.FAMILIARES,comparativa,,,812.66,
-2019,2019-T2,gastos-cap4-no-contributivas,RESTO DE PRESTACIONES FAMILIARES,comparativa,,,812.66,
 2019,2019-T2,ingresos,1. COTIZACIONES SOCIALES,principal,no,114915.75,61296.57,60470.75
 2019,2019-T2,ingresos,3. TASAS Y OTROS INGRESOS,principal,no,992.95,569.53,224.31
 2019,2019-T2,ingresos,4. TRANSFERENCIAS CORRIENTES,principal,no,18441.15,10042.2,9991.28
@@ -699,12 +685,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2019,2019-T3,gastos-cap4,A COMUNIDADES AUTÓNOMAS,principal,no,252.35,247.27,247.19
 2019,2019-T3,gastos-cap4,A EMPRESAS PRIVADAS Y OTRAS,principal,no,179.48,152.59,152.09
 2019,2019-T3,gastos-cap4,AL EXTERIOR,principal,no,7.56,4.78,4.62
-2019,2019-T3,gastos-cap4,"PREST.NACIM.,CUIDADO MENOR,CORRESP.,RIESGO EMB.,LACTANCIA",comparativa,,,1913.46,
-2019,2019-T3,gastos-cap4,PRESTACIÓN CESE ACTIVIDAD,comparativa,,,7.65,
-2019,2019-T3,gastos-cap4,CUOTAS BENEF.PRESTACIÓN CESE ACTIVIDAD,comparativa,,,3.31,
-2019,2019-T3,gastos-cap4,RESTO DE PRESTACIONES E INDEMNIZACIONES,comparativa,,,81.8,
-2019,2019-T3,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,comparativa,,,3104.17,
-2019,2019-T3,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,comparativa,,,103418.92,
 2019,2019-T3,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,no,1111.15,787.52,787.52
 2019,2019-T3,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,no,1300.85,960.37,960.37
 2019,2019-T3,gastos-cap4-no-contributivas,COMPL. A MÍNIMOS PENSIONES CONTRIBUTIVAS,principal,no,7318.92,5092.56,5091.53
@@ -723,8 +703,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2019,2019-T3,gastos-cap4-no-contributivas,A COMUNIDADES AUTÓNOMAS,principal,no,1313.44,1044.32,1044.32
 2019,2019-T3,gastos-cap4-no-contributivas,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,no,1487.2,1173.48,1173.48
 2019,2019-T3,gastos-cap4-no-contributivas,TOTAL,principal,no,12918.41,9444.82,9442.81
-2019,2019-T3,gastos-cap4-no-contributivas,INGRESO MÍNIMO VITAL Y PRESTAC.FAMILIARES,comparativa,,,1375.37,
-2019,2019-T3,gastos-cap4-no-contributivas,RESTO DE PRESTACIONES FAMILIARES,comparativa,,,1375.37,
 2019,2019-T3,ingresos,1. COTIZACIONES SOCIALES,principal,no,114915.75,92607.22,91557.59
 2019,2019-T3,ingresos,3. TASAS Y OTROS INGRESOS,principal,no,992.95,925.55,518.65
 2019,2019-T3,ingresos,4. TRANSFERENCIAS CORRIENTES,principal,no,18441.15,14257.78,14190.07
@@ -791,11 +769,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2019,2019-T4,gastos-cap4,AL EXTERIOR,principal,sí,7.56,6.95,6.69
 2019,2019-T4,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,sí,4429.42,4278.1,4256.72
 2019,2019-T4,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,sí,145572.51,145121.26,145055.6
-2019,2019-T4,gastos-cap4,INCAPACIDAD PERMANENTE,comparativa,,,12907.88,
-2019,2019-T4,gastos-cap4,"NACIM.CUIDADO MENOR, CORRESP.RIESGO EMB.,LACT.",comparativa,,,2637.54,
-2019,2019-T4,gastos-cap4,PRESTACIÓN CESE ACTIVIDAD,comparativa,,,10.56,
-2019,2019-T4,gastos-cap4,CUOTAS BENEF.PRESTACIÓN CESE ACTIVIDAD,comparativa,,,4.7,
-2019,2019-T4,gastos-cap4,RESTO DE PRESTACIONES E INDEMNIZACIONES,comparativa,,,212.41,
 2019,2019-T4,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,sí,1112,1091.6,1091.6
 2019,2019-T4,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,sí,1342.11,1339.13,1339.13
 2019,2019-T4,gastos-cap4-no-contributivas,COMPL. A MÍNIMOS PENSIONES CONTRIBUTIVAS,principal,sí,7130.43,7093.98,7091.69
@@ -814,9 +787,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2019,2019-T4,gastos-cap4-no-contributivas,A COMUNIDADES AUTÓNOMAS,principal,sí,1392.86,1392.36,1390.46
 2019,2019-T4,gastos-cap4-no-contributivas,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,sí,1566.42,1565.14,1563.24
 2019,2019-T4,gastos-cap4-no-contributivas,TOTAL,principal,sí,13035.21,12906.34,12900.68
-2019,2019-T4,gastos-cap4-no-contributivas,INGRESO MÍNIMO VITAL Y PRESTAC.FAMILIARES,comparativa,,,1666.77,
-2019,2019-T4,gastos-cap4-no-contributivas,RESTO DE PRESTACIONES FAMILIARES,comparativa,,,1666.77,
-2019,2019-T4,gastos-cap4-no-contributivas,SUBS.ECON.PARA PERS.DISCAPACIDAD,comparativa,,,11.9,
 2019,2019-T4,ingresos,1. COTIZACIONES SOCIALES,principal,sí,114915.75,124254.9,122998.89
 2019,2019-T4,ingresos,3. TASAS Y OTROS INGRESOS,principal,sí,992.95,1186.55,748.6
 2019,2019-T4,ingresos,4. TRANSFERENCIAS CORRIENTES,principal,sí,18441.15,19610.17,19582.36
@@ -881,14 +851,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2020,2020-T1,gastos-cap4,RESTO DE PRESTACIONES E INDEMNIZACIONES,principal,no,164.94,54.39,53.78
 2020,2020-T1,gastos-cap4,FARMACIA,principal,no,34.91,7.84,7.18
 2020,2020-T1,gastos-cap4,SUMA DE SUBSIDIOS Y OTRAS PRESTACIONES,principal,no,11311.52,3131.38,3054.31
-2020,2020-T1,gastos-cap4,INCAPACIDAD PERMANENTE,comparativa,,,2871.64,
-2020,2020-T1,gastos-cap4,"NACIM.CUIDADO MENOR, CORRESP.RIESGO EMB.,LACT.",comparativa,,,694.78,
-2020,2020-T1,gastos-cap4,A LA SEGURIDAD SOCIAL,comparativa,,,774.64,
-2020,2020-T1,gastos-cap4,A COMUNIDADES AUTÓNOMAS,comparativa,,,0.47,
-2020,2020-T1,gastos-cap4,A EMPRESAS PRIVADAS Y OTRAS,comparativa,,,0.63,
-2020,2020-T1,gastos-cap4,AL EXTERIOR,comparativa,,,0.71,
-2020,2020-T1,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,comparativa,,,776.45,
-2020,2020-T1,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,comparativa,,,32575.47,
 2020,2020-T1,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,no,1096.52,235.12,235.12
 2020,2020-T1,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,no,1283.48,295.44,295.44
 2020,2020-T1,gastos-cap4-no-contributivas,COMPL. A MÍNIMOS PENSIONES CONTRIBUTIVAS,principal,no,7318.92,1538.51,1530.02
@@ -908,9 +870,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2020,2020-T1,gastos-cap4-no-contributivas,AL EXTERIOR,principal,no,0.33,,
 2020,2020-T1,gastos-cap4-no-contributivas,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,no,1489.29,396.72,396.71
 2020,2020-T1,gastos-cap4-no-contributivas,TOTAL,principal,no,12885.61,3119.62,3107.75
-2020,2020-T1,gastos-cap4-no-contributivas,INGRESO MÍNIMO VITAL Y PRESTAC.FAMILIARES,comparativa,,,635.54,
-2020,2020-T1,gastos-cap4-no-contributivas,RESTO DE PRESTACIONES FAMILIARES,comparativa,,,635.54,
-2020,2020-T1,gastos-cap4-no-contributivas,SUBS.ECON.PARA PERS.DISCAPACIDAD,comparativa,,,2.42,
 2020,2020-T1,ingresos,1. COTIZACIONES SOCIALES,principal,no,114915.75,31894.68,31229.73
 2020,2020-T1,ingresos,3. TASAS Y OTROS INGRESOS,principal,no,992.95,327.03,65.54
 2020,2020-T1,ingresos,4. TRANSFERENCIAS CORRIENTES,principal,no,18332.05,4602.59,4572.08
@@ -982,8 +941,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2020,2020-T2,gastos-cap4,AL EXTERIOR,principal,no,7.56,1.48,1.33
 2020,2020-T2,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,no,4115.83,1896.38,1875.62
 2020,2020-T2,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,no,138710.35,68649.02,68503.35
-2020,2020-T2,gastos-cap4,INCAPACIDAD PERMANENTE,comparativa,,,5656.87,
-2020,2020-T2,gastos-cap4,"NACIM.CUIDADO MENOR, CORRESP.RIESGO EMB.,LACT.",comparativa,,,1435.94,
 2020,2020-T2,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,no,1096.52,542.84,542.84
 2020,2020-T2,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,no,1283.48,683.78,683.78
 2020,2020-T2,gastos-cap4-no-contributivas,COMPL. A MÍNIMOS PENSIONES CONTRIBUTIVAS,principal,no,7318.92,3022.09,3021.26
@@ -1005,7 +962,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2020,2020-T2,gastos-cap4-no-contributivas,AL EXTERIOR,principal,no,0.33,0.33,
 2020,2020-T2,gastos-cap4-no-contributivas,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,no,1489.29,788.06,787.72
 2020,2020-T2,gastos-cap4-no-contributivas,TOTAL,principal,no,13027.2,5999.14,5994.12
-2020,2020-T2,gastos-cap4-no-contributivas,SUBS.ECON.PARA PERS.DISCAPACIDAD,comparativa,,,5.46,
 2020,2020-T2,ingresos,1. COTIZACIONES SOCIALES,principal,no,114915.75,59145.17,58209.43
 2020,2020-T2,ingresos,3. TASAS Y OTROS INGRESOS,principal,no,992.95,482.37,175.04
 2020,2020-T2,ingresos,4. TRANSFERENCIAS CORRIENTES,principal,no,18332.05,26509.87,21619.09
@@ -1078,8 +1034,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2020,2020-T3,gastos-cap4,AL EXTERIOR,principal,no,7.56,3.01,2.88
 2020,2020-T3,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,no,7885.41,6750.17,6741.2
 2020,2020-T3,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,no,145078.85,115963.66,115840.51
-2020,2020-T3,gastos-cap4,INCAPACIDAD PERMANENTE,comparativa,,,9295.71,
-2020,2020-T3,gastos-cap4,"NACIM.CUIDADO MENOR, CORRESP.RIESGO EMB.,LACT.",comparativa,,,2187.18,
 2020,2020-T3,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,no,1096.52,773.99,773.99
 2020,2020-T3,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,no,1283.48,977.28,977.28
 2020,2020-T3,gastos-cap4-no-contributivas,COMPL. A MÍNIMOS PENSIONES CONTRIBUTIVAS,principal,no,7084.49,5001.92,5001.16
@@ -1101,7 +1055,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2020,2020-T3,gastos-cap4-no-contributivas,AL EXTERIOR,principal,no,0.33,0.33,0.33
 2020,2020-T3,gastos-cap4-no-contributivas,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,no,1489.04,1171.53,1171.53
 2020,2020-T3,gastos-cap4-no-contributivas,TOTAL,principal,no,13303.41,9610.27,9606.83
-2020,2020-T3,gastos-cap4-no-contributivas,SUBS.ECON.PARA PERS.DISCAPACIDAD,comparativa,,,7.64,
 2020,2020-T3,ingresos,1. COTIZACIONES SOCIALES,principal,no,114915.75,88894.33,87444.76
 2020,2020-T3,ingresos,3. TASAS Y OTROS INGRESOS,principal,no,992.95,721.67,338.04
 2020,2020-T3,ingresos,4. TRANSFERENCIAS CORRIENTES,principal,no,18332.05,30854.26,30798.13
@@ -1565,7 +1518,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2021,2021-T4,gastos-cap4-no-contributivas,A LA SEGURIDAD SOCIAL,principal,sí,2.9,2.58,2.58
 2021,2021-T4,gastos-cap4-no-contributivas,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,sí,186.4,186.07,186.07
 2021,2021-T4,gastos-cap4-no-contributivas,TOTAL,principal,sí,13675.93,13377.46,13197.38
-2021,2021-T4,gastos-cap4-no-contributivas,A COMUNIDADES AUTÓNOMAS,comparativa,,,1959.82,
 2021,2021-T4,ingresos,1. COTIZACIONES SOCIALES,principal,sí,125144.25,131856.51,130912.76
 2021,2021-T4,ingresos,3. TASAS Y OTROS INGRESOS,principal,sí,1157.79,976.45,617.82
 2021,2021-T4,ingresos,4. TRANSFERENCIAS CORRIENTES,principal,sí,34890.62,48002.14,47978.48
@@ -1638,8 +1590,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2022,2022-T1,gastos-cap4,AL EXTERIOR,principal,no,7.56,0.96,0.96
 2022,2022-T1,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,no,4920.58,823.91,807.57
 2022,2022-T1,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,no,163076.89,35612.36,35555.8
-2022,2022-T1,gastos-cap4,PRESTACIÓN CESE ACTIVIDAD (*),comparativa,,,117.51,
-2022,2022-T1,gastos-cap4,CUOTAS BENEF.PRESTACIÓN CESE ACTIVIDAD (**),comparativa,,,63.96,
 2022,2022-T1,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,no,1119.71,243.49,243.49
 2022,2022-T1,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,no,1467.42,323.05,323.05
 2022,2022-T1,gastos-cap4-no-contributivas,PENSIONES DE ORFANDAD,principal,no,3.4,,
@@ -1689,7 +1639,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2022,2022-T1,ingresos-cap1-cap4,DE COMUNIDADES AUTÓNOMAS,principal,no,0.53,0.06,
 2022,2022-T1,ingresos-cap1-cap4,DE EMPRESAS PRIVADAS Y OTROS,principal,no,43.92,10.33,
 2022,2022-T1,ingresos-cap1-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,no,40260.32,5627.67,
-2022,2022-T1,ingresos-cap1-cap4,"DESEMPLEADOS Y BENEF. PREST. ERTE, MEC. RED, CESE ACTIV Y BONIF. FOMENTO EMPLEO",comparativa,,,2130.8,
 2022,2022-T2,gastos,1. GASTOS DE PERSONAL,principal,no,2667.68,1199.74,1197.93
 2022,2022-T2,gastos,2. GASTOS CORRIENTES BIENES Y SERVICIOS,principal,no,1625.41,677.71,660.72
 2022,2022-T2,gastos,3. GASTOS FINANCIEROS,principal,no,36.85,13.63,13.63
@@ -1734,8 +1683,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2022,2022-T2,gastos-cap4,AL EXTERIOR,principal,no,7.56,3.08,2.86
 2022,2022-T2,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,no,4928.21,2415.61,2395.2
 2022,2022-T2,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,no,163335.42,73523.87,73455.01
-2022,2022-T2,gastos-cap4,PRESTACIÓN CESE ACTIVIDAD (*),comparativa,,,127.45,
-2022,2022-T2,gastos-cap4,CUOTAS BENEF.PRESTACIÓN CESE ACTIVIDAD (**),comparativa,,,87.44,
 2022,2022-T2,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,no,1119.71,558.44,558.44
 2022,2022-T2,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,no,1467.42,748.91,748.91
 2022,2022-T2,gastos-cap4-no-contributivas,PENSIONES DE ORFANDAD,principal,no,3.4,,
@@ -1785,7 +1732,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2022,2022-T2,ingresos-cap1-cap4,DE COMUNIDADES AUTÓNOMAS,principal,no,0.53,0.6,
 2022,2022-T2,ingresos-cap1-cap4,DE EMPRESAS PRIVADAS Y OTROS,principal,no,43.92,21.44,
 2022,2022-T2,ingresos-cap1-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,no,40260.32,23857.52,
-2022,2022-T2,ingresos-cap1-cap4,"DESEMPLEADOS Y BENEF. PREST. ERTE, MEC. RED, CESE ACTIV Y BONIF. FOMENTO EMPLEO",comparativa,,,4219.18,
 2022,2022-T3,gastos,1. GASTOS DE PERSONAL,principal,no,2674.5,1749.04,1748.06
 2022,2022-T3,gastos,2. GASTOS CORRIENTES BIENES Y SERVICIOS,principal,no,1634.84,1006.59,991.47
 2022,2022-T3,gastos,3. GASTOS FINANCIEROS,principal,no,37.04,18.45,18.44
@@ -1830,8 +1776,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2022,2022-T3,gastos-cap4,AL EXTERIOR,principal,no,7.56,3.6,3.6
 2022,2022-T3,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,no,4944.26,3752.98,3740.95
 2022,2022-T3,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,no,164532.86,120951.97,120867.93
-2022,2022-T3,gastos-cap4,PRESTACIÓN CESE ACTIVIDAD (*),comparativa,,,137.33,
-2022,2022-T3,gastos-cap4,CUOTAS BENEF.PRESTACIÓN CESE ACTIVIDAD (**),comparativa,,,148.1,
 2022,2022-T3,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,no,1119.71,826.16,826.16
 2022,2022-T3,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,no,1467.42,1115.21,1115.21
 2022,2022-T3,gastos-cap4-no-contributivas,PENSIONES DE ORFANDAD,principal,no,3.4,0.03,0.03
@@ -1881,7 +1825,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2022,2022-T3,ingresos-cap1-cap4,DE COMUNIDADES AUTÓNOMAS,principal,no,0.53,0.69,
 2022,2022-T3,ingresos-cap1-cap4,DE EMPRESAS PRIVADAS Y OTROS,principal,no,43.92,31.76,
 2022,2022-T3,ingresos-cap1-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,no,40260.32,29719.93,
-2022,2022-T3,ingresos-cap1-cap4,"DESEMPLEADOS Y BENEF. PREST. ERTE, MEC. RED, CESE ACTIV Y BONIF. FOMENTO EMPLEO",comparativa,,,6230.33,
 2022,2022-T4,gastos,1. GASTOS DE PERSONAL,principal,sí,2703.05,2437.33,2430.43
 2022,2022-T4,gastos,2. GASTOS CORRIENTES BIENES Y SERVICIOS,principal,sí,1687.98,1468.45,1431.87
 2022,2022-T4,gastos,3. GASTOS FINANCIEROS,principal,sí,37.17,19.16,19.15
@@ -1926,8 +1869,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2022,2022-T4,gastos-cap4,AL EXTERIOR,principal,sí,7.56,4.82,4.57
 2022,2022-T4,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,sí,6587.71,6408.9,6391.44
 2022,2022-T4,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,sí,170888.87,170124.44,170085.16
-2022,2022-T4,gastos-cap4,PRESTACIÓN CESE ACTIVIDAD (*),comparativa,,,148.49,
-2022,2022-T4,gastos-cap4,CUOTAS BENEF.PRESTACIÓN CESE ACTIVIDAD (**),comparativa,,,252.53,
 2022,2022-T4,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,sí,1209.73,1177.31,1177.31
 2022,2022-T4,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,sí,1585.4,1600.39,1600.39
 2022,2022-T4,gastos-cap4-no-contributivas,PENSIONES DE ORFANDAD,principal,sí,3.4,0.13,0.13
@@ -1977,7 +1918,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2022,2022-T4,ingresos-cap1-cap4,DE COMUNIDADES AUTÓNOMAS,principal,sí,0.53,0.88,
 2022,2022-T4,ingresos-cap1-cap4,DE EMPRESAS PRIVADAS Y OTROS,principal,sí,43.92,42.98,
 2022,2022-T4,ingresos-cap1-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,sí,40260.32,42696.95,
-2022,2022-T4,ingresos-cap1-cap4,"DESEMPLEADOS Y BENEF. PREST. ERTE, MEC. RED, CESE ACTIV Y BONIF. FOMENTO EMPLEO",comparativa,,,8418.71,
 2023,2023-T1,gastos,1. GASTOS DE PERSONAL,principal,no,2749.88,586.64,586.19
 2023,2023-T1,gastos,2. GASTOS CORRIENTES BIENES Y SERVICIOS,principal,no,1703.97,341.66,312.84
 2023,2023-T1,gastos,3. GASTOS FINANCIEROS,principal,no,31.79,0.28,0.28
@@ -2299,8 +2239,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2023,2023-T4,gastos-cap4,AL EXTERIOR,principal,sí,7.56,5.65,5.65
 2023,2023-T4,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,sí,5163.49,4897.8,4860.37
 2023,2023-T4,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,sí,185539.44,184910.59,184857.25
-2023,2023-T4,gastos-cap4,SUBSIDIO TEMPORAL PROCESOS DERIVADOS COVID 19,comparativa,,,116.27,
-2023,2023-T4,gastos-cap4,PRESTACIÓN + CUOTAS CESE ACTIVIDAD (*),comparativa,,,85.48,
 2023,2023-T4,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,sí,1245.55,1232.17,1232.17
 2023,2023-T4,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,sí,1768.21,1758.22,1758.22
 2023,2023-T4,gastos-cap4-no-contributivas,PENSIONES DE ORFANDAD,principal,sí,3.4,0.5,0.5
@@ -2394,9 +2332,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2024,2024-T1,gastos-cap4,AL EXTERIOR,principal,no,7.56,1.77,1.7
 2024,2024-T1,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,no,5323.66,1025.82,984.4
 2024,2024-T1,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,no,181075.74,42157.78,42091.06
-2024,2024-T1,gastos-cap4,SUBSIDIO TEMPORAL PROCESOS DERIVADOS COVID 19,comparativa,,,3.53,
-2024,2024-T1,gastos-cap4,PRESTACIÓN + CUOTAS CESE ACTIVIDAD (*),comparativa,,,24.26,
-2024,2024-T1,gastos-cap4,PRESTACIÓN + CUOTAS AFECT.MECANISMO RED,comparativa,,,0.01,
 2024,2024-T1,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,no,1170.39,281.38,281.38
 2024,2024-T1,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,no,1632.27,414.96,414.96
 2024,2024-T1,gastos-cap4-no-contributivas,PENSIONES DE ORFANDAD,principal,no,3.4,0.13,0.13
@@ -2489,8 +2424,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2024,2024-T2,gastos-cap4,AL EXTERIOR,principal,no,7.56,3.05,2.75
 2024,2024-T2,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,no,5359.76,2381.04,2344.54
 2024,2024-T2,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,no,181176.03,86243.67,86130.6
-2024,2024-T2,gastos-cap4,SUBSIDIO TEMPORAL PROCESOS DERIVADOS COVID 19,comparativa,,,5.53,
-2024,2024-T2,gastos-cap4,PRESTACIÓN + CUOTAS CESE ACTIVIDAD (*),comparativa,,,44.8,
 2024,2024-T2,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,no,1170.39,649.92,649.92
 2024,2024-T2,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,no,1632.27,966.88,966.88
 2024,2024-T2,gastos-cap4-no-contributivas,PENSIONES DE ORFANDAD,principal,no,3,0.28,0.28
@@ -2583,8 +2516,6 @@ ejercicio,periodo,tabla,concepto,columna,definitivo,prevision_o_presupuesto_meur
 2024,2024-T3,gastos-cap4,AL EXTERIOR,principal,no,7.56,4.06,3.87
 2024,2024-T3,gastos-cap4,SUMA DE OTRAS TRANSFERENCIAS CORRIENTES,principal,no,5421.88,3849.23,3809.09
 2024,2024-T3,gastos-cap4,TOTAL TRANSFERENCIAS CORRIENTES,principal,no,183722.4,142484.32,142376.56
-2024,2024-T3,gastos-cap4,SUBSIDIO TEMPORAL PROCESOS DERIVADOS COVID 19,comparativa,,,6.35,
-2024,2024-T3,gastos-cap4,PRESTACIÓN + CUOTAS CESE ACTIVIDAD (*),comparativa,,,56.62,
 2024,2024-T3,gastos-cap4-no-contributivas,PENSIONES DE INVALIDEZ,principal,no,1170.39,924.96,924.96
 2024,2024-T3,gastos-cap4-no-contributivas,PENSIONES DE JUBILACIÓN,principal,no,1632.27,1385.75,1385.75
 2024,2024-T3,gastos-cap4-no-contributivas,PENSIONES DE ORFANDAD,principal,no,3,0.43,0.43
