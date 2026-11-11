@@ -7,7 +7,7 @@
     {
       "id": "2026",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2026",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -33,7 +33,7 @@
     {
       "id": "2027",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2027",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -59,7 +59,7 @@
     {
       "id": "2028",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2028",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -85,7 +85,7 @@
     {
       "id": "2029",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2029",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -111,7 +111,7 @@
     {
       "id": "2030",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2030",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -137,7 +137,7 @@
     {
       "id": "2031",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2031",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -163,7 +163,7 @@
     {
       "id": "2032",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2032",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -189,7 +189,7 @@
     {
       "id": "2033",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2033",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -215,7 +215,7 @@
     {
       "id": "2034",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2034",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -241,7 +241,7 @@
     {
       "id": "2035",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2035",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -267,7 +267,7 @@
     {
       "id": "2036",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2036",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -293,7 +293,7 @@
     {
       "id": "2037",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2037",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -319,7 +319,7 @@
     {
       "id": "2038",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2038",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -345,7 +345,7 @@
     {
       "id": "2039",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2039",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -371,7 +371,7 @@
     {
       "id": "2040",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2040",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -397,7 +397,7 @@
     {
       "id": "2041",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2041",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -423,7 +423,7 @@
     {
       "id": "2042",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2042",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -449,7 +449,7 @@
     {
       "id": "2043",
       "value": 1,
-      "unit": "indicador (1 = la opción está disponible)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2043",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
@@ -475,7 +475,7 @@
     {
       "id": "2044",
       "value": 0,
-      "unit": "indicador (0 = la opción deja de existir)",
+      "unit": "indicador (1 = la opción está disponible; 0 = no disponible)",
       "period": "2044",
       "source": {
         "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",

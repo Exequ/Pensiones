@@ -167,9 +167,9 @@ for a, (m, dv, cita) in anios.items():
         nota = f'Opción por la redacción de 01/01/2023, con base reguladora de los últimos {m} meses entre {dv} (se computan todas las bases de la ventana, sin descartar ninguna). '
     vent.append(mk(str(a), a, m, 'meses', TRLGSS, c, loc47, nota, otros))
     divi.append(mk(str(a), a, dv, 'divisor (14 pagas: meses × 14/12)', TRLGSS, c, loc47, nota, otros))
-    apli.append(mk(str(a), a, 1, 'indicador (1 = la opción está disponible)', TRLGSS, c, loc47, nota, otros))
+    apli.append(mk(str(a), a, 1, 'indicador (1 = la opción está disponible; 0 = no disponible)', TRLGSS, c, loc47, nota, otros))
 fin = 'A partir de 2044, se aplicará lo previsto en el artículo 209.1 en la redacción vigente desde el 1 de enero de 2026.'
-apli.append(mk('2044', 2044, 0, 'indicador (0 = la opción deja de existir)', TRLGSS, fin, loc47, 'Desde 2044 solo rige el art. 209.1 en la redacción vigente desde el 01/01/2026 y su calendario de la DT 40.ª.', [(RDL, 'A partir de 2044, se aplicará lo previsto en el artículo 209.1 en la redacción vigente desde el 1 de enero de 2026', 'RDL 2/2023, art. único.36')]))
+apli.append(mk('2044', 2044, 0, 'indicador (1 = la opción está disponible; 0 = no disponible)', TRLGSS, fin, loc47, 'Desde 2044 solo rige el art. 209.1 en la redacción vigente desde el 01/01/2026 y su calendario de la DT 40.ª.', [(RDL, 'A partir de 2044, se aplicará lo previsto en el artículo 209.1 en la redacción vigente desde el 1 de enero de 2026', 'RDL 2/2023, art. único.36')]))
 escribe('opcion-25-anos-ventana', 'Opción de 25 años (DT 4.ª.7 TRLGSS): ventana de cálculo por año del hecho causante (2026-2043)', 'Meses de bases de cotización de la ventana de la opción por la redacción del art. 209.1 vigente el 01/01/2023.', vent)
 escribe('opcion-25-anos-divisor', 'Opción de 25 años (DT 4.ª.7 TRLGSS): divisor por año del hecho causante (2026-2043)', 'Divisor de la suma de bases de la opción por la redacción del art. 209.1 vigente el 01/01/2023.', divi)
 escribe('opcion-25-anos-aplicable', 'Opción de 25 años (DT 4.ª.7 TRLGSS): años en que está disponible (2026-2044)', 'Indicador por año del hecho causante: 1 si la opción está disponible, 0 en 2044, primer año sin opción.', apli)

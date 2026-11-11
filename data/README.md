@@ -38,6 +38,20 @@ Los ejemplos de los tests están en `scripts/fixtures/` y **no** deben copiarse 
 
 Los huecos y lo que no se pudo descargar están en [`docs/PENDIENTE_DATOS.md`](../docs/PENDIENTE_DATOS.md). Toda la extracción de tablas la hacen los scripts de [`scripts/etl/`](../scripts/etl) (Python, con `python3 -I`) a partir de los documentos descargados; cada dato lleva la cita literal (`quote`) y su localización. `docs/INFORME_VERIFICACION.md` y `docs/DISCREPANCIAS.md` recogen el contraste con segundas fuentes.
 
+## Contenido (Fase 1A-bis: reglas de evolución futura y de cálculo, en `parametros/`)
+
+| Fichero                                      | Contenido                                                                                          | Periodo                          | Unidad                    |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------- |
+| `base-maxima-incremento-futuro`              | Puntos que se suman al porcentaje de revalorización para fijar la base máxima (DT 38.ª)            | 2024-2050                        | puntos porcentuales       |
+| `pension-maxima-incremento-futuro`           | Puntos que se suman al porcentaje de revalorización para fijar la pensión máxima inicial (DT 39.ª) | 2025-2050                        | puntos porcentuales       |
+| `revalorizacion-regla`                       | Regla del art. 58: meses de IPC, último mes, suelo, indicadores                                    | desde 2024                       | meses; %; indicador       |
+| `pension-minima-regla`                       | DA 53.ª: brecha reducida por año, multiplicadores del umbral y factor del resto de mínimas         | 2024-2027                        | %; veces                  |
+| `opcion-25-anos-{ventana,divisor,aplicable}` | Opción de 25 años (DT 4.ª.7): ventana, divisor y disponibilidad por año del hecho causante         | 2026-2044                        | meses; divisor; indicador |
+| `lagunas-integracion`                        | Integración de lagunas: meses y porcentaje de la base mínima por versión (id `AAAA-parámetro`)     | versiones 2010, 2013, 2016, 2026 | meses; %                  |
+| `actualizacion-bases`                        | Actualización de bases: meses nominales e índice de referencia por versión                         | versiones 2010, 2013, 2016, 2026 | meses                     |
+
+En los ficheros por versión, `period` es el año desde el que rige y el `id` empieza por ese año. Cada dato lleva cita literal verificada por código y, cuando existe, contraste con una segunda norma (`crossCheck`). Los textos de partida están en `data-raw/boe/` con su hash en `origen.json`.
+
 ## Contenido (Fase 1B-1: `sistema/`)
 
 | Fichero                                                   | Contenido                                                                       | Periodo   | Unidad                  |

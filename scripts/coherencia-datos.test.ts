@@ -38,7 +38,17 @@ function numero(dato: DatoConId): number {
 }
 
 /** Series con varias cuantías por año (clase de pensión, situación familiar, tramo). */
-const MULTIPLES_POR_ANIO = ['pension-minima-', 'cuota-solidaridad-'];
+const MULTIPLES_POR_ANIO = [
+  'pension-minima-',
+  'cuota-solidaridad-',
+  'actualizacion-bases',
+  'lagunas-integracion',
+  'revalorizacion-regla',
+];
+/** Ficheros por versión de una regla (el periodo es el año desde el que rige): sin exigir años seguidos. */
+const POR_VERSION = ['actualizacion-bases', 'lagunas-integracion', 'revalorizacion-regla'];
+/** Ficheros de reglas con varios parámetros (unidades distintas) en un mismo fichero. */
+const VARIAS_UNIDADES = [...POR_VERSION, 'pension-minima-regla'];
 /** Años sin dato por falta de fuente descargada; cada uno consta en docs/PENDIENTE_DATOS.md. */
 const HUECOS_DOCUMENTADOS: Record<string, string[]> = {
   'base-minima-rg.json': ['2020', '2021'],
@@ -72,7 +82,9 @@ describe('series anuales de /data/parametros', () => {
         const previo = numeros[i - 1] ?? 0;
         const actual = numeros[i] ?? 0;
         if (multiples && actual === previo) continue;
-        expect(actual, `${fichero}: desorden tras ${previo}`).toBeGreaterThan(previo);
+        expect(actual, `${fichero}: desorden tras ${previo}`).toBeGreaterThanOrEqual(previo);
+        if (POR_VERSION.some((m) => fichero.startsWith(m))) continue;
+        expect(actual, `${fichero}: año repetido`).toBeGreaterThan(previo);
         for (let a = previo + 1; a < actual; a++) {
           expect(huecos.has(a), `${fichero}: hueco no documentado en ${a}`).toBe(true);
         }
@@ -88,6 +100,7 @@ describe('series anuales de /data/parametros', () => {
     });
 
     it(`${fichero}: una sola unidad en toda la serie`, () => {
+      if (VARIAS_UNIDADES.some((m) => fichero.startsWith(m))) return;
       expect(new Set((archivo.data ?? []).map((d) => d.unit)).size).toBe(1);
     });
 
