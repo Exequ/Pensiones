@@ -1,0 +1,39 @@
+{
+  "tipo": "datos",
+  "id": "edad-media-altas-jubilacion",
+  "title": "Edad media de las altas iniciales de jubilación (2022-2025)",
+  "description": "Edad media (años) de las altas iniciales de pensión de jubilación contributiva en el año, total sistema.",
+  "series": [
+    {
+      "id": "edad-media-altas-jubilacion",
+      "title": "Edad media de las altas iniciales de jubilación",
+      "unit": "años",
+      "source": {
+        "title": "Altas y bajas de pensiones contributivas: evolución 2022-2026 (fichero EVO), hoja EVO_acumula_altas_jub_edad",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44"
+      },
+      "confidence": "alta",
+      "notes": "Edad media de acceso a la pensión de jubilación (altas iniciales). No es la edad media efectiva de salida del mercado laboral.",
+      "points": [
+        {
+          "period": "2022",
+          "value": 64.83467350063425
+        },
+        {
+          "period": "2023",
+          "value": 65.05452767862894
+        },
+        {
+          "period": "2024",
+          "value": 65.17130914376537
+        },
+        {
+          "period": "2025",
+          "value": 65.32676087860075
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}

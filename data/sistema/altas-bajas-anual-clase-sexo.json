@@ -1,0 +1,54 @@
+{
+  "tipo": "tabla",
+  "id": "altas-bajas-anual-clase-sexo",
+  "title": "Altas iniciales y bajas definitivas de pensiones contributivas, por año, clase y sexo (2021-2025)",
+  "description": "Altas iniciales y bajas definitivas del año completo, con número y pensión media mensual de las altas/bajas, por clase y sexo. «ambos» incluye sexo no consta. Las altas no incluyen rehabilitaciones ni traslados.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año natural",
+      "unidad": null
+    },
+    {
+      "id": "movimiento",
+      "descripcion": "alta-inicial o baja-definitiva",
+      "unidad": null
+    },
+    {
+      "id": "clase",
+      "descripcion": "total, incapacidad, jubilacion, viudedad, orfandad o favor-familiares",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "numero",
+      "descripcion": "Número de altas o bajas",
+      "unidad": "pensiones"
+    },
+    {
+      "id": "pension_media_eur_mes",
+      "descripcion": "Pensión media mensual de las altas o bajas",
+      "unidad": "euros/mes"
+    }
+  ],
+  "filas": 180,
+  "source": {
+    "title": "Altas y bajas de pensiones contributivas: evolución 2022-2026 (fichero EVO)",
+    "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+    "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44"
+  },
+  "origenes": [
+    {
+      "period": "2025",
+      "url": "https://www.seg-social.es/wps/wcm/connect/wss/6744e6a9-4810-413a-8e6c-de6e86bc402d/EVO202609.xlsx",
+      "sha256": "4e3dbebd94279d08a1f4a86d24342744cca154829fb45f055c1db70b15165dbd"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Fichero EVO publicado con datos hasta septiembre de 2026; solo se toman los años completos 2021-2025. Años anteriores a 2021: ver docs/DESCARGAS_MANUALES.md."
+}

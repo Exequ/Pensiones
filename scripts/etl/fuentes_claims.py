@@ -18,6 +18,8 @@ def anota(src, fichero, fecha=HOY):
 
 
 claims = []
+huellas = []
+SERIES_CLAIM = {'pensionistas', 'pensiones', 'total-ambos', 'jubilacion-ambos', 'media-anual-total-sistema', 'diciembre-total-sistema', 'afiliados-diciembre-por-pensionista', 'afiliados-media-anual-por-pension', 'edad-media-altas-jubilacion'}
 
 
 def añade(id_, texto, ubic, datos, src, conf):
@@ -39,6 +41,11 @@ for ruta in sorted(glob.glob(f'{REPO}/data/*/*.json')):
             anota(x['crossCheck']['source'], rel)
     for s in d.get('series', []):
         anota(s['source'], rel)
+    if d.get('tipo') == 'tabla':
+        anota(d['source'], rel, d.get('fetchedAt', HOY))
+        for o in d.get('origenes', []):
+            anota({'title': f"{d['source']['title']} (fichero del periodo {o['period']})", 'publisher': d['source']['publisher'], 'url': o['url']}, rel, d.get('fetchedAt', HOY))
+            huellas.append((d['id'], o['period'], o['url'], o['sha256']))
     for n in d.get('normas', []):
         anota(n['source'], rel)
     for p in d.get('prestaciones', []):
@@ -46,6 +53,14 @@ for ruta in sorted(glob.glob(f'{REPO}/data/*/*.json')):
         for a in p.get('fuentesAdicionales', []):
             anota(a, rel)
     carpeta = rel.split('/')[0]
+    if carpeta == 'sistema':
+        for sr in d.get('series', []):
+            if sr['id'] in SERIES_CLAIM:
+                u = sr['points'][-1]
+                v = u['value']
+                txt = f"{sr['title']}: {num(round(v, 2) if isinstance(v, float) else v)} ({sr['unit']}) en {u['period']}."
+                añade(f"sistema-{d['id']}-{sr['id']}", txt, 'Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)',
+                      [f"{rel}#{sr['id']}"], sr['source'], sr['confidence'])
     if carpeta == 'parametros' and d.get('data'):
         # una afirmación por serie: el dato más reciente
         x = sorted(d['data'], key=lambda z: (z['period'], z['id']))[-1]
@@ -64,6 +79,11 @@ for url, e in sorted(fuentes.items(), key=lambda kv: (kv[1]['src']['publisher'],
     s = e['src']
     t = s['title'].replace('|', '/')
     filas.append(f"| {ORG.get(s['publisher'], s['publisher'])} | {t} | <{url}> | {e['fecha'][:10]} | {', '.join(sorted(e['ficheros']))} |")
+filas += ['', '## Huellas de los ficheros brutos (tablas)', '',
+          'SHA-256 de cada fichero descargado que alimenta una tabla de `/data` (los ficheros de hasta 5 MB están en `data-raw/`; los mayores no se versionan y se localizan por URL y huella).', '',
+          '| Tabla | Periodo | URL | SHA-256 |', '| ----- | ------- | --- | ------- |']
+for tabla, per, url, sha in huellas:
+    filas.append(f'| {tabla} | {per} | <{url}> | `{sha}` |')
 with open(f'{REPO}/docs/FUENTES.md', 'w', encoding='utf-8') as f:
     f.write('\n'.join(filas) + '\n')
 with open(f'{REPO}/docs/claims.json', 'w', encoding='utf-8') as f:

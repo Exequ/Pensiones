@@ -182,3 +182,18 @@ Resultado: ΔL\* mínimo 7,3 (verde/gris); ΔE mínimo 26,6 en visión típica, 
 - **Cronología y prestaciones**: `antes` es `null` cuando el documento descargado no recoge el régimen anterior (no se completa de memoria). El RETA queda fuera.
 - **Tests**: el test de series sin huecos admite solo los huecos listados en el propio test, cada uno documentado en `PENDIENTE_DATOS.md`.
 - **Tests (aclaración)**: el recuento de pruebas pasó de 68 a 63 en un resumen anterior por una ejecución parcial; revisando el historial de git no se eliminó ninguna prueba (68 al inicio de la Fase 1A y 79 antes de esta parte, contando bloques `it`). Ahora hay más por la cobertura de datos.
+
+## Fase 1B-1: datos estadísticos del sistema
+
+- **Fuente principal**: portal de estadísticas de la Seguridad Social (ficheros xlsx de «Pensiones contributivas en vigor», «Altas y bajas», «Pensionistas» y «Afiliación»). Se rastrea con `ss_rastreo.py` y cada fichero se descarga con `ss_descarga_reg.py` (prefijos REG y MIN), `ss_evo.py`, `ss_afiliacion*.py` y `ss_pensionistas.py`, todos con modo `descargar` y `local`.
+- **Tipo «tabla»**: CSV en `/data` más JSON hermano (título, descripción, columnas con unidad, fuente, `fetchedAt`, confianza y huella SHA-256 de cada fichero de origen). `validate:data` falla si falta el JSON, si la cabecera o el número de filas no coinciden o si falta procedencia.
+- **Cobertura y límites**: pensiones en vigor por clase, régimen y sexo 2008-2025 (el histórico de la Seguridad Social empieza en 2008; 2000-2007 queda para descarga manual de MITES); altas y bajas anuales 2021-2025; mínimos 2022-2025; afiliados mensuales 2001-2026 y por sexo y edad 2021-2025; pensionistas 2006-2025.
+- **Dato a 1 de diciembre**: las pensiones en vigor son las del 1 de diciembre de cada año, como las publica la fuente. El «último año completo» es 2025.
+- **Afiliados medios anuales**: la fuente publica medias mensuales; la media anual es la media aritmética de los doce meses (dato derivado, confianza «media», marcado en las notas). También se publica el valor de diciembre (confianza alta).
+- **Relación afiliados/pensionistas**: se publican cuatro definiciones (afiliados de diciembre o media anual, entre pensionistas o pensiones), con numerador y denominador literales. Son datos derivados (confianza «media»). La fuente no ofrece «cotizantes» distintos de «afiliados» en los ficheros descargados.
+- **Totales de «ambos sexos»**: hasta 2023 el fichero da hombres, mujeres y «no consta»; «ambos» es su suma y la pensión media se pondera. En 2024-2025 la fuente da «ambos».
+- **Regímenes agrario y de hogar**: existen hasta 2011 y la Ley 28/2011 los integró en el General en 2012; se conservan con su nombre.
+- **PNC e IMSERSO**: bloqueado (HTTP 403): no se evade la protección; a descarga manual.
+- **Segunda fuente**: no hay fuente independiente accesible (MITES no responde); se contrasta con otras publicaciones de la misma Seguridad Social (27 comprobaciones) y se dice así en el informe.
+- **Ficheros brutos**: `data-raw/` contiene los xlsx de hasta 5 MB. Los ficheros anuales de afiliación (~4 MB cada uno) no se versionan: URL y huella en `data-raw/seg-social/AFI/origen-edad.json` y `docs/FUENTES.md`.
+- **Rama**: se usa `feat/fase-1b-1-sistema` como pidió el encargo.

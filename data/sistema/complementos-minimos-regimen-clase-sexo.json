@@ -1,0 +1,79 @@
+{
+  "tipo": "tabla",
+  "id": "complementos-minimos-regimen-clase-sexo",
+  "title": "Pensiones con complemento por mínimos a 1 de diciembre, por régimen, clase y sexo (2022-2025)",
+  "description": "Número de pensiones que perciben complemento por mínimos, su porcentaje sobre las pensiones de la misma clase, pensión media (con complemento) y complemento medio mensual. «ambos» incluye sexo no consta.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año (1 de diciembre)",
+      "unidad": null
+    },
+    {
+      "id": "regimen",
+      "descripcion": "Régimen",
+      "unidad": null
+    },
+    {
+      "id": "clase",
+      "descripcion": "Clase de pensión",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "numero",
+      "descripcion": "Pensiones con complemento por mínimos",
+      "unidad": "pensiones"
+    },
+    {
+      "id": "porcentaje_sobre_pensiones",
+      "descripcion": "Porcentaje sobre las pensiones en vigor de esa clase, régimen y sexo",
+      "unidad": "%"
+    },
+    {
+      "id": "pension_media_eur_mes",
+      "descripcion": "Pensión media de las que reciben complemento",
+      "unidad": "euros/mes"
+    },
+    {
+      "id": "complemento_medio_eur_mes",
+      "descripcion": "Complemento medio por mínimos",
+      "unidad": "euros/mes"
+    }
+  ],
+  "filas": 576,
+  "source": {
+    "title": "Pensiones contributivas en vigor con complemento por mínimos (número, porcentaje, pensión media y complemento medio)",
+    "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+    "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+  },
+  "origenes": [
+    {
+      "period": "2022",
+      "url": "https://www.seg-social.es/wps/wcm/connect/wss/d258a745-d2bc-4bb5-a5c0-0c4c04a0ed6d/MIN202212.xlsx",
+      "sha256": "ec97962f4e4e30e671e3073d1dbc3fad74a5bca8cdf89eb782e9dddc019f9529"
+    },
+    {
+      "period": "2023",
+      "url": "https://www.seg-social.es/wps/wcm/connect/wss/08a25a27-ec2e-40b8-af12-0eacf585cd32/MIN202312.xlsx",
+      "sha256": "61ad2e3f488c82949a26edfae908639a8555c5253bd54852e42b5b8bea0eb815"
+    },
+    {
+      "period": "2024",
+      "url": "https://www.seg-social.es/wps/wcm/connect/wss/c3e49232-fb7b-47f0-ad5b-2b6e2c5b1798/MIN202412.xlsx",
+      "sha256": "7d1e990650c8381cdfe2eb1d7404f93f47cd5fd2d2e4aeea45f916f28f840ceb"
+    },
+    {
+      "period": "2025",
+      "url": "https://www.seg-social.es/wps/wcm/connect/wss/fdb32b62-eac0-4099-a23d-50e23e8b38bf/MIN202512.xlsx",
+      "sha256": "dea9370920b8e6df63e9583a32a00aa8b07c74e71817c7cdc883497043ce15a4"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Solo hay estadística publicada de complementos por mínimos desde 2022 en la serie descargada; años anteriores en docs/PENDIENTE_DATOS.md. El gasto en complementos por mínimos no figura aquí: procede del presupuesto (subfase 1B-2)."
+}

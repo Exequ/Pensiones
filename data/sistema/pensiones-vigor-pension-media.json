@@ -1,0 +1,1574 @@
+{
+  "tipo": "datos",
+  "id": "pensiones-vigor-pension-media",
+  "title": "Pensión media mensual, total sistema, por clase y sexo (2008-2025)",
+  "description": "Pensión media mensual de las pensiones contributivas en vigor a 1 de diciembre, total del sistema, por clase y sexo.",
+  "series": [
+    {
+      "id": "total-ambos",
+      "title": "Pensión media mensual: todas las clases, ambos",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 725.2
+        },
+        {
+          "period": "2009",
+          "value": 759.9
+        },
+        {
+          "period": "2010",
+          "value": 785.8
+        },
+        {
+          "period": "2011",
+          "value": 810.9
+        },
+        {
+          "period": "2012",
+          "value": 836.3
+        },
+        {
+          "period": "2013",
+          "value": 862.0
+        },
+        {
+          "period": "2014",
+          "value": 876.5
+        },
+        {
+          "period": "2015",
+          "value": 893.1
+        },
+        {
+          "period": "2016",
+          "value": 910.2
+        },
+        {
+          "period": "2017",
+          "value": 926.9
+        },
+        {
+          "period": "2018",
+          "value": 961.0
+        },
+        {
+          "period": "2019",
+          "value": 995.8
+        },
+        {
+          "period": "2020",
+          "value": 1018.0
+        },
+        {
+          "period": "2021",
+          "value": 1039.5
+        },
+        {
+          "period": "2022",
+          "value": 1094.9
+        },
+        {
+          "period": "2023",
+          "value": 1198.7
+        },
+        {
+          "period": "2024",
+          "value": 1261.901521852362
+        },
+        {
+          "period": "2025",
+          "value": 1317.7080299009351
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "total-hombres",
+      "title": "Pensión media mensual: todas las clases, hombres",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 905.9962322168676
+        },
+        {
+          "period": "2009",
+          "value": 948.6482973231266
+        },
+        {
+          "period": "2010",
+          "value": 980.57164934824
+        },
+        {
+          "period": "2011",
+          "value": 1011.8399938874968
+        },
+        {
+          "period": "2012",
+          "value": 1042.2894245814225
+        },
+        {
+          "period": "2013",
+          "value": 1071.6043002975714
+        },
+        {
+          "period": "2014",
+          "value": 1088.4885093315681
+        },
+        {
+          "period": "2015",
+          "value": 1107.8649401881873
+        },
+        {
+          "period": "2016",
+          "value": 1126.5035242217957
+        },
+        {
+          "period": "2017",
+          "value": 1143.9872140153354
+        },
+        {
+          "period": "2018",
+          "value": 1178.1108950154771
+        },
+        {
+          "period": "2019",
+          "value": 1212.6739877812245
+        },
+        {
+          "period": "2020",
+          "value": 1236.8513139315019
+        },
+        {
+          "period": "2021",
+          "value": 1260.071983778975
+        },
+        {
+          "period": "2022",
+          "value": 1323.8557383011112
+        },
+        {
+          "period": "2023",
+          "value": 1445.8537952673669
+        },
+        {
+          "period": "2024",
+          "value": 1516.1041923349233
+        },
+        {
+          "period": "2025",
+          "value": 1576.2008004220565
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "total-mujeres",
+      "title": "Pensión media mensual: todas las clases, mujeres",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 554.2612126019734
+        },
+        {
+          "period": "2009",
+          "value": 581.1070926603826
+        },
+        {
+          "period": "2010",
+          "value": 601.224161491126
+        },
+        {
+          "period": "2011",
+          "value": 620.1021157350996
+        },
+        {
+          "period": "2012",
+          "value": 640.4980468379375
+        },
+        {
+          "period": "2013",
+          "value": 662.4364937386205
+        },
+        {
+          "period": "2014",
+          "value": 674.8207739084799
+        },
+        {
+          "period": "2015",
+          "value": 689.1592892522834
+        },
+        {
+          "period": "2016",
+          "value": 705.5129597404508
+        },
+        {
+          "period": "2017",
+          "value": 722.1576916965736
+        },
+        {
+          "period": "2018",
+          "value": 757.6743256801942
+        },
+        {
+          "period": "2019",
+          "value": 793.8976363391155
+        },
+        {
+          "period": "2020",
+          "value": 816.0755897923744
+        },
+        {
+          "period": "2021",
+          "value": 837.9849197773857
+        },
+        {
+          "period": "2022",
+          "value": 887.4069028223778
+        },
+        {
+          "period": "2023",
+          "value": 976.1384053202411
+        },
+        {
+          "period": "2024",
+          "value": 1033.8867996032373
+        },
+        {
+          "period": "2025",
+          "value": 1086.6188865504605
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "incapacidad-ambos",
+      "title": "Pensión media mensual: incapacidad permanente, ambos",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 805.5
+        },
+        {
+          "period": "2009",
+          "value": 835.6
+        },
+        {
+          "period": "2010",
+          "value": 853.9
+        },
+        {
+          "period": "2011",
+          "value": 873.1
+        },
+        {
+          "period": "2012",
+          "value": 891.0
+        },
+        {
+          "period": "2013",
+          "value": 910.4
+        },
+        {
+          "period": "2014",
+          "value": 918.3
+        },
+        {
+          "period": "2015",
+          "value": 925.2
+        },
+        {
+          "period": "2016",
+          "value": 931.6
+        },
+        {
+          "period": "2017",
+          "value": 937.1
+        },
+        {
+          "period": "2018",
+          "value": 953.9
+        },
+        {
+          "period": "2019",
+          "value": 978.4
+        },
+        {
+          "period": "2020",
+          "value": 985.2
+        },
+        {
+          "period": "2021",
+          "value": 994.5
+        },
+        {
+          "period": "2022",
+          "value": 1034.5
+        },
+        {
+          "period": "2023",
+          "value": 1117.0
+        },
+        {
+          "period": "2024",
+          "value": 1165.9959898262475
+        },
+        {
+          "period": "2025",
+          "value": 1212.0732054486768
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "incapacidad-hombres",
+      "title": "Pensión media mensual: incapacidad permanente, hombres",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 876.3633141232068
+        },
+        {
+          "period": "2009",
+          "value": 907.4205340939887
+        },
+        {
+          "period": "2010",
+          "value": 925.3029596256548
+        },
+        {
+          "period": "2011",
+          "value": 943.4597762395795
+        },
+        {
+          "period": "2012",
+          "value": 959.2841195228957
+        },
+        {
+          "period": "2013",
+          "value": 976.8189323120491
+        },
+        {
+          "period": "2014",
+          "value": 982.5576411585545
+        },
+        {
+          "period": "2015",
+          "value": 987.851350643457
+        },
+        {
+          "period": "2016",
+          "value": 992.6688355606982
+        },
+        {
+          "period": "2017",
+          "value": 995.9886944629288
+        },
+        {
+          "period": "2018",
+          "value": 1011.2581584311945
+        },
+        {
+          "period": "2019",
+          "value": 1032.9559550234464
+        },
+        {
+          "period": "2020",
+          "value": 1038.37884608722
+        },
+        {
+          "period": "2021",
+          "value": 1047.5199912344892
+        },
+        {
+          "period": "2022",
+          "value": 1088.1725178896165
+        },
+        {
+          "period": "2023",
+          "value": 1174.3186947391955
+        },
+        {
+          "period": "2024",
+          "value": 1226.463789878229
+        },
+        {
+          "period": "2025",
+          "value": 1275.34143102254
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "incapacidad-mujeres",
+      "title": "Pensión media mensual: incapacidad permanente, mujeres",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 670.3546217520461
+        },
+        {
+          "period": "2009",
+          "value": 699.7688569759093
+        },
+        {
+          "period": "2010",
+          "value": 719.1605917870672
+        },
+        {
+          "period": "2011",
+          "value": 740.5804206478157
+        },
+        {
+          "period": "2012",
+          "value": 762.3364031057512
+        },
+        {
+          "period": "2013",
+          "value": 785.3913381707519
+        },
+        {
+          "period": "2014",
+          "value": 798.0739584073224
+        },
+        {
+          "period": "2015",
+          "value": 809.0953623717885
+        },
+        {
+          "period": "2016",
+          "value": 820.069045883577
+        },
+        {
+          "period": "2017",
+          "value": 831.1598735089696
+        },
+        {
+          "period": "2018",
+          "value": 852.5098364741867
+        },
+        {
+          "period": "2019",
+          "value": 883.4963870045293
+        },
+        {
+          "period": "2020",
+          "value": 893.481785884378
+        },
+        {
+          "period": "2021",
+          "value": 904.4822292029696
+        },
+        {
+          "period": "2022",
+          "value": 944.5335981541566
+        },
+        {
+          "period": "2023",
+          "value": 1021.9994462721912
+        },
+        {
+          "period": "2024",
+          "value": 1067.7804866269837
+        },
+        {
+          "period": "2025",
+          "value": 1111.2838702953566
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "jubilacion-ambos",
+      "title": "Pensión media mensual: jubilación, ambos",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 817.6
+        },
+        {
+          "period": "2009",
+          "value": 857.7
+        },
+        {
+          "period": "2010",
+          "value": 888.7
+        },
+        {
+          "period": "2011",
+          "value": 919.6
+        },
+        {
+          "period": "2012",
+          "value": 955.4
+        },
+        {
+          "period": "2013",
+          "value": 987.5
+        },
+        {
+          "period": "2014",
+          "value": 1007.7
+        },
+        {
+          "period": "2015",
+          "value": 1029.5
+        },
+        {
+          "period": "2016",
+          "value": 1050.8
+        },
+        {
+          "period": "2017",
+          "value": 1071.0
+        },
+        {
+          "period": "2018",
+          "value": 1107.5
+        },
+        {
+          "period": "2019",
+          "value": 1143.6
+        },
+        {
+          "period": "2020",
+          "value": 1170.3
+        },
+        {
+          "period": "2021",
+          "value": 1196.2
+        },
+        {
+          "period": "2022",
+          "value": 1259.8
+        },
+        {
+          "period": "2023",
+          "value": 1378.4
+        },
+        {
+          "period": "2024",
+          "value": 1449.862380972093
+        },
+        {
+          "period": "2025",
+          "value": 1512.7330687638016
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "jubilacion-hombres",
+      "title": "Pensión media mensual: jubilación, hombres",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 954.1504121635558
+        },
+        {
+          "period": "2009",
+          "value": 1001.9394826907441
+        },
+        {
+          "period": "2010",
+          "value": 1038.7475972243892
+        },
+        {
+          "period": "2011",
+          "value": 1074.997065048736
+        },
+        {
+          "period": "2012",
+          "value": 1117.0111104943771
+        },
+        {
+          "period": "2013",
+          "value": 1151.486300947568
+        },
+        {
+          "period": "2014",
+          "value": 1173.5301308657754
+        },
+        {
+          "period": "2015",
+          "value": 1197.1864871732205
+        },
+        {
+          "period": "2016",
+          "value": 1219.4404877270292
+        },
+        {
+          "period": "2017",
+          "value": 1240.4102818250813
+        },
+        {
+          "period": "2018",
+          "value": 1279.3295702796158
+        },
+        {
+          "period": "2019",
+          "value": 1318.4054332194983
+        },
+        {
+          "period": "2020",
+          "value": 1347.3969817015459
+        },
+        {
+          "period": "2021",
+          "value": 1375.3009566826768
+        },
+        {
+          "period": "2022",
+          "value": 1447.1643287536017
+        },
+        {
+          "period": "2023",
+          "value": 1582.1508081651143
+        },
+        {
+          "period": "2024",
+          "value": 1661.7041947677576
+        },
+        {
+          "period": "2025",
+          "value": 1729.8760594736727
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "jubilacion-mujeres",
+      "title": "Pensión media mensual: jubilación, mujeres",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 569.2858223567515
+        },
+        {
+          "period": "2009",
+          "value": 597.319053498487
+        },
+        {
+          "period": "2010",
+          "value": 619.9057334796676
+        },
+        {
+          "period": "2011",
+          "value": 643.1143711325666
+        },
+        {
+          "period": "2012",
+          "value": 670.3074450598891
+        },
+        {
+          "period": "2013",
+          "value": 700.3456708475251
+        },
+        {
+          "period": "2014",
+          "value": 720.4429236968128
+        },
+        {
+          "period": "2015",
+          "value": 742.8104776039731
+        },
+        {
+          "period": "2016",
+          "value": 767.0630197282467
+        },
+        {
+          "period": "2017",
+          "value": 791.0032649064119
+        },
+        {
+          "period": "2018",
+          "value": 829.6150400829766
+        },
+        {
+          "period": "2019",
+          "value": 866.3616333239885
+        },
+        {
+          "period": "2020",
+          "value": 895.5285284109771
+        },
+        {
+          "period": "2021",
+          "value": 924.6991923775657
+        },
+        {
+          "period": "2022",
+          "value": 982.318296427309
+        },
+        {
+          "period": "2023",
+          "value": 1083.0976835837716
+        },
+        {
+          "period": "2024",
+          "value": 1149.0942778857288
+        },
+        {
+          "period": "2025",
+          "value": 1210.389677630101
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "viudedad-ambos",
+      "title": "Pensión media mensual: viudedad, ambos",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 531.3
+        },
+        {
+          "period": "2009",
+          "value": 556.3
+        },
+        {
+          "period": "2010",
+          "value": 574.1
+        },
+        {
+          "period": "2011",
+          "value": 588.7
+        },
+        {
+          "period": "2012",
+          "value": 603.9
+        },
+        {
+          "period": "2013",
+          "value": 619.8
+        },
+        {
+          "period": "2014",
+          "value": 626.1
+        },
+        {
+          "period": "2015",
+          "value": 632.7
+        },
+        {
+          "period": "2016",
+          "value": 640.9
+        },
+        {
+          "period": "2017",
+          "value": 649.2
+        },
+        {
+          "period": "2018",
+          "value": 681.0
+        },
+        {
+          "period": "2019",
+          "value": 715.0
+        },
+        {
+          "period": "2020",
+          "value": 729.6
+        },
+        {
+          "period": "2021",
+          "value": 743.0
+        },
+        {
+          "period": "2022",
+          "value": 781.7
+        },
+        {
+          "period": "2023",
+          "value": 854.7
+        },
+        {
+          "period": "2024",
+          "value": 899.2474059667564
+        },
+        {
+          "period": "2025",
+          "value": 937.5610543265877
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "viudedad-hombres",
+      "title": "Pensión media mensual: viudedad, hombres",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 417.0816342068102
+        },
+        {
+          "period": "2009",
+          "value": 431.79803096423666
+        },
+        {
+          "period": "2010",
+          "value": 441.42755605056607
+        },
+        {
+          "period": "2011",
+          "value": 450.6084588120721
+        },
+        {
+          "period": "2012",
+          "value": 458.9462665125595
+        },
+        {
+          "period": "2013",
+          "value": 470.5605933252392
+        },
+        {
+          "period": "2014",
+          "value": 474.5440208197037
+        },
+        {
+          "period": "2015",
+          "value": 479.2234734866794
+        },
+        {
+          "period": "2016",
+          "value": 482.9440909929786
+        },
+        {
+          "period": "2017",
+          "value": 486.5386931552529
+        },
+        {
+          "period": "2018",
+          "value": 496.4381219479005
+        },
+        {
+          "period": "2019",
+          "value": 509.22458182226103
+        },
+        {
+          "period": "2020",
+          "value": 517.3118471834734
+        },
+        {
+          "period": "2021",
+          "value": 525.0785363882101
+        },
+        {
+          "period": "2022",
+          "value": 548.901227808497
+        },
+        {
+          "period": "2023",
+          "value": 596.2465958928634
+        },
+        {
+          "period": "2024",
+          "value": 620.7806072671553
+        },
+        {
+          "period": "2025",
+          "value": 645.0422264706024
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "viudedad-mujeres",
+      "title": "Pensión media mensual: viudedad, mujeres",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 539.6477331770685
+        },
+        {
+          "period": "2009",
+          "value": 565.4226299959256
+        },
+        {
+          "period": "2010",
+          "value": 583.9764885366815
+        },
+        {
+          "period": "2011",
+          "value": 599.1130288762001
+        },
+        {
+          "period": "2012",
+          "value": 614.9244659076066
+        },
+        {
+          "period": "2013",
+          "value": 631.3282958052104
+        },
+        {
+          "period": "2014",
+          "value": 638.1105170653508
+        },
+        {
+          "period": "2015",
+          "value": 645.1034575463422
+        },
+        {
+          "period": "2016",
+          "value": 653.8141781389085
+        },
+        {
+          "period": "2017",
+          "value": 662.7323808764565
+        },
+        {
+          "period": "2018",
+          "value": 696.4938404873872
+        },
+        {
+          "period": "2019",
+          "value": 732.6509737812432
+        },
+        {
+          "period": "2020",
+          "value": 748.2290860146207
+        },
+        {
+          "period": "2021",
+          "value": 762.5910689486435
+        },
+        {
+          "period": "2022",
+          "value": 803.1563083648879
+        },
+        {
+          "period": "2023",
+          "value": 879.1819898080169
+        },
+        {
+          "period": "2024",
+          "value": 926.4575025062597
+        },
+        {
+          "period": "2025",
+          "value": 967.1002712187014
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "orfandad-ambos",
+      "title": "Pensión media mensual: orfandad, ambos",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 327.5
+        },
+        {
+          "period": "2009",
+          "value": 342.6
+        },
+        {
+          "period": "2010",
+          "value": 352.4
+        },
+        {
+          "period": "2011",
+          "value": 361.6
+        },
+        {
+          "period": "2012",
+          "value": 365.3
+        },
+        {
+          "period": "2013",
+          "value": 369.7
+        },
+        {
+          "period": "2014",
+          "value": 368.0
+        },
+        {
+          "period": "2015",
+          "value": 371.9
+        },
+        {
+          "period": "2016",
+          "value": 376.4
+        },
+        {
+          "period": "2017",
+          "value": 381.1
+        },
+        {
+          "period": "2018",
+          "value": 393.4
+        },
+        {
+          "period": "2019",
+          "value": 405.5
+        },
+        {
+          "period": "2020",
+          "value": 412.0
+        },
+        {
+          "period": "2021",
+          "value": 418.4
+        },
+        {
+          "period": "2022",
+          "value": 439.4
+        },
+        {
+          "period": "2023",
+          "value": 479.6
+        },
+        {
+          "period": "2024",
+          "value": 503.3194394665679
+        },
+        {
+          "period": "2025",
+          "value": 526.9311056607246
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "orfandad-hombres",
+      "title": "Pensión media mensual: orfandad, hombres",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 326.4065397544716
+        },
+        {
+          "period": "2009",
+          "value": 341.10148626453685
+        },
+        {
+          "period": "2010",
+          "value": 350.7707722164175
+        },
+        {
+          "period": "2011",
+          "value": 359.63559397304874
+        },
+        {
+          "period": "2012",
+          "value": 362.9450043962772
+        },
+        {
+          "period": "2013",
+          "value": 367.8597722283205
+        },
+        {
+          "period": "2014",
+          "value": 367.03324184336725
+        },
+        {
+          "period": "2015",
+          "value": 371.3996168119249
+        },
+        {
+          "period": "2016",
+          "value": 376.39498775866366
+        },
+        {
+          "period": "2017",
+          "value": 381.2886527070613
+        },
+        {
+          "period": "2018",
+          "value": 393.7373108501806
+        },
+        {
+          "period": "2019",
+          "value": 406.09674465659504
+        },
+        {
+          "period": "2020",
+          "value": 412.8505863316414
+        },
+        {
+          "period": "2021",
+          "value": 419.76700128692966
+        },
+        {
+          "period": "2022",
+          "value": 441.0478630266602
+        },
+        {
+          "period": "2023",
+          "value": 482.00668266172664
+        },
+        {
+          "period": "2024",
+          "value": 506.1239696438673
+        },
+        {
+          "period": "2025",
+          "value": 530.175462989102
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "orfandad-mujeres",
+      "title": "Pensión media mensual: orfandad, mujeres",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 328.64126881078624
+        },
+        {
+          "period": "2009",
+          "value": 344.1253646746659
+        },
+        {
+          "period": "2010",
+          "value": 354.237523608769
+        },
+        {
+          "period": "2011",
+          "value": 363.8506843691781
+        },
+        {
+          "period": "2012",
+          "value": 367.8621869337486
+        },
+        {
+          "period": "2013",
+          "value": 371.6535210959846
+        },
+        {
+          "period": "2014",
+          "value": 369.0726301869413
+        },
+        {
+          "period": "2015",
+          "value": 372.5219183338576
+        },
+        {
+          "period": "2016",
+          "value": 376.4501223303727
+        },
+        {
+          "period": "2017",
+          "value": 380.80444548592277
+        },
+        {
+          "period": "2018",
+          "value": 393.02724164763265
+        },
+        {
+          "period": "2019",
+          "value": 404.9289174886893
+        },
+        {
+          "period": "2020",
+          "value": 411.067448405839
+        },
+        {
+          "period": "2021",
+          "value": 416.86852464786523
+        },
+        {
+          "period": "2022",
+          "value": 437.6341029337167
+        },
+        {
+          "period": "2023",
+          "value": 476.91034650862036
+        },
+        {
+          "period": "2024",
+          "value": 500.22847603451214
+        },
+        {
+          "period": "2025",
+          "value": 523.3569265083504
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "favor-familiares-ambos",
+      "title": "Pensión media mensual: favor de familiares, ambos",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 441.4
+        },
+        {
+          "period": "2009",
+          "value": 459.0
+        },
+        {
+          "period": "2010",
+          "value": 471.7
+        },
+        {
+          "period": "2011",
+          "value": 483.0
+        },
+        {
+          "period": "2012",
+          "value": 488.2
+        },
+        {
+          "period": "2013",
+          "value": 503.8
+        },
+        {
+          "period": "2014",
+          "value": 510.9
+        },
+        {
+          "period": "2015",
+          "value": 520.6
+        },
+        {
+          "period": "2016",
+          "value": 528.6
+        },
+        {
+          "period": "2017",
+          "value": 538.4
+        },
+        {
+          "period": "2018",
+          "value": 558.4
+        },
+        {
+          "period": "2019",
+          "value": 579.3
+        },
+        {
+          "period": "2020",
+          "value": 594.6
+        },
+        {
+          "period": "2021",
+          "value": 605.7
+        },
+        {
+          "period": "2022",
+          "value": 641.5
+        },
+        {
+          "period": "2023",
+          "value": 705.9
+        },
+        {
+          "period": "2024",
+          "value": 745.924045387805
+        },
+        {
+          "period": "2025",
+          "value": 784.9516345331742
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "favor-familiares-hombres",
+      "title": "Pensión media mensual: favor de familiares, hombres",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 449.71709583991867
+        },
+        {
+          "period": "2009",
+          "value": 463.48075621635513
+        },
+        {
+          "period": "2010",
+          "value": 473.66811882426373
+        },
+        {
+          "period": "2011",
+          "value": 481.6348597135065
+        },
+        {
+          "period": "2012",
+          "value": 449.4974342326204
+        },
+        {
+          "period": "2013",
+          "value": 463.653945563652
+        },
+        {
+          "period": "2014",
+          "value": 472.1125970359914
+        },
+        {
+          "period": "2015",
+          "value": 483.46512958758984
+        },
+        {
+          "period": "2016",
+          "value": 494.69940646528914
+        },
+        {
+          "period": "2017",
+          "value": 507.6891496401764
+        },
+        {
+          "period": "2018",
+          "value": 527.2931228233097
+        },
+        {
+          "period": "2019",
+          "value": 549.6410818584126
+        },
+        {
+          "period": "2020",
+          "value": 568.1264394599301
+        },
+        {
+          "period": "2021",
+          "value": 579.2632227488148
+        },
+        {
+          "period": "2022",
+          "value": 614.6349619482486
+        },
+        {
+          "period": "2023",
+          "value": 677.9952038523269
+        },
+        {
+          "period": "2024",
+          "value": 717.1791009424601
+        },
+        {
+          "period": "2025",
+          "value": 756.2016980903314
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "favor-familiares-mujeres",
+      "title": "Pensión media mensual: favor de familiares, mujeres",
+      "unit": "euros/mes",
+      "source": {
+        "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+      },
+      "confidence": "alta",
+      "notes": "Dato a 1 de diciembre. Procedencia por año: data/sistema/pensiones-vigor-regimen-clase-sexo.json (origenes).",
+      "points": [
+        {
+          "period": "2008",
+          "value": 439.3039445494635
+        },
+        {
+          "period": "2009",
+          "value": 457.8630439849499
+        },
+        {
+          "period": "2010",
+          "value": 471.155832518956
+        },
+        {
+          "period": "2011",
+          "value": 483.4279529490844
+        },
+        {
+          "period": "2012",
+          "value": 500.1634032513604
+        },
+        {
+          "period": "2013",
+          "value": 516.881540899119
+        },
+        {
+          "period": "2014",
+          "value": 524.3022662446087
+        },
+        {
+          "period": "2015",
+          "value": 534.2418603439293
+        },
+        {
+          "period": "2016",
+          "value": 541.910992297853
+        },
+        {
+          "period": "2017",
+          "value": 551.135549648448
+        },
+        {
+          "period": "2018",
+          "value": 572.1090279291304
+        },
+        {
+          "period": "2019",
+          "value": 592.8229335045144
+        },
+        {
+          "period": "2020",
+          "value": 607.0451309133173
+        },
+        {
+          "period": "2021",
+          "value": 618.7170426326595
+        },
+        {
+          "period": "2022",
+          "value": 655.2104541937218
+        },
+        {
+          "period": "2023",
+          "value": 720.4467579116028
+        },
+        {
+          "period": "2024",
+          "value": 761.2831251656506
+        },
+        {
+          "period": "2025",
+          "value": 800.6084803063832
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}

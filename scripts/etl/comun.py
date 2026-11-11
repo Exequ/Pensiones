@@ -107,3 +107,33 @@ def fusionar(carpeta, id_, nuevos, title=None, description=None):
         json.dump(obj, f, ensure_ascii=False, indent=2)
         f.write('\n')
     print('escrito', f'{carpeta}/{id_}', len(obj['data']))
+
+
+def escribe_tabla(carpeta, id_, title, description, columnas, filas, source, origenes, confidence='alta', notes=None):
+    """Escribe el JSON hermano de una tabla CSV (tipo «tabla»). `columnas`: [(id, descripción, unidad|None)]."""
+    obj = {
+        'tipo': 'tabla', 'id': id_, 'title': title, 'description': description,
+        'columnas': [{'id': c, 'descripcion': d, 'unidad': u} for c, d, u in columnas],
+        'filas': filas, 'source': source,
+    }
+    if origenes:
+        obj['origenes'] = origenes
+    obj.update({'fetchedAt': HOY, 'confidence': confidence})
+    if notes:
+        obj['notes'] = notes
+    with open(f'{REPO}/data/{carpeta}/{id_}.json', 'w', encoding='utf-8') as f:
+        json.dump(obj, f, ensure_ascii=False, indent=2)
+        f.write('\n')
+
+
+def escribe_series(carpeta, id_, title, description, series):
+    """Escribe un fichero de series. `series`: lista de dicts con id,title,unit,source,confidence,notes?,points."""
+    out = {'tipo': 'datos', 'id': id_, 'title': title, 'description': description, 'series': []}
+    for s in series:
+        s = dict(s)
+        s['fetchedAt'] = HOY
+        out['series'].append(s)
+    with open(f'{REPO}/data/{carpeta}/{id_}.json', 'w', encoding='utf-8') as f:
+        json.dump(out, f, ensure_ascii=False, indent=2)
+        f.write('\n')
+    print('escrito', f'{carpeta}/{id_}', len(series), 'series')

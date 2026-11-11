@@ -1,0 +1,39 @@
+{
+  "tipo": "tabla",
+  "id": "afiliacion-media-mensual-regimen",
+  "title": "Afiliados medios mensuales por régimen (enero de 2001 a la última publicación)",
+  "description": "Afiliados medios en alta de cada mes, por régimen y sistema especial, tal como los publica la Seguridad Social. A partir de 2012 el Régimen General no incluye los sistemas especiales Agrario y de Empleados de Hogar; «total-sistema» los incluye todos. Los cuidadores no profesionales (desde 2008) ya están incluidos en el General.",
+  "columnas": [
+    {
+      "id": "mes",
+      "descripcion": "Mes (AAAA-MM)",
+      "unidad": null
+    },
+    {
+      "id": "regimen",
+      "descripcion": "Régimen o sistema especial",
+      "unidad": null
+    },
+    {
+      "id": "afiliados_medios",
+      "descripcion": "Afiliados medios en alta del mes",
+      "unidad": "afiliados"
+    }
+  ],
+  "filas": 3183,
+  "source": {
+    "title": "Afiliados medios en alta por regímenes (serie 2001-2026, total sistema)",
+    "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+    "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST290/EST291"
+  },
+  "origenes": [
+    {
+      "period": "2026",
+      "url": "https://www.seg-social.es/wps/wcm/connect/wss/5ccf558a-868f-48b3-b832-04fe9f524960/19_Serie+afiliaci%C3%B3n+media+por+reg%C3%ADmenes+%28Total+Sistema%29.xlsx",
+      "sha256": "3e9fbcab199751ac967d840606ac48f5373fc4182246405bcdcf83825abd307c"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Los afiliados de «cuidadores-no-profesionales» están incluidos en general. Definiciones y notas a pie del fichero original (hoja Hoja1)."
+}

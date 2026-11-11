@@ -332,6 +332,39 @@ export const ArchivoPrestaciones = z.strictObject({
   prestaciones: z.array(Prestacion).min(1),
 });
 
+export const ColumnaTabla = z.strictObject({
+  id: z.string().regex(/^[a-z0-9_]+$/, { error: 'id de columna con formato no válido' }),
+  descripcion: textoObligatorio('columna.descripcion'),
+  /** Unidad de la columna; `null` para identificadores y categorías. */
+  unidad: z.string().trim().min(1).nullable(),
+});
+
+/** Fichero de origen de una parte de la tabla (por periodo): URL, descarga y huella. */
+export const OrigenTabla = z.strictObject({
+  period: Periodo,
+  url: z.url({ protocol: /^https?$/, error: 'origen.url debe ser una URL http(s) válida' }),
+  sha256: z.string().regex(/^[0-9a-f]{64}$/, { error: 'sha256 no válido' }),
+});
+
+/**
+ * Tabla grande (p. ej. edad × año × clase): un CSV en /data y este JSON hermano con el mismo
+ * nombre base, que lleva título, descripción, columnas, fuente, fecha de descarga y confianza.
+ */
+export const ArchivoTabla = z.strictObject({
+  tipo: z.literal('tabla'),
+  id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
+  title: textoObligatorio('title'),
+  description: textoObligatorio('description'),
+  columnas: z.array(ColumnaTabla).min(2),
+  filas: z.number().int().positive(),
+  source: Fuente,
+  origenes: z.array(OrigenTabla).optional(),
+  fetchedAt: FechaDescarga,
+  confidence: Confianza,
+  notes: z.string().trim().min(1).optional(),
+});
+
+export type ArchivoTabla = z.infer<typeof ArchivoTabla>;
 export type Periodo = z.infer<typeof Periodo>;
 export type Fuente = z.infer<typeof Fuente>;
 export type Confianza = z.infer<typeof Confianza>;

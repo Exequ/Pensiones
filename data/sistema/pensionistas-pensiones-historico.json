@@ -1,0 +1,198 @@
+{
+  "tipo": "datos",
+  "id": "pensionistas-pensiones-historico",
+  "title": "Pensionistas y pensiones contributivas, serie histórica a diciembre (2006-2025)",
+  "description": "Número de pensionistas (personas) y de pensiones contributivas a diciembre de cada año, según la serie histórica de la Seguridad Social.",
+  "series": [
+    {
+      "id": "pensionistas",
+      "title": "Pensionistas del sistema contributivo (personas) a diciembre",
+      "unit": "personas",
+      "source": {
+        "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas»)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271"
+      },
+      "confidence": "alta",
+      "notes": "Personas que perciben al menos una pensión contributiva. Nota (1) de la fuente en la hoja original.",
+      "points": [
+        {
+          "period": "2006",
+          "value": 7494385
+        },
+        {
+          "period": "2007",
+          "value": 7586574
+        },
+        {
+          "period": "2008",
+          "value": 7700749
+        },
+        {
+          "period": "2009",
+          "value": 7826416
+        },
+        {
+          "period": "2010",
+          "value": 7948463
+        },
+        {
+          "period": "2011",
+          "value": 8061785
+        },
+        {
+          "period": "2012",
+          "value": 8182112
+        },
+        {
+          "period": "2013",
+          "value": 8315826
+        },
+        {
+          "period": "2014",
+          "value": 8428617
+        },
+        {
+          "period": "2015",
+          "value": 8508482
+        },
+        {
+          "period": "2016",
+          "value": 8609085
+        },
+        {
+          "period": "2017",
+          "value": 8705707
+        },
+        {
+          "period": "2018",
+          "value": 8806744
+        },
+        {
+          "period": "2019",
+          "value": 8897902
+        },
+        {
+          "period": "2020",
+          "value": 8899064
+        },
+        {
+          "period": "2021",
+          "value": 8990513
+        },
+        {
+          "period": "2022",
+          "value": 9053550
+        },
+        {
+          "period": "2023",
+          "value": 9154513
+        },
+        {
+          "period": "2024",
+          "value": 9304060
+        },
+        {
+          "period": "2025",
+          "value": 9438579
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "pensiones",
+      "title": "Pensiones contributivas en vigor a diciembre",
+      "unit": "pensiones",
+      "source": {
+        "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas»)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271"
+      },
+      "confidence": "alta",
+      "notes": "Número de pensiones; un pensionista puede percibir varias. Difiere en decenas de unidades del fichero REG de diciembre (revisión posterior de la fuente): ver docs/DISCREPANCIAS.md.",
+      "points": [
+        {
+          "period": "2006",
+          "value": 8227243
+        },
+        {
+          "period": "2007",
+          "value": 8334316
+        },
+        {
+          "period": "2008",
+          "value": 8464342
+        },
+        {
+          "period": "2009",
+          "value": 8604119
+        },
+        {
+          "period": "2010",
+          "value": 8739732
+        },
+        {
+          "period": "2011",
+          "value": 8866277
+        },
+        {
+          "period": "2012",
+          "value": 8999045
+        },
+        {
+          "period": "2013",
+          "value": 9145966
+        },
+        {
+          "period": "2014",
+          "value": 9270942
+        },
+        {
+          "period": "2015",
+          "value": 9360799
+        },
+        {
+          "period": "2016",
+          "value": 9473482
+        },
+        {
+          "period": "2017",
+          "value": 9581770
+        },
+        {
+          "period": "2018",
+          "value": 9696272
+        },
+        {
+          "period": "2019",
+          "value": 9801379
+        },
+        {
+          "period": "2020",
+          "value": 9809019
+        },
+        {
+          "period": "2021",
+          "value": 9916966
+        },
+        {
+          "period": "2022",
+          "value": 9994836
+        },
+        {
+          "period": "2023",
+          "value": 10111991
+        },
+        {
+          "period": "2024",
+          "value": 10281477
+        },
+        {
+          "period": "2025",
+          "value": 10434856
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}

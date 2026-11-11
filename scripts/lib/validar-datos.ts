@@ -2,12 +2,14 @@
  * Validación de los JSON de /data contra el esquema común (src/engine/esquema-datos.ts)
  * y regla adicional: ningún valor numérico sin una fuente con URL y fetchedAt.
  */
+import { existsSync } from 'node:fs';
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import {
   ArchivoCronologia,
   ArchivoDatos,
   ArchivoPrestaciones,
+  ArchivoTabla,
   RegistroAfirmaciones,
 } from '../../src/engine/esquema-datos.ts';
 
@@ -90,7 +92,9 @@ export function validarContenido(json: unknown, fichero: string): ErrorValidacio
       ? ArchivoCronologia
       : tipo === 'prestaciones'
         ? ArchivoPrestaciones
-        : ArchivoDatos;
+        : tipo === 'tabla'
+          ? ArchivoTabla
+          : ArchivoDatos;
   const resultado = esquema.safeParse(json);
   if (!resultado.success) {
     for (const problema of resultado.error.issues) {
@@ -124,6 +128,36 @@ async function leerJson(
   }
 }
 
+/**
+ * Comprueba el CSV hermano de una tabla: existe, su cabecera coincide con `columnas`, el número
+ * de filas coincide con `filas` y cada fila tiene tantas celdas como columnas.
+ */
+export async function validarCsvHermano(
+  json: unknown,
+  ficheroJson: string,
+  relativo: string,
+): Promise<ErrorValidacion[]> {
+  const resultado = ArchivoTabla.safeParse(json);
+  if (!resultado.success) return [];
+  const csv = ficheroJson.replace(/\.json$/, '.csv');
+  const error = (mensaje: string): ErrorValidacion[] => [
+    { fichero: relativo, ruta: '(csv)', mensaje },
+  ];
+  if (!existsSync(csv)) return error(`Falta el CSV hermano ${path.basename(csv)}`);
+  const lineas = (await readFile(csv, 'utf8')).split('\n').filter((l) => l.trim() !== '');
+  const cabecera = (lineas[0] ?? '').split(',');
+  const esperada = resultado.data.columnas.map((c) => c.id);
+  if (cabecera.join(',') !== esperada.join(',')) {
+    return error(`La cabecera del CSV no coincide con «columnas»: ${cabecera.join(',')}`);
+  }
+  if (lineas.length - 1 !== resultado.data.filas) {
+    return error(`«filas» indica ${resultado.data.filas} y el CSV tiene ${lineas.length - 1}`);
+  }
+  const mala = lineas.findIndex((l) => l.split(',').length !== esperada.length);
+  if (mala >= 0) return error(`La fila ${mala} del CSV no tiene ${esperada.length} columnas`);
+  return [];
+}
+
 /** Valida todos los JSON de un directorio (recursivo). */
 export async function validarDirectorio(
   directorio: string,
@@ -139,6 +173,20 @@ export async function validarDirectorio(
       continue;
     }
     errores.push(...validarContenido(leido.json, relativo));
+    errores.push(...(await validarCsvHermano(leido.json, fichero, relativo)));
+  }
+  // Todo CSV de /data necesita su JSON hermano con la procedencia.
+  const entradas = await readdir(directorio, { withFileTypes: true, recursive: true });
+  for (const e of entradas) {
+    if (!e.isFile() || !e.name.endsWith('.csv')) continue;
+    const csv = path.join(e.parentPath, e.name);
+    if (!existsSync(csv.replace(/\.csv$/, '.json'))) {
+      errores.push({
+        fichero: path.relative(raiz, csv),
+        ruta: '(csv)',
+        mensaje: 'CSV sin JSON hermano con fuente, fecha de descarga y confianza',
+      });
+    }
   }
   return { ficheros: ficheros.map((f) => path.relative(raiz, f)), errores };
 }
