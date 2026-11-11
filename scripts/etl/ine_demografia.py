@@ -375,6 +375,24 @@ def a5():
         'El INE publica la emigración solo por sexo y lugar de nacimiento (serie «emigracion-proyectada-*» de proyecciones-hipotesis).',
         [('anio', 'Año', None), ('sexo', 'ambos, hombres o mujeres', None), ('edad', 'Edad', 'años'), ('personas', 'Inmigración proyectada', 'personas')],
         n, fuente(36776, 'Proyecciones de Población: flujos de inmigración exterior por sexo, generación y lugar de nacimiento (tabla 36776)'), origenes([36776]), confidence='alta')
+    # emigración proyectada por edad y sexo (resultados de la proyección, escenario principal)
+    rows = []
+    for s in tabla(36651):
+        m = meta(s)
+        if 'Totales de edad' in m:
+            continue
+        ed = edad_de(m.get('Valores simples de edad') or m['Semiintervalos de edad'])
+        for x in s['Data']:
+            rows.append([x['Anyo'], SEXO[m['Sexo']], ed, repr(float(x['Valor']))])
+    rows.sort(key=lambda r: (r[0], r[1], r[2]))
+    n = escribe_csv('proyecciones-emigracion-edad', ['anio', 'sexo', 'edad', 'personas'], rows)
+    escribe_tabla('demografia', 'proyecciones-emigracion-edad',
+        'Emigración exterior proyectada por el INE 2026-2075 por año, sexo y edad',
+        'Emigraciones con destino al extranjero proyectadas (edición 2026-2076, escenario principal «proyección a largo plazo») por edad simple (0 a 89 y «90 y más», edad 90) y sexo. '
+        'Con proyecciones-inmigracion-edad permite calcular el saldo migratorio exterior por edad (las edades de 90 y más y de 100 y más no coinciden: 90 frente a 100).',
+        [('anio', 'Año', None), ('sexo', 'ambos, hombres o mujeres', None), ('edad', 'Edad; 90 = «90 y más»', 'años'), ('personas', 'Emigración proyectada', 'personas')],
+        n, fuente(36651, 'Proyecciones de Población: emigraciones con destino al extranjero por sexo, edad y año (tabla 36651)'), origenes([36651]), confidence='alta',
+        notes='Los códigos Tempus de la tabla indican la edición PROY24 y su fecha de modificación es de 2024, pero el horizonte (2026-2075) es el de la edición 2026-2076; ver proyecciones-poblacion.')
     # tasas de dependencia INE
     for tid, sid, tit in ((36668, 'tasa-dependencia', 'Tasa de dependencia'), (36669, 'tasa-dependencia-menores-16', 'Tasa de dependencia de la población menor de 16 años'),
                           (36670, 'tasa-dependencia-mayores-64', 'Tasa de dependencia de la población mayor de 64 años')):

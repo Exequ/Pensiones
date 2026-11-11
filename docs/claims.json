@@ -1,7 +1,192 @@
 {
   "version": 1,
-  "descripcion": "Registro de afirmaciones factuales con sus fuentes. Lo valida npm run validate:data. Generado por scripts/etl/fuentes_claims.py a partir de /data; todas con revisionActuarial pendiente.",
+  "descripcion": "Registro de afirmaciones factuales con sus fuentes. Lo valida npm run validate:data. Generado por scripts/etl/fuentes_claims.py a partir de /data. Las afirmaciones con revisionActuarial «pendiente» llevan preguntaActuarial (lista en docs/REVISION_ACTUARIAL.md); el resto hereda revisionActuarialPorDefecto: «no-requiere» (no requiere revisión actuarial: transcripción literal de una norma o de una cifra publicada, contrastada con su fuente).",
+  "revisionActuarialPorDefecto": "no-requiere",
   "claims": [
+    {
+      "id": "demografia-ageing-report-2024-espana-ageing-report-2024-ii-1-64",
+      "texto": "Ageing Report 2024, tabla II.1.64: Public pensions, gross expenditure as % of GDP, España: 16,7 (% del PIB) en 2070.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-64"],
+      "fuentes": [
+        {
+          "title": "The 2024 Ageing Report: Economic and Budgetary Projections for the EU Member States (2022-2070), Statistical annex: cross-country tables",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en",
+          "docId": "ip279"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "demografia-esperanza-vida-anual-esperanza-vida-65-hombres",
+      "texto": "Esperanza de vida a los 65 años, hombres: 19,87 (años) en 2024.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["demografia/esperanza-vida-anual.json#esperanza-vida-65-hombres"],
+      "fuentes": [
+        {
+          "title": "Tablas de mortalidad por año, sexo, edad y funciones (tablas 27153 y 27150)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+          "docId": "INE-27153"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "demografia-esperanza-vida-anual-esperanza-vida-65-mujeres",
+      "texto": "Esperanza de vida a los 65 años, mujeres: 23,64 (años) en 2024.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["demografia/esperanza-vida-anual.json#esperanza-vida-65-mujeres"],
+      "fuentes": [
+        {
+          "title": "Tablas de mortalidad por año, sexo, edad y funciones (tablas 27153 y 27150)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+          "docId": "INE-27153"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "demografia-fecundidad-indicadores-icf-ambas",
+      "texto": "Indicador coyuntural de fecundidad, nacionalidad ambas de la madre: 1,1 (hijos por mujer) en 2024.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["demografia/fecundidad-indicadores.json#icf-ambas"],
+      "fuentes": [
+        {
+          "title": "Indicador Coyuntural de Fecundidad según orden del nacimiento y nacionalidad de la madre (tabla 1407)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=1407",
+          "docId": "INE-1407"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "demografia-migraciones-exterior-anual-saldo-exterior-ambos-publicado-emcr",
+      "texto": "Saldo migratorio exterior publicado por EMCR, ambos: 626268,0 (personas) en 2024.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["demografia/migraciones-exterior-anual.json#saldo-exterior-ambos-publicado-emcr"],
+      "fuentes": [
+        {
+          "title": "Estadística de Migraciones y Cambios de Residencia: saldos (tabla 69758)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69758",
+          "docId": "INE-69758"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "demografia-proyecciones-hipotesis-icf-proyectado",
+      "texto": "Indicador coyuntural de fecundidad proyectado (hipótesis): 1,21 (hijos por mujer) en 2075.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["demografia/proyecciones-hipotesis.json#icf-proyectado"],
+      "fuentes": [
+        {
+          "title": "Proyecciones de Población: indicador coyuntural de fecundidad por año (tabla 36655)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36655",
+          "docId": "INE-36655"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "macro-pib-ine-pib-corriente",
+      "texto": "PIB a precios de mercado, precios corrientes: 1690012 (millones de euros) en 2025.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["macro/pib-ine.json#pib-corriente"],
+      "fuentes": [
+        {
+          "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: PIB a precios de mercado y sus componentes",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+          "docId": "INE-CNA-pib95_25"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "macro-salario-medio-definiciones-eaes-ambos",
+      "texto": "EAES: salario medio bruto anual por trabajador, ambos: 29540,26 (euros/año) en 2024.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["macro/salario-medio-definiciones.json#eaes-ambos"],
+      "fuentes": [
+        {
+          "title": "Encuesta Anual de Estructura Salarial: salario medio bruto por sexo y edad (tabla 28189)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=28189",
+          "docId": "INE-28189"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar el concepto y la cobertura de la ganancia media anual de la EAES (devengos brutos anuales por asalariado, centros de cotización de industria, construcción y servicios con alta todo el mes de octubre; excluye agricultura y parte de las Administraciones Públicas) y su idoneidad como proxy del salario de la carrera; calcular su razón con la base máxima (data/macro/salario-medio-razon-base-maxima)."
+    },
+    {
+      "id": "macro-salario-medio-definiciones-etcl-coste-salarial-total",
+      "texto": "ETCL: coste salarial total por trabajador y mes, media de los cuatro trimestres, ambas jornadas: 2376,55 (euros/mes) en 2025.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["macro/salario-medio-definiciones.json#etcl-coste-salarial-total"],
+      "fuentes": [
+        {
+          "title": "Encuesta Trimestral de Coste Laboral: coste salarial por trabajador, tipo de jornada y sectores (tabla 6038)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=6038",
+          "docId": "INE-6038"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar el concepto de la ETCL (coste salarial por trabajador y mes, media de trimestres) y la conversión a año (12 veces la media mensual, sin pagas aparte porque los pagos extraordinarios van en el trimestre en que se pagan); verificar frente a la EAES en los años comunes (2008-2024) y su cobertura sectorial."
+    },
+    {
+      "id": "macro-salario-medio-definiciones-cn-remuneracion-por-asalariado-puesto",
+      "texto": "Contabilidad Nacional: remuneración de asalariados / asalariados (puestos de trabajo): 41132,88 (euros/año) en 2025.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["macro/salario-medio-definiciones.json#cn-remuneracion-por-asalariado-puesto"],
+      "fuentes": [
+        {
+          "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: remuneración de asalariados y empleo",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+          "docId": "INE-CNA-rem_empleo95_25"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar que la remuneración de asalariados de la Contabilidad Nacional incluye cotizaciones sociales del empleador (no es salario bruto) y que dividida por asalariados (puestos, ETC o personas) da tres cifras distintas; decidir qué denominador y qué ajuste (restar cotizaciones empresariales) se necesita para compararla con la EAES o con la base media."
+    },
+    {
+      "id": "macro-salario-medio-definiciones-base-media-cotizacion-rg-ambos",
+      "texto": "TGSS: base media de cotización por contingencias comunes del Régimen General, media anual ponderada, ambos: 2286,22 (euros/mes) en 2025.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["macro/salario-medio-definiciones.json#base-media-cotizacion-rg-ambos"],
+      "fuentes": [
+        {
+          "title": "Estadística de Bases de Cotización al Régimen General: tablas de bases medias y cotizantes",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/c9bd51e5-79bc-44f2-9618-14d6094eb585",
+          "docId": "TGSS-bases-medias-RG"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar que la base media de cotización (Régimen General, contingencias comunes, personas físicas con al menos un día cotizado, topada por la base máxima y sin agrario, hogar ni artistas) no es un salario: está topada, mezcla jornadas y meses parciales y solo existe desde 2018 en el fichero descargado. Valorar su uso para la tasa de reposición y el efecto del tope (razón con la base máxima)."
+    },
     {
       "id": "norma-ley-26-1985",
       "texto": "Primera gran reforma de las pensiones contributivas en democracia: eleva la carencia de jubilación a quince años, amplía el periodo de cálculo de la base reguladora a los últimos ocho años (96 meses entre 112) y establece la revalorización anual según el IPC previsto.",
@@ -16,8 +201,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-rdleg-1-1994",
@@ -33,8 +217,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-ley-24-1997",
@@ -50,8 +233,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-ley-24-2001",
@@ -67,8 +249,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-ley-35-2002",
@@ -84,8 +265,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-ley-28-2003",
@@ -101,8 +281,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-ley-40-2007",
@@ -118,8 +297,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-ley-27-2011",
@@ -135,8 +313,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-rdl-28-2012",
@@ -152,8 +329,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-rdl-5-2013",
@@ -169,8 +345,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-ley-23-2013",
@@ -186,8 +361,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-rdleg-8-2015",
@@ -203,8 +377,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-rdl-28-2018",
@@ -220,8 +393,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-rdl-3-2021",
@@ -237,8 +409,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-ley-21-2021",
@@ -254,8 +425,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-rdl-2-2023",
@@ -271,8 +441,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-rdl-11-2024",
@@ -288,8 +457,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-rd-316-2025",
@@ -305,8 +473,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "norma-rd-241-2026",
@@ -322,8 +489,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-jubilacion-ordinaria",
@@ -339,8 +505,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-jubilacion-anticipada-involuntaria",
@@ -356,8 +521,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-jubilacion-anticipada-voluntaria",
@@ -373,8 +537,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-jubilacion-demorada",
@@ -390,8 +553,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-jubilacion-activa",
@@ -407,8 +569,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-jubilacion-flexible",
@@ -424,8 +585,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-jubilacion-parcial",
@@ -441,8 +601,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "pendiente",
-      "revisionActuarial": "pendiente"
+      "estado": "pendiente"
     },
     {
       "id": "prest-incapacidad-permanente",
@@ -458,8 +617,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-viudedad",
@@ -475,8 +633,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-orfandad",
@@ -492,8 +649,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-favor-de-familiares",
@@ -509,8 +665,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-pnc-incapacidad",
@@ -526,8 +681,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-pnc-jubilacion",
@@ -543,8 +697,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-complemento-minimos",
@@ -560,8 +713,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-complemento-brecha-genero",
@@ -577,8 +729,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "prest-clases-pasivas",
@@ -594,8 +745,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "pendiente",
-      "revisionActuarial": "pendiente"
+      "estado": "pendiente"
     },
     {
       "id": "param-actualizacion-bases",
@@ -611,7 +761,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la actualización de las bases de cotización por versión (meses sin actualizar e índice de referencia): reproducir la actualización de una carrera de ejemplo con data/parametros/actualizacion-bases y el IPC de data/parametros/ipc-*, y verificar que los 24 meses más recientes se computan nominalmente en la versión de 2026."
     },
     {
       "id": "param-base-maxima-incremento-futuro",
@@ -627,7 +778,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la DT 38.ª TRLGSS: la base máxima crece cada año el porcentaje de revalorización más 1,2 puntos (2024-2050). Verificar que la base máxima de 2026 de data/parametros/base-maxima-rg es la de 2025 × (1 + (revalorización + 1,2)/100) y la lectura «acumulativa» (efecto compuesto) frente a la alternativa de sumar siempre sobre la cifra inicial."
     },
     {
       "id": "param-base-maxima-rg",
@@ -643,8 +795,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-base-minima-rg",
@@ -660,8 +811,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-carencia-jubilacion",
@@ -677,8 +827,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-carrera-jubilacion-65",
@@ -694,8 +843,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-complemento-brecha-genero",
@@ -711,8 +859,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-cotizacion-para-100",
@@ -728,8 +875,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-cuota-solidaridad-tipos",
@@ -745,8 +891,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-divisor-base-reguladora",
@@ -763,7 +908,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la relación entre el divisor y el número de bases computadas: divisor = meses computados × 14 / 12 (378 = 324 × 14/12 en 2037). Verificar año a año (data/parametros/divisor-base-reguladora y periodo-calculo-base-reguladora) que cada divisor sale de esa fórmula y que el redondeo es el de la norma."
     },
     {
       "id": "param-edad-ordinaria-jubilacion",
@@ -779,8 +925,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-escala-porcentajes-jubilacion",
@@ -797,7 +942,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar que la escala de porcentajes por años cotizados vigente en 2027 reproduce el art. 210 TRLGSS. Fórmula: recalcular el porcentaje con data/parametros/escala-porcentajes-jubilacion (50 % a los 15 años; 0,19 % por mes del 1 al 248 y 0,18 % por los 16 siguientes) para 15, 25, 35 y 38,5 años y verificar que el 100 % se alcanza en el número de meses que fija la norma y que cuadra con carrera-jubilacion-65."
     },
     {
       "id": "param-fondo-reserva-desembolso-maximo",
@@ -812,8 +958,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-ipc-indice-medio-anual",
@@ -829,8 +974,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-ipc-variacion-diciembre",
@@ -846,8 +990,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-ipc-variacion-media-anual",
@@ -863,8 +1006,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "pendiente",
-      "revisionActuarial": "pendiente"
+      "estado": "pendiente"
     },
     {
       "id": "param-iprem-anual",
@@ -880,8 +1022,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-iprem-diario",
@@ -897,8 +1038,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-iprem-mensual",
@@ -914,8 +1054,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-lagunas-integracion",
@@ -931,7 +1070,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la integración de lagunas por versión (48 meses al 100 % de la base mínima y el resto al 50 %; en 2026 cambia la referencia de la base mínima): ejemplo numérico con una carrera con 60 meses de laguna usando data/parametros/lagunas-integracion y base-minima-rg, y contrastar con art. 209.1.b TRLGSS y las versiones 2010, 2013 y 2016."
     },
     {
       "id": "param-limite-ingresos-complementos-minimos",
@@ -947,8 +1087,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-mei-destino",
@@ -964,7 +1103,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la afirmación sobre el destino del MEI (art. 127 bis: nutre el Fondo de Reserva y no computa a efectos de prestaciones). Contrastar la recaudación (derechos reconocidos de «Mecanismo de Equidad Intergeneracional» en la ejecución del presupuesto) con las dotaciones anuales del Fondo de data/sistema/fondo-reserva-series y explicar la diferencia."
     },
     {
       "id": "param-mei-tipo-empresa",
@@ -980,8 +1120,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-mei-tipo-total",
@@ -998,7 +1137,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la senda del Mecanismo de Equidad Intergeneracional (0,6 puntos en 2023 hasta 1,2 en 2029; empresa 0,5 a 1,0 y trabajador 0,1 a 0,2): que data/parametros/mei-tipo-total, mei-tipo-empresa y mei-tipo-trabajador suman y se reparten como dice el art. 127 bis TRLGSS y sobre qué base de cotización se aplica (contingencias comunes, con topes)."
     },
     {
       "id": "param-mei-tipo-trabajador",
@@ -1014,8 +1154,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-opcion-25-anos-aplicable",
@@ -1030,8 +1169,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-opcion-25-anos-divisor",
@@ -1047,7 +1185,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar el divisor de la opción de 25 años (en 2043, 371) frente a ventana × 14/12 (318 × 14/12 = 371) y frente a lo que dice literalmente la DT 4.ª.7; confirmar el redondeo y los años 2026-2040 (300 meses, divisor 350)."
     },
     {
       "id": "param-opcion-25-anos-ventana",
@@ -1063,7 +1202,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la opción de 25 años de la DT 4.ª.7 TRLGSS: que la ventana (en 2043, 318 meses) y su divisor (371) son los de la norma, la regla de 2041-2043 y qué ocurre con el 31/12/2040, que la DT deja ambiguo (decisión documentada en docs/DECISIONES.md). Fórmula: divisor = ventana × 14/12 cuando se computan todas las bases."
     },
     {
       "id": "param-pension-maxima-incremento-futuro",
@@ -1079,7 +1219,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la DT 39.ª TRLGSS: la pensión máxima inicial crece el porcentaje de revalorización más 0,115 puntos (2025-2050). Verificar con data/parametros/pension-maxima que 2025 y 2026 cuadran y justificar la lectura compuesta frente a la lineal (decisión documentada en docs/DECISIONES.md)."
     },
     {
       "id": "param-pension-maxima",
@@ -1095,8 +1236,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-pension-minima-incapacidad",
@@ -1114,8 +1254,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-pension-minima-jubilacion",
@@ -1131,8 +1270,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-pension-minima-orfandad-familiares",
@@ -1148,8 +1286,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-pension-minima-regla",
@@ -1165,7 +1302,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la regla de la DA 53.ª TRLGSS: reducción de la brecha entre la cuantía de referencia y el umbral de pobreza de un hogar de dos adultos (20 %, 30 %, 50 % y 100 % en 2024-2027 según data/parametros/pension-minima-regla). Verificar que esos porcentajes, el multiplicador del umbral unipersonal (1,5) y el factor del resto de mínimas (50 %) son los de la norma, y recalcular la mínima de jubilación con cónyuge a cargo de 2027 con la fórmula."
     },
     {
       "id": "param-pension-minima-viudedad",
@@ -1181,8 +1319,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-periodo-calculo-base-reguladora",
@@ -1199,7 +1336,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la regla «ventana de N meses de la que se toman las M bases de mayor importe» (en 2037, ventana de 348 meses y 324 bases): confirmar con el art. 209 TRLGSS y la DT 4.ª que N y M de cada año son los de la norma y que los meses descartados (24) se elijen por mayor base, no por antigüedad."
     },
     {
       "id": "param-pnc-importe-anual",
@@ -1215,8 +1353,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-prestamos-estado-seguridad-social",
@@ -1231,8 +1368,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-prestamos-plazo-ampliado-2026",
@@ -1247,8 +1383,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-revalorizacion-general",
@@ -1264,8 +1399,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-revalorizacion-regla",
@@ -1281,7 +1415,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar el art. 58 TRLGSS vigente: meses de IPC, último mes de medición (noviembre), suelo e indicadores de data/parametros/revalorizacion-regla; recalcular la revalorización de 2024, 2025 y 2026 con data/parametros/ipc-variacion-* y comparar con revalorizacion-general."
     },
     {
       "id": "param-smi-diario",
@@ -1297,8 +1432,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-smi-mensual",
@@ -1314,8 +1448,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-tipo-cc-empresa",
@@ -1331,8 +1464,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "param-tipo-cc-trabajador",
@@ -1348,8 +1480,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "sistema-afiliacion-anual-media-anual-total-sistema",
@@ -1364,8 +1495,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "pendiente",
-      "revisionActuarial": "pendiente"
+      "estado": "pendiente"
     },
     {
       "id": "sistema-afiliacion-anual-diciembre-total-sistema",
@@ -1380,8 +1510,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "sistema-deficit-presupuestario-seguridad-social-saldo-presupuestario-no-financiero",
@@ -1399,7 +1528,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "pendiente",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la definición de déficit presupuestario: derechos reconocidos netos menos obligaciones reconocidas por operaciones no financieras (excluye pasivos financieros y préstamos del Estado), frente al saldo con transferencias del Estado y al saldo contributivo ajustado. Contrastar con data/sistema/deficit-definiciones y deficit-presupuestario-seguridad-social."
     },
     {
       "id": "sistema-deficit-presupuestario-seguridad-social-pasivos-financieros",
@@ -1414,8 +1544,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "sistema-deficit-presupuestario-seguridad-social-transferencias-estado-corrientes",
@@ -1432,8 +1561,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "sistema-deficit-sec-fondos-seguridad-social-b9-mio-eur",
@@ -1449,7 +1577,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la definición SEC 2010 (B.9, capacidad o necesidad de financiación del subsector Fondos de la Seguridad Social, S.1314): criterios de devengo y de sectorización frente al saldo presupuestario; ruptura de 2002 por la sanidad (docs/DISCREPANCIAS.md). Contrastar 2025 con data/sistema/deficit-presupuestario-seguridad-social."
     },
     {
       "id": "sistema-edad-media-altas-jubilacion-edad-media-altas-jubilacion",
@@ -1464,8 +1593,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "sistema-fondo-reserva-series-valor-fin-ano",
@@ -1481,7 +1609,23 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar el criterio de valoración del Fondo de Reserva: el informe a las Cortes lo da a precio de adquisición (no a mercado). Contrastar el valor de 31 de diciembre con dotaciones, rendimientos y disposiciones de data/sistema/fondo-reserva-series (diferencias por redondeo de hasta 2 millones) y decidir qué valoración usa el modelo."
+    },
+    {
+      "id": "sistema-gastos-impropios-previstos-2023",
+      "texto": "Estos gastos impropios ascenderían a 22.871 millones en 2023, mientras que el déficit estimado para ese año sería de 20.185 millones (previsión de 2020, no dato observado).",
+      "ubicacion": "Financiación y déficit (Fase 1B-3)",
+      "datos": ["sistema/gastos-impropios.json#gastos-impropios-previstos-2023"],
+      "fuentes": [
+        {
+          "title": "¿Qué gastos no contributivos financia la Seguridad Social? (Revista Seguridad Social, 29/10/2020; antes «¿Qué son los gastos impropios de la Seguridad Social?»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://revista.seg-social.es/2020/10/29/que-son-los-gastos-impropios-de-la-seguridad-social/"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
     },
     {
       "id": "sistema-pensiones-vigor-numero-total-ambos",
@@ -1496,8 +1640,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "sistema-pensiones-vigor-numero-jubilacion-ambos",
@@ -1512,8 +1655,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "sistema-pensiones-vigor-pension-media-total-ambos",
@@ -1528,8 +1670,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "sistema-pensiones-vigor-pension-media-jubilacion-ambos",
@@ -1544,8 +1685,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
     },
     {
       "id": "sistema-pensionistas-pensiones-historico-pensionistas",
@@ -1561,7 +1701,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la diferencia entre pensionistas (personas) y pensiones (una persona puede percibir varias: 10.434.856 pensiones para 9.438.579 pensionistas en 2025, 1,11 pensiones por pensionista, según data/sistema/pensionistas-pensiones-historico): qué denominador corresponde a cada uso (gasto por persona, ratio de dependencia, tasa de reposición) y cómo se trata la acumulación de viudedad con jubilación."
     },
     {
       "id": "sistema-pensionistas-pensiones-historico-pensiones",
@@ -1576,8 +1717,27 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada",
-      "revisionActuarial": "pendiente"
+      "estado": "verificada"
+    },
+    {
+      "id": "sistema-relacion-afiliados-pensiones-alternativa-1-afiliados-por-pension-alternativa-1",
+      "texto": "Alternativa 1: afiliados a último día de diciembre ÷ pensiones en vigor a 1 de enero siguiente: 2,07 (afiliados por pensión) en 2025.",
+      "ubicacion": "Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)",
+      "datos": [
+        "sistema/relacion-afiliados-pensiones-alternativa-1.json#afiliados-por-pension-alternativa-1"
+      ],
+      "fuentes": [
+        {
+          "title": "Afiliados último día: serie de afiliados a último día por regímenes 1985-septiembre 2026 (fila de diciembre, columna TOTAL SISTEMA)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST305/EST306",
+          "docId": "SS-afiliados-ultimo-dia"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la definición de la Alternativa 1: afiliados a último día de diciembre del año t entre pensiones en vigor a 1 de enero de t+1 (data/sistema/relacion-afiliados-pensiones-alternativa-1). Verificar que el numerador es el total del sistema a último día (incluye empleados de hogar y regímenes especiales) y que las pensiones de enero (fichero REG) son un stock a 1 de enero; calcular la diferencia con la definición con datos de diciembre."
     },
     {
       "id": "sistema-relacion-afiliados-pensiones-afiliados-diciembre-por-pensionista",
@@ -1593,7 +1753,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "pendiente",
-      "revisionActuarial": "pendiente"
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar el significado de la relación afiliados/pensionistas: el numerador son afiliados (relaciones laborales, con pluriempleo, y media mensual de diciembre) y el denominador pensionistas (personas) a 1 de diciembre; no son cotizantes ni personas ocupadas. Comparar las cuatro definiciones de data/sistema/relacion-afiliados-pensiones y la Alternativa 1 (último día de diciembre entre pensiones a 1 de enero) y decidir cuál se usa en el modelo; las alternativas sin doble cómputo están en PENDIENTE_DATOS."
     },
     {
       "id": "sistema-relacion-afiliados-pensiones-afiliados-media-anual-por-pension",
@@ -1608,8 +1769,7 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "pendiente",
-      "revisionActuarial": "pendiente"
+      "estado": "pendiente"
     }
   ]
 }

@@ -22,6 +22,7 @@ Fecha: 2026-11-11.
 - No hay discrepancias numéricas entre las publicaciones contrastadas.
 
 <!-- discrepancias-1b3:inicio -->
+
 ## Fase 1B-3
 
 - **Pensiones no contributivas a diciembre de 2025 (IMSERSO)**: la nómina de diciembre cuenta 462.568 pensiones (jubilación e invalidez) y el perfil del pensionista del fichero técnico, 471.309 pensionistas (8.741 más). Son dos registros distintos del IMSERSO (nómina abonada y fichero técnico de pensionistas); la fuente no concilia ambas cifras y se publican las dos.
@@ -38,4 +39,5 @@ Fecha: 2026-11-11.
 - **Mortalidad proyectada del INE (tabla 36659), unidad de mx y qx**: la tabla se etiqueta «Tanto por mil», pero mx y qx vienen en tanto por uno (q0 de 2026 = 0,0025; en las tablas históricas del INE, 2,6 por mil). Solo con qx en tanto por uno se cumple l(x+1) = lx × (1 − qx). En data/demografia/proyecciones-mortalidad se publican multiplicados por 1.000 (por mil), como en mortalidad-ine; lx, dx, Lx, Tx y ex no se tocan.
 - **Mortalidad proyectada, tabla de funciones frente a hipótesis del INE**: el riesgo de muerte a edad 0 de las mujeres en 2026 es 2,524 por mil en la tabla de funciones (36659) y 2,513 por mil en la tabla de hipótesis (36774); no se ha podido explicar con la metodología descargada (la hipótesis se formula sobre la esperanza de vida al nacimiento). Se publican las dos tablas; el modelo debería elegir una y documentarla.
 - **Migraciones EM 2008-2021, saldo exterior**: la suma por edades de inmigración menos emigración difiere del saldo publicado hasta en 8 personas por año (redondeos del INE).
+
 <!-- discrepancias-1b3:fin -->

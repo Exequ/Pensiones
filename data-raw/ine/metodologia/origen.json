@@ -1,0 +1,47 @@
+{
+ "meto_ECP.pdf": {
+  "url": "https://www.ine.es/inebaseDYN/ecp30282/docs/meto_ECP.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "a1341c819ec7745497ae2f397d1b915f05d2b900f9d7e6e3e3f7ad1b5db0be10"
+ },
+ "meto_estimaciones_pobla.pdf": {
+  "url": "https://www.ine.es/inebaseDYN/ecp30282/docs/meto_estimaciones_pobla.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "bff278257cc29f08837e47692b47d2de1d1122b9343736f21b56a3c884d2a330"
+ },
+ "t2020319a.pdf": {
+  "url": "https://www.ine.es/metodologia/t20/t2020319a.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "7eced494097c848e9e101dfc7cad21a8ddbaa414fe8238b20ee8391591659eb7"
+ },
+ "meto_emcr.pdf": {
+  "url": "https://www.ine.es/metodologia/meto_emcr.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "e0fff6b8327ad62757e21ffc596fb0fd799afa54cba2901400cfdb97b046b619"
+ },
+ "t2230187.pdf": {
+  "url": "https://www.ine.es/metodologia/t22/t2230187.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "4c69ff7736066430b87c34c22a4583d6642fd95cb251c742a32ddc47ea0baed5"
+ },
+ "epa_cambios2021.pdf": {
+  "url": "https://www.ine.es/inebaseDYN/epa30308/docs/epa_cambios2021.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "3b39ac0b1d534ae37903f83c326951ac4d091d96ab940156126e92caeb4cd631"
+ },
+ "metodologia_idb.pdf": {
+  "url": "https://www.ine.es/metodologia/t20/metodologia_idb.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "8026cf7d1e704fd65b55137e97647dc4ee8d0541db2a16a1c6963f4880dd6d8f"
+ },
+ "meto_ees22.pdf": {
+  "url": "https://www.ine.es/metodologia/t22/meto_ees22.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "6bb1e4f770879257a215d50b02d37b32aa1be5304d34e5dc525b5ddade2348a8"
+ },
+ "meto_propob_2026_2076.pdf": {
+  "url": "https://www.ine.es/metodologia/t20/meto_propob_2026_2076.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "545feb37d425668d91a0580408cd751bd35f8d2237bcad45ef6896875bc37b18"
+ }
+}

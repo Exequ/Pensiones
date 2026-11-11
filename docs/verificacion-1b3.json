@@ -1,206 +1,206 @@
 [
- {
-  "id": "C2-pnc",
-  "titulo": "PNC a diciembre de 2025: pensiones de la nómina del IMSERSO frente a pensionistas del fichero técnico del IMSERSO",
-  "estado": "diferencia",
-  "detalle": "nómina 462.568 frente a fichero técnico 471.309 (diferencia 8.741)"
- },
- {
-  "id": "C2-pnc-serie",
-  "titulo": "PNC: pensiones de jubilación e invalidez a diciembre 2019-2024 y mensuales de 2025",
-  "estado": "ok",
-  "detalle": "2019 452.157; 2024 457.400; diciembre de 2025 462.568"
- },
- {
-  "id": "A1-eu-suma",
-  "titulo": "Eurostat: suma por edades frente al total publicado (1971-2025, ambos sexos)",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0 personas (ninguno); el total incluye personas de edad desconocida"
- },
- {
-  "id": "A6-ine-eurostat-total",
-  "titulo": "Población total a 1 de enero, INE frente a Eurostat (1971-2025)",
-  "estado": "diferencia",
-  "detalle": "23 de 55 años idénticos; diferencia máxima 116 personas en 2022 (0,0002 %)"
- },
- {
-  "id": "A6-ine-eurostat-grupos",
-  "titulo": "Población por grupos de edad (0-14, 15-64, 65+), INE frente a Eurostat (1971-2025)",
-  "estado": "diferencia",
-  "detalle": "diferencia máxima 108 personas (2022, grupo 15-64)"
- },
- {
-  "id": "A5-pob-partida",
-  "titulo": "Población de partida de las proyecciones (1-1-2026) frente a la ECP provisional",
-  "estado": "diferencia",
-  "detalle": "proyección 49.590.099 frente a ECP 49.596.376 (diferencia -6.277)"
- },
- {
-  "id": "A1-sexos",
-  "titulo": "Población: hombres + mujeres = ambos (1971-2026)",
-  "estado": "diferencia",
-  "detalle": "diferencia máxima 12 personas (el INE redondea cada serie por separado)"
- },
- {
-  "id": "A5-sexos",
-  "titulo": "Proyección: hombres + mujeres = ambos (2026-2076)",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0"
- },
- {
-  "id": "A6-proyecciones",
-  "titulo": "Población proyectada: INE (2026-2076), EUROPOP2025 y Ageing Report 2024 (informativo; son proyecciones con hipótesis distintas)",
-  "estado": "diferencia",
-  "detalle": "2030: INE 51,41 M, EUROPOP2025 50,92 M, Ageing Report 2024 49,32 M | 2040: INE 53,71 M, EUROPOP2025 52,83 M, Ageing Report 2024 50,28 M | 2050: INE 54,56 M, EUROPOP2025 53,79 M, Ageing Report 2024 50,43 M | 2060: INE 54,23 M, EUROPOP2025 53,33 M, Ageing Report 2024 49,22 M | 2070: INE 53,37 M, EUROPOP2025 52,22 M, Ageing Report 2024 47,69 M"
- },
- {
-  "id": "A2-INE-l0",
-  "titulo": "Mortalidad INE 1975-2024: lx(0) = 100.000",
-  "estado": "ok",
-  "detalle": "desviación máxima 0,000000"
- },
- {
-  "id": "A2-INE-qx",
-  "titulo": "Mortalidad INE 1975-2024: l(x+1) = lx × (1 − qx)",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0,000 personas sobre 14520 pares (peor caso (2021, 'ambos', 37); el INE redondea qx a 6 decimales)"
- },
- {
-  "id": "A2-INE-dx",
-  "titulo": "Mortalidad INE 1975-2024: dx = lx − l(x+1)",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0,000"
- },
- {
-  "id": "A2-INE-ex",
-  "titulo": "Mortalidad INE 1975-2024: ex = Tx / lx",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0,00000 años"
- },
- {
-  "id": "A2-pro-l0",
-  "titulo": "Mortalidad proyectada 2026-2075: lx(0) = 100.000",
-  "estado": "ok",
-  "detalle": "desviación máxima 0,000000"
- },
- {
-  "id": "A2-pro-qx",
-  "titulo": "Mortalidad proyectada 2026-2075: l(x+1) = lx × (1 − qx)",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0,050 personas sobre 15000 pares (peor caso (2072, 'ambos', 3); el INE redondea qx a 6 decimales)"
- },
- {
-  "id": "A2-pro-dx",
-  "titulo": "Mortalidad proyectada 2026-2075: dx = lx − l(x+1)",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0,000"
- },
- {
-  "id": "A2-pro-ex",
-  "titulo": "Mortalidad proyectada 2026-2075: ex = Tx / lx",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0,00000 años"
- },
- {
-  "id": "A2-e65",
-  "titulo": "Esperanza de vida a los 65 años por sexo: serie anual 1975-2024",
-  "estado": "ok",
-  "detalle": "2024: hombres 19,87, mujeres 23,64"
- },
- {
-  "id": "A3-icf",
-  "titulo": "Fecundidad: ICF = suma de las tasas por edad (1975-2024, ambas nacionalidades)",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0,0049 hijos por mujer"
- },
- {
-  "id": "A5-icf",
-  "titulo": "Proyección: ICF = suma de las tasas por edad (2026-2075)",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0,0000"
- },
- {
-  "id": "A4-saldo-em",
-  "titulo": "Migraciones EM 2008-2021: inmigración − emigración = saldo exterior (suma por edad)",
-  "estado": "diferencia",
-  "detalle": "diferencia máxima 8,00"
- },
- {
-  "id": "A4-saldo-emcr",
-  "titulo": "Migraciones EMCR 2021-2024: saldo derivado de la tabla por edad frente al saldo exterior publicado",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0,00 personas"
- },
- {
-  "id": "A4-ruptura-2021",
-  "titulo": "Migraciones: saldo exterior de 2021 en las dos series (ruptura de serie)",
-  "estado": "diferencia",
-  "detalle": "EM 148.070 frente a EMCR 191.094 personas"
- },
- {
-  "id": "B1-pib-corriente",
-  "titulo": "PIB corriente: INE frente a Eurostat",
-  "estado": "diferencia",
-  "detalle": "27 de 31 años idénticos; diferencia máxima 17,151 millones (3,508 %)"
- },
- {
-  "id": "B1-pib-volumen",
-  "titulo": "PIB en volumen (euros de 2020): INE (derivado) frente a Eurostat",
-  "estado": "ok",
-  "detalle": "diferencia relativa máxima 0,0001 %"
- },
- {
-  "id": "B1-deflactor",
-  "titulo": "Deflactor del PIB (2020 = 100): INE (derivado) frente a Eurostat",
-  "estado": "diferencia",
-  "detalle": "diferencia relativa máxima 3,3890 %"
- },
- {
-  "id": "B2-activos",
-  "titulo": "EPA: activos = ocupados + parados (miles, todos los trimestres, sexos y grupos)",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0,10 miles (redondeo del INE a 100 personas)"
- },
- {
-  "id": "B2-tasa-paro",
-  "titulo": "EPA: tasa de paro publicada = parados / activos",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0,50 puntos (grupos con pocos activos y redondeo de miles)"
- },
- {
-  "id": "B2-sexos",
-  "titulo": "EPA: activos hombres + mujeres = ambos sexos (total, todos los trimestres)",
-  "estado": "ok",
-  "detalle": "diferencia máxima 0,10 miles"
- },
- {
-  "id": "B3-orden",
-  "titulo": "Salario medio anual (euros): EAES, ETCL×12, CN por puesto y por ETC y base media de cotización×12, frente a frente",
-  "estado": "diferencia",
-  "detalle": "2018: EAES 24.009; ETCL×12 23.033; CN/puesto 31.340; CN/ETC 36.523; base media ×12 21.284 | 2020: EAES 25.166; ETCL×12 22.843; CN/puesto 34.884; CN/ETC 38.771; base media ×12 23.108 | 2022: EAES 26.949; ETCL×12 25.382; CN/puesto 36.275; CN/ETC 40.496; base media ×12 23.980 | 2024: EAES 29.540; ETCL×12 27.622; CN/puesto 39.473; CN/ETC 44.103; base media ×12 26.461"
- },
- {
-  "id": "B3-razones",
-  "titulo": "Razones con la base máxima calculadas con data/parametros/base-maxima-rg",
-  "estado": "ok",
-  "detalle": "2024: EAES 0,521; ETCL 0,488; CN/puesto 0,697; base media 0,467"
- },
- {
-  "id": "C1-alt1",
-  "titulo": "Relación afiliados/pensiones: Alternativa 1 frente a las cuatro definiciones anteriores",
-  "estado": "diferencia",
-  "detalle": "2025: Alternativa 1 2.0741; anteriores: afiliados-diciembre-por-pensionista 2,3144; afiliados-diciembre-por-pension 2,0934; afiliados-media-anual-por-pensionista 2,2922; afiliados-media-anual-por-pension 2,0734"
- },
- {
-  "id": "C2-pen1-dic",
-  "titulo": "BEL PEN-1 (diciembre de 2025, total) frente al fichero REG de la Seguridad Social",
-  "estado": "ok",
-  "detalle": "BEL 10.434.860 (redondeado a centenas) frente a REG 10.434.856; diferencia 4 pensiones; importe medio BEL 1317.71 frente a REG 1317.71"
- },
- {
-  "id": "C2-pen31",
-  "titulo": "BEL PEN-31 (máxima y mínimas) frente a data/parametros",
-  "estado": "diferencia",
-  "detalle": "306 celdas comparables: 221 iguales y 85 distintas (años 2000-2022); 106 celdas sin dato en parametros (años 1990-1999 y otras columnas)"
- }
+  {
+    "id": "C2-pnc",
+    "titulo": "PNC a diciembre de 2025: pensiones de la nómina del IMSERSO frente a pensionistas del fichero técnico del IMSERSO",
+    "estado": "diferencia",
+    "detalle": "nómina 462.568 frente a fichero técnico 471.309 (diferencia 8.741)"
+  },
+  {
+    "id": "C2-pnc-serie",
+    "titulo": "PNC: pensiones de jubilación e invalidez a diciembre 2019-2024 y mensuales de 2025",
+    "estado": "ok",
+    "detalle": "2019 452.157; 2024 457.400; diciembre de 2025 462.568"
+  },
+  {
+    "id": "A1-eu-suma",
+    "titulo": "Eurostat: suma por edades frente al total publicado (1971-2025, ambos sexos)",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0 personas (ninguno); el total incluye personas de edad desconocida"
+  },
+  {
+    "id": "A6-ine-eurostat-total",
+    "titulo": "Población total a 1 de enero, INE frente a Eurostat (1971-2025)",
+    "estado": "diferencia",
+    "detalle": "23 de 55 años idénticos; diferencia máxima 116 personas en 2022 (0,0002 %)"
+  },
+  {
+    "id": "A6-ine-eurostat-grupos",
+    "titulo": "Población por grupos de edad (0-14, 15-64, 65+), INE frente a Eurostat (1971-2025)",
+    "estado": "diferencia",
+    "detalle": "diferencia máxima 108 personas (2022, grupo 15-64)"
+  },
+  {
+    "id": "A5-pob-partida",
+    "titulo": "Población de partida de las proyecciones (1-1-2026) frente a la ECP provisional",
+    "estado": "diferencia",
+    "detalle": "proyección 49.590.099 frente a ECP 49.596.376 (diferencia -6.277)"
+  },
+  {
+    "id": "A1-sexos",
+    "titulo": "Población: hombres + mujeres = ambos (1971-2026)",
+    "estado": "diferencia",
+    "detalle": "diferencia máxima 12 personas (el INE redondea cada serie por separado)"
+  },
+  {
+    "id": "A5-sexos",
+    "titulo": "Proyección: hombres + mujeres = ambos (2026-2076)",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0"
+  },
+  {
+    "id": "A6-proyecciones",
+    "titulo": "Población proyectada: INE (2026-2076), EUROPOP2025 y Ageing Report 2024 (informativo; son proyecciones con hipótesis distintas)",
+    "estado": "diferencia",
+    "detalle": "2030: INE 51,41 M, EUROPOP2025 50,92 M, Ageing Report 2024 49,32 M | 2040: INE 53,71 M, EUROPOP2025 52,83 M, Ageing Report 2024 50,28 M | 2050: INE 54,56 M, EUROPOP2025 53,79 M, Ageing Report 2024 50,43 M | 2060: INE 54,23 M, EUROPOP2025 53,33 M, Ageing Report 2024 49,22 M | 2070: INE 53,37 M, EUROPOP2025 52,22 M, Ageing Report 2024 47,69 M"
+  },
+  {
+    "id": "A2-INE-l0",
+    "titulo": "Mortalidad INE 1975-2024: lx(0) = 100.000",
+    "estado": "ok",
+    "detalle": "desviación máxima 0,000000"
+  },
+  {
+    "id": "A2-INE-qx",
+    "titulo": "Mortalidad INE 1975-2024: l(x+1) = lx × (1 − qx)",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0,000 personas sobre 14520 pares (peor caso (2021, 'ambos', 37); el INE redondea qx a 6 decimales)"
+  },
+  {
+    "id": "A2-INE-dx",
+    "titulo": "Mortalidad INE 1975-2024: dx = lx − l(x+1)",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0,000"
+  },
+  {
+    "id": "A2-INE-ex",
+    "titulo": "Mortalidad INE 1975-2024: ex = Tx / lx",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0,00000 años"
+  },
+  {
+    "id": "A2-pro-l0",
+    "titulo": "Mortalidad proyectada 2026-2075: lx(0) = 100.000",
+    "estado": "ok",
+    "detalle": "desviación máxima 0,000000"
+  },
+  {
+    "id": "A2-pro-qx",
+    "titulo": "Mortalidad proyectada 2026-2075: l(x+1) = lx × (1 − qx)",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0,050 personas sobre 15000 pares (peor caso (2072, 'ambos', 3); el INE redondea qx a 6 decimales)"
+  },
+  {
+    "id": "A2-pro-dx",
+    "titulo": "Mortalidad proyectada 2026-2075: dx = lx − l(x+1)",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0,000"
+  },
+  {
+    "id": "A2-pro-ex",
+    "titulo": "Mortalidad proyectada 2026-2075: ex = Tx / lx",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0,00000 años"
+  },
+  {
+    "id": "A2-e65",
+    "titulo": "Esperanza de vida a los 65 años por sexo: serie anual 1975-2024",
+    "estado": "ok",
+    "detalle": "2024: hombres 19,87, mujeres 23,64"
+  },
+  {
+    "id": "A3-icf",
+    "titulo": "Fecundidad: ICF = suma de las tasas por edad (1975-2024, ambas nacionalidades)",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0,0049 hijos por mujer"
+  },
+  {
+    "id": "A5-icf",
+    "titulo": "Proyección: ICF = suma de las tasas por edad (2026-2075)",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0,0000"
+  },
+  {
+    "id": "A4-saldo-em",
+    "titulo": "Migraciones EM 2008-2021: inmigración − emigración = saldo exterior (suma por edad)",
+    "estado": "diferencia",
+    "detalle": "diferencia máxima 8,00"
+  },
+  {
+    "id": "A4-saldo-emcr",
+    "titulo": "Migraciones EMCR 2021-2024: saldo derivado de la tabla por edad frente al saldo exterior publicado",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0,00 personas"
+  },
+  {
+    "id": "A4-ruptura-2021",
+    "titulo": "Migraciones: saldo exterior de 2021 en las dos series (ruptura de serie)",
+    "estado": "diferencia",
+    "detalle": "EM 148.070 frente a EMCR 191.094 personas"
+  },
+  {
+    "id": "B1-pib-corriente",
+    "titulo": "PIB corriente: INE frente a Eurostat",
+    "estado": "diferencia",
+    "detalle": "27 de 31 años idénticos; diferencia máxima 17,151 millones (3,508 %)"
+  },
+  {
+    "id": "B1-pib-volumen",
+    "titulo": "PIB en volumen (euros de 2020): INE (derivado) frente a Eurostat",
+    "estado": "ok",
+    "detalle": "diferencia relativa máxima 0,0001 %"
+  },
+  {
+    "id": "B1-deflactor",
+    "titulo": "Deflactor del PIB (2020 = 100): INE (derivado) frente a Eurostat",
+    "estado": "diferencia",
+    "detalle": "diferencia relativa máxima 3,3890 %"
+  },
+  {
+    "id": "B2-activos",
+    "titulo": "EPA: activos = ocupados + parados (miles, todos los trimestres, sexos y grupos)",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0,10 miles (redondeo del INE a 100 personas)"
+  },
+  {
+    "id": "B2-tasa-paro",
+    "titulo": "EPA: tasa de paro publicada = parados / activos",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0,50 puntos (grupos con pocos activos y redondeo de miles)"
+  },
+  {
+    "id": "B2-sexos",
+    "titulo": "EPA: activos hombres + mujeres = ambos sexos (total, todos los trimestres)",
+    "estado": "ok",
+    "detalle": "diferencia máxima 0,10 miles"
+  },
+  {
+    "id": "B3-orden",
+    "titulo": "Salario medio anual (euros): EAES, ETCL×12, CN por puesto y por ETC y base media de cotización×12, frente a frente",
+    "estado": "diferencia",
+    "detalle": "2018: EAES 24.009; ETCL×12 23.033; CN/puesto 31.340; CN/ETC 36.523; base media ×12 21.284 | 2020: EAES 25.166; ETCL×12 22.843; CN/puesto 34.884; CN/ETC 38.771; base media ×12 23.108 | 2022: EAES 26.949; ETCL×12 25.382; CN/puesto 36.275; CN/ETC 40.496; base media ×12 23.980 | 2024: EAES 29.540; ETCL×12 27.622; CN/puesto 39.473; CN/ETC 44.103; base media ×12 26.461"
+  },
+  {
+    "id": "B3-razones",
+    "titulo": "Razones con la base máxima calculadas con data/parametros/base-maxima-rg",
+    "estado": "ok",
+    "detalle": "2024: EAES 0,521; ETCL 0,488; CN/puesto 0,697; base media 0,467"
+  },
+  {
+    "id": "C1-alt1",
+    "titulo": "Relación afiliados/pensiones: Alternativa 1 frente a las cuatro definiciones anteriores",
+    "estado": "diferencia",
+    "detalle": "2025: Alternativa 1 2.0741; anteriores: afiliados-diciembre-por-pensionista 2,3144; afiliados-diciembre-por-pension 2,0934; afiliados-media-anual-por-pensionista 2,2922; afiliados-media-anual-por-pension 2,0734"
+  },
+  {
+    "id": "C2-pen1-dic",
+    "titulo": "BEL PEN-1 (diciembre de 2025, total) frente al fichero REG de la Seguridad Social",
+    "estado": "ok",
+    "detalle": "BEL 10.434.860 (redondeado a centenas) frente a REG 10.434.856; diferencia 4 pensiones; importe medio BEL 1317.71 frente a REG 1317.71"
+  },
+  {
+    "id": "C2-pen31",
+    "titulo": "BEL PEN-31 (máxima y mínimas) frente a data/parametros",
+    "estado": "diferencia",
+    "detalle": "306 celdas comparables: 221 iguales y 85 distintas (años 2000-2022); 106 celdas sin dato en parametros (años 1990-1999 y otras columnas)"
+  }
 ]

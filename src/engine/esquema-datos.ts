@@ -175,6 +175,18 @@ export const ArchivoDatos = z
 /** Referencia a un elemento de /data: «parametros/pension-maxima.json#2024». */
 export const PATRON_REFERENCIA = /^[a-z0-9-]+\/[a-z0-9-]+\.json#[a-z0-9]+(?:[-_.][a-z0-9]+)*$/;
 
+/**
+ * Estado de la revisión actuarial de una afirmación:
+ * `pendiente` (requiere criterio actuarial y no se ha revisado), `revisada`, `rechazada` o
+ * `no-requiere` (transcripción literal de una norma o de una cifra publicada, contrastada con su fuente).
+ */
+export const EstadoRevisionActuarial = z.enum([
+  'pendiente',
+  'revisada',
+  'rechazada',
+  'no-requiere',
+]);
+
 /** Afirmación factual del texto de la web y sus fuentes (docs/claims.json). */
 export const Afirmacion = z.strictObject({
   id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
@@ -187,15 +199,37 @@ export const Afirmacion = z.strictObject({
   fuentes: z.array(Fuente).min(1, { error: 'Cada afirmación necesita al menos una fuente' }),
   fetchedAt: FechaDescarga,
   estado: z.enum(['verificada', 'pendiente', 'retirada']),
-  revisionActuarial: z.enum(['pendiente', 'revisada', 'rechazada']),
+  /**
+   * Si se omite, vale `revisionActuarialPorDefecto` del registro: así el resto de afirmaciones se
+   * marca «no requiere revisión actuarial» sin tocarlas una a una.
+   */
+  revisionActuarial: EstadoRevisionActuarial.optional(),
+  /** Qué debe comprobar el actuario y con qué dato o fórmula (obligatoria si la revisión está pendiente). */
+  preguntaActuarial: textoObligatorio('preguntaActuarial').optional(),
   notas: z.string().trim().min(1).optional(),
 });
 
-export const RegistroAfirmaciones = z.strictObject({
-  version: z.literal(1),
-  descripcion: z.string().optional(),
-  claims: z.array(Afirmacion),
-});
+export const RegistroAfirmaciones = z
+  .strictObject({
+    version: z.literal(1),
+    descripcion: z.string().optional(),
+    /** Estado de revisión actuarial de las afirmaciones que no lo indican. Por defecto, `pendiente`. */
+    revisionActuarialPorDefecto: EstadoRevisionActuarial.optional(),
+    claims: z.array(Afirmacion),
+  })
+  .superRefine((registro, ctx) => {
+    const porDefecto = registro.revisionActuarialPorDefecto ?? 'pendiente';
+    registro.claims.forEach((claim, i) => {
+      const estado = claim.revisionActuarial ?? porDefecto;
+      if (estado === 'pendiente' && claim.preguntaActuarial === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          message: `La afirmación ${claim.id} está pendiente de revisión actuarial y no tiene preguntaActuarial`,
+          path: ['claims', i, 'preguntaActuarial'],
+        });
+      }
+    });
+  });
 
 // ---------------------------------------------------------------------------
 // Normativa: cronología de reformas y reglas de prestaciones

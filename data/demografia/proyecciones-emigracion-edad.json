@@ -1,0 +1,45 @@
+{
+  "tipo": "tabla",
+  "id": "proyecciones-emigracion-edad",
+  "title": "Emigración exterior proyectada por el INE 2026-2075 por año, sexo y edad",
+  "description": "Emigraciones con destino al extranjero proyectadas (edición 2026-2076, escenario principal «proyección a largo plazo») por edad simple (0 a 89 y «90 y más», edad 90) y sexo. Con proyecciones-inmigracion-edad permite calcular el saldo migratorio exterior por edad (las edades de 90 y más y de 100 y más no coinciden: 90 frente a 100).",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Edad; 90 = «90 y más»",
+      "unidad": "años"
+    },
+    {
+      "id": "personas",
+      "descripcion": "Emigración proyectada",
+      "unidad": "personas"
+    }
+  ],
+  "filas": 13650,
+  "source": {
+    "title": "Proyecciones de Población: emigraciones con destino al extranjero por sexo, edad y año (tabla 36651)",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36651",
+    "docId": "INE-36651"
+  },
+  "origenes": [
+    {
+      "period": "2075",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36651",
+      "sha256": "d3d0904b9ee68bda4d3afb8425f248fe11fcb9cbe80dc28887346ecf02ca6884"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Los códigos Tempus de la tabla indican la edición PROY24 y su fecha de modificación es de 2024, pero el horizonte (2026-2075) es el de la edición 2026-2076; ver proyecciones-poblacion."
+}

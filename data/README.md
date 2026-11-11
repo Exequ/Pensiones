@@ -10,7 +10,8 @@ fecha de descarga (`fetchedAt`).
 | `normativa/`     | Parámetros fijados por ley o reglamento (con referencia al BOE).  |
 | `parametros/`    | Parámetros anuales del sistema: bases, topes, revalorización…     |
 | `sistema/`       | Estadísticas del sistema: pensiones, gasto, ingresos, afiliación. |
-| `demografia/`    | Población, esperanza de vida y proyecciones.                      |
+| `demografia/`    | Población, mortalidad, fecundidad, migraciones y proyecciones.    |
+| `macro/`         | PIB, mercado de trabajo, salarios y tipos de interés.             |
 | `internacional/` | Indicadores comparables de otros países.                          |
 
 Los ejemplos de los tests están en `scripts/fixtures/` y **no** deben copiarse aquí.
@@ -84,6 +85,10 @@ La ejecución del presupuesto usa los rótulos de la fuente, que cambian entre a
 | `relacion-afiliados-pensiones`                            | Cuatro definiciones de afiliados por pensionista o por pensión                  | 2006-2025 | razón                   |
 
 Las **tablas** (`tipo: "tabla"`) son un CSV más un JSON hermano con el mismo nombre (título, descripción, columnas y unidades, fuente, `fetchedAt`, confianza y SHA-256 de cada fichero de origen). `validate:data` comprueba ambos. Las definiciones de cada dato están en las notas de su JSON; las limitaciones, en `docs/DECISIONES.md` y `docs/PENDIENTE_DATOS.md`.
+
+## Contenido (Fase 1B-3: `demografia/`, `macro/` y `sistema/`)
+
+Detalle fichero a fichero en [demografia/README.md](demografia/README.md) y [macro/README.md](macro/README.md). En `sistema/` se añaden: `relacion-afiliados-pensiones-alternativa-1` (afiliados a último día de diciembre entre pensiones en vigor a 1 de enero siguiente, 2008-2025), `mites-bel-pensiones` y `mites-bel-pen31-cuantias` (BEL del MITES, descarga manual), `mites-anuario-pen1-sexo-clase`, `imserso-pnc-evolucion`, `imserso-pnc-perfil-2025` y `gastos-impropios` (previsiones de 2020, confianza media o baja).
 
 ## Formato
 
