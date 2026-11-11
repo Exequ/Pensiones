@@ -367,6 +367,304 @@
         "matches": true,
         "notes": "Localización: Artículo 120.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por 100, siendo el 23,60 por 100 a cargo de la empresa y el 4,70 por 100 a cargo del trabajador.»"
       }
+    },
+    {
+      "id": "2013",
+      "value": 23.6,
+      "unit": "%",
+      "period": "2013",
+      "source": {
+        "title": "Orden ESS/56/2013, de 28 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional, contenidas en la Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-835",
+        "docId": "BOE-A-2013-835"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo total por contingencias comunes: 28,3 %.",
+      "quote": "contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa y el 4,70 por 100 a cargo del trabajador",
+      "location": "Artículo 4.a) (tipos de cotización)"
+    },
+    {
+      "id": "2014",
+      "value": 23.6,
+      "unit": "%",
+      "period": "2014",
+      "source": {
+        "title": "Orden ESS/106/2014, de 31 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional, contenidas en la Ley 22/2013, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-1051",
+        "docId": "BOE-A-2014-1051"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo total por contingencias comunes: 28,3 %.",
+      "quote": "contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa y el 4,70 por 100 a cargo del trabajador",
+      "location": "Artículo 4.a) (tipos de cotización)",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 22/2013, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2014.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13616",
+          "docId": "BOE-A-2013-13616"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: artículo de tipos de cotización."
+      }
+    },
+    {
+      "id": "2015",
+      "value": 23.6,
+      "unit": "%",
+      "period": "2015",
+      "source": {
+        "title": "Orden ESS/86/2015, de 30 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional, contenidas en la Ley 36/2014, de 26 de diciembre, de Presupuestos Generales del Estado para el año 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-847",
+        "docId": "BOE-A-2015-847"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo total por contingencias comunes: 28,3 %.",
+      "quote": "contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa y el 4,70 por 100 a cargo del trabajador",
+      "location": "Artículo 4.a) (tipos de cotización)",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 36/2014, de 26 de diciembre, de Presupuestos Generales del Estado para el año 2015.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13612",
+          "docId": "BOE-A-2014-13612"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: artículo de tipos de cotización."
+      }
+    },
+    {
+      "id": "2016",
+      "value": 23.6,
+      "unit": "%",
+      "period": "2016",
+      "source": {
+        "title": "Orden ESS/70/2016, de 29 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional, contenidas en la Ley 48/2015, de 29 de octubre, de Presupuestos Generales del Estado para el año 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-886",
+        "docId": "BOE-A-2016-886"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo total por contingencias comunes: 28,3 %.",
+      "quote": "contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa y el 4,70 por 100 a cargo del trabajador",
+      "location": "Artículo 4.a) (tipos de cotización)",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 48/2015, de 29 de octubre, de Presupuestos Generales del Estado para el año 2016.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-11644",
+          "docId": "BOE-A-2015-11644"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: artículo de tipos de cotización."
+      }
+    },
+    {
+      "id": "2017",
+      "value": 23.6,
+      "unit": "%",
+      "period": "2017",
+      "source": {
+        "title": "Orden ESS/106/2017, de 9 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-1369",
+        "docId": "BOE-A-2017-1369"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo total por contingencias comunes: 28,3 %.",
+      "quote": "contingencias comunes, el 28,30 por ciento, del que el 23,60 por ciento será a cargo de la empresa y el 4,70 por ciento a cargo del trabajador",
+      "location": "Artículo 4.a) (tipos de cotización)",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 3/2017, de 27 de junio, de Presupuestos Generales del Estado para el año 2017.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-7387",
+          "docId": "BOE-A-2017-7387"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: artículo de tipos de cotización."
+      }
+    },
+    {
+      "id": "2018",
+      "value": 23.6,
+      "unit": "%",
+      "period": "2018",
+      "source": {
+        "title": "Orden ESS/55/2018, de 26 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-1142",
+        "docId": "BOE-A-2018-1142"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo total por contingencias comunes: 28,3 %.",
+      "quote": "contingencias comunes, el 28,30 por ciento, del que el 23,60 por ciento será a cargo de la empresa y el 4,70 por ciento a cargo del trabajador",
+      "location": "Artículo 4.a) (tipos de cotización)",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 6/2018, de 3 de julio, de Presupuestos Generales del Estado para el año 2018.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-9268",
+          "docId": "BOE-A-2018-9268"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: artículo de tipos de cotización."
+      }
+    },
+    {
+      "id": "2019",
+      "value": 23.6,
+      "unit": "%",
+      "period": "2019",
+      "source": {
+        "title": "Orden TMS/83/2019, de 31 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2019.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2019-1366",
+        "docId": "BOE-A-2019-1366"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo total por contingencias comunes: 28,3 %.",
+      "quote": "contingencias comunes, el 28,30 por ciento, del que el 23,60 por ciento será a cargo de la empresa y el 4,70 por ciento a cargo del trabajador",
+      "location": "Artículo 4.a) (tipos de cotización)"
+    },
+    {
+      "id": "2021",
+      "value": 23.6,
+      "unit": "%",
+      "period": "2021",
+      "source": {
+        "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339",
+        "docId": "BOE-A-2020-17339"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo total por contingencias comunes: 28,3 %.",
+      "quote": "contingencias comunes el 28,30 por ciento, siendo el 23,60 por ciento a cargo de la empresa y el 4,70 por ciento a cargo del trabajador",
+      "location": "Artículo de la Ley 11/2020 sobre tipos de cotización del Régimen General"
+    },
+    {
+      "id": "2022",
+      "value": 23.6,
+      "unit": "%",
+      "period": "2022",
+      "source": {
+        "title": "Orden PCM/244/2022, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-5063",
+        "docId": "BOE-A-2022-5063"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo total por contingencias comunes: 28,3 %.",
+      "quote": "contingencias comunes, el 28,30 por ciento, del que el 23,60 por ciento será a cargo de la empresa y el 4,70 por ciento, a cargo del trabajador",
+      "location": "Artículo 4.a) (tipos de cotización)",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 22/2021, de 28 de diciembre, de Presupuestos Generales del Estado para el año 2022.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-21653",
+          "docId": "BOE-A-2021-21653"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: artículo de tipos de cotización."
+      }
+    },
+    {
+      "id": "2023",
+      "value": 23.6,
+      "unit": "%",
+      "period": "2023",
+      "source": {
+        "title": "Orden PCM/74/2023, de 30 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-2472",
+        "docId": "BOE-A-2023-2472"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo total por contingencias comunes: 28,3 %.",
+      "quote": "contingencias comunes, el 28,30 por ciento, del que el 23,60 por ciento será a cargo de la empresa y el 4,70 por ciento, a cargo del trabajador",
+      "location": "Artículo 4.a) (tipos de cotización)",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 31/2022, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2023.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22128",
+          "docId": "BOE-A-2022-22128"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: artículo de tipos de cotización."
+      }
+    },
+    {
+      "id": "2024",
+      "value": 23.6,
+      "unit": "%",
+      "period": "2024",
+      "source": {
+        "title": "Orden PJC/51/2024, de 29 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2024.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-1691",
+        "docId": "BOE-A-2024-1691"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo total por contingencias comunes: 28,3 %.",
+      "quote": "contingencias comunes, el 28,30 por ciento, del que el 23,60 por ciento será a cargo de la empresa y el 4,70 por ciento, a cargo del trabajador",
+      "location": "Artículo 4.a) (tipos de cotización)"
+    },
+    {
+      "id": "2025",
+      "value": 23.6,
+      "unit": "%",
+      "period": "2025",
+      "source": {
+        "title": "Orden PJC/178/2025, de 25 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-3780",
+        "docId": "BOE-A-2025-3780"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo total por contingencias comunes: 28,3 %.",
+      "quote": "contingencias comunes, el 28,30 por ciento, del que el 23,60 por ciento será a cargo de la empresa y el 4,70 por ciento, a cargo de la persona trabajadora",
+      "location": "Artículo 4.a) (tipos de cotización)"
+    },
+    {
+      "id": "2026",
+      "value": 23.6,
+      "unit": "%",
+      "period": "2026",
+      "source": {
+        "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+        "docId": "BOE-A-2026-7296"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo total por contingencias comunes: 28,3 %.",
+      "quote": "contingencias comunes, el 28,30 por ciento, del que el 23,60 por ciento será a cargo de la empresa y el 4,70 por ciento, a cargo de la persona trabajadora",
+      "location": "Artículo 4.a) (tipos de cotización)"
     }
   ]
 }

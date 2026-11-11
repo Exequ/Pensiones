@@ -235,6 +235,210 @@
         "matches": true,
         "notes": "Localización: Artículo 120.Dos.1.a). Cita: «Las bases mínimas de cotización, según categorías profesionales y grupos de cotización, desde 1 de enero de 2012 no se incrementarán con respecto de las vigentes en 31 de diciembre de 2011.»"
       }
+    },
+    {
+      "id": "2013",
+      "value": 753.0,
+      "unit": "euros/mes",
+      "period": "2013",
+      "source": {
+        "title": "Orden ESS/56/2013, de 28 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional, contenidas en la Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-835",
+        "docId": "BOE-A-2013-835"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Grupos 4 a 7 (idénticos).",
+      "quote": "7 | Auxiliares Administrativos | 753,00 | 3.425,70",
+      "location": "Artículo 3 (tabla de bases mínimas y máximas por grupo de cotización)"
+    },
+    {
+      "id": "2014",
+      "value": 753.0,
+      "unit": "euros/mes",
+      "period": "2014",
+      "source": {
+        "title": "Orden ESS/106/2014, de 31 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional, contenidas en la Ley 22/2013, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2014.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-1051",
+        "docId": "BOE-A-2014-1051"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Grupos 4 a 7 (idénticos).",
+      "quote": "7 | Auxiliares Administrativos | 753,00 | 3.597,00",
+      "location": "Artículo 3 (tabla de bases mínimas y máximas por grupo de cotización)"
+    },
+    {
+      "id": "2015",
+      "value": 756.6,
+      "unit": "euros/mes",
+      "period": "2015",
+      "source": {
+        "title": "Orden ESS/86/2015, de 30 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional, contenidas en la Ley 36/2014, de 26 de diciembre, de Presupuestos Generales del Estado para el año 2015.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-847",
+        "docId": "BOE-A-2015-847"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Grupos 4 a 7 (idénticos).",
+      "quote": "7 | Auxiliares Administrativos | 756,60 | 3.606,00",
+      "location": "Artículo 3 (tabla de bases mínimas y máximas por grupo de cotización)"
+    },
+    {
+      "id": "2016",
+      "value": 764.4,
+      "unit": "euros/mes",
+      "period": "2016",
+      "source": {
+        "title": "Orden ESS/70/2016, de 29 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional, contenidas en la Ley 48/2015, de 29 de octubre, de Presupuestos Generales del Estado para el año 2016.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2016-886",
+        "docId": "BOE-A-2016-886"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Grupos 4 a 7 (idénticos).",
+      "quote": "7 | Auxiliares Administrativos | 764,40 | 3.642,00",
+      "location": "Artículo 3 (tabla de bases mínimas y máximas por grupo de cotización)"
+    },
+    {
+      "id": "2017",
+      "value": 825.6,
+      "unit": "euros/mes",
+      "period": "2017",
+      "source": {
+        "title": "Orden ESS/106/2017, de 9 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2017.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2017-1369",
+        "docId": "BOE-A-2017-1369"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Grupos 4 a 7 (idénticos).",
+      "quote": "7 | Auxiliares Administrativos. | 825,60 | 3.751,20",
+      "location": "Artículo 3 (tabla de bases mínimas y máximas por grupo de cotización)"
+    },
+    {
+      "id": "2018",
+      "value": 858.6,
+      "unit": "euros/mes",
+      "period": "2018",
+      "source": {
+        "title": "Orden ESS/55/2018, de 26 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2018.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-1142",
+        "docId": "BOE-A-2018-1142"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Grupos 4 a 7 (idénticos).",
+      "quote": "7 | Auxiliares Administrativos | 858,60 | 3.751,20",
+      "location": "Artículo 3 (tabla de bases mínimas y máximas por grupo de cotización)"
+    },
+    {
+      "id": "2019",
+      "value": 1050.0,
+      "unit": "euros/mes",
+      "period": "2019",
+      "source": {
+        "title": "Orden TMS/83/2019, de 31 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2019.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2019-1366",
+        "docId": "BOE-A-2019-1366"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Grupos 4 a 7 (idénticos).",
+      "quote": "7 | Auxiliares Administrativos. | 1.050,00 | 4.070,10",
+      "location": "Artículo 3 (tabla de bases mínimas y máximas por grupo de cotización)"
+    },
+    {
+      "id": "2022",
+      "value": 1166.7,
+      "unit": "euros/mes",
+      "period": "2022",
+      "source": {
+        "title": "Orden PCM/244/2022, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-5063",
+        "docId": "BOE-A-2022-5063"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Grupos 4 a 7 (idénticos).",
+      "quote": "7 | Auxiliares Administrativos. | 1.166,70 | 4.139,40",
+      "location": "Artículo 3 (tabla de bases mínimas y máximas por grupo de cotización)"
+    },
+    {
+      "id": "2023",
+      "value": 1260.0,
+      "unit": "euros/mes",
+      "period": "2023",
+      "source": {
+        "title": "Orden PCM/313/2023, de 30 de marzo, por la que se modifica la Orden PCM/74/2023, de 30 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-8121",
+        "docId": "BOE-A-2023-8121"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Valor de la orden modificadora, con efectos desde el 1 de enero de 2023 (actualiza la base mínima al SMI de 2023); la orden original (BOE-A-2023-2472) recogía un valor menor para ese periodo. Grupos 4 a 7 (idénticos).",
+      "quote": "7 | Auxiliares Administrativos. | 1.260,00 | 4.495,50",
+      "location": "Artículo 3 de la Orden (texto modificado)"
+    },
+    {
+      "id": "2024",
+      "value": 1323.0,
+      "unit": "euros/mes",
+      "period": "2024",
+      "source": {
+        "title": "Orden PJC/281/2024, de 27 de marzo, por la que se modifica la Orden PJC/51/2024, de 29 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2024.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-6218",
+        "docId": "BOE-A-2024-6218"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Valor de la orden modificadora, con efectos desde el 1 de enero de 2024 (actualiza la base mínima al SMI de 2024); la orden original (BOE-A-2024-1691) recogía un valor menor para ese periodo. Grupos 4 a 7 (idénticos).",
+      "quote": "7 | Auxiliares Administrativos. | 1.323,00 | 4.720,50",
+      "location": "Artículo 3 de la Orden (texto modificado)"
+    },
+    {
+      "id": "2025",
+      "value": 1381.2,
+      "unit": "euros/mes",
+      "period": "2025",
+      "source": {
+        "title": "Orden PJC/178/2025, de 25 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-3780",
+        "docId": "BOE-A-2025-3780"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Grupos 4 a 7 (idénticos). Orden dictada bajo prórroga presupuestaria; ver nota del año.",
+      "quote": "7 | Auxiliares Administrativos. | 1.381,20 | 4.909,50",
+      "location": "Artículo 3 (tabla de bases mínimas y máximas por grupo de cotización)"
+    },
+    {
+      "id": "2026",
+      "value": 1424.4,
+      "unit": "euros/mes",
+      "period": "2026",
+      "source": {
+        "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+        "docId": "BOE-A-2026-7296"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Grupos 4 a 7 (idénticos). Orden dictada bajo prórroga presupuestaria; ver nota del año.",
+      "quote": "7 | Auxiliares Administrativos. | 1.424,40 | 5.101,20",
+      "location": "Artículo 3 (tabla de bases mínimas y máximas por grupo de cotización)"
     }
   ]
 }

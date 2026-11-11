@@ -1,0 +1,110 @@
+{
+  "tipo": "datos",
+  "id": "cuota-solidaridad-tipos",
+  "title": "Cotización adicional de solidaridad: tipos por tramo",
+  "description": "Tipo aplicable a la parte de la retribución que supera la base máxima, por tramos (hasta el 10 %, del 10 % al 50 % y más del 50 % del exceso), con el reparto empresa/trabajador. Orden anual de cotización 2025 y 2026.",
+  "data": [
+    {
+      "id": "2025-tramo-a",
+      "value": 0.92,
+      "unit": "%",
+      "period": "2025",
+      "source": {
+        "title": "Orden PJC/178/2025, de 25 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-3780",
+        "docId": "BOE-A-2025-3780"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo a) sobre la retribución que excede de la base máxima (euros/mes: 4.909,51 a 5.400,45). Reparto: 0,77 % empresa y 0,15 % trabajador.",
+      "quote": "Artículo 17. Cotización adicional de solidaridad. 1. Desde el 1 de enero de 2025, la cotización adicional de solidaridad en el Régimen General de la Seguridad Social se determinará, respecto a las retribuciones a que se refiere el artículo 19 bis del texto refundido de la Ley General de la Seguridad",
+      "location": "Artículo 17.1 (cotización adicional de solidaridad; art. 19 bis TRLGSS)"
+    },
+    {
+      "id": "2025-tramo-b",
+      "value": 1.0,
+      "unit": "%",
+      "period": "2025",
+      "source": {
+        "title": "Orden PJC/178/2025, de 25 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-3780",
+        "docId": "BOE-A-2025-3780"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo b) sobre la retribución que excede de la base máxima (euros/mes: 5.400,46 a 7.364,25). Reparto: 0,83 % empresa y 0,17 % trabajador.",
+      "quote": "Artículo 17. Cotización adicional de solidaridad. 1. Desde el 1 de enero de 2025, la cotización adicional de solidaridad en el Régimen General de la Seguridad Social se determinará, respecto a las retribuciones a que se refiere el artículo 19 bis del texto refundido de la Ley General de la Seguridad",
+      "location": "Artículo 17.1 (cotización adicional de solidaridad; art. 19 bis TRLGSS)"
+    },
+    {
+      "id": "2025-tramo-c",
+      "value": 1.17,
+      "unit": "%",
+      "period": "2025",
+      "source": {
+        "title": "Orden PJC/178/2025, de 25 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-3780",
+        "docId": "BOE-A-2025-3780"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo c) sobre la retribución que excede de la base máxima (euros/mes: más de 7.364,25). Reparto: 0,98 % empresa y 0,19 % trabajador.",
+      "quote": "Artículo 17. Cotización adicional de solidaridad. 1. Desde el 1 de enero de 2025, la cotización adicional de solidaridad en el Régimen General de la Seguridad Social se determinará, respecto a las retribuciones a que se refiere el artículo 19 bis del texto refundido de la Ley General de la Seguridad",
+      "location": "Artículo 17.1 (cotización adicional de solidaridad; art. 19 bis TRLGSS)"
+    },
+    {
+      "id": "2026-tramo-a",
+      "value": 1.15,
+      "unit": "%",
+      "period": "2026",
+      "source": {
+        "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+        "docId": "BOE-A-2026-7296"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo a) sobre la retribución que excede de la base máxima (euros/mes: 5.101,21 a 5.611,32). Reparto: 0,96 % empresa y 0,19 % trabajador.",
+      "quote": "Artículo 17. Cotización adicional de solidaridad. 1. Desde el 1 de enero de 2026, la cotización adicional de solidaridad en el Régimen General de la Seguridad Social se determinará, respecto a las retribuciones a que se refiere el artículo 19 bis del texto refundido de la Ley General de la Seguridad",
+      "location": "Artículo 17.1 (cotización adicional de solidaridad; art. 19 bis TRLGSS)"
+    },
+    {
+      "id": "2026-tramo-b",
+      "value": 1.25,
+      "unit": "%",
+      "period": "2026",
+      "source": {
+        "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+        "docId": "BOE-A-2026-7296"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo b) sobre la retribución que excede de la base máxima (euros/mes: 5.611,33 a 7.651,80). Reparto: 1,04 % empresa y 0,21 % trabajador.",
+      "quote": "Artículo 17. Cotización adicional de solidaridad. 1. Desde el 1 de enero de 2026, la cotización adicional de solidaridad en el Régimen General de la Seguridad Social se determinará, respecto a las retribuciones a que se refiere el artículo 19 bis del texto refundido de la Ley General de la Seguridad",
+      "location": "Artículo 17.1 (cotización adicional de solidaridad; art. 19 bis TRLGSS)"
+    },
+    {
+      "id": "2026-tramo-c",
+      "value": 1.46,
+      "unit": "%",
+      "period": "2026",
+      "source": {
+        "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+        "docId": "BOE-A-2026-7296"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo c) sobre la retribución que excede de la base máxima (euros/mes: más de 7.651,80). Reparto: 1,22 % empresa y 0,24 % trabajador.",
+      "quote": "Artículo 17. Cotización adicional de solidaridad. 1. Desde el 1 de enero de 2026, la cotización adicional de solidaridad en el Régimen General de la Seguridad Social se determinará, respecto a las retribuciones a que se refiere el artículo 19 bis del texto refundido de la Ley General de la Seguridad",
+      "location": "Artículo 17.1 (cotización adicional de solidaridad; art. 19 bis TRLGSS)"
+    }
+  ]
+}

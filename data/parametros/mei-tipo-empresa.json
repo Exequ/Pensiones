@@ -1,0 +1,143 @@
+{
+  "tipo": "datos",
+  "id": "mei-tipo-empresa",
+  "title": "MEI: parte a cargo de la empresa",
+  "description": "Puntos porcentuales del MEI a cargo de la empresa (DT 43.ª TRLGSS).",
+  "data": [
+    {
+      "id": "2023",
+      "value": 0.5,
+      "unit": "puntos porcentuales",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "En el año 2023, será de 0,60 puntos porcentuales, de los que el 0,50 corresponderá a la empresa y el 0,10 al trabajador.",
+      "location": "Disposición transitoria cuadragésima tercera TRLGSS (añadida por el RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Orden PCM/74/2023, de 30 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2023.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-2472",
+          "docId": "BOE-A-2023-2472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: artículo 4.c). Cita: «mecanismo de equidad intergeneracional, el 0,6 por ciento aplicable sobre la base de cotización por contingencias comunes, del que el 0,5 por ciento será a cargo de la empresa y el 0,1 por ciento, a cargo del trabajador»."
+      }
+    },
+    {
+      "id": "2024",
+      "value": 0.58,
+      "unit": "puntos porcentuales",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "En el año 2024, será de 0,70 puntos porcentuales, de los que el 0,58 corresponderá a la empresa y el 0,12 al trabajador.",
+      "location": "Disposición transitoria cuadragésima tercera TRLGSS (añadida por el RDL 2/2023)",
+      "crossCheck": {
+        "source": {
+          "title": "Orden PJC/51/2024, de 29 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2024.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-1691",
+          "docId": "BOE-A-2024-1691"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: artículo 4.c). Cita: «mecanismo de equidad intergeneracional, el 0,70 por ciento aplicable sobre la base de cotización por contingencias comunes, del que el 0,58 por ciento será a cargo de la empresa y el 0,12 por ciento, a cargo del trabajador»."
+      }
+    },
+    {
+      "id": "2025",
+      "value": 0.67,
+      "unit": "puntos porcentuales",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "En el año 2025, será de 0,80 puntos porcentuales, de los que el 0,67 corresponderá a la empresa y el 0,13 al trabajador.",
+      "location": "Disposición transitoria cuadragésima tercera TRLGSS (añadida por el RDL 2/2023)"
+    },
+    {
+      "id": "2026",
+      "value": 0.75,
+      "unit": "puntos porcentuales",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "En el año 2026, será de 0,90 puntos porcentuales, de los que el 0,75 corresponderá a la empresa y el 0,15 al trabajador.",
+      "location": "Disposición transitoria cuadragésima tercera TRLGSS (añadida por el RDL 2/2023)"
+    },
+    {
+      "id": "2027",
+      "value": 0.83,
+      "unit": "puntos porcentuales",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "En el año 2027, será de 1 punto porcentual, del que el 0,83 corresponderá a la empresa y el 0,17 al trabajador.",
+      "location": "Disposición transitoria cuadragésima tercera TRLGSS (añadida por el RDL 2/2023)"
+    },
+    {
+      "id": "2028",
+      "value": 0.92,
+      "unit": "puntos porcentuales",
+      "period": "2028",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "En el año 2028, será de 1,10 puntos porcentuales, de los que el 0,92 corresponderá a la empresa y el 0,18 al trabajador.",
+      "location": "Disposición transitoria cuadragésima tercera TRLGSS (añadida por el RDL 2/2023)"
+    },
+    {
+      "id": "2029",
+      "value": 1.0,
+      "unit": "puntos porcentuales",
+      "period": "2029",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Escala legal vigente en el texto consolidado. Desde 2030 hasta 2050 se mantiene el 1,2 con igual distribución.",
+      "quote": "En el año 2029, será de 1,2 puntos porcentuales, de los que el 1,00 corresponderá a la empresa y el 0,2 al trabajador.",
+      "location": "Disposición transitoria cuadragésima tercera TRLGSS (añadida por el RDL 2/2023)"
+    }
+  ]
+}
