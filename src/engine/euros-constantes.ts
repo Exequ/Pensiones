@@ -6,7 +6,7 @@
  * Se trabaja con índices anuales (media anual del IPC, por ejemplo). La serie
  * real llegará en la Fase 1 desde /data; aquí solo se define la interfaz.
  */
-import type { Serie } from './esquema-datos';
+import type { ArchivoDatos, Serie } from './esquema-datos.ts';
 
 export interface PuntoIndice {
   readonly anio: number;
@@ -120,6 +120,28 @@ export function serieIPCDesdeDatos(serie: Serie): SerieIPC {
         );
       }
       return { anio: Number(punto.period), indice: punto.value };
+    }),
+  };
+}
+
+/**
+ * Adapta un fichero de /data con un dato por año (p. ej.
+ * data/parametros/ipc-indice-medio-anual.json) a la interfaz del motor.
+ * Rechaza periodos no anuales y valores no numéricos.
+ */
+export function serieIPCDesdeArchivo(archivo: ArchivoDatos): SerieIPC {
+  const datos = archivo.data ?? [];
+  return {
+    id: archivo.id,
+    descripcion: archivo.title,
+    puntos: datos.map((dato) => {
+      if (!/^\d{4}$/.test(dato.period)) {
+        throw new RangeError(`${archivo.id}: periodo no anual (${dato.period})`);
+      }
+      if (typeof dato.value !== 'number') {
+        throw new RangeError(`${archivo.id}: valor no numérico en ${dato.period}`);
+      }
+      return { anio: Number(dato.period), indice: dato.value };
     }),
   };
 }

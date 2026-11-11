@@ -3,6 +3,53 @@
 Registro de decisiones tomadas cuando algo era ambiguo o había que elegir. La más reciente,
 arriba dentro de cada fase.
 
+## Fase 1A · Normativa y parámetros
+
+### Estructura de los datos
+
+- **Una serie por fichero** en `data/parametros/`, con un «Dato» por año en `data` (id = año).
+  Cada año lleva su propia fuente, porque la mayoría de parámetros se fijan en una norma anual
+  distinta (Orden de cotización, Real Decreto de revalorización, Real Decreto del SMI…). El
+  formato `series` (fuente única) se mantiene en el esquema pero no se usa en esta fase.
+- **Series anuales sin huecos**: el valor de cada año es el vigente el 1 de enero. Los cambios a
+  mitad de año (p. ej., la base mínima de julio de 2004) se explican en `notes` del año, no como
+  datos trimestrales, para que las series sean comparables y los tests de huecos tengan sentido.
+- **Campos nuevos opcionales en «Dato»**: `quote` (cita literal del documento), `location`
+  (artículo, anexo o tabla) y `crossCheck` (segunda fuente independiente, con `matches`). Los nombres
+  van en inglés, como el resto del esquema «Dato».
+- **Ficheros de normativa con tipo propio**: `tipo: "cronologia"` (normas con sus cambios
+  antes/después/transición) y `tipo: "prestaciones"` (reglas por prestación). Cada norma o prestación
+  lleva su fuente y fecha de descarga, de modo que cualquier número que contenga queda amparado.
+- **Unidades exactas**: edades y periodos de cotización en **meses** (780 = 65 años) para evitar
+  decimales inexactos; importes en euros/mes con la precisión de la norma; porcentajes en «%».
+- **Calendarios legales futuros**: cuando la ley fija valores para años posteriores a 2026 (edad
+  en 2027, periodo de cálculo hasta 2037), se incluyen con una nota de «calendario legal vigente».
+- **Pesetas (2000-2001)**: se registran los euros de la tabla de equivalencias de la propia norma;
+  el importe legal en pesetas se indica en `notes`.
+- **claims.json**: cada afirmación lleva `datos` (referencias `carpeta/fichero.json#id`, que el
+  validador comprueba que existan) y `revisionActuarial` (`pendiente` en esta fase).
+- **`npm run lint` incluye `validate:data`**.
+
+### Fuentes y método
+
+- **BOE como fuente primaria**: textos originales (`doc.php`) y consolidados (`act.php`). Para el
+  derecho histórico se usan las **redacciones anteriores** que ofrece el texto consolidado del BOE
+  (parámetro `p=AAAAMMDD` de cada artículo); así la edad y la carencia de 2000-2012 se citan con la
+  redacción vigente en cada tramo de años.
+- **IPC**: API del INE (Tempus3), serie IPC290751 (índice general nacional, base 2025), disponible
+  desde enero de 2002. El índice medio anual es la media aritmética de los 12 meses (el INE no lo
+  publica como serie propia en esta base) y la variación media anual se calcula a partir de él
+  (confianza «media»: puede diferir en una décima de la tasa publicada en su momento). La variación
+  de diciembre a diciembre se toma directamente de la serie IPC290750.
+- **Segunda fuente**: para bases, tipos, pensión máxima y mínimas se contrasta la norma anual con la
+  Ley de PGE del año (norma distinta e independiente en su tramitación); para edades, con la página de
+  requisitos de la Seguridad Social. Las diferencias se recogen en `docs/DISCREPANCIAS.md`.
+- **Subagentes**: la recogida se repartió por bloques; cada valor lleva la cita literal y el
+  documento descargado. Un subagente independiente verificó una muestra aleatoria
+  (`docs/INFORME_VERIFICACION.md`).
+- **Sitios no accesibles desde el entorno** (MITES, AIReF, Hacienda: la conexión se corta; Inclusión
+  e IMSERSO: 403): no se usan; se anotan en `docs/PENDIENTE_DATOS.md` cuando hacían falta.
+
 ## Fase 0 · Cimientos
 
 ### Herramientas y versiones

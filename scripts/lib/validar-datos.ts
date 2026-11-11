@@ -4,7 +4,12 @@
  */
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { ArchivoDatos, RegistroAfirmaciones } from '../../src/engine/esquema-datos.ts';
+import {
+  ArchivoCronologia,
+  ArchivoDatos,
+  ArchivoPrestaciones,
+  RegistroAfirmaciones,
+} from '../../src/engine/esquema-datos.ts';
 
 export interface ErrorValidacion {
   readonly fichero: string;
@@ -79,7 +84,14 @@ export function validarContenido(json: unknown, fichero: string): ErrorValidacio
     ruta: rutaATexto(ruta),
     mensaje: 'Dato numérico sin fuente verificable (falta source.url o fetchedAt)',
   }));
-  const resultado = ArchivoDatos.safeParse(json);
+  const tipo = esObjeto(json) ? json['tipo'] : undefined;
+  const esquema =
+    tipo === 'cronologia'
+      ? ArchivoCronologia
+      : tipo === 'prestaciones'
+        ? ArchivoPrestaciones
+        : ArchivoDatos;
+  const resultado = esquema.safeParse(json);
   if (!resultado.success) {
     for (const problema of resultado.error.issues) {
       errores.push({
@@ -131,19 +143,59 @@ export async function validarDirectorio(
   return { ficheros: ficheros.map((f) => path.relative(raiz, f)), errores };
 }
 
-/** Valida el registro de afirmaciones factuales (docs/claims.json). */
+/** Identificadores de los elementos de un fichero de /data (datos, series, normas, prestaciones). */
+export function idsDeArchivo(json: unknown): Set<string> {
+  const ids = new Set<string>();
+  if (!esObjeto(json)) return ids;
+  for (const coleccion of ['data', 'series', 'normas', 'prestaciones']) {
+    const elementos = json[coleccion];
+    if (!Array.isArray(elementos)) continue;
+    for (const elemento of elementos) {
+      if (esObjeto(elemento) && typeof elemento['id'] === 'string') ids.add(elemento['id']);
+    }
+  }
+  return ids;
+}
+
+/**
+ * Valida el registro de afirmaciones factuales (docs/claims.json) y, si se
+ * indica el directorio de datos, que cada referencia «carpeta/fichero.json#id» exista.
+ */
 export async function validarAfirmaciones(
   fichero: string,
   raiz = process.cwd(),
+  directorioDatos?: string,
 ): Promise<ErrorValidacion[]> {
   const relativo = path.relative(raiz, fichero);
   const leido = await leerJson(fichero, relativo);
   if ('error' in leido) return [leido.error];
   const resultado = RegistroAfirmaciones.safeParse(leido.json);
-  if (resultado.success) return [];
-  return resultado.error.issues.map((problema) => ({
-    fichero: relativo,
-    ruta: rutaATexto(problema.path as Ruta),
-    mensaje: problema.message,
-  }));
+  if (!resultado.success) {
+    return resultado.error.issues.map((problema) => ({
+      fichero: relativo,
+      ruta: rutaATexto(problema.path as Ruta),
+      mensaje: problema.message,
+    }));
+  }
+  if (directorioDatos === undefined) return [];
+  const errores: ErrorValidacion[] = [];
+  const cache = new Map<string, Set<string> | null>();
+  for (const [i, claim] of resultado.data.claims.entries()) {
+    for (const [j, referencia] of claim.datos.entries()) {
+      const [ruta = '', id = ''] = referencia.split('#');
+      if (!cache.has(ruta)) {
+        const leidoDato = await leerJson(path.join(directorioDatos, ruta), ruta);
+        cache.set(ruta, 'error' in leidoDato ? null : idsDeArchivo(leidoDato.json));
+      }
+      const ids = cache.get(ruta);
+      if (!ids?.has(id)) {
+        errores.push({
+          fichero: relativo,
+          ruta: `claims[${i}].datos[${j}]`,
+          mensaje: `La referencia ${referencia} no existe en /data`,
+        });
+      }
+    }
+  }
+  return errores;
 }

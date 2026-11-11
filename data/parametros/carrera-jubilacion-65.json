@@ -1,0 +1,413 @@
+{
+  "tipo": "datos",
+  "id": "carrera-jubilacion-65",
+  "title": "Cotización exigida para jubilarse a los 65 años",
+  "description": "Desde 2013, periodo cotizado (en meses) que permite acceder a la jubilación ordinaria a los 65 años; quien no lo alcanza necesita la edad de la serie edad-ordinaria-jubilacion. Fuente: disposición transitoria 7.ª del TRLGSS.",
+  "data": [
+    {
+      "id": "2013",
+      "value": 423,
+      "unit": "meses cotizados",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "35 años y 3 meses: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2013 | 35 años y 3 meses o más. | 65 años. | Menos de 35 años y 3 meses. | 65 años y 1 mes.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2014",
+      "value": 426,
+      "unit": "meses cotizados",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "35 años y 6 meses: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2014 | 35 años y 6 meses o más. | 65 años. | Menos de 35 años y 6 meses. | 65 años y 2 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2015",
+      "value": 429,
+      "unit": "meses cotizados",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "35 años y 9 meses: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2015 | 35 años y 9 meses o más. | 65 años. | Menos de 35 años y 9 meses. | 65 años y 3 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2016",
+      "value": 432,
+      "unit": "meses cotizados",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "36 años: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2016 | 36 años o más. | 65 años. | Menos de 36 años. | 65 años y 4 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2017",
+      "value": 435,
+      "unit": "meses cotizados",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "36 años y 3 meses: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2017 | 36 años y 3 meses o más. | 65 años. | Menos de 36 años y 3 meses. | 65 años y 5 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2018",
+      "value": 438,
+      "unit": "meses cotizados",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "36 años y 6 meses: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2018 | 36 años y 6 meses o más. | 65 años. | Menos de 36 años y 6 meses. | 65 años y 6 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2019",
+      "value": 441,
+      "unit": "meses cotizados",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "36 años y 9 meses: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2019 | 36 años y 9 meses o más. | 65 años. | Menos de 36 años y 9 meses. | 65 años y 8 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2020",
+      "value": 444,
+      "unit": "meses cotizados",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "37 años: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2020 | 37 años o más. | 65 años. | Menos de 37 años. | 65 años y 10 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2021",
+      "value": 447,
+      "unit": "meses cotizados",
+      "period": "2021",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "37 años y 3 meses: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2021 | 37 años y 3 meses o más. | 65 años. | Menos de 37 años y 3 meses. | 66 años.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2022",
+      "value": 450,
+      "unit": "meses cotizados",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "37 años y 6 meses: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2022 | 37 años y 6 meses o más. | 65 años. | Menos de 37 años y 6 meses. | 66 años y 2 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2023",
+      "value": 453,
+      "unit": "meses cotizados",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "37 años y 9 meses: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2023 | 37 años y 9 meses o más. | 65 años. | Menos de 37 años y 9 meses. | 66 años y 4 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2024",
+      "value": 456,
+      "unit": "meses cotizados",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "38 años: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2024 | 38 años o más. | 65 años. | Menos de 38 años. | 66 años y 6 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2025",
+      "value": 459,
+      "unit": "meses cotizados",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "38 años y 3 meses: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2025 | 38 años y 3 meses o más. | 65 años. | Menos de 38 años y 3 meses. | 66 años y 8 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2026",
+      "value": 459,
+      "unit": "meses cotizados",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "38 años y 3 meses: periodo cotizado que permite jubilarse a los 65 años ese año.",
+      "quote": "2026 | 38 años y 3 meses o más. | 65 años. | Menos de 38 años y 3 meses. | 66 años y 10 meses.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    },
+    {
+      "id": "2027",
+      "value": 462,
+      "unit": "meses cotizados",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "38 años y 6 meses: periodo cotizado que permite jubilarse a los 65 años ese año. Valor que rige «a partir del año 2027» según la DT 7.ª (calendario legal vigente).",
+      "quote": "A partir del año 2027 | 38 años y 6 meses o más. | 65 años. | Menos de 38 años y 6 meses. | 67 años.",
+      "location": "disposición transitoria 7.ª TRLGSS",
+      "crossCheck": {
+        "source": {
+          "title": "Jubilación ordinaria. Requisitos (Régimen General)",
+          "publisher": "Seguridad Social (INSS)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "La tabla de aplicación gradual de la página de requisitos de la Seguridad Social coincide con la DT 7.ª."
+      }
+    }
+  ]
+}

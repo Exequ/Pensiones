@@ -1,0 +1,376 @@
+{
+  "tipo": "datos",
+  "id": "ipc-variacion-media-anual",
+  "title": "IPC: variación de la media anual",
+  "description": "Variación porcentual del índice medio anual respecto al año anterior, calculada a partir de ipc-indice-medio-anual.",
+  "data": [
+    {
+      "id": "2003",
+      "value": 3.0,
+      "unit": "%",
+      "period": "2003",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2004",
+      "value": 3.0,
+      "unit": "%",
+      "period": "2004",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2005",
+      "value": 3.4,
+      "unit": "%",
+      "period": "2005",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2006",
+      "value": 3.5,
+      "unit": "%",
+      "period": "2006",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2007",
+      "value": 2.8,
+      "unit": "%",
+      "period": "2007",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2008",
+      "value": 4.1,
+      "unit": "%",
+      "period": "2008",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2009",
+      "value": -0.3,
+      "unit": "%",
+      "period": "2009",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2010",
+      "value": 1.8,
+      "unit": "%",
+      "period": "2010",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2011",
+      "value": 3.2,
+      "unit": "%",
+      "period": "2011",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2012",
+      "value": 2.4,
+      "unit": "%",
+      "period": "2012",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2013",
+      "value": 1.4,
+      "unit": "%",
+      "period": "2013",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2014",
+      "value": -0.2,
+      "unit": "%",
+      "period": "2014",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2015",
+      "value": -0.5,
+      "unit": "%",
+      "period": "2015",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2016",
+      "value": -0.2,
+      "unit": "%",
+      "period": "2016",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2017",
+      "value": 2.0,
+      "unit": "%",
+      "period": "2017",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2018",
+      "value": 1.7,
+      "unit": "%",
+      "period": "2018",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2019",
+      "value": 0.7,
+      "unit": "%",
+      "period": "2019",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2020",
+      "value": -0.3,
+      "unit": "%",
+      "period": "2020",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2021",
+      "value": 3.1,
+      "unit": "%",
+      "period": "2021",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2022",
+      "value": 8.4,
+      "unit": "%",
+      "period": "2022",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2023",
+      "value": 3.5,
+      "unit": "%",
+      "period": "2023",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2024",
+      "value": 2.8,
+      "unit": "%",
+      "period": "2024",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    },
+    {
+      "id": "2025",
+      "value": 2.7,
+      "unit": "%",
+      "period": "2025",
+      "source": {
+        "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+        "docId": "IPC290751"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Variación de la media anual calculada a partir de los índices medios. Puede diferir en una décima de la tasa media anual publicada por el INE en su momento (cambios de base y redondeos).",
+      "location": "calculado a partir de la serie IPC290751"
+    }
+  ]
+}

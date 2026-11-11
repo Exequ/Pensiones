@@ -1,0 +1,467 @@
+{
+  "tipo": "datos",
+  "id": "carencia-jubilacion",
+  "title": "Periodo mínimo de cotización (carencia) de la jubilación",
+  "description": "Periodo mínimo de cotización exigido para la pensión contributiva de jubilación del Régimen General, en meses. Requisito adicional: al menos 2 años dentro de los 15 inmediatamente anteriores al hecho causante.",
+  "data": [
+    {
+      "id": "2000",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2000",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 16/07/1997 (en vigor desde el 05/08/1997)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=19970716",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994"
+    },
+    {
+      "id": "2001",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 16/07/1997 (en vigor desde el 05/08/1997)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=19970716",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994"
+    },
+    {
+      "id": "2002",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 31/12/2001 (en vigor desde el 01/01/2002)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20011231",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994"
+    },
+    {
+      "id": "2003",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2003",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 13/07/2002 (en vigor desde el 14/07/2002)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20020713",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994"
+    },
+    {
+      "id": "2004",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2004",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 11/12/2003 (en vigor desde el 01/01/2004)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20031211",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994"
+    },
+    {
+      "id": "2005",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2005",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 11/12/2003 (en vigor desde el 01/01/2004)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20031211",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994"
+    },
+    {
+      "id": "2006",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2006",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 11/12/2003 (en vigor desde el 01/01/2004)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20031211",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994"
+    },
+    {
+      "id": "2007",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2007",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 11/12/2003 (en vigor desde el 01/01/2004)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20031211",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994"
+    },
+    {
+      "id": "2008",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2008",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 05/12/2007 (en vigor desde el 01/01/2008)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20071205",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994"
+    },
+    {
+      "id": "2009",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2009",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 05/12/2007 (en vigor desde el 01/01/2008)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20071205",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994"
+    },
+    {
+      "id": "2010",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2010",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 05/12/2007 (en vigor desde el 01/01/2008)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20071205",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994"
+    },
+    {
+      "id": "2011",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2011",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 05/12/2007 (en vigor desde el 01/01/2008)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20071205",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994"
+    },
+    {
+      "id": "2012",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2012",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 05/12/2007 (en vigor desde el 01/01/2008)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20071205",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994"
+    },
+    {
+      "id": "2013",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 02/08/2011 (en vigor a partir del 01/01/2013)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20110802",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994 (redacción de la Ley 27/2011)"
+    },
+    {
+      "id": "2014",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2014",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 02/08/2011 (en vigor a partir del 01/01/2013)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20110802",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994 (redacción de la Ley 27/2011)"
+    },
+    {
+      "id": "2015",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2015",
+      "source": {
+        "title": "Real Decreto Legislativo 1/1994, de 20 de junio, Ley General de la Seguridad Social: artículo 161, redacción publicada el 02/08/2011 (en vigor a partir del 01/01/2013)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=20110802",
+        "docId": "BOE-A-1994-14960"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 161.1.b) LGSS 1994 (redacción de la Ley 27/2011)"
+    },
+    {
+      "id": "2016",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 205.1.b) TRLGSS"
+    },
+    {
+      "id": "2017",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2017",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 205.1.b) TRLGSS"
+    },
+    {
+      "id": "2018",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 205.1.b) TRLGSS"
+    },
+    {
+      "id": "2019",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 205.1.b) TRLGSS"
+    },
+    {
+      "id": "2020",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 205.1.b) TRLGSS"
+    },
+    {
+      "id": "2021",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2021",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 205.1.b) TRLGSS"
+    },
+    {
+      "id": "2022",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 205.1.b) TRLGSS"
+    },
+    {
+      "id": "2023",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 205.1.b) TRLGSS"
+    },
+    {
+      "id": "2024",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 205.1.b) TRLGSS"
+    },
+    {
+      "id": "2025",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 205.1.b) TRLGSS"
+    },
+    {
+      "id": "2026",
+      "value": 180,
+      "unit": "meses cotizados",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "15 años, de los cuales al menos 2 dentro de los 15 inmediatamente anteriores al hecho causante.",
+      "quote": "b) Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho.",
+      "location": "art. 205.1.b) TRLGSS"
+    }
+  ]
+}

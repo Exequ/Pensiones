@@ -1,0 +1,372 @@
+{
+  "tipo": "datos",
+  "id": "tipo-cc-trabajador",
+  "title": "Tipo de cotización por contingencias comunes: trabajador",
+  "description": "Tipo de cotización a cargo de la persona trabajadora por contingencias comunes en el Régimen General.",
+  "data": [
+    {
+      "id": "2000",
+      "value": 4.7,
+      "unit": "%",
+      "period": "2000",
+      "source": {
+        "title": "Orden de 28 de enero de 2000 por la que se desarrollan las normas de cotización a la Seguridad Social, Desempleo, Fondo de Garantía Salarial y Formación Profesional, contenidas en la Ley 54/1999, de 29 de diciembre, de Presupuestos Generales del Estado para el año 2000.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-1799",
+        "docId": "BOE-A-2000-1799"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo por contingencias comunes del Régimen General; tipo total 28,3 % (empresa 23,6 + trabajador 4,7).",
+      "quote": "1. Para las contingencias comunes, el 28,3 por 100, del que el 23,6 por 100 será a cargo de la empresa, y el 4,7 por 100 a cargo del trabajador.",
+      "location": "Artículo 4.1",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 54/1999, de 29 de diciembre, de Presupuestos Generales del Estado para el año 2000.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1999-24785",
+          "docId": "BOE-A-1999-24785"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Artículo 95.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por 100, siendo el 23,6 por 100 a cargo de la empresa y el 4,7 por 100 a cargo del trabajador.»"
+      }
+    },
+    {
+      "id": "2001",
+      "value": 4.7,
+      "unit": "%",
+      "period": "2001",
+      "source": {
+        "title": "Orden de 29 de enero de 2001 por la que se desarrollan las normas de cotización a la Seguridad Social, Desempleo, Fondo de Garantía Salarial y Formación Profesional, contenidas en la Ley 13/2000, de 28 de diciembre, de Presupuestos Generales del Estado para el año 2001.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-2156",
+        "docId": "BOE-A-2001-2156"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo por contingencias comunes del Régimen General; tipo total 28,3 % (empresa 23,6 + trabajador 4,7).",
+      "quote": "1. Para las contingencias comunes, el 28,3 por 100, del que el 23,6 por 100 será a cargo de la empresa y el 4,7 por 100 a cargo del trabajador.",
+      "location": "Artículo 4.1",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 13/2000, de 28 de diciembre, de Presupuestos Generales del Estado para el año 2001.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2000-24265",
+          "docId": "BOE-A-2000-24265"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Artículo 87.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por 100, siendo el 23,6 por 100 a cargo de la empresa y el 4,7 por 100 a cargo del trabajador.»"
+      }
+    },
+    {
+      "id": "2002",
+      "value": 4.7,
+      "unit": "%",
+      "period": "2002",
+      "source": {
+        "title": "Orden TAS/192/2002, de 31 de enero, por la que se desarrollan las normas de cotización a la Seguridad Social, Desempleo, Fondo de Garantía Salarial y Formación Profesional, contenidas en la Ley 23/2001, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2002.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-2195",
+        "docId": "BOE-A-2002-2195"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo por contingencias comunes del Régimen General; tipo total 28,3 % (empresa 23,6 + trabajador 4,7). Corrección(es) de errores publicadas (BOE-A-2002-3601, BOE-A-2002-5470) revisadas: no afectan a los artículos 2 a 4.",
+      "quote": "1. Para las contingencias comunes, el 28,3 por 100, del que el 23,6 por 100 será a cargo de la empresa, y el 4,7 por 100 a cargo del trabajador.",
+      "location": "Artículo 4.1",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 23/2001, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2002.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24964",
+          "docId": "BOE-A-2001-24964"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Artículo 89.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por 100, siendo el 23,60 por 100 a cargo de la empresa y el 4,70 por 100 a cargo del trabajador.»"
+      }
+    },
+    {
+      "id": "2003",
+      "value": 4.7,
+      "unit": "%",
+      "period": "2003",
+      "source": {
+        "title": "Orden TAS/118/2003, de 31 de enero, por la que se desarrollan las normas de cotización a la Seguridad Social, Desempleo, Fondo de Garantía Salarial y Formación Profesional, contenidas en la Ley 52/2002, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2003.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2003-2099",
+        "docId": "BOE-A-2003-2099"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo por contingencias comunes del Régimen General; tipo total 28,30 % (empresa 23,60 + trabajador 4,70).",
+      "quote": "1. Para las contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa y el 4,70 por 100 a cargo del trabajador.",
+      "location": "Artículo 4.1",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 52/2002, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2003.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-25411",
+          "docId": "BOE-A-2002-25411"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Artículo 81.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por 100, siendo el 23,60 por 100 a cargo de la empresa y el 4,70 por 100 a cargo del trabajador.»"
+      }
+    },
+    {
+      "id": "2004",
+      "value": 4.7,
+      "unit": "%",
+      "period": "2004",
+      "source": {
+        "title": "Orden TAS/368/2004, de 12 de febrero, por la que se desarrollan las normas de cotización a la Seguridad Social, Desempleo, Fondo de Garantía Salarial y Formación Profesional, contenidas en la Ley 61/2003, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2004.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-3062",
+        "docId": "BOE-A-2004-3062"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo por contingencias comunes del Régimen General; tipo total 28,30 % (empresa 23,60 + trabajador 4,70).",
+      "quote": "1. Para las contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa, y el 4,70 por 100 a cargo del trabajador.",
+      "location": "Artículo 4.1",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 61/2003, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2004.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2003-23935",
+          "docId": "BOE-A-2003-23935"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Artículo 97.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por ciento, siendo el 23,60 por ciento a cargo de la empresa y el 4,70 por ciento a cargo del trabajador.»"
+      }
+    },
+    {
+      "id": "2005",
+      "value": 4.7,
+      "unit": "%",
+      "period": "2005",
+      "source": {
+        "title": "Orden TAS/77/2005, de 18 de enero, por la que se desarrollan las normas de cotización a la Seguridad Social, Desempleo, Fondo de Garantía Salarial y Formación Profesional, contenidas en la Ley 2/2004, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2005.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-1412",
+        "docId": "BOE-A-2005-1412"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo por contingencias comunes del Régimen General; tipo total 28,30 % (empresa 23,60 + trabajador 4,70).",
+      "quote": "1. Para las contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa, y el 4,70 por 100 a cargo del trabajador.",
+      "location": "Artículo 4.1",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 2/2004, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2005.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-21688",
+          "docId": "BOE-A-2004-21688"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Artículo 100.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por 100, siendo el 23,60 por 100 a cargo de la empresa y el 4,70 por 100 a cargo del trabajador.»"
+      }
+    },
+    {
+      "id": "2006",
+      "value": 4.7,
+      "unit": "%",
+      "period": "2006",
+      "source": {
+        "title": "Orden TAS/29/2006, de 18 de enero, por la que se desarrollan las normas de cotización a la Seguridad Social, Desempleo, Fondo de Garantía Salarial y Formación Profesional, contenidas en la Ley 30/2005, de 29 de diciembre, de Presupuestos Generales del Estado para el año 2006.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-842",
+        "docId": "BOE-A-2006-842"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo por contingencias comunes del Régimen General; tipo total 28,30 % (empresa 23,60 + trabajador 4,70).",
+      "quote": "1. Para las contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa, y el 4,70 por 100 a cargo del trabajador.",
+      "location": "Artículo 4.1",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 30/2005, de 29 de diciembre, de Presupuestos Generales del Estado para el año 2006.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2005-21525",
+          "docId": "BOE-A-2005-21525"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Artículo 110.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por ciento, siendo el 23,60 por ciento a cargo de la empresa y el 4,70 por ciento a cargo del trabajador.»"
+      }
+    },
+    {
+      "id": "2007",
+      "value": 4.7,
+      "unit": "%",
+      "period": "2007",
+      "source": {
+        "title": "Orden TAS/31/2007, de 16 de enero, por la que se desarrollan las normas de cotización a la Seguridad Social, Desempleo, Fondo de Garantía Salarial y Formación Profesional, contenidas en la Ley 42/2006, de 28 de diciembre, de Presupuestos Generales del Estado para el año 2007.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2007-1113",
+        "docId": "BOE-A-2007-1113"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo por contingencias comunes del Régimen General; tipo total 28,30 % (empresa 23,60 + trabajador 4,70).",
+      "quote": "1. Para las contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa y el 4,70 por 100 a cargo del trabajador.",
+      "location": "Artículo 4.1",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 42/2006, de 28 de diciembre, de Presupuestos Generales del Estado para el año 2007.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2006-22865",
+          "docId": "BOE-A-2006-22865"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Artículo 115.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por ciento, siendo el 23,60 por ciento a cargo de la empresa y el 4,70 por ciento a cargo del trabajador.»"
+      }
+    },
+    {
+      "id": "2008",
+      "value": 4.7,
+      "unit": "%",
+      "period": "2008",
+      "source": {
+        "title": "Orden TAS/76/2008, de 22 de enero, por la que se desarrollan las normas de cotización a la Seguridad Social, Desempleo, Fondo de Garantía Salarial y Formación Profesional, contenidas en la Ley 51/2007, de 26 de diciembre, de Presupuestos Generales del Estado para el año 2008.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-1466",
+        "docId": "BOE-A-2008-1466"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo por contingencias comunes del Régimen General; tipo total 28,30 % (empresa 23,60 + trabajador 4,70). Corrección(es) de errores publicadas (BOE-A-2008-2334) revisadas: no afectan a los artículos 2 a 4.",
+      "quote": "1. Para las contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa y el 4,70 por 100 a cargo del trabajador.",
+      "location": "Artículo 4.1",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 51/2007, de 26 de diciembre, de Presupuestos Generales del Estado para el año 2008.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2007-22295",
+          "docId": "BOE-A-2007-22295"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Artículo 122.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por ciento, siendo el 23,60 por ciento a cargo de la empresa y el 4,70 por ciento a cargo del trabajador.»"
+      }
+    },
+    {
+      "id": "2009",
+      "value": 4.7,
+      "unit": "%",
+      "period": "2009",
+      "source": {
+        "title": "Orden TIN/41/2009, de 20 de enero, por la que se desarrollan las normas de cotización a la Seguridad Social, Desempleo, Fondo de Garantía Salarial y Formación Profesional, contenidas en la Ley 2/2008, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2009.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-1169",
+        "docId": "BOE-A-2009-1169"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo por contingencias comunes del Régimen General; tipo total 28,30 % (empresa 23,60 + trabajador 4,70). Corrección(es) de errores publicadas (BOE-A-2009-2322) revisadas: no afectan a los artículos 2 a 4.",
+      "quote": "1. Para las contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa y el 4,70 por 100 a cargo del trabajador.",
+      "location": "Artículo 4.1",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 2/2008, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2009.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20744",
+          "docId": "BOE-A-2008-20744"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Artículo 120.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por ciento, siendo el 23,60 por ciento a cargo de la empresa y el 4,70 por ciento a cargo del trabajador.»"
+      }
+    },
+    {
+      "id": "2010",
+      "value": 4.7,
+      "unit": "%",
+      "period": "2010",
+      "source": {
+        "title": "Orden TIN/25/2010, de 12 de enero, por la que se desarrollan las normas de cotización a la Seguridad Social, Desempleo, Fondo de Garantía Salarial y Formación Profesional, contenidas en la Ley 26/2009, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2010.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-729",
+        "docId": "BOE-A-2010-729"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo por contingencias comunes del Régimen General; tipo total 28,30 % (empresa 23,60 + trabajador 4,70). Corrección(es) de errores publicadas (BOE-A-2010-1703) revisadas: no afectan a los artículos 2 a 4.",
+      "quote": "1. Para las contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa y el 4,70 por 100 a cargo del trabajador.",
+      "location": "Artículo 4.1",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 26/2009, de 23 de diciembre, de Presupuestos Generales del Estado para el año 2010.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-20765",
+          "docId": "BOE-A-2009-20765"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Artículo 129.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por ciento, siendo el 23,60 por ciento a cargo de la empresa y el 4,70 por ciento a cargo del trabajador.»"
+      }
+    },
+    {
+      "id": "2011",
+      "value": 4.7,
+      "unit": "%",
+      "period": "2011",
+      "source": {
+        "title": "Orden TIN/41/2011, de 18 de enero, por la que se desarrollan las normas de cotización a la Seguridad Social, Desempleo, Fondo de Garantía Salarial y Formación Profesional, contenidas en la Ley 39/2010, de 22 de diciembre, de Presupuestos Generales del Estado para el año 2011.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-1009",
+        "docId": "BOE-A-2011-1009"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo por contingencias comunes del Régimen General; tipo total 28,30 % (empresa 23,60 + trabajador 4,70).",
+      "quote": "1. Para las contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa y el 4,70 por 100 a cargo del trabajador.",
+      "location": "Artículo 4.1",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 39/2010, de 22 de diciembre, de Presupuestos Generales del Estado para el año 2011.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-19703",
+          "docId": "BOE-A-2010-19703"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Artículo 132.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por ciento, siendo el 23,60 por ciento a cargo de la empresa y el 4,70 por ciento a cargo del trabajador.»"
+      }
+    },
+    {
+      "id": "2012",
+      "value": 4.7,
+      "unit": "%",
+      "period": "2012",
+      "source": {
+        "title": "Orden ESS/184/2012, de 2 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2012.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-1791",
+        "docId": "BOE-A-2012-1791"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tipo por contingencias comunes del Régimen General; tipo total 28,30 % (empresa 23,60 + trabajador 4,70).",
+      "quote": "1. Para las contingencias comunes, el 28,30 por 100, del que el 23,60 por 100 será a cargo de la empresa y el 4,70 por 100 a cargo del trabajador.",
+      "location": "Artículo 4.1",
+      "crossCheck": {
+        "source": {
+          "title": "Ley 2/2012, de 29 de junio, de Presupuestos Generales del Estado para el año 2012.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-8745",
+          "docId": "BOE-A-2012-8745"
+        },
+        "fetchedAt": "2026-11-11",
+        "matches": true,
+        "notes": "Localización: Artículo 120.Dos.2.a). Cita: «Para las contingencias comunes el 28,30 por 100, siendo el 23,60 por 100 a cargo de la empresa y el 4,70 por 100 a cargo del trabajador.»"
+      }
+    }
+  ]
+}
