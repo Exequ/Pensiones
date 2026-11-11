@@ -1,0 +1,39 @@
+{
+  "id": "ejemplo-valido",
+  "title": "Fichero de ejemplo válido",
+  "description": "Cifras inventadas para probar el validador.",
+  "data": [
+    {
+      "id": "importe-ejemplo",
+      "value": 1234.5,
+      "unit": "euros/mes",
+      "period": "2024",
+      "source": {
+        "title": "Documento de ejemplo",
+        "publisher": "Organismo de ejemplo",
+        "url": "https://example.org/documento",
+        "docId": "EJ-1"
+      },
+      "fetchedAt": "2024-05-01",
+      "confidence": "alta"
+    }
+  ],
+  "series": [
+    {
+      "id": "serie-ejemplo",
+      "title": "Serie de ejemplo",
+      "unit": "índice",
+      "source": {
+        "title": "Serie de ejemplo",
+        "publisher": "Organismo de ejemplo",
+        "url": "https://example.org/serie"
+      },
+      "fetchedAt": "2024-05-01T09:30:00Z",
+      "confidence": "media",
+      "points": [
+        { "period": "2023-T4", "value": 101.2 },
+        { "period": "2024-T1", "value": 102.4 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "ejemplo-sin-fecha",
+  "title": "Fichero con una fuente sin fecha de descarga",
+  "description": "La fuente tiene URL pero no consta cuándo se descargó.",
+  "data": [
+    {
+      "id": "importe-sin-fecha",
+      "value": 99,
+      "unit": "euros/mes",
+      "period": "2024",
+      "source": {
+        "title": "Documento de ejemplo",
+        "publisher": "Organismo de ejemplo",
+        "url": "https://example.org/documento"
+      },
+      "confidence": "baja"
+    }
+  ]
+}
