@@ -47,8 +47,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # Sin --with-deps: la imagen del ejecutor ya trae las librerías de Chromium y apt-get puede no
+      # resolver los espejos de Ubuntu (el paso fallaba tras ~10 min solo por instalar fuentes CJK).
       - name: Instalar Chromium
-        run: npx playwright install --with-deps chromium
+        timeout-minutes: 5
+        run: npx playwright install chromium
       - name: Pruebas de interfaz
         run: npm run test:e2e
       - name: Capturas (1360 px y 390 px)
