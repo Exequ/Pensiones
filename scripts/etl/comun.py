@@ -5,6 +5,7 @@ indicado en la variable de entorno DESCARGAS y escriben JSON en /data con su pro
 (URL, fetchedAt, cita literal y localización). Ejecutar con `python3 -I`.
 """
 
+import html
 import json
 import os
 import re
@@ -21,7 +22,12 @@ INE = 'Instituto Nacional de Estadística (INE)'
 
 def texto(doc_id):
     """Texto plano del documento (celdas de tabla separadas por « | »), espacios normalizados."""
-    with open(f'{DESCARGAS}/{doc_id}.txt', encoding='utf-8') as f:
+    ruta = f'{DESCARGAS}/{doc_id}.txt'
+    if not os.path.exists(ruta):  # solo XML: se convierte quitando etiquetas
+        with open(f'{DESCARGAS}/{doc_id}.xml', encoding='utf-8') as f:
+            x = re.sub(r'</t[dh]>', ' | ', f.read())
+        return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', x)))
+    with open(ruta, encoding='utf-8') as f:
         return re.sub(r'\s+', ' ', f.read())
 
 
