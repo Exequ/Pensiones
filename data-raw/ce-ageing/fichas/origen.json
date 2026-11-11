@@ -1,0 +1,65 @@
+{
+ "Denmark": {
+  "iso": "DNK",
+  "url": "https://economy-finance.ec.europa.eu/document/download/93eeaeab-e2bf-4e62-9cc9-bbb42c2f091e_en?filename=2024-ageing-report-country-fiche-Denmark.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "e669eff74e7c4439cc5d2d0e3de49a33d140ecc798bb0601b67eb4be66b08b60",
+  "http": "200"
+ },
+ "France": {
+  "iso": "FRA",
+  "url": "https://economy-finance.ec.europa.eu/document/download/e412927a-ea31-406d-bb6c-c925914123e9_en?filename=2024-ageing-report-country-fiche-France.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "8b28513a2466b312cec11ea5ed2c9cf4340164f2d077ce95c17cf8f506517397",
+  "http": "200"
+ },
+ "Germany": {
+  "iso": "DEU",
+  "url": "https://economy-finance.ec.europa.eu/document/download/e8f41d38-6d27-45b4-8919-c9348720fcfc_en?filename=2024-ageing-report-country-fiche-Germany.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "4367894f7e08db80227dd8fc67453f69ecc8837b918f7d808d5ad3bcc2c73d91",
+  "http": "200"
+ },
+ "Italy": {
+  "iso": "ITA",
+  "url": "https://economy-finance.ec.europa.eu/document/download/82b762d7-21ce-4992-aa97-888fd2c66205_en?filename=2024-ageing-report-country-fiche-Italy.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "a04fe31348a2bf2d0ddd2e4ae7610f732b85154df664c5357cda1b7edc978b20",
+  "http": "200"
+ },
+ "Netherlands": {
+  "iso": "NLD",
+  "url": "https://economy-finance.ec.europa.eu/document/download/610eea99-d6a4-4f2b-8d00-6fe0467c3b37_en?filename=2024-ageing-report-country-fiche-Netherlands.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "ff2b87b9833952c397ddf35ec511558809e0e5833260d210e707c35aeaa77f54",
+  "http": "200"
+ },
+ "Poland": {
+  "iso": "POL",
+  "url": "https://economy-finance.ec.europa.eu/document/download/568baf8e-3a50-4859-8507-f0d963411213_en?filename=2024-ageing-report-country-fiche-Poland.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "a80a847d717573ed53ac5e2e9a96380de4f7c20be8ec6cf695b9f72a1bac40df",
+  "http": "200"
+ },
+ "Portugal": {
+  "iso": "PRT",
+  "url": "https://economy-finance.ec.europa.eu/document/download/0617eec0-e5ba-4635-9443-c71a953fb0cc_en?filename=2024-ageing-report-country-fiche-Portugal.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "26a77bca8fc88434a8eb032b091b7a5210946fc9b28631361b347fa842ee63f4",
+  "http": "200"
+ },
+ "Spain": {
+  "iso": "ESP",
+  "url": "https://economy-finance.ec.europa.eu/document/download/392994f2-c025-4066-bea8-f65cf4bcd411_en?filename=2024-ageing-report-country-fiche-Spain.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "073dca6b182b575cb78abe236e77db5014e78319cd0a0563e7ddaa161a307e3d",
+  "http": "200"
+ },
+ "Sweden": {
+  "iso": "SWE",
+  "url": "https://economy-finance.ec.europa.eu/document/download/1a05f725-4231-411e-bcde-7d567ddd7689_en?filename=2024-ageing-report-country-fiche-Sweden.pdf",
+  "fetchedAt": "2026-11-11",
+  "sha256": "7d52f65327bb8431e786793e8fb2c5cd5f01fd7b94d0864ec561c6f5744a0072",
+  "http": "200"
+ }
+}
