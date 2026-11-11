@@ -18,16 +18,12 @@
         {
           "nombre": "Valor del Fondo de Reserva a 31 de diciembre",
           "literal": "Valor acumulado que publican los informes a las Cortes (a precio de adquisición, no a precio de mercado), con las dotaciones, rendimientos y disposiciones de cada año.",
-          "datos": [
-            "sistema/fondo-reserva-series.json#valor-fin-ano"
-          ]
+          "datos": ["sistema/fondo-reserva-series.json#valor-fin-ano"]
         },
         {
           "nombre": "Disposiciones del Fondo",
           "literal": "Importes que se han retirado del Fondo para pagar prestaciones, por año.",
-          "datos": [
-            "sistema/fondo-reserva-series.json#disposiciones-anuales"
-          ]
+          "datos": ["sistema/fondo-reserva-series.json#disposiciones-anuales"]
         },
         {
           "nombre": "Reservas de la Seguridad Social en sentido amplio",
@@ -62,23 +58,17 @@
         {
           "nombre": "Financiación por cotizaciones",
           "literal": "Cotizaciones sociales como capítulo de ingresos de la ejecución del presupuesto del Sistema de la Seguridad Social.",
-          "datos": [
-            "sistema/presupuesto-ss-ejecucion.json"
-          ]
+          "datos": ["sistema/presupuesto-ss-ejecucion.json"]
         },
         {
           "nombre": "Gastos «impropios»",
           "literal": "Expresión de una fuente institucional para prestaciones no contributivas, reducciones de cuotas y otras partidas que el Pacto de Toledo propone financiar con impuestos; su cuantía depende de qué partidas se incluyan.",
-          "datos": [
-            "sistema/gastos-impropios.json#transferencia-prevista-pge-2021"
-          ]
+          "datos": ["sistema/gastos-impropios.json#transferencia-prevista-pge-2021"]
         },
         {
           "nombre": "Préstamos del Estado",
           "literal": "Operaciones financieras (no son transferencias corrientes) autorizadas a la Seguridad Social.",
-          "datos": [
-            "parametros/prestamos-estado-seguridad-social.json#2021-importe-maximo"
-          ]
+          "datos": ["parametros/prestamos-estado-seguridad-social.json#2021-importe-maximo"]
         }
       ],
       "noSePuedeConcluir": [
@@ -105,16 +95,12 @@
         {
           "nombre": "Afiliados por pensionista",
           "literal": "Afiliados (relaciones laborales en alta, con pluriempleo) entre pensionistas (personas), con afiliados medios de diciembre o media anual.",
-          "datos": [
-            "sistema/relacion-afiliados-pensiones.json#afiliados-diciembre-por-pensionista"
-          ]
+          "datos": ["sistema/relacion-afiliados-pensiones.json#afiliados-diciembre-por-pensionista"]
         },
         {
           "nombre": "Afiliados por pensión",
           "literal": "Los mismos afiliados entre pensiones (una persona puede cobrar varias).",
-          "datos": [
-            "sistema/relacion-afiliados-pensiones.json#afiliados-media-anual-por-pension"
-          ]
+          "datos": ["sistema/relacion-afiliados-pensiones.json#afiliados-media-anual-por-pension"]
         },
         {
           "nombre": "Alternativa 1",
@@ -126,16 +112,12 @@
         {
           "nombre": "Ratio de apoyo del Ageing Report 2024",
           "literal": "Cotizantes por cada 100 pensionistas públicos, proyección de la Comisión Europea.",
-          "datos": [
-            "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-84"
-          ]
+          "datos": ["demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-84"]
         },
         {
           "nombre": "Tasa de dependencia de mayores",
           "literal": "Población de 65 o más años entre población de 20 a 64 años (proyección).",
-          "datos": [
-            "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-59"
-          ]
+          "datos": ["demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-59"]
         }
       ],
       "noSePuedeConcluir": [
@@ -167,16 +149,12 @@
         {
           "nombre": "Cotizaciones pagadas por el trabajador",
           "literal": "Solo la parte del trabajador, o también la de la empresa (en el tipo de cotización de contingencias comunes de data/parametros).",
-          "datos": [
-            "parametros/tipo-cc-empresa.json"
-          ]
+          "datos": ["parametros/tipo-cc-empresa.json"]
         },
         {
           "nombre": "Riqueza de pensiones de la OCDE",
           "literal": "Valor actual de las prestaciones esperadas expresado en múltiplos del salario anual (medidas GPW y NPW) para una carrera completa teórica.",
-          "datos": [
-            "internacional/ocde-espana.json"
-          ]
+          "datos": ["internacional/ocde-espana.json"]
         }
       ],
       "noSePuedeConcluir": [
@@ -204,23 +182,17 @@
         {
           "nombre": "Saldo presupuestario no financiero",
           "literal": "Derechos reconocidos netos menos obligaciones reconocidas por operaciones no financieras del Sistema de la Seguridad Social (incluye las transferencias del Estado).",
-          "datos": [
-            "sistema/deficit-definiciones.json#saldo-presupuestario-no-financiero"
-          ]
+          "datos": ["sistema/deficit-definiciones.json#saldo-presupuestario-no-financiero"]
         },
         {
           "nombre": "Saldo presupuestario total",
           "literal": "El anterior más las operaciones financieras (activos y pasivos financieros, como préstamos).",
-          "datos": [
-            "sistema/deficit-definiciones.json#saldo-presupuestario-total"
-          ]
+          "datos": ["sistema/deficit-definiciones.json#saldo-presupuestario-total"]
         },
         {
           "nombre": "Capacidad o necesidad de financiación SEC 2010",
           "literal": "Saldo B.9 del subsector Fondos de la Seguridad Social según la contabilidad nacional (Eurostat), con criterio de devengo.",
-          "datos": [
-            "sistema/deficit-definiciones.json#necesidad-financiacion-sec-s1314"
-          ]
+          "datos": ["sistema/deficit-definiciones.json#necesidad-financiacion-sec-s1314"]
         },
         {
           "nombre": "Saldo del sistema contributivo sin transferencias",
@@ -252,37 +224,27 @@
         {
           "nombre": "Edad ordinaria legal",
           "literal": "Edad a partir de la cual se accede a la pensión de jubilación sin reducción cuando no se alcanza el periodo cotizado de la jubilación a los 65 años (data/parametros).",
-          "datos": [
-            "parametros/edad-ordinaria-jubilacion.json#2025"
-          ]
+          "datos": ["parametros/edad-ordinaria-jubilacion.json#2025"]
         },
         {
           "nombre": "Jubilación a los 65 con carrera larga",
           "literal": "Periodo cotizado, en meses, que permite jubilarse a los 65 años sin reducción en cada año.",
-          "datos": [
-            "parametros/carrera-jubilacion-65.json#2025"
-          ]
+          "datos": ["parametros/carrera-jubilacion-65.json#2025"]
         },
         {
           "nombre": "Edad media de las altas de jubilación",
           "literal": "Edad media de las altas iniciales de pensión de jubilación del año, según la estadística de altas de la Seguridad Social (data/sistema).",
-          "datos": [
-            "sistema/edad-media-altas-jubilacion.json#edad-media-altas-jubilacion"
-          ]
+          "datos": ["sistema/edad-media-altas-jubilacion.json#edad-media-altas-jubilacion"]
         },
         {
           "nombre": "Edad efectiva de salida del mercado laboral (OCDE)",
           "literal": "Medida ELMEA de la OCDE; literal de la fuente: «Effective labour market exit age». El método de estimación es el de la OCDE y no se ha descargado.",
-          "datos": [
-            "internacional/ocde-espana.json#elmea-hombres-z-z-y"
-          ]
+          "datos": ["internacional/ocde-espana.json#elmea-hombres-z-z-y"]
         },
         {
           "nombre": "Edad de jubilación actual de la OCDE",
           "literal": "Edad a la que puede jubilarse sin penalización quien entró en el mercado laboral a los 22 años con carrera ininterrumpida (CRPLF22).",
-          "datos": [
-            "internacional/ocde-espana.json#crplf22-hombres-z-z-y-2024"
-          ]
+          "datos": ["internacional/ocde-espana.json#crplf22-hombres-z-z-y-2024"]
         }
       ],
       "noSePuedeConcluir": [
@@ -315,9 +277,7 @@
         {
           "nombre": "Balance del sistema de pensiones",
           "literal": "Cotizaciones menos gasto bruto de pensiones, en % del PIB, según el Ageing Report 2024.",
-          "datos": [
-            "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-74"
-          ]
+          "datos": ["demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-74"]
         },
         {
           "nombre": "Sostenibilidad",
@@ -344,23 +304,17 @@
         {
           "nombre": "Riesgo de pobreza o exclusión social (AROPE) de los mayores de 65",
           "literal": "Personas de 65 o más años en riesgo de pobreza o exclusión social según el indicador de Eurostat (ilc_peps01n); la definición detallada del indicador es la de Eurostat y no se ha descargado en esta fase.",
-          "datos": [
-            "internacional/eurostat-espana.json#pobreza-o-exclusion-total-y-ge65-pc"
-          ]
+          "datos": ["internacional/eurostat-espana.json#pobreza-o-exclusion-total-y-ge65-pc"]
         },
         {
           "nombre": "Pobreza de renta de los mayores (OCDE)",
           "literal": "Medida OAIP de la OCDE; literal de la fuente: «Old age income poverty rate below 50% of median income», referida a personas de 66 o más años.",
-          "datos": [
-            "internacional/ocde-espana.json#oaip-total-y-ge66-z-pt-pop-sex-age"
-          ]
+          "datos": ["internacional/ocde-espana.json#oaip-total-y-ge66-z-pt-pop-sex-age"]
         },
         {
           "nombre": "Pensión mínima o no contributiva frente a un umbral",
           "literal": "Cuantía mínima de la pensión o de la PNC frente a un umbral de pobreza (la regla de las mínimas usa el umbral de pobreza de un hogar de dos adultos).",
-          "datos": [
-            "parametros/pension-minima-jubilacion.json"
-          ]
+          "datos": ["parametros/pension-minima-jubilacion.json"]
         }
       ],
       "noSePuedeConcluir": [
@@ -385,16 +339,12 @@
         {
           "nombre": "Tasa de reposición bruta teórica (OCDE)",
           "literal": "Pensión bruta de una persona con carrera completa desde los 22 años como porcentaje de sus ingresos brutos antes de jubilarse a ese mismo nivel de renta (GPRR), con parámetros de 2024.",
-          "datos": [
-            "internacional/ocde-espana.json#gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024"
-          ]
+          "datos": ["internacional/ocde-espana.json#gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024"]
         },
         {
           "nombre": "Tasa de reposición neta teórica (OCDE)",
           "literal": "Pensión neta de impuestos y cotizaciones como porcentaje del ingreso neto previo (NPRR).",
-          "datos": [
-            "internacional/ocde-espana.json#nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024"
-          ]
+          "datos": ["internacional/ocde-espana.json#nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024"]
         },
         {
           "nombre": "Cociente empírico pensión media / salario medio",
@@ -426,23 +376,17 @@
         {
           "nombre": "Prestaciones de vejez y supervivencia sobre el PIB (Eurostat, ESSPROS)",
           "literal": "Gasto en prestaciones de las funciones vejez y supervivencia en porcentaje del PIB, para España y la UE-27.",
-          "datos": [
-            "internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp"
-          ]
+          "datos": ["internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp"]
         },
         {
           "nombre": "Gasto público en pensiones sobre el PIB (OCDE)",
           "literal": "Gasto público en pensiones (medida PEP, literal «Public expenditure on pensions») según la OCDE; su delimitación es la de la OCDE.",
-          "datos": [
-            "internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq"
-          ]
+          "datos": ["internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq"]
         },
         {
           "nombre": "Pensiones contributivas del Sistema de la Seguridad Social sobre el PIB",
           "literal": "Obligaciones por «suma de pensiones» de la ejecución del presupuesto, sin Clases Pasivas ni PNC.",
-          "datos": [
-            "internacional/contraste-espana.json#gasto-pensiones-contributivas-sobre-pib"
-          ]
+          "datos": ["internacional/contraste-espana.json#gasto-pensiones-contributivas-sobre-pib"]
         }
       ],
       "noSePuedeConcluir": [
@@ -465,30 +409,22 @@
         {
           "nombre": "IPC medio anual",
           "literal": "Variación de la media anual del índice de precios de consumo (INE).",
-          "datos": [
-            "parametros/ipc-variacion-media-anual.json"
-          ]
+          "datos": ["parametros/ipc-variacion-media-anual.json"]
         },
         {
           "nombre": "IPC de diciembre",
           "literal": "Variación interanual del índice en diciembre (INE).",
-          "datos": [
-            "parametros/ipc-variacion-diciembre.json"
-          ]
+          "datos": ["parametros/ipc-variacion-diciembre.json"]
         },
         {
           "nombre": "Regla vigente del artículo 58",
           "literal": "Media de los IPC interanuales de los meses que fija la regla hasta un último mes de medición, con las reglas de suelo e indicadores de data/parametros.",
-          "datos": [
-            "parametros/revalorizacion-regla.json#2024-ultimo-mes-medicion"
-          ]
+          "datos": ["parametros/revalorizacion-regla.json#2024-ultimo-mes-medicion"]
         },
         {
           "nombre": "Revalorización aplicada cada año",
           "literal": "Porcentaje con el que se revalorizaron las pensiones cada año, según la norma de ese año.",
-          "datos": [
-            "parametros/revalorizacion-general.json"
-          ]
+          "datos": ["parametros/revalorizacion-general.json"]
         }
       ],
       "noSePuedeConcluir": [

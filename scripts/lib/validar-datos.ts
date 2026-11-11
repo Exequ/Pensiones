@@ -316,7 +316,11 @@ export async function validarReferenciasMitos(
       }
       const ids = cache.get(rutaDato);
       if (ids === null || ids === undefined || (id !== undefined && !ids.has(id))) {
-        errores.push({ fichero: relativo, ruta, mensaje: `La referencia ${referencia} no existe en /data` });
+        errores.push({
+          fichero: relativo,
+          ruta,
+          mensaje: `La referencia ${referencia} no existe en /data`,
+        });
       }
     }
   }

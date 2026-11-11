@@ -5,14 +5,15 @@ Cada fichero JSON de esta carpeta sigue el esquema `ArchivoDatos` de
 `npm run validate:data`, que falla si algún valor numérico no tiene una fuente con URL y
 fecha de descarga (`fetchedAt`).
 
-| Carpeta          | Contenido                                                         |
-| ---------------- | ----------------------------------------------------------------- |
-| `normativa/`     | Parámetros fijados por ley o reglamento (con referencia al BOE).  |
-| `parametros/`    | Parámetros anuales del sistema: bases, topes, revalorización…     |
-| `sistema/`       | Estadísticas del sistema: pensiones, gasto, ingresos, afiliación. |
-| `demografia/`    | Población, mortalidad, fecundidad, migraciones y proyecciones.    |
-| `macro/`         | PIB, mercado de trabajo, salarios y tipos de interés.             |
-| `internacional/` | Indicadores comparables de otros países.                          |
+| Carpeta          | Contenido                                                          |
+| ---------------- | ------------------------------------------------------------------ |
+| `normativa/`     | Parámetros fijados por ley o reglamento (con referencia al BOE).   |
+| `parametros/`    | Parámetros anuales del sistema: bases, topes, revalorización…      |
+| `sistema/`       | Estadísticas del sistema: pensiones, gasto, ingresos, afiliación.  |
+| `demografia/`    | Población, mortalidad, fecundidad, migraciones y proyecciones.     |
+| `macro/`         | PIB, mercado de trabajo, salarios y tipos de interés.              |
+| `internacional/` | Comparativa internacional (OCDE y Eurostat) y contraste de España. |
+| `mitos/`         | Catálogo de afirmaciones circulantes, con datos y definiciones.    |
 
 Los ejemplos de los tests están en `scripts/fixtures/` y **no** deben copiarse aquí.
 
@@ -89,6 +90,10 @@ Las **tablas** (`tipo: "tabla"`) son un CSV más un JSON hermano con el mismo no
 ## Contenido (Fase 1B-3: `demografia/`, `macro/` y `sistema/`)
 
 Detalle fichero a fichero en [demografia/README.md](demografia/README.md) y [macro/README.md](macro/README.md). En `sistema/` se añaden: `relacion-afiliados-pensiones-alternativa-1` (afiliados a último día de diciembre entre pensiones en vigor a 1 de enero siguiente, 2008-2025), `mites-bel-pensiones` y `mites-bel-pen31-cuantias` (BEL del MITES, descarga manual), `mites-anuario-pen1-sexo-clase`, `imserso-pnc-evolucion`, `imserso-pnc-perfil-2025` y `gastos-impropios` (previsiones de 2020, confianza media o baja).
+
+## Contenido (Fase 1C: `internacional/` y `mitos/`)
+
+Detalle en [internacional/README.md](internacional/README.md) y [mitos/README.md](mitos/README.md): OCDE «Pensions at a Glance» (11 países, media OCDE y UE-27), Eurostat (gasto en pensiones, pobreza o exclusión de mayores, empleo de 55 a 64 años), estructura de nueve sistemas de pensiones con cita literal, series derivadas de contraste de España y un catálogo de 12 afirmaciones circulantes (de tipo `mitos`) sin veredicto.
 
 ## Formato
 

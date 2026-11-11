@@ -6,7 +6,11 @@
  */
 import { existsSync } from 'node:fs';
 import path from 'node:path';
-import { validarAfirmaciones, validarDirectorio, validarReferenciasMitos } from './lib/validar-datos.ts';
+import {
+  validarAfirmaciones,
+  validarDirectorio,
+  validarReferenciasMitos,
+} from './lib/validar-datos.ts';
 
 const argumento = process.argv[2];
 const directorio = path.resolve(argumento ?? 'data');

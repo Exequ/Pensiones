@@ -255,7 +255,9 @@ export const Mito = z.strictObject({
   /** Afirmación tal como circula, formulada de forma neutral. */
   enunciado: textoObligatorio('enunciado'),
   datos: z.array(ReferenciaFichero).min(1, { error: 'Cada afirmación necesita datos de /data' }),
-  definiciones: z.array(Definicion).min(1, { error: 'Cada afirmación necesita definiciones alternativas' }),
+  definiciones: z
+    .array(Definicion)
+    .min(1, { error: 'Cada afirmación necesita definiciones alternativas' }),
   noSePuedeConcluir: z.array(textoObligatorio('noSePuedeConcluir')).min(1),
   /** Datos que harían falta y no están en /data (se anotan también en docs/PENDIENTE_DATOS.md). */
   faltan: z.array(textoObligatorio('faltan')).optional(),
@@ -268,7 +270,10 @@ export const ArchivoMitos = z.strictObject({
   id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
   title: textoObligatorio('title'),
   description: textoObligatorio('description'),
-  mitos: z.array(Mito).min(10, { error: 'El catálogo debe tener entre 10 y 12 afirmaciones' }).max(12),
+  mitos: z
+    .array(Mito)
+    .min(10, { error: 'El catálogo debe tener entre 10 y 12 afirmaciones' })
+    .max(12),
 });
 export type ArchivoMitos = z.infer<typeof ArchivoMitos>;
 

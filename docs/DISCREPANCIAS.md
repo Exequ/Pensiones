@@ -43,6 +43,7 @@ Fecha: 2026-11-11.
 <!-- discrepancias-1b3:fin -->
 
 <!-- discrepancias-1c:inicio -->
+
 ## Fase 1C
 
 - **Pensión media total frente a la media ponderada de las cinco clases (2008-2011)**: en los ficheros REG de 2008 a 2011 la pensión media del total del sistema es hasta 2,24 euros/mes superior a la media ponderada por número de las cinco clases (2,24 en 2008, 2,05 en 2011); desde 2012 la diferencia no pasa de 0,054 euros/mes. Los datos descargados no explican la diferencia en 2008-2011 (el número sí coincide con la suma de clases).
@@ -55,4 +56,5 @@ Fecha: 2026-11-11.
 - **Esperanza de vida a los 65 años de 2024 (OCDE frente a INE)**: la OCDE publica la edad hasta la que se espera vivir a los 65 años (84,6 hombres, 88,5 mujeres) y el INE, la esperanza de vida a esa edad (65 más 19,87 y 23,64 años): diferencias de 0,27 y 0,14 años. La OCDE no indica en el flujo descargado la fuente de ese dato.
 - **URL de fuente que no responde desde el entorno (2026-11-11)**: https://economy-finance.ec.europa.eu/document/download/e8f41d38-6d27-45b4-8919-c9348720fcfc_en?filename=2024-ageing-report-country-fiche-Germany.pdf → HTTP 429.
 - **URL de fuente que no responde desde el entorno (2026-11-11)**: https://www.mites.gob.es/estadisticas/bel/PEN/index.htm → HTTP 000 (curl: (60) SSL certificate problem: unable to get local issuer certificate).
+
 <!-- discrepancias-1c:fin -->
