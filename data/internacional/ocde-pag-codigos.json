@@ -1,0 +1,39 @@
+{
+  "tipo": "tabla",
+  "id": "ocde-pag-codigos",
+  "title": "OCDE, Pensions at a Glance: literal en inglés de cada código (área, medida, unidad, edad, opcionalidad y sexo)",
+  "description": "Literales de la estructura de datos de la OCDE (DSD_PAG) para los códigos que aparecen en `ocde-pag`. Son el literal de cada indicador de la fuente.",
+  "columnas": [
+    {
+      "id": "dimension",
+      "descripcion": "REF_AREA, MEASURE, UNIT_MEASURE, AGE, OPTIONALITY o SEX",
+      "unidad": null
+    },
+    {
+      "id": "codigo",
+      "descripcion": "Código de la fuente",
+      "unidad": null
+    },
+    {
+      "id": "literal_en",
+      "descripcion": "Literal en inglés de la fuente",
+      "unidad": null
+    }
+  ],
+  "filas": 79,
+  "source": {
+    "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+    "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+    "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+    "docId": "OECD-DSD_PAG-DF_PAG"
+  },
+  "origenes": [
+    {
+      "period": "2024",
+      "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+      "sha256": "5c0fa6cb7bbe762dd50ac8fec2d064bc7baaa1fd13e00574e73f64f30db7ce6e"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta"
+}

@@ -100,6 +100,394 @@
       "estado": "verificada"
     },
     {
+      "id": "internacional-contraste-espana-gasto-pensiones-contributivas-sobre-pib",
+      "texto": "Obligaciones reconocidas por «suma de pensiones» (contributivas) del Sistema de la Seguridad Social sobre el PIB: 10,8 (% del PIB) en 2025.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["internacional/contraste-espana.json#gasto-pensiones-contributivas-sobre-pib"],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la delimitación del gasto: la fila «suma de pensiones» de la ejecución (obligaciones reconocidas) excluye Clases Pasivas, pensiones no contributivas y el complemento a mínimos (que va en otra fila, ver docs/INFORME_VERIFICACION.md). Decidir qué delimitación comparable con OCDE, Eurostat y Ageing Report usará el modelo."
+    },
+    {
+      "id": "internacional-contraste-espana-pension-altas-sobre-salario-eaes",
+      "texto": "Cociente entre la pensión media de las altas iniciales de jubilación (ambos sexos) × 14 pagas y el salario medio «eaes»: 0,74 (razón) en 2024.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["internacional/contraste-espana.json#pension-altas-sobre-salario-eaes"],
+      "fuentes": [
+        {
+          "title": "Altas y bajas de pensiones contributivas: evolución 2022-2026 (fichero EVO)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar que el cociente entre la pensión media de las altas de jubilación (14 pagas) y la ganancia media de la EAES no es una tasa de reposición: mezcla carreras de distinta duración y compara con el salario de todos los trabajadores del ámbito de la EAES. Decidir si debe usarse como referencia empírica de sensibilidad frente a la tasa teórica de la OCDE y con qué definición de salario (EAES, ETCL, Contabilidad Nacional, base media)."
+    },
+    {
+      "id": "internacional-eurostat-espana-gasto-old-srv-no-aplica-no-aplica-pc-gdp",
+      "texto": "gasto-old-srv (España; sexo no-aplica; edad no-aplica; unidad PC_GDP): 12,9 (% del PIB) en 2025.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp"],
+      "fuentes": [
+        {
+          "title": "Expenditure on social benefits by function (spr_exp_func)",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+          "docId": "eurostat-spr_exp_func"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-eurostat-espana-pobreza-o-exclusion-total-y-ge65-pc",
+      "texto": "pobreza-o-exclusion (España; sexo total; edad Y_GE65; unidad PC): 19,2 (%) en 2025.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["internacional/eurostat-espana.json#pobreza-o-exclusion-total-y-ge65-pc"],
+      "fuentes": [
+        {
+          "title": "Persons at risk of poverty or social exclusion by age and sex (ilc_peps01n)",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en",
+          "docId": "eurostat-ilc_peps01n"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-espana-elmea-hombres-z-z-y",
+      "texto": "Effective labour market exit age (España; sexo: hombres; edad: _Z; opcionalidad: _Z; unidad: Years): 62,4 (Years) en 2024.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["internacional/ocde-espana.json#elmea-hombres-z-z-y"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-espana-pep-no-aplica-z-z-pt-b1gq",
+      "texto": "Public expenditure on pensions (España; sexo: no-aplica; edad: _Z; opcionalidad: _Z; unidad: Percentage of GDP): 12,3 (Percentage of GDP) en 2021.",
+      "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
+      "datos": ["internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-espana-crplf22-hombres-z-z-y-2024",
+      "texto": "Current retirement age for a person who entered the labour force at age 22: 65,0 (Years) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": ["internacional/ocde-espana.json#crplf22-hombres-z-z-y-2024"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-espana-gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024",
+      "texto": "Gross pension replacement rate at 100% of average wage: 80,4 (Percentage of gross pre-retirement earnings at the same income level) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": ["internacional/ocde-espana.json#gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la comparabilidad de la tasa de reposición teórica bruta de la OCDE (carrera completa desde los 22 años, pensión obligatoria, 100 % del salario medio, parámetros de 2024) con una tasa calculada con las reglas propias (data/parametros: escala de porcentajes, periodo de cálculo, actualización de bases, pensión máxima) y con los cocientes empíricos de data/internacional/contraste-espana; en concreto, qué supuestos de crecimiento del salario y de indexación hay detrás del 80,4 % y si la tasa neta (86,3 %) usa los mismos impuestos y cotizaciones que el cálculo propio."
+    },
+    {
+      "id": "internacional-ocde-espana-nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024",
+      "texto": "Net pension replacement rate at 100% of average wage: 86,3 (Percentage of net pre-retirement earnings at the same income level) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": ["internacional/ocde-espana.json#nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-sistema-esp-1",
+      "texto": "España: sistema obligatorio de reparto.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-esp-1"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for España",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/392994f2-c025-4066-bea8-f65cf4bcd411_en?filename=2024-ageing-report-country-fiche-Spain.pdf",
+          "docId": "ageing-report-2024-ficha-esp"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-fra-1",
+      "texto": "Francia: sistema público de reparto financiado con cotizaciones de trabajadores y empresas.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-fra-1"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Francia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/e412927a-ea31-406d-bb6c-c925914123e9_en?filename=2024-ageing-report-country-fiche-France.pdf",
+          "docId": "ageing-report-2024-ficha-fra"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-fra-2",
+      "texto": "Francia: segundo pilar del sector privado (Agirc-Arrco): sistema de puntos de reparto.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-fra-2"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Francia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/e412927a-ea31-406d-bb6c-c925914123e9_en?filename=2024-ageing-report-country-fiche-France.pdf",
+          "docId": "ageing-report-2024-ficha-fra"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-ita-1",
+      "texto": "Italia: cuentas nocionales de aportación definida (NDC), con revisión periódica de los coeficientes y requisitos de acceso ligados a la esperanza de vida.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-ita-1"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Italia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/82b762d7-21ce-4992-aa97-888fd2c66205_en?filename=2024-ageing-report-country-fiche-Italy.pdf",
+          "docId": "ageing-report-2024-ficha-ita"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-swe-1",
+      "texto": "Suecia: cuentas nocionales (NDC) de reparto más un componente obligatorio de capitalización de aportación definida.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-swe-1"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Suecia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/1a05f725-4231-411e-bcde-7d567ddd7689_en?filename=2024-ageing-report-country-fiche-Sweden.pdf",
+          "docId": "ageing-report-2024-ficha-swe"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-swe-2",
+      "texto": "Suecia: mecanismo de ajuste automático (balancing) con tipo de cotización fijo.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-swe-2"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Suecia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/1a05f725-4231-411e-bcde-7d567ddd7689_en?filename=2024-ageing-report-country-fiche-Sweden.pdf",
+          "docId": "ageing-report-2024-ficha-swe"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-pol-1",
+      "texto": "Polonia: cuentas nocionales (NDC) y pilar de capitalización (FDC).",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-pol-1"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Polonia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/568baf8e-3a50-4859-8507-f0d963411213_en?filename=2024-ageing-report-country-fiche-Poland.pdf",
+          "docId": "ageing-report-2024-ficha-pol"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-deu-1",
+      "texto": "Alemania: sistema público de reparto ligado a los ingresos (puntos de pensión).",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-deu-1"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Alemania",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/e8f41d38-6d27-45b4-8919-c9348720fcfc_en?filename=2024-ageing-report-country-fiche-Germany.pdf",
+          "docId": "ageing-report-2024-ficha-deu"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-deu-2",
+      "texto": "Alemania: factor de sostenibilidad que liga la actualización del valor del punto a la relación entre pensionistas y cotizantes.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-deu-2"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Alemania",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/e8f41d38-6d27-45b4-8919-c9348720fcfc_en?filename=2024-ageing-report-country-fiche-Germany.pdf",
+          "docId": "ageing-report-2024-ficha-deu"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-prt-1",
+      "texto": "Portugal: sistema contributivo público de prestación definida y reparto.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-prt-1"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Portugal",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/0617eec0-e5ba-4635-9443-c71a953fb0cc_en?filename=2024-ageing-report-country-fiche-Portugal.pdf",
+          "docId": "ageing-report-2024-ficha-prt"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-prt-2",
+      "texto": "Portugal: régimen público complementario, voluntario y de capitalización.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-prt-2"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Portugal",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/0617eec0-e5ba-4635-9443-c71a953fb0cc_en?filename=2024-ageing-report-country-fiche-Portugal.pdf",
+          "docId": "ageing-report-2024-ficha-prt"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-nld-1",
+      "texto": "Países Bajos: pensión pública de vejez (AOW) de reparto.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-nld-1"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Países Bajos",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/610eea99-d6a4-4f2b-8d00-6fe0467c3b37_en?filename=2024-ageing-report-country-fiche-Netherlands.pdf",
+          "docId": "ageing-report-2024-ficha-nld"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-nld-2",
+      "texto": "Países Bajos: segundo pilar: pensión de empleo privada de capitalización.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-nld-2"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Países Bajos",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/610eea99-d6a4-4f2b-8d00-6fe0467c3b37_en?filename=2024-ageing-report-country-fiche-Netherlands.pdf",
+          "docId": "ageing-report-2024-ficha-nld"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-dnk-1",
+      "texto": "Dinamarca: primer pilar: pensión pública de prestación definida financiada con impuestos generales.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-dnk-1"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Dinamarca",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/93eeaeab-e2bf-4e62-9cc9-bbb42c2f091e_en?filename=2024-ageing-report-country-fiche-Denmark.pdf",
+          "docId": "ageing-report-2024-ficha-dnk"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-dnk-2",
+      "texto": "Dinamarca: primer pilar: pequeño régimen de capitalización (ATP).",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-dnk-2"],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Dinamarca",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/93eeaeab-e2bf-4e62-9cc9-bbb42c2f091e_en?filename=2024-ageing-report-country-fiche-Denmark.pdf",
+          "docId": "ageing-report-2024-ficha-dnk"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
       "id": "macro-pib-ine-pib-corriente",
       "texto": "PIB a precios de mercado, precios corrientes: 1690012 (millones de euros) en 2025.",
       "ubicacion": "Datos demográficos y macroeconómicos (Fase 1B-3)",
@@ -186,6 +574,273 @@
       "estado": "pendiente",
       "revisionActuarial": "pendiente",
       "preguntaActuarial": "Comprobar que la base media de cotización (Régimen General, contingencias comunes, personas físicas con al menos un día cotizado, topada por la base máxima y sin agrario, hogar ni artistas) no es un salario: está topada, mezcla jornadas y meses parciales y solo existe desde 2018 en el fichero descargado. Valorar su uso para la tasa de reposición y el efecto del tope (razón con la base máxima)."
+    },
+    {
+      "id": "mito-hucha-vaciada",
+      "texto": "Afirmación circulante: «La hucha de las pensiones se ha vaciado.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.",
+      "ubicacion": "Catálogo de afirmaciones circulantes (Fase 1C)",
+      "datos": [
+        "sistema/fondo-reserva-series.json#valor-fin-ano",
+        "sistema/fondo-reserva-series.json#disposiciones-anuales",
+        "parametros/mei-destino.json#destino-fondo-reserva"
+      ],
+      "fuentes": [
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar el criterio de valoración (precio de adquisición) y la secuencia dotaciones, rendimientos y disposiciones del Fondo de Reserva; decidir con qué referencia (valor máximo, saldo actual, años de gasto cubiertos) se formula «vaciado» y calcular los meses de gasto en pensiones que cubre el valor de cada año."
+    },
+    {
+      "id": "mito-pensiones-con-impuestos",
+      "texto": "Afirmación circulante: «Las pensiones se pagan con los impuestos.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.",
+      "ubicacion": "Catálogo de afirmaciones circulantes (Fase 1C)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes",
+        "sistema/gastos-impropios.json#transferencia-prevista-pge-2021",
+        "parametros/prestamos-estado-seguridad-social.json#2021-importe-maximo"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la separación de fuentes de financiación (contributivas frente a no contributivas) y el desglose de las transferencias por finalidad; decidir cómo se atribuyen los complementos a mínimos y las reducciones de cuotas al calcular la proporción financiada con cotizaciones."
+    },
+    {
+      "id": "mito-menos-cotizantes-por-pensionista",
+      "texto": "Afirmación circulante: «Hay cada vez menos cotizantes por pensionista.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.",
+      "ubicacion": "Catálogo de afirmaciones circulantes (Fase 1C)",
+      "datos": [
+        "sistema/relacion-afiliados-pensiones.json#afiliados-diciembre-por-pensionista",
+        "sistema/relacion-afiliados-pensiones.json#afiliados-media-anual-por-pension",
+        "sistema/relacion-afiliados-pensiones-alternativa-1.json#afiliados-por-pension-alternativa-1",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-84",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-59"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar qué es un «cotizante» frente a un afiliado (pluriempleo, regímenes especiales, situaciones sin cotización) y un «pensionista» frente a una pensión; elegir la definición coherente con el uso en el modelo y valorar el efecto del doble cómputo sobre el nivel y la tendencia."
+    },
+    {
+      "id": "mito-jubilados-cobran-mas-de-lo-cotizado",
+      "texto": "Afirmación circulante: «Los jubilados de ahora cobran más de lo que cotizaron.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.",
+      "ubicacion": "Catálogo de afirmaciones circulantes (Fase 1C)",
+      "datos": [
+        "sistema/pensiones-vigor-pension-media.json#jubilacion-ambos",
+        "demografia/esperanza-vida-anual.json#esperanza-vida-65-hombres",
+        "demografia/esperanza-vida-anual.json#esperanza-vida-65-mujeres"
+      ],
+      "fuentes": [
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Definir el cociente valor actual de prestaciones / valor actual de cotizaciones por cohorte (tipo de descuento, mortalidad de data/demografia, cotización de trabajador y de empresa) y decidir qué datos de historiales de cotización harían falta; comparar con la riqueza de pensiones de la OCDE."
+    },
+    {
+      "id": "mito-sistema-en-deficit",
+      "texto": "Afirmación circulante: «El sistema de pensiones está en déficit.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.",
+      "ubicacion": "Catálogo de afirmaciones circulantes (Fase 1C)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-no-financiero",
+        "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-total",
+        "sistema/deficit-sec-fondos-seguridad-social.json#b9-mio-eur",
+        "sistema/deficit-sec-fondos-seguridad-social.json#b9-pc-gdp",
+        "sistema/gastos-impropios.json#deficit-estimado-2023"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar las definiciones de déficit (presupuestario no financiero, total, SEC 2010 y saldo contributivo ajustado de la AIReF) y su reconciliación (criterio de caja o devengo, sectorización, tratamiento de transferencias y préstamos); decidir cuál se usa en cada magnitud del modelo."
+    },
+    {
+      "id": "mito-edad-real-de-jubilacion-65",
+      "texto": "Afirmación circulante: «La edad de jubilación real es 65.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.",
+      "ubicacion": "Catálogo de afirmaciones circulantes (Fase 1C)",
+      "datos": [
+        "parametros/edad-ordinaria-jubilacion.json#2025",
+        "parametros/carrera-jubilacion-65.json#2025",
+        "sistema/edad-media-altas-jubilacion.json#edad-media-altas-jubilacion",
+        "internacional/ocde-espana.json#crplf22-hombres-z-z-y-2024",
+        "internacional/ocde-espana.json#elmea-hombres-z-z-y",
+        "internacional/contraste-espana.json#meses-carrera-completa-desde-22-hasta-65"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar qué mide cada edad (legal, de alta, efectiva de salida del mercado laboral, de la OCDE para carrera completa), con la dependencia de la carrera cotizada y las modalidades anticipadas, y decidir cuál debe alimentar la edad de jubilación del modelo."
+    },
+    {
+      "id": "mito-pensiones-publicas-insostenibles",
+      "texto": "Afirmación circulante: «Las pensiones públicas son insostenibles.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.",
+      "ubicacion": "Catálogo de afirmaciones circulantes (Fase 1C)",
+      "datos": [
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-64",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-74",
+        "internacional/ocde-espana.json#ppep-no-aplica-z-z-pt-b1gq",
+        "demografia/proyecciones-hipotesis.json#tasa-dependencia-proyectada",
+        "internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp"
+      ],
+      "fuentes": [
+        {
+          "title": "The 2024 Ageing Report: Economic and Budgetary Projections for the EU Member States (2022-2070), Statistical annex: cross-country tables",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en",
+          "docId": "ip279"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar los criterios de sostenibilidad aplicables (gasto/PIB, saldo, ratio de dependencia, mecanismos automáticos como el MEI), la sensibilidad a las hipótesis de fecundidad, mortalidad y migración (INE, EUROPOP2025, Ageing Report) y las reglas vigentes de revalorización y base máxima."
+    },
+    {
+      "id": "mito-mayores-en-pobreza",
+      "texto": "Afirmación circulante: «Los pensionistas españoles viven en la pobreza.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.",
+      "ubicacion": "Catálogo de afirmaciones circulantes (Fase 1C)",
+      "datos": [
+        "internacional/eurostat-espana.json#pobreza-o-exclusion-total-y-ge65-pc",
+        "internacional/ocde-espana.json#oaip-total-y-ge66-z-pt-pop-sex-age"
+      ],
+      "fuentes": [
+        {
+          "title": "Persons at risk of poverty or social exclusion by age and sex (ilc_peps01n)",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en",
+          "docId": "eurostat-ilc_peps01n"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la sensibilidad de las tasas de pobreza al umbral y a la escala de equivalencia, el tratamiento de la vivienda en propiedad y otro patrimonio, y la comparabilidad del indicador AROPE de Eurostat con el OAIP de la OCDE."
+    },
+    {
+      "id": "mito-pensiones-sustituyen-casi-todo-el-salario",
+      "texto": "Afirmación circulante: «En España la pensión sustituye casi todo el último salario.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.",
+      "ubicacion": "Catálogo de afirmaciones circulantes (Fase 1C)",
+      "datos": [
+        "internacional/ocde-espana.json#gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024",
+        "internacional/ocde-espana.json#nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024",
+        "internacional/ocde-espana.json#gprr200-hombres-z-m-pt-earn-g-pre-ret-inc-2024",
+        "internacional/contraste-espana.json#pension-altas-sobre-salario-eaes",
+        "internacional/contraste-espana.json#pension-vigor-sobre-salario-eaes"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la comparabilidad de la tasa de reposición teórica de la OCDE (carrera completa desde los 22, indexación de ingresos y supuestos de crecimiento) con una tasa calculada a partir de las reglas propias (escala de porcentajes, base reguladora, actualización de bases) y con los cocientes empíricos; reproducir el 100 % del salario medio con la fórmula vigente."
+    },
+    {
+      "id": "mito-espana-gasta-mas-que-europa",
+      "texto": "Afirmación circulante: «España gasta en pensiones más que la media europea.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.",
+      "ubicacion": "Catálogo de afirmaciones circulantes (Fase 1C)",
+      "datos": [
+        "internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp",
+        "internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq",
+        "internacional/contraste-espana.json#gasto-pensiones-contributivas-sobre-pib"
+      ],
+      "fuentes": [
+        {
+          "title": "Expenditure on social benefits by function (spr_exp_func)",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+          "docId": "eurostat-spr_exp_func"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la comparabilidad de las definiciones de gasto (ESSPROS vejez y supervivencia, gasto público en pensiones de la OCDE, pensiones contributivas del Sistema) y plantear una comparación ajustada por estructura de edades (por ejemplo, gasto por mayor de 65 años o relativo al PIB por trabajador)."
+    },
+    {
+      "id": "mito-pensiones-siempre-con-el-ipc",
+      "texto": "Afirmación circulante: «Las pensiones se revalorizan siempre con el IPC.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.",
+      "ubicacion": "Catálogo de afirmaciones circulantes (Fase 1C)",
+      "datos": ["parametros/revalorizacion-regla.json#2024-ultimo-mes-medicion"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar año a año la diferencia entre el porcentaje de revalorización de data/parametros/revalorizacion-general y las distintas medidas de IPC (media anual, diciembre, media de 12 meses hasta noviembre), identificar los años con regla distinta y calcular el efecto acumulado sobre el poder adquisitivo con cada medida."
+    },
+    {
+      "id": "mito-sin-nacimientos-no-hay-pensiones",
+      "texto": "Afirmación circulante: «Con menos nacimientos no se podrán pagar las pensiones.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.",
+      "ubicacion": "Catálogo de afirmaciones circulantes (Fase 1C)",
+      "datos": [
+        "demografia/fecundidad-indicadores.json#icf-ambas",
+        "demografia/proyecciones-hipotesis.json#icf-proyectado",
+        "demografia/proyecciones-hipotesis.json#tasa-dependencia-proyectada",
+        "demografia/europop2025-indicadores.json#europop2025-olddep1",
+        "macro/pib-ine.json#pib-corriente",
+        "demografia/migraciones-exterior-anual.json#saldo-exterior-ambos-publicado-emcr"
+      ],
+      "fuentes": [
+        {
+          "title": "Indicador Coyuntural de Fecundidad según orden del nacimiento y nacionalidad de la madre (tabla 1407)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=1407",
+          "docId": "INE-1407"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la contribución relativa de fecundidad, mortalidad, migración y empleo a la tasa de dependencia y al gasto en pensiones (análisis de sensibilidad del Ageing Report y variantes de EUROPOP2025) y qué hipótesis de empleo y productividad hacen falta para pasar de la dependencia demográfica a la económica."
     },
     {
       "id": "norma-ley-26-1985",

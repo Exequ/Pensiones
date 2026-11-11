@@ -1,0 +1,75 @@
+{
+  "tipo": "tabla",
+  "id": "eurostat-indicadores",
+  "title": "Eurostat: gasto en pensiones, pobreza o exclusión de mayores, empleo de 55 a 64 años y duración de la vida laboral (11 áreas)",
+  "description": "Indicadores de Eurostat para España, Alemania, Francia, Italia, Suecia, Portugal, Países Bajos, Dinamarca, Polonia, Reino Unido (hasta donde Eurostat lo publica) y UE-27. «gasto-old», «gasto-srv» y «gasto-old-srv»: prestaciones de vejez, de supervivencia y de ambas, y «gasto-total» todas las prestaciones sociales (ESSPROS, spr_exp_func; unidades PC_GDP = % del PIB y MIO_EUR = millones de euros). «pobreza-o-exclusion»: personas en riesgo de pobreza o exclusión social (indicador AROPE), de 65 o más años (Y_GE65) y del total de la población, en % (ilc_peps01n). «empleo-55-64»: tasa de empleo de 55 a 64 años, en % de la población, por sexo (lfsi_emp_a). «duracion-vida-laboral»: duración de la vida laboral en años, por sexo (lfsi_dwl_a). Eurostat no ofrece por esta vía una serie de la edad media de salida del mercado laboral (los códigos de conjunto probados devuelven «no disponible»); esa edad está en la tabla de la OCDE (medida ELMEA).",
+  "columnas": [
+    {
+      "id": "indicador",
+      "descripcion": "gasto-old, gasto-srv, gasto-old-srv, gasto-total, pobreza-o-exclusion, empleo-55-64 o duracion-vida-laboral",
+      "unidad": null
+    },
+    {
+      "id": "pais",
+      "descripcion": "ESP, DEU, FRA, ITA, SWE, PRT, NLD, DNK, POL, GBR o EU27",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "total, hombres, mujeres o no-aplica",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Y_GE65, TOTAL, Y55-64, Y15+ o no-aplica",
+      "unidad": null
+    },
+    {
+      "id": "unidad",
+      "descripcion": "PC_GDP, MIO_EUR, PC, PC_POP o YR",
+      "unidad": null
+    },
+    {
+      "id": "anio",
+      "descripcion": "Año",
+      "unidad": null
+    },
+    {
+      "id": "valor",
+      "descripcion": "Valor",
+      "unidad": null
+    }
+  ],
+  "filas": 4335,
+  "source": {
+    "title": "Eurostat: spr_exp_func, ilc_peps01n, lfsi_emp_a y lfsi_dwl_a",
+    "publisher": "Eurostat",
+    "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+    "docId": "eurostat-int"
+  },
+  "origenes": [
+    {
+      "period": "2025",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+      "sha256": "2ad367f8d1171bdfda9227b63d81b431087642d1320fe11f09b459037dc946b7"
+    },
+    {
+      "period": "2025",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en",
+      "sha256": "2e49bee9e72bd196f493c683be8a9c779945b18ba607c99a914d2e59c2759d76"
+    },
+    {
+      "period": "2025",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_a/default/table?lang=en",
+      "sha256": "ab725f9f523a7690746d00cd683b579db7e35aeb98798013f7ba14da8cc601ae"
+    },
+    {
+      "period": "2025",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_dwl_a/default/table?lang=en",
+      "sha256": "b0a6682f08aa935b18fcd7f47e5f5c307d6a290e23a0c64ffaf898ae82c00191"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Descarga de la API de Eurostat el 2026-11-11. El Reino Unido solo tiene datos hasta donde Eurostat los publica tras 2020. Los datos brutos están en data-raw/eurostat/int/."
+}

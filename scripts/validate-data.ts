@@ -6,7 +6,11 @@
  */
 import { existsSync } from 'node:fs';
 import path from 'node:path';
-import { validarAfirmaciones, validarDirectorio } from './lib/validar-datos.ts';
+import {
+  validarAfirmaciones,
+  validarDirectorio,
+  validarReferenciasMitos,
+} from './lib/validar-datos.ts';
 
 const argumento = process.argv[2];
 const directorio = path.resolve(argumento ?? 'data');
@@ -17,7 +21,7 @@ if (!existsSync(directorio)) {
 }
 
 const { ficheros, errores } = await validarDirectorio(directorio);
-const todos = [...errores];
+const todos = [...errores, ...(await validarReferenciasMitos(directorio))];
 if (argumento === undefined) {
   const claims = path.resolve('docs/claims.json');
   if (existsSync(claims))

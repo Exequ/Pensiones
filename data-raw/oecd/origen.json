@@ -1,0 +1,14 @@
+{
+ "DF_PAG.csv": {
+  "url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SPD,DSD_PAG@DF_PAG,1.0/all?dimensionAtObservation=AllDimensions",
+  "fetchedAt": "2026-11-11",
+  "sha256": "5c0fa6cb7bbe762dd50ac8fec2d064bc7baaa1fd13e00574e73f64f30db7ce6e",
+  "bytes": 4119404
+ },
+ "pag_dsd.xml": {
+  "url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.ELS.SPD/DSD_PAG@DF_PAG/1.0?references=all",
+  "fetchedAt": "2026-11-11",
+  "sha256": "fa2f43566b8cde695d8d535a950b23c59aed10cc38f6e90ef0f37115efc89015",
+  "bytes": 1390951
+ }
+}

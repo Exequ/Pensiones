@@ -1,0 +1,74 @@
+[
+  {
+    "id": "C2-total-clases",
+    "titulo": "Pensiones en vigor: total = suma de las cinco clases y pensión media total = media ponderada de las clases (2008-2025)",
+    "estado": "diferencia",
+    "detalle": "diferencia máxima en número 0 pensiones; en pensión media 2,242 euros/mes"
+  },
+  {
+    "id": "C2-pensionistas-pensiones",
+    "titulo": "Pensionistas (personas) frente a pensiones en vigor a diciembre (2008-2025)",
+    "estado": "ok",
+    "detalle": "pensiones por pensionista entre 1,099 y 1,106; 2025: 1,106; la serie histórica de pensiones coincide con el fichero REG salvo diferencias de unas decenas (ver DISCREPANCIAS 1B-1)"
+  },
+  {
+    "id": "C2-gasto-ejecucion",
+    "titulo": "Gasto en pensiones de la ejecución («suma de pensiones», obligaciones) ÷ número × pensión media × 14, 2018-2025",
+    "estado": "diferencia",
+    "detalle": "con datos de diciembre: de 0,930 a 0,959; con la media anual del BEL (PEN-1): de 0,949 a 0,970; sumando el complemento a mínimos de pensiones contributivas (otra fila de la ejecución): de 1,001 a 1,019"
+  },
+  {
+    "id": "C2-poblacion-65",
+    "titulo": "Pensiones de jubilación a 1 de diciembre ÷ población de 65 o más años a 1 de enero siguiente (INE, 2008-2025)",
+    "estado": "diferencia",
+    "detalle": "de 0,637 a 0,662; 2025: 0,637; no es una tasa de cobertura: hay jubilados menores de 65 años, mayores de 65 sin pensión de jubilación del sistema (incluida Clases Pasivas) y pensiones de otras clases"
+  },
+  {
+    "id": "C2-eaes-base",
+    "titulo": "Salario medio EAES frente a la base media de cotización y a la base máxima (2018-2024)",
+    "estado": "diferencia",
+    "detalle": "2018: base media×12 / EAES = 0,886; EAES / (12 × base máxima) = 0,533 | 2019: base media×12 / EAES = 0,908; EAES / (12 × base máxima) = 0,499 | 2020: base media×12 / EAES = 0,918; EAES / (12 × base máxima) = 0,515 | 2021: base media×12 / EAES = 0,903; EAES / (12 × base máxima) = 0,530 | 2022: base media×12 / EAES = 0,890; EAES / (12 × base máxima) = 0,543 | 2023: base media×12 / EAES = 0,904; EAES / (12 × base máxima) = 0,520 | 2024: base media×12 / EAES = 0,896; EAES / (12 × base máxima) = 0,521"
+  },
+  {
+    "id": "A4-tabla-datos",
+    "titulo": "OCDE: tasa de reposición bruta al 100 % del salario medio de España, tabla frente a fichero de datos",
+    "estado": "ok",
+    "detalle": "80.4 (tabla) frente a 80.4 (fichero)"
+  },
+  {
+    "id": "A4-reposicion",
+    "titulo": "Tasa de reposición teórica de la OCDE para España (2024) frente a cocientes empíricos propios (2024)",
+    "estado": "diferencia",
+    "detalle": "OCDE bruta: 80,6 % (50 % del salario medio), 80,4 % (100 %), 49,9 % (200 %); neta al 100 %: 86,3 %. Propios (pensión media de las altas de jubilación × 14 / salario medio): EAES 74,2 %; ETCL×12 79,4 %; Contabilidad Nacional por puesto 55,5 %; base media×12 82,9 %. Con la pensión media en vigor: EAES 68,7 %; ETCL×12 73,5 %; Contabilidad Nacional por puesto 51,4 %; base media×12 76,7 %"
+  },
+  {
+    "id": "A4-edad",
+    "titulo": "Edad de jubilación: OCDE (carrera desde los 22) frente a edad ordinaria propia (2025)",
+    "estado": "diferencia",
+    "detalle": "OCDE: 65 años (hombres y mujeres, 2024). Propia: 800 meses (66 años y 8 meses) como edad ordinaria en 2025, y jubilación a los 65 con 459 meses cotizados (38 años y 3 meses); una carrera ininterrumpida desde los 22 hasta los 65 son 516 meses, por lo que ambas cifras responden a carreras distintas"
+  },
+  {
+    "id": "A4-gasto",
+    "titulo": "Gasto en pensiones sobre el PIB de 2021: OCDE, Eurostat, Ageing Report y datos propios",
+    "estado": "diferencia",
+    "detalle": "OCDE (gasto público en pensiones) 12,3 %; Eurostat (vejez y supervivencia) 13,2 %; Ageing Report 2024 (pensiones públicas, 2022) 13,1 %; propio (pensiones contributivas del Sistema, sin Clases Pasivas ni PNC) 11,2 %"
+  },
+  {
+    "id": "A4-esperanza-vida",
+    "titulo": "Esperanza de vida a los 65 años de 2024: OCDE (edad de fallecimiento esperada) frente a INE (65 + e65)",
+    "estado": "diferencia",
+    "detalle": "hombres: OCDE 84,6 frente a INE 84,87 (diferencia 0,27); mujeres: OCDE 88,5 frente a INE 88,64 (diferencia 0,14)"
+  },
+  {
+    "id": "A2-arope",
+    "titulo": "Riesgo de pobreza o exclusión de mayores de 65 años en 2025 (Eurostat): España y UE-27",
+    "estado": "diferencia",
+    "detalle": "España 19,2 %; UE-27 18,8 %"
+  },
+  {
+    "id": "C3-urls",
+    "titulo": "Muestra de 30 URLs de fuentes de /data (comprobada el 2026-11-11)",
+    "estado": "diferencia",
+    "detalle": "28 responden; 1 bloqueada(s) por límite de peticiones o protección; 1 no responde(n): https://economy-finance.ec.europa.eu/document/download/e8f41d38-6d27-45b4-8919-c9348720fcf (HTTP 429); https://www.mites.gob.es/estadisticas/bel/PEN/index.htm (HTTP 000, curl: (60) SSL certificate problem: unable to get local issu)"
+  }
+]

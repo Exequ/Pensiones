@@ -1,0 +1,216 @@
+{
+  "fecha": "2026-11-11",
+  "muestra": 30,
+  "resultados": [
+    {
+      "carpeta": "demografia",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25nanmig/default/table?lang=en",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "demografia",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=1381",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "demografia",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=1409",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "demografia",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36655",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "demografia",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36669",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "internacional",
+      "url": "https://economy-finance.ec.europa.eu/document/download/e412927a-ea31-406d-bb6c-c925914123e9_en?filename=2024-ageing-report-country-fiche-France.pdf",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "internacional",
+      "url": "https://economy-finance.ec.europa.eu/document/download/e8f41d38-6d27-45b4-8919-c9348720fcfc_en?filename=2024-ageing-report-country-fiche-Germany.pdf",
+      "http": "429",
+      "estado": "bloqueada",
+      "error": ""
+    },
+    {
+      "carpeta": "internacional",
+      "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "internacional",
+      "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "macro",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table?lang=en",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "macro",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=28189",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "macro",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=6038",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "macro",
+      "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/c9bd51e5-79bc-44f2-9618-14d6094eb585",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "normativa",
+      "url": "https://www.boe.es/boe/dias/2021/12/29/pdfs/BOE-A-2021-21652.pdf",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "normativa",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "normativa",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-11645",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "normativa",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-13972",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "normativa",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-21652",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "parametros",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-14960&b=254&tn=1&p=19970716",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "parametros",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2001-24969",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "parametros",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2008-20957",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "parametros",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-1009",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "parametros",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-11644",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "parametros",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-15770",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "parametros",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-2251",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "parametros",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "sistema",
+      "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm",
+      "http": "000",
+      "estado": "no responde",
+      "error": "curl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslce"
+    },
+    {
+      "carpeta": "sistema",
+      "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "sistema",
+      "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    },
+    {
+      "carpeta": "sistema",
+      "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394",
+      "http": "200",
+      "estado": "responde",
+      "error": ""
+    }
+  ]
+}

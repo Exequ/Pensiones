@@ -19,13 +19,18 @@ def anota(src, fichero, fecha=HOY):
 
 claims = []
 huellas = []
+MITO_PREGUNTAS = {}
 CLAIMS_SERIES_NUEVAS = {
     ('salario-medio-definiciones', 'eaes-ambos'), ('salario-medio-definiciones', 'etcl-coste-salarial-total'),
     ('salario-medio-definiciones', 'cn-remuneracion-por-asalariado-puesto'), ('salario-medio-definiciones', 'base-media-cotizacion-rg-ambos'),
     ('pib-ine', 'pib-corriente'), ('esperanza-vida-anual', 'esperanza-vida-65-hombres'), ('esperanza-vida-anual', 'esperanza-vida-65-mujeres'),
     ('fecundidad-indicadores', 'icf-ambas'), ('proyecciones-hipotesis', 'icf-proyectado'), ('ageing-report-2024-espana', 'ageing-report-2024-ii-1-64'),
     ('migraciones-exterior-anual', 'saldo-exterior-ambos-publicado-emcr'),
+    ('eurostat-espana', 'gasto-old-srv-no-aplica-no-aplica-pc-gdp'), ('eurostat-espana', 'pobreza-o-exclusion-total-y-ge65-pc'),
+    ('ocde-espana', 'pep-no-aplica-z-z-pt-b1gq'), ('ocde-espana', 'elmea-hombres-z-z-y'),
+    ('contraste-espana', 'pension-altas-sobre-salario-eaes'), ('contraste-espana', 'gasto-pensiones-contributivas-sobre-pib'),
 }
+CLAIMS_DATOS_NUEVOS = {('ocde-espana', 'gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024'), ('ocde-espana', 'nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024'), ('ocde-espana', 'crplf22-hombres-z-z-y-2024')}
 SERIES_CLAIM = {'pensionistas', 'pensiones', 'total-ambos', 'jubilacion-ambos', 'media-anual-total-sistema', 'diciembre-total-sistema', 'afiliados-diciembre-por-pensionista', 'afiliados-media-anual-por-pension', 'edad-media-altas-jubilacion', 'valor-fin-ano', 'saldo-presupuestario-no-financiero', 'b9-mio-eur', 'pasivos-financieros', 'transferencias-estado-corrientes', 'afiliados-por-pension-alternativa-1'}
 
 
@@ -68,13 +73,29 @@ for ruta in sorted(glob.glob(f'{REPO}/data/*/*.json')):
                 txt = f"{sr['title']}: {num(round(v, 2) if isinstance(v, float) else v)} ({sr['unit']}) en {u['period']}."
                 añade(f"sistema-{d['id']}-{sr['id']}", txt, 'Datos del sistema (módulos «Financiación y déficit», «Cotizantes por pensionista»)',
                       [f"{rel}#{sr['id']}"], sr['source'], sr['confidence'])
-    if carpeta in ('macro', 'demografia'):
+    if carpeta in ('macro', 'demografia', 'internacional'):
         for sr in d.get('series', []):
             if (d['id'], sr['id']) in CLAIMS_SERIES_NUEVAS:
                 u = sr['points'][-1]
                 v = u['value']
                 txt = f"{sr['title']}: {num(round(v, 2) if isinstance(v, float) else v)} ({sr['unit']}) en {u['period']}."
                 añade(f"{carpeta}-{d['id']}-{sr['id']}", txt, 'Datos demográficos y macroeconómicos (Fase 1B-3)', [f"{rel}#{sr['id']}"], sr['source'], sr['confidence'])
+    if carpeta == 'internacional':
+        for x in d.get('data', []):
+            if (d['id'], x['id']) in CLAIMS_DATOS_NUEVOS:
+                añade(f"internacional-{d['id']}-{x['id']}", f"{x['notes'].split('. ')[0]}: {num(x['value'])} ({x['unit']}) en {x['period']}.", 'Comparativa internacional (Fase 1C)', [f"{rel}#{x['id']}"], x['source'], x['confidence'])
+        if d['id'] == 'paises-sistemas':
+            for x in d['data']:
+                añade(f"internacional-{x['id']}", f"{x['source']['title'].split('for ')[-1]}: {x['value']}.", 'Comparativa internacional: fichas de país (Fase 1C)', [f"{rel}#{x['id']}"], x['source'], x['confidence'])
+    if carpeta == 'mitos':
+        for m in d['mitos']:
+            refs = [r for r in m['datos'] if '#' in r]
+            fich, ide = refs[0].split('#')
+            o = json.load(open(f'{REPO}/data/{fich}', encoding='utf-8'))
+            el = next(e for e in o.get('data', []) + o.get('series', []) if e['id'] == ide)
+            añade(f"mito-{m['id']}", f"Afirmación circulante: {m['enunciado']} El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.", 'Catálogo de afirmaciones circulantes (Fase 1C)', refs, el['source'], 'media')
+            claims[-1]['estado'] = 'pendiente'
+            MITO_PREGUNTAS[f"mito-{m['id']}"] = m['preguntaActuarial']
     if carpeta == 'sistema' and d['id'] == 'gastos-impropios':
         x = d['data'][0]
         añade('sistema-gastos-impropios-previstos-2023', f"{x['quote'][0].upper()}{x['quote'][1:]} (previsión de 2020, no dato observado).", 'Financiación y déficit (Fase 1B-3)', [f"{rel}#{x['id']}"], x['source'], x['confidence'])
@@ -121,6 +142,9 @@ REVISION = {
     'macro-salario-medio-definiciones-cn-remuneracion-por-asalariado-puesto': 'Comprobar que la remuneración de asalariados de la Contabilidad Nacional incluye cotizaciones sociales del empleador (no es salario bruto) y que dividida por asalariados (puestos, ETC o personas) da tres cifras distintas; decidir qué denominador y qué ajuste (restar cotizaciones empresariales) se necesita para compararla con la EAES o con la base media.',
     'macro-salario-medio-definiciones-base-media-cotizacion-rg-ambos': 'Comprobar que la base media de cotización (Régimen General, contingencias comunes, personas físicas con al menos un día cotizado, topada por la base máxima y sin agrario, hogar ni artistas) no es un salario: está topada, mezcla jornadas y meses parciales y solo existe desde 2018 en el fichero descargado. Valorar su uso para la tasa de reposición y el efecto del tope (razón con la base máxima).',
 }
+REVISION['internacional-ocde-espana-gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024'] = 'Comprobar la comparabilidad de la tasa de reposición teórica bruta de la OCDE (carrera completa desde los 22 años, pensión obligatoria, 100 % del salario medio, parámetros de 2024) con una tasa calculada con las reglas propias (data/parametros: escala de porcentajes, periodo de cálculo, actualización de bases, pensión máxima) y con los cocientes empíricos de data/internacional/contraste-espana; en concreto, qué supuestos de crecimiento del salario y de indexación hay detrás del 80,4 % y si la tasa neta (86,3 %) usa los mismos impuestos y cotizaciones que el cálculo propio.'
+REVISION['internacional-contraste-espana-pension-altas-sobre-salario-eaes'] = 'Comprobar que el cociente entre la pensión media de las altas de jubilación (14 pagas) y la ganancia media de la EAES no es una tasa de reposición: mezcla carreras de distinta duración y compara con el salario de todos los trabajadores del ámbito de la EAES. Decidir si debe usarse como referencia empírica de sensibilidad frente a la tasa teórica de la OCDE y con qué definición de salario (EAES, ETCL, Contabilidad Nacional, base media).'
+REVISION['internacional-contraste-espana-gasto-pensiones-contributivas-sobre-pib'] = 'Comprobar la delimitación del gasto: la fila «suma de pensiones» de la ejecución (obligaciones reconocidas) excluye Clases Pasivas, pensiones no contributivas y el complemento a mínimos (que va en otra fila, ver docs/INFORME_VERIFICACION.md). Decidir qué delimitación comparable con OCDE, Eurostat y Ageing Report usará el modelo.'
 REVISION_POR_DEFECTO = 'no-requiere'
 
 ORG = {'Boletín Oficial del Estado (BOE)': 'BOE', 'Instituto Nacional de Estadística (INE)': 'INE'}
@@ -138,6 +162,7 @@ for tabla, per, url, sha in huellas:
     filas.append(f'| {tabla} | {per} | <{url}> | `{sha}` |')
 with open(f'{REPO}/docs/FUENTES.md', 'w', encoding='utf-8') as f:
     f.write('\n'.join(filas) + '\n')
+REVISION.update(MITO_PREGUNTAS)
 ids = {c['id'] for c in claims}
 faltan = sorted(set(REVISION) - ids)
 assert not faltan, f'Ids de REVISION sin afirmación: {faltan}'
@@ -166,7 +191,9 @@ md = ['# Revisión actuarial', '',
 grupos = [('Reglas de cálculo de la pensión de jubilación', [i for i in REVISION if i.startswith('param-') and any(k in i for k in ('escala', 'divisor', 'periodo', 'lagunas', 'actualizacion', 'opcion'))]),
           ('Reglas de evolución (mínimas, revalorización, base y pensión máximas, MEI)', [i for i in REVISION if i.startswith('param-') and any(k in i for k in ('minima', 'revalorizacion', 'incremento', 'mei'))]),
           ('Definiciones (ratio afiliados/pensionistas, pensionistas y pensiones, déficit, Fondo de Reserva)', [i for i in REVISION if i.startswith('sistema-')]),
-          ('Definiciones de salario medio', [i for i in REVISION if i.startswith('macro-')])]
+          ('Definiciones de salario medio', [i for i in REVISION if i.startswith('macro-')]),
+          ('Comparativa internacional (comparabilidad de la tasa de reposición y del gasto)', [i for i in REVISION if i.startswith('internacional-')]),
+          ('Afirmaciones circulantes (definiciones de cada una)', [i for i in REVISION if i.startswith('mito-')])]
 n = 0
 for tit, lista in grupos:
     md += [f'## {tit}', '']
