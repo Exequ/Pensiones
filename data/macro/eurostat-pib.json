@@ -1,0 +1,425 @@
+{
+  "tipo": "datos",
+  "id": "eurostat-pib",
+  "title": "PIB de España según Eurostat (contraste con el INE)",
+  "description": "PIB a precios de mercado (B1GQ) de Eurostat, corrientes, en volumen y deflactor, para contrastar con la Contabilidad Nacional del INE.",
+  "series": [
+    {
+      "id": "pib-corriente",
+      "title": "PIB a precios de mercado, precios corrientes (Eurostat)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Gross domestic product (GDP) and main components, annual data (nama_10_gdp), B1GQ",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table?lang=en",
+        "docId": "eurostat-nama_10_gdp"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1995",
+          "value": 469819.9
+        },
+        {
+          "period": "1996",
+          "value": 506096.6
+        },
+        {
+          "period": "1997",
+          "value": 520533.1
+        },
+        {
+          "period": "1998",
+          "value": 552906.5
+        },
+        {
+          "period": "1999",
+          "value": 595242.0
+        },
+        {
+          "period": "2000",
+          "value": 647569.0
+        },
+        {
+          "period": "2001",
+          "value": 700958.0
+        },
+        {
+          "period": "2002",
+          "value": 749744.0
+        },
+        {
+          "period": "2003",
+          "value": 802683.0
+        },
+        {
+          "period": "2004",
+          "value": 860059.0
+        },
+        {
+          "period": "2005",
+          "value": 928122.0
+        },
+        {
+          "period": "2006",
+          "value": 1004976.0
+        },
+        {
+          "period": "2007",
+          "value": 1077541.0
+        },
+        {
+          "period": "2008",
+          "value": 1112432.0
+        },
+        {
+          "period": "2009",
+          "value": 1072990.0
+        },
+        {
+          "period": "2010",
+          "value": 1077145.0
+        },
+        {
+          "period": "2011",
+          "value": 1068690.0
+        },
+        {
+          "period": "2012",
+          "value": 1035964.0
+        },
+        {
+          "period": "2013",
+          "value": 1025652.0
+        },
+        {
+          "period": "2014",
+          "value": 1038949.0
+        },
+        {
+          "period": "2015",
+          "value": 1087112.0
+        },
+        {
+          "period": "2016",
+          "value": 1122967.0
+        },
+        {
+          "period": "2017",
+          "value": 1170024.0
+        },
+        {
+          "period": "2018",
+          "value": 1212276.0
+        },
+        {
+          "period": "2019",
+          "value": 1253710.0
+        },
+        {
+          "period": "2020",
+          "value": 1129214.0
+        },
+        {
+          "period": "2021",
+          "value": 1235474.0
+        },
+        {
+          "period": "2022",
+          "value": 1375863.0
+        },
+        {
+          "period": "2023",
+          "value": 1496277.0
+        },
+        {
+          "period": "2024",
+          "value": 1598588.0
+        },
+        {
+          "period": "2025",
+          "value": 1690012.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "pib-volumen-2020",
+      "title": "PIB a precios de mercado, volumen encadenado (referencia 2020), millones de euros (Eurostat)",
+      "unit": "millones de euros de 2020",
+      "source": {
+        "title": "Gross domestic product (GDP) and main components, annual data (nama_10_gdp), B1GQ",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table?lang=en",
+        "docId": "eurostat-nama_10_gdp"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1995",
+          "value": 763631.0
+        },
+        {
+          "period": "1996",
+          "value": 783542.0
+        },
+        {
+          "period": "1997",
+          "value": 811650.0
+        },
+        {
+          "period": "1998",
+          "value": 846567.0
+        },
+        {
+          "period": "1999",
+          "value": 883891.0
+        },
+        {
+          "period": "2000",
+          "value": 929859.0
+        },
+        {
+          "period": "2001",
+          "value": 966301.0
+        },
+        {
+          "period": "2002",
+          "value": 992927.0
+        },
+        {
+          "period": "2003",
+          "value": 1022112.0
+        },
+        {
+          "period": "2004",
+          "value": 1053946.0
+        },
+        {
+          "period": "2005",
+          "value": 1091374.0
+        },
+        {
+          "period": "2006",
+          "value": 1135503.0
+        },
+        {
+          "period": "2007",
+          "value": 1175626.0
+        },
+        {
+          "period": "2008",
+          "value": 1184645.0
+        },
+        {
+          "period": "2009",
+          "value": 1140006.0
+        },
+        {
+          "period": "2010",
+          "value": 1141079.0
+        },
+        {
+          "period": "2011",
+          "value": 1133777.0
+        },
+        {
+          "period": "2012",
+          "value": 1101293.0
+        },
+        {
+          "period": "2013",
+          "value": 1085574.0
+        },
+        {
+          "period": "2014",
+          "value": 1102080.0
+        },
+        {
+          "period": "2015",
+          "value": 1146834.0
+        },
+        {
+          "period": "2016",
+          "value": 1180266.0
+        },
+        {
+          "period": "2017",
+          "value": 1214447.0
+        },
+        {
+          "period": "2018",
+          "value": 1243538.0
+        },
+        {
+          "period": "2019",
+          "value": 1267926.0
+        },
+        {
+          "period": "2020",
+          "value": 1129214.0
+        },
+        {
+          "period": "2021",
+          "value": 1204681.0
+        },
+        {
+          "period": "2022",
+          "value": 1281423.0
+        },
+        {
+          "period": "2023",
+          "value": 1311664.0
+        },
+        {
+          "period": "2024",
+          "value": 1359828.0
+        },
+        {
+          "period": "2025",
+          "value": 1395075.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "pib-deflactor-2020",
+      "title": "Deflactor implícito del PIB, índice 2020 = 100 (Eurostat)",
+      "unit": "índice 2020 = 100",
+      "source": {
+        "title": "Gross domestic product (GDP) and main components, annual data (nama_10_gdp), B1GQ",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table?lang=en",
+        "docId": "eurostat-nama_10_gdp"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "1995",
+          "value": 61.524
+        },
+        {
+          "period": "1996",
+          "value": 64.591
+        },
+        {
+          "period": "1997",
+          "value": 64.133
+        },
+        {
+          "period": "1998",
+          "value": 65.312
+        },
+        {
+          "period": "1999",
+          "value": 67.343
+        },
+        {
+          "period": "2000",
+          "value": 69.642
+        },
+        {
+          "period": "2001",
+          "value": 72.54
+        },
+        {
+          "period": "2002",
+          "value": 75.508
+        },
+        {
+          "period": "2003",
+          "value": 78.532
+        },
+        {
+          "period": "2004",
+          "value": 81.604
+        },
+        {
+          "period": "2005",
+          "value": 85.042
+        },
+        {
+          "period": "2006",
+          "value": 88.505
+        },
+        {
+          "period": "2007",
+          "value": 91.657
+        },
+        {
+          "period": "2008",
+          "value": 93.904
+        },
+        {
+          "period": "2009",
+          "value": 94.121
+        },
+        {
+          "period": "2010",
+          "value": 94.397
+        },
+        {
+          "period": "2011",
+          "value": 94.259
+        },
+        {
+          "period": "2012",
+          "value": 94.068
+        },
+        {
+          "period": "2013",
+          "value": 94.48
+        },
+        {
+          "period": "2014",
+          "value": 94.272
+        },
+        {
+          "period": "2015",
+          "value": 94.792
+        },
+        {
+          "period": "2016",
+          "value": 95.145
+        },
+        {
+          "period": "2017",
+          "value": 96.342
+        },
+        {
+          "period": "2018",
+          "value": 97.486
+        },
+        {
+          "period": "2019",
+          "value": 98.879
+        },
+        {
+          "period": "2020",
+          "value": 100.0
+        },
+        {
+          "period": "2021",
+          "value": 102.556
+        },
+        {
+          "period": "2022",
+          "value": 107.37
+        },
+        {
+          "period": "2023",
+          "value": 114.075
+        },
+        {
+          "period": "2024",
+          "value": 117.558
+        },
+        {
+          "period": "2025",
+          "value": 121.141
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}

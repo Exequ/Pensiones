@@ -1,0 +1,718 @@
+{
+  "tipo": "datos",
+  "id": "cn-remuneracion-empleo",
+  "title": "Remuneración de asalariados y empleo asalariado de la Contabilidad Nacional (INE, 1995-2025)",
+  "description": "Remuneración de los asalariados y empleo (puestos, puestos equivalentes a tiempo completo y personas) del total de la economía, Contabilidad Nacional anual del INE (Revisión Estadística 2024).",
+  "series": [
+    {
+      "id": "remuneracion-asalariados",
+      "title": "Remuneración de los asalariados, total economía",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: remuneración y empleo por ramas de actividad",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+        "docId": "INE-CNA-rem_empleo95_25"
+      },
+      "confidence": "alta",
+      "notes": "Tabla 1 (primer bloque, TOTAL). Coincide con la fila de rentas de la tabla 1 del PIB.",
+      "points": [
+        {
+          "period": "1995",
+          "value": 219791
+        },
+        {
+          "period": "1996",
+          "value": 232395
+        },
+        {
+          "period": "1997",
+          "value": 251708
+        },
+        {
+          "period": "1998",
+          "value": 270455
+        },
+        {
+          "period": "1999",
+          "value": 290388
+        },
+        {
+          "period": "2000",
+          "value": 316163
+        },
+        {
+          "period": "2001",
+          "value": 336896
+        },
+        {
+          "period": "2002",
+          "value": 358651
+        },
+        {
+          "period": "2003",
+          "value": 380011
+        },
+        {
+          "period": "2004",
+          "value": 405676
+        },
+        {
+          "period": "2005",
+          "value": 435445
+        },
+        {
+          "period": "2006",
+          "value": 471958
+        },
+        {
+          "period": "2007",
+          "value": 509107
+        },
+        {
+          "period": "2008",
+          "value": 545226
+        },
+        {
+          "period": "2009",
+          "value": 531653
+        },
+        {
+          "period": "2010",
+          "value": 528815
+        },
+        {
+          "period": "2011",
+          "value": 515740
+        },
+        {
+          "period": "2012",
+          "value": 483951
+        },
+        {
+          "period": "2013",
+          "value": 470153
+        },
+        {
+          "period": "2014",
+          "value": 476301
+        },
+        {
+          "period": "2015",
+          "value": 497019
+        },
+        {
+          "period": "2016",
+          "value": 508025
+        },
+        {
+          "period": "2017",
+          "value": 528140
+        },
+        {
+          "period": "2018",
+          "value": 550649
+        },
+        {
+          "period": "2019",
+          "value": 585833
+        },
+        {
+          "period": "2020",
+          "value": 561866
+        },
+        {
+          "period": "2021",
+          "value": 604193
+        },
+        {
+          "period": "2022",
+          "value": 656283
+        },
+        {
+          "period": "2023",
+          "value": 711380
+        },
+        {
+          "period": "2024",
+          "value": 762301,
+          "notes": "Estimación provisional (P) según el INE"
+        },
+        {
+          "period": "2025",
+          "value": 817261,
+          "notes": "Estimación avance (A) según el INE"
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "asalariados-puestos",
+      "title": "Empleo asalariado, puestos de trabajo (total economía)",
+      "unit": "miles de puestos",
+      "source": {
+        "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: remuneración y empleo por ramas de actividad",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+        "docId": "INE-CNA-rem_empleo95_25"
+      },
+      "confidence": "alta",
+      "notes": "Tabla 2 (bloque «Empleo asalariado», TOTAL).",
+      "points": [
+        {
+          "period": "1995",
+          "value": 11167.6
+        },
+        {
+          "period": "1996",
+          "value": 11472.6
+        },
+        {
+          "period": "1997",
+          "value": 12090.9
+        },
+        {
+          "period": "1998",
+          "value": 12693
+        },
+        {
+          "period": "1999",
+          "value": 13386.1
+        },
+        {
+          "period": "2000",
+          "value": 14148.3
+        },
+        {
+          "period": "2001",
+          "value": 14683.9
+        },
+        {
+          "period": "2002",
+          "value": 15106.9
+        },
+        {
+          "period": "2003",
+          "value": 15692.3
+        },
+        {
+          "period": "2004",
+          "value": 16319.6
+        },
+        {
+          "period": "2005",
+          "value": 17107.4
+        },
+        {
+          "period": "2006",
+          "value": 17945.8
+        },
+        {
+          "period": "2007",
+          "value": 18632.7
+        },
+        {
+          "period": "2008",
+          "value": 18689.5
+        },
+        {
+          "period": "2009",
+          "value": 17546.7
+        },
+        {
+          "period": "2010",
+          "value": 17160
+        },
+        {
+          "period": "2011",
+          "value": 16748.1
+        },
+        {
+          "period": "2012",
+          "value": 15916.9
+        },
+        {
+          "period": "2013",
+          "value": 15481.6
+        },
+        {
+          "period": "2014",
+          "value": 15649.9
+        },
+        {
+          "period": "2015",
+          "value": 16162.2
+        },
+        {
+          "period": "2016",
+          "value": 16604.8
+        },
+        {
+          "period": "2017",
+          "value": 17152.7
+        },
+        {
+          "period": "2018",
+          "value": 17570.4
+        },
+        {
+          "period": "2019",
+          "value": 17989.3
+        },
+        {
+          "period": "2020",
+          "value": 16106.9
+        },
+        {
+          "period": "2021",
+          "value": 17283.6
+        },
+        {
+          "period": "2022",
+          "value": 18092.1
+        },
+        {
+          "period": "2023",
+          "value": 18713.699999999997
+        },
+        {
+          "period": "2024",
+          "value": 19311.8,
+          "notes": "Estimación provisional (P) según el INE"
+        },
+        {
+          "period": "2025",
+          "value": 19868.800000000003,
+          "notes": "Estimación avance (A) según el INE"
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "asalariados-puestos-etc",
+      "title": "Empleo asalariado, puestos de trabajo equivalentes a tiempo completo (total economía)",
+      "unit": "miles de puestos",
+      "source": {
+        "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: remuneración y empleo por ramas de actividad",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+        "docId": "INE-CNA-rem_empleo95_25"
+      },
+      "confidence": "alta",
+      "notes": "Tabla 3 (bloque «Empleo equivalente a tiempo completo asalariado», TOTAL).",
+      "points": [
+        {
+          "period": "1995",
+          "value": 10582.7
+        },
+        {
+          "period": "1996",
+          "value": 10829
+        },
+        {
+          "period": "1997",
+          "value": 11424.1
+        },
+        {
+          "period": "1998",
+          "value": 11970.5
+        },
+        {
+          "period": "1999",
+          "value": 12631.4
+        },
+        {
+          "period": "2000",
+          "value": 13318.6
+        },
+        {
+          "period": "2001",
+          "value": 13813.1
+        },
+        {
+          "period": "2002",
+          "value": 14187.5
+        },
+        {
+          "period": "2003",
+          "value": 14622.2
+        },
+        {
+          "period": "2004",
+          "value": 15019.3
+        },
+        {
+          "period": "2005",
+          "value": 15591.2
+        },
+        {
+          "period": "2006",
+          "value": 16209.5
+        },
+        {
+          "period": "2007",
+          "value": 16772.1
+        },
+        {
+          "period": "2008",
+          "value": 16769.4
+        },
+        {
+          "period": "2009",
+          "value": 15725.9
+        },
+        {
+          "period": "2010",
+          "value": 15308
+        },
+        {
+          "period": "2011",
+          "value": 14888.5
+        },
+        {
+          "period": "2012",
+          "value": 14025.3
+        },
+        {
+          "period": "2013",
+          "value": 13436.8
+        },
+        {
+          "period": "2014",
+          "value": 13558.2
+        },
+        {
+          "period": "2015",
+          "value": 14020.1
+        },
+        {
+          "period": "2016",
+          "value": 14399.3
+        },
+        {
+          "period": "2017",
+          "value": 14859.1
+        },
+        {
+          "period": "2018",
+          "value": 15076.7
+        },
+        {
+          "period": "2019",
+          "value": 15579.1
+        },
+        {
+          "period": "2020",
+          "value": 14491.9
+        },
+        {
+          "period": "2021",
+          "value": 15468.7
+        },
+        {
+          "period": "2022",
+          "value": 16206.2
+        },
+        {
+          "period": "2023",
+          "value": 16762.5
+        },
+        {
+          "period": "2024",
+          "value": 17284.7,
+          "notes": "Estimación provisional (P) según el INE"
+        },
+        {
+          "period": "2025",
+          "value": 17829.7,
+          "notes": "Estimación avance (A) según el INE"
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "asalariados-personas",
+      "title": "Personas asalariadas (total economía)",
+      "unit": "miles de personas",
+      "source": {
+        "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: remuneración y empleo por ramas de actividad",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+        "docId": "INE-CNA-rem_empleo95_25"
+      },
+      "confidence": "alta",
+      "notes": "Tabla 5 (bloque «Personas Asalariadas», TOTAL).",
+      "points": [
+        {
+          "period": "1995",
+          "value": 11071.7
+        },
+        {
+          "period": "1996",
+          "value": 11269.6
+        },
+        {
+          "period": "1997",
+          "value": 11879.9
+        },
+        {
+          "period": "1998",
+          "value": 12463.7
+        },
+        {
+          "period": "1999",
+          "value": 13136
+        },
+        {
+          "period": "2000",
+          "value": 13883.2
+        },
+        {
+          "period": "2001",
+          "value": 14393
+        },
+        {
+          "period": "2002",
+          "value": 14813.3
+        },
+        {
+          "period": "2003",
+          "value": 15393.7
+        },
+        {
+          "period": "2004",
+          "value": 15999.5
+        },
+        {
+          "period": "2005",
+          "value": 16754.5
+        },
+        {
+          "period": "2006",
+          "value": 17544.9
+        },
+        {
+          "period": "2007",
+          "value": 18193.7
+        },
+        {
+          "period": "2008",
+          "value": 18236.8
+        },
+        {
+          "period": "2009",
+          "value": 17098.2
+        },
+        {
+          "period": "2010",
+          "value": 16799.5
+        },
+        {
+          "period": "2011",
+          "value": 16382
+        },
+        {
+          "period": "2012",
+          "value": 15549.6
+        },
+        {
+          "period": "2013",
+          "value": 15127.7
+        },
+        {
+          "period": "2014",
+          "value": 15293.6
+        },
+        {
+          "period": "2015",
+          "value": 15772
+        },
+        {
+          "period": "2016",
+          "value": 16129.6
+        },
+        {
+          "period": "2017",
+          "value": 16645.6
+        },
+        {
+          "period": "2018",
+          "value": 17063.5
+        },
+        {
+          "period": "2019",
+          "value": 17553.4
+        },
+        {
+          "period": "2020",
+          "value": 16709.1
+        },
+        {
+          "period": "2021",
+          "value": 17145.8
+        },
+        {
+          "period": "2022",
+          "value": 17790.5
+        },
+        {
+          "period": "2023",
+          "value": 18344.000000000004
+        },
+        {
+          "period": "2024",
+          "value": 18956.600000000002,
+          "notes": "Estimación provisional (P) según el INE"
+        },
+        {
+          "period": "2025",
+          "value": 19467.5,
+          "notes": "Estimación avance (A) según el INE"
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "empleo-puestos",
+      "title": "Empleo total, puestos de trabajo (total economía)",
+      "unit": "miles de puestos",
+      "source": {
+        "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: remuneración y empleo por ramas de actividad",
+        "publisher": "Instituto Nacional de Estadística (INE)",
+        "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+        "docId": "INE-CNA-rem_empleo95_25"
+      },
+      "confidence": "alta",
+      "notes": "Tabla 2 (bloque «Empleo total», TOTAL).",
+      "points": [
+        {
+          "period": "1995",
+          "value": 14059.2
+        },
+        {
+          "period": "1996",
+          "value": 14419
+        },
+        {
+          "period": "1997",
+          "value": 14953.8
+        },
+        {
+          "period": "1998",
+          "value": 15613.8
+        },
+        {
+          "period": "1999",
+          "value": 16332.8
+        },
+        {
+          "period": "2000",
+          "value": 17171.2
+        },
+        {
+          "period": "2001",
+          "value": 17746.9
+        },
+        {
+          "period": "2002",
+          "value": 18173.6
+        },
+        {
+          "period": "2003",
+          "value": 18762.5
+        },
+        {
+          "period": "2004",
+          "value": 19450.5
+        },
+        {
+          "period": "2005",
+          "value": 20277.1
+        },
+        {
+          "period": "2006",
+          "value": 21162.7
+        },
+        {
+          "period": "2007",
+          "value": 21856.3
+        },
+        {
+          "period": "2008",
+          "value": 21861.1
+        },
+        {
+          "period": "2009",
+          "value": 20515.4
+        },
+        {
+          "period": "2010",
+          "value": 20060.3
+        },
+        {
+          "period": "2011",
+          "value": 19592
+        },
+        {
+          "period": "2012",
+          "value": 18761.8
+        },
+        {
+          "period": "2013",
+          "value": 18355.8
+        },
+        {
+          "period": "2014",
+          "value": 18548.6
+        },
+        {
+          "period": "2015",
+          "value": 19102.4
+        },
+        {
+          "period": "2016",
+          "value": 19604.2
+        },
+        {
+          "period": "2017",
+          "value": 20144.7
+        },
+        {
+          "period": "2018",
+          "value": 20571.4
+        },
+        {
+          "period": "2019",
+          "value": 21054.3
+        },
+        {
+          "period": "2020",
+          "value": 18836.4
+        },
+        {
+          "period": "2021",
+          "value": 20298.6
+        },
+        {
+          "period": "2022",
+          "value": 21268.1
+        },
+        {
+          "period": "2023",
+          "value": 21985.100000000002
+        },
+        {
+          "period": "2024",
+          "value": 22628.8,
+          "notes": "Estimación provisional (P) según el INE"
+        },
+        {
+          "period": "2025",
+          "value": 23259.8,
+          "notes": "Estimación avance (A) según el INE"
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}

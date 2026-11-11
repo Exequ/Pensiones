@@ -1,0 +1,9 @@
+{
+ "Tablas_Bases_Medias_y_Cotizantes_-_CNAE25.xlsx": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/d2b1a1e4-dfbf-412f-a34b-1e188f5655d5/Tablas+Bases+Medias+y+Cotizantes+-+CNAE25.xlsx",
+  "pagina": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/c9bd51e5-79bc-44f2-9618-14d6094eb585",
+  "fetchedAt": "2026-11-11",
+  "sha256": "76bf8d28676406a790e7a51b255a94d7251a56a23bf678d5106696a4111f3afc",
+  "nota": "Última actualización indicada en la página: 27/10/2026. Se descartaron los ficheros de RETA, Hogar y el PDF de personas físicas (no se procesan)."
+ }
+}

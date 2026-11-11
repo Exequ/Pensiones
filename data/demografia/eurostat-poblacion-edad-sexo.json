@@ -1,0 +1,45 @@
+{
+  "tipo": "tabla",
+  "id": "eurostat-poblacion-edad-sexo",
+  "title": "Población a 1 de enero por edad simple y sexo según Eurostat, España (1960-2025)",
+  "description": "Población a 1 de enero por edad simple (0 a 99 y «100 y más», edad 100) y sexo, España, de Eurostat (demo_pjan), que recoge las cifras que le envía el INE. Se publica como contraste independiente de data/demografia/poblacion-edad-sexo. Las personas de edad desconocida (código UNK) no se incluyen en las edades.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año (1 de enero)",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Edad simple; 100 = «100 y más»",
+      "unidad": "años"
+    },
+    {
+      "id": "poblacion",
+      "descripcion": "Población",
+      "unidad": "personas"
+    }
+  ],
+  "filas": 16245,
+  "source": {
+    "title": "Population on 1 January by age and sex (demo_pjan)",
+    "publisher": "Eurostat",
+    "url": "https://ec.europa.eu/eurostat/databrowser/view/demo_pjan/default/table?lang=en",
+    "docId": "eurostat-demo_pjan"
+  },
+  "origenes": [
+    {
+      "period": "2025",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjan?format=JSON&lang=EN&geo=ES",
+      "sha256": "9f271cd0b4d15f3efb86446256ddb904aacc9343d317ef2550cb6106a8e72991"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Eurostat actualizó el conjunto el 25/09/2026. Para 1960-1970 el INE no ofrece población por edad en la tabla utilizada en este proyecto (la serie del INE empieza en 1971)."
+}

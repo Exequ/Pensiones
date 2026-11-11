@@ -1,0 +1,74 @@
+{
+  "tipo": "tabla",
+  "id": "migraciones-exterior-edad-sexo",
+  "title": "Inmigración, emigración y saldo migratorio exterior por año, sexo y edad (2008-2024)",
+  "description": "Flujos migratorios con el extranjero por año, sexo y edad simple (0 a 89 y «90 y más», que figura como edad 90). Dos series del INE que NO son homogéneas y se solapan en 2021: «EM-2008-2021» (Estadística de Migraciones, flujo de inmigración y emigración, y saldo con el extranjero) y «EMCR-2021-2024» (Estadística de Migraciones y Cambios de Residencia, basada en la ECP). El saldo exterior de EMCR por edad se ha calculado como inmigración menos emigración (flujo «saldo-exterior-derivado», dato derivado).",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año natural",
+      "unidad": null
+    },
+    {
+      "id": "serie",
+      "descripcion": "EM-2008-2021 o EMCR-2021-2024",
+      "unidad": null
+    },
+    {
+      "id": "flujo",
+      "descripcion": "inmigracion, emigracion, saldo-exterior o saldo-exterior-derivado",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Edad simple; 90 = «90 y más»",
+      "unidad": "años"
+    },
+    {
+      "id": "personas",
+      "descripcion": "Número de personas (flujo del año)",
+      "unidad": "personas"
+    }
+  ],
+  "filas": 14742,
+  "source": {
+    "title": "Estadística de Migraciones y Cambios de Residencia (tablas 69687 y 69702) y Estadística de Migraciones (tablas 24282, 24296 y 24304)",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69687",
+    "docId": "INE-69687"
+  },
+  "origenes": [
+    {
+      "period": "2021",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=24282",
+      "sha256": "20b540672faf0339e85480b63cfe368007ced4681e67476ff4359263f66a394f"
+    },
+    {
+      "period": "2021",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=24296",
+      "sha256": "542e670da25c3b15a70c24814b08ec4ad251764dc87ead0ca6be65902b3197ea"
+    },
+    {
+      "period": "2021",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=24304",
+      "sha256": "b3046297f3beeffea55cb2974fa42c138db258755b1724e57e5a05ea3537e656"
+    },
+    {
+      "period": "2024",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69687",
+      "sha256": "29d4222b2537c34472dcbf0c5279a900a2376100c570bfdbee7119c37484613f"
+    },
+    {
+      "period": "2024",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69702",
+      "sha256": "c5c6f48c408b76159712d2fd2f737a132b7f3a0005459c10f1c9fae63cb29a1f"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta"
+}

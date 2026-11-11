@@ -1,0 +1,519 @@
+{
+ "pen31": {
+  "comparadas": 306,
+  "iguales": 221,
+  "sin_dato_en_parametros": 106,
+  "diferencias": [
+   {
+    "anio": 2000,
+    "concepto": "maxima",
+    "bel": 26102.27,
+    "parametros": 25575.76
+   },
+   {
+    "anio": 2001,
+    "concepto": "ip-absoluta-65-conyuge-cargo",
+    "bel": 6230.98,
+    "parametros": 6188.7
+   },
+   {
+    "anio": 2001,
+    "concepto": "ip-absoluta-65-unipersonal",
+    "bel": 5291.16,
+    "parametros": 5255.18
+   },
+   {
+    "anio": 2001,
+    "concepto": "ip-gran-invalidez-conyuge-cargo",
+    "bel": 9346.54,
+    "parametros": 9282.98
+   },
+   {
+    "anio": 2001,
+    "concepto": "ip-gran-invalidez-unipersonal",
+    "bel": 7936.74,
+    "parametros": 7882.84
+   },
+   {
+    "anio": 2001,
+    "concepto": "jub-menor65-conyuge-cargo",
+    "bel": 5493.88,
+    "parametros": 5456.64
+   },
+   {
+    "anio": 2001,
+    "concepto": "jub65-conyuge-cargo",
+    "bel": 6230.98,
+    "parametros": 6188.7
+   },
+   {
+    "anio": 2001,
+    "concepto": "jub65-unipersonal",
+    "bel": 5291.16,
+    "parametros": 5255.18
+   },
+   {
+    "anio": 2001,
+    "concepto": "maxima",
+    "bel": 26807.2,
+    "parametros": 26624.36
+   },
+   {
+    "anio": 2002,
+    "concepto": "ip-absoluta-65-conyuge-cargo",
+    "bel": 6474.02,
+    "parametros": 6355.72
+   },
+   {
+    "anio": 2002,
+    "concepto": "ip-absoluta-65-unipersonal",
+    "bel": 5497.52,
+    "parametros": 5397.0
+   },
+   {
+    "anio": 2002,
+    "concepto": "ip-gran-invalidez-conyuge-cargo",
+    "bel": 9711.1,
+    "parametros": 9533.58
+   },
+   {
+    "anio": 2002,
+    "concepto": "ip-gran-invalidez-unipersonal",
+    "bel": 8246.28,
+    "parametros": 8095.5
+   },
+   {
+    "anio": 2002,
+    "concepto": "jub-menor65-conyuge-cargo",
+    "bel": 5792.22,
+    "parametros": 5686.24
+   },
+   {
+    "anio": 2002,
+    "concepto": "jub65-conyuge-cargo",
+    "bel": 6474.02,
+    "parametros": 6355.72
+   },
+   {
+    "anio": 2002,
+    "concepto": "jub65-unipersonal",
+    "bel": 5497.52,
+    "parametros": 5397.0
+   },
+   {
+    "anio": 2002,
+    "concepto": "maxima",
+    "bel": 27852.72,
+    "parametros": 27343.399999999998
+   },
+   {
+    "anio": 2003,
+    "concepto": "ip-absoluta-65-conyuge-cargo",
+    "bel": 6655.32,
+    "parametros": 6603.52
+   },
+   {
+    "anio": 2003,
+    "concepto": "ip-absoluta-65-unipersonal",
+    "bel": 5651.52,
+    "parametros": 5607.56
+   },
+   {
+    "anio": 2003,
+    "concepto": "ip-gran-invalidez-conyuge-cargo",
+    "bel": 9982.98,
+    "parametros": 9905.28
+   },
+   {
+    "anio": 2003,
+    "concepto": "ip-gran-invalidez-unipersonal",
+    "bel": 8477.28,
+    "parametros": 8411.34
+   },
+   {
+    "anio": 2003,
+    "concepto": "jub-menor65-conyuge-cargo",
+    "bel": 6042.12,
+    "parametros": 5995.08
+   },
+   {
+    "anio": 2003,
+    "concepto": "jub65-conyuge-cargo",
+    "bel": 6655.32,
+    "parametros": 6603.52
+   },
+   {
+    "anio": 2003,
+    "concepto": "jub65-unipersonal",
+    "bel": 5651.52,
+    "parametros": 5607.56
+   },
+   {
+    "anio": 2003,
+    "concepto": "maxima",
+    "bel": 28632.66,
+    "parametros": 28409.78
+   },
+   {
+    "anio": 2004,
+    "concepto": "ip-absoluta-65-conyuge-cargo",
+    "bel": 6888.28,
+    "parametros": 6788.46
+   },
+   {
+    "anio": 2004,
+    "concepto": "ip-absoluta-65-unipersonal",
+    "bel": 5849.34,
+    "parametros": 5764.64
+   },
+   {
+    "anio": 2004,
+    "concepto": "ip-gran-invalidez-conyuge-cargo",
+    "bel": 10332.42,
+    "parametros": 10182.76
+   },
+   {
+    "anio": 2004,
+    "concepto": "ip-gran-invalidez-unipersonal",
+    "bel": 8774.08,
+    "parametros": 8646.96
+   },
+   {
+    "anio": 2004,
+    "concepto": "jub-menor65-conyuge-cargo",
+    "bel": 6437.62,
+    "parametros": 6344.24
+   },
+   {
+    "anio": 2004,
+    "concepto": "jub65-conyuge-cargo",
+    "bel": 6888.28,
+    "parametros": 6788.46
+   },
+   {
+    "anio": 2004,
+    "concepto": "jub65-unipersonal",
+    "bel": 5849.34,
+    "parametros": 5764.64
+   },
+   {
+    "anio": 2004,
+    "concepto": "maxima",
+    "bel": 29634.92,
+    "parametros": 29205.399999999998
+   },
+   {
+    "anio": 2005,
+    "concepto": "ip-absoluta-65-conyuge-cargo",
+    "bel": 7436.94,
+    "parametros": 7336.14
+   },
+   {
+    "anio": 2005,
+    "concepto": "ip-absoluta-65-unipersonal",
+    "bel": 6226.36,
+    "parametros": 6141.94
+   },
+   {
+    "anio": 2005,
+    "concepto": "ip-gran-invalidez-conyuge-cargo",
+    "bel": 11155.48,
+    "parametros": 11004.28
+   },
+   {
+    "anio": 2005,
+    "concepto": "ip-gran-invalidez-unipersonal",
+    "bel": 9339.54,
+    "parametros": 9212.98
+   },
+   {
+    "anio": 2005,
+    "concepto": "jub-menor65-conyuge-cargo",
+    "bel": 6950.3,
+    "parametros": 6856.08
+   },
+   {
+    "anio": 2005,
+    "concepto": "jub65-conyuge-cargo",
+    "bel": 7436.94,
+    "parametros": 7336.14
+   },
+   {
+    "anio": 2005,
+    "concepto": "jub65-unipersonal",
+    "bel": 6226.36,
+    "parametros": 6141.94
+   },
+   {
+    "anio": 2005,
+    "concepto": "maxima",
+    "bel": 30642.64,
+    "parametros": 30227.68
+   },
+   {
+    "anio": 2006,
+    "concepto": "ip-absoluta-65-conyuge-cargo",
+    "bel": 7966.98,
+    "parametros": 7920.36
+   },
+   {
+    "anio": 2006,
+    "concepto": "ip-absoluta-65-unipersonal",
+    "bel": 6576.22,
+    "parametros": 6537.72
+   },
+   {
+    "anio": 2006,
+    "concepto": "ip-gran-invalidez-conyuge-cargo",
+    "bel": 11950.54,
+    "parametros": 11880.54
+   },
+   {
+    "anio": 2006,
+    "concepto": "ip-gran-invalidez-unipersonal",
+    "bel": 9864.4,
+    "parametros": 9806.58
+   },
+   {
+    "anio": 2006,
+    "concepto": "jub-menor65-conyuge-cargo",
+    "bel": 7445.76,
+    "parametros": 7402.08
+   },
+   {
+    "anio": 2006,
+    "concepto": "jub65-conyuge-cargo",
+    "bel": 7966.98,
+    "parametros": 7920.36
+   },
+   {
+    "anio": 2006,
+    "concepto": "jub65-unipersonal",
+    "bel": 6576.22,
+    "parametros": 6537.72
+   },
+   {
+    "anio": 2006,
+    "concepto": "maxima",
+    "bel": 31439.38,
+    "parametros": 31255.559999999998
+   },
+   {
+    "anio": 2007,
+    "concepto": "ip-absoluta-65-conyuge-cargo",
+    "bel": 8659.56,
+    "parametros": 8484.84
+   },
+   {
+    "anio": 2007,
+    "concepto": "ip-absoluta-65-unipersonal",
+    "bel": 7047.32,
+    "parametros": 6905.08
+   },
+   {
+    "anio": 2007,
+    "concepto": "ip-gran-invalidez-conyuge-cargo",
+    "bel": 12989.34,
+    "parametros": 12727.26
+   },
+   {
+    "anio": 2007,
+    "concepto": "ip-gran-invalidez-unipersonal",
+    "bel": 10570.98,
+    "parametros": 10357.62
+   },
+   {
+    "anio": 2007,
+    "concepto": "jub-menor65-conyuge-cargo",
+    "bel": 8093.12,
+    "parametros": 7929.74
+   },
+   {
+    "anio": 2007,
+    "concepto": "jub65-conyuge-cargo",
+    "bel": 8659.56,
+    "parametros": 8484.84
+   },
+   {
+    "anio": 2007,
+    "concepto": "jub65-unipersonal",
+    "bel": 7047.32,
+    "parametros": 6905.08
+   },
+   {
+    "anio": 2007,
+    "concepto": "maxima",
+    "bel": 32728.5,
+    "parametros": 32068.260000000002
+   },
+   {
+    "anio": 2008,
+    "concepto": "maxima",
+    "bel": 33514.18,
+    "parametros": 33383.14
+   },
+   {
+    "anio": 2010,
+    "concepto": "ip-absoluta-65-conyuge-cargo",
+    "bel": 10284.4,
+    "parametros": 10152.8
+   },
+   {
+    "anio": 2010,
+    "concepto": "ip-absoluta-65-conyuge-no-cargo",
+    "bel": 7905.8,
+    "parametros": 7805.0
+   },
+   {
+    "anio": 2010,
+    "concepto": "ip-absoluta-65-unipersonal",
+    "bel": 8335.6,
+    "parametros": 8229.2
+   },
+   {
+    "anio": 2010,
+    "concepto": "ip-gran-invalidez-conyuge-cargo",
+    "bel": 15426.6,
+    "parametros": 15229.2
+   },
+   {
+    "anio": 2010,
+    "concepto": "ip-gran-invalidez-conyuge-no-cargo",
+    "bel": 11859.4,
+    "parametros": 11708.2
+   },
+   {
+    "anio": 2010,
+    "concepto": "ip-gran-invalidez-unipersonal",
+    "bel": 12503.4,
+    "parametros": 12343.8
+   },
+   {
+    "anio": 2010,
+    "concepto": "jub-menor65-conyuge-cargo",
+    "bel": 9639.0,
+    "parametros": 9515.8
+   },
+   {
+    "anio": 2010,
+    "concepto": "jub-menor65-conyuge-no-cargo",
+    "bel": 7366.8,
+    "parametros": 7273.0
+   },
+   {
+    "anio": 2010,
+    "concepto": "jub65-conyuge-cargo",
+    "bel": 10284.4,
+    "parametros": 10152.8
+   },
+   {
+    "anio": 2010,
+    "concepto": "jub65-conyuge-no-cargo",
+    "bel": 7905.8,
+    "parametros": 7805.0
+   },
+   {
+    "anio": 2010,
+    "concepto": "jub65-unipersonal",
+    "bel": 8335.6,
+    "parametros": 8229.2
+   },
+   {
+    "anio": 2010,
+    "concepto": "maxima",
+    "bel": 34970.74,
+    "parametros": 34526.799999999996
+   },
+   {
+    "anio": 2010,
+    "concepto": "viud-cargas-familiares",
+    "bel": 9639.0,
+    "parametros": 9515.8
+   },
+   {
+    "anio": 2011,
+    "concepto": "ip-absoluta-65-conyuge-cargo",
+    "bel": 10584.0,
+    "parametros": 10388.0
+   },
+   {
+    "anio": 2011,
+    "concepto": "ip-absoluta-65-conyuge-no-cargo",
+    "bel": 8135.4,
+    "parametros": 7985.6
+   },
+   {
+    "anio": 2011,
+    "concepto": "ip-absoluta-65-unipersonal",
+    "bel": 8577.8,
+    "parametros": 8419.6
+   },
+   {
+    "anio": 2011,
+    "concepto": "ip-gran-invalidez-conyuge-cargo",
+    "bel": 15876.0,
+    "parametros": 15582.0
+   },
+   {
+    "anio": 2011,
+    "concepto": "ip-gran-invalidez-conyuge-no-cargo",
+    "bel": 12203.8,
+    "parametros": 11978.4
+   },
+   {
+    "anio": 2011,
+    "concepto": "ip-gran-invalidez-unipersonal",
+    "bel": 12867.4,
+    "parametros": 12629.4
+   },
+   {
+    "anio": 2011,
+    "concepto": "jub-menor65-conyuge-cargo",
+    "bel": 9919.0,
+    "parametros": 9735.6
+   },
+   {
+    "anio": 2011,
+    "concepto": "jub-menor65-conyuge-no-cargo",
+    "bel": 7581.0,
+    "parametros": 7441.0
+   },
+   {
+    "anio": 2011,
+    "concepto": "jub65-conyuge-cargo",
+    "bel": 10584.0,
+    "parametros": 10388.0
+   },
+   {
+    "anio": 2011,
+    "concepto": "jub65-conyuge-no-cargo",
+    "bel": 8135.4,
+    "parametros": 7985.6
+   },
+   {
+    "anio": 2011,
+    "concepto": "jub65-unipersonal",
+    "bel": 8577.8,
+    "parametros": 8419.6
+   },
+   {
+    "anio": 2011,
+    "concepto": "viud-cargas-familiares",
+    "bel": 9919.0,
+    "parametros": 9735.6
+   },
+   {
+    "anio": 2012,
+    "concepto": "ip-gran-invalidez-conyuge-no-cargo",
+    "bel": 12327.0,
+    "parametros": 13327.0
+   },
+   {
+    "anio": 2022,
+    "concepto": "maxima",
+    "bel": 39474.0,
+    "parametros": 39468.52
+   }
+  ]
+ }
+}

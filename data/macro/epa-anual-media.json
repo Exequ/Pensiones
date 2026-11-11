@@ -1,0 +1,69 @@
+{
+  "tipo": "tabla",
+  "id": "epa-anual-media",
+  "title": "EPA: media anual de los cuatro trimestres (2002-2025), dato derivado",
+  "description": "Media aritmética de los cuatro trimestres de cada año de las magnitudes de epa-trimestral (activos, ocupados, parados en miles; tasas en %). Solo años con los cuatro trimestres (2002-2025). Se elige la media anual y no el cuarto trimestre porque elimina la estacionalidad (agricultura, hostelería, campañas) y es el equivalente anual de las magnitudes de la Contabilidad Nacional; el cuarto trimestre se puede leer en epa-trimestral. Es un dato derivado: las tasas anuales son la media de las tasas trimestrales, no el cociente de las medias.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año",
+      "unidad": null
+    },
+    {
+      "id": "magnitud",
+      "descripcion": "activos, ocupados, parados (miles), tasa-actividad o tasa-paro (%)",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "grupo_edad",
+      "descripcion": "Grupo de edad",
+      "unidad": null
+    },
+    {
+      "id": "valor",
+      "descripcion": "Media anual: miles de personas o porcentaje",
+      "unidad": null
+    }
+  ],
+  "filas": 4621,
+  "source": {
+    "title": "Encuesta de Población Activa (tablas 65080, 65109, 65218, 65081 y 65219), media anual calculada",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=65080",
+    "docId": "INE-65080"
+  },
+  "origenes": [
+    {
+      "period": "2026",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=65080",
+      "sha256": "369e1fc4c3820acd73c1c0339fcbf6c0abfd4a8ac86b11a9857bce61e4a98dc5"
+    },
+    {
+      "period": "2026",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=65109",
+      "sha256": "e985388e256e02f8e7751b755a4a4980989868a7e832602950a64c273a5f3950"
+    },
+    {
+      "period": "2026",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=65218",
+      "sha256": "e23e7675ddbd8b5ce8c59a9f350f4d35626bd3b25400d45b374ca34a11c95979"
+    },
+    {
+      "period": "2026",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=65081",
+      "sha256": "1ec530e6baf4c7905881f2062a65cb63daf824416b5067c9ab1dd7424e654c99"
+    },
+    {
+      "period": "2026",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=65219",
+      "sha256": "c567774a80b0162cd3af564f980c2bf16a8ea7be8a8062a1d52cc1839454c256"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "media"
+}

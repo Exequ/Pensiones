@@ -1,0 +1,44 @@
+{
+  "tipo": "tabla",
+  "id": "proyecciones-inmigracion-edad",
+  "title": "Inmigración exterior proyectada por el INE 2026-2075 por año, sexo y edad",
+  "description": "Hipótesis de inmigración procedente del extranjero (edición 2026-2076) por edad simple (0 a «100 y más», edad 100) y sexo, todos los lugares de nacimiento. El INE publica la emigración solo por sexo y lugar de nacimiento (serie «emigracion-proyectada-*» de proyecciones-hipotesis).",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Edad",
+      "unidad": "años"
+    },
+    {
+      "id": "personas",
+      "descripcion": "Inmigración proyectada",
+      "unidad": "personas"
+    }
+  ],
+  "filas": 15150,
+  "source": {
+    "title": "Proyecciones de Población: flujos de inmigración exterior por sexo, generación y lugar de nacimiento (tabla 36776)",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36776",
+    "docId": "INE-36776"
+  },
+  "origenes": [
+    {
+      "period": "2075",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36776",
+      "sha256": "6d26aee104d4adf95c3ed9438632d9f836104fed2a8e5274961bd0c17d0b5f4a"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta"
+}

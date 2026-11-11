@@ -1,0 +1,5751 @@
+{
+  "tipo": "datos",
+  "id": "europop2025-indicadores",
+  "title": "EUROPOP2025: hipótesis e indicadores para España (2025-2100), escenario de referencia",
+  "description": "Hipótesis de fecundidad, mortalidad y migración e indicadores demográficos de Eurostat (EUROPOP2025, escenario de referencia) para España.",
+  "series": [
+    {
+      "id": "europop2025-icf",
+      "title": "EUROPOP2025: indicador coyuntural de fecundidad (referencia)",
+      "unit": "hijos por mujer",
+      "source": {
+        "title": "Assumptions for fertility rates by age and type of projection (proj_25naasfr)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25naasfr/default/table?lang=en",
+        "docId": "eurostat-proj_25naasfr"
+      },
+      "confidence": "alta",
+      "notes": "Código age = TOTAL del conjunto de tasas por edad.",
+      "points": [
+        {
+          "period": "2025",
+          "value": 1.10738
+        },
+        {
+          "period": "2026",
+          "value": 1.1141
+        },
+        {
+          "period": "2027",
+          "value": 1.11831
+        },
+        {
+          "period": "2028",
+          "value": 1.12252
+        },
+        {
+          "period": "2029",
+          "value": 1.12671
+        },
+        {
+          "period": "2030",
+          "value": 1.13097
+        },
+        {
+          "period": "2031",
+          "value": 1.13519
+        },
+        {
+          "period": "2032",
+          "value": 1.13937
+        },
+        {
+          "period": "2033",
+          "value": 1.14358
+        },
+        {
+          "period": "2034",
+          "value": 1.14782
+        },
+        {
+          "period": "2035",
+          "value": 1.15201
+        },
+        {
+          "period": "2036",
+          "value": 1.15628
+        },
+        {
+          "period": "2037",
+          "value": 1.16052
+        },
+        {
+          "period": "2038",
+          "value": 1.16476
+        },
+        {
+          "period": "2039",
+          "value": 1.16897
+        },
+        {
+          "period": "2040",
+          "value": 1.17322
+        },
+        {
+          "period": "2041",
+          "value": 1.17748
+        },
+        {
+          "period": "2042",
+          "value": 1.18174
+        },
+        {
+          "period": "2043",
+          "value": 1.18598
+        },
+        {
+          "period": "2044",
+          "value": 1.19027
+        },
+        {
+          "period": "2045",
+          "value": 1.19445
+        },
+        {
+          "period": "2046",
+          "value": 1.19871
+        },
+        {
+          "period": "2047",
+          "value": 1.20293
+        },
+        {
+          "period": "2048",
+          "value": 1.20721
+        },
+        {
+          "period": "2049",
+          "value": 1.21143
+        },
+        {
+          "period": "2050",
+          "value": 1.21568
+        },
+        {
+          "period": "2051",
+          "value": 1.21997
+        },
+        {
+          "period": "2052",
+          "value": 1.22416
+        },
+        {
+          "period": "2053",
+          "value": 1.22842
+        },
+        {
+          "period": "2054",
+          "value": 1.23267
+        },
+        {
+          "period": "2055",
+          "value": 1.23689
+        },
+        {
+          "period": "2056",
+          "value": 1.24114
+        },
+        {
+          "period": "2057",
+          "value": 1.24538
+        },
+        {
+          "period": "2058",
+          "value": 1.24964
+        },
+        {
+          "period": "2059",
+          "value": 1.25389
+        },
+        {
+          "period": "2060",
+          "value": 1.25809
+        },
+        {
+          "period": "2061",
+          "value": 1.26235
+        },
+        {
+          "period": "2062",
+          "value": 1.2666
+        },
+        {
+          "period": "2063",
+          "value": 1.27086
+        },
+        {
+          "period": "2064",
+          "value": 1.27507
+        },
+        {
+          "period": "2065",
+          "value": 1.27934
+        },
+        {
+          "period": "2066",
+          "value": 1.28359
+        },
+        {
+          "period": "2067",
+          "value": 1.28781
+        },
+        {
+          "period": "2068",
+          "value": 1.29206
+        },
+        {
+          "period": "2069",
+          "value": 1.2963
+        },
+        {
+          "period": "2070",
+          "value": 1.30055
+        },
+        {
+          "period": "2071",
+          "value": 1.30481
+        },
+        {
+          "period": "2072",
+          "value": 1.30904
+        },
+        {
+          "period": "2073",
+          "value": 1.3133
+        },
+        {
+          "period": "2074",
+          "value": 1.31754
+        },
+        {
+          "period": "2075",
+          "value": 1.32178
+        },
+        {
+          "period": "2076",
+          "value": 1.32599
+        },
+        {
+          "period": "2077",
+          "value": 1.33025
+        },
+        {
+          "period": "2078",
+          "value": 1.33449
+        },
+        {
+          "period": "2079",
+          "value": 1.33873
+        },
+        {
+          "period": "2080",
+          "value": 1.34297
+        },
+        {
+          "period": "2081",
+          "value": 1.34719
+        },
+        {
+          "period": "2082",
+          "value": 1.35149
+        },
+        {
+          "period": "2083",
+          "value": 1.3557
+        },
+        {
+          "period": "2084",
+          "value": 1.35995
+        },
+        {
+          "period": "2085",
+          "value": 1.3642
+        },
+        {
+          "period": "2086",
+          "value": 1.36843
+        },
+        {
+          "period": "2087",
+          "value": 1.37267
+        },
+        {
+          "period": "2088",
+          "value": 1.37691
+        },
+        {
+          "period": "2089",
+          "value": 1.38115
+        },
+        {
+          "period": "2090",
+          "value": 1.38541
+        },
+        {
+          "period": "2091",
+          "value": 1.38967
+        },
+        {
+          "period": "2092",
+          "value": 1.39389
+        },
+        {
+          "period": "2093",
+          "value": 1.39816
+        },
+        {
+          "period": "2094",
+          "value": 1.40236
+        },
+        {
+          "period": "2095",
+          "value": 1.40663
+        },
+        {
+          "period": "2096",
+          "value": 1.41086
+        },
+        {
+          "period": "2097",
+          "value": 1.41514
+        },
+        {
+          "period": "2098",
+          "value": 1.41936
+        },
+        {
+          "period": "2099",
+          "value": 1.42361
+        },
+        {
+          "period": "2100",
+          "value": 1.42783
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-esperanza-vida-0-hombres",
+      "title": "EUROPOP2025: esperanza de vida a la edad 0, hombres (referencia)",
+      "unit": "años",
+      "source": {
+        "title": "Projected life expectancy by age, sex and type of projection (proj_25nalexp)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25nalexp/default/table?lang=en",
+        "docId": "eurostat-proj_25nalexp"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 81.5
+        },
+        {
+          "period": "2026",
+          "value": 81.6
+        },
+        {
+          "period": "2027",
+          "value": 81.7
+        },
+        {
+          "period": "2028",
+          "value": 81.8
+        },
+        {
+          "period": "2029",
+          "value": 81.9
+        },
+        {
+          "period": "2030",
+          "value": 82.0
+        },
+        {
+          "period": "2031",
+          "value": 82.1
+        },
+        {
+          "period": "2032",
+          "value": 82.2
+        },
+        {
+          "period": "2033",
+          "value": 82.3
+        },
+        {
+          "period": "2034",
+          "value": 82.4
+        },
+        {
+          "period": "2035",
+          "value": 82.6
+        },
+        {
+          "period": "2036",
+          "value": 82.7
+        },
+        {
+          "period": "2037",
+          "value": 82.8
+        },
+        {
+          "period": "2038",
+          "value": 82.9
+        },
+        {
+          "period": "2039",
+          "value": 83.0
+        },
+        {
+          "period": "2040",
+          "value": 83.1
+        },
+        {
+          "period": "2041",
+          "value": 83.2
+        },
+        {
+          "period": "2042",
+          "value": 83.3
+        },
+        {
+          "period": "2043",
+          "value": 83.4
+        },
+        {
+          "period": "2044",
+          "value": 83.5
+        },
+        {
+          "period": "2045",
+          "value": 83.6
+        },
+        {
+          "period": "2046",
+          "value": 83.7
+        },
+        {
+          "period": "2047",
+          "value": 83.8
+        },
+        {
+          "period": "2048",
+          "value": 83.9
+        },
+        {
+          "period": "2049",
+          "value": 84.0
+        },
+        {
+          "period": "2050",
+          "value": 84.2
+        },
+        {
+          "period": "2051",
+          "value": 84.3
+        },
+        {
+          "period": "2052",
+          "value": 84.4
+        },
+        {
+          "period": "2053",
+          "value": 84.5
+        },
+        {
+          "period": "2054",
+          "value": 84.6
+        },
+        {
+          "period": "2055",
+          "value": 84.7
+        },
+        {
+          "period": "2056",
+          "value": 84.8
+        },
+        {
+          "period": "2057",
+          "value": 84.9
+        },
+        {
+          "period": "2058",
+          "value": 85.0
+        },
+        {
+          "period": "2059",
+          "value": 85.1
+        },
+        {
+          "period": "2060",
+          "value": 85.3
+        },
+        {
+          "period": "2061",
+          "value": 85.4
+        },
+        {
+          "period": "2062",
+          "value": 85.5
+        },
+        {
+          "period": "2063",
+          "value": 85.6
+        },
+        {
+          "period": "2064",
+          "value": 85.7
+        },
+        {
+          "period": "2065",
+          "value": 85.8
+        },
+        {
+          "period": "2066",
+          "value": 85.9
+        },
+        {
+          "period": "2067",
+          "value": 86.0
+        },
+        {
+          "period": "2068",
+          "value": 86.1
+        },
+        {
+          "period": "2069",
+          "value": 86.2
+        },
+        {
+          "period": "2070",
+          "value": 86.4
+        },
+        {
+          "period": "2071",
+          "value": 86.5
+        },
+        {
+          "period": "2072",
+          "value": 86.6
+        },
+        {
+          "period": "2073",
+          "value": 86.7
+        },
+        {
+          "period": "2074",
+          "value": 86.8
+        },
+        {
+          "period": "2075",
+          "value": 86.9
+        },
+        {
+          "period": "2076",
+          "value": 87.0
+        },
+        {
+          "period": "2077",
+          "value": 87.1
+        },
+        {
+          "period": "2078",
+          "value": 87.2
+        },
+        {
+          "period": "2079",
+          "value": 87.3
+        },
+        {
+          "period": "2080",
+          "value": 87.5
+        },
+        {
+          "period": "2081",
+          "value": 87.6
+        },
+        {
+          "period": "2082",
+          "value": 87.7
+        },
+        {
+          "period": "2083",
+          "value": 87.8
+        },
+        {
+          "period": "2084",
+          "value": 87.9
+        },
+        {
+          "period": "2085",
+          "value": 88.0
+        },
+        {
+          "period": "2086",
+          "value": 88.1
+        },
+        {
+          "period": "2087",
+          "value": 88.2
+        },
+        {
+          "period": "2088",
+          "value": 88.3
+        },
+        {
+          "period": "2089",
+          "value": 88.4
+        },
+        {
+          "period": "2090",
+          "value": 88.5
+        },
+        {
+          "period": "2091",
+          "value": 88.6
+        },
+        {
+          "period": "2092",
+          "value": 88.7
+        },
+        {
+          "period": "2093",
+          "value": 88.8
+        },
+        {
+          "period": "2094",
+          "value": 89.0
+        },
+        {
+          "period": "2095",
+          "value": 89.1
+        },
+        {
+          "period": "2096",
+          "value": 89.2
+        },
+        {
+          "period": "2097",
+          "value": 89.3
+        },
+        {
+          "period": "2098",
+          "value": 89.4
+        },
+        {
+          "period": "2099",
+          "value": 89.5
+        },
+        {
+          "period": "2100",
+          "value": 89.6
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-esperanza-vida-65-hombres",
+      "title": "EUROPOP2025: esperanza de vida a la edad 65, hombres (referencia)",
+      "unit": "años",
+      "source": {
+        "title": "Projected life expectancy by age, sex and type of projection (proj_25nalexp)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25nalexp/default/table?lang=en",
+        "docId": "eurostat-proj_25nalexp"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 19.9
+        },
+        {
+          "period": "2026",
+          "value": 20.0
+        },
+        {
+          "period": "2027",
+          "value": 20.0
+        },
+        {
+          "period": "2028",
+          "value": 20.1
+        },
+        {
+          "period": "2029",
+          "value": 20.2
+        },
+        {
+          "period": "2030",
+          "value": 20.3
+        },
+        {
+          "period": "2031",
+          "value": 20.4
+        },
+        {
+          "period": "2032",
+          "value": 20.4
+        },
+        {
+          "period": "2033",
+          "value": 20.5
+        },
+        {
+          "period": "2034",
+          "value": 20.6
+        },
+        {
+          "period": "2035",
+          "value": 20.7
+        },
+        {
+          "period": "2036",
+          "value": 20.8
+        },
+        {
+          "period": "2037",
+          "value": 20.8
+        },
+        {
+          "period": "2038",
+          "value": 20.9
+        },
+        {
+          "period": "2039",
+          "value": 21.0
+        },
+        {
+          "period": "2040",
+          "value": 21.1
+        },
+        {
+          "period": "2041",
+          "value": 21.2
+        },
+        {
+          "period": "2042",
+          "value": 21.2
+        },
+        {
+          "period": "2043",
+          "value": 21.3
+        },
+        {
+          "period": "2044",
+          "value": 21.4
+        },
+        {
+          "period": "2045",
+          "value": 21.5
+        },
+        {
+          "period": "2046",
+          "value": 21.6
+        },
+        {
+          "period": "2047",
+          "value": 21.6
+        },
+        {
+          "period": "2048",
+          "value": 21.7
+        },
+        {
+          "period": "2049",
+          "value": 21.8
+        },
+        {
+          "period": "2050",
+          "value": 21.9
+        },
+        {
+          "period": "2051",
+          "value": 22.0
+        },
+        {
+          "period": "2052",
+          "value": 22.1
+        },
+        {
+          "period": "2053",
+          "value": 22.1
+        },
+        {
+          "period": "2054",
+          "value": 22.2
+        },
+        {
+          "period": "2055",
+          "value": 22.3
+        },
+        {
+          "period": "2056",
+          "value": 22.4
+        },
+        {
+          "period": "2057",
+          "value": 22.5
+        },
+        {
+          "period": "2058",
+          "value": 22.6
+        },
+        {
+          "period": "2059",
+          "value": 22.7
+        },
+        {
+          "period": "2060",
+          "value": 22.7
+        },
+        {
+          "period": "2061",
+          "value": 22.8
+        },
+        {
+          "period": "2062",
+          "value": 22.9
+        },
+        {
+          "period": "2063",
+          "value": 23.0
+        },
+        {
+          "period": "2064",
+          "value": 23.1
+        },
+        {
+          "period": "2065",
+          "value": 23.2
+        },
+        {
+          "period": "2066",
+          "value": 23.3
+        },
+        {
+          "period": "2067",
+          "value": 23.4
+        },
+        {
+          "period": "2068",
+          "value": 23.4
+        },
+        {
+          "period": "2069",
+          "value": 23.5
+        },
+        {
+          "period": "2070",
+          "value": 23.6
+        },
+        {
+          "period": "2071",
+          "value": 23.7
+        },
+        {
+          "period": "2072",
+          "value": 23.8
+        },
+        {
+          "period": "2073",
+          "value": 23.9
+        },
+        {
+          "period": "2074",
+          "value": 24.0
+        },
+        {
+          "period": "2075",
+          "value": 24.1
+        },
+        {
+          "period": "2076",
+          "value": 24.1
+        },
+        {
+          "period": "2077",
+          "value": 24.2
+        },
+        {
+          "period": "2078",
+          "value": 24.3
+        },
+        {
+          "period": "2079",
+          "value": 24.4
+        },
+        {
+          "period": "2080",
+          "value": 24.5
+        },
+        {
+          "period": "2081",
+          "value": 24.6
+        },
+        {
+          "period": "2082",
+          "value": 24.7
+        },
+        {
+          "period": "2083",
+          "value": 24.8
+        },
+        {
+          "period": "2084",
+          "value": 24.8
+        },
+        {
+          "period": "2085",
+          "value": 24.9
+        },
+        {
+          "period": "2086",
+          "value": 25.0
+        },
+        {
+          "period": "2087",
+          "value": 25.1
+        },
+        {
+          "period": "2088",
+          "value": 25.2
+        },
+        {
+          "period": "2089",
+          "value": 25.3
+        },
+        {
+          "period": "2090",
+          "value": 25.4
+        },
+        {
+          "period": "2091",
+          "value": 25.5
+        },
+        {
+          "period": "2092",
+          "value": 25.5
+        },
+        {
+          "period": "2093",
+          "value": 25.6
+        },
+        {
+          "period": "2094",
+          "value": 25.7
+        },
+        {
+          "period": "2095",
+          "value": 25.8
+        },
+        {
+          "period": "2096",
+          "value": 25.9
+        },
+        {
+          "period": "2097",
+          "value": 26.0
+        },
+        {
+          "period": "2098",
+          "value": 26.1
+        },
+        {
+          "period": "2099",
+          "value": 26.1
+        },
+        {
+          "period": "2100",
+          "value": 26.2
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-esperanza-vida-0-mujeres",
+      "title": "EUROPOP2025: esperanza de vida a la edad 0, mujeres (referencia)",
+      "unit": "años",
+      "source": {
+        "title": "Projected life expectancy by age, sex and type of projection (proj_25nalexp)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25nalexp/default/table?lang=en",
+        "docId": "eurostat-proj_25nalexp"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 86.6
+        },
+        {
+          "period": "2026",
+          "value": 86.7
+        },
+        {
+          "period": "2027",
+          "value": 86.8
+        },
+        {
+          "period": "2028",
+          "value": 86.8
+        },
+        {
+          "period": "2029",
+          "value": 86.9
+        },
+        {
+          "period": "2030",
+          "value": 87.0
+        },
+        {
+          "period": "2031",
+          "value": 87.1
+        },
+        {
+          "period": "2032",
+          "value": 87.2
+        },
+        {
+          "period": "2033",
+          "value": 87.3
+        },
+        {
+          "period": "2034",
+          "value": 87.4
+        },
+        {
+          "period": "2035",
+          "value": 87.5
+        },
+        {
+          "period": "2036",
+          "value": 87.5
+        },
+        {
+          "period": "2037",
+          "value": 87.6
+        },
+        {
+          "period": "2038",
+          "value": 87.7
+        },
+        {
+          "period": "2039",
+          "value": 87.8
+        },
+        {
+          "period": "2040",
+          "value": 87.9
+        },
+        {
+          "period": "2041",
+          "value": 88.0
+        },
+        {
+          "period": "2042",
+          "value": 88.1
+        },
+        {
+          "period": "2043",
+          "value": 88.1
+        },
+        {
+          "period": "2044",
+          "value": 88.2
+        },
+        {
+          "period": "2045",
+          "value": 88.3
+        },
+        {
+          "period": "2046",
+          "value": 88.4
+        },
+        {
+          "period": "2047",
+          "value": 88.5
+        },
+        {
+          "period": "2048",
+          "value": 88.6
+        },
+        {
+          "period": "2049",
+          "value": 88.7
+        },
+        {
+          "period": "2050",
+          "value": 88.8
+        },
+        {
+          "period": "2051",
+          "value": 88.9
+        },
+        {
+          "period": "2052",
+          "value": 88.9
+        },
+        {
+          "period": "2053",
+          "value": 89.0
+        },
+        {
+          "period": "2054",
+          "value": 89.1
+        },
+        {
+          "period": "2055",
+          "value": 89.2
+        },
+        {
+          "period": "2056",
+          "value": 89.3
+        },
+        {
+          "period": "2057",
+          "value": 89.4
+        },
+        {
+          "period": "2058",
+          "value": 89.5
+        },
+        {
+          "period": "2059",
+          "value": 89.6
+        },
+        {
+          "period": "2060",
+          "value": 89.6
+        },
+        {
+          "period": "2061",
+          "value": 89.7
+        },
+        {
+          "period": "2062",
+          "value": 89.8
+        },
+        {
+          "period": "2063",
+          "value": 89.9
+        },
+        {
+          "period": "2064",
+          "value": 90.0
+        },
+        {
+          "period": "2065",
+          "value": 90.1
+        },
+        {
+          "period": "2066",
+          "value": 90.2
+        },
+        {
+          "period": "2067",
+          "value": 90.3
+        },
+        {
+          "period": "2068",
+          "value": 90.4
+        },
+        {
+          "period": "2069",
+          "value": 90.4
+        },
+        {
+          "period": "2070",
+          "value": 90.5
+        },
+        {
+          "period": "2071",
+          "value": 90.6
+        },
+        {
+          "period": "2072",
+          "value": 90.7
+        },
+        {
+          "period": "2073",
+          "value": 90.8
+        },
+        {
+          "period": "2074",
+          "value": 90.9
+        },
+        {
+          "period": "2075",
+          "value": 91.0
+        },
+        {
+          "period": "2076",
+          "value": 91.0
+        },
+        {
+          "period": "2077",
+          "value": 91.1
+        },
+        {
+          "period": "2078",
+          "value": 91.2
+        },
+        {
+          "period": "2079",
+          "value": 91.3
+        },
+        {
+          "period": "2080",
+          "value": 91.4
+        },
+        {
+          "period": "2081",
+          "value": 91.5
+        },
+        {
+          "period": "2082",
+          "value": 91.6
+        },
+        {
+          "period": "2083",
+          "value": 91.6
+        },
+        {
+          "period": "2084",
+          "value": 91.7
+        },
+        {
+          "period": "2085",
+          "value": 91.8
+        },
+        {
+          "period": "2086",
+          "value": 91.9
+        },
+        {
+          "period": "2087",
+          "value": 92.0
+        },
+        {
+          "period": "2088",
+          "value": 92.1
+        },
+        {
+          "period": "2089",
+          "value": 92.2
+        },
+        {
+          "period": "2090",
+          "value": 92.2
+        },
+        {
+          "period": "2091",
+          "value": 92.3
+        },
+        {
+          "period": "2092",
+          "value": 92.4
+        },
+        {
+          "period": "2093",
+          "value": 92.5
+        },
+        {
+          "period": "2094",
+          "value": 92.6
+        },
+        {
+          "period": "2095",
+          "value": 92.6
+        },
+        {
+          "period": "2096",
+          "value": 92.7
+        },
+        {
+          "period": "2097",
+          "value": 92.8
+        },
+        {
+          "period": "2098",
+          "value": 92.9
+        },
+        {
+          "period": "2099",
+          "value": 93.0
+        },
+        {
+          "period": "2100",
+          "value": 93.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-esperanza-vida-65-mujeres",
+      "title": "EUROPOP2025: esperanza de vida a la edad 65, mujeres (referencia)",
+      "unit": "años",
+      "source": {
+        "title": "Projected life expectancy by age, sex and type of projection (proj_25nalexp)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25nalexp/default/table?lang=en",
+        "docId": "eurostat-proj_25nalexp"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 23.7
+        },
+        {
+          "period": "2026",
+          "value": 23.8
+        },
+        {
+          "period": "2027",
+          "value": 23.8
+        },
+        {
+          "period": "2028",
+          "value": 23.9
+        },
+        {
+          "period": "2029",
+          "value": 24.0
+        },
+        {
+          "period": "2030",
+          "value": 24.0
+        },
+        {
+          "period": "2031",
+          "value": 24.1
+        },
+        {
+          "period": "2032",
+          "value": 24.2
+        },
+        {
+          "period": "2033",
+          "value": 24.2
+        },
+        {
+          "period": "2034",
+          "value": 24.3
+        },
+        {
+          "period": "2035",
+          "value": 24.4
+        },
+        {
+          "period": "2036",
+          "value": 24.5
+        },
+        {
+          "period": "2037",
+          "value": 24.5
+        },
+        {
+          "period": "2038",
+          "value": 24.6
+        },
+        {
+          "period": "2039",
+          "value": 24.7
+        },
+        {
+          "period": "2040",
+          "value": 24.7
+        },
+        {
+          "period": "2041",
+          "value": 24.8
+        },
+        {
+          "period": "2042",
+          "value": 24.9
+        },
+        {
+          "period": "2043",
+          "value": 24.9
+        },
+        {
+          "period": "2044",
+          "value": 25.0
+        },
+        {
+          "period": "2045",
+          "value": 25.1
+        },
+        {
+          "period": "2046",
+          "value": 25.2
+        },
+        {
+          "period": "2047",
+          "value": 25.2
+        },
+        {
+          "period": "2048",
+          "value": 25.3
+        },
+        {
+          "period": "2049",
+          "value": 25.4
+        },
+        {
+          "period": "2050",
+          "value": 25.4
+        },
+        {
+          "period": "2051",
+          "value": 25.5
+        },
+        {
+          "period": "2052",
+          "value": 25.6
+        },
+        {
+          "period": "2053",
+          "value": 25.7
+        },
+        {
+          "period": "2054",
+          "value": 25.7
+        },
+        {
+          "period": "2055",
+          "value": 25.8
+        },
+        {
+          "period": "2056",
+          "value": 25.9
+        },
+        {
+          "period": "2057",
+          "value": 25.9
+        },
+        {
+          "period": "2058",
+          "value": 26.0
+        },
+        {
+          "period": "2059",
+          "value": 26.1
+        },
+        {
+          "period": "2060",
+          "value": 26.2
+        },
+        {
+          "period": "2061",
+          "value": 26.2
+        },
+        {
+          "period": "2062",
+          "value": 26.3
+        },
+        {
+          "period": "2063",
+          "value": 26.4
+        },
+        {
+          "period": "2064",
+          "value": 26.5
+        },
+        {
+          "period": "2065",
+          "value": 26.5
+        },
+        {
+          "period": "2066",
+          "value": 26.6
+        },
+        {
+          "period": "2067",
+          "value": 26.7
+        },
+        {
+          "period": "2068",
+          "value": 26.7
+        },
+        {
+          "period": "2069",
+          "value": 26.8
+        },
+        {
+          "period": "2070",
+          "value": 26.9
+        },
+        {
+          "period": "2071",
+          "value": 27.0
+        },
+        {
+          "period": "2072",
+          "value": 27.0
+        },
+        {
+          "period": "2073",
+          "value": 27.1
+        },
+        {
+          "period": "2074",
+          "value": 27.2
+        },
+        {
+          "period": "2075",
+          "value": 27.3
+        },
+        {
+          "period": "2076",
+          "value": 27.3
+        },
+        {
+          "period": "2077",
+          "value": 27.4
+        },
+        {
+          "period": "2078",
+          "value": 27.5
+        },
+        {
+          "period": "2079",
+          "value": 27.5
+        },
+        {
+          "period": "2080",
+          "value": 27.6
+        },
+        {
+          "period": "2081",
+          "value": 27.7
+        },
+        {
+          "period": "2082",
+          "value": 27.8
+        },
+        {
+          "period": "2083",
+          "value": 27.8
+        },
+        {
+          "period": "2084",
+          "value": 27.9
+        },
+        {
+          "period": "2085",
+          "value": 28.0
+        },
+        {
+          "period": "2086",
+          "value": 28.0
+        },
+        {
+          "period": "2087",
+          "value": 28.1
+        },
+        {
+          "period": "2088",
+          "value": 28.2
+        },
+        {
+          "period": "2089",
+          "value": 28.3
+        },
+        {
+          "period": "2090",
+          "value": 28.3
+        },
+        {
+          "period": "2091",
+          "value": 28.4
+        },
+        {
+          "period": "2092",
+          "value": 28.5
+        },
+        {
+          "period": "2093",
+          "value": 28.5
+        },
+        {
+          "period": "2094",
+          "value": 28.6
+        },
+        {
+          "period": "2095",
+          "value": 28.7
+        },
+        {
+          "period": "2096",
+          "value": 28.7
+        },
+        {
+          "period": "2097",
+          "value": 28.8
+        },
+        {
+          "period": "2098",
+          "value": 28.9
+        },
+        {
+          "period": "2099",
+          "value": 28.9
+        },
+        {
+          "period": "2100",
+          "value": 29.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-migracion-neta-total",
+      "title": "EUROPOP2025: migración neta, total (referencia)",
+      "unit": "personas",
+      "source": {
+        "title": "Assumptions for net migration by age, sex and type of projection (proj_25nanmig)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25nanmig/default/table?lang=en",
+        "docId": "eurostat-proj_25nanmig"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 568240
+        },
+        {
+          "period": "2026",
+          "value": 524861
+        },
+        {
+          "period": "2027",
+          "value": 485772
+        },
+        {
+          "period": "2028",
+          "value": 446676
+        },
+        {
+          "period": "2029",
+          "value": 407589
+        },
+        {
+          "period": "2030",
+          "value": 368487
+        },
+        {
+          "period": "2031",
+          "value": 330493
+        },
+        {
+          "period": "2032",
+          "value": 333441
+        },
+        {
+          "period": "2033",
+          "value": 332614
+        },
+        {
+          "period": "2034",
+          "value": 332196
+        },
+        {
+          "period": "2035",
+          "value": 332095
+        },
+        {
+          "period": "2036",
+          "value": 333530
+        },
+        {
+          "period": "2037",
+          "value": 332906
+        },
+        {
+          "period": "2038",
+          "value": 331562
+        },
+        {
+          "period": "2039",
+          "value": 331606
+        },
+        {
+          "period": "2040",
+          "value": 329129
+        },
+        {
+          "period": "2041",
+          "value": 327414
+        },
+        {
+          "period": "2042",
+          "value": 323868
+        },
+        {
+          "period": "2043",
+          "value": 320739
+        },
+        {
+          "period": "2044",
+          "value": 315593
+        },
+        {
+          "period": "2045",
+          "value": 311887
+        },
+        {
+          "period": "2046",
+          "value": 306950
+        },
+        {
+          "period": "2047",
+          "value": 302629
+        },
+        {
+          "period": "2048",
+          "value": 297688
+        },
+        {
+          "period": "2049",
+          "value": 294408
+        },
+        {
+          "period": "2050",
+          "value": 290950
+        },
+        {
+          "period": "2051",
+          "value": 288038
+        },
+        {
+          "period": "2052",
+          "value": 285772
+        },
+        {
+          "period": "2053",
+          "value": 284169
+        },
+        {
+          "period": "2054",
+          "value": 282372
+        },
+        {
+          "period": "2055",
+          "value": 280785
+        },
+        {
+          "period": "2056",
+          "value": 279352
+        },
+        {
+          "period": "2057",
+          "value": 278874
+        },
+        {
+          "period": "2058",
+          "value": 276805
+        },
+        {
+          "period": "2059",
+          "value": 275053
+        },
+        {
+          "period": "2060",
+          "value": 273936
+        },
+        {
+          "period": "2061",
+          "value": 273148
+        },
+        {
+          "period": "2062",
+          "value": 273032
+        },
+        {
+          "period": "2063",
+          "value": 271429
+        },
+        {
+          "period": "2064",
+          "value": 272022
+        },
+        {
+          "period": "2065",
+          "value": 271945
+        },
+        {
+          "period": "2066",
+          "value": 270223
+        },
+        {
+          "period": "2067",
+          "value": 269308
+        },
+        {
+          "period": "2068",
+          "value": 269593
+        },
+        {
+          "period": "2069",
+          "value": 268596
+        },
+        {
+          "period": "2070",
+          "value": 267307
+        },
+        {
+          "period": "2071",
+          "value": 266417
+        },
+        {
+          "period": "2072",
+          "value": 264406
+        },
+        {
+          "period": "2073",
+          "value": 264968
+        },
+        {
+          "period": "2074",
+          "value": 261007
+        },
+        {
+          "period": "2075",
+          "value": 259323
+        },
+        {
+          "period": "2076",
+          "value": 256714
+        },
+        {
+          "period": "2077",
+          "value": 253939
+        },
+        {
+          "period": "2078",
+          "value": 250095
+        },
+        {
+          "period": "2079",
+          "value": 249396
+        },
+        {
+          "period": "2080",
+          "value": 246614
+        },
+        {
+          "period": "2081",
+          "value": 243888
+        },
+        {
+          "period": "2082",
+          "value": 240362
+        },
+        {
+          "period": "2083",
+          "value": 236702
+        },
+        {
+          "period": "2084",
+          "value": 233773
+        },
+        {
+          "period": "2085",
+          "value": 230439
+        },
+        {
+          "period": "2086",
+          "value": 228548
+        },
+        {
+          "period": "2087",
+          "value": 225780
+        },
+        {
+          "period": "2088",
+          "value": 222812
+        },
+        {
+          "period": "2089",
+          "value": 220258
+        },
+        {
+          "period": "2090",
+          "value": 218855
+        },
+        {
+          "period": "2091",
+          "value": 216709
+        },
+        {
+          "period": "2092",
+          "value": 214835
+        },
+        {
+          "period": "2093",
+          "value": 213251
+        },
+        {
+          "period": "2094",
+          "value": 211613
+        },
+        {
+          "period": "2095",
+          "value": 210033
+        },
+        {
+          "period": "2096",
+          "value": 208484
+        },
+        {
+          "period": "2097",
+          "value": 206961
+        },
+        {
+          "period": "2098",
+          "value": 205474
+        },
+        {
+          "period": "2099",
+          "value": 203966
+        },
+        {
+          "period": "2100",
+          "value": 202454
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-jan",
+      "title": "EUROPOP2025: Población a 1 de enero, total (referencia)",
+      "unit": "personas",
+      "source": {
+        "title": "Demographic balances and indicators by type of projection (proj_25ndbi)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+        "docId": "eurostat-proj_25ndbi"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 49128297
+        },
+        {
+          "period": "2026",
+          "value": 49570728
+        },
+        {
+          "period": "2027",
+          "value": 49976787
+        },
+        {
+          "period": "2028",
+          "value": 50341560
+        },
+        {
+          "period": "2029",
+          "value": 50665174
+        },
+        {
+          "period": "2030",
+          "value": 50947559
+        },
+        {
+          "period": "2031",
+          "value": 51188480
+        },
+        {
+          "period": "2032",
+          "value": 51388670
+        },
+        {
+          "period": "2033",
+          "value": 51588777
+        },
+        {
+          "period": "2034",
+          "value": 51784850
+        },
+        {
+          "period": "2035",
+          "value": 51977041
+        },
+        {
+          "period": "2036",
+          "value": 52165359
+        },
+        {
+          "period": "2037",
+          "value": 52350887
+        },
+        {
+          "period": "2038",
+          "value": 52531070
+        },
+        {
+          "period": "2039",
+          "value": 52704554
+        },
+        {
+          "period": "2040",
+          "value": 52872036
+        },
+        {
+          "period": "2041",
+          "value": 53030247
+        },
+        {
+          "period": "2042",
+          "value": 53179376
+        },
+        {
+          "period": "2043",
+          "value": 53316811
+        },
+        {
+          "period": "2044",
+          "value": 53442218
+        },
+        {
+          "period": "2045",
+          "value": 53552939
+        },
+        {
+          "period": "2046",
+          "value": 53649716
+        },
+        {
+          "period": "2047",
+          "value": 53730730
+        },
+        {
+          "period": "2048",
+          "value": 53795991
+        },
+        {
+          "period": "2049",
+          "value": 53844444
+        },
+        {
+          "period": "2050",
+          "value": 53877467
+        },
+        {
+          "period": "2051",
+          "value": 53894687
+        },
+        {
+          "period": "2052",
+          "value": 53896657
+        },
+        {
+          "period": "2053",
+          "value": 53884144
+        },
+        {
+          "period": "2054",
+          "value": 53858298
+        },
+        {
+          "period": "2055",
+          "value": 53819505
+        },
+        {
+          "period": "2056",
+          "value": 53768702
+        },
+        {
+          "period": "2057",
+          "value": 53706991
+        },
+        {
+          "period": "2058",
+          "value": 53636315
+        },
+        {
+          "period": "2059",
+          "value": 53556215
+        },
+        {
+          "period": "2060",
+          "value": 53468132
+        },
+        {
+          "period": "2061",
+          "value": 53373841
+        },
+        {
+          "period": "2062",
+          "value": 53274812
+        },
+        {
+          "period": "2063",
+          "value": 53172769
+        },
+        {
+          "period": "2064",
+          "value": 53067245
+        },
+        {
+          "period": "2065",
+          "value": 52961437
+        },
+        {
+          "period": "2066",
+          "value": 52855709
+        },
+        {
+          "period": "2067",
+          "value": 52749283
+        },
+        {
+          "period": "2068",
+          "value": 52643727
+        },
+        {
+          "period": "2069",
+          "value": 52541042
+        },
+        {
+          "period": "2070",
+          "value": 52440634
+        },
+        {
+          "period": "2071",
+          "value": 52342803
+        },
+        {
+          "period": "2072",
+          "value": 52248476
+        },
+        {
+          "period": "2073",
+          "value": 52156996
+        },
+        {
+          "period": "2074",
+          "value": 52071283
+        },
+        {
+          "period": "2075",
+          "value": 51987018
+        },
+        {
+          "period": "2076",
+          "value": 51906556
+        },
+        {
+          "period": "2077",
+          "value": 51828919
+        },
+        {
+          "period": "2078",
+          "value": 51753742
+        },
+        {
+          "period": "2079",
+          "value": 51679605
+        },
+        {
+          "period": "2080",
+          "value": 51609115
+        },
+        {
+          "period": "2081",
+          "value": 51539595
+        },
+        {
+          "period": "2082",
+          "value": 51470426
+        },
+        {
+          "period": "2083",
+          "value": 51400058
+        },
+        {
+          "period": "2084",
+          "value": 51327616
+        },
+        {
+          "period": "2085",
+          "value": 51253093
+        },
+        {
+          "period": "2086",
+          "value": 51175484
+        },
+        {
+          "period": "2087",
+          "value": 51095635
+        },
+        {
+          "period": "2088",
+          "value": 51012263
+        },
+        {
+          "period": "2089",
+          "value": 50924801
+        },
+        {
+          "period": "2090",
+          "value": 50833421
+        },
+        {
+          "period": "2091",
+          "value": 50739133
+        },
+        {
+          "period": "2092",
+          "value": 50641123
+        },
+        {
+          "period": "2093",
+          "value": 50539652
+        },
+        {
+          "period": "2094",
+          "value": 50435119
+        },
+        {
+          "period": "2095",
+          "value": 50327598
+        },
+        {
+          "period": "2096",
+          "value": 50217270
+        },
+        {
+          "period": "2097",
+          "value": 50104382
+        },
+        {
+          "period": "2098",
+          "value": 49989275
+        },
+        {
+          "period": "2099",
+          "value": 49872340
+        },
+        {
+          "period": "2100",
+          "value": 49753929
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-lbirth",
+      "title": "EUROPOP2025: Nacimientos (referencia)",
+      "unit": "personas",
+      "source": {
+        "title": "Demographic balances and indicators by type of projection (proj_25ndbi)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+        "docId": "eurostat-proj_25ndbi"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 321164
+        },
+        {
+          "period": "2026",
+          "value": 325343
+        },
+        {
+          "period": "2027",
+          "value": 329490
+        },
+        {
+          "period": "2028",
+          "value": 333745
+        },
+        {
+          "period": "2029",
+          "value": 338007
+        },
+        {
+          "period": "2030",
+          "value": 342192
+        },
+        {
+          "period": "2031",
+          "value": 346222
+        },
+        {
+          "period": "2032",
+          "value": 350292
+        },
+        {
+          "period": "2033",
+          "value": 354533
+        },
+        {
+          "period": "2034",
+          "value": 358811
+        },
+        {
+          "period": "2035",
+          "value": 363040
+        },
+        {
+          "period": "2036",
+          "value": 367079
+        },
+        {
+          "period": "2037",
+          "value": 370792
+        },
+        {
+          "period": "2038",
+          "value": 374064
+        },
+        {
+          "period": "2039",
+          "value": 376796
+        },
+        {
+          "period": "2040",
+          "value": 378887
+        },
+        {
+          "period": "2041",
+          "value": 380261
+        },
+        {
+          "period": "2042",
+          "value": 380887
+        },
+        {
+          "period": "2043",
+          "value": 380776
+        },
+        {
+          "period": "2044",
+          "value": 379939
+        },
+        {
+          "period": "2045",
+          "value": 378413
+        },
+        {
+          "period": "2046",
+          "value": 376276
+        },
+        {
+          "period": "2047",
+          "value": 373608
+        },
+        {
+          "period": "2048",
+          "value": 370489
+        },
+        {
+          "period": "2049",
+          "value": 367021
+        },
+        {
+          "period": "2050",
+          "value": 363321
+        },
+        {
+          "period": "2051",
+          "value": 359503
+        },
+        {
+          "period": "2052",
+          "value": 355687
+        },
+        {
+          "period": "2053",
+          "value": 352007
+        },
+        {
+          "period": "2054",
+          "value": 348592
+        },
+        {
+          "period": "2055",
+          "value": 345537
+        },
+        {
+          "period": "2056",
+          "value": 342923
+        },
+        {
+          "period": "2057",
+          "value": 340820
+        },
+        {
+          "period": "2058",
+          "value": 339258
+        },
+        {
+          "period": "2059",
+          "value": 338245
+        },
+        {
+          "period": "2060",
+          "value": 337789
+        },
+        {
+          "period": "2061",
+          "value": 337854
+        },
+        {
+          "period": "2062",
+          "value": 338375
+        },
+        {
+          "period": "2063",
+          "value": 339273
+        },
+        {
+          "period": "2064",
+          "value": 340484
+        },
+        {
+          "period": "2065",
+          "value": 341945
+        },
+        {
+          "period": "2066",
+          "value": 343565
+        },
+        {
+          "period": "2067",
+          "value": 345264
+        },
+        {
+          "period": "2068",
+          "value": 346992
+        },
+        {
+          "period": "2069",
+          "value": 348689
+        },
+        {
+          "period": "2070",
+          "value": 350292
+        },
+        {
+          "period": "2071",
+          "value": 351758
+        },
+        {
+          "period": "2072",
+          "value": 353044
+        },
+        {
+          "period": "2073",
+          "value": 354139
+        },
+        {
+          "period": "2074",
+          "value": 355010
+        },
+        {
+          "period": "2075",
+          "value": 355626
+        },
+        {
+          "period": "2076",
+          "value": 355992
+        },
+        {
+          "period": "2077",
+          "value": 356104
+        },
+        {
+          "period": "2078",
+          "value": 355965
+        },
+        {
+          "period": "2079",
+          "value": 355605
+        },
+        {
+          "period": "2080",
+          "value": 355056
+        },
+        {
+          "period": "2081",
+          "value": 354331
+        },
+        {
+          "period": "2082",
+          "value": 353454
+        },
+        {
+          "period": "2083",
+          "value": 352453
+        },
+        {
+          "period": "2084",
+          "value": 351369
+        },
+        {
+          "period": "2085",
+          "value": 350242
+        },
+        {
+          "period": "2086",
+          "value": 349115
+        },
+        {
+          "period": "2087",
+          "value": 348028
+        },
+        {
+          "period": "2088",
+          "value": 347010
+        },
+        {
+          "period": "2089",
+          "value": 346090
+        },
+        {
+          "period": "2090",
+          "value": 345302
+        },
+        {
+          "period": "2091",
+          "value": 344673
+        },
+        {
+          "period": "2092",
+          "value": 344208
+        },
+        {
+          "period": "2093",
+          "value": 343920
+        },
+        {
+          "period": "2094",
+          "value": 343809
+        },
+        {
+          "period": "2095",
+          "value": 343869
+        },
+        {
+          "period": "2096",
+          "value": 344087
+        },
+        {
+          "period": "2097",
+          "value": 344449
+        },
+        {
+          "period": "2098",
+          "value": 344932
+        },
+        {
+          "period": "2099",
+          "value": 345513
+        },
+        {
+          "period": "2100",
+          "value": 346167
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-death",
+      "title": "EUROPOP2025: Defunciones (referencia)",
+      "unit": "personas",
+      "source": {
+        "title": "Demographic balances and indicators by type of projection (proj_25ndbi)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+        "docId": "eurostat-proj_25ndbi"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 446982
+        },
+        {
+          "period": "2026",
+          "value": 444143
+        },
+        {
+          "period": "2027",
+          "value": 450487
+        },
+        {
+          "period": "2028",
+          "value": 456817
+        },
+        {
+          "period": "2029",
+          "value": 463209
+        },
+        {
+          "period": "2030",
+          "value": 469759
+        },
+        {
+          "period": "2031",
+          "value": 476523
+        },
+        {
+          "period": "2032",
+          "value": 483629
+        },
+        {
+          "period": "2033",
+          "value": 491079
+        },
+        {
+          "period": "2034",
+          "value": 498811
+        },
+        {
+          "period": "2035",
+          "value": 506822
+        },
+        {
+          "period": "2036",
+          "value": 515076
+        },
+        {
+          "period": "2037",
+          "value": 523518
+        },
+        {
+          "period": "2038",
+          "value": 532141
+        },
+        {
+          "period": "2039",
+          "value": 540918
+        },
+        {
+          "period": "2040",
+          "value": 549804
+        },
+        {
+          "period": "2041",
+          "value": 558543
+        },
+        {
+          "period": "2042",
+          "value": 567328
+        },
+        {
+          "period": "2043",
+          "value": 576103
+        },
+        {
+          "period": "2044",
+          "value": 584810
+        },
+        {
+          "period": "2045",
+          "value": 593511
+        },
+        {
+          "period": "2046",
+          "value": 602212
+        },
+        {
+          "period": "2047",
+          "value": 610970
+        },
+        {
+          "period": "2048",
+          "value": 619729
+        },
+        {
+          "period": "2049",
+          "value": 628408
+        },
+        {
+          "period": "2050",
+          "value": 637040
+        },
+        {
+          "period": "2051",
+          "value": 645592
+        },
+        {
+          "period": "2052",
+          "value": 653959
+        },
+        {
+          "period": "2053",
+          "value": 662026
+        },
+        {
+          "period": "2054",
+          "value": 669758
+        },
+        {
+          "period": "2055",
+          "value": 677110
+        },
+        {
+          "period": "2056",
+          "value": 683996
+        },
+        {
+          "period": "2057",
+          "value": 690374
+        },
+        {
+          "period": "2058",
+          "value": 696168
+        },
+        {
+          "period": "2059",
+          "value": 701384
+        },
+        {
+          "period": "2060",
+          "value": 706014
+        },
+        {
+          "period": "2061",
+          "value": 710034
+        },
+        {
+          "period": "2062",
+          "value": 713455
+        },
+        {
+          "period": "2063",
+          "value": 716228
+        },
+        {
+          "period": "2064",
+          "value": 718302
+        },
+        {
+          "period": "2065",
+          "value": 719617
+        },
+        {
+          "period": "2066",
+          "value": 720228
+        },
+        {
+          "period": "2067",
+          "value": 720122
+        },
+        {
+          "period": "2068",
+          "value": 719265
+        },
+        {
+          "period": "2069",
+          "value": 717697
+        },
+        {
+          "period": "2070",
+          "value": 715428
+        },
+        {
+          "period": "2071",
+          "value": 712489
+        },
+        {
+          "period": "2072",
+          "value": 708931
+        },
+        {
+          "period": "2073",
+          "value": 704824
+        },
+        {
+          "period": "2074",
+          "value": 700290
+        },
+        {
+          "period": "2075",
+          "value": 695410
+        },
+        {
+          "period": "2076",
+          "value": 690336
+        },
+        {
+          "period": "2077",
+          "value": 685208
+        },
+        {
+          "period": "2078",
+          "value": 680214
+        },
+        {
+          "period": "2079",
+          "value": 675485
+        },
+        {
+          "period": "2080",
+          "value": 671189
+        },
+        {
+          "period": "2081",
+          "value": 667395
+        },
+        {
+          "period": "2082",
+          "value": 664191
+        },
+        {
+          "period": "2083",
+          "value": 661604
+        },
+        {
+          "period": "2084",
+          "value": 659659
+        },
+        {
+          "period": "2085",
+          "value": 658302
+        },
+        {
+          "period": "2086",
+          "value": 657496
+        },
+        {
+          "period": "2087",
+          "value": 657180
+        },
+        {
+          "period": "2088",
+          "value": 657284
+        },
+        {
+          "period": "2089",
+          "value": 657727
+        },
+        {
+          "period": "2090",
+          "value": 658450
+        },
+        {
+          "period": "2091",
+          "value": 659396
+        },
+        {
+          "period": "2092",
+          "value": 660507
+        },
+        {
+          "period": "2093",
+          "value": 661697
+        },
+        {
+          "period": "2094",
+          "value": 662954
+        },
+        {
+          "period": "2095",
+          "value": 664233
+        },
+        {
+          "period": "2096",
+          "value": 665451
+        },
+        {
+          "period": "2097",
+          "value": 666521
+        },
+        {
+          "period": "2098",
+          "value": 667339
+        },
+        {
+          "period": "2099",
+          "value": 667884
+        },
+        {
+          "period": "2100",
+          "value": 668029
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-nmigrat",
+      "title": "EUROPOP2025: Migración neta (referencia)",
+      "unit": "personas",
+      "source": {
+        "title": "Demographic balances and indicators by type of projection (proj_25ndbi)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+        "docId": "eurostat-proj_25ndbi"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 568240
+        },
+        {
+          "period": "2026",
+          "value": 524861
+        },
+        {
+          "period": "2027",
+          "value": 485772
+        },
+        {
+          "period": "2028",
+          "value": 446676
+        },
+        {
+          "period": "2029",
+          "value": 407589
+        },
+        {
+          "period": "2030",
+          "value": 368487
+        },
+        {
+          "period": "2031",
+          "value": 330493
+        },
+        {
+          "period": "2032",
+          "value": 333441
+        },
+        {
+          "period": "2033",
+          "value": 332614
+        },
+        {
+          "period": "2034",
+          "value": 332196
+        },
+        {
+          "period": "2035",
+          "value": 332095
+        },
+        {
+          "period": "2036",
+          "value": 333530
+        },
+        {
+          "period": "2037",
+          "value": 332906
+        },
+        {
+          "period": "2038",
+          "value": 331562
+        },
+        {
+          "period": "2039",
+          "value": 331606
+        },
+        {
+          "period": "2040",
+          "value": 329129
+        },
+        {
+          "period": "2041",
+          "value": 327414
+        },
+        {
+          "period": "2042",
+          "value": 323868
+        },
+        {
+          "period": "2043",
+          "value": 320739
+        },
+        {
+          "period": "2044",
+          "value": 315593
+        },
+        {
+          "period": "2045",
+          "value": 311887
+        },
+        {
+          "period": "2046",
+          "value": 306950
+        },
+        {
+          "period": "2047",
+          "value": 302629
+        },
+        {
+          "period": "2048",
+          "value": 297688
+        },
+        {
+          "period": "2049",
+          "value": 294408
+        },
+        {
+          "period": "2050",
+          "value": 290950
+        },
+        {
+          "period": "2051",
+          "value": 288038
+        },
+        {
+          "period": "2052",
+          "value": 285772
+        },
+        {
+          "period": "2053",
+          "value": 284169
+        },
+        {
+          "period": "2054",
+          "value": 282372
+        },
+        {
+          "period": "2055",
+          "value": 280785
+        },
+        {
+          "period": "2056",
+          "value": 279352
+        },
+        {
+          "period": "2057",
+          "value": 278874
+        },
+        {
+          "period": "2058",
+          "value": 276805
+        },
+        {
+          "period": "2059",
+          "value": 275053
+        },
+        {
+          "period": "2060",
+          "value": 273936
+        },
+        {
+          "period": "2061",
+          "value": 273148
+        },
+        {
+          "period": "2062",
+          "value": 273032
+        },
+        {
+          "period": "2063",
+          "value": 271429
+        },
+        {
+          "period": "2064",
+          "value": 272022
+        },
+        {
+          "period": "2065",
+          "value": 271945
+        },
+        {
+          "period": "2066",
+          "value": 270223
+        },
+        {
+          "period": "2067",
+          "value": 269308
+        },
+        {
+          "period": "2068",
+          "value": 269593
+        },
+        {
+          "period": "2069",
+          "value": 268596
+        },
+        {
+          "period": "2070",
+          "value": 267307
+        },
+        {
+          "period": "2071",
+          "value": 266417
+        },
+        {
+          "period": "2072",
+          "value": 264406
+        },
+        {
+          "period": "2073",
+          "value": 264968
+        },
+        {
+          "period": "2074",
+          "value": 261007
+        },
+        {
+          "period": "2075",
+          "value": 259323
+        },
+        {
+          "period": "2076",
+          "value": 256714
+        },
+        {
+          "period": "2077",
+          "value": 253939
+        },
+        {
+          "period": "2078",
+          "value": 250095
+        },
+        {
+          "period": "2079",
+          "value": 249396
+        },
+        {
+          "period": "2080",
+          "value": 246614
+        },
+        {
+          "period": "2081",
+          "value": 243888
+        },
+        {
+          "period": "2082",
+          "value": 240362
+        },
+        {
+          "period": "2083",
+          "value": 236702
+        },
+        {
+          "period": "2084",
+          "value": 233773
+        },
+        {
+          "period": "2085",
+          "value": 230439
+        },
+        {
+          "period": "2086",
+          "value": 228548
+        },
+        {
+          "period": "2087",
+          "value": 225780
+        },
+        {
+          "period": "2088",
+          "value": 222812
+        },
+        {
+          "period": "2089",
+          "value": 220258
+        },
+        {
+          "period": "2090",
+          "value": 218855
+        },
+        {
+          "period": "2091",
+          "value": 216709
+        },
+        {
+          "period": "2092",
+          "value": 214835
+        },
+        {
+          "period": "2093",
+          "value": 213251
+        },
+        {
+          "period": "2094",
+          "value": 211613
+        },
+        {
+          "period": "2095",
+          "value": 210033
+        },
+        {
+          "period": "2096",
+          "value": 208484
+        },
+        {
+          "period": "2097",
+          "value": 206961
+        },
+        {
+          "period": "2098",
+          "value": 205474
+        },
+        {
+          "period": "2099",
+          "value": 203966
+        },
+        {
+          "period": "2100",
+          "value": 202454
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-olddep1",
+      "title": "EUROPOP2025: Tasa de dependencia de mayores (65 o más / 15 a 64) (referencia)",
+      "unit": "ratio",
+      "source": {
+        "title": "Demographic balances and indicators by type of projection (proj_25ndbi)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+        "docId": "eurostat-proj_25ndbi"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 31.2
+        },
+        {
+          "period": "2026",
+          "value": 31.7
+        },
+        {
+          "period": "2027",
+          "value": 32.3
+        },
+        {
+          "period": "2028",
+          "value": 32.9
+        },
+        {
+          "period": "2029",
+          "value": 33.7
+        },
+        {
+          "period": "2030",
+          "value": 34.5
+        },
+        {
+          "period": "2031",
+          "value": 35.4
+        },
+        {
+          "period": "2032",
+          "value": 36.3
+        },
+        {
+          "period": "2033",
+          "value": 37.3
+        },
+        {
+          "period": "2034",
+          "value": 38.3
+        },
+        {
+          "period": "2035",
+          "value": 39.3
+        },
+        {
+          "period": "2036",
+          "value": 40.3
+        },
+        {
+          "period": "2037",
+          "value": 41.4
+        },
+        {
+          "period": "2038",
+          "value": 42.6
+        },
+        {
+          "period": "2039",
+          "value": 43.8
+        },
+        {
+          "period": "2040",
+          "value": 45.0
+        },
+        {
+          "period": "2041",
+          "value": 46.3
+        },
+        {
+          "period": "2042",
+          "value": 47.6
+        },
+        {
+          "period": "2043",
+          "value": 48.9
+        },
+        {
+          "period": "2044",
+          "value": 50.1
+        },
+        {
+          "period": "2045",
+          "value": 51.1
+        },
+        {
+          "period": "2046",
+          "value": 52.1
+        },
+        {
+          "period": "2047",
+          "value": 53.0
+        },
+        {
+          "period": "2048",
+          "value": 53.7
+        },
+        {
+          "period": "2049",
+          "value": 54.2
+        },
+        {
+          "period": "2050",
+          "value": 54.7
+        },
+        {
+          "period": "2051",
+          "value": 55.0
+        },
+        {
+          "period": "2052",
+          "value": 55.3
+        },
+        {
+          "period": "2053",
+          "value": 55.5
+        },
+        {
+          "period": "2054",
+          "value": 55.7
+        },
+        {
+          "period": "2055",
+          "value": 55.9
+        },
+        {
+          "period": "2056",
+          "value": 56.0
+        },
+        {
+          "period": "2057",
+          "value": 56.2
+        },
+        {
+          "period": "2058",
+          "value": 56.3
+        },
+        {
+          "period": "2059",
+          "value": 56.4
+        },
+        {
+          "period": "2060",
+          "value": 56.5
+        },
+        {
+          "period": "2061",
+          "value": 56.6
+        },
+        {
+          "period": "2062",
+          "value": 56.6
+        },
+        {
+          "period": "2063",
+          "value": 56.8
+        },
+        {
+          "period": "2064",
+          "value": 56.9
+        },
+        {
+          "period": "2065",
+          "value": 57.1
+        },
+        {
+          "period": "2066",
+          "value": 57.4
+        },
+        {
+          "period": "2067",
+          "value": 57.7
+        },
+        {
+          "period": "2068",
+          "value": 58.0
+        },
+        {
+          "period": "2069",
+          "value": 58.4
+        },
+        {
+          "period": "2070",
+          "value": 58.8
+        },
+        {
+          "period": "2071",
+          "value": 59.3
+        },
+        {
+          "period": "2072",
+          "value": 59.8
+        },
+        {
+          "period": "2073",
+          "value": 60.4
+        },
+        {
+          "period": "2074",
+          "value": 61.0
+        },
+        {
+          "period": "2075",
+          "value": 61.6
+        },
+        {
+          "period": "2076",
+          "value": 62.2
+        },
+        {
+          "period": "2077",
+          "value": 62.8
+        },
+        {
+          "period": "2078",
+          "value": 63.4
+        },
+        {
+          "period": "2079",
+          "value": 63.9
+        },
+        {
+          "period": "2080",
+          "value": 64.4
+        },
+        {
+          "period": "2081",
+          "value": 65.0
+        },
+        {
+          "period": "2082",
+          "value": 65.5
+        },
+        {
+          "period": "2083",
+          "value": 65.9
+        },
+        {
+          "period": "2084",
+          "value": 66.2
+        },
+        {
+          "period": "2085",
+          "value": 66.5
+        },
+        {
+          "period": "2086",
+          "value": 66.7
+        },
+        {
+          "period": "2087",
+          "value": 66.9
+        },
+        {
+          "period": "2088",
+          "value": 67.0
+        },
+        {
+          "period": "2089",
+          "value": 67.1
+        },
+        {
+          "period": "2090",
+          "value": 67.1
+        },
+        {
+          "period": "2091",
+          "value": 67.1
+        },
+        {
+          "period": "2092",
+          "value": 67.1
+        },
+        {
+          "period": "2093",
+          "value": 67.1
+        },
+        {
+          "period": "2094",
+          "value": 67.1
+        },
+        {
+          "period": "2095",
+          "value": 67.2
+        },
+        {
+          "period": "2096",
+          "value": 67.2
+        },
+        {
+          "period": "2097",
+          "value": 67.2
+        },
+        {
+          "period": "2098",
+          "value": 67.2
+        },
+        {
+          "period": "2099",
+          "value": 67.3
+        },
+        {
+          "period": "2100",
+          "value": 67.4
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-depratio1",
+      "title": "EUROPOP2025: Tasa de dependencia total (0 a 14 y 65 o más / 15 a 64) (referencia)",
+      "unit": "ratio",
+      "source": {
+        "title": "Demographic balances and indicators by type of projection (proj_25ndbi)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+        "docId": "eurostat-proj_25ndbi"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 50.7
+        },
+        {
+          "period": "2026",
+          "value": 50.8
+        },
+        {
+          "period": "2027",
+          "value": 50.9
+        },
+        {
+          "period": "2028",
+          "value": 51.1
+        },
+        {
+          "period": "2029",
+          "value": 51.6
+        },
+        {
+          "period": "2030",
+          "value": 52.2
+        },
+        {
+          "period": "2031",
+          "value": 52.7
+        },
+        {
+          "period": "2032",
+          "value": 53.4
+        },
+        {
+          "period": "2033",
+          "value": 54.2
+        },
+        {
+          "period": "2034",
+          "value": 55.1
+        },
+        {
+          "period": "2035",
+          "value": 56.1
+        },
+        {
+          "period": "2036",
+          "value": 57.2
+        },
+        {
+          "period": "2037",
+          "value": 58.4
+        },
+        {
+          "period": "2038",
+          "value": 59.8
+        },
+        {
+          "period": "2039",
+          "value": 61.1
+        },
+        {
+          "period": "2040",
+          "value": 62.7
+        },
+        {
+          "period": "2041",
+          "value": 64.2
+        },
+        {
+          "period": "2042",
+          "value": 65.8
+        },
+        {
+          "period": "2043",
+          "value": 67.3
+        },
+        {
+          "period": "2044",
+          "value": 68.7
+        },
+        {
+          "period": "2045",
+          "value": 70.0
+        },
+        {
+          "period": "2046",
+          "value": 71.2
+        },
+        {
+          "period": "2047",
+          "value": 72.2
+        },
+        {
+          "period": "2048",
+          "value": 73.0
+        },
+        {
+          "period": "2049",
+          "value": 73.6
+        },
+        {
+          "period": "2050",
+          "value": 74.2
+        },
+        {
+          "period": "2051",
+          "value": 74.5
+        },
+        {
+          "period": "2052",
+          "value": 74.8
+        },
+        {
+          "period": "2053",
+          "value": 75.0
+        },
+        {
+          "period": "2054",
+          "value": 75.1
+        },
+        {
+          "period": "2055",
+          "value": 75.2
+        },
+        {
+          "period": "2056",
+          "value": 75.3
+        },
+        {
+          "period": "2057",
+          "value": 75.3
+        },
+        {
+          "period": "2058",
+          "value": 75.3
+        },
+        {
+          "period": "2059",
+          "value": 75.3
+        },
+        {
+          "period": "2060",
+          "value": 75.3
+        },
+        {
+          "period": "2061",
+          "value": 75.2
+        },
+        {
+          "period": "2062",
+          "value": 75.2
+        },
+        {
+          "period": "2063",
+          "value": 75.3
+        },
+        {
+          "period": "2064",
+          "value": 75.3
+        },
+        {
+          "period": "2065",
+          "value": 75.5
+        },
+        {
+          "period": "2066",
+          "value": 75.8
+        },
+        {
+          "period": "2067",
+          "value": 76.1
+        },
+        {
+          "period": "2068",
+          "value": 76.4
+        },
+        {
+          "period": "2069",
+          "value": 76.9
+        },
+        {
+          "period": "2070",
+          "value": 77.4
+        },
+        {
+          "period": "2071",
+          "value": 78.0
+        },
+        {
+          "period": "2072",
+          "value": 78.7
+        },
+        {
+          "period": "2073",
+          "value": 79.3
+        },
+        {
+          "period": "2074",
+          "value": 80.2
+        },
+        {
+          "period": "2075",
+          "value": 80.9
+        },
+        {
+          "period": "2076",
+          "value": 81.7
+        },
+        {
+          "period": "2077",
+          "value": 82.5
+        },
+        {
+          "period": "2078",
+          "value": 83.2
+        },
+        {
+          "period": "2079",
+          "value": 83.8
+        },
+        {
+          "period": "2080",
+          "value": 84.5
+        },
+        {
+          "period": "2081",
+          "value": 85.2
+        },
+        {
+          "period": "2082",
+          "value": 85.8
+        },
+        {
+          "period": "2083",
+          "value": 86.4
+        },
+        {
+          "period": "2084",
+          "value": 86.8
+        },
+        {
+          "period": "2085",
+          "value": 87.1
+        },
+        {
+          "period": "2086",
+          "value": 87.3
+        },
+        {
+          "period": "2087",
+          "value": 87.6
+        },
+        {
+          "period": "2088",
+          "value": 87.7
+        },
+        {
+          "period": "2089",
+          "value": 87.8
+        },
+        {
+          "period": "2090",
+          "value": 87.8
+        },
+        {
+          "period": "2091",
+          "value": 87.8
+        },
+        {
+          "period": "2092",
+          "value": 87.8
+        },
+        {
+          "period": "2093",
+          "value": 87.8
+        },
+        {
+          "period": "2094",
+          "value": 87.8
+        },
+        {
+          "period": "2095",
+          "value": 87.8
+        },
+        {
+          "period": "2096",
+          "value": 87.8
+        },
+        {
+          "period": "2097",
+          "value": 87.9
+        },
+        {
+          "period": "2098",
+          "value": 87.9
+        },
+        {
+          "period": "2099",
+          "value": 88.0
+        },
+        {
+          "period": "2100",
+          "value": 88.1
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-olddep3",
+      "title": "EUROPOP2025: Tasa de dependencia de mayores (65 o más / 20 a 64) (referencia)",
+      "unit": "ratio",
+      "source": {
+        "title": "Demographic balances and indicators by type of projection (proj_25ndbi)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+        "docId": "eurostat-proj_25ndbi"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 34.0
+        },
+        {
+          "period": "2026",
+          "value": 34.6
+        },
+        {
+          "period": "2027",
+          "value": 35.2
+        },
+        {
+          "period": "2028",
+          "value": 35.9
+        },
+        {
+          "period": "2029",
+          "value": 36.6
+        },
+        {
+          "period": "2030",
+          "value": 37.6
+        },
+        {
+          "period": "2031",
+          "value": 38.4
+        },
+        {
+          "period": "2032",
+          "value": 39.4
+        },
+        {
+          "period": "2033",
+          "value": 40.4
+        },
+        {
+          "period": "2034",
+          "value": 41.4
+        },
+        {
+          "period": "2035",
+          "value": 42.4
+        },
+        {
+          "period": "2036",
+          "value": 43.4
+        },
+        {
+          "period": "2037",
+          "value": 44.5
+        },
+        {
+          "period": "2038",
+          "value": 45.7
+        },
+        {
+          "period": "2039",
+          "value": 46.9
+        },
+        {
+          "period": "2040",
+          "value": 48.2
+        },
+        {
+          "period": "2041",
+          "value": 49.5
+        },
+        {
+          "period": "2042",
+          "value": 50.9
+        },
+        {
+          "period": "2043",
+          "value": 52.2
+        },
+        {
+          "period": "2044",
+          "value": 53.6
+        },
+        {
+          "period": "2045",
+          "value": 54.7
+        },
+        {
+          "period": "2046",
+          "value": 55.8
+        },
+        {
+          "period": "2047",
+          "value": 56.8
+        },
+        {
+          "period": "2048",
+          "value": 57.6
+        },
+        {
+          "period": "2049",
+          "value": 58.2
+        },
+        {
+          "period": "2050",
+          "value": 58.7
+        },
+        {
+          "period": "2051",
+          "value": 59.1
+        },
+        {
+          "period": "2052",
+          "value": 59.5
+        },
+        {
+          "period": "2053",
+          "value": 59.8
+        },
+        {
+          "period": "2054",
+          "value": 60.0
+        },
+        {
+          "period": "2055",
+          "value": 60.2
+        },
+        {
+          "period": "2056",
+          "value": 60.4
+        },
+        {
+          "period": "2057",
+          "value": 60.6
+        },
+        {
+          "period": "2058",
+          "value": 60.8
+        },
+        {
+          "period": "2059",
+          "value": 60.9
+        },
+        {
+          "period": "2060",
+          "value": 61.0
+        },
+        {
+          "period": "2061",
+          "value": 61.0
+        },
+        {
+          "period": "2062",
+          "value": 61.1
+        },
+        {
+          "period": "2063",
+          "value": 61.3
+        },
+        {
+          "period": "2064",
+          "value": 61.4
+        },
+        {
+          "period": "2065",
+          "value": 61.6
+        },
+        {
+          "period": "2066",
+          "value": 61.9
+        },
+        {
+          "period": "2067",
+          "value": 62.1
+        },
+        {
+          "period": "2068",
+          "value": 62.4
+        },
+        {
+          "period": "2069",
+          "value": 62.9
+        },
+        {
+          "period": "2070",
+          "value": 63.3
+        },
+        {
+          "period": "2071",
+          "value": 63.8
+        },
+        {
+          "period": "2072",
+          "value": 64.4
+        },
+        {
+          "period": "2073",
+          "value": 64.9
+        },
+        {
+          "period": "2074",
+          "value": 65.7
+        },
+        {
+          "period": "2075",
+          "value": 66.3
+        },
+        {
+          "period": "2076",
+          "value": 67.0
+        },
+        {
+          "period": "2077",
+          "value": 67.6
+        },
+        {
+          "period": "2078",
+          "value": 68.2
+        },
+        {
+          "period": "2079",
+          "value": 68.8
+        },
+        {
+          "period": "2080",
+          "value": 69.4
+        },
+        {
+          "period": "2081",
+          "value": 70.0
+        },
+        {
+          "period": "2082",
+          "value": 70.6
+        },
+        {
+          "period": "2083",
+          "value": 71.1
+        },
+        {
+          "period": "2084",
+          "value": 71.5
+        },
+        {
+          "period": "2085",
+          "value": 71.8
+        },
+        {
+          "period": "2086",
+          "value": 72.1
+        },
+        {
+          "period": "2087",
+          "value": 72.3
+        },
+        {
+          "period": "2088",
+          "value": 72.5
+        },
+        {
+          "period": "2089",
+          "value": 72.6
+        },
+        {
+          "period": "2090",
+          "value": 72.6
+        },
+        {
+          "period": "2091",
+          "value": 72.7
+        },
+        {
+          "period": "2092",
+          "value": 72.7
+        },
+        {
+          "period": "2093",
+          "value": 72.7
+        },
+        {
+          "period": "2094",
+          "value": 72.7
+        },
+        {
+          "period": "2095",
+          "value": 72.7
+        },
+        {
+          "period": "2096",
+          "value": 72.8
+        },
+        {
+          "period": "2097",
+          "value": 72.8
+        },
+        {
+          "period": "2098",
+          "value": 72.8
+        },
+        {
+          "period": "2099",
+          "value": 72.9
+        },
+        {
+          "period": "2100",
+          "value": 73.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-depratio3",
+      "title": "EUROPOP2025: Tasa de dependencia total (0 a 19 y 65 o más / 20 a 64) (referencia)",
+      "unit": "ratio",
+      "source": {
+        "title": "Demographic balances and indicators by type of projection (proj_25ndbi)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+        "docId": "eurostat-proj_25ndbi"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 64.3
+        },
+        {
+          "period": "2026",
+          "value": 64.5
+        },
+        {
+          "period": "2027",
+          "value": 64.7
+        },
+        {
+          "period": "2028",
+          "value": 64.9
+        },
+        {
+          "period": "2029",
+          "value": 65.1
+        },
+        {
+          "period": "2030",
+          "value": 65.5
+        },
+        {
+          "period": "2031",
+          "value": 65.9
+        },
+        {
+          "period": "2032",
+          "value": 66.4
+        },
+        {
+          "period": "2033",
+          "value": 67.0
+        },
+        {
+          "period": "2034",
+          "value": 67.8
+        },
+        {
+          "period": "2035",
+          "value": 68.5
+        },
+        {
+          "period": "2036",
+          "value": 69.3
+        },
+        {
+          "period": "2037",
+          "value": 70.2
+        },
+        {
+          "period": "2038",
+          "value": 71.3
+        },
+        {
+          "period": "2039",
+          "value": 72.5
+        },
+        {
+          "period": "2040",
+          "value": 74.0
+        },
+        {
+          "period": "2041",
+          "value": 75.5
+        },
+        {
+          "period": "2042",
+          "value": 77.2
+        },
+        {
+          "period": "2043",
+          "value": 78.8
+        },
+        {
+          "period": "2044",
+          "value": 80.5
+        },
+        {
+          "period": "2045",
+          "value": 82.0
+        },
+        {
+          "period": "2046",
+          "value": 83.3
+        },
+        {
+          "period": "2047",
+          "value": 84.5
+        },
+        {
+          "period": "2048",
+          "value": 85.5
+        },
+        {
+          "period": "2049",
+          "value": 86.4
+        },
+        {
+          "period": "2050",
+          "value": 87.0
+        },
+        {
+          "period": "2051",
+          "value": 87.6
+        },
+        {
+          "period": "2052",
+          "value": 88.0
+        },
+        {
+          "period": "2053",
+          "value": 88.3
+        },
+        {
+          "period": "2054",
+          "value": 88.6
+        },
+        {
+          "period": "2055",
+          "value": 88.8
+        },
+        {
+          "period": "2056",
+          "value": 88.9
+        },
+        {
+          "period": "2057",
+          "value": 89.0
+        },
+        {
+          "period": "2058",
+          "value": 89.2
+        },
+        {
+          "period": "2059",
+          "value": 89.2
+        },
+        {
+          "period": "2060",
+          "value": 89.2
+        },
+        {
+          "period": "2061",
+          "value": 89.1
+        },
+        {
+          "period": "2062",
+          "value": 89.1
+        },
+        {
+          "period": "2063",
+          "value": 89.1
+        },
+        {
+          "period": "2064",
+          "value": 89.1
+        },
+        {
+          "period": "2065",
+          "value": 89.3
+        },
+        {
+          "period": "2066",
+          "value": 89.5
+        },
+        {
+          "period": "2067",
+          "value": 89.8
+        },
+        {
+          "period": "2068",
+          "value": 90.1
+        },
+        {
+          "period": "2069",
+          "value": 90.5
+        },
+        {
+          "period": "2070",
+          "value": 91.0
+        },
+        {
+          "period": "2071",
+          "value": 91.6
+        },
+        {
+          "period": "2072",
+          "value": 92.3
+        },
+        {
+          "period": "2073",
+          "value": 93.0
+        },
+        {
+          "period": "2074",
+          "value": 93.9
+        },
+        {
+          "period": "2075",
+          "value": 94.7
+        },
+        {
+          "period": "2076",
+          "value": 95.6
+        },
+        {
+          "period": "2077",
+          "value": 96.4
+        },
+        {
+          "period": "2078",
+          "value": 97.3
+        },
+        {
+          "period": "2079",
+          "value": 98.0
+        },
+        {
+          "period": "2080",
+          "value": 98.8
+        },
+        {
+          "period": "2081",
+          "value": 99.7
+        },
+        {
+          "period": "2082",
+          "value": 100.4
+        },
+        {
+          "period": "2083",
+          "value": 101.1
+        },
+        {
+          "period": "2084",
+          "value": 101.6
+        },
+        {
+          "period": "2085",
+          "value": 102.1
+        },
+        {
+          "period": "2086",
+          "value": 102.4
+        },
+        {
+          "period": "2087",
+          "value": 102.8
+        },
+        {
+          "period": "2088",
+          "value": 103.0
+        },
+        {
+          "period": "2089",
+          "value": 103.2
+        },
+        {
+          "period": "2090",
+          "value": 103.2
+        },
+        {
+          "period": "2091",
+          "value": 103.3
+        },
+        {
+          "period": "2092",
+          "value": 103.3
+        },
+        {
+          "period": "2093",
+          "value": 103.4
+        },
+        {
+          "period": "2094",
+          "value": 103.4
+        },
+        {
+          "period": "2095",
+          "value": 103.4
+        },
+        {
+          "period": "2096",
+          "value": 103.4
+        },
+        {
+          "period": "2097",
+          "value": 103.5
+        },
+        {
+          "period": "2098",
+          "value": 103.5
+        },
+        {
+          "period": "2099",
+          "value": 103.6
+        },
+        {
+          "period": "2100",
+          "value": 103.7
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-pc_y65_max",
+      "title": "EUROPOP2025: Proporción de población de 65 o más años (referencia)",
+      "unit": "%",
+      "source": {
+        "title": "Demographic balances and indicators by type of projection (proj_25ndbi)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+        "docId": "eurostat-proj_25ndbi"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 20.7
+        },
+        {
+          "period": "2026",
+          "value": 21.1
+        },
+        {
+          "period": "2027",
+          "value": 21.4
+        },
+        {
+          "period": "2028",
+          "value": 21.8
+        },
+        {
+          "period": "2029",
+          "value": 22.2
+        },
+        {
+          "period": "2030",
+          "value": 22.7
+        },
+        {
+          "period": "2031",
+          "value": 23.2
+        },
+        {
+          "period": "2032",
+          "value": 23.7
+        },
+        {
+          "period": "2033",
+          "value": 24.2
+        },
+        {
+          "period": "2034",
+          "value": 24.7
+        },
+        {
+          "period": "2035",
+          "value": 25.2
+        },
+        {
+          "period": "2036",
+          "value": 25.7
+        },
+        {
+          "period": "2037",
+          "value": 26.2
+        },
+        {
+          "period": "2038",
+          "value": 26.7
+        },
+        {
+          "period": "2039",
+          "value": 27.2
+        },
+        {
+          "period": "2040",
+          "value": 27.7
+        },
+        {
+          "period": "2041",
+          "value": 28.2
+        },
+        {
+          "period": "2042",
+          "value": 28.7
+        },
+        {
+          "period": "2043",
+          "value": 29.2
+        },
+        {
+          "period": "2044",
+          "value": 29.7
+        },
+        {
+          "period": "2045",
+          "value": 30.1
+        },
+        {
+          "period": "2046",
+          "value": 30.5
+        },
+        {
+          "period": "2047",
+          "value": 30.8
+        },
+        {
+          "period": "2048",
+          "value": 31.0
+        },
+        {
+          "period": "2049",
+          "value": 31.2
+        },
+        {
+          "period": "2050",
+          "value": 31.4
+        },
+        {
+          "period": "2051",
+          "value": 31.5
+        },
+        {
+          "period": "2052",
+          "value": 31.6
+        },
+        {
+          "period": "2053",
+          "value": 31.7
+        },
+        {
+          "period": "2054",
+          "value": 31.8
+        },
+        {
+          "period": "2055",
+          "value": 31.9
+        },
+        {
+          "period": "2056",
+          "value": 32.0
+        },
+        {
+          "period": "2057",
+          "value": 32.0
+        },
+        {
+          "period": "2058",
+          "value": 32.1
+        },
+        {
+          "period": "2059",
+          "value": 32.2
+        },
+        {
+          "period": "2060",
+          "value": 32.2
+        },
+        {
+          "period": "2061",
+          "value": 32.3
+        },
+        {
+          "period": "2062",
+          "value": 32.3
+        },
+        {
+          "period": "2063",
+          "value": 32.4
+        },
+        {
+          "period": "2064",
+          "value": 32.4
+        },
+        {
+          "period": "2065",
+          "value": 32.5
+        },
+        {
+          "period": "2066",
+          "value": 32.6
+        },
+        {
+          "period": "2067",
+          "value": 32.7
+        },
+        {
+          "period": "2068",
+          "value": 32.9
+        },
+        {
+          "period": "2069",
+          "value": 33.0
+        },
+        {
+          "period": "2070",
+          "value": 33.1
+        },
+        {
+          "period": "2071",
+          "value": 33.3
+        },
+        {
+          "period": "2072",
+          "value": 33.5
+        },
+        {
+          "period": "2073",
+          "value": 33.7
+        },
+        {
+          "period": "2074",
+          "value": 33.9
+        },
+        {
+          "period": "2075",
+          "value": 34.1
+        },
+        {
+          "period": "2076",
+          "value": 34.2
+        },
+        {
+          "period": "2077",
+          "value": 34.4
+        },
+        {
+          "period": "2078",
+          "value": 34.6
+        },
+        {
+          "period": "2079",
+          "value": 34.7
+        },
+        {
+          "period": "2080",
+          "value": 34.9
+        },
+        {
+          "period": "2081",
+          "value": 35.1
+        },
+        {
+          "period": "2082",
+          "value": 35.2
+        },
+        {
+          "period": "2083",
+          "value": 35.4
+        },
+        {
+          "period": "2084",
+          "value": 35.5
+        },
+        {
+          "period": "2085",
+          "value": 35.5
+        },
+        {
+          "period": "2086",
+          "value": 35.6
+        },
+        {
+          "period": "2087",
+          "value": 35.7
+        },
+        {
+          "period": "2088",
+          "value": 35.7
+        },
+        {
+          "period": "2089",
+          "value": 35.7
+        },
+        {
+          "period": "2090",
+          "value": 35.7
+        },
+        {
+          "period": "2091",
+          "value": 35.7
+        },
+        {
+          "period": "2092",
+          "value": 35.7
+        },
+        {
+          "period": "2093",
+          "value": 35.7
+        },
+        {
+          "period": "2094",
+          "value": 35.8
+        },
+        {
+          "period": "2095",
+          "value": 35.8
+        },
+        {
+          "period": "2096",
+          "value": 35.8
+        },
+        {
+          "period": "2097",
+          "value": 35.8
+        },
+        {
+          "period": "2098",
+          "value": 35.8
+        },
+        {
+          "period": "2099",
+          "value": 35.8
+        },
+        {
+          "period": "2100",
+          "value": 35.8
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-pc_y15_64",
+      "title": "EUROPOP2025: Proporción de población de 15 a 64 años (referencia)",
+      "unit": "%",
+      "source": {
+        "title": "Demographic balances and indicators by type of projection (proj_25ndbi)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+        "docId": "eurostat-proj_25ndbi"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 66.4
+        },
+        {
+          "period": "2026",
+          "value": 66.3
+        },
+        {
+          "period": "2027",
+          "value": 66.3
+        },
+        {
+          "period": "2028",
+          "value": 66.2
+        },
+        {
+          "period": "2029",
+          "value": 66.0
+        },
+        {
+          "period": "2030",
+          "value": 65.7
+        },
+        {
+          "period": "2031",
+          "value": 65.5
+        },
+        {
+          "period": "2032",
+          "value": 65.2
+        },
+        {
+          "period": "2033",
+          "value": 64.9
+        },
+        {
+          "period": "2034",
+          "value": 64.5
+        },
+        {
+          "period": "2035",
+          "value": 64.1
+        },
+        {
+          "period": "2036",
+          "value": 63.6
+        },
+        {
+          "period": "2037",
+          "value": 63.1
+        },
+        {
+          "period": "2038",
+          "value": 62.6
+        },
+        {
+          "period": "2039",
+          "value": 62.1
+        },
+        {
+          "period": "2040",
+          "value": 61.5
+        },
+        {
+          "period": "2041",
+          "value": 60.9
+        },
+        {
+          "period": "2042",
+          "value": 60.3
+        },
+        {
+          "period": "2043",
+          "value": 59.8
+        },
+        {
+          "period": "2044",
+          "value": 59.3
+        },
+        {
+          "period": "2045",
+          "value": 58.8
+        },
+        {
+          "period": "2046",
+          "value": 58.4
+        },
+        {
+          "period": "2047",
+          "value": 58.1
+        },
+        {
+          "period": "2048",
+          "value": 57.8
+        },
+        {
+          "period": "2049",
+          "value": 57.6
+        },
+        {
+          "period": "2050",
+          "value": 57.4
+        },
+        {
+          "period": "2051",
+          "value": 57.3
+        },
+        {
+          "period": "2052",
+          "value": 57.2
+        },
+        {
+          "period": "2053",
+          "value": 57.1
+        },
+        {
+          "period": "2054",
+          "value": 57.1
+        },
+        {
+          "period": "2055",
+          "value": 57.1
+        },
+        {
+          "period": "2056",
+          "value": 57.1
+        },
+        {
+          "period": "2057",
+          "value": 57.0
+        },
+        {
+          "period": "2058",
+          "value": 57.0
+        },
+        {
+          "period": "2059",
+          "value": 57.0
+        },
+        {
+          "period": "2060",
+          "value": 57.1
+        },
+        {
+          "period": "2061",
+          "value": 57.1
+        },
+        {
+          "period": "2062",
+          "value": 57.1
+        },
+        {
+          "period": "2063",
+          "value": 57.1
+        },
+        {
+          "period": "2064",
+          "value": 57.0
+        },
+        {
+          "period": "2065",
+          "value": 57.0
+        },
+        {
+          "period": "2066",
+          "value": 56.9
+        },
+        {
+          "period": "2067",
+          "value": 56.8
+        },
+        {
+          "period": "2068",
+          "value": 56.7
+        },
+        {
+          "period": "2069",
+          "value": 56.5
+        },
+        {
+          "period": "2070",
+          "value": 56.4
+        },
+        {
+          "period": "2071",
+          "value": 56.2
+        },
+        {
+          "period": "2072",
+          "value": 56.0
+        },
+        {
+          "period": "2073",
+          "value": 55.8
+        },
+        {
+          "period": "2074",
+          "value": 55.5
+        },
+        {
+          "period": "2075",
+          "value": 55.3
+        },
+        {
+          "period": "2076",
+          "value": 55.0
+        },
+        {
+          "period": "2077",
+          "value": 54.8
+        },
+        {
+          "period": "2078",
+          "value": 54.6
+        },
+        {
+          "period": "2079",
+          "value": 54.4
+        },
+        {
+          "period": "2080",
+          "value": 54.2
+        },
+        {
+          "period": "2081",
+          "value": 54.0
+        },
+        {
+          "period": "2082",
+          "value": 53.8
+        },
+        {
+          "period": "2083",
+          "value": 53.7
+        },
+        {
+          "period": "2084",
+          "value": 53.5
+        },
+        {
+          "period": "2085",
+          "value": 53.4
+        },
+        {
+          "period": "2086",
+          "value": 53.4
+        },
+        {
+          "period": "2087",
+          "value": 53.3
+        },
+        {
+          "period": "2088",
+          "value": 53.3
+        },
+        {
+          "period": "2089",
+          "value": 53.3
+        },
+        {
+          "period": "2090",
+          "value": 53.2
+        },
+        {
+          "period": "2091",
+          "value": 53.2
+        },
+        {
+          "period": "2092",
+          "value": 53.2
+        },
+        {
+          "period": "2093",
+          "value": 53.2
+        },
+        {
+          "period": "2094",
+          "value": 53.2
+        },
+        {
+          "period": "2095",
+          "value": 53.2
+        },
+        {
+          "period": "2096",
+          "value": 53.2
+        },
+        {
+          "period": "2097",
+          "value": 53.2
+        },
+        {
+          "period": "2098",
+          "value": 53.2
+        },
+        {
+          "period": "2099",
+          "value": 53.2
+        },
+        {
+          "period": "2100",
+          "value": 53.2
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-pc_y0_14",
+      "title": "EUROPOP2025: Proporción de población de 0 a 14 años (referencia)",
+      "unit": "%",
+      "source": {
+        "title": "Demographic balances and indicators by type of projection (proj_25ndbi)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+        "docId": "eurostat-proj_25ndbi"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 12.9
+        },
+        {
+          "period": "2026",
+          "value": 12.6
+        },
+        {
+          "period": "2027",
+          "value": 12.3
+        },
+        {
+          "period": "2028",
+          "value": 12.1
+        },
+        {
+          "period": "2029",
+          "value": 11.8
+        },
+        {
+          "period": "2030",
+          "value": 11.6
+        },
+        {
+          "period": "2031",
+          "value": 11.3
+        },
+        {
+          "period": "2032",
+          "value": 11.1
+        },
+        {
+          "period": "2033",
+          "value": 11.0
+        },
+        {
+          "period": "2034",
+          "value": 10.8
+        },
+        {
+          "period": "2035",
+          "value": 10.8
+        },
+        {
+          "period": "2036",
+          "value": 10.7
+        },
+        {
+          "period": "2037",
+          "value": 10.7
+        },
+        {
+          "period": "2038",
+          "value": 10.7
+        },
+        {
+          "period": "2039",
+          "value": 10.8
+        },
+        {
+          "period": "2040",
+          "value": 10.8
+        },
+        {
+          "period": "2041",
+          "value": 10.9
+        },
+        {
+          "period": "2042",
+          "value": 10.9
+        },
+        {
+          "period": "2043",
+          "value": 11.0
+        },
+        {
+          "period": "2044",
+          "value": 11.0
+        },
+        {
+          "period": "2045",
+          "value": 11.1
+        },
+        {
+          "period": "2046",
+          "value": 11.1
+        },
+        {
+          "period": "2047",
+          "value": 11.2
+        },
+        {
+          "period": "2048",
+          "value": 11.2
+        },
+        {
+          "period": "2049",
+          "value": 11.2
+        },
+        {
+          "period": "2050",
+          "value": 11.2
+        },
+        {
+          "period": "2051",
+          "value": 11.2
+        },
+        {
+          "period": "2052",
+          "value": 11.2
+        },
+        {
+          "period": "2053",
+          "value": 11.1
+        },
+        {
+          "period": "2054",
+          "value": 11.1
+        },
+        {
+          "period": "2055",
+          "value": 11.0
+        },
+        {
+          "period": "2056",
+          "value": 11.0
+        },
+        {
+          "period": "2057",
+          "value": 10.9
+        },
+        {
+          "period": "2058",
+          "value": 10.8
+        },
+        {
+          "period": "2059",
+          "value": 10.8
+        },
+        {
+          "period": "2060",
+          "value": 10.7
+        },
+        {
+          "period": "2061",
+          "value": 10.7
+        },
+        {
+          "period": "2062",
+          "value": 10.6
+        },
+        {
+          "period": "2063",
+          "value": 10.6
+        },
+        {
+          "period": "2064",
+          "value": 10.5
+        },
+        {
+          "period": "2065",
+          "value": 10.5
+        },
+        {
+          "period": "2066",
+          "value": 10.5
+        },
+        {
+          "period": "2067",
+          "value": 10.5
+        },
+        {
+          "period": "2068",
+          "value": 10.5
+        },
+        {
+          "period": "2069",
+          "value": 10.5
+        },
+        {
+          "period": "2070",
+          "value": 10.5
+        },
+        {
+          "period": "2071",
+          "value": 10.5
+        },
+        {
+          "period": "2072",
+          "value": 10.5
+        },
+        {
+          "period": "2073",
+          "value": 10.6
+        },
+        {
+          "period": "2074",
+          "value": 10.6
+        },
+        {
+          "period": "2075",
+          "value": 10.7
+        },
+        {
+          "period": "2076",
+          "value": 10.7
+        },
+        {
+          "period": "2077",
+          "value": 10.8
+        },
+        {
+          "period": "2078",
+          "value": 10.8
+        },
+        {
+          "period": "2079",
+          "value": 10.9
+        },
+        {
+          "period": "2080",
+          "value": 10.9
+        },
+        {
+          "period": "2081",
+          "value": 10.9
+        },
+        {
+          "period": "2082",
+          "value": 11.0
+        },
+        {
+          "period": "2083",
+          "value": 11.0
+        },
+        {
+          "period": "2084",
+          "value": 11.0
+        },
+        {
+          "period": "2085",
+          "value": 11.0
+        },
+        {
+          "period": "2086",
+          "value": 11.0
+        },
+        {
+          "period": "2087",
+          "value": 11.0
+        },
+        {
+          "period": "2088",
+          "value": 11.0
+        },
+        {
+          "period": "2089",
+          "value": 11.0
+        },
+        {
+          "period": "2090",
+          "value": 11.0
+        },
+        {
+          "period": "2091",
+          "value": 11.0
+        },
+        {
+          "period": "2092",
+          "value": 11.0
+        },
+        {
+          "period": "2093",
+          "value": 11.0
+        },
+        {
+          "period": "2094",
+          "value": 11.0
+        },
+        {
+          "period": "2095",
+          "value": 11.0
+        },
+        {
+          "period": "2096",
+          "value": 11.0
+        },
+        {
+          "period": "2097",
+          "value": 11.0
+        },
+        {
+          "period": "2098",
+          "value": 11.0
+        },
+        {
+          "period": "2099",
+          "value": 11.0
+        },
+        {
+          "period": "2100",
+          "value": 11.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "europop2025-medagepop",
+      "title": "EUROPOP2025: Edad mediana de la población (referencia)",
+      "unit": "años",
+      "source": {
+        "title": "Demographic balances and indicators by type of projection (proj_25ndbi)",
+        "publisher": "Eurostat",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+        "docId": "eurostat-proj_25ndbi"
+      },
+      "confidence": "alta",
+      "points": [
+        {
+          "period": "2025",
+          "value": 45.8
+        },
+        {
+          "period": "2026",
+          "value": 46.1
+        },
+        {
+          "period": "2027",
+          "value": 46.3
+        },
+        {
+          "period": "2028",
+          "value": 46.6
+        },
+        {
+          "period": "2029",
+          "value": 46.9
+        },
+        {
+          "period": "2030",
+          "value": 47.1
+        },
+        {
+          "period": "2031",
+          "value": 47.3
+        },
+        {
+          "period": "2032",
+          "value": 47.6
+        },
+        {
+          "period": "2033",
+          "value": 47.8
+        },
+        {
+          "period": "2034",
+          "value": 48.0
+        },
+        {
+          "period": "2035",
+          "value": 48.2
+        },
+        {
+          "period": "2036",
+          "value": 48.3
+        },
+        {
+          "period": "2037",
+          "value": 48.5
+        },
+        {
+          "period": "2038",
+          "value": 48.6
+        },
+        {
+          "period": "2039",
+          "value": 48.8
+        },
+        {
+          "period": "2040",
+          "value": 48.9
+        },
+        {
+          "period": "2041",
+          "value": 49.0
+        },
+        {
+          "period": "2042",
+          "value": 49.2
+        },
+        {
+          "period": "2043",
+          "value": 49.3
+        },
+        {
+          "period": "2044",
+          "value": 49.4
+        },
+        {
+          "period": "2045",
+          "value": 49.5
+        },
+        {
+          "period": "2046",
+          "value": 49.6
+        },
+        {
+          "period": "2047",
+          "value": 49.7
+        },
+        {
+          "period": "2048",
+          "value": 49.8
+        },
+        {
+          "period": "2049",
+          "value": 49.9
+        },
+        {
+          "period": "2050",
+          "value": 50.1
+        },
+        {
+          "period": "2051",
+          "value": 50.2
+        },
+        {
+          "period": "2052",
+          "value": 50.4
+        },
+        {
+          "period": "2053",
+          "value": 50.5
+        },
+        {
+          "period": "2054",
+          "value": 50.6
+        },
+        {
+          "period": "2055",
+          "value": 50.8
+        },
+        {
+          "period": "2056",
+          "value": 51.0
+        },
+        {
+          "period": "2057",
+          "value": 51.1
+        },
+        {
+          "period": "2058",
+          "value": 51.3
+        },
+        {
+          "period": "2059",
+          "value": 51.5
+        },
+        {
+          "period": "2060",
+          "value": 51.6
+        },
+        {
+          "period": "2061",
+          "value": 51.8
+        },
+        {
+          "period": "2062",
+          "value": 52.0
+        },
+        {
+          "period": "2063",
+          "value": 52.1
+        },
+        {
+          "period": "2064",
+          "value": 52.3
+        },
+        {
+          "period": "2065",
+          "value": 52.4
+        },
+        {
+          "period": "2066",
+          "value": 52.5
+        },
+        {
+          "period": "2067",
+          "value": 52.6
+        },
+        {
+          "period": "2068",
+          "value": 52.7
+        },
+        {
+          "period": "2069",
+          "value": 52.8
+        },
+        {
+          "period": "2070",
+          "value": 52.9
+        },
+        {
+          "period": "2071",
+          "value": 53.0
+        },
+        {
+          "period": "2072",
+          "value": 53.0
+        },
+        {
+          "period": "2073",
+          "value": 53.0
+        },
+        {
+          "period": "2074",
+          "value": 53.0
+        },
+        {
+          "period": "2075",
+          "value": 53.0
+        },
+        {
+          "period": "2076",
+          "value": 53.0
+        },
+        {
+          "period": "2077",
+          "value": 53.0
+        },
+        {
+          "period": "2078",
+          "value": 53.0
+        },
+        {
+          "period": "2079",
+          "value": 53.0
+        },
+        {
+          "period": "2080",
+          "value": 53.0
+        },
+        {
+          "period": "2081",
+          "value": 53.0
+        },
+        {
+          "period": "2082",
+          "value": 53.0
+        },
+        {
+          "period": "2083",
+          "value": 53.0
+        },
+        {
+          "period": "2084",
+          "value": 53.0
+        },
+        {
+          "period": "2085",
+          "value": 53.0
+        },
+        {
+          "period": "2086",
+          "value": 53.0
+        },
+        {
+          "period": "2087",
+          "value": 53.0
+        },
+        {
+          "period": "2088",
+          "value": 53.1
+        },
+        {
+          "period": "2089",
+          "value": 53.1
+        },
+        {
+          "period": "2090",
+          "value": 53.2
+        },
+        {
+          "period": "2091",
+          "value": 53.2
+        },
+        {
+          "period": "2092",
+          "value": 53.3
+        },
+        {
+          "period": "2093",
+          "value": 53.3
+        },
+        {
+          "period": "2094",
+          "value": 53.4
+        },
+        {
+          "period": "2095",
+          "value": 53.4
+        },
+        {
+          "period": "2096",
+          "value": 53.4
+        },
+        {
+          "period": "2097",
+          "value": 53.5
+        },
+        {
+          "period": "2098",
+          "value": 53.5
+        },
+        {
+          "period": "2099",
+          "value": 53.6
+        },
+        {
+          "period": "2100",
+          "value": 53.6
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}

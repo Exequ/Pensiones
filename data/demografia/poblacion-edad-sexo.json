@@ -1,0 +1,59 @@
+{
+  "tipo": "tabla",
+  "id": "poblacion-edad-sexo",
+  "title": "Población residente a 1 de enero por edad simple y sexo (1971-2026)",
+  "description": "Población residente en España a 1 de enero por edad simple (0 a «100 y más»; 0 a «85 y más» en 1971-1980) y sexo, 1971-2026. Población residente en España a 1 de enero de cada año por edad simple (0 a 99 y «100 y más», que figura como edad 100) y sexo; «ambos» es el total publicado por el INE. Serie 1971-2021: estimaciones intercensales de población (coinciden con los censos de 1981, 1991, 2001, 2011 y 2021 y se corrigen con cada censo); desde el 1 de enero de 2021, Estadística Continua de Población (ECP), basada por primera vez enteramente en registros administrativos. El INE señala que la ECP sustituye a las series «Cifras de Población» y a las correcciones intercensales decenales; el año 2021 es el punto de cambio de metodología. El valor de 1 de enero de 2026 es «provisional» según el INE. 1971-1980: la tabla 59583 del INE solo da las edades 0 a 84 (sin tramo abierto) y se usa la tabla 56934, que añade «85 y más» (la suma coincide con el total); 1981-2026: tabla 59583. Ambas tablas coinciden en todas las fechas comunes.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año (1 de enero)",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Edad simple en años cumplidos; 100 = «100 y más años»",
+      "unidad": "años"
+    },
+    {
+      "id": "poblacion",
+      "descripcion": "Población residente",
+      "unidad": "personas"
+    },
+    {
+      "id": "tipo",
+      "descripcion": "definitivo o provisional (según el INE)",
+      "unidad": null
+    },
+    {
+      "id": "tramo_abierto",
+      "descripcion": "1 si la edad es el tramo abierto final («85 y más» en 1971-1980, «100 y más» desde 1981)",
+      "unidad": null
+    }
+  ],
+  "filas": 16518,
+  "source": {
+    "title": "Estadística Continua de Población: población residente por fecha, sexo y edad (tabla 59583)",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=59583",
+    "docId": "INE-59583"
+  },
+  "origenes": [
+    {
+      "period": "2026",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=59583",
+      "sha256": "82d8572f3b1da7bb43a0b3e0275a4bf7e5fd94ad924d7e97529eb51e4b3022d0"
+    },
+    {
+      "period": "2025",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=56934",
+      "sha256": "62e4b00899a8b2b42f79b51b8c051e5000a97567f0fff0de495e8b5db8d26bfa"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta"
+}

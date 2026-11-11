@@ -1,0 +1,79 @@
+{
+  "tipo": "tabla",
+  "id": "mites-bel-pensiones",
+  "title": "MITES, Boletín de Estadísticas Laborales: pensiones contributivas por clase y régimen, y altas y bajas (PEN-1, PEN-2, PEN-10 a PEN-13; 2016-2026)",
+  "description": "Número de pensiones (miles) e importe medio (euros/mes) por clase (PEN-1, PEN-10, PEN-11) y por régimen (PEN-2, PEN-12, PEN-13). PEN-1 y PEN-2: pensiones en vigor el primer día de cada mes; el valor «anual» es la media anual de esas cifras mensuales. PEN-10 a PEN-13: altas y bajas del período. Cobertura del fichero descargado: años 2016-2025 (anual), acumulados enero-octubre de 2025 y 2026 y meses de 2025 (mayo a diciembre) y 2026 (enero a octubre). tipo_periodo: anual, mes o acumulado. El BEL no publica el sexo ni la edad.",
+  "columnas": [
+    {
+      "id": "tabla",
+      "descripcion": "Tabla del BEL (PEN-1 …)",
+      "unidad": null
+    },
+    {
+      "id": "periodo",
+      "descripcion": "Año (AAAA), mes (AAAA-MM) o acumulado (AAAA-ene-oct)",
+      "unidad": null
+    },
+    {
+      "id": "tipo_periodo",
+      "descripcion": "anual, mes o acumulado",
+      "unidad": null
+    },
+    {
+      "id": "concepto",
+      "descripcion": "Clase de pensión o régimen, normalizado desde el rótulo de la fuente",
+      "unidad": null
+    },
+    {
+      "id": "numero_miles",
+      "descripcion": "Número de pensiones",
+      "unidad": "miles de pensiones"
+    },
+    {
+      "id": "importe_medio_eur_mes",
+      "descripcion": "Importe medio mensual",
+      "unidad": "euros/mes"
+    }
+  ],
+  "filas": 1202,
+  "source": {
+    "title": "Boletín de Estadísticas Laborales: pensiones contributivas del sistema de la Seguridad Social (PEN-1, PEN-2, PEN-10, PEN-11, PEN-12, PEN-13)",
+    "publisher": "Ministerio de Trabajo y Economía Social (MITES), Boletín de Estadísticas Laborales",
+    "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm"
+  },
+  "origenes": [
+    {
+      "period": "2025",
+      "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm",
+      "sha256": "a8b369b1063489c3243afe79b657b4695c7627a0d841dcffaa44bf002f11be2c"
+    },
+    {
+      "period": "2025",
+      "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm",
+      "sha256": "ef3b587e7e0ed80771ba7a69a05bf5c7d665490d47a41cd81e3d5745dc0e2cdb"
+    },
+    {
+      "period": "2025",
+      "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm",
+      "sha256": "b7da107393640918b63b6d9a62a93d4b9a76649fcbe67639dc1b13c8c6386351"
+    },
+    {
+      "period": "2025",
+      "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm",
+      "sha256": "3e882b0f6150b62c92b077efce00681944b996409e6dbfa5acb3bc893eb6cbe6"
+    },
+    {
+      "period": "2025",
+      "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm",
+      "sha256": "e36f46b107c63be4a2cd318d7a0e799f9060fd5c47995dc006ec7c63e4e4eb79"
+    },
+    {
+      "period": "2025",
+      "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm",
+      "sha256": "6272f753b20f43946e290d0c547b0b6f3fa131a1f88e3d2a55359b24c9da3d56"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Descarga manual del autor (data-raw/mites/*.xls). Los rótulos de régimen cambian con la Ley 28/2011 (integración de los regímenes agrario y de hogar en el General desde 2012)."
+}

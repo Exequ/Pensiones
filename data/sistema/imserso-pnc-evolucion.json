@@ -1,0 +1,54 @@
+{
+  "tipo": "tabla",
+  "id": "imserso-pnc-evolucion",
+  "title": "IMSERSO: pensiones no contributivas de jubilación e invalidez, número, importe bruto de la nómina y pensión media (2019-2025)",
+  "description": "Total España (incluye las nóminas de Navarra y el País Vasco, que facilitan sus comunidades). Filas «anual» (2019-2024): número de pensiones a diciembre e importe bruto abonado y pensión media del año; filas «mes» (2025): nómina de cada mes (en junio y noviembre la mensualidad incluye una paga extra, de ahí el importe duplicado); fila «total-anual» (2025): suma del año con el complemento de alquiler. clase: jubilacion, invalidez o total (jubilación e invalidez). La pensión media del IMSERSO es el importe bruto de la nómina entre el número de pensiones del mes, no el importe reconocido.",
+  "columnas": [
+    {
+      "id": "periodo",
+      "descripcion": "Año (AAAA) o mes de 2025 (2025-MM)",
+      "unidad": null
+    },
+    {
+      "id": "tipo_periodo",
+      "descripcion": "anual, mes o total-anual",
+      "unidad": null
+    },
+    {
+      "id": "clase",
+      "descripcion": "jubilacion, invalidez o total",
+      "unidad": null
+    },
+    {
+      "id": "pensiones",
+      "descripcion": "Número de pensiones",
+      "unidad": "pensiones"
+    },
+    {
+      "id": "importe_bruto_eur",
+      "descripcion": "Importe bruto abonado",
+      "unidad": "euros"
+    },
+    {
+      "id": "pension_media_eur_mes",
+      "descripcion": "Pensión media",
+      "unidad": "euros/mes"
+    }
+  ],
+  "filas": 57,
+  "source": {
+    "title": "Informe de evolución de las nóminas. PNC y PSPD. 2019-2025 (anexos 7 y 8, total España)",
+    "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+    "url": "https://imserso.es/el-imserso/documentacion/estadisticas/pensiones-no-contributivas-jubilacion-invalidez-pnc"
+  },
+  "origenes": [
+    {
+      "period": "2025",
+      "url": "https://imserso.es/el-imserso/documentacion/estadisticas/pensiones-no-contributivas-jubilacion-invalidez-pnc",
+      "sha256": "1fbd3e592562d11c08eebe36a2ea96c9a0a8ddb0e11de1ebb6f68d8b06c8ccad"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Descarga manual del autor (data-raw/imserso/evolnom20192025.pdf). Extraído del texto del PDF con pdftotext y comprobado con el total estatal de la tabla por comunidades del mismo informe."
+}

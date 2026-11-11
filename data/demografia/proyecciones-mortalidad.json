@@ -1,0 +1,84 @@
+{
+  "tipo": "tabla",
+  "id": "proyecciones-mortalidad",
+  "title": "Tablas de mortalidad proyectadas por el INE 2026-2075 por año, sexo y edad simple",
+  "description": "Funciones de la tabla de mortalidad proyectada (mx, qx, lx, dx, Lx, Tx, ex) por año, sexo y edad simple (0 a «100 y más», edad 100), escenario principal de la edición 2026-2076. Es la hipótesis de mortalidad de las proyecciones del INE. mx y qx se publican aquí en tanto por mil: el INE los etiqueta así pero los entrega en tanto por uno, y se han multiplicado por 1.000 (comprobado con l(x+1) = lx × (1 − qx)).",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "edad",
+      "descripcion": "Edad x; 100 = «100 y más»",
+      "unidad": "años"
+    },
+    {
+      "id": "mx",
+      "descripcion": "Tasa de mortalidad",
+      "unidad": "por mil"
+    },
+    {
+      "id": "qx_por_mil",
+      "descripcion": "Riesgo de muerte",
+      "unidad": "por mil"
+    },
+    {
+      "id": "lx",
+      "descripcion": "Supervivientes (raíz 100.000)",
+      "unidad": "personas"
+    },
+    {
+      "id": "dx",
+      "descripcion": "Defunciones teóricas",
+      "unidad": "personas"
+    },
+    {
+      "id": "pob_estacionaria",
+      "descripcion": "Población estacionaria Lx",
+      "unidad": "personas-año"
+    },
+    {
+      "id": "tiempo_por_vivir",
+      "descripcion": "Tiempo por vivir Tx",
+      "unidad": "personas-año"
+    },
+    {
+      "id": "ex",
+      "descripcion": "Esperanza de vida",
+      "unidad": "años"
+    }
+  ],
+  "filas": 15150,
+  "source": {
+    "title": "Proyecciones de Población: tablas de mortalidad por sexo, edad, funciones y año (tabla 36659)",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36659",
+    "docId": "INE-36659"
+  },
+  "origenes": [
+    {
+      "period": "2075",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36659",
+      "sha256": "5865389299150af8fb8ac0bfc1bccc54626478fb8e40e3793d6732bff4a9825f"
+    },
+    {
+      "period": "2075",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36774",
+      "sha256": "b784e4e9493391f588be93af50181f5e34c774dd205f583f543631ad164c6f0a"
+    },
+    {
+      "period": "2075",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36775",
+      "sha256": "5fc830241cc1dbe9f14d6a8122334ee5b551cb700e1c7d122a3794925beff858"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta"
+}

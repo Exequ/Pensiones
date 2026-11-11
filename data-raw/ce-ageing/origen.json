@@ -1,0 +1,15 @@
+{
+ "anexo-estadistico-2024.xlsx": {
+  "url": "https://economy-finance.ec.europa.eu/document/download/403cc04f-9487-406b-a48a-22538e0d461c_en?filename=2024_Ageing_Report-Statistical_annex_all_horizontal_tables.xlsx",
+  "pagina": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en",
+  "fetchedAt": "2026-11-11",
+  "nota": "No se versiona (12 MB); se vuelve a descargar con la URL.",
+  "sha256": "3507c3759bdc5d0f2bbf721290d1cae48f25688025aeadbee1a79adc896378f6"
+ },
+ "ficha-espana-2024.pdf": {
+  "url": "https://economy-finance.ec.europa.eu/document/download/392994f2-c025-4066-bea8-f65cf4bcd411_en?filename=2024-ageing-report-country-fiche-Spain.pdf",
+  "pagina": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en",
+  "fetchedAt": "2026-11-11",
+  "sha256": "073dca6b182b575cb78abe236e77db5014e78319cd0a0563e7ddaa161a307e3d"
+ }
+}

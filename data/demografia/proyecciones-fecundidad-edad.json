@@ -1,0 +1,39 @@
+{
+  "tipo": "tabla",
+  "id": "proyecciones-fecundidad-edad",
+  "title": "Tasas de fecundidad por edad de la madre proyectadas por el INE 2026-2075",
+  "description": "Hipótesis de fecundidad de las proyecciones del INE (edición 2026-2076): tasas por edad simple de la madre (15 = «15 y menos», 49 = «49 y más»), nacimientos por 1.000 mujeres, total nacional.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año",
+      "unidad": null
+    },
+    {
+      "id": "edad_madre",
+      "descripcion": "Edad de la madre",
+      "unidad": "años"
+    },
+    {
+      "id": "tasa_por_mil",
+      "descripcion": "Tasa de fecundidad",
+      "unidad": "nacimientos por 1.000 mujeres"
+    }
+  ],
+  "filas": 1750,
+  "source": {
+    "title": "Proyecciones de Población: tasas de fecundidad por edad de la madre y año (tabla 36654)",
+    "publisher": "Instituto Nacional de Estadística (INE)",
+    "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36654",
+    "docId": "INE-36654"
+  },
+  "origenes": [
+    {
+      "period": "2075",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36654",
+      "sha256": "4393663e2d0f456d631eabc28433a490cf2027dca38d1345f8fd381cfcae4ad1"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta"
+}

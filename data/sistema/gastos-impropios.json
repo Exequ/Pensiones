@@ -1,0 +1,72 @@
+{
+  "tipo": "datos",
+  "id": "gastos-impropios",
+  "title": "Gastos impropios de la Seguridad Social: previsiones de 2020 (Revista Seguridad Social)",
+  "description": "Cifras que cita el artículo de la Revista de la Seguridad Social de 29/10/2020 sobre los llamados gastos impropios (previsión de 2020 para 2023, déficit estimado, transferencia prevista en el proyecto de PGE 2021 y aportación del Estado en 2016). Fuente secundaria, con confianza media o baja.",
+  "data": [
+    {
+      "id": "gastos-impropios-previstos-2023",
+      "value": 22871,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "¿Qué gastos no contributivos financia la Seguridad Social? (Revista Seguridad Social, 29/10/2020; antes «¿Qué son los gastos impropios de la Seguridad Social?»)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://revista.seg-social.es/2020/10/29/que-son-los-gastos-impropios-de-la-seguridad-social/"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Previsión de 2020 de la AIReF y del Ministerio (presentada en la Comisión del Pacto de Toledo en septiembre de 2020), no un dato observado. «Gastos impropios» es la expresión de la fuente: prestaciones no contributivas, reducciones de cuotas, políticas de apoyo a las familias y gastos de funcionamiento que el Pacto de Toledo propone financiar con impuestos. Fuente secundaria (revista institucional).",
+      "quote": "estos gastos impropios ascenderían a 22.871 millones en 2023, mientras que el déficit estimado para ese año sería de 20.185 millones",
+      "location": "apartado «Opinión de la AIReF»"
+    },
+    {
+      "id": "deficit-estimado-2023",
+      "value": 20185,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "¿Qué gastos no contributivos financia la Seguridad Social? (Revista Seguridad Social, 29/10/2020; antes «¿Qué son los gastos impropios de la Seguridad Social?»)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://revista.seg-social.es/2020/10/29/que-son-los-gastos-impropios-de-la-seguridad-social/"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Déficit estimado para 2023 en la misma previsión de 2020 (no un dato observado ni una definición concreta de déficit; ver data/sistema/deficit-definiciones).",
+      "quote": "estos gastos impropios ascenderían a 22.871 millones en 2023, mientras que el déficit estimado para ese año sería de 20.185 millones",
+      "location": "apartado «Opinión de la AIReF»"
+    },
+    {
+      "id": "transferencia-prevista-pge-2021",
+      "value": 14000,
+      "unit": "millones de euros",
+      "period": "2021",
+      "source": {
+        "title": "¿Qué gastos no contributivos financia la Seguridad Social? (Revista Seguridad Social, 29/10/2020; antes «¿Qué son los gastos impropios de la Seguridad Social?»)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://revista.seg-social.es/2020/10/29/que-son-los-gastos-impropios-de-la-seguridad-social/"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "baja",
+      "notes": "La fuente dice «cerca de 14.000 millones»: cifra aproximada del proyecto de PGE 2021 para cubrir parte de los gastos impropios (no es el importe de la ley aprobada).",
+      "quote": "transferencia de cerca de 14.000 millones de euros",
+      "location": "apartado final"
+    },
+    {
+      "id": "aportacion-estado-gasto-pensiones-espana-2016",
+      "value": 14,
+      "unit": "% del gasto en pensiones",
+      "period": "2016",
+      "source": {
+        "title": "¿Qué gastos no contributivos financia la Seguridad Social? (Revista Seguridad Social, 29/10/2020; antes «¿Qué son los gastos impropios de la Seguridad Social?»)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://revista.seg-social.es/2020/10/29/que-son-los-gastos-impropios-de-la-seguridad-social/"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Según el Ageing Report 2018 de la Comisión Europea citado por la fuente; en Francia 26,6 % y en Alemania 37,2 %.",
+      "quote": "la aportación del Estado para pagar pensiones cubre el 14% del gasto en pensiones frente al 26,6% de Francia o el 37,2% de Alemania",
+      "location": "apartado final"
+    }
+  ]
+}
