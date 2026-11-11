@@ -146,4 +146,5 @@ def main():
         escribe_series('sistema', f'pensiones-vigor-{pref}', f'{nombre}, total sistema, por clase y sexo (2008-2025)', desc + ', total del sistema, por clase y sexo.', ss)
 
 
-main()
+if __name__ == '__main__':
+    main()
