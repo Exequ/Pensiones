@@ -1,0 +1,42 @@
+{
+ "2014": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/9a50d28a-0577-4469-87b4-6a2cff068ff7/AB3122014.xlsx",
+  "sha256": "e3a30da50297fdcd2b94ab51a15e38fe4e7fcb8f000247431f906356d8eb2fb3"
+ },
+ "2016": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/22714cb8-bd40-45ef-a662-6f64f8daaf96/AB3201612.xlsx",
+  "sha256": "6668cece4e752f2fcbff629acf2e5de60292c000404253bf6e2375b67ba10b03"
+ },
+ "2017": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/519bd98d-7af0-4c98-965e-25b3382156d6/AB3201712.xlsx",
+  "sha256": "47334af5d65561bfafee0da2b0a4ccca7cc68fc857c6dd44a75a974fd359b006"
+ },
+ "2018": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/727b99a7-9ff0-43b8-95ca-2c7ba16d6693/AB3201812.xlsx",
+  "sha256": "e0ee7a7291f068bc40f0994ede6a386ad6f7107b06d95cba974f9a3e783215e2"
+ },
+ "2019": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/5969d55c-bbeb-4077-ab1c-f1f444f497af/AB3201912.xlsx",
+  "sha256": "816407dbf44ec5ec73b3f224b2fee2bc8ef6ecf18da7cd432f488949cb0c24d8"
+ },
+ "2020": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/dbddffaf-c942-48df-86e7-2bd5ed96ccfd/AB3202012.xlsx",
+  "sha256": "ee564b8f324f47223ca4274bd9f9f9a8f4f6b4b20e0f1c9a3fb204cd2c91faba"
+ },
+ "2021": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/eb8ed8ce-bcc4-469d-a294-1015040c0946/AB202112.xlsx",
+  "sha256": "a5f6368c4e62435ebc1ca3612918d3343ea0b4a7f8f16d8592282214d24e4481"
+ },
+ "2022": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/1071a5bc-cdc2-4bce-a216-50d9837d1e40/AB202212.xlsx",
+  "sha256": "9616c5c78565cd9ec9acac4d422ca34880efab5e16aa69d8fe9b075db94aae55"
+ },
+ "2024": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/bfa2c7c7-7e0c-46bb-bff5-0f7d8d53872b/AB202412.xlsx",
+  "sha256": "ac2eb23b7ab2a87539e7eb74bf9d2d269280e039dfe9e0ac684515f31cbd1c9b"
+ },
+ "2025": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/eae29e8e-84b5-4cf9-a578-be5059cf2aa1/AB202512.xlsx",
+  "sha256": "aa6a358bcadc8fe19ad50a75459f9395ec1ad252e47d27833ff34f4d9a146628"
+ }
+}
