@@ -177,7 +177,12 @@ export function variablesNoDefinidas(
   contenido.split('\n').forEach((linea, i) => {
     for (const m of linea.matchAll(/var\(\s*(--[a-zA-Z0-9-]+)/g)) {
       const nombre = m[1];
-      if (nombre && !definidas.has(nombre) && !nombre.startsWith('--plot-')) {
+      if (
+        nombre &&
+        !nombre.endsWith('-') && // nombre construido dinámicamente: var(--color-${x})
+        !definidas.has(nombre) &&
+        !nombre.startsWith('--plot-')
+      ) {
         infracciones.push({
           fichero,
           linea: i + 1,

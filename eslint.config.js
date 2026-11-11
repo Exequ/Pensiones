@@ -1,5 +1,5 @@
-// @ts-check
 import js from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -26,7 +26,7 @@ const LIBRERIAS_PROHIBIDAS = [
   },
 ];
 
-export default tseslint.config(
+export default defineConfig(
   {
     ignores: ['dist', 'node_modules', 'coverage', 'playwright-report', 'test-results', 'capturas'],
   },
@@ -35,9 +35,7 @@ export default tseslint.config(
   {
     languageOptions: {
       parserOptions: {
-        projectService: {
-          allowDefaultProject: ['eslint.config.js'],
-        },
+        projectService: true,
         tsconfigRootDir: import.meta.dirname,
       },
     },
@@ -63,7 +61,9 @@ export default tseslint.config(
     rules: {
       ...reactHooks.configs.recommended.rules,
       ...jsxA11y.flatConfigs.strict.rules,
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      'react-refresh/only-export-components': ['error', { allowConstantExport: true }],
+      // Las regiones desplazables (tablas anchas) deben poder enfocarse con el teclado.
+      'jsx-a11y/no-noninteractive-tabindex': ['error', { roles: ['tabpanel', 'region'] }],
       'no-restricted-syntax': [
         'error',
         {
@@ -73,6 +73,10 @@ export default tseslint.config(
         },
       ],
     },
+  },
+  {
+    files: ['**/*.js'],
+    extends: [tseslint.configs.disableTypeChecked],
   },
   {
     files: ['scripts/**/*.ts', 'e2e/**/*.ts', '*.config.{js,ts}'],

@@ -1,0 +1,29 @@
+.estado-seccion {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: var(--espacio-3);
+  min-height: var(--objetivo-tactil);
+  padding-inline: var(--espacio-4);
+  border: var(--grosor-filete) solid var(--color-tinta);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+}
+
+.estado-seccion-etiqueta {
+  font-size: var(--texto-mini);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-apagado);
+}
+
+.articulo > .seccion {
+  margin-top: var(--espacio-5);
+}
+
+.enlace-volver {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--objetivo-tactil);
+}

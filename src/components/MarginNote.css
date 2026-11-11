@@ -1,0 +1,31 @@
+.nota-margen {
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  padding-top: var(--espacio-2);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-tinta-2);
+}
+
+.articulo > .nota-margen {
+  grid-column: 2;
+}
+
+.nota-margen-etiqueta {
+  font-size: var(--texto-mini);
+  font-weight: var(--peso-semi);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-apagado);
+  margin-bottom: var(--espacio-1);
+}
+
+.nota-margen-texto > * + * {
+  margin-top: var(--espacio-2);
+}
+
+@media (width < 960px) {
+  .articulo > .nota-margen {
+    grid-column: 1;
+  }
+}

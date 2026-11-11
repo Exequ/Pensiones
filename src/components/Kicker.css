@@ -1,0 +1,9 @@
+.kicker {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  font-weight: var(--peso-semi);
+  line-height: var(--interlineado-etiqueta);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-acento);
+}

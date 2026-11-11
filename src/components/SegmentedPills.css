@@ -1,0 +1,67 @@
+.pildoras {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.pildoras-leyenda {
+  padding: 0;
+  margin-bottom: var(--espacio-2);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta-2);
+}
+
+.pildoras-opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-2);
+}
+
+.pildora {
+  position: relative;
+  display: inline-flex;
+}
+
+.pildora-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.pildora-texto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--objetivo-tactil);
+  min-width: var(--objetivo-tactil);
+  padding-inline: var(--espacio-4);
+  border: var(--grosor-filete) solid var(--color-tinta);
+  border-radius: var(--radio);
+  background: var(--color-papel);
+  color: var(--color-tinta);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.pildora-input:hover + .pildora-texto {
+  background: var(--color-filete);
+}
+
+.pildora-input:checked + .pildora-texto {
+  background: var(--color-tinta);
+  color: var(--color-papel);
+}
+
+.pildora-input:focus-visible + .pildora-texto {
+  outline: var(--grosor-foco) solid var(--color-acento);
+  outline-offset: var(--separacion-foco);
+}

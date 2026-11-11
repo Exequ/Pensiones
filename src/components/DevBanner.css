@@ -1,0 +1,12 @@
+.banner-desarrollo {
+  background: var(--color-tinta);
+  color: var(--color-papel);
+}
+
+.banner-desarrollo-texto {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  line-height: var(--interlineado-etiqueta);
+  letter-spacing: 0.02em;
+  padding-block: var(--espacio-2);
+}

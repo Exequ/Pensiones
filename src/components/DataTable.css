@@ -1,0 +1,74 @@
+.tabla-datos-desplazable {
+  overflow-x: auto;
+}
+
+.tabla-datos table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.tabla-datos caption {
+  caption-side: top;
+  text-align: left;
+  padding-bottom: var(--espacio-3);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta);
+}
+
+.tabla-datos th,
+.tabla-datos td {
+  padding: var(--espacio-2) var(--espacio-3);
+  text-align: left;
+  vertical-align: baseline;
+  border-bottom: var(--grosor-filete) solid var(--color-filete);
+}
+
+.tabla-datos th:first-child,
+.tabla-datos td:first-child {
+  padding-left: 0;
+}
+
+.tabla-datos th:last-child,
+.tabla-datos td:last-child {
+  padding-right: 0;
+}
+
+.tabla-datos thead th {
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta-2);
+  vertical-align: bottom;
+  border-bottom: var(--grosor-filete-cabecera) solid var(--color-tinta);
+}
+
+.tabla-datos tbody th {
+  font-weight: var(--peso-normal);
+}
+
+.tabla-datos .num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.tabla-datos tbody tr:last-child th,
+.tabla-datos tbody tr:last-child td {
+  border-bottom-color: var(--color-tinta);
+}
+
+.tabla-datos tr.destacada th,
+.tabla-datos tr.destacada td {
+  font-weight: var(--peso-semi);
+  color: var(--color-acento);
+}
+
+.tabla-datos-pie {
+  margin-top: var(--espacio-2);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  color: var(--color-apagado);
+}

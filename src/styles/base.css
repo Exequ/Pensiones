@@ -1,0 +1,194 @@
+/*
+ * Estilos base del sistema «Editorial»: reinicio, tipografía y maquetación.
+ * Solo se usan tokens de tokens.css.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-papel);
+  color: var(--color-tinta);
+  font-family: var(--fuente-lectura);
+  font-size: var(--texto-cuerpo);
+  line-height: var(--interlineado-cuerpo);
+  font-optical-sizing: auto;
+  font-variant-numeric: lining-nums tabular-nums;
+  overflow-wrap: break-word;
+  hyphens: manual;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--texto-h1);
+  line-height: var(--interlineado-h1);
+  font-weight: var(--peso-h1);
+  letter-spacing: var(--tracking-h1);
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: var(--texto-h2);
+  line-height: var(--interlineado-h2);
+  font-weight: var(--peso-h2);
+  text-wrap: balance;
+}
+
+h3 {
+  font-size: var(--texto-h3);
+  line-height: var(--interlineado-h2);
+  font-weight: var(--peso-semi);
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: var(--color-acento);
+  text-decoration-line: underline;
+  text-decoration-thickness: var(--grosor-filete);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--color-acento-oscuro);
+  text-decoration-thickness: var(--grosor-filete-cabecera);
+}
+
+:focus-visible {
+  outline: var(--grosor-foco) solid var(--color-acento);
+  outline-offset: var(--separacion-foco);
+}
+
+::selection {
+  background: var(--color-filete);
+  color: var(--color-tinta);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Utilidades */
+
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.cifra {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* Maquetación */
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-contenedor);
+  margin-inline: auto;
+  padding-inline: var(--margen-lateral);
+}
+
+/*
+ * Rejilla de artículo: columna de texto (máx. 760 px) y columna de notas al
+ * margen (280 px). Los hijos van a la columna de texto; .nota-margen se coloca
+ * en la columna derecha, a la altura del elemento que la precede.
+ */
+.articulo {
+  display: grid;
+  grid-template-columns: minmax(0, var(--ancho-texto)) var(--ancho-notas);
+  column-gap: var(--separacion-columnas);
+  row-gap: var(--espacio-5);
+  align-items: start;
+}
+
+.articulo > * {
+  grid-column: 1;
+}
+
+.articulo > .ancho-completo {
+  grid-column: 1 / -1;
+}
+
+@media (width < 960px) {
+  .articulo {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.pagina {
+  padding-block: var(--espacio-7) var(--espacio-9);
+}
+
+.pagina-cabecera {
+  display: grid;
+  gap: var(--espacio-4);
+  padding-bottom: var(--espacio-6);
+}
+
+.seccion {
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  padding-top: var(--espacio-6);
+  margin-top: var(--espacio-8);
+}
+
+.prosa > * + * {
+  margin-top: var(--espacio-5);
+}
+
+.prosa ul,
+.prosa ol {
+  padding-left: 1.25em;
+}
+
+.prosa li + li {
+  margin-top: var(--espacio-2);
+}
+
+.texto-interfaz {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+}

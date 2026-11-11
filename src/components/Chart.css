@@ -1,0 +1,64 @@
+.grafico {
+  display: grid;
+  gap: var(--espacio-3);
+}
+
+.grafico-leyenda {
+  display: grid;
+  gap: var(--espacio-1);
+}
+
+.grafico-titulo {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-tinta);
+}
+
+.grafico-descripcion {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-apagado);
+}
+
+.grafico-lienzo {
+  width: 100%;
+  min-height: 1px;
+  color: var(--color-tinta);
+}
+
+.grafico-lienzo svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.grafico-datos summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--objetivo-tactil);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  color: var(--color-tinta-2);
+  text-decoration: underline;
+  text-decoration-thickness: var(--grosor-filete);
+  text-underline-offset: 0.18em;
+  cursor: pointer;
+}
+
+.grafico-datos summary:hover {
+  color: var(--color-acento);
+}
+
+.grafico-datos[open] summary {
+  margin-bottom: var(--espacio-3);
+}
+
+.grafico-nota {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-apagado);
+}
