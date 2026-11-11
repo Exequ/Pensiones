@@ -1,0 +1,698 @@
+{
+  "tipo": "datos",
+  "id": "afiliacion-anual",
+  "title": "Afiliados: serie anual (media de los doce meses y diciembre), 2001-2025",
+  "description": "Afiliados medios en alta, total sistema, Régimen General y autónomos: media anual derivada de los doce meses y valor de diciembre.",
+  "series": [
+    {
+      "id": "media-anual-total-sistema",
+      "title": "Afiliados medios anuales: total-sistema",
+      "unit": "afiliados",
+      "source": {
+        "title": "Afiliados medios en alta por regímenes (serie 2001-2026, total sistema)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST290/EST291"
+      },
+      "confidence": "media",
+      "notes": "Dato derivado: media aritmética de los doce afiliados medios mensuales publicados; solo años completos. No es una cifra publicada como tal por la fuente.",
+      "points": [
+        {
+          "period": "2001",
+          "value": 15685849.0
+        },
+        {
+          "period": "2002",
+          "value": 16173294.1
+        },
+        {
+          "period": "2003",
+          "value": 16688147.4
+        },
+        {
+          "period": "2004",
+          "value": 17148364.8
+        },
+        {
+          "period": "2005",
+          "value": 17906996.5
+        },
+        {
+          "period": "2006",
+          "value": 18674963.9
+        },
+        {
+          "period": "2007",
+          "value": 19232797.2
+        },
+        {
+          "period": "2008",
+          "value": 19129805.2
+        },
+        {
+          "period": "2009",
+          "value": 18019045.3
+        },
+        {
+          "period": "2010",
+          "value": 17667468.0
+        },
+        {
+          "period": "2011",
+          "value": 17430571.0
+        },
+        {
+          "period": "2012",
+          "value": 16845859.6
+        },
+        {
+          "period": "2013",
+          "value": 16298011.2
+        },
+        {
+          "period": "2014",
+          "value": 16553786.2
+        },
+        {
+          "period": "2015",
+          "value": 17083765.9
+        },
+        {
+          "period": "2016",
+          "value": 17596979.7
+        },
+        {
+          "period": "2017",
+          "value": 18223083.3
+        },
+        {
+          "period": "2018",
+          "value": 18788079.2
+        },
+        {
+          "period": "2019",
+          "value": 19277818.2
+        },
+        {
+          "period": "2020",
+          "value": 18881311.1
+        },
+        {
+          "period": "2021",
+          "value": 19357309.3
+        },
+        {
+          "period": "2022",
+          "value": 20107667.6
+        },
+        {
+          "period": "2023",
+          "value": 20642597.3
+        },
+        {
+          "period": "2024",
+          "value": 21147912.4
+        },
+        {
+          "period": "2025",
+          "value": 21635194.4
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "diciembre-total-sistema",
+      "title": "Afiliados medios de diciembre: total-sistema",
+      "unit": "afiliados",
+      "source": {
+        "title": "Afiliados medios en alta por regímenes (serie 2001-2026, total sistema)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST290/EST291"
+      },
+      "confidence": "alta",
+      "notes": "Afiliados medios del mes de diciembre, tal como figuran en el fichero.",
+      "points": [
+        {
+          "period": "2001",
+          "value": 15901915.3
+        },
+        {
+          "period": "2002",
+          "value": 16380197.7
+        },
+        {
+          "period": "2003",
+          "value": 16826224.2
+        },
+        {
+          "period": "2004",
+          "value": 17340361.1
+        },
+        {
+          "period": "2005",
+          "value": 18316322.9
+        },
+        {
+          "period": "2006",
+          "value": 18925995.8
+        },
+        {
+          "period": "2007",
+          "value": 19372777.1
+        },
+        {
+          "period": "2008",
+          "value": 18531311.7
+        },
+        {
+          "period": "2009",
+          "value": 17803838.9
+        },
+        {
+          "period": "2010",
+          "value": 17584981.6
+        },
+        {
+          "period": "2011",
+          "value": 17229921.5
+        },
+        {
+          "period": "2012",
+          "value": 16442681.2
+        },
+        {
+          "period": "2013",
+          "value": 16357640.1
+        },
+        {
+          "period": "2014",
+          "value": 16775214.5
+        },
+        {
+          "period": "2015",
+          "value": 17308400.0
+        },
+        {
+          "period": "2016",
+          "value": 17849054.5
+        },
+        {
+          "period": "2017",
+          "value": 18460200.6
+        },
+        {
+          "period": "2018",
+          "value": 19024165.2
+        },
+        {
+          "period": "2019",
+          "value": 19408537.8
+        },
+        {
+          "period": "2020",
+          "value": 19048433.3
+        },
+        {
+          "period": "2021",
+          "value": 19824911.2
+        },
+        {
+          "period": "2022",
+          "value": 20296270.9
+        },
+        {
+          "period": "2023",
+          "value": 20836010.4
+        },
+        {
+          "period": "2024",
+          "value": 21337962.2
+        },
+        {
+          "period": "2025",
+          "value": 21844413.7
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "media-anual-general",
+      "title": "Afiliados medios anuales: general",
+      "unit": "afiliados",
+      "source": {
+        "title": "Afiliados medios en alta por regímenes (serie 2001-2026, total sistema)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST290/EST291"
+      },
+      "confidence": "media",
+      "notes": "Dato derivado: media aritmética de los doce afiliados medios mensuales publicados; solo años completos. No es una cifra publicada como tal por la fuente.",
+      "points": [
+        {
+          "period": "2001",
+          "value": 11702302.2
+        },
+        {
+          "period": "2002",
+          "value": 12129458.5
+        },
+        {
+          "period": "2003",
+          "value": 12547321.1
+        },
+        {
+          "period": "2004",
+          "value": 12953802.8
+        },
+        {
+          "period": "2005",
+          "value": 13565395.1
+        },
+        {
+          "period": "2006",
+          "value": 14233686.6
+        },
+        {
+          "period": "2007",
+          "value": 14783754.5
+        },
+        {
+          "period": "2008",
+          "value": 14645160.8
+        },
+        {
+          "period": "2009",
+          "value": 13632969.1
+        },
+        {
+          "period": "2010",
+          "value": 13350727.1
+        },
+        {
+          "period": "2011",
+          "value": 13149685.7
+        },
+        {
+          "period": "2012",
+          "value": 12558831.5
+        },
+        {
+          "period": "2013",
+          "value": 12025961.0
+        },
+        {
+          "period": "2014",
+          "value": 12209472.3
+        },
+        {
+          "period": "2015",
+          "value": 12677770.3
+        },
+        {
+          "period": "2016",
+          "value": 13148880.7
+        },
+        {
+          "period": "2017",
+          "value": 13743519.1
+        },
+        {
+          "period": "2018",
+          "value": 14289107.3
+        },
+        {
+          "period": "2019",
+          "value": 14780318.7
+        },
+        {
+          "period": "2020",
+          "value": 14439133.3
+        },
+        {
+          "period": "2021",
+          "value": 14865739.9
+        },
+        {
+          "period": "2022",
+          "value": 15631230.9
+        },
+        {
+          "period": "2023",
+          "value": 16187284.2
+        },
+        {
+          "period": "2024",
+          "value": 16685589.5
+        },
+        {
+          "period": "2025",
+          "value": 17165148.8
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "diciembre-general",
+      "title": "Afiliados medios de diciembre: general",
+      "unit": "afiliados",
+      "source": {
+        "title": "Afiliados medios en alta por regímenes (serie 2001-2026, total sistema)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST290/EST291"
+      },
+      "confidence": "alta",
+      "notes": "Afiliados medios del mes de diciembre, tal como figuran en el fichero.",
+      "points": [
+        {
+          "period": "2001",
+          "value": 11901095.2
+        },
+        {
+          "period": "2002",
+          "value": 12285306.8
+        },
+        {
+          "period": "2003",
+          "value": 12659431.7
+        },
+        {
+          "period": "2004",
+          "value": 13127530.7
+        },
+        {
+          "period": "2005",
+          "value": 13858117.3
+        },
+        {
+          "period": "2006",
+          "value": 14492200.6
+        },
+        {
+          "period": "2007",
+          "value": 14896049.2
+        },
+        {
+          "period": "2008",
+          "value": 14081098.5
+        },
+        {
+          "period": "2009",
+          "value": 13436666.9
+        },
+        {
+          "period": "2010",
+          "value": 13273267.0
+        },
+        {
+          "period": "2011",
+          "value": 12929822.4
+        },
+        {
+          "period": "2012",
+          "value": 12120442.5
+        },
+        {
+          "period": "2013",
+          "value": 12029632.8
+        },
+        {
+          "period": "2014",
+          "value": 12366110.1
+        },
+        {
+          "period": "2015",
+          "value": 12842075.2
+        },
+        {
+          "period": "2016",
+          "value": 13350090.8
+        },
+        {
+          "period": "2017",
+          "value": 13969394.9
+        },
+        {
+          "period": "2018",
+          "value": 14482967.4
+        },
+        {
+          "period": "2019",
+          "value": 14901559.1
+        },
+        {
+          "period": "2020",
+          "value": 14553605.3
+        },
+        {
+          "period": "2021",
+          "value": 15297594.4
+        },
+        {
+          "period": "2022",
+          "value": 15822536.1
+        },
+        {
+          "period": "2023",
+          "value": 16368039.8
+        },
+        {
+          "period": "2024",
+          "value": 16846307.8
+        },
+        {
+          "period": "2025",
+          "value": 17344022.0
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "media-anual-autonomos",
+      "title": "Afiliados medios anuales: autonomos",
+      "unit": "afiliados",
+      "source": {
+        "title": "Afiliados medios en alta por regímenes (serie 2001-2026, total sistema)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST290/EST291"
+      },
+      "confidence": "media",
+      "notes": "Dato derivado: media aritmética de los doce afiliados medios mensuales publicados; solo años completos. No es una cifra publicada como tal por la fuente.",
+      "points": [
+        {
+          "period": "2001",
+          "value": 2606381.6
+        },
+        {
+          "period": "2002",
+          "value": 2654638.3
+        },
+        {
+          "period": "2003",
+          "value": 2730601.0
+        },
+        {
+          "period": "2004",
+          "value": 2837483.6
+        },
+        {
+          "period": "2005",
+          "value": 2933406.1
+        },
+        {
+          "period": "2006",
+          "value": 3017662.8
+        },
+        {
+          "period": "2007",
+          "value": 3120390.6
+        },
+        {
+          "period": "2008",
+          "value": 3148338.7
+        },
+        {
+          "period": "2009",
+          "value": 2996494.4
+        },
+        {
+          "period": "2010",
+          "value": 2917057.5
+        },
+        {
+          "period": "2011",
+          "value": 2887072.0
+        },
+        {
+          "period": "2012",
+          "value": 2849046.4
+        },
+        {
+          "period": "2013",
+          "value": 2833363.6
+        },
+        {
+          "period": "2014",
+          "value": 2901231.4
+        },
+        {
+          "period": "2015",
+          "value": 2962925.4
+        },
+        {
+          "period": "2016",
+          "value": 2994993.7
+        },
+        {
+          "period": "2017",
+          "value": 3020875.1
+        },
+        {
+          "period": "2018",
+          "value": 3057783.1
+        },
+        {
+          "period": "2019",
+          "value": 3077981.5
+        },
+        {
+          "period": "2020",
+          "value": 3068048.8
+        },
+        {
+          "period": "2021",
+          "value": 3124264.9
+        },
+        {
+          "period": "2022",
+          "value": 3156145.6
+        },
+        {
+          "period": "2023",
+          "value": 3164851.0
+        },
+        {
+          "period": "2024",
+          "value": 3203930.6
+        },
+        {
+          "period": "2025",
+          "value": 3245537.4
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    },
+    {
+      "id": "diciembre-autonomos",
+      "title": "Afiliados medios de diciembre: autonomos",
+      "unit": "afiliados",
+      "source": {
+        "title": "Afiliados medios en alta por regímenes (serie 2001-2026, total sistema)",
+        "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST290/EST291"
+      },
+      "confidence": "alta",
+      "notes": "Afiliados medios del mes de diciembre, tal como figuran en el fichero.",
+      "points": [
+        {
+          "period": "2001",
+          "value": 2622593.0
+        },
+        {
+          "period": "2002",
+          "value": 2675695.8
+        },
+        {
+          "period": "2003",
+          "value": 2770250.9
+        },
+        {
+          "period": "2004",
+          "value": 2878779.0
+        },
+        {
+          "period": "2005",
+          "value": 2967849.2
+        },
+        {
+          "period": "2006",
+          "value": 3053033.7
+        },
+        {
+          "period": "2007",
+          "value": 3159017.2
+        },
+        {
+          "period": "2008",
+          "value": 3089174.5
+        },
+        {
+          "period": "2009",
+          "value": 2943128.1
+        },
+        {
+          "period": "2010",
+          "value": 2895542.1
+        },
+        {
+          "period": "2011",
+          "value": 2869187.1
+        },
+        {
+          "period": "2012",
+          "value": 2827676.6
+        },
+        {
+          "period": "2013",
+          "value": 2855551.8
+        },
+        {
+          "period": "2014",
+          "value": 2932506.8
+        },
+        {
+          "period": "2015",
+          "value": 2975973.6
+        },
+        {
+          "period": "2016",
+          "value": 3003780.6
+        },
+        {
+          "period": "2017",
+          "value": 3016079.6
+        },
+        {
+          "period": "2018",
+          "value": 3067367.0
+        },
+        {
+          "period": "2019",
+          "value": 3083544.9
+        },
+        {
+          "period": "2020",
+          "value": 3088306.9
+        },
+        {
+          "period": "2021",
+          "value": 3151603.7
+        },
+        {
+          "period": "2022",
+          "value": 3156019.0
+        },
+        {
+          "period": "2023",
+          "value": 3175961.5
+        },
+        {
+          "period": "2024",
+          "value": 3223569.9
+        },
+        {
+          "period": "2025",
+          "value": 3266279.4
+        }
+      ],
+      "fetchedAt": "2026-11-11"
+    }
+  ]
+}
