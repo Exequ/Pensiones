@@ -169,10 +169,12 @@ Comprobaciones internas adicionales (`scripts/coherencia-financiacion.test.ts`):
 <!-- verificacion-1b3:inicio -->
 ## Fase 1B-3: demografía, macro y salarios
 
-Comprobaciones: 32 (20 coinciden, 12 con diferencias explicadas o informativas, 0 fallos). Generado por `scripts/etl/verificacion_1b3.py`; resultado completo en `docs/verificacion-1b3.json`.
+Comprobaciones: 34 (21 coinciden, 13 con diferencias explicadas o informativas, 0 fallos). Generado por `scripts/etl/verificacion_1b3.py`; resultado completo en `docs/verificacion-1b3.json`.
 
 | Comprobación | Resultado | Detalle |
 | --- | --- | --- |
+| PNC a diciembre de 2025: pensiones de la nómina del IMSERSO frente a pensionistas del fichero técnico del IMSERSO | diferencia | nómina 462.568 frente a fichero técnico 471.309 (diferencia 8.741) |
+| PNC: pensiones de jubilación e invalidez a diciembre 2019-2024 y mensuales de 2025 | ok | 2019 452.157; 2024 457.400; diciembre de 2025 462.568 |
 | Eurostat: suma por edades frente al total publicado (1971-2025, ambos sexos) | ok | diferencia máxima 0 personas (ninguno); el total incluye personas de edad desconocida |
 | Población total a 1 de enero, INE frente a Eurostat (1971-2025) | diferencia | 23 de 55 años idénticos; diferencia máxima 116 personas en 2022 (0,0002 %) |
 | Población por grupos de edad (0-14, 15-64, 65+), INE frente a Eurostat (1971-2025) | diferencia | diferencia máxima 108 personas (2022, grupo 15-64) |

@@ -256,8 +256,21 @@ def sistema():
                 '. En 2012 (gran invalidez, con cónyuge no a cargo) el texto del BOE descargado dice 13.327,00, más que la mínima unipersonal del mismo año (12.997,60) cuando debería ser menor, y fuera de la tendencia de la serie; el BEL da 12.327,00, coherente con 2011 (12.203,80) y 2013 (12.574,80). Se mantiene el valor del BOE (cita literal) y se señala el posible error del texto de la norma; confirmar con el BOE oficial.')
 
 
+def pnc():
+    E = rd('sistema/imserso-pnc-evolucion.csv')
+    dic = next(r for r in E if r['periodo'] == '2025-12' and r['clase'] == 'total')
+    j = json.load(open(f'{D}/sistema/imserso-pnc-perfil-2025.json'))['data']
+    perfil = next(x['value'] for x in j if x['id'] == 'total-total-2025')
+    nom = int(dic['pensiones'])
+    reg('C2-pnc', 'PNC a diciembre de 2025: pensiones de la nómina del IMSERSO frente a pensionistas del fichero técnico del IMSERSO', 'diferencia',
+        f'nómina {f(nom)} frente a fichero técnico {f(perfil)} (diferencia {f(perfil - nom)})')
+    DISC.append(f'- **Pensiones no contributivas a diciembre de 2025 (IMSERSO)**: la nómina de diciembre cuenta {f(nom)} pensiones (jubilación e invalidez) y el perfil del pensionista del fichero técnico, {f(perfil)} pensionistas ({f(perfil - nom)} más). Son dos registros distintos del IMSERSO (nómina abonada y fichero técnico de pensionistas); la fuente no concilia ambas cifras y se publican las dos.')
+    anual = {r['periodo']: r for r in E if r['clase'] == 'total' and r['tipo_periodo'] == 'anual'}
+    reg('C2-pnc-serie', 'PNC: pensiones de jubilación e invalidez a diciembre 2019-2024 y mensuales de 2025', 'ok', f"2019 {f(int(anual['2019']['pensiones']))}; 2024 {f(int(anual['2024']['pensiones']))}; diciembre de 2025 {f(nom)}")
+
+
 def main():
-    poblacion(); mortalidad(); migraciones(); macro(); sistema()
+    pnc(); poblacion(); mortalidad(); migraciones(); macro(); sistema()
     DISC.append('- **Mortalidad proyectada del INE (tabla 36659), unidad de mx y qx**: la tabla se etiqueta «Tanto por mil», pero mx y qx vienen en tanto por uno (q0 de 2026 = 0,0025; en las tablas históricas del INE, 2,6 por mil). Solo con qx en tanto por uno se cumple l(x+1) = lx × (1 − qx). En data/demografia/proyecciones-mortalidad se publican multiplicados por 1.000 (por mil), como en mortalidad-ine; lx, dx, Lx, Tx y ex no se tocan.')
     DISC.append('- **Mortalidad proyectada, tabla de funciones frente a hipótesis del INE**: el riesgo de muerte a edad 0 de las mujeres en 2026 es 2,524 por mil en la tabla de funciones (36659) y 2,513 por mil en la tabla de hipótesis (36774); no se ha podido explicar con la metodología descargada (la hipótesis se formula sobre la esperanza de vida al nacimiento). Se publican las dos tablas; el modelo debería elegir una y documentarla.')
     DISC.append('- **Migraciones EM 2008-2021, saldo exterior**: la suma por edades de inmigración menos emigración difiere del saldo publicado hasta en 8 personas por año (redondeos del INE).')

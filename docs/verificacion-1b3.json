@@ -1,5 +1,17 @@
 [
  {
+  "id": "C2-pnc",
+  "titulo": "PNC a diciembre de 2025: pensiones de la nómina del IMSERSO frente a pensionistas del fichero técnico del IMSERSO",
+  "estado": "diferencia",
+  "detalle": "nómina 462.568 frente a fichero técnico 471.309 (diferencia 8.741)"
+ },
+ {
+  "id": "C2-pnc-serie",
+  "titulo": "PNC: pensiones de jubilación e invalidez a diciembre 2019-2024 y mensuales de 2025",
+  "estado": "ok",
+  "detalle": "2019 452.157; 2024 457.400; diciembre de 2025 462.568"
+ },
+ {
   "id": "A1-eu-suma",
   "titulo": "Eurostat: suma por edades frente al total publicado (1971-2025, ambos sexos)",
   "estado": "ok",

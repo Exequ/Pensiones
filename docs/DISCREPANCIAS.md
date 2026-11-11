@@ -24,6 +24,7 @@ Fecha: 2026-11-11.
 <!-- discrepancias-1b3:inicio -->
 ## Fase 1B-3
 
+- **Pensiones no contributivas a diciembre de 2025 (IMSERSO)**: la nómina de diciembre cuenta 462.568 pensiones (jubilación e invalidez) y el perfil del pensionista del fichero técnico, 471.309 pensionistas (8.741 más). Son dos registros distintos del IMSERSO (nómina abonada y fichero técnico de pensionistas); la fuente no concilia ambas cifras y se publican las dos.
 - **Población total INE frente a Eurostat**: 32 de 55 años (1971-2025) difieren; diferencia máxima 116 personas en 2022 (0,0002 % en términos relativos).
 - **Población por grupos de edad INE frente a Eurostat**: diferencia máxima 108 personas (2022, grupo 15-64). Eurostat no incluye en las edades a las personas de edad desconocida.
 - **Población de 1 de enero de 2026**: la proyección del INE (publicada el 17/06/2026) parte de 49.590.099 y la ECP provisional descargada (tabla 59583, revisada en agosto de 2026) da 49.596.376 (diferencia -6.277). La metodología de la proyección dice que parte de las cifras provisionales de 1 de enero de 2026, que la ECP ha revisado después.

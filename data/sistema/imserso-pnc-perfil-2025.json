@@ -1,0 +1,152 @@
+{
+  "tipo": "datos",
+  "id": "imserso-pnc-perfil-2025",
+  "title": "Pensionistas no contributivos por tipo de pensión y sexo, diciembre de 2025 (IMSERSO)",
+  "description": "Total España: pensionistas de jubilación, invalidez y total, por sexo, según el fichero técnico de pensionistas no contributivos del IMSERSO a diciembre de 2025.",
+  "data": [
+    {
+      "id": "jubilacion-hombres-2025",
+      "value": 86346,
+      "unit": "pensionistas",
+      "period": "2025",
+      "source": {
+        "title": "Perfil del pensionista de pensiones no contributivas a diciembre de 2025 (Fichero Técnico de Pensionistas no Contributivos del IMSERSO), hoja «Tipo de pensión y sexo»",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/el-imserso/documentacion/estadisticas/pensiones-no-contributivas-jubilacion-invalidez-pnc"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Dato a diciembre de 2025. La jubilación incluye la jubilación derivada de invalidez (nota (*) de la fuente). No coincide con el número de pensiones de la nómina (imserso-pnc-evolucion): el fichero técnico y la nómina son registros distintos.",
+      "quote": "TOTAL ESTADO: jubilacion hombres 86346",
+      "location": "hoja «SEXO RESUMEN jub e inv», fila «TOTAL ESTADO»"
+    },
+    {
+      "id": "jubilacion-mujeres-2025",
+      "value": 215330,
+      "unit": "pensionistas",
+      "period": "2025",
+      "source": {
+        "title": "Perfil del pensionista de pensiones no contributivas a diciembre de 2025 (Fichero Técnico de Pensionistas no Contributivos del IMSERSO), hoja «Tipo de pensión y sexo»",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/el-imserso/documentacion/estadisticas/pensiones-no-contributivas-jubilacion-invalidez-pnc"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Dato a diciembre de 2025. La jubilación incluye la jubilación derivada de invalidez (nota (*) de la fuente). No coincide con el número de pensiones de la nómina (imserso-pnc-evolucion): el fichero técnico y la nómina son registros distintos.",
+      "quote": "TOTAL ESTADO: jubilacion mujeres 215330",
+      "location": "hoja «SEXO RESUMEN jub e inv», fila «TOTAL ESTADO»"
+    },
+    {
+      "id": "jubilacion-total-2025",
+      "value": 301676,
+      "unit": "pensionistas",
+      "period": "2025",
+      "source": {
+        "title": "Perfil del pensionista de pensiones no contributivas a diciembre de 2025 (Fichero Técnico de Pensionistas no Contributivos del IMSERSO), hoja «Tipo de pensión y sexo»",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/el-imserso/documentacion/estadisticas/pensiones-no-contributivas-jubilacion-invalidez-pnc"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Dato a diciembre de 2025. La jubilación incluye la jubilación derivada de invalidez (nota (*) de la fuente). No coincide con el número de pensiones de la nómina (imserso-pnc-evolucion): el fichero técnico y la nómina son registros distintos.",
+      "quote": "TOTAL ESTADO: jubilacion total 301676",
+      "location": "hoja «SEXO RESUMEN jub e inv», fila «TOTAL ESTADO»"
+    },
+    {
+      "id": "invalidez-hombres-2025",
+      "value": 86338,
+      "unit": "pensionistas",
+      "period": "2025",
+      "source": {
+        "title": "Perfil del pensionista de pensiones no contributivas a diciembre de 2025 (Fichero Técnico de Pensionistas no Contributivos del IMSERSO), hoja «Tipo de pensión y sexo»",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/el-imserso/documentacion/estadisticas/pensiones-no-contributivas-jubilacion-invalidez-pnc"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Dato a diciembre de 2025. La jubilación incluye la jubilación derivada de invalidez (nota (*) de la fuente). No coincide con el número de pensiones de la nómina (imserso-pnc-evolucion): el fichero técnico y la nómina son registros distintos.",
+      "quote": "TOTAL ESTADO: invalidez hombres 86338",
+      "location": "hoja «SEXO RESUMEN jub e inv», fila «TOTAL ESTADO»"
+    },
+    {
+      "id": "invalidez-mujeres-2025",
+      "value": 83295,
+      "unit": "pensionistas",
+      "period": "2025",
+      "source": {
+        "title": "Perfil del pensionista de pensiones no contributivas a diciembre de 2025 (Fichero Técnico de Pensionistas no Contributivos del IMSERSO), hoja «Tipo de pensión y sexo»",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/el-imserso/documentacion/estadisticas/pensiones-no-contributivas-jubilacion-invalidez-pnc"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Dato a diciembre de 2025. La jubilación incluye la jubilación derivada de invalidez (nota (*) de la fuente). No coincide con el número de pensiones de la nómina (imserso-pnc-evolucion): el fichero técnico y la nómina son registros distintos.",
+      "quote": "TOTAL ESTADO: invalidez mujeres 83295",
+      "location": "hoja «SEXO RESUMEN jub e inv», fila «TOTAL ESTADO»"
+    },
+    {
+      "id": "invalidez-total-2025",
+      "value": 169633,
+      "unit": "pensionistas",
+      "period": "2025",
+      "source": {
+        "title": "Perfil del pensionista de pensiones no contributivas a diciembre de 2025 (Fichero Técnico de Pensionistas no Contributivos del IMSERSO), hoja «Tipo de pensión y sexo»",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/el-imserso/documentacion/estadisticas/pensiones-no-contributivas-jubilacion-invalidez-pnc"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Dato a diciembre de 2025. La jubilación incluye la jubilación derivada de invalidez (nota (*) de la fuente). No coincide con el número de pensiones de la nómina (imserso-pnc-evolucion): el fichero técnico y la nómina son registros distintos.",
+      "quote": "TOTAL ESTADO: invalidez total 169633",
+      "location": "hoja «SEXO RESUMEN jub e inv», fila «TOTAL ESTADO»"
+    },
+    {
+      "id": "total-hombres-2025",
+      "value": 172684,
+      "unit": "pensionistas",
+      "period": "2025",
+      "source": {
+        "title": "Perfil del pensionista de pensiones no contributivas a diciembre de 2025 (Fichero Técnico de Pensionistas no Contributivos del IMSERSO), hoja «Tipo de pensión y sexo»",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/el-imserso/documentacion/estadisticas/pensiones-no-contributivas-jubilacion-invalidez-pnc"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Dato a diciembre de 2025. La jubilación incluye la jubilación derivada de invalidez (nota (*) de la fuente). No coincide con el número de pensiones de la nómina (imserso-pnc-evolucion): el fichero técnico y la nómina son registros distintos.",
+      "quote": "TOTAL ESTADO: total hombres 172684",
+      "location": "hoja «SEXO RESUMEN jub e inv», fila «TOTAL ESTADO»"
+    },
+    {
+      "id": "total-mujeres-2025",
+      "value": 298625,
+      "unit": "pensionistas",
+      "period": "2025",
+      "source": {
+        "title": "Perfil del pensionista de pensiones no contributivas a diciembre de 2025 (Fichero Técnico de Pensionistas no Contributivos del IMSERSO), hoja «Tipo de pensión y sexo»",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/el-imserso/documentacion/estadisticas/pensiones-no-contributivas-jubilacion-invalidez-pnc"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Dato a diciembre de 2025. La jubilación incluye la jubilación derivada de invalidez (nota (*) de la fuente). No coincide con el número de pensiones de la nómina (imserso-pnc-evolucion): el fichero técnico y la nómina son registros distintos.",
+      "quote": "TOTAL ESTADO: total mujeres 298625",
+      "location": "hoja «SEXO RESUMEN jub e inv», fila «TOTAL ESTADO»"
+    },
+    {
+      "id": "total-total-2025",
+      "value": 471309,
+      "unit": "pensionistas",
+      "period": "2025",
+      "source": {
+        "title": "Perfil del pensionista de pensiones no contributivas a diciembre de 2025 (Fichero Técnico de Pensionistas no Contributivos del IMSERSO), hoja «Tipo de pensión y sexo»",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/el-imserso/documentacion/estadisticas/pensiones-no-contributivas-jubilacion-invalidez-pnc"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Dato a diciembre de 2025. La jubilación incluye la jubilación derivada de invalidez (nota (*) de la fuente). No coincide con el número de pensiones de la nómina (imserso-pnc-evolucion): el fichero técnico y la nómina son registros distintos.",
+      "quote": "TOTAL ESTADO: total total 471309",
+      "location": "hoja «SEXO RESUMEN jub e inv», fila «TOTAL ESTADO»"
+    }
+  ]
+}
