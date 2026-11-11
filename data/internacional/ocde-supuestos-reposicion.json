@@ -1,0 +1,93 @@
+{
+  "tipo": "datos",
+  "id": "ocde-supuestos-reposicion",
+  "title": "OCDE, Pensions at a Glance: supuestos de la tasa de reposición teórica que figuran en los metadatos del flujo SDMX",
+  "description": "Edad de entrada al mercado laboral (22 años, literal del flujo) y edad de jubilación considerada para España. No se han encontrado en los metadatos accesibles el crecimiento real de los salarios ni la inflación (ver docs/PENDIENTE_DATOS.md).",
+  "data": [
+    {
+      "id": "ocde-pag-entrada-mercado-laboral-22",
+      "value": "Los indicadores de «Pensions at a Glance» se calculan para trabajadores que entran en el mercado laboral a los 22 años en el año especificado.",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: definición del flujo SDMX DSD_PAG@DF_PRR (Pension replacement rates)",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.ELS.SPD/DSD_PAG@DF_PRR/1.0",
+        "docId": "OECD-DSD_PAG-DF_PRR"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Pensions at a Glance reviews and analyses the pension measures enacted or legislated in OECD countries for workers entering the labour market at age 22 in the specified year.",
+      "location": "descripción del flujo (metadatos SDMX)",
+      "notes": "Es la única referencia a los supuestos del cálculo en los metadatos accesibles del flujo: no figuran el crecimiento real de los salarios, la inflación ni la carrera (años cotizados)."
+    },
+    {
+      "id": "edad-jubilacion-actual-carrera-desde-22-hombres",
+      "value": 65.0,
+      "unit": "años",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Current retirement age for a person who entered the labour force at age 22. Sexo: hombres; opcionalidad: _Z. Literal de la fuente. Copiado de data/internacional/ocde-espana; es la edad que la OCDE considera para España (el flujo no da más supuestos).",
+      "quote": "ESP: CRPLF22 = 65 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "edad-jubilacion-actual-carrera-desde-22-mujeres",
+      "value": 65.0,
+      "unit": "años",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Current retirement age for a person who entered the labour force at age 22. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente. Copiado de data/internacional/ocde-espana; es la edad que la OCDE considera para España (el flujo no da más supuestos).",
+      "quote": "ESP: CRPLF22 = 65 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "edad-jubilacion-futura-carrera-desde-22-hombres",
+      "value": 65.0,
+      "unit": "años",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Future retirement age for a person who entered the labour force at age 22. Sexo: hombres; opcionalidad: _Z. Literal de la fuente. Copiado de data/internacional/ocde-espana; es la edad que la OCDE considera para España (el flujo no da más supuestos).",
+      "quote": "ESP: FRPLF22 = 65 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    },
+    {
+      "id": "edad-jubilacion-futura-carrera-desde-22-mujeres",
+      "value": 65.0,
+      "unit": "años",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+        "docId": "OECD-DSD_PAG-DF_PAG"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Future retirement age for a person who entered the labour force at age 22. Sexo: mujeres; opcionalidad: _Z. Literal de la fuente. Copiado de data/internacional/ocde-espana; es la edad que la OCDE considera para España (el flujo no da más supuestos).",
+      "quote": "ESP: FRPLF22 = 65 (2024)",
+      "location": "flujo DSD_PAG@DF_PAG, área ESP"
+    }
+  ]
+}

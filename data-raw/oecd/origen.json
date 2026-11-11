@@ -10,5 +10,11 @@
   "fetchedAt": "2026-11-11",
   "sha256": "fa2f43566b8cde695d8d535a950b23c59aed10cc38f6e90ef0f37115efc89015",
   "bytes": 1390951
+ },
+ "DF_PRR-dataflow.xml": {
+  "url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.ELS.SPD/DSD_PAG@DF_PRR/1.0",
+  "fetchedAt": "2026-11-11",
+  "sha256": "6f45847997871b2bb372017b99d37e70e7f506e0f2078400ccca314e71179b5d",
+  "bytes": 5585
  }
 }

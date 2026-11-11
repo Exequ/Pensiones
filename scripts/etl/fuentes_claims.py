@@ -30,7 +30,7 @@ CLAIMS_SERIES_NUEVAS = {
     ('ocde-espana', 'pep-no-aplica-z-z-pt-b1gq'), ('ocde-espana', 'elmea-hombres-z-z-y'),
     ('contraste-espana', 'pension-altas-sobre-salario-eaes'), ('contraste-espana', 'gasto-pensiones-contributivas-sobre-pib'),
 }
-CLAIMS_DATOS_NUEVOS = {('ocde-espana', 'gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024'), ('ocde-espana', 'nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024'), ('ocde-espana', 'crplf22-hombres-z-z-y-2024')}
+CLAIMS_DATOS_NUEVOS = {('triangulacion-mortalidad', 'supervivencia-publicada-sobre-qx-hombres-85-2010-2020'), ('triangulacion-mortalidad', 'supervivencia-publicada-sobre-qx-lexis-hombres-85-2010-2020'), ('triangulacion-mortalidad', 'factor-real-sobre-qx-mujeres-85-2010-2019'), ('triangulacion-mortalidad', 'muertes-implicitas-pensiones-jubilacion-lexis'), ('triangulacion-mortalidad', 'ine-tablas-recalculo-censo-2021'), ('ocde-supuestos-reposicion', 'ocde-pag-entrada-mercado-laboral-22'), ('ocde-espana', 'gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024'), ('ocde-espana', 'nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024'), ('ocde-espana', 'crplf22-hombres-z-z-y-2024')}
 SERIES_CLAIM = {'pensionistas', 'pensiones', 'total-ambos', 'jubilacion-ambos', 'media-anual-total-sistema', 'diciembre-total-sistema', 'afiliados-diciembre-por-pensionista', 'afiliados-media-anual-por-pension', 'edad-media-altas-jubilacion', 'valor-fin-ano', 'saldo-presupuestario-no-financiero', 'b9-mio-eur', 'pasivos-financieros', 'transferencias-estado-corrientes', 'afiliados-por-pension-alternativa-1'}
 
 
@@ -80,10 +80,11 @@ for ruta in sorted(glob.glob(f'{REPO}/data/*/*.json')):
                 v = u['value']
                 txt = f"{sr['title']}: {num(round(v, 2) if isinstance(v, float) else v)} ({sr['unit']}) en {u['period']}."
                 añade(f"{carpeta}-{d['id']}-{sr['id']}", txt, 'Datos demográficos y macroeconómicos (Fase 1B-3)', [f"{rel}#{sr['id']}"], sr['source'], sr['confidence'])
-    if carpeta == 'internacional':
+    if carpeta in ('internacional', 'demografia'):
         for x in d.get('data', []):
             if (d['id'], x['id']) in CLAIMS_DATOS_NUEVOS:
-                añade(f"internacional-{d['id']}-{x['id']}", f"{x['notes'].split('. ')[0]}: {num(x['value'])} ({x['unit']}) en {x['period']}.", 'Comparativa internacional (Fase 1C)', [f"{rel}#{x['id']}"], x['source'], x['confidence'])
+                texto = x['value'] if isinstance(x['value'], str) else f"{x['notes'].split('. ')[0]}: {num(x['value'])} ({x['unit']}) en {x['period']}."
+                añade(f"{carpeta}-{d['id']}-{x['id']}", texto, 'Comparativa internacional (Fase 1C)' if carpeta == 'internacional' else 'Triangulación de la mortalidad (Fase 1B-4)', [f"{rel}#{x['id']}"], x['source'], x['confidence'])
         if d['id'] == 'paises-sistemas':
             for x in d['data']:
                 añade(f"internacional-{x['id']}", f"{x['source']['title'].split('for ')[-1]}: {x['value']}.", 'Comparativa internacional: fichas de país (Fase 1C)', [f"{rel}#{x['id']}"], x['source'], x['confidence'])
@@ -145,6 +146,12 @@ REVISION = {
 REVISION['internacional-ocde-espana-gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024'] = 'Comprobar la comparabilidad de la tasa de reposición teórica bruta de la OCDE (carrera completa desde los 22 años, pensión obligatoria, 100 % del salario medio, parámetros de 2024) con una tasa calculada con las reglas propias (data/parametros: escala de porcentajes, periodo de cálculo, actualización de bases, pensión máxima) y con los cocientes empíricos de data/internacional/contraste-espana; en concreto, qué supuestos de crecimiento del salario y de indexación hay detrás del 80,4 % y si la tasa neta (86,3 %) usa los mismos impuestos y cotizaciones que el cálculo propio.'
 REVISION['internacional-contraste-espana-pension-altas-sobre-salario-eaes'] = 'Comprobar que el cociente entre la pensión media de las altas de jubilación (14 pagas) y la ganancia media de la EAES no es una tasa de reposición: mezcla carreras de distinta duración y compara con el salario de todos los trabajadores del ámbito de la EAES. Decidir si debe usarse como referencia empírica de sensibilidad frente a la tasa teórica de la OCDE y con qué definición de salario (EAES, ETCL, Contabilidad Nacional, base media).'
 REVISION['internacional-contraste-espana-gasto-pensiones-contributivas-sobre-pib'] = 'Comprobar la delimitación del gasto: la fila «suma de pensiones» de la ejecución (obligaciones reconocidas) excluye Clases Pasivas, pensiones no contributivas y el complemento a mínimos (que va en otra fila, ver docs/INFORME_VERIFICACION.md). Decidir qué delimitación comparable con OCDE, Eurostat y Ageing Report usará el modelo.'
+REVISION['demografia-triangulacion-mortalidad-supervivencia-publicada-sobre-qx-hombres-85-2010-2020'] = 'Comprobar que el desfase entre la supervivencia publicada y Π(1 − qx) se debe a la convención de edades: qx es la probabilidad entre las edades exactas x y x+1, y la cohorte con x años cumplidos a 1 de enero pasa durante el año de edad exacta media x+0,5 a x+1,5. Reproducir con data/demografia/triangulacion-cohortes y triangulacion-factor-qx el factor medio (defunciones registradas de la generación / población × qx, 1,04 a 1,08) y compararlo con (qx + qx+1)/2 ÷ qx; decidir si el modelo debe usar qx desplazado, la probabilidad de Lexis o una conversión desde la tasa central mx.'
+REVISION['demografia-triangulacion-mortalidad-supervivencia-publicada-sobre-qx-lexis-hombres-85-2010-2020'] = 'Valorar el residuo que queda en hombres de 85 años en 2010-2020 tras la convención de Lexis (supervivencia publicada algo inferior a la de la tabla y a la de las defunciones registradas de la generación): comprobar si se debe al ajuste intercensal de 2012-2020, a la migración o a la población de partida, comparando las ventanas de data/demografia/triangulacion-cohortes (2000-2010, 2010-2020, 2015-2020 y 2021-2024) y decidir si el modelo debe corregir la población de edades altas o solo qx.'
+REVISION['demografia-triangulacion-mortalidad-factor-real-sobre-qx-mujeres-85-2010-2019'] = 'Comprobar el factor entre las defunciones registradas de la cohorte y población × qx (mujeres de 85 años, media 2010-2019) y su estabilidad por edad y año (mínimo y máximo en data/demografia/triangulacion-factor-qx); decidir si un factor constante desde los 75 años (como el 1,07 a 1,10 del modelo) es una aproximación aceptable de la corrección de Lexis o si debe variar con la edad (la pendiente de qx).'
+REVISION['demografia-triangulacion-mortalidad-muertes-implicitas-pensiones-jubilacion-lexis'] = 'Conciliar las muertes implícitas en las tablas entre las pensiones de jubilación (aproximación con la distribución por edad de octubre de 2026) con las bajas definitivas de jubilación de 2025 de la Seguridad Social: la fuente no desglosa las causas de baja (fallecimiento u otras) y las pensiones no son pensionistas. Determinar qué dato haría falta (pensionistas por edad simple y causa de baja) y si la diferencia restante es relevante para el modelo.'
+REVISION['demografia-triangulacion-mortalidad-ine-tablas-recalculo-censo-2021'] = 'Confirmar con el INE qué años de la serie de tablas 1991-2024 cambiaron en la edición de noviembre de 2023 (la metodología indica que se recalcularon las series intercensales de 2012-2020 con el censo de 2021 y que las de 1981-2001 se recalcularon en 2014) y comparar las tablas actuales con la edición anterior para medir el cambio en qx de las edades altas.'
+REVISION['internacional-ocde-supuestos-reposicion-ocde-pag-entrada-mercado-laboral-22'] = 'Los metadatos accesibles de la OCDE solo dicen que la tasa de reposición teórica se calcula para trabajadores que entran en el mercado laboral a los 22 años; no figuran el crecimiento real de los salarios, la inflación ni la carrera. Obtener la metodología de «Pensions at a Glance» y comprobar esos supuestos antes de comparar la tasa teórica de la OCDE con una tasa calculada con las reglas propias.'
 REVISION_POR_DEFECTO = 'no-requiere'
 
 ORG = {'Boletín Oficial del Estado (BOE)': 'BOE', 'Instituto Nacional de Estadística (INE)': 'INE'}
@@ -192,8 +199,9 @@ grupos = [('Reglas de cálculo de la pensión de jubilación', [i for i in REVIS
           ('Reglas de evolución (mínimas, revalorización, base y pensión máximas, MEI)', [i for i in REVISION if i.startswith('param-') and any(k in i for k in ('minima', 'revalorizacion', 'incremento', 'mei'))]),
           ('Definiciones (ratio afiliados/pensionistas, pensionistas y pensiones, déficit, Fondo de Reserva)', [i for i in REVISION if i.startswith('sistema-')]),
           ('Definiciones de salario medio', [i for i in REVISION if i.startswith('macro-')]),
-          ('Comparativa internacional (comparabilidad de la tasa de reposición y del gasto)', [i for i in REVISION if i.startswith('internacional-')]),
-          ('Afirmaciones circulantes (definiciones de cada una)', [i for i in REVISION if i.startswith('mito-')])]
+          ('Comparativa internacional (comparabilidad de la tasa de reposición y del gasto)', [i for i in REVISION if i.startswith('internacional-') and not i.startswith('internacional-ocde-supuestos')]),
+          ('Afirmaciones circulantes (definiciones de cada una)', [i for i in REVISION if i.startswith('mito-')]),
+          ('Mortalidad en edades altas y supuestos de la OCDE', [i for i in REVISION if i.startswith(('demografia-', 'internacional-ocde-supuestos'))])]
 n = 0
 for tit, lista in grupos:
     md += [f'## {tit}', '']

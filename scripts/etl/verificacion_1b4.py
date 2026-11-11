@@ -225,7 +225,24 @@ def comp_pens(p26, pens):
     return E_q, E_l, bajas, tot
 
 
+def comp_eurostat_defunciones():
+    eu = {(int(r['anio']), r['sexo'], int(r['edad'])): float(r['defunciones']) for r in rd('demografia/eurostat-defunciones-edad-sexo.csv')}
+    antes = [(k, dea[k] - eu[k]) for k in dea if k in eu and k[0] < 2001 and abs(dea[k] - eu[k]) > 5]
+    gr = {}
+    for nombre, lo, hi in (('0-14', 0, 14), ('15-64', 15, 64), ('65-84', 65, 84), ('85+', 85, 100)):
+        r = [100 * (sum(dea[(y, 'ambos', e)] for e in range(lo, hi + 1)) / sum(eu[(y, 'ambos', e)] for e in range(lo, hi + 1)) - 1) for y in range(2001, 2025)]
+        gr[nombre] = (min(r), max(r))
+    reg('B1-ine-eurostat-defunciones', 'Defunciones por edad y sexo: INE (tabla 6547) frente a Eurostat (demo_magec), 1975-2024', 'diferencia',
+        f'hasta 2000 coinciden salvo {len(antes)} celdas ({"; ".join(f"{y}, {s}, {e} años: INE menos Eurostat = {n(d_)}" for (y, s, e), d_ in antes[:2])}); desde 2001 el INE da más defunciones que Eurostat: '
+        + ', '.join(f'{g} {n(a, 2)} % a {n(b, 2)} %' for g, (a, b) in gr.items()) + ' (INE menos Eurostat, ambos sexos)')
+    k = antes[0][0] if antes else None
+    DISC.append('- **Defunciones por edad: INE frente a Eurostat**: hasta 2000 coinciden salvo una diferencia de 100 defunciones a los 73 años en 1986 (Eurostat da 100 más que el INE, en mujeres y en ambos sexos). '
+                f'Desde 2001 el INE da más defunciones que Eurostat en todos los grupos (65-84 años: {n(gr["65-84"][0], 2)} % a {n(gr["65-84"][1], 2)} %; 85 o más: {n(gr["85+"][0], 2)} % a {n(gr["85+"][1], 2)} %; 15-64: {n(gr["15-64"][0], 2)} % a {n(gr["15-64"][1], 2)} %). '
+                'Las dos series se presentan como datos del INE; los datos descargados no explican la diferencia (podría deberse a la delimitación de las defunciones incluidas, que Eurostat no detalla en el conjunto descargado).')
+
+
 def main():
+    comp_eurostat_defunciones()
     rows1, rng1 = comp1_()
     rows2, fr, sel, fsel = comp2_()
     p100, d100, flag, t, p26, pens, filas = comp34()

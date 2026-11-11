@@ -1,5 +1,11 @@
 [
   {
+    "id": "B1-ine-eurostat-defunciones",
+    "titulo": "Defunciones por edad y sexo: INE (tabla 6547) frente a Eurostat (demo_magec), 1975-2024",
+    "estado": "diferencia",
+    "detalle": "hasta 2000 coinciden salvo 2 celdas (1986, ambos, 73 años: INE menos Eurostat = -100; 1986, mujeres, 73 años: INE menos Eurostat = -100); desde 2001 el INE da más defunciones que Eurostat: 0-14 1,66 % a 4,69 %, 15-64 0,85 % a 2,13 %, 65-84 0,32 % a 0,86 %, 85+ 0,07 % a 0,14 % (INE menos Eurostat, ambos sexos)"
+  },
+  {
     "id": "B1-defunciones-tablas",
     "titulo": "Defunciones registradas ÷ defunciones implícitas en las tablas, 2010-2019 (hombres y mujeres, grupos de edad)",
     "estado": "diferencia",
