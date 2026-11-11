@@ -165,3 +165,44 @@ Resultado: **37 de 37** contrastes coinciden.
 | Eurostat S.1314: B.9 = ingresos totales − gastos totales (26 años, 2000-2025) | 26         | Series TR y TE del mismo conjunto       | 26         | sí       |
 
 Comprobaciones internas adicionales (`scripts/coherencia-financiacion.test.ts`): ingresos y gastos igual a la suma de operaciones, cotizaciones por régimen igual al total, pensiones por clase igual a «SUMA DE PENSIONES», acumulados trimestrales crecientes, valor del Fondo igual a dotaciones + rendimientos + disposiciones, pasivos financieros igual al importe autorizado por las leyes de PGE de 2021-2023 y razón entre gasto en pensiones y número × pensión media × 14.
+
+<!-- verificacion-1b3:inicio -->
+## Fase 1B-3: demografía, macro y salarios
+
+Comprobaciones: 32 (20 coinciden, 12 con diferencias explicadas o informativas, 0 fallos). Generado por `scripts/etl/verificacion_1b3.py`; resultado completo en `docs/verificacion-1b3.json`.
+
+| Comprobación | Resultado | Detalle |
+| --- | --- | --- |
+| Eurostat: suma por edades frente al total publicado (1971-2025, ambos sexos) | ok | diferencia máxima 0 personas (ninguno); el total incluye personas de edad desconocida |
+| Población total a 1 de enero, INE frente a Eurostat (1971-2025) | diferencia | 23 de 55 años idénticos; diferencia máxima 116 personas en 2022 (0,0002 %) |
+| Población por grupos de edad (0-14, 15-64, 65+), INE frente a Eurostat (1971-2025) | diferencia | diferencia máxima 108 personas (2022, grupo 15-64) |
+| Población de partida de las proyecciones (1-1-2026) frente a la ECP provisional | diferencia | proyección 49.590.099 frente a ECP 49.596.376 (diferencia -6.277) |
+| Población: hombres + mujeres = ambos (1971-2026) | diferencia | diferencia máxima 12 personas (el INE redondea cada serie por separado) |
+| Proyección: hombres + mujeres = ambos (2026-2076) | ok | diferencia máxima 0 |
+| Población proyectada: INE (2026-2076), EUROPOP2025 y Ageing Report 2024 (informativo; son proyecciones con hipótesis distintas) | diferencia | 2030: INE 51,41 M, EUROPOP2025 50,92 M, Ageing Report 2024 49,32 M / 2040: INE 53,71 M, EUROPOP2025 52,83 M, Ageing Report 2024 50,28 M / 2050: INE 54,56 M, EUROPOP2025 53,79 M, Ageing Report 2024 50,43 M / 2060: INE 54,23 M, EUROPOP2025 53,33 M, Ageing Report 2024 49,22 M / 2070: INE 53,37 M, EUROPOP2025 52,22 M, Ageing Report 2024 47,69 M |
+| Mortalidad INE 1975-2024: lx(0) = 100.000 | ok | desviación máxima 0,000000 |
+| Mortalidad INE 1975-2024: l(x+1) = lx × (1 − qx) | ok | diferencia máxima 0,000 personas sobre 14520 pares (peor caso (2021, 'ambos', 37); el INE redondea qx a 6 decimales) |
+| Mortalidad INE 1975-2024: dx = lx − l(x+1) | ok | diferencia máxima 0,000 |
+| Mortalidad INE 1975-2024: ex = Tx / lx | ok | diferencia máxima 0,00000 años |
+| Mortalidad proyectada 2026-2075: lx(0) = 100.000 | ok | desviación máxima 0,000000 |
+| Mortalidad proyectada 2026-2075: l(x+1) = lx × (1 − qx) | ok | diferencia máxima 0,050 personas sobre 15000 pares (peor caso (2072, 'ambos', 3); el INE redondea qx a 6 decimales) |
+| Mortalidad proyectada 2026-2075: dx = lx − l(x+1) | ok | diferencia máxima 0,000 |
+| Mortalidad proyectada 2026-2075: ex = Tx / lx | ok | diferencia máxima 0,00000 años |
+| Esperanza de vida a los 65 años por sexo: serie anual 1975-2024 | ok | 2024: hombres 19,87, mujeres 23,64 |
+| Fecundidad: ICF = suma de las tasas por edad (1975-2024, ambas nacionalidades) | ok | diferencia máxima 0,0049 hijos por mujer |
+| Proyección: ICF = suma de las tasas por edad (2026-2075) | ok | diferencia máxima 0,0000 |
+| Migraciones EM 2008-2021: inmigración − emigración = saldo exterior (suma por edad) | diferencia | diferencia máxima 8,00 |
+| Migraciones EMCR 2021-2024: saldo derivado de la tabla por edad frente al saldo exterior publicado | ok | diferencia máxima 0,00 personas |
+| Migraciones: saldo exterior de 2021 en las dos series (ruptura de serie) | diferencia | EM 148.070 frente a EMCR 191.094 personas |
+| PIB corriente: INE frente a Eurostat | diferencia | 27 de 31 años idénticos; diferencia máxima 17,151 millones (3,508 %) |
+| PIB en volumen (euros de 2020): INE (derivado) frente a Eurostat | ok | diferencia relativa máxima 0,0001 % |
+| Deflactor del PIB (2020 = 100): INE (derivado) frente a Eurostat | diferencia | diferencia relativa máxima 3,3890 % |
+| EPA: activos = ocupados + parados (miles, todos los trimestres, sexos y grupos) | ok | diferencia máxima 0,10 miles (redondeo del INE a 100 personas) |
+| EPA: tasa de paro publicada = parados / activos | ok | diferencia máxima 0,50 puntos (grupos con pocos activos y redondeo de miles) |
+| EPA: activos hombres + mujeres = ambos sexos (total, todos los trimestres) | ok | diferencia máxima 0,10 miles |
+| Salario medio anual (euros): EAES, ETCL×12, CN por puesto y por ETC y base media de cotización×12, frente a frente | diferencia | 2018: EAES 24.009; ETCL×12 23.033; CN/puesto 31.340; CN/ETC 36.523; base media ×12 21.284 / 2020: EAES 25.166; ETCL×12 22.843; CN/puesto 34.884; CN/ETC 38.771; base media ×12 23.108 / 2022: EAES 26.949; ETCL×12 25.382; CN/puesto 36.275; CN/ETC 40.496; base media ×12 23.980 / 2024: EAES 29.540; ETCL×12 27.622; CN/puesto 39.473; CN/ETC 44.103; base media ×12 26.461 |
+| Razones con la base máxima calculadas con data/parametros/base-maxima-rg | ok | 2024: EAES 0,521; ETCL 0,488; CN/puesto 0,697; base media 0,467 |
+| Relación afiliados/pensiones: Alternativa 1 frente a las cuatro definiciones anteriores | diferencia | 2025: Alternativa 1 2.0741; anteriores: afiliados-diciembre-por-pensionista 2,3144; afiliados-diciembre-por-pension 2,0934; afiliados-media-anual-por-pensionista 2,2922; afiliados-media-anual-por-pension 2,0734 |
+| BEL PEN-1 (diciembre de 2025, total) frente al fichero REG de la Seguridad Social | ok | BEL 10.434.860 (redondeado a centenas) frente a REG 10.434.856; diferencia 4 pensiones; importe medio BEL 1317.71 frente a REG 1317.71 |
+| BEL PEN-31 (máxima y mínimas) frente a data/parametros | diferencia | 306 celdas comparables: 221 iguales y 85 distintas (años 2000-2022); 106 celdas sin dato en parametros (años 1990-1999 y otras columnas) |
+<!-- verificacion-1b3:fin -->

@@ -1,0 +1,64 @@
+{
+  "tipo": "tabla",
+  "id": "mites-anuario-pen1-sexo-clase",
+  "title": "MITES, Anuario de Estadísticas: pensiones, importe medio y pensionistas (media anual) por sexo y clase (PEN-1; 2020 a 2025)",
+  "description": "Pensiones (número), importe medio (euros/mes) y pensionistas (personas) como media anual, por sexo y clase de pensión, según la tabla PEN-1 de los anuarios de 2022 y 2025 (cada edición recoge dos años). «ambos» incluye los de sexo «no consta». Los pensionistas se calculan sobre los que perciben al menos una pensión de esa clase (nota (1) de la fuente: una persona con pensiones de varias clases cuenta en cada una), por lo que no suman el total.",
+  "columnas": [
+    {
+      "id": "edicion",
+      "descripcion": "Edición del anuario (2022 o 2025)",
+      "unidad": null
+    },
+    {
+      "id": "anio",
+      "descripcion": "Año de referencia",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "clase",
+      "descripcion": "total, incapacidad, jubilacion, viudedad, orfandad o favor-familiares",
+      "unidad": null
+    },
+    {
+      "id": "pensiones",
+      "descripcion": "Número de pensiones (media anual)",
+      "unidad": "pensiones"
+    },
+    {
+      "id": "importe_medio_eur_mes",
+      "descripcion": "Importe medio de las pensiones",
+      "unidad": "euros/mes"
+    },
+    {
+      "id": "pensionistas",
+      "descripcion": "Pensionistas (media anual)",
+      "unidad": "personas"
+    }
+  ],
+  "filas": 64,
+  "source": {
+    "title": "Anuario de Estadísticas del MITES: pensiones contributivas, PEN-1 (pensiones e importe medio y pensionistas por sexo y clase)",
+    "publisher": "Ministerio de Trabajo y Economía Social (MITES), Boletín de Estadísticas Laborales",
+    "url": "https://www.mites.gob.es/estadisticas/anuarios/index.htm"
+  },
+  "origenes": [
+    {
+      "period": "2022",
+      "url": "https://www.mites.gob.es/estadisticas/anuarios/index.htm",
+      "sha256": "d0680ebfb4b2c5dbd28a993ec0972d80de98bcc442ba1e979657a4220bb8aa1a"
+    },
+    {
+      "period": "2025",
+      "url": "https://www.mites.gob.es/estadisticas/anuarios/index.htm",
+      "sha256": "71b72637a1ef21cf579ff0a4ef3fd5301eaa4f1882558409db6ab89b9c247119"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Descarga manual del autor (data-raw/mites/PEN-anuario2022.xlsx y PEN-anuario2025.xlsx). El resto de tablas PEN del anuario (PEN-2 a PEN-28) no se han procesado: ver docs/ESTADO_FASE_1B.md."
+}

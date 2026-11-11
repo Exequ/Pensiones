@@ -2,7 +2,7 @@
   "tipo": "tabla",
   "id": "proyecciones-mortalidad",
   "title": "Tablas de mortalidad proyectadas por el INE 2026-2075 por año, sexo y edad simple",
-  "description": "Funciones de la tabla de mortalidad proyectada (mx, qx, lx, dx, Lx, Tx, ex) por año, sexo y edad simple (0 a «100 y más», edad 100), escenario principal de la edición 2026-2076. Es la hipótesis de mortalidad de las proyecciones del INE.",
+  "description": "Funciones de la tabla de mortalidad proyectada (mx, qx, lx, dx, Lx, Tx, ex) por año, sexo y edad simple (0 a «100 y más», edad 100), escenario principal de la edición 2026-2076. Es la hipótesis de mortalidad de las proyecciones del INE. mx y qx se publican aquí en tanto por mil: el INE los etiqueta así pero los entrega en tanto por uno, y se han multiplicado por 1.000 (comprobado con l(x+1) = lx × (1 − qx)).",
   "columnas": [
     {
       "id": "anio",

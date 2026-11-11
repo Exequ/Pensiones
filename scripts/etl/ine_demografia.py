@@ -322,7 +322,9 @@ def a5():
             continue
         ed = edad_de(m.get('Valores simples de edad') or m['Semiintervalos de edad'])
         for x in s['Data']:
-            mort[(x['Anyo'], SEXO[m['Sexo']], ed)][fn] = x['Valor']
+            # El INE etiqueta mx y qx de esta tabla como «tanto por mil», pero los valores están en tanto por uno
+            # (q0 = 0,0025 frente a 2,6 por mil en la tabla histórica; solo l(x+1) = lx(1 − qx) cuadra así): se pasan a por mil.
+            mort[(x['Anyo'], SEXO[m['Sexo']], ed)][fn] = x['Valor'] * 1000 if fn in ('mx', 'qx_por_mil') else x['Valor']
     cols = ['mx', 'qx_por_mil', 'lx', 'dx', 'pob_estacionaria', 'tiempo_por_vivir', 'ex']
     rows = [[a, sx, ed] + [repr(float(v.get(c))) if v.get(c) is not None else '' for c in cols] for (a, sx, ed), v in sorted(mort.items())]
     n = escribe_csv('proyecciones-mortalidad', ['anio', 'sexo', 'edad'] + cols, rows)
@@ -330,7 +332,7 @@ def a5():
     escribe_tabla('demografia', 'proyecciones-mortalidad',
         'Tablas de mortalidad proyectadas por el INE 2026-2075 por año, sexo y edad simple',
         'Funciones de la tabla de mortalidad proyectada (mx, qx, lx, dx, Lx, Tx, ex) por año, sexo y edad simple (0 a «100 y más», edad 100), escenario principal de la edición 2026-2076. '
-        'Es la hipótesis de mortalidad de las proyecciones del INE.',
+        'Es la hipótesis de mortalidad de las proyecciones del INE. mx y qx se publican aquí en tanto por mil: el INE los etiqueta así pero los entrega en tanto por uno, y se han multiplicado por 1.000 (comprobado con l(x+1) = lx × (1 − qx)).',
         [('anio', 'Año', None), ('sexo', 'ambos, hombres o mujeres', None), ('edad', 'Edad x; 100 = «100 y más»', 'años'),
          ('mx', 'Tasa de mortalidad', 'por mil'), ('qx_por_mil', 'Riesgo de muerte', 'por mil'),
          ('lx', 'Supervivientes (raíz 100.000)', 'personas'), ('dx', 'Defunciones teóricas', 'personas'),

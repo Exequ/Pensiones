@@ -1,0 +1,39 @@
+{
+  "tipo": "tabla",
+  "id": "mites-bel-pen31-cuantias",
+  "title": "MITES, BEL PEN-31: cuantía máxima y cuantías mínimas de las pensiones contributivas, 1990-2026",
+  "description": "Cuantía máxima y cuantías mínimas por clase y situación familiar, en euros al año, tal como las publica el BEL (PEN-31), 1990-2026. «maxima» es la pensión máxima anual; el resto son mínimas (ip = incapacidad permanente, jub = jubilación, viud = viudedad, orf = orfandad, fam = favor de familiares). La asignación de columnas a conceptos se ha hecho por la cabecera del fichero; las celdas vacías o «-» no se incluyen. Hay columnas de la hoja que no se han podido asignar con seguridad (ver notas) y no se publican.",
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año",
+      "unidad": null
+    },
+    {
+      "id": "concepto",
+      "descripcion": "Concepto (máxima o mínima por clase y situación)",
+      "unidad": null
+    },
+    {
+      "id": "euros_anio",
+      "descripcion": "Cuantía anual",
+      "unidad": "euros/año"
+    }
+  ],
+  "filas": 720,
+  "source": {
+    "title": "Boletín de Estadísticas Laborales: PEN-31 cuantías máxima y mínima de las pensiones contributivas",
+    "publisher": "Ministerio de Trabajo y Economía Social (MITES), Boletín de Estadísticas Laborales",
+    "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm"
+  },
+  "origenes": [
+    {
+      "period": "2026",
+      "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm",
+      "sha256": "6d606cb463ee676b8bf6c7686a6cf2175b96ac655accf144a11b39854a2e57e1"
+    }
+  ],
+  "fetchedAt": "2026-11-11",
+  "confidence": "alta",
+  "notes": "Descarga manual del autor (data-raw/mites/pen31.xls). El fichero tiene 10 columnas en la primera hoja y las cabeceras combinadas desplazan algunas celdas; se publican solo las columnas cuya cabecera es inequívoca. Contraste con data/parametros en docs/INFORME_VERIFICACION.md y docs/DISCREPANCIAS.md."
+}
