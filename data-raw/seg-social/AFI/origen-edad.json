@@ -1,0 +1,22 @@
+{
+ "2021": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/72597595-6a64-4b14-86cc-8b2d8b78088c/Afiliaci%C3%B3n+2021+Pub+-+6+Rev.xlsx",
+  "sha256": "d8a5c71d15d9f4e2c204b535ef88bf6e753cb690056057a349adf5afa01641a0"
+ },
+ "2022": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/23367054-1fe5-41b2-880b-d30a7123ab49/Afiliaci%C3%B3n+2022.xlsx",
+  "sha256": "80ff349942e0725b9ba6bcf0ed4310d893b396d408f4d6c9e36cbdd88d73ac6b"
+ },
+ "2023": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/48862fc6-c5d8-4947-bfe8-8de5f2485f5f/Afiliaci%C3%B3n+2023.xlsx",
+  "sha256": "59a82a4c8274c3a9adcc9e309898d478241fc92b4147a69d026dfb6457c7f521"
+ },
+ "2024": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/0de70d6f-8b39-4468-acaf-88d3a61a1f9a/Afiliaci%C3%B3n+2024.xlsx",
+  "sha256": "1e5fd613de2ee9b5ee0d1d3555fb6b4d5866528eac8bad2556ae3900bb60de2a"
+ },
+ "2025": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/426ff44b-aea3-4c72-adbe-e46a35bb2ca4/Afiliaci%C3%B3n+2025.xlsx",
+  "sha256": "9d619bf0a6133438c84352e5c1830554ce12c2eef73043693536f20b1dd38191"
+ }
+}
