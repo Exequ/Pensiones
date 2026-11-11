@@ -9,3 +9,4 @@ capturas
 *.log
 .vite
 __pycache__/
+data-raw/seg-social/paginas/
