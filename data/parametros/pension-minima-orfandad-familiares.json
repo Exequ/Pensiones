@@ -1794,6 +1794,40 @@
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
+      "id": "2022-orf-absoluta-incremento-unico",
+      "value": 7655.2,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Incremento anual de la cuantía mínima de orfandad en la orfandad absoluta, distribuido entre los beneficiarios. Añadido en la Fase 2-B-2.",
+      "quote": "En la orfandad absoluta el mínimo se incrementará en 7.655,20 euros/año distribuidos, en su caso, entre los beneficiarios.",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-fam-varios-incremento-unico",
+      "value": 4565.4,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Importe anual que se prorratea entre varios beneficiarios de favor de familiares cuando no hay viudo ni huérfano pensionistas. Añadido en la Fase 2-B-2.",
+      "quote": "Varios beneficiarios: El mínimo asignado a cada uno de ellos se incrementará en el importe que resulte de prorratear 4.565,40 euros/año entre el número de beneficiarios.",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
       "id": "2023-orf-unico",
       "value": 3353.0,
       "unit": "euros/año",
@@ -1910,6 +1944,40 @@
       "confidence": "alta",
       "notes": "Cuantía mínima anual (importe único).",
       "quote": "Un solo beneficiario menor de sesenta y cinco años. … 7.632,80",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-orf-absoluta-incremento-unico",
+      "value": 8306.2,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Incremento anual de la cuantía mínima de orfandad en la orfandad absoluta, distribuido entre los beneficiarios. Añadido en la Fase 2-B-2.",
+      "quote": "En la orfandad absoluta el mínimo se incrementará en 8.306,20 euros/año distribuidos, en su caso, entre los beneficiarios.",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-fam-varios-incremento-unico",
+      "value": 4953.2,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Importe anual que se prorratea entre varios beneficiarios de favor de familiares cuando no hay viudo ni huérfano pensionistas. Añadido en la Fase 2-B-2.",
+      "quote": "Varios beneficiarios: El mínimo asignado a cada uno de ellos se incrementará en el importe que resulte de prorratear 4.953,20 euros/año entre el número de beneficiarios.",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
@@ -2032,6 +2100,40 @@
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
+      "id": "2024-orf-absoluta-incremento-unico",
+      "value": 8752.8,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Incremento anual de la cuantía mínima de orfandad en la orfandad absoluta, distribuido entre los beneficiarios. Añadido en la Fase 2-B-2.",
+      "quote": "En la orfandad absoluta el mínimo se incrementará en 8.752,8 euros/año distribuidos, en su caso, entre los beneficiarios.",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-fam-varios-incremento-unico",
+      "value": 5219.2,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Importe anual que se prorratea entre varios beneficiarios de favor de familiares cuando no hay viudo ni huérfano pensionistas. Añadido en la Fase 2-B-2.",
+      "quote": "Varios beneficiarios: El mínimo asignado a cada uno de ellos se incrementará en el importe que resulte de prorratear 5.219,20 euros/año entre el número de beneficiarios.",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
       "id": "2025-orf-unico",
       "value": 3745.0,
       "unit": "euros/año",
@@ -2044,8 +2146,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario. … 8.523,20",
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Orfandad | | Por beneficiario. | 3.745,00 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2072,8 +2174,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. … 8.523,20",
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Por beneficiario menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. | 7.361,20 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2100,8 +2202,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Un beneficiario. … 8.523,20",
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Un beneficiario. | 11.113,20 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2128,8 +2230,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Varios beneficiarios: a repartir entre número de beneficiarios. … 8.523,20",
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Varios beneficiarios: a repartir entre número de beneficiarios. | 18.733,70 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2156,8 +2258,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario. … 8.523,20",
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "En favor de familiares | | Por beneficiario. | 3.745,00 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2184,8 +2286,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Un solo beneficiario con sesenta y cinco años. … 8.523,20",
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Un solo beneficiario con sesenta y cinco años. | 9.044,00 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2228,6 +2330,40 @@
       }
     },
     {
+      "id": "2025-orf-absoluta-incremento-unico",
+      "value": 9275.0,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Incremento anual de la cuantía mínima de orfandad en la orfandad absoluta, distribuido entre los beneficiarios. Añadido en la Fase 2-B-2.",
+      "quote": "En la orfandad absoluta el mínimo se incrementará en 9.275 euros/año distribuidos, en su caso, entre los beneficiarios.",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2025-fam-varios-incremento-unico",
+      "value": 5530.0,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Importe anual que se prorratea entre varios beneficiarios de favor de familiares cuando no hay viudo ni huérfano pensionistas. Añadido en la Fase 2-B-2.",
+      "quote": "Varios beneficiarios: El mínimo asignado a cada uno de ellos se incrementará en el importe que resulte de prorratear 5.530 euros/año entre el número de beneficiarios.",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
       "id": "2026-orf-discapacidad65-unico",
       "value": 7882.0,
       "unit": "euros/año",
@@ -2240,8 +2376,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por persona beneficiaria menor de dieciocho años con una discapacidad en grado igual o superior al 65 por 100. … 9.126,60",
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Por persona beneficiaria menor de dieciocho años con una discapacidad en grado igual o superior al 65 por 100. | 7.882,00 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2268,8 +2404,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Una sola persona beneficiaria con sesenta y cinco años. … 9.126,60",
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Una sola persona beneficiaria con sesenta y cinco años. | 9.683,80 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2310,6 +2446,108 @@
         "matches": true,
         "notes": "Misma cuantía en otra norma del mismo año."
       }
+    },
+    {
+      "id": "2026-orf-unico",
+      "value": 4011.0,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único). Añadida en la Fase 2-B-2 (no la recogió la extracción de la Fase 1A).",
+      "quote": "Orfandad | | Por persona beneficiaria. | 4.011,00 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2026-prest-orf-1-unico",
+      "value": 11603.2,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único). Añadida en la Fase 2-B-2 (no la recogió la extracción de la Fase 1A).",
+      "quote": "Una persona beneficiaria. | 11.603,20 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2026-prest-orf-varios-unico",
+      "value": 19559.68,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único). Añadida en la Fase 2-B-2 (no la recogió la extracción de la Fase 1A).",
+      "quote": "Varias personas beneficiarias: a repartir entre número de personas beneficiarias. | 19.559,68 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2026-fam-unico",
+      "value": 4011.0,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (importe único). Añadida en la Fase 2-B-2 (no la recogió la extracción de la Fase 1A).",
+      "quote": "En favor de familiares | | Por persona beneficiaria. | 4.011,00 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2026-orf-absoluta-incremento-unico",
+      "value": 9931.6,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Incremento anual de la cuantía mínima de orfandad en la orfandad absoluta, distribuido entre los beneficiarios. Añadido en la Fase 2-B-2.",
+      "quote": "En la orfandad absoluta el mínimo se incrementará en 9.931,60 euros/año distribuidos, en su caso, entre las personas beneficiarias.",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2026-fam-varios-incremento-unico",
+      "value": 5920.6,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Importe anual que se prorratea entre varios beneficiarios de favor de familiares cuando no hay viudo ni huérfano pensionistas. Añadido en la Fase 2-B-2.",
+      "quote": "Varias personas beneficiarias: El mínimo asignado a cada una de ellas se incrementará en el importe que resulte de prorratear 5.920,60 euros/año entre el número de personas beneficiarias.",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     }
   ]
 }
