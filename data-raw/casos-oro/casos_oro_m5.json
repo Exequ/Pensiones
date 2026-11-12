@@ -1,0 +1,754 @@
+{
+ "modelo": "M5 v1",
+ "tolerancia_relativa": 1e-09,
+ "casos": [
+  {
+   "nombre": "base T2026 rel0.5 g0.0",
+   "entrada": {
+    "rel": 0.5,
+    "g": 0.0,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2026
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 1055.0315137228206,
+    "pension_calculada": 14770.441192119488,
+    "pension_final": 14770.441192119488,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.9627765139523974,
+    "rr_salario_medio": 0.4805945160596699
+   }
+  },
+  {
+   "nombre": "base T2026 rel0.5 g0.015",
+   "entrada": {
+    "rel": 0.5,
+    "g": 0.015,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2026
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 907.2799084613941,
+    "pension_calculada": 12701.918718459518,
+    "pension_final": 13106.8,
+    "estado": "minima",
+    "rr_ultimo_salario": 0.8303007772882594,
+    "rr_salario_medio": 0.41395194831288895
+   }
+  },
+  {
+   "nombre": "base T2026 rel1.0 g0.0",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.0,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2026
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 2110.063027445641,
+    "pension_calculada": 29540.882384238976,
+    "pension_final": 29540.882384238976,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.9627765139523974,
+    "rr_salario_medio": 0.9611890321193398
+   }
+  },
+  {
+   "nombre": "base T2026 rel1.0 g0.015",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.015,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2026
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 1814.5598169227883,
+    "pension_calculada": 25403.837436919035,
+    "pension_final": 25403.837436919035,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.8046520115504341,
+    "rr_salario_medio": 0.8023291727680701
+   }
+  },
+  {
+   "nombre": "base T2026 rel2.0 g0.0",
+   "entrada": {
+    "rel": 2.0,
+    "g": 0.0,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2026
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 3631.167615925527,
+    "pension_calculada": 50836.34662295738,
+    "pension_final": 47034.4,
+    "estado": "maxima",
+    "rr_ultimo_salario": 0.7664567205345723,
+    "rr_salario_medio": 1.5303858843578189
+   }
+  },
+  {
+   "nombre": "base T2026 rel2.0 g0.015",
+   "entrada": {
+    "rel": 2.0,
+    "g": 0.015,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2026
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 3519.8795951272446,
+    "pension_calculada": 49278.314331781425,
+    "pension_final": 47034.4,
+    "estado": "maxima",
+    "rr_ultimo_salario": 0.7448938505067391,
+    "rr_salario_medio": 1.485487038615661
+   }
+  },
+  {
+   "nombre": "base T2035 rel0.5 g0.0",
+   "entrada": {
+    "rel": 0.5,
+    "g": 0.0,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2035
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 1260.860321712491,
+    "pension_calculada": 17652.044503974874,
+    "pension_final": 17652.044503974874,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.9627765139523978,
+    "rr_salario_medio": 0.4805945160596701
+   }
+  },
+  {
+   "nombre": "base T2035 rel0.5 g0.015",
+   "entrada": {
+    "rel": 0.5,
+    "g": 0.015,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2035
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 1239.7588572442046,
+    "pension_calculada": 17356.624001418866,
+    "pension_final": 17356.624001418866,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.8046520115504343,
+    "rr_salario_medio": 0.4011645863840351
+   }
+  },
+  {
+   "nombre": "base T2035 rel1.0 g0.0",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.0,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2035
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 2521.720643424982,
+    "pension_calculada": 35304.08900794975,
+    "pension_final": 35304.08900794975,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.9627765139523978,
+    "rr_salario_medio": 0.9611890321193401
+   }
+  },
+  {
+   "nombre": "base T2035 rel1.0 g0.015",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.015,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2035
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 2479.517714488409,
+    "pension_calculada": 34713.24800283773,
+    "pension_final": 34713.24800283773,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.8046520115504343,
+    "rr_salario_medio": 0.8023291727680703
+   }
+  },
+  {
+   "nombre": "base T2035 rel2.0 g0.0",
+   "entrada": {
+    "rel": 2.0,
+    "g": 0.0,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2035
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 4652.7391177189775,
+    "pension_calculada": 65138.34764806568,
+    "pension_final": 56783.41181221278,
+    "estado": "maxima",
+    "rr_ultimo_salario": 0.7742691684039084,
+    "rr_salario_medio": 1.5459850168609226
+   }
+  },
+  {
+   "nombre": "base T2035 rel2.0 g0.015",
+   "entrada": {
+    "rel": 2.0,
+    "g": 0.015,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2035
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 4706.584995583098,
+    "pension_calculada": 65892.18993816337,
+    "pension_final": 56783.41181221278,
+    "estado": "maxima",
+    "rr_ultimo_salario": 0.6581188619062465,
+    "rr_salario_medio": 1.312438058879336
+   }
+  },
+  {
+   "nombre": "base T2043 rel0.5 g0.0",
+   "entrada": {
+    "rel": 0.5,
+    "g": 0.0,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2043
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 1477.159186557088,
+    "pension_calculada": 20680.228611799233,
+    "pension_final": 20680.228611799233,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.9626855102138459,
+    "rr_salario_medio": 0.4805490892165189
+   }
+  },
+  {
+   "nombre": "base T2043 rel0.5 g0.015",
+   "entrada": {
+    "rel": 0.5,
+    "g": 0.015,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2043
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 1619.1473695757868,
+    "pension_calculada": 22668.063174061015,
+    "pension_final": 22668.063174061015,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.7962098539575097,
+    "rr_salario_medio": 0.39695569283708576
+   }
+  },
+  {
+   "nombre": "base T2043 rel1.0 g0.0",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.0,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2043
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 2954.318373114176,
+    "pension_calculada": 41360.45722359847,
+    "pension_final": 41360.45722359847,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.9626855102138459,
+    "rr_salario_medio": 0.9610981784330378
+   }
+  },
+  {
+   "nombre": "base T2043 rel1.0 g0.015",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.015,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2043
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 3238.2947391515736,
+    "pension_calculada": 45336.12634812203,
+    "pension_final": 45336.12634812203,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.7962098539575097,
+    "rr_salario_medio": 0.7939113856741715
+   }
+  },
+  {
+   "nombre": "base T2043 rel2.0 g0.0",
+   "entrada": {
+    "rel": 2.0,
+    "g": 0.0,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2043
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 5685.566600036242,
+    "pension_calculada": 79597.93240050739,
+    "pension_final": 67133.2723323723,
+    "estado": "maxima",
+    "rr_ultimo_salario": 0.7812803927460074,
+    "rr_salario_medio": 1.559984344517324
+   }
+  },
+  {
+   "nombre": "base T2043 rel2.0 g0.015",
+   "entrada": {
+    "rel": 2.0,
+    "g": 0.015,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2043
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 6014.437927860165,
+    "pension_calculada": 84202.13099004231,
+    "pension_final": 67133.2723323723,
+    "estado": "maxima",
+    "rr_ultimo_salario": 0.589509705229393,
+    "rr_salario_medio": 1.1756158621267603
+   }
+  },
+  {
+   "nombre": "base T2050 rel0.5 g0.0",
+   "entrada": {
+    "rel": 0.5,
+    "g": 0.0,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2050
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 1696.7420803829234,
+    "pension_calculada": 23754.38912536093,
+    "pension_final": 23754.38912536093,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.9626574226402232,
+    "rr_salario_medio": 0.48053506858591677
+   }
+  },
+  {
+   "nombre": "base T2050 rel0.5 g0.015",
+   "entrada": {
+    "rel": 0.5,
+    "g": 0.015,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2050
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 2056.970242673559,
+    "pension_calculada": 28797.58339742983,
+    "pension_final": 28797.58339742983,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.793424634415638,
+    "rr_salario_medio": 0.3955671031989972
+   }
+  },
+  {
+   "nombre": "base T2050 rel1.0 g0.0",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.0,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2050
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 3393.484160765847,
+    "pension_calculada": 47508.77825072186,
+    "pension_final": 47508.77825072186,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.9626574226402232,
+    "rr_salario_medio": 0.9610701371718335
+   }
+  },
+  {
+   "nombre": "base T2050 rel1.0 g0.015",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.015,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2050
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 4113.940485347118,
+    "pension_calculada": 57595.16679485966,
+    "pension_final": 57595.16679485966,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.793424634415638,
+    "rr_salario_medio": 0.7911342063979944
+   }
+  },
+  {
+   "nombre": "base T2050 rel2.0 g0.0",
+   "entrada": {
+    "rel": 2.0,
+    "g": 0.0,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2050
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 6743.183013474896,
+    "pension_calculada": 94404.56218864855,
+    "pension_final": 77725.69403173577,
+    "estado": "maxima",
+    "rr_ultimo_salario": 0.7874672749385684,
+    "rr_salario_medio": 1.5723377063210682
+   }
+  },
+  {
+   "nombre": "base T2050 rel2.0 g0.015",
+   "entrada": {
+    "rel": 2.0,
+    "g": 0.015,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2050
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 7549.55387037938,
+    "pension_calculada": 105693.75418531132,
+    "pension_final": 77725.69403173577,
+    "estado": "maxima",
+    "rr_ultimo_salario": 0.5353702732686214,
+    "rr_salario_medio": 1.0676495735058569
+   }
+  },
+  {
+   "nombre": "carrera corta 15 anios",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.01,
+    "edad_inicio": 50,
+    "anio_jubilacion": 2030
+   },
+   "salida": {
+    "edad_jubilacion": 67.0,
+    "meses_cotizados": 204,
+    "porcentaje": 54.56,
+    "base_reguladora_mensual": 1517.6275942927775,
+    "pension_calculada": 11592.246616245953,
+    "pension_final": 14187.221834687998,
+    "estado": "minima",
+    "rr_ultimo_salario": 0.402745380968283,
+    "rr_salario_medio": 0.4017480456769429
+   }
+  },
+  {
+   "nombre": "inicio tardio 35",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.01,
+    "edad_inicio": 35,
+    "anio_jubilacion": 2040
+   },
+   "salida": {
+    "edad_jubilacion": 67.0,
+    "meses_cotizados": 384,
+    "porcentaje": 88.75999999999999,
+    "base_reguladora_mensual": 2889.682923868752,
+    "pension_calculada": 35908.35588516265,
+    "pension_final": 35908.35588516265,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.7570303203627876,
+    "rr_salario_medio": 0.7551556544056087
+   }
+  },
+  {
+   "nombre": "topada maxima",
+   "entrada": {
+    "rel": 3.0,
+    "g": 0.01,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2045
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 6402.337886746041,
+    "pension_calculada": 89632.73041444457,
+    "pension_final": 70003.03997524455,
+    "estado": "maxima",
+    "rr_ultimo_salario": 0.4239412452013594,
+    "rr_salario_medio": 1.2686742651052918
+   }
+  },
+  {
+   "nombre": "minima",
+   "entrada": {
+    "rel": 0.4,
+    "g": 0.01,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2030
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 858.4099192804211,
+    "pension_calculada": 12017.738869925895,
+    "pension_final": 14187.221834687998,
+    "estado": "minima",
+    "rr_ultimo_salario": 1.0068634524207076,
+    "rr_salario_medio": 0.4017480456769429
+   }
+  },
+  {
+   "nombre": "lagunas 12",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.01,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2045,
+    "lagunas_meses": 12
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 504,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 3283.8583374580007,
+    "pension_calculada": 45974.01672441201,
+    "pension_final": 45974.01672441201,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.860486419623219,
+    "rr_salario_medio": 0.8331931285042459
+   }
+  },
+  {
+   "nombre": "lagunas 48",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.01,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2045,
+    "lagunas_meses": 48
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 468,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 3105.9681362461592,
+    "pension_calculada": 43483.55390744623,
+    "pension_final": 43483.55390744623,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.8898590865285209,
+    "rr_salario_medio": 0.7880581445777842
+   }
+  },
+  {
+   "nombre": "lagunas 60",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.01,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2045,
+    "lagunas_meses": 60
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 456,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 3035.035834488772,
+    "pension_calculada": 42490.501682842805,
+    "pension_final": 42490.501682842805,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.8957970173908549,
+    "rr_salario_medio": 0.7700609290039255
+   }
+  },
+  {
+   "nombre": "ipc 0",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.01,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2045,
+    "ipc": 0.0
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 2279.4067205307956,
+    "pension_calculada": 31911.69408743114,
+    "pension_final": 31911.69408743114,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.8772973381943738,
+    "rr_salario_medio": 0.8765701898120256
+   }
+  },
+  {
+   "nombre": "ipc 4",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.01,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2045,
+    "ipc": 0.04
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 4803.550934117241,
+    "pension_calculada": 67249.71307764137,
+    "pension_final": 67249.71307764137,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.813966829463335,
+    "rr_salario_medio": 0.810638353580966
+   }
+  },
+  {
+   "nombre": "sin topes",
+   "entrada": {
+    "rel": 3.0,
+    "g": 0.01,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2045,
+    "topes": false
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 9963.016875459578,
+    "pension_calculada": 139482.2362564341,
+    "pension_final": 139482.2362564341,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.8447100717759406,
+    "rr_salario_medio": 2.5278548423104534
+   }
+  },
+  {
+   "nombre": "sin actualizar",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.01,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2045,
+    "actualizar": false
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 2705.6710281003384,
+    "pension_calculada": 37879.394393404735,
+    "pension_final": 37879.394393404735,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.6881974396665748,
+    "rr_salario_medio": 0.686493227460989
+   }
+  },
+  {
+   "nombre": "opcion25 2040",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.02,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2040
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 3013.3395861224276,
+    "pension_calculada": 42186.75420571399,
+    "pension_final": 42186.75420571399,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.7603081830411601,
+    "rr_salario_medio": 0.7578029695361912
+   }
+  },
+  {
+   "nombre": "salario medio de referencia 2000",
+   "entrada": {
+    "rel": 1.0,
+    "g": 0.01,
+    "edad_inicio": 22,
+    "anio_jubilacion": 2045,
+    "salario_medio_ref": 2000.0
+   },
+   "salida": {
+    "edad_jubilacion": 65.0,
+    "meses_cotizados": 516,
+    "porcentaje": 100.0,
+    "base_reguladora_mensual": 2698.152792279981,
+    "pension_calculada": 37774.13909191974,
+    "pension_final": 37774.13909191974,
+    "estado": "contributiva",
+    "rr_ultimo_salario": 0.8447100717759407,
+    "rr_salario_medio": 0.8426182807701512
+   }
+  }
+ ]
+}
