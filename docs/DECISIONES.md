@@ -14,6 +14,7 @@ arriba dentro de cada fase.
 - **Reglamento de accidentes de trabajo de 1956** (base de las contingencias profesionales): no está en la legislación consolidada del BOE y la búsqueda por la web no dio resultado. A `DESCARGAS_MANUALES.md`; la rama lanza `NoImplementada` y admite una base calculada fuera (opción explícita).
 - **Tests de datos**: el nuevo fichero de reglas tiene varios datos por año (el de la redacción de cada regla), como los de la 2-A; se registra en `scripts/coherencia-datos.test.ts` (`FICHEROS_REGLAS_2B1`). No se ha cambiado ninguna aserción.
 - **Claims**: tres afirmaciones nuevas (base reguladora, periodo mínimo y cuantía) con sus preguntas actuariales; total de pendientes 60, el límite del test, sin tocarlo.
+- **Prettier y los modelos M1 a M6**: el último commit de `main` (modelos y sus descripciones) no pasaba `prettier --check`, con lo que `npm run lint` fallaba antes de esta fase. Para no reescribir ficheros del autor, `modelos/` y `docs/modelos/` se añaden a `.prettierignore`.
 - **Caché de Vitest**: tras añadir un fichero a `data/parametros`, `import.meta.glob` necesitó borrar `node_modules/.vitest-cache` en local. En CI no afecta.
 
 ### Estructura del motor
