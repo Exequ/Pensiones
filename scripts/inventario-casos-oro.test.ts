@@ -8,7 +8,9 @@ import { RAIZ } from './lib/motor-jubilacion.ts';
 describe('inventario de casos de oro', () => {
   it('docs/INVENTARIO_CASOS_ORO.md está al día (npx tsx scripts/inventario-casos-oro.ts)', () => {
     const actual = readFileSync(path.join(RAIZ, 'docs/INVENTARIO_CASOS_ORO.md'), 'utf8');
-    expect(actual.trimEnd()).toBe(inventario().trimEnd());
+    // Prettier alinea las tablas: se compara sin espacios ni guiones de relleno.
+    const norm = (t: string) => t.replace(/[\s-]+/g, '');
+    expect(norm(actual)).toBe(norm(inventario()));
   });
 
   it('cumple los mínimos del encargo: 12 casos de PNC y 6 de MEI', () => {

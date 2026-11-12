@@ -3,6 +3,38 @@
 Registro de decisiones tomadas cuando algo era ambiguo o había que elegir. La más reciente,
 arriba dentro de cada fase.
 
+## Fase 2-B-3 · No contributivas, MEI, fachada única y cierre del motor
+
+### Proceso y datos
+
+- **Rama y base**: `feat/fase-2b3-no-contributivas-mei-api`, creada desde `origin/main` (que ya contiene la Fase 2-B-2), como pide el encargo y no la rama de trabajo que asigna el entorno.
+- **Higiene de datos** (`scripts/etl/minimas_citas_historicas.py`): mismo método que `minimas_citas.py` para las mínimas de 2013 (Real Decreto-ley 29/2012, descargado del XML del BOE) y de 2021 (Ley 11/2020): cita literal con la cifra, celda de la columna comprobada contra el valor, ningún valor cambia. El nuevo test `scripts/citas-cifras.test.ts` exige que la cita de cada cuantía de 15 ficheros contenga su cifra (admite «9.275», «1 221» o «1080»).
+- **SMI de 2027**: comprobado una sola vez (2026-11-12) en la API de legislación consolidada del BOE: el real decreto más reciente es el de 2026. No se añade nada.
+- **Guías del IMSERSO como fuente oficial** (`scripts/etl/pnc_imserso.py`, PDF en `data-raw/imserso/` con huella): publican las cuantías de cada año, los límites de acumulación y el límite del art. 366. Es la fuente de los casos de oro «independientes» de la PNC y de un contraste de datos que encontró un error: la cuantía de 2023 de `/data` era la del RD 1058/2022 (6.402,20), superada por el incremento extraordinario del art. 77 del RDL 20/2022 (hasta el 15 % sobre el importe de 2022: 6.784,54). Se corrige el dato (cifra de la guía; el RDL, descargado, se cita como contraste y el script comprueba por código 5.899,60 × 1,15 = 6.784,54) y se anota en `docs/DISCREPANCIAS.md`.
+- **IPREM del art. 366**: las guías publican el IPREM anual sin pagas extra de 2022 a 2026 (`pnc-iprem-anual-sin-pagas-extra`), con lo que el IPREM de 2024 a 2026, que faltaba, deja de bloquear la compatibilidad con el trabajo.
+- **Complemento de alquiler de 2024**: el RDL 8/2023 descargado no repite el importe y las guías del IMSERSO no lo mencionan: sin dato (`DatoNoDisponible`). El RD 1191/2012 no tiene versión consolidada en el BOE: se guarda su texto original y los datos que de él salen llevan confianza «media».
+- **Datos del MEI**: ya estaban 2023-2029 (Fase 1B-2); se añaden 2030-2050 (DT 43.ª: «mismo porcentaje del 1,2, con igual distribución»: 1,00 la empresa y 0,2 el trabajador), el último año de efecto y las reglas del art. 127 bis. La cotización adicional de solidaridad se extrae completa (DT 42.ª, 63 tipos de 2025 a 2045, y art. 19 bis); coincide con los tipos de 2025 y 2026 de la orden de cotización (test).
+- **Contraste con `modelos/`** (solo lectura): M4 usa los mismos datos del MEI y el mismo último año (2050); sin diferencias de valores (`scripts/contraste-mei-modelos.test.ts`, `docs/DISCREPANCIAS.md`).
+- **Claims y preguntas actuariales**: dos afirmaciones nuevas (`param-pnc-reglas`, `param-mei-reglas`) con sus preguntas; 65 pendientes (dentro del tope de 70 del test, que no se toca).
+
+### Estructura de los motores
+
+- **PNC**: `ParametrosPNC` propios (no heredan de la jubilación: no usan bases). Año de la normativa = año de los efectos económicos (primer día del mes siguiente a la solicitud, arts. 365 y 371); `NoImplementada` antes de 2022 y `DatoNoDisponible` si falta la cuantía del año. La cuantía y los límites se redondean al céntimo como los publica el IMSERSO.
+- **MEI**: funciones por año (`tipoMEI`, `calcularMEI`, `cuotaSolidaridad`, `cotizacionAdicionalMensual`), sin proyecciones; hereda los parámetros de la jubilación para la base máxima (con escenario después de 2026). Antes de 2023 el MEI vale 0 (efectos desde el 01/01/2023); en contingencias profesionales, 0 (solo se cotiza donde se cotiza por jubilación); después de 2050, `NoImplementada`. La solidaridad vale 0 antes de 2025 y usa los tipos del art. 19 bis desde 2045.
+- **Fachada** (`src/engine/fachada.ts`, exportada por `src/engine/index.ts`): `crearMotor(leer, configuracion)` con una función por tipo de prestación, `calcular(entrada)`, salida unificada y errores devueltos en vez de lanzados (`desenvolver` los relanza). `src/engine/repositorio.ts` (Vite o Vitest) la crea con `/data` del repositorio, como el resto de módulos. No cambia ningún resultado: un test comprueba que `detalle` es idéntico al de cada motor. Las lecturas de la jubilación (contexto común) también rigen en incapacidad y supervivencia, como antes.
+- **Registro único de lecturas** (`src/engine/lecturas.ts`): 27 lecturas con identificador `motor.opcion`; el valor por defecto se lee de las constantes de cada motor (no se repite) y un test exige que el registro sea completo y que sus enlaces (informe, pregunta actuarial) existan. **Ningún valor por defecto ha cambiado.**
+- **Casos de Sergio**: tabla Markdown con siete columnas (`docs/CASOS_SERGIO_PLANTILLA.md`); `scripts/lib/casos-sergio.ts` la lee, valida (línea, columna y qué corregir) y ejecuta con la fachada. Sustituye a los `it.todo` y al test que fallaba si el fichero aparecía; mientras no exista, nada falla. No se ha creado `casos-sergio.md`.
+- **Inventario de casos de oro** (`docs/INVENTARIO_CASOS_ORO.md`) generado por `scripts/inventario-casos-oro.ts` y comprobado por un test.
+
+### Interpretaciones adoptadas (la más sencilla; las dudosas, como opción y en REVISION_ACTUARIAL)
+
+- **Edad de la incapacidad no contributiva**: «mayor de dieciocho» se lee como más de 18 años en la fecha de la solicitud (comparación por día); «menor de sesenta y cinco», menos de 65.
+- **35 % de rentas**: sobre la cuantía íntegra (lo que aplica la guía del IMSERSO); alternativa, sobre la cuantía por beneficiario. **Límite del art. 366**: IPREM anual + cuantía íntegra (es el límite que publica el IMSERSO); alternativa, la pensión reconocida. **Cuatro primeros años de actividad**: el art. 366 sustituye a la reducción general («salvo lo dispuesto en el artículo 366»); alternativa, aplicar ambas. **Límite de acumulación con tercera persona**: sobre la cuantía incrementada (aplicación del IMSERSO, no texto de la ley); alternativa, solo la íntegra. Las cuatro son opciones del motor (`lecturasPNC`).
+- **Unidad económica**: se describe con el número de convivientes y de beneficiarios y las rentas de la unidad; el motor no clasifica quién forma parte de ella ni cada tipo de renta. Con varios beneficiarios y personas no beneficiarias se supone la misma pensión para todos (aviso).
+- **Complemento de alquiler**: se informa aparte, en euros al año (no se reparte en las 14 pagas).
+- **Base del MEI**: la base de cotización por contingencias comunes (el art. 127 bis no nombra la base); alternativa, la retribución completa (`lecturasMEI`). Reparto de la solidaridad: proporción de los tipos de contingencias comunes de empresa y trabajador.
+- **Límite de uso**: no se alcanzó; no hizo falta parada.
+
 ## Fase 2-B-2 · Muerte y supervivencia
 
 ### Proceso y datos

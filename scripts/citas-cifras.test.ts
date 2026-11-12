@@ -11,7 +11,7 @@ import { ArchivoDatos } from '../src/engine/esquema-datos.ts';
 
 const DATA = path.resolve(import.meta.dirname, '../data/parametros');
 
-/** Ficheros de cuantías en euros o tipos en porcentaje, de los años que cubre el motor (desde 2013). */
+/** Ficheros de cuantías en euros o tipos en porcentaje, de todos los años (desde 2000). */
 const FICHEROS = [
   'pension-minima-jubilacion',
   'pension-minima-incapacidad',
@@ -47,7 +47,7 @@ describe('la cita contiene la cifra del dato', () => {
       );
       const malos: string[] = [];
       for (const d of archivo.data ?? []) {
-        if (typeof d.value !== 'number' || Number(d.period) < 2013) continue;
+        if (typeof d.value !== 'number' || Number(d.period) < 2000) continue;
         const q = d.quote ?? '';
         if (!numerosDe(q).some((n) => Math.abs(n - (d.value as number)) < 0.005)) malos.push(d.id);
       }

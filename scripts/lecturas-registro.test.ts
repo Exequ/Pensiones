@@ -26,6 +26,7 @@ const claims = JSON.parse(readFileSync(path.join(RAIZ, 'docs/claims.json'), 'utf
   claims: { id: string; revisionActuarial?: string; preguntaActuarial?: string }[];
 };
 const revision = readFileSync(path.join(RAIZ, 'docs/REVISION_ACTUARIAL.md'), 'utf8');
+const motorMd = readFileSync(path.join(RAIZ, 'docs/MOTOR.md'), 'utf8');
 
 const DEFECTOS: Record<MotorLectura, Record<string, string>> = {
   jubilacion: { ...LECTURAS_POR_DEFECTO },
@@ -85,6 +86,17 @@ describe('registro único de lecturas abiertas', () => {
       expect(c?.revisionActuarial).toBe('pendiente');
       expect(c?.preguntaActuarial?.length).toBeGreaterThan(40);
       expect(revision).toContain(`\`${l.preguntaActuarial}\``);
+    }
+  });
+});
+
+describe('documentación', () => {
+  it('docs/MOTOR.md lista todas las lecturas del registro con su valor por defecto', () => {
+    for (const l of LECTURAS_ABIERTAS) {
+      const id = l.id.replace('.', '\\.');
+      expect(motorMd, l.id).toMatch(
+        new RegExp('\\| `' + id + '` +\\| `' + l.porDefecto + '` +\\|'),
+      );
     }
   });
 });
