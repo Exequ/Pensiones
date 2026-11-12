@@ -137,7 +137,7 @@ describe('Requisitos', () => {
     }
   });
 
-  it('el art. 366 en la jubilación se ignora con aviso; sin IPREM del año, DatoNoDisponible', () => {
+  it('el art. 366 en la jubilación se ignora con aviso; sin norma de revalorización del año, DatoNoDisponible', () => {
     expect(
       calcularPNCJubilacion(JUB, {
         trabajo: { ingresosActividadAnuales: 1000, mesesDesdeInicio: 3 },
@@ -145,7 +145,7 @@ describe('Requisitos', () => {
     ).toBe(1);
     expect(() =>
       calcularPNCInvalidez(
-        { ...INC, rentasAnuales: 1000 },
+        { ...INC, fechaSolicitud: '2027-03-10', rentasAnuales: 1000 },
         { trabajo: { ingresosActividadAnuales: 1000, mesesDesdeInicio: 3 } },
       ),
     ).toThrow(DatoNoDisponible);
@@ -187,9 +187,9 @@ describe('Lecturas abiertas (una prueba por opción)', () => {
       { ...s, rentasAnuales: 12000 },
       { ...o, lecturasPNC: { limiteTrabajo: 'pension-reconocida' } },
     );
-    // Rentas ajenas a la actividad 2.000 (≤ 35 %): pensión 6.402,20; límite íntegra 13.602,20 frente a 7.200 + pensión.
-    expect(a.pensionAnual).toBeCloseTo(3602.2, 2);
-    expect(b.pensionAnual).toBeCloseTo(3602.2, 2);
+    // Rentas ajenas a la actividad 2.000 (≤ 35 %): pensión 6.784,54; límite 7.200 + 6.784,54 = 13.984,54.
+    expect(a.pensionAnual).toBeCloseTo(3984.54, 2);
+    expect(b.pensionAnual).toBeCloseTo(3984.54, 2);
     const s2 = { ...s, rentasAnuales: 14000 };
     const a2 = calcularPNCInvalidez(s2, o);
     const b2 = calcularPNCInvalidez(s2, {
@@ -207,7 +207,23 @@ describe('Lecturas abiertas (una prueba por opción)', () => {
       ...o,
       lecturasPNC: { rentasConTrabajoEnCuatroAnios: 'se-suman' },
     });
-    expect(a.pensionAnual).toBeCloseTo(3602.2, 2);
+    expect(a.pensionAnual).toBeCloseTo(3984.54, 2);
+    expect(b.cumpleRequisitos).toBe(false);
+  });
+});
+
+describe('Lectura del límite con tercera persona', () => {
+  it('limiteConTerceraPersona: sin complemento el límite de dos convivientes baja de 22.448,16 a 14.965,44', () => {
+    const s = { ...INC, gradoDiscapacidad: 80, necesitaTerceraPersona: true };
+    const o = { unidadEconomica: { convivientes: 2, rentasUnidadAnuales: 20000 } };
+    const a = calcularPNCInvalidez(s, o);
+    const b = calcularPNCInvalidez(s, {
+      ...o,
+      lecturasPNC: { limiteConTerceraPersona: 'sin-complemento' },
+    });
+    expect(a.limiteAcumulacionAnual).toBeCloseTo(22448.16, 2);
+    expect(b.limiteAcumulacionAnual).toBeCloseTo(14965.44, 2);
+    expect(a.cumpleRequisitos).toBe(true);
     expect(b.cumpleRequisitos).toBe(false);
   });
 });

@@ -71,12 +71,20 @@ export interface LecturasPNC {
    * 35 % para los ingresos de la actividad (`sustituye-364-2`); alternativa: aplicar ambas (`se-suman`).
    */
   readonly rentasConTrabajoEnCuatroAnios: 'sustituye-364-2' | 'se-suman';
+  /**
+   * Art. 363.2: con derecho al complemento de tercera persona, el límite de acumulación de recursos
+   * de la unidad económica se calcula sobre la cuantía íntegra incrementada con el complemento
+   * (`con-complemento`, aplicación publicada por el IMSERSO) o solo sobre la íntegra (`sin-complemento`,
+   * lectura literal).
+   */
+  readonly limiteConTerceraPersona: 'con-complemento' | 'sin-complemento';
 }
 
 export const LECTURAS_PNC_POR_DEFECTO: LecturasPNC = {
   baseRentasCompatibles: 'cuantia-integra',
   limiteTrabajo: 'cuantia-integra',
   rentasConTrabajoEnCuatroAnios: 'sustituye-364-2',
+  limiteConTerceraPersona: 'con-complemento',
 };
 
 export interface OpcionesPNC {

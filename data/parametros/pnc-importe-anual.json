@@ -380,20 +380,31 @@
     },
     {
       "id": "2023",
-      "value": 6402.2,
+      "value": 6784.54,
       "unit": "euros/año",
       "period": "2023",
       "source": {
-        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2023.",
-        "publisher": "Boletín Oficial del Estado (BOE)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
-        "docId": "BOE-A-2022-22694"
+        "title": "Guía resumen de aplicación de las pensiones no contributivas de la Seguridad Social, año 2023",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/documents/20123/1595507/pncresumen2023.pdf/0d138a8e-b367-38b9-7826-11238afb437f",
+        "docId": "pncresumen2023"
       },
-      "fetchedAt": "2026-11-11",
+      "fetchedAt": "2026-11-12",
       "confidence": "alta",
-      "notes": "Importe anual íntegro de la pensión de jubilación e invalidez en su modalidad no contributiva (14 pagas).",
-      "quote": "Para el año 2023, la cuantía de las pensiones de jubilación e invalidez en su modalidad no contributiva queda establecida en 6.402,20 euros anuales",
-      "location": "Artículo o anexo sobre la pensión no contributiva"
+      "notes": "Importe anual íntegro de la pensión no contributiva de jubilación e invalidez en 2023 (14 pagas) con el incremento extraordinario del art. 77 del RDL 20/2022 (hasta el 15 % sobre el importe de 1 de enero de 2022: 5899.60 × 1,15 = 6784.54). Sustituye a 6402.20, que fijaba el RD 1058/2022 con la revalorización del 8,5 % y que este incremento superó (docs/DISCREPANCIAS.md, Fase 2-B-3). Fuente de la cifra: guía del IMSERSO; la norma la confirma sin escribirla.",
+      "quote": "ÍNTEGRA 6.784,54 484,61 MÍNIMO DEL 25%",
+      "location": "Guía resumen: cuantías",
+      "crossCheck": {
+        "source": {
+          "title": "Real Decreto-ley 20/2022, de 27 de diciembre, de medidas de respuesta a las consecuencias económicas y sociales de la Guerra de Ucrania y de apoyo a la reconstrucción de la isla de La Palma y a otras situaciones de vulnerabilidad",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22685",
+          "docId": "BOE-A-2022-22685"
+        },
+        "fetchedAt": "2026-11-12",
+        "matches": true,
+        "notes": "Artículo 77: «hasta alcanzar un porcentaje total del 15 por ciento»; 5899.60 × 1,15 = 6784.54 (comprobado por código)."
+      }
     },
     {
       "id": "2024",

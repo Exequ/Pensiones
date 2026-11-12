@@ -9,8 +9,8 @@
  *   localizado ninguno (docs/INFORME_VERIFICACION.md, Fase 2-B-3).
  *
  * Cuantías de 2026 de /data: íntegra 8.803,20 euros/año (70 % = 6.162,24; 35 % = 3.081,12; 25 % =
- * 2.200,80; 50 % = 4.401,60), alquiler 525,00, 14 pagas. Año 2023: íntegra 6.402,20 e IPREM
- * mensual 600,00. La solicitud del 10/03/2026 tiene efectos desde el 01/04/2026.
+ * 2.200,80; 50 % = 4.401,60), alquiler 525,00, 14 pagas. Año 2023: íntegra 6.784,54 (incremento
+ * extraordinario del RDL 20/2022) e IPREM anual sin pagas extra 7.200,00. La solicitud del 10/03/2026 tiene efectos desde el 01/04/2026.
  */
 import { describe, expect, it } from 'vitest';
 import { DatoNoDisponible } from '../jubilacion/errores.ts';
@@ -204,10 +204,10 @@ const CASOS: readonly CasoOro[] = [
     clase: 'incapacidad',
     etiqueta: 'derivado de la norma',
     cuenta:
-      '2023 (íntegra 6.402,20; IPREM 600): ingresos de la actividad 10.000 en el mes 12; límite = 7.200 + 6.402,20 = 13.602,20; 6.402,20 + 10.000 − 13.602,20 = 2.800 → 3.602,20 / 14 = 257,30.',
+      '2023 (íntegra 6.784,54; IPREM anual 7.200): ingresos de la actividad 10.000 en el mes 12; límite = 7.200 + 6.784,54 = 13.984,54; 6.784,54 + 10.000 − 13.984,54 = 2.800 → 3.984,54 / 14 = 284,61.',
     solicitante: { ...INC, fechaSolicitud: '2023-03-10', rentasAnuales: 10000 },
     opciones: { trabajo: { ingresosActividadAnuales: 10000, mesesDesdeInicio: 12 } },
-    esperado: { reduccionPorTrabajo: 2800, pensionAnual: 3602.2, pensionMensual: 257.3 },
+    esperado: { reduccionPorTrabajo: 2800, pensionAnual: 3984.54, pensionMensual: 284.61 },
   },
   {
     id: 'jubilacion-integra',

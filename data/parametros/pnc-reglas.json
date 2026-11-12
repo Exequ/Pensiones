@@ -574,6 +574,23 @@
       "notes": "Texto añadido por la Ley 4/2026, de 1 de octubre; en vigor desde el 23/10/2026. El motor no clasifica las rentas: quien aporta las rentas computables decide. Cita comprobada en las redacciones vigentes desde 20261023 (bloque a363).",
       "quote": "no se considerarán rentas o ingresos computables las indemnizaciones por responsabilidad civil por daños personales en la cuantía legal o judicialmente reconocidas.",
       "location": "art. 363 TRLGSS.1 (Ley 4/2026, disposición final 12.2)"
+    },
+    {
+      "id": "limite-acumulacion-con-tercera-persona",
+      "value": 1,
+      "unit": "indicador (1 = el límite usa la cuantía íntegra incrementada con el complemento de tercera persona)",
+      "period": "2026",
+      "source": {
+        "title": "Guía resumen de aplicación de las pensiones no contributivas de la Seguridad Social, año 2026",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/documents/20123/1595507/pncresumen2026.pdf/c4b41c80-63fe-942d-7231-f3ee20e28694",
+        "docId": "pncresumen2026"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Aplicación del IMSERSO, no texto de la ley: con derecho al complemento del art. 364.6, la cuantía del límite del art. 363.2 es 13.204,80 (8.803,20 + 4.401,60) y no 8.803,20 (para dos convivientes, 22.448,16 = 13.204,80 + 70 % × 13.204,80). El motor la sigue por defecto (lectura limiteConTerceraPersona).",
+      "quote": "Cuando el solicitante o titular de una pensión de incapacidad no contributiva reúne los requisitos exigidos para causar derecho al complemento por necesidad de tercera persona, los importes del límite de acumulación de recursos aplicable en función del número de personas que integran la unidad econó […] 2 13.204,80 + 9.243,36 22.448,16",
+      "location": "Guía resumen: requisitos de rentas, unidad económica con complemento de tercera persona"
     }
   ]
 }

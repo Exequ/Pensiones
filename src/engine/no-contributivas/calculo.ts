@@ -1,7 +1,7 @@
 /**
  * Pensiones no contributivas de jubilación y de incapacidad (arts. 363 a 372 TRLGSS), con desglose
  * por pasos. Todas las cifras legales salen de /data (`pnc-reglas`, `pnc-importe-anual`,
- * `pnc-complemento-alquiler`, `iprem-mensual`).
+ * `pnc-complemento-alquiler`, `pnc-iprem-anual-sin-pagas-extra`).
  *
  * Pasos: efectos económicos y año → requisitos (edad, residencia, discapacidad, carencia de
  * rentas) → cuantía por beneficiario de la unidad económica → reducción por rentas propias (35 %)
@@ -234,7 +234,20 @@ export function calcularPNCConParametros(
     unidad.convivenciaAscendientesDescendientes === true
       ? r('unidad-economica-ascendientes-descendientes-multiplo')
       : 1;
-  const limite = n > 1 ? (C + f * C * (n - 1)) * factorAscDesc : 0;
+  // Con derecho al complemento de tercera persona, el IMSERSO calcula el límite sobre la cuantía incrementada.
+  const derechoTercera =
+    incapacidad &&
+    solicitante.necesitaTerceraPersona === true &&
+    (solicitante.gradoDiscapacidad ?? 0) >= r('complemento-tercera-persona-grado-minimo-pct');
+  const cuantiaLimite =
+    derechoTercera && lecturas.limiteConTerceraPersona === 'con-complemento'
+      ? C + (r('complemento-tercera-persona-pct') / 100) * C
+      : C;
+  // Redondeado al céntimo, como lo publica el IMSERSO (evita errores de coma flotante en el borde).
+  const limite =
+    n > 1
+      ? Math.round((cuantiaLimite + f * cuantiaLimite * (n - 1)) * factorAscDesc * 100) / 100
+      : 0;
   const rentasUnidad =
     (unidad.rentasUnidadAnuales ?? solicitante.rentasAnuales) -
     (solicitante.rentasAnuales - rentas);
@@ -268,6 +281,7 @@ export function calcularPNCConParametros(
           refPNC('unidad-economica-limite-pct-convivientes'),
           refPNC('unidad-economica-ascendientes-descendientes-multiplo'),
           refPNC('unidad-economica-parentesco-grado'),
+          ...(cuantiaLimite === C ? [] : [refPNC('limite-acumulacion-con-tercera-persona')]),
         ],
         'art. 363.1.d), 363.2 y 363.3 TRLGSS',
       ),
@@ -281,6 +295,12 @@ export function calcularPNCConParametros(
         refPNC('unidad-economica-limite-pct-convivientes'),
         refPNC('unidad-economica-ascendientes-descendientes-multiplo'),
         importe.ref,
+        ...(cuantiaLimite === C
+          ? []
+          : [
+              refPNC('limite-acumulacion-con-tercera-persona'),
+              refPNC('complemento-tercera-persona-pct'),
+            ]),
       ],
       'art. 363.2 y 363.3 TRLGSS',
       `${n} convivientes${factorAscDesc !== 1 ? ' con ascendientes o descendientes en primer grado' : ''}.`,
@@ -404,9 +424,9 @@ export function calcularPNCConParametros(
         'El art. 366 (compatibilidad con el trabajo) solo regula la pensión de incapacidad: se ignora el trabajo en la de jubilación.',
       );
     } else if (opciones.trabajo.mesesDesdeInicio <= r('compatibilidad-trabajo-anios-meses')) {
-      const iprem = valorDelAnio(params.iprem, anio, 'IPREM mensual');
+      const iprem = valorDelAnio(params.ipremAnual, anio, 'IPREM anual sin pagas extraordinarias');
       const limiteTrabajo =
-        iprem.valor * 12 + (lecturas.limiteTrabajo === 'cuantia-integra' ? C : pension);
+        iprem.valor + (lecturas.limiteTrabajo === 'cuantia-integra' ? C : pension);
       const exceso = pension + opciones.trabajo.ingresosActividadAnuales - limiteTrabajo;
       if (exceso > 0) {
         reduccionTrabajo = Math.min(exceso, pension);

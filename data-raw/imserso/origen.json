@@ -1,0 +1,32 @@
+{
+ "pncresumen2022.pdf": {
+  "url": "https://imserso.es/documents/20123/98526/pncresumen2022.pdf/5ca7393f-30e3-4c31-dcaa-90ee082dea6a",
+  "sha256_original": "ee8d1821f1dcdd33875f49c06766e9051f1edbeb15b0cfea3417ac175018aa19",
+  "fetchedAt": "2026-11-12",
+  "nota": "Guía resumen de aplicación de las pensiones no contributivas de la Seguridad Social, año 2022 (IMSERSO), PDF original"
+ },
+ "pncresumen2023.pdf": {
+  "url": "https://imserso.es/documents/20123/1595507/pncresumen2023.pdf/0d138a8e-b367-38b9-7826-11238afb437f",
+  "sha256_original": "76d0ddcd230ace299bc0bd818ee66a74ccdc87d927b0b7fd1d549f20e8958189",
+  "fetchedAt": "2026-11-12",
+  "nota": "Guía resumen de aplicación de las pensiones no contributivas de la Seguridad Social, año 2023 (IMSERSO), PDF original"
+ },
+ "pncresumen2024.pdf": {
+  "url": "https://imserso.es/documents/20123/1595507/pncresumen2024.pdf/62e24a0f-cede-5580-326e-2baebbf2ad3c",
+  "sha256_original": "0a8cc1fd207e10eb5517a9adbe9e4f13b91a96faf9920e06604e040ecc4b4ac5",
+  "fetchedAt": "2026-11-12",
+  "nota": "Guía resumen de aplicación de las pensiones no contributivas de la Seguridad Social, año 2024 (IMSERSO), PDF original"
+ },
+ "pncresumen2025.pdf": {
+  "url": "https://blogceadac.imserso.es/documents/d/global/pncresumen2025",
+  "sha256_original": "8297bfbfed88926ef929df0dc6e1d377e03d9e655d0688f3296a0b61f7f2f1c6",
+  "fetchedAt": "2026-11-12",
+  "nota": "Guía resumen de aplicación de las pensiones no contributivas de la Seguridad Social, año 2025 (IMSERSO), PDF original"
+ },
+ "pncresumen2026.pdf": {
+  "url": "https://imserso.es/documents/20123/1595507/pncresumen2026.pdf/c4b41c80-63fe-942d-7231-f3ee20e28694",
+  "sha256_original": "005056e7f5c664d11e5aa23b525387f43866e0d0a1ce706291334fb57d763bfa",
+  "fetchedAt": "2026-11-12",
+  "nota": "Guía resumen de aplicación de las pensiones no contributivas de la Seguridad Social, año 2026 (IMSERSO), PDF original"
+ }
+}

@@ -18,7 +18,8 @@ export interface ParametrosPNC {
   readonly reglasPNC: ReadonlyMap<string, number>;
   readonly importeAnual: SerieAnual;
   readonly complementoAlquiler: SerieAnual;
-  readonly iprem: SerieAnual;
+  /** IPREM anual de 12 mensualidades (sin pagas extra) con el que el IMSERSO calcula el límite del art. 366. */
+  readonly ipremAnual: SerieAnual;
 }
 
 export function construirParametrosPNC(leer: LeerDatos): ParametrosPNC {
@@ -30,7 +31,7 @@ export function construirParametrosPNC(leer: LeerDatos): ParametrosPNC {
     reglasPNC,
     importeAnual: serieAnual(leer, 'pnc-importe-anual'),
     complementoAlquiler: serieAnual(leer, 'pnc-complemento-alquiler'),
-    iprem: serieAnual(leer, 'iprem-mensual'),
+    ipremAnual: serieAnual(leer, 'pnc-iprem-anual-sin-pagas-extra'),
   };
 }
 
