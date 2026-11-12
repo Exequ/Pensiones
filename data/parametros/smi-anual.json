@@ -1,0 +1,93 @@
+{
+  "tipo": "datos",
+  "id": "smi-anual",
+  "title": "Salario mínimo interprofesional anual",
+  "description": "Cuantía anual del salario mínimo interprofesional (cómputo anual del art. 3 del real decreto de cada año), en euros/año.",
+  "data": [
+    {
+      "id": "2022",
+      "value": 14000.0,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 152/2022, de 22 de febrero, por el que se fija el salario mínimo interprofesional para 2022.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-2851",
+        "docId": "BOE-A-2022-2851"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Salario mínimo en cómputo anual (término de comparación del art. 3). Lo usan los requisitos de ingresos de orfandad (art. 224.3 TRLGSS), favor de familiares (art. 22 Orden de 13/02/1967) y viudedad con cargas familiares (art. 31.2 Decreto 3158/1966).",
+      "quote": "sin que en ningún caso pueda considerarse una cuantía anual inferior a 14.000 euros",
+      "location": "Artículo 3.1"
+    },
+    {
+      "id": "2023",
+      "value": 15120.0,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 99/2023, de 14 de febrero, por el que se fija el salario mínimo interprofesional para 2023.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-3982",
+        "docId": "BOE-A-2023-3982"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Salario mínimo en cómputo anual (término de comparación del art. 3). Lo usan los requisitos de ingresos de orfandad (art. 224.3 TRLGSS), favor de familiares (art. 22 Orden de 13/02/1967) y viudedad con cargas familiares (art. 31.2 Decreto 3158/1966).",
+      "quote": "sin que en ningún caso pueda considerarse una cuantía anual inferior a 15.120 euros",
+      "location": "Artículo 3.1"
+    },
+    {
+      "id": "2024",
+      "value": 15876.0,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto 145/2024, de 6 de febrero, por el que se fija el salario mínimo interprofesional para 2024.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-2251",
+        "docId": "BOE-A-2024-2251"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Salario mínimo en cómputo anual (término de comparación del art. 3). Lo usan los requisitos de ingresos de orfandad (art. 224.3 TRLGSS), favor de familiares (art. 22 Orden de 13/02/1967) y viudedad con cargas familiares (art. 31.2 Decreto 3158/1966).",
+      "quote": "sin que en ningún caso pueda considerarse una cuantía anual inferior a 15.876 euros",
+      "location": "Artículo 3.1"
+    },
+    {
+      "id": "2025",
+      "value": 16576.0,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 87/2025, de 11 de febrero, por el que se fija el salario mínimo interprofesional para 2025.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-2576",
+        "docId": "BOE-A-2025-2576"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Salario mínimo en cómputo anual (término de comparación del art. 3). Lo usan los requisitos de ingresos de orfandad (art. 224.3 TRLGSS), favor de familiares (art. 22 Orden de 13/02/1967) y viudedad con cargas familiares (art. 31.2 Decreto 3158/1966).",
+      "quote": "sin que en ningún caso pueda considerarse una cuantía anual inferior a 16 576 euros",
+      "location": "Artículo 3.1"
+    },
+    {
+      "id": "2026",
+      "value": 17094.0,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 126/2026, de 18 de febrero, por el que se fija el salario mínimo interprofesional para 2026.",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-3815",
+        "docId": "BOE-A-2026-3815"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Salario mínimo en cómputo anual (término de comparación del art. 3). Lo usan los requisitos de ingresos de orfandad (art. 224.3 TRLGSS), favor de familiares (art. 22 Orden de 13/02/1967) y viudedad con cargas familiares (art. 31.2 Decreto 3158/1966).",
+      "quote": "sin que en ningún caso pueda considerarse una cuantía anual inferior a 17 094 euros",
+      "location": "Artículo 3.1"
+    }
+  ]
+}

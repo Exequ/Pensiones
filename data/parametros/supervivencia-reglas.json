@@ -1,0 +1,1383 @@
+{
+  "tipo": "datos",
+  "id": "supervivencia-reglas",
+  "title": "Reglas de las prestaciones de muerte y supervivencia (viudedad, orfandad y favor de familiares)",
+  "description": "Requisitos del causante y de los beneficiarios, base reguladora, porcentajes de viudedad (52, 60 y 70 %), orfandad y familiares (20 %), incremento de la orfandad absoluta, límites conjuntos del art. 229, separados, divorciados y parejas de hecho, prestación temporal, complemento de brecha y clases de las mínimas (arts. 216 a 229 TRLGSS, Decreto 3158/1966, Decreto 1646/1972, Orden de 13/02/1967, RD 1647/1997 y RD 900/2018). Los valores escritos con letras o en años se pasan a números (meses); la conversión consta en `notes`. Los indicadores (1) recogen reglas cualitativas con su cita. Las reglas que cambian el 21/10/2026 (RDL 31/2026) llevan el año en el id.",
+  "data": [
+    {
+      "id": "br-lapsos-sin-obligacion",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "1967",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Los meses sin cotización dentro del periodo elegido cuentan como cero (no se integran). Cita comprobada en las redacciones vigentes desde 19670315 (bloque a9).",
+      "quote": "aun cuando dentro del mismo existan lapsos en los que no haya habido obligación de cotizar",
+      "location": "art. 9.a) Orden de 13/02/1967"
+    },
+    {
+      "id": "br-profesional-salario-real",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "1967",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Remite al capítulo V del Reglamento de accidentes de trabajo de 1956 (no descargado): el motor lanza NoImplementada salvo base calculada fuera. Cita comprobada en las redacciones vigentes desde 19670315 (bloque a9).",
+      "quote": "Cuando el fallecimiento del causante sea debido a accidente de trabajo o a enfermedad profesional, la base reguladora se determinará, en todos los casos, sobre las retribuciones efectivamente percibidas",
+      "location": "art. 9.d) Orden de 13/02/1967"
+    },
+    {
+      "id": "orfandad-pct-contraste-orden-1967",
+      "value": 20,
+      "unit": "% de la base reguladora por huérfano",
+      "period": "1967",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Segunda fuente del porcentaje de orfandad (test de contraste). Cita comprobada en las redacciones vigentes desde 19670315 (bloque a17).",
+      "quote": "La cuantía de la pensión de orfandad será para cada huérfano la equivalente al 20 por 100 de la base reguladora del causante",
+      "location": "art. 17.1 Orden de 13/02/1967"
+    },
+    {
+      "id": "familiares-cuantia-igual-orfandad",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "1967",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "El 20 % de la orfandad (orfandad-pct). Cita comprobada en las redacciones vigentes desde 19670101 (bloque atreintaynueve).",
+      "quote": "será para cada uno de ellos igual a la señalada para la prestación de orfandad en el número uno del artículo treinta y seis",
+      "location": "art. 39.Uno Decreto 3158/1966"
+    },
+    {
+      "id": "familiares-incremento-sin-viudo",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "1967",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "El art. 17.2 remite al porcentaje de viudedad; el art. 36.Dos del Decreto 3158/1966 al que remite su art. 39.Dos está derogado desde 2009: lectura abierta `incrementoFamiliares`. Cita comprobada en las redacciones vigentes desde 19670315 (bloque a23).",
+      "quote": "Si al fallecimiento del causante no quedase cónyuge sobreviviente, o cuando el cónyuge sobreviviente con derecho a pensión de viudedad falleciese estando en el disfrute de la misma, la pensión correspondiente a los nietos o hermanos se incrementará en la forma prevista en el número 2 del artículo 17. Si en el indicado momento no quedase cónyuge sobreviviente, ni hijos, nietos o hermanos con derecho a pensión, el porcentaje para determinar la pensión de los ascendientes se incrementará, en igual forma que en el anterior supuesto, distribuyéndose el incremento por partes iguales entre todos los ascendientes, si hubiera más de uno con derecho a pensión.",
+      "location": "art. 23.2 Orden de 13/02/1967"
+    },
+    {
+      "id": "limite-viudedad-orfandad-orden-1967",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "1967",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "La norma no dice qué pensión se reduce; el motor reduce las de orfandad (lectura en DECISIONES y REVISION_ACTUARIAL). Cita comprobada en las redacciones vigentes desde 19670315 (bloque a18).",
+      "quote": "En todo caso, la suma de las pensiones de viudedad y de orfandad no podrá exceder de la cuantía de la base reguladora sobre la que se hayan determinado dichas pensiones.",
+      "location": "art. 18.1 Orden de 13/02/1967"
+    },
+    {
+      "id": "viudedad-minima-cargas-definicion",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2001",
+      "source": {
+        "title": "Real Decreto 1647/1997, de 31 de octubre, por el que se desarrollan determinados aspectos de la Ley 24/1997 (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1997-24163"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Misma definición de cargas familiares que el art. 31.2 del Decreto 3158/1966: la usa la mínima de viudedad «con cargas familiares». Cita comprobada en las redacciones vigentes desde 20001230 (bloque a8).",
+      "quote": "se entenderá por cargas familiares la convivencia del beneficiario con hijos menores de veintiséis años o mayores incapacitados, o menores acogidos, cuando la renta del conjunto de la unidad familiar así constituida, dividida por el número de miembros que la componen, no supere en cómputo anual el 75 por 100 del salario mínimo interprofesional, excluida la parte proporcional de dos pagas extraordinarias",
+      "location": "art. 8.2 RD 1647/1997"
+    },
+    {
+      "id": "orfandad-carencia-rd-1647-1997-dias",
+      "value": 500,
+      "unit": "días de cotización",
+      "period": "2002",
+      "source": {
+        "title": "Real Decreto 1647/1997, de 31 de octubre, por el que se desarrollan determinados aspectos de la Ley 24/1997 (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1997-24163"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Regla reglamentaria anterior a la Ley 40/2007; el art. 224.1 TRLGSS vigente no la recoge. Solo se aplica con la lectura `carenciaOrfandad: rd-1647-1997`. Cita comprobada en las redacciones vigentes desde 20011231 (bloque a9).",
+      "quote": "Asimismo, cuando al fallecer el causante se encontrase en alta o en situación asimilada al alta, será exigible que hubiera completado un periodo de cotización de quinientos días dentro de los cinco años anteriores a la fecha del fallecimiento. Si la causa de éste fuese un accidente, sea o no de trabajo, o una enfermedad profesional, no se exigirá ningún periodo previo de cotización.",
+      "location": "art. 9.1, párr. 2.º, RD 1647/1997"
+    },
+    {
+      "id": "familiares-carencia-alta-dias",
+      "value": 500,
+      "unit": "días de cotización",
+      "period": "2002",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "La Orden solo exime el accidente de trabajo y la enfermedad profesional; el art. 219.1 TRLGSS exime cualquier accidente en la viudedad (lectura abierta `carenciaFamiliaresAccidenteNoLaboral`). Cita comprobada en las redacciones vigentes desde 20011231 (bloque a22).",
+      "quote": "Será además preciso que el causante, que al fallecer se encontrase en activo o en situación asimilada al alta, hubiese cubierto un período de cotización de quinientos días dentro de los cinco años anteriores a la fecha del fallecimiento, salvo que la causa de éste sea un accidente de trabajo o enfermedad profesional, en cuyo caso no se exigirá este requisito.",
+      "location": "art. 22.1 Orden de 13/02/1967"
+    },
+    {
+      "id": "familiares-nietos-hermanos-edad-meses",
+      "value": 216,
+      "unit": "meses",
+      "period": "2002",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Dieciocho años = 216 meses. Cita comprobada en las redacciones vigentes desde 20011231 (bloque a22).",
+      "quote": "Menores de dieciocho años o que tengan reducida su capacidad de trabajo en un porcentaje valorado en el grado de incapacidad permanente absoluta o gran invalidez.",
+      "location": "art. 22.1 Orden de 13/02/1967 (redacción del RD 1465/2001), punto 1).a)"
+    },
+    {
+      "id": "familiares-nietos-hermanos-edad-ampliada-meses",
+      "value": 264,
+      "unit": "meses",
+      "period": "2002",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Veintidós años = 264 meses, sin trabajo o con ingresos inferiores al 75 % del SMI anual. Cita comprobada en las redacciones vigentes desde 20011231 (bloque a22).",
+      "quote": "resulten inferiores al 75 por 100 de la cuantía del salario mínimo que se fije en cada momento, también en cómputo anual, se podrá ser beneficiario de la pensión en favor de familiares siempre que, al fallecer el causante, sea menor de veintidós años de edad",
+      "location": "art. 22.1 Orden de 13/02/1967 (redacción del RD 1465/2001), punto 1).a), párr. 2.º"
+    },
+    {
+      "id": "familiares-trabajo-smi-pct",
+      "value": 75,
+      "unit": "% del SMI anual (ingresos del trabajo)",
+      "period": "2002",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20011231 (bloque a22).",
+      "quote": "resulten inferiores al 75 por 100 de la cuantía del salario mínimo que se fije en cada momento, también en cómputo anual",
+      "location": "art. 22.1 Orden de 13/02/1967 (redacción del RD 1465/2001), punto 1).a), párr. 2.º"
+    },
+    {
+      "id": "familiares-nietos-hermanos-huerfanos",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2002",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20011231 (bloque a22).",
+      "quote": "b) Huérfanos de padre y madre.",
+      "location": "art. 22.1 Orden de 13/02/1967 (redacción del RD 1465/2001), punto 1).b)"
+    },
+    {
+      "id": "familiares-convivencia-meses",
+      "value": 24,
+      "unit": "meses",
+      "period": "2002",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Dos años = 24 meses. Cita comprobada en las redacciones vigentes desde 20011231 (bloque a22).",
+      "quote": "c) Que convivieran con el causante, y a sus expensas, al menos con dos años de antelación al fallecimiento de aquél.",
+      "location": "art. 22.1 Orden de 13/02/1967 (redacción del RD 1465/2001), punto 1).c)"
+    },
+    {
+      "id": "familiares-sin-pension-publica",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2002",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20011231 (bloque a22).",
+      "quote": "d) Que no tengan derecho a pensión pública.",
+      "location": "art. 22.1 Orden de 13/02/1967 (redacción del RD 1465/2001), punto 1).d)"
+    },
+    {
+      "id": "familiares-medios-subsistencia-smi-pct",
+      "value": 100,
+      "unit": "% del SMI anual (ingresos totales máximos)",
+      "period": "2002",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Iguales o inferiores al SMI anual = 100 %. El motor aplica el mismo umbral a los ascendientes (remisión a la letra e). Cita comprobada en las redacciones vigentes desde 20011231 (bloque a22).",
+      "quote": "Se entenderá que el nieto o hermano del causante carece de medios de subsistencia, cuando los ingresos de que disponga, en cómputo anual, sean iguales o inferiores a la cuantía, también en cómputo anual, que esté establecida en cada momento para el salario mínimo interprofesional para trabajadores con dieciocho años.",
+      "location": "art. 22.1 Orden de 13/02/1967 (redacción del RD 1465/2001), punto 1).e)"
+    },
+    {
+      "id": "familiares-trabajo-mayor-18-smi-pct",
+      "value": 75,
+      "unit": "% del SMI anual (ingresos del trabajo con 18 o más años)",
+      "period": "2002",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20011231 (bloque a22).",
+      "quote": "Cuando el nieto o hermano tengan dieciocho o más años y realicen un trabajo por cuenta ajena o efectúan una actividad profesional por cuenta propia, será preciso, además, que los ingresos anuales procedentes del trabajo o de la actividad profesional no superen el 75 por 100 del importe, también en cómputo anual, del salario mínimo interprofesional vigente en cada momento.",
+      "location": "art. 22.1 Orden de 13/02/1967 (redacción del RD 1465/2001), punto 1).e)"
+    },
+    {
+      "id": "familiares-madre-abuelas-estado-civil",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2002",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "El motor recibe el cumplimiento del estado civil como dato (estadoCivilCumple). Cita comprobada en las redacciones vigentes desde 20011231 (bloque a22).",
+      "quote": "2) Madre y abuelas: a) Viudas casadas cuyo marido esté incapacitado para el trabajo, o solteras. b) Que reúnan las condiciones de los apartados c), d) y e) del punto anterior.",
+      "location": "art. 22.1 Orden de 13/02/1967 (redacción del RD 1465/2001), punto 2)"
+    },
+    {
+      "id": "familiares-padre-abuelos-edad-meses",
+      "value": 720,
+      "unit": "meses",
+      "period": "2002",
+      "source": {
+        "title": "Orden de 13 de febrero de 1967 por la que se establecen normas para la aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Sesenta años = 720 meses. Cita comprobada en las redacciones vigentes desde 20011231 (bloque a22).",
+      "quote": "3) Padre y abuelos. a) Que tengan cumplidos los sesenta años de edad o se hallen incapacitados para el trabajo.",
+      "location": "art. 22.1 Orden de 13/02/1967 (redacción del RD 1465/2001), punto 3)"
+    },
+    {
+      "id": "br-meses",
+      "value": 24,
+      "unit": "meses",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20040101 (bloque aseptimo).",
+      "quote": "será el cociente que resulte de dividir por 28 la suma de las bases de cotización del interesado durante un período ininterrumpido de 24 meses, elegidos por los beneficiarios dentro de los 15 años inmediatamente anteriores a la fecha del hecho causante de la pensión",
+      "location": "art. 7.2 Decreto 1646/1972 (redacción del RD 1795/2003)"
+    },
+    {
+      "id": "br-ventana-meses",
+      "value": 180,
+      "unit": "meses",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Quince años = 180 meses. Cita comprobada en las redacciones vigentes desde 20040101 (bloque aseptimo).",
+      "quote": "será el cociente que resulte de dividir por 28 la suma de las bases de cotización del interesado durante un período ininterrumpido de 24 meses, elegidos por los beneficiarios dentro de los 15 años inmediatamente anteriores a la fecha del hecho causante de la pensión",
+      "location": "art. 7.2 Decreto 1646/1972"
+    },
+    {
+      "id": "br-divisor",
+      "value": 28,
+      "unit": "divisor",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20040101 (bloque aseptimo).",
+      "quote": "será el cociente que resulte de dividir por 28 la suma de las bases de cotización del interesado durante un período ininterrumpido de 24 meses, elegidos por los beneficiarios dentro de los 15 años inmediatamente anteriores a la fecha del hecho causante de la pensión",
+      "location": "art. 7.2 Decreto 1646/1972"
+    },
+    {
+      "id": "br-pensionista-misma-base",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20040101 (bloque aseptimo).",
+      "quote": "La base reguladora de las pensiones por muerte y supervivencia, cuando el causante, al tiempo de su fallecimiento, fuese pensionista de jubilación o incapacidad permanente, será la misma que sirvió para determinar su pensión.",
+      "location": "art. 7.3 Decreto 1646/1972"
+    },
+    {
+      "id": "br-pensionista-revalorizaciones",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "El motor aplica la revalorización general de cada año posterior al del hecho causante de la pensión del causante hasta el año del fallecimiento. Cita comprobada en las redacciones vigentes desde 20040101 (bloque aseptimo).",
+      "quote": "En estos casos, la cuantía de la pensión se incrementará mediante la aplicación de las mejoras o revalorizaciones que, para las prestaciones de igual naturaleza por muerte y supervivencia, hayan tenido lugar desde la fecha del hecho causante de la pensión de la que deriven.",
+      "location": "art. 7.3 Decreto 1646/1972"
+    },
+    {
+      "id": "viudedad-pct",
+      "value": 52,
+      "unit": "% de la base reguladora",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20040101 (bloque atreintayuno).",
+      "quote": "El porcentaje a aplicar a la correspondiente base reguladora para la determinación de la cuantía de la pensión de viudedad será del 52 por ciento.",
+      "location": "art. 31 Decreto 3158/1966 (redacción del RD 1795/2003), apartado 1"
+    },
+    {
+      "id": "viudedad-cargas-pct",
+      "value": 70,
+      "unit": "% de la base reguladora",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20040101 (bloque atreintayuno).",
+      "quote": "Cuando la pensión de viudedad constituya la principal o única fuente de ingresos del pensionista, aquéllos no superen la cuantía a que se refiere el párrafo siguiente y el pensionista tenga cargas familiares, el porcentaje señalado en el apartado 1 será del 70 por 100.",
+      "location": "art. 31 Decreto 3158/1966 (redacción del RD 1795/2003), apartado 2"
+    },
+    {
+      "id": "viudedad-cargas-principal-fuente-pct",
+      "value": 50,
+      "unit": "% mínimo de la pensión (con el complemento a mínimos) sobre los ingresos totales",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20040101 (bloque atreintayuno).",
+      "quote": "cuando el importe anual de la misma represente, como mínimo, el 50 por 100 del total de los ingresos de aquél, también en cómputo anual. A tales efectos, como cuantía de la pensión se tendrá en cuenta también el importe del complemento a mínimo que pudiera corresponder.",
+      "location": "art. 31 Decreto 3158/1966 (redacción del RD 1795/2003), apartado 2"
+    },
+    {
+      "id": "viudedad-cargas-limite-rendimientos",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Límite = límite de ingresos de los complementos por mínimos + mínima anual de viudedad de la edad del pensionista. Cita comprobada en las redacciones vigentes desde 20040101 (bloque atreintayuno).",
+      "quote": "será necesario que los rendimientos anuales del pensionista por todos los conceptos no superen la cuantía resultante de sumar al límite que, en cada ejercicio económico, esté previsto para el reconocimiento de los complementos por mínimos de las pensiones contributivas, el importe anual que, en cada ejercicio, corresponda a la pensión mínima de viudedad en función de la edad del pensionista",
+      "location": "art. 31 Decreto 3158/1966 (redacción del RD 1795/2003), apartado 2"
+    },
+    {
+      "id": "viudedad-cargas-hijos-edad-meses",
+      "value": 312,
+      "unit": "meses",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Veintiséis años = 312 meses. Cita comprobada en las redacciones vigentes desde 20040101 (bloque atreintayuno).",
+      "quote": "Se entenderá por cargas familiares la convivencia del beneficiario con hijos menores de veintiséis años o mayores incapacitados, o menores acogidos",
+      "location": "art. 31 Decreto 3158/1966 (redacción del RD 1795/2003), apartado 2"
+    },
+    {
+      "id": "viudedad-cargas-smi-pct",
+      "value": 75,
+      "unit": "% del SMI anual sin pagas extraordinarias (renta por miembro de la unidad familiar)",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20040101 (bloque atreintayuno).",
+      "quote": "cuando los rendimientos del conjunto de la unidad familiar, así constituida, incluido el pensionista, dividida entre el número de miembros que la compongan, no supere, en cómputo anual, el 75 por 100 del salario mínimo interprofesional, excluida la parte proporcional de dos pagas extraordinarias",
+      "location": "art. 31 Decreto 3158/1966 (redacción del RD 1795/2003), apartado 2"
+    },
+    {
+      "id": "viudedad-cargas-pagas-extra-excluidas",
+      "value": 2,
+      "unit": "pagas extraordinarias del SMI que se excluyen",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Dos = 2. El SMI anual sin pagas extraordinarias es el SMI anual menos dos mensualidades (smi-mensual). Cita comprobada en las redacciones vigentes desde 20040101 (bloque atreintayuno).",
+      "quote": "el 75 por 100 del salario mínimo interprofesional, excluida la parte proporcional de dos pagas extraordinarias",
+      "location": "art. 31 Decreto 3158/1966 (redacción del RD 1795/2003), apartado 2"
+    },
+    {
+      "id": "viudedad-cargas-reduccion-limite",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "La norma no dice si la reducción puede bajar del 52 %: lectura abierta `reduccionViudedad70`. Cita comprobada en las redacciones vigentes desde 20040101 (bloque atreintayuno).",
+      "quote": "La aplicación del porcentaje del 70 por 100 sobre la respectiva base reguladora no podrá dar lugar a que la suma de la cuantía, en cómputo anual, de la pensión de viudedad, más los rendimientos anuales percibidos por el interesado, excedan del límite a que se refiere el párrafo segundo del apartado anterior. En caso contrario, se procederá a reducir la cuantía de la pensión de viudedad, a fin de no superar el límite señalado.",
+      "location": "art. 31 Decreto 3158/1966 (redacción del RD 1795/2003), apartado 3"
+    },
+    {
+      "id": "orfandad-pct",
+      "value": 20,
+      "unit": "% de la base reguladora por huérfano",
+      "period": "2009",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Veinte por ciento = 20 %. Cita comprobada en las redacciones vigentes desde 20090322 (bloque atreintayseis).",
+      "quote": "será para cada huérfano la equivalente al veinte por ciento de la base reguladora del causante",
+      "location": "art. 36.Uno Decreto 3158/1966"
+    },
+    {
+      "id": "orfandad-absoluta-incremento-pct",
+      "value": 52,
+      "unit": "% de la base reguladora (se reparte entre los huérfanos)",
+      "period": "2009",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20090322, 20261021 (bloque atreintayocho).",
+      "quote": "Cuando a la muerte del causante no exista beneficiario de la pensión de viudedad, la cuantía de la pensión de orfandad que se reconozca al huérfano se incrementará en el importe resultante de aplicar a la base reguladora el 52 por ciento.",
+      "location": "art. 38.1.1.º Decreto 3158/1966 (redacción del RD 296/2009)"
+    },
+    {
+      "id": "orfandad-absoluta-porcentaje-no-asignado",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2009",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20090322, 20261021 (bloque atreintayocho).",
+      "quote": "Cuando a la muerte del causante exista algún beneficiario de la pensión de viudedad, la pensión de orfandad que se reconozca podrá, en su caso, incrementarse en el importe resultante de aplicar a la base reguladora el porcentaje de pensión de viudedad que no hubiera sido asignado.",
+      "location": "art. 38.1.2.º Decreto 3158/1966"
+    },
+    {
+      "id": "orfandad-absoluta-reparto-iguales",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2009",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20090322, 20261021 (bloque atreintayocho).",
+      "quote": "en el caso de existir varios huérfanos con derecho a pensión, el porcentaje de incremento que corresponda se distribuirá a partes iguales entre todos ellos",
+      "location": "art. 38.1.4.º Decreto 3158/1966"
+    },
+    {
+      "id": "orfandad-absoluta-dentro-limite",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2009",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "El límite del art. 179.4 LGSS de 1994 es hoy el art. 229 TRLGSS. Cita comprobada en las redacciones vigentes desde 20090322, 20261021 (bloque atreintayocho).",
+      "quote": "Los incrementos de las pensiones de orfandad regulados en los párrafos 1.º, 2.º, 3.º y 4.º en ningún caso podrán dar lugar a que se supere el límite establecido en el apartado 4 del artículo 179 de la Ley General de la Seguridad Social, para las pensiones por muerte y supervivencia.",
+      "location": "art. 38.1.5.º Decreto 3158/1966"
+    },
+    {
+      "id": "orfandad-absoluta-progenitor-desconocido",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2009",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20090322, 20261021 (bloque atreintayocho).",
+      "quote": "se asimila a huérfano absoluto el huérfano de un solo progenitor conocido",
+      "location": "art. 38.2 Decreto 3158/1966"
+    },
+    {
+      "id": "orfandad-absoluta-compatible-prestacion-temporal",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2009",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Si solo hay prestación temporal de viudedad, el motor trata la orfandad absoluta como sin beneficiario de pensión de viudedad. Cita comprobada en las redacciones vigentes desde 20090322, 20261021 (bloque atreintayocho).",
+      "quote": "dichos incrementos serán compatibles con la prestación temporal de viudedad, pudiendo, por tanto, ser reconocidos durante el percibo de esta última.",
+      "location": "art. 38.1.5.º Decreto 3158/1966"
+    },
+    {
+      "id": "causante-pensionista",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Pueden causar las prestaciones los pensionistas de jubilación e incapacidad permanente, sin periodo previo de cotización. Cita comprobada en las redacciones vigentes desde 20160102 (bloque a217).",
+      "quote": "Los titulares de pensiones contributivas de jubilación e incapacidad permanente.",
+      "location": "art. 217.1.c) TRLGSS"
+    },
+    {
+      "id": "carencia-alta-dias",
+      "value": 500,
+      "unit": "días de cotización",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Quinientos días = 500. Causante en alta o asimilada. Cita comprobada en las redacciones vigentes desde 20160102 (bloque a219).",
+      "quote": "hubiera completado un período de cotización de quinientos días, dentro de los cinco años inmediatamente anteriores a la fecha del hecho causante de la pensión",
+      "location": "art. 219.1, párr. 1.º, TRLGSS"
+    },
+    {
+      "id": "carencia-alta-ventana-meses",
+      "value": 60,
+      "unit": "meses",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cinco años = 60 meses. Cita comprobada en las redacciones vigentes desde 20160102 (bloque a219).",
+      "quote": "hubiera completado un período de cotización de quinientos días, dentro de los cinco años inmediatamente anteriores a la fecha del hecho causante de la pensión",
+      "location": "art. 219.1, párr. 1.º, TRLGSS"
+    },
+    {
+      "id": "carencia-sin-obligacion-desde-cese",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20160102 (bloque a219).",
+      "quote": "el período de cotización de quinientos días deberá estar comprendido dentro de los cinco años inmediatamente anteriores a la fecha en que cesó la obligación de cotizar",
+      "location": "art. 219.1, párr. 1.º, TRLGSS"
+    },
+    {
+      "id": "carencia-exenta-accidente-ep",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Comprende el accidente no laboral. Cita comprobada en las redacciones vigentes desde 20160102 (bloque a219).",
+      "quote": "si la causa de la muerte fuera un accidente, sea o no de trabajo, o una enfermedad profesional, no se exigirá ningún período previo de cotización",
+      "location": "art. 219.1, párr. 1.º, TRLGSS"
+    },
+    {
+      "id": "carencia-sin-alta-meses",
+      "value": 180,
+      "unit": "meses",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Quince años = 180 meses. Se aplica también a orfandad (art. 224.1) y favor de familiares (art. 226.1). Cita comprobada en las redacciones vigentes desde 20160102 (bloque a219).",
+      "quote": "También tendrá derecho a la pensión de viudedad el cónyuge superviviente aunque el causante, a la fecha de fallecimiento, no se encontrase en alta o en situación asimilada a la de alta, siempre que el mismo hubiera completado un período mínimo de cotización de quince años.",
+      "location": "art. 219.1, párr. 2.º, TRLGSS"
+    },
+    {
+      "id": "orfandad-alta-o-pensionista",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "La ley no exige a la orfandad el periodo de quinientos días (sí el art. 9.1 del RD 1647/1997: lectura abierta `carenciaOrfandad`). Cita comprobada en las redacciones vigentes desde 20190303, 20220323, 20221007, 20261021 (bloque a224).",
+      "quote": "que el causante se encontrase en alta o situación asimilada a la de alta, o fuera pensionista en los términos del artículo 217.1.c)",
+      "location": "art. 224.1 TRLGSS"
+    },
+    {
+      "id": "orfandad-sin-alta-quince-anios",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20190303, 20220323, 20221007, 20261021 (bloque a224).",
+      "quote": "Será de aplicación, asimismo, a las pensiones de orfandad lo previsto en el segundo párrafo del artículo 219.1.",
+      "location": "art. 224.1, párr. 2.º, TRLGSS"
+    },
+    {
+      "id": "familiares-sin-alta-quince-anios",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20160102 (bloque a226).",
+      "quote": "Será de aplicación a las prestaciones en favor de familiares lo establecido en el párrafo segundo del artículo 219.1.",
+      "location": "art. 226.1, párr. 2.º, TRLGSS"
+    },
+    {
+      "id": "matrimonio-antelacion-meses",
+      "value": 12,
+      "unit": "meses",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Un año = 12 meses. Cita comprobada en las redacciones vigentes desde 20160102 (bloque a219).",
+      "quote": "En los supuestos excepcionales en que el fallecimiento del causante derivara de enfermedad común, no sobrevenida tras el vínculo conyugal, se requerirá, además, que el matrimonio se hubiera celebrado con un año de antelación como mínimo a la fecha del fallecimiento o, alternativamente, la existencia de hijos comunes.",
+      "location": "art. 219.2 TRLGSS"
+    },
+    {
+      "id": "matrimonio-convivencia-total-meses",
+      "value": 24,
+      "unit": "meses",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Dos años = 24 meses; la suma debe superarlos. Cita comprobada en las redacciones vigentes desde 20160102 (bloque a219).",
+      "quote": "No se exigirá dicha duración del vínculo matrimonial cuando en la fecha de celebración del mismo se acreditara un período de convivencia con el causante, en los términos establecidos en el artículo 221.2, que, sumado al de duración del matrimonio, hubiera superado los dos años.",
+      "location": "art. 219.2 TRLGSS"
+    },
+    {
+      "id": "divorcio-requiere-compensatoria",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Separación o divorcio posteriores al 01/01/2008 (los anteriores, DT 13.ª: no implementada). Cita comprobada en las redacciones vigentes desde 20160102 (bloque a220).",
+      "quote": "se requerirá que las personas divorciadas o separadas judicialmente sean acreedoras de la pensión compensatoria a que se refiere el artículo 97 del Código Civil y esta quedara extinguida a la muerte del causante",
+      "location": "art. 220.1 TRLGSS"
+    },
+    {
+      "id": "divorcio-limite-compensatoria",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20160102 (bloque a220).",
+      "quote": "En el supuesto de que la cuantía de la pensión de viudedad fuera superior a la pensión compensatoria, aquella se disminuirá hasta alcanzar la cuantía de esta última.",
+      "location": "art. 220.1 TRLGSS"
+    },
+    {
+      "id": "divorcio-violencia-genero-sin-compensatoria",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20160102 (bloque a220).",
+      "quote": "tendrán derecho a la pensión de viudedad las mujeres que, aun no siendo acreedoras de pensión compensatoria, pudieran acreditar que eran víctimas de violencia de género en el momento de la separación judicial o el divorcio",
+      "location": "art. 220.1, párr. 3.º, TRLGSS"
+    },
+    {
+      "id": "divorcio-sin-nuevas-nupcias",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20160102 (bloque a220).",
+      "quote": "siempre que no hubiera contraído nuevas nupcias o hubiera constituido una pareja de hecho en los términos a que se refiere el artículo siguiente",
+      "location": "art. 220.1 TRLGSS"
+    },
+    {
+      "id": "concurrencia-garantia-pct",
+      "value": 40,
+      "unit": "% de la pensión garantizado al cónyuge o pareja superviviente",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20160102 (bloque a220).",
+      "quote": "esta será reconocida en cuantía proporcional al tiempo vivido por cada uno de ellos con el causante, garantizándose, en todo caso, el 40 por ciento a favor del cónyuge superviviente",
+      "location": "art. 220.2 TRLGSS"
+    },
+    {
+      "id": "orfandad-edad-limite-meses",
+      "value": 252,
+      "unit": "meses",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Veintiún años = 252 meses (edad en la fecha del fallecimiento). Cita comprobada en las redacciones vigentes desde 20190303, 20220323, 20221007, 20261021 (bloque a224).",
+      "quote": "sean menores de veintiún años o estén incapacitados para el trabajo",
+      "location": "art. 224.1 TRLGSS"
+    },
+    {
+      "id": "orfandad-edad-ampliada-meses",
+      "value": 300,
+      "unit": "meses",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Veinticinco años = 300 meses; ingresos inferiores al SMI anual (smi-anual). Cita comprobada en las redacciones vigentes desde 20190303, 20220323, 20221007, 20261021 (bloque a224).",
+      "quote": "fuera menor de veinticinco años, el hijo del causante que no efectúe un trabajo lucrativo por cuenta ajena o propia, o cuando realizándolo, los ingresos que obtenga resulten inferiores, en cómputo anual, a la cuantía vigente para el salario mínimo interprofesional, también en cómputo anual",
+      "location": "art. 224.3 TRLGSS"
+    },
+    {
+      "id": "familiares-hijos-hermanos-pensionista-edad-meses",
+      "value": 540,
+      "unit": "meses",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuarenta y cinco años = 540 meses (deben ser mayores: más de 540 meses). El desarrollo reglamentario no se ha localizado en las normas descargadas; las circunstancias a), c) y d) se reciben como datos. Cita comprobada en las redacciones vigentes desde 20160102 (bloque a226).",
+      "quote": "En todo caso, se reconocerá derecho a pensión a los hijos o hermanos de beneficiarios de pensiones contributivas de jubilación e incapacidad permanente, en quienes se den, en los términos que se establezcan reglamentariamente, las siguientes circunstancias: a) Haber convivido con el causante y a su cargo. b) Ser mayores de cuarenta y cinco años y solteros, divorciados o viudos. c) Acreditar dedicación prolongada al cuidado del causante. d) Carecer de medios propios de vida.",
+      "location": "art. 226.2 TRLGSS"
+    },
+    {
+      "id": "viudedad-65-pct",
+      "value": 60,
+      "unit": "% de la base reguladora",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 900/2018, de 20 de julio, de desarrollo de la disposición adicional trigésima de la Ley 27/2011 en materia de porcentaje aplicable a la base reguladora de la pensión de viudedad para pensionistas con 65 o más años que no perciban otra pensión pública (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-10397"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Desde el 01/01/2019 (DT 1.ª: «A partir de 1 de enero de 2019, se aplicará el 60 por ciento.»). Cita comprobada en las redacciones vigentes desde 20180725 (bloque ar-3).",
+      "quote": "Cuando concurran los requisitos recogidos en el artículo anterior, el importe de la pensión de viudedad se determinará aplicando a la base reguladora que corresponda el porcentaje del 60 por ciento.",
+      "location": "art. 3 RD 900/2018"
+    },
+    {
+      "id": "viudedad-65-edad-meses",
+      "value": 780,
+      "unit": "meses",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 900/2018, de 20 de julio, de desarrollo de la disposición adicional trigésima de la Ley 27/2011 en materia de porcentaje aplicable a la base reguladora de la pensión de viudedad para pensionistas con 65 o más años que no perciban otra pensión pública (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-10397"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "65 años = 780 meses. Cita comprobada en las redacciones vigentes desde 20180725 (bloque ar-2).",
+      "quote": "a) Haber cumplido una edad igual o superior a los 65 años.",
+      "location": "art. 2.a) RD 900/2018"
+    },
+    {
+      "id": "viudedad-65-requisitos",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 900/2018, de 20 de julio, de desarrollo de la disposición adicional trigésima de la Ley 27/2011 en materia de porcentaje aplicable a la base reguladora de la pensión de viudedad para pensionistas con 65 o más años que no perciban otra pensión pública (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-10397"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20180725 (bloque ar-2).",
+      "quote": "b) No tener derecho a otra pensión pública española o extranjera. c) No percibir ingresos por la realización de trabajo, ya sea por cuenta propia o ajena. d) No percibir rendimientos del capital, de actividades económicas o ganancias patrimoniales, de acuerdo con el concepto establecido para dichas rentas en el Impuesto sobre la Renta de las Personas Físicas, que en cómputo anual superen el límite de ingresos establecido en la correspondiente Ley de Presupuestos Generales del Estado para ser beneficiario de la pensión mínima de viudedad.",
+      "location": "art. 2.b)-d) RD 900/2018"
+    },
+    {
+      "id": "viudedad-65-incompatible-70",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto 900/2018, de 20 de julio, de desarrollo de la disposición adicional trigésima de la Ley 27/2011 en materia de porcentaje aplicable a la base reguladora de la pensión de viudedad para pensionistas con 65 o más años que no perciban otra pensión pública (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-10397"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Se aplica el 70 % o el 60 %, el que dé mayor pensión. Cita comprobada en las redacciones vigentes desde 20180725 (bloque ar-7).",
+      "quote": "procederá el reconocimiento de aquel, de resultar más favorable, no pudiendo acumularse a la mejora regulada en este real decreto",
+      "location": "art. 7 RD 900/2018"
+    },
+    {
+      "id": "limite-conjunto-pct-br",
+      "value": 100,
+      "unit": "% de la base reguladora (suma de las pensiones)",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "El importe de la base reguladora = 100 %. Cita comprobada en las redacciones vigentes desde 20180705 (bloque a229).",
+      "quote": "La suma de las cuantías de las pensiones por muerte y supervivencia no podrá exceder del importe de la base reguladora que corresponda",
+      "location": "art. 229 TRLGSS.1"
+    },
+    {
+      "id": "limite-solo-inicial",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20180705 (bloque a229).",
+      "quote": "Esta limitación se aplicará a la determinación inicial de las expresadas cuantías, pero no afectará a las revalorizaciones periódicas de las pensiones que procedan en lo sucesivo",
+      "location": "art. 229 TRLGSS.1"
+    },
+    {
+      "id": "limite-preferencia-orfandad",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20180705 (bloque a229).",
+      "quote": "las pensiones de orfandad tendrán preferencia sobre las pensiones a favor de otros familiares",
+      "location": "art. 229 TRLGSS.2"
+    },
+    {
+      "id": "limite-orden-nietos-hermanos",
+      "value": 1,
+      "unit": "orden de preferencia",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20180705 (bloque a229).",
+      "quote": "1.º Nietos y hermanos del causante, menores de dieciocho años o mayores incapacitados.",
+      "location": "art. 229 TRLGSS.2"
+    },
+    {
+      "id": "limite-orden-padres",
+      "value": 2,
+      "unit": "orden de preferencia",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20180705 (bloque a229).",
+      "quote": "2.º Padre y madre del causante.",
+      "location": "art. 229 TRLGSS.2"
+    },
+    {
+      "id": "limite-orden-abuelos",
+      "value": 3,
+      "unit": "orden de preferencia",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20180705 (bloque a229).",
+      "quote": "3.º Abuelos y abuelas del causante.",
+      "location": "art. 229 TRLGSS.2"
+    },
+    {
+      "id": "limite-orden-hijos-hermanos-pensionista",
+      "value": 4,
+      "unit": "orden de preferencia",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20180705 (bloque a229).",
+      "quote": "4.º Hijos y hermanos del titular de una pensión contributiva de jubilación o incapacidad permanente mayores de cuarenta y cinco años y que reúnan los demás requisitos establecidos.",
+      "location": "art. 229 TRLGSS.2"
+    },
+    {
+      "id": "limite-excepcion-viudedad-umbral-pct",
+      "value": 52,
+      "unit": "% de la viudedad por encima del cual puede rebasarse el límite",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20180705 (bloque a229).",
+      "quote": "el límite establecido podrá ser rebasado en caso de concurrencia de varias pensiones de orfandad con una pensión de viudedad cuando el porcentaje a aplicar a la correspondiente base reguladora para el cálculo de esta última sea superior al 52 por ciento",
+      "location": "art. 229 TRLGSS.3"
+    },
+    {
+      "id": "limite-orfandad-max-pct",
+      "value": 48,
+      "unit": "% de la base reguladora (suma de las pensiones de orfandad en la excepción)",
+      "period": "2018",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20180705 (bloque a229).",
+      "quote": "si bien, en ningún caso, la suma de las pensiones de orfandad podrá superar el 48 por ciento de la base reguladora que corresponda",
+      "location": "art. 229 TRLGSS.3"
+    },
+    {
+      "id": "br-anterior-mes-previo",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Las bases se toman por su valor nominal (la norma no prevé actualizarlas). Cita comprobada en las redacciones vigentes desde 20190303 (bloque a228).",
+      "quote": "se computará la totalidad de las bases por las que se haya efectuado la cotización durante el periodo establecido reglamentariamente anterior al mes previo al del hecho causante",
+      "location": "art. 228 TRLGSS"
+    },
+    {
+      "id": "brecha-incluye-viudedad",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2021",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20210204, 20230318 (bloque a60).",
+      "quote": "beneficiarias de una pensión contributiva de jubilación, de incapacidad permanente o de viudedad, tendrán derecho a un complemento por cada hijo o hija",
+      "location": "art. 60.1 TRLGSS"
+    },
+    {
+      "id": "brecha-hombre-viudedad-con-orfandad",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2021",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Un hombre tiene derecho al complemento en la viudedad si alguno de los hijos en común tiene derecho a pensión de orfandad. Cita comprobada en las redacciones vigentes desde 20210204, 20230318 (bloque a60).",
+      "quote": "pensión de viudedad […] fallecimiento del otro progenitor […] siempre que alguno de ellos tenga derecho a percibir una pensión de orfandad",
+      "location": "art. 60.1.a) TRLGSS"
+    },
+    {
+      "id": "brecha-un-complemento-por-hijo",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2021",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Si el complemento ya se percibe con otra pensión (jubilación o incapacidad), no se suma en la viudedad (opción brechaEnOtraPension). Cita comprobada en las redacciones vigentes desde 20210204, 20230318 (bloque a60).",
+      "quote": "a) Cada hijo o hija dará derecho únicamente al reconocimiento de un complemento.",
+      "location": "art. 60.3.a) TRLGSS"
+    },
+    {
+      "id": "pareja-convivencia-meses",
+      "value": 60,
+      "unit": "meses",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cinco años = 60 meses. Cita comprobada en las redacciones vigentes desde 20220101, 20261021 (bloque a221).",
+      "quote": "una convivencia estable y notoria con carácter inmediato al fallecimiento del causante y con una duración ininterrumpida no inferior a cinco años",
+      "location": "art. 221.2 TRLGSS"
+    },
+    {
+      "id": "pareja-registro-antelacion-meses",
+      "value": 24,
+      "unit": "meses",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Dos años = 24 meses. Si no se cumple, prestación temporal (art. 222). Cita comprobada en las redacciones vigentes desde 20220101, 20261021 (bloque a221).",
+      "quote": "Tanto la mencionada inscripción como la formalización del correspondiente documento público deberán haberse producido con una antelación mínima de dos años con respecto a la fecha del fallecimiento del causante.",
+      "location": "art. 221.2 TRLGSS"
+    },
+    {
+      "id": "2022-pareja-hijos-comunes-solo-constitucion",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Hechos causantes del 01/01/2022 al 20/10/2026. Cita comprobada en las redacciones vigentes desde 20220101 (bloque a221).",
+      "quote": "salvo que existan hijos en común, en cuyo caso solo deberán acreditar la constitución de la pareja de hecho de conformidad con lo previsto en el párrafo siguiente",
+      "location": "art. 221.2 TRLGSS (redacción de la Ley 21/2021)"
+    },
+    {
+      "id": "expareja-requiere-compensatoria",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20220101, 20261021 (bloque a221).",
+      "quote": "Asimismo, se requerirá que la persona supérstite sea acreedora de una pensión compensatoria y que ésta se extinga con motivo de la muerte del causante.",
+      "location": "art. 221.3 TRLGSS"
+    },
+    {
+      "id": "prestacion-temporal-meses",
+      "value": 24,
+      "unit": "meses",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Dos años = 24 meses; incluye a la pareja de hecho desde 2022. Cita comprobada en las redacciones vigentes desde 20220101 (bloque a222).",
+      "quote": "tendrá derecho a una prestación temporal en cuantía igual a la de la pensión de viudedad que le hubiera correspondido y con una duración de dos años",
+      "location": "art. 222 TRLGSS"
+    },
+    {
+      "id": "viudedad-compatible-trabajo",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20220101 (bloque a223).",
+      "quote": "La pensión de viudedad será compatible con cualesquiera rentas de trabajo.",
+      "location": "art. 223.1 TRLGSS"
+    },
+    {
+      "id": "2026-pareja-hijos-comunes-convivencia-meses",
+      "value": 24,
+      "unit": "meses",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Dos años = 24 meses. Hechos causantes desde el 21/10/2026. Cita comprobada en las redacciones vigentes desde 20261021 (bloque a221).",
+      "quote": "En el caso de que existan hijos en común únicamente será exigible el requisito de una convivencia estable y notoria durante un periodo de al menos dos años ininterrumpidos, con carácter inmediato al fallecimiento del causante.",
+      "location": "art. 221.2 TRLGSS (redacción del RDL 31/2026)"
+    },
+    {
+      "id": "pareja-redaccion-2026-desde",
+      "value": 20261021,
+      "unit": "fecha AAAAMMDD de entrada en vigor de la redacción del art. 221.2 del RDL 31/2026",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Se modifica el apartado 2 por el art. 1.10 del Real Decreto-ley 31/2026, de 20 de octubre. […] Última actualización, publicada el 21/10/2026, en vigor a partir del 21/10/2026.",
+      "location": "art. 221 TRLGSS (notas de la versión consolidada)"
+    },
+    {
+      "id": "minima-viudedad-edad-60-meses",
+      "value": 720,
+      "unit": "meses",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Sesenta años = 720 meses. Clases de la viudedad: con cargas familiares; 65 años o discapacidad del 65 %; 60 a 64; menos de 60.",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años. | | 12.262,60 | |",
+      "location": "Anexo I (Viudedad) del RD 241/2026"
+    },
+    {
+      "id": "minima-orfandad-discapacidad-edad-meses",
+      "value": 216,
+      "unit": "meses",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Dieciocho años = 216 meses.",
+      "quote": "Por persona beneficiaria menor de dieciocho años con una discapacidad en grado igual o superior al 65 por 100. | 7.882,00 |",
+      "location": "Anexo I (Orfandad) del RD 241/2026"
+    },
+    {
+      "id": "minima-familiares-sin-viudo-ni-huerfanos",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Las mínimas incrementadas de familiares solo se aplican si no hay pensionistas de viudedad ni de orfandad.",
+      "quote": "Si no existen personas viudas ni huérfanas pensionistas: | | Una sola persona beneficiaria con sesenta y cinco años. | 9.683,80 |",
+      "location": "Anexo I (En favor de familiares) del RD 241/2026"
+    }
+  ]
+}

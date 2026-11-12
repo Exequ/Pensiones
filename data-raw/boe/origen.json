@@ -120,5 +120,68 @@
   "sha256_original": "0efed993bc34ef6aa9216fa4f18f21185bb8e0e5a947cd1b76887651ebfa7d1e",
   "fetchedAt": "2026-11-12",
   "nota": "Real Decreto 241/2026, de 25 de marzo (limitación y revalorización de las pensiones para 2026). XML del BOE descargado el 2026-11-12 con curl; texto plano: etiquetas eliminadas, una línea por párrafo o celda (celdas terminadas en « |»)"
+ },
+ "orden-13-02-1967.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876",
+  "urlDescarga": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1967-2876/texto",
+  "sha256_original": "0ea0c98096235f473f454ab031ebd2555d9e00f67d18b40573ce71a1b3d477db",
+  "fetchedAt": "2026-11-12",
+  "nota": "Orden de 13 de febrero de 1967 (normas de aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General). Texto consolidado descargado de la API de datos abiertos del BOE; texto plano con todas las versiones de cada bloque (scripts/etl/boe_consolidado.py)"
+ },
+ "rd-900-2018.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-10397",
+  "urlDescarga": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2018-10397/texto",
+  "sha256_original": "45d9d012acbe9116a42f77b8832d86e854303bf6905a2d472df21284217f11e1",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 900/2018, de 20 de julio (porcentaje de la base reguladora de la pensión de viudedad de pensionistas con 65 o más años). Texto consolidado descargado de la API de datos abiertos del BOE; texto plano con todas las versiones de cada bloque (scripts/etl/boe_consolidado.py)"
+ },
+ "trlgss-2015-versiones.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+  "urlDescarga": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2015-11724/texto",
+  "sha256_original": "caa717ece05dc45f65b37722ad0fc48affef33d5d80ef24f120b95601a1a4891",
+  "fetchedAt": "2026-11-12",
+  "nota": "Texto refundido de la Ley General de la Seguridad Social (Real Decreto Legislativo 8/2015), con todas las versiones de cada precepto. Texto consolidado descargado de la API de datos abiertos del BOE; texto plano con todas las versiones de cada bloque (scripts/etl/boe_consolidado.py)"
+ },
+ "rd-1647-1997.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1997-24163",
+  "urlDescarga": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1997-24163/texto",
+  "sha256_original": "e707e7ea403983a2b228d97bbec230ac8e6d9ea914dc4ca319360d825d98c5f5",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 1647/1997, de 31 de octubre (desarrollo de determinados aspectos de la Ley 24/1997 en materia de muerte y supervivencia). Texto consolidado descargado de la API de datos abiertos del BOE; texto plano con todas las versiones de cada bloque (scripts/etl/boe_consolidado.py)"
+ },
+ "BOE-A-2022-2851.txt": {
+  "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-2851",
+  "urlDescarga": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2022-2851",
+  "sha256_original": "dcf070d3a99fcb3b4bd3b136b4ec8df23e8fc5145e683d8943340b9dcd4007b0",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 152/2022, de 22 de febrero, por el que se fija el salario mínimo interprofesional para 2022.. Texto plano del XML del BOE (etiquetas eliminadas)."
+ },
+ "BOE-A-2023-3982.txt": {
+  "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-3982",
+  "urlDescarga": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2023-3982",
+  "sha256_original": "80f0168e224d9cfd8cb37b57601546b7d61bb2bee9e8e5172b7e1354e4e3a882",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 99/2023, de 14 de febrero, por el que se fija el salario mínimo interprofesional para 2023.. Texto plano del XML del BOE (etiquetas eliminadas)."
+ },
+ "BOE-A-2024-2251.txt": {
+  "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-2251",
+  "urlDescarga": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2024-2251",
+  "sha256_original": "60121e3afbdbbbeb107af9c1ad305978d94af9fb2f5b5edb5c661363c11e1fd2",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 145/2024, de 6 de febrero, por el que se fija el salario mínimo interprofesional para 2024.. Texto plano del XML del BOE (etiquetas eliminadas)."
+ },
+ "BOE-A-2025-2576.txt": {
+  "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-2576",
+  "urlDescarga": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2025-2576",
+  "sha256_original": "2998c5feb7c1be830468d65a896eef1bf24cbdfc2d709c9da008a60bbe5b3abe",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 87/2025, de 11 de febrero, por el que se fija el salario mínimo interprofesional para 2025.. Texto plano del XML del BOE (etiquetas eliminadas)."
+ },
+ "BOE-A-2026-3815.txt": {
+  "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-3815",
+  "urlDescarga": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-3815",
+  "sha256_original": "0fc178f31f57187a027b8ecdad3547706dc77f81ea5080a02198889a69cbe9e1",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 126/2026, de 18 de febrero, por el que se fija el salario mínimo interprofesional para 2026.. Texto plano del XML del BOE (etiquetas eliminadas)."
  }
 }
