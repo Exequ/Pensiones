@@ -3,6 +3,45 @@
 Registro de decisiones tomadas cuando algo era ambiguo o había que elegir. La más reciente,
 arriba dentro de cada fase.
 
+## Fase 2-A · Motor de cálculo de la jubilación
+
+### Proceso y datos
+
+- **Rama y base**: `feat/fase-2a-motor-jubilacion`, creada desde `origin/main` (que ya contiene los casos de oro y los ficheros de M5 de `data-raw/casos-oro`), como pidió el encargo y no la rama de trabajo que asigna el entorno.
+- **Datos que faltaban** (`scripts/etl/jubilacion_reglas.py`, citas literales de `data-raw/boe` comprobadas por código **dentro del artículo o disposición**): escala numérica de la DT 9.ª; periodo previo; cuadros de los arts. 207.2 y 208.2; DT 34.ª (960 coeficientes, con la comprobación de que en 2033 coinciden con el art. 208.2); requisitos de las anticipadas y de la parcial; demora (art. 210.2, fórmula del pago único del texto del PDF de la Ley 21/2021, opción mixta del RD 371/2023); DT 41.ª; tabla de la DT 39.ª.4; reglas del art. 60; edad de 65 años y número de pagas. Los valores escritos con letras o en años pasan a números (meses) en `value`; la conversión consta en `notes`.
+- **RD 371/2023** (texto consolidado al 28/05/2026): se descargó en esta fase (`data-raw/boe/rd-371-2023.txt`, huella en `origen.json`) porque la opción mixta de la demora solo estaba descrita en prosa. La redacción es la vigente desde el 28/08/2026 (RD 416/2026); la anterior no se transcribe y los hechos causantes previos a esa fecha lanzan `NoImplementada`.
+- **Corrección de `PENDIENTE_DATOS.md`**: la fila «Incrementos de la base máxima y de la pensión máxima a partir de 2051» decía que la ley no fija incremento más allá de 2050. La DT 39.ª.4 sí fija una tabla para 2051-2065 (se recoge en `pension-maxima-incremento-2051-2065`); sigue sin haberlos para la base máxima y para las mínimas.
+- **Tests de Node en `scripts/`**: los que leen ficheros (contraste con M5, verificación, casos de Sergio) están en `scripts/`, porque `tsconfig.app.json` no tiene tipos de Node. Los parámetros se leen con `construirParametros` y `readFileSync` (`scripts/lib/motor-jubilacion.ts`); en `src/` se leen con `import.meta.glob` (`parametros-datos.ts`).
+- **Generación de claims**: `fuentes_claims.py` genera una afirmación por fichero nuevo y ocho preguntas actuariales nuevas (más dos preguntas ampliadas); el límite superior de afirmaciones pendientes del test pasa de 50 a 60.
+- **Límite de uso**: no se alcanzó; no hizo falta parada.
+
+### Estructura del motor
+
+- **Funciones puras con un contexto**: `crearContexto(params, opciones)` agrupa las magnitudes que dependen del año (IPC mensual, bases, pensión máxima, mínimas…) y acumula `avisos`; el resto son funciones que reciben el contexto o las tablas. `calcularJubilacionConParametros` recibe los parámetros (sin `import.meta.glob`) para poder usarse en Node; `repositorio.ts` es el envoltorio para Vite.
+- **Entrada de carrera**: periodos con base constante, por año o por mes; huecos = meses sin obligación de cotizar; solapes = pluriempleo (se suman, con el tope de la base máxima). Cada mes cuenta como cotización efectiva (sin parte proporcional de pagas extra).
+- **Fechas con día**: la normativa es la del año del hecho causante; la víspera y el día del cambio de normativa dan resultados distintos (test).
+- **Paso de «a partir de»**: el último año de una serie legal se extiende hacia delante (`valorEn` marca `extendido`): edad y carrera de la DT 7.ª (2027), periodo y divisor de la DT 40.ª (2037), escala (2027), opción de 25 años (sin opción desde 2044).
+- **Escenario económico explícito**: el IPC y las magnitudes que dependen de él después de los últimos datos salen de `opciones.escenario`; sin escenario, un año sin dato lanza `DatoNoDisponible`. La base mínima de 2020 y 2021 (sin dato) también falla por defecto; `huecoBaseMinima: 'anterior'` es una concesión explícita.
+- **IPC mensual**: `/data` solo tiene medias anuales. Se interpola en logaritmos entre medias anuales situadas a mitad de año; antes de mediados de 2002 se usa la variación de diciembre a diciembre del INE. Es una aproximación declarada (opción `interpolacionIPC`; efecto del orden de ±1 % en la base reguladora).
+- **Mínimas y base mínima desde 2027**: solo se revalorizan con el IPC del escenario (la DA 53.ª de 2027 exige el umbral de pobreza, no descargado). Es lo que hace M5.
+
+### Interpretaciones adoptadas (la opción más sencilla, con la alternativa como opción cuando afecta al resultado)
+
+- **Lagunas**: se cuentan los meses de la ventana sin cotización, también los anteriores a la primera alta (lectura literal del art. 209.1.b); la primera laguna es la más próxima al hecho causante; se integran con la base mínima del mes de la laguna y se actualizan con el IPC como las demás bases. Las bases integradas entran en la selección de las mejores bases.
+- **DT 41.ª**: se aplica a la regla general y no a la opción de 25 años (que aplica la redacción de 2023); por defecto, a las mujeres (la brecha de la DA 37.ª no consta en `/data`: se da por vigente) y a los hombres que acrediten el art. 60.1.b); se puede forzar con `integracionReforzadaLagunas`.
+- **Opción de 25 años**: se calcula también la regla general y se aplica la mayor base reguladora; el 31/12/2040 se trata como cubierto (lectura de `/data`), con `opcion25EnUltimoDia2040: 'excluida'` como alternativa. Ese último día se deduce de `/data` (último año con ventana de 300 meses), no está escrito en el código.
+- **Edad legal de las anticipadas y la parcial con relevo**: la que correspondería «de haber seguido cotizando» hasta los 65 años, con el calendario del año del hecho causante. En la ordinaria y la demorada se usan los meses cotizados reales. Los coeficientes se eligen con los meses cotizados reales.
+- **Anticipación**: cada mes o fracción de mes cuenta como un mes (redondeo hacia arriba entre el hecho causante y la fecha en que cumpliría la edad legal).
+- **Voluntaria**: se exige además (art. 208.1.c) que la pensión reducida supere la mínima de los 65 años; con 3 meses de subsidio se usan los coeficientes y el tope de la involuntaria (art. 208.3); sobre el límite de pensión se aplica la DT 34.ª (sin la salvaguarda del apartado 1: no hay normas de 2021 transcritas).
+- **Involuntaria**: si no se informa de la demanda de empleo ni de la causa del cese, se suponen cumplidas y se avisa.
+- **Demora**: la fracción de más de 6 meses cuenta desde el segundo año completo (opción `fraccionDemora`); los años de demora son meses cotizados tras la fecha en que se cumplió la edad ordinaria; el pago único usa la pensión anual reconocida limitada a la máxima; con la opción por porcentaje, el porcentaje no usado al topar se paga como cantidad anual (redondeada al euro por exceso y con el tope de 12 veces la base máxima).
+- **Parcial**: pensión proporcional a la reducción de jornada (sobre la pensión ya limitada a la máxima), sin coeficientes reductores, con mínima proporcional y sin complemento de brecha; solo desde la redacción vigente desde el 1/4/2025.
+- **Brecha de género** (art. 60): el complemento no cuenta para el límite de pensión máxima y se suma a la mínima; máximo de 4 hijos; un hombre solo con las condiciones del art. 60.1.b).
+- **Complemento a mínimos**: clase `jub65` si la edad al hecho causante es de al menos 65 años (si no, `jub-menor65`); con cónyuge a cargo y rentas el motor avisa y no aplica el complemento, porque falta el límite correspondiente.
+- **Pensión máxima desde 2051** (tabla de la DT 39.ª.4): por defecto, como incremento acumulado total que enlaza con 26 × 0,115 de 2050; alternativa: incremento anual literal. Es una duda sin resolver (`REVISION_ACTUARIAL.md`).
+- **Lecturas de «acumulativos»**: por defecto, la compuesta de `/data` (confirmada con 2025 y 2026); alternativas: base máxima con los 1,2 puntos sumados sobre la cifra inicial, y pensión máxima con un incremento que crece 0,115 puntos cada año.
+- **Contraste con M5**: el adaptador construye la carrera de M5 mes a mes; el motor no se ajustó para coincidir. Los 37 casos coinciden dentro del 0,5 %; la diferencia sistemática (−0,05 % a −0,41 %) es el mes previo, que la ley excluye y M5 incluye.
+
 ## Fase 1A · Normativa y parámetros
 
 ### Estructura de los datos

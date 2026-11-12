@@ -265,3 +265,54 @@ Comprobaciones: 12 (2 coinciden, 10 con diferencias explicadas o informativas, 0
 6. **Edades muy altas**: la población de 85 o más, 90 o más y 100 o más años del INE y de Eurostat coincide (diferencias de hasta 6 personas). La Seguridad Social publica pensiones por edad solo hasta «85 y más», así que no hay contraste posible con la población de 90 o más ni con los centenarios. En 85 o más años hay más de una pensión (jubilación más viudedad) por persona; no hay grupo con más pensiones de jubilación que personas.
 
 <!-- verificacion-1b4:fin -->
+
+## Fase 2-A: motor de cálculo de la jubilación
+
+Verificación del motor (`src/engine/jubilacion/`, descrito en `docs/MOTOR_JUBILACION.md`) y de los datos nuevos que usa.
+
+### Datos extraídos del BOE
+
+- `scripts/etl/jubilacion_reglas.py` escribe 12 ficheros de `data/parametros` (véase `docs/MOTOR_INVENTARIO.md`). **Todas las citas se comprueban contra el texto del artículo o la disposición en el momento de generar los datos** (el script se detiene si una cita no aparece): 28 datos de la escala (4 versiones de la DT 9.ª), 192 + 96 coeficientes de los arts. 207.2 y 208.2, 960 de la DT 34.ª, requisitos de las anticipadas y la parcial, demora, DT 41.ª, tabla de la DT 39.ª.4 y reglas del art. 60.
+- **Comprobaciones cruzadas por código** (`scripts/coherencia-datos.test.ts` y `porcentajes.test.ts`): los 96 coeficientes de la DT 34.ª para 2033 coinciden con los del art. 208.2; los meses para llegar al 100 % que salen de la escala nueva coinciden con `cotizacion-para-100` en los 15 años 2013-2027; en todos los años cada divisor es «bases computadas × 14 / 12».
+- La fórmula del pago único de la demora (800 / 880, divisor 500, exponente 1/1,65) se cita del texto del PDF oficial de la Ley 21/2021; el texto extraído no conserva la barra de fracción ni el exponente, de modo que la disposición de las cifras se comprobó en la Fase 1A-bis sobre el PDF (no por código). El RD 371/2023 se ha descargado en esta fase.
+
+### Contraste con M5
+
+37 de 37 casos de oro de M5 reproducidos con el motor; diferencia máxima **0,41 %** (todos dentro del 0,5 %; tolerancia fijada 1,5 %). La diferencia es sistemática y negativa en las pensiones contributivas porque la ley excluye el mes previo al hecho causante y M5 lo incluye. Dos casos tienen una regla que distingue al motor de M5 (integración de lagunas anteriores a la primera alta y edad exigida con 456 meses cotizados). Detalle y tabla completa: `docs/CONTRASTE_M5.md`.
+
+### Verificación independiente (30 combinaciones)
+
+`scripts/verificacion-motor.ts`: año de jubilación 2026-2050 × 6 perfiles de carrera (muestra de 30 combinaciones; con `--completa`, las 150). Resultado: **360 comprobaciones (1.800 con las 150 combinaciones), 0 violaciones**: ningún valor es NaN ni infinito; la pensión nunca supera el máximo del año; nunca baja de la mínima cuando corresponde; es monótona no decreciente en los años cotizados (quitando 12, 60 y 120 meses de carrera) y en el nivel de las bases (±10 %).
+
+### Casos de oro
+
+17 tests con 6 casos hechos a mano (`docs/CASOS_ORO_MOTOR.md`: ordinaria, anticipada voluntaria, anticipada involuntaria, demorada con porcentaje y con tanto alzado, topada y mínima), recalculados aparte en Python con los JSON de `data/parametros`. Los casos de Sergio (`data-raw/casos-oro/casos-sergio.md`) **no existen todavía**: quedan 5 `it.todo` en `scripts/casos-sergio.test.ts`, que fallará si el fichero aparece sin convertir.
+
+### Cómo cambia el resultado de un caso típico con cada lectura abierta
+
+Cada lectura abierta es una opción del motor (por defecto, la que reflejan los ficheros de `/data`). Para cada una, un caso típico (importes en euros nominales; base reguladora o pensión mensual por paga según el caso; escenario de IPC del 2 %; opción de 25 años apagada salvo en el caso (c); generado con `npx tsx scripts/lecturas-abiertas.ts`):
+
+| Lectura                                  | Caso                               | Alternativa                    | Por defecto | Alternativa (€) | Variación |
+| ---------------------------------------- | ---------------------------------- | ------------------------------ | ----------: | --------------: | --------: |
+| (a) DT 38.ª, base máxima                 | topado por la base máxima, 2040    | «sobre la cifra inicial»       |     5550,02 |         5523,56 |   -0,48 % |
+| (a) DT 39.ª, pensión máxima              | topado, 2040                       | «incremento creciente»         |     4503,41 |         5145,23 |   14,25 % |
+| (b) lagunas, base mínima                 | 40 meses de laguna finales, 2040   | base mínima del hecho causante |     2306,63 |         2308,67 |    0,09 % |
+| (c) opción de 25 años el 31/12/2040      | salarios con +2 % real, 31/12/2040 | excluida                       |     3988,46 |         3919,01 |   -1,74 % |
+| (d) lagunas anteriores a la primera alta | 15 años cotizados, 2030            | ignorar                        |     1687,61 |         1440,77 |  -14,63 % |
+| (d) IPC mensual                          | 31 años a 2.000 €, 2026            | escalón anual                  |     2187,29 |         2166,53 |   -0,95 % |
+| (d) fracción de la demora                | 1 año y 9 meses de demora          | desde el primer año            |     2905,22 |         2961,09 |    1,92 % |
+| (d) pensión máxima desde 2051            | topado, 2055                       | incremento anual literal       |     6279,06 |         7512,96 |   19,65 % |
+
+Lectura de la tabla:
+
+- **(a) «Acumulativos»**: la base máxima con los 1,2 puntos sumados sobre la cifra inicial en vez de compuestos solo afecta a quien está topado por la base máxima (−0,5 % de base reguladora en 2040). La pensión máxima con un incremento que crece 0,115 puntos cada año en vez de 0,115 constante sube la máxima de 2040 un 14 %, lo que importa a quien ya está topado: es la lectura con mayor efecto de las cuatro.
+- **(b) Base mínima de las lagunas**: con la base mínima del hecho causante la base reguladora sube un 0,1 % con 40 meses de laguna; es una diferencia pequeña porque las lagunas integradas pesan poco frente a las bases reales.
+- **(c) 31/12/2040**: con salarios con crecimiento real, excluir ese día de la opción de 25 años baja la base reguladora un 1,7 % para quien se jubila justo ese día (un día antes o un día después no cambia nada con ninguna de las dos lecturas).
+- **(d) Otras**: no integrar las lagunas anteriores a la primera alta baja la base reguladora de una carrera de 15 años un 14,6 % (es la lectura de mayor efecto en carreras cortas; en ellas la pensión suele ser la mínima y la diferencia a menudo no se nota); el IPC mensual interpolado frente al escalón anual cambia la base reguladora un 1 %; computar la fracción de la demora desde el primer año sube la pensión un 1,9 %; la tabla de 2051-2065 como incremento anual literal en vez de acumulado eleva la máxima de 2055 un 20 %.
+
+### Limitaciones de la verificación
+
+- El contraste con M5 es contra un modelo simplificado propio, no contra pensiones reales ni contra el simulador oficial de la Seguridad Social.
+- Los casos de Sergio no existen todavía: el motor no se ha contrastado con ningún caso externo real.
+- El IPC mensual se aproxima con medias anuales; el efecto aparece en el apartado (d).
+- La opción mixta de la demora, las anticipadas y la integración reforzada de lagunas se han probado con casos construidos, no con resoluciones reales.
