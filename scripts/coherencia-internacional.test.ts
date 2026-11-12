@@ -336,7 +336,7 @@ const SERIES: [string, string, string, number, string, string, number][] = [
 const DATOS: [string, string, number, number, number][] = [
   ['internacional', 'ocde-espana', 51, 51, 67322.8],
   ['internacional', 'contraste-espana', 4, 4, 1840.0],
-  ['internacional', 'paises-sistemas', 15, 0, 0],
+  ['internacional', 'paises-sistemas', 36, 0, 0],
 ];
 
 describe('tablas 1C: cabecera, filas y suma de control', () => {
@@ -544,13 +544,26 @@ describe('contraste de España (A4)', () => {
 
 describe('estructura de los sistemas de pensiones (A3)', () => {
   const d = ArchivoDatos.parse(leeJson('internacional', 'paises-sistemas')).data ?? [];
-  it('hay quince elementos de nueve países, cada uno con cita literal y su fuente', () => {
-    expect(d.length).toBe(15);
-    expect(new Set(d.map((x) => x.id.split('-')[1])).size).toBe(9);
+  it('hay 36 elementos de once países, cada uno con cita literal y su fuente', () => {
+    expect(d.length).toBe(36);
+    expect(new Set(d.map((x) => x.id.split('-')[1])).size).toBe(11);
     for (const x of d) {
       expect(typeof x.quote).toBe('string');
-      expect((x.quote ?? '').length).toBeGreaterThan(30);
+      expect((x.quote ?? '').length).toBeGreaterThan(10);
       expect(x.source.url.startsWith('https://')).toBe(true);
+    }
+  });
+  it('Reino Unido y Estados Unidos se describen solo con «Pensions at a Glance 2025» y España también con lo que dice la OCDE', () => {
+    const de = (iso: string) => d.filter((x) => x.id.startsWith(`sistema-${iso}-`));
+    for (const iso of ['gbr', 'usa']) {
+      expect(de(iso).length).toBeGreaterThanOrEqual(5);
+      expect(de(iso).every((x) => x.source.docId === 'OECD-PAG-2025')).toBe(true);
+    }
+    expect(de('esp').filter((x) => x.source.docId === 'OECD-PAG-2025').length).toBe(8);
+    expect(de('esp').filter((x) => x.source.docId !== 'OECD-PAG-2025').length).toBe(1);
+    // cada elemento con fuente de la OCDE indica la página del informe
+    for (const x of d.filter((e) => e.source.docId === 'OECD-PAG-2025')) {
+      expect(x.location).toMatch(/^p\. \d+ del informe \(pág\. \d+ del PDF\)/);
     }
   });
 });

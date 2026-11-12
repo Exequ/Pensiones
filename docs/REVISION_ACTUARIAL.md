@@ -2,7 +2,7 @@
 
 Lista de las afirmaciones de `docs/claims.json` que requieren criterio actuarial (no son la transcripción literal de una norma o de una cifra publicada): reglas de cálculo de la pensión de jubilación, reglas de evolución futura, definiciones y las definiciones de salario medio. Para cada una: el identificador del claim, qué se afirma y una pregunta concreta sobre qué debe comprobar el actuario y con qué dato o fórmula. Generado por `scripts/etl/fuentes_claims.py` (diccionario `REVISION`); la pregunta también está en el campo `preguntaActuarial` de `docs/claims.json`.
 
-**Resto de afirmaciones (107)**: no llevan `revisionActuarial` y heredan `revisionActuarialPorDefecto: "no-requiere"` — no requieren revisión actuarial (transcripción literal de una norma o de una cifra publicada, contrastada con su fuente). Para cambiar el estado de una afirmación basta con añadirle `revisionActuarial` (`revisada`, `rechazada` o `pendiente` con `preguntaActuarial`); `npm run validate:data` exige la pregunta en las pendientes.
+**Resto de afirmaciones (156)**: no llevan `revisionActuarial` y heredan `revisionActuarialPorDefecto: "no-requiere"` — no requieren revisión actuarial (transcripción literal de una norma o de una cifra publicada, contrastada con su fuente). Para cambiar el estado de una afirmación basta con añadirle `revisionActuarial` (`revisada`, `rechazada` o `pendiente` con `preguntaActuarial`); `npm run validate:data` exige la pregunta en las pendientes.
 
 Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"`) en la afirmación de `docs/claims.json` y anotar el criterio en `notas`.
 
@@ -204,7 +204,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Afirmación**: Gross pension replacement rate at 100% of average wage: 80,4 (Percentage of gross pre-retirement earnings at the same income level) en 2024.
 
-**Qué debe comprobar el actuario**: Comprobar la comparabilidad de la tasa de reposición teórica bruta de la OCDE (carrera completa desde los 22 años, pensión obligatoria, 100 % del salario medio, parámetros de 2024) con una tasa calculada con las reglas propias (data/parametros: escala de porcentajes, periodo de cálculo, actualización de bases, pensión máxima) y con los cocientes empíricos de data/internacional/contraste-espana; en concreto, qué supuestos de crecimiento del salario y de indexación hay detrás del 80,4 % y si la tasa neta (86,3 %) usa los mismos impuestos y cotizaciones que el cálculo propio.
+**Qué debe comprobar el actuario**: Comprobar la comparabilidad de la tasa de reposición teórica bruta de la OCDE (carrera completa desde los 22 años, pensión obligatoria, 100 % del salario medio, parámetros de 2024) con una tasa calculada con las reglas propias (data/parametros: escala de porcentajes, periodo de cálculo, actualización de bases, pensión máxima) y con los cocientes empíricos de data/internacional/contraste-espana; en concreto: los supuestos de crecimiento del salario (real 1,25 % anual), inflación (2 %) y carrera (de los 22 a los 65 años) que hay detrás del 80,4 % ya están en ocde-supuestos-reposicion (elementos ocde-pag-2025-*); falta saber si la tasa neta (86,3 %) usa los mismos impuestos y cotizaciones que el cálculo propio, porque el detalle del IRPF y de las cotizaciones del pensionista está en los «Country Profiles» en línea, aún no descargados.
 
 **Datos**: internacional/ocde-espana.json#gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024
 
@@ -224,9 +224,17 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: internacional/contraste-espana.json#gasto-pensiones-contributivas-sobre-pib
 
+### 27. `internacional-sistema-esp-9`
+
+**Afirmación**: España (OCDE, Pensions at a Glance 2025): la OCDE recoge la proyección de AIReF de 2025: el gasto en pensiones sube 3,2 puntos del PIB entre 2023 y 2050 (16,1 % del PIB en 2050) con las reglas vigentes; es una proyección de AIReF citada por la OCDE, no una estimación de la OCDE.
+
+**Qué debe comprobar el actuario**: Contrastar la proyección de AIReF que cita la OCDE (gasto en pensiones de 16,1 % del PIB en 2050, +3,2 puntos entre 2023 y 2050) con la del Ageing Report 2024 (data/demografia/ageing-report-2024-espana) y con las proyecciones de gasto público de ocde-pag: definición de gasto (pensiones contributivas, Clases Pasivas, PNC), año base y supuestos demográficos y de empleo de cada una.
+
+**Datos**: internacional/paises-sistemas.json#sistema-esp-9
+
 ## Afirmaciones circulantes (definiciones de cada una)
 
-### 27. `mito-hucha-vaciada`
+### 28. `mito-hucha-vaciada`
 
 **Afirmación**: Afirmación circulante: «La hucha de las pensiones se ha vaciado.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -234,7 +242,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/fondo-reserva-series.json#valor-fin-ano, sistema/fondo-reserva-series.json#disposiciones-anuales, parametros/mei-destino.json#destino-fondo-reserva
 
-### 28. `mito-pensiones-con-impuestos`
+### 29. `mito-pensiones-con-impuestos`
 
 **Afirmación**: Afirmación circulante: «Las pensiones se pagan con los impuestos.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -242,7 +250,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes, sistema/gastos-impropios.json#transferencia-prevista-pge-2021, parametros/prestamos-estado-seguridad-social.json#2021-importe-maximo
 
-### 29. `mito-menos-cotizantes-por-pensionista`
+### 30. `mito-menos-cotizantes-por-pensionista`
 
 **Afirmación**: Afirmación circulante: «Hay cada vez menos cotizantes por pensionista.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -250,7 +258,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/relacion-afiliados-pensiones.json#afiliados-diciembre-por-pensionista, sistema/relacion-afiliados-pensiones.json#afiliados-media-anual-por-pension, sistema/relacion-afiliados-pensiones-alternativa-1.json#afiliados-por-pension-alternativa-1, demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-84, demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-59
 
-### 30. `mito-jubilados-cobran-mas-de-lo-cotizado`
+### 31. `mito-jubilados-cobran-mas-de-lo-cotizado`
 
 **Afirmación**: Afirmación circulante: «Los jubilados de ahora cobran más de lo que cotizaron.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -258,7 +266,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/pensiones-vigor-pension-media.json#jubilacion-ambos, demografia/esperanza-vida-anual.json#esperanza-vida-65-hombres, demografia/esperanza-vida-anual.json#esperanza-vida-65-mujeres
 
-### 31. `mito-sistema-en-deficit`
+### 32. `mito-sistema-en-deficit`
 
 **Afirmación**: Afirmación circulante: «El sistema de pensiones está en déficit.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -266,7 +274,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-no-financiero, sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-total, sistema/deficit-sec-fondos-seguridad-social.json#b9-mio-eur, sistema/deficit-sec-fondos-seguridad-social.json#b9-pc-gdp, sistema/gastos-impropios.json#deficit-estimado-2023
 
-### 32. `mito-edad-real-de-jubilacion-65`
+### 33. `mito-edad-real-de-jubilacion-65`
 
 **Afirmación**: Afirmación circulante: «La edad de jubilación real es 65.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -274,7 +282,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: parametros/edad-ordinaria-jubilacion.json#2025, parametros/carrera-jubilacion-65.json#2025, sistema/edad-media-altas-jubilacion.json#edad-media-altas-jubilacion, internacional/ocde-espana.json#crplf22-hombres-z-z-y-2024, internacional/ocde-espana.json#elmea-hombres-z-z-y, internacional/contraste-espana.json#meses-carrera-completa-desde-22-hasta-65
 
-### 33. `mito-pensiones-publicas-insostenibles`
+### 34. `mito-pensiones-publicas-insostenibles`
 
 **Afirmación**: Afirmación circulante: «Las pensiones públicas son insostenibles.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -282,7 +290,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-64, demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-74, internacional/ocde-espana.json#ppep-no-aplica-z-z-pt-b1gq, demografia/proyecciones-hipotesis.json#tasa-dependencia-proyectada, internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp
 
-### 34. `mito-mayores-en-pobreza`
+### 35. `mito-mayores-en-pobreza`
 
 **Afirmación**: Afirmación circulante: «Los pensionistas españoles viven en la pobreza.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -290,7 +298,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: internacional/eurostat-espana.json#pobreza-o-exclusion-total-y-ge65-pc, internacional/ocde-espana.json#oaip-total-y-ge66-z-pt-pop-sex-age
 
-### 35. `mito-pensiones-sustituyen-casi-todo-el-salario`
+### 36. `mito-pensiones-sustituyen-casi-todo-el-salario`
 
 **Afirmación**: Afirmación circulante: «En España la pensión sustituye casi todo el último salario.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -298,7 +306,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: internacional/ocde-espana.json#gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024, internacional/ocde-espana.json#nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024, internacional/ocde-espana.json#gprr200-hombres-z-m-pt-earn-g-pre-ret-inc-2024, internacional/contraste-espana.json#pension-altas-sobre-salario-eaes, internacional/contraste-espana.json#pension-vigor-sobre-salario-eaes
 
-### 36. `mito-espana-gasta-mas-que-europa`
+### 37. `mito-espana-gasta-mas-que-europa`
 
 **Afirmación**: Afirmación circulante: «España gasta en pensiones más que la media europea.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -306,7 +314,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp, internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq, internacional/contraste-espana.json#gasto-pensiones-contributivas-sobre-pib
 
-### 37. `mito-pensiones-siempre-con-el-ipc`
+### 38. `mito-pensiones-siempre-con-el-ipc`
 
 **Afirmación**: Afirmación circulante: «Las pensiones se revalorizan siempre con el IPC.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -314,7 +322,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: parametros/revalorizacion-regla.json#2024-ultimo-mes-medicion
 
-### 38. `mito-sin-nacimientos-no-hay-pensiones`
+### 39. `mito-sin-nacimientos-no-hay-pensiones`
 
 **Afirmación**: Afirmación circulante: «Con menos nacimientos no se podrán pagar las pensiones.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -324,7 +332,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 ## Mortalidad en edades altas y supuestos de la OCDE
 
-### 39. `demografia-triangulacion-mortalidad-supervivencia-publicada-sobre-qx-hombres-85-2010-2020`
+### 40. `demografia-triangulacion-mortalidad-supervivencia-publicada-sobre-qx-hombres-85-2010-2020`
 
 **Afirmación**: Dato derivado: supervivencia publicada a 10 años de los hombres de 85 años en 2010 dividida por Π(1 − qx) (tablas del INE); un valor inferior a 1 significa que la población publicada pierde más efectivos que los que implica qx aplicado a la población a 1 de enero.: 0,8726 (razón) en 2020.
 
@@ -332,7 +340,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: demografia/triangulacion-mortalidad.json#supervivencia-publicada-sobre-qx-hombres-85-2010-2020
 
-### 40. `demografia-triangulacion-mortalidad-supervivencia-publicada-sobre-qx-lexis-hombres-85-2010-2020`
+### 41. `demografia-triangulacion-mortalidad-supervivencia-publicada-sobre-qx-lexis-hombres-85-2010-2020`
 
 **Afirmación**: Dato derivado: ídem con (qx + qx+1)/2 en lugar de qx (convención de Lexis).: 0,9528 (razón) en 2020.
 
@@ -340,7 +348,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: demografia/triangulacion-mortalidad.json#supervivencia-publicada-sobre-qx-lexis-hombres-85-2010-2020
 
-### 41. `demografia-triangulacion-mortalidad-factor-real-sobre-qx-mujeres-85-2010-2019`
+### 42. `demografia-triangulacion-mortalidad-factor-real-sobre-qx-mujeres-85-2010-2019`
 
 **Afirmación**: Dato derivado: ídem para mujeres.: 1,0751 (razón) en 2019.
 
@@ -348,7 +356,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: demografia/triangulacion-mortalidad.json#factor-real-sobre-qx-mujeres-85-2010-2019
 
-### 42. `demografia-triangulacion-mortalidad-muertes-implicitas-pensiones-jubilacion-lexis`
+### 43. `demografia-triangulacion-mortalidad-muertes-implicitas-pensiones-jubilacion-lexis`
 
 **Afirmación**: Dato derivado: ídem con (qx + qx+1)/2.: 263776 (personas) en 2025.
 
@@ -356,7 +364,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: demografia/triangulacion-mortalidad.json#muertes-implicitas-pensiones-jubilacion-lexis
 
-### 43. `demografia-triangulacion-mortalidad-ine-tablas-recalculo-censo-2021`
+### 44. `demografia-triangulacion-mortalidad-ine-tablas-recalculo-censo-2021`
 
 **Afirmación**: Con el censo de 2021 se calcularon en 2023 nuevas series intercensales (2012-2020) y en noviembre de 2023 se publicaron las tablas de mortalidad sobre la nueva base poblacional.
 
@@ -364,10 +372,34 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: demografia/triangulacion-mortalidad.json#ine-tablas-recalculo-censo-2021
 
-### 44. `internacional-ocde-supuestos-reposicion-ocde-pag-entrada-mercado-laboral-22`
+### 45. `internacional-ocde-supuestos-reposicion-ocde-pag-entrada-mercado-laboral-22`
 
 **Afirmación**: Los indicadores de «Pensions at a Glance» se calculan para trabajadores que entran en el mercado laboral a los 22 años en el año especificado.
 
-**Qué debe comprobar el actuario**: Los metadatos accesibles de la OCDE solo dicen que la tasa de reposición teórica se calcula para trabajadores que entran en el mercado laboral a los 22 años; no figuran el crecimiento real de los salarios, la inflación ni la carrera. Obtener la metodología de «Pensions at a Glance» y comprobar esos supuestos antes de comparar la tasa teórica de la OCDE con una tasa calculada con las reglas propias.
+**Qué debe comprobar el actuario**: Los metadatos SDMX solo dicen que la tasa de reposición teórica se calcula para quien entra en el mercado laboral a los 22 años; el resto de supuestos (carrera, crecimiento real de los salarios, inflación, impuestos) se han leído del informe «Pensions at a Glance 2025» (elementos ocde-pag-2025-* del mismo fichero). Comprobar que la carrera modelada para España (entrada a los 22 y jubilación a la edad normal de 65 años, es decir, 43 años de carrera) es comparable con los años cotizados que exige el cálculo propio con las reglas de data/parametros antes de contrastar la tasa de la OCDE con una tasa calculada con ellas.
 
 **Datos**: internacional/ocde-supuestos-reposicion.json#ocde-pag-entrada-mercado-laboral-22
+
+### 46. `internacional-ocde-supuestos-reposicion-ocde-pag-2025-crecimiento-real-salarios-base`
+
+**Afirmación**: OCDE, supuesto de la tasa de reposición teórica (crecimiento real de los salarios, escenario base): 1,25 (% anual) en 2024.
+
+**Qué debe comprobar el actuario**: La OCDE supone para todos los países un crecimiento real del salario del 1,25 % anual, inflación del 2 % y salario individual igual al medio de la economía, y publica la sensibilidad con 0,75 % de crecimiento real y 1 % de inflación. Como España revaloriza los ingresos pasados con los precios y no con los salarios, la tasa bruta del 100 % del salario medio pasa del 80,4 % al 88,0 % con el escenario alternativo (tabla 5.4). Comprobar cómo afectan estos supuestos al cálculo con las reglas propias (periodo de cálculo, actualización de bases con el IPC, escala de porcentajes) y contrastarlos con el crecimiento real observado del salario en data/macro y con las hipótesis del Ageing Report 2024 en data/demografia.
+
+**Datos**: internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-crecimiento-real-salarios-base
+
+### 47. `internacional-ocde-supuestos-reposicion-ocde-pag-2025-politica-fiscal-constante`
+
+**Afirmación**: Impuestos y cotizaciones de la tasa neta: se supone que no cambian en el futuro; los parámetros de «valor» (mínimos exentos, topes de cotización) se ajustan cada año con el salario medio y los de «tipo» (escala del IRPF, tipos de cotización) no varían.
+
+**Qué debe comprobar el actuario**: La tasa neta de la OCDE supone que los tipos del IRPF y las cotizaciones no cambian y que los mínimos exentos y los topes se actualizan con el salario medio; el detalle de lo que pagan los pensionistas está en los «Country Profiles» en línea, que no se han descargado (PENDIENTE_DATOS). Comprobar, cuando estén disponibles, que la tasa neta de España (86,3 % al salario medio) usa la escala del IRPF, los mínimos y las cotizaciones del pensionista que se aplicarían en el cálculo propio; mientras tanto la tasa neta no es comparable con una calculada por separado.
+
+**Datos**: internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-politica-fiscal-constante
+
+### 48. `internacional-ocde-supuestos-reposicion-ocde-pag-2025-sensibilidad-espana-valorizacion-precios`
+
+**Afirmación**: En la sensibilidad al crecimiento y los tipos, la tasa bruta de España sube porque los ingresos pasados se revalorizan con los precios y el crecimiento real de los salarios es menor en el escenario alternativo.
+
+**Qué debe comprobar el actuario**: La OCDE atribuye la subida de España en el escenario alternativo (7,6 puntos, la mayor del grupo formado por Bélgica, Portugal, España, Türkiye y Reino Unido) a que los ingresos pasados se valorizan a los precios y el crecimiento real de los salarios es menor. Comprobar que ese mecanismo es coherente con la regla española de actualización de las bases con el IPC dentro del periodo de cálculo (data/parametros) y estimar con las reglas propias la sensibilidad de la tasa a ±0,5 puntos de crecimiento real.
+
+**Datos**: internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-sensibilidad-espana-valorizacion-precios

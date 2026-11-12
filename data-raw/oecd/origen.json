@@ -16,5 +16,12 @@
   "fetchedAt": "2026-11-11",
   "sha256": "6f45847997871b2bb372017b99d37e70e7f506e0f2078400ccca314e71179b5d",
   "bytes": 5585
+ },
+ "Pensions at a Glance 2025 OCDE.pdf": {
+  "url": "https://doi.org/10.1787/e40274c1-en",
+  "fetchedAt": "2026-11-12",
+  "sha256": "d58e7f093b5f812d436932ce263baf0bcfbe94d05134d481eb60bb2cdb04b9e1",
+  "bytes": 8517913,
+  "nota": "Aportado a mano por el autor (HTTP 403 desde el entorno); 248 páginas; la fecha es la de su incorporación al repositorio."
  }
 }

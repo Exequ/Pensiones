@@ -327,7 +327,7 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar la comparabilidad de la tasa de reposición teórica bruta de la OCDE (carrera completa desde los 22 años, pensión obligatoria, 100 % del salario medio, parámetros de 2024) con una tasa calculada con las reglas propias (data/parametros: escala de porcentajes, periodo de cálculo, actualización de bases, pensión máxima) y con los cocientes empíricos de data/internacional/contraste-espana; en concreto, qué supuestos de crecimiento del salario y de indexación hay detrás del 80,4 % y si la tasa neta (86,3 %) usa los mismos impuestos y cotizaciones que el cálculo propio."
+      "preguntaActuarial": "Comprobar la comparabilidad de la tasa de reposición teórica bruta de la OCDE (carrera completa desde los 22 años, pensión obligatoria, 100 % del salario medio, parámetros de 2024) con una tasa calculada con las reglas propias (data/parametros: escala de porcentajes, periodo de cálculo, actualización de bases, pensión máxima) y con los cocientes empíricos de data/internacional/contraste-espana; en concreto: los supuestos de crecimiento del salario (real 1,25 % anual), inflación (2 %) y carrera (de los 22 a los 65 años) que hay detrás del 80,4 % ya están en ocde-supuestos-reposicion (elementos ocde-pag-2025-*); falta saber si la tasa neta (86,3 %) usa los mismos impuestos y cotizaciones que el cálculo propio, porque el detalle del IRPF y de las cotizaciones del pensionista está en los «Country Profiles» en línea, aún no descargados."
     },
     {
       "id": "internacional-ocde-espana-nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024",
@@ -361,7 +361,577 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Los metadatos accesibles de la OCDE solo dicen que la tasa de reposición teórica se calcula para trabajadores que entran en el mercado laboral a los 22 años; no figuran el crecimiento real de los salarios, la inflación ni la carrera. Obtener la metodología de «Pensions at a Glance» y comprobar esos supuestos antes de comparar la tasa teórica de la OCDE con una tasa calculada con las reglas propias."
+      "preguntaActuarial": "Los metadatos SDMX solo dicen que la tasa de reposición teórica se calcula para quien entra en el mercado laboral a los 22 años; el resto de supuestos (carrera, crecimiento real de los salarios, inflación, impuestos) se han leído del informe «Pensions at a Glance 2025» (elementos ocde-pag-2025-* del mismo fichero). Comprobar que la carrera modelada para España (entrada a los 22 y jubilación a la edad normal de 65 años, es decir, 43 años de carrera) es comparable con los años cotizados que exige el cálculo propio con las reglas de data/parametros antes de contrastar la tasa de la OCDE con una tasa calculada con ellas."
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-inflacion-base",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (inflación de precios, escenario base): 2,0 (% anual) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": ["internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-inflacion-base"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-crecimiento-real-salarios-base",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (crecimiento real de los salarios, escenario base): 1,25 (% anual) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-crecimiento-real-salarios-base"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "La OCDE supone para todos los países un crecimiento real del salario del 1,25 % anual, inflación del 2 % y salario individual igual al medio de la economía, y publica la sensibilidad con 0,75 % de crecimiento real y 1 % de inflación. Como España revaloriza los ingresos pasados con los precios y no con los salarios, la tasa bruta del 100 % del salario medio pasa del 80,4 % al 88,0 % con el escenario alternativo (tabla 5.4). Comprobar cómo afectan estos supuestos al cálculo con las reglas propias (periodo de cálculo, actualización de bases con el IPC, escala de porcentajes) y contrastarlos con el crecimiento real observado del salario en data/macro y con las hipótesis del Ageing Report 2024 en data/demografia."
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-crecimiento-nominal-salarios-base",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (crecimiento nominal de los salarios, escenario base): 3,275 (% anual) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-crecimiento-nominal-salarios-base"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-tipo-descuento-real-base",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (tipo de descuento real, escenario base): 1,5 (% anual) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tipo-descuento-real-base"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-rentabilidad-real-fdc-base",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (rentabilidad real de los planes FDC, escenario base): 2,5 (% anual) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-rentabilidad-real-fdc-base"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-factor-conversion-fdc-base",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (factor de conversión de los planes FDC, escenario base): 90 (%) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-factor-conversion-fdc-base"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-inflacion-alternativo",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (inflación de precios, escenario alternativo): 1,0 (% anual) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": ["internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-inflacion-alternativo"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-crecimiento-real-salarios-alternativo",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (crecimiento real de los salarios, escenario alternativo): 0,75 (% anual) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-crecimiento-real-salarios-alternativo"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-tipo-descuento-real-alternativo",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (tipo de descuento real, escenario alternativo): 1,0 (% anual) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tipo-descuento-real-alternativo"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-rentabilidad-real-fdc-alternativo",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (rentabilidad real de los planes FDC, escenario alternativo): 2,0 (% anual) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-rentabilidad-real-fdc-alternativo"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-crecimiento-pib-alternativo",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (ajuste del crecimiento del PIB, escenario alternativo): -0,5 (puntos porcentuales) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-crecimiento-pib-alternativo"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-carrera-completa",
+      "texto": "Carrera completa: entrada en el mercado laboral a los 22 años y trabajo hasta la edad normal de jubilación.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": ["internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-carrera-completa"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-duracion-carrera",
+      "texto": "La duración de la carrera depende del país: la edad normal de jubilación menos 22 años.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": ["internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-duracion-carrera"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-trabajador-que-entra-en-2024",
+      "texto": "Trabajador soltero que entra en el sistema en 2024 a los 22 años (nacido en 2002) y se jubila tras una carrera completa con el mismo salario relativo; parámetros del sistema de 2024 en adelante.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-trabajador-que-entra-en-2024"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-salario-relativo-constante",
+      "texto": "El salario individual crece igual que el salario medio de la economía: el trabajador mantiene el mismo porcentaje del salario medio todos los años.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-salario-relativo-constante"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-salario-medio-definicion",
+      "texto": "El salario medio (AW) es el salario bruto medio de un adulto a tiempo completo, definido en «Taxing Wages» de la OCDE.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-salario-medio-definicion"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-mortalidad",
+      "texto": "Mortalidad: proyecciones por país de la base de población de Naciones Unidas para cada año de 2024 a 2100, con mejoras de mortalidad por cohorte después de la edad de jubilación.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": ["internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-mortalidad"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-renta-vitalicia-indexada",
+      "texto": "Las prestaciones de los planes de aportación definida se pagan como renta vitalicia indexada a los precios, calculada con el precio actuarialmente justo con previsión perfecta.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-renta-vitalicia-indexada"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-politica-fiscal-constante",
+      "texto": "Impuestos y cotizaciones de la tasa neta: se supone que no cambian en el futuro; los parámetros de «valor» (mínimos exentos, topes de cotización) se ajustan cada año con el salario medio y los de «tipo» (escala del IRPF, tipos de cotización) no varían.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-politica-fiscal-constante"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "La tasa neta de la OCDE supone que los tipos del IRPF y las cotizaciones no cambian y que los mínimos exentos y los topes se actualizan con el salario medio; el detalle de lo que pagan los pensionistas está en los «Country Profiles» en línea, que no se han descargado (PENDIENTE_DATOS). Comprobar, cuando estén disponibles, que la tasa neta de España (86,3 % al salario medio) usa la escala del IRPF, los mínimos y las cotizaciones del pensionista que se aplicarían en el cálculo propio; mientras tanto la tasa neta no es comparable con una calculada por separado."
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-impuestos-pensionistas-en-perfiles",
+      "texto": "Los impuestos personales y las cotizaciones que pagan los pensionistas en el cálculo figuran en los «Country Profiles» en línea, no en el informe.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-impuestos-pensionistas-en-perfiles"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-tasa-neta-definicion",
+      "texto": "Tasa de reposición neta: pensión neta sobre ingresos netos individuales, descontando el IRPF y las cotizaciones de trabajadores y pensionistas; por lo demás se mide como la bruta.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": ["internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tasa-neta-definicion"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-cotizaciones-pensionistas-general",
+      "texto": "Los pensionistas suelen no pagar cotizaciones por pensión ni desempleo, aunque pueden pagar aportaciones por sanidad o cuidados de larga duración; 21 países de la OCDE no cobran cotizaciones sociales a los pensionistas.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-cotizaciones-pensionistas-general"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-indexacion-precios-espana",
+      "texto": "Con indexación a los precios y edad normal de 65 años (como en España), la tasa de reposición bruta a los 80 años es un 17 % menor que a la edad de jubilación, con los supuestos del modelo de la OCDE.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-indexacion-precios-espana"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-sensibilidad-espana-valorizacion-precios",
+      "texto": "En la sensibilidad al crecimiento y los tipos, la tasa bruta de España sube porque los ingresos pasados se revalorizan con los precios y el crecimiento real de los salarios es menor en el escenario alternativo.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-sensibilidad-espana-valorizacion-precios"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "La OCDE atribuye la subida de España en el escenario alternativo (7,6 puntos, la mayor del grupo formado por Bélgica, Portugal, España, Türkiye y Reino Unido) a que los ingresos pasados se valorizan a los precios y el crecimiento real de los salarios es menor. Comprobar que ese mecanismo es coherente con la regla española de actualización de las bases con el IPC dentro del periodo de cálculo (data/parametros) y estimar con las reglas propias la sensibilidad de la tasa a ±0,5 puntos de crecimiento real."
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-definicion-edad-normal-jubilacion",
+      "texto": "Edad normal de jubilación de la OCDE: la edad de acceso a todos los componentes obligatorios del sistema en 2024, suponiendo entrada en el mercado laboral a los 22 años y una carrera ininterrumpida.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-definicion-edad-normal-jubilacion"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-definicion-edad-efectiva-salida",
+      "texto": "Edad efectiva de salida del mercado laboral de la OCDE (medida ELMEA): edad media de salida de la población activa de los trabajadores de 40 o más años, estimada con los cambios en las tasas de actividad por cohorte sintética.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-definicion-edad-efectiva-salida"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-tasa-bruta-reposicion-alternativo-esp",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (tasa bruta de reposición de España con el escenario alternativo, hombre con carrera completa al salario medio): 88,0 (% del salario medio) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tasa-bruta-reposicion-alternativo-esp"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-tasa-bruta-reposicion-alternativo-gbr",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (tasa bruta de reposición del Reino Unido con el escenario alternativo, hombre con carrera completa al salario medio): 51,3 (% del salario medio) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tasa-bruta-reposicion-alternativo-gbr"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-tasa-bruta-reposicion-alternativo-usa",
+      "texto": "OCDE, supuesto de la tasa de reposición teórica (tasa bruta de reposición de Estados Unidos con el escenario alternativo, hombre con carrera completa al salario medio): 41,2 (% del salario medio) en 2024.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tasa-bruta-reposicion-alternativo-usa"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-tratamiento-fiscal-pensionista-esp",
+      "texto": "España: sin asignación o crédito fiscal adicional por ser pensionista; desgravación total o parcial de la pensión del régimen público; sin cotizaciones sobre la pensión.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tratamiento-fiscal-pensionista-esp"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-tratamiento-fiscal-pensionista-gbr",
+      "texto": "Reino Unido: sin asignación o crédito fiscal adicional por ser pensionista; desgravación total o parcial de la pensión de los planes privados; sin cotizaciones sobre la pensión.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tratamiento-fiscal-pensionista-gbr"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-ocde-supuestos-reposicion-ocde-pag-2025-tratamiento-fiscal-pensionista-usa",
+      "texto": "Estados Unidos: asignación o crédito fiscal adicional por ser pensionista; desgravación total o parcial de la pensión del régimen público; sin cotizaciones sobre la pensión.",
+      "ubicacion": "Comparativa internacional (Fase 1C)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tratamiento-fiscal-pensionista-usa"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
     },
     {
       "id": "internacional-sistema-esp-1",
@@ -598,6 +1168,344 @@
           "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
           "url": "https://economy-finance.ec.europa.eu/document/download/93eeaeab-e2bf-4e62-9cc9-bbb42c2f091e_en?filename=2024-ageing-report-country-fiche-Denmark.pdf",
           "docId": "ageing-report-2024-ficha-dnk"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-esp-2",
+      "texto": "España (OCDE, Pensions at a Glance 2025): pensión pública de prestación definida; medida de ingresos pensionables: los mejores 27 años de los 29 anteriores a la jubilación.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-esp-2"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-esp-3",
+      "texto": "España (OCDE, Pensions at a Glance 2025): régimen de prestación definida y reparto con tasas de acumulación nominales de al menos el 2 % anual (Colombia, Portugal, España y Türkiye).",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-esp-3"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-esp-4",
+      "texto": "España (OCDE, Pensions at a Glance 2025): tasa de acumulación total limitada al 100 % de la base de cálculo.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-esp-4"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-esp-5",
+      "texto": "España (OCDE, Pensions at a Glance 2025): los ingresos pasados se revalorizan solo con la inflación (no con el crecimiento de los salarios).",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-esp-5"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-esp-6",
+      "texto": "España (OCDE, Pensions at a Glance 2025): bonus por demora de la jubilación: antes del 4 % por año completo; desde 2025, el 2 % por semestre con demora de al menos 18 meses.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-esp-6"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-esp-7",
+      "texto": "España (OCDE, Pensions at a Glance 2025): cotización adicional sobre los ingresos de quien compatibiliza trabajo y pensión tras la edad ordinaria, que no genera una pensión mayor.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-esp-7"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-esp-8",
+      "texto": "España (OCDE, Pensions at a Glance 2025): único país de la OCDE que exige demorar al menos un año el cobro de la pensión para poder compatibilizarla con el trabajo tras la edad ordinaria.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-esp-8"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-esp-9",
+      "texto": "España (OCDE, Pensions at a Glance 2025): la OCDE recoge la proyección de AIReF de 2025: el gasto en pensiones sube 3,2 puntos del PIB entre 2023 y 2050 (16,1 % del PIB en 2050) con las reglas vigentes; es una proyección de AIReF citada por la OCDE, no una estimación de la OCDE.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-esp-9"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Contrastar la proyección de AIReF que cita la OCDE (gasto en pensiones de 16,1 % del PIB en 2050, +3,2 puntos entre 2023 y 2050) con la del Ageing Report 2024 (data/demografia/ageing-report-2024-espana) y con las proyecciones de gasto público de ocde-pag: definición de gasto (pensiones contributivas, Clases Pasivas, PNC), año base y supuestos demográficos y de empleo de cada una."
+    },
+    {
+      "id": "internacional-sistema-gbr-1",
+      "texto": "Reino Unido (OCDE, Pensions at a Glance 2025): además de la pensión básica pública, un plan de empleo de capitalización de aportación definida (FDC) cuasi obligatorio.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-gbr-1"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-gbr-2",
+      "texto": "Reino Unido (OCDE, Pensions at a Glance 2025): tabla 3.1, panel A (legislación más reciente, personas que entran en 2024 a los 22 años): primer nivel con pensión básica contributiva y segundo nivel privado FDC cuasi obligatorio.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-gbr-2"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-gbr-3",
+      "texto": "Reino Unido (OCDE, Pensions at a Glance 2025): tabla 3.1, panel B (legislación vigente para quienes se jubilan en 2024, donde difiere del panel A): pensión básica contributiva y segundo nivel público de prestación definida.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-gbr-3"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-gbr-4",
+      "texto": "Reino Unido (OCDE, Pensions at a Glance 2025): el plan de empleo cuasi obligatorio se incluye en los cálculos porque cubre al menos el 85 % de los asalariados.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-gbr-4"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-gbr-5",
+      "texto": "Reino Unido (OCDE, Pensions at a Glance 2025): la jubilación anticipada no es posible en la pensión básica, pero sí en el plan FDC cuasi obligatorio para quien empieza hoy.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-gbr-5"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-usa-1",
+      "texto": "Estados Unidos (OCDE, Pensions at a Glance 2025): tabla 3.1: un único componente obligatorio, el segundo nivel público de prestación definida (DB), sin primer nivel residencial ni contributivo básico.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-usa-1"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-usa-2",
+      "texto": "Estados Unidos (OCDE, Pensions at a Glance 2025): el primer nivel está formado solo por prestaciones focalizadas sujetas a comprobación de recursos.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-usa-2"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-usa-3",
+      "texto": "Estados Unidos (OCDE, Pensions at a Glance 2025): ingresos pensionables: los mejores 35 años de la carrera.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-usa-3"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-usa-4",
+      "texto": "Estados Unidos (OCDE, Pensions at a Glance 2025): la tasa de acumulación varía con el nivel de ingresos y es mayor para los ingresos bajos.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-usa-4"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-usa-5",
+      "texto": "Estados Unidos (OCDE, Pensions at a Glance 2025): revalorización de los ingresos pasados: con el crecimiento de los salarios hasta los 60 años, sin ajuste de 60 a 62 y con la inflación de 62 a 67.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-usa-5"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-usa-6",
+      "texto": "Estados Unidos (OCDE, Pensions at a Glance 2025): entre el 15 % y el 50 % de la pensión pública no tributa en el impuesto sobre la renta, según los ingresos totales del pensionista.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-usa-6"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-usa-7",
+      "texto": "Estados Unidos (OCDE, Pensions at a Glance 2025): fecha de agotamiento del fondo fiduciario de vejez y supervivencia (OASI): primer trimestre de 2033, adelantada tres trimestres respecto de la proyección anterior.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-usa-7"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "internacional-sistema-usa-8",
+      "texto": "Estados Unidos (OCDE, Pensions at a Glance 2025): suplemento por cónyuge igual al 50 % de la pensión individual más alta de la pareja, del que se deduce la pensión más baja.",
+      "ubicacion": "Comparativa internacional: fichas de país (Fase 1C)",
+      "datos": ["internacional/paises-sistemas.json#sistema-usa-8"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
         }
       ],
       "fetchedAt": "2026-11-11",

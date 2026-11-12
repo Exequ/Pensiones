@@ -38,7 +38,7 @@ const TABLAS: [string, string, string, number, number][] = [
 // [carpeta, fichero, elementos de «data», elementos numéricos, suma de los valores numéricos]
 const DATOS: [string, string, number, number, number][] = [
   ['demografia', 'triangulacion-mortalidad', 12, 9, 511403.8328],
-  ['internacional', 'ocde-supuestos-reposicion', 5, 4, 260.0],
+  ['internacional', 'ocde-supuestos-reposicion', 37, 18, 545.275],
   ['demografia', 'defunciones-2025-estimadas', 1, 1, 443314.0],
 ];
 
@@ -233,5 +233,36 @@ describe('supuestos de la OCDE', () => {
     expect(d.find((e) => e.id === 'edad-jubilacion-actual-carrera-desde-22-hombres')?.value).toBe(
       65,
     );
+  });
+  it('las notas metodológicas del informe de 2025 recogen los supuestos económicos del escenario base y del alternativo', () => {
+    const v = (id: string): unknown => d.find((e) => e.id === id)?.value;
+    expect(v('ocde-pag-2025-inflacion-base')).toBe(2.0);
+    expect(v('ocde-pag-2025-crecimiento-real-salarios-base')).toBe(1.25);
+    expect(v('ocde-pag-2025-crecimiento-nominal-salarios-base')).toBe(3.275);
+    expect(v('ocde-pag-2025-tipo-descuento-real-base')).toBe(1.5);
+    expect(v('ocde-pag-2025-rentabilidad-real-fdc-base')).toBe(2.5);
+    expect(v('ocde-pag-2025-inflacion-alternativo')).toBe(1.0);
+    expect(v('ocde-pag-2025-crecimiento-real-salarios-alternativo')).toBe(0.75);
+    // el crecimiento nominal es el que resulta de componer la inflación y el crecimiento real
+    const nominal = (1 + 0.02) * (1 + 0.0125) - 1;
+    expect(Math.abs(nominal * 100 - 3.275)).toBeLessThan(0.001);
+  });
+  it('cada elemento del informe lleva la cita literal en inglés, su página y la fuente del PDF', () => {
+    const del2025 = d.filter((e) => e.id.startsWith('ocde-pag-2025-'));
+    expect(del2025.length).toBe(32);
+    for (const e of del2025) {
+      expect((e.quote ?? '').length).toBeGreaterThan(10);
+      expect(e.location).toMatch(/^p\. \d+ del informe \(pág\. \d+ del PDF\)/);
+      expect(e.source.docId).toBe('OECD-PAG-2025');
+      expect(e.source.url.startsWith('https://')).toBe(true);
+    }
+  });
+  it('la tasa bruta del escenario alternativo de España es la de la tabla 5.4 y supera a la del escenario base', () => {
+    expect(
+      d.find((e) => e.id === 'ocde-pag-2025-tasa-bruta-reposicion-alternativo-esp')?.value,
+    ).toBe(88.0);
+    expect(
+      d.find((e) => e.id === 'ocde-pag-2025-tasa-bruta-reposicion-alternativo-gbr')?.value,
+    ).toBe(51.3);
   });
 });
