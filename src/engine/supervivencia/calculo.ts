@@ -444,7 +444,9 @@ export function calcularSupervivenciaConParametros(
     }
     const base52 = (br * pct52) / 100;
     if (pension70 > 0 || pension60 > 0) {
-      if (pension70 >= pension60 && pension70 > base52) {
+      const aplica70 =
+        pension70 > base52 || (pension70 > 0 && lecturas.reduccionViudedad70 === 'sin-suelo');
+      if (aplica70 && pension70 >= pension60) {
         pct = (pension70 / br) * 100;
         refs.push(refSV('viudedad-cargas-pct'), refSV('viudedad-65-incompatible-70'));
       } else if (pension60 > base52) {
