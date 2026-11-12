@@ -42,6 +42,14 @@ export interface Contexto {
   revalorizacionPct(anio: number): number;
 }
 
+/** Fichero de /data de la cuantía mínima de una clase («ip-…», «viud-…», «orf-…», «fam…»…). */
+export function ficheroMinima(claseSituacion: string): string {
+  if (claseSituacion.startsWith('ip-')) return 'pension-minima-incapacidad';
+  if (claseSituacion.startsWith('viud-')) return 'pension-minima-viudedad';
+  if (/^(orf-|prest-orf-|fam)/.test(claseSituacion)) return 'pension-minima-orfandad-familiares';
+  return 'pension-minima-jubilacion';
+}
+
 export function crearContexto(
   params: ParametrosJubilacion,
   opciones: OpcionesJubilacion = {},
@@ -246,10 +254,8 @@ export function crearContexto(
     const anioDato = Math.min(anio, ultimo);
     const id = `${anioDato}-${claseSituacion}`;
     const v = params.pensionMinima.get(id);
-    // Las clases de incapacidad permanente («ip-…») están en su propio fichero de /data.
-    const fichero = claseSituacion.startsWith('ip-')
-      ? 'pension-minima-incapacidad'
-      : 'pension-minima-jubilacion';
+    // Las clases de incapacidad permanente y de supervivencia están en su propio fichero de /data.
+    const fichero = ficheroMinima(claseSituacion);
     if (v === undefined) throw new DatoNoDisponible(`parametros/${fichero}.json#${id}`);
     const r = ref(fichero, id);
     if (anio <= ultimo) return { valor: v, refs: [r] };
