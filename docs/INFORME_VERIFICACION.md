@@ -434,7 +434,7 @@ Verificación de los motores `src/engine/no-contributivas/` y `src/engine/mei/` 
 
 ### Casos de oro
 
-- **PNC: 24 casos «independientes»** (`casos-oro-pnc-imserso.test.ts`) con las cifras que publican las guías del IMSERSO (cuantía íntegra de 2022 a 2026, complemento de tercera persona, cuantía individual con 2 a 5 beneficiarios, mínimo del 25 %, límites de acumulación de 2 y 10 convivientes, con descendientes o ascendientes y con tercera persona, y los límites del art. 366 de cada año, con su URL) y **21 «derivados de la norma»** (`casos-oro-pnc.test.ts`). Al contrastar con la guía, el motor coincidió salvo en dos puntos que se corrigieron: el límite con tercera persona (la guía usa la cuantía incrementada: se añade la lectura `limiteConTerceraPersona`) y el redondeo del límite al céntimo (el borde exacto fallaba por coma flotante).
+- **PNC: 23 casos «independientes»** (`casos-oro-pnc-imserso.test.ts`) con las cifras que publican las guías del IMSERSO (cuantía íntegra de 2022 a 2026, complemento de tercera persona, cuantía individual con 2 a 5 beneficiarios, mínimo del 25 %, límites de acumulación de 2 y 10 convivientes, con descendientes o ascendientes y con tercera persona, y los límites del art. 366 de cada año, con su URL) y **20 «derivados de la norma»** (`casos-oro-pnc.test.ts`). Al contrastar con la guía, el motor coincidió salvo en dos puntos que se corrigieron: el límite con tercera persona (la guía usa la cuantía incrementada: se añade la lectura `limiteConTerceraPersona`) y el redondeo del límite al céntimo (el borde exacto fallaba por coma flotante).
 - **MEI y solidaridad: 13 casos «derivados de la norma»** (`casos-oro-mei.test.ts`); no se ha localizado ningún ejemplo resuelto oficial.
 
 ### Propiedades

@@ -1,0 +1,42 @@
+# Inventario de casos de oro de los motores
+
+Generado por `scripts/inventario-casos-oro.ts` (un test comprueba que está al día). Cada caso lleva una etiqueta:
+
+- **independiente**: ejemplo resuelto publicado en una fuente oficial, con su URL. Contrasta el motor con algo que el motor no ha producido.
+- **derivado de la norma**: calculado a mano a partir del texto legal y de `/data`. Comprueba que el motor aplica nuestra lectura de la norma; **no** es una validación independiente.
+
+Los casos de oro de Sergio (`data-raw/casos-oro/casos-sergio.md`, formato en `docs/CASOS_SERGIO_PLANTILLA.md`) se ejecutarán además de estos cuando existan.
+
+| Motor                      |   Casos | independiente | derivado de la norma | Fuente del resultado esperado                                                                                      | Fichero                                                     |
+| -------------------------- | ------: | ------------: | -------------------: | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
+| Jubilación                 |       6 |             0 |                    6 | Cálculo a mano, recalculado aparte en Python con los JSON de /data (docs/CASOS_ORO_MOTOR.md)                       | `src/engine/jubilacion/casos-oro-motor.test.ts`             |
+| Incapacidad permanente     |      20 |             0 |                   20 | Cuenta a mano en cada caso (bases constantes, hecho causante en 2026).                                             | `src/engine/incapacidad/casos-oro-incapacidad.test.ts`      |
+| Muerte y supervivencia     |      27 |             0 |                   27 | Cuenta a mano en cada caso (bases constantes de 2.000 euros, fallecimiento en 2026).                               | `src/engine/supervivencia/casos-oro-supervivencia.test.ts`  |
+| Pensiones no contributivas |      20 |             0 |                   20 | Cuenta a mano en cada caso (cuantías de 2026 y 2023).                                                              | `src/engine/no-contributivas/casos-oro-pnc.test.ts`         |
+| Pensiones no contributivas |      23 |            23 |                    0 | Cifras publicadas en las guías del IMSERSO de 2022 a 2026 (URL de cada guía en el test; PDF en data-raw/imserso/). | `src/engine/no-contributivas/casos-oro-pnc-imserso.test.ts` |
+| MEI y solidaridad          |      13 |             0 |                   13 | Cuenta a mano en cada caso (DT 42.ª y 43.ª, art. 19 bis).                                                          | `src/engine/mei/casos-oro-mei.test.ts`                      |
+| **Total**                  | **109** |        **23** |               **86** |                                                                                                                    |                                                             |
+
+Además, el contraste con el modelo M5 (`docs/CONTRASTE_M5.md`, 37 casos) y la verificación por rejilla (`scripts/verificacion-motor.ts`) no son casos de oro.
+
+## Casos por motor
+
+### Incapacidad permanente (`casos-oro-incapacidad.test.ts`)
+
+`total-ec-45` (derivado de la norma), `absoluta-ec-45` (derivado de la norma), `gran-incapacidad-ec-45` (derivado de la norma), `total-cualificada-ec-58` (derivado de la norma), `total-ec-suelo-con-rentas` (derivado de la norma), `total-ec-minima-sin-rentas` (derivado de la norma), `absoluta-minima` (derivado de la norma), `gran-incapacidad-maxima` (derivado de la norma), `gran-incapacidad-complemento-minimo` (derivado de la norma), `total-anl-periodo-favorable` (derivado de la norma), `total-anl-periodo-elegido` (derivado de la norma), `parcial-ec` (derivado de la norma), `absoluta-ec-22-periodo-corto` (derivado de la norma), `total-ec-63-menos-de-15-anios` (derivado de la norma), `ec-excluida-por-jubilacion` (derivado de la norma), `anl-68-art-196-5` (derivado de la norma), `total-ec-brecha` (derivado de la norma), `gran-incapacidad-trabaja` (derivado de la norma), `absoluta-ec-sin-alta-con-lagunas` (derivado de la norma), `total-at-base-facilitada` (derivado de la norma)
+
+### Muerte y supervivencia (`casos-oro-supervivencia.test.ts`)
+
+`viudedad-52` (derivado de la norma), `viudedad-60-mayor-65` (derivado de la norma), `viudedad-70-cargas` (derivado de la norma), `viudedad-70-reducida` (derivado de la norma), `viudedad-prestacion-temporal` (derivado de la norma), `pareja-hecho` (derivado de la norma), `pareja-hijos-redaccion-2022` (derivado de la norma), `pareja-hijos-redaccion-2026` (derivado de la norma), `pareja-sin-inscripcion-temporal` (derivado de la norma), `excónyuge-compensatoria` (derivado de la norma), `concurrencia-garantia-40` (derivado de la norma), `orfandad-un-huerfano` (derivado de la norma), `orfandad-absoluta-dos` (derivado de la norma), `orfandad-absoluta-tres-limite` (derivado de la norma), `viudedad-cuatro-huerfanos` (derivado de la norma), `viudedad-70-tres-huerfanos-118` (derivado de la norma), `orfandad-23-anios-ingresos` (derivado de la norma), `orfandad-sin-carencia` (derivado de la norma), `familiares-nieto-incremento` (derivado de la norma), `familiares-padres` (derivado de la norma), `familiares-limite-conjunto` (derivado de la norma), `causante-pensionista` (derivado de la norma), `sin-alta-quince-anios` (derivado de la norma), `sin-alta-catorce-anios` (derivado de la norma), `accidente-no-laboral-sin-carencia` (derivado de la norma), `viudedad-pension-maxima` (derivado de la norma), `viudo-brecha` (derivado de la norma)
+
+### Pensiones no contributivas (`casos-oro-pnc.test.ts`)
+
+`incapacidad-integra` (derivado de la norma), `incapacidad-rentas-35` (derivado de la norma), `incapacidad-rentas-en-el-umbral` (derivado de la norma), `incapacidad-rentas-casi-la-cuantia` (derivado de la norma), `incapacidad-rentas-igual-cuantia` (derivado de la norma), `incapacidad-tercera-persona` (derivado de la norma), `incapacidad-tercera-persona-grado-74` (derivado de la norma), `incapacidad-dos-beneficiarios` (derivado de la norma), `incapacidad-unidad-no-beneficiario` (derivado de la norma), `incapacidad-unidad-sin-derecho` (derivado de la norma), `incapacidad-unidad-hijos-padres` (derivado de la norma), `incapacidad-minimo-25` (derivado de la norma), `incapacidad-alquiler` (derivado de la norma), `incapacidad-trabajo-cuatro-anios` (derivado de la norma), `jubilacion-integra` (derivado de la norma), `jubilacion-64-anios` (derivado de la norma), `jubilacion-65-justos` (derivado de la norma), `jubilacion-residencia-119` (derivado de la norma), `jubilacion-rentas` (derivado de la norma), `jubilacion-dos-convivientes-rentas` (derivado de la norma)
+
+### Pensiones no contributivas (`casos-oro-pnc-imserso.test.ts`)
+
+`integra-2022` (independiente), `integra-2023` (independiente), `integra-2024` (independiente), `integra-2025` (independiente), `integra-2026` (independiente), `tercera-persona-2026` (independiente), `dos-beneficiarios-2026` (independiente), `tres-beneficiarios-2026` (independiente), `cuatro-beneficiarios-2026` (independiente), `cinco-beneficiarios-2026` (independiente), `minimo-25-2026` (independiente), `trabajo-limite-2022` (independiente), `trabajo-limite-2023` (independiente), `trabajo-limite-2024` (independiente), `trabajo-limite-2025` (independiente), `trabajo-limite-2026` (independiente), `limite-2-convivientes-por-debajo` (independiente), `limite-2-convivientes-en-el-limite` (independiente), `limite-10-convivientes-en-el-limite` (independiente), `limite-2-convivientes-descendientes` (independiente), `limite-5-convivientes-descendientes` (independiente), `limite-2-convivientes-tercera-persona` (independiente), `limite-2-convivientes-tercera-persona-en-el-limite` (independiente)
+
+### MEI y solidaridad (`casos-oro-mei.test.ts`)
+
+`mei-2023` (derivado de la norma), `mei-2026` (derivado de la norma), `mei-2029` (derivado de la norma), `mei-2035-mismo-porcentaje` (derivado de la norma), `mei-antes-de-2023` (derivado de la norma), `mei-contingencias-profesionales` (derivado de la norma), `solidaridad-2026-dos-tramos` (derivado de la norma), `solidaridad-2026-tres-tramos` (derivado de la norma), `solidaridad-2025` (derivado de la norma), `solidaridad-sin-exceso` (derivado de la norma), `solidaridad-antes-de-2025` (derivado de la norma), `solidaridad-tipos-finales` (derivado de la norma), `cotizacion-adicional-2026` (derivado de la norma)
