@@ -2576,6 +2576,21 @@
       "estado": "verificada"
     },
     {
+      "id": "param-cuota-solidaridad-calendario",
+      "texto": "Cotización adicional de solidaridad: calendario de la DT 42.ª: 7,0 (%) en 2045.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/cuota-solidaridad-calendario.json#2045-tramo-c"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
       "id": "param-cuota-solidaridad-tipos",
       "texto": "Cotización adicional de solidaridad: tipos por tramo: 1,46 (%) en 2026.",
       "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
@@ -3025,6 +3040,31 @@
       "preguntaActuarial": "Comprobar la afirmación sobre el destino del MEI (art. 127 bis: nutre el Fondo de Reserva y no computa a efectos de prestaciones). Contrastar la recaudación (derechos reconocidos de «Mecanismo de Equidad Intergeneracional» en la ejecución del presupuesto) con las dotaciones anuales del Fondo de data/sistema/fondo-reserva-series y explicar la diferencia."
     },
     {
+      "id": "param-mei-reglas",
+      "texto": "MEI y cotización adicional de solidaridad: el MEI se mantiene en 1,2 puntos de 2030 a 2050 (1,00 la empresa y 0,2 el trabajador), es una cotización finalista sin bonificaciones y no computa para prestaciones; la cuota de solidaridad se aplica por tramos a la retribución que supera la base máxima, con los tipos de la DT 42.ª de 2025 a 2045 (art. 127 bis, art. 19 bis, DT 42.ª y DT 43.ª TRLGSS).",
+      "ubicacion": "Motor de pensiones no contributivas y MEI (docs/MOTOR_NO_CONTRIBUTIVAS_MEI.md)",
+      "datos": [
+        "parametros/mei-reglas.json#tipo-total-2030-2050",
+        "parametros/mei-reglas.json#tipo-empresa-2030-2050",
+        "parametros/mei-reglas.json#ultimo-anio",
+        "parametros/mei-reglas.json#aplicable-contingencia-jubilacion",
+        "parametros/mei-reglas.json#solidaridad-tramo-1-limite-pct",
+        "parametros/mei-reglas.json#solidaridad-tipo-final-tramo-a",
+        "parametros/mei-reglas.json#solidaridad-primer-anio"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Lecturas abiertas del MEI y de la cotización de solidaridad (opciones del motor; efecto en docs/INFORME_VERIFICACION.md, Fase 2-B-3): (a) el art. 127 bis no nombra la base: el motor aplica el tipo a la base de cotización por contingencias comunes (por defecto) o, alternativamente, a la retribución completa, también la parte que supera la base máxima y cotiza como solidaridad (+17,6 % en el caso típico); (b) de 2030 a 2050 el reparto del 1,2 se supone igual que en 2029 (1,00 empresa y 0,2 trabajador) por «igual distribución» de la DT 43.ª; (c) la cuota de solidaridad se reparte con la proporción de los tipos de contingencias comunes de empresa y trabajador (DT 42.ª) y, desde 2045, rigen los tipos del art. 19 bis, que coinciden con los de 2045; (d) el MEI no se aplica antes de 2023 ni a las contingencias profesionales y lanza NoImplementada después de 2050 (la ley no fija el tipo). Confirmar."
+    },
+    {
       "id": "param-mei-tipo-empresa",
       "texto": "MEI: parte a cargo de la empresa: 1,0 (puntos porcentuales) en 2029.",
       "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
@@ -3275,6 +3315,22 @@
       "preguntaActuarial": "Comprobar la regla «ventana de N meses de la que se toman las M bases de mayor importe» (en 2037, ventana de 348 meses y 324 bases): confirmar con el art. 209 TRLGSS y la DT 4.ª que N y M de cada año son los de la norma y que los meses descartados (24) se elijen por mayor base, no por antigüedad."
     },
     {
+      "id": "param-pnc-complemento-alquiler",
+      "texto": "Pensión no contributiva: complemento de alquiler de vivienda: 525,0 (euros/año) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/pnc-complemento-alquiler.json#2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
       "id": "param-pnc-importe-anual",
       "texto": "Pensión no contributiva: importe anual: 8803,2 (euros/año) en 2026.",
       "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
@@ -3289,6 +3345,50 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada"
+    },
+    {
+      "id": "param-pnc-iprem-anual-sin-pagas-extra",
+      "texto": "IPREM anual sin pagas extraordinarias (límite del art. 366 TRLGSS): 7200,0 (euros/año) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/pnc-iprem-anual-sin-pagas-extra.json#2026"],
+      "fuentes": [
+        {
+          "title": "Guía resumen de aplicación de las pensiones no contributivas de la Seguridad Social, año 2026",
+          "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+          "url": "https://imserso.es/documents/20123/1595507/pncresumen2026.pdf/c4b41c80-63fe-942d-7231-f3ee20e28694",
+          "docId": "pncresumen2026"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "param-pnc-reglas",
+      "texto": "Pensiones no contributivas: requisitos (mayor de 18 y menor de 65 años con discapacidad de al menos el 65 % y cinco años de residencia en incapacidad; 65 años y diez años de residencia en jubilación), cuantía íntegra anual, reducción de las rentas propias que superan el 35 %, mínimo del 25 %, límite de acumulación de recursos de la unidad económica (70 % por cada conviviente adicional), complemento del 50 % por tercera persona y compatibilidad con el trabajo (arts. 363 a 370 TRLGSS y guías del IMSERSO).",
+      "ubicacion": "Motor de pensiones no contributivas y MEI (docs/MOTOR_NO_CONTRIBUTIVAS_MEI.md)",
+      "datos": [
+        "parametros/pnc-reglas.json#incapacidad-edad-minima-meses",
+        "parametros/pnc-reglas.json#incapacidad-grado-minimo-pct",
+        "parametros/pnc-reglas.json#incapacidad-residencia-total-meses",
+        "parametros/pnc-reglas.json#jubilacion-residencia-total-meses",
+        "parametros/pnc-reglas.json#unidad-economica-limite-pct-convivientes",
+        "parametros/pnc-reglas.json#rentas-compatibles-pct",
+        "parametros/pnc-reglas.json#cuantia-minima-pct",
+        "parametros/pnc-reglas.json#complemento-tercera-persona-pct",
+        "parametros/pnc-reglas.json#compatibilidad-trabajo-limite-iprem",
+        "parametros/pnc-reglas.json#limite-acumulacion-con-tercera-persona"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Lecturas abiertas de las pensiones no contributivas (opciones del motor; efecto en docs/INFORME_VERIFICACION.md, Fase 2-B-3): (a) art. 364.2: el 35 % de rentas compatibles se calcula sobre la cuantía íntegra (por defecto; es lo que aplica la guía del IMSERSO) o sobre la cuantía por beneficiario de la unidad económica (-7,0 % en el caso típico); (b) art. 366: el límite de compatibilidad con el trabajo suma el IPREM anual y la cuantía íntegra (por defecto; es el límite que publica el IMSERSO: 16.003,20 en 2026) o la pensión reconocida (-40,8 %); (c) art. 364.2 in fine («salvo lo dispuesto en el artículo 366»): el motor lee que el límite del art. 366 sustituye a la reducción general por rentas durante los cuatro primeros años de actividad (alternativa: aplicar ambas); (d) art. 363.2: con derecho al complemento de tercera persona, el límite de acumulación de recursos se calcula sobre la cuantía con el complemento (aplicación del IMSERSO, que no es texto de la ley; por defecto) o solo sobre la íntegra. Otras decisiones: «mayor de dieciocho» se lee como más de 18 años en la fecha de la solicitud; los efectos económicos son del primer día del mes siguiente a la solicitud (arts. 365 y 371) y la cuantía es la de ese año; la cuantía de 2023 es la del incremento extraordinario del art. 77 del RDL 20/2022 (6.784,54), no la del RD 1058/2022 (6.402,20); el complemento de alquiler de 2024 no consta en el texto descargado. Confirmar (a)-(d)."
     },
     {
       "id": "param-prestamos-estado-seguridad-social",

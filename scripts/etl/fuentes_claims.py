@@ -35,6 +35,14 @@ SV_CLAIMS = [
     ('-limites', ['limite-conjunto-pct-br', 'limite-excepcion-viudedad-umbral-pct', 'limite-orfandad-max-pct', 'limite-preferencia-orfandad', 'limite-viudedad-orfandad-orden-1967', 'pareja-convivencia-meses', 'prestacion-temporal-meses'],
      'Límite conjunto de muerte y supervivencia: la suma de las pensiones no excede de la base reguladora (salvo viudedad de más del 52 % con varias orfandades, que pueden llegar al 48 %), con preferencia de la orfandad sobre los familiares y orden nietos y hermanos, padres, abuelos, hijos y hermanos de pensionistas (art. 229 TRLGSS); parejas de hecho y prestación temporal de dos años (arts. 221 y 222).'),
 ]
+PNC_CLAIMS = [
+    ('', ['incapacidad-edad-minima-meses', 'incapacidad-grado-minimo-pct', 'incapacidad-residencia-total-meses', 'jubilacion-residencia-total-meses', 'unidad-economica-limite-pct-convivientes', 'rentas-compatibles-pct', 'cuantia-minima-pct', 'complemento-tercera-persona-pct', 'compatibilidad-trabajo-limite-iprem', 'limite-acumulacion-con-tercera-persona'],
+     'Pensiones no contributivas: requisitos (mayor de 18 y menor de 65 años con discapacidad de al menos el 65 % y cinco años de residencia en incapacidad; 65 años y diez años de residencia en jubilación), cuantía íntegra anual, reducción de las rentas propias que superan el 35 %, mínimo del 25 %, límite de acumulación de recursos de la unidad económica (70 % por cada conviviente adicional), complemento del 50 % por tercera persona y compatibilidad con el trabajo (arts. 363 a 370 TRLGSS y guías del IMSERSO).'),
+]
+MEI_CLAIMS = [
+    ('', ['tipo-total-2030-2050', 'tipo-empresa-2030-2050', 'ultimo-anio', 'aplicable-contingencia-jubilacion', 'solidaridad-tramo-1-limite-pct', 'solidaridad-tipo-final-tramo-a', 'solidaridad-primer-anio'],
+     'MEI y cotización adicional de solidaridad: el MEI se mantiene en 1,2 puntos de 2030 a 2050 (1,00 la empresa y 0,2 el trabajador), es una cotización finalista sin bonificaciones y no computa para prestaciones; la cuota de solidaridad se aplica por tramos a la retribución que supera la base máxima, con los tipos de la DT 42.ª de 2025 a 2045 (art. 127 bis, art. 19 bis, DT 42.ª y DT 43.ª TRLGSS).'),
+]
 MITO_PREGUNTAS = {}
 CLAIMS_SERIES_NUEVAS = {
     ('salario-medio-definiciones', 'eaes-ambos'), ('salario-medio-definiciones', 'etcl-coste-salarial-total'),
@@ -139,6 +147,13 @@ for ruta in sorted(glob.glob(f'{REPO}/data/*/*.json')):
         for sufijo, ids, texto in IP_CLAIMS:
             x = por[ids[0]]
             añade(f"param-{d['id']}{sufijo}", texto, 'Motor de incapacidad permanente (docs/MOTOR_INCAPACIDAD.md)',
+                  [f"{rel}#{i}" for i in ids], x['source'], x['confidence'])
+    elif carpeta == 'parametros' and d['id'] in ('pnc-reglas', 'mei-reglas'):
+        # Fase 2-B-3: una afirmación por fichero de reglas
+        por = {z['id']: z for z in d['data']}
+        for sufijo, ids, texto in (PNC_CLAIMS if d['id'] == 'pnc-reglas' else MEI_CLAIMS):
+            x = por[ids[0]]
+            añade(f"param-{d['id']}{sufijo}", texto, 'Motor de pensiones no contributivas y MEI (docs/MOTOR_NO_CONTRIBUTIVAS_MEI.md)',
                   [f"{rel}#{i}" for i in ids], x['source'], x['confidence'])
     elif carpeta == 'parametros' and d['id'] == 'supervivencia-reglas':
         # Fase 2-B-2: tres afirmaciones (causante y base, cuantía, límites y beneficiarios)
@@ -250,6 +265,17 @@ REVISION['param-supervivencia-reglas-limites'] = ('Preguntas del límite conjunt
     '(c) el reparto entre excónyuges y cónyuge actual (art. 220.2) usa los meses convividos y garantiza el 40 % al cónyuge o pareja actual; el porcentaje no asignado por la compensatoria incrementa la orfandad absoluta (art. 38.1.2.º Decreto 3158/1966); '
     '(d) desde el 21/10/2026 (RDL 31/2026) la pareja de hecho con hijos comunes necesita dos años de convivencia y no la inscripción; antes, solo la inscripción con dos años de antelación; '
     '(e) madre y abuelas: el requisito de estado civil del art. 22.1.2) de la Orden de 1967 se recibe como dato; hijos y hermanos de pensionistas mayores de 45 años (art. 226.2): su desarrollo reglamentario no se ha localizado y el motor exige ingresos no superiores al SMI anual. Confirmar.')
+REVISION['param-pnc-reglas'] = ('Lecturas abiertas de las pensiones no contributivas (opciones del motor; efecto en docs/INFORME_VERIFICACION.md, Fase 2-B-3): '
+    '(a) art. 364.2: el 35 % de rentas compatibles se calcula sobre la cuantía íntegra (por defecto; es lo que aplica la guía del IMSERSO) o sobre la cuantía por beneficiario de la unidad económica (-7,0 % en el caso típico); '
+    '(b) art. 366: el límite de compatibilidad con el trabajo suma el IPREM anual y la cuantía íntegra (por defecto; es el límite que publica el IMSERSO: 16.003,20 en 2026) o la pensión reconocida (-40,8 %); '
+    '(c) art. 364.2 in fine («salvo lo dispuesto en el artículo 366»): el motor lee que el límite del art. 366 sustituye a la reducción general por rentas durante los cuatro primeros años de actividad (alternativa: aplicar ambas); '
+    '(d) art. 363.2: con derecho al complemento de tercera persona, el límite de acumulación de recursos se calcula sobre la cuantía con el complemento (aplicación del IMSERSO, que no es texto de la ley; por defecto) o solo sobre la íntegra. '
+    'Otras decisiones: «mayor de dieciocho» se lee como más de 18 años en la fecha de la solicitud; los efectos económicos son del primer día del mes siguiente a la solicitud (arts. 365 y 371) y la cuantía es la de ese año; la cuantía de 2023 es la del incremento extraordinario del art. 77 del RDL 20/2022 (6.784,54), no la del RD 1058/2022 (6.402,20); el complemento de alquiler de 2024 no consta en el texto descargado. Confirmar (a)-(d).')
+REVISION['param-mei-reglas'] = ('Lecturas abiertas del MEI y de la cotización de solidaridad (opciones del motor; efecto en docs/INFORME_VERIFICACION.md, Fase 2-B-3): '
+    '(a) el art. 127 bis no nombra la base: el motor aplica el tipo a la base de cotización por contingencias comunes (por defecto) o, alternativamente, a la retribución completa, también la parte que supera la base máxima y cotiza como solidaridad (+17,6 % en el caso típico); '
+    '(b) de 2030 a 2050 el reparto del 1,2 se supone igual que en 2029 (1,00 empresa y 0,2 trabajador) por «igual distribución» de la DT 43.ª; '
+    '(c) la cuota de solidaridad se reparte con la proporción de los tipos de contingencias comunes de empresa y trabajador (DT 42.ª) y, desde 2045, rigen los tipos del art. 19 bis, que coinciden con los de 2045; '
+    '(d) el MEI no se aplica antes de 2023 ni a las contingencias profesionales y lanza NoImplementada después de 2050 (la ley no fija el tipo). Confirmar.')
 REVISION_POR_DEFECTO = 'no-requiere'
 
 ORG = {'Boletín Oficial del Estado (BOE)': 'BOE', 'Instituto Nacional de Estadística (INE)': 'INE'}
@@ -294,8 +320,9 @@ md = ['# Revisión actuarial', '',
       'Para cambiar el estado de una afirmación basta con añadirle `revisionActuarial` (`revisada`, `rechazada` o `pendiente` con `preguntaActuarial`); `npm run validate:data` exige la pregunta en las pendientes.', '',
       'Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"`) en la afirmación de `docs/claims.json` y anotar el criterio en `notas`.', '']
 grupos = [('Reglas de cálculo de la pensión de jubilación', [i for i in REVISION if i.startswith('param-') and any(k in i for k in ('escala', 'divisor', 'periodo', 'lagunas', 'actualizacion', 'opcion', 'coeficientes', 'demora', 'carrera'))]),
-          ('Reglas de evolución (mínimas, revalorización, base y pensión máximas, MEI)', [i for i in REVISION if i.startswith('param-') and any(k in i for k in ('minima', 'revalorizacion', 'incremento', 'mei'))]),
+          ('Reglas de evolución (mínimas, revalorización, base y pensión máximas, MEI)', [i for i in REVISION if i.startswith('param-') and not i.startswith('param-mei-reglas') and any(k in i for k in ('minima', 'revalorizacion', 'incremento', 'mei'))]),
           ('Reglas de cálculo de la incapacidad permanente', [i for i in REVISION if i.startswith('param-incapacidad-permanente')]),
+          ('Reglas de las pensiones no contributivas y del MEI', [i for i in REVISION if i.startswith(('param-pnc-reglas', 'param-mei-reglas'))]),
           ('Reglas de cálculo de muerte y supervivencia', [i for i in REVISION if i.startswith('param-supervivencia-reglas')]),
           ('Definiciones (ratio afiliados/pensionistas, pensionistas y pensiones, déficit, Fondo de Reserva)', [i for i in REVISION if i.startswith('sistema-')]),
           ('Definiciones de salario medio', [i for i in REVISION if i.startswith('macro-')]),

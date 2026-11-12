@@ -61,8 +61,8 @@ const s = LECTURAS_SUPERVIVENCIA_POR_DEFECTO;
 const p = LECTURAS_PNC_POR_DEFECTO;
 const m = LECTURAS_MEI_POR_DEFECTO;
 
-function lectura<M extends MotorLectura>(
-  motor: M,
+function lectura(
+  motor: MotorLectura,
   opcion: string,
   descripcion: string,
   porDefecto: string,
@@ -315,7 +315,7 @@ export const LECTURAS_ABIERTAS: readonly LecturaAbierta[] = [
     p.baseRentasCompatibles,
     ['cuantia-integra', 'cuantia-por-beneficiario'],
     S_2B3,
-    '(a) base del porcentaje de rentas compatibles',
+    '(a) base del 35 % de las rentas',
     'param-pnc-reglas',
   ),
   lectura(
@@ -325,7 +325,7 @@ export const LECTURAS_ABIERTAS: readonly LecturaAbierta[] = [
     p.limiteTrabajo,
     ['cuantia-integra', 'pension-reconocida'],
     S_2B3,
-    '(b) límite del art. 366 con trabajo',
+    '(b) límite del art. 366',
     'param-pnc-reglas',
   ),
   lectura(

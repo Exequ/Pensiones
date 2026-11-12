@@ -275,6 +275,7 @@ export function cotizacionAdicionalMensual(
   opciones: OpcionesMEI = {},
 ): CotizacionAdicional {
   const lecturas: LecturasMEI = { ...LECTURAS_MEI_POR_DEFECTO, ...opciones.lecturasMEI };
+  tipoMEI(params, anio); // falla antes (NoImplementada) si la ley no fija el tipo del año
   const ctx = crearContexto(params, opciones);
   const baseMax = opciones.baseMaximaMensual ?? ctx.baseMaxima(anio).valor;
   const baseCotizacion = Math.min(retribucionMensual, baseMax);

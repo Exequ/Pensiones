@@ -414,3 +414,55 @@ Lectura de la tabla:
 - No hay contraste con resoluciones reales ni con el simulador de la Seguridad Social, ni con un modelo propio (M5 no calcula la supervivencia).
 - La base reguladora de las contingencias profesionales no se calcula (Reglamento de 1956 no descargado).
 - Los requisitos de ingresos se comparan con el SMI anual; el motor no comprueba la definición de cada tipo de renta (se reciben como datos).
+
+## Fase 2-B-3: pensiones no contributivas y MEI
+
+Verificación de los motores `src/engine/no-contributivas/` y `src/engine/mei/` (descritos en `docs/MOTOR_NO_CONTRIBUTIVAS_MEI.md`) y de los datos nuevos.
+
+### Higiene de datos
+
+- `scripts/etl/minimas_citas_historicas.py` aplica el método de `minimas_citas.py` a las cuantías mínimas de 2013 (Real Decreto-ley 29/2012, descargado) y de 2021 (Ley 11/2020): la cita de la Fase 1A no contenía la cifra; cada una pasa a ser la fila literal del cuadro, comprobada por código, con la celda de la columna correspondiente coincidiendo con el valor (0 discrepancias, 0 valores cambiados). Un test nuevo (`scripts/citas-cifras.test.ts`) comprueba que la cita de cada cuantía de 15 ficheros (mínimas, PNC, solidaridad, MEI, SMI, pensión máxima, límite de ingresos y brecha) contiene su cifra.
+- **SMI de 2027**: comprobado una sola vez el 2026-11-12 en la API de legislación consolidada del BOE (búsqueda por «interprofesional», la más reciente es el Real Decreto 126/2026, de 18 de febrero): no está publicado; se deja como está.
+- **Cuantía de la PNC de 2023**: la guía del IMSERSO de 2023 publica 6.784,54 euros (15 % sobre 5.899,60 por el incremento extraordinario del art. 77 del RDL 20/2022) y no los 6.402,20 que `/data` tomaba del RD 1058/2022. Se corrige el dato (docs/DISCREPANCIAS.md). Las demás cuantías (2022, 2024, 2025 y 2026) coinciden con las guías.
+
+### Datos extraídos
+
+- `scripts/etl/pnc_mei_reglas.py`: `pnc-reglas` (arts. 363, 364, 366, 369 y 370 TRLGSS, art. 46 de las pagas y RD 1191/2012), `pnc-complemento-alquiler` (2022, 2023, 2025 y 2026), `mei-reglas` (DT 43.ª de 2030 a 2050, art. 127 bis y art. 19 bis) y `cuota-solidaridad-calendario` (63 tipos de la DT 42.ª, 2025-2045). Cada cita se comprueba en todas las redacciones vigentes desde 2022.
+- `scripts/etl/pnc_imserso.py`: guías del IMSERSO de 2022 a 2026 (`data-raw/imserso/`, con huella), IPREM anual de cada año (`pnc-iprem-anual-sin-pagas-extra`, que cubre 2024-2026) y la aplicación del límite de acumulación con tercera persona.
+- **MEI**: contraste con `modelos/m4` (solo lectura, `scripts/contraste-mei-modelos.test.ts`): M4 lee el mismo `mei-tipo-total`, fija 2050 como último año (coincide con la DT 43.ª), mantiene el 1,2 hasta 2050 (coincide con `mei-reglas`) y pone 0 después (el motor lanza `NoImplementada`). Sin diferencias de valores; M4 no modela el reparto ni la solidaridad.
+- El calendario de la solidaridad coincide con los tipos de 2025 y 2026 de la orden de cotización (`cuota-solidaridad-tipos`, test).
+
+### Casos de oro
+
+- **PNC: 24 casos «independientes»** (`casos-oro-pnc-imserso.test.ts`) con las cifras que publican las guías del IMSERSO (cuantía íntegra de 2022 a 2026, complemento de tercera persona, cuantía individual con 2 a 5 beneficiarios, mínimo del 25 %, límites de acumulación de 2 y 10 convivientes, con descendientes o ascendientes y con tercera persona, y los límites del art. 366 de cada año, con su URL) y **21 «derivados de la norma»** (`casos-oro-pnc.test.ts`). Al contrastar con la guía, el motor coincidió salvo en dos puntos que se corrigieron: el límite con tercera persona (la guía usa la cuantía incrementada: se añade la lectura `limiteConTerceraPersona`) y el redondeo del límite al céntimo (el borde exacto fallaba por coma flotante).
+- **MEI y solidaridad: 13 casos «derivados de la norma»** (`casos-oro-mei.test.ts`); no se ha localizado ningún ejemplo resuelto oficial.
+
+### Propiedades
+
+PNC: la pensión no sube con las rentas, nunca supera la íntegra ni baja del 25 % cuando hay derecho (5 años × 5 estructuras de unidad económica × 81 niveles de rentas), la cuantía de cada beneficiario no sube con el número de beneficiarios. MEI: la cuota es lineal en la base; la solidaridad no baja con la retribución, es 0 sin exceso, los tramos suman el exceso y el reparto suma la cuota; el calendario sube cada año en cada tramo.
+
+### Cómo cambia el resultado con cada lectura abierta
+
+Generado con `npx tsx scripts/lecturas-abiertas-pnc-mei.ts`:
+
+| Lectura                                            | Caso                                                    | Alternativa                       | Magnitud        | Por defecto | Alternativa | Variación |
+| -------------------------------------------------- | ------------------------------------------------------- | --------------------------------- | --------------- | ----------: | ----------: | --------: |
+| (a) base del 35 % de las rentas                    | dos beneficiarios, rentas propias de 4.000 €, 2026      | sobre la cuantía por beneficiario | pensión €/año   |     6563,84 |     6101,67 |   -7,04 % |
+| (b) límite del art. 366                            | rentas ajenas de 14.000 €, 10.000 € de actividad, 2023  | pensión reconocida                | pensión €/año   |     3984,54 |     2359,13 |  -40,79 % |
+| (c) rentas del trabajo en los cuatro primeros años | 10.000 € de actividad, 2023                             | se suman las dos reducciones      | pensión €/año   |     3984,54 |        0,00 | -100,00 % |
+| (d) límite de acumulación con tercera persona      | dos convivientes, rentas de la unidad de 20.000 €, 2026 | sin complemento                   | pensión €/año   |     2448,16 |        0,00 | -100,00 % |
+| (e) base del MEI                                   | retribución de 6.000 €/mes, 2026                        | retribución completa              | cuota MEI €/mes |       45,91 |       54,00 |   17,62 % |
+
+Lectura de la tabla:
+
+- **(a) Base del 35 %**: con varios beneficiarios, calcularlo sobre la cuantía de cada uno baja la pensión un 7,0 % en el caso.
+- **(b) Límite del art. 366**: con la pensión reconocida en lugar de la íntegra, la pensión baja un 40,8 % en el caso (el límite que publica el IMSERSO es el de la cuantía íntegra: es el valor por defecto).
+- **(c) Cuatro primeros años de actividad**: sumar la reducción general por rentas a la del art. 366 elimina la pensión en el caso.
+- **(d) Límite con tercera persona**: sin el complemento en el límite, el caso queda sin derecho (el IMSERSO lo calcula con el complemento: valor por defecto).
+- **(e) Base del MEI**: sobre la retribución completa, la cuota sube un 17,6 % para una retribución por encima de la base máxima.
+
+### Limitaciones de la verificación
+
+- No hay contraste con resoluciones reales; las guías del IMSERSO no son norma (confianza «media» en el dato de la aplicación del límite con tercera persona).
+- El complemento de alquiler de 2024 no consta (el RDL 8/2023 descargado no repite el importe) y el RD 1191/2012 se usa en su texto original (el BOE no ofrece versión consolidada).
+- La unidad económica se describe con el número de convivientes y beneficiarios y las rentas de la unidad: no se clasifica quién forma parte de ella ni cada tipo de renta.
