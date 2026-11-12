@@ -33,8 +33,8 @@ const FICHEROS = [
 function numerosDe(texto: string): number[] {
   const res: number[] = [];
   // 1.234,56 | 1 234,56 | 1234,56 | 1234 | 0,5
-  for (const m of texto.matchAll(/\d{1,3}(?:[.  ]\d{3})+(?:,\d+)?|\d+(?:,\d+)?/g)) {
-    res.push(Number(m[0].replace(/[.  ]/g, '').replace(',', '.')));
+  for (const m of texto.matchAll(/\d{1,3}(?:[. \u00a0]\d{3})+(?:,\d+)?|\d+(?:,\d+)?/g)) {
+    res.push(Number(m[0].replace(/[. \u00a0]/g, '').replace(',', '.')));
   }
   return res;
 }

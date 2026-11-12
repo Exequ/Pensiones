@@ -219,14 +219,15 @@ export function calcularPNCConParametros(
     throw new RangeError('beneficiarios debe estar entre 1 y convivientes');
   if (solicitante.rentasAnuales < 0) throw new RangeError('Las rentas no pueden ser negativas');
   // Incapacidad con actividad en los cuatro primeros años: «salvo lo dispuesto en el artículo 366».
+  const trabajoOpc = opciones.trabajo;
   const trabajoEnCuatroAnios =
     incapacidad &&
-    opciones.trabajo !== undefined &&
-    opciones.trabajo.mesesDesdeInicio <= r('compatibilidad-trabajo-anios-meses');
+    trabajoOpc !== undefined &&
+    trabajoOpc.mesesDesdeInicio <= r('compatibilidad-trabajo-anios-meses');
   const sustituye =
     trabajoEnCuatroAnios && lecturas.rentasConTrabajoEnCuatroAnios === 'sustituye-364-2';
   const rentas = sustituye
-    ? Math.max(0, solicitante.rentasAnuales - (opciones.trabajo?.ingresosActividadAnuales ?? 0))
+    ? Math.max(0, solicitante.rentasAnuales - trabajoOpc.ingresosActividadAnuales)
     : solicitante.rentasAnuales;
   const f = r('unidad-economica-limite-pct-convivientes') / 100;
   const factorAscDesc =
