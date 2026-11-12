@@ -183,5 +183,19 @@
   "sha256_original": "0fc178f31f57187a027b8ecdad3547706dc77f81ea5080a02198889a69cbe9e1",
   "fetchedAt": "2026-11-12",
   "nota": "Real Decreto 126/2026, de 18 de febrero, por el que se fija el salario mínimo interprofesional para 2026.. Texto plano del XML del BOE (etiquetas eliminadas)."
+ },
+ "BOE-A-2012-15764.txt": {
+  "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+  "urlDescarga": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2012-15764",
+  "sha256_original": "bbcf575a4c834e372b774771d594a97dee9d452880658b1c91d17a2c68a2da99",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.. Texto plano del XML del BOE (etiquetas eliminadas; celdas de tabla terminadas en « |»)."
+ },
+ "BOE-A-2012-10476.txt": {
+  "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-10476",
+  "urlDescarga": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2012-10476",
+  "sha256_original": "3ebb83c52fd5ffb248d4f1fb0574beb725085128672bbc4ce03e8b0cc6cdd33e",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 1191/2012, de 3 de agosto, por el que se establecen normas para el reconocimiento del complemento de pensión para el alquiler de vivienda a favor de los pensionistas de la Seguridad Social en su modalidad no contributiva.. Texto original del XML del BOE desde «DISPONGO» (etiquetas eliminadas); el BOE no ofrece versión consolidada."
  }
 }

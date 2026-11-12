@@ -51,6 +51,9 @@ const FICHEROS_REGLAS_2B1 = ['incapacidad-permanente-reglas'];
 /** Reglas de muerte y supervivencia de la Fase 2-B-2 (cada dato, con el año de su redacción). */
 const FICHEROS_REGLAS_2B2 = ['supervivencia-reglas'];
 
+/** Reglas de las pensiones no contributivas y del MEI de la Fase 2-B-3 (cada dato, con el año de su redacción). */
+const FICHEROS_REGLAS_2B3 = ['pnc-reglas', 'mei-reglas'];
+
 /** Series con varias cuantías por año (clase de pensión, situación familiar, tramo). */
 const MULTIPLES_POR_ANIO = [
   'pension-minima-',
@@ -63,6 +66,7 @@ const MULTIPLES_POR_ANIO = [
   ...FICHEROS_REGLAS_2A,
   ...FICHEROS_REGLAS_2B1,
   ...FICHEROS_REGLAS_2B2,
+  ...FICHEROS_REGLAS_2B3,
 ];
 /** Ficheros por versión de una regla (el periodo es el año desde el que rige): sin exigir años seguidos. */
 const POR_VERSION = [
@@ -72,6 +76,7 @@ const POR_VERSION = [
   ...FICHEROS_REGLAS_2A,
   ...FICHEROS_REGLAS_2B1,
   ...FICHEROS_REGLAS_2B2,
+  ...FICHEROS_REGLAS_2B3,
 ];
 /** Ficheros de reglas con varios parámetros (unidades distintas) en un mismo fichero. */
 const VARIAS_UNIDADES = [...POR_VERSION, 'pension-minima-regla', 'prestamos-', 'mei-destino'];
@@ -84,6 +89,7 @@ const HUECOS_DOCUMENTADOS: Record<string, string[]> = {
   'iprem-diario.json': ['2019', '2020'],
   'iprem-mensual.json': ['2019', '2020'],
   'pension-maxima.json': ['2011'],
+  'pnc-complemento-alquiler.json': ['2024'],
   'revalorizacion-general.json': ['2011', '2012'],
   'pension-minima-jubilacion.json': ['2000', '2008'],
   'pension-minima-incapacidad.json': ['2000', '2008'],

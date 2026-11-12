@@ -748,9 +748,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con cargas familiares. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con cargas familiares. | | 10.220,00 | |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Viudedad"
     },
     {
       "id": "2013-viud-65-o-discapacidad65-unipersonal",
@@ -765,9 +765,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con sesenta y cinco años, o con discapacidad en grado igual o superior al 65 por 100. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años, o con discapacidad en grado igual o superior al 65 por 100. | | 8.838,20 | |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Viudedad"
     },
     {
       "id": "2013-viud-60-64-unipersonal",
@@ -782,9 +782,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con edad entre sesenta y sesenta y cuatro años. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años. | | 8.267,00 | |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Viudedad"
     },
     {
       "id": "2013-viud-menor60-unipersonal",
@@ -799,9 +799,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con menos de sesenta años. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con menos de sesenta años. | | 6.690,60 | |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Viudedad"
     },
     {
       "id": "2014-viud-cargas-familiares-unipersonal",
@@ -1292,9 +1292,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con cargas familiares … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con cargas familiares | – | 11.170,60 | – |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Viudedad",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -1320,9 +1320,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100 … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100 | – | 9.655,80 | |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Viudedad",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -1348,9 +1348,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con edad entre sesenta y sesenta y cuatro años … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con edad entre sesenta y sesenta y cuatro años | – | 9.034,20 | – |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Viudedad",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -1376,9 +1376,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con menos de sesenta años … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con menos de sesenta años | – | 7.315,00 | – |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Viudedad",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",

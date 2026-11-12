@@ -1700,9 +1700,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Gran invalidez. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Gran invalidez. | 16.357,60 | 13.258,00 | 12.574,80 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente"
     },
     {
       "id": "2013-ip-gran-invalidez-unipersonal",
@@ -1717,9 +1717,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Gran invalidez. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Gran invalidez. | 16.357,60 | 13.258,00 | 12.574,80 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente"
     },
     {
       "id": "2013-ip-gran-invalidez-conyuge-no-cargo",
@@ -1734,9 +1734,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Gran invalidez. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Gran invalidez. | 16.357,60 | 13.258,00 | 12.574,80 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente"
     },
     {
       "id": "2013-ip-absoluta-conyuge-cargo",
@@ -1751,9 +1751,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Absoluta. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Absoluta. | 10.904,60 | 8.838,20 | 8.383,20 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente"
     },
     {
       "id": "2013-ip-absoluta-unipersonal",
@@ -1768,9 +1768,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Absoluta. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Absoluta. | 10.904,60 | 8.838,20 | 8.383,20 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente"
     },
     {
       "id": "2013-ip-absoluta-conyuge-no-cargo",
@@ -1785,9 +1785,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Absoluta. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Absoluta. | 10.904,60 | 8.838,20 | 8.383,20 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente"
     },
     {
       "id": "2013-ip-parcial-at-65-conyuge-cargo",
@@ -1802,9 +1802,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Titular con sesenta y cinco años. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Parcial del régimen de Accidente de Trabajo: Titular con sesenta y cinco años. | 10.904,60 | 8.838,20 | 8.383,20 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente"
     },
     {
       "id": "2013-ip-parcial-at-65-unipersonal",
@@ -1819,9 +1819,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con sesenta y cinco años. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Parcial del régimen de Accidente de Trabajo: Titular con sesenta y cinco años. | 10.904,60 | 8.838,20 | 8.383,20 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente"
     },
     {
       "id": "2013-ip-parcial-at-65-conyuge-no-cargo",
@@ -1836,9 +1836,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Titular con sesenta y cinco años. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Parcial del régimen de Accidente de Trabajo: Titular con sesenta y cinco años. | 10.904,60 | 8.838,20 | 8.383,20 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente"
     },
     {
       "id": "2013-ip-total-enf-comun-menor60-conyuge-cargo",
@@ -1853,9 +1853,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años. | 5.496,40 | 5.496,40 | (*) |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente"
     },
     {
       "id": "2013-ip-total-enf-comun-menor60-unipersonal",
@@ -1870,9 +1870,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años. | 5.496,40 | 5.496,40 | (*) |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente"
     },
     {
       "id": "2014-ip-gran-invalidez-conyuge-cargo",
@@ -3298,9 +3298,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Gran invalidez … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Gran invalidez | 17.871,00 | 14.484,40 | 13.746,60 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -3326,9 +3326,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Gran invalidez … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Gran invalidez | 17.871,00 | 14.484,40 | 13.746,60 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -3354,9 +3354,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Gran invalidez … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Gran invalidez | 17.871,00 | 14.484,40 | 13.746,60 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -3382,9 +3382,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Absoluta … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Absoluta | 11.914,00 | 9.655,80 | 9.164,40 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -3410,9 +3410,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Absoluta … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Absoluta | 11.914,00 | 9.655,80 | 9.164,40 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -3438,9 +3438,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Absoluta … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Absoluta | 11.914,00 | 9.655,80 | 9.164,40 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -3466,9 +3466,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Titular con sesenta y cinco años … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Parcial del régimen de accidentes de trabajo: Titular con sesenta y cinco años | 11.914,00 | 9.655,80 | 9.164,40 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -3494,9 +3494,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con sesenta y cinco años … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Parcial del régimen de accidentes de trabajo: Titular con sesenta y cinco años | 11.914,00 | 9.655,80 | 9.164,40 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -3522,9 +3522,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Titular con sesenta y cinco años … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Parcial del régimen de accidentes de trabajo: Titular con sesenta y cinco años | 11.914,00 | 9.655,80 | 9.164,40 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -3550,9 +3550,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años | 7.119,00 | 7.119,00 | 7.056,00 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -3578,9 +3578,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años | 7.119,00 | 7.119,00 | 7.056,00 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -3606,9 +3606,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Total: Derivada de enfermedad común menor de sesenta años … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Total: Derivada de enfermedad común menor de sesenta años | 7.119,00 | 7.119,00 | 7.056,00 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Incapacidad Permanente",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",

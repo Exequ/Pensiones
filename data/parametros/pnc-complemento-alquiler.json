@@ -1,0 +1,76 @@
+{
+  "tipo": "datos",
+  "id": "pnc-complemento-alquiler",
+  "title": "Pensión no contributiva: complemento de alquiler de vivienda",
+  "description": "Importe anual del complemento de pensión no contributiva para quien carece de vivienda en propiedad y reside en una vivienda alquilada (RD 1191/2012), según la norma de revalorización de cada año.",
+  "data": [
+    {
+      "id": "2022",
+      "value": 525.0,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social para el ejercicio 2022",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Complemento de pensión para quien carece de vivienda en propiedad y vive en alquiler (RD 1191/2012). En el RDL 8/2023 (año 2024) el texto descargado no repite este importe: sin dato en 2024 (PENDIENTE_DATOS).",
+      "quote": "Para el año 2022, tendrá un importe de 525,00 euros anuales el complemento de pensión establecido en favor de la persona pensionista que acredite fehacientemente carecer de vivienda en propiedad",
+      "location": "Artículo de revalorización de las pensiones no contributivas (apartado 2)"
+    },
+    {
+      "id": "2023",
+      "value": 525.0,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2023",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Complemento de pensión para quien carece de vivienda en propiedad y vive en alquiler (RD 1191/2012). En el RDL 8/2023 (año 2024) el texto descargado no repite este importe: sin dato en 2024 (PENDIENTE_DATOS).",
+      "quote": "Para el año 2023, tendrá un importe de 525,00 euros anuales el complemento de pensión establecido en favor de la persona pensionista que acredite fehacientemente carecer de vivienda en propiedad",
+      "location": "Artículo de revalorización de las pensiones no contributivas (apartado 2)"
+    },
+    {
+      "id": "2025",
+      "value": 525.0,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2025",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Complemento de pensión para quien carece de vivienda en propiedad y vive en alquiler (RD 1191/2012). En el RDL 8/2023 (año 2024) el texto descargado no repite este importe: sin dato en 2024 (PENDIENTE_DATOS).",
+      "quote": "Para el año 2025, tendrá un importe de 525,00 euros anuales el complemento de pensión establecido en favor de la persona pensionista que acredite fehacientemente carecer de vivienda en propiedad",
+      "location": "Artículo de revalorización de las pensiones no contributivas (apartado 2)"
+    },
+    {
+      "id": "2026",
+      "value": 525.0,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Complemento de pensión para quien carece de vivienda en propiedad y vive en alquiler (RD 1191/2012). En el RDL 8/2023 (año 2024) el texto descargado no repite este importe: sin dato en 2024 (PENDIENTE_DATOS).",
+      "quote": "Para el año 2026, tendrá un importe de 525,00 euros anuales el complemento de pensión establecido en favor de la persona pensionista que acredite fehacientemente carecer de vivienda en propiedad",
+      "location": "Artículo de revalorización de las pensiones no contributivas (apartado 2)"
+    }
+  ]
+}
