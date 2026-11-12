@@ -239,7 +239,8 @@ export function construirParametros(leer: LeerDatos): ParametrosJubilacion {
 
   const edad65 = mapaPorId(leer, 'jubilacion-edad-65');
   const minimas = new Map<string, number>();
-  for (const f of ['pension-minima-jubilacion'])
+  // Las mínimas de incapacidad permanente (ids «AAAA-ip-…») no coinciden con las de jubilación.
+  for (const f of ['pension-minima-jubilacion', 'pension-minima-incapacidad'])
     for (const [id, v] of mapaPorId(leer, f)) minimas.set(id, v);
 
   return {

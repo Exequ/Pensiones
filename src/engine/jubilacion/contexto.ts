@@ -246,9 +246,12 @@ export function crearContexto(
     const anioDato = Math.min(anio, ultimo);
     const id = `${anioDato}-${claseSituacion}`;
     const v = params.pensionMinima.get(id);
-    if (v === undefined)
-      throw new DatoNoDisponible(`parametros/pension-minima-jubilacion.json#${id}`);
-    const r = ref('pension-minima-jubilacion', id);
+    // Las clases de incapacidad permanente («ip-…») están en su propio fichero de /data.
+    const fichero = claseSituacion.startsWith('ip-')
+      ? 'pension-minima-incapacidad'
+      : 'pension-minima-jubilacion';
+    if (v === undefined) throw new DatoNoDisponible(`parametros/${fichero}.json#${id}`);
+    const r = ref(fichero, id);
     if (anio <= ultimo) return { valor: v, refs: [r] };
     avisos.add(
       'Pensión mínima posterior a 2026: se revaloriza con el IPC del escenario; no se aplica la reducción de la brecha con el umbral de pobreza de la DA 53.ª (2027).',
