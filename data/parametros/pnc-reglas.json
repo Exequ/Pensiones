@@ -512,6 +512,54 @@
       "location": "art. 366 TRLGSS"
     },
     {
+      "id": "pagas-anuales",
+      "value": 14,
+      "unit": "pagas al año",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Dos pagas extraordinarias, en junio y noviembre. Cita comprobada en las redacciones vigentes desde 20160102 (bloque a46).",
+      "quote": "el pago de las pensiones no contributivas de invalidez y jubilación se fraccionará en catorce pagas, correspondientes a cada uno de los meses del año y dos pagas extraordinarias",
+      "location": "art. 46.2 TRLGSS"
+    },
+    {
+      "id": "efectos-incapacidad-mes-siguiente",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "La cuantía aplicable es la del año de los efectos económicos. Cita comprobada en las redacciones vigentes desde 20160102, 20250501 (bloque a365).",
+      "quote": "se producirán a partir del día primero del mes siguiente a aquel en que se presente la solicitud",
+      "location": "art. 365 TRLGSS"
+    },
+    {
+      "id": "efectos-jubilacion-mes-siguiente",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "La cuantía aplicable es la del año de los efectos económicos. Cita comprobada en las redacciones vigentes desde 20160102 (bloque a371).",
+      "quote": "se producirán a partir del día primero del mes siguiente a aquel en que se presente la solicitud",
+      "location": "art. 371 TRLGSS"
+    },
+    {
       "id": "rentas-indemnizaciones-rc-excluidas-desde",
       "value": 20261023,
       "unit": "fecha AAAAMMDD desde la que no computan las indemnizaciones por responsabilidad civil por daños personales",
