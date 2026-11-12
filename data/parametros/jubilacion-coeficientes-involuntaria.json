@@ -1,0 +1,2940 @@
+{
+  "tipo": "datos",
+  "id": "jubilacion-coeficientes-involuntaria",
+  "title": "Coeficientes reductores de la jubilación anticipada por causa no imputable al trabajador (art. 207.2 TRLGSS)",
+  "description": "Porcentaje de reducción de la pensión por meses de anticipación (1 a 48) y tramo de periodo cotizado (t1 a t4), según el cuadro del art. 207.2 en la redacción de la Ley 21/2021 (en vigor desde 2022). El periodo es el año desde el que rige.",
+  "data": [
+    {
+      "id": "t1-48",
+      "value": 30.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo 1 de periodo cotizado, 48 meses de anticipación. Cuadro del art. 207.2: la reducción se aplica por cada mes o fracción de mes de anticipación.",
+      "quote": "| 48 | 30,00 | 28,00 | 26,00 | 24,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-48",
+      "value": 28.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo 2 de periodo cotizado, 48 meses de anticipación. Cuadro del art. 207.2: la reducción se aplica por cada mes o fracción de mes de anticipación.",
+      "quote": "| 48 | 30,00 | 28,00 | 26,00 | 24,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-48",
+      "value": 26.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo 3 de periodo cotizado, 48 meses de anticipación. Cuadro del art. 207.2: la reducción se aplica por cada mes o fracción de mes de anticipación.",
+      "quote": "| 48 | 30,00 | 28,00 | 26,00 | 24,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-48",
+      "value": 24.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo 4 de periodo cotizado, 48 meses de anticipación. Cuadro del art. 207.2: la reducción se aplica por cada mes o fracción de mes de anticipación.",
+      "quote": "| 48 | 30,00 | 28,00 | 26,00 | 24,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-47",
+      "value": 29.38,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 47 | 29,38 | 27,42 | 25,46 | 23,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-47",
+      "value": 27.42,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 47 | 29,38 | 27,42 | 25,46 | 23,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-47",
+      "value": 25.46,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 47 | 29,38 | 27,42 | 25,46 | 23,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-47",
+      "value": 23.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 47 | 29,38 | 27,42 | 25,46 | 23,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-46",
+      "value": 28.75,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 46 | 28,75 | 26,83 | 24,92 | 23,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-46",
+      "value": 26.83,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 46 | 28,75 | 26,83 | 24,92 | 23,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-46",
+      "value": 24.92,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 46 | 28,75 | 26,83 | 24,92 | 23,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-46",
+      "value": 23.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 46 | 28,75 | 26,83 | 24,92 | 23,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-45",
+      "value": 28.13,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 45 | 28,13 | 26,25 | 24,38 | 22,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-45",
+      "value": 26.25,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 45 | 28,13 | 26,25 | 24,38 | 22,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-45",
+      "value": 24.38,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 45 | 28,13 | 26,25 | 24,38 | 22,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-45",
+      "value": 22.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 45 | 28,13 | 26,25 | 24,38 | 22,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-44",
+      "value": 27.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 44 | 27,50 | 25,67 | 23,83 | 22,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-44",
+      "value": 25.67,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 44 | 27,50 | 25,67 | 23,83 | 22,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-44",
+      "value": 23.83,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 44 | 27,50 | 25,67 | 23,83 | 22,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-44",
+      "value": 22.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 44 | 27,50 | 25,67 | 23,83 | 22,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-43",
+      "value": 26.88,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 43 | 26,88 | 25,08 | 23,29 | 21,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-43",
+      "value": 25.08,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 43 | 26,88 | 25,08 | 23,29 | 21,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-43",
+      "value": 23.29,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 43 | 26,88 | 25,08 | 23,29 | 21,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-43",
+      "value": 21.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 43 | 26,88 | 25,08 | 23,29 | 21,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-42",
+      "value": 26.25,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 42 | 26,25 | 24,50 | 22,75 | 21,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-42",
+      "value": 24.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 42 | 26,25 | 24,50 | 22,75 | 21,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-42",
+      "value": 22.75,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 42 | 26,25 | 24,50 | 22,75 | 21,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-42",
+      "value": 21.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 42 | 26,25 | 24,50 | 22,75 | 21,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-41",
+      "value": 25.63,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 41 | 25,63 | 23,92 | 22,21 | 20,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-41",
+      "value": 23.92,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 41 | 25,63 | 23,92 | 22,21 | 20,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-41",
+      "value": 22.21,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 41 | 25,63 | 23,92 | 22,21 | 20,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-41",
+      "value": 20.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 41 | 25,63 | 23,92 | 22,21 | 20,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-40",
+      "value": 25.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 40 | 25,00 | 23,33 | 21,67 | 20,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-40",
+      "value": 23.33,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 40 | 25,00 | 23,33 | 21,67 | 20,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-40",
+      "value": 21.67,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 40 | 25,00 | 23,33 | 21,67 | 20,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-40",
+      "value": 20.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 40 | 25,00 | 23,33 | 21,67 | 20,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-39",
+      "value": 24.38,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 39 | 24,38 | 22,75 | 21,13 | 19,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-39",
+      "value": 22.75,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 39 | 24,38 | 22,75 | 21,13 | 19,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-39",
+      "value": 21.13,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 39 | 24,38 | 22,75 | 21,13 | 19,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-39",
+      "value": 19.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 39 | 24,38 | 22,75 | 21,13 | 19,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-38",
+      "value": 23.75,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 38 | 23,75 | 22,17 | 20,58 | 19,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-38",
+      "value": 22.17,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 38 | 23,75 | 22,17 | 20,58 | 19,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-38",
+      "value": 20.58,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 38 | 23,75 | 22,17 | 20,58 | 19,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-38",
+      "value": 19.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 38 | 23,75 | 22,17 | 20,58 | 19,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-37",
+      "value": 23.13,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 37 | 23,13 | 21,58 | 20,04 | 18,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-37",
+      "value": 21.58,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 37 | 23,13 | 21,58 | 20,04 | 18,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-37",
+      "value": 20.04,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 37 | 23,13 | 21,58 | 20,04 | 18,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-37",
+      "value": 18.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 37 | 23,13 | 21,58 | 20,04 | 18,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-36",
+      "value": 22.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 36 | 22,50 | 21,00 | 19,50 | 18,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-36",
+      "value": 21.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 36 | 22,50 | 21,00 | 19,50 | 18,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-36",
+      "value": 19.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 36 | 22,50 | 21,00 | 19,50 | 18,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-36",
+      "value": 18.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 36 | 22,50 | 21,00 | 19,50 | 18,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-35",
+      "value": 21.88,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 35 | 21,88 | 20,42 | 18,96 | 17,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-35",
+      "value": 20.42,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 35 | 21,88 | 20,42 | 18,96 | 17,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-35",
+      "value": 18.96,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 35 | 21,88 | 20,42 | 18,96 | 17,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-35",
+      "value": 17.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 35 | 21,88 | 20,42 | 18,96 | 17,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-34",
+      "value": 21.25,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 34 | 21,25 | 19,83 | 18,42 | 17,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-34",
+      "value": 19.83,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 34 | 21,25 | 19,83 | 18,42 | 17,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-34",
+      "value": 18.42,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 34 | 21,25 | 19,83 | 18,42 | 17,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-34",
+      "value": 17.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 34 | 21,25 | 19,83 | 18,42 | 17,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-33",
+      "value": 20.63,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 33 | 20,63 | 19,25 | 17,88 | 16,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-33",
+      "value": 19.25,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 33 | 20,63 | 19,25 | 17,88 | 16,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-33",
+      "value": 17.88,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 33 | 20,63 | 19,25 | 17,88 | 16,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-33",
+      "value": 16.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 33 | 20,63 | 19,25 | 17,88 | 16,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-32",
+      "value": 20.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 32 | 20,00 | 18,67 | 17,33 | 16,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-32",
+      "value": 18.67,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 32 | 20,00 | 18,67 | 17,33 | 16,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-32",
+      "value": 17.33,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 32 | 20,00 | 18,67 | 17,33 | 16,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-32",
+      "value": 16.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 32 | 20,00 | 18,67 | 17,33 | 16,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-31",
+      "value": 19.38,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 31 | 19,38 | 18,08 | 16,79 | 15,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-31",
+      "value": 18.08,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 31 | 19,38 | 18,08 | 16,79 | 15,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-31",
+      "value": 16.79,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 31 | 19,38 | 18,08 | 16,79 | 15,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-31",
+      "value": 15.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 31 | 19,38 | 18,08 | 16,79 | 15,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-30",
+      "value": 18.75,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 30 | 18,75 | 17,50 | 16,25 | 15,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-30",
+      "value": 17.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 30 | 18,75 | 17,50 | 16,25 | 15,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-30",
+      "value": 16.25,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 30 | 18,75 | 17,50 | 16,25 | 15,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-30",
+      "value": 15.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 30 | 18,75 | 17,50 | 16,25 | 15,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-29",
+      "value": 18.13,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 29 | 18,13 | 16,92 | 15,71 | 14,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-29",
+      "value": 16.92,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 29 | 18,13 | 16,92 | 15,71 | 14,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-29",
+      "value": 15.71,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 29 | 18,13 | 16,92 | 15,71 | 14,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-29",
+      "value": 14.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 29 | 18,13 | 16,92 | 15,71 | 14,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-28",
+      "value": 17.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 28 | 17,50 | 16,33 | 15,17 | 14,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-28",
+      "value": 16.33,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 28 | 17,50 | 16,33 | 15,17 | 14,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-28",
+      "value": 15.17,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 28 | 17,50 | 16,33 | 15,17 | 14,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-28",
+      "value": 14.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 28 | 17,50 | 16,33 | 15,17 | 14,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-27",
+      "value": 16.88,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 27 | 16,88 | 15,75 | 14,63 | 13,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-27",
+      "value": 15.75,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 27 | 16,88 | 15,75 | 14,63 | 13,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-27",
+      "value": 14.63,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 27 | 16,88 | 15,75 | 14,63 | 13,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-27",
+      "value": 13.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 27 | 16,88 | 15,75 | 14,63 | 13,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-26",
+      "value": 16.25,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 26 | 16,25 | 15,17 | 14,08 | 13,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-26",
+      "value": 15.17,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 26 | 16,25 | 15,17 | 14,08 | 13,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-26",
+      "value": 14.08,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 26 | 16,25 | 15,17 | 14,08 | 13,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-26",
+      "value": 13.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 26 | 16,25 | 15,17 | 14,08 | 13,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-25",
+      "value": 15.63,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 25 | 15,63 | 14,58 | 13,54 | 12,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-25",
+      "value": 14.58,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 25 | 15,63 | 14,58 | 13,54 | 12,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-25",
+      "value": 13.54,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 25 | 15,63 | 14,58 | 13,54 | 12,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-25",
+      "value": 12.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 25 | 15,63 | 14,58 | 13,54 | 12,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-24",
+      "value": 15.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 24 | 15,00 | 14,00 | 13,00 | 12,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-24",
+      "value": 14.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 24 | 15,00 | 14,00 | 13,00 | 12,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-24",
+      "value": 13.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 24 | 15,00 | 14,00 | 13,00 | 12,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-24",
+      "value": 12.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 24 | 15,00 | 14,00 | 13,00 | 12,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-23",
+      "value": 14.38,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 23 | 14,38 | 13,42 | 12,46 | 11,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-23",
+      "value": 13.42,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 23 | 14,38 | 13,42 | 12,46 | 11,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-23",
+      "value": 12.46,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 23 | 14,38 | 13,42 | 12,46 | 11,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-23",
+      "value": 11.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 23 | 14,38 | 13,42 | 12,46 | 11,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-22",
+      "value": 13.75,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 22 | 13,75 | 12,83 | 11,92 | 11,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-22",
+      "value": 12.83,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 22 | 13,75 | 12,83 | 11,92 | 11,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-22",
+      "value": 11.92,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 22 | 13,75 | 12,83 | 11,92 | 11,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-22",
+      "value": 11.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 22 | 13,75 | 12,83 | 11,92 | 11,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-21",
+      "value": 12.57,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 21 | 12,57 | 12,00 | 11,38 | 10,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-21",
+      "value": 12.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 21 | 12,57 | 12,00 | 11,38 | 10,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-21",
+      "value": 11.38,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 21 | 12,57 | 12,00 | 11,38 | 10,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-21",
+      "value": 10.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 21 | 12,57 | 12,00 | 11,38 | 10,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-20",
+      "value": 11.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 20 | 11,00 | 10,50 | 10,00 | 9,20 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-20",
+      "value": 10.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 20 | 11,00 | 10,50 | 10,00 | 9,20 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-20",
+      "value": 10.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 20 | 11,00 | 10,50 | 10,00 | 9,20 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-20",
+      "value": 9.2,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 20 | 11,00 | 10,50 | 10,00 | 9,20 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-19",
+      "value": 9.78,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 19 | 9,78 | 9,33 | 8,89 | 8,40 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-19",
+      "value": 9.33,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 19 | 9,78 | 9,33 | 8,89 | 8,40 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-19",
+      "value": 8.89,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 19 | 9,78 | 9,33 | 8,89 | 8,40 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-19",
+      "value": 8.4,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 19 | 9,78 | 9,33 | 8,89 | 8,40 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-18",
+      "value": 8.8,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 18 | 8,80 | 8,40 | 8,00 | 7,60 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-18",
+      "value": 8.4,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 18 | 8,80 | 8,40 | 8,00 | 7,60 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-18",
+      "value": 8.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 18 | 8,80 | 8,40 | 8,00 | 7,60 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-18",
+      "value": 7.6,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 18 | 8,80 | 8,40 | 8,00 | 7,60 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-17",
+      "value": 8.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 17 | 8,00 | 7,64 | 7,27 | 6,91 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-17",
+      "value": 7.64,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 17 | 8,00 | 7,64 | 7,27 | 6,91 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-17",
+      "value": 7.27,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 17 | 8,00 | 7,64 | 7,27 | 6,91 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-17",
+      "value": 6.91,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 17 | 8,00 | 7,64 | 7,27 | 6,91 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-16",
+      "value": 7.33,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 16 | 7,33 | 7,00 | 6,67 | 6,33 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-16",
+      "value": 7.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 16 | 7,33 | 7,00 | 6,67 | 6,33 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-16",
+      "value": 6.67,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 16 | 7,33 | 7,00 | 6,67 | 6,33 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-16",
+      "value": 6.33,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 16 | 7,33 | 7,00 | 6,67 | 6,33 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-15",
+      "value": 6.77,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 15 | 6,77 | 6,46 | 6,15 | 5,85 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-15",
+      "value": 6.46,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 15 | 6,77 | 6,46 | 6,15 | 5,85 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-15",
+      "value": 6.15,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 15 | 6,77 | 6,46 | 6,15 | 5,85 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-15",
+      "value": 5.85,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 15 | 6,77 | 6,46 | 6,15 | 5,85 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-14",
+      "value": 6.29,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 14 | 6,29 | 6,00 | 5,71 | 5,43 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-14",
+      "value": 6.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 14 | 6,29 | 6,00 | 5,71 | 5,43 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-14",
+      "value": 5.71,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 14 | 6,29 | 6,00 | 5,71 | 5,43 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-14",
+      "value": 5.43,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 14 | 6,29 | 6,00 | 5,71 | 5,43 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-13",
+      "value": 5.87,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 13 | 5,87 | 5,60 | 5,33 | 5,07 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-13",
+      "value": 5.6,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 13 | 5,87 | 5,60 | 5,33 | 5,07 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-13",
+      "value": 5.33,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 13 | 5,87 | 5,60 | 5,33 | 5,07 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-13",
+      "value": 5.07,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 13 | 5,87 | 5,60 | 5,33 | 5,07 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-12",
+      "value": 5.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 12 | 5,50 | 5,25 | 5,00 | 4,75 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-12",
+      "value": 5.25,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 12 | 5,50 | 5,25 | 5,00 | 4,75 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-12",
+      "value": 5.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 12 | 5,50 | 5,25 | 5,00 | 4,75 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-12",
+      "value": 4.75,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 12 | 5,50 | 5,25 | 5,00 | 4,75 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-11",
+      "value": 5.18,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 11 | 5,18 | 4,94 | 4,71 | 4,47 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-11",
+      "value": 4.94,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 11 | 5,18 | 4,94 | 4,71 | 4,47 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-11",
+      "value": 4.71,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 11 | 5,18 | 4,94 | 4,71 | 4,47 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-11",
+      "value": 4.47,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 11 | 5,18 | 4,94 | 4,71 | 4,47 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-10",
+      "value": 4.89,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 10 | 4,89 | 4,67 | 4,44 | 4,22 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-10",
+      "value": 4.67,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 10 | 4,89 | 4,67 | 4,44 | 4,22 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-10",
+      "value": 4.44,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 10 | 4,89 | 4,67 | 4,44 | 4,22 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-10",
+      "value": 4.22,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 10 | 4,89 | 4,67 | 4,44 | 4,22 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-9",
+      "value": 4.63,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 9 | 4,63 | 4,42 | 4,21 | 4,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-9",
+      "value": 4.42,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 9 | 4,63 | 4,42 | 4,21 | 4,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-9",
+      "value": 4.21,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 9 | 4,63 | 4,42 | 4,21 | 4,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-9",
+      "value": 4.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 9 | 4,63 | 4,42 | 4,21 | 4,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-8",
+      "value": 4.4,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 8 | 4,40 | 4,20 | 4,00 | 3,80 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-8",
+      "value": 4.2,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 8 | 4,40 | 4,20 | 4,00 | 3,80 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-8",
+      "value": 4.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 8 | 4,40 | 4,20 | 4,00 | 3,80 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-8",
+      "value": 3.8,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 8 | 4,40 | 4,20 | 4,00 | 3,80 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-7",
+      "value": 4.19,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 7 | 4,19 | 4,00 | 3,81 | 3,62 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-7",
+      "value": 4.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 7 | 4,19 | 4,00 | 3,81 | 3,62 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-7",
+      "value": 3.81,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 7 | 4,19 | 4,00 | 3,81 | 3,62 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-7",
+      "value": 3.62,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 7 | 4,19 | 4,00 | 3,81 | 3,62 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-6",
+      "value": 3.75,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 6 | 3,75 | 3,50 | 3,25 | 3,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-6",
+      "value": 3.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 6 | 3,75 | 3,50 | 3,25 | 3,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-6",
+      "value": 3.25,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 6 | 3,75 | 3,50 | 3,25 | 3,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-6",
+      "value": 3.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 6 | 3,75 | 3,50 | 3,25 | 3,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-5",
+      "value": 3.13,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 5 | 3,13 | 2,92 | 2,71 | 2,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-5",
+      "value": 2.92,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 5 | 3,13 | 2,92 | 2,71 | 2,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-5",
+      "value": 2.71,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 5 | 3,13 | 2,92 | 2,71 | 2,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-5",
+      "value": 2.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 5 | 3,13 | 2,92 | 2,71 | 2,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-4",
+      "value": 2.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 4 | 2,50 | 2,33 | 2,17 | 2,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-4",
+      "value": 2.33,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 4 | 2,50 | 2,33 | 2,17 | 2,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-4",
+      "value": 2.17,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 4 | 2,50 | 2,33 | 2,17 | 2,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-4",
+      "value": 2.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 4 | 2,50 | 2,33 | 2,17 | 2,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-3",
+      "value": 1.88,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 3 | 1,88 | 1,75 | 1,63 | 1,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-3",
+      "value": 1.75,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 3 | 1,88 | 1,75 | 1,63 | 1,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-3",
+      "value": 1.63,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 3 | 1,88 | 1,75 | 1,63 | 1,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-3",
+      "value": 1.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 3 | 1,88 | 1,75 | 1,63 | 1,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-2",
+      "value": 1.25,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2 | 1,25 | 1,17 | 1,08 | 1,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-2",
+      "value": 1.17,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2 | 1,25 | 1,17 | 1,08 | 1,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-2",
+      "value": 1.08,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2 | 1,25 | 1,17 | 1,08 | 1,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-2",
+      "value": 1.0,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2 | 1,25 | 1,17 | 1,08 | 1,00 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t1-1",
+      "value": 0.63,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 1 | 0,63 | 0,58 | 0,54 | 0,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t2-1",
+      "value": 0.58,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 1 | 0,63 | 0,58 | 0,54 | 0,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t3-1",
+      "value": 0.54,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 1 | 0,63 | 0,58 | 0,54 | 0,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "t4-1",
+      "value": 0.5,
+      "unit": "% de reducción de la pensión",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 1 | 0,63 | 0,58 | 0,54 | 0,50 |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "umbral-t2",
+      "value": 462,
+      "unit": "meses cotizados desde los que se aplica el tramo",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Conversión de «38 años y 6 meses» a meses. Tramo 1: menos de 462 meses (38 años y 6 meses); tramo 2: de 462 a menos de 498; tramo 3: de 498 a menos de 534; tramo 4: 534 o más.",
+      "quote": "|  | Periodo cotizado: menos de 38 años y 6 meses | Periodo cotizado: igual o superior a 38 años y 6 meses e inferior a 41 años y 6 meses | Periodo cotizado: igual o superior a 41 años y 6 meses e inferior a 44 años y 6 meses | Periodo cotizado: igual o superior a 44 años y 6 meses |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "umbral-t3",
+      "value": 498,
+      "unit": "meses cotizados desde los que se aplica el tramo",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Conversión de «41 años y 6 meses» a meses. Tramo 1: menos de 462 meses (38 años y 6 meses); tramo 2: de 462 a menos de 498; tramo 3: de 498 a menos de 534; tramo 4: 534 o más.",
+      "quote": "|  | Periodo cotizado: menos de 38 años y 6 meses | Periodo cotizado: igual o superior a 38 años y 6 meses e inferior a 41 años y 6 meses | Periodo cotizado: igual o superior a 41 años y 6 meses e inferior a 44 años y 6 meses | Periodo cotizado: igual o superior a 44 años y 6 meses |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "umbral-t4",
+      "value": 534,
+      "unit": "meses cotizados desde los que se aplica el tramo",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Conversión de «44 años y 6 meses» a meses. Tramo 1: menos de 462 meses (38 años y 6 meses); tramo 2: de 462 a menos de 498; tramo 3: de 498 a menos de 534; tramo 4: 534 o más.",
+      "quote": "|  | Periodo cotizado: menos de 38 años y 6 meses | Periodo cotizado: igual o superior a 38 años y 6 meses e inferior a 41 años y 6 meses | Periodo cotizado: igual o superior a 41 años y 6 meses e inferior a 44 años y 6 meses | Periodo cotizado: igual o superior a 44 años y 6 meses |",
+      "location": "art. 207.2 TRLGSS (art. 1.6 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "tipo": "datos",
+  "id": "complemento-brecha-genero-reglas",
+  "title": "Reglas numéricas del complemento para la reducción de la brecha de género (art. 60 TRLGSS)",
+  "description": "Hijos mínimos, tope de cuatro veces el importe por hijo, relación con el límite de pensión máxima y con el complemento por mínimos, y exclusión de la jubilación parcial.",
+  "data": [
+    {
+      "id": "hijos-minimo",
+      "value": 1,
+      "unit": "hijos o hijas mínimos para tener derecho al complemento",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Versión del RDL 2/2023 (desde 2024: un complemento por cada hijo o hija, sin mínimo de dos).",
+      "quote": "Las mujeres que hayan tenido uno o más hijos o hijas y que sean beneficiarias de una pensión contributiva de jubilación",
+      "location": "art. 60 TRLGSS.1"
+    },
+    {
+      "id": "hijos-maximo-multiplo",
+      "value": 4,
+      "unit": "veces el importe mensual por hijo: tope de la cuantía a percibir",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "La cuantía a percibir estará limitada a cuatro veces el importe mensual fijado por hijo o hija",
+      "location": "art. 60 TRLGSS.3"
+    },
+    {
+      "id": "computa-limite-pension-maxima",
+      "value": 0,
+      "unit": "indicador (1 = el complemento se tiene en cuenta en el límite máximo de pensiones; 0 = no)",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "El importe del complemento no será tenido en cuenta en la aplicación del límite máximo de pensiones previsto en los artículos 57 y 58.7",
+      "location": "art. 60 TRLGSS.3.d)"
+    },
+    {
+      "id": "se-suma-a-la-minima",
+      "value": 1,
+      "unit": "indicador (1 = con complemento por mínimos, el de brecha se suma a la cuantía mínima)",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Cuando concurran dichos requisitos, se reconocerá la cuantía mínima de pensión según establezca anualmente la correspondiente Ley de Presupuestos Generales del Estado. A este importe se sumará el complemento para la reducción de la brecha de género",
+      "location": "art. 60 TRLGSS.3.e)"
+    },
+    {
+      "id": "compatible-con-jubilacion-parcial",
+      "value": 0,
+      "unit": "indicador (1 = se reconoce en la jubilación parcial; 0 = no hasta el acceso a la jubilación plena)",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se reconoce el complemento cuando desde la jubilación parcial se acceda a la jubilación plena.",
+      "quote": "No se tendrá derecho a este complemento en los casos de jubilación parcial",
+      "location": "art. 60 TRLGSS.4"
+    },
+    {
+      "id": "pagas-anuales",
+      "value": 14,
+      "unit": "pagas anuales de las pensiones contributivas (12 mensualidades y 2 extraordinarias)",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Las pensiones contributivas se abonan en catorce pagas; así se expresan la pensión máxima de pension-maxima (euros/mes, 14 pagas) y las mínimas anuales. El motor usa este dato para pasar de importe mensual a anual.",
+      "quote": "El complemento será satisfecho en catorce pagas, junto con la pensión que determine el derecho al mismo",
+      "location": "art. 60 TRLGSS.3.c)"
+    }
+  ]
+}

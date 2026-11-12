@@ -1,0 +1,40 @@
+{
+  "tipo": "datos",
+  "id": "jubilacion-edad-65",
+  "title": "Edad de 65 años: jubilación con carrera larga y referencia de las cuantías mínimas (arts. 205.1.a y 208.1.c TRLGSS)",
+  "description": "Edad de 65 años en meses (780), con la cita del artículo que la fija como edad con carrera larga y como referencia de las pensiones mínimas.",
+  "data": [
+    {
+      "id": "2013-carrera-larga-meses",
+      "value": 780,
+      "unit": "meses de edad (65 años) exigidos con la carrera de cotización de la DT 7.ª",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Sesenta y cinco años = 780 meses. Es la edad con carrera larga en todos los años de la DT 7.ª (antes de 2013, edad única de 65 años: edad-ordinaria-jubilacion).",
+      "quote": "Haber cumplido sesenta y siete años de edad, o sesenta y cinco años cuando se acrediten treinta y ocho años y seis meses de cotización",
+      "location": "art. 205.1.a) TRLGSS"
+    },
+    {
+      "id": "2013-referencia-minimas-meses",
+      "value": 780,
+      "unit": "meses de edad (65 años) a partir de los cuales se aplica la cuantía mínima «de 65 años»",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Sesenta y cinco años = 780 meses. Distingue las mínimas jub65 de las jub-menor65 (pension-minima-jubilacion).",
+      "quote": "al cumplimiento de los sesenta y cinco años de edad",
+      "location": "art. 208.1.c) TRLGSS"
+    }
+  ]
+}

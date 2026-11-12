@@ -38,5 +38,10 @@
   "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967",
   "sha256_original": "68978b317cef146f57e2fc3d7a29a6d7389ae4d6229f53797da26a0bb8c9edbc",
   "nota": "Texto plano descargado en la Fase 1A (misma fecha de descarga)"
+ },
+ "rd-371-2023.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-11645",
+  "sha256_original": "4f3140cfd4e1e68edbc773433e1d4b7ba147274346504823845e942cb5908503",
+  "nota": "Real Decreto 371/2023 (texto consolidado, última actualización publicada el 28/05/2026), descargado el 2026-11-12 con curl; texto plano extraído del HTML (etiquetas eliminadas, celdas separadas por « | »)"
  }
 }

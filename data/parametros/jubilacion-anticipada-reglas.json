@@ -1,0 +1,244 @@
+{
+  "tipo": "datos",
+  "id": "jubilacion-anticipada-reglas",
+  "title": "Requisitos numéricos de las jubilaciones anticipadas y de la jubilación parcial (arts. 207, 208, 210.4 y 215 TRLGSS)",
+  "description": "Meses máximos de anticipación, cotización efectiva exigida, demanda de empleo, tope de pensión por trimestre y condiciones de la jubilación parcial. Anticipadas: redacción de la Ley 21/2021 (desde 2022). Parcial: redacción vigente desde 01/04/2025.",
+  "data": [
+    {
+      "id": "involuntaria-anticipo-maximo-meses",
+      "value": 48,
+      "unit": "meses de anticipación como máximo respecto de la edad ordinaria",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuatro años = 48 meses.",
+      "quote": "Tener cumplida una edad que sea inferior en cuatro años, como máximo, a la edad que en cada caso resulte de aplicación",
+      "location": "art. 207.1 TRLGSS.a)"
+    },
+    {
+      "id": "involuntaria-demandante-empleo-meses",
+      "value": 6,
+      "unit": "meses inmediatamente anteriores a la solicitud como demandante de empleo",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "durante un plazo de, al menos, seis meses inmediatamente anteriores a la fecha de la solicitud de la jubilación",
+      "location": "art. 207.1 TRLGSS.b)"
+    },
+    {
+      "id": "involuntaria-cotizacion-efectiva-meses",
+      "value": 396,
+      "unit": "meses de cotización efectiva exigidos",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Treinta y tres años = 396 meses, sin parte proporcional de pagas extraordinarias.",
+      "quote": "Acreditar un período mínimo de cotización efectiva de 33 años",
+      "location": "art. 207.1 TRLGSS.c)"
+    },
+    {
+      "id": "involuntaria-servicio-militar-maximo-meses",
+      "value": 12,
+      "unit": "meses como máximo del servicio militar o prestación social computables",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Un año = 12 meses.",
+      "quote": "solo se computará el período de prestación del servicio militar obligatorio o de la prestación social sustitutoria, o del servicio social femenino obligatorio, con el límite máximo de un año",
+      "location": "art. 207.1 TRLGSS.c)"
+    },
+    {
+      "id": "involuntaria-tope-pension-pct-trimestre",
+      "value": 0.5,
+      "unit": "% de reducción del tope máximo de pensión por trimestre o fracción de anticipación",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "no podrá ser superior a la cuantía que resulte de reducir el tope máximo de pensión en un 0,50 por ciento por cada trimestre o fracción de trimestre de anticipación",
+      "location": "art. 210.4 TRLGSS"
+    },
+    {
+      "id": "voluntaria-anticipo-maximo-meses",
+      "value": 24,
+      "unit": "meses de anticipación como máximo respecto de la edad ordinaria",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Dos años = 24 meses.",
+      "quote": "Tener cumplida una edad que sea inferior en dos años, como máximo, a la edad que en cada caso resulte de aplicación",
+      "location": "art. 208 TRLGSS.1.a)"
+    },
+    {
+      "id": "voluntaria-cotizacion-efectiva-meses",
+      "value": 420,
+      "unit": "meses de cotización efectiva exigidos",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Treinta y cinco años = 420 meses, sin parte proporcional de pagas extraordinarias.",
+      "quote": "Acreditar un período mínimo de cotización efectiva de treinta y cinco años",
+      "location": "art. 208 TRLGSS.1.b)"
+    },
+    {
+      "id": "voluntaria-servicio-militar-maximo-meses",
+      "value": 12,
+      "unit": "meses como máximo del servicio militar o prestación social computables",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Un año = 12 meses.",
+      "quote": "con el límite máximo de un año",
+      "location": "art. 208 TRLGSS.1.b)"
+    },
+    {
+      "id": "voluntaria-subsidio-desempleo-meses",
+      "value": 3,
+      "unit": "meses mínimos con subsidio por desempleo para aplicar los coeficientes de la involuntaria",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "el trabajador esté percibiendo el subsidio por desempleo del artículo 274, y lo haya hecho durante al menos tres meses",
+      "location": "art. 208 TRLGSS.3"
+    },
+    {
+      "id": "parcial-reduccion-jornada-minima-pct",
+      "value": 25,
+      "unit": "% mínimo de reducción de jornada",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Versión vigente desde 01/04/2025 (RDL 11/2024).",
+      "quote": "siempre que se produzca una reducción de su jornada de trabajo comprendida entre un mínimo del 25 por ciento y un máximo del 75 por ciento",
+      "location": "art. 215 TRLGSS.1"
+    },
+    {
+      "id": "parcial-reduccion-jornada-maxima-pct",
+      "value": 75,
+      "unit": "% máximo de reducción de jornada",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "siempre que se produzca una reducción de su jornada de trabajo comprendida entre un mínimo del 25 por ciento y un máximo del 75 por ciento",
+      "location": "art. 215 TRLGSS.1"
+    },
+    {
+      "id": "parcial-relevo-anticipo-maximo-meses",
+      "value": 36,
+      "unit": "meses de anticipación como máximo (con contrato de relevo)",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tres años = 36 meses.",
+      "quote": "una edad que sea inferior en tres años, como máximo, a la edad que en cada caso resulte de aplicación",
+      "location": "art. 215 TRLGSS.2.a)"
+    },
+    {
+      "id": "parcial-relevo-cotizacion-meses",
+      "value": 396,
+      "unit": "meses de cotización exigidos (con contrato de relevo)",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Treinta y tres años = 396 meses, sin pagas extraordinarias.",
+      "quote": "acreditar un periodo de cotización de treinta y tres años",
+      "location": "art. 215 TRLGSS.2.a)"
+    },
+    {
+      "id": "parcial-relevo-cotizacion-discapacidad-meses",
+      "value": 300,
+      "unit": "meses de cotización exigidos con discapacidad igual o superior al 33 % (con relevo)",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Veinticinco años = 300 meses.",
+      "quote": "el período de cotización de 33 años indicado en el párrafo anterior se reducirá al de veinticinco años",
+      "location": "art. 215 TRLGSS.2.a)"
+    },
+    {
+      "id": "parcial-relevo-antiguedad-empresa-meses",
+      "value": 72,
+      "unit": "meses de antigüedad en la empresa exigidos (con relevo)",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Seis años = 72 meses.",
+      "quote": "Acreditar un período de antigüedad en la empresa de, al menos, seis años inmediatamente anteriores",
+      "location": "art. 215 TRLGSS.2.b)"
+    }
+  ]
+}
