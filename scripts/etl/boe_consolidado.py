@@ -38,7 +38,14 @@ NORMAS = {
     'BOE-A-1966-21116': ('decreto-3158-1966.txt', 'Decreto 3158/1966, de 23 de diciembre (Reglamento General de la cuantía de las prestaciones económicas)'),
     'BOE-A-1984-12729': ('rd-1071-1984.txt', 'Real Decreto 1071/1984, de 23 de mayo (modificación de diversos aspectos de la invalidez permanente)'),
     'BOE-A-1985-20582': ('rd-1799-1985.txt', 'Real Decreto 1799/1985, de 2 de octubre (racionalización de las pensiones de jubilación e invalidez permanente)'),
+    # Fase 2-B-2 (muerte y supervivencia)
+    'BOE-A-1967-2876': ('orden-13-02-1967.txt', 'Orden de 13 de febrero de 1967 (normas de aplicación y desarrollo de las prestaciones de muerte y supervivencia del Régimen General)'),
+    'BOE-A-2018-10397': ('rd-900-2018.txt', 'Real Decreto 900/2018, de 20 de julio (porcentaje de la base reguladora de la pensión de viudedad de pensionistas con 65 o más años)'),
+    'BOE-A-1997-24163': ('rd-1647-1997.txt', 'Real Decreto 1647/1997, de 31 de octubre (desarrollo de determinados aspectos de la Ley 24/1997 en materia de muerte y supervivencia)'),
+    'BOE-A-2015-11724': ('trlgss-2015-versiones.txt', 'Texto refundido de la Ley General de la Seguridad Social (Real Decreto Legislativo 8/2015), con todas las versiones de cada precepto'),
 }
+# SOLO=<id>,<id> limita la ejecución a esas normas (para no volver a descargar las de fases anteriores).
+SOLO = [x for x in os.environ.get('SOLO', '').split(',') if x]
 
 
 def limpio(s):
@@ -65,6 +72,8 @@ def main():
     origen_ruta = f'{RAW}/origen.json'
     origen = json.load(open(origen_ruta, encoding='utf-8'))
     for id_, (fichero, titulo) in NORMAS.items():
+        if SOLO and id_ not in SOLO:
+            continue
         xml_ruta = f'{DESC}/{id_}.xml'
         if MODO != 'local' and not os.path.exists(xml_ruta):
             subprocess.run(['curl', '-sS', '--fail', '-H', 'Accept: application/xml', API.format(id_), '-o', xml_ruta], check=True)

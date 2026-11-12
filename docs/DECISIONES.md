@@ -3,6 +3,43 @@
 Registro de decisiones tomadas cuando algo era ambiguo o había que elegir. La más reciente,
 arriba dentro de cada fase.
 
+## Fase 2-B-2 · Muerte y supervivencia
+
+### Proceso y datos
+
+- **Rama y base**: `feat/fase-2b2-supervivencia`, creada desde `origin/main` (que ya contiene la Fase 2-B-1), como pide el encargo y no la rama de trabajo que asigna el entorno.
+- **Corrección previa de citas** (`scripts/etl/minimas_citas.py`): las citas de la Fase 1A de las cuantías mínimas de 2025 y 2026 (jubilación, incapacidad, viudedad, orfandad y familiares; 49 datos) terminaban en una cifra ajena al dato (la última del cuadro, p. ej. «9.126,60»). Se sustituyen por la fila literal del Anexo I, comprobada por código dentro del cuadro del año, y el script comprueba que la celda de la columna correspondiente coincide con el valor: **ningún valor cambia** y no hay discrepancias. Las de 2013 y 2021, fuera del alcance del motor, quedan en `PENDIENTE_DATOS.md`.
+- **Mínimas que faltaban**: orfandad, prestación de orfandad y favor de familiares de 2026 (la extracción de 1A no las recogió); incremento de la mínima en la orfandad absoluta e importe a prorratear entre varios familiares, de 2022 a 2026 (cita con la cifra tal como la escribe el BOE: «9.275» en 2025).
+- **Normativa descargada en la sesión** con la API de datos abiertos del BOE (`boe_consolidado.py`, variable `SOLO` para no volver a descargar las normas de fases anteriores): Orden de 13/02/1967, RD 900/2018, RD 1647/1997 y el **TRLGSS con todas las versiones de cada precepto** (`trlgss-2015-versiones.txt`); y los reales decretos del SMI de 2022 a 2026 (XML del BOE). El TRLGSS de la Fase 1A solo tenía la redacción vigente, y el RDL 31/2026 cambió el art. 221.2 (parejas de hecho) el 21/10/2026.
+- **Citas comprobadas en todas las redacciones** vigentes desde el 01/01/2022: `supervivencia_reglas.py` falla si una cita no aparece en alguna. Las reglas que cambian llevan el año en el id (`2022-pareja-…`, `2026-pareja-…`) y la fecha de entrada en vigor como dato (`pareja-redaccion-2026-desde`, citada de las notas del texto consolidado).
+- **SMI anual** (`smi-anual`, nuevo): la cuantía anual del art. 3 de cada real decreto del SMI. Lo exigen los requisitos de ingresos de orfandad (art. 224.3), familiares (art. 22 Orden de 1967) y viudedad con cargas (75 % del SMI sin dos pagas extraordinarias = SMI anual − 2 × SMI mensual).
+- **Tests de datos y claims**: `supervivencia-reglas` se registra en `scripts/coherencia-datos.test.ts` (`FICHEROS_REGLAS_2B2`), como las reglas de las fases anteriores. Tres afirmaciones nuevas con sus preguntas actuariales (63 pendientes): el tope del test de pendientes pasa de 60 a 70.
+- **Ejemplos oficiales**: se buscaron en las páginas de viudedad y orfandad de la Seguridad Social (portal con contenido cargado por JavaScript, sin ejemplos resueltos en el HTML descargado). Los 27 casos de oro son «derivados de la norma».
+
+### Estructura del motor
+
+- **Patrón de la 2-B-1**: `causante.ts` (periodo previo y base reguladora, con `basePeriodoElegido` de `comun/base-reguladora.ts`), `calculo.ts` (función conjunta), `prestaciones.ts` (una prestación por separado), parámetros, repositorio, revalorización y limitaciones.
+- **Contexto común**: `construirParametros` carga también las mínimas de viudedad y de orfandad y familiares, y `pensionMinimaAnual` cita el fichero de la clase (`ficheroMinima`). Los ids no coinciden con los de jubilación e incapacidad: sus tests pasan sin cambios.
+- **Primer año del motor**: el del primer dato con año en el id de `supervivencia-reglas` (2022), leído de `/data`.
+
+### Interpretaciones adoptadas (la más sencilla; las dudosas, como opción y en REVISION_ACTUARIAL)
+
+- **Ventana de la base reguladora**: quince años anteriores al mes previo al del hecho causante (art. 228 TRLGSS, de rango superior y posterior al Decreto 1646/1972); el periodo de 24 meses, el más favorable salvo que se indique; los meses sin cotizar dentro del periodo cuentan como cero (art. 9.a de la Orden de 1967).
+- **Pensionista**: base de su pensión × revalorizaciones generales de cada año posterior al de su pensión hasta el del fallecimiento.
+- **Orfandad sin periodo previo** con causante en alta (art. 224.1, ley); el RD 1647/1997 (500 días) queda como alternativa.
+- **Familiares y accidente no laboral**: se exigen los 500 días (literal de la Orden de 1967, que solo exime el accidente de trabajo y la enfermedad profesional).
+- **Viudedad**: el 60 % y el 70 % no se acumulan: se aplica el más favorable; la reducción del 70 % no baja del 52 %; edad y rentas en el hecho causante; la mínima con cargas familiares si se aplica el 70 %, si no, la de la edad.
+- **Cónyuge**: si no se indica que la enfermedad sea anterior al vínculo, no se exige un año de matrimonio (el motor avisa).
+- **Excónyuge**: la viudedad anual (14 pagas) se limita a la compensatoria anual; después, complemento a mínimos si procede.
+- **Varios beneficiarios de viudedad**: reparto por meses convividos con el 40 % al cónyuge o pareja actual; el porcentaje no asignado incrementa la orfandad absoluta (art. 38.1.2.º).
+- **Prestación temporal**: sin complemento a mínimos y fuera del límite conjunto (no es pensión); no impide el incremento de la orfandad absoluta (art. 38.1.5.º).
+- **Límite conjunto**: cada pensión primero con la pensión máxima; la viudedad no se reduce; las orfandades sí (hasta el 48 % en la excepción del art. 229.3, que se aplica con dos o más huérfanos y viudedad de más del 52 %); familiares después, por orden de preferencia y en proporción dentro de cada grupo; mínimos y brecha después del límite.
+- **Incremento de familiares**: el porcentaje de viudedad (52 %) si no hay beneficiario de pensión de viudedad (art. 23.2 Orden de 1967, cuya remisión al art. 36.Dos del Decreto 3158/1966 está derogada).
+- **Mínimas de familiares incrementadas**: solo sin pensionistas de viudedad ni de orfandad del mismo causante; en el cálculo aislado se indica con `hayViudoOHuerfanosPensionistas`.
+- **Madre y abuelas**: el estado civil del art. 22.1.2) de la Orden se recibe como dato (`estadoCivilCumple`), sin valorarlo.
+- **Hijos y hermanos de pensionistas** (art. 226.2): no se ha localizado su desarrollo reglamentario; se exigen las circunstancias de la ley y, para «carecer de medios propios de vida», ingresos no superiores al SMI anual.
+- **Límite de uso**: no se alcanzó; no hizo falta parada.
+
 ## Fase 2-B-1 · Incapacidad permanente
 
 ### Proceso y datos

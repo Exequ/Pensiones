@@ -48,6 +48,9 @@ const FICHEROS_REGLAS_2A = [
 /** Reglas de la incapacidad permanente de la Fase 2-B-1 (cada dato, con el año de su redacción). */
 const FICHEROS_REGLAS_2B1 = ['incapacidad-permanente-reglas'];
 
+/** Reglas de muerte y supervivencia de la Fase 2-B-2 (cada dato, con el año de su redacción). */
+const FICHEROS_REGLAS_2B2 = ['supervivencia-reglas'];
+
 /** Series con varias cuantías por año (clase de pensión, situación familiar, tramo). */
 const MULTIPLES_POR_ANIO = [
   'pension-minima-',
@@ -59,6 +62,7 @@ const MULTIPLES_POR_ANIO = [
   'mei-destino',
   ...FICHEROS_REGLAS_2A,
   ...FICHEROS_REGLAS_2B1,
+  ...FICHEROS_REGLAS_2B2,
 ];
 /** Ficheros por versión de una regla (el periodo es el año desde el que rige): sin exigir años seguidos. */
 const POR_VERSION = [
@@ -67,6 +71,7 @@ const POR_VERSION = [
   'revalorizacion-regla',
   ...FICHEROS_REGLAS_2A,
   ...FICHEROS_REGLAS_2B1,
+  ...FICHEROS_REGLAS_2B2,
 ];
 /** Ficheros de reglas con varios parámetros (unidades distintas) en un mismo fichero. */
 const VARIAS_UNIDADES = [...POR_VERSION, 'pension-minima-regla', 'prestamos-', 'mei-destino'];

@@ -27,6 +27,14 @@ IP_CLAIMS = [
     ('-cuantia', ['total-porcentaje', 'absoluta-porcentaje', 'gran-incapacidad-porcentaje', 'total-cualificada-pct', 'gran-incapacidad-complemento-pct-base-minima', 'total-ec-suelo-clase-minima', 'edad-ip-sin-jubilacion-meses', 'br-profesional-salario-real'],
      'Cuantía de la incapacidad permanente: total 55 % (más 20 % la cualificada desde los 55 años), absoluta y gran incapacidad 100 % de la base reguladora; complemento de gran incapacidad del 45 % de la base mínima más el 30 % de la última base (mínimo, 45 % de la pensión); suelo de la total por enfermedad común; regla del art. 196.5 a partir de los 67 años.'),
 ]
+SV_CLAIMS = [
+    ('', ['carencia-alta-dias', 'carencia-sin-alta-meses', 'br-meses', 'br-ventana-meses', 'br-divisor', 'br-pensionista-misma-base', 'orfandad-alta-o-pensionista', 'familiares-carencia-alta-dias'],
+     'Causante y base reguladora de muerte y supervivencia: en alta, 500 días cotizados en los cinco años anteriores (sin periodo previo si la muerte se debe a un accidente o a una enfermedad profesional; la orfandad no lo exige); sin alta, quince años; base reguladora de 24 meses elegidos en los quince años anteriores entre 28, o la de la pensión del causante pensionista con sus revalorizaciones (arts. 219, 224 y 228 TRLGSS; art. 7 Decreto 1646/1972).'),
+    ('-cuantia', ['viudedad-pct', 'viudedad-65-pct', 'viudedad-cargas-pct', 'viudedad-cargas-reduccion-limite', 'orfandad-pct', 'orfandad-absoluta-incremento-pct', 'familiares-cuantia-igual-orfandad', 'familiares-incremento-sin-viudo', 'divorcio-limite-compensatoria', 'concurrencia-garantia-pct'],
+     'Cuantía de la viudedad, la orfandad y el favor de familiares: viudedad 52 % de la base reguladora (60 % con 65 o más años sin otras rentas; 70 % con cargas familiares y rentas bajas), orfandad y familiares 20 % por beneficiario, incremento del 52 % repartido en la orfandad absoluta; separados y divorciados hasta la pensión compensatoria y, si concurren varios, en proporción al tiempo convivido con el 40 % garantizado al cónyuge o pareja superviviente.'),
+    ('-limites', ['limite-conjunto-pct-br', 'limite-excepcion-viudedad-umbral-pct', 'limite-orfandad-max-pct', 'limite-preferencia-orfandad', 'limite-viudedad-orfandad-orden-1967', 'pareja-convivencia-meses', 'prestacion-temporal-meses'],
+     'Límite conjunto de muerte y supervivencia: la suma de las pensiones no excede de la base reguladora (salvo viudedad de más del 52 % con varias orfandades, que pueden llegar al 48 %), con preferencia de la orfandad sobre los familiares y orden nietos y hermanos, padres, abuelos, hijos y hermanos de pensionistas (art. 229 TRLGSS); parejas de hecho y prestación temporal de dos años (arts. 221 y 222).'),
+]
 MITO_PREGUNTAS = {}
 CLAIMS_SERIES_NUEVAS = {
     ('salario-medio-definiciones', 'eaes-ambos'), ('salario-medio-definiciones', 'etcl-coste-salarial-total'),
@@ -132,6 +140,13 @@ for ruta in sorted(glob.glob(f'{REPO}/data/*/*.json')):
             x = por[ids[0]]
             añade(f"param-{d['id']}{sufijo}", texto, 'Motor de incapacidad permanente (docs/MOTOR_INCAPACIDAD.md)',
                   [f"{rel}#{i}" for i in ids], x['source'], x['confidence'])
+    elif carpeta == 'parametros' and d['id'] == 'supervivencia-reglas':
+        # Fase 2-B-2: tres afirmaciones (causante y base, cuantía, límites y beneficiarios)
+        por = {z['id']: z for z in d['data']}
+        for sufijo, ids, texto in SV_CLAIMS:
+            x = por[ids[0]]
+            añade(f"param-{d['id']}{sufijo}", texto, 'Motor de muerte y supervivencia (docs/MOTOR_SUPERVIVENCIA.md)',
+                  [f"{rel}#{i}" for i in ids], x['source'], x['confidence'])
     elif carpeta == 'parametros' and d.get('data'):
         # una afirmación por serie: el dato más reciente
         x = sorted(d['data'], key=lambda z: (z['period'], z['id']))[-1]
@@ -216,6 +231,25 @@ REVISION['param-incapacidad-permanente-reglas-cuantia'] = ('Preguntas de cuantí
     '(c) la cualificada se presume por la edad (55 años) salvo indicación en contra; '
     '(d) la gran incapacidad percibe el 100 % (art. 18 de la Orden de 1969: la prestación de la absoluta) también cuando la incapacidad de base sea total; '
     '(e) contingencias profesionales: la base reguladora del salario real (Reglamento de 1956) no está en /data y el motor solo admite una base calculada fuera. Confirmar (a)-(d) y decidir cómo obtener (e).')
+REVISION['param-supervivencia-reglas'] = ('Lecturas abiertas del causante y de la base reguladora de muerte y supervivencia (opciones del motor; efecto en docs/INFORME_VERIFICACION.md, Fase 2-B-2): '
+    '(a) ventana de los quince años: el motor la cuenta «anterior al mes previo al del hecho causante» (art. 228 TRLGSS, ley posterior y de rango superior); alternativa, hasta el mes anterior al hecho causante (art. 7.2 Decreto 1646/1972), +1,2 % en un caso con subida de bases en los dos últimos meses; '
+    '(b) los 500 días se cuentan con los días naturales de los meses cotizados (alternativa: 30 por mes); '
+    '(c) orfandad con causante en alta: el art. 224.1 TRLGSS no exige periodo previo, pero el art. 9.1 del RD 1647/1997 (no actualizado) exige 500 días; el motor sigue la ley (alternativa como opción); '
+    '(d) favor de familiares y accidente no laboral: la Orden de 1967 solo exime el accidente de trabajo y la enfermedad profesional; el art. 219.1 exime cualquier accidente en la viudedad; el motor exige los 500 días (literal de la Orden). '
+    'Confirmar (a)-(d) y si la base del causante pensionista debe revalorizarse con la revalorización general de cada año posterior a su pensión (como hace el motor).')
+REVISION['param-supervivencia-reglas-cuantia'] = ('Preguntas de cuantía de la viudedad, la orfandad y el favor de familiares: '
+    '(a) reducción del 70 % por el límite de rendimientos (art. 31.3 Decreto 3158/1966): el motor no baja del 52 % (alternativa, sin suelo: −16,9 % en el caso típico); '
+    '(b) la pensión de un excónyuge se compara con la compensatoria en cómputo anual (14 pagas frente a la compensatoria anual; alternativa mensual: +16,7 %) y después recibe el complemento a mínimos si procede; '
+    '(c) incremento de familiares sin cónyuge superviviente (art. 23.2 Orden de 1967): el art. 39.Dos del Decreto 3158/1966 remite a un apartado derogado en 2009; el motor aplica el porcentaje de viudedad (52 %) repartido entre nietos y hermanos o, si no los hay ni huérfanos, entre ascendientes (alternativa, sin incremento: −72 %); '
+    '(d) el 60 % del RD 900/2018 y el 70 % se comparan y se aplica el mayor; la edad de 65 años y las rentas se miden en el hecho causante; '
+    '(e) la prestación temporal de viudedad no recibe complemento a mínimos ni cuenta en el límite conjunto (no es pensión); '
+    '(f) el complemento de brecha se reconoce en la viudedad a mujeres con hijos y a hombres con algún hijo con orfandad, salvo que ya se cobre con otra pensión. Confirmar.')
+REVISION['param-supervivencia-reglas-limites'] = ('Preguntas del límite conjunto (art. 229 TRLGSS) y de los beneficiarios: '
+    '(a) la norma no dice qué pensión se reduce cuando viudedad y orfandad superan la base reguladora; el motor mantiene la viudedad y reduce las orfandades (alternativa proporcional: −24 % en la viudedad con cuatro huérfanos); '
+    '(b) el límite se aplica a las cuantías tras la pensión máxima de cada una y antes de los complementos a mínimos; '
+    '(c) el reparto entre excónyuges y cónyuge actual (art. 220.2) usa los meses convividos y garantiza el 40 % al cónyuge o pareja actual; el porcentaje no asignado por la compensatoria incrementa la orfandad absoluta (art. 38.1.2.º Decreto 3158/1966); '
+    '(d) desde el 21/10/2026 (RDL 31/2026) la pareja de hecho con hijos comunes necesita dos años de convivencia y no la inscripción; antes, solo la inscripción con dos años de antelación; '
+    '(e) madre y abuelas: el requisito de estado civil del art. 22.1.2) de la Orden de 1967 se recibe como dato; hijos y hermanos de pensionistas mayores de 45 años (art. 226.2): su desarrollo reglamentario no se ha localizado y el motor exige ingresos no superiores al SMI anual. Confirmar.')
 REVISION_POR_DEFECTO = 'no-requiere'
 
 ORG = {'Boletín Oficial del Estado (BOE)': 'BOE', 'Instituto Nacional de Estadística (INE)': 'INE'}
@@ -254,7 +288,7 @@ with open(f'{REPO}/docs/claims.json', 'w', encoding='utf-8') as f:
 por_id = {c['id']: c for c in claims}
 md = ['# Revisión actuarial', '',
       'Lista de las afirmaciones de `docs/claims.json` que requieren criterio actuarial (no son la transcripción literal de una norma o de una cifra publicada): reglas de cálculo de la pensión de jubilación, '
-      'reglas de evolución futura, definiciones y las definiciones de salario medio. Para cada una: el identificador del claim, qué se afirma y una pregunta concreta sobre qué debe comprobar el actuario y con qué dato o fórmula. '
+      'reglas de evolución futura, reglas de incapacidad permanente y de muerte y supervivencia, definiciones y las definiciones de salario medio. Para cada una: el identificador del claim, qué se afirma y una pregunta concreta sobre qué debe comprobar el actuario y con qué dato o fórmula. '
       'Generado por `scripts/etl/fuentes_claims.py` (diccionario `REVISION`); la pregunta también está en el campo `preguntaActuarial` de `docs/claims.json`.', '',
       f'**Resto de afirmaciones ({len(claims) - len(REVISION)})**: no llevan `revisionActuarial` y heredan `revisionActuarialPorDefecto: "no-requiere"` — no requieren revisión actuarial (transcripción literal de una norma o de una cifra publicada, contrastada con su fuente). '
       'Para cambiar el estado de una afirmación basta con añadirle `revisionActuarial` (`revisada`, `rechazada` o `pendiente` con `preguntaActuarial`); `npm run validate:data` exige la pregunta en las pendientes.', '',
@@ -262,6 +296,7 @@ md = ['# Revisión actuarial', '',
 grupos = [('Reglas de cálculo de la pensión de jubilación', [i for i in REVISION if i.startswith('param-') and any(k in i for k in ('escala', 'divisor', 'periodo', 'lagunas', 'actualizacion', 'opcion', 'coeficientes', 'demora', 'carrera'))]),
           ('Reglas de evolución (mínimas, revalorización, base y pensión máximas, MEI)', [i for i in REVISION if i.startswith('param-') and any(k in i for k in ('minima', 'revalorizacion', 'incremento', 'mei'))]),
           ('Reglas de cálculo de la incapacidad permanente', [i for i in REVISION if i.startswith('param-incapacidad-permanente')]),
+          ('Reglas de cálculo de muerte y supervivencia', [i for i in REVISION if i.startswith('param-supervivencia-reglas')]),
           ('Definiciones (ratio afiliados/pensionistas, pensionistas y pensiones, déficit, Fondo de Reserva)', [i for i in REVISION if i.startswith('sistema-')]),
           ('Definiciones de salario medio', [i for i in REVISION if i.startswith('macro-')]),
           ('Comparativa internacional (comparabilidad de la tasa de reposición y del gasto)', [i for i in REVISION if i.startswith('internacional-') and not i.startswith('internacional-ocde-supuestos')]),

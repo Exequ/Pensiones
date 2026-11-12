@@ -362,3 +362,55 @@ Lectura de la tabla:
 - No hay contraste con resoluciones reales ni con el simulador de la Seguridad Social, ni con un modelo propio (M5 no calcula la incapacidad).
 - La base reguladora de las contingencias profesionales no se calcula (Reglamento de 1956 no descargado).
 - Las normas de 2024 (RDL 8/2023) no repiten las reglas de la gran incapacidad en el texto descargado: el motor usa las de 2023.
+
+## Fase 2-B-2: motor de muerte y supervivencia
+
+Verificación del motor (`src/engine/supervivencia/`, descrito en `docs/MOTOR_SUPERVIVENCIA.md`) y de los datos nuevos.
+
+### Corrección previa de las citas de las mínimas
+
+`scripts/etl/minimas_citas.py` revisó las cuantías mínimas de 2022 a 2026 de los cuatro ficheros: 49 citas (todas de 2025 y 2026) no contenían la cifra del dato. Cada una se sustituyó por la fila literal del Anexo I (comprobada por código dentro del cuadro del año) y el script comprobó que la celda de la columna que corresponde coincide con el valor: **0 discrepancias, 0 valores cambiados**. Después, ninguna cita de 2022-2026 de esos ficheros deja de contener su cifra (las del incremento de la orfandad absoluta reproducen la cifra como la escribe el BOE: «9.275»).
+
+### Datos extraídos del BOE
+
+- `scripts/etl/supervivencia_reglas.py` escribe `supervivencia-reglas` (86 datos) y `smi-anual` (2022-2026). **Cada cita se comprueba en todas las redacciones del precepto vigentes desde el 01/01/2022** (TRLGSS con todas las versiones, Decreto 3158/1966, Decreto 1646/1972, Orden de 13/02/1967, RD 900/2018, RD 1647/1997); las reglas del art. 221.2 que cambia el RDL 31/2026 se citan en su redacción y periodo.
+- Segunda fuente: el 20 % de la orfandad figura en el art. 36 del Decreto 3158/1966 y en el art. 17 de la Orden de 1967 (test); el límite del art. 229 TRLGSS coincide con el art. 18 de la Orden; la definición de cargas familiares del art. 31.2 del Decreto 3158/1966 coincide con la del art. 8.2 del RD 1647/1997; todas las referencias a `/data` de los pasos y requisitos de un caso combinado existen (test).
+
+### Casos de oro
+
+27 casos (`casos-oro-supervivencia.test.ts`), **todos «derivados de la norma»**: calculados a mano desde el texto legal y `/data` (bases constantes, hecho causante en 2026), con la cuenta escrita en cada caso; cubren las tres prestaciones, la prestación temporal, parejas de hecho antes y después del RDL 31/2026, excónyuges y concurrencia, el 60 % y el 70 % (con su reducción), la orfandad absoluta, la excepción del 118 %, la pensión máxima, el causante pensionista y sin alta, el accidente no laboral y la brecha. **Casos «independientes»: ninguno**; se buscaron ejemplos resueltos en las páginas de viudedad y orfandad de la Seguridad Social, que no los publican en el HTML descargado (PENDIENTE_DATOS).
+
+### Propiedades (`propiedades.test.ts`)
+
+Rejilla de 3 años × 4 niveles de base × 4 situaciones de viudedad (sin viudo, 52 %, 60 % y 70 %) × 0 a 5 huérfanos × orfandad absoluta, con un familiar: ningún NaN; ninguna pensión contributiva supera la máxima; la suma de las contributivas no supera la base reguladora salvo en la excepción del art. 229.3 (y entonces las orfandades no pasan del 48 % ni los familiares del resto); la viudedad y la suma de orfandades no bajan al subir las bases; con más huérfanos la suma no baja y la de cada uno no sube; el límite no reduce la viudedad (lectura por defecto). Más de 900 comprobaciones, 0 violaciones.
+
+### Cómo cambia el resultado con cada lectura abierta
+
+Generado con `npx tsx scripts/lecturas-abiertas-supervivencia.ts` (sin complemento a mínimos, para ver el efecto sobre la pensión contributiva):
+
+| Lectura                                | Caso                                                          | Alternativa                               | Magnitud                  | Por defecto | Alternativa |     Variación |
+| -------------------------------------- | ------------------------------------------------------------- | ----------------------------------------- | ------------------------- | ----------: | ----------: | ------------: |
+| (a) ventana de la base reguladora      | base de 2.000 € con subida a 2.600 € en los dos últimos meses | Decreto 1646/1972 (incluye el mes previo) | viudedad €/mes            |      902,57 |      913,71 |        1,23 % |
+| (b) días cotizados para los 500 días   | 17 meses cotizados (octubre 2024 a febrero 2026)              | treinta por mes                           | días acreditados          |      516,00 |      510,00 |       -1,16 % |
+| (c) periodo previo de la orfandad      | 12 meses cotizados, en alta                                   | RD 1647/1997 (500 días)                   | orfandad €/mes            |      171,43 |        0,00 |     -100,00 % |
+| (d) familiares y accidente no laboral  | nieto; 13 meses cotizados                                     | exento                                    | favor de familiares €/mes |        0,00 |      617,14 | de 0 a 617,14 |
+| (e) comparación con la compensatoria   | excónyuge con compensatoria de 6.000 €/año                    | mensual (entre 12)                        | viudedad €/mes            |      428,57 |      500,00 |       16,67 % |
+| (f) reducción del 70 %                 | cargas familiares y 9.000 € de rentas propias                 | sin suelo del 52 %                        | viudedad €/mes            |      891,43 |      740,97 |      -16,88 % |
+| (g) incremento de familiares sin viudo | nieto, sin viudo ni huérfanos                                 | sin incremento                            | favor de familiares €/mes |     1234,29 |      342,86 |      -72,22 % |
+| (h) reducción por el límite conjunto   | viudedad 52 % y cuatro huérfanos                              | proporcional                              | viudedad €/mes            |      891,43 |      675,32 |      -24,24 % |
+
+Lectura de la tabla:
+
+- **(a) Ventana de la base reguladora**: solo importa si el mes previo al del hecho causante es de los mejores; con bases estables, efecto nulo.
+- **(b) Días cotizados**: decide el derecho solo cerca de los 500 días (unos 16 a 17 meses).
+- **(c) Periodo previo de la orfandad** y **(d) familiares con accidente no laboral**: deciden el derecho (todo o nada) cuando el causante en alta tiene menos de 500 días en cinco años.
+- **(e) Compensatoria**: comparar importes mensuales (12) frente a pagas (14) da un 16,7 % más.
+- **(f) Reducción del 70 %**: sin suelo, la pensión puede quedar por debajo del 52 % (−16,9 % en el caso); con el suelo, el 70 % reducido nunca empeora al 52 %.
+- **(g) Incremento de familiares**: la lectura de mayor efecto (sin incremento, el nieto cobra el 20 % y no el 72 %).
+- **(h) Límite conjunto**: con la reducción proporcional, la viudedad baja un 24 % con cuatro huérfanos.
+
+### Limitaciones de la verificación
+
+- No hay contraste con resoluciones reales ni con el simulador de la Seguridad Social, ni con un modelo propio (M5 no calcula la supervivencia).
+- La base reguladora de las contingencias profesionales no se calcula (Reglamento de 1956 no descargado).
+- Los requisitos de ingresos se comparan con el SMI anual; el motor no comprueba la definición de cada tipo de renta (se reciben como datos).

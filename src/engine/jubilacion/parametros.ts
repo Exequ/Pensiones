@@ -239,8 +239,15 @@ export function construirParametros(leer: LeerDatos): ParametrosJubilacion {
 
   const edad65 = mapaPorId(leer, 'jubilacion-edad-65');
   const minimas = new Map<string, number>();
-  // Las mínimas de incapacidad permanente (ids «AAAA-ip-…») no coinciden con las de jubilación.
-  for (const f of ['pension-minima-jubilacion', 'pension-minima-incapacidad'])
+  // Las mínimas de incapacidad permanente («AAAA-ip-…»), viudedad («AAAA-viud-…») y orfandad y
+  // favor de familiares («AAAA-orf-…», «AAAA-prest-orf-…», «AAAA-fam…») no coinciden con las de
+  // jubilación: se cargan todas en el mismo mapa.
+  for (const f of [
+    'pension-minima-jubilacion',
+    'pension-minima-incapacidad',
+    'pension-minima-viudedad',
+    'pension-minima-orfandad-familiares',
+  ])
     for (const [id, v] of mapaPorId(leer, f)) minimas.set(id, v);
 
   return {

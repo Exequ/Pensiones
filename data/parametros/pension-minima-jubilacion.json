@@ -2887,8 +2887,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Titular con sesenta y cinco años. … 8.523,20",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años. | 15.786,40 | 12.241,60 | 11.620,00 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2915,8 +2915,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con sesenta y cinco años. … 8.523,20",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años. | 15.786,40 | 12.241,60 | 11.620,00 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2943,8 +2943,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Titular con sesenta y cinco años. … 8.523,20",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años. | 15.786,40 | 12.241,60 | 11.620,00 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2971,8 +2971,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Titular menor de sesenta y cinco años. … 8.523,20",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular menor de sesenta y cinco años. | 15.786,40 | 11.452,00 | 10.824,80 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -2999,8 +2999,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular menor de sesenta y cinco años. … 8.523,20",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular menor de sesenta y cinco años. | 15.786,40 | 11.452,00 | 10.824,80 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3027,8 +3027,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Titular menor de sesenta y cinco años. … 8.523,20",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular menor de sesenta y cinco años. | 15.786,40 | 11.452,00 | 10.824,80 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3055,8 +3055,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Titular con sesenta y cinco años procedente de gran invalidez. … 8.523,20",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años procedente de gran invalidez. | 23.678,20 | 18.362,40 | 17.430,00 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3083,8 +3083,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con sesenta y cinco años procedente de gran invalidez. … 8.523,20",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años procedente de gran invalidez. | 23.678,20 | 18.362,40 | 17.430,00 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3111,8 +3111,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Titular con sesenta y cinco años procedente de gran invalidez. … 8.523,20",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años procedente de gran invalidez. | 23.678,20 | 18.362,40 | 17.430,00 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3139,8 +3139,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Titular con sesenta y cinco años. … 9.126,60",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años. | 17.592,40 | 13.106,80 | 12.441,80 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3167,8 +3167,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con sesenta y cinco años. … 9.126,60",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años. | 17.592,40 | 13.106,80 | 12.441,80 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3195,8 +3195,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Titular con sesenta y cinco años. … 9.126,60",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años. | 17.592,40 | 13.106,80 | 12.441,80 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3223,8 +3223,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Titular menor de sesenta y cinco años. … 9.126,60",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular menor de sesenta y cinco años. | 17.592,40 | 12.262,60 | 11.590,60 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3251,8 +3251,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular menor de sesenta y cinco años. … 9.126,60",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular menor de sesenta y cinco años. | 17.592,40 | 12.262,60 | 11.590,60 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3279,8 +3279,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Titular menor de sesenta y cinco años. … 9.126,60",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular menor de sesenta y cinco años. | 17.592,40 | 12.262,60 | 11.590,60 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3307,8 +3307,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Titular con sesenta y cinco años procedente de gran incapacidad. … 9.126,60",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años procedente de gran incapacidad. | 26.385,80 | 19.660,20 | 18.662,00 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3335,8 +3335,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)).",
-      "quote": "Titular con sesenta y cinco años procedente de gran incapacidad. … 9.126,60",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años procedente de gran incapacidad. | 26.385,80 | 19.660,20 | 18.662,00 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {
@@ -3363,8 +3363,8 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Titular con sesenta y cinco años procedente de gran incapacidad. … 9.126,60",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Cita corregida en la Fase 2-B-2: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Titular con sesenta y cinco años procedente de gran incapacidad. | 26.385,80 | 19.660,20 | 18.662,00 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
       "crossCheck": {
         "source": {

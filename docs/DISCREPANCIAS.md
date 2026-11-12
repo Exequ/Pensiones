@@ -70,3 +70,8 @@ Fecha: 2026-11-11.
 - **Defunciones registradas frente a tasa central × población media (65-99 años)**: las registradas superan a las esperadas entre un 0,5 % y un 3 % (más en 95-99); el INE calcula la exposición con los tiempos vividos por los fallecidos (b1 y b2 de su metodología) y no con la población media, por lo que no se espera una igualdad exacta.
 
 <!-- discrepancias-1b4:fin -->
+
+## Fase 2-B-2
+
+- **Cuantías mínimas de 2025 y 2026** (citas): 49 citas no contenían la cifra del dato. Se sustituyeron por la fila literal del Anexo I; en todas, la celda de la columna correspondiente coincide con el valor de `/data`. Ningún valor cambia; no hay discrepancia de importes.
+- **Periodo previo de la orfandad**: el art. 224.1 TRLGSS no exige los 500 días con el causante en alta y el art. 9.1 del RD 1647/1997 (redacción de 2001, no actualizada) sí. No es una discrepancia de datos sino de normas; el motor sigue la ley y ofrece la otra lectura (`carenciaOrfandad`, REVISION_ACTUARIAL).

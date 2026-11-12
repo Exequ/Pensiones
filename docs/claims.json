@@ -3209,9 +3209,9 @@
     },
     {
       "id": "param-pension-minima-orfandad-familiares",
-      "texto": "Pensiones mínimas de orfandad y en favor de familiares: 7882,0 (euros/año) en 2026.",
+      "texto": "Pensiones mínimas de orfandad y en favor de familiares: 19559,68 (euros/año) en 2026.",
       "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
-      "datos": ["parametros/pension-minima-orfandad-familiares.json#2026-orf-discapacidad65-unico"],
+      "datos": ["parametros/pension-minima-orfandad-familiares.json#2026-prest-orf-varios-unico"],
       "fuentes": [
         {
           "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
@@ -3354,6 +3354,22 @@
       "preguntaActuarial": "Comprobar el art. 58 TRLGSS vigente: meses de IPC, último mes de medición (noviembre), suelo e indicadores de data/parametros/revalorizacion-regla; recalcular la revalorización de 2024, 2025 y 2026 con data/parametros/ipc-variacion-* y comparar con revalorizacion-general."
     },
     {
+      "id": "param-smi-anual",
+      "texto": "Salario mínimo interprofesional anual: 17094,0 (euros/año) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/smi-anual.json#2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 126/2026, de 18 de febrero, por el que se fija el salario mínimo interprofesional para 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-3815",
+          "docId": "BOE-A-2026-3815"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
       "id": "param-smi-diario",
       "texto": "Salario mínimo interprofesional diario: 40,7 (euros/día) en 2026.",
       "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
@@ -3384,6 +3400,85 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada"
+    },
+    {
+      "id": "param-supervivencia-reglas",
+      "texto": "Causante y base reguladora de muerte y supervivencia: en alta, 500 días cotizados en los cinco años anteriores (sin periodo previo si la muerte se debe a un accidente o a una enfermedad profesional; la orfandad no lo exige); sin alta, quince años; base reguladora de 24 meses elegidos en los quince años anteriores entre 28, o la de la pensión del causante pensionista con sus revalorizaciones (arts. 219, 224 y 228 TRLGSS; art. 7 Decreto 1646/1972).",
+      "ubicacion": "Motor de muerte y supervivencia (docs/MOTOR_SUPERVIVENCIA.md)",
+      "datos": [
+        "parametros/supervivencia-reglas.json#carencia-alta-dias",
+        "parametros/supervivencia-reglas.json#carencia-sin-alta-meses",
+        "parametros/supervivencia-reglas.json#br-meses",
+        "parametros/supervivencia-reglas.json#br-ventana-meses",
+        "parametros/supervivencia-reglas.json#br-divisor",
+        "parametros/supervivencia-reglas.json#br-pensionista-misma-base",
+        "parametros/supervivencia-reglas.json#orfandad-alta-o-pensionista",
+        "parametros/supervivencia-reglas.json#familiares-carencia-alta-dias"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Lecturas abiertas del causante y de la base reguladora de muerte y supervivencia (opciones del motor; efecto en docs/INFORME_VERIFICACION.md, Fase 2-B-2): (a) ventana de los quince años: el motor la cuenta «anterior al mes previo al del hecho causante» (art. 228 TRLGSS, ley posterior y de rango superior); alternativa, hasta el mes anterior al hecho causante (art. 7.2 Decreto 1646/1972), +1,2 % en un caso con subida de bases en los dos últimos meses; (b) los 500 días se cuentan con los días naturales de los meses cotizados (alternativa: 30 por mes); (c) orfandad con causante en alta: el art. 224.1 TRLGSS no exige periodo previo, pero el art. 9.1 del RD 1647/1997 (no actualizado) exige 500 días; el motor sigue la ley (alternativa como opción); (d) favor de familiares y accidente no laboral: la Orden de 1967 solo exime el accidente de trabajo y la enfermedad profesional; el art. 219.1 exime cualquier accidente en la viudedad; el motor exige los 500 días (literal de la Orden). Confirmar (a)-(d) y si la base del causante pensionista debe revalorizarse con la revalorización general de cada año posterior a su pensión (como hace el motor)."
+    },
+    {
+      "id": "param-supervivencia-reglas-cuantia",
+      "texto": "Cuantía de la viudedad, la orfandad y el favor de familiares: viudedad 52 % de la base reguladora (60 % con 65 o más años sin otras rentas; 70 % con cargas familiares y rentas bajas), orfandad y familiares 20 % por beneficiario, incremento del 52 % repartido en la orfandad absoluta; separados y divorciados hasta la pensión compensatoria y, si concurren varios, en proporción al tiempo convivido con el 40 % garantizado al cónyuge o pareja superviviente.",
+      "ubicacion": "Motor de muerte y supervivencia (docs/MOTOR_SUPERVIVENCIA.md)",
+      "datos": [
+        "parametros/supervivencia-reglas.json#viudedad-pct",
+        "parametros/supervivencia-reglas.json#viudedad-65-pct",
+        "parametros/supervivencia-reglas.json#viudedad-cargas-pct",
+        "parametros/supervivencia-reglas.json#viudedad-cargas-reduccion-limite",
+        "parametros/supervivencia-reglas.json#orfandad-pct",
+        "parametros/supervivencia-reglas.json#orfandad-absoluta-incremento-pct",
+        "parametros/supervivencia-reglas.json#familiares-cuantia-igual-orfandad",
+        "parametros/supervivencia-reglas.json#familiares-incremento-sin-viudo",
+        "parametros/supervivencia-reglas.json#divorcio-limite-compensatoria",
+        "parametros/supervivencia-reglas.json#concurrencia-garantia-pct"
+      ],
+      "fuentes": [
+        {
+          "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Preguntas de cuantía de la viudedad, la orfandad y el favor de familiares: (a) reducción del 70 % por el límite de rendimientos (art. 31.3 Decreto 3158/1966): el motor no baja del 52 % (alternativa, sin suelo: −16,9 % en el caso típico); (b) la pensión de un excónyuge se compara con la compensatoria en cómputo anual (14 pagas frente a la compensatoria anual; alternativa mensual: +16,7 %) y después recibe el complemento a mínimos si procede; (c) incremento de familiares sin cónyuge superviviente (art. 23.2 Orden de 1967): el art. 39.Dos del Decreto 3158/1966 remite a un apartado derogado en 2009; el motor aplica el porcentaje de viudedad (52 %) repartido entre nietos y hermanos o, si no los hay ni huérfanos, entre ascendientes (alternativa, sin incremento: −72 %); (d) el 60 % del RD 900/2018 y el 70 % se comparan y se aplica el mayor; la edad de 65 años y las rentas se miden en el hecho causante; (e) la prestación temporal de viudedad no recibe complemento a mínimos ni cuenta en el límite conjunto (no es pensión); (f) el complemento de brecha se reconoce en la viudedad a mujeres con hijos y a hombres con algún hijo con orfandad, salvo que ya se cobre con otra pensión. Confirmar."
+    },
+    {
+      "id": "param-supervivencia-reglas-limites",
+      "texto": "Límite conjunto de muerte y supervivencia: la suma de las pensiones no excede de la base reguladora (salvo viudedad de más del 52 % con varias orfandades, que pueden llegar al 48 %), con preferencia de la orfandad sobre los familiares y orden nietos y hermanos, padres, abuelos, hijos y hermanos de pensionistas (art. 229 TRLGSS); parejas de hecho y prestación temporal de dos años (arts. 221 y 222).",
+      "ubicacion": "Motor de muerte y supervivencia (docs/MOTOR_SUPERVIVENCIA.md)",
+      "datos": [
+        "parametros/supervivencia-reglas.json#limite-conjunto-pct-br",
+        "parametros/supervivencia-reglas.json#limite-excepcion-viudedad-umbral-pct",
+        "parametros/supervivencia-reglas.json#limite-orfandad-max-pct",
+        "parametros/supervivencia-reglas.json#limite-preferencia-orfandad",
+        "parametros/supervivencia-reglas.json#limite-viudedad-orfandad-orden-1967",
+        "parametros/supervivencia-reglas.json#pareja-convivencia-meses",
+        "parametros/supervivencia-reglas.json#prestacion-temporal-meses"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Preguntas del límite conjunto (art. 229 TRLGSS) y de los beneficiarios: (a) la norma no dice qué pensión se reduce cuando viudedad y orfandad superan la base reguladora; el motor mantiene la viudedad y reduce las orfandades (alternativa proporcional: −24 % en la viudedad con cuatro huérfanos); (b) el límite se aplica a las cuantías tras la pensión máxima de cada una y antes de los complementos a mínimos; (c) el reparto entre excónyuges y cónyuge actual (art. 220.2) usa los meses convividos y garantiza el 40 % al cónyuge o pareja actual; el porcentaje no asignado por la compensatoria incrementa la orfandad absoluta (art. 38.1.2.º Decreto 3158/1966); (d) desde el 21/10/2026 (RDL 31/2026) la pareja de hecho con hijos comunes necesita dos años de convivencia y no la inscripción; antes, solo la inscripción con dos años de antelación; (e) madre y abuelas: el requisito de estado civil del art. 22.1.2) de la Orden de 1967 se recibe como dato; hijos y hermanos de pensionistas mayores de 45 años (art. 226.2): su desarrollo reglamentario no se ha localizado y el motor exige ingresos no superiores al SMI anual. Confirmar."
     },
     {
       "id": "param-tipo-cc-empresa",
