@@ -1,0 +1,93 @@
+{
+  "tipo": "datos",
+  "id": "pnc-iprem-anual-sin-pagas-extra",
+  "title": "IPREM anual sin pagas extraordinarias (límite del art. 366 TRLGSS)",
+  "description": "IPREM anual de 12 mensualidades que usa el IMSERSO en su guía de cada año para el límite de compatibilidad de la pensión de incapacidad no contributiva con una actividad laboral (art. 366 TRLGSS). En 2022 y 2023 coincide con el IPREM mensual de /data × 12.",
+  "data": [
+    {
+      "id": "2022",
+      "value": 6948.24,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Guía resumen de aplicación de las pensiones no contributivas de la Seguridad Social, año 2022",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/documents/20123/98526/pncresumen2022.pdf/5ca7393f-30e3-4c31-dcaa-90ee082dea6a",
+        "docId": "pncresumen2022"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "IPREM anual excluidas las pagas extraordinarias (12 mensualidades) con el que la guía calcula el límite de compatibilidad con el trabajo del art. 366 TRLGSS: 12847.84 euros = IPREM + pensión íntegra de 5899.60. Comprobado por código que la suma coincide con el límite que publica la guía.",
+      "quote": "indicador público de renta de efectos múltiples (IPREM), que se cifra en 6.948,24 euros y para la pensión de invalidez no contributiva, que es de 5.899,60",
+      "location": "Guía resumen: pensión de incapacidad que inicia una actividad laboral"
+    },
+    {
+      "id": "2023",
+      "value": 7200.0,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Guía resumen de aplicación de las pensiones no contributivas de la Seguridad Social, año 2023",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/documents/20123/1595507/pncresumen2023.pdf/0d138a8e-b367-38b9-7826-11238afb437f",
+        "docId": "pncresumen2023"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "IPREM anual excluidas las pagas extraordinarias (12 mensualidades) con el que la guía calcula el límite de compatibilidad con el trabajo del art. 366 TRLGSS: 13984.54 euros = IPREM + pensión íntegra de 6784.54. Comprobado por código que la suma coincide con el límite que publica la guía.",
+      "quote": "indicador público de renta de efectos múltiples (IPREM), que se cifra en 7.200,00 euros y para la pensión de invalidez no contributiva, que es de 6.784,54",
+      "location": "Guía resumen: pensión de incapacidad que inicia una actividad laboral"
+    },
+    {
+      "id": "2024",
+      "value": 7200.0,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Guía resumen de aplicación de las pensiones no contributivas de la Seguridad Social, año 2024",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/documents/20123/1595507/pncresumen2024.pdf/62e24a0f-cede-5580-326e-2baebbf2ad3c",
+        "docId": "pncresumen2024"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "IPREM anual excluidas las pagas extraordinarias (12 mensualidades) con el que la guía calcula el límite de compatibilidad con el trabajo del art. 366 TRLGSS: 14450.60 euros = IPREM + pensión íntegra de 7250.60. Comprobado por código que la suma coincide con el límite que publica la guía.",
+      "quote": "indicador público de renta de efectos múltiples (IPREM), que se cifra en 7.200,00 euros y para la pensión de invalidez no contributiva, que es de 7.250,60",
+      "location": "Guía resumen: pensión de incapacidad que inicia una actividad laboral"
+    },
+    {
+      "id": "2025",
+      "value": 7200.0,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Guía resumen de aplicación de las pensiones no contributivas de la Seguridad Social, año 2025",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://blogceadac.imserso.es/documents/d/global/pncresumen2025",
+        "docId": "pncresumen2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "IPREM anual excluidas las pagas extraordinarias (12 mensualidades) con el que la guía calcula el límite de compatibilidad con el trabajo del art. 366 TRLGSS: 15105.80 euros = IPREM + pensión íntegra de 7905.80. Comprobado por código que la suma coincide con el límite que publica la guía.",
+      "quote": "indicador público de renta de efectos múltiples (IPREM), que se cifra en 7.200,00 euros y para la pensión de incapacidad no contributiva, que es de 7.905,80",
+      "location": "Guía resumen: pensión de incapacidad que inicia una actividad laboral"
+    },
+    {
+      "id": "2026",
+      "value": 7200.0,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Guía resumen de aplicación de las pensiones no contributivas de la Seguridad Social, año 2026",
+        "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+        "url": "https://imserso.es/documents/20123/1595507/pncresumen2026.pdf/c4b41c80-63fe-942d-7231-f3ee20e28694",
+        "docId": "pncresumen2026"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "IPREM anual excluidas las pagas extraordinarias (12 mensualidades) con el que la guía calcula el límite de compatibilidad con el trabajo del art. 366 TRLGSS: 16003.20 euros = IPREM + pensión íntegra de 8803.20. Comprobado por código que la suma coincide con el límite que publica la guía.",
+      "quote": "indicador público de renta de efectos múltiples (IPREM), que se cifra en 7.200,00 euros y para la pensión de incapacidad no contributiva, que es de 8.803,20",
+      "location": "Guía resumen: pensión de incapacidad que inicia una actividad laboral"
+    }
+  ]
+}

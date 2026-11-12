@@ -2,7 +2,7 @@
 
 Lista de las afirmaciones de `docs/claims.json` que requieren criterio actuarial (no son la transcripción literal de una norma o de una cifra publicada): reglas de cálculo de la pensión de jubilación, reglas de evolución futura, reglas de incapacidad permanente y de muerte y supervivencia, definiciones y las definiciones de salario medio. Para cada una: el identificador del claim, qué se afirma y una pregunta concreta sobre qué debe comprobar el actuario y con qué dato o fórmula. Generado por `scripts/etl/fuentes_claims.py` (diccionario `REVISION`); la pregunta también está en el campo `preguntaActuarial` de `docs/claims.json`.
 
-**Resto de afirmaciones (159)**: no llevan `revisionActuarial` y heredan `revisionActuarialPorDefecto: "no-requiere"` — no requieren revisión actuarial (transcripción literal de una norma o de una cifra publicada, contrastada con su fuente). Para cambiar el estado de una afirmación basta con añadirle `revisionActuarial` (`revisada`, `rechazada` o `pendiente` con `preguntaActuarial`); `npm run validate:data` exige la pregunta en las pendientes.
+**Resto de afirmaciones (162)**: no llevan `revisionActuarial` y heredan `revisionActuarialPorDefecto: "no-requiere"` — no requieren revisión actuarial (transcripción literal de una norma o de una cifra publicada, contrastada con su fuente). Para cambiar el estado de una afirmación basta con añadirle `revisionActuarial` (`revisada`, `rechazada` o `pendiente` con `preguntaActuarial`); `npm run validate:data` exige la pregunta en las pendientes.
 
 Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"`) en la afirmación de `docs/claims.json` y anotar el criterio en `notas`.
 
@@ -212,9 +212,27 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: parametros/incapacidad-permanente-reglas.json#total-porcentaje, parametros/incapacidad-permanente-reglas.json#absoluta-porcentaje, parametros/incapacidad-permanente-reglas.json#gran-incapacidad-porcentaje, parametros/incapacidad-permanente-reglas.json#total-cualificada-pct, parametros/incapacidad-permanente-reglas.json#gran-incapacidad-complemento-pct-base-minima, parametros/incapacidad-permanente-reglas.json#total-ec-suelo-clase-minima, parametros/incapacidad-permanente-reglas.json#edad-ip-sin-jubilacion-meses, parametros/incapacidad-permanente-reglas.json#br-profesional-salario-real
 
+## Reglas de las pensiones no contributivas y del MEI
+
+### 26. `param-pnc-reglas`
+
+**Afirmación**: Pensiones no contributivas: requisitos (mayor de 18 y menor de 65 años con discapacidad de al menos el 65 % y cinco años de residencia en incapacidad; 65 años y diez años de residencia en jubilación), cuantía íntegra anual, reducción de las rentas propias que superan el 35 %, mínimo del 25 %, límite de acumulación de recursos de la unidad económica (70 % por cada conviviente adicional), complemento del 50 % por tercera persona y compatibilidad con el trabajo (arts. 363 a 370 TRLGSS y guías del IMSERSO).
+
+**Qué debe comprobar el actuario**: Lecturas abiertas de las pensiones no contributivas (opciones del motor; efecto en docs/INFORME_VERIFICACION.md, Fase 2-B-3): (a) art. 364.2: el 35 % de rentas compatibles se calcula sobre la cuantía íntegra (por defecto; es lo que aplica la guía del IMSERSO) o sobre la cuantía por beneficiario de la unidad económica (-7,0 % en el caso típico); (b) art. 366: el límite de compatibilidad con el trabajo suma el IPREM anual y la cuantía íntegra (por defecto; es el límite que publica el IMSERSO: 16.003,20 en 2026) o la pensión reconocida (-40,8 %); (c) art. 364.2 in fine («salvo lo dispuesto en el artículo 366»): el motor lee que el límite del art. 366 sustituye a la reducción general por rentas durante los cuatro primeros años de actividad (alternativa: aplicar ambas); (d) art. 363.2: con derecho al complemento de tercera persona, el límite de acumulación de recursos se calcula sobre la cuantía con el complemento (aplicación del IMSERSO, que no es texto de la ley; por defecto) o solo sobre la íntegra. Otras decisiones: «mayor de dieciocho» se lee como más de 18 años en la fecha de la solicitud; los efectos económicos son del primer día del mes siguiente a la solicitud (arts. 365 y 371) y la cuantía es la de ese año; la cuantía de 2023 es la del incremento extraordinario del art. 77 del RDL 20/2022 (6.784,54), no la del RD 1058/2022 (6.402,20); el complemento de alquiler de 2024 no consta en el texto descargado. Confirmar (a)-(d).
+
+**Datos**: parametros/pnc-reglas.json#incapacidad-edad-minima-meses, parametros/pnc-reglas.json#incapacidad-grado-minimo-pct, parametros/pnc-reglas.json#incapacidad-residencia-total-meses, parametros/pnc-reglas.json#jubilacion-residencia-total-meses, parametros/pnc-reglas.json#unidad-economica-limite-pct-convivientes, parametros/pnc-reglas.json#rentas-compatibles-pct, parametros/pnc-reglas.json#cuantia-minima-pct, parametros/pnc-reglas.json#complemento-tercera-persona-pct, parametros/pnc-reglas.json#compatibilidad-trabajo-limite-iprem, parametros/pnc-reglas.json#limite-acumulacion-con-tercera-persona
+
+### 27. `param-mei-reglas`
+
+**Afirmación**: MEI y cotización adicional de solidaridad: el MEI se mantiene en 1,2 puntos de 2030 a 2050 (1,00 la empresa y 0,2 el trabajador), es una cotización finalista sin bonificaciones y no computa para prestaciones; la cuota de solidaridad se aplica por tramos a la retribución que supera la base máxima, con los tipos de la DT 42.ª de 2025 a 2045 (art. 127 bis, art. 19 bis, DT 42.ª y DT 43.ª TRLGSS).
+
+**Qué debe comprobar el actuario**: Lecturas abiertas del MEI y de la cotización de solidaridad (opciones del motor; efecto en docs/INFORME_VERIFICACION.md, Fase 2-B-3): (a) el art. 127 bis no nombra la base: el motor aplica el tipo a la base de cotización por contingencias comunes (por defecto) o, alternativamente, a la retribución completa, también la parte que supera la base máxima y cotiza como solidaridad (+17,6 % en el caso típico); (b) de 2030 a 2050 el reparto del 1,2 se supone igual que en 2029 (1,00 empresa y 0,2 trabajador) por «igual distribución» de la DT 43.ª; (c) la cuota de solidaridad se reparte con la proporción de los tipos de contingencias comunes de empresa y trabajador (DT 42.ª) y, desde 2045, rigen los tipos del art. 19 bis, que coinciden con los de 2045; (d) el MEI no se aplica antes de 2023 ni a las contingencias profesionales y lanza NoImplementada después de 2050 (la ley no fija el tipo). Confirmar.
+
+**Datos**: parametros/mei-reglas.json#tipo-total-2030-2050, parametros/mei-reglas.json#tipo-empresa-2030-2050, parametros/mei-reglas.json#ultimo-anio, parametros/mei-reglas.json#aplicable-contingencia-jubilacion, parametros/mei-reglas.json#solidaridad-tramo-1-limite-pct, parametros/mei-reglas.json#solidaridad-tipo-final-tramo-a, parametros/mei-reglas.json#solidaridad-primer-anio
+
 ## Reglas de cálculo de muerte y supervivencia
 
-### 26. `param-supervivencia-reglas`
+### 28. `param-supervivencia-reglas`
 
 **Afirmación**: Causante y base reguladora de muerte y supervivencia: en alta, 500 días cotizados en los cinco años anteriores (sin periodo previo si la muerte se debe a un accidente o a una enfermedad profesional; la orfandad no lo exige); sin alta, quince años; base reguladora de 24 meses elegidos en los quince años anteriores entre 28, o la de la pensión del causante pensionista con sus revalorizaciones (arts. 219, 224 y 228 TRLGSS; art. 7 Decreto 1646/1972).
 
@@ -222,7 +240,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: parametros/supervivencia-reglas.json#carencia-alta-dias, parametros/supervivencia-reglas.json#carencia-sin-alta-meses, parametros/supervivencia-reglas.json#br-meses, parametros/supervivencia-reglas.json#br-ventana-meses, parametros/supervivencia-reglas.json#br-divisor, parametros/supervivencia-reglas.json#br-pensionista-misma-base, parametros/supervivencia-reglas.json#orfandad-alta-o-pensionista, parametros/supervivencia-reglas.json#familiares-carencia-alta-dias
 
-### 27. `param-supervivencia-reglas-cuantia`
+### 29. `param-supervivencia-reglas-cuantia`
 
 **Afirmación**: Cuantía de la viudedad, la orfandad y el favor de familiares: viudedad 52 % de la base reguladora (60 % con 65 o más años sin otras rentas; 70 % con cargas familiares y rentas bajas), orfandad y familiares 20 % por beneficiario, incremento del 52 % repartido en la orfandad absoluta; separados y divorciados hasta la pensión compensatoria y, si concurren varios, en proporción al tiempo convivido con el 40 % garantizado al cónyuge o pareja superviviente.
 
@@ -230,7 +248,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: parametros/supervivencia-reglas.json#viudedad-pct, parametros/supervivencia-reglas.json#viudedad-65-pct, parametros/supervivencia-reglas.json#viudedad-cargas-pct, parametros/supervivencia-reglas.json#viudedad-cargas-reduccion-limite, parametros/supervivencia-reglas.json#orfandad-pct, parametros/supervivencia-reglas.json#orfandad-absoluta-incremento-pct, parametros/supervivencia-reglas.json#familiares-cuantia-igual-orfandad, parametros/supervivencia-reglas.json#familiares-incremento-sin-viudo, parametros/supervivencia-reglas.json#divorcio-limite-compensatoria, parametros/supervivencia-reglas.json#concurrencia-garantia-pct
 
-### 28. `param-supervivencia-reglas-limites`
+### 30. `param-supervivencia-reglas-limites`
 
 **Afirmación**: Límite conjunto de muerte y supervivencia: la suma de las pensiones no excede de la base reguladora (salvo viudedad de más del 52 % con varias orfandades, que pueden llegar al 48 %), con preferencia de la orfandad sobre los familiares y orden nietos y hermanos, padres, abuelos, hijos y hermanos de pensionistas (art. 229 TRLGSS); parejas de hecho y prestación temporal de dos años (arts. 221 y 222).
 
@@ -240,7 +258,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 ## Definiciones (ratio afiliados/pensionistas, pensionistas y pensiones, déficit, Fondo de Reserva)
 
-### 29. `sistema-relacion-afiliados-pensiones-afiliados-diciembre-por-pensionista`
+### 31. `sistema-relacion-afiliados-pensiones-afiliados-diciembre-por-pensionista`
 
 **Afirmación**: Afiliados medios de diciembre (total sistema) por pensionista (personas) a diciembre: 2,31 (razón (afiliados por pensionista o por pensión)) en 2025.
 
@@ -248,7 +266,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/relacion-afiliados-pensiones.json#afiliados-diciembre-por-pensionista
 
-### 30. `sistema-relacion-afiliados-pensiones-alternativa-1-afiliados-por-pension-alternativa-1`
+### 32. `sistema-relacion-afiliados-pensiones-alternativa-1-afiliados-por-pension-alternativa-1`
 
 **Afirmación**: Alternativa 1: afiliados a último día de diciembre ÷ pensiones en vigor a 1 de enero siguiente: 2,07 (afiliados por pensión) en 2025.
 
@@ -256,7 +274,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/relacion-afiliados-pensiones-alternativa-1.json#afiliados-por-pension-alternativa-1
 
-### 31. `sistema-pensionistas-pensiones-historico-pensionistas`
+### 33. `sistema-pensionistas-pensiones-historico-pensionistas`
 
 **Afirmación**: Pensionistas del sistema contributivo (personas) a diciembre: 9438579 (personas) en 2025.
 
@@ -264,7 +282,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/pensionistas-pensiones-historico.json#pensionistas
 
-### 32. `sistema-deficit-presupuestario-seguridad-social-saldo-presupuestario-no-financiero`
+### 34. `sistema-deficit-presupuestario-seguridad-social-saldo-presupuestario-no-financiero`
 
 **Afirmación**: Saldo presupuestario no financiero (derechos reconocidos netos menos obligaciones reconocidas por operaciones no financieras): -7187,89 (millones de euros) en 2025.
 
@@ -272,7 +290,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-no-financiero
 
-### 33. `sistema-deficit-sec-fondos-seguridad-social-b9-mio-eur`
+### 35. `sistema-deficit-sec-fondos-seguridad-social-b9-mio-eur`
 
 **Afirmación**: Capacidad (+) / necesidad (-) de financiación (B.9) de los fondos de la Seguridad Social, SEC 2010: -5612,0 (millones de euros) en 2025.
 
@@ -280,7 +298,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/deficit-sec-fondos-seguridad-social.json#b9-mio-eur
 
-### 34. `sistema-fondo-reserva-series-valor-fin-ano`
+### 36. `sistema-fondo-reserva-series-valor-fin-ano`
 
 **Afirmación**: Valor del Fondo de Reserva a 31 de diciembre: 14070 (millones de euros) en 2025.
 
@@ -290,7 +308,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 ## Definiciones de salario medio
 
-### 35. `macro-salario-medio-definiciones-eaes-ambos`
+### 37. `macro-salario-medio-definiciones-eaes-ambos`
 
 **Afirmación**: EAES: salario medio bruto anual por trabajador, ambos: 29540,26 (euros/año) en 2024.
 
@@ -298,7 +316,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: macro/salario-medio-definiciones.json#eaes-ambos
 
-### 36. `macro-salario-medio-definiciones-etcl-coste-salarial-total`
+### 38. `macro-salario-medio-definiciones-etcl-coste-salarial-total`
 
 **Afirmación**: ETCL: coste salarial total por trabajador y mes, media de los cuatro trimestres, ambas jornadas: 2376,55 (euros/mes) en 2025.
 
@@ -306,7 +324,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: macro/salario-medio-definiciones.json#etcl-coste-salarial-total
 
-### 37. `macro-salario-medio-definiciones-cn-remuneracion-por-asalariado-puesto`
+### 39. `macro-salario-medio-definiciones-cn-remuneracion-por-asalariado-puesto`
 
 **Afirmación**: Contabilidad Nacional: remuneración de asalariados / asalariados (puestos de trabajo): 41132,88 (euros/año) en 2025.
 
@@ -314,7 +332,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: macro/salario-medio-definiciones.json#cn-remuneracion-por-asalariado-puesto
 
-### 38. `macro-salario-medio-definiciones-base-media-cotizacion-rg-ambos`
+### 40. `macro-salario-medio-definiciones-base-media-cotizacion-rg-ambos`
 
 **Afirmación**: TGSS: base media de cotización por contingencias comunes del Régimen General, media anual ponderada, ambos: 2286,22 (euros/mes) en 2025.
 
@@ -324,7 +342,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 ## Comparativa internacional (comparabilidad de la tasa de reposición y del gasto)
 
-### 39. `internacional-ocde-espana-gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024`
+### 41. `internacional-ocde-espana-gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024`
 
 **Afirmación**: Gross pension replacement rate at 100% of average wage: 80,4 (Percentage of gross pre-retirement earnings at the same income level) en 2024.
 
@@ -332,7 +350,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: internacional/ocde-espana.json#gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024
 
-### 40. `internacional-contraste-espana-pension-altas-sobre-salario-eaes`
+### 42. `internacional-contraste-espana-pension-altas-sobre-salario-eaes`
 
 **Afirmación**: Cociente entre la pensión media de las altas iniciales de jubilación (ambos sexos) × 14 pagas y el salario medio «eaes»: 0,74 (razón) en 2024.
 
@@ -340,7 +358,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: internacional/contraste-espana.json#pension-altas-sobre-salario-eaes
 
-### 41. `internacional-contraste-espana-gasto-pensiones-contributivas-sobre-pib`
+### 43. `internacional-contraste-espana-gasto-pensiones-contributivas-sobre-pib`
 
 **Afirmación**: Obligaciones reconocidas por «suma de pensiones» (contributivas) del Sistema de la Seguridad Social sobre el PIB: 10,8 (% del PIB) en 2025.
 
@@ -348,7 +366,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: internacional/contraste-espana.json#gasto-pensiones-contributivas-sobre-pib
 
-### 42. `internacional-sistema-esp-9`
+### 44. `internacional-sistema-esp-9`
 
 **Afirmación**: España (OCDE, Pensions at a Glance 2025): la OCDE recoge la proyección de AIReF de 2025: el gasto en pensiones sube 3,2 puntos del PIB entre 2023 y 2050 (16,1 % del PIB en 2050) con las reglas vigentes; es una proyección de AIReF citada por la OCDE, no una estimación de la OCDE.
 
@@ -358,7 +376,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 ## Afirmaciones circulantes (definiciones de cada una)
 
-### 43. `mito-hucha-vaciada`
+### 45. `mito-hucha-vaciada`
 
 **Afirmación**: Afirmación circulante: «La hucha de las pensiones se ha vaciado.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -366,7 +384,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/fondo-reserva-series.json#valor-fin-ano, sistema/fondo-reserva-series.json#disposiciones-anuales, parametros/mei-destino.json#destino-fondo-reserva
 
-### 44. `mito-pensiones-con-impuestos`
+### 46. `mito-pensiones-con-impuestos`
 
 **Afirmación**: Afirmación circulante: «Las pensiones se pagan con los impuestos.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -374,7 +392,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes, sistema/gastos-impropios.json#transferencia-prevista-pge-2021, parametros/prestamos-estado-seguridad-social.json#2021-importe-maximo
 
-### 45. `mito-menos-cotizantes-por-pensionista`
+### 47. `mito-menos-cotizantes-por-pensionista`
 
 **Afirmación**: Afirmación circulante: «Hay cada vez menos cotizantes por pensionista.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -382,7 +400,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/relacion-afiliados-pensiones.json#afiliados-diciembre-por-pensionista, sistema/relacion-afiliados-pensiones.json#afiliados-media-anual-por-pension, sistema/relacion-afiliados-pensiones-alternativa-1.json#afiliados-por-pension-alternativa-1, demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-84, demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-59
 
-### 46. `mito-jubilados-cobran-mas-de-lo-cotizado`
+### 48. `mito-jubilados-cobran-mas-de-lo-cotizado`
 
 **Afirmación**: Afirmación circulante: «Los jubilados de ahora cobran más de lo que cotizaron.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -390,7 +408,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/pensiones-vigor-pension-media.json#jubilacion-ambos, demografia/esperanza-vida-anual.json#esperanza-vida-65-hombres, demografia/esperanza-vida-anual.json#esperanza-vida-65-mujeres
 
-### 47. `mito-sistema-en-deficit`
+### 49. `mito-sistema-en-deficit`
 
 **Afirmación**: Afirmación circulante: «El sistema de pensiones está en déficit.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -398,7 +416,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-no-financiero, sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-total, sistema/deficit-sec-fondos-seguridad-social.json#b9-mio-eur, sistema/deficit-sec-fondos-seguridad-social.json#b9-pc-gdp, sistema/gastos-impropios.json#deficit-estimado-2023
 
-### 48. `mito-edad-real-de-jubilacion-65`
+### 50. `mito-edad-real-de-jubilacion-65`
 
 **Afirmación**: Afirmación circulante: «La edad de jubilación real es 65.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -406,7 +424,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: parametros/edad-ordinaria-jubilacion.json#2025, parametros/carrera-jubilacion-65.json#2025, sistema/edad-media-altas-jubilacion.json#edad-media-altas-jubilacion, internacional/ocde-espana.json#crplf22-hombres-z-z-y-2024, internacional/ocde-espana.json#elmea-hombres-z-z-y, internacional/contraste-espana.json#meses-carrera-completa-desde-22-hasta-65
 
-### 49. `mito-pensiones-publicas-insostenibles`
+### 51. `mito-pensiones-publicas-insostenibles`
 
 **Afirmación**: Afirmación circulante: «Las pensiones públicas son insostenibles.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -414,7 +432,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-64, demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-74, internacional/ocde-espana.json#ppep-no-aplica-z-z-pt-b1gq, demografia/proyecciones-hipotesis.json#tasa-dependencia-proyectada, internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp
 
-### 50. `mito-mayores-en-pobreza`
+### 52. `mito-mayores-en-pobreza`
 
 **Afirmación**: Afirmación circulante: «Los pensionistas españoles viven en la pobreza.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -422,7 +440,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: internacional/eurostat-espana.json#pobreza-o-exclusion-total-y-ge65-pc, internacional/ocde-espana.json#oaip-total-y-ge66-z-pt-pop-sex-age
 
-### 51. `mito-pensiones-sustituyen-casi-todo-el-salario`
+### 53. `mito-pensiones-sustituyen-casi-todo-el-salario`
 
 **Afirmación**: Afirmación circulante: «En España la pensión sustituye casi todo el último salario.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -430,7 +448,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: internacional/ocde-espana.json#gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024, internacional/ocde-espana.json#nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024, internacional/ocde-espana.json#gprr200-hombres-z-m-pt-earn-g-pre-ret-inc-2024, internacional/contraste-espana.json#pension-altas-sobre-salario-eaes, internacional/contraste-espana.json#pension-vigor-sobre-salario-eaes
 
-### 52. `mito-espana-gasta-mas-que-europa`
+### 54. `mito-espana-gasta-mas-que-europa`
 
 **Afirmación**: Afirmación circulante: «España gasta en pensiones más que la media europea.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -438,7 +456,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp, internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq, internacional/contraste-espana.json#gasto-pensiones-contributivas-sobre-pib
 
-### 53. `mito-pensiones-siempre-con-el-ipc`
+### 55. `mito-pensiones-siempre-con-el-ipc`
 
 **Afirmación**: Afirmación circulante: «Las pensiones se revalorizan siempre con el IPC.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -446,7 +464,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: parametros/revalorizacion-regla.json#2024-ultimo-mes-medicion
 
-### 54. `mito-sin-nacimientos-no-hay-pensiones`
+### 56. `mito-sin-nacimientos-no-hay-pensiones`
 
 **Afirmación**: Afirmación circulante: «Con menos nacimientos no se podrán pagar las pensiones.» El catálogo muestra los datos y las definiciones que la condicionan; no emite veredicto.
 
@@ -456,7 +474,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 ## Mortalidad en edades altas y supuestos de la OCDE
 
-### 55. `demografia-triangulacion-mortalidad-supervivencia-publicada-sobre-qx-hombres-85-2010-2020`
+### 57. `demografia-triangulacion-mortalidad-supervivencia-publicada-sobre-qx-hombres-85-2010-2020`
 
 **Afirmación**: Dato derivado: supervivencia publicada a 10 años de los hombres de 85 años en 2010 dividida por Π(1 − qx) (tablas del INE); un valor inferior a 1 significa que la población publicada pierde más efectivos que los que implica qx aplicado a la población a 1 de enero.: 0,8726 (razón) en 2020.
 
@@ -464,7 +482,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: demografia/triangulacion-mortalidad.json#supervivencia-publicada-sobre-qx-hombres-85-2010-2020
 
-### 56. `demografia-triangulacion-mortalidad-supervivencia-publicada-sobre-qx-lexis-hombres-85-2010-2020`
+### 58. `demografia-triangulacion-mortalidad-supervivencia-publicada-sobre-qx-lexis-hombres-85-2010-2020`
 
 **Afirmación**: Dato derivado: ídem con (qx + qx+1)/2 en lugar de qx (convención de Lexis).: 0,9528 (razón) en 2020.
 
@@ -472,7 +490,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: demografia/triangulacion-mortalidad.json#supervivencia-publicada-sobre-qx-lexis-hombres-85-2010-2020
 
-### 57. `demografia-triangulacion-mortalidad-factor-real-sobre-qx-mujeres-85-2010-2019`
+### 59. `demografia-triangulacion-mortalidad-factor-real-sobre-qx-mujeres-85-2010-2019`
 
 **Afirmación**: Dato derivado: ídem para mujeres.: 1,0751 (razón) en 2019.
 
@@ -480,7 +498,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: demografia/triangulacion-mortalidad.json#factor-real-sobre-qx-mujeres-85-2010-2019
 
-### 58. `demografia-triangulacion-mortalidad-muertes-implicitas-pensiones-jubilacion-lexis`
+### 60. `demografia-triangulacion-mortalidad-muertes-implicitas-pensiones-jubilacion-lexis`
 
 **Afirmación**: Dato derivado: ídem con (qx + qx+1)/2.: 263776 (personas) en 2025.
 
@@ -488,7 +506,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: demografia/triangulacion-mortalidad.json#muertes-implicitas-pensiones-jubilacion-lexis
 
-### 59. `demografia-triangulacion-mortalidad-ine-tablas-recalculo-censo-2021`
+### 61. `demografia-triangulacion-mortalidad-ine-tablas-recalculo-censo-2021`
 
 **Afirmación**: Con el censo de 2021 se calcularon en 2023 nuevas series intercensales (2012-2020) y en noviembre de 2023 se publicaron las tablas de mortalidad sobre la nueva base poblacional.
 
@@ -496,7 +514,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: demografia/triangulacion-mortalidad.json#ine-tablas-recalculo-censo-2021
 
-### 60. `internacional-ocde-supuestos-reposicion-ocde-pag-entrada-mercado-laboral-22`
+### 62. `internacional-ocde-supuestos-reposicion-ocde-pag-entrada-mercado-laboral-22`
 
 **Afirmación**: Los indicadores de «Pensions at a Glance» se calculan para trabajadores que entran en el mercado laboral a los 22 años en el año especificado.
 
@@ -504,7 +522,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: internacional/ocde-supuestos-reposicion.json#ocde-pag-entrada-mercado-laboral-22
 
-### 61. `internacional-ocde-supuestos-reposicion-ocde-pag-2025-crecimiento-real-salarios-base`
+### 63. `internacional-ocde-supuestos-reposicion-ocde-pag-2025-crecimiento-real-salarios-base`
 
 **Afirmación**: OCDE, supuesto de la tasa de reposición teórica (crecimiento real de los salarios, escenario base): 1,25 (% anual) en 2024.
 
@@ -512,7 +530,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-crecimiento-real-salarios-base
 
-### 62. `internacional-ocde-supuestos-reposicion-ocde-pag-2025-politica-fiscal-constante`
+### 64. `internacional-ocde-supuestos-reposicion-ocde-pag-2025-politica-fiscal-constante`
 
 **Afirmación**: Impuestos y cotizaciones de la tasa neta: se supone que no cambian en el futuro; los parámetros de «valor» (mínimos exentos, topes de cotización) se ajustan cada año con el salario medio y los de «tipo» (escala del IRPF, tipos de cotización) no varían.
 
@@ -520,7 +538,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Datos**: internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-politica-fiscal-constante
 
-### 63. `internacional-ocde-supuestos-reposicion-ocde-pag-2025-sensibilidad-espana-valorizacion-precios`
+### 65. `internacional-ocde-supuestos-reposicion-ocde-pag-2025-sensibilidad-espana-valorizacion-precios`
 
 **Afirmación**: En la sensibilidad al crecimiento y los tipos, la tasa bruta de España sube porque los ingresos pasados se revalorizan con los precios y el crecimiento real de los salarios es menor en el escenario alternativo.
 

@@ -850,9 +850,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Por beneficiario. | 2.699,20 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Orfandad"
     },
     {
       "id": "2013-orf-discapacidad65-unico",
@@ -867,9 +867,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario discapacitado menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Por beneficiario discapacitado menor de 18 años con una discapacidad en grado igual o superior al 65 por 100. | 5.311,60 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Orfandad"
     },
     {
       "id": "2013-fam-unico",
@@ -884,9 +884,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Por beneficiario. | 2.699,20 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección En favor de familiares"
     },
     {
       "id": "2013-fam1-65-conyuge-cargo",
@@ -901,9 +901,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge a cargo).",
-      "quote": "Un solo beneficiario con sesenta y cinco años. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "– Un solo beneficiario con sesenta y cinco años. | 6.525,40 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección En favor de familiares"
     },
     {
       "id": "2013-fam1-menor65-unico",
@@ -918,9 +918,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Un solo beneficiario menor de sesenta y cinco años. … 1,00, 0,85, 1,85, 49",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "– Un solo beneficiario menor de sesenta y cinco años. | 6.146,00 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección En favor de familiares"
     },
     {
       "id": "2014-orf-unico",
@@ -1547,9 +1547,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Por beneficiario | 2.951,20 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Orfandad",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -1575,9 +1575,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario menor de 18 años con una discapacidad en grado igual o superior al 65 por 100 … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Por beneficiario menor de 18 años con una discapacidad en grado igual o superior al 65 por 100 | 5.805,80 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección Orfandad",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -1603,9 +1603,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Por beneficiario … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Por beneficiario | 2.951,20 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección En favor de familiares",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",
@@ -1631,9 +1631,9 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (importe único).",
-      "quote": "Un solo beneficiario con sesenta y cinco años … 6.721,40",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)",
+      "notes": "Cuantía mínima anual (importe único). Cita corregida en la Fase 2-B-3: fila literal del cuadro, comprobada por código (la de la Fase 1A no contenía la cifra).",
+      "quote": "Un solo beneficiario con sesenta y cinco años | 7.131,60 |",
+      "location": "Anexo (cuadro de cuantías mínimas de las pensiones contributivas), sección En favor de familiares",
       "crossCheck": {
         "source": {
           "title": "Real Decreto 46/2021, de 26 de enero, sobre revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas y de otras prestaciones sociales públicas para el ejercicio 2021.",

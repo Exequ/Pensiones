@@ -1,0 +1,248 @@
+{
+  "tipo": "datos",
+  "id": "mei-reglas",
+  "title": "Reglas del MEI y de la cotización adicional de solidaridad",
+  "description": "Tipo del MEI de 2030 a 2050 y años de efecto (DT 43.ª), alcance del art. 127 bis, y reglas de la cotización adicional de solidaridad (tramos y tipos finales del art. 19 bis, calendario de la DT 42.ª y reparto). El tipo de 2023 a 2029 está en mei-tipo-total, mei-tipo-empresa y mei-tipo-trabajador (Fase 1B-2).",
+  "data": [
+    {
+      "id": "primer-anio",
+      "value": 2023,
+      "unit": "año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20230401 (bloque dt-14).",
+      "quote": "tendrá efectos desde el 1 de enero de 2023 hasta el 31 de diciembre de 2050",
+      "location": "DT 43.ª TRLGSS"
+    },
+    {
+      "id": "aplicable-contingencia-jubilacion",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "El motor lo aplica a la base de cotización por contingencias comunes (el artículo no nombra la base: lectura abierta `baseMEI`). Cita comprobada en las redacciones vigentes desde 20230318 (bloque a1-5).",
+      "quote": "una cotización finalista aplicable en todos los regímenes y en todos los supuestos en los que se cotice por la contingencia de jubilación",
+      "location": "art. 127 bis TRLGSS"
+    },
+    {
+      "id": "sin-beneficios-en-cotizacion",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20230318 (bloque a1-5).",
+      "quote": "no podrá ser objeto de bonificación, reducción, exención o deducción alguna",
+      "location": "art. 127 bis TRLGSS.2"
+    },
+    {
+      "id": "solidaridad-tramo-1-limite-pct",
+      "value": 10,
+      "unit": "% de la base máxima",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20250101 (bloque a1-4).",
+      "quote": "La cuota de solidaridad será el resultado de aplicar un tipo del 5,5 por ciento a la parte de retribución comprendida entre la base máxima de cotización y la cantidad superior a la referida base máxima en un 10 por ciento",
+      "location": "art. 19 bis TRLGSS"
+    },
+    {
+      "id": "solidaridad-tramo-2-limite-pct",
+      "value": 50,
+      "unit": "% de la base máxima",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20250101 (bloque a1-4).",
+      "quote": "el tipo del 6 por ciento a la parte de retribución comprendida entre el 10 por ciento superior a la base máxima de cotización y el 50 por ciento",
+      "location": "art. 19 bis TRLGSS"
+    },
+    {
+      "id": "solidaridad-primer-anio",
+      "value": 2025,
+      "unit": "año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20230401 (bloque dt-13).",
+      "quote": "durante cada año desde el año 2025 hasta el año 2045",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "solidaridad-reparto-como-contingencias-comunes",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Proporción = tipo de contingencias comunes de empresa (tipo-cc-empresa) y trabajador (tipo-cc-trabajador) del año. Cita comprobada en las redacciones vigentes desde 20230401 (bloque dt-13).",
+      "quote": "La distribución de los tipos de cotización por solidaridad entre empresario y trabajador mantendrá la misma proporción que la distribución del tipo general de cotización a la seguridad social por contingencias comunes.",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "tipo-total-2030-2050",
+      "value": 1.2,
+      "unit": "puntos porcentuales",
+      "period": "2030",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Aplica a cada año de 2030 a 2050. Cita comprobada en las redacciones vigentes desde 20230401 (bloque dt-14).",
+      "quote": "Desde el año 2030 hasta 2050 se mantendrá el mismo porcentaje del 1,2, con igual distribución entre empresario y trabajador.",
+      "location": "DT 43.ª TRLGSS"
+    },
+    {
+      "id": "tipo-empresa-2030-2050",
+      "value": 1.0,
+      "unit": "puntos porcentuales",
+      "period": "2030",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Con «igual distribución» que en 2029: 1,00 la empresa y 0,2 el trabajador. Cita comprobada en las redacciones vigentes desde 20230401 (bloque dt-14).",
+      "quote": "En el año 2029, será de 1,2 puntos porcentuales, de los que el 1,00 corresponderá a la empresa y el 0,2 al trabajador. […] Desde el año 2030 hasta 2050 se mantendrá el mismo porcentaje del 1,2, con igual distribución entre empresario y trabajador.",
+      "location": "DT 43.ª TRLGSS"
+    },
+    {
+      "id": "tipo-trabajador-2030-2050",
+      "value": 0.2,
+      "unit": "puntos porcentuales",
+      "period": "2030",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Con «igual distribución» que en 2029. Cita comprobada en las redacciones vigentes desde 20230401 (bloque dt-14).",
+      "quote": "En el año 2029, será de 1,2 puntos porcentuales, de los que el 1,00 corresponderá a la empresa y el 0,2 al trabajador. […] Desde el año 2030 hasta 2050 se mantendrá el mismo porcentaje del 1,2, con igual distribución entre empresario y trabajador.",
+      "location": "DT 43.ª TRLGSS"
+    },
+    {
+      "id": "solidaridad-tipo-final-tramo-a",
+      "value": 5.5,
+      "unit": "%",
+      "period": "2045",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipos del art. 19 bis: los que fija la DT 42.ª para 2045; aplican desde 2045. Cita comprobada en las redacciones vigentes desde 20250101 (bloque a1-4).",
+      "quote": "aplicar un tipo del 5,5 por ciento a la parte de retribución comprendida entre la base máxima de cotización",
+      "location": "art. 19 bis TRLGSS"
+    },
+    {
+      "id": "solidaridad-tipo-final-tramo-b",
+      "value": 6.0,
+      "unit": "%",
+      "period": "2045",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20250101 (bloque a1-4).",
+      "quote": "el tipo del 6 por ciento a la parte de retribución comprendida entre el 10 por ciento superior",
+      "location": "art. 19 bis TRLGSS"
+    },
+    {
+      "id": "solidaridad-tipo-final-tramo-c",
+      "value": 7.0,
+      "unit": "%",
+      "period": "2045",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20250101 (bloque a1-4).",
+      "quote": "el tipo del 7 por ciento a la parte de retribución que supere el anterior porcentaje",
+      "location": "art. 19 bis TRLGSS"
+    },
+    {
+      "id": "solidaridad-ultimo-anio-calendario",
+      "value": 2045,
+      "unit": "año",
+      "period": "2045",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cita comprobada en las redacciones vigentes desde 20230401 (bloque dt-13).",
+      "quote": "durante cada año desde el año 2025 hasta el año 2045",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "ultimo-anio",
+      "value": 2050,
+      "unit": "año",
+      "period": "2050",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Después de 2050 la ley no fija el tipo: el motor lanza NoImplementada. Cita comprobada en las redacciones vigentes desde 20230401 (bloque dt-14).",
+      "quote": "tendrá efectos desde el 1 de enero de 2023 hasta el 31 de diciembre de 2050",
+      "location": "DT 43.ª TRLGSS"
+    }
+  ]
+}

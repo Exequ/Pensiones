@@ -72,3 +72,7 @@ No bloquean el modelo: metadatos de AROPE de Eurostat y método de ELMEA de la O
 ## Fase 2-B-2 (muerte y supervivencia)
 
 No hay descargas manuales nuevas: toda la normativa necesaria se descargó con la API del BOE. **La que de verdad bloquea algo es la misma de la Fase 2-B-1**: el Reglamento de accidentes de trabajo de 1956 (capítulo V), al que remite también el art. 9.d) de la Orden de 13/02/1967 para la base reguladora de muerte y supervivencia por accidente de trabajo o enfermedad profesional. Con él se extraería la regla con `scripts/etl/supervivencia_reglas.py`; mientras tanto, el motor lanza `NoImplementada` salvo base calculada fuera.
+
+## Fase 2-B-3 (pensiones no contributivas, MEI, fachada y casos de Sergio)
+
+No hay descargas manuales nuevas: la normativa y las guías del IMSERSO (2022-2026) se descargaron con la API del BOE y con `curl`. **Sigue bloqueando lo mismo que en las Fases 2-B-1 y 2-B-2**: el Reglamento de accidentes de trabajo de 1956 (capítulo V), base reguladora de las prestaciones por accidente de trabajo y enfermedad profesional, que el motor lanza como `NoImplementada` salvo base calculada fuera. Lo único nuevo que Sergio puede aportar y que no se puede descargar es **`data-raw/casos-oro/casos-sergio.md`**, con el formato de `docs/CASOS_SERGIO_PLANTILLA.md`.

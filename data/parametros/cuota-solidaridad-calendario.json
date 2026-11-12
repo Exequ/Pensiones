@@ -1,0 +1,1016 @@
+{
+  "tipo": "datos",
+  "id": "cuota-solidaridad-calendario",
+  "title": "Cotización adicional de solidaridad: calendario de la DT 42.ª",
+  "description": "Tipo aplicable a cada tramo de retribución por encima de la base máxima, de 2025 a 2045 (DT 42.ª TRLGSS). Tramos: a (hasta el 10 % adicional de la base máxima), b (del 10 % al 50 %) y c (más del 50 %). Coincide con los tipos de 2025 y 2026 de la orden de cotización (cuota-solidaridad-tipos).",
+  "data": [
+    {
+      "id": "2025-tramo-a",
+      "value": 0.92,
+      "unit": "%",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2025 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2025 | 0,92 | 1 | 1,17",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2025-tramo-b",
+      "value": 1.0,
+      "unit": "%",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2025 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2025 | 0,92 | 1 | 1,17",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2025-tramo-c",
+      "value": 1.17,
+      "unit": "%",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2025 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2025 | 0,92 | 1 | 1,17",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2026-tramo-a",
+      "value": 1.15,
+      "unit": "%",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2026 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2026 | 1,15 | 1,25 | 1,46",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2026-tramo-b",
+      "value": 1.25,
+      "unit": "%",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2026 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2026 | 1,15 | 1,25 | 1,46",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2026-tramo-c",
+      "value": 1.46,
+      "unit": "%",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2026 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2026 | 1,15 | 1,25 | 1,46",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2027-tramo-a",
+      "value": 1.38,
+      "unit": "%",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2027 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2027 | 1,38 | 1,5 | 1,75",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2027-tramo-b",
+      "value": 1.5,
+      "unit": "%",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2027 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2027 | 1,38 | 1,5 | 1,75",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2027-tramo-c",
+      "value": 1.75,
+      "unit": "%",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2027 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2027 | 1,38 | 1,5 | 1,75",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2028-tramo-a",
+      "value": 1.6,
+      "unit": "%",
+      "period": "2028",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2028 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2028 | 1,60 | 1,75 | 2,04",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2028-tramo-b",
+      "value": 1.75,
+      "unit": "%",
+      "period": "2028",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2028 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2028 | 1,60 | 1,75 | 2,04",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2028-tramo-c",
+      "value": 2.04,
+      "unit": "%",
+      "period": "2028",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2028 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2028 | 1,60 | 1,75 | 2,04",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2029-tramo-a",
+      "value": 1.83,
+      "unit": "%",
+      "period": "2029",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2029 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2029 | 1,83 | 2 | 2,33",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2029-tramo-b",
+      "value": 2.0,
+      "unit": "%",
+      "period": "2029",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2029 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2029 | 1,83 | 2 | 2,33",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2029-tramo-c",
+      "value": 2.33,
+      "unit": "%",
+      "period": "2029",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2029 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2029 | 1,83 | 2 | 2,33",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2030-tramo-a",
+      "value": 2.06,
+      "unit": "%",
+      "period": "2030",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2030 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2030 | 2,06 | 2,25 | 2,63",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2030-tramo-b",
+      "value": 2.25,
+      "unit": "%",
+      "period": "2030",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2030 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2030 | 2,06 | 2,25 | 2,63",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2030-tramo-c",
+      "value": 2.63,
+      "unit": "%",
+      "period": "2030",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2030 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2030 | 2,06 | 2,25 | 2,63",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2031-tramo-a",
+      "value": 2.29,
+      "unit": "%",
+      "period": "2031",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2031 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2031 | 2,29 | 2,5 | 2,92",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2031-tramo-b",
+      "value": 2.5,
+      "unit": "%",
+      "period": "2031",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2031 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2031 | 2,29 | 2,5 | 2,92",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2031-tramo-c",
+      "value": 2.92,
+      "unit": "%",
+      "period": "2031",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2031 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2031 | 2,29 | 2,5 | 2,92",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2032-tramo-a",
+      "value": 2.52,
+      "unit": "%",
+      "period": "2032",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2032 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2032 | 2,52 | 2,75 | 3,21",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2032-tramo-b",
+      "value": 2.75,
+      "unit": "%",
+      "period": "2032",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2032 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2032 | 2,52 | 2,75 | 3,21",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2032-tramo-c",
+      "value": 3.21,
+      "unit": "%",
+      "period": "2032",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2032 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2032 | 2,52 | 2,75 | 3,21",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2033-tramo-a",
+      "value": 2.75,
+      "unit": "%",
+      "period": "2033",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2033 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2033 | 2,75 | 3 | 3,50",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2033-tramo-b",
+      "value": 3.0,
+      "unit": "%",
+      "period": "2033",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2033 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2033 | 2,75 | 3 | 3,50",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2033-tramo-c",
+      "value": 3.5,
+      "unit": "%",
+      "period": "2033",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2033 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2033 | 2,75 | 3 | 3,50",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2034-tramo-a",
+      "value": 2.98,
+      "unit": "%",
+      "period": "2034",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2034 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2034 | 2,98 | 3,25 | 3,79",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2034-tramo-b",
+      "value": 3.25,
+      "unit": "%",
+      "period": "2034",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2034 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2034 | 2,98 | 3,25 | 3,79",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2034-tramo-c",
+      "value": 3.79,
+      "unit": "%",
+      "period": "2034",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2034 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2034 | 2,98 | 3,25 | 3,79",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2035-tramo-a",
+      "value": 3.21,
+      "unit": "%",
+      "period": "2035",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2035 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2035 | 3,21 | 3,5 | 4,08",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2035-tramo-b",
+      "value": 3.5,
+      "unit": "%",
+      "period": "2035",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2035 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2035 | 3,21 | 3,5 | 4,08",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2035-tramo-c",
+      "value": 4.08,
+      "unit": "%",
+      "period": "2035",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2035 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2035 | 3,21 | 3,5 | 4,08",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2036-tramo-a",
+      "value": 3.44,
+      "unit": "%",
+      "period": "2036",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2036 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2036 | 3,44 | 3,75 | 4,38",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2036-tramo-b",
+      "value": 3.75,
+      "unit": "%",
+      "period": "2036",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2036 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2036 | 3,44 | 3,75 | 4,38",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2036-tramo-c",
+      "value": 4.38,
+      "unit": "%",
+      "period": "2036",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2036 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2036 | 3,44 | 3,75 | 4,38",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2037-tramo-a",
+      "value": 3.67,
+      "unit": "%",
+      "period": "2037",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2037 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2037 | 3,67 | 4 | 4,67",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2037-tramo-b",
+      "value": 4.0,
+      "unit": "%",
+      "period": "2037",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2037 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2037 | 3,67 | 4 | 4,67",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2037-tramo-c",
+      "value": 4.67,
+      "unit": "%",
+      "period": "2037",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2037 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2037 | 3,67 | 4 | 4,67",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2038-tramo-a",
+      "value": 3.9,
+      "unit": "%",
+      "period": "2038",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2038 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2038 | 3,90 | 4,25 | 4,96",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2038-tramo-b",
+      "value": 4.25,
+      "unit": "%",
+      "period": "2038",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2038 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2038 | 3,90 | 4,25 | 4,96",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2038-tramo-c",
+      "value": 4.96,
+      "unit": "%",
+      "period": "2038",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2038 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2038 | 3,90 | 4,25 | 4,96",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2039-tramo-a",
+      "value": 4.13,
+      "unit": "%",
+      "period": "2039",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2039 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2039 | 4,13 | 4,5 | 5,25",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2039-tramo-b",
+      "value": 4.5,
+      "unit": "%",
+      "period": "2039",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2039 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2039 | 4,13 | 4,5 | 5,25",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2039-tramo-c",
+      "value": 5.25,
+      "unit": "%",
+      "period": "2039",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2039 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2039 | 4,13 | 4,5 | 5,25",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2040-tramo-a",
+      "value": 4.35,
+      "unit": "%",
+      "period": "2040",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2040 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2040 | 4,35 | 4,75 | 5,54",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2040-tramo-b",
+      "value": 4.75,
+      "unit": "%",
+      "period": "2040",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2040 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2040 | 4,35 | 4,75 | 5,54",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2040-tramo-c",
+      "value": 5.54,
+      "unit": "%",
+      "period": "2040",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2040 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2040 | 4,35 | 4,75 | 5,54",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2041-tramo-a",
+      "value": 4.58,
+      "unit": "%",
+      "period": "2041",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2041 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2041 | 4,58 | 5 | 5,83",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2041-tramo-b",
+      "value": 5.0,
+      "unit": "%",
+      "period": "2041",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2041 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2041 | 4,58 | 5 | 5,83",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2041-tramo-c",
+      "value": 5.83,
+      "unit": "%",
+      "period": "2041",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2041 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2041 | 4,58 | 5 | 5,83",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2042-tramo-a",
+      "value": 4.81,
+      "unit": "%",
+      "period": "2042",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2042 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2042 | 4,81 | 5,25 | 6,13",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2042-tramo-b",
+      "value": 5.25,
+      "unit": "%",
+      "period": "2042",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2042 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2042 | 4,81 | 5,25 | 6,13",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2042-tramo-c",
+      "value": 6.13,
+      "unit": "%",
+      "period": "2042",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2042 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2042 | 4,81 | 5,25 | 6,13",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2043-tramo-a",
+      "value": 5.04,
+      "unit": "%",
+      "period": "2043",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2043 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2043 | 5,04 | 5,5 | 6,42",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2043-tramo-b",
+      "value": 5.5,
+      "unit": "%",
+      "period": "2043",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2043 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2043 | 5,04 | 5,5 | 6,42",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2043-tramo-c",
+      "value": 6.42,
+      "unit": "%",
+      "period": "2043",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2043 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2043 | 5,04 | 5,5 | 6,42",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2044-tramo-a",
+      "value": 5.27,
+      "unit": "%",
+      "period": "2044",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2044 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2044 | 5,27 | 5,75 | 6,71",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2044-tramo-b",
+      "value": 5.75,
+      "unit": "%",
+      "period": "2044",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2044 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2044 | 5,27 | 5,75 | 6,71",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2044-tramo-c",
+      "value": 6.71,
+      "unit": "%",
+      "period": "2044",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2044 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2044 | 5,27 | 5,75 | 6,71",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2045-tramo-a",
+      "value": 5.5,
+      "unit": "%",
+      "period": "2045",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2045 para el tramo A (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2045 | 5,50 | 6,00 | 7,00",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2045-tramo-b",
+      "value": 6.0,
+      "unit": "%",
+      "period": "2045",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2045 para el tramo B (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2045 | 5,50 | 6,00 | 7,00",
+      "location": "DT 42.ª TRLGSS"
+    },
+    {
+      "id": "2045-tramo-c",
+      "value": 7.0,
+      "unit": "%",
+      "period": "2045",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Tipo de la cuota adicional de solidaridad del año 2045 para el tramo C (a: desde la base máxima hasta el 10 % adicional; b: del 10 % al 50 %; c: más del 50 %). Cuadro de la DT 42.ª, columnas en el orden del texto.",
+      "quote": "2045 | 5,50 | 6,00 | 7,00",
+      "location": "DT 42.ª TRLGSS"
+    }
+  ]
+}
