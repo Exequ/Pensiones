@@ -19,6 +19,14 @@ def anota(src, fichero, fecha=HOY):
 
 claims = []
 huellas = []
+IP_CLAIMS = [
+    ('', ['br-ec-escala-con-anios-hasta-edad', 'br-ec-meses', 'br-ec-divisor', 'br-periodo-corto-coeficiente-divisor', 'br-anl-meses', 'br-anl-divisor'],
+     'Base reguladora de la incapacidad permanente: por enfermedad común, bases de 96 meses entre 112 (con menos de ocho años exigidos, tantas bases como meses exigidos y divisor × 1,1666) por el porcentaje de la escala con los años que faltan hasta la edad ordinaria; por accidente no laboral en alta, 24 meses elegidos en siete años entre 28 (arts. 197 TRLGSS, 5 RD 1799/1985 y 7 Decreto 1646/1972).'),
+    ('-carencia', ['carencia-general-divisor', 'carencia-joven-divisor', 'carencia-reciente-divisor', 'carencia-redondeo-edad-medio-anio-meses', 'carencia-parcial-dias'],
+     'Periodo mínimo de cotización de la incapacidad permanente por enfermedad común: un tercio del tiempo desde los 16 años (menores de 31) o un cuarto desde los 20 (mínimo cinco años, un quinto en los diez últimos); parcial, 1.800 días en diez años; sin alta, quince años (art. 195 TRLGSS y art. 4 RD 1799/1985).'),
+    ('-cuantia', ['total-porcentaje', 'absoluta-porcentaje', 'gran-incapacidad-porcentaje', 'total-cualificada-pct', 'gran-incapacidad-complemento-pct-base-minima', 'total-ec-suelo-clase-minima', 'edad-ip-sin-jubilacion-meses', 'br-profesional-salario-real'],
+     'Cuantía de la incapacidad permanente: total 55 % (más 20 % la cualificada desde los 55 años), absoluta y gran incapacidad 100 % de la base reguladora; complemento de gran incapacidad del 45 % de la base mínima más el 30 % de la última base (mínimo, 45 % de la pensión); suelo de la total por enfermedad común; regla del art. 196.5 a partir de los 67 años.'),
+]
 MITO_PREGUNTAS = {}
 CLAIMS_SERIES_NUEVAS = {
     ('salario-medio-definiciones', 'eaes-ambos'), ('salario-medio-definiciones', 'etcl-coste-salarial-total'),
@@ -117,7 +125,14 @@ for ruta in sorted(glob.glob(f'{REPO}/data/*/*.json')):
     if carpeta == 'sistema' and d['id'] == 'gastos-impropios':
         x = d['data'][0]
         añade('sistema-gastos-impropios-previstos-2023', f"{x['quote'][0].upper()}{x['quote'][1:]} (previsión de 2020, no dato observado).", 'Financiación y déficit (Fase 1B-3)', [f"{rel}#{x['id']}"], x['source'], x['confidence'])
-    if carpeta == 'parametros' and d.get('data'):
+    if carpeta == 'parametros' and d['id'] == 'incapacidad-permanente-reglas':
+        # Fase 2-B-1: tres afirmaciones (base reguladora, periodo mínimo y cuantía) con las lecturas abiertas
+        por = {z['id']: z for z in d['data']}
+        for sufijo, ids, texto in IP_CLAIMS:
+            x = por[ids[0]]
+            añade(f"param-{d['id']}{sufijo}", texto, 'Motor de incapacidad permanente (docs/MOTOR_INCAPACIDAD.md)',
+                  [f"{rel}#{i}" for i in ids], x['source'], x['confidence'])
+    elif carpeta == 'parametros' and d.get('data'):
         # una afirmación por serie: el dato más reciente
         x = sorted(d['data'], key=lambda z: (z['period'], z['id']))[-1]
         añade(f"param-{d['id']}", f"{d['title']}: {num(x['value'])} ({x['unit']}) en {x['period']}.", 'Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)',
@@ -184,6 +199,23 @@ REVISION['param-lagunas-integracion-brecha-genero'] = 'Comprobar la DT 41.ª: (1
 REVISION['param-pension-maxima-incremento-2051-2065'] = 'La tabla de la DT 39.ª.4 (3,2 en 2051 hasta 20,0 en 2065) se describe como «incremento anual adicional» pero enlaza con el acumulado de la DT 39.ª.1 (26 × 0,115 = 2,99 en 2050) y la propia DT apunta a «un incremento total de 30 puntos». El motor ofrece dos lecturas: «incremento acumulado» (por defecto: el límite crece la revalorización más la diferencia entre el acumulado de un año y el del anterior) y «anual literal» (se suma el valor de la tabla a la revalorización de ese año). Determinar cuál es la intención y cómo se compone con la lectura de 2025-2050 (la de /data suma 0,115 constante, no creciente).'
 REVISION['param-carrera-jubilacion-65'] = 'Comprobar cómo se aplica la DT 7.ª: (1) la carrera que permite jubilarse a los 65 años se mide con los meses cotizados al hecho causante (jubilación ordinaria); (2) en las anticipadas, con los meses que habría cotizado hasta los 65 años (proyección) y el calendario del año del hecho causante, no el del año en que cumpliría la edad; (3) los meses se cuentan completos y sin parte proporcional de pagas extra. Confirmar (2), que es la que decide la anticipación.'
 REVISION['param-base-minima-rg'] = 'La base mínima falta en 2020 y 2021 (docs/PENDIENTE_DATOS.md) y la ley no fija su evolución posterior a 2026 en /data: el motor falla por defecto si una laguna cae en 2020-2021 (opción huecoBaseMinima: «anterior» usa el último valor conocido) y proyecta la base mínima con el IPC del escenario desde 2027. Aportar la base mínima de 2020 y 2021 y la regla de evolución (vinculada al SMI) para sustituir ambas aproximaciones.'
+REVISION['param-incapacidad-permanente-reglas'] = ('Lecturas abiertas de la base reguladora de la incapacidad permanente (opciones del motor; efecto cuantificado en docs/INFORME_VERIFICACION.md, Fase 2-B-1): '
+    '(a) «edad ordinaria de jubilación vigente en cada momento» del art. 197.1.b): por defecto, la del art. 205.1.a) con la cotización proyectada hasta los 65 años y el calendario del año del hecho causante; alternativa, la edad general sin carrera larga (efecto nulo con los parámetros de 2022-2027, porque la carrera que da los 65 años supera la que da el 100 %); '
+    '(b) «los años que le resten»: por defecto, meses completos; alternativa, años completos (−1,3 % en el caso típico); '
+    '(c) divisor del periodo corto del art. 197.2: por defecto meses × 1,1666 (RD 1799/1985); alternativa meses × 14/12 (−0,01 %); '
+    '(d) accidente no laboral en alta: periodo de 24 meses elegido por defecto el más favorable y meses sin cotizar a cero; alternativa, integrarlos con la base mínima (+31 % en un caso con seis meses sin cotizar). '
+    'Confirmar las cuatro lecturas y si el periodo corto (art. 197.2) se aplica, como hace el motor, a quien tiene entre 31 y unos 52 años (periodo exigido inferior a 96 meses).')
+REVISION['param-incapacidad-permanente-reglas-carencia'] = ('Lecturas abiertas del periodo mínimo de cotización (art. 195 TRLGSS): '
+    '(a) el redondeo de la edad a medios años del art. 4.1 del RD 1799/1985 (escrito para la regla de 26 años de la Ley 26/1985), ¿sigue aplicándose con la regla del TRLGSS? Por defecto, no (meses cumplidos; un mes menos o más de periodo exigido); '
+    '(b) la quinta parte en los diez últimos años se redondea hacia arriba («al menos»); '
+    '(c) parcial: los 1.800 días se cuentan como días naturales de los meses cotizados (alternativa: 30 por mes) y la ventana de diez años desde el hecho causante, que se toma como fecha de extinción de la incapacidad temporal; '
+    '(d) los meses que faltaban para agotar la incapacidad temporal (art. 4.4 RD 1799/1985) entran como dato del usuario. Confirmar.')
+REVISION['param-incapacidad-permanente-reglas-cuantia'] = ('Preguntas de cuantía de la incapacidad permanente: '
+    '(a) art. 196.5 (67 o más años sin derecho a jubilación): el motor sustituye el porcentaje del grado por el de la carencia de la jubilación (50 %) y mantiene el complemento de gran incapacidad; ¿es la lectura correcta? '
+    '(b) el suelo de la total por enfermedad común (art. 196.2, párr. 3.º) se aplica sin límite de rentas y sobre la pensión con el incremento de la cualificada; '
+    '(c) la cualificada se presume por la edad (55 años) salvo indicación en contra; '
+    '(d) la gran incapacidad percibe el 100 % (art. 18 de la Orden de 1969: la prestación de la absoluta) también cuando la incapacidad de base sea total; '
+    '(e) contingencias profesionales: la base reguladora del salario real (Reglamento de 1956) no está en /data y el motor solo admite una base calculada fuera. Confirmar (a)-(d) y decidir cómo obtener (e).')
 REVISION_POR_DEFECTO = 'no-requiere'
 
 ORG = {'Boletín Oficial del Estado (BOE)': 'BOE', 'Instituto Nacional de Estadística (INE)': 'INE'}
@@ -229,6 +261,7 @@ md = ['# Revisión actuarial', '',
       'Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"`) en la afirmación de `docs/claims.json` y anotar el criterio en `notas`.', '']
 grupos = [('Reglas de cálculo de la pensión de jubilación', [i for i in REVISION if i.startswith('param-') and any(k in i for k in ('escala', 'divisor', 'periodo', 'lagunas', 'actualizacion', 'opcion', 'coeficientes', 'demora', 'carrera'))]),
           ('Reglas de evolución (mínimas, revalorización, base y pensión máximas, MEI)', [i for i in REVISION if i.startswith('param-') and any(k in i for k in ('minima', 'revalorizacion', 'incremento', 'mei'))]),
+          ('Reglas de cálculo de la incapacidad permanente', [i for i in REVISION if i.startswith('param-incapacidad-permanente')]),
           ('Definiciones (ratio afiliados/pensionistas, pensionistas y pensiones, déficit, Fondo de Reserva)', [i for i in REVISION if i.startswith('sistema-')]),
           ('Definiciones de salario medio', [i for i in REVISION if i.startswith('macro-')]),
           ('Comparativa internacional (comparabilidad de la tasa de reposición y del gasto)', [i for i in REVISION if i.startswith('internacional-') and not i.startswith('internacional-ocde-supuestos')]),

@@ -3,6 +3,41 @@
 Registro de decisiones tomadas cuando algo era ambiguo o había que elegir. La más reciente,
 arriba dentro de cada fase.
 
+## Fase 2-B-1 · Incapacidad permanente
+
+### Proceso y datos
+
+- **Rama y base**: `feat/fase-2b1-incapacidad`, creada desde `origin/main` (que ya contiene la Fase 2-A y los modelos M1 a M6), como pide el encargo.
+- **Normativa de desarrollo descargada en la sesión** con la API de datos abiertos del BOE (`scripts/etl/boe_consolidado.py`, texto consolidado con **todas las versiones** de cada bloque y huella del XML en `data-raw/boe/origen.json`): Orden de 15/04/1969, Decreto 1646/1972, Orden de 31/07/1972, Decreto 3158/1966, RD 1071/1984 y RD 1799/1985. También las normas de revalorización de 2022 a 2026 (XML del BOE). El ETL usa la **versión vigente** de cada bloque y se detiene si es posterior al 01/01/2022 (así se comprueba que la regla rige para todos los hechos causantes del alcance).
+- **Datos nuevos** (`scripts/etl/incapacidad_reglas.py`, citas comprobadas por código dentro del artículo o bloque): `incapacidad-permanente-reglas` (75 datos) y, en `pension-minima-incapacidad`, las clases «Total: titular con 65 años» y «de 60 a 64 años» de 2022-2026, que la Fase 1A no extrajo porque el Anexo I escribe la edad con letras (el script comprueba además que la fila «Absoluta» del mismo cuadro coincide con `/data`). Los porcentajes por grado y las carencias por edad, que `PENDIENTE_DATOS.md` daba como pendientes, quedan resueltos.
+- **Porcentajes por grado**: la regla vigente está en normas preconstitucionales que conservan su texto: total 55 % (art. 15.2 de la Orden de 1969, con el art. 12 del Decreto 3158/1966 como segunda fuente), absoluta 100 % (art. 17 de la Orden), gran incapacidad la prestación de la absoluta (art. 18). La base sobre la que se aplican ya no es el «salario real» sino la del art. 197 (RD 1071/1984, art. 3), como se dice en las notas de cada dato.
+- **Reglamento de accidentes de trabajo de 1956** (base de las contingencias profesionales): no está en la legislación consolidada del BOE y la búsqueda por la web no dio resultado. A `DESCARGAS_MANUALES.md`; la rama lanza `NoImplementada` y admite una base calculada fuera (opción explícita).
+- **Tests de datos**: el nuevo fichero de reglas tiene varios datos por año (el de la redacción de cada regla), como los de la 2-A; se registra en `scripts/coherencia-datos.test.ts` (`FICHEROS_REGLAS_2B1`). No se ha cambiado ninguna aserción.
+- **Claims**: tres afirmaciones nuevas (base reguladora, periodo mínimo y cuantía) con sus preguntas actuariales; total de pendientes 60, el límite del test, sin tocarlo.
+- **Caché de Vitest**: tras añadir un fichero a `data/parametros`, `import.meta.glob` necesitó borrar `node_modules/.vitest-cache` en local. En CI no afecta.
+
+### Estructura del motor
+
+- **Refactor mínimo**: la ventana de bases (actualización, lagunas, mejores bases, divisor) pasa a `src/engine/comun/base-reguladora.ts` (`basesDeVentana`), y se añade `basePeriodoElegido` (periodo ininterrumpido elegido en una ventana). La jubilación construye su regla y llama a la función común: mismo resultado (los 776 tests previos pasan sin cambios). El contexto, el tiempo y los parámetros se siguen importando de `jubilacion/`: moverlos no era necesario.
+- **Mínimas de IP en el contexto común**: `construirParametros` carga también `pension-minima-incapacidad` (ids distintos de los de jubilación) y `pensionMinimaAnual` cita el fichero que corresponde a la clase. No cambia ningún cálculo de la jubilación.
+- **Primer año del motor**: el del primer dato de las normas de revalorización en las reglas (2022), leído de `/data`, no escrito en el código.
+
+### Interpretaciones adoptadas (la más sencilla; las dudosas, como opción y en REVISION_ACTUARIAL)
+
+- **Periodo corto del art. 197.2**: se aplica siempre que el periodo exigido sea inferior a 96 meses, lo que ocurre en la enfermedad común hasta unos 52 años de edad. Divisor: meses × 1,1666 (RD 1799/1985); alternativa meses × 14/12.
+- **Edad de la ficción del art. 197.1.b)**: la del art. 205.1.a) con la cotización proyectada hasta los 65 años y el calendario del año del hecho causante (como las anticipadas de la 2-A); alternativa, la edad general. Con los parámetros de 2022-2027 las dos dan el mismo porcentaje (la carrera que permite los 65 años ya da el 100 %).
+- **«Años que le resten»**: meses completos (la escala es por meses desde 2013); alternativa, años completos.
+- **Periodo mínimo**: edad en meses cumplidos, fracciones del periodo exigido despreciadas (RD 1799/1985, art. 4.1) y la quinta parte redondeada hacia arriba; alternativa, el redondeo de la edad a medios años del mismo artículo.
+- **Parcial**: la ventana de diez años y la base de la IT se toman del hecho causante y del mes anterior al inicio de la IT (o de los datos que se indiquen); los días, naturales (alternativa: 30 por mes).
+- **Accidente no laboral en alta**: el periodo más favorable y los meses sin cotizar a cero (la norma no prevé integrarlos; alternativa, integrarlos).
+- **Total cualificada**: se presume la dificultad de empleo desde los 55 años salvo `totalCualificada: false`; en suspenso si trabaja. Con el límite de la máxima, el incremento queda dentro del tope.
+- **Suelo de la total por enfermedad común**: sobre la pensión con el incremento y sin límite de rentas (la norma no lo condiciona).
+- **Gran incapacidad**: 100 % de la base; complemento con la base mínima de los grupos 4 a 7 del año y la última base de la carrera si no se indica otra; el límite de la máxima solo sobre la pensión; la mínima comprende pensión y complemento; la revalorización, por separado (el mismo porcentaje).
+- **Art. 196.5** (67 o más años sin jubilación): el porcentaje de la carencia de la jubilación sustituye al del grado; se mantiene el complemento de gran incapacidad (lectura literal, en REVISION_ACTUARIAL).
+- **Trabajo de absoluta o gran incapacidad**: el importe en suspenso se informa aparte (`importeEnSuspenso`); antes del 22/12/2024, `NoImplementada`.
+- **Casos de oro**: 20, todos «derivados de la norma» (cálculo a mano desde el texto); no se ha localizado ningún ejemplo resuelto oficial con cifras para usarlo como caso «independiente».
+- **Límite de uso**: no se alcanzó; no hizo falta parada.
+
 ## Fase 2-A · Motor de cálculo de la jubilación
 
 ### Proceso y datos

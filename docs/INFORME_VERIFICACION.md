@@ -316,3 +316,49 @@ Lectura de la tabla:
 - Los casos de Sergio no existen todavía: el motor no se ha contrastado con ningún caso externo real.
 - El IPC mensual se aproxima con medias anuales; el efecto aparece en el apartado (d).
 - La opción mixta de la demora, las anticipadas y la integración reforzada de lagunas se han probado con casos construidos, no con resoluciones reales.
+
+## Fase 2-B-1: motor de la incapacidad permanente
+
+Verificación del motor (`src/engine/incapacidad/`, descrito en `docs/MOTOR_INCAPACIDAD.md`) y de los datos nuevos.
+
+### Datos extraídos del BOE
+
+- `scripts/etl/incapacidad_reglas.py` escribe `incapacidad-permanente-reglas` (75 datos) y añade 30 cuantías mínimas a `pension-minima-incapacidad` (IP total con 65 años y con 60 a 64 años, 2022-2026). **Cada cita se comprueba contra el texto del artículo o del bloque consolidado** (el script se detiene si no aparece) y, en los textos consolidados, que la versión citada sea la vigente para todos los hechos causantes desde el 01/01/2022.
+- Segunda fuente: el 55 % de la total figura en la Orden de 1969 (art. 15.2) y en el Decreto 3158/1966 (art. 12.Dos) (test); la fila «Absoluta» del Anexo I de cada año 2022-2026 coincide con la extraída en la Fase 1A (comprobación del ETL); la relación 112 / 96 coincide con el coeficiente 1,1666 del RD 1799/1985 a tres decimales (test); todas las referencias a `/data` de los pasos de cuatro casos existen (test).
+
+### Casos de oro
+
+20 casos (`casos-oro-incapacidad.test.ts`), **todos «derivados de la norma»**: calculados a mano desde el texto legal y `/data` (bases constantes, sin actualización por IPC, hecho causante en 2026), con la cuenta escrita en cada caso. No son una validación independiente: comprueban que el motor aplica nuestra lectura. **Casos «independientes»: ninguno**; no se ha localizado un ejemplo resuelto con cifras en una fuente oficial. Al escribir los casos, dos cuentas a mano estaban mal (no se había aplicado el periodo corto del art. 197.2 a los 45 años y una suma de lagunas); se corrigieron las cuentas, no el motor.
+
+### Propiedades (`propiedades.test.ts`)
+
+Rejilla de 7 años (2022-2040, IPC del 2 % desde el último dato) × 5 edades × 2 orígenes comunes × 3 niveles de base × 3 grados: ningún NaN; la pensión sin complementos no supera la máxima salvo cuando es la mínima; nunca baja de la mínima de su clase sin rentas; es monótona no decreciente en el nivel de las bases (+10 %) y no crece al quitar 12 o 60 meses de carrera; total ≤ absoluta ≤ gran incapacidad. Más de 500 comprobaciones, 0 violaciones.
+
+### Cómo cambia el resultado con cada lectura abierta
+
+Generado con `npx tsx scripts/lecturas-abiertas-incapacidad.ts` (sin complemento a mínimos, para ver el efecto sobre la pensión contributiva; IPC del 2 %):
+
+| Lectura                                              | Caso                                      | Alternativa                    | Magnitud         | Por defecto | Alternativa | Variación |
+| ---------------------------------------------------- | ----------------------------------------- | ------------------------------ | ---------------- | ----------: | ----------: | --------: |
+| (a) edad de la ficción (art. 197.1.b)                | 58 años, 191 meses cotizados, 2026        | edad general sin carrera larga | pensión €/mes    |     1348,51 |     1348,51 |    0,00 % |
+| (b) años añadidos por meses o años completos         | el mismo caso                             | años completos                 | pensión €/mes    |     1348,51 |     1330,78 |   -1,31 % |
+| (c) redondeo de la edad a medios años (RD 1799/1985) | 45 años y 5 meses, 2026                   | medio año                      | meses exigidos   |       76,00 |       75,00 |   -1,32 % |
+| (c) ídem, efecto en la base del periodo corto        | bases crecientes (100 € al año)           | medio año                      | pensión €/mes    |     1510,45 |     1511,18 |    0,05 % |
+| (d) divisor del periodo corto (art. 197.2)           | 42 años, 2026                             | meses × 14/12                  | pensión €/mes    |     1794,15 |     1794,05 |   -0,01 % |
+| (e) meses sin cotizar en el accidente no laboral     | 24 meses elegidos con 6 sin cotizar, 2026 | integrarlos con la base mínima | pensión €/mes    |      530,36 |      693,14 |   30,69 % |
+| (f) días cotizados de la parcial                     | 59 meses cotizados                        | treinta días por mes           | días acreditados |     1796,00 |     1770,00 |   -1,45 % |
+
+Lectura de la tabla:
+
+- **(a) Edad de la ficción**: efecto nulo con los parámetros de 2022-2027, porque quien alcanza con la cotización proyectada la carrera que permite jubilarse a los 65 años (de 37 años y 6 meses a 38 años y 6 meses) ya supera la que da el 100 % de la escala (de 36 a 37 años). Solo importaría si cambiara alguno de los dos calendarios.
+- **(b) Meses o años completos**: hasta 11 meses menos en la escala (−1,3 % en el caso típico; nada si ya se llega al 100 %).
+- **(c) Redondeo de la edad**: cambia el periodo exigido en un mes y, con él, el número de bases del periodo corto (efecto en la pensión del orden del 0,05 %); puede decidir el derecho en el límite.
+- **(d) Divisor del periodo corto**: 1,1666 frente a 14/12 = 1,16667: −0,01 %.
+- **(e) Meses sin cotizar en el accidente no laboral**: es la lectura de mayor efecto (+31 % con seis meses sin cotizar dentro del periodo elegido); con el periodo más favorable, el efecto desaparece si hay 24 meses seguidos cotizados en los siete años.
+- **(f) Días de la parcial**: solo decide el derecho cerca de los 1.800 días.
+
+### Limitaciones de la verificación
+
+- No hay contraste con resoluciones reales ni con el simulador de la Seguridad Social, ni con un modelo propio (M5 no calcula la incapacidad).
+- La base reguladora de las contingencias profesionales no se calcula (Reglamento de 1956 no descargado).
+- Las normas de 2024 (RDL 8/2023) no repiten las reglas de la gran incapacidad en el texto descargado: el motor usa las de 2023.
