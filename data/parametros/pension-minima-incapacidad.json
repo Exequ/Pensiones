@@ -3826,6 +3826,108 @@
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
+      "id": "2022-ip-total-65-conyuge-cargo",
+      "value": 12467.0,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social para el ejercicio 2022",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 12.467,00 | 10.103,80 | 9.590,00 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-ip-total-65-unipersonal",
+      "value": 10103.8,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social para el ejercicio 2022",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 12.467,00 | 10.103,80 | 9.590,00 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-ip-total-65-conyuge-no-cargo",
+      "value": 9590.0,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social para el ejercicio 2022",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 12.467,00 | 10.103,80 | 9.590,00 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-ip-total-60-64-conyuge-cargo",
+      "value": 11688.6,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social para el ejercicio 2022",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 11.688,60 | 9.452,80 | 8.934,80 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-ip-total-60-64-unipersonal",
+      "value": 9452.8,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social para el ejercicio 2022",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 11.688,60 | 9.452,80 | 8.934,80 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2022-ip-total-60-64-conyuge-no-cargo",
+      "value": 8934.8,
+      "unit": "euros/año",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social para el ejercicio 2022",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+        "docId": "BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 11.688,60 | 9.452,80 | 8.934,80 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
       "id": "2023-ip-gran-invalidez-conyuge-cargo",
       "value": 20290.2,
       "unit": "euros/año",
@@ -4030,6 +4132,108 @@
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
+      "id": "2023-ip-total-65-conyuge-cargo",
+      "value": 13526.8,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2023",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 13.526,80 | 10.963,40 | 10.406,20 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-ip-total-65-unipersonal",
+      "value": 10963.4,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2023",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 13.526,80 | 10.963,40 | 10.406,20 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-ip-total-65-conyuge-no-cargo",
+      "value": 10406.2,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2023",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 13.526,80 | 10.963,40 | 10.406,20 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-ip-total-60-64-conyuge-cargo",
+      "value": 12682.6,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2023",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 12.682,60 | 10.256,40 | 9.695,00 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-ip-total-60-64-unipersonal",
+      "value": 10256.4,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2023",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 12.682,60 | 10.256,40 | 9.695,00 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2023-ip-total-60-64-conyuge-no-cargo",
+      "value": 9695.0,
+      "unit": "euros/año",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2023",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+        "docId": "BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 12.682,60 | 10.256,40 | 9.695,00 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
       "id": "2024-ip-gran-invalidez-conyuge-cargo",
       "value": 21698.6,
       "unit": "euros/año",
@@ -4231,6 +4435,108 @@
       "confidence": "alta",
       "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
       "quote": "Total: Derivada de enfermedad común menor de sesenta años. … 8.516,20, 8.516,20, 8.443,40",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-ip-total-65-conyuge-cargo",
+      "value": 14466.2,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre (medidas para 2024, incluida la revalorización de las pensiones)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 14.466,20 | 11.552,80 | 10.966,20 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-ip-total-65-unipersonal",
+      "value": 11552.8,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre (medidas para 2024, incluida la revalorización de las pensiones)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 14.466,20 | 11.552,80 | 10.966,20 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-ip-total-65-conyuge-no-cargo",
+      "value": 10966.2,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre (medidas para 2024, incluida la revalorización de las pensiones)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 14.466,20 | 11.552,80 | 10.966,20 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-ip-total-60-64-conyuge-cargo",
+      "value": 14466.2,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre (medidas para 2024, incluida la revalorización de las pensiones)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 14.466,20 | 10.808,00 | 10.215,80 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-ip-total-60-64-unipersonal",
+      "value": 10808.0,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre (medidas para 2024, incluida la revalorización de las pensiones)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 14.466,20 | 10.808,00 | 10.215,80 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2024-ip-total-60-64-conyuge-no-cargo",
+      "value": 10215.8,
+      "unit": "euros/año",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto-ley 8/2023, de 27 de diciembre (medidas para 2024, incluida la revalorización de las pensiones)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+        "docId": "BOE-A-2023-26452"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 14.466,20 | 10.808,00 | 10.215,80 |",
       "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     },
     {
@@ -4570,6 +4876,108 @@
       }
     },
     {
+      "id": "2025-ip-total-65-conyuge-cargo",
+      "value": 15786.4,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2025",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 15.786,40 | 12.241,60 | 11.620,00 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2025-ip-total-65-unipersonal",
+      "value": 12241.6,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2025",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 15.786,40 | 12.241,60 | 11.620,00 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2025-ip-total-65-conyuge-no-cargo",
+      "value": 11620.0,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2025",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 15.786,40 | 12.241,60 | 11.620,00 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2025-ip-total-60-64-conyuge-cargo",
+      "value": 15786.4,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2025",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 15.786,40 | 11.452,00 | 10.824,80 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2025-ip-total-60-64-unipersonal",
+      "value": 11452.0,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2025",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 15.786,40 | 11.452,00 | 10.824,80 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2025-ip-total-60-64-conyuge-no-cargo",
+      "value": 10824.8,
+      "unit": "euros/año",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2025",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+        "docId": "BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 15.786,40 | 11.452,00 | 10.824,80 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
       "id": "2026-ip-gran-invalidez-conyuge-cargo",
       "value": 26385.8,
       "unit": "euros/año",
@@ -4904,6 +5312,108 @@
         "matches": true,
         "notes": "Misma cuantía en otra norma del mismo año."
       }
+    },
+    {
+      "id": "2026-ip-total-65-conyuge-cargo",
+      "value": 17592.4,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 17.592,40 | 13.106,80 | 12.441,80 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2026-ip-total-65-unipersonal",
+      "value": 13106.8,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 17.592,40 | 13.106,80 | 12.441,80 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2026-ip-total-65-conyuge-no-cargo",
+      "value": 12441.8,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con sesenta y cinco años. | 17.592,40 | 13.106,80 | 12.441,80 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2026-ip-total-60-64-conyuge-cargo",
+      "value": 17592.4,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 17.592,40 | 12.262,60 | 11.590,60 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2026-ip-total-60-64-unipersonal",
+      "value": 12262.6,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (sin cónyuge (unidad económica unipersonal)). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 17.592,40 | 12.262,60 | 11.590,60 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+    },
+    {
+      "id": "2026-ip-total-60-64-conyuge-no-cargo",
+      "value": 11590.6,
+      "unit": "euros/año",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+        "docId": "BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Columnas del cuadro: con cónyuge a cargo, sin cónyuge, con cónyuge no a cargo. Extraída en la Fase 2-B-1.",
+      "quote": "Total: Titular con edad entre sesenta y sesenta y cuatro años. | 17.592,40 | 12.262,60 | 11.590,60 |",
+      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
     }
   ]
 }

@@ -43,5 +43,82 @@
   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-11645",
   "sha256_original": "4f3140cfd4e1e68edbc773433e1d4b7ba147274346504823845e942cb5908503",
   "nota": "Real Decreto 371/2023 (texto consolidado, última actualización publicada el 28/05/2026), descargado el 2026-11-12 con curl; texto plano extraído del HTML (etiquetas eliminadas, celdas separadas por « | »)"
+ },
+ "orden-15-04-1969.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1969-575",
+  "urlDescarga": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1969-575/texto",
+  "sha256_original": "51cb9c0b111d98a51451d50a51de3fc5595d3875cb33b9791d06cc657fb1943d",
+  "fetchedAt": "2026-11-12",
+  "nota": "Orden de 15 de abril de 1969 (prestaciones por invalidez del Régimen General). Texto consolidado descargado de la API de datos abiertos del BOE; texto plano con todas las versiones de cada bloque (scripts/etl/boe_consolidado.py)"
+ },
+ "decreto-1646-1972.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944",
+  "urlDescarga": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1972-944/texto",
+  "sha256_original": "fcd25eb0bf2893d11b98b8920657130ba5e341f5d77a35e375e4067a650013ea",
+  "fetchedAt": "2026-11-12",
+  "nota": "Decreto 1646/1972, de 23 de junio (aplicación de la Ley 24/1972 en materia de prestaciones). Texto consolidado descargado de la API de datos abiertos del BOE; texto plano con todas las versiones de cada bloque (scripts/etl/boe_consolidado.py)"
+ },
+ "orden-31-07-1972.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-1210",
+  "urlDescarga": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1972-1210/texto",
+  "sha256_original": "4d567a58dee9cc5bb278fa46b9226755289aa5dc00f24cf72d82126136815537",
+  "fetchedAt": "2026-11-12",
+  "nota": "Orden de 31 de julio de 1972 (desarrollo del Decreto 1646/1972). Texto consolidado descargado de la API de datos abiertos del BOE; texto plano con todas las versiones de cada bloque (scripts/etl/boe_consolidado.py)"
+ },
+ "decreto-3158-1966.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116",
+  "urlDescarga": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1966-21116/texto",
+  "sha256_original": "d8aeb8bfd2d7ea341ae0d9b0ac94fbf714038de16091ac35e131b053415e02b9",
+  "fetchedAt": "2026-11-12",
+  "nota": "Decreto 3158/1966, de 23 de diciembre (Reglamento General de la cuantía de las prestaciones económicas). Texto consolidado descargado de la API de datos abiertos del BOE; texto plano con todas las versiones de cada bloque (scripts/etl/boe_consolidado.py)"
+ },
+ "rd-1799-1985.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-20582",
+  "urlDescarga": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1985-20582/texto",
+  "sha256_original": "230bff69357afefa850a23cc0322e8e19ffad24bd85c715df0bae0d48ac2170c",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 1799/1985, de 2 de octubre (racionalización de las pensiones de jubilación e invalidez permanente). Texto consolidado descargado de la API de datos abiertos del BOE; texto plano con todas las versiones de cada bloque (scripts/etl/boe_consolidado.py)"
+ },
+ "rd-1071-1984.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1984-12729",
+  "urlDescarga": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1984-12729/texto",
+  "sha256_original": "5ccb81d74566b0ffcff4f5328b233c2bbb0194ff9ffe1ac3e510d9ea3ea2fe76",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 1071/1984, de 23 de mayo (modificación de diversos aspectos de la invalidez permanente). Texto consolidado descargado de la API de datos abiertos del BOE; texto plano con todas las versiones de cada bloque (scripts/etl/boe_consolidado.py)"
+ },
+ "BOE-A-2022-1189.txt": {
+  "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189",
+  "urlDescarga": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2022-1189",
+  "sha256_original": "23d46b986edb3302e593b73c7536f40c0869ffeb6f5eaf509c6269884cb0f075",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 65/2022, de 25 de enero (actualización de las pensiones para 2022). XML del BOE descargado el 2026-11-12 con curl; texto plano: etiquetas eliminadas, una línea por párrafo o celda (celdas terminadas en « |»)"
+ },
+ "BOE-A-2022-22694.txt": {
+  "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694",
+  "urlDescarga": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2022-22694",
+  "sha256_original": "fccd87ee2cd6ae9a1f1aeb3baf15d6eaff0e9828d322036b1c5327580ab4df7c",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 1058/2022, de 27 de diciembre (revalorización de las pensiones para 2023). XML del BOE descargado el 2026-11-12 con curl; texto plano: etiquetas eliminadas, una línea por párrafo o celda (celdas terminadas en « |»)"
+ },
+ "BOE-A-2023-26452.txt": {
+  "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26452",
+  "urlDescarga": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2023-26452",
+  "sha256_original": "7e3ee95b7c12179a1ab8235aa21e19f44c32c46ac8457ca51d0a5a21272995e7",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto-ley 8/2023, de 27 de diciembre (pensiones para 2024). XML del BOE descargado el 2026-11-12 con curl; texto plano: etiquetas eliminadas, una línea por párrafo o celda (celdas terminadas en « |»)"
+ },
+ "BOE-A-2025-7660.txt": {
+  "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+  "urlDescarga": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2025-7660",
+  "sha256_original": "5751b2abc8d14f76ee7ee0ebf97b141cfc29137976a3cbb1e7924c500bf22527",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 316/2025, de 15 de abril (limitación y revalorización de las pensiones para 2025). XML del BOE descargado el 2026-11-12 con curl; texto plano: etiquetas eliminadas, una línea por párrafo o celda (celdas terminadas en « |»)"
+ },
+ "BOE-A-2026-6977.txt": {
+  "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+  "urlDescarga": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-6977",
+  "sha256_original": "0efed993bc34ef6aa9216fa4f18f21185bb8e0e5a947cd1b76887651ebfa7d1e",
+  "fetchedAt": "2026-11-12",
+  "nota": "Real Decreto 241/2026, de 25 de marzo (limitación y revalorización de las pensiones para 2026). XML del BOE descargado el 2026-11-12 con curl; texto plano: etiquetas eliminadas, una línea por párrafo o celda (celdas terminadas en « |»)"
  }
 }

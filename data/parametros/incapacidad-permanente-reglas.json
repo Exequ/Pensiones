@@ -1,0 +1,1150 @@
+{
+  "tipo": "datos",
+  "id": "incapacidad-permanente-reglas",
+  "title": "Reglas de la incapacidad permanente contributiva (arts. 194 a 198 y DT 26.ª TRLGSS y normativa de desarrollo)",
+  "description": "Grados, periodos mínimos de cotización, base reguladora por origen, porcentajes por grado, años añadidos hasta la edad ordinaria, incremento de la total cualificada, complemento de gran incapacidad, suelo de la total por enfermedad común, cantidad a tanto alzado de la parcial, compatibilidad con el trabajo, complemento de brecha y reglas de la gran incapacidad en las normas de revalorización. Los valores escritos con letras o en años se pasan a números (meses); la conversión consta en `notes`. Los indicadores (1) recogen reglas cualitativas con su cita.",
+  "data": [
+    {
+      "id": "total-porcentaje-contraste-1966",
+      "value": 55,
+      "unit": "% de la base (incapacidad permanente total; contraste)",
+      "period": "1967",
+      "source": {
+        "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Segunda fuente del 55 %.",
+      "quote": "la cuantía de ésta será equivalente al cincuenta y cinco por ciento de su base de cotización",
+      "location": "art. 12.Dos Decreto 3158/1966"
+    },
+    {
+      "id": "total-porcentaje",
+      "value": 55,
+      "unit": "% de la base reguladora (incapacidad permanente total)",
+      "period": "1969",
+      "source": {
+        "title": "Orden de 15 de abril de 1969 por la que se establecen normas para la aplicación y desarrollo de las prestaciones por invalidez en el Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1969-575"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Contraste: el art. 12.Dos del Decreto 3158/1966 fija la misma cuantía («cincuenta y cinco por ciento»). La opción entre pensión y rehabilitación que regula el artículo dejó de existir con el art. 3 del Decreto 1646/1972 (pensión vitalicia en todo caso); el porcentaje es el que se sigue aplicando.",
+      "quote": "que les sea reconocido el derecho a una pensión vitalicia de cuantía equivalente al 55 por 100 de la base reguladora",
+      "location": "art. 15.2 Orden de 15/04/1969"
+    },
+    {
+      "id": "absoluta-porcentaje",
+      "value": 100,
+      "unit": "% de la base reguladora (incapacidad permanente absoluta)",
+      "period": "1969",
+      "source": {
+        "title": "Orden de 15 de abril de 1969 por la que se establecen normas para la aplicación y desarrollo de las prestaciones por invalidez en el Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1969-575"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "El «salario real» como base se sustituyó por la base reguladora de las contingencias comunes (art. 3 del RD 1071/1984 y art. 197 TRLGSS); el porcentaje del 100 % sigue siendo el de la norma. Contraste: art. 12.Cuatro del Decreto 3158/1966 («ciento por ciento»).",
+      "quote": "dará derecho, a quienes reúnan las condiciones establecidas en el artículo 19, a una pensión vitalicia equivalente al 100 por 100 del salario real del trabajador",
+      "location": "art. 17 Orden de 15/04/1969"
+    },
+    {
+      "id": "gran-incapacidad-porcentaje",
+      "value": 100,
+      "unit": "% de la base reguladora (gran incapacidad, sin el complemento)",
+      "period": "1969",
+      "source": {
+        "title": "Orden de 15 de abril de 1969 por la que se establecen normas para la aplicación y desarrollo de las prestaciones por invalidez en el Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1969-575"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "La gran incapacidad percibe la pensión de la absoluta (100 %). El incremento del 50 % de este artículo lo sustituye el complemento del art. 196.4 TRLGSS.",
+      "quote": "dará derecho, a quienes reúnan las condiciones establecidas en el artículo 19, a la prestación económica que se señala en el articulo anterior para el de incapacidad permanente absoluta",
+      "location": "art. 18 Orden de 15/04/1969"
+    },
+    {
+      "id": "br-profesional-salario-real",
+      "value": 1,
+      "unit": "indicador (1 = la base de las contingencias profesionales es el salario real del Reglamento de 1956)",
+      "period": "1969",
+      "source": {
+        "title": "Orden de 15 de abril de 1969 por la que se establecen normas para la aplicación y desarrollo de las prestaciones por invalidez en el Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1969-575"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "El Reglamento de accidentes de trabajo de 1956 no está en la legislación consolidada del BOE y no se ha descargado (DESCARGAS_MANUALES.md): el motor no calcula la base de las contingencias profesionales.",
+      "quote": "serán de aplicación, para determinar la base reguladora, las normas que para la incapacidad permanente establecía el capitulo V del Reglamento aprobado por Decreto de 22 de junio de 1956",
+      "location": "art. 15.2.b) Orden de 15/04/1969"
+    },
+    {
+      "id": "parcial-mensualidades",
+      "value": 24,
+      "unit": "mensualidades de la base reguladora de la incapacidad temporal",
+      "period": "1972",
+      "source": {
+        "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Veinticuatro mensualidades. «Cualquiera que sea la contingencia determinante de la misma y su edad».",
+      "quote": "percibirán una cantidad a tanto alzado equivalente a veinticuatro mensualidades de la base reguladora que haya servido para determinar la prestación económica por incapacidad laboral transitoria de la que se deriva la invalidez",
+      "location": "art. 9 Decreto 1646/1972"
+    },
+    {
+      "id": "total-cualificada-pct",
+      "value": 20,
+      "unit": "% de la base reguladora (incremento de la total «cualificada»)",
+      "period": "1972",
+      "source": {
+        "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Desarrolla el art. 196.2, párrafo 2.º, TRLGSS.",
+      "quote": "El incremento a que el presente artículo se refiere consistirá en un veinte por ciento de la base reguladora que se tome para determinar la cuantía de la pensión.",
+      "location": "art. 6.Tres Decreto 1646/1972"
+    },
+    {
+      "id": "total-cualificada-edad-minima-meses",
+      "value": 660,
+      "unit": "meses de edad mínimos para el incremento de la total",
+      "period": "1972",
+      "source": {
+        "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Cincuenta y cinco años = 660 meses.",
+      "quote": "El requisito de edad exigido en el precepto legal citado será, como mínimo, de cincuenta y cinco años.",
+      "location": "art. 6.Dos Decreto 1646/1972"
+    },
+    {
+      "id": "total-cualificada-suspension-empleo",
+      "value": 1,
+      "unit": "indicador (1 = el incremento se suspende mientras se trabaje)",
+      "period": "1972",
+      "source": {
+        "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "El incremento quedará en suspenso durante el período en que el trabajador obtenga un empleo.",
+      "location": "art. 6.Cuatro Decreto 1646/1972"
+    },
+    {
+      "id": "br-absoluta-cc-como-art7",
+      "value": 1,
+      "unit": "indicador (1 = la absoluta por contingencias comunes usa la base de las demás pensiones)",
+      "period": "1984",
+      "source": {
+        "title": "Real Decreto 1071/1984, de 23 de mayo, por el que se modifican diversos aspectos en la normativa vigente en materia de invalidez permanente (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1984-12729"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "El cálculo de la base reguladora de la pensión de invalidez absoluta, derivada de enfermedad común o accidente no laboral, se llevará a cabo conforme a lo dispuesto en el artículo 7.º del Decreto 1646/1972",
+      "location": "art. 3 RD 1071/1984"
+    },
+    {
+      "id": "br-periodo-corto-coeficiente-divisor",
+      "value": 1.1666,
+      "unit": "coeficiente que multiplica el número de meses para obtener el divisor",
+      "period": "1985",
+      "source": {
+        "title": "Real Decreto 1799/1985, de 2 de octubre, para la aplicación de la Ley 26/1985 en materia de racionalización de las pensiones de jubilación e invalidez permanente (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-20582"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "El art. 197.2 TRLGSS dice «de forma análoga» sin fijar el divisor; el RD 1799/1985 da 1,1666. La alternativa (14/12, la relación 112/96) es una opción del motor (`divisorPeriodoCorto`).",
+      "quote": "por el número de meses a que dichas bases se refieran, incrementándose este divisor multiplicándolo por el coeficiente 1,1666",
+      "location": "art. 5.2, regla 3.ª, RD 1799/1985"
+    },
+    {
+      "id": "br-anl-alta-normas-anteriores",
+      "value": 1,
+      "unit": "indicador (1 = el accidente no laboral en alta sigue las normas anteriores a la Ley 26/1985)",
+      "period": "1985",
+      "source": {
+        "title": "Real Decreto 1799/1985, de 2 de octubre, para la aplicación de la Ley 26/1985 en materia de racionalización de las pensiones de jubilación e invalidez permanente (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-20582"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "El cálculo de la base reguladora de las pensiones de invalidez permanente total, invalidez permanente absoluta y gran invalidez, derivadas de accidente no laboral, en que los beneficiarios se encontrasen en situación de alta o asimilada a la de alta, continuarán rigiéndose por las normas ya en vigor con anterioridad a la Ley 26/1985.",
+      "location": "art. 5.4, párrafo 2.º, RD 1799/1985"
+    },
+    {
+      "id": "carencia-redondeo-fracciones-mes",
+      "value": 1,
+      "unit": "indicador (1 = se desprecian las fracciones de mes del periodo exigido)",
+      "period": "1998",
+      "source": {
+        "title": "Real Decreto 1799/1985, de 2 de octubre, para la aplicación de la Ley 26/1985 en materia de racionalización de las pensiones de jubilación e invalidez permanente (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-20582"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "Los períodos resultantes por aplicación de las reglas contenidas en los apartados a) y b) del presente número serán objeto de redondeo, despreciándose, en su caso, las fracciones de mes.",
+      "location": "art. 4 RD 1799/1985 (redacción vigente desde el 10/01/1998), apartado 1"
+    },
+    {
+      "id": "carencia-redondeo-edad-medio-anio-meses",
+      "value": 6,
+      "unit": "meses: fracción de edad que el RD 1799/1985 redondea a medio año (lectura alternativa)",
+      "period": "1998",
+      "source": {
+        "title": "Real Decreto 1799/1985, de 2 de octubre, para la aplicación de la Ley 26/1985 en materia de racionalización de las pensiones de jubilación e invalidez permanente (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-20582"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "El art. 4.1 del RD 1799/1985 desarrolla la regla de la Ley 26/1985 (umbral de 26 años y la mitad del tiempo); el art. 195.3 TRLGSS fija otro umbral (31 años) y otra fracción. Si el redondeo de la edad a medios años sigue rigiendo con la regla del TRLGSS es una lectura abierta (opción del motor `redondeoEdadCarencia`).",
+      "quote": "A tales efectos, no se tendrán en consideración, en su caso, las fracciones de edad del beneficiario en la fecha del hecho causante que sean inferiores a medio año. Del mismo modo, cuando tales fracciones sean superiores a seis meses, se considerarán equivalentes a medio año.",
+      "location": "art. 4 RD 1799/1985 (redacción vigente desde el 10/01/1998), apartado 1.b)"
+    },
+    {
+      "id": "carencia-dias-it-asimilados",
+      "value": 1,
+      "unit": "indicador (1 = los días que faltan para agotar la incapacidad temporal cuentan como cotizados)",
+      "period": "1998",
+      "source": {
+        "title": "Real Decreto 1799/1985, de 2 de octubre, para la aplicación de la Ley 26/1985 en materia de racionalización de las pensiones de jubilación e invalidez permanente (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-20582"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "los días que falten para agotar dicho período máximo se asimilarán a días cotizados a efectos del cómputo del período mínimo de cotización exigido para causar derecho a la pensión de incapacidad permanente",
+      "location": "art. 4 RD 1799/1985 (redacción vigente desde el 10/01/1998), apartado 4"
+    },
+    {
+      "id": "br-anl-meses",
+      "value": 24,
+      "unit": "meses ininterrumpidos de bases (accidente no laboral)",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "La base reguladora de las pensiones de incapacidad permanente, derivadas de accidente no laboral, será el cociente que resulte de dividir por 28 la suma de las bases de cotización del interesado durante un período ininterrumpido de 24 meses, elegido por el beneficiario dentro de los siete años inmediatamente anteriores a la fecha del hecho causante de la pensión.",
+      "location": "art. 7.1 Decreto 1646/1972 (redacción del RD 1795/2003, vigente desde el 01/01/2004)"
+    },
+    {
+      "id": "br-anl-divisor",
+      "value": 28,
+      "unit": "divisor (accidente no laboral)",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "será el cociente que resulte de dividir por 28 la suma de las bases de cotización del interesado durante un período ininterrumpido de 24 meses",
+      "location": "art. 7.1 Decreto 1646/1972"
+    },
+    {
+      "id": "br-anl-ventana-meses",
+      "value": 84,
+      "unit": "meses anteriores al hecho causante en que se elige el periodo (accidente no laboral)",
+      "period": "2004",
+      "source": {
+        "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "Siete años = 84 meses.",
+      "quote": "elegido por el beneficiario dentro de los siete años inmediatamente anteriores a la fecha del hecho causante de la pensión",
+      "location": "art. 7.1 Decreto 1646/1972"
+    },
+    {
+      "id": "grados-aplicables-hasta-desarrollo",
+      "value": 1,
+      "unit": "indicador (1 = rige la redacción de la DT 26.ª)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "El art. 194 (grados por porcentaje de reducción de la capacidad) no rige: falta la lista de enfermedades reglamentaria. Las definiciones que siguen son las de la DT 26.ª.",
+      "quote": "Lo dispuesto en el artículo 194 de esta ley únicamente será de aplicación a partir de la fecha en que entren en vigor las disposiciones reglamentarias a que se refiere el apartado 3 del mencionado artículo 194. Hasta que no se desarrolle reglamentariamente dicho artículo será de aplicación la siguiente redacción",
+      "location": "DT 26.ª TRLGSS (redacción del art. 194 aplicable hasta su desarrollo reglamentario), apartado Uno"
+    },
+    {
+      "id": "grado-parcial",
+      "value": "parcial",
+      "unit": "grado",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Se entenderá por incapacidad permanente parcial para la profesión habitual la que, sin alcanzar el grado de total, ocasione al trabajador una disminución no inferior al 33 por ciento en su rendimiento normal para dicha profesión, sin impedirle la realización de las tareas fundamentales de la misma.",
+      "location": "DT 26.ª TRLGSS (redacción del art. 194 aplicable hasta su desarrollo reglamentario), art. 194.3"
+    },
+    {
+      "id": "grado-parcial-reduccion-minima-pct",
+      "value": 33,
+      "unit": "% mínimo de disminución del rendimiento normal en la profesión habitual",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "ocasione al trabajador una disminución no inferior al 33 por ciento en su rendimiento normal para dicha profesión",
+      "location": "DT 26.ª TRLGSS (redacción del art. 194 aplicable hasta su desarrollo reglamentario), art. 194.3"
+    },
+    {
+      "id": "grado-total",
+      "value": "total",
+      "unit": "grado",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Se entenderá por incapacidad permanente total para la profesión habitual la que inhabilite al trabajador para la realización de todas o de las fundamentales tareas de dicha profesión, siempre que pueda dedicarse a otra distinta.",
+      "location": "DT 26.ª TRLGSS (redacción del art. 194 aplicable hasta su desarrollo reglamentario), art. 194.4"
+    },
+    {
+      "id": "grado-absoluta",
+      "value": "absoluta",
+      "unit": "grado",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Se entenderá por incapacidad permanente absoluta para todo trabajo la que inhabilite por completo al trabajador para toda profesión u oficio.",
+      "location": "DT 26.ª TRLGSS (redacción del art. 194 aplicable hasta su desarrollo reglamentario), art. 194.5"
+    },
+    {
+      "id": "grado-gran-incapacidad",
+      "value": "gran-incapacidad",
+      "unit": "grado",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Denominación «gran incapacidad» desde el 01/05/2025 (Ley 2/2025); antes, «gran invalidez». El cambio es solo de nombre.",
+      "quote": "Se entenderá por gran incapacidad la situación del trabajador afecto de incapacidad permanente y que, por consecuencia de pérdidas anatómicas o funcionales, necesite la asistencia de otra persona para los actos más esenciales de la vida, tales como vestirse, desplazarse, comer o análogos.",
+      "location": "DT 26.ª TRLGSS (redacción del art. 194 aplicable hasta su desarrollo reglamentario), art. 194.6"
+    },
+    {
+      "id": "carencia-exenta-accidente-ep",
+      "value": 0,
+      "unit": "meses de cotización exigidos si deriva de accidente (laboral o no) o de enfermedad profesional",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "salvo que aquella sea debida a accidente, sea o no laboral, o a enfermedad profesional, en cuyo caso no será exigido ningún período previo de cotización",
+      "location": "art. 195 TRLGSS.1"
+    },
+    {
+      "id": "excluida-si-reune-jubilacion",
+      "value": 1,
+      "unit": "indicador (1 = no se reconoce la IP por contingencias comunes)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "No se reconocerá el derecho a las prestaciones de incapacidad permanente derivada de contingencias comunes cuando el beneficiario, en la fecha del hecho causante, tenga la edad prevista en el artículo 205.1.a) y reúna los requisitos para acceder a la pensión de jubilación en el sistema de la Seguridad Social.",
+      "location": "art. 195 TRLGSS.1, párrafo 2.º"
+    },
+    {
+      "id": "carencia-parcial-dias",
+      "value": 1800,
+      "unit": "días de cotización exigidos (incapacidad permanente parcial)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Mil ochocientos días.",
+      "quote": "el período mínimo de cotización exigible será de mil ochocientos días, que han de estar comprendidos en los diez años inmediatamente anteriores a la fecha en la que se haya extinguido la incapacidad temporal",
+      "location": "art. 195 TRLGSS.2"
+    },
+    {
+      "id": "carencia-parcial-ventana-meses",
+      "value": 120,
+      "unit": "meses anteriores a la extinción de la incapacidad temporal en que deben estar los 1.800 días",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Diez años = 120 meses.",
+      "quote": "comprendidos en los diez años inmediatamente anteriores a la fecha en la que se haya extinguido la incapacidad temporal",
+      "location": "art. 195 TRLGSS.2"
+    },
+    {
+      "id": "carencia-joven-edad-limite-meses",
+      "value": 372,
+      "unit": "meses de edad por debajo de los cuales rige la regla de los menores de 31 años",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Treinta y un años = 372 meses.",
+      "quote": "Si el sujeto causante tiene menos de treinta y un años de edad",
+      "location": "art. 195 TRLGSS.3.a)"
+    },
+    {
+      "id": "carencia-joven-desde-edad-meses",
+      "value": 192,
+      "unit": "meses de edad desde los que se cuenta el tiempo (menores de 31 años)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Dieciséis años = 192 meses.",
+      "quote": "la tercera parte del tiempo transcurrido entre la fecha en que cumplió los dieciséis años y la del hecho causante de la pensión",
+      "location": "art. 195 TRLGSS.3.a)"
+    },
+    {
+      "id": "carencia-joven-divisor",
+      "value": 3,
+      "unit": "divisor del tiempo transcurrido (la tercera parte)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "la tercera parte del tiempo transcurrido entre la fecha en que cumplió los dieciséis años y la del hecho causante de la pensión",
+      "location": "art. 195 TRLGSS.3.a)"
+    },
+    {
+      "id": "carencia-general-desde-edad-meses",
+      "value": 240,
+      "unit": "meses de edad desde los que se cuenta el tiempo (31 o más años)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Veinte años = 240 meses.",
+      "quote": "la cuarta parte del tiempo transcurrido entre la fecha en que cumplió los veinte años y la del hecho causante de la pensión, con un mínimo, en todo caso, de cinco años",
+      "location": "art. 195 TRLGSS.3.b)"
+    },
+    {
+      "id": "carencia-general-divisor",
+      "value": 4,
+      "unit": "divisor del tiempo transcurrido (la cuarta parte)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "la cuarta parte del tiempo transcurrido entre la fecha en que cumplió los veinte años y la del hecho causante de la pensión",
+      "location": "art. 195 TRLGSS.3.b)"
+    },
+    {
+      "id": "carencia-general-minimo-meses",
+      "value": 60,
+      "unit": "meses de cotización mínimos (31 o más años)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cinco años = 60 meses.",
+      "quote": "con un mínimo, en todo caso, de cinco años",
+      "location": "art. 195 TRLGSS.3.b)"
+    },
+    {
+      "id": "carencia-reciente-divisor",
+      "value": 5,
+      "unit": "divisor del periodo exigible que debe estar en los últimos diez años (la quinta parte)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "al menos la quinta parte del período de cotización exigible deberá estar comprendida dentro de los diez años inmediatamente anteriores al hecho causante",
+      "location": "art. 195 TRLGSS.3.b)"
+    },
+    {
+      "id": "carencia-reciente-ventana-meses",
+      "value": 120,
+      "unit": "meses anteriores al hecho causante (o al cese de la obligación de cotizar) para la quinta parte",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Diez años = 120 meses. Desde una situación de alta o asimilada sin obligación de cotizar, la ventana se cuenta hacia atrás desde el cese de la obligación de cotizar.",
+      "quote": "dentro de los diez años inmediatamente anteriores al hecho causante […] el período de los diez años, dentro de los cuales deba estar comprendido, al menos, una quinta parte del período de cotización exigible, se computará, hacia atrás, desde la fecha en que cesó la obligación de cotizar",
+      "location": "art. 195 TRLGSS.3.b)"
+    },
+    {
+      "id": "carencia-sin-alta-meses",
+      "value": 180,
+      "unit": "meses de cotización exigidos a la absoluta o gran incapacidad por contingencias comunes sin alta",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Quince años = 180 meses; la quinta parte (36 meses) en los diez años anteriores.",
+      "quote": "podrán causarse aunque los interesados no se encuentren en el momento del hecho causante en alta o situación asimilada a la de alta. […] el período mínimo de cotización exigible será, en todo caso, de quince años, distribuidos en la forma prevista en el último inciso del apartado 3.b).",
+      "location": "art. 195 TRLGSS.4"
+    },
+    {
+      "id": "parcial-tanto-alzado",
+      "value": 1,
+      "unit": "indicador (1 = la parcial es una cantidad a tanto alzado)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "La prestación económica correspondiente a la incapacidad permanente parcial, consistirá en una cantidad a tanto alzado.",
+      "location": "art. 196 TRLGSS.1"
+    },
+    {
+      "id": "gran-incapacidad-complemento-pct-base-minima",
+      "value": 45,
+      "unit": "% de la base mínima de cotización vigente en el hecho causante",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "El importe de dicho complemento será equivalente al resultado de sumar el 45 por ciento de la base mínima de cotización vigente en el momento del hecho causante y el 30 por ciento de la última base de cotización del trabajador correspondiente a la contingencia de la que derive la situación de incapacidad permanente.",
+      "location": "art. 196 TRLGSS.4"
+    },
+    {
+      "id": "gran-incapacidad-complemento-pct-ultima-base",
+      "value": 30,
+      "unit": "% de la última base de cotización de la contingencia",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "el 30 por ciento de la última base de cotización del trabajador correspondiente a la contingencia de la que derive la situación de incapacidad permanente",
+      "location": "art. 196 TRLGSS.4"
+    },
+    {
+      "id": "gran-incapacidad-complemento-minimo-pct",
+      "value": 45,
+      "unit": "% de la pensión sin el complemento (mínimo del complemento)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "En ningún caso el complemento señalado podrá tener un importe inferior al 45 por ciento de la pensión percibida, sin el complemento, por el trabajador.",
+      "location": "art. 196 TRLGSS.4"
+    },
+    {
+      "id": "edad-ip-sin-jubilacion-meses",
+      "value": 804,
+      "unit": "meses de edad (67 años) desde los que rige el art. 196.5",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Sesenta y siete años = 804 meses. El porcentaje es el de la escala para la carencia de la jubilación.",
+      "quote": "En los casos en que el trabajador, con sesenta y siete o más años acceda a la pensión de incapacidad permanente derivada de contingencias comunes, por no reunir los requisitos para el reconocimiento del derecho a pensión de jubilación, la cuantía de la pensión de incapacidad permanente será equivalente al resultado de aplicar a la correspondiente base reguladora el porcentaje que corresponda al período mínimo de cotización que esté establecido, en cada momento, para el acceso a la pensión de jubilación. Cuando la incapacidad permanente derive de enfermedad común, se considerará como base reguladora el resultado de aplicar únicamente lo establecido en la norma a) del apartado 1 del artículo 197.",
+      "location": "art. 196 TRLGSS.5"
+    },
+    {
+      "id": "br-ec-meses",
+      "value": 96,
+      "unit": "meses de bases de cotización (enfermedad común)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Se hallará el cociente que resulte de dividir por 112 las bases de cotización del interesado durante los 96 meses anteriores al mes previo al del hecho causante.",
+      "location": "art. 197 TRLGSS.1.a)"
+    },
+    {
+      "id": "br-ec-divisor",
+      "value": 112,
+      "unit": "divisor (enfermedad común)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Se hallará el cociente que resulte de dividir por 112 las bases de cotización del interesado durante los 96 meses anteriores al mes previo al del hecho causante.",
+      "location": "art. 197 TRLGSS.1.a)"
+    },
+    {
+      "id": "br-ec-meses-nominales",
+      "value": 24,
+      "unit": "meses más recientes que entran por su valor nominal",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Las bases correspondientes a los veinticuatro meses anteriores al mes previo al del hecho causante se computarán en su valor nominal.",
+      "location": "art. 197 TRLGSS.1.a), regla 1.ª"
+    },
+    {
+      "id": "br-ec-mes-indice-referencia",
+      "value": 25,
+      "unit": "mes (contado hacia atrás desde el mes previo) cuyo IPC actualiza las bases",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "El periodo no actualizable ocupa los meses 1 a 24; el mes inmediato anterior a su inicio es el 25 (Bi × I25 / Ii), como en la jubilación (`actualizacion-bases`).",
+      "quote": "Las restantes bases de cotización se actualizarán de acuerdo con la evolución que haya experimentado el Índice de Precios de Consumo desde los meses a que aquellas correspondan hasta el mes inmediato anterior a aquel en que se inicie el período de bases no actualizables a que se refiere la regla anterior.",
+      "location": "art. 197 TRLGSS.1.a), regla 2.ª"
+    },
+    {
+      "id": "br-ec-escala-con-anios-hasta-edad",
+      "value": 1,
+      "unit": "indicador (1 = se suman los años que faltan hasta la edad ordinaria)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Qué edad ordinaria (con o sin la carrera de 65 años del art. 205.1.a) y si los «años» se cuentan enteros o por meses son lecturas abiertas (opciones del motor `edadFiccion` y `computoFiccion`).",
+      "quote": "Al resultado obtenido en razón a lo establecido en la norma anterior se le aplicará el porcentaje que corresponda en función de los años de cotización, según la escala prevista en el artículo 210.1, considerándose a tal efecto como cotizados los años que le resten al interesado, en la fecha del hecho causante, para cumplir la edad ordinaria de jubilación vigente en cada momento.",
+      "location": "art. 197 TRLGSS.1.b)"
+    },
+    {
+      "id": "br-ec-porcentaje-sin-15-anios",
+      "value": 50,
+      "unit": "% si no se alcanzan quince años (con los años añadidos)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "En el caso de no alcanzarse quince años de cotización, el porcentaje aplicable será del 50 por ciento.",
+      "location": "art. 197 TRLGSS.1.b)"
+    },
+    {
+      "id": "br-periodo-corto-umbral-meses",
+      "value": 96,
+      "unit": "meses: si el periodo mínimo exigido es inferior, se computan tantas bases como meses exigidos",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Ocho años = 96 meses.",
+      "quote": "En los supuestos en que se exija un período mínimo de cotización inferior a ocho años, la base reguladora se obtendrá de forma análoga a la establecida en el apartado anterior, pero computando bases mensuales de cotización en número igual al de meses de que conste el período mínimo exigible, sin tener en cuenta las fracciones de mes",
+      "location": "art. 197 TRLGSS.2"
+    },
+    {
+      "id": "br-ec-lagunas-tramo1-meses",
+      "value": 48,
+      "unit": "primeras mensualidades sin obligación de cotizar integradas con la base mínima",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Cuarenta y ocho mensualidades.",
+      "quote": "las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento, y el resto de mensualidades con el 50 por ciento de dicha base mínima",
+      "location": "art. 197 TRLGSS.4"
+    },
+    {
+      "id": "br-ec-lagunas-tramo1-pct",
+      "value": 100,
+      "unit": "% de la base mínima (primeras 48 mensualidades)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "las primeras cuarenta y ocho mensualidades se integrarán con la base mínima de entre todas las existentes en cada momento",
+      "location": "art. 197 TRLGSS.4"
+    },
+    {
+      "id": "br-ec-lagunas-tramo2-pct",
+      "value": 50,
+      "unit": "% de la base mínima (resto de mensualidades)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "y el resto de mensualidades con el 50 por ciento de dicha base mínima",
+      "location": "art. 197 TRLGSS.4"
+    },
+    {
+      "id": "br-anl-sin-alta-regla-general",
+      "value": 1,
+      "unit": "indicador (1 = absoluta o gran incapacidad por accidente no laboral sin alta: art. 197.1.a)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Respecto a las pensiones de incapacidad permanente absoluta o gran incapacidad derivadas de accidente no laboral a que se refiere artículo 195.4, para el cómputo de su base reguladora, se aplicarán las reglas previstas en el apartado 1.a) del presente artículo.",
+      "location": "art. 197 TRLGSS.3"
+    },
+    {
+      "id": "compatibilidad-total-salario",
+      "value": 1,
+      "unit": "indicador (1 = la total es compatible con un salario en funciones distintas)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "En caso de incapacidad permanente total, la pensión vitalicia correspondiente será compatible con el salario que pueda percibir el trabajador en la misma empresa o en otra distinta, siempre y cuando las funciones no coincidan con aquellas que dieron lugar a la incapacidad permanente total.",
+      "location": "art. 198 TRLGSS.1"
+    },
+    {
+      "id": "compatibilidad-desde-edad-jubilacion",
+      "value": 1,
+      "unit": "indicador (1 = desde la edad de jubilación, como la jubilación del art. 213.1)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "El disfrute de la pensión de incapacidad permanente absoluta y de gran incapacidad a partir de la edad de acceso a la pensión de jubilación será incompatible con el desempeño por el pensionista de un trabajo",
+      "location": "art. 198 TRLGSS.3"
+    },
+    {
+      "id": "total-pension-vitalicia",
+      "value": 1,
+      "unit": "indicador (1 = pensión vitalicia; sustituible por tanto alzado si es menor de 60 años)",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "La prestación económica correspondiente a la incapacidad permanente total consistirá en una pensión vitalicia, que podrá excepcionalmente ser sustituida por una indemnización a tanto alzado cuando el beneficiario fuese menor de sesenta años.",
+      "location": "art. 196 TRLGSS.2 (redacción vigente desde el 01/01/2019)"
+    },
+    {
+      "id": "total-sustitucion-edad-limite-meses",
+      "value": 720,
+      "unit": "meses de edad: la sustitución por tanto alzado solo cabe por debajo",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Sesenta años = 720 meses. El motor no calcula la indemnización sustitutiva (Orden de 31/07/1972).",
+      "quote": "cuando el beneficiario fuese menor de sesenta años",
+      "location": "art. 196 TRLGSS.2"
+    },
+    {
+      "id": "total-cualificada-condiciones",
+      "value": 1,
+      "unit": "indicador (1 = el incremento exige que se presuma la dificultad de obtener empleo)",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "El motor aplica el incremento cuando la edad alcanza el mínimo, salvo que se indique lo contrario (`totalCualificada: false`).",
+      "quote": "cuando por su edad, falta de preparación general o especializada y circunstancias sociales y laborales del lugar de residencia, se presuma la dificultad de obtener empleo en actividad distinta de la habitual anterior",
+      "location": "art. 196 TRLGSS.2, párrafo 2.º"
+    },
+    {
+      "id": "total-ec-suelo-clase-minima",
+      "value": "ip-total-enf-comun-menor60-conyuge-no-cargo",
+      "unit": "clase de pensión mínima del Anexo I que hace de suelo",
+      "period": "2019",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Suelo de la cuantía, distinto del complemento a mínimos: la norma no lo condiciona a las rentas.",
+      "quote": "La cuantía de la pensión de incapacidad permanente total derivada de enfermedad común no podrá resultar inferior al importe mínimo fijado anualmente en la Ley de Presupuestos Generales del Estado para la pensión de incapacidad permanente total derivada de enfermedad común de titulares menores de sesenta años con cónyuge no a cargo.",
+      "location": "art. 196 TRLGSS.2, párrafo 3.º (RDL 28/2018)"
+    },
+    {
+      "id": "brecha-incluye-incapacidad",
+      "value": 1,
+      "unit": "indicador (1 = el complemento del art. 60 se aplica a las pensiones de incapacidad permanente)",
+      "period": "2021",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Los hombres, solo si causan la pensión de incapacidad con la carrera afectada en las condiciones del art. 60.1.b).",
+      "quote": "Las mujeres que hayan tenido uno o más hijos o hijas y que sean beneficiarias de una pensión contributiva de jubilación, de incapacidad permanente o de viudedad, tendrán derecho a un complemento por cada hijo o hija",
+      "location": "art. 60.1 TRLGSS"
+    },
+    {
+      "id": "2022-gran-incapacidad-limite-sin-complemento",
+      "value": 1,
+      "unit": "indicador (1 = el límite máximo se aplica solo a la pensión, sin el complemento)",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social para el ejercicio 2022",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "A los efectos del límite máximo señalado en el apartado 2, se computará únicamente la pensión sin complemento.",
+      "location": "Norma de revalorización de 2022 (artículos de limitación, revalorización y mínimos)"
+    },
+    {
+      "id": "2022-gran-incapacidad-revalorizacion-separada",
+      "value": 1,
+      "unit": "indicador (1 = la pensión y el complemento se revalorizan por separado)",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social para el ejercicio 2022",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "La actualización de las pensiones de gran invalidez se efectuará aplicando las reglas previstas en el apartado 1 de manera separada a la pensión y al complemento.",
+      "location": "Norma de revalorización de 2022 (artículos de limitación, revalorización y mínimos)"
+    },
+    {
+      "id": "2022-gran-incapacidad-minimo-incluye-complemento",
+      "value": 1,
+      "unit": "indicador (1 = la cuantía mínima comprende pensión y complemento)",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto 65/2022, de 25 de enero, sobre actualización de las pensiones del sistema de la Seguridad Social para el ejercicio 2022",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-1189"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "En el mínimo asignado a las pensiones de gran invalidez, están comprendidos los dos elementos que integran la pensión",
+      "location": "Norma de revalorización de 2022 (artículos de limitación, revalorización y mínimos)"
+    },
+    {
+      "id": "2023-gran-incapacidad-limite-sin-complemento",
+      "value": 1,
+      "unit": "indicador (1 = el límite máximo se aplica solo a la pensión, sin el complemento)",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2023",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "notes": "El Real Decreto-ley 8/2023 (2024) no repite la regla en el texto descargado; el motor aplica la de 2023 (la última anterior con dato).",
+      "quote": "A los efectos del límite máximo señalado en el apartado 2, se computará únicamente la pensión sin complemento.",
+      "location": "Norma de revalorización de 2023 (artículos de limitación, revalorización y mínimos)"
+    },
+    {
+      "id": "2023-gran-incapacidad-revalorizacion-separada",
+      "value": 1,
+      "unit": "indicador (1 = la pensión y el complemento se revalorizan por separado)",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2023",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "La revalorización de las pensiones de gran invalidez se efectuará aplicando las reglas previstas en el apartado 1 de manera separada a la pensión y al complemento.",
+      "location": "Norma de revalorización de 2023 (artículos de limitación, revalorización y mínimos)"
+    },
+    {
+      "id": "2023-gran-incapacidad-minimo-incluye-complemento",
+      "value": 1,
+      "unit": "indicador (1 = la cuantía mínima comprende pensión y complemento)",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto 1058/2022, de 27 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social para el ejercicio 2023",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22694"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "En el mínimo asignado a las pensiones de gran invalidez, están comprendidos los dos elementos que integran la pensión",
+      "location": "Norma de revalorización de 2023 (artículos de limitación, revalorización y mínimos)"
+    },
+    {
+      "id": "compatibilidad-absoluta-suspension-desde",
+      "value": 20241222,
+      "unit": "fecha AAAAMMDD desde la que se suspende el pago de la absoluta o gran incapacidad al trabajar",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "La redacción anterior al 22/12/2024 no se ha transcrito: el motor no simula el trabajo de un pensionista de absoluta o gran incapacidad antes de esa fecha.",
+      "quote": "En el supuesto de que el pensionista realice un trabajo o actividad que de lugar a la inclusión en un régimen de la seguridad social, la entidad gestora suspenderá el pago de la pensión. […] Modificación publicada el 21/12/2024, en vigor a partir del 22/12/2024.",
+      "location": "art. 198 TRLGSS.2 (Ley 7/2024, disposición final 13)"
+    },
+    {
+      "id": "compatibilidad-complemento-gi-no-se-suspende",
+      "value": 1,
+      "unit": "indicador (1 = el complemento de gran incapacidad no se suspende)",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "el complemento de gran incapacidad destinado a que la persona beneficiaria pueda remunerar a la persona que le atienda no se suspenderá por la realización de un trabajo incompatible con la pensión",
+      "location": "art. 198 TRLGSS.2, párrafo 3.º"
+    },
+    {
+      "id": "2025-gran-incapacidad-limite-sin-complemento",
+      "value": 1,
+      "unit": "indicador (1 = el límite máximo se aplica solo a la pensión, sin el complemento)",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2025",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "A efectos de aplicar el citado límite máximo a las pensiones de gran invalidez, se computará únicamente la pensión, sin el complemento.",
+      "location": "Norma de revalorización de 2025 (artículos de limitación, revalorización y mínimos)"
+    },
+    {
+      "id": "2025-gran-incapacidad-revalorizacion-separada",
+      "value": 1,
+      "unit": "indicador (1 = la pensión y el complemento se revalorizan por separado)",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2025",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "La revalorización de las pensiones de gran invalidez se efectuará aplicando la regla prevista en el artículo 6 de manera separada a la pensión y al complemento.",
+      "location": "Norma de revalorización de 2025 (artículos de limitación, revalorización y mínimos)"
+    },
+    {
+      "id": "2025-gran-incapacidad-minimo-incluye-complemento",
+      "value": 1,
+      "unit": "indicador (1 = la cuantía mínima comprende pensión y complemento)",
+      "period": "2025",
+      "source": {
+        "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2025",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "En el mínimo asignado a las pensiones de gran invalidez, están comprendidos los dos elementos que integran la pensión",
+      "location": "Norma de revalorización de 2025 (artículos de limitación, revalorización y mínimos)"
+    },
+    {
+      "id": "2026-gran-incapacidad-limite-sin-complemento",
+      "value": 1,
+      "unit": "indicador (1 = el límite máximo se aplica solo a la pensión, sin el complemento)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "A efectos de aplicar el citado límite máximo a las pensiones de gran incapacidad, se computará únicamente la pensión, sin el complemento.",
+      "location": "Norma de revalorización de 2026 (artículos de limitación, revalorización y mínimos)"
+    },
+    {
+      "id": "2026-gran-incapacidad-revalorizacion-separada",
+      "value": 1,
+      "unit": "indicador (1 = la pensión y el complemento se revalorizan por separado)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "La revalorización de las pensiones de gran incapacidad se efectuará aplicando la regla prevista en el artículo 6 de manera separada a la pensión y al complemento.",
+      "location": "Norma de revalorización de 2026 (artículos de limitación, revalorización y mínimos)"
+    },
+    {
+      "id": "2026-gran-incapacidad-minimo-incluye-complemento",
+      "value": 1,
+      "unit": "indicador (1 = la cuantía mínima comprende pensión y complemento)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones para el ejercicio 2026",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "alta",
+      "quote": "En el mínimo asignado a las pensiones de gran incapacidad, están comprendidos los dos elementos que integran la pensión",
+      "location": "Norma de revalorización de 2026 (artículos de limitación, revalorización y mínimos)"
+    }
+  ]
+}
