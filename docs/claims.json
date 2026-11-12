@@ -2441,7 +2441,7 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar la actualización de las bases de cotización por versión (meses sin actualizar e índice de referencia): reproducir la actualización de una carrera de ejemplo con data/parametros/actualizacion-bases y el IPC de data/parametros/ipc-*, y verificar que los 24 meses más recientes se computan nominalmente en la versión de 2026."
+      "preguntaActuarial": "Comprobar la actualización de las bases de cotización por versión (meses sin actualizar e índice de referencia): reproducir la actualización de una carrera de ejemplo con data/parametros/actualizacion-bases y el IPC de data/parametros/ipc-*, y verificar que los 24 meses más recientes se computan nominalmente en la versión de 2026. Duda del motor: el IPC de /data es anual; el índice mensual se obtiene interpolando en logaritmos entre medias anuales situadas a mitad de año (alternativa: escalón anual, opción interpolacionIPC) y, antes de 2002, con la variación de diciembre a diciembre. Valorar la diferencia con el IPC mensual real (efecto de ±1 % en la base reguladora en el caso típico)."
     },
     {
       "id": "param-base-maxima-incremento-futuro",
@@ -2490,7 +2490,9 @@
         }
       ],
       "fetchedAt": "2026-11-11",
-      "estado": "verificada"
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "La base mínima falta en 2020 y 2021 (docs/PENDIENTE_DATOS.md) y la ley no fija su evolución posterior a 2026 en /data: el motor falla por defecto si una laguna cae en 2020-2021 (opción huecoBaseMinima: «anterior» usa el último valor conocido) y proyecta la base mínima con el IPC del escenario desde 2027. Aportar la base mínima de 2020 y 2021 y la regla de evolución (vinculada al SMI) para sustituir ambas aproximaciones."
     },
     {
       "id": "param-carencia-jubilacion",
@@ -2519,6 +2521,23 @@
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
           "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar cómo se aplica la DT 7.ª: (1) la carrera que permite jubilarse a los 65 años se mide con los meses cotizados al hecho causante (jubilación ordinaria); (2) en las anticipadas, con los meses que habría cotizado hasta los 65 años (proyección) y el calendario del año del hecho causante, no el del año en que cumpliría la edad; (3) los meses se cuentan completos y sin parte proporcional de pagas extra. Confirmar (2), que es la que decide la anticipación."
+    },
+    {
+      "id": "param-complemento-brecha-genero-reglas",
+      "texto": "Reglas numéricas del complemento para la reducción de la brecha de género (art. 60 TRLGSS): 1 (indicador (1 = con complemento por mínimos, el de brecha se suma a la cuantía mínima)) en 2023.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/complemento-brecha-genero-reglas.json#se-suma-a-la-minima"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
       ],
       "fetchedAt": "2026-11-11",
@@ -2605,6 +2624,23 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada"
+    },
+    {
+      "id": "param-escala-jubilacion-tramos",
+      "texto": "Escala de porcentajes de la jubilación por meses cotizados (DT 9.ª y art. 210.1 TRLGSS), en forma numérica: 0,18 (% de la base reguladora por cada mes adicional del segundo tramo) en 2027.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/escala-jubilacion-tramos.json#2027-tramo2-pct"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar que la escala en forma numérica (50 % a los 15 años; 0,21 % y 0,19 % por mes según DT 9.ª hasta 2026; 0,19 % y 0,18 % desde 2027) reproduce el texto de la DT 9.ª y del art. 210.1: con el motor, para 15, 25, 35 y 37 años cotizados en 2026 y en 2027 debe dar 50 %, 77,x %, 95,x % y 100 %; y que los meses para el 100 % coinciden con data/parametros/cotizacion-para-100 (hay un test que lo comprueba)."
     },
     {
       "id": "param-escala-porcentajes-jubilacion",
@@ -2736,6 +2772,136 @@
       "estado": "verificada"
     },
     {
+      "id": "param-jubilacion-anticipada-reglas",
+      "texto": "Requisitos numéricos de las jubilaciones anticipadas y de la jubilación parcial (arts. 207, 208, 210.4 y 215 TRLGSS): 396 (meses de cotización exigidos (con contrato de relevo)) en 2025.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/jubilacion-anticipada-reglas.json#parcial-relevo-cotizacion-meses"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "param-jubilacion-coeficientes-involuntaria",
+      "texto": "Coeficientes reductores de la jubilación anticipada por causa no imputable al trabajador (art. 207.2 TRLGSS): 534 (meses cotizados desde los que se aplica el tramo) en 2022.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/jubilacion-coeficientes-involuntaria.json#umbral-t4"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar el cuadro del art. 207.2 (coeficientes por mes de anticipación, 1 a 48, y por tramo de periodo cotizado). Dudas de aplicación del motor: (1) «cada mes o fracción de mes que le falte» se aplica como redondeo hacia arriba de los meses entre el hecho causante y la edad legal; (2) la edad legal es la que correspondería «de haber seguido cotizando» hasta cumplirla: el motor proyecta la cotización hasta los 65 años para decidir si la edad legal es 65 años o la de la DT 7.ª de ese año del hecho causante; (3) el tramo se elige con los meses cotizados reales al hecho causante, sin proyectar. Confirmar las tres lecturas."
+    },
+    {
+      "id": "param-jubilacion-coeficientes-voluntaria-limite",
+      "texto": "Aplicación gradual de los coeficientes reductores sobre el límite de pensión (DT 34.ª TRLGSS, 2024-2033): 4,0 (% de reducción aplicado sobre el límite de pensión (art. 210.3, párr. 2.º)) en 2033.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/jubilacion-coeficientes-voluntaria-limite.json#2033-t4-9"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la aplicación de la DT 34.ª: cuando BR × % supera el límite de pensión, el coeficiente de cada año 2024-2033 se aplica sobre el límite (art. 210.3, párr. 2.º). El motor no aplica la salvaguarda del apartado 1 de la DT 34.ª (pensión no inferior a la que habría correspondido con las normas de 2021, que no están transcritas) y no calcula 2022-2023 (rige la redacción original del art. 210.3). Valorar la magnitud de ambas omisiones."
+    },
+    {
+      "id": "param-jubilacion-coeficientes-voluntaria",
+      "texto": "Coeficientes reductores de la jubilación anticipada por voluntad del interesado (art. 208.2 TRLGSS): 534 (meses cotizados desde los que se aplica el tramo) en 2022.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/jubilacion-coeficientes-voluntaria.json#umbral-t4"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar el cuadro del art. 208.2 (1 a 24 meses) y su aplicación: mismas dudas (1) a (3) de la jubilación involuntaria. Además, el art. 208.3 aplica los coeficientes de la involuntaria si al acogerse el trabajador percibe subsidio de desempleo al menos tres meses: el motor lo hace por una opción explícita (mesesSubsidioDesempleo) y añade entonces el tope de la pensión máxima reducida por trimestres (art. 210.4). Confirmar."
+    },
+    {
+      "id": "param-jubilacion-demora-reglas",
+      "texto": "Complemento por jubilación demorada: porcentaje adicional, pago único y opción mixta (art. 210.2 TRLGSS, Ley 21/2021 y RD 371/2023): 20260828 (fecha AAAAMMDD desde la que rige la redacción del art. 3 del RD 371/2023 que se transcribe) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/jubilacion-demora-reglas.json#mixta-vigencia-desde"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 371/2023, de 16 de mayo, por el que se desarrolla el régimen jurídico del complemento económico establecido en el artículo 210.2 del texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 28/05/2026; descargado el 2026-11-12)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-11645"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar el complemento por demora: (1) «a partir del segundo año completo de demora» se lee como: las fracciones de más de 6 meses cuentan cuando ya hay al menos dos años completos (opción fraccionDemora: «desde el segundo año» por defecto o «desde el primer año»); (2) en la opción mixta de 2 a 8 años y 6 meses, los años completos se dividen en dos partes y el semestre va al tanto alzado (×0,5); con 9 o más años, cinco años a tanto alzado y el resto a porcentaje; (3) la «pensión inicial anual» del tanto alzado es la reconocida (con el porcentaje adicional de la parte mixta), limitada a la máxima; (4) los años de demora se cuentan con los meses cotizados (no los asimilados al alta). Confirmar las cuatro lecturas."
+    },
+    {
+      "id": "param-jubilacion-edad-65",
+      "texto": "Edad de 65 años: jubilación con carrera larga y referencia de las cuantías mínimas (arts. 205.1.a y 208.1.c TRLGSS): 780 (meses de edad (65 años) a partir de los cuales se aplica la cuantía mínima «de 65 años») en 2013.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/jubilacion-edad-65.json#2013-referencia-minimas-meses"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "param-jubilacion-periodo-previo",
+      "texto": "Periodo previo exigido a la jubilación: dos años dentro de los quince anteriores (art. 205.1.b TRLGSS): 180 (meses inmediatamente anteriores al hecho causante (ventana del periodo previo)) en 2013.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/jubilacion-periodo-previo.json#2013-ventana-meses"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "param-lagunas-integracion-brecha-genero",
+      "texto": "Integración de lagunas con porcentajes adicionales de las mensualidades 49.ª a 84.ª (DT 41.ª TRLGSS): 5 (% de brecha de género de las pensiones de jubilación por encima del cual rige la medida) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/lagunas-integracion-brecha-genero.json#2026-umbral-brecha-pct"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar la DT 41.ª: (1) las «mensualidades» 49.ª a 84.ª son los meses de laguna ordenados desde el hecho causante hacia atrás (no los meses naturales de la ventana); (2) se aplica a la regla general del art. 209.1 y no a la opción de 25 años de la DT 4.ª.7 (que aplica la redacción de 2023), aunque la opción pueda salir menos favorable; (3) mientras la brecha de la DA 37.ª sea superior al 5 %, que no consta en /data: el motor la da por vigente para mujeres (y hombres que acrediten el art. 60.1.b) y permite apagarla. Confirmar."
+    },
+    {
       "id": "param-lagunas-integracion",
       "texto": "Integración de lagunas de cotización en el cálculo de la base reguladora de jubilación (por versión): 50 (% de la base mínima (el resto de los meses con laguna)) en 2026.",
       "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
@@ -2750,7 +2916,7 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar la integración de lagunas por versión (48 meses al 100 % de la base mínima y el resto al 50 %; en 2026 cambia la referencia de la base mínima): ejemplo numérico con una carrera con 60 meses de laguna usando data/parametros/lagunas-integracion y base-minima-rg, y contrastar con art. 209.1.b TRLGSS y las versiones 2010, 2013 y 2016."
+      "preguntaActuarial": "Comprobar la integración de lagunas por versión (48 meses al 100 % de la base mínima y el resto al 50 %; en 2026 cambia la referencia de la base mínima): ejemplo numérico con una carrera con 60 meses de laguna usando data/parametros/lagunas-integracion y base-minima-rg, y contrastar con art. 209.1.b TRLGSS y las versiones 2010, 2013 y 2016. Dudas del motor: (b) en 2026 la base mínima de referencia es «la que corresponda al mes respectivo»: el motor usa por defecto la del mes de la laguna (actualizada con el IPC como el resto de bases) y ofrece la del hecho causante como alternativa; (d) las lagunas se cuentan también en los meses de la ventana anteriores a la primera alta (lectura literal; opción lagunasAnterioresAlPrimerAlta). Confirmar ambas."
     },
     {
       "id": "param-limite-ingresos-complementos-minimos",
@@ -2883,6 +3049,23 @@
       "estado": "verificada",
       "revisionActuarial": "pendiente",
       "preguntaActuarial": "Comprobar la opción de 25 años de la DT 4.ª.7 TRLGSS: que la ventana (en 2043, 318 meses) y su divisor (371) son los de la norma, la regla de 2041-2043 y qué ocurre con el 31/12/2040, que la DT deja ambiguo (decisión documentada en docs/DECISIONES.md). Fórmula: divisor = ventana × 14/12 cuando se computan todas las bases."
+    },
+    {
+      "id": "param-pension-maxima-incremento-2051-2065",
+      "texto": "Incrementos de la pensión máxima inicial de 2051 a 2065 (DT 39.ª.4 TRLGSS): 30 (puntos porcentuales de incremento total al que apunta el proceso de convergencia (a valorar en 2065)) en 2065.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/pension-maxima-incremento-2051-2065.json#2065-convergencia-total"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "La tabla de la DT 39.ª.4 (3,2 en 2051 hasta 20,0 en 2065) se describe como «incremento anual adicional» pero enlaza con el acumulado de la DT 39.ª.1 (26 × 0,115 = 2,99 en 2050) y la propia DT apunta a «un incremento total de 30 puntos». El motor ofrece dos lecturas: «incremento acumulado» (por defecto: el límite crece la revalorización más la diferencia entre el acumulado de un año y el del anterior) y «anual literal» (se suma el valor de la tabla a la revalorización de ese año). Determinar cuál es la intención y cómo se compone con la lectura de 2025-2050 (la de /data suma 0,115 constante, no creciente)."
     },
     {
       "id": "param-pension-maxima-incremento-futuro",

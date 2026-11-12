@@ -1,0 +1,243 @@
+{
+  "tipo": "datos",
+  "id": "jubilacion-demora-reglas",
+  "title": "Complemento por jubilación demorada: porcentaje adicional, pago único y opción mixta (art. 210.2 TRLGSS, Ley 21/2021 y RD 371/2023)",
+  "description": "Porcentaje adicional (4 % por año, 2 % por semestre), fórmula del pago único (800/880, divisor 500, exponente 1/1,65) y reglas numéricas de la opción mixta. Periodo = año desde el que rige cada regla.",
+  "data": [
+    {
+      "id": "porcentaje-adicional-anual",
+      "value": 4,
+      "unit": "% adicional de la base reguladora por cada año completo de demora",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Un porcentaje adicional de un 4 por ciento por cada año completo cotizado entre la fecha en que cumplió dicha edad y la del hecho causante de la pensión",
+      "location": "art. 210.2 TRLGSS (art. 1.8 de la Ley 21/2021; en vigor desde 01/01/2022), letra a)"
+    },
+    {
+      "id": "porcentaje-adicional-semestre",
+      "value": 2,
+      "unit": "% adicional por un periodo de más de 6 meses y menos de un año (desde el segundo año completo)",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "correspondiendo a dichos periodos un 2 por ciento adicional",
+      "location": "art. 210.2 TRLGSS (art. 1.8 de la Ley 21/2021; en vigor desde 01/01/2022), letra a)"
+    },
+    {
+      "id": "fraccion-minima-meses",
+      "value": 6,
+      "unit": "meses que debe superar la fracción para computarse (desde el segundo año completo)",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "El periodo debe ser superior a 6 meses (estrictamente) e inferior a un año.",
+      "quote": "se podrán computar periodos superiores a 6 meses e inferiores a un año",
+      "location": "art. 210.2 TRLGSS (art. 1.8 de la Ley 21/2021; en vigor desde 01/01/2022)"
+    },
+    {
+      "id": "tanto-alzado-base-menos-44-6",
+      "value": 800,
+      "unit": "euros (numerador de la fórmula del pago único, cotización inferior a 44 años y 6 meses)",
+      "period": "2022",
+      "source": {
+        "title": "Ley 21/2021, de 28 de diciembre, de garantía del poder adquisitivo de las pensiones y de otras medidas de refuerzo de la sostenibilidad financiera y social del sistema público de pensiones (PDF oficial del BOE)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/boe/dias/2021/12/29/pdfs/BOE-A-2021-21652.pdf"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Fórmula (Ley 21/2021, art. 1.Ocho, PDF oficial del BOE, donde es texto): Pago único = 800 × (Pensión inicial anual / 500)^(1/1,65) si se han cotizado menos de 44 años y 6 meses; Pago único = 880 × (…) si al menos 44 años y 6 meses. La disposición de las cifras en el PDF (numerador, exponente 1/1,65 y divisor 500) se comprobó sobre el PDF en la Fase 1A-bis; el texto extraído no conserva la barra de fracción ni el exponente.",
+      "quote": "1.º Si ha cotizado menos de 44 años y 6 meses: 1 Pensión inicial anual […] 1,65 Pago único = 800 […] 500 2.º Si ha cotizado, al menos, 44 años y 6 meses la cifra anterior se aumenta en un 10%: 1 Pensión inicial anual […] 1,65 Pago único = 880 […] 500 Verificable",
+      "location": "Ley 21/2021, art. 1.Ocho (nueva redacción del art. 210.2.b TRLGSS)"
+    },
+    {
+      "id": "tanto-alzado-base-44-6-o-mas",
+      "value": 880,
+      "unit": "euros (numerador de la fórmula del pago único, cotización de al menos 44 años y 6 meses)",
+      "period": "2022",
+      "source": {
+        "title": "Ley 21/2021, de 28 de diciembre, de garantía del poder adquisitivo de las pensiones y de otras medidas de refuerzo de la sostenibilidad financiera y social del sistema público de pensiones (PDF oficial del BOE)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/boe/dias/2021/12/29/pdfs/BOE-A-2021-21652.pdf"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Es la cifra anterior aumentada en un 10 % (800 × 1,10).",
+      "quote": "1.º Si ha cotizado menos de 44 años y 6 meses: 1 Pensión inicial anual […] 1,65 Pago único = 800 […] 500 2.º Si ha cotizado, al menos, 44 años y 6 meses la cifra anterior se aumenta en un 10%: 1 Pensión inicial anual […] 1,65 Pago único = 880 […] 500 Verificable",
+      "location": "Ley 21/2021, art. 1.Ocho (nueva redacción del art. 210.2.b TRLGSS)"
+    },
+    {
+      "id": "tanto-alzado-divisor-pension",
+      "value": 500,
+      "unit": "euros (divisor de la pensión inicial anual en la fórmula del pago único)",
+      "period": "2022",
+      "source": {
+        "title": "Ley 21/2021, de 28 de diciembre, de garantía del poder adquisitivo de las pensiones y de otras medidas de refuerzo de la sostenibilidad financiera y social del sistema público de pensiones (PDF oficial del BOE)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/boe/dias/2021/12/29/pdfs/BOE-A-2021-21652.pdf"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1.º Si ha cotizado menos de 44 años y 6 meses: 1 Pensión inicial anual […] 1,65 Pago único = 800 […] 500 2.º Si ha cotizado, al menos, 44 años y 6 meses la cifra anterior se aumenta en un 10%: 1 Pensión inicial anual […] 1,65 Pago único = 880 […] 500 Verificable",
+      "location": "Ley 21/2021, art. 1.Ocho (nueva redacción del art. 210.2.b TRLGSS)"
+    },
+    {
+      "id": "tanto-alzado-exponente-divisor",
+      "value": 1.65,
+      "unit": "divisor del exponente (el exponente es 1/1,65)",
+      "period": "2022",
+      "source": {
+        "title": "Ley 21/2021, de 28 de diciembre, de garantía del poder adquisitivo de las pensiones y de otras medidas de refuerzo de la sostenibilidad financiera y social del sistema público de pensiones (PDF oficial del BOE)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/boe/dias/2021/12/29/pdfs/BOE-A-2021-21652.pdf"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "1.º Si ha cotizado menos de 44 años y 6 meses: 1 Pensión inicial anual […] 1,65 Pago único = 800 […] 500 2.º Si ha cotizado, al menos, 44 años y 6 meses la cifra anterior se aumenta en un 10%: 1 Pensión inicial anual […] 1,65 Pago único = 880 […] 500 Verificable",
+      "location": "Ley 21/2021, art. 1.Ocho (nueva redacción del art. 210.2.b TRLGSS)"
+    },
+    {
+      "id": "tanto-alzado-umbral-cotizacion-meses",
+      "value": 534,
+      "unit": "meses cotizados que activan la cifra de 880 euros",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Conversión: 44 años y 6 meses = 534 meses.",
+      "quote": "Si ha cotizado, al menos, 44 años y 6 meses la cifra anterior se aumenta en un 10 %",
+      "location": "art. 210.2 TRLGSS (art. 1.8 de la Ley 21/2021; en vigor desde 01/01/2022), letra b)"
+    },
+    {
+      "id": "tanto-alzado-factor-semestre",
+      "value": 0.5,
+      "unit": "factor sobre el pago único por un periodo de más de 6 meses y menos de un año (desde el segundo año completo)",
+      "period": "2022",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "correspondiendo a dichos periodos el resultado de multiplicar la cuantía de la formula anterior por 0,5",
+      "location": "art. 210.2 TRLGSS (art. 1.8 de la Ley 21/2021; en vigor desde 01/01/2022), letra b).2.º"
+    },
+    {
+      "id": "mixta-minimo-anios",
+      "value": 2,
+      "unit": "años completos cotizados tras la edad ordinaria para poder optar por la modalidad mixta",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 371/2023, de 16 de mayo, por el que se desarrolla el régimen jurídico del complemento económico establecido en el artículo 210.2 del texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 28/05/2026; descargado el 2026-11-12)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-11645"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Redacción vigente desde el 28/08/2026 (RD 416/2026, disposición final 1.1); para hechos causantes anteriores regía la redacción original del RD 371/2023, que no se ha transcrito.",
+      "quote": "cuando acrediten, al menos, dos años completos cotizados entre la fecha en que cumplieron la edad ordinaria de jubilación aplicable y la del hecho causante",
+      "location": "art. 3 del RD 371/2023 (redacción del RD 416/2026, en vigor desde 28/08/2026)"
+    },
+    {
+      "id": "mixta-tramo1-maximo-meses",
+      "value": 102,
+      "unit": "meses cotizados tras la edad ordinaria hasta los que se aplica el reparto por mitades",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 371/2023, de 16 de mayo, por el que se desarrolla el régimen jurídico del complemento económico establecido en el artículo 210.2 del texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 28/05/2026; descargado el 2026-11-12)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-11645"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Conversión: ocho años y seis meses = 102 meses. Redacción vigente desde el 28/08/2026 (RD 416/2026, disposición final 1.1); para hechos causantes anteriores regía la redacción original del RD 371/2023, que no se ha transcrito.",
+      "quote": "se acrediten entre dos y ocho años y seis meses de cotización",
+      "location": "art. 3 del RD 371/2023 (redacción del RD 416/2026, en vigor desde 28/08/2026)"
+    },
+    {
+      "id": "mixta-tramo1-divisor-anios",
+      "value": 2,
+      "unit": "partes iguales en que se dividen los años completos (la parte entera recibe el 4 % adicional)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 371/2023, de 16 de mayo, por el que se desarrolla el régimen jurídico del complemento económico establecido en el artículo 210.2 del texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 28/05/2026; descargado el 2026-11-12)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-11645"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Redacción vigente desde el 28/08/2026 (RD 416/2026, disposición final 1.1); para hechos causantes anteriores regía la redacción original del RD 371/2023, que no se ha transcrito.",
+      "quote": "Los años completos cotizados se dividirán en dos partes iguales",
+      "location": "art. 3 del RD 371/2023 (redacción del RD 416/2026, en vigor desde 28/08/2026)"
+    },
+    {
+      "id": "mixta-tramo2-minimo-anios",
+      "value": 9,
+      "unit": "años cotizados tras la edad ordinaria desde los que se aplica la regla de cinco años a tanto alzado",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 371/2023, de 16 de mayo, por el que se desarrolla el régimen jurídico del complemento económico establecido en el artículo 210.2 del texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 28/05/2026; descargado el 2026-11-12)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-11645"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Redacción vigente desde el 28/08/2026 (RD 416/2026, disposición final 1.1); para hechos causantes anteriores regía la redacción original del RD 371/2023, que no se ha transcrito.",
+      "quote": "se acredite un periodo de nueve o más años cotizados",
+      "location": "art. 3 del RD 371/2023 (redacción del RD 416/2026, en vigor desde 28/08/2026)"
+    },
+    {
+      "id": "mixta-tramo2-anios-tanto-alzado",
+      "value": 5,
+      "unit": "años del periodo que se pagan a tanto alzado (el resto, con porcentaje adicional)",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 371/2023, de 16 de mayo, por el que se desarrolla el régimen jurídico del complemento económico establecido en el artículo 210.2 del texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 28/05/2026; descargado el 2026-11-12)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-11645"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Redacción vigente desde el 28/08/2026 (RD 416/2026, disposición final 1.1); para hechos causantes anteriores regía la redacción original del RD 371/2023, que no se ha transcrito.",
+      "quote": "Una cantidad a tanto alzado por cinco años de ese periodo",
+      "location": "art. 3 del RD 371/2023 (redacción del RD 416/2026, en vigor desde 28/08/2026)"
+    },
+    {
+      "id": "mixta-vigencia-desde",
+      "value": 20260828,
+      "unit": "fecha AAAAMMDD desde la que rige la redacción del art. 3 del RD 371/2023 que se transcribe",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto 371/2023, de 16 de mayo, por el que se desarrolla el régimen jurídico del complemento económico establecido en el artículo 210.2 del texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 28/05/2026; descargado el 2026-11-12)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-11645"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Fecha tomada del aviso de modificación del texto consolidado; antes de esa fecha rige la redacción original del RD 371/2023.",
+      "quote": "Se modifica, con efectos desde el 28 de agosto de 2026, por la disposición final 1.1 del Real Decreto 416/2026, de 27 de mayo",
+      "location": "art. 3 del RD 371/2023 (redacción del RD 416/2026, en vigor desde 28/08/2026)"
+    }
+  ]
+}

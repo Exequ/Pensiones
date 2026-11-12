@@ -1,0 +1,250 @@
+{
+  "tipo": "datos",
+  "id": "pension-maxima-incremento-2051-2065",
+  "title": "Incrementos de la pensión máxima inicial de 2051 a 2065 (DT 39.ª.4 TRLGSS)",
+  "description": "Tabla de la DT 39.ª.4 con el incremento (puntos porcentuales) que fija la ley para cada año de 2051 a 2065; y el total de 30 puntos al que apunta la convergencia.",
+  "data": [
+    {
+      "id": "2051",
+      "value": 3.2,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2051",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "La DT dice «incremento anual adicional» y la tabla crece de 3,2 a 20,0; la DT 39.ª.1 suma 0,115 puntos «acumulativos» cada año hasta 2050 (26 × 0,115 = 2,99, que enlaza con el 3,2 de 2051). Dos lecturas: (a) la tabla es el incremento acumulado total sobre el límite (convergencia hasta 30 puntos, DT 39.ª.4 último párrafo); (b) es el incremento anual adicional literal. El motor las ofrece como opción (véase docs/REVISION_ACTUARIAL.md).",
+      "quote": "| 2051 | 3,2 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2052",
+      "value": 3.6,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2052",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2052 | 3,6 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2053",
+      "value": 4.1,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2053",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2053 | 4,1 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2054",
+      "value": 4.8,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2054",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2054 | 4,8 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2055",
+      "value": 5.5,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2055",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2055 | 5,5 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2056",
+      "value": 6.4,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2056",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2056 | 6,4 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2057",
+      "value": 7.4,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2057",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2057 | 7,4 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2058",
+      "value": 8.5,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2058",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2058 | 8,5 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2059",
+      "value": 9.8,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2059",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2059 | 9,8 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2060",
+      "value": 11.2,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2060",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2060 | 11,2 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2061",
+      "value": 12.7,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2061",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2061 | 12,7 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2062",
+      "value": 14.3,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2062",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2062 | 14,3 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2063",
+      "value": 16.1,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2063",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2063 | 16,1 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2064",
+      "value": 18.0,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2064",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2064 | 18,0 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2065",
+      "value": 20.0,
+      "unit": "puntos porcentuales (valor de la tabla de la DT 39.ª.4; su lectura es una cuestión abierta, véase notes)",
+      "period": "2065",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "| 2065 | 20,0 |",
+      "location": "DT 39.ª.4 TRLGSS (art. único.39 del RDL 2/2023)"
+    },
+    {
+      "id": "2065-convergencia-total",
+      "value": 30,
+      "unit": "puntos porcentuales de incremento total al que apunta el proceso de convergencia (a valorar en 2065)",
+      "period": "2065",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "No es un incremento fijado por ley: la DT prevé valorar en 2065 si se mantiene la convergencia hasta ese total.",
+      "quote": "En 2065, se valorará en el marco del diálogo social la conveniencia de mantener el proceso de convergencia hasta alcanzar un incremento total de 30 puntos porcentuales",
+      "location": "DT 39.ª.4 TRLGSS"
+    }
+  ]
+}

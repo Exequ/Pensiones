@@ -1,0 +1,115 @@
+{
+  "tipo": "datos",
+  "id": "lagunas-integracion-brecha-genero",
+  "title": "Integración de lagunas con porcentajes adicionales de las mensualidades 49.ª a 84.ª (DT 41.ª TRLGSS)",
+  "description": "Mensualidades y porcentajes de la base mínima de la integración reforzada (100 % de la 49.ª a la 60.ª y 80 % de la 61.ª a la 84.ª) y umbral de la brecha de género que la condiciona. Rige desde 2026.",
+  "data": [
+    {
+      "id": "2026-tramo-a-desde-mes",
+      "value": 49,
+      "unit": "mensualidad (contada desde el hecho causante hacia atrás) desde la que se aplica el primer porcentaje adicional",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Se aplica a las mujeres trabajadoras por cuenta ajena y, con las condiciones del art. 60.1.b) reglas 1.ª o 2.ª, a los hombres; «en tanto la brecha de género sea superior al 5 por ciento» (DA 37.ª). No consta en /data la brecha de ningún año: el motor lo trata como opción.",
+      "quote": "los meses en los que no haya existido obligación de cotizar, desde la cuadragésima novena mensualidad hasta la sexagésima, se integrarán con el 100 por ciento de la base mínima de cotización del Régimen General que corresponda al mes respectivo. Este porcentaje será del 80 por ciento de la misma base desde la mensualidad sexagésima primera a la octagésima cuarta",
+      "location": "DT 41.ª TRLGSS (art. único.41 del RDL 2/2023; en vigor desde 01/01/2026)"
+    },
+    {
+      "id": "2026-tramo-a-hasta-mes",
+      "value": 60,
+      "unit": "mensualidad hasta la que se aplica el primer porcentaje adicional",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "los meses en los que no haya existido obligación de cotizar, desde la cuadragésima novena mensualidad hasta la sexagésima, se integrarán con el 100 por ciento de la base mínima de cotización del Régimen General que corresponda al mes respectivo. Este porcentaje será del 80 por ciento de la misma base desde la mensualidad sexagésima primera a la octagésima cuarta",
+      "location": "DT 41.ª TRLGSS (art. único.41 del RDL 2/2023; en vigor desde 01/01/2026)"
+    },
+    {
+      "id": "2026-tramo-a-pct-base-minima",
+      "value": 100,
+      "unit": "% de la base mínima de las mensualidades 49.ª a 60.ª",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "los meses en los que no haya existido obligación de cotizar, desde la cuadragésima novena mensualidad hasta la sexagésima, se integrarán con el 100 por ciento de la base mínima de cotización del Régimen General que corresponda al mes respectivo. Este porcentaje será del 80 por ciento de la misma base desde la mensualidad sexagésima primera a la octagésima cuarta",
+      "location": "DT 41.ª TRLGSS (art. único.41 del RDL 2/2023; en vigor desde 01/01/2026)"
+    },
+    {
+      "id": "2026-tramo-b-desde-mes",
+      "value": 61,
+      "unit": "mensualidad desde la que se aplica el segundo porcentaje adicional",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "los meses en los que no haya existido obligación de cotizar, desde la cuadragésima novena mensualidad hasta la sexagésima, se integrarán con el 100 por ciento de la base mínima de cotización del Régimen General que corresponda al mes respectivo. Este porcentaje será del 80 por ciento de la misma base desde la mensualidad sexagésima primera a la octagésima cuarta",
+      "location": "DT 41.ª TRLGSS (art. único.41 del RDL 2/2023; en vigor desde 01/01/2026)"
+    },
+    {
+      "id": "2026-tramo-b-hasta-mes",
+      "value": 84,
+      "unit": "mensualidad hasta la que se aplica el segundo porcentaje adicional",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "los meses en los que no haya existido obligación de cotizar, desde la cuadragésima novena mensualidad hasta la sexagésima, se integrarán con el 100 por ciento de la base mínima de cotización del Régimen General que corresponda al mes respectivo. Este porcentaje será del 80 por ciento de la misma base desde la mensualidad sexagésima primera a la octagésima cuarta",
+      "location": "DT 41.ª TRLGSS (art. único.41 del RDL 2/2023; en vigor desde 01/01/2026)"
+    },
+    {
+      "id": "2026-tramo-b-pct-base-minima",
+      "value": 80,
+      "unit": "% de la base mínima de las mensualidades 61.ª a 84.ª",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "los meses en los que no haya existido obligación de cotizar, desde la cuadragésima novena mensualidad hasta la sexagésima, se integrarán con el 100 por ciento de la base mínima de cotización del Régimen General que corresponda al mes respectivo. Este porcentaje será del 80 por ciento de la misma base desde la mensualidad sexagésima primera a la octagésima cuarta",
+      "location": "DT 41.ª TRLGSS (art. único.41 del RDL 2/2023; en vigor desde 01/01/2026)"
+    },
+    {
+      "id": "2026-umbral-brecha-pct",
+      "value": 5,
+      "unit": "% de brecha de género de las pensiones de jubilación por encima del cual rige la medida",
+      "period": "2026",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "La DA 37.ª.1 define la brecha como la diferencia porcentual entre el importe medio de las pensiones de jubilación causadas en un año por mujeres y por hombres.",
+      "quote": "En tanto la brecha de género sea superior al 5 por ciento",
+      "location": "DT 41.ª TRLGSS (art. único.41 del RDL 2/2023; en vigor desde 01/01/2026); DA 37.ª"
+    }
+  ]
+}

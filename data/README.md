@@ -95,6 +95,22 @@ Detalle fichero a fichero en [demografia/README.md](demografia/README.md) y [mac
 
 Detalle en [internacional/README.md](internacional/README.md) y [mitos/README.md](mitos/README.md): OCDE «Pensions at a Glance» (11 países, media OCDE y UE-27), Eurostat (gasto en pensiones, pobreza o exclusión de mayores, empleo de 55 a 64 años), estructura de nueve sistemas de pensiones con cita literal, series derivadas de contraste de España y un catálogo de 12 afirmaciones circulantes (de tipo `mitos`) sin veredicto.
 
+## Contenido (Fase 2-A: reglas de la jubilación para el motor, en `parametros/`)
+
+Generados por `scripts/etl/jubilacion_reglas.py` (cita literal comprobada por código en el artículo o la disposición); detalle en [`docs/MOTOR_INVENTARIO.md`](../docs/MOTOR_INVENTARIO.md).
+
+| Fichero                                                                      | Contenido                                                                            | Periodo                          | Unidad                         |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------ |
+| `escala-jubilacion-tramos`                                                   | Escala por meses cotizados: porcentaje base, tramos y máximo (DT 9.ª, art. 210.1)    | versiones 2013, 2020, 2023, 2027 | %; meses                       |
+| `jubilacion-periodo-previo`, `jubilacion-edad-65`                            | Dos años en los quince anteriores; edad de 65 años                                   | desde 2013                       | meses                          |
+| `jubilacion-coeficientes-involuntaria`, `jubilacion-coeficientes-voluntaria` | Cuadros de los arts. 207.2 y 208.2 (id `tramo-meses`) y umbrales de periodo cotizado | desde 2022                       | % de reducción; meses          |
+| `jubilacion-coeficientes-voluntaria-limite`                                  | DT 34.ª: coeficientes sobre el límite de pensión (id `año-tramo-meses`)              | 2024-2033                        | % de reducción                 |
+| `jubilacion-anticipada-reglas`                                               | Requisitos numéricos de las anticipadas y de la parcial                              | 2022 y 2025                      | meses; %                       |
+| `jubilacion-demora-reglas`                                                   | Porcentaje adicional, pago único (800, 880, 500, 1,65) y opción mixta                | 2022 y 2026                      | %; euros; meses; años          |
+| `lagunas-integracion-brecha-genero`                                          | DT 41.ª: mensualidades 49.ª a 84.ª y porcentajes de la base mínima                   | 2026                             | mensualidad; %                 |
+| `pension-maxima-incremento-2051-2065`                                        | Tabla de la DT 39.ª.4                                                                | 2051-2065                        | puntos porcentuales            |
+| `complemento-brecha-genero-reglas`                                           | Art. 60: hijos, tope de 4 veces, límite máximo, mínimas, parcial, número de pagas    | desde 2023                       | hijos; veces; indicador; pagas |
+
 ## Formato
 
 ```jsonc

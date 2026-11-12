@@ -37,6 +37,14 @@ function numero(dato: DatoConId): number {
   return dato.value;
 }
 
+/** Reglas de la jubilación de la Fase 2-A: varios parámetros (y unidades) por año o por versión. */
+const FICHEROS_REGLAS_2A = [
+  'escala-jubilacion-tramos',
+  'jubilacion-',
+  'complemento-brecha-genero-reglas',
+  'pension-maxima-incremento-2051-2065',
+];
+
 /** Series con varias cuantías por año (clase de pensión, situación familiar, tramo). */
 const MULTIPLES_POR_ANIO = [
   'pension-minima-',
@@ -46,9 +54,15 @@ const MULTIPLES_POR_ANIO = [
   'revalorizacion-regla',
   'prestamos-',
   'mei-destino',
+  ...FICHEROS_REGLAS_2A,
 ];
 /** Ficheros por versión de una regla (el periodo es el año desde el que rige): sin exigir años seguidos. */
-const POR_VERSION = ['actualizacion-bases', 'lagunas-integracion', 'revalorizacion-regla'];
+const POR_VERSION = [
+  'actualizacion-bases',
+  'lagunas-integracion',
+  'revalorizacion-regla',
+  ...FICHEROS_REGLAS_2A,
+];
 /** Ficheros de reglas con varios parámetros (unidades distintas) en un mismo fichero. */
 const VARIAS_UNIDADES = [...POR_VERSION, 'pension-minima-regla', 'prestamos-', 'mei-destino'];
 /** Años sin dato por falta de fuente descargada; cada uno consta en docs/PENDIENTE_DATOS.md. */

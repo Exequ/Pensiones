@@ -1,0 +1,444 @@
+{
+  "tipo": "datos",
+  "id": "escala-jubilacion-tramos",
+  "title": "Escala de porcentajes de la jubilación por meses cotizados (DT 9.ª y art. 210.1 TRLGSS), en forma numérica",
+  "description": "Por versión (el periodo es el año desde el que rige): porcentaje base (50 % a los 15 años), porcentaje y meses de cada tramo adicional y máximo. Solo desde 2013 (escala por meses); la anterior (por años) no se ha estructurado (PENDIENTE_DATOS.md).",
+  "data": [
+    {
+      "id": "2013-tramo1-pct",
+      "value": 0.21,
+      "unit": "% de la base reguladora por cada mes adicional del primer tramo",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Porcentaje por cada mes cotizado adicional a los 15 años, de los meses 1 a 163. Rige desde 2013 hasta la versión siguiente; la última versión rige «a partir» de su año.",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 163, el 0,21 por ciento y por cada uno de los 83 meses siguientes, el 0,19 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2013-tramo1-meses",
+      "value": 163,
+      "unit": "meses adicionales a los 15 años a los que se aplica el primer porcentaje",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 163, el 0,21 por ciento y por cada uno de los 83 meses siguientes, el 0,19 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2013-tramo2-pct",
+      "value": 0.19,
+      "unit": "% de la base reguladora por cada mes adicional del segundo tramo",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 163, el 0,21 por ciento y por cada uno de los 83 meses siguientes, el 0,19 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2013-tramo2-meses",
+      "value": 83,
+      "unit": "meses adicionales del segundo tramo (los «meses siguientes» al primer tramo)",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 163, el 0,21 por ciento y por cada uno de los 83 meses siguientes, el 0,19 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2013-base-pct",
+      "value": 50,
+      "unit": "% de la base reguladora por los primeros quince años cotizados",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Quince años = 180 meses (el artículo habla de años; en `base-meses`).",
+      "quote": "Por los primeros quince años cotizados, el 50 por ciento.",
+      "location": "art. 210.1.a) TRLGSS"
+    },
+    {
+      "id": "2013-base-meses",
+      "value": 180,
+      "unit": "meses cotizados que dan el porcentaje base",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Conversión: quince años × 12 meses.",
+      "quote": "Por los primeros quince años cotizados, el 50 por ciento.",
+      "location": "art. 210.1.a) TRLGSS"
+    },
+    {
+      "id": "2013-maximo-pct",
+      "value": 100,
+      "unit": "% máximo de la base reguladora",
+      "period": "2013",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Salvo la demora del art. 210.2 (puede superar el 100 % con el límite del art. 57).",
+      "quote": "sin que el porcentaje aplicable a la base reguladora supere el 100 por cien",
+      "location": "art. 210.1.b) TRLGSS"
+    },
+    {
+      "id": "2020-tramo1-pct",
+      "value": 0.21,
+      "unit": "% de la base reguladora por cada mes adicional del primer tramo",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Porcentaje por cada mes cotizado adicional a los 15 años, de los meses 1 a 106. Rige desde 2020 hasta la versión siguiente; la última versión rige «a partir» de su año.",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 106, el 0,21 por ciento y por cada uno de los 146 meses siguientes, el 0,19 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2020-tramo1-meses",
+      "value": 106,
+      "unit": "meses adicionales a los 15 años a los que se aplica el primer porcentaje",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 106, el 0,21 por ciento y por cada uno de los 146 meses siguientes, el 0,19 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2020-tramo2-pct",
+      "value": 0.19,
+      "unit": "% de la base reguladora por cada mes adicional del segundo tramo",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 106, el 0,21 por ciento y por cada uno de los 146 meses siguientes, el 0,19 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2020-tramo2-meses",
+      "value": 146,
+      "unit": "meses adicionales del segundo tramo (los «meses siguientes» al primer tramo)",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 106, el 0,21 por ciento y por cada uno de los 146 meses siguientes, el 0,19 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2020-base-pct",
+      "value": 50,
+      "unit": "% de la base reguladora por los primeros quince años cotizados",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Quince años = 180 meses (el artículo habla de años; en `base-meses`).",
+      "quote": "Por los primeros quince años cotizados, el 50 por ciento.",
+      "location": "art. 210.1.a) TRLGSS"
+    },
+    {
+      "id": "2020-base-meses",
+      "value": 180,
+      "unit": "meses cotizados que dan el porcentaje base",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Conversión: quince años × 12 meses.",
+      "quote": "Por los primeros quince años cotizados, el 50 por ciento.",
+      "location": "art. 210.1.a) TRLGSS"
+    },
+    {
+      "id": "2020-maximo-pct",
+      "value": 100,
+      "unit": "% máximo de la base reguladora",
+      "period": "2020",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Salvo la demora del art. 210.2 (puede superar el 100 % con el límite del art. 57).",
+      "quote": "sin que el porcentaje aplicable a la base reguladora supere el 100 por cien",
+      "location": "art. 210.1.b) TRLGSS"
+    },
+    {
+      "id": "2023-tramo1-pct",
+      "value": 0.21,
+      "unit": "% de la base reguladora por cada mes adicional del primer tramo",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Porcentaje por cada mes cotizado adicional a los 15 años, de los meses 1 a 49. Rige desde 2023 hasta la versión siguiente; la última versión rige «a partir» de su año.",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 49, el 0,21 por ciento y por cada uno de los 209 meses siguientes, el 0,19 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2023-tramo1-meses",
+      "value": 49,
+      "unit": "meses adicionales a los 15 años a los que se aplica el primer porcentaje",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 49, el 0,21 por ciento y por cada uno de los 209 meses siguientes, el 0,19 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2023-tramo2-pct",
+      "value": 0.19,
+      "unit": "% de la base reguladora por cada mes adicional del segundo tramo",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 49, el 0,21 por ciento y por cada uno de los 209 meses siguientes, el 0,19 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2023-tramo2-meses",
+      "value": 209,
+      "unit": "meses adicionales del segundo tramo (los «meses siguientes» al primer tramo)",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 49, el 0,21 por ciento y por cada uno de los 209 meses siguientes, el 0,19 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2023-base-pct",
+      "value": 50,
+      "unit": "% de la base reguladora por los primeros quince años cotizados",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Quince años = 180 meses (el artículo habla de años; en `base-meses`).",
+      "quote": "Por los primeros quince años cotizados, el 50 por ciento.",
+      "location": "art. 210.1.a) TRLGSS"
+    },
+    {
+      "id": "2023-base-meses",
+      "value": 180,
+      "unit": "meses cotizados que dan el porcentaje base",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Conversión: quince años × 12 meses.",
+      "quote": "Por los primeros quince años cotizados, el 50 por ciento.",
+      "location": "art. 210.1.a) TRLGSS"
+    },
+    {
+      "id": "2023-maximo-pct",
+      "value": 100,
+      "unit": "% máximo de la base reguladora",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Salvo la demora del art. 210.2 (puede superar el 100 % con el límite del art. 57).",
+      "quote": "sin que el porcentaje aplicable a la base reguladora supere el 100 por cien",
+      "location": "art. 210.1.b) TRLGSS"
+    },
+    {
+      "id": "2027-tramo1-pct",
+      "value": 0.19,
+      "unit": "% de la base reguladora por cada mes adicional del primer tramo",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Porcentaje por cada mes cotizado adicional a los 15 años, de los meses 1 a 248. Rige desde 2027 hasta la versión siguiente; la última versión rige «a partir» de su año.",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 248, el 0,19 por ciento y por cada uno de los 16 meses siguientes, el 0,18 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2027-tramo1-meses",
+      "value": 248,
+      "unit": "meses adicionales a los 15 años a los que se aplica el primer porcentaje",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 248, el 0,19 por ciento y por cada uno de los 16 meses siguientes, el 0,18 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2027-tramo2-pct",
+      "value": 0.18,
+      "unit": "% de la base reguladora por cada mes adicional del segundo tramo",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 248, el 0,19 por ciento y por cada uno de los 16 meses siguientes, el 0,18 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2027-tramo2-meses",
+      "value": 16,
+      "unit": "meses adicionales del segundo tramo (los «meses siguientes» al primer tramo)",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "quote": "Por cada mes adicional de cotización entre los meses 1 y 248, el 0,19 por ciento y por cada uno de los 16 meses siguientes, el 0,18 por ciento.",
+      "location": "DT 9.ª TRLGSS (tabla de porcentajes sustitutivos del art. 210.1.b)"
+    },
+    {
+      "id": "2027-base-pct",
+      "value": 50,
+      "unit": "% de la base reguladora por los primeros quince años cotizados",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Quince años = 180 meses (el artículo habla de años; en `base-meses`).",
+      "quote": "Por los primeros quince años cotizados, el 50 por ciento.",
+      "location": "art. 210.1.a) TRLGSS"
+    },
+    {
+      "id": "2027-base-meses",
+      "value": 180,
+      "unit": "meses cotizados que dan el porcentaje base",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Conversión: quince años × 12 meses.",
+      "quote": "Por los primeros quince años cotizados, el 50 por ciento.",
+      "location": "art. 210.1.a) TRLGSS"
+    },
+    {
+      "id": "2027-maximo-pct",
+      "value": 100,
+      "unit": "% máximo de la base reguladora",
+      "period": "2027",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Salvo la demora del art. 210.2 (puede superar el 100 % con el límite del art. 57).",
+      "quote": "sin que el porcentaje aplicable a la base reguladora supere el 100 por cien",
+      "location": "art. 210.1.b) TRLGSS"
+    }
+  ]
+}
