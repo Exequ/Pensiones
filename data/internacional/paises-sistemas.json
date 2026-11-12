@@ -1,8 +1,8 @@
 {
   "tipo": "datos",
   "id": "paises-sistemas",
-  "title": "Estructura del sistema de pensiones de nueve países según las fichas del Ageing Report 2024",
-  "description": "Rasgos de la estructura de cada sistema (cuentas nocionales, ajuste automático, capitalización, reparto) con la cita literal en inglés de la ficha por país del Ageing Report 2024 de la Comisión Europea. Reino Unido y Estados Unidos no tienen ficha de la Comisión; los perfiles de la OCDE no se han podido descargar (ver docs/PENDIENTE_DATOS.md).",
+  "title": "Estructura del sistema de pensiones de once países según las fichas del Ageing Report 2024 y «Pensions at a Glance 2025»",
+  "description": "Rasgos de la estructura de cada sistema (cuentas nocionales, ajuste automático, capitalización, reparto) con la cita literal en inglés de la ficha por país del Ageing Report 2024 de la Comisión Europea (nueve países) y de «Pensions at a Glance 2025» de la OCDE (Reino Unido y Estados Unidos, que no tienen ficha de la Comisión, y España, con lo que dice la OCDE). El PDF de la OCDE no incluye los «Country Profiles» en línea (ver docs/PENDIENTE_DATOS.md).",
   "data": [
     {
       "id": "sistema-esp-1",
@@ -258,6 +258,363 @@
       "notes": "Etiqueta en español de Dinamarca basada en la cita en inglés de la ficha (edición 2024 del Ageing Report; la ficha describe el sistema a finales de 2023). Las citas conservan los saltos de palabra del PDF. No es una descripción completa del sistema.",
       "quote": "A minor funded pension scheme, ATP (Arbejdsmarkedets Tillægspension), also belong in the first pillar",
       "location": "ficha por país, apartado 1 «Overview of the pension system»"
+    },
+    {
+      "id": "sistema-esp-2",
+      "value": "pensión pública de prestación definida; medida de ingresos pensionables: los mejores 27 años de los 29 anteriores a la jubilación",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de España basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Nota de la tabla 3.4 (parámetros del régimen público de prestación definida).",
+      "quote": "Spain: The earnings measure is the best 27 years of the 29 years immediately prior to retirement.",
+      "location": "p. 153 del informe (pág. 155 del PDF)"
+    },
+    {
+      "id": "sistema-esp-3",
+      "value": "régimen de prestación definida y reparto con tasas de acumulación nominales de al menos el 2 % anual (Colombia, Portugal, España y Türkiye)",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de España basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF).",
+      "quote": "Within PAYG DB schemes, accrual rates of at least 2% apply in Colombia, Portugal, Spain and Türkiye.",
+      "location": "p. 152 del informe (pág. 154 del PDF)"
+    },
+    {
+      "id": "sistema-esp-4",
+      "value": "tasa de acumulación total limitada al 100 % de la base de cálculo",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de España basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF).",
+      "quote": "In Spain and Türkiye, the total accumulated accrual rate is capped at 100% and 90% respectively.",
+      "location": "p. 152 del informe (pág. 154 del PDF)"
+    },
+    {
+      "id": "sistema-esp-5",
+      "value": "los ingresos pasados se revalorizan solo con la inflación (no con el crecimiento de los salarios)",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de España basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Es una regla del sistema, no un supuesto económico: explica por qué la tasa de reposición teórica depende del crecimiento real de los salarios (ver ocde-supuestos-reposicion).",
+      "quote": "Belgium, Colombia, Costa Rica, Spain and the main scheme in France only revalue past earnings with price inflation",
+      "location": "p. 152 del informe (pág. 154 del PDF)"
+    },
+    {
+      "id": "sistema-esp-6",
+      "value": "bonus por demora de la jubilación: antes del 4 % por año completo; desde 2025, el 2 % por semestre con demora de al menos 18 meses",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de España basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Reforma de 2024-2025 recogida por la OCDE (anexo 1.A: «Spain, December 2024»).",
+      "quote": "Spain has provided some more flexibility in retirement timing in its deferral bonus. Previously, the bonus of 4% per year only accumulated per full year of deferral. Since 2025, the bonus instead accumulates at 2% per six months in case of a deferral of at least 18 months.",
+      "location": "p. 41 del informe (pág. 43 del PDF)"
+    },
+    {
+      "id": "sistema-esp-7",
+      "value": "cotización adicional sobre los ingresos de quien compatibiliza trabajo y pensión tras la edad ordinaria, que no genera una pensión mayor",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de España basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Se refiere a la compatibilización de trabajo y pensión; la OCDE dice 9 % para España.",
+      "quote": "Greece and Spain levy a supplementary contribution of 10% and 9% of earnings, respectively, that does not result in a higher pension.",
+      "location": "p. 34 del informe (pág. 36 del PDF)"
+    },
+    {
+      "id": "sistema-esp-8",
+      "value": "único país de la OCDE que exige demorar al menos un año el cobro de la pensión para poder compatibilizarla con el trabajo tras la edad ordinaria",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de España basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF).",
+      "quote": "Spain, moreover, is the only country that requires that pension uptake is deferred with at least one year before a person can combine work and pension receipt after the normal retirement age.",
+      "location": "p. 34 del informe (pág. 36 del PDF)"
+    },
+    {
+      "id": "sistema-esp-9",
+      "value": "la OCDE recoge la proyección de AIReF de 2025: el gasto en pensiones sube 3,2 puntos del PIB entre 2023 y 2050 (16,1 % del PIB en 2050) con las reglas vigentes; es una proyección de AIReF citada por la OCDE, no una estimación de la OCDE",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de España basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Dato de AIReF citado por la OCDE (referencia [32] del capítulo 1). La OCDE añade que implica un desfase entre gasto y cotizaciones; no se reproduce su valoración. Contrastar con data/demografia/ageing-report-2024-espana y con las proyecciones de gasto de ocde-pag.",
+      "quote": "In Spain, the gap between pension spending and social security contributions will widen in the coming decades without further reforms, despite high contributions. AIReF (2025[32]) projects that, under current rules, pension spending will raise by 3.2 p.p. of GDP between 2023-2050, reaching 16.1% of GDP in 2050.",
+      "location": "p. 48 del informe (pág. 50 del PDF)"
+    },
+    {
+      "id": "sistema-gbr-1",
+      "value": "además de la pensión básica pública, un plan de empleo de capitalización de aportación definida (FDC) cuasi obligatorio",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de Reino Unido basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). La tabla 3.1 (panel A) clasifica al Reino Unido con pensión básica contributiva de primer nivel y FDC cuasi obligatorio («FDC [q]») de segundo nivel; el panel B añade un segundo nivel público de prestación definida (DB) para quienes se jubilan en 2024.",
+      "quote": "Five of these countries, Denmark, Iceland, the Netherlands, Sweden and the United Kingdom, also have quasi-mandatory, occupational FDC schemes in addition to either compulsory earnings-related public plans or basic pensions.",
+      "location": "p. 146 del informe (pág. 148 del PDF)"
+    },
+    {
+      "id": "sistema-gbr-2",
+      "value": "tabla 3.1, panel A (legislación más reciente, personas que entran en 2024 a los 22 años): primer nivel con pensión básica contributiva y segundo nivel privado FDC cuasi obligatorio",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de Reino Unido basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Lectura de la fila de la tabla 3.1; la columna de la marca (✓) es la de pensión básica contributiva, comprobada sobre la imagen de la página. Columnas: primer nivel (básica, focalizada, básica contributiva, mínima contributiva) y segundo nivel (público, privado).",
+      "quote": "United Kingdom ✓ FDC [q]",
+      "location": "p. 147 del informe (pág. 149 del PDF)"
+    },
+    {
+      "id": "sistema-gbr-3",
+      "value": "tabla 3.1, panel B (legislación vigente para quienes se jubilan en 2024, donde difiere del panel A): pensión básica contributiva y segundo nivel público de prestación definida",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de Reino Unido basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Lectura de la fila del panel B de la tabla 3.1 (columna de pensión básica contributiva y columna de segundo nivel público).",
+      "quote": "United Kingdom ✓ DB",
+      "location": "p. 147 del informe (pág. 149 del PDF)"
+    },
+    {
+      "id": "sistema-gbr-4",
+      "value": "el plan de empleo cuasi obligatorio se incluye en los cálculos porque cubre al menos el 85 % de los asalariados",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de Reino Unido basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). El umbral del 85 % figura en la frase anterior del informe: «Schemes with near-universal coverage are also included, if they cover at least 85% of employees.»",
+      "quote": "Such plans are called “quasi-mandatory” in this report and are included for Denmark, Iceland, the Netherlands, Sweden and the United Kingdom.",
+      "location": "p. 160 del informe (pág. 162 del PDF)"
+    },
+    {
+      "id": "sistema-gbr-5",
+      "value": "la jubilación anticipada no es posible en la pensión básica, pero sí en el plan FDC cuasi obligatorio para quien empieza hoy",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de Reino Unido basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Nota de la figura 3.9 (edades de jubilación anticipada).",
+      "quote": "Early retirement is not possible in the basic pension in the United Kingdom for both current and future retirees. However, full-career workers starting today will be able to take early retirement within the quasi-mandatory FDC scheme.",
+      "location": "p. 157 del informe (pág. 159 del PDF)"
+    },
+    {
+      "id": "sistema-usa-1",
+      "value": "tabla 3.1: un único componente obligatorio, el segundo nivel público de prestación definida (DB), sin primer nivel residencial ni contributivo básico",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de Estados Unidos basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Lectura de la fila de la tabla 3.1: sin marcas en ninguna columna de primer nivel y «DB» en segundo nivel público. El informe señala la prestación focalizada («targeted») como único componente de primer nivel (frase siguiente).",
+      "quote": "United States DB",
+      "location": "p. 147 del informe (pág. 149 del PDF)"
+    },
+    {
+      "id": "sistema-usa-2",
+      "value": "el primer nivel está formado solo por prestaciones focalizadas sujetas a comprobación de recursos",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de Estados Unidos basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF).",
+      "quote": "All OECD countries provide targeted benefits that are subject to means tests; in Australia, Finland, Germany and the United States these are the only first-tier schemes in place.",
+      "location": "p. 148 del informe (pág. 150 del PDF)"
+    },
+    {
+      "id": "sistema-usa-3",
+      "value": "ingresos pensionables: los mejores 35 años de la carrera",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de Estados Unidos basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Medida de ingresos pensionables de la tabla 3.4 (el informe indica «B35»).",
+      "quote": "Portugal, Slovenia and the United States also come close by using the best 40, 35 and 35 years, respectively.",
+      "location": "p. 152 del informe (pág. 154 del PDF)"
+    },
+    {
+      "id": "sistema-usa-4",
+      "value": "la tasa de acumulación varía con el nivel de ingresos y es mayor para los ingresos bajos",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de Estados Unidos basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF).",
+      "quote": "However, in Czechia, Portugal, the United States and for the public scheme in Switzerland, entitlements vary with earnings levels, granting higher accrual rates to lower earners.",
+      "location": "p. 152 del informe (pág. 154 del PDF)"
+    },
+    {
+      "id": "sistema-usa-5",
+      "value": "revalorización de los ingresos pasados: con el crecimiento de los salarios hasta los 60 años, sin ajuste de 60 a 62 y con la inflación de 62 a 67",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de Estados Unidos basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Nota de la tabla 3.4. La tasa de acumulación se aplica a la media de ingresos en el momento de la jubilación.",
+      "quote": "United States: valorisation with earnings growth to age 60, no adjustment from 60 to 62, valorisation with price inflation from 62 to 67.",
+      "location": "p. 153 del informe (pág. 155 del PDF)"
+    },
+    {
+      "id": "sistema-usa-6",
+      "value": "entre el 15 % y el 50 % de la pensión pública no tributa en el impuesto sobre la renta, según los ingresos totales del pensionista",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de Estados Unidos basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Tratamiento fiscal de las pensiones públicas citado por la OCDE como ejemplo.",
+      "quote": "between 15% and 50% of income from public pensions in the United States (social security) is not taxed, depending on the total income of the pensioner",
+      "location": "p. 166 del informe (pág. 168 del PDF)"
+    },
+    {
+      "id": "sistema-usa-7",
+      "value": "fecha de agotamiento del fondo fiduciario de vejez y supervivencia (OASI): primer trimestre de 2033, adelantada tres trimestres respecto de la proyección anterior",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de Estados Unidos basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Proyección de los administradores del fondo (Board of Trustees, 2025) citada por la OCDE, no una estimación de la OCDE.",
+      "quote": "In the United States, the depletion date of the Old-Age and Survivors Insurance (OASI) Trust Fund has moved forward by three-quarters to the first quarter of 2033",
+      "location": "p. 48 del informe (pág. 50 del PDF)"
+    },
+    {
+      "id": "sistema-usa-8",
+      "value": "suplemento por cónyuge igual al 50 % de la pensión individual más alta de la pareja, del que se deduce la pensión más baja",
+      "unit": "texto",
+      "period": "2024",
+      "source": {
+        "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+        "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+        "url": "https://doi.org/10.1787/e40274c1-en",
+        "docId": "OECD-PAG-2025"
+      },
+      "fetchedAt": "2026-11-12",
+      "confidence": "media",
+      "notes": "Etiqueta en español de Estados Unidos basada en la cita en inglés de «Pensions at a Glance 2025» (OCDE; PDF aportado a mano). Describe la legislación recogida por la OCDE para quien entra en el mercado laboral en 2024 a los 22 años, no es una descripción completa del sistema (los «Country Profiles» en línea no forman parte del PDF). Capítulo 2 (pensiones de pareja y brecha de género).",
+      "quote": "In the United States, the spousal supplement is equal to 50% of the higher individual pension within the couple, and the lower pension is deducted from the spousal benefit.",
+      "location": "p. 128 del informe (pág. 130 del PDF)"
     }
   ]
 }

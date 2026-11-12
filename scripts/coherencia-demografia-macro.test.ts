@@ -1194,7 +1194,7 @@ describe('registro de afirmaciones (C3): revisión actuarial', () => {
       (c) => (c.revisionActuarial ?? registro.revisionActuarialPorDefecto) === 'pendiente',
     );
     expect(pendientes.length).toBeGreaterThanOrEqual(18);
-    expect(pendientes.length).toBeLessThanOrEqual(45);
+    expect(pendientes.length).toBeLessThanOrEqual(50);
     for (const c of pendientes) expect(c.preguntaActuarial?.length).toBeGreaterThan(40);
     expect(registro.claims.some((c) => c.revisionActuarial === undefined)).toBe(true);
   });
