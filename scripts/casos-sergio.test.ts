@@ -29,7 +29,10 @@ describe('casos de oro de Sergio (casos-sergio.md)', () => {
     for (const c of casos) {
       it(`${c.id} (${c.tipo}, línea ${c.linea}): ${c.fuente.slice(0, 60)}`, () => {
         const r = ejecutarCaso(c, leerParametroDeDisco);
+        // Con la marca «diferenciaConocida» y sin coincidir, el caso pasa con una advertencia.
+        for (const a of r.advertencias ?? []) console.warn(`[${c.id}] ${a}`);
         expect(r.mensajes, r.mensajes.join('\n')).toEqual([]);
+        expect(r.ok).toBe(true);
       });
     }
   } else {
@@ -123,6 +126,78 @@ describe('lector y ejecutor de casos (datos sintéticos)', () => {
     const r = ejecutarCaso(casos[0]!, leerParametroDeDisco);
     expect(r.ok).toBe(false);
     expect(r.mensajes[0]).toMatch(/el motor da 628\.8000 y el caso espera 700/);
+  });
+
+  describe('marca «diferenciaConocida»', () => {
+    const pnc = (esperado: string) =>
+      cab +
+      fila(
+        'pnc-marca',
+        'pnc-jubilacion',
+        '2026-03-10',
+        '`{"nacimiento":"1955-03-03","residenciaLegalMeses":240,"residenciaRecienteMeses":60,"rentasAnuales":0}`',
+        '-',
+        `\`${esperado}\``,
+        'valor de prueba para la marca',
+      );
+    const MOTIVO = 'IPC mensual aproximado por interpolación anual (prueba)';
+
+    it('un caso con la marca que no coincide da una advertencia y no falla', () => {
+      const { casos, errores } = leerCasosSergio(
+        pnc(`{"pensionMensual": 700, "diferenciaConocida": "${MOTIVO}"}`),
+      );
+      expect(errores).toEqual([]);
+      const r = ejecutarCaso(casos[0]!, leerParametroDeDisco);
+      expect(r.ok).toBe(true);
+      expect(r.estado).toBe('diferencia-conocida');
+      expect(r.mensajes).toEqual([]);
+      expect(r.advertencias?.[0]).toContain(MOTIVO);
+      expect(r.advertencias?.[0]).toMatch(/el motor da 628\.8000 y el caso espera 700/);
+    });
+
+    it('un caso con la marca que sí coincide FALLA, para obligar a retirarla', () => {
+      const { casos } = leerCasosSergio(
+        pnc(`{"pensionMensual": 628.8, "diferenciaConocida": "${MOTIVO}"}`),
+      );
+      const r = ejecutarCaso(casos[0]!, leerParametroDeDisco);
+      expect(r.ok).toBe(false);
+      expect(r.estado).toBe('falla');
+      expect(r.mensajes[0]).toMatch(/retire la marca/);
+    });
+
+    it('sin la marca, una diferencia falla y un acierto coincide', () => {
+      const mal = ejecutarCaso(
+        leerCasosSergio(pnc('{"pensionMensual": 700}')).casos[0]!,
+        leerParametroDeDisco,
+      );
+      expect(mal.ok).toBe(false);
+      expect(mal.estado).toBe('falla');
+      const bien = ejecutarCaso(
+        leerCasosSergio(pnc('{"pensionMensual": 628.8}')).casos[0]!,
+        leerParametroDeDisco,
+      );
+      expect(bien.ok).toBe(true);
+      expect(bien.estado).toBe('coincide');
+    });
+
+    it('la marca respeta la tolerancia del caso', () => {
+      // 628,80 frente a 628,85: con tolerancia 0,10 coincide, y entonces la marca sobra.
+      const r = ejecutarCaso(
+        leerCasosSergio(
+          pnc(`{"pensionMensual": 628.85, "tolerancia": 0.1, "diferenciaConocida": "${MOTIVO}"}`),
+        ).casos[0]!,
+        leerParametroDeDisco,
+      );
+      expect(r.ok).toBe(false);
+      expect(r.mensajes[0]).toMatch(/retire la marca/);
+    });
+
+    it('la marca debe ser un texto con el motivo', () => {
+      const a = leerCasosSergio(pnc('{"pensionMensual": 700, "diferenciaConocida": true}'));
+      expect(a.errores.join('\n')).toMatch(/«diferenciaConocida» debe ser un texto con el motivo/);
+      const b = leerCasosSergio(pnc('{"pensionMensual": 700, "diferenciaConocida": "x"}'));
+      expect(b.errores.join('\n')).toMatch(/«diferenciaConocida» debe ser un texto/);
+    });
   });
 
   it('los errores de formato dicen línea, columna y qué corregir', () => {

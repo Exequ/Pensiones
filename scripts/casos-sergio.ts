@@ -23,6 +23,7 @@ if (errores.length > 0) {
   process.exit(1);
 }
 let fallos = 0;
+let conocidas = 0;
 for (const c of casos) {
   let r;
   try {
@@ -30,9 +31,14 @@ for (const c of casos) {
   } catch (e) {
     r = { ok: false, mensajes: [(e as Error).message] };
   }
-  console.log(`${r.ok ? '✓' : '✗'} ${c.id} (${c.tipo}, línea ${c.linea})`);
+  const marca = r.estado === 'diferencia-conocida' ? '⚠' : r.ok ? '✓' : '✗';
+  console.log(`${marca} ${c.id} (${c.tipo}, línea ${c.linea})`);
   for (const m of r.mensajes) console.log(`    ${m}`);
+  for (const a of r.advertencias ?? []) console.log(`    ${a}`);
+  if (r.estado === 'diferencia-conocida') conocidas++;
   if (!r.ok) fallos++;
 }
-console.log(`${casos.length - fallos} de ${casos.length} casos coinciden.`);
+console.log(
+  `${casos.length - fallos - conocidas} de ${casos.length} casos coinciden; ${conocidas} con diferencia conocida (advertencia); ${fallos} fallan.`,
+);
 process.exit(fallos > 0 ? 1 : 0);
