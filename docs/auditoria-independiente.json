@@ -1,0 +1,1728 @@
+{
+  "generado": "2026-11-13",
+  "registros": [
+    {
+      "serie": "pension-minima-jubilacion: cuantías mínimas por clase y situación (euros/año)",
+      "fichero": "pension-minima-jubilacion",
+      "anios": "2001-2026",
+      "segundaFuente": [
+        {
+          "title": "MITES, Boletín de Estadísticas Laborales, PEN-31 (cuantías máxima y mínimas de las pensiones contributivas)",
+          "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm",
+          "fetchedAt": "2026-11-11",
+          "nota": "fichero aportado por el autor y ya incorporado a data/sistema/mites-bel-pen31-cuantias"
+        }
+      ],
+      "resultado": "coincide con salvedades",
+      "comparados": 126,
+      "difieren": [
+        {
+          "id": "2001-jub65-conyuge-cargo",
+          "valor": 6188.7,
+          "segundaFuente": 6230.98,
+          "pct": 0.68
+        },
+        {
+          "id": "2002-jub65-conyuge-cargo",
+          "valor": 6355.72,
+          "segundaFuente": 6474.02,
+          "pct": 1.86
+        },
+        {
+          "id": "2003-jub65-conyuge-cargo",
+          "valor": 6603.52,
+          "segundaFuente": 6655.32,
+          "pct": 0.78
+        },
+        {
+          "id": "2004-jub65-conyuge-cargo",
+          "valor": 6788.46,
+          "segundaFuente": 6888.28,
+          "pct": 1.47
+        },
+        {
+          "id": "2005-jub65-conyuge-cargo",
+          "valor": 7336.14,
+          "segundaFuente": 7436.94,
+          "pct": 1.37
+        },
+        {
+          "id": "2006-jub65-conyuge-cargo",
+          "valor": 7920.36,
+          "segundaFuente": 7966.98,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-jub65-conyuge-cargo",
+          "valor": 8484.84,
+          "segundaFuente": 8659.56,
+          "pct": 2.06
+        },
+        {
+          "id": "2010-jub65-conyuge-cargo",
+          "valor": 10152.8,
+          "segundaFuente": 10284.4,
+          "pct": 1.3
+        },
+        {
+          "id": "2011-jub65-conyuge-cargo",
+          "valor": 10388.0,
+          "segundaFuente": 10584.0,
+          "pct": 1.89
+        },
+        {
+          "id": "2001-jub65-unipersonal",
+          "valor": 5255.18,
+          "segundaFuente": 5291.16,
+          "pct": 0.68
+        },
+        {
+          "id": "2002-jub65-unipersonal",
+          "valor": 5397.0,
+          "segundaFuente": 5497.52,
+          "pct": 1.86
+        },
+        {
+          "id": "2003-jub65-unipersonal",
+          "valor": 5607.56,
+          "segundaFuente": 5651.52,
+          "pct": 0.78
+        },
+        {
+          "id": "2004-jub65-unipersonal",
+          "valor": 5764.64,
+          "segundaFuente": 5849.34,
+          "pct": 1.47
+        },
+        {
+          "id": "2005-jub65-unipersonal",
+          "valor": 6141.94,
+          "segundaFuente": 6226.36,
+          "pct": 1.37
+        },
+        {
+          "id": "2006-jub65-unipersonal",
+          "valor": 6537.72,
+          "segundaFuente": 6576.22,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-jub65-unipersonal",
+          "valor": 6905.08,
+          "segundaFuente": 7047.32,
+          "pct": 2.06
+        },
+        {
+          "id": "2010-jub65-unipersonal",
+          "valor": 8229.2,
+          "segundaFuente": 8335.6,
+          "pct": 1.29
+        },
+        {
+          "id": "2011-jub65-unipersonal",
+          "valor": 8419.6,
+          "segundaFuente": 8577.8,
+          "pct": 1.88
+        },
+        {
+          "id": "2010-jub65-conyuge-no-cargo",
+          "valor": 7805.0,
+          "segundaFuente": 7905.8,
+          "pct": 1.29
+        },
+        {
+          "id": "2011-jub65-conyuge-no-cargo",
+          "valor": 7985.6,
+          "segundaFuente": 8135.4,
+          "pct": 1.88
+        },
+        {
+          "id": "2001-jub-menor65-conyuge-cargo",
+          "valor": 5456.64,
+          "segundaFuente": 5493.88,
+          "pct": 0.68
+        },
+        {
+          "id": "2002-jub-menor65-conyuge-cargo",
+          "valor": 5686.24,
+          "segundaFuente": 5792.22,
+          "pct": 1.86
+        },
+        {
+          "id": "2003-jub-menor65-conyuge-cargo",
+          "valor": 5995.08,
+          "segundaFuente": 6042.12,
+          "pct": 0.78
+        },
+        {
+          "id": "2004-jub-menor65-conyuge-cargo",
+          "valor": 6344.24,
+          "segundaFuente": 6437.62,
+          "pct": 1.47
+        },
+        {
+          "id": "2005-jub-menor65-conyuge-cargo",
+          "valor": 6856.08,
+          "segundaFuente": 6950.3,
+          "pct": 1.37
+        },
+        {
+          "id": "2006-jub-menor65-conyuge-cargo",
+          "valor": 7402.08,
+          "segundaFuente": 7445.76,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-jub-menor65-conyuge-cargo",
+          "valor": 7929.74,
+          "segundaFuente": 8093.12,
+          "pct": 2.06
+        },
+        {
+          "id": "2010-jub-menor65-conyuge-cargo",
+          "valor": 9515.8,
+          "segundaFuente": 9639.0,
+          "pct": 1.29
+        },
+        {
+          "id": "2011-jub-menor65-conyuge-cargo",
+          "valor": 9735.6,
+          "segundaFuente": 9919.0,
+          "pct": 1.88
+        },
+        {
+          "id": "2010-jub-menor65-conyuge-no-cargo",
+          "valor": 7273.0,
+          "segundaFuente": 7366.8,
+          "pct": 1.29
+        },
+        {
+          "id": "2011-jub-menor65-conyuge-no-cargo",
+          "valor": 7441.0,
+          "segundaFuente": 7581.0,
+          "pct": 1.88
+        }
+      ],
+      "detalle": "126 valores comparados con el BEL (años 2000-2026 en que ambos existen); coinciden 95. Clases sin columna equivalente en el BEL (no contrastadas con él): jub65-gran-invalidez-conyuge-cargo, jub65-gran-invalidez-conyuge-no-cargo, jub65-gran-invalidez-unipersonal. Difieren 31 valores de los años 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2010, 2011: el BEL da importes superiores en un porcentaje casi constante para todas las clases de cada año (entre +0,59 % y +2,07 %), compatible con que el BEL recoja los importes tras una actualización posterior a la norma (la fuente no lo dice: no verificado). Se conserva el valor de la norma (cita literal)."
+    },
+    {
+      "serie": "pension-minima-incapacidad: cuantías mínimas por clase y situación (euros/año)",
+      "fichero": "pension-minima-incapacidad",
+      "anios": "2001-2026",
+      "segundaFuente": [
+        {
+          "title": "MITES, Boletín de Estadísticas Laborales, PEN-31 (cuantías máxima y mínimas de las pensiones contributivas)",
+          "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm",
+          "fetchedAt": "2026-11-11",
+          "nota": "fichero aportado por el autor y ya incorporado a data/sistema/mites-bel-pen31-cuantias"
+        }
+      ],
+      "resultado": "difiere",
+      "comparados": 152,
+      "difieren": [
+        {
+          "id": "2001-ip-absoluta-conyuge-cargo",
+          "valor": 6188.7,
+          "segundaFuente": 6230.98,
+          "pct": 0.68
+        },
+        {
+          "id": "2002-ip-absoluta-conyuge-cargo",
+          "valor": 6355.72,
+          "segundaFuente": 6474.02,
+          "pct": 1.86
+        },
+        {
+          "id": "2003-ip-absoluta-conyuge-cargo",
+          "valor": 6603.52,
+          "segundaFuente": 6655.32,
+          "pct": 0.78
+        },
+        {
+          "id": "2004-ip-absoluta-conyuge-cargo",
+          "valor": 6788.46,
+          "segundaFuente": 6888.28,
+          "pct": 1.47
+        },
+        {
+          "id": "2005-ip-absoluta-conyuge-cargo",
+          "valor": 7336.14,
+          "segundaFuente": 7436.94,
+          "pct": 1.37
+        },
+        {
+          "id": "2006-ip-absoluta-conyuge-cargo",
+          "valor": 7920.36,
+          "segundaFuente": 7966.98,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-ip-absoluta-conyuge-cargo",
+          "valor": 8484.84,
+          "segundaFuente": 8659.56,
+          "pct": 2.06
+        },
+        {
+          "id": "2010-ip-absoluta-conyuge-cargo",
+          "valor": 10152.8,
+          "segundaFuente": 10284.4,
+          "pct": 1.3
+        },
+        {
+          "id": "2011-ip-absoluta-conyuge-cargo",
+          "valor": 10388.0,
+          "segundaFuente": 10584.0,
+          "pct": 1.89
+        },
+        {
+          "id": "2001-ip-absoluta-unipersonal",
+          "valor": 5255.18,
+          "segundaFuente": 5291.16,
+          "pct": 0.68
+        },
+        {
+          "id": "2002-ip-absoluta-unipersonal",
+          "valor": 5397.0,
+          "segundaFuente": 5497.52,
+          "pct": 1.86
+        },
+        {
+          "id": "2003-ip-absoluta-unipersonal",
+          "valor": 5607.56,
+          "segundaFuente": 5651.52,
+          "pct": 0.78
+        },
+        {
+          "id": "2004-ip-absoluta-unipersonal",
+          "valor": 5764.64,
+          "segundaFuente": 5849.34,
+          "pct": 1.47
+        },
+        {
+          "id": "2005-ip-absoluta-unipersonal",
+          "valor": 6141.94,
+          "segundaFuente": 6226.36,
+          "pct": 1.37
+        },
+        {
+          "id": "2006-ip-absoluta-unipersonal",
+          "valor": 6537.72,
+          "segundaFuente": 6576.22,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-ip-absoluta-unipersonal",
+          "valor": 6905.08,
+          "segundaFuente": 7047.32,
+          "pct": 2.06
+        },
+        {
+          "id": "2010-ip-absoluta-unipersonal",
+          "valor": 8229.2,
+          "segundaFuente": 8335.6,
+          "pct": 1.29
+        },
+        {
+          "id": "2011-ip-absoluta-unipersonal",
+          "valor": 8419.6,
+          "segundaFuente": 8577.8,
+          "pct": 1.88
+        },
+        {
+          "id": "2010-ip-absoluta-conyuge-no-cargo",
+          "valor": 7805.0,
+          "segundaFuente": 7905.8,
+          "pct": 1.29
+        },
+        {
+          "id": "2011-ip-absoluta-conyuge-no-cargo",
+          "valor": 7985.6,
+          "segundaFuente": 8135.4,
+          "pct": 1.88
+        },
+        {
+          "id": "2001-ip-gran-invalidez-conyuge-cargo",
+          "valor": 9282.98,
+          "segundaFuente": 9346.54,
+          "pct": 0.68
+        },
+        {
+          "id": "2002-ip-gran-invalidez-conyuge-cargo",
+          "valor": 9533.58,
+          "segundaFuente": 9711.1,
+          "pct": 1.86
+        },
+        {
+          "id": "2003-ip-gran-invalidez-conyuge-cargo",
+          "valor": 9905.28,
+          "segundaFuente": 9982.98,
+          "pct": 0.78
+        },
+        {
+          "id": "2004-ip-gran-invalidez-conyuge-cargo",
+          "valor": 10182.76,
+          "segundaFuente": 10332.42,
+          "pct": 1.47
+        },
+        {
+          "id": "2005-ip-gran-invalidez-conyuge-cargo",
+          "valor": 11004.28,
+          "segundaFuente": 11155.48,
+          "pct": 1.37
+        },
+        {
+          "id": "2006-ip-gran-invalidez-conyuge-cargo",
+          "valor": 11880.54,
+          "segundaFuente": 11950.54,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-ip-gran-invalidez-conyuge-cargo",
+          "valor": 12727.26,
+          "segundaFuente": 12989.34,
+          "pct": 2.06
+        },
+        {
+          "id": "2010-ip-gran-invalidez-conyuge-cargo",
+          "valor": 15229.2,
+          "segundaFuente": 15426.6,
+          "pct": 1.3
+        },
+        {
+          "id": "2011-ip-gran-invalidez-conyuge-cargo",
+          "valor": 15582.0,
+          "segundaFuente": 15876.0,
+          "pct": 1.89
+        },
+        {
+          "id": "2001-ip-gran-invalidez-unipersonal",
+          "valor": 7882.84,
+          "segundaFuente": 7936.74,
+          "pct": 0.68
+        },
+        {
+          "id": "2002-ip-gran-invalidez-unipersonal",
+          "valor": 8095.5,
+          "segundaFuente": 8246.28,
+          "pct": 1.86
+        },
+        {
+          "id": "2003-ip-gran-invalidez-unipersonal",
+          "valor": 8411.34,
+          "segundaFuente": 8477.28,
+          "pct": 0.78
+        },
+        {
+          "id": "2004-ip-gran-invalidez-unipersonal",
+          "valor": 8646.96,
+          "segundaFuente": 8774.08,
+          "pct": 1.47
+        },
+        {
+          "id": "2005-ip-gran-invalidez-unipersonal",
+          "valor": 9212.98,
+          "segundaFuente": 9339.54,
+          "pct": 1.37
+        },
+        {
+          "id": "2006-ip-gran-invalidez-unipersonal",
+          "valor": 9806.58,
+          "segundaFuente": 9864.4,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-ip-gran-invalidez-unipersonal",
+          "valor": 10357.62,
+          "segundaFuente": 10570.98,
+          "pct": 2.06
+        },
+        {
+          "id": "2010-ip-gran-invalidez-unipersonal",
+          "valor": 12343.8,
+          "segundaFuente": 12503.4,
+          "pct": 1.29
+        },
+        {
+          "id": "2011-ip-gran-invalidez-unipersonal",
+          "valor": 12629.4,
+          "segundaFuente": 12867.4,
+          "pct": 1.88
+        },
+        {
+          "id": "2010-ip-gran-invalidez-conyuge-no-cargo",
+          "valor": 11708.2,
+          "segundaFuente": 11859.4,
+          "pct": 1.29
+        },
+        {
+          "id": "2011-ip-gran-invalidez-conyuge-no-cargo",
+          "valor": 11978.4,
+          "segundaFuente": 12203.8,
+          "pct": 1.88
+        },
+        {
+          "id": "2005-ip-total-60-64-conyuge-cargo",
+          "valor": 6856.08,
+          "segundaFuente": 6950.3,
+          "pct": 1.37
+        },
+        {
+          "id": "2006-ip-total-60-64-conyuge-cargo",
+          "valor": 7402.08,
+          "segundaFuente": 7445.76,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-ip-total-60-64-conyuge-cargo",
+          "valor": 7929.74,
+          "segundaFuente": 8093.12,
+          "pct": 2.06
+        },
+        {
+          "id": "2005-ip-total-60-64-unipersonal",
+          "valor": 5722.92,
+          "segundaFuente": 5801.6,
+          "pct": 1.37
+        },
+        {
+          "id": "2006-ip-total-60-64-unipersonal",
+          "valor": 6091.68,
+          "segundaFuente": 6127.52,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-ip-total-60-64-unipersonal",
+          "valor": 6433.98,
+          "segundaFuente": 6566.56,
+          "pct": 2.06
+        },
+        {
+          "id": "2026-ip-total-60-64-unipersonal",
+          "valor": 12262.6,
+          "segundaFuente": 13106.8,
+          "pct": 6.88
+        }
+      ],
+      "detalle": "152 valores comparados con el BEL (años 2000-2026 en que ambos existen); coinciden 105. Clases sin columna equivalente en el BEL (no contrastadas con él): ip-parcial-at-65-conyuge-cargo, ip-parcial-at-65-conyuge-no-cargo, ip-parcial-at-65-unipersonal, ip-total-60-64-conyuge-no-cargo, ip-total-65-conyuge-cargo, ip-total-65-conyuge-no-cargo, ip-total-65-unipersonal, ip-total-enf-comun-menor60-conyuge-cargo, ip-total-enf-comun-menor60-conyuge-no-cargo, ip-total-enf-comun-menor60-unipersonal. Difieren 46 valores de los años 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2010, 2011: el BEL da importes superiores en un porcentaje casi constante para todas las clases de cada año (entre +0,59 % y +2,07 %), compatible con que el BEL recoja los importes tras una actualización posterior a la norma (la fuente no lo dice: no verificado). Se conserva el valor de la norma (cita literal). Diferencias fuera de 2000-2011: 2026 ip-total-60-64-unipersonal: /data 12262.60 frente a BEL 13106.80 (ver «Hallazgos»)."
+    },
+    {
+      "serie": "pension-minima-viudedad: cuantías mínimas por clase y situación (euros/año)",
+      "fichero": "pension-minima-viudedad",
+      "anios": "2001-2026",
+      "segundaFuente": [
+        {
+          "title": "MITES, Boletín de Estadísticas Laborales, PEN-31 (cuantías máxima y mínimas de las pensiones contributivas)",
+          "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm",
+          "fetchedAt": "2026-11-11",
+          "nota": "fichero aportado por el autor y ya incorporado a data/sistema/mites-bel-pen31-cuantias"
+        }
+      ],
+      "resultado": "coincide con salvedades",
+      "comparados": 18,
+      "difieren": [
+        {
+          "id": "2010-viud-cargas-familiares-unipersonal",
+          "valor": 9515.8,
+          "segundaFuente": 9639.0,
+          "pct": 1.29
+        },
+        {
+          "id": "2011-viud-cargas-familiares-unipersonal",
+          "valor": 9735.6,
+          "segundaFuente": 9919.0,
+          "pct": 1.88
+        }
+      ],
+      "detalle": "18 valores comparados con el BEL (años 2000-2026 en que ambos existen); coinciden 16. Clases sin columna equivalente en el BEL (no contrastadas con él): viud-60-64-unipersonal, viud-65-o-discapacidad65-unipersonal, viud-menor60-cargas-unipersonal, viud-menor60-unipersonal. Difieren 2 valores de los años 2010, 2011: el BEL da importes superiores en un porcentaje casi constante para todas las clases de cada año (entre +0,59 % y +2,07 %), compatible con que el BEL recoja los importes tras una actualización posterior a la norma (la fuente no lo dice: no verificado). Se conserva el valor de la norma (cita literal)."
+    },
+    {
+      "serie": "pension-minima-orfandad-familiares: cuantías mínimas por clase y situación (euros/año)",
+      "fichero": "pension-minima-orfandad-familiares",
+      "anios": "2001-2026",
+      "segundaFuente": [
+        {
+          "title": "MITES, Boletín de Estadísticas Laborales, PEN-31 (cuantías máxima y mínimas de las pensiones contributivas)",
+          "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm",
+          "fetchedAt": "2026-11-11",
+          "nota": "fichero aportado por el autor y ya incorporado a data/sistema/mites-bel-pen31-cuantias"
+        }
+      ],
+      "resultado": "coincide con salvedades",
+      "comparados": 115,
+      "difieren": [
+        {
+          "id": "2001-orf-unico",
+          "valor": 1520.54,
+          "segundaFuente": 1530.9,
+          "pct": 0.68
+        },
+        {
+          "id": "2002-orf-unico",
+          "valor": 1561.56,
+          "segundaFuente": 1590.68,
+          "pct": 1.86
+        },
+        {
+          "id": "2003-orf-unico",
+          "valor": 1646.4,
+          "segundaFuente": 1659.42,
+          "pct": 0.79
+        },
+        {
+          "id": "2004-orf-unico",
+          "valor": 1742.44,
+          "segundaFuente": 1768.2,
+          "pct": 1.48
+        },
+        {
+          "id": "2005-orf-unico",
+          "valor": 1856.68,
+          "segundaFuente": 1882.3,
+          "pct": 1.38
+        },
+        {
+          "id": "2006-orf-unico",
+          "valor": 1976.52,
+          "segundaFuente": 1988.28,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-orf-unico",
+          "valor": 2087.82,
+          "segundaFuente": 2130.94,
+          "pct": 2.07
+        },
+        {
+          "id": "2010-orf-unico",
+          "valor": 2511.6,
+          "segundaFuente": 2545.2,
+          "pct": 1.34
+        },
+        {
+          "id": "2011-orf-unico",
+          "valor": 2571.8,
+          "segundaFuente": 2619.4,
+          "pct": 1.85
+        },
+        {
+          "id": "2006-orf-discapacidad65-unico",
+          "valor": 2800.0,
+          "segundaFuente": 2816.52,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-orf-discapacidad65-unico",
+          "valor": 4374.02,
+          "segundaFuente": 4464.18,
+          "pct": 2.06
+        },
+        {
+          "id": "2010-orf-discapacidad65-unico",
+          "valor": 4944.8,
+          "segundaFuente": 5009.2,
+          "pct": 1.3
+        },
+        {
+          "id": "2011-orf-discapacidad65-unico",
+          "valor": 5059.6,
+          "segundaFuente": 5154.8,
+          "pct": 1.88
+        },
+        {
+          "id": "2001-fam1-65-unico",
+          "valor": 3915.24,
+          "segundaFuente": 3941.98,
+          "pct": 0.68
+        },
+        {
+          "id": "2002-fam1-65-unico",
+          "valor": 4020.94,
+          "segundaFuente": 4095.84,
+          "pct": 1.86
+        },
+        {
+          "id": "2003-fam1-65-unico",
+          "valor": 4239.2,
+          "segundaFuente": 4272.52,
+          "pct": 0.79
+        },
+        {
+          "id": "2004-fam1-65-unico",
+          "valor": 4486.16,
+          "segundaFuente": 4552.24,
+          "pct": 1.47
+        },
+        {
+          "id": "2005-fam1-65-unico",
+          "valor": 4779.88,
+          "segundaFuente": 4845.54,
+          "pct": 1.37
+        },
+        {
+          "id": "2006-fam1-65-unico",
+          "valor": 5087.88,
+          "segundaFuente": 5117.84,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-fam1-65-unico",
+          "valor": 5373.76,
+          "segundaFuente": 5484.5,
+          "pct": 2.06
+        },
+        {
+          "id": "2010-fam1-65-unico",
+          "valor": 6074.6,
+          "segundaFuente": 6153.0,
+          "pct": 1.29
+        },
+        {
+          "id": "2011-fam1-65-unico",
+          "valor": 6214.6,
+          "segundaFuente": 6332.2,
+          "pct": 1.89
+        },
+        {
+          "id": "2001-fam1-menor65-unico",
+          "valor": 3686.34,
+          "segundaFuente": 3711.54,
+          "pct": 0.68
+        },
+        {
+          "id": "2002-fam1-menor65-unico",
+          "valor": 3785.88,
+          "segundaFuente": 3856.3,
+          "pct": 1.86
+        },
+        {
+          "id": "2003-fam1-menor65-unico",
+          "valor": 3991.4,
+          "segundaFuente": 4022.76,
+          "pct": 0.79
+        },
+        {
+          "id": "2004-fam1-menor65-unico",
+          "valor": 4223.94,
+          "segundaFuente": 4286.1,
+          "pct": 1.47
+        },
+        {
+          "id": "2005-fam1-menor65-unico",
+          "valor": 4500.44,
+          "segundaFuente": 4562.32,
+          "pct": 1.37
+        },
+        {
+          "id": "2006-fam1-menor65-unico",
+          "valor": 4790.52,
+          "segundaFuente": 4818.8,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-fam1-menor65-unico",
+          "valor": 5059.74,
+          "segundaFuente": 5164.04,
+          "pct": 2.06
+        },
+        {
+          "id": "2010-fam1-menor65-unico",
+          "valor": 5720.4,
+          "segundaFuente": 5794.6,
+          "pct": 1.3
+        },
+        {
+          "id": "2011-fam1-menor65-unico",
+          "valor": 5853.4,
+          "segundaFuente": 5964.0,
+          "pct": 1.89
+        },
+        {
+          "id": "2001-fam-unico",
+          "valor": 1520.54,
+          "segundaFuente": 1530.9,
+          "pct": 0.68
+        },
+        {
+          "id": "2002-fam-unico",
+          "valor": 1561.56,
+          "segundaFuente": 1590.68,
+          "pct": 1.86
+        },
+        {
+          "id": "2003-fam-unico",
+          "valor": 1646.4,
+          "segundaFuente": 1659.42,
+          "pct": 0.79
+        },
+        {
+          "id": "2005-fam-unico",
+          "valor": 1856.68,
+          "segundaFuente": 1882.3,
+          "pct": 1.38
+        },
+        {
+          "id": "2006-fam-unico",
+          "valor": 1976.52,
+          "segundaFuente": 1988.28,
+          "pct": 0.59
+        },
+        {
+          "id": "2007-fam-unico",
+          "valor": 2087.82,
+          "segundaFuente": 2130.94,
+          "pct": 2.07
+        },
+        {
+          "id": "2010-fam-unico",
+          "valor": 2511.6,
+          "segundaFuente": 2545.2,
+          "pct": 1.34
+        },
+        {
+          "id": "2011-fam-unico",
+          "valor": 2571.8,
+          "segundaFuente": 2619.4,
+          "pct": 1.85
+        }
+      ],
+      "detalle": "115 valores comparados con el BEL (años 2000-2026 en que ambos existen); coinciden 76. Clases sin columna equivalente en el BEL (no contrastadas con él): fam-varios-incremento-unico, fam1-65-conyuge-cargo, orf-absoluta-incremento-unico, prest-orf-1-unico, prest-orf-varios-unico. Difieren 39 valores de los años 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2010, 2011: el BEL da importes superiores en un porcentaje casi constante para todas las clases de cada año (entre +0,59 % y +2,07 %), compatible con que el BEL recoja los importes tras una actualización posterior a la norma (la fuente no lo dice: no verificado). Se conserva el valor de la norma (cita literal)."
+    },
+    {
+      "serie": "pension-maxima: límite máximo de las pensiones (euros/mes)",
+      "fichero": "pension-maxima",
+      "anios": "2000-2026",
+      "segundaFuente": [
+        {
+          "title": "MITES, Boletín de Estadísticas Laborales, PEN-31 (cuantías máxima y mínimas de las pensiones contributivas)",
+          "url": "https://www.mites.gob.es/estadisticas/bel/PEN/index.htm",
+          "fetchedAt": "2026-11-11",
+          "nota": "fichero aportado por el autor y ya incorporado a data/sistema/mites-bel-pen31-cuantias"
+        }
+      ],
+      "resultado": "difiere",
+      "comparados": 26,
+      "difieren": [
+        {
+          "id": "2000",
+          "valor": 25575.76,
+          "segundaFuente": 26102.27
+        },
+        {
+          "id": "2001",
+          "valor": 26624.36,
+          "segundaFuente": 26807.2
+        },
+        {
+          "id": "2002",
+          "valor": 27343.399999999998,
+          "segundaFuente": 27852.72
+        },
+        {
+          "id": "2003",
+          "valor": 28409.78,
+          "segundaFuente": 28632.66
+        },
+        {
+          "id": "2004",
+          "valor": 29205.399999999998,
+          "segundaFuente": 29634.92
+        },
+        {
+          "id": "2005",
+          "valor": 30227.68,
+          "segundaFuente": 30642.64
+        },
+        {
+          "id": "2006",
+          "valor": 31255.559999999998,
+          "segundaFuente": 31439.38
+        },
+        {
+          "id": "2007",
+          "valor": 32068.260000000002,
+          "segundaFuente": 32728.5
+        },
+        {
+          "id": "2008",
+          "valor": 33383.14,
+          "segundaFuente": 33514.18
+        },
+        {
+          "id": "2010",
+          "valor": 34526.799999999996,
+          "segundaFuente": 34970.74
+        },
+        {
+          "id": "2022",
+          "valor": 39468.52,
+          "segundaFuente": 39474.0
+        }
+      ],
+      "detalle": "26 años comparados con la pensión máxima anual del BEL (×14 de /data). Difieren los años 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2010 (el BEL es mayor, mismo patrón que en las mínimas). Fuera de 2000-2011: 2022: /data×14 39468.52 frente a BEL 39474.00."
+    },
+    {
+      "serie": "pension-minima-jubilacion: cuantías mínimas de 2026 (euros/año)",
+      "fichero": "pension-minima-jubilacion",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Revalorización, cuantías mínimas de las pensiones",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/30434/30445",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 9,
+      "difieren": [],
+      "detalle": "9 cuantías anuales de 2026 comparadas con la tabla «Cuantías mínimas» de la web de la Seguridad Social."
+    },
+    {
+      "serie": "pension-minima-incapacidad: cuantías mínimas de 2026 (euros/año)",
+      "fichero": "pension-minima-incapacidad",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Revalorización, cuantías mínimas de las pensiones",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/30434/30445",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 15,
+      "difieren": [],
+      "detalle": "15 cuantías anuales de 2026 comparadas con la tabla «Cuantías mínimas» de la web de la Seguridad Social."
+    },
+    {
+      "serie": "pension-minima-viudedad: cuantías mínimas de 2026 (euros/año)",
+      "fichero": "pension-minima-viudedad",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Revalorización, cuantías mínimas de las pensiones",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/30434/30445",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 4,
+      "difieren": [],
+      "detalle": "4 cuantías anuales de 2026 comparadas con la tabla «Cuantías mínimas» de la web de la Seguridad Social."
+    },
+    {
+      "serie": "pension-minima-orfandad-familiares: cuantías mínimas de 2026 (euros/año)",
+      "fichero": "pension-minima-orfandad-familiares",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Revalorización, cuantías mínimas de las pensiones",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/30434/30445",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 8,
+      "difieren": [],
+      "detalle": "8 cuantías anuales de 2026 comparadas con la tabla «Cuantías mínimas» de la web de la Seguridad Social."
+    },
+    {
+      "serie": "pension-maxima 2026 (euros/mes)",
+      "fichero": "pension-maxima",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Revalorización, resumen de cuantías (tope máximo, no contributivas)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/36869/40885",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 1,
+      "difieren": [],
+      "detalle": "La web da 3359.60 euros al mes y 47034.40 al año."
+    },
+    {
+      "serie": "pnc-importe-anual 2026 (euros/año)",
+      "fichero": "pnc-importe-anual",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Revalorización, resumen de cuantías (tope máximo, no contributivas)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/36869/40885",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 1,
+      "difieren": [],
+      "detalle": "La web da 8803.20 euros al año (cuantía íntegra)."
+    },
+    {
+      "serie": "pnc-complemento-alquiler 2026 (euros/año)",
+      "fichero": "pnc-complemento-alquiler",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Revalorización, resumen de cuantías (tope máximo, no contributivas)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/36869/40885",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 1,
+      "difieren": [],
+      "detalle": "La web da 525.00 euros anuales."
+    },
+    {
+      "serie": "limite-ingresos-complementos-minimos 2026 (euros/año)",
+      "fichero": "limite-ingresos-complementos-minimos",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Revalorización, cuantías mínimas de las pensiones",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/30434/30445",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 1,
+      "difieren": [],
+      "detalle": "La web da 9442.00 euros (sin cónyuge a cargo). Los años 2002-2025 no tienen contraste independiente."
+    },
+    {
+      "serie": "complemento-brecha-genero 2026 (euros/mes por hijo)",
+      "fichero": "complemento-brecha-genero",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Complemento para la reducción de la brecha de género, cuantía",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/4c43ce49-6636-4a12-bacf-5e6697eb81da/cuantia",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Seguridad Social: Revalorización de las pensiones en 2026",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/30431",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 2,
+      "difieren": [],
+      "detalle": "Dos páginas de la web dan 36.90 euros al mes por hijo. Los años 2023-2025 no tienen contraste independiente."
+    },
+    {
+      "serie": "revalorizacion-general 2026 (%)",
+      "fichero": "revalorizacion-general",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Revalorización de las pensiones en 2026",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/30431",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 1,
+      "difieren": [],
+      "detalle": "La web da 2.7 %."
+    },
+    {
+      "serie": "edad-ordinaria-jubilacion (meses de edad con menos carrera que la exigida)",
+      "fichero": "edad-ordinaria-jubilacion",
+      "anios": "2013-2027",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Jubilación ordinaria, requisitos",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 15,
+      "difieren": [],
+      "detalle": "Cuadro de aplicación gradual de la web. Los años 2000-2012 (780 meses) no tienen contraste independiente."
+    },
+    {
+      "serie": "carrera-jubilacion-65 (meses cotizados para jubilarse a los 65 años)",
+      "fichero": "carrera-jubilacion-65",
+      "anios": "2013-2027",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Jubilación ordinaria, requisitos",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 15,
+      "difieren": [],
+      "detalle": "Cuadro de aplicación gradual de la web (la fila «A partir de 2027» se contrasta con 2027)."
+    },
+    {
+      "serie": "divisor-base-reguladora (2026-2037)",
+      "fichero": "divisor-base-reguladora",
+      "anios": "2026-2037",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Jubilación ordinaria, cuantía",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28475",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 12,
+      "difieren": [],
+      "detalle": "Divisores de la aplicación gradual del cálculo de las 324 mejores bases. Los años anteriores a 2026 y de 2038 en adelante no tienen contraste independiente en la página."
+    },
+    {
+      "serie": "periodo-calculo-base-reguladora (2026-2037)",
+      "fichero": "periodo-calculo-base-reguladora",
+      "anios": "2026-2037",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Jubilación ordinaria, cuantía",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28475",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 12,
+      "difieren": [],
+      "detalle": "Periodos de la aplicación gradual (304 a 348 meses)."
+    },
+    {
+      "serie": "opcion-25-anos-divisor (2026-2043)",
+      "fichero": "opcion-25-anos-divisor",
+      "anios": "2026-2043",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Jubilación ordinaria, cuantía",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28475",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 18,
+      "difieren": [],
+      "detalle": "350 hasta 2040 y 357, 364 y 371 en 2041-2043."
+    },
+    {
+      "serie": "opcion-25-anos-ventana (2026-2043)",
+      "fichero": "opcion-25-anos-ventana",
+      "anios": "2026-2043",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Jubilación ordinaria, cuantía",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28475",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 18,
+      "difieren": [],
+      "detalle": "300 meses hasta 2040 y 306, 312 y 318 en 2041-2043."
+    },
+    {
+      "serie": "escala-jubilacion-tramos (2026 y 2027)",
+      "fichero": "escala-jubilacion-tramos",
+      "anios": "2026-2027",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Jubilación ordinaria, cuantía",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28475",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 6,
+      "difieren": [],
+      "detalle": "Porcentaje por mes de los dos tramos y meses del primer tramo. 2013-2025 sin contraste independiente."
+    },
+    {
+      "serie": "lagunas-integracion y lagunas-integracion-brecha-genero (2026)",
+      "fichero": "lagunas-integracion",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Jubilación ordinaria, cuantía",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28475",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 7,
+      "difieren": [],
+      "detalle": "Primeras 48 mensualidades al 100 % de la base mínima y el resto al 50 %; mensualidades 49.ª a 60.ª al 100 % y 61.ª a 84.ª al 80 % (DT 41.ª). Versiones de 2010, 2013 y 2016 sin contraste independiente."
+    },
+    {
+      "serie": "actualizacion-bases (2026)",
+      "fichero": "actualizacion-bases",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Jubilación ordinaria, cuantía",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28475",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 1,
+      "difieren": [],
+      "detalle": "Veinticuatro meses nominales. La página no da el mes del índice de referencia; ese dato y las versiones de 2010-2016 no tienen contraste independiente."
+    },
+    {
+      "serie": "jubilacion-demora-reglas (porcentajes del 4 % y el 2 %)",
+      "fichero": "jubilacion-demora-reglas",
+      "anios": "2022-2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Jubilación ordinaria, cuantía",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28475",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 2,
+      "difieren": [],
+      "detalle": "Solo los dos porcentajes; la fórmula del pago único y la opción mixta no tienen contraste independiente en la página."
+    },
+    {
+      "serie": "cotizacion-para-100 (2026 y 2027, derivado)",
+      "fichero": "cotizacion-para-100",
+      "anios": "2026-2027",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Jubilación ordinaria, cuantía",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28475",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 2,
+      "difieren": [],
+      "detalle": "Meses para el 100 % recalculados con la escala de la web (50 % a los 15 años; porcentajes por mes del texto). Otros años: coherencia interna con la escala (test), sin contraste independiente."
+    },
+    {
+      "serie": "smi-mensual (euros/mes, 14 pagas)",
+      "fichero": "smi-mensual",
+      "anios": "2000-2026",
+      "segundaFuente": [
+        {
+          "title": "Eurostat: salarios mínimos nacionales (earn_mw_cur), España",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_mw_cur?format=JSON&geo=ES&currency=EUR&lang=EN",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide con salvedades",
+      "comparados": 27,
+      "difieren": [
+        {
+          "id": "2021",
+          "valor": 965.0,
+          "segundaFuente": "S1 1108 / S2 1108 (en 12 pagas; el SMI de 14 pagas de /data equivale a 1125.83)"
+        }
+      ],
+      "detalle": "27 años comparados. Eurostat publica el SMI mensual con doce pagas (el de /data, con catorce, multiplicado por 14/12 y redondeado) por semestre; coinciden con el primer o el segundo semestre 26 años. Los años que no coinciden son aquellos en que el real decreto se aprobó con efectos retroactivos o a mitad de año y Eurostat no refleja el importe del real decreto en ninguno de sus dos semestres: 2021: S1 1108 / S2 1108 (en 12 pagas; el SMI de 14 pagas de /data equivale a 1125.83)."
+    },
+    {
+      "serie": "smi-anual (euros/año)",
+      "fichero": "smi-anual",
+      "anios": "2022-2026",
+      "segundaFuente": [
+        {
+          "title": "Eurostat: salarios mínimos nacionales (earn_mw_cur), España",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_mw_cur?format=JSON&geo=ES&currency=EUR&lang=EN",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 5,
+      "difieren": [],
+      "detalle": "Contraste indirecto: coincide con smi-mensual × 14, que sí se contrasta con Eurostat. Sin fuente independiente propia."
+    },
+    {
+      "serie": "revalorizacion-general (%, 2022-2026) frente al IPC del INE",
+      "fichero": "revalorizacion-general",
+      "anios": "2022-2026",
+      "segundaFuente": [
+        {
+          "title": "INE: IPC, índice general nacional (serie IPC290751)",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=1000",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 5,
+      "difieren": [],
+      "detalle": "Media de las doce variaciones interanuales del IPC desde diciembre del año anterior al anterior hasta noviembre del año anterior (regla del art. 58 TRLGSS), calculada con la serie del INE descargada en esta sesión y redondeada a un decimal: 2022: 2,5; 2023: 8,5 (8,47); 2024: 3,8 (3,77); 2025: 2,8; 2026: 2,7 (2,67). El contraste vale para esos años, en los que la ley fija el porcentaje por esa regla o por la cifra del IPC; los anteriores se rigen por otras reglas (IRP de 0,25 % de 2014 a 2018, porcentaje fijado por ley en 2019-2021) y no se pueden contrastar con el IPC."
+    },
+    {
+      "serie": "ipc-indice-medio-anual e ipc-variacion-diciembre",
+      "fichero": "ipc-indice-medio-anual",
+      "anios": "2000-2025",
+      "segundaFuente": [
+        {
+          "title": "INE: IPC, índice general nacional (serie IPC290751)",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=1000",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "sin contraste independiente",
+      "comparados": 24,
+      "difieren": [],
+      "detalle": "Las dos series proceden del INE y la única otra publicación del mismo índice que hay es la del propio INE (otra serie: IPC290751 frente a las tablas históricas): no hay segunda fuente de otro organismo. El IPC armonizado de Eurostat es otro índice y no sirve para contrastar el nivel. Indirectamente, los años 2022-2026 de la revalorización se reproducen con la serie del INE (fila anterior)."
+    },
+    {
+      "serie": "base-minima-rg 2026",
+      "fichero": "base-minima-rg",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Bases y tipos de cotización (Régimen General, año 2026; MEI)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 1,
+      "difieren": [],
+      "detalle": "La web da 1424,4 (Régimen General; grupos 4 a 7 en las bases). Los demás años se contrastan en otras filas."
+    },
+    {
+      "serie": "base-maxima-rg 2026",
+      "fichero": "base-maxima-rg",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Bases y tipos de cotización (Régimen General, año 2026; MEI)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 1,
+      "difieren": [],
+      "detalle": "La web da 5101,2 (Régimen General; grupos 4 a 7 en las bases). Los demás años se contrastan en otras filas."
+    },
+    {
+      "serie": "tipo-cc-empresa 2026",
+      "fichero": "tipo-cc-empresa",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Bases y tipos de cotización (Régimen General, año 2026; MEI)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 1,
+      "difieren": [],
+      "detalle": "La web da 23,6 (Régimen General; grupos 4 a 7 en las bases). Los demás años se contrastan en otras filas."
+    },
+    {
+      "serie": "tipo-cc-trabajador 2026",
+      "fichero": "tipo-cc-trabajador",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Bases y tipos de cotización (Régimen General, año 2026; MEI)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 1,
+      "difieren": [],
+      "detalle": "La web da 4,7 (Régimen General; grupos 4 a 7 en las bases). Los demás años se contrastan en otras filas."
+    },
+    {
+      "serie": "mei-tipo-total (puntos porcentuales, 2023-2026)",
+      "fichero": "mei-tipo-total",
+      "anios": "2023-2026",
+      "segundaFuente": [
+        {
+          "title": "Orden PCM/74/2023, de 30 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2023.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-2472",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Orden PJC/51/2024, de 29 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2024.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-1691",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Orden PJC/178/2025, de 25 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2025.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-3780",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Seguridad Social: Bases y tipos de cotización (Régimen General, año 2026; MEI)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 5,
+      "difieren": [],
+      "detalle": "Órdenes anuales de cotización (art. del tipo del MEI en el Régimen General) y, para 2026, la web de la Seguridad Social. 2027-2029 sin contraste independiente: solo la DT 43.ª."
+    },
+    {
+      "serie": "mei-tipo-empresa (puntos porcentuales, 2023-2026)",
+      "fichero": "mei-tipo-empresa",
+      "anios": "2023-2026",
+      "segundaFuente": [
+        {
+          "title": "Orden PCM/74/2023, de 30 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2023.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-2472",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Orden PJC/51/2024, de 29 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2024.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-1691",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Orden PJC/178/2025, de 25 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2025.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-3780",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Seguridad Social: Bases y tipos de cotización (Régimen General, año 2026; MEI)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 5,
+      "difieren": [],
+      "detalle": "Órdenes anuales de cotización (art. del tipo del MEI en el Régimen General) y, para 2026, la web de la Seguridad Social. 2027-2029 sin contraste independiente: solo la DT 43.ª."
+    },
+    {
+      "serie": "mei-tipo-trabajador (puntos porcentuales, 2023-2026)",
+      "fichero": "mei-tipo-trabajador",
+      "anios": "2023-2026",
+      "segundaFuente": [
+        {
+          "title": "Orden PCM/74/2023, de 30 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2023.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-2472",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Orden PJC/51/2024, de 29 de enero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2024.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-1691",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Orden PJC/178/2025, de 25 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2025.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-3780",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Seguridad Social: Bases y tipos de cotización (Régimen General, año 2026; MEI)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 5,
+      "difieren": [],
+      "detalle": "Órdenes anuales de cotización (art. del tipo del MEI en el Régimen General) y, para 2026, la web de la Seguridad Social. 2027-2029 sin contraste independiente: solo la DT 43.ª."
+    },
+    {
+      "serie": "base-maxima-rg 2024-2026 (euros/mes) frente a la regla de la DT 38.ª",
+      "fichero": "base-maxima-rg",
+      "anios": "2024-2026",
+      "segundaFuente": [
+        {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo (DT 38.ª TRLGSS: revalorización más 1,2 puntos)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 3,
+      "difieren": [],
+      "detalle": "Cálculo: base del año anterior × (1 + (revalorización + 1,2) / 100), con tolerancia de 0,30 euros por el redondeo de la orden: 2024: 4720.28 frente a 4720.50; 2025: 4909.32 frente a 4909.50; 2026: 5100.97 frente a 5101.20. Los demás años no tienen contraste independiente; 2026 coincide además con la web."
+    },
+    {
+      "serie": "base-minima-rg (grupos 4-7, euros/mes) frente al SMI de Eurostat",
+      "fichero": "base-minima-rg",
+      "anios": "2000-2026",
+      "segundaFuente": [
+        {
+          "title": "Eurostat: salarios mínimos nacionales (earn_mw_cur), España",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_mw_cur?format=JSON&geo=ES&currency=EUR&lang=EN",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 25,
+      "difieren": [],
+      "detalle": "La base mínima de los grupos 4 a 7 es el SMI mensual de catorce pagas ×14/12; Eurostat publica el SMI con doce pagas (entero, de ahí la tolerancia de 1 euro). Coinciden con un semestre 25 de 25 años. Contraste indirecto (la base no es el SMI, deriva de él por la norma de cotización). 2020 y 2021 no están en /data."
+    },
+    {
+      "serie": "pnc-importe-anual (cuantía íntegra, euros/año)",
+      "fichero": "pnc-importe-anual",
+      "anios": "2019-2026",
+      "segundaFuente": [
+        {
+          "title": "IMSERSO, Informe de evolución de las nóminas. PNC y PSPD. 2019-2025",
+          "url": "https://imserso.es/el-imserso/documentacion/estadisticas/pensiones-no-contributivas-jubilacion-invalidez-pnc",
+          "fetchedAt": "2026-11-11"
+        },
+        {
+          "title": "IMSERSO, guías resumen de aplicación de las pensiones no contributivas de 2022 a 2026",
+          "url": "https://imserso.es/documents/20123/1595507/pncresumen2026.pdf/c4b41c80-63fe-942d-7231-f3ee20e28694",
+          "fetchedAt": "2026-11-12"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 8,
+      "difieren": [],
+      "detalle": "Cuantía anual de 2019 a 2025 en el informe de evolución y de 2022 a 2026 en las guías (la de 2023, 6.784,54, corregida en la Fase 2-B-3); 2026 coincide además con la web de la Seguridad Social. Los años 2001-2018 no tienen contraste independiente en las fuentes descargadas."
+    },
+    {
+      "serie": "pnc-iprem-anual-sin-pagas-extra (IPREM anual con doce pagas)",
+      "fichero": "pnc-iprem-anual-sin-pagas-extra",
+      "anios": "2022-2026",
+      "segundaFuente": [
+        {
+          "title": "Ley 22/2021 (BOE-A-2021-21653) y Ley 31/2022 (BOE-A-2022-22128): IPREM de 2022 y 2023",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-22128",
+          "fetchedAt": "2026-11-11"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 2,
+      "difieren": [],
+      "detalle": "Las guías del IMSERSO (fuente del dato) y la ley dan 6.948,24 (2022) y 7.200,00 (2023). 2024-2026: solo las guías; ninguna norma descargada enuncia el IPREM de esos años (docs/PENDIENTE_DATOS.md)."
+    },
+    {
+      "serie": "pnc-complemento-alquiler (euros/año)",
+      "fichero": "pnc-complemento-alquiler",
+      "anios": "2025-2026",
+      "segundaFuente": [
+        {
+          "title": "IMSERSO, guías resumen de aplicación de las pensiones no contributivas de 2022 a 2026",
+          "url": "https://imserso.es/documents/20123/1595507/pncresumen2026.pdf/c4b41c80-63fe-942d-7231-f3ee20e28694",
+          "fetchedAt": "2026-11-12"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 2,
+      "difieren": [],
+      "detalle": "Importe en las guías del IMSERSO de 2025 y 2026 (2026 coincide además con la web de la Seguridad Social). 2022 y 2023 no tienen contraste independiente (las guías de esos años no mencionan el complemento) y el de 2024 falta (docs/PENDIENTE_DATOS.md)."
+    },
+    {
+      "serie": "supervivencia-reglas: porcentajes de la viudedad (52, 60, 70 %), 75 % del SMI de las cargas y base reguladora de 24 meses entre 28",
+      "fichero": "supervivencia-reglas",
+      "anios": "2022-2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Pensión de viudedad, cuantía y abono",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10964/10966/28489/28492/28617",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 6,
+      "difieren": [],
+      "detalle": "Cifras y regla presentes en la página de la Seguridad Social. El resto de las 86 reglas de supervivencia (orfandad, familiares, límite conjunto, parejas de hecho, edades) no tienen contraste independiente: la cita literal de la norma se comprueba por código (misma fuente)."
+    },
+    {
+      "serie": "incapacidad-permanente-reglas: 100 % de la absoluta y 50 % sin derecho a jubilación",
+      "fichero": "incapacidad-permanente-reglas",
+      "anios": "2022-2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Incapacidad permanente absoluta",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10960/28750/28680/28729/28738/28741",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 2,
+      "difieren": [],
+      "detalle": "Solo estas dos cifras constan en la página consultada. El resto de las 75 reglas (total 55 %, cualificada, gran incapacidad, carencias, periodos) no tienen contraste independiente en las fuentes descargadas (contraste interno: 55 % en la Orden de 1969 y en el Decreto 3158/1966, ya en los tests)."
+    },
+    {
+      "serie": "carencia-jubilacion (180 meses), jubilacion-periodo-previo (24 de los últimos 180) y jubilacion-edad-65 (780 meses)",
+      "fichero": "carencia-jubilacion",
+      "anios": "2000-2026",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Jubilación ordinaria, requisitos",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 3,
+      "difieren": [],
+      "detalle": "Quince años de cotización, dos de ellos dentro de los quince anteriores, en la página de requisitos de la jubilación. La serie se mantiene en 180 meses en todos los años de /data (2000-2026)."
+    },
+    {
+      "serie": "pnc-reglas: edades, residencia, grado, mínimo del 25 %, complemento del 50 % y 70 % por beneficiario adicional",
+      "fichero": "pnc-reglas",
+      "anios": "2026",
+      "segundaFuente": [
+        {
+          "title": "IMSERSO, guía resumen de aplicación de las pensiones no contributivas, año 2026",
+          "url": "https://imserso.es/documents/20123/1595507/pncresumen2026.pdf/c4b41c80-63fe-942d-7231-f3ee20e28694",
+          "fetchedAt": "2026-11-12"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 12,
+      "difieren": [],
+      "detalle": "Requisitos y cuantías de la guía del IMSERSO (los cocientes 2.200,80/8.803,20 y 4.401,60/8.803,20 dan el 25 % y el 50 %). Las demás reglas de pnc-reglas (rentas computables, trabajo, efectos, alquiler) no tienen contraste independiente: la guía es un resumen, no la norma."
+    },
+    {
+      "serie": "opcion-25-anos-aplicable (2026-2044)",
+      "fichero": "opcion-25-anos-aplicable",
+      "anios": "2026-2044",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Jubilación ordinaria, cuantía",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28475",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 3,
+      "difieren": [],
+      "detalle": "Cálculo alternativo disponible de 2026 a 2043 y, desde 2044, un solo cálculo (comprobados 2026, 2043 y 2044). La lectura del 31/12/2040 no está en la página."
+    },
+    {
+      "serie": "mei-reglas: años de vigencia del MEI (2023-2050) y de la solidaridad (2025-2045)",
+      "fichero": "mei-reglas",
+      "anios": "2023-2050",
+      "segundaFuente": [
+        {
+          "title": "Seguridad Social: Bases y tipos de cotización (Régimen General, año 2026; MEI)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 4,
+      "difieren": [],
+      "detalle": "Solo los años de vigencia. Los tipos de 2030 a 2050 y los de la solidaridad por tramo no tienen contraste independiente (solo la DT 43.ª y la DT 42.ª)."
+    },
+    {
+      "serie": "cuota-solidaridad-calendario (2025 y 2026) frente a la orden anual de cotización",
+      "fichero": "cuota-solidaridad-calendario",
+      "anios": "2025-2026",
+      "segundaFuente": [
+        {
+          "title": "Orden PJC/178/2025, de 25 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2025.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-3780",
+          "fetchedAt": "2026-11-13"
+        },
+        {
+          "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide",
+      "comparados": 6,
+      "difieren": [],
+      "detalle": "Tipos por tramo de la DT 42.ª frente a los de las órdenes de 2025 y 2026 (otra norma). 2027-2045: solo la DT 42.ª."
+    },
+    {
+      "serie": "correcciones de errores del BOE de las normas citadas (todas las series)",
+      "fichero": "todos los ficheros de data/parametros que leen los motores",
+      "anios": "1969-2025",
+      "segundaFuente": [
+        {
+          "title": "BOE: 26 correcciones de errores de las normas citadas (campo «posteriores» de cada norma)",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2012-352",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide con salvedades",
+      "comparados": 25,
+      "difieren": [],
+      "detalle": "Se revisaron las 108 normas del BOE que citan los datos de los motores: 26 tienen correcciones de errores publicadas (los textos están en data-raw/auditoria/correcciones/). Solo una cambia cifras de /data (BOE-A-2012-352, gran invalidez de 2012: corregida en esta fase, ver «Hallazgos»). Las demás son de redacción o de cifras ajenas a /data; las que sustituyen cuadros (bases de 2019, 2023 y 2024, orfandad y favor de familiares de 2017, pensión máxima de 2005) coinciden con /data. Cifras de «donde dice» que aparecen en /data y se han revisado a mano (no son errores de /data): BOE-A-2012-352 «7.658,00»: es el valor correcto de otra fila del mismo cuadro (jubilación de titular menor de 65 años, cónyuge no a cargo, 2012); BOE-A-2013-832 «7.063,07»: la corrección cambia el texto («no excedan» por «excedan»), no la cifra del límite de ingresos de 2013; BOE-A-2014-1505 «753,00»: la errata es del grupo de cotización 3; /data usa los grupos 4 a 7 (753,00 es correcto). Ninguna otra cifra errónea corregida figura en /data."
+    }
+  ],
+  "sinContraste": {
+    "base-maxima-incremento-futuro": "Regla legal de 2024 a 2050 (DT 38.ª: revalorización más 1,2 puntos). Su aplicación a 2024-2026 se reproduce con la base máxima publicada (fila de «base-maxima-rg»); 2027-2050 son reglas futuras: solo el BOE consolidado.",
+    "pension-maxima-incremento-futuro": "Regla legal de 2025 a 2050 (DT 39.ª): solo el BOE consolidado; no hay publicación de otro organismo.",
+    "pension-maxima-incremento-2051-2065": "Tabla de la DT 39.ª.4: solo el BOE consolidado; su lectura es una pregunta abierta (REVISION_ACTUARIAL).",
+    "complemento-brecha-genero-reglas": "Reglas del art. 60 TRLGSS (tope de cuatro hijos, no computa para el límite): la web de la SS confirma el tope de cuatro veces el importe y que no computa para la pensión máxima ni para los mínimos, pero no se ha automatizado la comparación.",
+    "jubilacion-anticipada-reglas": "Requisitos de las jubilaciones anticipadas y parcial (arts. 207, 208, 215): solo el BOE consolidado; las páginas de la SS descargadas no los recogen.",
+    "jubilacion-coeficientes-involuntaria": "Cuadro del art. 207.2 (192 coeficientes): solo el BOE; cruce interno en tests (el cuadro de 2033 de la DT 34.ª coincide con el art. 208.2).",
+    "jubilacion-coeficientes-voluntaria": "Cuadro del art. 208.2 (96 coeficientes): solo el BOE; cruce interno en tests.",
+    "jubilacion-coeficientes-voluntaria-limite": "DT 34.ª (960 coeficientes de 2024 a 2033): solo el BOE; en 2033 coincide con el art. 208.2 (test)."
+  },
+  "inventario": {
+    "actualizacion-bases": ["jubilacion"],
+    "base-maxima-incremento-futuro": ["jubilacion"],
+    "base-maxima-rg": ["jubilacion"],
+    "base-minima-rg": ["jubilacion"],
+    "carencia-jubilacion": ["jubilacion"],
+    "carrera-jubilacion-65": ["jubilacion"],
+    "complemento-brecha-genero": ["jubilacion"],
+    "complemento-brecha-genero-reglas": ["incapacidad", "jubilacion", "supervivencia"],
+    "cotizacion-para-100": ["jubilacion"],
+    "cuota-solidaridad-calendario": ["mei"],
+    "divisor-base-reguladora": ["jubilacion"],
+    "edad-ordinaria-jubilacion": ["jubilacion"],
+    "escala-jubilacion-tramos": ["incapacidad", "jubilacion"],
+    "incapacidad-permanente-reglas": ["incapacidad"],
+    "ipc-indice-medio-anual": ["jubilacion"],
+    "ipc-variacion-diciembre": ["jubilacion"],
+    "jubilacion-anticipada-reglas": ["jubilacion"],
+    "jubilacion-coeficientes-involuntaria": ["jubilacion"],
+    "jubilacion-coeficientes-voluntaria": ["jubilacion"],
+    "jubilacion-coeficientes-voluntaria-limite": ["jubilacion"],
+    "jubilacion-demora-reglas": ["jubilacion"],
+    "jubilacion-edad-65": ["incapacidad", "jubilacion"],
+    "jubilacion-periodo-previo": ["jubilacion"],
+    "lagunas-integracion": ["jubilacion"],
+    "lagunas-integracion-brecha-genero": ["jubilacion"],
+    "limite-ingresos-complementos-minimos": ["jubilacion"],
+    "mei-reglas": ["mei"],
+    "mei-tipo-empresa": ["mei"],
+    "mei-tipo-total": ["mei"],
+    "mei-tipo-trabajador": ["mei"],
+    "opcion-25-anos-aplicable": ["jubilacion"],
+    "opcion-25-anos-divisor": ["jubilacion"],
+    "opcion-25-anos-ventana": ["jubilacion"],
+    "pension-maxima": ["jubilacion"],
+    "pension-maxima-incremento-2051-2065": ["jubilacion"],
+    "pension-maxima-incremento-futuro": ["jubilacion"],
+    "pension-minima-incapacidad": ["jubilacion"],
+    "pension-minima-jubilacion": ["jubilacion"],
+    "pension-minima-orfandad-familiares": ["jubilacion"],
+    "pension-minima-viudedad": ["jubilacion"],
+    "periodo-calculo-base-reguladora": ["jubilacion"],
+    "pnc-complemento-alquiler": ["no-contributivas"],
+    "pnc-importe-anual": ["no-contributivas"],
+    "pnc-iprem-anual-sin-pagas-extra": ["no-contributivas"],
+    "pnc-reglas": ["no-contributivas"],
+    "revalorizacion-general": ["jubilacion", "supervivencia"],
+    "smi-anual": ["supervivencia"],
+    "smi-mensual": ["supervivencia"],
+    "supervivencia-reglas": ["supervivencia"],
+    "tipo-cc-empresa": ["mei"],
+    "tipo-cc-trabajador": ["mei"]
+  }
+}

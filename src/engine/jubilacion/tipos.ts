@@ -1,3 +1,4 @@
+import { porDefectoDelMotor } from '../config/lecturas-por-defecto.ts';
 /**
  * Tipos públicos del motor de la pensión de jubilación contributiva.
  * Todas las cantidades son euros nominales del año de la jubilación, salvo que se indique otra cosa.
@@ -78,16 +79,8 @@ export interface LecturasAbiertas {
   readonly maximaDesde2051: 'incremento-acumulado' | 'incremento-anual-literal';
 }
 
-export const LECTURAS_POR_DEFECTO: LecturasAbiertas = {
-  baseMaxima: 'compuesto',
-  pensionMaxima: 'compuesto',
-  referenciaBaseMinimaLagunas: 'mes-de-la-laguna',
-  opcion25EnUltimoDia2040: 'incluida',
-  lagunasAnterioresAlPrimerAlta: 'integrar',
-  interpolacionIPC: 'interpolada',
-  fraccionDemora: 'desde-segundo-anio',
-  maximaDesde2051: 'incremento-acumulado',
-};
+export const LECTURAS_POR_DEFECTO: LecturasAbiertas =
+  porDefectoDelMotor<LecturasAbiertas>('jubilacion');
 
 /**
  * Escenario económico para los años en que /data no tiene dato (a partir de 2026 y, para el IPC,

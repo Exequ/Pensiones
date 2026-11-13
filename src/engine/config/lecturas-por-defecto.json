@@ -1,0 +1,194 @@
+{
+  "descripcion": "Valor por defecto de cada lectura abierta del motor. «pendiente»: lo decide Sergio tras la revisión actuarial (docs/REVISION_PRIORIZADA.md); «decidida»: ya decidido y registrado en docs/DECISIONES_ACTUARIALES.md. Cambiar una decisión es cambiar `valor` (y `estado` y `fecha`) de una entrada; los motores y el registro de lecturas (src/engine/lecturas.ts) leen este fichero.",
+  "lecturas": [
+    {
+      "id": "jubilacion.baseMaxima",
+      "valor": "compuesto",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-base-maxima-incremento-futuro"
+    },
+    {
+      "id": "jubilacion.pensionMaxima",
+      "valor": "compuesto",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-pension-maxima-incremento-futuro"
+    },
+    {
+      "id": "jubilacion.referenciaBaseMinimaLagunas",
+      "valor": "mes-de-la-laguna",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-lagunas-integracion"
+    },
+    {
+      "id": "jubilacion.opcion25EnUltimoDia2040",
+      "valor": "incluida",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-opcion-25-anos-ventana"
+    },
+    {
+      "id": "jubilacion.lagunasAnterioresAlPrimerAlta",
+      "valor": "integrar",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-lagunas-integracion"
+    },
+    {
+      "id": "jubilacion.interpolacionIPC",
+      "valor": "interpolada",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-actualizacion-bases"
+    },
+    {
+      "id": "jubilacion.fraccionDemora",
+      "valor": "desde-segundo-anio",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-jubilacion-demora-reglas"
+    },
+    {
+      "id": "jubilacion.maximaDesde2051",
+      "valor": "incremento-acumulado",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-pension-maxima-incremento-2051-2065"
+    },
+    {
+      "id": "incapacidad.edadFiccion",
+      "valor": "carrera-proyectada",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-incapacidad-permanente-reglas"
+    },
+    {
+      "id": "incapacidad.computoFiccion",
+      "valor": "meses",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-incapacidad-permanente-reglas"
+    },
+    {
+      "id": "incapacidad.divisorPeriodoCorto",
+      "valor": "coeficiente-rd-1799-1985",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-incapacidad-permanente-reglas"
+    },
+    {
+      "id": "incapacidad.lagunasAccidenteNoLaboral",
+      "valor": "sin-integrar",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-incapacidad-permanente-reglas"
+    },
+    {
+      "id": "incapacidad.redondeoEdadCarencia",
+      "valor": "sin-redondeo",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-incapacidad-permanente-reglas-carencia"
+    },
+    {
+      "id": "incapacidad.diasCotizadosParcial",
+      "valor": "naturales",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-incapacidad-permanente-reglas-carencia"
+    },
+    {
+      "id": "supervivencia.ventanaBaseReguladora",
+      "valor": "anterior-al-mes-previo",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-supervivencia-reglas"
+    },
+    {
+      "id": "supervivencia.diasCotizados",
+      "valor": "naturales",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-supervivencia-reglas"
+    },
+    {
+      "id": "supervivencia.carenciaOrfandad",
+      "valor": "sin-carencia",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-supervivencia-reglas"
+    },
+    {
+      "id": "supervivencia.carenciaFamiliaresAccidenteNoLaboral",
+      "valor": "exigir",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-supervivencia-reglas"
+    },
+    {
+      "id": "supervivencia.reduccionViudedad70",
+      "valor": "no-inferior-52",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-supervivencia-reglas-cuantia"
+    },
+    {
+      "id": "supervivencia.comparacionCompensatoria",
+      "valor": "anual",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-supervivencia-reglas-cuantia"
+    },
+    {
+      "id": "supervivencia.incrementoFamiliares",
+      "valor": "porcentaje-viudedad",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-supervivencia-reglas-cuantia"
+    },
+    {
+      "id": "supervivencia.reduccionLimiteConjunto",
+      "valor": "orfandad",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-supervivencia-reglas-limites"
+    },
+    {
+      "id": "no-contributivas.baseRentasCompatibles",
+      "valor": "cuantia-integra",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-pnc-reglas"
+    },
+    {
+      "id": "no-contributivas.limiteTrabajo",
+      "valor": "cuantia-integra",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-pnc-reglas"
+    },
+    {
+      "id": "no-contributivas.rentasConTrabajoEnCuatroAnios",
+      "valor": "sustituye-364-2",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-pnc-reglas"
+    },
+    {
+      "id": "no-contributivas.limiteConTerceraPersona",
+      "valor": "con-complemento",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-pnc-reglas"
+    },
+    {
+      "id": "mei.baseMEI",
+      "valor": "base-cotizacion",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-mei-reglas"
+    }
+  ]
+}

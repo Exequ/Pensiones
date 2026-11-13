@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fecha_actualizacion="20251220122601">
+  <metadatos>
+    <identificador>BOE-A-2019-647</identificador>
+    <origen_legislativo codigo="1">Estatal</origen_legislativo>
+    <departamento codigo="7723">Jefatura del Estado</departamento>
+    <rango codigo="1590">Corrección (errores o erratas)</rango>
+    <fecha_disposicion/>
+    <numero_oficial/>
+    <titulo>Corrección de errores del Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.</titulo>
+    <diario codigo="BOE">Boletín Oficial del Estado</diario>
+    <fecha_publicacion>20190121</fecha_publicacion>
+    <diario_numero>18</diario_numero>
+    <seccion>1</seccion>
+    <subseccion/>
+    <pagina_inicial>4544</pagina_inicial>
+    <pagina_final>4544</pagina_final>
+    <suplemento_pagina_inicial/>
+    <suplemento_pagina_final/>
+    <url_pdf>https://www.boe.es/boe/dias/2019/01/21/pdfs/BOE-A-2019-647.pdf</url_pdf>
+    <url_epub>
+      <url_epub>https://www.boe.es/diario_boe/epub.php?id=BOE-A-2019-647</url_epub>
+    </url_epub>
+    <url_pdf_catalan>/boe_catalan/dias/2019/01/21/pdfs/BOE-A-2019-647-C.pdf</url_pdf_catalan>
+    <url_pdf_euskera>/boe_euskera/dias/2019/01/21/pdfs/BOE-A-2019-647-E.pdf</url_pdf_euskera>
+    <url_pdf_gallego>/boe_gallego/dias/2019/01/21/pdfs/BOE-A-2019-647-G.pdf</url_pdf_gallego>
+    <url_pdf_valenciano/>
+    <estatus_legislativo>L</estatus_legislativo>
+    <fecha_vigencia/>
+    <estatus_derogacion>N</estatus_derogacion>
+    <fecha_derogacion/>
+    <judicialmente_anulada>N</judicialmente_anulada>
+    <fecha_anulacion/>
+    <vigencia_agotada>N</vigencia_agotada>
+    <estado_consolidacion codigo="0"/>
+    <letra_imagen>A</letra_imagen>
+    <suplemento_letra_imagen/>
+    <url_eli>https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121</url_eli>
+  </metadatos>
+  <metadata-eli>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:eli="http://data.europa.eu/eli/ontology#">
+      <eli:LegalResource rdf:about="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121">
+        <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+        <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/rdl"/>
+        <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2019-647</eli:id_local>
+        <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12-28</eli:date_document>
+        <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28</eli:number>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/1684"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/1754"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/3158"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/5938"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/6256"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/6499"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/6832"/>
+        <eli:subtype_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/corrigendum"/>
+        <eli:has_member>
+          <eli:LegalResource rdf:about="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof">
+            <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+            <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/rdl"/>
+            <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2019-647</eli:id_local>
+            <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12-28</eli:date_document>
+            <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28</eli:number>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/1684"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/1754"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/3158"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/5938"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/6256"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/6499"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/6832"/>
+            <eli:subtype_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/corrigendum"/>
+            <eli:version rdf:resource="http://www.elidata.es/mdr/authority/version/dof"/>
+            <eli:corrects rdf:resource="https://www.boe.es/eli/es/rdl/2018/12/28/28/dof"/>
+            <eli:is_member_of rdf:resource="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121"/>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/spa">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/spa"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corrección de errores del Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-21</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/spa/epub">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/epub+zip"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/spa/html">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/text/html"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/spa/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/spa/xml">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/xml"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/cat">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/cat"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Correcció d'errors del Reial decret llei 28/2018, de 28 de desembre, per la revaloració de les pensions públiques i altres mesures urgents en matèria social, laboral i d'ocupació.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-21</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/cat/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/cat"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/glg">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/glg"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corrección de erros do Real decreto lei 28/2018, do 28 de decembro, para a revalorización das pensións públicas e outras medidas urxentes en materia social, laboral e de emprego.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-21</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/glg/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/glg"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/eus">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/eus"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huts-zuzenketa, honako honena: 28/2018 Errege Lege Dekretua, abenduaren 28koa, Pentsio publikoak handitu eta gizarte-, lan- eta enplegu-alorrean presako beste neurri batzuk hartzekoa.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-21</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/eus/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2018/12/28/28/corrigendum/20190121/dof/eus"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+          </eli:LegalResource>
+        </eli:has_member>
+      </eli:LegalResource>
+    </rdf:RDF>
+  </metadata-eli>
+  <analisis>
+    <materias>
+      <materia codigo="1684" orden="">Convenios colectivos</materia>
+      <materia codigo="1754" orden="">Cotización a la Seguridad Social</materia>
+      <materia codigo="3158" orden="">Empleados de Hogar</materia>
+      <materia codigo="5938" orden="">Regímenes especiales de la Seguridad Social</materia>
+      <materia codigo="6256" orden="">Salario Mínimo Interprofesional</materia>
+      <materia codigo="6499" orden="">Seguridad Social</materia>
+      <materia codigo="6832" orden="">Trabajadores autónomos</materia>
+    </materias>
+    <notas>
+      <nota codigo="0" orden="999">Las correcciones de errores de la Ley 6/2018, de 3 de julio, la Ley General de la Seguridad Social, texto refundido aprobado por Real Decreto Legislativo 8/2015, de 30 de octubre y la Ley 20/2007, de 11 de julio se establecen por estas modificadas por el Real Decreto-ley 28/2018, de 28 de diciembre.</nota>
+    </notas>
+    <referencias>
+      <anteriores>
+        <anterior referencia="BOE-A-2018-17992" orden="2120">
+          <palabra codigo="201">CORRECCIÓN de errores</palabra>
+          <texto>del Real Decreto-ley 28/2018, de 28 de diciembre</texto>
+        </anterior>
+        <anterior referencia="BOE-A-2018-9268" orden="2140">
+          <palabra codigo="203">CORRIGE errores</palabra>
+          <texto>en la Ley 6/2018, de 3 de julio</texto>
+        </anterior>
+        <anterior referencia="BOE-A-2015-11724" orden="2140">
+          <palabra codigo="203">CORRIGE errores</palabra>
+          <texto>en la Ley General de la Seguridad Social, texto refundido aprobado por Real Decreto Legislativo 8/2015, de 30 de octubre</texto>
+        </anterior>
+        <anterior referencia="BOE-A-2007-13409" orden="2140">
+          <palabra codigo="203">CORRIGE errores</palabra>
+          <texto>en la Ley 20/2007, de 11 de julio</texto>
+        </anterior>
+      </anteriores>
+      <posteriores/>
+    </referencias>
+    <alertas>
+      <alerta codigo="125" orden="">Seguridad Social</alerta>
+      <alerta codigo="131" orden="">Trabajo y empleo</alerta>
+    </alertas>
+  </analisis>
+  <texto>
+    <p xmlns:xhtml="http://www.w3.org/1999/xhtml" class="parrafo">Advertidos errores en el Real Decreto-ley 28/2018, de 28 de diciembre, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo, publicado en el «Boletín Oficial del Estado» número 314, de 29 de diciembre de 2018, se procede a efectuar las oportunas rectificaciones:</p>
+    <p xmlns:xhtml="http://www.w3.org/1999/xhtml" class="parrafo_2">En la página 129879, penúltimo párrafo, séptima línea, donde dice: «…disposiciones reglamentaria dirigidas…», debe decir: «…disposiciones reglamentarias dirigidas…».</p>
+    <p xmlns:xhtml="http://www.w3.org/1999/xhtml" class="parrafo">En la página 129894, en el artículo 12, apartado 1, donde dice: «… real decreto 1462/2018, de 21 de diciembre…», debe decir: «… Real Decreto 1462/2018, de 21 de diciembre…».</p>
+    <p xmlns:xhtml="http://www.w3.org/1999/xhtml" class="parrafo">En la página 129901, en la línea primera, donde dice: «…sin perjuicio de lo previsto en la disposición transitoria novena…» debe decir: «…sin perjuicio de lo previsto en la disposición transitoria octava…».</p>
+    <p xmlns:xhtml="http://www.w3.org/1999/xhtml" class="parrafo">En la página 129912, en el apartado Veintinueve, en la redacción dada a la disposición transitoria decimosexta del texto refundido de la Ley General de la Seguridad Social, donde dice: «Desde el año 2012 hasta el año 2020, a efectos de determinar el coeficiente de parcialidad a que se refiere la regla a) del artículo 247…», debe decir: «2. Desde el año 2012 hasta el año 2020, a efectos de determinar el coeficiente de parcialidad a que se refiere la regla a) del artículo 247…»</p>
+    <p xmlns:xhtml="http://www.w3.org/1999/xhtml" class="parrafo">En la página 129920, en el párrafo segundo, donde dice: «En tal caso, la aplicación de las medidas previstas en este artículo se producirán a partir del día primero del mes siguiente al que se tal elección se realice», debe decir: «En tal caso, la aplicación de las medidas previstas en este artículo se producirán a partir del día primero del mes siguiente al que tal elección se realice».</p>
+    <p xmlns:xhtml="http://www.w3.org/1999/xhtml" class="parrafo">En la página 129921, en el apartado 9, en el párrafo segundo, donde dice: «En tal caso, la aplicación de las medidas previstas en este artículo se producirán a partir del día primero del mes siguiente al que se tal elección se realice», debe decir: «En tal caso, la aplicación de las medidas previstas en este artículo se producirán a partir del día primero del mes siguiente al que tal elección se realice».</p>
+  </texto>
+</documento>

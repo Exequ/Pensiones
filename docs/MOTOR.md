@@ -52,6 +52,8 @@ desenvolver(r); // devuelve el resultado o vuelve a lanzar el error original
 
 Una lectura abierta es una duda de interpretación que el motor no decide: es una opción explícita con un valor por defecto (la lectura más sencilla, en `docs/DECISIONES.md`) y alternativas. El registro lista las 27 de todos los motores, cada una con identificador `motor.opcion`, descripción en lenguaje llano (sin cifras), valor por defecto **leído de las constantes de cada motor**, alternativas, efecto medido (sección y fila de `docs/INFORME_VERIFICACION.md`) e identificador de la pregunta de `docs/REVISION_ACTUARIAL.md`. Dos tests comprueban que el registro es completo (todas las opciones de cada motor y ninguna de más), que los enlaces existen y que las descripciones no llevan cifras. **Los valores por defecto los decide Sergio tras la revisión actuarial; el registro no cambia ninguno.**
 
+**Configuración única (Fase 2-C)**: los valores por defecto están en `src/engine/config/lecturas-por-defecto.json` (id, valor, estado `pendiente` o `decidida`, fecha y pregunta de `docs/REVISION_ACTUARIAL.md`). Las constantes de cada motor (`LECTURAS_POR_DEFECTO`…) y el registro leen de ese fichero; un test comprueba que cubre exactamente las lecturas del registro y que `docs/DECISIONES_ACTUARIALES.md` lo refleja. Adoptar una decisión es cambiar una línea del JSON (y la fila del registro de decisiones). Clasificación de las 27 lecturas por impacto y fichas del grupo A: `docs/REVISION_PRIORIZADA.md`.
+
 | Identificador                                        | Por defecto                | Alternativas               | Pregunta actuarial                             |
 | ---------------------------------------------------- | -------------------------- | -------------------------- | ---------------------------------------------- |
 | `jubilacion.baseMaxima`                              | `compuesto`                | `sobre-cifra-inicial`      | `param-base-maxima-incremento-futuro`          |
@@ -86,9 +88,13 @@ Una lectura abierta es una duda de interpretación que el motor no decide: es un
 
 Todas las cifras salen de `/data` con cita literal comprobada por código (la cita debe contener la cifra: `scripts/citas-cifras.test.ts`). Los ficheros por motor están en los documentos de cada motor y en `docs/MOTOR_INVENTARIO.md`; las fuentes, en `docs/FUENTES.md`; las afirmaciones, en `docs/claims.json`; los huecos, en `docs/PENDIENTE_DATOS.md` y `docs/DESCARGAS_MANUALES.md`.
 
+## Auditoría de los datos
+
+`docs/AUDITORIA_DATOS.md` (sección «Auditoría independiente de las series del motor») contrasta cada serie que leen los motores con una segunda fuente distinta de su cita (`scripts/etl/auditoria_independiente.py`; fuentes en `data-raw/auditoria/`). En la Fase 2-C se corrigió la gran invalidez de 2012 con cónyuge no a cargo con la corrección de errores del BOE (`docs/DISCREPANCIAS.md`); ningún motor ni caso de oro usa 2012.
+
 ## Casos de oro
 
-`docs/INVENTARIO_CASOS_ORO.md` (generado y comprobado por un test) lista los casos de cada motor con su etiqueta: «independiente» (ejemplo oficial con URL) o «derivado de la norma». Los casos de Sergio se escribirán como una tabla (`docs/CASOS_SERGIO_PLANTILLA.md`) en `data-raw/casos-oro/casos-sergio.md` y se ejecutan con `npx tsx scripts/casos-sergio.ts` o con `scripts/casos-sergio.test.ts`; mientras el fichero no exista, nada falla.
+`docs/INVENTARIO_CASOS_ORO.md` (generado y comprobado por un test) lista los casos de cada motor con su etiqueta: «independiente» (ejemplo oficial con URL) o «derivado de la norma». El inventario no cambia en la Fase 2-C (no se ha tocado ningún caso; la corrección de datos de 2012 no afecta a ninguno). Los casos de Sergio se escribirán como una tabla (`docs/CASOS_SERGIO_PLANTILLA.md`) en `data-raw/casos-oro/casos-sergio.md` y se ejecutan con `npx tsx scripts/casos-sergio.ts` o con `scripts/casos-sergio.test.ts`; mientras el fichero no exista, nada falla.
 
 ## Limitaciones consolidadas
 
@@ -98,7 +104,7 @@ Todas las cifras salen de `/data` con cita literal comprobada por código (la ci
 - **Contingencias profesionales**: la base reguladora por accidente de trabajo y enfermedad profesional (Reglamento de 1956) no está descargada; los motores lanzan `NoImplementada` salvo base calculada fuera. Indemnizaciones a tanto alzado, lesiones permanentes no incapacitantes y recargo de prestaciones.
 - **Normativa anterior**: jubilación anterior a 2013 (escala por años) y anticipadas, demora y parcial anteriores a 2022; incapacidad y supervivencia anteriores a 2022; PNC anteriores a 2022 (`NoImplementada`).
 - **Hechos posteriores al reconocimiento**: extinción, suspensión, revisión del grado, recálculo de los límites, trabajo de pensionistas fuera de lo regulado y pensiones concurrentes entre causantes.
-- **Datos que faltan**: base mínima de 2020 y 2021, umbral de pobreza (mínimas de 2027), límite de ingresos con cónyuge a cargo, complemento de alquiler de 2024, SMI y tipos de contingencias comunes posteriores a 2026.
+- **Datos que faltan**: base mínima de 2020 y 2021, umbral de pobreza (mínimas de 2027), límite de ingresos con cónyuge a cargo, complemento de alquiler de 2024, IPREM de 2024 a 2026 (sin norma expresa), IPC anterior a 2000 (hechos causantes de 2022 a 2024 con carreras anteriores a 2000 lanzan `DatoNoDisponible` sin escenario), SMI y tipos de contingencias comunes posteriores a 2026. Sondeo año a año de las funciones de la fachada: `docs/PENDIENTE_DATOS.md` («años futuros») y `npx tsx scripts/anios-futuros.ts`.
 - **Fuera de alcance por decisión**: complementos autonómicos y haciendas forales de las PNC, proyecciones del MEI y RETA.
 
 ## Pruebas

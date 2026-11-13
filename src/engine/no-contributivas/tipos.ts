@@ -3,6 +3,7 @@
  * (arts. 363 a 372 TRLGSS). Importes en euros nominales del año de los efectos económicos.
  */
 import type { Paso, Requisito } from '../jubilacion/tipos.ts';
+import { porDefectoDelMotor } from '../config/lecturas-por-defecto.ts';
 
 export type { Paso, Requisito };
 
@@ -80,12 +81,8 @@ export interface LecturasPNC {
   readonly limiteConTerceraPersona: 'con-complemento' | 'sin-complemento';
 }
 
-export const LECTURAS_PNC_POR_DEFECTO: LecturasPNC = {
-  baseRentasCompatibles: 'cuantia-integra',
-  limiteTrabajo: 'cuantia-integra',
-  rentasConTrabajoEnCuatroAnios: 'sustituye-364-2',
-  limiteConTerceraPersona: 'con-complemento',
-};
+export const LECTURAS_PNC_POR_DEFECTO: LecturasPNC =
+  porDefectoDelMotor<LecturasPNC>('no-contributivas');
 
 export interface OpcionesPNC {
   readonly lecturasPNC?: Partial<LecturasPNC>;

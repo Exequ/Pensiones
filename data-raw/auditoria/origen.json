@@ -1,0 +1,207 @@
+{
+ "ss-cuantias-minimas.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/30434/30445",
+  "sha256": "fea4878fc0aad2add7b0d0af8b1d03fa9f77c0f4d7bfb0418bb9a996bd29c6cc",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-resumen-cuantias.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/36869/40885",
+  "sha256": "ef6dbdf6a52943899416b03e9bc4dd92b0f213ea9098f7ff2e502efaa5b1d40b",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-revalorizacion-2026.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/30431",
+  "sha256": "cd9cf92dac5dc7e5ba52d54eb02087cca093fc52dcf8a88e91e8052f8ae60de6",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-jubilacion-requisitos.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472",
+  "sha256": "17d4f4392cdcb3c3e71a553f450d08ebabd3474f8c33ab9b209b74cda2ebc863",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-jubilacion-cuantia.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28475",
+  "sha256": "86c8544a98192fa743ee029ddcb407773bc66ec5b914e1a4db5269ff958e51c4",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-brecha-genero-cuantia.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/4c43ce49-6636-4a12-bacf-5e6697eb81da/cuantia?changeLanguage=es",
+  "sha256": "2767941138166085200d172e16904dbe0352fda5d3062bfe770e7f7a8802c760",
+  "fetchedAt": "2026-11-13"
+ },
+ "eurostat-earn_mw_cur-ES.json": {
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_mw_cur?format=JSON&geo=ES&currency=EUR&lang=EN",
+  "sha256": "47796af3f4bc1236c47e9943ddc8bdc5830c85ff8158c669e014b272cee9c573",
+  "fetchedAt": "2026-11-13"
+ },
+ "ine-ipc-indice-general-IPC290751.json": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=1000",
+  "sha256": "c619ba5bfc7ce9a8157ed065008e4f53fb4f163116fab2e22622560a485e8e15",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-bases-tipos-cotizacion.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537?changeLanguage=es&dbe437e9_page=1",
+  "sha256": "57c6191cfc30df093927c2c4c6c6fa837e202a57ef9bb1977098b78b2c217d83",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-viudedad-cuantia.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10964/10966/28489/28492/28617",
+  "sha256": "4d134b17fc54cb2814c76e939d8af088f0371cf7d4a20acc9a0828c4b1b99eaf",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-incapacidad-absoluta.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10960/28750/28680/28729/28738/28741",
+  "sha256": "9eafb8aa8d57f06bee00604ff1aa696549e2069f3d77dd89bb0ef4e2a33be626",
+  "fetchedAt": "2026-11-13"
+ },
+ "BOE-A-2023-2472.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2023-2472",
+  "sha256": "a04f4fcc26821aaf94ab7b3c69916b93bf17b3e5ede611c8be758d9090bb4cda",
+  "fetchedAt": "2026-11-13"
+ },
+ "BOE-A-2024-1691.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2024-1691",
+  "sha256": "f078f960cd1f313ecb4d673ed6731bdef2be4f76b400dc188e253599595d6276",
+  "fetchedAt": "2026-11-13"
+ },
+ "BOE-A-2025-3780.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2025-3780",
+  "sha256": "161ec17ce640f1377f8f64fd4e222cca96ef1f5aacdccc71b55e9d406b0281b8",
+  "fetchedAt": "2026-11-13"
+ },
+ "BOE-A-2026-7296.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-7296",
+  "sha256": "ec4de765d771b2e9d6aaf87e9a77d7511dd33d3d8a08130f39d8172c219997cd",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-1969-1003.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1969-1003",
+  "sha256": "cfb82a585fcaba1dbd1acb60868c4e3946ae306bf12704564f47f51209674479",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2000-1284.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2000-1284",
+  "sha256": "fc5f38f9c97b296d971dae41f0dc94e814522c685422089e6b45ce0c67191d16",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2002-3601.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2002-3601",
+  "sha256": "a2534d9f9abe5be0459b12c23df2bb578df43bc4ecdea790f77f31584fb1b9b8",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2002-5470.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2002-5470",
+  "sha256": "6a3bdab69cdab23271ad63f7e5824a04b3c25680e907e9a445be879666524757",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2005-1413.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2005-1413",
+  "sha256": "12f4a688375984e35c10348eb6b39bdeef087f674c2beca3905783fd9fc72f03",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2008-2334.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2008-2334",
+  "sha256": "29965400ac1e00ff416451c2cf0d86e4e06ac18892acd74ec896852e4608198e",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2009-2322.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2009-2322",
+  "sha256": "3a1d2dbe2c0ec9fed64711439b701cf0e5786f3c45617cd83204c3c79a9035e5",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2010-1703.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2010-1703",
+  "sha256": "3847a986e2a408dd8e8c873e44ea1ba3b1df48b60e0936657d580c9e150b3475",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2012-352.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2012-352",
+  "sha256": "cb539e394ed47e7a1d8fc103c33155f7bf67078a59a398135db79a6f2c3a986f",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2013-1274.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2013-1274",
+  "sha256": "e70af1771050ddefa2dcf194ddacf8ad190ce181accddb63e70621ef77ce6649",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2013-1461.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2013-1461",
+  "sha256": "b0cf5905cc57e116e039d6627a769d0132278fa8967fd4c2fc210f176e654e55",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2013-2343.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2013-2343",
+  "sha256": "92b4491213cb78c660d2fd3391e4a961a51f414664f16bc216ea4da09ea134ca",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2013-832.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2013-832",
+  "sha256": "00909517cd7fd13e6cac29c40606702156f9e7c136966b3c941916dadc6ce69c",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2014-1505.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2014-1505",
+  "sha256": "b410645ddd12aceedd7238e083874e120c9d9bc9cc844fc1b2f2ff67d806d2d1",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2015-3507.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2015-3507",
+  "sha256": "81d23b8ecc40282e47569259c564a393cfa1ee2b73aaed9429c02ff4543bb634",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2016-1320.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2016-1320",
+  "sha256": "efafdee358605f458c7a3f65a43b6cb0dd4be2392d659c944350507d1281a40f",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2017-1573.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2017-1573",
+  "sha256": "4d136b8e70414bd556d4f3ea78e4fe7c9f72defc20a729520fc57cfd7fc308d0",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2017-2462.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2017-2462",
+  "sha256": "183879dc18ccff90800387e75787d2038dd36ccaf1f10cccf1c9d33f928f6c6a",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2018-1276.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2018-1276",
+  "sha256": "3fb56a1b1c2c327ceba0ee05541ec743641f940b24add78e9a2b078807c00117",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2019-1932.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2019-1932",
+  "sha256": "9fe97890f4dcc2b2369bf558b4753c37fea4cbfa5029d2d01eff714480164067",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2019-647.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2019-647",
+  "sha256": "6f4174b30235e2a61b6b67c818ac7e3ea753860bb89e512bb24a3768aa4370a0",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2021-6240.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2021-6240",
+  "sha256": "22a2415a8361af0348d0f10543b389fdaba9685917f507ceb2901fdfb4b3eb53",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2022-2981.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2022-2981",
+  "sha256": "922a17b415d90531592a51f942c60a417dfb8e20e73e66d6663976c1a36e26a1",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2023-8706.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2023-8706",
+  "sha256": "ba27fe15fcc9a6765634ef5964ac0d47bb22cc38e65c05476fbc7a3e7d6fe3d4",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2024-6627.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2024-6627",
+  "sha256": "d3507391210298a9537c73cc340b6291a3b3c16376e7aecbac1137c45c058d77",
+  "fetchedAt": "2026-11-13"
+ },
+ "correcciones/BOE-A-2025-7292.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2025-7292",
+  "sha256": "4bc21ad91e2568ef4fcb894d955a4dbbb8b1b722983a904b676aa09e70c5b4f5",
+  "fetchedAt": "2026-11-13"
+ }
+}

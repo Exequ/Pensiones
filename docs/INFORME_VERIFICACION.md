@@ -466,3 +466,9 @@ Lectura de la tabla:
 - No hay contraste con resoluciones reales; las guías del IMSERSO no son norma (confianza «media» en el dato de la aplicación del límite con tercera persona).
 - El complemento de alquiler de 2024 no consta (el RDL 8/2023 descargado no repite el importe) y el RD 1191/2012 se usa en su texto original (el BOE no ofrece versión consolidada).
 - La unidad económica se describe con el número de convivientes y beneficiarios y las rentas de la unidad: no se clasifica quién forma parte de ella ni cada tipo de renta.
+
+## Fase 2-C: auditoría independiente de los datos y triage actuarial
+
+- **Auditoría** (`docs/AUDITORIA_DATOS.md`, sección «Auditoría independiente de las series del motor»): 51 ficheros de `data/parametros` leen los motores; cada serie se contrasta con una segunda fuente distinta de su cita (web de la Seguridad Social, Eurostat, INE, IMSERSO, BEL del MITES, órdenes de cotización y otras normas del BOE). Resultado: una corrección de datos (gran invalidez de 2012 con cónyuge no a cargo, con la corrección de errores BOE-A-2012-352; `docs/DISCREPANCIAS.md`); el resto coincide o tiene diferencias explicadas (BEL de 2000 a 2011, errores del BEL de 2022 y 2026, calendario de Eurostat en el SMI de 2021 y 2022); ocho ficheros de reglas legales sin segunda fuente independiente. Prueba de sensibilidad: `python3 -I scripts/etl/auditoria_independiente.py --sensibilidad`.
+- **Triage** (`docs/REVISION_PRIORIZADA.md`): de las 27 lecturas abiertas, 6 se cierran por evidencia (propuestas pendientes de visto bueno), 11 son del grupo A (con ficha de tres casos), 7 del B y 3 del C. Las mediciones están en `docs/triage-actuarial.json` (`npx tsx scripts/triage-actuarial.ts`).
+- **Años futuros**: `npx tsx scripts/anios-futuros.ts` y `docs/PENDIENTE_DATOS.md`.

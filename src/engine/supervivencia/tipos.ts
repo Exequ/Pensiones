@@ -11,6 +11,7 @@ import type {
   Requisito,
   Sexo,
 } from '../jubilacion/tipos.ts';
+import { porDefectoDelMotor } from '../config/lecturas-por-defecto.ts';
 
 export type { Carrera, EstadoPension, Paso, Requisito, Sexo };
 
@@ -184,16 +185,8 @@ export interface LecturasSupervivencia {
   readonly reduccionLimiteConjunto: 'orfandad' | 'proporcional';
 }
 
-export const LECTURAS_SUPERVIVENCIA_POR_DEFECTO: LecturasSupervivencia = {
-  ventanaBaseReguladora: 'anterior-al-mes-previo',
-  diasCotizados: 'naturales',
-  carenciaOrfandad: 'sin-carencia',
-  carenciaFamiliaresAccidenteNoLaboral: 'exigir',
-  comparacionCompensatoria: 'anual',
-  reduccionViudedad70: 'no-inferior-52',
-  incrementoFamiliares: 'porcentaje-viudedad',
-  reduccionLimiteConjunto: 'orfandad',
-};
+export const LECTURAS_SUPERVIVENCIA_POR_DEFECTO: LecturasSupervivencia =
+  porDefectoDelMotor<LecturasSupervivencia>('supervivencia');
 
 type OpcionesComunes = Pick<
   OpcionesJubilacion,

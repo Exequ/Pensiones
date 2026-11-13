@@ -1126,7 +1126,7 @@ describe('descargas manuales (C2): MITES e IMSERSO', () => {
       2,
     );
   });
-  it('BEL PEN-31 frente a data/parametros: 221 de 306 celdas coinciden; las demás están en DISCREPANCIAS', () => {
+  it('BEL PEN-31 frente a data/parametros: 222 de 306 celdas coinciden; las demás están en DISCREPANCIAS', () => {
     const p = (f: string) =>
       new Map(
         (ArchivoDatos.parse(leeJson('parametros', f)).data ?? []).map((d) => [
@@ -1170,7 +1170,9 @@ describe('descargas manuales (C2): MITES e IMSERSO', () => {
       if (Math.abs(ref - Number(f['euros_anio'])) < 0.05) iguales++;
     }
     expect(comparadas).toBe(306);
-    expect(iguales).toBe(221);
+    // 221 hasta la Fase 2-C: la gran invalidez de 2012 con cónyuge no a cargo se corrigió con la
+    // corrección de errores del BOE (BOE-A-2012-352, docs/DISCREPANCIAS.md) y ahora coincide con el BEL.
+    expect(iguales).toBe(222);
   });
   it('IMSERSO: PNC de diciembre de 2025 = jubilación + invalidez y 2019 coincide con el total del informe', () => {
     const e = csv('sistema', 'imserso-pnc-evolucion');

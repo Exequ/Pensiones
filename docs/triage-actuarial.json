@@ -1,0 +1,354 @@
+{
+  "medidas": [
+    {
+      "id": "jubilacion.lagunasAnterioresAlPrimerAlta",
+      "alternativa": "ignorar",
+      "casos": [
+        {
+          "descripcion": "15 años cotizados (2015-2029), base 2.500 €, 2030",
+          "magnitud": "pensión de jubilación €/mes por paga (sin complementos a mínimos)",
+          "defecto": 843.8030616957553,
+          "alternativa": 720.3845276081527
+        },
+        {
+          "descripcion": "18 años cotizados, base 2.500 €, 2030",
+          "magnitud": "pensión de jubilación €/mes por paga (sin complementos a mínimos)",
+          "defecto": 1119.9155459674955,
+          "alternativa": 1006.8503495759453
+        },
+        {
+          "descripcion": "22 años cotizados, base 2.500 €, 2030",
+          "magnitud": "pensión de jubilación €/mes por paga (sin complementos a mínimos)",
+          "defecto": 1560.025941701664,
+          "alternativa": 1478.4516174237929
+        }
+      ]
+    },
+    {
+      "id": "jubilacion.maximaDesde2051",
+      "alternativa": "incremento-anual-literal",
+      "casos": [
+        {
+          "descripcion": "topado por la pensión máxima, jubilación en 2052",
+          "magnitud": "pensión de jubilación €/mes por paga (sin complementos a mínimos)",
+          "defecto": 5810.340900306558,
+          "alternativa": 6167.600443441689
+        },
+        {
+          "descripcion": "topado, 2055",
+          "magnitud": "pensión de jubilación €/mes por paga (sin complementos a mínimos)",
+          "defecto": 6279.062895434181,
+          "alternativa": 7512.964415331442
+        },
+        {
+          "descripcion": "topado, 2060",
+          "magnitud": "pensión de jubilación €/mes por paga (sin complementos a mínimos)",
+          "defecto": 7307.149951741164,
+          "alternativa": 10119.533604598717
+        }
+      ]
+    },
+    {
+      "id": "incapacidad.lagunasAccidenteNoLaboral",
+      "alternativa": "integrar",
+      "casos": [
+        {
+          "descripcion": "accidente no laboral, incapacidad total, base 1.500 €, 6 meses sin cotizar dentro de los 24 elegidos, 2026",
+          "magnitud": "pensión de incapacidad total €/mes (sin complementos a mínimos)",
+          "defecto": 530.3571428571429,
+          "alternativa": 693.1414285714287
+        },
+        {
+          "descripcion": "accidente no laboral, incapacidad total, base 1.500 €, 3 meses sin cotizar dentro de los 24 elegidos, 2026",
+          "magnitud": "pensión de incapacidad total €/mes (sin complementos a mínimos)",
+          "defecto": 618.75,
+          "alternativa": 700.1421428571429
+        },
+        {
+          "descripcion": "accidente no laboral, incapacidad total, base 1.500 €, 12 meses sin cotizar dentro de los 24 elegidos, 2026",
+          "magnitud": "pensión de incapacidad total €/mes (sin complementos a mínimos)",
+          "defecto": 353.5714285714286,
+          "alternativa": 679.1400000000003
+        }
+      ]
+    },
+    {
+      "id": "supervivencia.carenciaOrfandad",
+      "alternativa": "rd-1647-1997",
+      "casos": [
+        {
+          "descripcion": "6 meses cotizados (2025-09 a 2026-02), un huérfano",
+          "magnitud": "orfandad €/mes",
+          "defecto": 71.42857142857143,
+          "alternativa": 0
+        },
+        {
+          "descripcion": "12 meses cotizados, un huérfano",
+          "magnitud": "orfandad €/mes",
+          "defecto": 171.42857142857142,
+          "alternativa": 0
+        },
+        {
+          "descripcion": "15 meses cotizados, un huérfano",
+          "magnitud": "orfandad €/mes",
+          "defecto": 200,
+          "alternativa": 0
+        }
+      ]
+    },
+    {
+      "id": "supervivencia.carenciaFamiliaresAccidenteNoLaboral",
+      "alternativa": "exenta",
+      "casos": [
+        {
+          "descripcion": "nieto huérfano, 13 meses cotizados",
+          "magnitud": "favor de familiares €/mes",
+          "defecto": 0,
+          "alternativa": 617.1428571428571
+        },
+        {
+          "descripcion": "nieto huérfano, 8 meses cotizados",
+          "magnitud": "favor de familiares €/mes",
+          "defecto": 0,
+          "alternativa": 360
+        },
+        {
+          "descripcion": "nieto huérfano, 15 meses cotizados",
+          "magnitud": "favor de familiares €/mes",
+          "defecto": 0,
+          "alternativa": 720
+        }
+      ]
+    },
+    {
+      "id": "supervivencia.reduccionViudedad70",
+      "alternativa": "sin-suelo",
+      "casos": [
+        {
+          "descripcion": "cargas familiares, rentas propias 9.000 €, unidad 12.000 €",
+          "magnitud": "viudedad €/mes",
+          "defecto": 891.4285714285714,
+          "alternativa": 740.9714285714284
+        },
+        {
+          "descripcion": "rentas propias 7.000 €, unidad 12.000 €",
+          "magnitud": "viudedad €/mes",
+          "defecto": 891.4285714285714,
+          "alternativa": 883.8285714285713
+        },
+        {
+          "descripcion": "rentas propias 10.000 €, unidad 14.000 €",
+          "magnitud": "viudedad €/mes",
+          "defecto": 891.4285714285714,
+          "alternativa": 669.5428571428571
+        }
+      ]
+    },
+    {
+      "id": "supervivencia.comparacionCompensatoria",
+      "alternativa": "mensual",
+      "casos": [
+        {
+          "descripcion": "excónyuge con compensatoria de 6.000 €/año",
+          "magnitud": "viudedad €/mes",
+          "defecto": 428.57142857142856,
+          "alternativa": 500
+        },
+        {
+          "descripcion": "compensatoria de 4.500 €/año",
+          "magnitud": "viudedad €/mes",
+          "defecto": 321.42857142857144,
+          "alternativa": 375
+        },
+        {
+          "descripcion": "compensatoria de 9.000 €/año",
+          "magnitud": "viudedad €/mes",
+          "defecto": 642.8571428571429,
+          "alternativa": 750
+        }
+      ]
+    },
+    {
+      "id": "supervivencia.incrementoFamiliares",
+      "alternativa": "sin-incremento",
+      "casos": [
+        {
+          "descripcion": "un nieto huérfano, sin viudo ni huérfanos",
+          "magnitud": "favor de familiares €/mes (primer beneficiario)",
+          "defecto": 1234.2857142857142,
+          "alternativa": 342.85714285714283
+        },
+        {
+          "descripcion": "dos nietos huérfanos, sin viudo ni huérfanos",
+          "magnitud": "favor de familiares €/mes (primer beneficiario)",
+          "defecto": 788.5714285714286,
+          "alternativa": 342.85714285714283
+        },
+        {
+          "descripcion": "un hermano huérfano, sin viudo ni huérfanos",
+          "magnitud": "favor de familiares €/mes (primer beneficiario)",
+          "defecto": 1234.2857142857142,
+          "alternativa": 342.85714285714283
+        }
+      ]
+    },
+    {
+      "id": "supervivencia.reduccionLimiteConjunto",
+      "alternativa": "proporcional",
+      "casos": [
+        {
+          "descripcion": "viudedad del 52 % y tres huérfanos",
+          "magnitud": "viudedad €/mes",
+          "defecto": 891.4285714285714,
+          "alternativa": 795.9183673469387
+        },
+        {
+          "descripcion": "viudedad del 52 % y cuatro huérfanos",
+          "magnitud": "viudedad €/mes",
+          "defecto": 891.4285714285714,
+          "alternativa": 675.3246753246754
+        },
+        {
+          "descripcion": "viudedad del 52 % y cinco huérfanos",
+          "magnitud": "viudedad €/mes",
+          "defecto": 891.4285714285714,
+          "alternativa": 586.4661654135338
+        }
+      ]
+    },
+    {
+      "id": "no-contributivas.rentasConTrabajoEnCuatroAnios",
+      "alternativa": "se-suman",
+      "casos": [
+        {
+          "descripcion": "PNC de incapacidad, grado 70 %, rentas de 10.000 € (todas de la actividad), 2023",
+          "magnitud": "pensión €/año",
+          "defecto": 3984.54,
+          "alternativa": 0
+        },
+        {
+          "descripcion": "PNC de incapacidad, grado 70 %, rentas de 3.000 €, actividad de 6.000 €, 2026",
+          "magnitud": "pensión €/año",
+          "defecto": 8803.2,
+          "alternativa": 8803.2
+        },
+        {
+          "descripcion": "PNC de incapacidad, grado 70 %, rentas de 8.000 € (todas de la actividad), 2025",
+          "magnitud": "pensión €/año",
+          "defecto": 7105.8,
+          "alternativa": 0
+        }
+      ]
+    },
+    {
+      "id": "mei.baseMEI",
+      "alternativa": "retribucion-completa",
+      "casos": [
+        {
+          "descripcion": "retribución de 6000 €/mes, 2026",
+          "magnitud": "cuota total del MEI €/mes",
+          "defecto": 45.9108,
+          "alternativa": 54
+        },
+        {
+          "descripcion": "retribución de 8000 €/mes, 2026",
+          "magnitud": "cuota total del MEI €/mes",
+          "defecto": 45.9108,
+          "alternativa": 72
+        },
+        {
+          "descripcion": "retribución de 12.000 €/mes, 2026",
+          "magnitud": "cuota total del MEI €/mes",
+          "defecto": 45.9108,
+          "alternativa": 108
+        }
+      ]
+    },
+    {
+      "id": "jubilacion.integracionReforzadaLagunas (opción, DT 41.ª)",
+      "alternativa": "apagada (sin la integración reforzada)",
+      "casos": [
+        {
+          "descripcion": "mujer, jubilación ordinaria en 2026, base 2.500 €, 60 meses de laguna (carrera hasta 2020-12)",
+          "magnitud": "pensión de jubilación €/mes por paga (sin complementos a mínimos)",
+          "defecto": 1625.9674619928824,
+          "alternativa": 1613.9307973841405
+        },
+        {
+          "descripcion": "mujer, jubilación ordinaria en 2026, base 2.500 €, 72 meses de laguna (carrera hasta 2019-12)",
+          "magnitud": "pensión de jubilación €/mes por paga (sin complementos a mínimos)",
+          "defecto": 1527.7146911350264,
+          "alternativa": 1507.9587478601197
+        },
+        {
+          "descripcion": "mujer, jubilación ordinaria en 2026, base 2.500 €, 84 meses de laguna (carrera hasta 2018-12)",
+          "magnitud": "pensión de jubilación €/mes por paga (sin complementos a mínimos)",
+          "defecto": 1431.557085363701,
+          "alternativa": 1404.9992091155334
+        }
+      ]
+    },
+    {
+      "id": "jubilacion.coeficientesInvoluntaria (art. 207.2: lecturas 1 a 3 de la pregunta)",
+      "alternativa": "otra lectura de la anticipación o del tramo",
+      "casos": [
+        {
+          "descripcion": "un mes más de anticipación (redondeo hacia arriba), 24 frente a 23 meses, tramo 2",
+          "magnitud": "pensión reducida €/mes por paga (pensión sin reducir de 1.500 €)",
+          "defecto": 1290,
+          "alternativa": 1298.7
+        },
+        {
+          "descripcion": "tramo 2 frente a tramo 3 (otra carrera para elegir el tramo), 24 meses",
+          "magnitud": "pensión reducida €/mes por paga (pensión sin reducir de 1.500 €)",
+          "defecto": 1290,
+          "alternativa": 1305
+        },
+        {
+          "descripcion": "tramo 1 frente a tramo 4, 24 meses",
+          "magnitud": "pensión reducida €/mes por paga (pensión sin reducir de 1.500 €)",
+          "defecto": 1275,
+          "alternativa": 1320
+        }
+      ]
+    },
+    {
+      "id": "jubilacion.coeficientesVoluntaria (art. 208.2: lecturas 1 a 3 de la pregunta)",
+      "alternativa": "otra lectura de la anticipación o del tramo",
+      "casos": [
+        {
+          "descripcion": "un mes más de anticipación (redondeo hacia arriba), 12 frente a 11 meses, tramo 2",
+          "magnitud": "pensión reducida €/mes por paga (pensión sin reducir de 1.500 €)",
+          "defecto": 1421.25,
+          "alternativa": 1425.9
+        },
+        {
+          "descripcion": "tramo 2 frente a tramo 3 (otra carrera para elegir el tramo), 12 meses",
+          "magnitud": "pensión reducida €/mes por paga (pensión sin reducir de 1.500 €)",
+          "defecto": 1421.25,
+          "alternativa": 1425
+        },
+        {
+          "descripcion": "tramo 1 frente a tramo 4, 12 meses",
+          "magnitud": "pensión reducida €/mes por paga (pensión sin reducir de 1.500 €)",
+          "defecto": 1417.5,
+          "alternativa": 1428.75
+        }
+      ]
+    }
+  ],
+  "evidencias": [
+    {
+      "id": "jubilacion.baseMaxima",
+      "texto": "2025: oficial 4909,50; compuesto 4909,32 (diferencia 0,18); sobre la cifra de 2023 4906,62 (diferencia 2,88). 2026: oficial 5101,20; compuesto 5100,97 (diferencia 0,23); sobre la cifra de 2023 5096,00 (diferencia 5,20)"
+    },
+    {
+      "id": "jubilacion.pensionMaxima",
+      "texto": "2025: oficial 3267,60; incremento constante 3267,59 (diferencia 0,01); incremento creciente 3267,59 (diferencia 0,01). 2026: oficial 3359,60; incremento constante 3359,58 (diferencia 0,02); incremento creciente 3363,34 (diferencia 3,74)"
+    },
+    {
+      "id": "incapacidad.edadFiccion",
+      "texto": "675 combinaciones (hecho causante de 2022 a 2050 cada dos años, edades de 40 a 66, carreras de 10 a 38 años, incapacidad absoluta por enfermedad común): las dos lecturas dan un resultado distinto en 0"
+    }
+  ]
+}

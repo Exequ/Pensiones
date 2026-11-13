@@ -204,5 +204,11 @@
   "sha256_original": "099d1eec0ce8e4336b9e304cd9ceaca001ed055b4fe5d37e7cd463e31db7329a",
   "fetchedAt": "2026-11-12",
   "nota": "Real Decreto-ley 20/2022, de 27 de diciembre, de medidas de respuesta a las consecuencias económicas y sociales de la Guerra de Ucrania y de apoyo a la reconstrucción de la isla de La Palma y a otras situaciones de vulnerabilidad. Texto plano del XML del BOE (etiquetas eliminadas)."
+ },
+ "reglamento-at-1956-capa-texto-bruta.txt": {
+  "url": "https://www.boe.es/boe/dias/1956/07/15/pdfs/A04614-04634.pdf",
+  "sha256_original": "0335b9dee024a60c6ce4f17dac1c4e4596ef821c88ae049fab8f08db59080380",
+  "fetchedAt": "2026-11-13",
+  "nota": "BOE núm. 197, de 15/07/1956, pp. 4614-4634: Decreto de 22 de junio de 1956 (texto refundido de la legislación de accidentes del trabajo y Reglamento para su aplicación). Capa de texto del PDF (OCR del propio BOE, con ruido y columnas mezcladas; pdftotext sin -layout). El PDF (5,3 MB) no se versiona. El capítulo V del Reglamento (arts. 58 a 63, «Del salario base») está hacia el 8 % del texto."
  }
 }
