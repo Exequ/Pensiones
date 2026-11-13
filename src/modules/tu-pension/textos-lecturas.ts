@@ -159,4 +159,94 @@ export const TEXTOS_LECTURAS: Readonly<Record<string, TextoLectura>> = {
       },
     },
   },
+  // --- Incapacidad permanente (Fase 3-C1) ---
+  'incapacidad.edadFiccion': {
+    titulo: 'Edad ordinaria con la que se añaden los años que faltan hasta la jubilación',
+    valores: {
+      'carrera-proyectada': {
+        etiqueta: 'La que resulta de la carrera proyectada',
+        queCambia:
+          'La edad ordinaria de jubilación se calcula suponiendo que la cotización sigue hasta la edad de referencia, de modo que depende de los años cotizados. Los meses que faltan hasta esa edad se suman a los cotizados para fijar el porcentaje de la base reguladora en la incapacidad por enfermedad común.',
+      },
+      'edad-general': {
+        etiqueta: 'La edad ordinaria general',
+        queCambia:
+          'Se usa la edad ordinaria general de la jubilación, sin tener en cuenta la carrera larga. Solo puede cambiar el resultado en la incapacidad por enfermedad común, y no cambia si las dos edades coinciden.',
+      },
+    },
+  },
+  'incapacidad.computoFiccion': {
+    titulo: 'Cómo se cuentan los años que faltan hasta la edad ordinaria',
+    valores: {
+      meses: {
+        etiqueta: 'Por meses completos',
+        queCambia:
+          'Se añaden a la cotización todos los meses completos que faltan hasta la edad ordinaria de jubilación.',
+      },
+      'anios-completos': {
+        etiqueta: 'Por años completos',
+        queCambia:
+          'Solo se añaden años completos: los meses sueltos que sobran no se cuentan. Solo puede cambiar el resultado en la incapacidad por enfermedad común.',
+      },
+    },
+  },
+  'incapacidad.divisorPeriodoCorto': {
+    titulo: 'Divisor de la base reguladora cuando el periodo exigido es corto',
+    valores: {
+      'coeficiente-rd-1799-1985': {
+        etiqueta: 'Coeficiente del reglamento de desarrollo',
+        queCambia:
+          'Cuando la base reguladora se calcula con menos meses que el periodo ordinario, el divisor es el número de meses multiplicado por el coeficiente que fija el reglamento de desarrollo.',
+      },
+      'catorce-doceavos': {
+        etiqueta: 'Proporción de catorce doceavos',
+        queCambia:
+          'El divisor es el número de meses multiplicado por la misma proporción que hay entre el periodo ordinario de cálculo y su divisor. Solo cambia el resultado cuando el periodo exigido es corto.',
+      },
+    },
+  },
+  'incapacidad.lagunasAccidenteNoLaboral': {
+    titulo: 'Meses sin cotizar dentro del periodo elegido en el accidente no laboral',
+    valores: {
+      'sin-integrar': {
+        etiqueta: 'Contarlos como cero',
+        queCambia:
+          'Los meses sin cotizar dentro del periodo elegido aportan una base nula a la suma, lo que reduce la base reguladora.',
+      },
+      integrar: {
+        etiqueta: 'Rellenarlos con la base mínima',
+        queCambia:
+          'Los meses sin cotizar dentro del periodo elegido se rellenan con una parte de la base mínima de cotización, como en el resto de las bases reguladoras. Solo cambia el resultado en el accidente no laboral con meses sin cotizar en ese periodo.',
+      },
+    },
+  },
+  'incapacidad.redondeoEdadCarencia': {
+    titulo: 'Cómo se mide la edad para el periodo mínimo de cotización',
+    valores: {
+      'sin-redondeo': {
+        etiqueta: 'En meses cumplidos',
+        queCambia: 'La edad se mide en meses cumplidos para calcular el periodo mínimo exigido.',
+      },
+      'medio-anio': {
+        etiqueta: 'Redondeada a medios años',
+        queCambia:
+          'La edad se redondea a medios años, como disponía el reglamento de desarrollo, para calcular el periodo mínimo exigido. Solo cambia el resultado en la incapacidad por enfermedad común.',
+      },
+    },
+  },
+  'incapacidad.diasCotizadosParcial': {
+    titulo: 'Días cotizados de cada mes en la incapacidad parcial',
+    valores: {
+      naturales: {
+        etiqueta: 'Días naturales de cada mes',
+        queCambia:
+          'Cada mes con base cuenta con los días naturales que tiene, para comprobar los días cotizados que exige la incapacidad parcial.',
+      },
+      'treinta-por-mes': {
+        etiqueta: 'Treinta días por mes',
+        queCambia:
+          'Cada mes con base cuenta como treinta días, para comprobar los días cotizados que exige la incapacidad parcial. Solo puede cambiar si se cumple o no el requisito de la parcial.',
+      },
+    },
+  },
 };

@@ -8,6 +8,8 @@ interface PanelSupuestosProps {
   onElegir: (id: string, valor: string) => void;
   /** Devuelve todas las lecturas a su valor por defecto. */
   onRestablecer: () => void;
+  /** Introducción propia de la prestación (por defecto, la de la jubilación). */
+  introduccion?: string;
 }
 
 /**
@@ -21,11 +23,12 @@ export function PanelSupuestos({
   conEfecto,
   onElegir,
   onRestablecer,
+  introduccion,
 }: PanelSupuestosProps) {
   return (
     <section className="seccion tp-supuestos" aria-labelledby="tp-supuestos">
       <h2 id="tp-supuestos">{TEXTOS.supuestosTitulo}</h2>
-      <p>{TEXTOS.supuestosIntro}</p>
+      <p>{introduccion ?? TEXTOS.supuestosIntro}</p>
       <p className="campo-ayuda">{TEXTOS.supuestosEstadoNota}</p>
       <div className="tp-restablecer">
         <button type="button" className="tp-boton-secundario" onClick={onRestablecer}>

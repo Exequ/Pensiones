@@ -24,10 +24,11 @@ export const SECCIONES = [
     titulo: 'Tu pensión',
     tituloNav: 'Tu pensión',
     resumen:
-      'Un simulador orientativo para estimar una pensión de jubilación ordinaria a partir de tu trayectoria, con el cálculo explicado paso a paso y los supuestos a la vista.',
+      'Un simulador orientativo para estimar una pensión de jubilación ordinaria o de incapacidad permanente a partir de tu trayectoria, con el cálculo explicado paso a paso y los supuestos a la vista.',
     previsto: [
       'Jubilación ordinaria con una carrera simple: fecha de inicio, meses sin cotizar y base constante (disponible).',
       'Carrera por tramos y personas de ejemplo.',
+      'Incapacidad permanente por enfermedad común y accidente no laboral, con el cálculo explicado y las lecturas abiertas a la vista (disponible).',
       'Supuestos explícitos y modificables: lecturas abiertas, bases de cotización, lagunas.',
       'Comparación entre jubilación anticipada, ordinaria y demorada.',
       'Qué no tiene en cuenta el cálculo y por qué el resultado es orientativo (disponible).',

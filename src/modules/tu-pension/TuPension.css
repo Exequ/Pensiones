@@ -674,3 +674,34 @@
   font-size: var(--texto-etiqueta);
   color: var(--color-tinta-2);
 }
+
+/* Fase 3-C1: lecturas que intervienen en el resultado de la incapacidad y selector de prestación. */
+.tp-intervienen {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-3);
+  padding: var(--espacio-4) 0;
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  border-bottom: var(--grosor-filete) solid var(--color-tinta);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+}
+
+.tp-intervienen h3 {
+  font-family: var(--fuente-lectura);
+  font-size: var(--texto-cuerpo);
+}
+
+.tp-intervienen p {
+  margin: 0;
+}
+
+.tp-intervienen h4 {
+  font-size: var(--texto-etiqueta);
+}
+
+.tp-selector-prestacion {
+  display: grid;
+  gap: var(--espacio-3);
+}

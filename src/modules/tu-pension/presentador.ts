@@ -47,8 +47,12 @@ export interface ModeloResultado {
   readonly requisitos: readonly RequisitoVista[];
   readonly pasos: readonly PasoVista[];
   readonly avisos: readonly string[];
-  /** Año de la normativa aplicada (el de la jubilación). */
+  /** Año de la normativa aplicada (el de la jubilación o el del hecho causante). */
   readonly anioNormativa: string;
+  /** «de la jubilación», «del hecho causante»: a qué fecha se refiere el año de la normativa. */
+  readonly momentoNormativa: string;
+  /** Título de la tabla de requisitos. */
+  readonly tituloRequisitos: string;
 }
 
 /** Lectura de un dato numérico de /data por su referencia `parametros/fichero.json#id`. */
@@ -349,5 +353,7 @@ export function presentarResultado(
     pasos: pasosVista,
     avisos: r.avisos,
     anioNormativa: String(r.anioNormativa),
+    momentoNormativa: 'de la jubilación',
+    tituloRequisitos: 'Requisitos de la jubilación ordinaria',
   };
 }

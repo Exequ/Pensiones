@@ -9,7 +9,10 @@ import type { CatalogoReferencias } from './referencias';
 import { ReferenciasBase } from './ReferenciasBase';
 import { ResumenTramos } from './ResumenTramos';
 import { TablaTramos } from './TablaTramos';
-import { MESES, TEXTOS } from './textos';
+import type { GradoIncapacidad, OrigenIncapacidad } from '../../engine/incapacidad/tipos';
+import { GRADOS, ORIGENES } from './incapacidad-mapeador';
+import { MESES, TEXTOS, type TextosPrestacion } from './textos';
+import { TEXTOS_INCAPACIDAD_PROPIOS } from './textos-incapacidad';
 import type { ErroresFormulario, FormularioTuPension, Sexo, TipoCarrera } from './tipos';
 import type { ErrorTramo, ResultadoTramos, TramoFormulario } from './tramos';
 
@@ -31,6 +34,8 @@ interface FormularioProps {
   personaCargada: PersonaCargada | undefined;
   mensajePersona: string | undefined;
   onCargarPersona: (id: string) => void;
+  /** Textos que cambian con la prestación (fecha final de la carrera, introducciones). */
+  textos: TextosPrestacion;
 }
 
 function SelectorMes({
@@ -121,6 +126,7 @@ export function Formulario({
   personaCargada,
   mensajePersona,
   onCargarPersona,
+  textos,
 }: FormularioProps) {
   const enviar = (e: SyntheticEvent) => {
     e.preventDefault();
@@ -129,6 +135,7 @@ export function Formulario({
   const lagunas = Number(valores.mesesSinCotizar.replace(',', '.'));
   const hayErrores = Object.keys(errores).length > 0 || erroresTramos.length > 0;
   const simple = valores.tipoCarrera === 'simple';
+  const incapacidad = valores.prestacion === 'incapacidad';
   return (
     <form
       className="tp-formulario"
@@ -203,7 +210,7 @@ export function Formulario({
         ) : null}
         <div className="tp-fila">
           <SelectorMes
-            etiqueta="Mes de jubilación"
+            etiqueta={textos.etiquetaMes}
             valor={valores.jubilacionMes}
             error={errores.jubilacionMes}
             onCambio={(v) => {
@@ -211,7 +218,7 @@ export function Formulario({
             }}
           />
           <CampoTexto
-            etiqueta="Año de jubilación"
+            etiqueta={textos.etiquetaAnio}
             valor={valores.jubilacionAnio}
             error={errores.jubilacionAnio}
             onCambio={(v) => {
@@ -219,9 +226,85 @@ export function Formulario({
             }}
           />
         </div>
-        <p className="campo-ayuda">{TEXTOS.ayudaFechaJubilacion}</p>
-        <p className="tp-proximamente">{TEXTOS.proximamente}</p>
+        <p className="campo-ayuda">{textos.ayudaFecha}</p>
+        {incapacidad ? null : <p className="tp-proximamente">{TEXTOS.proximamente}</p>}
       </fieldset>
+
+      {incapacidad ? (
+        <fieldset className="tp-grupo">
+          <legend>{TEXTOS_INCAPACIDAD_PROPIOS.tituloIncapacidad}</legend>
+          <p className="campo-ayuda">{TEXTOS_INCAPACIDAD_PROPIOS.introIncapacidad}</p>
+          <div className="tp-bloque">
+            <SegmentedPills<GradoIncapacidad | ''>
+              leyenda={TEXTOS_INCAPACIDAD_PROPIOS.gradoLeyenda}
+              opciones={GRADOS.map((g) => ({ valor: g.valor, etiqueta: g.etiqueta }))}
+              valor={valores.grado}
+              onCambio={(v) => {
+                onCambio({ grado: v });
+              }}
+            />
+            <p className="campo-ayuda">
+              {GRADOS.find((g) => g.valor === valores.grado)?.descripcion ??
+                'Elige un grado para ver qué significa.'}
+            </p>
+            {errores.grado ? (
+              <p className="campo-error" aria-live="polite">
+                <span className="campo-error-prefijo">Error: </span>
+                {errores.grado}
+              </p>
+            ) : null}
+          </div>
+          <div className="tp-bloque">
+            <SegmentedPills<OrigenIncapacidad | ''>
+              leyenda={TEXTOS_INCAPACIDAD_PROPIOS.origenLeyenda}
+              opciones={ORIGENES.map((o) => ({
+                valor: o.valor,
+                etiqueta: o.disponible ? o.etiqueta : `${o.etiqueta} (no disponible)`,
+                deshabilitada: !o.disponible,
+              }))}
+              valor={valores.origen}
+              onCambio={(v) => {
+                onCambio({ origen: v });
+              }}
+            />
+            <p className="campo-ayuda">{TEXTOS_INCAPACIDAD_PROPIOS.origenNoDisponible}</p>
+            {errores.origen ? (
+              <p className="campo-error" aria-live="polite">
+                <span className="campo-error-prefijo">Error: </span>
+                {errores.origen}
+              </p>
+            ) : null}
+          </div>
+          <div className="tp-bloque">
+            <SegmentedPills
+              leyenda={TEXTOS_INCAPACIDAD_PROPIOS.enAltaLeyenda}
+              opciones={[
+                { valor: 'si', etiqueta: TEXTOS_INCAPACIDAD_PROPIOS.enAltaSi },
+                { valor: 'no', etiqueta: TEXTOS_INCAPACIDAD_PROPIOS.enAltaNo },
+              ]}
+              valor={valores.enAlta ? 'si' : 'no'}
+              onCambio={(v) => {
+                onCambio({ enAlta: v === 'si' });
+              }}
+            />
+            <p className="campo-ayuda">{TEXTOS_INCAPACIDAD_PROPIOS.enAltaAyuda}</p>
+          </div>
+          <div className="tp-bloque">
+            <SegmentedPills
+              leyenda={TEXTOS_INCAPACIDAD_PROPIOS.trabajaLeyenda}
+              opciones={[
+                { valor: 'no', etiqueta: TEXTOS_INCAPACIDAD_PROPIOS.trabajaNo },
+                { valor: 'si', etiqueta: TEXTOS_INCAPACIDAD_PROPIOS.trabajaSi },
+              ]}
+              valor={valores.trabaja ? 'si' : 'no'}
+              onCambio={(v) => {
+                onCambio({ trabaja: v === 'si' });
+              }}
+            />
+            <p className="campo-ayuda">{TEXTOS_INCAPACIDAD_PROPIOS.trabajaAyuda}</p>
+          </div>
+        </fieldset>
+      ) : null}
 
       <fieldset className="tp-grupo">
         <legend>{TEXTOS.tituloCarrera}</legend>
@@ -238,7 +321,7 @@ export function Formulario({
         </div>
         {simple ? (
           <>
-            <p className="campo-ayuda">{TEXTOS.introCarrera}</p>
+            <p className="campo-ayuda">{textos.introCarrera}</p>
             <div className="tp-fila">
               <SelectorMes
                 etiqueta="Mes de inicio de la cotización"
@@ -259,7 +342,7 @@ export function Formulario({
             </div>
             <CampoTexto
               etiqueta="Meses sin cotizar (lagunas)"
-              ayuda={TEXTOS.ayudaLagunas}
+              ayuda={textos.ayudaLagunas}
               valor={valores.mesesSinCotizar}
               error={errores.mesesSinCotizar}
               onCambio={(v) => {
@@ -272,7 +355,7 @@ export function Formulario({
                   leyenda="Dónde están los meses sin cotizar"
                   opciones={[
                     { valor: 'mitad', etiqueta: 'En mitad de la carrera' },
-                    { valor: 'final', etiqueta: 'Justo antes de jubilarme' },
+                    { valor: 'final', etiqueta: textos.ubicacionFinal },
                   ]}
                   valor={valores.ubicacionLagunas}
                   onCambio={(v) => {
@@ -302,6 +385,7 @@ export function Formulario({
               onCargar={onCargarPersona}
               mensaje={mensajePersona}
               cargada={personaCargada}
+              introduccion={textos.personasIntro}
             />
             <section className="tp-tramos-seccion" aria-labelledby="tp-tramos-titulo">
               <h3 id="tp-tramos-titulo">{TEXTOS.tramosTitulo}</h3>
@@ -322,6 +406,7 @@ export function Formulario({
                 }
               }
               avisos={analisis?.avisos ?? []}
+              textoSinHuecos={textos.resumenSinHuecos}
             />
             <ReferenciasBase
               catalogo={catalogo}
@@ -367,7 +452,7 @@ export function Formulario({
         </p>
         <CampoTexto
           etiqueta="IPC anual supuesto (%)"
-          ayuda={`${TEXTOS.ayudaIpc} ${TEXTOS.avisoIpcVacio}`}
+          ayuda={`${TEXTOS.ayudaIpc} ${textos.avisoIpcVacio}`}
           modo="decimal"
           valor={valores.ipcSupuesto}
           error={errores.ipcSupuesto}

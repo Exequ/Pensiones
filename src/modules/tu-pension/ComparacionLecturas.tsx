@@ -1,6 +1,11 @@
 import { DataTable } from '../../components/DataTable';
 import type { ComparacionLecturas as Comparacion } from '../../engine/comparar-lecturas';
-import { filasComparacion, fraseComparacion } from './comparacion-texto';
+import {
+  ETIQUETAS_JUBILACION,
+  filasComparacion,
+  fraseComparacion,
+  type EtiquetasComparacion,
+} from './comparacion-texto';
 import { TEXTOS } from './textos';
 
 /**
@@ -11,12 +16,15 @@ import { TEXTOS } from './textos';
 export function ComparacionLecturas({
   comparacion,
   restablecidas,
+  etiquetas = ETIQUETAS_JUBILACION,
 }: {
   comparacion: Comparacion;
+  /** Palabras propias de la prestación (por defecto, las de la jubilación). */
+  etiquetas?: EtiquetasComparacion;
   /** `true` justo después de pulsar «Restablecer lecturas». */
   restablecidas: boolean;
 }) {
-  const filas = filasComparacion(comparacion);
+  const filas = filasComparacion(comparacion, etiquetas);
   return (
     <section
       className={`tp-comparacion${comparacion.tipo === 'sin-cambios' ? '' : ' tp-comparacion-activa'}`}
@@ -24,7 +32,7 @@ export function ComparacionLecturas({
     >
       <h3 id="tp-comparacion-titulo">{TEXTOS.comparacionTitulo}</h3>
       <p className="tp-comparacion-frase" role="status" aria-live="polite" aria-atomic="true">
-        {fraseComparacion(comparacion, restablecidas)}
+        {fraseComparacion(comparacion, restablecidas, etiquetas)}
       </p>
       {filas.length > 0 ? (
         <>

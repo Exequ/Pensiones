@@ -3,6 +3,7 @@ import type { FormularioTuPension } from './tipos.ts';
 
 /** Formulario válido: carrera completa de 40 años, base constante, jubilación en noviembre de 2026. */
 export const FORMULARIO_BASE: FormularioTuPension = {
+  prestacion: 'jubilacion',
   nacimientoMes: '11',
   nacimientoAnio: '1961',
   sexo: 'hombre',
@@ -20,5 +21,9 @@ export const FORMULARIO_BASE: FormularioTuPension = {
   aplicarMinimos: true,
   aplicarPensionMaxima: true,
   ipcSupuesto: '2',
+  grado: '',
+  origen: '',
+  enAlta: true,
+  trabaja: false,
   lecturas: {},
 };

@@ -57,6 +57,9 @@ export interface ContextoPersona {
   readonly catalogo: CatalogoReferencias;
   /** Definición de la «base media» elegida (decide la cobertura de los tramos con base media). */
   readonly definicionMedia: string;
+  /** «a la jubilación» (por defecto) o «al hecho causante»; y, entre paréntesis, «de jubilación» o «del hecho causante». */
+  readonly anteriorA?: string;
+  readonly deFin?: string;
 }
 
 export type CargaPersona =
@@ -84,7 +87,7 @@ export function cargarPersona(p: PersonaEjemplo, ctx: ContextoPersona): CargaPer
   if (inicio > fin) {
     return {
       ok: false,
-      mensaje: `Con estas fechas, esta persona empezaría a cotizar en ${nombreDeMes(inicio)}, después del mes anterior a la jubilación (${nombreDeMes(fin)}). Cambia las fechas de nacimiento o de jubilación.`,
+      mensaje: `Con estas fechas, esta persona empezaría a cotizar en ${nombreDeMes(inicio)}, después del mes anterior ${ctx.anteriorA ?? 'a la jubilación'} (${nombreDeMes(fin)}). Cambia las fechas de nacimiento o ${ctx.deFin ?? 'de jubilación'}.`,
     };
   }
   const tramos: TramoFormulario[] = [];

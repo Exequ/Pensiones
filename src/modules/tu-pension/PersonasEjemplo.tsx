@@ -12,15 +12,23 @@ interface PersonasEjemploProps {
   /** Mensaje de la última acción (por ejemplo, que faltan las fechas). */
   mensaje: string | undefined;
   cargada: PersonaCargada | undefined;
+  /** Introducción propia de la prestación (por defecto, la de la jubilación). */
+  introduccion?: string;
 }
 
 /** Personas-ejemplo ilustrativas: cada una carga su carrera, en tramos, en la tabla. */
-export function PersonasEjemplo({ personas, onCargar, mensaje, cargada }: PersonasEjemploProps) {
+export function PersonasEjemplo({
+  personas,
+  onCargar,
+  mensaje,
+  cargada,
+  introduccion,
+}: PersonasEjemploProps) {
   const persona = personas.find((p) => p.id === cargada?.id);
   return (
     <section className="tp-personas" aria-labelledby="tp-personas-titulo">
       <h3 id="tp-personas-titulo">{TEXTOS.personasTitulo}</h3>
-      <p className="campo-ayuda">{TEXTOS.personasIntro}</p>
+      <p className="campo-ayuda">{introduccion ?? TEXTOS.personasIntro}</p>
       <ul className="tp-personas-lista">
         {personas.map((p) => (
           <li key={p.id} className="tp-persona">
