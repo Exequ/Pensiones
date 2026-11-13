@@ -49,7 +49,7 @@ Los de v1 (base máxima y mínima, pensión máxima y mínima, lagunas, opción 
 - Con 36 meses de laguna: se jubila a los 67 con 468 meses cotizados y cobra 44.465 €/año (v1 mantenía los 65 años).
 - Umbral de los 65: entrada a los 26 años y 6 meses en 2045, 462 meses, se jubila a los 65. Con un mes más tarde de entrada, 461 meses, se jubila a los 67. Con entrada a los 22 y 54 meses de laguna, a los 65; con 55, a los 67.
 - Carrera corta: entrada a los 50, T = 2030. Se jubila a los 67 con 204 meses y 54,56 %. Base reguladora de 1.717 €/mes (v1: 1.518). La pensión es la mínima, 14.187 €/año, igual que en v1.
-- Entrada a los 45, T = 2045: 264 meses cotizados y 85 meses anteriores al primer alta. Pensión 27.622 €/año; con `lagunas_previas="ignorar"`, 25.451.
+- Entrada a los 45, T = 2045: 264 meses cotizados y 85 meses anteriores al primer alta. Pensión 27.675 €/año; con `lagunas_previas="ignorar"`, 25.451.
 - Entrada a los 55: 144 meses, sin carencia. `no-causa-derecho`, pensión 0.
 - Entrada a los 22, T = 2045: con 156 meses de laguna sí causa derecho (24 meses cotizados en los 180 previos); con 157 no.
 - 84 meses de laguna: 40.131 €/año; con la integración reforzada, 40.530.
@@ -65,12 +65,12 @@ Los de v1 (base máxima y mínima, pensión máxima y mínima, lagunas, opción 
 - Las lagunas van siempre justo antes de jubilarse, también cuando eso retrasa la jubilación a los 67.
 - La integración de lagunas anteriores a la primera alta es una lectura: el texto de la ley no distingue entre meses anteriores y posteriores al primer alta, y no he encontrado fuente que lo zanje. Con `lagunas_previas="ignorar"` se ve el efecto (puede llegar al 8 % de la pensión).
 - El suelo de la base mínima supone jornada completa. Con jornada parcial las bases pueden ser menores; el modelo no lo recoge.
-- La serie de base mínima no tiene datos de 2020 y 2021: se usa 1.050 €, exacto hasta agosto de 2021 y un 7 % bajo después (1.125,90 €).
+- La serie de base mínima de 2020 y 2021 se ha completado con una fuente oficial: 1.108,50 € en 2020 (anexo al informe económico-financiero del presupuesto de la Seguridad Social de 2021) y el mismo valor de enero a agosto de 2021 (deducido de la ley, sin cambio del salario mínimo hasta septiembre). Como el fichero guarda un valor por año, de septiembre a diciembre de 2021 se usa 1.108,50 en vez de los 1.125,90 que rigieron esos meses (un 1,5 % menos). El efecto sobre las pensiones es menor del 0,3 %.
 - La integración reforzada de la DT 41.ª rige solo mientras la brecha de género de las pensiones supere el 5 %. La Dirección General de Ordenación de la Seguridad Social la extiende a los hombres en su criterio 17/2025. Está apagada por defecto.
 - IPC constante, revalorización igual al IPC. Mínimas y base mínima posteriores a 2026 crecen solo con el IPC. Sin test de ingresos del hogar. Sin jubilación anticipada ni demorada. Salario medio de referencia: EAES 2024 (INE).
 
 ## 10. Contraste
-- **Motor TypeScript de la Fase 2-A:** los 51 casos de oro coinciden con una diferencia máxima de 0 % (con v1 la diferencia llegaba al 0,41 %). El motor se programó aparte, con las reglas del texto legal, así que el acuerdo es una comprobación independiente. Prueba que las dos implementaciones son coherentes entre sí, no que la lectura de la ley sea correcta.
+- **Motor TypeScript de la Fase 2-A:** los 51 casos de oro coinciden con una diferencia relativa máxima del orden de 10⁻¹⁵ (con v1 la diferencia llegaba al 0,41 %). El motor se programó aparte, con las reglas del texto legal, así que el acuerdo es una comprobación independiente. Prueba que las dos implementaciones son coherentes entre sí, no que la lectura de la ley sea correcta.
 - **OCDE (carrera completa desde los 22, jubilación a los 65 en 2067, IPC 2 %):** con g = 1,25 % salen 81,6 % (mitad del salario medio y salario medio) y 47,1 % (doble); la OCDE publica 80,6 %, 80,4 % y 49,9 %. Con g = 0 % salen 96,1 % (medio) y con g = 2 %, 68,6 %. Los supuestos de la OCDE no se han podido leer, así que 1,25 % es una referencia y no un dato verificado.
 
 ## 11. Ejecución
