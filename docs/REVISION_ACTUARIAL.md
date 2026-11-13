@@ -182,7 +182,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Afirmación**: Base mínima de cotización del Régimen General (grupos 4 a 7): 1424,4 (euros/mes) en 2026.
 
-**Qué debe comprobar el actuario**: La base mínima falta en 2020 y 2021 (docs/PENDIENTE_DATOS.md) y la ley no fija su evolución posterior a 2026 en /data: el motor falla por defecto si una laguna cae en 2020-2021 (opción huecoBaseMinima: «anterior» usa el último valor conocido) y proyecta la base mínima con el IPC del escenario desde 2027. Aportar la base mínima de 2020 y 2021 y la regla de evolución (vinculada al SMI) para sustituir ambas aproximaciones.
+**Qué debe comprobar el actuario**: La base mínima de 2020 (1.108,50, del anexo al informe económico-financiero de los presupuestos de la Seguridad Social de 2021) consta con confianza alta, y la de 2021 es un valor deducido (confianza media: la Ley 11/2020 la incrementa en el porcentaje del SMI, que no cambió hasta el 1-9-2021; desde esa fecha fue 1.125,90, y el fichero guarda un valor por año). La ley no fija su evolución posterior a 2026 en /data: el motor la proyecta con el IPC del escenario desde 2027. Confirmar la cuantía de 2020 y 2021 con una orden o resolución y aportar la regla de evolución (vinculada al SMI).
 
 **Datos**: parametros/base-minima-rg.json#2026
 

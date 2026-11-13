@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { fechaEdadOrdinaria } from './calculo.ts';
+import { calcularJubilacionConParametros, fechaEdadOrdinaria } from './calculo.ts';
+import type { OpcionesJubilacion } from './tipos.ts';
 import { sumarMeses, formatearMes, parsearFecha, mesAbsDe } from './tiempo.ts';
 import { PARAMS, calc, continua, paso, requisito, ESCENARIO_2PC } from './pruebas.ts';
 
@@ -127,14 +128,33 @@ describe('jubilación el mismo día del cambio de normativa', () => {
   });
 });
 
-describe('datos que faltan: base mínima de 2020 y 2021', () => {
-  it('una laguna en 2020-2021 no se rellena en silencio: error salvo que se pida el último valor conocido', () => {
-    const carrera = [continua('1990-01', '2013-12', 2000)];
-    expect(() =>
-      calc(carrera, '1960-01-01', '2027-01-01', 'ordinaria', { escenario: ESCENARIO_2PC }),
-    ).toThrow(/base mínima de 20(20|21)/);
-    const r = calc(carrera, '1960-01-01', '2027-01-01', 'ordinaria', OPC);
+describe('datos que faltan: un año sin base mínima en la serie', () => {
+  // /data ya tiene la base mínima de 2020 y 2021; el mecanismo se prueba con una copia de los
+  // parámetros a la que se quita 2020-2021 (sin tocar /data).
+  const valores = new Map(PARAMS.baseMinima.valores);
+  valores.delete(2020);
+  valores.delete(2021);
+  const sinDato = { ...PARAMS, baseMinima: { ...PARAMS.baseMinima, valores } };
+  const carrera = [continua('1990-01', '2013-12', 2000)];
+  const calcSinDato = (opciones: OpcionesJubilacion) =>
+    calcularJubilacionConParametros(
+      sinDato,
+      carrera,
+      '1960-01-01',
+      '2027-01-01',
+      'ordinaria',
+      opciones,
+    );
+
+  it('una laguna en un año sin dato no se rellena en silencio: error salvo que se pida el último valor conocido', () => {
+    expect(() => calcSinDato({ escenario: ESCENARIO_2PC })).toThrow(/base mínima de 20(20|21)/);
+    const r = calcSinDato(OPC);
     expect(r.avisos.some((a) => a.includes('Base mínima de 2021 sin dato'))).toBe(true);
+  });
+
+  it('con los datos de /data, 2020 y 2021 tienen base mínima y no hay error ni aviso', () => {
+    const r = calc(carrera, '1960-01-01', '2027-01-01', 'ordinaria', { escenario: ESCENARIO_2PC });
+    expect(r.avisos.some((a) => a.includes('sin dato'))).toBe(false);
   });
 });
 

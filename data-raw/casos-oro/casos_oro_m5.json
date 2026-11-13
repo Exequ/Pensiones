@@ -42,8 +42,8 @@
     "lagunas_en_ventana": 0,
     "lagunas_previas_primera_alta": 0,
     "porcentaje": 100.0,
-    "base_reguladora_mensual": 912.0375636100653,
-    "pension_calculada": 12768.525890540914,
+    "base_reguladora_mensual": 912.7695762316532,
+    "pension_calculada": 12778.774067243145,
     "pension_final": 13106.8,
     "estado": "minima",
     "rr_ultimo_salario": 0.8303007772882594,
@@ -186,12 +186,12 @@
     "lagunas_en_ventana": 0,
     "lagunas_previas_primera_alta": 0,
     "porcentaje": 100.0,
-    "base_reguladora_mensual": 1253.6905679020767,
-    "pension_calculada": 17551.667950629075,
-    "pension_final": 17551.667950629075,
+    "base_reguladora_mensual": 1254.5653907462743,
+    "pension_calculada": 17563.91547044784,
+    "pension_final": 17563.91547044784,
     "estado": "contributiva",
-    "rr_ultimo_salario": 0.8136942369313555,
-    "rr_salario_medio": 0.40567264769856415
+    "rr_ultimo_salario": 0.8142620311900699,
+    "rr_salario_medio": 0.40595572528450036
    }
   },
   {
@@ -330,12 +330,12 @@
     "lagunas_en_ventana": 0,
     "lagunas_previas_primera_alta": 0,
     "porcentaje": 100.0,
-    "base_reguladora_mensual": 1633.828425623217,
-    "pension_calculada": 22873.59795872504,
-    "pension_final": 22873.59795872504,
+    "base_reguladora_mensual": 1634.7954014648387,
+    "pension_calculada": 22887.135620507743,
+    "pension_final": 22887.135620507743,
     "estado": "contributiva",
-    "rr_ultimo_salario": 0.8034292100896998,
-    "rr_salario_medio": 0.4005549506220116
+    "rr_ultimo_salario": 0.8039047169571444,
+    "rr_salario_medio": 0.400792017718176
    }
   },
   {
@@ -666,8 +666,8 @@
     "lagunas_en_ventana": 0,
     "lagunas_previas_primera_alta": 0,
     "porcentaje": 100.0,
-    "base_reguladora_mensual": 997.6922632528047,
-    "pension_calculada": 13967.691685539265,
+    "base_reguladora_mensual": 1002.2890417698942,
+    "pension_calculada": 14032.046584778518,
     "pension_final": 14187.221834687998,
     "estado": "minima",
     "rr_ultimo_salario": 1.0068634524207076,
@@ -1060,12 +1060,12 @@
     "lagunas_en_ventana": 85,
     "lagunas_previas_primera_alta": 85,
     "porcentaje": 65.96000000000001,
-    "base_reguladora_mensual": 2991.2327104682495,
-    "pension_calculada": 27622.239341548007,
-    "pension_final": 27622.239341548007,
+    "base_reguladora_mensual": 2996.961098120508,
+    "pension_calculada": 27675.13756448402,
+    "pension_final": 27675.13756448402,
     "estado": "contributiva",
-    "rr_ultimo_salario": 0.5018442004453078,
-    "rr_salario_medio": 0.5006014625878178
+    "rr_ultimo_salario": 0.5028052617867165,
+    "rr_salario_medio": 0.501560144012688
    }
   },
   {
@@ -1108,12 +1108,12 @@
     "lagunas_en_ventana": 85,
     "lagunas_previas_primera_alta": 85,
     "porcentaje": 56.84,
-    "base_reguladora_mensual": 2397.299833678869,
-    "pension_calculada": 19076.75315648297,
-    "pension_final": 19076.75315648297,
+    "base_reguladora_mensual": 2402.903281041153,
+    "pension_calculada": 19121.343149213084,
+    "pension_final": 19121.343149213084,
     "estado": "contributiva",
-    "rr_ultimo_salario": 0.4021816147673147,
-    "rr_salario_medio": 0.401185675553881
+    "rr_ultimo_salario": 0.40312167386078607,
+    "rr_salario_medio": 0.4021234067395621
    }
   },
   {

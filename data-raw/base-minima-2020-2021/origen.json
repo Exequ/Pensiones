@@ -1,0 +1,12 @@
+{
+ "informe-economico-2021-cuadro-I3-pdf-p19.txt": {
+  "url": "https://www.seg-social.es/wps/wcm/connect/wss/5410001a-62f0-4ab7-8a78-f214bb85c43c/202120004.pdf?CVID=&MOD=AJPERES",
+  "sha256_original": "5fe6e02c7076380b466eeec73c183f55680b9051d5a3b977de1fad5e7960c1ae",
+  "nota": "Página 19 del PDF (Cuadro I.3, evolución de las bases mínimas y máximas del Régimen General) extraída con pdftotext -layout. Documento: Anexo al informe económico-financiero a los presupuestos de la Seguridad Social de 2021 (Ministerio de Inclusión, Seguridad Social y Migraciones). Descargado el 2026-11-13."
+ },
+ "orden-pcm-1353-2021-preambulo.txt": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2021-20075",
+  "sha256_original": "2c7afe6a0c5fba86985e0fe1c911b05e23288d29c9a222d2eb3780eb01d295e5",
+  "nota": "Preámbulo (cuatro primeros párrafos) de la Orden PCM/1353/2021, extraído del XML del BOE. Descargado el 2026-11-13."
+ }
+}
