@@ -14,6 +14,7 @@ fecha de descarga (`fetchedAt`).
 | `macro/`         | PIB, mercado de trabajo, salarios y tipos de interés.              |
 | `internacional/` | Comparativa internacional (OCDE y Eurostat) y contraste de España. |
 | `mitos/`         | Catálogo de afirmaciones circulantes, con datos y definiciones.    |
+| `ejemplos/`      | Personas-ejemplo ilustrativas del simulador (elaboración propia).  |
 
 Los ejemplos de los tests están en `scripts/fixtures/` y **no** deben copiarse aquí.
 

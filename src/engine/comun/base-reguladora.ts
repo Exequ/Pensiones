@@ -10,7 +10,7 @@
  *   (art. 7 del Decreto 1646/1972: accidente no laboral; muerte y supervivencia).
  */
 import type { Contexto } from '../jubilacion/contexto.ts';
-import { anioDeMes, type MesAbs } from '../jubilacion/tiempo.ts';
+import { anioDeMes, formatearMes, type MesAbs } from '../jubilacion/tiempo.ts';
 
 export interface EntradaBases {
   readonly bases: ReadonlyMap<MesAbs, number>;
@@ -39,12 +39,39 @@ export interface ReglaVentana {
   readonly refs: readonly string[];
 }
 
+/**
+ * Un mes de la ventana de cálculo, tal como lo trata `basesDeVentana` (solo lectura: no interviene
+ * en el cálculo, lo refleja). `valor` = `baseActualizada`; la suma de los meses `usado` es `sumaBases`.
+ */
+export interface MesVentana {
+  /** Mes en formato `AAAA-MM`. */
+  readonly mes: string;
+  /** Meses hacia atrás desde el mes previo al hecho causante (1 = el más próximo). */
+  readonly orden: number;
+  /**
+   * `cotizado`: mes con base; `laguna-integrada`: sin base, integrado con un porcentaje de la base
+   * mínima; `previo-al-alta-ignorado`: anterior a la primera alta, con la lectura `ignorar` (vale cero).
+   */
+  readonly tipo: 'cotizado' | 'laguna-integrada' | 'previo-al-alta-ignorado';
+  /** Base del mes antes de actualizar (laguna: porcentaje de integración × base mínima de referencia). */
+  readonly baseNominal: number;
+  /** Factor de actualización con el IPC (1 si el mes no se actualiza). */
+  readonly factor: number;
+  readonly baseActualizada: number;
+  /** Porcentaje de la base mínima con que se integra la laguna (solo `laguna-integrada`). */
+  readonly porcentajeIntegracion?: number;
+  /** Si el mes está entre las bases de mayor importe que se suman (el resto se descarta). */
+  readonly usado: boolean;
+}
+
 export interface DetalleVentana {
   readonly baseReguladora: number;
   readonly sumaBases: number;
   readonly mesesConBase: number;
   readonly lagunas: number;
   readonly lagunasIntegradasAlCien: number;
+  /** Todos los meses de la ventana, del más antiguo al más reciente. */
+  readonly meses: readonly MesVentana[];
   readonly refs: readonly string[];
 }
 
@@ -62,8 +89,9 @@ export function basesDeVentana(
 
   // 1. Meses de la ventana: i = 1 es el mes inmediatamente anterior al mes previo al hecho causante.
   const lagunas: { i: number; mes: MesAbs }[] = [];
-  const valores: number[] = [];
   const mesesBase: { i: number; base: number }[] = [];
+  const ignorados: { i: number; mes: MesAbs }[] = [];
+  const valores: number[] = [];
   for (let i = 1; i <= regla.ventana; i++) {
     const mes = mesPrevio - i;
     const base = entrada.bases.get(mes);
@@ -73,6 +101,7 @@ export function basesDeVentana(
       (entrada.primerMesAlta === undefined || mes < entrada.primerMesAlta)
     ) {
       valores.push(0);
+      ignorados.push({ i, mes });
     } else lagunas.push({ i, mes });
   }
 
@@ -83,7 +112,36 @@ export function basesDeVentana(
     return ctx.lecturas.actualizacionFactorMinimo === 'suelo-1' ? Math.max(1, cociente) : cociente;
   };
 
-  for (const { i, base } of mesesBase) valores.push(base * factor(i));
+  // `candidatos` lleva cada valor con su mes, en el mismo orden en que se añadían a `valores`.
+  const candidatos: { valor: number; detalle: Omit<MesVentana, 'usado'> }[] = [];
+  for (const { i, mes } of ignorados) {
+    candidatos.push({
+      valor: 0,
+      detalle: {
+        mes: formatearMes(mes),
+        orden: i,
+        tipo: 'previo-al-alta-ignorado',
+        baseNominal: 0,
+        factor: 1,
+        baseActualizada: 0,
+      },
+    });
+  }
+  for (const { i, base } of mesesBase) {
+    const f = factor(i);
+    valores.push(base * f);
+    candidatos.push({
+      valor: base * f,
+      detalle: {
+        mes: formatearMes(mesPrevio - i),
+        orden: i,
+        tipo: 'cotizado',
+        baseNominal: base,
+        factor: f,
+        baseActualizada: base * f,
+      },
+    });
+  }
 
   // 2. Lagunas: la primera es la más próxima al hecho causante.
   let alCien = 0;
@@ -96,18 +154,46 @@ export function basesDeVentana(
     const bm = ctx.baseMinima(hecho ? anioHechoCausante : anioDeMes(mes));
     for (const r of bm.refs) refsLagunas.add(r);
     // Con la base mínima del hecho causante la base ya está en euros actuales: no se actualiza.
-    valores.push((pct / 100) * bm.valor * (hecho ? 1 : factor(i)));
+    const f = hecho ? 1 : factor(i);
+    const valor = (pct / 100) * bm.valor * f;
+    valores.push(valor);
+    candidatos.push({
+      valor,
+      detalle: {
+        mes: formatearMes(mes),
+        orden: i,
+        tipo: 'laguna-integrada',
+        baseNominal: (pct / 100) * bm.valor,
+        factor: f,
+        baseActualizada: valor,
+        porcentajeIntegracion: pct,
+      },
+    });
   });
 
   // 3. Las `nBases` de mayor importe, entre las bases de la ventana.
   const mejores = [...valores].sort((a, b) => b - a).slice(0, regla.nBases);
   const suma = mejores.reduce((a, b) => a + b, 0);
+  // Solo lectura: qué meses forman esas `nBases` (a igualdad de valor, los más próximos primero).
+  const usados = new Set(
+    [...candidatos]
+      .sort((a, b) => b.valor - a.valor || a.detalle.orden - b.detalle.orden)
+      .slice(0, regla.nBases)
+      .map((c) => c.detalle.orden),
+  );
+  const meses = candidatos
+    .map((c) => ({
+      ...c.detalle,
+      usado: usados.has(c.detalle.orden) && c.detalle.tipo !== 'previo-al-alta-ignorado',
+    }))
+    .sort((a, b) => b.orden - a.orden);
   return {
     baseReguladora: suma / regla.divisor,
     sumaBases: suma,
     mesesConBase: mesesBase.length,
     lagunas: lagunas.length,
     lagunasIntegradasAlCien: alCien,
+    meses,
     refs: [...regla.refs, ...refsLagunas],
   };
 }

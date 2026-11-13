@@ -4087,6 +4087,61 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-tramos-base-maxima",
+      "texto": "La base de cotización de cada mes está limitada por la base máxima de cotización del Régimen General de ese año, y la base mínima de cada año es la que sirve de referencia para integrar las lagunas.",
+      "ubicacion": "Página «Tu pensión», carrera por tramos (Fase 3-B1)",
+      "datos": ["parametros/base-maxima-rg.json#2026", "parametros/base-minima-rg.json#2026"],
+      "fuentes": [
+        {
+          "title": "Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296",
+          "docId": "BOE-A-2026-7296"
+        }
+      ],
+      "fetchedAt": "2026-11-13",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-tramos-definiciones-salario",
+      "texto": "Las definiciones de salario medio (base media de cotización, salario medio bruto, coste salarial y remuneración por asalariado) difieren en ámbito y concepto y no son intercambiables.",
+      "ubicacion": "Página «Tu pensión», referencias de base de los tramos (Fase 3-B1)",
+      "datos": [
+        "macro/salario-medio-definiciones.json#base-media-cotizacion-rg-ambos",
+        "macro/salario-medio-definiciones.json#eaes-ambos",
+        "macro/salario-medio-definiciones.json#etcl-coste-salarial-total",
+        "macro/salario-medio-definiciones.json#cn-remuneracion-por-asalariado-puesto"
+      ],
+      "fuentes": [
+        {
+          "title": "Estadística de Bases de Cotización al Régimen General: tablas de bases medias y cotizantes",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/c9bd51e5-79bc-44f2-9618-14d6094eb585",
+          "docId": "TGSS-bases-medias-RG"
+        },
+        {
+          "title": "Encuesta Anual de Estructura Salarial: salario medio bruto por sexo y edad (tabla 28189)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=28189",
+          "docId": "INE-28189"
+        },
+        {
+          "title": "Encuesta Trimestral de Coste Laboral: coste salarial por trabajador, tipo de jornada y sectores (tabla 6038)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=6038",
+          "docId": "INE-6038"
+        },
+        {
+          "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: remuneración de asalariados y empleo",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+          "docId": "INE-CNA-rem_empleo95_25"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
     }
   ]
 }

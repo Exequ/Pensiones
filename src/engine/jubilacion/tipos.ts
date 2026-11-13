@@ -1,3 +1,4 @@
+import type { MesVentana } from '../comun/base-reguladora.ts';
 import { porDefectoDelMotor } from '../config/lecturas-por-defecto.ts';
 /**
  * Tipos públicos del motor de la pensión de jubilación contributiva.
@@ -157,6 +158,25 @@ export interface OpcionesJubilacion {
 
 export type EstadoPension = 'contributiva' | 'minima' | 'maxima' | 'no-causa-derecho';
 
+/**
+ * Bases de la ventana de cálculo de la regla que da la base reguladora aplicada (solo lectura): mes a
+ * mes, base nominal, factor de actualización, base actualizada y si cuenta entre las usadas. La suma
+ * de las usadas es `sumaBases` y `sumaBases / divisor` es `baseReguladora` (docs/MOTOR_JUBILACION.md).
+ */
+export interface BasesPeriodoCalculo {
+  /** Regla que resulta más favorable y se aplica. */
+  readonly regla: 'general' | 'opcion-25-anos';
+  readonly ventana: number;
+  readonly nBases: number;
+  readonly divisor: number;
+  /** Meses más recientes que entran por su valor nominal. */
+  readonly mesesNominales: number;
+  readonly sumaBases: number;
+  readonly baseReguladora: number;
+  /** Del mes más antiguo al más reciente. */
+  readonly meses: readonly MesVentana[];
+}
+
 export interface ResultadoJubilacion {
   readonly modalidad: Modalidad;
   readonly fechaJubilacion: string;
@@ -173,6 +193,8 @@ export interface ResultadoJubilacion {
   readonly edadMeses: number;
   readonly mesesCotizados: number;
   readonly baseReguladora: number;
+  /** Bases mes a mes de la ventana de la regla aplicada (para explicar y representar el cálculo). */
+  readonly basesPeriodo: BasesPeriodoCalculo;
   /** Porcentaje total aplicado a la base reguladora (sin coeficientes reductores). */
   readonly porcentaje: number;
   /** Complemento de demora a tanto alzado (pago único), si se elige. */

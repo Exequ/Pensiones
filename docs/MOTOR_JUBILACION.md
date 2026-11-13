@@ -53,6 +53,34 @@ Para scripts de Node, `calcularJubilacionConParametros(params, …)` recibe los 
 
 `meses-cotizados` → `edad-legal` → `periodo-calculo` → `base-reguladora-general` → `base-reguladora-opcion-25` → `base-reguladora` → `porcentaje` → (según la modalidad) `coeficiente-reductor` / `coeficiente-sobre-limite` / `tope-trimestres` / `demora-*` / `parcial-reduccion` → `limite-maximo` → `pension-contributiva` → `complemento-minimos` → `complemento-brecha` → `pension-final`.
 
+## Bases del periodo de cálculo (`basesPeriodo`, solo lectura)
+
+Fase 3-B1. `ResultadoJubilacion.basesPeriodo` expone, para la regla que da la base reguladora aplicada (general u opción de 25 años), la lista **mes a mes** de la ventana de cálculo. No cambia ninguna regla ni ningún valor: `basesDeVentana` (`src/engine/comun/base-reguladora.ts`) ya recorría esos meses y ahora los devuelve además de las sumas; los tests de las tres prestaciones que la usan siguen pasando sin tocar ninguno.
+
+```ts
+r.basesPeriodo.regla; // 'general' | 'opcion-25-anos'
+r.basesPeriodo.ventana; // meses de la ventana (== meses.length)
+r.basesPeriodo.nBases; // bases de mayor importe que se suman
+r.basesPeriodo.divisor;
+r.basesPeriodo.mesesNominales; // meses recientes que van por su valor nominal
+r.basesPeriodo.sumaBases; // suma de las bases usadas; sumaBases / divisor === baseReguladora
+r.basesPeriodo.meses; // del más antiguo al más reciente
+```
+
+Cada elemento de `meses` (`MesVentana`):
+
+| Campo                   | Significado                                                                                                                                                      |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `mes`, `orden`          | `AAAA-MM` y posición hacia atrás desde el mes previo al hecho causante (1 = el más próximo).                                                                     |
+| `tipo`                  | `cotizado` (mes con base), `laguna-integrada` (sin base, integrada con un porcentaje de la base mínima) o `previo-al-alta-ignorado` (lectura `ignorar`, vale 0). |
+| `baseNominal`           | Base del mes antes de actualizar; en una laguna, el porcentaje de integración por la base mínima de referencia.                                                  |
+| `factor`                | Factor de actualización con el IPC (1 en los meses nominales y con `actualizarBases: false`; respeta el suelo de la lectura `actualizacionFactorMinimo`).        |
+| `baseActualizada`       | `baseNominal × factor`.                                                                                                                                          |
+| `porcentajeIntegracion` | Solo en las lagunas integradas.                                                                                                                                  |
+| `usado`                 | Si el mes está entre las `nBases` de mayor importe (si no, se descarta). A igualdad de importe se prefiere el más próximo al hecho causante.                     |
+
+Pruebas: `scripts/bases-periodo.test.ts` comprueba, en los ocho casos de jubilación de Sergio, que la ventana está completa y que la suma de las bases usadas coincide con la del motor y con `baseReguladora × divisor`; `src/engine/jubilacion/bases-periodo.test.ts` cubre lagunas integradas, descartadas, meses anteriores al alta y la opción de 25 años.
+
 ## Escenario económico y datos que faltan
 
 El motor nunca inventa un dato de `/data`. Donde `/data` termina (IPC en 2025, bases y pensiones en 2026, calendario legal en 2027 y 2037) aplica la regla legal con el `escenario` que se le dé, y lo anota en `avisos`:

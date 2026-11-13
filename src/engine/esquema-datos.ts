@@ -444,6 +444,78 @@ export const ArchivoTabla = z.strictObject({
   notes: z.string().trim().min(1).optional(),
 });
 
+// ---------------------------------------------------------------------------
+// Personas-ejemplo de «Tu pensión» (ilustrativas, elaboración propia)
+// ---------------------------------------------------------------------------
+
+/** Referencia de base de un tramo de una persona-ejemplo: una serie de /data o un periodo sin cotizar. */
+export const REFERENCIAS_PERSONA = ['minima', 'media', 'maxima', 'sin-cotizar'] as const;
+
+/**
+ * Tramo de una persona-ejemplo. Los tramos se encadenan desde el inicio de la cotización: cada uno
+ * dura `anios` años o, si es el último, llega hasta el mes anterior a la jubilación.
+ */
+export const TramoPersona = z
+  .strictObject({
+    referencia: z.enum(REFERENCIAS_PERSONA, { error: 'referencia de tramo desconocida' }),
+    anios: z.number().int().positive().optional(),
+    hastaJubilacion: z.literal(true).optional(),
+  })
+  .refine((t) => (t.anios === undefined) !== (t.hastaJubilacion === undefined), {
+    error: 'Un tramo lleva «anios» o «hastaJubilacion», no ambos ni ninguno',
+  });
+
+/**
+ * Persona-ejemplo: perfil **ilustrativo** (`ilustrativo: true`), de elaboración propia. Sus cifras
+ * (edad de inicio, duraciones) son convenciones de la ilustración, no estadísticas de población, y
+ * por eso llevan fuente «elaboración propia» y confianza adecuada. Las bases no están aquí: se
+ * toman de las series de /data (mínima, media o máxima) al aplicarlas a unas fechas concretas.
+ */
+export const PersonaEjemplo = z
+  .strictObject({
+    id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
+    nombre: textoObligatorio('nombre'),
+    descripcion: textoObligatorio('descripcion'),
+    ilustrativo: z.literal(true, { error: 'Toda persona-ejemplo debe llevar ilustrativo: true' }),
+    /** Edad (en años cumplidos) a la que empieza a cotizar. */
+    edadInicio: z.number().int().positive(),
+    tramos: z.array(TramoPersona).min(1),
+    source: Fuente,
+    fetchedAt: FechaDescarga,
+    confidence: Confianza,
+  })
+  .superRefine((persona, ctx) => {
+    persona.tramos.forEach((t, i) => {
+      if (t.hastaJubilacion === true && i !== persona.tramos.length - 1) {
+        ctx.addIssue({
+          code: 'custom',
+          message: '«hastaJubilacion» solo puede ir en el último tramo',
+          path: ['tramos', i],
+        });
+      }
+    });
+    if (persona.tramos.every((t) => t.referencia === 'sin-cotizar')) {
+      ctx.addIssue({
+        code: 'custom',
+        message: 'La persona debe cotizar en algún tramo',
+        path: ['tramos'],
+      });
+    }
+  });
+
+export const ArchivoPersonas = z.strictObject({
+  tipo: z.literal('personas'),
+  id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
+  title: textoObligatorio('title'),
+  description: textoObligatorio('description'),
+  personas: z
+    .array(PersonaEjemplo)
+    .min(3, { error: 'Entre tres y cinco personas-ejemplo' })
+    .max(5, { error: 'Entre tres y cinco personas-ejemplo' }),
+});
+export type ArchivoPersonas = z.infer<typeof ArchivoPersonas>;
+export type PersonaEjemplo = z.infer<typeof PersonaEjemplo>;
+
 export type ArchivoTabla = z.infer<typeof ArchivoTabla>;
 export type Periodo = z.infer<typeof Periodo>;
 export type Fuente = z.infer<typeof Fuente>;

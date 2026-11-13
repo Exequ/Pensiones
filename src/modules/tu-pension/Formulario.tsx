@@ -3,16 +3,34 @@ import { Field } from '../../components/Field';
 import { SegmentedPills } from '../../components/SegmentedPills';
 import { SourceLine } from '../../components/SourceLine';
 import type { Dato } from '../../engine/esquema-datos';
+import { PersonasEjemplo, type PersonaCargada } from './PersonasEjemplo';
+import type { PersonaEjemplo } from './personas';
+import type { CatalogoReferencias } from './referencias';
+import { ReferenciasBase } from './ReferenciasBase';
+import { ResumenTramos } from './ResumenTramos';
+import { TablaTramos } from './TablaTramos';
 import { MESES, TEXTOS } from './textos';
-import type { ErroresFormulario, FormularioTuPension, Sexo } from './tipos';
+import type { ErroresFormulario, FormularioTuPension, Sexo, TipoCarrera } from './tipos';
+import type { ErrorTramo, ResultadoTramos, TramoFormulario } from './tramos';
 
 interface FormularioProps {
   valores: FormularioTuPension;
   errores: ErroresFormulario;
+  /** Errores de la tabla de tramos (carrera por tramos). */
+  erroresTramos: readonly ErrorTramo[];
+  /** Análisis vivo de los tramos (resumen y avisos de límites); solo con la carrera por tramos. */
+  analisis: ResultadoTramos | undefined;
   onCambio: (cambios: Partial<FormularioTuPension>) => void;
+  onCambioTipoCarrera: (tipo: TipoCarrera) => void;
+  onCambioTramos: (tramos: readonly TramoFormulario[]) => void;
   onCalcular: () => void;
   fuenteBase: Dato;
   fuenteIpc: Dato;
+  catalogo: CatalogoReferencias;
+  personas: readonly PersonaEjemplo[];
+  personaCargada: PersonaCargada | undefined;
+  mensajePersona: string | undefined;
+  onCargarPersona: (id: string) => void;
 }
 
 function SelectorMes({
@@ -90,17 +108,27 @@ const SI_NO = [
 export function Formulario({
   valores,
   errores,
+  erroresTramos,
+  analisis,
   onCambio,
+  onCambioTipoCarrera,
+  onCambioTramos,
   onCalcular,
   fuenteBase,
   fuenteIpc,
+  catalogo,
+  personas,
+  personaCargada,
+  mensajePersona,
+  onCargarPersona,
 }: FormularioProps) {
   const enviar = (e: SyntheticEvent) => {
     e.preventDefault();
     onCalcular();
   };
   const lagunas = Number(valores.mesesSinCotizar.replace(',', '.'));
-  const hayErrores = Object.keys(errores).length > 0;
+  const hayErrores = Object.keys(errores).length > 0 || erroresTramos.length > 0;
+  const simple = valores.tipoCarrera === 'simple';
   return (
     <form
       className="tp-formulario"
@@ -114,6 +142,9 @@ export function Formulario({
           <ul>
             {Object.entries(errores).map(([campo, mensaje]) => (
               <li key={campo}>{mensaje}</li>
+            ))}
+            {erroresTramos.map((e) => (
+              <li key={`${e.tramoId}-${e.mensaje}`}>{e.mensaje}</li>
             ))}
           </ul>
         </div>
@@ -194,61 +225,113 @@ export function Formulario({
 
       <fieldset className="tp-grupo">
         <legend>{TEXTOS.tituloCarrera}</legend>
-        <p className="campo-ayuda">{TEXTOS.introCarrera}</p>
-        <div className="tp-fila">
-          <SelectorMes
-            etiqueta="Mes de inicio de la cotización"
-            valor={valores.inicioMes}
-            error={errores.inicioMes}
-            onCambio={(v) => {
-              onCambio({ inicioMes: v });
-            }}
-          />
-          <CampoTexto
-            etiqueta="Año de inicio de la cotización"
-            valor={valores.inicioAnio}
-            error={errores.inicioAnio}
-            onCambio={(v) => {
-              onCambio({ inicioAnio: v });
-            }}
+        <div className="tp-bloque">
+          <SegmentedPills<TipoCarrera>
+            leyenda={TEXTOS.tipoCarreraLeyenda}
+            opciones={[
+              { valor: 'simple', etiqueta: TEXTOS.carreraSimple },
+              { valor: 'tramos', etiqueta: TEXTOS.carreraTramos },
+            ]}
+            valor={valores.tipoCarrera}
+            onCambio={onCambioTipoCarrera}
           />
         </div>
-        <CampoTexto
-          etiqueta="Meses sin cotizar (lagunas)"
-          ayuda={TEXTOS.ayudaLagunas}
-          valor={valores.mesesSinCotizar}
-          error={errores.mesesSinCotizar}
-          onCambio={(v) => {
-            onCambio({ mesesSinCotizar: v });
-          }}
-        />
-        {lagunas > 0 ? (
-          <div className="tp-bloque">
-            <SegmentedPills
-              leyenda="Dónde están los meses sin cotizar"
-              opciones={[
-                { valor: 'mitad', etiqueta: 'En mitad de la carrera' },
-                { valor: 'final', etiqueta: 'Justo antes de jubilarme' },
-              ]}
-              valor={valores.ubicacionLagunas}
+        {simple ? (
+          <>
+            <p className="campo-ayuda">{TEXTOS.introCarrera}</p>
+            <div className="tp-fila">
+              <SelectorMes
+                etiqueta="Mes de inicio de la cotización"
+                valor={valores.inicioMes}
+                error={errores.inicioMes}
+                onCambio={(v) => {
+                  onCambio({ inicioMes: v });
+                }}
+              />
+              <CampoTexto
+                etiqueta="Año de inicio de la cotización"
+                valor={valores.inicioAnio}
+                error={errores.inicioAnio}
+                onCambio={(v) => {
+                  onCambio({ inicioAnio: v });
+                }}
+              />
+            </div>
+            <CampoTexto
+              etiqueta="Meses sin cotizar (lagunas)"
+              ayuda={TEXTOS.ayudaLagunas}
+              valor={valores.mesesSinCotizar}
+              error={errores.mesesSinCotizar}
               onCambio={(v) => {
-                onCambio({ ubicacionLagunas: v });
+                onCambio({ mesesSinCotizar: v });
               }}
             />
-            <p className="campo-ayuda">{TEXTOS.ayudaUbicacionLagunas}</p>
-          </div>
-        ) : null}
-        <CampoTexto
-          etiqueta="Base mensual de cotización (euros)"
-          ayuda={TEXTOS.ayudaBase}
-          modo="decimal"
-          valor={valores.baseMensual}
-          error={errores.baseMensual}
-          onCambio={(v) => {
-            onCambio({ baseMensual: v });
-          }}
-        />
-        <SourceLine datos={fuenteBase} />
+            {lagunas > 0 ? (
+              <div className="tp-bloque">
+                <SegmentedPills
+                  leyenda="Dónde están los meses sin cotizar"
+                  opciones={[
+                    { valor: 'mitad', etiqueta: 'En mitad de la carrera' },
+                    { valor: 'final', etiqueta: 'Justo antes de jubilarme' },
+                  ]}
+                  valor={valores.ubicacionLagunas}
+                  onCambio={(v) => {
+                    onCambio({ ubicacionLagunas: v });
+                  }}
+                />
+                <p className="campo-ayuda">{TEXTOS.ayudaUbicacionLagunas}</p>
+              </div>
+            ) : null}
+            <CampoTexto
+              etiqueta="Base mensual de cotización (euros)"
+              ayuda={TEXTOS.ayudaBase}
+              modo="decimal"
+              valor={valores.baseMensual}
+              error={errores.baseMensual}
+              onCambio={(v) => {
+                onCambio({ baseMensual: v });
+              }}
+            />
+            <SourceLine datos={fuenteBase} />
+          </>
+        ) : (
+          <>
+            <p className="campo-ayuda">{TEXTOS.introTramos}</p>
+            <PersonasEjemplo
+              personas={personas}
+              onCargar={onCargarPersona}
+              mensaje={mensajePersona}
+              cargada={personaCargada}
+            />
+            <section className="tp-tramos-seccion" aria-labelledby="tp-tramos-titulo">
+              <h3 id="tp-tramos-titulo">{TEXTOS.tramosTitulo}</h3>
+              <TablaTramos
+                tramos={valores.tramos}
+                errores={erroresTramos}
+                onCambio={onCambioTramos}
+              />
+            </section>
+            <ResumenTramos
+              resumen={
+                analisis?.resumen ?? {
+                  mesesCotizados: 0,
+                  mesesSinCotizar: 0,
+                  huecos: [],
+                  primerMes: undefined,
+                  ultimoMes: undefined,
+                }
+              }
+              avisos={analisis?.avisos ?? []}
+            />
+            <ReferenciasBase
+              catalogo={catalogo}
+              definicionMedia={valores.definicionMedia}
+              onCambio={(id) => {
+                onCambio({ definicionMedia: id });
+              }}
+            />
+          </>
+        )}
       </fieldset>
 
       <fieldset className="tp-grupo">

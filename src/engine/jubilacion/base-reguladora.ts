@@ -9,6 +9,7 @@ import {
   integracionEnDosTramos,
   type EntradaBases,
   type IntegracionLaguna,
+  type MesVentana,
 } from '../comun/base-reguladora.ts';
 import type { Contexto } from './contexto.ts';
 import { parametro, ref, valorEn, versionEn } from './parametros.ts';
@@ -34,6 +35,9 @@ export interface DetalleBR {
   readonly mesesConBase: number;
   readonly lagunas: number;
   readonly lagunasIntegradasAlCien: number;
+  readonly meses: readonly MesVentana[];
+  /** Meses más recientes que entran por su valor nominal (de la versión de actualización). */
+  readonly mesesNominales: number;
   readonly refs: readonly string[];
 }
 
@@ -136,5 +140,5 @@ export function calcularBaseReguladora(
     },
     anioHechoCausante,
   );
-  return { regla, ...d };
+  return { regla, ...d, mesesNominales: vAct.mesesNominales };
 }

@@ -1,5 +1,7 @@
 import { forwardRef } from 'react';
 import { DataTable } from '../../components/DataTable';
+import type { BasesPeriodoCalculo } from '../../engine/jubilacion/tipos';
+import { GraficoBases } from './GraficoBases';
 import type { ModeloResultado } from './presentador';
 import type { MensajeError } from './errores';
 import { TEXTOS } from './textos';
@@ -22,11 +24,13 @@ interface ResultadoProps {
   modelo: ModeloResultado;
   /** IPC supuesto usado, en %, tal como se escribió. */
   ipcUsado: string | undefined;
+  /** Bases mes a mes del periodo de cálculo. */
+  bases: BasesPeriodoCalculo;
 }
 
 /** Cifras principales, requisitos y explicación paso a paso. */
 export const Resultado = forwardRef<HTMLHeadingElement, ResultadoProps>(function Resultado(
-  { modelo, ipcUsado },
+  { modelo, ipcUsado, bases },
   ref,
 ) {
   return (
@@ -75,6 +79,11 @@ export const Resultado = forwardRef<HTMLHeadingElement, ResultadoProps>(function
             cumple: q.cumple ? 'Sí' : 'No',
           }))}
         />
+      </section>
+
+      <section className="tp-subseccion" aria-labelledby="tp-bases">
+        <h3 id="tp-bases">{TEXTOS.graficoSeccion}</h3>
+        <GraficoBases bases={bases} />
       </section>
 
       <section className="tp-subseccion" aria-labelledby="tp-como">
