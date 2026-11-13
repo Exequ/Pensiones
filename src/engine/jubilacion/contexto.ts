@@ -222,7 +222,7 @@ export function crearContexto(
         if (anio < s.primero) throw new DatoNoDisponible(`${s.fichero}: sin dato para ${anio}`);
         if (huecoBaseMinima === 'error') {
           throw new DatoNoDisponible(
-            `base mínima de ${anio} (consta en docs/PENDIENTE_DATOS.md); use opciones.huecoBaseMinima = 'anterior' para usar el último valor conocido`,
+            `base mínima de ${anio} (sin dato en /data); use opciones.huecoBaseMinima = 'anterior' para usar el último valor conocido`,
           );
         }
         avisos.add(`Base mínima de ${anio} sin dato: se usa la del último año anterior con dato.`);

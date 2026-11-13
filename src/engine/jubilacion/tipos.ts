@@ -127,7 +127,11 @@ export interface OpcionesJubilacion {
   readonly hombreCumpleArt60?: boolean;
   /** Fuerza o impide la integración reforzada de la DT 41.ª; por defecto según sexo. */
   readonly integracionReforzadaLagunas?: boolean;
-  /** Qué hacer si una laguna cae en un año sin base mínima en /data (2020 y 2021). */
+  /**
+   * Qué hacer si una laguna cae en un año intermedio sin base mínima en /data. Con los datos
+   * actuales no hay huecos (2020 y 2021 ya constan); la opción se mantiene para series de
+   * parámetros con huecos.
+   */
   readonly huecoBaseMinima?: 'error' | 'anterior';
   readonly demora?: { readonly opcion: OpcionDemora };
   readonly parcial?: {
