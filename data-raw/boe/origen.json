@@ -210,5 +210,31 @@
   "sha256_original": "0335b9dee024a60c6ce4f17dac1c4e4596ef821c88ae049fab8f08db59080380",
   "fetchedAt": "2026-11-13",
   "nota": "BOE núm. 197, de 15/07/1956, pp. 4614-4634: Decreto de 22 de junio de 1956 (texto refundido de la legislación de accidentes del trabajo y Reglamento para su aplicación). Capa de texto del PDF (OCR del propio BOE, con ruido y columnas mezcladas; pdftotext sin -layout). El PDF (5,3 MB) no se versiona. El capítulo V del Reglamento (arts. 58 a 63, «Del salario base») está hacia el 8 % del texto."
+ },
+ "ley-6-2018.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-9268",
+  "urlDescarga": "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2018-9268/texto",
+  "sha256_original": "ec6177c890c5851ac5749d1fff1d8de4232171da42e072236d073e65d02e95c5",
+  "fetchedAt": "2026-11-13",
+  "nota": "Ley 6/2018, de 3 de julio, de Presupuestos Generales del Estado para el año 2018. Texto consolidado descargado de la API de datos abiertos del BOE; texto plano con todas las versiones de cada bloque (scripts/etl/boe_consolidado.py)"
+ },
+ "orden-1967-arts-17-18.txt": {
+  "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1967-2876",
+  "sha256_original": "2fa6ec588390b480220a8451488a4d68efc7e9905875ab6d3c68eee55b94ce37",
+  "fetchedAt": "2026-11-13",
+  "confidence": "alta",
+  "nota": "Orden de 13 de febrero de 1967, artículos 17 (cuantía de la orfandad) y 18 (límite de la suma de viudedad y orfandad), redacción original. Texto de la página consolidada del BOE (bloques a17 y a18) extraído a texto plano; el SHA-256 es el de la página HTML descargada. Fase 2-E."
+ },
+ "orden-1967-art17-control-sergio.txt": {
+  "url": "(control recibido de Sergio; no es una fuente)",
+  "fetchedAt": "2026-11-13",
+  "confidence": "alta",
+  "nota": "Texto del art. 17 pegado por Sergio como control en el encargo de la Fase 2-E; se compara por código con orden-1967-arts-17-18.txt (coinciden salvo saltos de párrafo y el título del artículo)."
+ },
+ "reglamento-at-1956-cap5.txt": {
+  "url": "https://www.boe.es/boe/dias/1956/07/15/pdfs/A04614-04634.pdf",
+  "fetchedAt": "2026-11-13",
+  "confidence": "media",
+  "nota": "Reglamento de accidentes del trabajo (Decreto de 22-06-1956), BOE n.º 197, 15-07-1956, pp. 4621-4623, capítulo V (arts. 58 a 63). Texto obtenido por OCR (tesseract, español, columnas separadas); puede contener errores de reconocimiento. Las cifras clave se comprueban por código contra reglamento-at-1956-capa-texto-bruta.txt (scripts/textos-fase-2e.test.ts). No se ha convertido en datos del motor."
  }
 }

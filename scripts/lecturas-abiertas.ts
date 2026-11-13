@@ -137,9 +137,9 @@ const ts = (l: Partial<LecturasAbiertas>) =>
 fila(
   '(d) suelo del factor de actualización',
   '31 años a 2.000 €, noviembre de 2026',
-  'suelo de uno',
+  'sin suelo (por defecto: suelo de uno, Fase 2-E)',
   ts({}),
-  ts({ actualizacionFactorMinimo: 'suelo-1' }),
+  ts({ actualizacionFactorMinimo: 'sin-suelo' }),
   'baseReguladora',
 );
 const dem = [{ desde: '1986-01', hasta: '2030-12', baseMensual: 2500 }];

@@ -103,8 +103,8 @@ describe('suelo del factor de actualización (actualizacionFactorMinimo)', () =>
       lecturas: { actualizacionFactorMinimo: suelo },
     });
 
-  it('por defecto no hay suelo', () => {
-    expect(contexto().lecturas.actualizacionFactorMinimo).toBe('sin-suelo');
+  it('por defecto el suelo es uno (Fase 2-E, lectura provisional)', () => {
+    expect(contexto().lecturas.actualizacionFactorMinimo).toBe('suelo-1');
   });
 
   it('con septiembre de 2024 como referencia hay meses anteriores (junio de 2024) con factor menor que uno', () => {

@@ -295,7 +295,9 @@ describe('base reguladora (art. 197 y art. 7 del Decreto 1646/1972)', () => {
       '2026-03-15',
       'total',
       'accidente-no-laboral',
-      SIN_IPC,
+      // Fase 2-E: el valor por defecto pasó de `sin-integrar` a `integrar`; aquí se fija la lectura
+      // antigua para comprobar la alternativa (el valor por defecto se prueba en el test siguiente).
+      { ...SIN_IPC, lecturasIncapacidad: { lagunasAccidenteNoLaboral: 'sin-integrar' } },
     );
     const integra = calcularIncapacidadPermanente(
       carrera,
@@ -307,6 +309,21 @@ describe('base reguladora (art. 197 y art. 7 del Decreto 1646/1972)', () => {
     );
     expect(cero.baseReguladora).toBeCloseTo((18 * 2000) / 28, 4);
     expect(integra.baseReguladora).toBeGreaterThan(cero.baseReguladora);
+  });
+  it('por defecto (Fase 2-E, lectura provisional) el accidente no laboral integra las lagunas', () => {
+    const carrera = [{ desde: '2024-01', hasta: '2025-06', baseMensual: 2000 }];
+    const args = [carrera, '1981-03-10', '2026-03-15', 'total', 'accidente-no-laboral'] as const;
+    const defecto = calcularIncapacidadPermanente(...args, SIN_IPC);
+    const integra = calcularIncapacidadPermanente(...args, {
+      ...SIN_IPC,
+      lecturasIncapacidad: { lagunasAccidenteNoLaboral: 'integrar' },
+    });
+    const sin = calcularIncapacidadPermanente(...args, {
+      ...SIN_IPC,
+      lecturasIncapacidad: { lagunasAccidenteNoLaboral: 'sin-integrar' },
+    });
+    expect(defecto.baseReguladora).toBeCloseTo(integra.baseReguladora, 9);
+    expect(defecto.baseReguladora).toBeGreaterThan(sin.baseReguladora);
   });
   it('el periodo elegido debe estar dentro de los siete años', () => {
     expect(() =>

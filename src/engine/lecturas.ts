@@ -17,7 +17,9 @@
  * Los valores por defecto los decide Sergio tras la revisión actuarial: este módulo no los cambia.
  * Las descripciones no llevan cifras (lo comprueba un test), para poder mostrarse en la interfaz.
  */
-import { entradaDeLectura } from './config/lecturas-por-defecto.ts';
+import { entradaDeLectura, ESTADOS_LECTURA } from './config/lecturas-por-defecto.ts';
+
+export type EstadoLectura = (typeof ESTADOS_LECTURA)[number];
 
 export type MotorLectura =
   'jubilacion' | 'incapacidad' | 'supervivencia' | 'no-contributivas' | 'mei';
@@ -32,8 +34,13 @@ export interface LecturaAbierta {
   readonly descripcion: string;
   /** Valor por defecto, leído de `config/lecturas-por-defecto.json`. */
   readonly porDefecto: string;
-  /** `pendiente` (lo decide Sergio) o `decidida` (registrada en docs/DECISIONES_ACTUARIALES.md). */
-  readonly estado: 'pendiente' | 'decidida';
+  /**
+   * `pendiente` (sin decidir), `provisional` (decidida con confianza actuarial baja o media, abierta
+   * a revisión) o `decidida` (firme). Todas constan en docs/DECISIONES_ACTUARIALES.md.
+   */
+  readonly estado: EstadoLectura;
+  /** Motivo corto de la decisión, con la confianza actuarial en palabras; `null` si está pendiente. */
+  readonly motivo: string | null;
   /** Fecha (`AAAA-MM-DD`) del último cambio de estado. */
   readonly fechaEstado: string;
   readonly alternativas: readonly string[];
@@ -75,6 +82,7 @@ function lectura(
     descripcion,
     porDefecto: config.valor,
     estado: config.estado,
+    motivo: config.motivo ?? null,
     fechaEstado: config.fecha,
     alternativas,
     efecto: { informe: INFORME, seccion, fila },

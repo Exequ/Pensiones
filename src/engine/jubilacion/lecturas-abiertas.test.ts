@@ -20,7 +20,7 @@ describe('valores por defecto = lecturas ya reflejadas en /data', () => {
       opcion25EnUltimoDia2040: 'incluida',
       lagunasAnterioresAlPrimerAlta: 'integrar',
       interpolacionIPC: 'mensual-ine',
-      actualizacionFactorMinimo: 'sin-suelo',
+      actualizacionFactorMinimo: 'suelo-1',
       fraccionDemora: 'desde-segundo-anio',
       maximaDesde2051: 'incremento-acumulado',
     });

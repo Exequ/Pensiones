@@ -50,25 +50,25 @@
     },
     {
       "id": "incapacidad.lagunasAccidenteNoLaboral",
-      "alternativa": "integrar",
+      "alternativa": "sin-integrar",
       "casos": [
         {
           "descripcion": "accidente no laboral, incapacidad total, base 1.500 €, 6 meses sin cotizar dentro de los 24 elegidos, 2026",
           "magnitud": "pensión de incapacidad total €/mes (sin complementos a mínimos)",
-          "defecto": 530.3571428571429,
-          "alternativa": 693.1414285714287
+          "defecto": 693.1414285714287,
+          "alternativa": 530.3571428571429
         },
         {
           "descripcion": "accidente no laboral, incapacidad total, base 1.500 €, 3 meses sin cotizar dentro de los 24 elegidos, 2026",
           "magnitud": "pensión de incapacidad total €/mes (sin complementos a mínimos)",
-          "defecto": 618.75,
-          "alternativa": 700.1421428571429
+          "defecto": 700.1421428571429,
+          "alternativa": 618.75
         },
         {
           "descripcion": "accidente no laboral, incapacidad total, base 1.500 €, 12 meses sin cotizar dentro de los 24 elegidos, 2026",
           "magnitud": "pensión de incapacidad total €/mes (sin complementos a mínimos)",
-          "defecto": 353.5714285714286,
-          "alternativa": 679.1400000000003
+          "defecto": 679.1400000000003,
+          "alternativa": 353.5714285714286
         }
       ]
     },
@@ -271,20 +271,20 @@
         {
           "descripcion": "mujer, jubilación ordinaria en 2026, base 2.500 €, 60 meses de laguna (carrera hasta 2020-12)",
           "magnitud": "pensión de jubilación €/mes por paga (sin complementos a mínimos)",
-          "defecto": 1618.966546156798,
-          "alternativa": 1606.9041325973062
+          "defecto": 1620.2087730599333,
+          "alternativa": 1607.5226708069545
         },
         {
           "descripcion": "mujer, jubilación ordinaria en 2026, base 2.500 €, 72 meses de laguna (carrera hasta 2019-12)",
           "magnitud": "pensión de jubilación €/mes por paga (sin complementos a mínimos)",
-          "defecto": 1520.9455833011677,
-          "alternativa": 1501.1848086096475
+          "defecto": 1523.3068100334574,
+          "alternativa": 1502.5080868764874
         },
         {
           "descripcion": "mujer, jubilación ordinaria en 2026, base 2.500 €, 84 meses de laguna (carrera hasta 2018-12)",
           "magnitud": "pensión de jubilación €/mes por paga (sin complementos a mínimos)",
-          "defecto": 1425.2648786216844,
-          "alternativa": 1398.7367468803452
+          "defecto": 1427.7245394998251,
+          "alternativa": 1400.0202668813042
         }
       ]
     },
