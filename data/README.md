@@ -38,7 +38,7 @@ Los ejemplos de los tests están en `scripts/fixtures/` y **no** deben copiarse 
 
 `normativa/cronologia.json` (19 normas, 1985-2026, con antes/después/transición) y `normativa/prestaciones.json` (16 prestaciones: a quién cubre, requisitos, fórmula, límites, duración y compatibilidades, con artículo del TRLGSS).
 
-Los huecos y lo que no se pudo descargar están en [`docs/PENDIENTE_DATOS.md`](../docs/PENDIENTE_DATOS.md). Toda la extracción de tablas la hacen los scripts de [`scripts/etl/`](../scripts/etl) (Python, con `python3 -I`) a partir de los documentos descargados; cada dato lleva la cita literal (`quote`) y su localización. `docs/INFORME_VERIFICACION.md` y `docs/DISCREPANCIAS.md` recogen el contraste con segundas fuentes.
+Los huecos y lo que no se pudo descargar están en [`docs/PENDIENTE_DATOS.md`](../docs/PENDIENTE_DATOS.md). Toda la extracción de tablas la hacen los scripts de [`scripts/etl/`](../scripts/etl) (Python, con `python3 -I`) a partir de los documentos descargados; salvo el orden indicado en la cabecera de cada script (por ejemplo, `cotizacion_2013_2026.py` antes que `base_minima_2020_2021.py`), el orden de ejecución no importa; cada dato lleva la cita literal (`quote`) y su localización. `docs/INFORME_VERIFICACION.md` y `docs/DISCREPANCIAS.md` recogen el contraste con segundas fuentes.
 
 ## Contenido (Fase 1A-bis: reglas de evolución futura y de cálculo, en `parametros/`)
 

@@ -35,7 +35,7 @@ add("lagunas 54 (462 cotizados a los 65)", 1.0, 0.01, 22, 2045, lagunas_meses=54
 add("lagunas 55 (461 cotizados a los 65)", 1.0, 0.01, 22, 2045, lagunas_meses=55)
 add("carrera corta sin opcion25 inicio 45 T2045", 1.0, 0.01, 45, 2045)
 add("carrera corta con opcion25 inicio 45 T2035", 1.0, 0.01, 45, 2035)
-add("carrera corta inicio 49 T2040 (hueco base minima 2020-2021)", 1.0, 0.01, 49, 2040)
+add("carrera corta inicio 49 T2040 (lagunas previas)", 1.0, 0.01, 49, 2040)
 add("carrera corta ignorando lagunas previas", 1.0, 0.01, 45, 2045, lagunas_previas="ignorar")
 add("sin carencia (144 meses)", 1.0, 0.01, 55, 2045)
 add("periodo previo justo (156 lagunas)", 1.0, 0.01, 22, 2045, lagunas_meses=156)

@@ -9,6 +9,9 @@ SMI no cambió hasta el 1 de septiembre de 2021 (preámbulo de la Orden PCM/1353
 de esas dos fuentes (confianza «media»).
 
 Lee los extractos de data-raw/base-minima-2020-2021 (huella en origen.json) y los ficheros de /data.
+Orden de ejecución: va DESPUÉS de scripts/etl/cotizacion_2013_2026.py, porque contrasta con los
+ficheros de /data que escribe aquel (bases de 2019 y 2020). Después de ejecutarlo, el orden entre
+ambos ya no importa: los dos fusionan por identificador.
 Uso: python3 -I scripts/etl/base_minima_2020_2021.py
 """
 

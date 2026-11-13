@@ -3,6 +3,10 @@ contingencias comunes (empresa y trabajador), MEI y cotización adicional de sol
 
 Fuente principal: Orden anual de cotización (BOE) y, donde se modificó, la orden modificadora.
 Contraste: Ley de PGE (o Real Decreto-ley) del año cuando existe.
+
+Orden de ejecución: este script va PRIMERO; scripts/etl/base_minima_2020_2021.py va DESPUÉS y
+añade 2020 y 2021 a base-minima-rg.json (lee los ficheros que escribe este). Este script fusiona
+por identificador y no toca 2020 ni 2021, así que volver a ejecutarlo no borra lo del segundo.
 """
 
 import os
