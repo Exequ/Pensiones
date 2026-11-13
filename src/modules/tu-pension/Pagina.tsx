@@ -8,6 +8,7 @@ import { antetituloSeccion, buscarSeccion } from '../secciones';
 import { calcularTuPension, type RespuestaCalculo } from './calcular';
 import { sugerenciaBase, supuestoIpcPorDefecto } from './datos';
 import { Formulario } from './Formulario';
+import { catalogoPorDefecto } from './referencias-datos';
 import { numeroATexto } from './mapeador';
 import { crearMotorDelRepositorio, leerReferenciaDeRepositorio } from './motor';
 import { PanelSupuestos } from './PanelSupuestos';
@@ -24,6 +25,7 @@ export default function TuPension() {
   useTituloPagina(seccion.titulo);
   const base = useMemo(() => sugerenciaBase(), []);
   const ipc = useMemo(() => supuestoIpcPorDefecto(), []);
+  const catalogo = useMemo(() => catalogoPorDefecto(), []);
   const [valores, setValores] = useState<FormularioTuPension>(() => ({
     nacimientoMes: '',
     nacimientoAnio: '',
@@ -36,6 +38,9 @@ export default function TuPension() {
     mesesSinCotizar: '0',
     ubicacionLagunas: 'mitad',
     baseMensual: numeroATexto(base.valor),
+    tipoCarrera: 'simple',
+    tramos: [],
+    definicionMedia: catalogo.mediaPorDefecto,
     aplicarMinimos: true,
     aplicarPensionMaxima: true,
     ipcSupuesto: numeroATexto(ipc.porcentaje),

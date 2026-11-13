@@ -30,7 +30,7 @@ describe('basesPeriodo', () => {
     expect(b.meses.filter((m) => m.usado)).toHaveLength(b.nBases);
     // Los meses se ordenan del más antiguo al más reciente, con los últimos al mes previo menos uno.
     expect(b.meses.at(-1)?.mes).toBe('2029-11');
-    expect(b.meses[0]?.mes < (b.meses.at(-1)?.mes ?? '')).toBe(true);
+    expect((b.meses[0]?.mes ?? '') < (b.meses.at(-1)?.mes ?? '')).toBe(true);
   });
 
   it('los meses recientes van por su valor nominal (factor uno) y los antiguos se actualizan', () => {

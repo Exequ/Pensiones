@@ -1,7 +1,9 @@
-/** Tipos de la capa de entrada y presentación del simulador «Tu pensión» (Fase 3-A). */
+/** Tipos de la capa de entrada y presentación del simulador «Tu pensión» (Fases 3-A y 3-B1). */
+import type { TramoFormulario } from './tramos.ts';
 
 export type Sexo = 'hombre' | 'mujer';
 export type UbicacionLagunas = 'mitad' | 'final';
+export type TipoCarrera = 'simple' | 'tramos';
 
 /**
  * Valores del formulario tal como los escribe la persona (texto). La validación y la conversión
@@ -19,6 +21,12 @@ export interface FormularioTuPension {
   readonly mesesSinCotizar: string;
   readonly ubicacionLagunas: UbicacionLagunas;
   readonly baseMensual: string;
+  /** Carrera simple (3-A: base constante) o por tramos (3-B1). */
+  readonly tipoCarrera: TipoCarrera;
+  /** Tramos de la carrera por tramos (solo se usan si `tipoCarrera` es `tramos`). */
+  readonly tramos: readonly TramoFormulario[];
+  /** Definición de la «base media» para los tramos con esa referencia (id de `referencias.ts`). */
+  readonly definicionMedia: string;
   readonly aplicarMinimos: boolean;
   readonly aplicarPensionMaxima: boolean;
   /** IPC anual supuesto, en %, con coma o punto decimal. Vacío: sin escenario. */

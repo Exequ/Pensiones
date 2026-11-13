@@ -13,41 +13,35 @@
  */
 import type { ConfiguracionMotor, EntradaJubilacion } from '../../engine/fachada.ts';
 import type { Carrera, OpcionesJubilacion } from '../../engine/jubilacion/tipos.ts';
+import { leerEntero, leerNumero, numeroATexto } from './lectura.ts';
+import type { CatalogoReferencias } from './referencias.ts';
 import type { ErroresFormulario, FormularioTuPension } from './tipos.ts';
+import {
+  mesAbsoluto,
+  procesarTramos,
+  type AvisoTramo,
+  type ErrorTramo,
+  type ResultadoTramos,
+  type ResumenCarrera,
+} from './tramos.ts';
+
+export { leerNumero, numeroATexto };
 
 export type ResultadoMapeo =
   | {
       readonly ok: true;
       readonly entrada: EntradaJubilacion;
       readonly configuracion: ConfiguracionMotor;
+      /** Resumen y avisos de la carrera por tramos (vacíos en la carrera simple). */
+      readonly resumenTramos: ResumenCarrera | undefined;
+      readonly avisosTramos: readonly AvisoTramo[];
     }
-  | { readonly ok: false; readonly errores: ErroresFormulario };
-
-/**
- * Número escrito por una persona, con la convención española: la coma es el separador decimal y el
- * punto agrupa miles («2.500» es dos mil quinientos; «2.5» es dos coma cinco). `undefined` si no
- * es un número.
- */
-export function leerNumero(texto: string): number | undefined {
-  const t = texto.trim().replace(/\s/g, '');
-  let limpio: string;
-  if (t.includes(',')) limpio = t.replace(/\./g, '').replace(',', '.');
-  else if (/^[+-]?\d{1,3}(\.\d{3})+$/.test(t)) limpio = t.replace(/\./g, '');
-  else limpio = t;
-  if (limpio === '' || !/^[+-]?\d+(\.\d+)?$/.test(limpio)) return undefined;
-  const n = Number(limpio);
-  return Number.isFinite(n) ? n : undefined;
-}
-
-/** Número como texto editable (coma decimal, sin agrupar miles). */
-export function numeroATexto(n: number): string {
-  return String(n).replace('.', ',');
-}
-
-function leerEntero(texto: string): number | undefined {
-  const n = leerNumero(texto);
-  return n !== undefined && Number.isInteger(n) ? n : undefined;
-}
+  | {
+      readonly ok: false;
+      readonly errores: ErroresFormulario;
+      /** Errores de la tabla de tramos (solo con la carrera por tramos). */
+      readonly erroresTramos: readonly ErrorTramo[];
+    };
 
 const mes2 = (m: number): string => String(m).padStart(2, '0');
 const claveMes = (anio: number, mes: number): string => `${String(anio)}-${mes2(mes)}`;
@@ -103,14 +97,18 @@ export function validarFormulario(f: FormularioTuPension): ErroresFormulario {
     'jubilacionAnio',
     'jubilación',
   );
-  const ini = leerMesAnio(
-    f.inicioMes,
-    f.inicioAnio,
-    errores,
-    'inicioMes',
-    'inicioAnio',
-    'inicio de la cotización',
-  );
+  const simple = f.tipoCarrera === 'simple';
+  // El inicio de la cotización, los meses sin cotizar y la base solo existen en la carrera simple.
+  const ini = simple
+    ? leerMesAnio(
+        f.inicioMes,
+        f.inicioAnio,
+        errores,
+        'inicioMes',
+        'inicioAnio',
+        'inicio de la cotización',
+      )
+    : undefined;
   if (f.sexo === '')
     errores.sexo =
       'Indica el sexo: el cálculo lo usa para integrar lagunas y para el complemento por hijos.';
@@ -121,13 +119,13 @@ export function validarFormulario(f: FormularioTuPension): ErroresFormulario {
       errores.hijos = 'Escribe el número de hijos como un entero (0 si no tienes).';
   }
 
-  const lagunas = leerEntero(f.mesesSinCotizar);
-  if (lagunas === undefined || lagunas < 0) {
+  const lagunas = simple ? leerEntero(f.mesesSinCotizar) : undefined;
+  if (simple && (lagunas === undefined || lagunas < 0)) {
     errores.mesesSinCotizar = 'Escribe los meses sin cotizar como un entero (0 si no hay).';
   }
 
   const base = leerNumero(f.baseMensual);
-  if (base === undefined || base <= 0) {
+  if (simple && (base === undefined || base <= 0)) {
     errores.baseMensual =
       'Escribe una base mensual de cotización mayor que cero (por ejemplo, 2.000,50).';
   }
@@ -185,13 +183,52 @@ export function carreraSimple(
   return tramos;
 }
 
+/** Mes de nacimiento y mes anterior a la jubilación (meses absolutos), si esos campos son válidos. */
+function fechasClave(f: FormularioTuPension): {
+  nacimiento: number | undefined;
+  mesPrevio: number | undefined;
+} {
+  const mes = (m: string, a: string): number | undefined => {
+    const mm = leerEntero(m);
+    const aa = leerEntero(a);
+    return mm !== undefined && mm >= 1 && mm <= 12 && aa !== undefined && a.trim().length === 4
+      ? mesAbsoluto(aa, mm)
+      : undefined;
+  };
+  const jub = mes(f.jubilacionMes, f.jubilacionAnio);
+  return {
+    nacimiento: mes(f.nacimientoMes, f.nacimientoAnio),
+    mesPrevio: jub === undefined ? undefined : jub - 1,
+  };
+}
+
+/** Valida y traduce la carrera por tramos del formulario (con las fechas del propio formulario). */
+export function analizarTramos(
+  f: FormularioTuPension,
+  catalogo: CatalogoReferencias,
+): ResultadoTramos {
+  return procesarTramos(f.tramos, {
+    catalogo,
+    definicionMedia: f.definicionMedia,
+    ...fechasClave(f),
+  });
+}
+
 /** Entrada del motor y su configuración a partir del formulario, o los errores de validación. */
-export function formularioAEntrada(f: FormularioTuPension): ResultadoMapeo {
+export function formularioAEntrada(
+  f: FormularioTuPension,
+  catalogo?: CatalogoReferencias,
+): ResultadoMapeo {
   const errores = validarFormulario(f);
-  if (Object.keys(errores).length > 0) return { ok: false, errores };
+  if (f.tipoCarrera === 'tramos' && catalogo === undefined) {
+    throw new Error('La carrera por tramos necesita el catálogo de referencias de base.');
+  }
+  const tramos = f.tipoCarrera === 'tramos' && catalogo ? analizarTramos(f, catalogo) : undefined;
+  if (Object.keys(errores).length > 0 || (tramos && tramos.errores.length > 0)) {
+    return { ok: false, errores, erroresTramos: tramos?.errores ?? [] };
+  }
   const nac = { anio: Number(f.nacimientoAnio), mes: Number(f.nacimientoMes) };
   const jub = { anio: Number(f.jubilacionAnio), mes: Number(f.jubilacionMes) };
-  const ini = { anio: Number(f.inicioAnio), mes: Number(f.inicioMes) };
   const sexo = f.sexo === 'mujer' ? 'mujer' : 'hombre';
   const opciones: OpcionesJubilacion = {
     sexo,
@@ -201,16 +238,19 @@ export function formularioAEntrada(f: FormularioTuPension): ResultadoMapeo {
     aplicarPensionMaxima: f.aplicarPensionMaxima,
   };
   const ipc = leerNumero(f.ipcSupuesto);
+  const carrera: Carrera =
+    tramos?.carrera ??
+    carreraSimple(
+      { anio: Number(f.inicioAnio), mes: Number(f.inicioMes) },
+      jub,
+      leerNumero(f.baseMensual) ?? 0,
+      leerEntero(f.mesesSinCotizar) ?? 0,
+      f.ubicacionLagunas,
+    );
   return {
     ok: true,
     entrada: {
-      carrera: carreraSimple(
-        ini,
-        jub,
-        leerNumero(f.baseMensual) ?? 0,
-        leerEntero(f.mesesSinCotizar) ?? 0,
-        f.ubicacionLagunas,
-      ),
+      carrera,
       nacimiento: `${claveMes(nac.anio, nac.mes)}-01`,
       fechaJubilacion: `${claveMes(jub.anio, jub.mes)}-01`,
       modalidad: 'ordinaria',
@@ -218,5 +258,7 @@ export function formularioAEntrada(f: FormularioTuPension): ResultadoMapeo {
     },
     // El IPC se escribe en % y el motor lo recibe como fracción.
     configuracion: ipc === undefined ? {} : { escenario: { ipc: ipc / 100 } },
+    resumenTramos: tramos?.resumen,
+    avisosTramos: tramos?.avisos ?? [],
   };
 }

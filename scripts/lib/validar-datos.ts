@@ -9,6 +9,7 @@ import {
   ArchivoCronologia,
   ArchivoMitos,
   ArchivoDatos,
+  ArchivoPersonas,
   ArchivoPrestaciones,
   ArchivoTabla,
   RegistroAfirmaciones,
@@ -97,7 +98,9 @@ export function validarContenido(json: unknown, fichero: string): ErrorValidacio
           ? ArchivoTabla
           : tipo === 'mitos'
             ? ArchivoMitos
-            : ArchivoDatos;
+            : tipo === 'personas'
+              ? ArchivoPersonas
+              : ArchivoDatos;
   const resultado = esquema.safeParse(json);
   if (!resultado.success) {
     for (const problema of resultado.error.issues) {

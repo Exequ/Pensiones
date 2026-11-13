@@ -3,12 +3,14 @@ import { formatearEuros } from '../../engine/formato';
 import { calcularTuPension, type Dependencias } from './calcular';
 import { crearMotorDelRepositorio, leerReferenciaDeRepositorio } from './motor';
 import { leerOpcion25, leerPeriodoCalculo } from './presentador';
+import { catalogoPorDefecto } from './referencias-datos';
 import { FORMULARIO_BASE } from './pruebas';
 import type { FormularioTuPension } from './tipos';
 
 const deps: Dependencias = {
   fabricaMotor: crearMotorDelRepositorio,
   leerReferencia: leerReferenciaDeRepositorio,
+  catalogo: catalogoPorDefecto(),
 };
 
 function modeloDe(f: FormularioTuPension) {

@@ -1,0 +1,116 @@
+{
+  "tipo": "personas",
+  "id": "personas-ejemplo",
+  "title": "Personas-ejemplo de «Tu pensión» (ilustrativas)",
+  "description": "Perfiles ilustrativos para rellenar la carrera por tramos del simulador. No son estadísticas ni casos reales: la edad de inicio y las duraciones son convenciones de la ilustración (elaboración propia, confianza baja). Las bases no se escriben aquí: cada tramo se refiere a una serie de /data (base mínima, media o máxima de cotización) y se rellena con los valores de esa serie para las fechas de la persona que usa el simulador.",
+  "personas": [
+    {
+      "id": "carrera-completa-base-media",
+      "nombre": "Carrera completa con base media",
+      "descripcion": "Cotiza todos los meses desde que empieza hasta el mes anterior a la jubilación con la base media.",
+      "ilustrativo": true,
+      "edadInicio": 22,
+      "tramos": [
+        {
+          "referencia": "media",
+          "hastaJubilacion": true
+        }
+      ],
+      "source": {
+        "title": "Perfiles ilustrativos de carrera de cotización (elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/"
+      },
+      "fetchedAt": "2026-11-13",
+      "confidence": "baja"
+    },
+    {
+      "id": "carrera-base-minima",
+      "nombre": "Carrera con base mínima",
+      "descripcion": "Cotiza todos los meses desde que empieza hasta el mes anterior a la jubilación con la base mínima.",
+      "ilustrativo": true,
+      "edadInicio": 22,
+      "tramos": [
+        {
+          "referencia": "minima",
+          "hastaJubilacion": true
+        }
+      ],
+      "source": {
+        "title": "Perfiles ilustrativos de carrera de cotización (elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/"
+      },
+      "fetchedAt": "2026-11-13",
+      "confidence": "baja"
+    },
+    {
+      "id": "carrera-bases-maximas",
+      "nombre": "Carrera con bases máximas",
+      "descripcion": "Cotiza todos los meses desde que empieza hasta el mes anterior a la jubilación con la base máxima.",
+      "ilustrativo": true,
+      "edadInicio": 22,
+      "tramos": [
+        {
+          "referencia": "maxima",
+          "hastaJubilacion": true
+        }
+      ],
+      "source": {
+        "title": "Perfiles ilustrativos de carrera de cotización (elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/"
+      },
+      "fetchedAt": "2026-11-13",
+      "confidence": "baja"
+    },
+    {
+      "id": "interrupcion-larga",
+      "nombre": "Carrera con una interrupción larga",
+      "descripcion": "Cotiza con la base media, deja de cotizar durante un periodo largo y vuelve a cotizar con la base media hasta el mes anterior a la jubilación.",
+      "ilustrativo": true,
+      "edadInicio": 22,
+      "tramos": [
+        {
+          "referencia": "media",
+          "anios": 15
+        },
+        {
+          "referencia": "sin-cotizar",
+          "anios": 8
+        },
+        {
+          "referencia": "media",
+          "hastaJubilacion": true
+        }
+      ],
+      "source": {
+        "title": "Perfiles ilustrativos de carrera de cotización (elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/"
+      },
+      "fetchedAt": "2026-11-13",
+      "confidence": "baja"
+    },
+    {
+      "id": "inicio-tardio",
+      "nombre": "Inicio tardío de la cotización",
+      "descripcion": "Empieza a cotizar más tarde y lo hace con la base media hasta el mes anterior a la jubilación.",
+      "ilustrativo": true,
+      "edadInicio": 35,
+      "tramos": [
+        {
+          "referencia": "media",
+          "hastaJubilacion": true
+        }
+      ],
+      "source": {
+        "title": "Perfiles ilustrativos de carrera de cotización (elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/"
+      },
+      "fetchedAt": "2026-11-13",
+      "confidence": "baja"
+    }
+  ]
+}
