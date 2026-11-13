@@ -42,7 +42,7 @@ afterEach(() => {
 
 describe('textos de la incapacidad', () => {
   it('no contienen cifras escritas a mano (regla a de CLAUDE.md)', () => {
-    const valores = (o: Readonly<Record<string, string>>): string[] => Object.values(o);
+    const valores = (o: object): string[] => Object.values<string>(o as Record<string, string>);
     const todo = [
       ...valores(TEXTOS_INCAPACIDAD),
       ...valores(TEXTOS_INCAPACIDAD_PROPIOS),
