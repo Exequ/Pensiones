@@ -290,7 +290,7 @@ const PREGUNTA: Record<string, Clasificacion> = {
     grupo: 'B',
     efecto: 'no medible',
     motivo:
-      'Falta la base mínima de 2020 y 2021 y la regla posterior a 2026; la base de cada año de /data coincide con el SMI de Eurostat.',
+      'La base mínima de 2021 (enero-agosto) es un valor deducido y falta la regla posterior a 2026; la base de cada año de /data coincide con el SMI de Eurostat.',
   },
   'param-incapacidad-permanente-reglas': {
     grupo: 'A',

@@ -278,7 +278,7 @@ Verificación del motor (`src/engine/jubilacion/`, descrito en `docs/MOTOR_JUBIL
 
 ### Contraste con M5
 
-37 de 37 casos de oro de M5 reproducidos con el motor; diferencia máxima **0,41 %** (todos dentro del 0,5 %; tolerancia fijada 1,5 %). La diferencia es sistemática y negativa en las pensiones contributivas porque la ley excluye el mes previo al hecho causante y M5 lo incluye. Dos casos tienen una regla que distingue al motor de M5 (integración de lagunas anteriores a la primera alta y edad exigida con 456 meses cotizados). Detalle y tabla completa: `docs/CONTRASTE_M5.md`.
+51 de 51 casos de oro de M5 v2 reproducidos con el motor; diferencia relativa máxima **5,54e-15** (tolerancia fijada 1e-6). Con M5 v1 (37 casos) el motor quedaba entre un 0,05 % y un 0,41 % por debajo por el mes previo, y dos casos tenían una regla distinta (lagunas anteriores a la primera alta y edad con 456 meses cotizados); M5 v2 incorpora esas reglas. La coincidencia prueba que las dos implementaciones son coherentes entre sí, no que la lectura legal sea correcta. Detalle y tabla completa: `docs/CONTRASTE_M5.md`.
 
 ### Verificación independiente (30 combinaciones)
 

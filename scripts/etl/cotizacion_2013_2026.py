@@ -92,8 +92,7 @@ for y, oid in sorted(ORDEN.items()):
         loc_min = 'Artículo 3 de la Orden (texto modificado)'
     if y == 2021:
         # La orden de 2021 solo fija la tabla desde el 1 de septiembre: no se publica el valor de enero-agosto.
-        PEND.append({'que': 'base-minima-rg 2021 (1 de enero a 31 de agosto)', 'url': url_boe(oid),
-                     'motivo': 'La Orden PCM/1353/2021 solo contiene la tabla vigente desde el 1 de septiembre de 2021 (1.125,90 euros/mes).'})
+        # El valor de 2021 (deducido) lo añade scripts/etl/base_minima_2020_2021.py; aquí no se escribe.
         vmin = None
     # ---- base máxima
     cross = None
@@ -149,7 +148,8 @@ MAX.append(dato(2020, num(m2.group(1)), U, fuente(RDL_2020), m.group(0) + ' || R
                 'Artículo de prórroga del RDL 18/2019 (remite al artículo 3 del RDL 28/2018)',
                 'No hubo orden anual de cotización para 2020. El RDL 18/2019 remite a las cuantías del art. 3 del RDL 28/2018; el valor se toma de ese artículo.',
                 confidence='media'))
-for q in ('base-minima-rg 2020', 'tipos de contingencias comunes 2020'):
+# La base mínima de 2020 y 2021 la añade scripts/etl/base_minima_2020_2021.py (anexo del informe económico-financiero)
+for q in ('tipos de contingencias comunes 2020',):
     PEND.append({'que': q, 'url': url_boe(RDL_2020), 'motivo': 'Sin orden anual de cotización en 2020 y el RDL 18/2019 no recoge la cuantía; falta la fuente que la fije.'})
 
 fusionar('parametros', 'base-maxima-rg', MAX)

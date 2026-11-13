@@ -85,7 +85,6 @@ const POR_VERSION = [
 const VARIAS_UNIDADES = [...POR_VERSION, 'pension-minima-regla', 'prestamos-', 'mei-destino'];
 /** Años sin dato por falta de fuente descargada; cada uno consta en docs/PENDIENTE_DATOS.md. */
 const HUECOS_DOCUMENTADOS: Record<string, string[]> = {
-  'base-minima-rg.json': ['2020', '2021'],
   'tipo-cc-empresa.json': ['2020'],
   'tipo-cc-trabajador.json': ['2020'],
   'iprem-anual.json': ['2019', '2020'],
