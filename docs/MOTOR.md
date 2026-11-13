@@ -101,7 +101,7 @@ Todas las cifras salen de `/data` con cita literal comprobada por código (la ci
 
 ## Casos de oro
 
-`docs/INVENTARIO_CASOS_ORO.md` (generado y comprobado por un test) lista los casos de cada motor con su etiqueta: «independiente» (ejemplo oficial con URL) o «derivado de la norma». El inventario de las Fases 2-A a 2-C no cambia; la Fase 2-D añade los ocho casos independientes de pensiones contributivas de Sergio. Los casos de Sergio (`data-raw/casos-oro/casos-sergio.md`, tabla descrita en `docs/CASOS_SERGIO_PLANTILLA.md`) son ocho cálculos del autocálculo oficial de la Seguridad Social: siete coinciden con el motor dentro de ±0,01 € y uno lleva la marca `diferenciaConocida` con su motivo; se ejecutan con `npx tsx scripts/casos-sergio.ts` o con `scripts/casos-sergio.test.ts`.
+`docs/INVENTARIO_CASOS_ORO.md` (generado y comprobado por un test) lista los casos de cada motor con su etiqueta: «independiente» (ejemplo oficial con URL) o «derivado de la norma». El inventario de las Fases 2-A a 2-C no cambia; la Fase 2-D añade los ocho casos independientes de pensiones contributivas de Sergio. Los casos de Sergio (`data-raw/casos-oro/casos-sergio.md`, tabla descrita en `docs/CASOS_SERGIO_PLANTILLA.md`) son ocho cálculos del autocálculo oficial de la Seguridad Social: los ocho coinciden con el motor dentro de ±0,01 € (uno, con una tolerancia de 0,02 € por redondeo del autocálculo; Fase 3-A); se ejecutan con `npx tsx scripts/casos-sergio.ts` o con `scripts/casos-sergio.test.ts`.
 
 ## Limitaciones consolidadas
 

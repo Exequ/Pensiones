@@ -3,6 +3,15 @@
 Registro de decisiones tomadas cuando algo era ambiguo o había que elegir. La más reciente,
 arriba dentro de cada fase.
 
+## Fase 3-A · «Tu pensión» (jubilación ordinaria con carrera simple)
+
+### Paso 0: correcciones de casos de oro
+
+- **Caso `jub-ord-2026-bases-minimas-sin-minimos`**: el relleno de base 1000 termina en 2001-05 y el tramo de 505,75 empieza en 2001-06 (antes, 2001-09 y 2001-10); se retira la marca `diferenciaConocida` (el caso coincide: motor 889,35, regla general 888,45, se elige la menor, la de 25 años). Antes: motor 897,83 y +8,48 €; después: 889,35 y 0,00 €. El diagnóstico anterior (897,83 y 883,47) era una hipótesis errónea y se sustituye en `docs/DISCREPANCIAS.md`.
+- **Caso `jub-ord-2026-carrera-20a`**: se quita `sin-suelo`; usa el valor por defecto `suelo-1`. Residuo de +0,0131 €; no es del suelo (suma de bases del informe = la de `suelo-1`). El informe muestra la base reguladora y la pensión truncadas a céntimos; con ese truncamiento se obtiene 1.026,48. Se fija `tolerancia: 0.02` con la nota «redondeo del autocálculo» (el redondeo simple no bastaba: 1.026,49). Antes: `sin-suelo` fijado y coincidencia a −0,003 €; después: lectura por defecto y +0,013 € dentro de la tolerancia. `jub-ord-2026-carrera-15a` no necesita tolerancia (+0,002 €).
+- **Documentos actualizados**: `docs/DISCREPANCIAS.md`, `docs/INFORME_VERIFICACION.md`, `docs/CASOS_SERGIO_PLANTILLA.md`, `docs/DESCARGAS_MANUALES.md` (se cierra la petición de repetir el caso 6) y `docs/REVISION_PRIORIZADA.md` con su generador.
+- **Rama**: `feat/fase-3a-tu-pension`, creada desde `origin/main` (que ya contiene la Fase 2-E), como pidió el encargo y no la rama de trabajo que asigna el entorno.
+
 ## Fase 2-E · Decisiones actuariales, textos de 1956 y 1967, IPC frente a los informes y base máxima de 2018
 
 - **Rama y base**: `feat/fase-2e-decisiones-actuariales`, creada desde `origin/main` (que ya contiene el PR de retoques de la Fase M5 v2), y no la rama de trabajo que asigna el entorno.
