@@ -139,7 +139,7 @@ export function inventario(): string {
     '',
     ...filas,
     '',
-    'Además, el contraste con el modelo M5 (`docs/CONTRASTE_M5.md`, 37 casos) y la verificación por rejilla (`scripts/verificacion-motor.ts`) no son casos de oro.',
+    'Además, el contraste con el modelo M5 v2 (`docs/CONTRASTE_M5.md`, 51 casos) y la verificación por rejilla (`scripts/verificacion-motor.ts`) no son casos de oro.',
     '',
     '## Casos por motor',
     '',

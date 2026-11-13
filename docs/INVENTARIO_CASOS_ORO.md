@@ -18,7 +18,7 @@ Los casos de oro de Sergio (`data-raw/casos-oro/casos-sergio.md`, formato en `do
 | MEI y solidaridad                         |      13 |             0 |                   13 | Cuenta a mano en cada caso (DT 42.ª y 43.ª, art. 19 bis).                                                                                        | `src/engine/mei/casos-oro-mei.test.ts`                      |
 | **Total**                                 | **117** |        **31** |               **86** |                                                                                                                                                  |                                                             |
 
-Además, el contraste con el modelo M5 (`docs/CONTRASTE_M5.md`, 37 casos) y la verificación por rejilla (`scripts/verificacion-motor.ts`) no son casos de oro.
+Además, el contraste con el modelo M5 v2 (`docs/CONTRASTE_M5.md`, 51 casos) y la verificación por rejilla (`scripts/verificacion-motor.ts`) no son casos de oro.
 
 ## Casos por motor
 

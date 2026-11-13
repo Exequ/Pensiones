@@ -1,6 +1,7 @@
 /**
- * Contraste con el modelo simplificado M5 (data-raw/casos-oro/m5_v1.py): reproduce los casos de
- * data-raw/casos-oro/casos_oro_m5.json con el motor y compara la pensión final.
+ * Contraste con el modelo simplificado M5 v2 (modelos/m5/m5_v2.py): reproduce los casos de
+ * data-raw/casos-oro/casos_oro_m5.json (copia de modelos/m5/casos_oro_m5.json) con el motor y
+ * compara la pensión final.
  *
  * M5 es un modelo teórico (carrera continua, salario relativo constante, crecimiento real g, IPC
  * constante). Aquí se construye la carrera mes a mes con la misma fórmula que M5, como *entrada*
@@ -9,6 +10,7 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { calcularJubilacionConParametros } from '../../src/engine/jubilacion/calculo.ts';
+import { crearContexto } from '../../src/engine/jubilacion/contexto.ts';
 import { valorEn } from '../../src/engine/jubilacion/parametros.ts';
 import { sumarMeses } from '../../src/engine/jubilacion/tiempo.ts';
 import type { OpcionesJubilacion, PeriodoCarrera } from '../../src/engine/jubilacion/tipos.ts';
@@ -26,6 +28,9 @@ export interface CasoM5 {
     topes?: boolean;
     actualizar?: boolean;
     salario_medio_ref?: number;
+    lagunas_previas?: 'integrar' | 'ignorar';
+    integracion_reforzada?: boolean;
+    suelo_base_minima?: boolean;
   };
   salida: {
     pension_final: number;
@@ -77,14 +82,23 @@ export function construirEntrada(e: CasoM5['entrada']): EntradaMotor {
   const ipc = e.ipc ?? 0.02;
   const T = e.anio_jubilacion;
   const ref = e.salario_medio_ref ?? salarioReferencia();
-  // Edad de jubilación de M5: 65 años si el máximo de meses cotizables hasta los 65 alcanza la carrera de la DT 7.ª
-  const mesesA65 = Math.round((65 - e.edad_inicio) * 12);
+  // Edad de jubilación de M5 v2: 65 años si los meses cotizados hasta los 65 (sin las lagunas)
+  // alcanzan la carrera de la DT 7.ª; si no, la edad ordinaria del año.
+  const mesesA65 = Math.max(0, Math.round((65 - e.edad_inicio) * 12));
+  const cotizadosA65 = Math.max(0, mesesA65 - (e.lagunas_meses ?? 0));
   const edadMeses =
-    mesesA65 >= valorEn(params.carrera65, T).valor
+    cotizadosA65 >= valorEn(params.carrera65, T).valor
       ? params.edad65Meses
       : valorEn(params.edadOrdinaria, T).valor;
   const meses = Math.round(edadMeses - e.edad_inicio * 12);
   const lagunas = Math.min(e.lagunas_meses ?? 0, meses);
+  // Suelo de la base mínima (M5 v2): la base de un mes no baja de la base mínima de su año. Los
+  // meses anteriores al primer año con base mínima en /data (2000) quedan fuera de toda ventana.
+  const contexto = crearContexto(params, {
+    escenario: { ipc, sustituirHistoricoIPC: true },
+    huecoBaseMinima: 'anterior',
+  });
+  const suelo = e.suelo_base_minima ?? true;
   // Base de cada mes, a k meses del 1 de enero de T (k = 1 es el mes previo al hecho causante)
   const basesPorMes: Record<string, number> = {};
   let primero = '';
@@ -93,7 +107,12 @@ export function construirEntrada(e: CasoM5['entrada']): EntradaMotor {
     const abs = T * 12 - k;
     const clave = `${Math.floor(abs / 12)}-${String((abs % 12) + 1).padStart(2, '0')}`;
     const t = T - k / 12;
-    basesPorMes[clave] = e.rel * ref * Math.pow((1 + e.g) * (1 + ipc), t - 2024);
+    const base = e.rel * ref * Math.pow((1 + e.g) * (1 + ipc), t - 2024);
+    const anioMes = Math.floor(abs / 12);
+    basesPorMes[clave] =
+      suelo && anioMes >= params.baseMinima.primero
+        ? Math.max(base, contexto.baseMinima(anioMes).valor)
+        : base;
     if (primero === '') primero = clave;
     ultimo = clave;
   }
@@ -107,7 +126,9 @@ export function construirEntrada(e: CasoM5['entrada']): EntradaMotor {
       topeBases: e.topes ?? true,
       aplicarPensionMaxima: e.topes ?? true,
       actualizarBases: e.actualizar ?? true,
-      calcularAunqueNoCumpla: true,
+      huecoBaseMinima: 'anterior',
+      lecturas: { lagunasAnterioresAlPrimerAlta: e.lagunas_previas ?? 'integrar' },
+      integracionReforzadaLagunas: e.integracion_reforzada ?? false,
     },
   };
 }
@@ -127,6 +148,10 @@ export function reproducir(c: CasoM5): ResultadoContraste {
     estadoMotor: r.estado,
     cumple: r.cumpleRequisitos,
     baseReguladora: r.baseReguladora,
-    diferenciaRelativa: (r.pensionAnual - c.salida.pension_final) / c.salida.pension_final,
+    // Con pensión 0 en M5 (no causa derecho) se devuelve la pensión del motor, que debe ser 0.
+    diferenciaRelativa:
+      c.salida.pension_final === 0
+        ? r.pensionAnual
+        : (r.pensionAnual - c.salida.pension_final) / c.salida.pension_final,
   };
 }
