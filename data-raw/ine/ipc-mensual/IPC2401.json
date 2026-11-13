@@ -1,0 +1,578 @@
+{"COD":"IPC2401", "Nombre":"Indice general. Nacional. Base 1992", "FK_Unidad":133, "FK_Escala":1, "Notas":[{"texto" : "Serie certificable como indice oficial", "Fk_TipoNota" : 1, "textoTipo" : null}], "Data":[{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1954, "Valor":null, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1954, "Valor":null, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1954, "Valor":3.282, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1954, "Valor":3.289, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1954, "Valor":3.289, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1954, "Valor":3.277, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1954, "Valor":3.28, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1954, "Valor":3.267, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1954, "Valor":3.269, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1954, "Valor":3.286, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1954, "Valor":3.314, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1954, "Valor":3.344, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1955, "Valor":3.365, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1955, "Valor":3.376, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1955, "Valor":3.389, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1955, "Valor":3.408, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1955, "Valor":3.41, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1955, "Valor":3.401, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1955, "Valor":3.401, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1955, "Valor":3.408, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1955, "Valor":3.431, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1955, "Valor":3.459, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1955, "Valor":3.474, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1955, "Valor":3.485, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1956, "Valor":3.489, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1956, "Valor":3.532, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1956, "Valor":3.566, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1956, "Valor":3.604, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1956, "Valor":3.621, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1956, "Valor":3.609, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1956, "Valor":3.598, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1956, "Valor":3.604, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1956, "Valor":3.63, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1956, "Valor":3.662, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1956, "Valor":3.713, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1956, "Valor":3.779, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1957, "Valor":3.848, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1957, "Valor":3.869, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1957, "Valor":3.889, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1957, "Valor":3.906, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1957, "Valor":3.916, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1957, "Valor":3.906, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1957, "Valor":3.967, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1957, "Valor":4.023, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1957, "Valor":4.08, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1957, "Valor":4.166, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1957, "Valor":4.234, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1957, "Valor":4.279, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1958, "Valor":4.309, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1958, "Valor":4.313, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1958, "Valor":4.397, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1958, "Valor":4.491, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1958, "Valor":4.52, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1958, "Valor":4.514, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1958, "Valor":4.544, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1958, "Valor":4.574, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1958, "Valor":4.646, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1958, "Valor":4.689, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1958, "Valor":4.732, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1958, "Valor":4.787, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1959, "Valor":4.794, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1959, "Valor":4.817, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1959, "Valor":4.843, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1959, "Valor":4.873, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1959, "Valor":4.888, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1959, "Valor":4.86, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1959, "Valor":4.86, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1959, "Valor":4.868, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1959, "Valor":4.894, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1959, "Valor":4.909, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1959, "Valor":4.926, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1959, "Valor":4.969, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1960, "Valor":4.93, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1960, "Valor":4.926, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1960, "Valor":4.92, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1960, "Valor":4.924, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1960, "Valor":4.909, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1960, "Valor":4.905, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1960, "Valor":4.903, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1960, "Valor":4.913, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1960, "Valor":4.943, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1960, "Valor":4.956, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1960, "Valor":4.962, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1960, "Valor":4.999, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1961, "Valor":5.02, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1961, "Valor":4.979, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1961, "Valor":4.957, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1961, "Valor":4.97, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1961, "Valor":4.957, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1961, "Valor":4.93, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1961, "Valor":4.93, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1961, "Valor":4.938, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1961, "Valor":4.942, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1961, "Valor":4.961, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1961, "Valor":5.038, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1961, "Valor":5.047, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1962, "Valor":5.038, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1962, "Valor":5.061, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1962, "Valor":5.105, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1962, "Valor":5.177, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1962, "Valor":5.243, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1962, "Valor":5.27, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1962, "Valor":5.27, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1962, "Valor":5.257, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1962, "Valor":5.289, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1962, "Valor":5.34, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1962, "Valor":5.477, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1962, "Valor":5.547, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1963, "Valor":5.56, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1963, "Valor":5.604, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1963, "Valor":5.713, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1963, "Valor":5.709, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1963, "Valor":5.741, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1963, "Valor":5.635, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1963, "Valor":5.695, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1963, "Valor":5.754, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1963, "Valor":5.741, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1963, "Valor":5.757, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1963, "Valor":5.829, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1963, "Valor":5.851, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1964, "Valor":5.842, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1964, "Valor":5.846, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1964, "Valor":5.864, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1964, "Valor":5.886, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1964, "Valor":5.901, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1964, "Valor":5.98, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1964, "Valor":6.109, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1964, "Valor":6.205, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1964, "Valor":6.266, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1964, "Valor":6.369, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1964, "Valor":6.516, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1964, "Valor":6.592, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1965, "Valor":6.657, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1965, "Valor":6.771, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1965, "Valor":6.824, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1965, "Valor":6.874, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1965, "Valor":6.902, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1965, "Valor":6.871, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1965, "Valor":6.88, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1965, "Valor":6.915, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1965, "Valor":6.981, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1965, "Valor":7.018, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1965, "Valor":7.169, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1965, "Valor":7.21, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1966, "Valor":7.197, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1966, "Valor":7.191, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1966, "Valor":7.191, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1966, "Valor":7.26, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1966, "Valor":7.366, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1966, "Valor":7.38, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1966, "Valor":7.376, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1966, "Valor":7.389, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1966, "Valor":7.366, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1966, "Valor":7.411, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1966, "Valor":7.54, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1966, "Valor":7.589, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1967, "Valor":7.593, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1967, "Valor":7.652, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1967, "Valor":7.684, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1967, "Valor":7.791, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1967, "Valor":7.818, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1967, "Valor":7.75, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1967, "Valor":7.755, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1967, "Valor":7.868, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1967, "Valor":7.89, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1967, "Valor":7.922, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1967, "Valor":8.087, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1967, "Valor":8.087, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1968, "Valor":8.11, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1968, "Valor":8.11, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1968, "Valor":8.193, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1968, "Valor":8.265, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1968, "Valor":8.238, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1968, "Valor":8.261, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1968, "Valor":8.193, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1968, "Valor":8.198, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1968, "Valor":8.185, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1968, "Valor":8.211, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1968, "Valor":8.265, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1968, "Valor":8.32, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1969, "Valor":8.301, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":2, "Anyo":1969, "Valor":8.251, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":3, "Anyo":1969, "Valor":8.301, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":4, "Anyo":1969, "Valor":8.399, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":5, "Anyo":1969, "Valor":8.399, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":6, "Anyo":1969, "Valor":8.301, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":7, "Anyo":1969, "Valor":8.366, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":8, "Anyo":1969, "Valor":8.392, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":9, "Anyo":1969, "Valor":8.408, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":10, "Anyo":1969, "Valor":8.44, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":11, "Anyo":1969, "Valor":8.515, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":12, "Anyo":1969, "Valor":8.605, "Secreto":false}
+,{"FK_TipoDato":1, "FK_Periodo":1, "Anyo":1970, "Valor":8.646, "Secreto":false}
+,{"Fecha":2674800000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1970, "Valor":8.613, "Secreto":false}
+,{"Fecha":5094000000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1970, "Valor":8.679, "Secreto":false}
+,{"Fecha":7772400000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1970, "Valor":8.727, "Secreto":false}
+,{"Fecha":10364400000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1970, "Valor":8.67, "Secreto":false}
+,{"Fecha":13042800000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1970, "Valor":8.703, "Secreto":false}
+,{"Fecha":15634800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1970, "Valor":8.867, "Secreto":false}
+,{"Fecha":18313200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1970, "Valor":9.007, "Secreto":false}
+,{"Fecha":20991600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1970, "Valor":9.048, "Secreto":false}
+,{"Fecha":23583600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1970, "Valor":9.138, "Secreto":false}
+,{"Fecha":26262000000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1970, "Valor":9.162, "Secreto":false}
+,{"Fecha":28854000000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1970, "Valor":9.188, "Secreto":false}
+,{"Fecha":31532400000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1971, "Valor":9.285, "Secreto":false}
+,{"Fecha":34210800000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1971, "Valor":9.278, "Secreto":false}
+,{"Fecha":36630000000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1971, "Valor":9.376, "Secreto":false}
+,{"Fecha":39308400000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1971, "Valor":9.475, "Secreto":false}
+,{"Fecha":41900400000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1971, "Valor":9.533, "Secreto":false}
+,{"Fecha":44578800000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1971, "Valor":9.573, "Secreto":false}
+,{"Fecha":47170800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1971, "Valor":9.573, "Secreto":false}
+,{"Fecha":49849200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1971, "Valor":9.59, "Secreto":false}
+,{"Fecha":52527600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1971, "Valor":9.704, "Secreto":false}
+,{"Fecha":55119600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1971, "Valor":9.811, "Secreto":false}
+,{"Fecha":57798000000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1971, "Valor":9.944, "Secreto":false}
+,{"Fecha":60390000000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1971, "Valor":10.074, "Secreto":false}
+,{"Fecha":63068400000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1972, "Valor":10.082, "Secreto":false}
+,{"Fecha":65746800000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1972, "Valor":10.074, "Secreto":false}
+,{"Fecha":68252400000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1972, "Valor":10.172, "Secreto":false}
+,{"Fecha":70930800000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1972, "Valor":10.172, "Secreto":false}
+,{"Fecha":73522800000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1972, "Valor":10.222, "Secreto":false}
+,{"Fecha":76201200000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1972, "Valor":10.246, "Secreto":false}
+,{"Fecha":78793200000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1972, "Valor":10.386, "Secreto":false}
+,{"Fecha":81471600000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1972, "Valor":10.493, "Secreto":false}
+,{"Fecha":84150000000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1972, "Valor":10.641, "Secreto":false}
+,{"Fecha":86742000000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1972, "Valor":10.714, "Secreto":false}
+,{"Fecha":89420400000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1972, "Valor":10.731, "Secreto":false}
+,{"Fecha":92012400000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1972, "Valor":10.814, "Secreto":false}
+,{"Fecha":94690800000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1973, "Valor":10.895, "Secreto":false}
+,{"Fecha":97369200000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1973, "Valor":10.912, "Secreto":false}
+,{"Fecha":99788400000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1973, "Valor":11.002, "Secreto":false}
+,{"Fecha":102466800000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1973, "Valor":11.158, "Secreto":false}
+,{"Fecha":105058800000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1973, "Valor":11.322, "Secreto":false}
+,{"Fecha":107737200000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1973, "Valor":11.494, "Secreto":false}
+,{"Fecha":110329200000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1973, "Valor":11.617, "Secreto":false}
+,{"Fecha":113007600000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1973, "Valor":11.808, "Secreto":false}
+,{"Fecha":115686000000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1973, "Valor":12.012, "Secreto":false}
+,{"Fecha":118278000000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1973, "Valor":12.202, "Secreto":false}
+,{"Fecha":120956400000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1973, "Valor":12.217, "Secreto":false}
+,{"Fecha":123548400000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1973, "Valor":12.35, "Secreto":false}
+,{"Fecha":126226800000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1974, "Valor":12.423, "Secreto":false}
+,{"Fecha":128905200000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1974, "Valor":12.465, "Secreto":false}
+,{"Fecha":131324400000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1974, "Valor":12.736, "Secreto":false}
+,{"Fecha":134002800000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1974, "Valor":13.015, "Secreto":false}
+,{"Fecha":136591200000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1974, "Valor":13.179, "Secreto":false}
+,{"Fecha":139269600000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1974, "Valor":13.236, "Secreto":false}
+,{"Fecha":141861600000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1974, "Valor":13.393, "Secreto":false}
+,{"Fecha":144540000000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1974, "Valor":13.614, "Secreto":false}
+,{"Fecha":147218400000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1974, "Valor":13.828, "Secreto":false}
+,{"Fecha":149810400000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1974, "Valor":13.975, "Secreto":false}
+,{"Fecha":152492400000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1974, "Valor":14.361, "Secreto":false}
+,{"Fecha":155084400000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1974, "Valor":14.558, "Secreto":false}
+,{"Fecha":157762800000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1975, "Valor":14.762, "Secreto":false}
+,{"Fecha":160441200000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1975, "Valor":14.903, "Secreto":false}
+,{"Fecha":162860400000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1975, "Valor":15.0, "Secreto":false}
+,{"Fecha":165538800000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1975, "Valor":15.264, "Secreto":false}
+,{"Fecha":168127200000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1975, "Valor":15.452, "Secreto":false}
+,{"Fecha":170805600000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1975, "Valor":15.494, "Secreto":false}
+,{"Fecha":173397600000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1975, "Valor":15.74, "Secreto":false}
+,{"Fecha":176076000000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1975, "Valor":15.987, "Secreto":false}
+,{"Fecha":178754400000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1975, "Valor":16.241, "Secreto":false}
+,{"Fecha":181346400000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1975, "Valor":16.241, "Secreto":false}
+,{"Fecha":184028400000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1975, "Valor":16.347, "Secreto":false}
+,{"Fecha":186620400000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1975, "Valor":16.61, "Secreto":false}
+,{"Fecha":189298800000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1976, "Valor":16.807, "Secreto":false}
+,{"Fecha":191977200000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1976, "Valor":16.997, "Secreto":false}
+,{"Fecha":194482800000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1976, "Valor":17.391, "Secreto":false}
+,{"Fecha":197157600000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1976, "Valor":17.743, "Secreto":false}
+,{"Fecha":199749600000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1976, "Valor":18.556, "Secreto":false}
+,{"Fecha":202428000000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1976, "Valor":18.442, "Secreto":false}
+,{"Fecha":205020000000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1976, "Valor":18.556, "Secreto":false}
+,{"Fecha":207698400000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1976, "Valor":18.713, "Secreto":false}
+,{"Fecha":210376800000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1976, "Valor":19.065, "Secreto":false}
+,{"Fecha":212972400000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1976, "Valor":19.329, "Secreto":false}
+,{"Fecha":215650800000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1976, "Valor":19.69, "Secreto":false}
+,{"Fecha":218242800000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1976, "Valor":19.894, "Secreto":false}
+,{"Fecha":220921200000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1977, "Valor":20.542, "Secreto":false}
+,{"Fecha":223599600000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1977, "Valor":20.849, "Secreto":false}
+,{"Fecha":226018800000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1977, "Valor":21.348, "Secreto":false}
+,{"Fecha":228697200000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1977, "Valor":21.736, "Secreto":false}
+,{"Fecha":231285600000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1977, "Valor":21.926, "Secreto":false}
+,{"Fecha":233964000000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1977, "Valor":22.539, "Secreto":false}
+,{"Fecha":236556000000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1977, "Valor":23.278, "Secreto":false}
+,{"Fecha":239234400000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1977, "Valor":24.033, "Secreto":false}
+,{"Fecha":241912800000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1977, "Valor":24.368, "Secreto":false}
+,{"Fecha":244508400000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1977, "Valor":24.747, "Secreto":false}
+,{"Fecha":247186800000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1977, "Valor":24.947, "Secreto":false}
+,{"Fecha":249778800000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1977, "Valor":25.144, "Secreto":false}
+,{"Fecha":252457200000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1978, "Valor":25.545, "Secreto":false}
+,{"Fecha":255135600000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1978, "Valor":25.796, "Secreto":false}
+,{"Fecha":257554800000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1978, "Valor":26.127, "Secreto":false}
+,{"Fecha":260233200000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1978, "Valor":26.677, "Secreto":false}
+,{"Fecha":262821600000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1978, "Valor":26.944, "Secreto":false}
+,{"Fecha":265500000000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1978, "Valor":27.216, "Secreto":false}
+,{"Fecha":268092000000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1978, "Valor":27.806, "Secreto":false}
+,{"Fecha":270770400000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1978, "Valor":28.291, "Secreto":false}
+,{"Fecha":273448800000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1978, "Valor":28.524, "Secreto":false}
+,{"Fecha":276040800000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1978, "Valor":28.785, "Secreto":false}
+,{"Fecha":278722800000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1978, "Valor":28.911, "Secreto":false}
+,{"Fecha":281314800000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1978, "Valor":29.303, "Secreto":false}
+,{"Fecha":283993200000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1979, "Valor":29.806, "Secreto":false}
+,{"Fecha":286671600000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1979, "Valor":30.037, "Secreto":false}
+,{"Fecha":289090800000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1979, "Valor":30.349, "Secreto":false}
+,{"Fecha":291769200000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1979, "Valor":30.807, "Secreto":false}
+,{"Fecha":294357600000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1979, "Valor":31.167, "Secreto":false}
+,{"Fecha":297036000000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1979, "Valor":31.442, "Secreto":false}
+,{"Fecha":299628000000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1979, "Valor":32.121, "Secreto":false}
+,{"Fecha":302306400000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1979, "Valor":32.437, "Secreto":false}
+,{"Fecha":304984800000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1979, "Valor":32.864, "Secreto":false}
+,{"Fecha":307580400000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1979, "Valor":33.305, "Secreto":false}
+,{"Fecha":310258800000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1979, "Valor":33.385, "Secreto":false}
+,{"Fecha":312850800000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1979, "Valor":33.872, "Secreto":false}
+,{"Fecha":315529200000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1980, "Valor":34.804, "Secreto":false}
+,{"Fecha":318207600000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1980, "Valor":35.115, "Secreto":false}
+,{"Fecha":320713200000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1980, "Valor":35.304, "Secreto":false}
+,{"Fecha":323391600000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1980, "Valor":35.645, "Secreto":false}
+,{"Fecha":325980000000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1980, "Valor":35.892, "Secreto":false}
+,{"Fecha":328658400000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1980, "Valor":36.449, "Secreto":false}
+,{"Fecha":331250400000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1980, "Valor":36.964, "Secreto":false}
+,{"Fecha":333928800000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1980, "Valor":37.397, "Secreto":false}
+,{"Fecha":336607200000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1980, "Valor":37.795, "Secreto":false}
+,{"Fecha":339202800000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1980, "Valor":38.098, "Secreto":false}
+,{"Fecha":341881200000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1980, "Valor":38.487, "Secreto":false}
+,{"Fecha":344473200000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1980, "Valor":39.025, "Secreto":false}
+,{"Fecha":347151600000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1981, "Valor":39.818, "Secreto":false}
+,{"Fecha":349830000000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1981, "Valor":40.02, "Secreto":false}
+,{"Fecha":352249200000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1981, "Valor":40.817, "Secreto":false}
+,{"Fecha":354924000000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1981, "Valor":41.223, "Secreto":false}
+,{"Fecha":357516000000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1981, "Valor":41.415, "Secreto":false}
+,{"Fecha":360194400000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1981, "Valor":41.451, "Secreto":false}
+,{"Fecha":362786400000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1981, "Valor":42.263, "Secreto":false}
+,{"Fecha":365464800000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1981, "Valor":42.778, "Secreto":false}
+,{"Fecha":368143200000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1981, "Valor":43.118, "Secreto":false}
+,{"Fecha":370738800000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1981, "Valor":43.603, "Secreto":false}
+,{"Fecha":373417200000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1981, "Valor":43.981, "Secreto":false}
+,{"Fecha":376009200000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1981, "Valor":44.647, "Secreto":false}
+,{"Fecha":378687600000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1982, "Valor":45.572, "Secreto":false}
+,{"Fecha":381366000000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1982, "Valor":45.927, "Secreto":false}
+,{"Fecha":383785200000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1982, "Valor":46.378, "Secreto":false}
+,{"Fecha":386460000000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1982, "Valor":46.988, "Secreto":false}
+,{"Fecha":389052000000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1982, "Valor":47.668, "Secreto":false}
+,{"Fecha":391730400000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1982, "Valor":48.126, "Secreto":false}
+,{"Fecha":394322400000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1982, "Valor":48.744, "Secreto":false}
+,{"Fecha":397000800000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1982, "Valor":49.082, "Secreto":false}
+,{"Fecha":399679200000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1982, "Valor":49.139, "Secreto":false}
+,{"Fecha":402274800000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1982, "Valor":49.631, "Secreto":false}
+,{"Fecha":404953200000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1982, "Valor":49.793, "Secreto":false}
+,{"Fecha":407545200000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1982, "Valor":50.901, "Secreto":false}
+,{"Fecha":410223600000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1983, "Valor":51.761, "Secreto":false}
+,{"Fecha":412902000000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1983, "Valor":52.021, "Secreto":false}
+,{"Fecha":415321200000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1983, "Valor":52.337, "Secreto":false}
+,{"Fecha":417996000000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1983, "Valor":53.056, "Secreto":false}
+,{"Fecha":420588000000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1983, "Valor":53.276, "Secreto":false}
+,{"Fecha":423266400000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1983, "Valor":53.588, "Secreto":false}
+,{"Fecha":425858400000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1983, "Valor":53.779, "Secreto":false}
+,{"Fecha":428536800000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1983, "Valor":54.501, "Secreto":false}
+,{"Fecha":431215200000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1983, "Valor":54.937, "Secreto":false}
+,{"Fecha":433810800000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1983, "Valor":55.682, "Secreto":false}
+,{"Fecha":436489200000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1983, "Valor":56.249, "Secreto":false}
+,{"Fecha":439081200000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1983, "Valor":57.122, "Secreto":false}
+,{"Fecha":441759600000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1984, "Valor":58.007, "Secreto":false}
+,{"Fecha":444438000000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1984, "Valor":58.227, "Secreto":false}
+,{"Fecha":446943600000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1984, "Valor":58.696, "Secreto":false}
+,{"Fecha":449618400000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1984, "Valor":58.973, "Secreto":false}
+,{"Fecha":452210400000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1984, "Valor":59.292, "Secreto":false}
+,{"Fecha":454888800000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1984, "Valor":59.712, "Secreto":false}
+,{"Fecha":457480800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1984, "Valor":60.629, "Secreto":false}
+,{"Fecha":460159200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1984, "Valor":61.05, "Secreto":false}
+,{"Fecha":462837600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1984, "Valor":61.174, "Secreto":false}
+,{"Fecha":465433200000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1984, "Valor":61.543, "Secreto":false}
+,{"Fecha":468111600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1984, "Valor":61.859, "Secreto":false}
+,{"Fecha":470703600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1984, "Valor":62.278, "Secreto":false}
+,{"Fecha":473382000000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1985, "Valor":63.438, "Secreto":false}
+,{"Fecha":476060400000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1985, "Valor":63.898, "Secreto":false}
+,{"Fecha":478479600000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1985, "Valor":64.296, "Secreto":false}
+,{"Fecha":481154400000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1985, "Valor":64.959, "Secreto":false}
+,{"Fecha":483746400000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1985, "Valor":65.163, "Secreto":false}
+,{"Fecha":486424800000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1985, "Valor":65.052, "Secreto":false}
+,{"Fecha":489016800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1985, "Valor":65.422, "Secreto":false}
+,{"Fecha":491695200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1985, "Valor":65.52, "Secreto":false}
+,{"Fecha":494373600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1985, "Valor":66.239, "Secreto":false}
+,{"Fecha":496969200000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1985, "Valor":66.58, "Secreto":false}
+,{"Fecha":499647600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1985, "Valor":67.093, "Secreto":false}
+,{"Fecha":502239600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1985, "Valor":67.371, "Secreto":false}
+,{"Fecha":504918000000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1986, "Valor":69.308, "Secreto":false}
+,{"Fecha":507596400000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1986, "Valor":69.617, "Secreto":false}
+,{"Fecha":510015600000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1986, "Valor":69.852, "Secreto":false}
+,{"Fecha":512690400000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1986, "Valor":70.022, "Secreto":false}
+,{"Fecha":515282400000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1986, "Valor":70.217, "Secreto":false}
+,{"Fecha":517960800000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1986, "Valor":70.862, "Secreto":false}
+,{"Fecha":520552800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1986, "Valor":71.57, "Secreto":false}
+,{"Fecha":523231200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1986, "Valor":71.773, "Secreto":false}
+,{"Fecha":525909600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1986, "Valor":72.516, "Secreto":false}
+,{"Fecha":528505200000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1986, "Valor":72.787, "Secreto":false}
+,{"Fecha":531183600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1986, "Valor":72.62, "Secreto":false}
+,{"Fecha":533775600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1986, "Valor":72.93, "Secreto":false}
+,{"Fecha":536454000000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1987, "Valor":73.489, "Secreto":false}
+,{"Fecha":539132400000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1987, "Valor":73.802, "Secreto":false}
+,{"Fecha":541551600000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1987, "Valor":74.231, "Secreto":false}
+,{"Fecha":544226400000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1987, "Valor":74.399, "Secreto":false}
+,{"Fecha":546818400000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1987, "Valor":74.307, "Secreto":false}
+,{"Fecha":549496800000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1987, "Valor":74.325, "Secreto":false}
+,{"Fecha":552088800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1987, "Valor":75.078, "Secreto":false}
+,{"Fecha":554767200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1987, "Valor":75.045, "Secreto":false}
+,{"Fecha":557445600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1987, "Valor":75.737, "Secreto":false}
+,{"Fecha":560041200000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1987, "Valor":76.187, "Secreto":false}
+,{"Fecha":562719600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1987, "Valor":76.012, "Secreto":false}
+,{"Fecha":565311600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1987, "Valor":76.284, "Secreto":false}
+,{"Fecha":567990000000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1988, "Valor":76.768, "Secreto":false}
+,{"Fecha":570668400000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1988, "Valor":76.978, "Secreto":false}
+,{"Fecha":573174000000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1988, "Valor":77.536, "Secreto":false}
+,{"Fecha":575848800000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1988, "Valor":77.266, "Secreto":false}
+,{"Fecha":578440800000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1988, "Valor":77.262, "Secreto":false}
+,{"Fecha":581119200000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1988, "Valor":77.562, "Secreto":false}
+,{"Fecha":583711200000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1988, "Valor":78.586, "Secreto":false}
+,{"Fecha":586389600000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1988, "Valor":79.363, "Secreto":false}
+,{"Fecha":589068000000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1988, "Valor":80.06, "Secreto":false}
+,{"Fecha":591663600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1988, "Valor":80.15, "Secreto":false}
+,{"Fecha":594342000000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1988, "Valor":80.105, "Secreto":false}
+,{"Fecha":596934000000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1988, "Valor":80.742, "Secreto":false}
+,{"Fecha":599612400000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1989, "Valor":81.68, "Secreto":false}
+,{"Fecha":602290800000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1989, "Valor":81.738, "Secreto":false}
+,{"Fecha":604710000000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1989, "Valor":82.26, "Secreto":false}
+,{"Fecha":607384800000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1989, "Valor":82.481, "Secreto":false}
+,{"Fecha":609976800000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1989, "Valor":82.598, "Secreto":false}
+,{"Fecha":612655200000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1989, "Valor":83.048, "Secreto":false}
+,{"Fecha":615247200000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1989, "Valor":84.396, "Secreto":false}
+,{"Fecha":617925600000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1989, "Valor":84.59, "Secreto":false}
+,{"Fecha":620604000000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1989, "Valor":85.485, "Secreto":false}
+,{"Fecha":623199600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1989, "Valor":85.83, "Secreto":false}
+,{"Fecha":625878000000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1989, "Valor":85.969, "Secreto":false}
+,{"Fecha":628470000000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1989, "Valor":86.304, "Secreto":false}
+,{"Fecha":631148400000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1990, "Valor":87.144, "Secreto":false}
+,{"Fecha":633826800000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1990, "Valor":87.697, "Secreto":false}
+,{"Fecha":636246000000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1990, "Valor":88.018, "Secreto":false}
+,{"Fecha":638920800000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1990, "Valor":88.218, "Secreto":false}
+,{"Fecha":641512800000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1990, "Valor":88.211, "Secreto":false}
+,{"Fecha":644191200000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1990, "Valor":88.483, "Secreto":false}
+,{"Fecha":646783200000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1990, "Valor":89.672, "Secreto":false}
+,{"Fecha":649461600000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1990, "Valor":90.065, "Secreto":false}
+,{"Fecha":652140000000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1990, "Valor":91.013, "Secreto":false}
+,{"Fecha":654735600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1990, "Valor":91.821, "Secreto":false}
+,{"Fecha":657414000000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1990, "Valor":91.729, "Secreto":false}
+,{"Fecha":660006000000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1990, "Valor":91.955, "Secreto":false}
+,{"Fecha":662684400000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1991, "Valor":93.025, "Secreto":false}
+,{"Fecha":665362800000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1991, "Valor":92.895, "Secreto":false}
+,{"Fecha":667782000000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1991, "Valor":93.197, "Secreto":false}
+,{"Fecha":670456800000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1991, "Valor":93.399, "Secreto":false}
+,{"Fecha":673048800000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1991, "Valor":93.664, "Secreto":false}
+,{"Fecha":675727200000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1991, "Valor":93.934, "Secreto":false}
+,{"Fecha":678319200000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1991, "Valor":95.1, "Secreto":false}
+,{"Fecha":680997600000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1991, "Valor":95.453, "Secreto":false}
+,{"Fecha":683676000000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1991, "Valor":96.233, "Secreto":false}
+,{"Fecha":686271600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1991, "Valor":96.838, "Secreto":false}
+,{"Fecha":688950000000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1991, "Valor":96.985, "Secreto":false}
+,{"Fecha":691542000000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1991, "Valor":97.038, "Secreto":false}
+,{"Fecha":694220400000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1992, "Valor":98.576, "Secreto":false}
+,{"Fecha":696898800000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1992, "Valor":99.233, "Secreto":false}
+,{"Fecha":699404400000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1992, "Valor":99.592, "Secreto":false}
+,{"Fecha":702079200000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1992, "Valor":99.485, "Secreto":false}
+,{"Fecha":704671200000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1992, "Valor":99.745, "Secreto":false}
+,{"Fecha":707349600000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1992, "Valor":99.726, "Secreto":false}
+,{"Fecha":709941600000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1992, "Valor":100.05, "Secreto":false}
+,{"Fecha":712620000000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1992, "Valor":100.962, "Secreto":false}
+,{"Fecha":715298400000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1992, "Valor":101.795, "Secreto":false}
+,{"Fecha":717894000000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1992, "Valor":101.856, "Secreto":false}
+,{"Fecha":720572400000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1992, "Valor":101.921, "Secreto":false}
+,{"Fecha":723164400000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1992, "Valor":102.227, "Secreto":false}
+,{"Fecha":725842800000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1993, "Valor":103.185, "Secreto":false}
+,{"Fecha":728521200000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1993, "Valor":103.218, "Secreto":false}
+,{"Fecha":730940400000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1993, "Valor":103.581, "Secreto":false}
+,{"Fecha":733615200000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1993, "Valor":104.035, "Secreto":false}
+,{"Fecha":736207200000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1993, "Valor":104.322, "Secreto":false}
+,{"Fecha":738885600000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1993, "Valor":104.581, "Secreto":false}
+,{"Fecha":741477600000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1993, "Valor":104.955, "Secreto":false}
+,{"Fecha":744156000000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1993, "Valor":105.583, "Secreto":false}
+,{"Fecha":746834400000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1993, "Valor":106.18, "Secreto":false}
+,{"Fecha":749430000000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1993, "Valor":106.576, "Secreto":false}
+,{"Fecha":752108400000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1993, "Valor":106.755, "Secreto":false}
+,{"Fecha":754700400000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1993, "Valor":107.262, "Secreto":false}
+,{"Fecha":757378800000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1994, "Valor":108.346, "Secreto":false}
+,{"Fecha":760057200000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1994, "Valor":108.385, "Secreto":false}
+,{"Fecha":762476400000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1994, "Valor":108.743, "Secreto":false}
+,{"Fecha":765151200000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1994, "Valor":109.171, "Secreto":false}
+,{"Fecha":767743200000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1994, "Valor":109.394, "Secreto":false}
+,{"Fecha":770421600000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1994, "Valor":109.512, "Secreto":false}
+,{"Fecha":773013600000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1994, "Valor":109.941, "Secreto":false}
+,{"Fecha":775692000000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1994, "Valor":110.651, "Secreto":false}
+,{"Fecha":778370400000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1994, "Valor":110.988, "Secreto":false}
+,{"Fecha":780966000000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1994, "Valor":111.229, "Secreto":false}
+,{"Fecha":783644400000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1994, "Valor":111.422, "Secreto":false}
+,{"Fecha":786236400000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1994, "Valor":111.914, "Secreto":false}
+,{"Fecha":788914800000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1995, "Valor":113.074, "Secreto":false}
+,{"Fecha":791593200000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1995, "Valor":113.628, "Secreto":false}
+,{"Fecha":794012400000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1995, "Valor":114.29, "Secreto":false}
+,{"Fecha":796687200000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1995, "Valor":114.896, "Secreto":false}
+,{"Fecha":799279200000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1995, "Valor":114.942, "Secreto":false}
+,{"Fecha":801957600000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1995, "Valor":115.051, "Secreto":false}
+,{"Fecha":804549600000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1995, "Valor":115.069, "Secreto":false}
+,{"Fecha":807228000000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1995, "Valor":115.394, "Secreto":false}
+,{"Fecha":809906400000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1995, "Valor":115.848, "Secreto":false}
+,{"Fecha":812502000000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1995, "Valor":116.064, "Secreto":false}
+,{"Fecha":815180400000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1995, "Valor":116.372, "Secreto":false}
+,{"Fecha":817772400000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1995, "Valor":116.748, "Secreto":false}
+,{"Fecha":820450800000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1996, "Valor":117.462, "Secreto":false}
+,{"Fecha":823129200000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1996, "Valor":117.782, "Secreto":false}
+,{"Fecha":825634800000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1996, "Valor":118.2, "Secreto":false}
+,{"Fecha":828309600000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1996, "Valor":118.871, "Secreto":false}
+,{"Fecha":830901600000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1996, "Valor":119.281, "Secreto":false}
+,{"Fecha":833580000000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1996, "Valor":119.181, "Secreto":false}
+,{"Fecha":836172000000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1996, "Valor":119.34, "Secreto":false}
+,{"Fecha":838850400000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1996, "Valor":119.678, "Secreto":false}
+,{"Fecha":841528800000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1996, "Valor":119.97, "Secreto":false}
+,{"Fecha":844120800000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1996, "Valor":120.134, "Secreto":false}
+,{"Fecha":846802800000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1996, "Valor":120.141, "Secreto":false}
+,{"Fecha":849394800000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1996, "Valor":120.497, "Secreto":false}
+,{"Fecha":852073200000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1997, "Valor":120.847, "Secreto":false}
+,{"Fecha":854751600000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1997, "Valor":120.765, "Secreto":false}
+,{"Fecha":857170800000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1997, "Valor":120.825, "Secreto":false}
+,{"Fecha":859845600000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1997, "Valor":120.869, "Secreto":false}
+,{"Fecha":862437600000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1997, "Valor":121.045, "Secreto":false}
+,{"Fecha":865116000000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1997, "Valor":121.041, "Secreto":false}
+,{"Fecha":867708000000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1997, "Valor":121.263, "Secreto":false}
+,{"Fecha":870386400000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1997, "Valor":121.798, "Secreto":false}
+,{"Fecha":873064800000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1997, "Valor":122.401, "Secreto":false}
+,{"Fecha":875656800000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1997, "Valor":122.356, "Secreto":false}
+,{"Fecha":878338800000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1997, "Valor":122.599, "Secreto":false}
+,{"Fecha":880930800000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1997, "Valor":122.925, "Secreto":false}
+,{"Fecha":883609200000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1998, "Valor":123.215, "Secreto":false}
+,{"Fecha":886287600000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1998, "Valor":122.927, "Secreto":false}
+,{"Fecha":888706800000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1998, "Valor":122.984, "Secreto":false}
+,{"Fecha":891381600000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1998, "Valor":123.289, "Secreto":false}
+,{"Fecha":893973600000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1998, "Valor":123.45, "Secreto":false}
+,{"Fecha":896652000000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1998, "Valor":123.53, "Secreto":false}
+,{"Fecha":899244000000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1998, "Valor":123.986, "Secreto":false}
+,{"Fecha":901922400000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1998, "Valor":124.318, "Secreto":false}
+,{"Fecha":904600800000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1998, "Valor":124.41, "Secreto":false}
+,{"Fecha":907192800000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1998, "Valor":124.421, "Secreto":false}
+,{"Fecha":909874800000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1998, "Valor":124.309, "Secreto":false}
+,{"Fecha":912466800000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1998, "Valor":124.653, "Secreto":false}
+,{"Fecha":915145200000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":1999, "Valor":125.111, "Secreto":false}
+,{"Fecha":917823600000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":1999, "Valor":125.185, "Secreto":false}
+,{"Fecha":920242800000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":1999, "Valor":125.737, "Secreto":false}
+,{"Fecha":922917600000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":1999, "Valor":126.202, "Secreto":false}
+,{"Fecha":925509600000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":1999, "Valor":126.198, "Secreto":false}
+,{"Fecha":928188000000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":1999, "Valor":126.225, "Secreto":false}
+,{"Fecha":930780000000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":1999, "Valor":126.772, "Secreto":false}
+,{"Fecha":933458400000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":1999, "Valor":127.312, "Secreto":false}
+,{"Fecha":936136800000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":1999, "Valor":127.557, "Secreto":false}
+,{"Fecha":938728800000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":1999, "Valor":127.509, "Secreto":false}
+,{"Fecha":941410800000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":1999, "Valor":127.714, "Secreto":false}
+,{"Fecha":944002800000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":1999, "Valor":128.29, "Secreto":false}
+,{"Fecha":946681200000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":2000, "Valor":128.712, "Secreto":false}
+,{"Fecha":949359600000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":2000, "Valor":128.894, "Secreto":false}
+,{"Fecha":951865200000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":2000, "Valor":129.405, "Secreto":false}
+,{"Fecha":954540000000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":2000, "Valor":129.943, "Secreto":false}
+,{"Fecha":957132000000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":2000, "Valor":130.159, "Secreto":false}
+,{"Fecha":959810400000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":2000, "Valor":130.553, "Secreto":false}
+,{"Fecha":962402400000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2000, "Valor":131.346, "Secreto":false}
+,{"Fecha":965080800000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2000, "Valor":131.897, "Secreto":false}
+,{"Fecha":967759200000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2000, "Valor":132.238, "Secreto":false}
+,{"Fecha":970351200000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2000, "Valor":132.576, "Secreto":false}
+,{"Fecha":973033200000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2000, "Valor":132.906, "Secreto":false}
+,{"Fecha":975625200000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2000, "Valor":133.366, "Secreto":false}
+,{"Fecha":978303600000, "FK_TipoDato":1, "FK_Periodo":1, "Anyo":2001, "Valor":133.413, "Secreto":false}
+,{"Fecha":980982000000, "FK_TipoDato":1, "FK_Periodo":2, "Anyo":2001, "Valor":133.851, "Secreto":false}
+,{"Fecha":983401200000, "FK_TipoDato":1, "FK_Periodo":3, "Anyo":2001, "Valor":134.415, "Secreto":false}
+,{"Fecha":986076000000, "FK_TipoDato":1, "FK_Periodo":4, "Anyo":2001, "Valor":135.113, "Secreto":false}
+,{"Fecha":988668000000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":2001, "Valor":135.624, "Secreto":false}
+,{"Fecha":991346400000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":2001, "Valor":136.081, "Secreto":false}
+,{"Fecha":993938400000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2001, "Valor":136.415, "Secreto":false}
+,{"Fecha":996616800000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2001, "Valor":136.745, "Secreto":false}
+,{"Fecha":999295200000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2001, "Valor":136.726, "Secreto":false}
+,{"Fecha":1001887200000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2001, "Valor":136.585, "Secreto":false}
+,{"Fecha":1004569200000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2001, "Valor":136.483, "Secreto":false}
+,{"Fecha":1007161200000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2001, "Valor":136.978, "Secreto":false}
+]
+}

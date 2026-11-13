@@ -79,7 +79,8 @@ export function basesDeVentana(
   const mesRef = mesPrevio - regla.mesIndiceReferencia;
   const factor = (i: number): number => {
     if (!entrada.actualizar || i < regla.mesIndiceReferencia || i <= regla.mesesNominales) return 1;
-    return ctx.ipc(mesRef) / ctx.ipc(mesPrevio - i);
+    const cociente = ctx.ipc(mesRef) / ctx.ipc(mesPrevio - i);
+    return ctx.lecturas.actualizacionFactorMinimo === 'suelo-1' ? Math.max(1, cociente) : cociente;
   };
 
   for (const { i, base } of mesesBase) valores.push(base * factor(i));

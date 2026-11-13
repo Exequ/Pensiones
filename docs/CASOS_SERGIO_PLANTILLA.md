@@ -23,7 +23,7 @@ Mientras el fichero no exista, nada falla. Si existe y el formato no es válido,
 | `fecha del hecho causante` | `AAAA-MM-DD`: jubilación, hecho causante de la incapacidad, fallecimiento, solicitud de la PNC o, en el MEI, cualquier día del año.                                                                                   |
 | `datos personales`         | Objeto JSON con los datos del caso (véase abajo). `{}` si no hay.                                                                                                                                                     |
 | `carrera o bases`          | Lista JSON de periodos `[{"desde":"AAAA-MM","hasta":"AAAA-MM","baseMensual":2000}]` (también `basesPorAnio` y `basesPorMes`); en el MEI, `{"retribucionMensual": 6000}`; `-` en las PNC y en un causante pensionista. |
-| `resultado esperado`       | Objeto JSON con las cifras esperadas (véase abajo) y, opcionalmente, `"tolerancia"` en euros (por defecto, 0,01) y `"diferenciaConocida"` (véase abajo).                                                                                                     |
+| `resultado esperado`       | Objeto JSON con las cifras esperadas (véase abajo) y, opcionalmente, `"tolerancia"` en euros (por defecto, 0,01) y `"diferenciaConocida"` (véase abajo).                                                              |
 | `fuente o método`          | De dónde sale el resultado: «independiente: resolución X (url)», «independiente: simulador de la Seguridad Social, fecha», «derivado: cálculo a mano, hoja adjunta»… Obligatoria (al menos diez caracteres).          |
 
 Las celdas JSON pueden ir entre comillas invertidas (así una barra «|» dentro de un JSON no rompe la tabla).

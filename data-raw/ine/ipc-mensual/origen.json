@@ -1,0 +1,37 @@
+{
+  "IPC2401.json": {
+    "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC2401?nult=2000",
+    "sha256": "6eb20f735a08e8778d510efb3f88d8eff5b9cd146063814a83cad43769d908e9",
+    "fetchedAt": "2026-11-13"
+  },
+  "IPC290750.json": {
+    "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=2000",
+    "sha256": "eacf5489a57552e60f839bfc086d3378473c838a3f9630a2f632831a330b6efd",
+    "fetchedAt": "2026-11-13"
+  },
+  "IPC290751.json": {
+    "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=2000",
+    "sha256": "bc369aadcd4a1cc7b13f9cf6c558b2738f4a104efb00b313f14a96fd247b07ea",
+    "fetchedAt": "2026-11-13"
+  },
+  "IPC290752.json": {
+    "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290752?nult=2000",
+    "sha256": "f69d71b7c697c17d785ca7b37e68712bd240389091d7556146ef9196a7ded7f3",
+    "fetchedAt": "2026-11-13"
+  },
+  "IPC4191.json": {
+    "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC4191?nult=2000",
+    "sha256": "692d014fa4f1a77bb25b8e97b0cdf9daab3095aaa337645a862df805c6071810",
+    "fetchedAt": "2026-11-13"
+  },
+  "IPC77344.json": {
+    "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC77344?nult=2000",
+    "sha256": "9ace73d8c3abda467874505921014c3fd05a11ad5508115a692671dc2bf9b84b",
+    "fetchedAt": "2026-11-13"
+  },
+  "tabla-249-base-2001.px": {
+    "url": "https://www.ine.es/jaxiT3/files/es/249.px",
+    "sha256": "79553ac6eee5748b54e802c7c285b44d04ce5e906d63eaf60995d41eaf124e52",
+    "fetchedAt": "2026-11-13"
+  }
+}
