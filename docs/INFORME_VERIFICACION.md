@@ -286,35 +286,37 @@ Verificación del motor (`src/engine/jubilacion/`, descrito en `docs/MOTOR_JUBIL
 
 ### Casos de oro
 
-17 tests con 6 casos hechos a mano (`docs/CASOS_ORO_MOTOR.md`: ordinaria, anticipada voluntaria, anticipada involuntaria, demorada con porcentaje y con tanto alzado, topada y mínima), recalculados aparte en Python con los JSON de `data/parametros`. Los casos de Sergio (`data-raw/casos-oro/casos-sergio.md`) **no existen todavía**: quedan 5 `it.todo` en `scripts/casos-sergio.test.ts`, que fallará si el fichero aparece sin convertir.
+17 tests con 6 casos hechos a mano (`docs/CASOS_ORO_MOTOR.md`: ordinaria, anticipada voluntaria, anticipada involuntaria, demorada con porcentaje y con tanto alzado, topada y mínima), recalculados aparte en Python con los JSON de `data/parametros`. Los casos de Sergio (`data-raw/casos-oro/casos-sergio.md`) se incorporaron en la Fase 2-D (sección siguiente de este informe).
 
 ### Cómo cambia el resultado de un caso típico con cada lectura abierta
 
 Cada lectura abierta es una opción del motor (por defecto, la que reflejan los ficheros de `/data`). Para cada una, un caso típico (importes en euros nominales; base reguladora o pensión mensual por paga según el caso; escenario de IPC del 2 %; opción de 25 años apagada salvo en el caso (c); generado con `npx tsx scripts/lecturas-abiertas.ts`):
 
-| Lectura                                  | Caso                               | Alternativa                    | Por defecto | Alternativa (€) | Variación |
-| ---------------------------------------- | ---------------------------------- | ------------------------------ | ----------: | --------------: | --------: |
-| (a) DT 38.ª, base máxima                 | topado por la base máxima, 2040    | «sobre la cifra inicial»       |     5550,02 |         5523,56 |   -0,48 % |
-| (a) DT 39.ª, pensión máxima              | topado, 2040                       | «incremento creciente»         |     4503,41 |         5145,23 |   14,25 % |
-| (b) lagunas, base mínima                 | 40 meses de laguna finales, 2040   | base mínima del hecho causante |     2306,63 |         2308,67 |    0,09 % |
-| (c) opción de 25 años el 31/12/2040      | salarios con +2 % real, 31/12/2040 | excluida                       |     3988,46 |         3919,01 |   -1,74 % |
-| (d) lagunas anteriores a la primera alta | 15 años cotizados, 2030            | ignorar                        |     1687,61 |         1440,77 |  -14,63 % |
-| (d) IPC mensual                          | 31 años a 2.000 €, 2026            | escalón anual                  |     2187,29 |         2166,53 |   -0,95 % |
-| (d) fracción de la demora                | 1 año y 9 meses de demora          | desde el primer año            |     2905,22 |         2961,09 |    1,92 % |
-| (d) pensión máxima desde 2051            | topado, 2055                       | incremento anual literal       |     6279,06 |         7512,96 |   19,65 % |
+| Lectura                                  | Caso                                 | Alternativa                    | Por defecto | Alternativa (€) | Variación |
+| ---------------------------------------- | ------------------------------------ | ------------------------------ | ----------: | --------------: | --------: |
+| (a) DT 38.ª, base máxima                 | topado por la base máxima, 2040      | «sobre la cifra inicial»       |     5627,47 |         5601,00 |   -0,47 % |
+| (a) DT 39.ª, pensión máxima              | topado, 2040                         | «incremento creciente»         |     4503,41 |         5145,23 |   14,25 % |
+| (b) lagunas, base mínima                 | 40 meses de laguna finales, 2040     | base mínima del hecho causante |     2351,23 |         2353,27 |    0,09 % |
+| (c) opción de 25 años el 31/12/2040      | salarios con +2 % real, 31/12/2040   | excluida                       |     4033,62 |         3967,71 |   -1,63 % |
+| (d) lagunas anteriores a la primera alta | 15 años cotizados, 2030              | ignorar                        |     1729,67 |         1475,58 |  -14,69 % |
+| (d) IPC mensual                          | 31 años a 2.000 €, 2026              | escalón anual                  |     2185,32 |         2166,53 |   -0,86 % |
+| (d) IPC mensual interpolado              | 31 años a 2.000 €, 2026              | medias anuales interpoladas    |     2185,32 |         2187,29 |    0,09 % |
+| (d) suelo del factor de actualización    | 31 años a 2.000 €, noviembre de 2026 | suelo de uno                   |     2177,03 |         2177,12 |    0,00 % |
+| (d) fracción de la demora                | 1 año y 9 meses de demora            | desde el primer año            |     2983,16 |         3040,52 |    1,92 % |
+| (d) pensión máxima desde 2051            | topado, 2055                         | incremento anual literal       |     6279,06 |         7512,96 |   19,65 % |
 
 Lectura de la tabla:
 
 - **(a) «Acumulativos»**: la base máxima con los 1,2 puntos sumados sobre la cifra inicial en vez de compuestos solo afecta a quien está topado por la base máxima (−0,5 % de base reguladora en 2040). La pensión máxima con un incremento que crece 0,115 puntos cada año en vez de 0,115 constante sube la máxima de 2040 un 14 %, lo que importa a quien ya está topado: es la lectura con mayor efecto de las cuatro.
 - **(b) Base mínima de las lagunas**: con la base mínima del hecho causante la base reguladora sube un 0,1 % con 40 meses de laguna; es una diferencia pequeña porque las lagunas integradas pesan poco frente a las bases reales.
-- **(c) 31/12/2040**: con salarios con crecimiento real, excluir ese día de la opción de 25 años baja la base reguladora un 1,7 % para quien se jubila justo ese día (un día antes o un día después no cambia nada con ninguna de las dos lecturas).
-- **(d) Otras**: no integrar las lagunas anteriores a la primera alta baja la base reguladora de una carrera de 15 años un 14,6 % (es la lectura de mayor efecto en carreras cortas; en ellas la pensión suele ser la mínima y la diferencia a menudo no se nota); el IPC mensual interpolado frente al escalón anual cambia la base reguladora un 1 %; computar la fracción de la demora desde el primer año sube la pensión un 1,9 %; la tabla de 2051-2065 como incremento anual literal en vez de acumulado eleva la máxima de 2055 un 20 %.
+- **(c) 31/12/2040**: con salarios con crecimiento real, excluir ese día de la opción de 25 años baja la base reguladora un 1,6 % para quien se jubila justo ese día (un día antes o un día después no cambia nada con ninguna de las dos lecturas).
+- **(d) Otras**: no integrar las lagunas anteriores a la primera alta baja la base reguladora de una carrera de 15 años un 14,7 % (es la lectura de mayor efecto en carreras cortas; en ellas la pensión suele ser la mínima y la diferencia a menudo no se nota); el índice mensual real del INE (por defecto desde la Fase 2-D) frente al escalón anual cambia la base reguladora un 0,9 % y frente a las medias anuales interpoladas (la lectura anterior) un 0,1 % en este caso típico; en los ocho casos de Sergio acerca la pensión del motor a la del autocálculo (desfase medio de 0,56 % con las medias anuales y de 0,12 % con el índice mensual, véase la sección de la Fase 2-D); el suelo de uno del factor de actualización apenas mueve un caso típico (la diferencia sube con el número de meses con factor menor que uno); computar la fracción de la demora desde el primer año sube la pensión un 1,9 %; la tabla de 2051-2065 como incremento anual literal en vez de acumulado eleva la máxima de 2055 un 20 %.
 
 ### Limitaciones de la verificación
 
 - El contraste con M5 es contra un modelo simplificado propio, no contra pensiones reales ni contra el simulador oficial de la Seguridad Social.
-- Los casos de Sergio no existen todavía: el motor no se ha contrastado con ningún caso externo real.
-- El IPC mensual se aproxima con medias anuales; el efecto aparece en el apartado (d).
+- Los casos de Sergio (Fase 2-D) son ocho cálculos del autocálculo oficial de la Seguridad Social; contrastan la base reguladora de la jubilación ordinaria, no el resto de prestaciones ni las pensiones reales.
+- Hasta la Fase 2-D el IPC mensual se aproximaba con medias anuales; desde entonces es el índice mensual del INE (efecto en el apartado (d)).
 - La opción mixta de la demora, las anticipadas y la integración reforzada de lagunas se han probado con casos construidos, no con resoluciones reales.
 
 ## Fase 2-B-1: motor de la incapacidad permanente
@@ -340,11 +342,11 @@ Generado con `npx tsx scripts/lecturas-abiertas-incapacidad.ts` (sin complemento
 
 | Lectura                                              | Caso                                      | Alternativa                    | Magnitud         | Por defecto | Alternativa | Variación |
 | ---------------------------------------------------- | ----------------------------------------- | ------------------------------ | ---------------- | ----------: | ----------: | --------: |
-| (a) edad de la ficción (art. 197.1.b)                | 58 años, 191 meses cotizados, 2026        | edad general sin carrera larga | pensión €/mes    |     1348,51 |     1348,51 |    0,00 % |
-| (b) años añadidos por meses o años completos         | el mismo caso                             | años completos                 | pensión €/mes    |     1348,51 |     1330,78 |   -1,31 % |
+| (a) edad de la ficción (art. 197.1.b)                | 58 años, 191 meses cotizados, 2026        | edad general sin carrera larga | pensión €/mes    |     1355,77 |     1355,77 |    0,00 % |
+| (b) años añadidos por meses o años completos         | el mismo caso                             | años completos                 | pensión €/mes    |     1355,77 |     1337,94 |   -1,31 % |
 | (c) redondeo de la edad a medios años (RD 1799/1985) | 45 años y 5 meses, 2026                   | medio año                      | meses exigidos   |       76,00 |       75,00 |   -1,32 % |
-| (c) ídem, efecto en la base del periodo corto        | bases crecientes (100 € al año)           | medio año                      | pensión €/mes    |     1510,45 |     1511,18 |    0,05 % |
-| (d) divisor del periodo corto (art. 197.2)           | 42 años, 2026                             | meses × 14/12                  | pensión €/mes    |     1794,15 |     1794,05 |   -0,01 % |
+| (c) ídem, efecto en la base del periodo corto        | bases crecientes (100 € al año)           | medio año                      | pensión €/mes    |     1518,48 |     1519,18 |    0,05 % |
+| (d) divisor del periodo corto (art. 197.2)           | 42 años, 2026                             | meses × 14/12                  | pensión €/mes    |     1802,96 |     1802,86 |   -0,01 % |
 | (e) meses sin cotizar en el accidente no laboral     | 24 meses elegidos con 6 sin cotizar, 2026 | integrarlos con la base mínima | pensión €/mes    |      530,36 |      693,14 |   30,69 % |
 | (f) días cotizados de la parcial                     | 59 meses cotizados                        | treinta días por mes           | días acreditados |     1796,00 |     1770,00 |   -1,45 % |
 
@@ -472,3 +474,27 @@ Lectura de la tabla:
 - **Auditoría** (`docs/AUDITORIA_DATOS.md`, sección «Auditoría independiente de las series del motor»): 51 ficheros de `data/parametros` leen los motores; cada serie se contrasta con una segunda fuente distinta de su cita (web de la Seguridad Social, Eurostat, INE, IMSERSO, BEL del MITES, órdenes de cotización y otras normas del BOE). Resultado: una corrección de datos (gran invalidez de 2012 con cónyuge no a cargo, con la corrección de errores BOE-A-2012-352; `docs/DISCREPANCIAS.md`); el resto coincide o tiene diferencias explicadas (BEL de 2000 a 2011, errores del BEL de 2022 y 2026, calendario de Eurostat en el SMI de 2021 y 2022); ocho ficheros de reglas legales sin segunda fuente independiente. Prueba de sensibilidad: `python3 -I scripts/etl/auditoria_independiente.py --sensibilidad`.
 - **Triage** (`docs/REVISION_PRIORIZADA.md`): de las 27 lecturas abiertas, 6 se cierran por evidencia (propuestas pendientes de visto bueno), 11 son del grupo A (con ficha de tres casos), 7 del B y 3 del C. Las mediciones están en `docs/triage-actuarial.json` (`npx tsx scripts/triage-actuarial.ts`).
 - **Años futuros**: `npx tsx scripts/anios-futuros.ts` y `docs/PENDIENTE_DATOS.md`.
+
+## Fase 2-D: casos de oro de Sergio e IPC mensual del INE
+
+**Casos de Sergio** (`data-raw/casos-oro/casos-sergio.md`, `npx tsx scripts/casos-sergio.ts`): ocho cálculos de jubilación ordinaria hechos con el autocálculo de la Seguridad Social (informes del 13/11/2026). Resultado: **siete coinciden dentro de ±0,01 €** y uno lleva la marca `diferenciaConocida` con su motivo. Desfase de la pensión mensual del motor con respecto al autocálculo, media de los ocho casos:
+
+| Configuración del motor                                               | Desfase absoluto medio | Desfase relativo medio | Desfase máximo |
+| --------------------------------------------------------------------- | ---------------------: | ---------------------: | -------------: |
+| Antes de la Fase 2-D (medias anuales interpoladas, sin suelo)         |                 9,18 € |                0,563 % |        21,33 € |
+| Índice mensual del INE, sin suelo del factor                          |                 1,10 € |                0,120 % |         8,36 € |
+| Índice mensual del INE y lectura de cada caso (cuatro con suelo de 1) |                 1,06 € |                0,119 % |         8,48 € |
+
+El único caso con desfase (`jub-ord-2026-bases-minimas-sin-minimos`, 8,48 €) no es un error de cálculo: el tramo de relleno de base 1000 (2001-06 a 2001-09) cae dentro de la ventana de 304 meses de la regla general, que con esas bases sale mayor que la opción de 25 años; el autocálculo aplicó la opción de 25 años. Con el relleno hasta 2001-05 el motor elige la opción de 25 años y coincide (889,35). Sin ese caso, el desfase absoluto medio es de 0,003 €: los otros siete coinciden con diferencias de 0,00 a 0,01 € (la mayor, +0,007 € en `jub-ord-2026-bases-crecientes`).
+
+**Qué cerró el desfase** (medido con el propio motor, sin tocar reglas):
+
+1. **Índice mensual del INE** (`data/parametros/ipc-indice-mensual.json`): de 2002 en adelante, la serie IPC290751 sin transformar. Con ella, el caso sin meses anteriores a 2002 en la ventana (`jub-ord-2027-11-plana-40a`) coincide exactamente (−0,0001 €) y los factores del motor reproducen los del autocálculo (enero de 2024: 1,0141).
+2. **Suelo del factor de actualización** (`jubilacion.actualizacionFactorMinimo`): los informes muestran siempre un factor mayor o igual que 1,0000000. Es necesario en cuatro casos (`jub-ord-2026-plana-40a`, `jub-ord-2026-bases-crecientes`, `jub-ord-2026-bases-minimas-sin-minimos`, `jub-ord-2026-carrera-15a`), que lo fijan en `configuracion`; en `jub-ord-2027-05-plana-40a`, `jub-ord-2027-11-plana-40a` y `jub-ord-2026-bases-maximas-tope` no cambia la pensión, y `jub-ord-2026-carrera-20a` coincide también sin él (−0,003 € sin suelo, +0,013 € con suelo). Sin el suelo, el caso 4 se separa 0,27 € y el caso 1, 0,11 €.
+3. **Meses de 2001**: el INE no publica el índice de 2001 en la base 2025. Con un único coeficiente (tasa mensual de enero de 2002) los casos con meses de 2001 en la ventana (`jub-ord-2026-plana-40a` y `jub-ord-2027-05-plana-40a`) se separaban 0,38 y 0,24 €; con las variaciones anuales de 2002 que publica el INE, 0,002 y 0,004 €. Esta comparación se hizo con los casos de Sergio a la vista: los dos casos con meses de 2001 han dejado de ser un contraste independiente de ese tramo (véase `docs/DECISIONES.md`).
+
+**Efecto colateral en la base máxima de 2018**: el caso `jub-ord-2026-bases-maximas-tope` coincide en la pensión (topada), pero su base reguladora difiere en 0,87 € (3.769,48 frente a 3.770,35 del informe). La causa es que las bases de Sergio para agosto a diciembre de 2018 (3.803,70) superan la base máxima anual de `/data` para 2018 (3.751,20), de modo que el motor topa cinco meses; el dato mensual de 2018 consta en `docs/PENDIENTE_DATOS.md`.
+
+**Serie mensual del IPC**: 418 meses, de 1992-01 a 2026-10 (último publicado por el INE al descargar). Tramos: 2002-01 a 2026-10, serie IPC290751 (confianza alta); 2001, enlazado con las variaciones anuales de 2002 (confianza media); 1992-01 a 2000-12, serie IPC2401 de base 1992 enlazada con un coeficiente (confianza media). Comprobaciones por código (`scripts/ipc-mensual.test.ts`): los valores se recalculan desde los ficheros del INE de `data-raw/ine/ipc-mensual/` (con su SHA-256), las citas contienen la cifra de partida y las series de las bases 2001 y 2006 son proporcionales a la de base 2025 (no amplían la cobertura). El motor usa la serie mensual con la lectura `mensual-ine` (por defecto); después del último mes encadena con la tasa del escenario y antes de 1992-01 interpola las medias anuales con aviso.
+
+**Qué cambia el IPC mensual en el resto de casos de oro**: ningún caso de oro independiente del IMSERSO cambia (todas las pensiones no contributivas son importes fijos) y los casos del motor de jubilación, incapacidad y supervivencia siguen pasando sin modificar sus valores esperados salvo los que se indican en `docs/DISCREPANCIAS.md`.

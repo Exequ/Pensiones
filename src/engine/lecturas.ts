@@ -132,10 +132,19 @@ export const LECTURAS_ABIERTAS: readonly LecturaAbierta[] = [
   lectura(
     'jubilacion',
     'interpolacionIPC',
-    'Cómo se obtiene el índice de precios de cada mes a partir de las medias anuales: suavizado entre años o en escalones.',
-    ['interpolada', 'escalon-anual'],
+    'De dónde sale el índice de precios de cada mes: del índice mensual publicado por el INE (mejora de datos, no una lectura legal) o, a partir de las medias anuales, suavizado entre años o en escalones.',
+    ['mensual-ine', 'interpolada', 'escalon-anual'],
     S_2A,
     '(d) IPC mensual',
+    'param-actualizacion-bases',
+  ),
+  lectura(
+    'jubilacion',
+    'actualizacionFactorMinimo',
+    'Qué ocurre cuando el índice de precios del mes de referencia es menor que el del mes de la base: el factor de actualización puede ser inferior a uno o tener un suelo igual a uno, como en los informes del autocálculo de la Seguridad Social.',
+    ['sin-suelo', 'suelo-1'],
+    S_2A,
+    '(d) suelo del factor de actualización',
     'param-actualizacion-bases',
   ),
   lectura(

@@ -71,8 +71,17 @@ export interface LecturasAbiertas {
   readonly opcion25EnUltimoDia2040: 'incluida' | 'excluida';
   /** Lagunas en meses anteriores a la primera alta (dentro de la ventana de cálculo). */
   readonly lagunasAnterioresAlPrimerAlta: 'integrar' | 'ignorar';
-  /** Índice mensual del IPC a partir de la media anual: interpolado o escalón anual. */
-  readonly interpolacionIPC: 'interpolada' | 'escalon-anual';
+  /**
+   * Índice mensual del IPC: el índice mensual real del INE (`mensual-ine`, mejora de datos y no una
+   * lectura legal) o, a partir de las medias anuales, interpolado o en escalón anual.
+   */
+  readonly interpolacionIPC: 'mensual-ine' | 'interpolada' | 'escalon-anual';
+  /**
+   * Factor de actualización de una base (cociente de índices): sin suelo, o con suelo de uno (cuando
+   * el índice del mes de referencia es menor que el del mes de la base, el factor es uno, como en los
+   * informes del autocálculo de la Seguridad Social). Rige también en incapacidad y supervivencia.
+   */
+  readonly actualizacionFactorMinimo: 'sin-suelo' | 'suelo-1';
   /** Demora (art. 210.2.a): las fracciones de más de 6 meses cuentan desde el primer o el segundo año. */
   readonly fraccionDemora: 'desde-segundo-anio' | 'desde-primer-anio';
   /** DT 39.ª.4 (pensión máxima desde 2051): tabla como incremento acumulado total o anual literal. */

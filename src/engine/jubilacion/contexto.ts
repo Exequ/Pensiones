@@ -13,7 +13,7 @@ import {
   type LecturasAbiertas,
   type OpcionesJubilacion,
 } from './tipos.ts';
-import { anioDeMes, mesDelAnio, type MesAbs } from './tiempo.ts';
+import { anioDeMes, formatearMes, mesDelAnio, type MesAbs } from './tiempo.ts';
 
 export interface ImporteConReferencia {
   readonly valor: number;
@@ -26,7 +26,10 @@ export interface Contexto {
   readonly escenario: Escenario | undefined;
   readonly huecoBaseMinima: 'error' | 'anterior';
   readonly avisos: Set<string>;
-  /** Índice mensual del IPC (base arbitraria; solo importan los cocientes). */
+  /**
+   * Índice mensual del IPC (base arbitraria; solo importan los cocientes): el del INE con la lectura
+   * `mensual-ine` (por defecto) o el interpolado de las medias anuales.
+   */
   ipc(mes: MesAbs): number;
   indiceAnual(anio: number): number;
   baseMaxima(anio: number): ImporteConReferencia;
@@ -110,16 +113,53 @@ export function crearContexto(
     return v;
   }
 
-  function ipc(mes: MesAbs): number {
+  /** Interpolación en logaritmos entre las medias anuales (situadas a mitad de año). */
+  function ipcInterpolado(mes: MesAbs): number {
     const anio = anioDeMes(mes);
     if (lecturas.interpolacionIPC === 'escalon-anual') return indiceAnual(anio);
-    // La media anual se sitúa a mitad de año; entre dos mitades de año se interpola en logaritmos.
     const t = anio + (mesDelAnio(mes) - 0.5) / 12;
     const y0 = Math.floor(t - 0.5);
     const w = t - (y0 + 0.5);
     const a0 = indiceAnual(y0);
     const a1 = indiceAnual(y0 + 1);
     return Math.exp(Math.log(a0) + w * (Math.log(a1) - Math.log(a0)));
+  }
+
+  // Índice mensual del INE (lectura `mensual-ine`): el publicado; después del último mes, la tasa
+  // anual del escenario repartida en tasas mensuales iguales; antes del primero, la interpolación.
+  const mensual = params.ipcIndiceMensual;
+  const usarMensual = lecturas.interpolacionIPC === 'mensual-ine' && !sustituir;
+  const cacheMensual = new Map<MesAbs, number>();
+
+  function ipcMensual(mes: MesAbs): number {
+    const publicado = mensual.valores.get(mes);
+    if (publicado !== undefined) return publicado;
+    if (mes < mensual.primero) {
+      avisos.add(
+        `IPC anterior a ${formatearMes(mensual.primero)}: sin índice mensual en /data; se interpolan las medias anuales.`,
+      );
+      return ipcInterpolado(mes);
+    }
+    const guardado = cacheMensual.get(mes);
+    if (guardado !== undefined) return guardado;
+    avisos.add(
+      `IPC posterior a ${formatearMes(mensual.ultimo)} (último mes publicado por el INE): se usa la tasa anual del escenario repartida en tasas mensuales iguales.`,
+    );
+    let v = mensual.valores.get(mensual.ultimo) as number;
+    for (let t = mensual.ultimo + 1; t <= mes; t++) {
+      const previo = cacheMensual.get(t);
+      if (previo !== undefined) {
+        v = previo;
+        continue;
+      }
+      v *= (1 + tasaIPC(anioDeMes(t))) ** (1 / 12);
+      cacheMensual.set(t, v);
+    }
+    return v;
+  }
+
+  function ipc(mes: MesAbs): number {
+    return usarMensual ? ipcMensual(mes) : ipcInterpolado(mes);
   }
 
   // --- Revalorización ----------------------------------------------------------------------

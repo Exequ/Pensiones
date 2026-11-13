@@ -122,6 +122,26 @@ fila(
   te({ interpolacionIPC: 'escalon-anual' }),
   'baseReguladora',
 );
+fila(
+  '(d) IPC mensual interpolado',
+  '31 años a 2.000 €, 2026',
+  'medias anuales interpoladas',
+  te({}),
+  te({ interpolacionIPC: 'interpolada' }),
+  'baseReguladora',
+);
+// Con el índice de referencia (septiembre de 2024) por debajo del de los meses anteriores de 2024.
+const sueloCarrera = [{ desde: '1995-01', hasta: '2026-10', baseMensual: 2000 }];
+const ts = (l: Partial<LecturasAbiertas>) =>
+  por(sueloCarrera, '1961-11-15', '2026-11-15', 'ordinaria', l);
+fila(
+  '(d) suelo del factor de actualización',
+  '31 años a 2.000 €, noviembre de 2026',
+  'suelo de uno',
+  ts({}),
+  ts({ actualizacionFactorMinimo: 'suelo-1' }),
+  'baseReguladora',
+);
 const dem = [{ desde: '1986-01', hasta: '2030-12', baseMensual: 2500 }];
 const tf = (l: Partial<LecturasAbiertas>) => por(dem, '1964-01-01', '2030-10-01', 'demorada', l);
 fila(

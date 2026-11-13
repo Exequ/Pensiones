@@ -176,6 +176,13 @@ export function leerCasosSergio(texto: string): LecturaCasos {
         errores.push(
           `${fila}, columna «resultado esperado»: indique al menos pensionMensual, pensionAnual, cuotaTotal, prestaciones, cumpleRequisitos o error.`,
         );
+      if ('diferenciaConocida' in e) {
+        const m = e['diferenciaConocida'];
+        if (typeof m !== 'string' || m.trim().length < 10)
+          errores.push(
+            `${fila}, columna «resultado esperado»: «diferenciaConocida» debe ser un texto con el motivo (al menos diez caracteres).`,
+          );
+      }
     }
     const fu = fuente.trim();
     if (fu.length < 10)
@@ -315,6 +322,19 @@ export function entradaDeCaso(
 export interface ResultadoCaso {
   readonly ok: boolean;
   readonly mensajes: readonly string[];
+  /**
+   * Avisos que no hacen fallar el caso: con la marca `diferenciaConocida`, la diferencia con el
+   * resultado esperado (el caso no coincide, pero se sabe por qué).
+   */
+  readonly advertencias?: readonly string[];
+  /** `coincide`, `diferencia-conocida` (marca y no coincide) o `falla`. */
+  readonly estado?: 'coincide' | 'diferencia-conocida' | 'falla';
+}
+
+/** Motivo de la clave opcional «diferenciaConocida» del resultado esperado, si la lleva. */
+export function diferenciaConocida(esperado: Json): string | undefined {
+  const d = esperado['diferenciaConocida'];
+  return typeof d === 'string' && d.trim() !== '' ? d.trim() : undefined;
 }
 
 const tol = (e: Json): number => (typeof e['tolerancia'] === 'number' ? e['tolerancia'] : 0.01);
@@ -333,8 +353,35 @@ function comparar(
     );
 }
 
-/** Ejecuta un caso con el motor y compara con el resultado esperado. */
+/**
+ * Ejecuta un caso con el motor y compara con el resultado esperado.
+ *
+ * Marca «diferenciaConocida» (texto con el motivo, dentro de «resultado esperado»): un caso con la
+ * marca que no coincide da una advertencia y no falla; un caso con la marca que sí coincide FALLA,
+ * para obligar a retirarla. Una marca nunca sustituye a un error de ejecución del motor distinto
+ * de una diferencia de cifras: si el motor lanza una excepción, el caso falla igualmente.
+ */
 export function ejecutarCaso(caso: CasoSergio, leer: LeerDatos): ResultadoCaso {
+  const r = ejecutarCasoSinMarca(caso, leer);
+  const motivo = diferenciaConocida(caso.esperado);
+  if (motivo === undefined) return { ...r, estado: r.ok ? 'coincide' : 'falla' };
+  if (r.ok)
+    return {
+      ok: false,
+      estado: 'falla',
+      mensajes: [
+        `el caso coincide con el motor y lleva la marca «diferenciaConocida» («${motivo}»): retire la marca de «resultado esperado».`,
+      ],
+    };
+  return {
+    ok: true,
+    estado: 'diferencia-conocida',
+    mensajes: [],
+    advertencias: [`diferencia conocida (${motivo}): ${r.mensajes.join(' ')}`],
+  };
+}
+
+function ejecutarCasoSinMarca(caso: CasoSergio, leer: LeerDatos): ResultadoCaso {
   const d = caso.datos;
   const cfg = (d['configuracion'] ?? {}) as ConfiguracionMotor;
   const motor: Motor = crearMotor(leer, cfg);

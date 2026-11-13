@@ -2441,7 +2441,7 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar la actualización de las bases de cotización por versión (meses sin actualizar e índice de referencia): reproducir la actualización de una carrera de ejemplo con data/parametros/actualizacion-bases y el IPC de data/parametros/ipc-*, y verificar que los 24 meses más recientes se computan nominalmente en la versión de 2026. Duda del motor: el IPC de /data es anual; el índice mensual se obtiene interpolando en logaritmos entre medias anuales situadas a mitad de año (alternativa: escalón anual, opción interpolacionIPC) y, antes de 2002, con la variación de diciembre a diciembre. Valorar la diferencia con el IPC mensual real (efecto de ±1 % en la base reguladora en el caso típico)."
+      "preguntaActuarial": "Comprobar la actualización de las bases de cotización por versión (meses sin actualizar e índice de referencia): reproducir la actualización de una carrera de ejemplo con data/parametros/actualizacion-bases y el IPC mensual de data/parametros/ipc-indice-mensual, y verificar que los 24 meses más recientes se computan nominalmente en la versión de 2026. Dos dudas. (1) IPC mensual (Fase 2-D): el motor usa por defecto el índice mensual real del INE (lectura interpolacionIPC = mensual-ine, mejora de datos y no una lectura legal; alternativas: medias anuales interpoladas y escalón anual). De 2002 en adelante es la serie del INE sin transformar; el INE no publica el índice de 2001 en la base vigente y advierte de que no se pueden calcular variaciones entre IPC-92 e IPC-2001, de modo que 2001 se obtiene con las variaciones anuales de 2002 que publica el INE y 1992-2000 con la serie de base 1992 enlazada (confianza media). Confirmar que el autocálculo de la Seguridad Social usa el mismo índice para los meses anteriores a 2002 (sus informes muestran el factor de cada mes). (2) Suelo del factor de actualización (lectura actualizacionFactorMinimo, por defecto sin suelo): los nueve informes del autocálculo aportados nunca muestran un factor inferior a 1,0000000; cuando el índice del mes de referencia es menor que el del mes de la base, el factor sale 1. El art. 209 TRLGSS habla de actualizar «de acuerdo con la evolución del IPC» y no menciona ese suelo: decidir si el motor aplica el suelo de uno (lectura suelo-1) o deja que el factor baje de uno. Efecto medido en docs/INFORME_VERIFICACION.md (Fase 2-D): hasta 0,3 euros al mes (0,014 %) en los casos de Sergio; la evidencia de los informes está en docs/REVISION_PRIORIZADA.md."
     },
     {
       "id": "param-base-maxima-incremento-futuro",
@@ -2773,6 +2773,22 @@
           "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
           "publisher": "Instituto Nacional de Estadística (INE)",
           "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+          "docId": "IPC290751"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "param-ipc-indice-mensual",
+      "texto": "IPC: índice general nacional mensual (base 2025): 105,651 (índice (base 2025)) en 2026.",
+      "ubicacion": "Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)",
+      "datos": ["parametros/ipc-indice-mensual.json#2026-10"],
+      "fuentes": [
+        {
+          "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=2000",
           "docId": "IPC290751"
         }
       ],

@@ -18,6 +18,15 @@ export interface SerieAnual {
   readonly ultimo: number;
 }
 
+/** Serie con un valor por mes (identificador `AAAA-MM`); el campo `period` del dato es el año. */
+export interface SerieMensual {
+  readonly fichero: string;
+  /** Mes absoluto (año × 12 + mes − 1) → valor. */
+  readonly valores: ReadonlyMap<number, number>;
+  readonly primero: number;
+  readonly ultimo: number;
+}
+
 export interface ValorConReferencia {
   readonly valor: number;
   /** Referencia «parametros/fichero.json#id» del dato usado. */
@@ -87,6 +96,8 @@ export interface ParametrosJubilacion {
   readonly limiteIngresosMinimos: SerieAnual;
   readonly revalorizacion: SerieAnual;
   readonly ipcIndiceMedio: SerieAnual;
+  /** Índice mensual del INE (tramo enlazado desde 1992); lectura `mensual-ine` del IPC. */
+  readonly ipcIndiceMensual: SerieMensual;
   readonly ipcVariacionDiciembre: SerieAnual;
   readonly complementoBrecha: SerieAnual;
   readonly reglasBrecha: ReadonlyMap<string, number>;
@@ -123,6 +134,26 @@ export function serieAnual(leer: LeerDatos, fichero: string): SerieAnual {
   const anios = [...valores.keys()];
   if (anios.length === 0) throw new DatoNoDisponible(`${fichero}: sin datos`);
   return { fichero, valores, primero: Math.min(...anios), ultimo: Math.max(...anios) };
+}
+
+/** Serie mensual: los datos llevan el identificador `AAAA-MM` (el periodo es solo el año). */
+export function serieMensual(leer: LeerDatos, fichero: string): SerieMensual {
+  const valores = new Map<number, number>();
+  for (const d of archivo(leer, fichero).data ?? []) {
+    const m = /^(\d{4})-(\d{2})$/.exec(d.id);
+    if (m === null) throw new DatoNoDisponible(`${fichero}: id no mensual (${d.id})`);
+    const mes = Number(m[2]);
+    if (mes < 1 || mes > 12) throw new DatoNoDisponible(`${fichero}: mes inexistente (${d.id})`);
+    valores.set(Number(m[1]) * 12 + (mes - 1), numero(d.value, `${fichero}#${d.id}`));
+  }
+  const meses = [...valores.keys()];
+  if (meses.length === 0) throw new DatoNoDisponible(`${fichero}: sin datos`);
+  const primero = Math.min(...meses);
+  const ultimo = Math.max(...meses);
+  for (let t = primero; t <= ultimo; t++)
+    if (!valores.has(t))
+      throw new DatoNoDisponible(`${fichero}: falta un mes entre el primero y el último`);
+  return { fichero, valores, primero, ultimo };
 }
 
 function mapaPorId(leer: LeerDatos, fichero: string): Map<string, number> {
@@ -278,6 +309,7 @@ export function construirParametros(leer: LeerDatos): ParametrosJubilacion {
     limiteIngresosMinimos: serieAnual(leer, 'limite-ingresos-complementos-minimos'),
     revalorizacion: serieAnual(leer, 'revalorizacion-general'),
     ipcIndiceMedio: serieAnual(leer, 'ipc-indice-medio-anual'),
+    ipcIndiceMensual: serieMensual(leer, 'ipc-indice-mensual'),
     ipcVariacionDiciembre: serieAnual(leer, 'ipc-variacion-diciembre'),
     complementoBrecha: serieAnual(leer, 'complemento-brecha-genero'),
     reglasBrecha: mapaPorId(leer, 'complemento-brecha-genero-reglas'),

@@ -38,7 +38,14 @@
     },
     {
       "id": "jubilacion.interpolacionIPC",
-      "valor": "interpolada",
+      "valor": "mensual-ine",
+      "estado": "pendiente",
+      "fecha": "2026-11-13",
+      "pregunta": "param-actualizacion-bases"
+    },
+    {
+      "id": "jubilacion.actualizacionFactorMinimo",
+      "valor": "sin-suelo",
       "estado": "pendiente",
       "fecha": "2026-11-13",
       "pregunta": "param-actualizacion-bases"
