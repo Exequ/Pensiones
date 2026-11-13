@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, type ReactNode } from 'react';
 import { DataTable } from '../../components/DataTable';
 import type { BasesPeriodoCalculo } from '../../engine/jubilacion/tipos';
 import { GraficoBases } from './GraficoBases';
@@ -26,11 +26,13 @@ interface ResultadoProps {
   ipcUsado: string | undefined;
   /** Bases mes a mes del periodo de cálculo. */
   bases: BasesPeriodoCalculo;
+  /** Bloque de comparación con las lecturas por defecto (va justo después de las cifras). */
+  comparacion?: ReactNode;
 }
 
 /** Cifras principales, requisitos y explicación paso a paso. */
 export const Resultado = forwardRef<HTMLHeadingElement, ResultadoProps>(function Resultado(
-  { modelo, ipcUsado, bases },
+  { modelo, ipcUsado, bases, comparacion },
   ref,
 ) {
   return (
@@ -55,6 +57,7 @@ export const Resultado = forwardRef<HTMLHeadingElement, ResultadoProps>(function
           </div>
         ))}
       </dl>
+      {comparacion}
       <p className="tp-normativa">
         Normativa aplicada: la del año de la jubilación ({modelo.anioNormativa}). Importes en euros
         de ese año.

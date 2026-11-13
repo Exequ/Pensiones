@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { formatearEuros } from '../../engine/formato';
 import { calcularTuPension, type Dependencias } from './calcular';
+import { formularioAEntrada } from './mapeador';
 import { crearMotorDelRepositorio, leerReferenciaDeRepositorio } from './motor';
 import { leerOpcion25, leerPeriodoCalculo } from './presentador';
 import { catalogoPorDefecto } from './referencias-datos';
@@ -202,5 +203,57 @@ describe('panel de lecturas', () => {
     const por = Object.fromEntries(r.lecturas.map((l) => [l.id, l.valorActual]));
     expect(por['jubilacion.interpolacionIPC']).toBe('mensual-ine');
     expect(por['jubilacion.actualizacionFactorMinimo']).toBe('suelo-1');
+  });
+});
+
+function entradaDe(f: FormularioTuPension) {
+  const mapeo = formularioAEntrada(f, catalogoPorDefecto());
+  if (!mapeo.ok) throw new Error('formulario inválido');
+  return mapeo.entrada;
+}
+
+describe('lecturas elegidas (Fase 3-B2)', () => {
+  it('con las lecturas por defecto el resultado es el de la 3-A y la comparación no tiene diferencia', () => {
+    const r = modeloDe(FORMULARIO_BASE);
+    expect(r.comparacion.tipo).toBe('sin-cambios');
+    expect(cifra(r, 'Pensión mensual')).toBe(formatearEuros(2721.39, { decimales: 2 }));
+    // Elegir explícitamente los valores por defecto tampoco cambia nada.
+    const igual = modeloDe({
+      ...FORMULARIO_BASE,
+      lecturas: { 'jubilacion.actualizacionFactorMinimo': 'suelo-1' },
+    });
+    expect(igual.comparacion.tipo).toBe('sin-cambios');
+    expect(cifra(igual, 'Pensión mensual')).toBe(cifra(r, 'Pensión mensual'));
+  });
+
+  it('una lectura alternativa llega al motor, se compara con las lecturas por defecto y consta en el panel', () => {
+    const f = {
+      ...FORMULARIO_BASE,
+      lecturas: { 'jubilacion.interpolacionIPC': 'escalon-anual' },
+    };
+    const r = modeloDe(f);
+    expect(r.comparacion.tipo).toBe('comparado');
+    const directa = crearMotorDelRepositorio({
+      escenario: { ipc: 0.02 },
+      lecturas: f.lecturas,
+    }).jubilacion(entradaDe(f));
+    if (!directa.ok) throw directa.error.original;
+    expect(cifra(r, 'Pensión mensual')).toBe(
+      formatearEuros(directa.detalle.pensionMensual, { decimales: 2 }),
+    );
+    const fila = r.lecturas.find((l) => l.id === 'jubilacion.interpolacionIPC');
+    expect(fila?.valorActual).toBe('escalon-anual');
+    expect(fila?.cambiada).toBe(true);
+    // El efecto de cada alternativa se mide frente a la elección actual: la de por defecto aparece.
+    expect(fila?.efecto).toMatch(/Índice mensual publicado por el INE/);
+    expect(fila?.efecto).not.toMatch(/Medias anuales en escalones/);
+  });
+
+  it('una elección con lecturas inexistentes o valores inventados se ignora sin fallar', () => {
+    const r = modeloDe({
+      ...FORMULARIO_BASE,
+      lecturas: { 'jubilacion.noExiste': 'x', 'jubilacion.baseMaxima': 'inventado' },
+    });
+    expect(r.comparacion.tipo).toBe('sin-cambios');
   });
 });

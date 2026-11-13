@@ -20,4 +20,5 @@ export const FORMULARIO_BASE: FormularioTuPension = {
   aplicarMinimos: true,
   aplicarPensionMaxima: true,
   ipcSupuesto: '2',
+  lecturas: {},
 };

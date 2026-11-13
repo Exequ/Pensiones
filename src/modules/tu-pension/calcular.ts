@@ -4,6 +4,7 @@
  */
 import type { ConfiguracionMotor, Motor } from '../../engine/fachada';
 import type { BasesPeriodoCalculo } from '../../engine/jubilacion/tipos';
+import { compararLecturas, type ComparacionLecturas } from '../../engine/comparar-lecturas';
 import { LECTURAS_ABIERTAS } from '../../engine/lecturas';
 import { traducirError, type MensajeError } from './errores';
 import { formularioAEntrada } from './mapeador';
@@ -18,6 +19,11 @@ export type RespuestaCalculo =
       readonly tipo: 'resultado';
       readonly modelo: ModeloResultado;
       readonly lecturas: readonly LecturaVista[];
+      /**
+       * Comparación con las lecturas por defecto (Fase 3-B2): `sin-cambios` si la persona no ha
+       * cambiado ninguna lectura.
+       */
+      readonly comparacion: ComparacionLecturas;
       /** Escenario de IPC usado, en %, o `undefined` si no se indicó. */
       readonly ipcUsado: string | undefined;
       /** Bases mes a mes del periodo de cálculo (para el gráfico). */
@@ -65,13 +71,20 @@ export function calcularTuPension(
     leerReferencia,
     factorMinimo,
   });
+  const comparacion = compararLecturas(
+    mapeo.entrada,
+    mapeo.configuracion,
+    formulario.lecturas,
+    fabricaMotor,
+  );
   const efectos = resultado.detalle.cumpleRequisitos
     ? efectoPorLectura(mapeo.entrada, mapeo.configuracion, resultado, fabricaMotor)
     : undefined;
   return {
     tipo: 'resultado',
     modelo,
-    lecturas: filasDelPanel(efectos),
+    lecturas: filasDelPanel(efectos, formulario.lecturas),
+    comparacion,
     ipcUsado: formulario.ipcSupuesto.trim() === '' ? undefined : formulario.ipcSupuesto.trim(),
     bases: resultado.detalle.basesPeriodo,
     resumenTramos: mapeo.resumenTramos,

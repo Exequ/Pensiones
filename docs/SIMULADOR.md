@@ -1,6 +1,6 @@
 # Simulador «Tu pensión»: capa de entrada y presentación
 
-Fases 3-A y 3-B1 (la carrera por tramos, las personas-ejemplo y el gráfico están en la sección «Fase 3-B1», al final).
+Fases 3-A, 3-B1 y 3-B2 (la carrera por tramos, las personas-ejemplo y el gráfico están en «Fase 3-B1»; las lecturas alternativas y el enlace compartible, en «Fase 3-B2», al final).
 
 Fase 3-A. La página `#/tu-pension` calcula la **jubilación ordinaria con carrera simple** con el motor de `src/engine/` (sin cambiarlo) y explica el cálculo con las cifras reales del motor. Todo el código está en `src/modules/tu-pension/`; la única pieza nueva del sistema de diseño es `src/components/Field.tsx` (etiqueta, ayuda y error con `aria-live` asociados a un control).
 
@@ -20,7 +20,7 @@ formulario (texto) ──mapeador──▶ EntradaJubilacion + ConfiguracionMoto
 | `calcular.ts`    | Orquesta: mapeo → motor → presentador → panel de lecturas. Recibe el motor y la lectura de datos por inyección (se prueba sin navegador).                                                                                                                                                               |                                                                 |
 | `presentador.ts` | Resultado del motor → modelo de vista con las cifras formateadas con `src/engine/formato.ts`; lee los pasos y requisitos de la fachada (formato de los pasos fijado por un test). Las cifras de reglas (meses nominales, tramos de lagunas) se leen de `/data` por la referencia que ya trae cada paso. | No recalcula nada.                                              |
 | `errores.ts`     | `EntradaInvalida`, `DatoNoDisponible` y `NoImplementada` → mensaje, acción que puede hacer la persona y campo al que llevar el foco. Cada código tiene su test.                                                                                                                                         |                                                                 |
-| `supuestos.ts`   | Panel «Supuestos y lecturas»: lecturas de `jubilacion.*` con valor actual, estado, motivo y efecto en el resultado (se vuelve a llamar al motor con cada alternativa, cambiando solo esa lectura).                                                                                                      | Sin selector: cambiarlas es de la Fase 3-B.                     |
+| `supuestos.ts`   | Panel «Supuestos y lecturas»: lecturas de `jubilacion.*` con valor elegido, estado, motivo y efecto en el resultado (se vuelve a llamar al motor con cada alternativa, cambiando solo esa lectura). Desde la 3-B2 es interactivo (véase «Fase 3-B2»).                                                   | Sin selector hasta la Fase 3-B2.                                |
 | `datos.ts`       | Valor inicial de la base (base media de cotización del Régimen General, último año completo) y del IPC supuesto (escenario base de «Pensions at a Glance 2025»), con su `Dato` para `SourceLine`.                                                                                                       |                                                                 |
 | `motor.ts`       | Único punto que usa `import.meta.glob` (vía `repositorio.ts`): se carga con la página.                                                                                                                                                                                                                  |                                                                 |
 
@@ -66,3 +66,47 @@ Cinco perfiles ilustrativos, siempre rotulados así, definidos como tramos de re
 ### Pruebas
 
 `tramos.test.ts`, `personas.test.ts`, `grafico-bases.test.ts`, `tramos-motor.test.ts` (qué hace el motor con bases fuera de los límites), `TablaTramos.test.tsx` (tabla y página), `scripts/tramos-equivalencia.test.ts` (los casos `jub-ord-2026-plana-40a`, `jub-ord-2026-bases-crecientes` y `jub-ord-2026-carrera-20a` expresados como tramos coinciden con el motor a ±0,01 €), `scripts/bases-periodo.test.ts` (la lista reproduce los totales del motor) y Playwright (`e2e/tu-pension.spec.ts`).
+
+## Fase 3-B2: lecturas alternativas y enlace compartible
+
+Nada de esto cambia una regla del motor ni un valor por defecto, estado o motivo de las lecturas. Decisiones: `docs/DECISIONES.md` (Fase 3-B2).
+
+### Lecturas alternativas
+
+`src/engine/comparar-lecturas.ts` (lógica pura, sin React):
+
+| Función                                         | Qué hace                                                                                                                                                                        |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `lecturasOfrecidas()`                           | Lecturas de la jubilación con al menos dos valores en el registro. Hoy las nueve; no se inventa ninguna alternativa.                                                            |
+| `normalizarEleccion(e)` / `valoresElegidos`     | Deja solo lo ofrecido, válido y distinto del valor por defecto / valor efectivo de cada lectura.                                                                                |
+| `lecturasCambiadas(e)`                          | `{ id, valor, porDefecto }` de las cambiadas, en el orden del registro.                                                                                                         |
+| `compararLecturas(entrada, config, e, fabrica)` | Calcula con la elección y con todo por defecto y devuelve `sin-cambios`, `comparado` (con la diferencia en euros al mes y en % de pensión y base reguladora) o `no-comparable`. |
+
+La elección vive en `FormularioTuPension.lecturas`. `textos-lecturas.ts` da, por lectura y valor, una etiqueta y una frase de «qué cambia» (sin cifras ni consejo). `PanelSupuestos.tsx` es un grupo de botones de opción por lectura (con estado, motivo y efecto) y el botón «Restablecer lecturas»; `ComparacionLecturas.tsx` es el bloque junto al resultado («Con tus lecturas» frente a «Con las lecturas por defecto», tabla y frase en una región `aria-live`).
+
+### Enlace compartible (`enlace.ts`, `EnlaceCompartible.tsx`)
+
+`#/tu-pension?v=1&…` (HashRouter). Todo es local: el enlace es la única forma de compartir.
+
+| Parámetro            | Contenido                                                                                                         |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `v`                  | Versión del formato (`1`); obligatorio                                                                            |
+| `nac`, `jub`, `ini`  | Nacimiento, jubilación e inicio de la cotización (carrera simple), `AAAA-MM`                                      |
+| `sex`, `hij`         | `h` o `m`; hijos (solo con `m`)                                                                                   |
+| `car`                | `s` (simple) o `t` (tramos)                                                                                       |
+| `lag`, `ubi`, `base` | Meses sin cotizar, ubicación (`m` o `f`) y base de la carrera simple, tal como se escribió                        |
+| `tr`                 | Tramos separados por `~`; cada uno `desde:hasta:base` con fechas `AAAA-MM` y base = importe o `min`, `med`, `max` |
+| `med`, `pe`          | Definición de la «base media» y persona-ejemplo cargada                                                           |
+| `min`, `max`         | Complemento a mínimos y pensión máxima (`1` o `0`)                                                                |
+| `ipc`                | IPC supuesto en %, tal como se escribió; vacío = sin escenario                                                    |
+| `lec`                | Lecturas cambiadas, `id:valor` separadas por comas (solo las que difieren del valor por defecto)                  |
+
+Ejemplo (carrera simple, una lectura cambiada): `#/tu-pension?v=1&nac=1961-11&jub=2026-11&sex=h&car=s&ini=1986-11&lag=0&ubi=m&base=2500&med=media-cotizacion-rg&min=1&max=1&ipc=2&lec=jubilacion.actualizacionFactorMinimo:sin-suelo`.
+
+**Lectura**: se valida cada campo contra rangos de sensatez (`LIMITES_ENLACE`) y contra el registro (lecturas, valores, ids de media y de persona). Lo inválido se ignora y la página muestra un aviso con qué se ha ignorado; sin versión, con versión desconocida o con más de 12.000 caracteres, el enlace se descarta entero. Nunca falla. **Escritura**: solo lo válido y completo.
+
+**Tamaño**: unos 23 caracteres por tramo; con 100 tramos (el máximo) y las nueve lecturas cambiadas, unos 2.800 caracteres (la parte de hash no se envía al servidor). Con más de 100 tramos, el enlace omite los últimos y la página lo avisa.
+
+### Pruebas
+
+`scripts/lecturas-usuario.test.ts` (capa de lecturas con tres casos de Sergio: elección por defecto idéntica a la llamada directa, alternativas idénticas a la llamada directa con esa lectura, elegir y restablecer), `enlace.test.ts` (ida y vuelta en modo simple, tramos y con lecturas; malformado, versión desconocida, fuera de rango, lectura inexistente; tamaño), `textos-lecturas.test.ts`, `comparacion-texto.test.ts`, `Lecturas.test.tsx` (selector, restablecer, comparación, copiar enlace, aviso) y `e2e/lecturas-enlace.spec.ts` (escritorio y móvil, axe, pestaña nueva con el mismo resultado).

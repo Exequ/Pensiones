@@ -3,6 +3,50 @@
 Registro de decisiones tomadas cuando algo era ambiguo o había que elegir. La más reciente,
 arriba dentro de cada fase.
 
+## Fase 3-B2 · Lecturas alternativas y enlace compartible en «Tu pensión»
+
+### Paso 0
+
+- **Caso `jub-ord-2026-carrera-20a`**: la columna «fuente o método» de `data-raw/casos-oro/casos-sergio.md` queda con la nota «tolerancia 0.02: el informe del autocálculo imprime el porcentaje 62,37 % pero la pensión mostrada (1.026,48 €) equivale a 1.645,54 € × 62,38 %; el porcentaje impreso en ese informe no es el aplicado». No cambia ningún dato, configuración ni resultado esperado; el inventario se regeneró sin diferencias.
+
+### Capa de lecturas (`src/engine/comparar-lecturas.ts`)
+
+- **Qué se ofrece**: las lecturas del registro con `motor = jubilacion` y al menos dos valores (hoy las nueve; el registro no tiene un campo «relevante para jubilación» aparte, y `motor` es el criterio que ya usaba el panel de la 3-A). No se inventa ninguna alternativa: las opciones son exactamente `LecturaAbierta.alternativas`.
+- **Elección normalizada**: `{ id: valor }` solo con lecturas ofrecidas, valor válido y distinto del valor por defecto. Es lo que se pasa al motor y lo que va al enlace; un valor igual al de por defecto equivale a «no cambiada».
+- **Comparación**: `compararLecturas` calcula con la elección y con todas las lecturas por defecto (misma entrada y mismo escenario de IPC) y devuelve la diferencia en euros al mes y en % del valor por defecto, para la pensión y la base reguladora. Sin cambios no hay segundo cálculo ni diferencia. Si una de las dos llamadas falla, `no-comparable` con el error. La capa vive en `src/engine` (es un cálculo) con la fábrica del motor inyectada; no cambia ninguna regla, valor por defecto, estado ni motivo.
+- **Si solo un cálculo cumple los requisitos**, no se muestra tabla: una frase lo dice. La tabla solo aparece cuando hay pensión en los dos.
+- **`FormularioTuPension.lecturas`**: la elección forma parte del estado del formulario (así el enlace serializa un único objeto). El efecto de cada alternativa en el panel se mide ahora frente a la elección actual (no frente al valor por defecto) y se nombra con la etiqueta llana.
+
+### Textos de las lecturas (`src/modules/tu-pension/textos-lecturas.ts`)
+
+- El registro sí tiene una descripción en lenguaje llano por lectura, pero no etiquetas para cada valor (`suelo-1`, `escalon-anual`… no se entienden). Se escribe, por lectura, un título corto y, por valor, una etiqueta y una frase que dice **qué cambia en el cálculo**. Sin dígitos (los valores con número se dicen con palabras: «suelo igual a uno») y sin lenguaje de consejo; dos tests lo comprueban, y otro que hay texto para cada lectura y valor del registro y ninguno de más.
+- El estado (decidida, provisional, pendiente) sigue mostrándose en texto y borde y se acompaña de una nota que lo declara información sobre la revisión actuarial, «no una indicación de cuál elegir». La opción por defecto se señala como «opción por defecto del cálculo», no como la recomendada. Las pendientes y provisionales no se ocultan.
+
+### Interfaz
+
+- **Selector**: grupo de botones de opción nativos (`fieldset` + `legend` + `input type=radio`), no `SegmentedPills`: las etiquetas son largas y cada opción lleva su explicación (`aria-describedby`). Teclado completo por el comportamiento nativo (flechas dentro del grupo); cada opción mide al menos 44 px.
+- **Recálculo**: cambiar una lectura recalcula sobre el formulario con el que se calculó el resultado visible (`ultimoCalculado`), sin mover el foco ni mostrar errores de campos editados después. Si aún no hay resultado, solo guarda la elección. «Restablecer lecturas» vacía la elección.
+- **Aviso en directo**: se quita `aria-live` de toda la sección de resultado (anunciaría el resultado entero con cada cambio) y se pone una región `role="status"` con la frase de la comparación, que existe siempre que hay resultado. Se verá «Todas las lecturas están en su valor por defecto» cuando no hay cambios.
+- **Maquetación**: `grid-template-columns: minmax(0, 1fr)` en `.tp-resultado`, `.tp-comparacion` y `.tp-opciones-lectura` (la tabla ancha desbordaba el documento en móvil).
+
+### Enlace compartible (`src/modules/tu-pension/enlace.ts`)
+
+- **Dónde**: parámetros de la parte de hash (`#/tu-pension?v=1&…`); `v=1` obligatorio. Formato y tabla en `docs/SIMULADOR.md`. La página lee `window.location.hash` (y escucha `hashchange`) en vez de `useLocation`, para no depender del router en los tests de la página.
+- **Texto tal como se escribió**: base, importes de tramos e IPC se guardan literalmente (`2.500,75`), no normalizados, para que estado → enlace → estado sea idéntico. Los meses se guardan como los entregan los selectores (sin cero a la izquierda).
+- **Qué se escribe**: solo lo válido y completo. Un año de tres cifras o un tramo a medias no se escriben (no se puede calcular con ellos), de modo que un enlace propio nunca produce avisos. El IPC vacío significa «sin escenario» y se escribe `ipc=`.
+- **Qué se hace al leer**: cada campo se valida; lo inválido se ignora con un aviso que dice qué (mes o año no válidos, número fuera de rango, lectura que no está en el registro, valor que no es alternativa, tramo mal formado, persona o definición de base media desconocidas, parámetro desconocido o repetido). Sin versión, con versión desconocida o con más de 12.000 caracteres se descarta el enlace entero (valores por defecto y aviso). Nunca lanza.
+- **Límites de sensatez** (`LIMITES_ENLACE`; no son reglas de la norma, que son del motor): años de 1900 a 2100, hasta 30 hijos, hasta 1.200 meses sin cotizar, importes mayores que cero y hasta un millón de euros mensuales, IPC de −20 a 50 %, hasta 100 tramos.
+- **Tamaño**: ~23 caracteres por tramo; con 100 tramos y las nueve lecturas cambiadas, unos 2.800 caracteres de búsqueda (medido). Está por debajo de los límites habituales (la parte de hash no viaja al servidor), así que no se compacta más y las pruebas siguen legibles. Con más de 100 tramos el enlace omite los últimos y la página lo avisa.
+- **Persona-ejemplo**: el enlace guarda su id (`pe`) y los tramos tal como están (editados o no); al abrirlo se marca como cargada y se recalculan las notas de cobertura.
+- **Al abrir un enlace**: se rellena el formulario y se calcula en silencio (sin foco ni errores de campos incompletos). Si faltan fechas, el formulario queda relleno sin resultado. Pegar otro enlace en la misma pestaña lo aplica (evento `hashchange`).
+- **Privacidad**: nada sale de la web; una frase junto al campo del enlace lo dice y avisa de que quien tenga el enlace ve los valores.
+- **Campo del enlace**: `textarea` de solo lectura (el enlace es largo y un `input` cortaría el texto); se añade su estilo a `Field.css`.
+- **Portapapeles**: «Copiar enlace» usa `navigator.clipboard`; si falla, lo dice y deja el enlace seleccionado en el campo.
+
+### Afirmaciones y fuentes
+
+- 3 afirmaciones nuevas en `docs/claims-web.json` (incrementos de base y pensión máxima, índice de precios del INE, fracciones de la demora), apoyadas en datos ya existentes. No hay fuentes nuevas: `docs/FUENTES.md` no cambia. Las etiquetas de las opciones describen el comportamiento del motor según el registro de lecturas; las preguntas actuariales siguen en `docs/REVISION_ACTUARIAL.md`.
+
 ## Fase 3-B1 · Carrera por tramos, personas-ejemplo y gráfico en «Tu pensión»
 
 ### Paso 0 y motor

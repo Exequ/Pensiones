@@ -1,4 +1,4 @@
-/** Tipos de la capa de entrada y presentación del simulador «Tu pensión» (Fases 3-A y 3-B1). */
+/** Tipos de la capa de entrada y presentación del simulador «Tu pensión» (Fases 3-A, 3-B1 y 3-B2). */
 import type { TramoFormulario } from './tramos.ts';
 
 export type Sexo = 'hombre' | 'mujer';
@@ -31,6 +31,11 @@ export interface FormularioTuPension {
   readonly aplicarPensionMaxima: boolean;
   /** IPC anual supuesto, en %, con coma o punto decimal. Vacío: sin escenario. */
   readonly ipcSupuesto: string;
+  /**
+   * Lecturas abiertas que la persona ha cambiado (Fase 3-B2): `{ id: valor }` solo con las que
+   * difieren del valor por defecto del registro. Vacío: todas las lecturas por defecto.
+   */
+  readonly lecturas: Readonly<Record<string, string>>;
 }
 
 export type CampoFormulario = keyof FormularioTuPension;

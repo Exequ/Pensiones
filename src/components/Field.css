@@ -20,7 +20,8 @@
 }
 
 .campo input,
-.campo select {
+.campo select,
+.campo textarea {
   width: 100%;
   min-height: var(--objetivo-tactil);
   padding: 0 var(--espacio-3);
@@ -34,12 +35,14 @@
 }
 
 .campo input:hover,
-.campo select:hover {
+.campo select:hover,
+.campo textarea:hover {
   border-color: var(--color-acento-oscuro);
 }
 
 .campo-con-error input,
-.campo-con-error select {
+.campo-con-error select,
+.campo-con-error textarea {
   border-width: var(--grosor-filete-cabecera);
   border-color: var(--color-acento);
 }
@@ -54,4 +57,11 @@
 
 .campo-error-prefijo {
   font-weight: var(--peso-semi);
+}
+
+.campo textarea {
+  padding: var(--espacio-2) var(--espacio-3);
+  line-height: var(--interlineado-etiqueta);
+  overflow-wrap: anywhere;
+  resize: vertical;
 }

@@ -12,6 +12,7 @@
  *   carrera o justo antes de la jubilación.
  */
 import type { ConfiguracionMotor, EntradaJubilacion } from '../../engine/fachada.ts';
+import { normalizarEleccion } from '../../engine/comparar-lecturas.ts';
 import type { Carrera, OpcionesJubilacion } from '../../engine/jubilacion/tipos.ts';
 import { leerEntero, leerNumero, numeroATexto } from './lectura.ts';
 import type { CatalogoReferencias } from './referencias.ts';
@@ -298,6 +299,7 @@ export function formularioAEntrada(
     aplicarPensionMaxima: f.aplicarPensionMaxima,
   };
   const ipc = leerNumero(f.ipcSupuesto);
+  const lecturas = normalizarEleccion(f.lecturas);
   const carrera: Carrera =
     tramos?.carrera ??
     carreraSimple(
@@ -316,8 +318,11 @@ export function formularioAEntrada(
       modalidad: 'ordinaria',
       opciones,
     },
-    // El IPC se escribe en % y el motor lo recibe como fracción.
-    configuracion: ipc === undefined ? {} : { escenario: { ipc: ipc / 100 } },
+    // El IPC se escribe en % y el motor lo recibe como fracción. Las lecturas son las elegidas.
+    configuracion: {
+      ...(ipc === undefined ? {} : { escenario: { ipc: ipc / 100 } }),
+      ...(Object.keys(lecturas).length === 0 ? {} : { lecturas }),
+    },
     resumenTramos: tramos?.resumen,
     avisosTramos: tramos?.avisos ?? [],
   };
