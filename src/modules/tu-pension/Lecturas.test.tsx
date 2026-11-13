@@ -1,4 +1,4 @@
-import { cleanup, render, screen, waitFor, within } from '@testing-library/react';
+import { act, cleanup, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { escribirEnlace } from './enlace';
@@ -158,7 +158,7 @@ describe('selector de lecturas', () => {
   it('el estado de la lectura se muestra como información, sin lenguaje de consejo', () => {
     render(<TuPension />);
     expect(panel()).toHaveTextContent(TEXTOS.supuestosEstadoNota);
-    const lecturas = panel().querySelector('.tp-lecturas')!.textContent?.toLowerCase();
+    const lecturas = panel().querySelector('.tp-lecturas')!.textContent.toLowerCase();
     expect(lecturas).not.toMatch(/\b(correcta|recomendada|aconsejable|mejor|peor)\b/);
   });
 });
@@ -169,7 +169,7 @@ describe('enlace compartible', () => {
     render(<TuPension />);
     await rellenar(usuario);
     await usuario.click(within(grupo(FACTOR)).getByRole('radio', { name: /Sin suelo/ }));
-    const campo = screen.getByLabelText(TEXTOS.enlaceCampo) as HTMLInputElement;
+    const campo = screen.getByLabelText<HTMLTextAreaElement>(TEXTOS.enlaceCampo);
     expect(campo).toHaveAttribute('readonly');
     expect(campo.value).toMatch(/#\/tu-pension\?v=1&nac=1961-11&jub=2026-11/);
     expect(campo.value).toContain('lec=jubilacion.actualizacionFactorMinimo:sin-suelo');
@@ -182,7 +182,7 @@ describe('enlace compartible', () => {
     await rellenar(usuario);
     await usuario.click(screen.getByRole('button', { name: TEXTOS.enlaceCopiar }));
     expect(await navigator.clipboard.readText()).toBe(
-      (screen.getByLabelText(TEXTOS.enlaceCampo) as HTMLInputElement).value,
+      screen.getByLabelText<HTMLTextAreaElement>(TEXTOS.enlaceCampo).value,
     );
     const estado = await screen.findByText(TEXTOS.enlaceCopiado);
     expect(estado.closest('[aria-live]')).toHaveAttribute('aria-live', 'polite');
@@ -224,7 +224,7 @@ describe('enlace compartible', () => {
     expect(screen.getByText(/Has cambiado una lectura/)).toBeInTheDocument();
   });
 
-  it('enlace inválido: la página carga con los valores por defecto y avisa de qué se ignoró', async () => {
+  it('enlace inválido: la página carga con los valores por defecto y avisa de qué se ignoró', () => {
     window.location.hash = '#/tu-pension?v=1&nac=1961-13&lec=jubilacion.noExiste:x&base=abc';
     render(<TuPension />);
     const aviso = screen.getByRole('heading', { name: TEXTOS.enlaceAvisoTitulo }).closest('aside')!;
@@ -237,6 +237,17 @@ describe('enlace compartible', () => {
     expect(screen.getByLabelText('Base mensual de cotización (euros)')).toHaveValue('2286,22');
     expect(screen.queryByRole('heading', { name: 'Tu pensión estimada' })).toBeNull();
     expect(screen.getByText(TEXTOS.sinResultado)).toBeInTheDocument();
+  });
+
+  it('pegar otro enlace en la misma pestaña lo aplica sin recargar', async () => {
+    render(<TuPension />);
+    expect(screen.getByLabelText('Año de nacimiento')).toHaveValue('');
+    act(() => {
+      window.location.hash = `#/tu-pension${escribirEnlace({ ...FORMULARIO_BASE, lecturas: {} })}`;
+      window.dispatchEvent(new HashChangeEvent('hashchange'));
+    });
+    expect(await screen.findByRole('heading', { name: 'Tu pensión estimada' })).toBeInTheDocument();
+    expect(screen.getByLabelText('Año de nacimiento')).toHaveValue('1961');
   });
 
   it('versión desconocida: se ignora el enlace entero y se avisa', () => {

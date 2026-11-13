@@ -18,9 +18,10 @@ import {
   numeroATexto,
   tramosDeCarreraSimple,
 } from './mapeador';
-import { cargarPersona } from './personas';
+import { cargarPersona, type PersonaEjemplo } from './personas';
 import { personasDeRepositorio } from './personas-datos';
 import { type PersonaCargada } from './PersonasEjemplo';
+import type { CatalogoReferencias } from './referencias';
 import { catalogoPorDefecto } from './referencias-datos';
 import { crearMotorDelRepositorio, leerReferenciaDeRepositorio } from './motor';
 import { PanelSupuestos } from './PanelSupuestos';
@@ -52,6 +53,53 @@ interface OpcionesCalculo {
   readonly enfocar?: boolean;
 }
 
+/** Estado que produce un enlace: formulario, avisos, persona cargada y resultado ya calculado. */
+interface EstadoDeEnlace {
+  readonly valores: FormularioTuPension;
+  readonly avisos: readonly string[];
+  readonly personaCargada: PersonaCargada | undefined;
+  readonly respuesta: RespuestaCalculo | undefined;
+  readonly ultimoCalculado: FormularioTuPension | undefined;
+}
+
+function estadoDeEnlace(
+  enlace: ResultadoEnlace,
+  personas: readonly PersonaEjemplo[],
+  catalogo: CatalogoReferencias,
+): EstadoDeEnlace {
+  const persona = personas.find((p) => p.id === enlace.personaId);
+  const { nacimiento, jubilacion } = leerFechasFormulario(enlace.formulario);
+  const carga =
+    persona && nacimiento && jubilacion
+      ? cargarPersona(persona, {
+          nacimiento,
+          jubilacion,
+          catalogo,
+          definicionMedia: enlace.formulario.definicionMedia,
+        })
+      : undefined;
+  // Con un enlace válido se calcula en silencio: si el formulario está incompleto, solo se rellena.
+  const r = enlace.aplicado
+    ? calcularTuPension(enlace.formulario, {
+        fabricaMotor: crearMotorDelRepositorio,
+        leerReferencia: leerReferenciaDeRepositorio,
+        catalogo,
+      })
+    : undefined;
+  const calculado = r !== undefined && r.tipo !== 'errores-formulario';
+  return {
+    valores: enlace.formulario,
+    avisos: enlace.avisos,
+    personaCargada:
+      persona && enlace.aplicado
+        ? { id: persona.id, notas: carga?.ok ? carga.notas : [] }
+        : undefined,
+    respuesta: calculado ? r : undefined,
+    ultimoCalculado: calculado ? enlace.formulario : undefined,
+  };
+}
+
+/** Módulo «tu-pension»: jubilación ordinaria con carrera simple o por tramos, lecturas y enlace. */
 export default function TuPension() {
   useTituloPagina(seccion.titulo);
   const base = useMemo(() => sugerenciaBase(), []);
@@ -93,18 +141,26 @@ export default function TuPension() {
   const [enlaceInicial] = useState<ResultadoEnlace | undefined>(() =>
     leerEnlace(busquedaDelHash(), contextoEnlace),
   );
-  const [avisosEnlace, setAvisosEnlace] = useState<readonly string[]>(enlaceInicial?.avisos ?? []);
-  const [valores, setValores] = useState<FormularioTuPension>(
-    () => enlaceInicial?.formulario ?? defecto,
+  const [busquedaInicial] = useState(busquedaDelHash);
+  const [estadoInicial] = useState<EstadoDeEnlace | undefined>(() =>
+    enlaceInicial ? estadoDeEnlace(enlaceInicial, personas, catalogo) : undefined,
   );
-  const [respuesta, setRespuesta] = useState<RespuestaCalculo | undefined>(undefined);
+  const [avisosEnlace, setAvisosEnlace] = useState<readonly string[]>(estadoInicial?.avisos ?? []);
+  const [valores, setValores] = useState<FormularioTuPension>(
+    () => estadoInicial?.valores ?? defecto,
+  );
+  const [respuesta, setRespuesta] = useState<RespuestaCalculo | undefined>(
+    estadoInicial?.respuesta,
+  );
   const [erroresVista, setErroresVista] = useState<ErroresFormulario>({});
   const [erroresTramos, setErroresTramos] = useState<readonly ErrorTramo[]>([]);
-  const [personaCargada, setPersonaCargada] = useState<PersonaCargada | undefined>(undefined);
+  const [personaCargada, setPersonaCargada] = useState<PersonaCargada | undefined>(
+    estadoInicial?.personaCargada,
+  );
   const [mensajePersona, setMensajePersona] = useState<string | undefined>(undefined);
   const [restablecidas, setRestablecidas] = useState(false);
   /** Formulario con el que se calculó el resultado que se ve (las lecturas se cambian sobre él). */
-  const ultimoCalculado = useRef<FormularioTuPension | undefined>(undefined);
+  const ultimoCalculado = useRef<FormularioTuPension | undefined>(estadoInicial?.ultimoCalculado);
   const encabezadoResultado = useRef<HTMLHeadingElement>(null);
   const errorMotor = useRef<HTMLDivElement>(null);
 
@@ -143,55 +199,24 @@ export default function TuPension() {
     }
   };
 
-  /** Aplica un enlace (al abrir la página o al pegar otro en la misma pestaña). */
+  /** Aplica un enlace pegado en la misma pestaña (la página no se vuelve a montar). */
   const aplicarEnlace = useCallback(
     (enlace: ResultadoEnlace) => {
-      setValores(enlace.formulario);
-      setAvisosEnlace(enlace.avisos);
+      const e = estadoDeEnlace(enlace, personas, catalogo);
+      setValores(e.valores);
+      setAvisosEnlace(e.avisos);
       setErroresVista({});
       setErroresTramos([]);
       setMensajePersona(undefined);
       setRestablecidas(false);
-      const persona = personas.find((p) => p.id === enlace.personaId);
-      const { nacimiento, jubilacion } = leerFechasFormulario(enlace.formulario);
-      const carga =
-        persona && nacimiento && jubilacion
-          ? cargarPersona(persona, {
-              nacimiento,
-              jubilacion,
-              catalogo,
-              definicionMedia: enlace.formulario.definicionMedia,
-            })
-          : undefined;
-      setPersonaCargada(
-        persona && enlace.aplicado
-          ? { id: persona.id, notas: carga?.ok ? carga.notas : [] }
-          : undefined,
-      );
-      if (enlace.aplicado) {
-        const r = calcularTuPension(enlace.formulario, {
-          fabricaMotor: crearMotorDelRepositorio,
-          leerReferencia: leerReferenciaDeRepositorio,
-          catalogo,
-        });
-        ultimoCalculado.current = r.tipo === 'errores-formulario' ? undefined : enlace.formulario;
-        setRespuesta(r.tipo === 'errores-formulario' ? undefined : r);
-      } else {
-        ultimoCalculado.current = undefined;
-        setRespuesta(undefined);
-      }
+      setPersonaCargada(e.personaCargada);
+      ultimoCalculado.current = e.ultimoCalculado;
+      setRespuesta(e.respuesta);
     },
     [personas, catalogo],
   );
 
-  // Al abrir la página con un enlace se rellena el formulario y se calcula (una sola vez).
-  const busquedaAplicada = useRef<string | undefined>(undefined);
-  useEffect(() => {
-    if (busquedaAplicada.current !== undefined) return;
-    busquedaAplicada.current = busquedaDelHash();
-    if (enlaceInicial) aplicarEnlace(enlaceInicial);
-  }, [enlaceInicial, aplicarEnlace]);
-
+  const busquedaAplicada = useRef<string>(busquedaInicial);
   // Si se pega otro enlace en la misma pestaña, la página no se vuelve a montar: se escucha el hash.
   useEffect(() => {
     const alCambiarHash = () => {

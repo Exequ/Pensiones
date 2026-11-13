@@ -51,6 +51,8 @@ export function PanelSupuestos({
                 const idOpcion = `${l.id}-${o.valor}`;
                 return (
                   <div key={o.valor} className="tp-opcion-lectura">
+                    {/* La etiqueta envuelve el control y el texto visible de la opción (nombre y qué cambia). */}
+                    {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
                     <label htmlFor={idOpcion} className="tp-opcion-etiqueta">
                       <input
                         id={idOpcion}

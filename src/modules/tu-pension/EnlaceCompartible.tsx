@@ -17,7 +17,7 @@ type EstadoCopia = 'ninguno' | 'copiado' | 'fallo';
  * se deja el enlace seleccionado en el campo.
  */
 export function EnlaceCompartible({ enlace, tramosOmitidos }: EnlaceCompartibleProps) {
-  const campo = useRef<HTMLInputElement>(null);
+  const campo = useRef<HTMLTextAreaElement>(null);
   const [copia, setCopia] = useState<EstadoCopia>('ninguno');
 
   const copiar = async () => {
@@ -37,10 +37,9 @@ export function EnlaceCompartible({ enlace, tramosOmitidos }: EnlaceCompartibleP
       <p>{TEXTOS.enlaceIntro}</p>
       <Field etiqueta={TEXTOS.enlaceCampo} ayuda={TEXTOS.enlacePrivacidad}>
         {(atributos) => (
-          <input
+          <textarea
             {...atributos}
             ref={campo}
-            type="text"
             readOnly
             value={enlace}
             onFocus={(e) => {

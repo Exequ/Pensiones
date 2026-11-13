@@ -120,6 +120,7 @@
 
 .tp-resultado {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--espacio-5);
 }
 
@@ -554,6 +555,7 @@
 
 .tp-opciones-lectura {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--espacio-1);
   margin: 0;
   padding: 0;
@@ -623,6 +625,7 @@
 
 .tp-comparacion {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--espacio-3);
   padding: var(--espacio-4) 0;
   border-top: var(--grosor-filete) solid var(--color-tinta);
@@ -660,8 +663,9 @@
   margin-top: var(--espacio-3);
 }
 
-.tp-enlace input[type='text'] {
+.tp-enlace textarea {
   width: 100%;
+  min-height: 7em;
 }
 
 .tp-copia-estado {

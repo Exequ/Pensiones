@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fase 3-A). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md).",
+  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1 y 3-B2). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md).",
   "claims": [
     {
       "id": "web-tu-pension-base-sugerida",
@@ -223,6 +223,55 @@
           "publisher": "Instituto Nacional de Estadística (INE)",
           "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
           "docId": "INE-CNA-rem_empleo95_25"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-lecturas-incrementos-maximos",
+      "texto": "La base máxima de cotización y el límite de la pensión máxima tienen un incremento adicional anual sobre la revalorización fijado por la norma (disposiciones transitorias 38.ª y 39.ª del TRLGSS); cómo se aplican esos incrementos año a año es una lectura abierta que el simulador deja elegir.",
+      "ubicacion": "Página «Tu pensión», selector de lecturas (Fase 3-B2)",
+      "datos": [
+        "parametros/base-maxima-incremento-futuro.json#2050",
+        "parametros/pension-maxima-incremento-futuro.json#2050"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-lecturas-indice-precios",
+      "texto": "El cálculo usa por defecto el índice de precios al consumo mensual (índice general nacional) que publica el INE para actualizar las bases; las alternativas del selector parten de las medias anuales de ese índice.",
+      "ubicacion": "Página «Tu pensión», selector de lecturas (Fase 3-B2)",
+      "datos": ["parametros/ipc-indice-mensual.json#1992-01"],
+      "fuentes": [
+        {
+          "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, base 1992 (serie IPC2401)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC2401?nult=2000",
+          "docId": "IPC2401"
+        }
+      ],
+      "fetchedAt": "2026-11-13",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-lecturas-demora",
+      "texto": "El complemento por jubilación demorada se calcula por fracciones de año completas de demora, y las fracciones superiores a un mínimo de meses se computan desde el segundo año completo; desde cuándo cuentan esas fracciones es una lectura abierta que el simulador deja elegir (art. 210.2 TRLGSS).",
+      "ubicacion": "Página «Tu pensión», selector de lecturas (Fase 3-B2)",
+      "datos": ["parametros/jubilacion-demora-reglas.json#fraccion-minima-meses"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
       ],
       "fetchedAt": "2026-11-11",
