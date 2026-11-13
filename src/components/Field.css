@@ -1,0 +1,57 @@
+.campo {
+  display: grid;
+  gap: var(--espacio-1);
+  align-content: start;
+  min-width: 0;
+}
+
+.campo-etiqueta {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta);
+}
+
+.campo-ayuda {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-tinta-2);
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  min-height: var(--objetivo-tactil);
+  padding: 0 var(--espacio-3);
+  border: var(--grosor-filete) solid var(--color-tinta);
+  border-radius: var(--radio);
+  background: var(--color-papel);
+  color: var(--color-tinta);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.campo input:hover,
+.campo select:hover {
+  border-color: var(--color-acento-oscuro);
+}
+
+.campo-con-error input,
+.campo-con-error select {
+  border-width: var(--grosor-filete-cabecera);
+  border-color: var(--color-acento);
+}
+
+.campo-error {
+  min-height: 0;
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-acento);
+}
+
+.campo-error-prefijo {
+  font-weight: var(--peso-semi);
+}

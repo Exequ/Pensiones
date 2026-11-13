@@ -1,0 +1,282 @@
+/* Página «Tu pensión»: solo tokens de src/styles/tokens.css. */
+
+.tp-aviso {
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  border-bottom: var(--grosor-filete) solid var(--color-tinta);
+  padding-block: var(--espacio-3);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-tinta-2);
+}
+
+.tp-formulario {
+  display: grid;
+  gap: var(--espacio-6);
+}
+
+.tp-grupo {
+  display: grid;
+  gap: var(--espacio-4);
+  margin: 0;
+  padding: var(--espacio-4) 0 0;
+  min-width: 0;
+  border: 0;
+  border-top: var(--grosor-filete-cabecera) solid var(--color-tinta);
+}
+
+.tp-grupo > legend {
+  padding: 0 var(--espacio-3) 0 0;
+  font-size: var(--texto-h3);
+  font-weight: var(--peso-semi);
+}
+
+.tp-fila {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--espacio-4);
+}
+
+@media (width < 480px) {
+  .tp-fila {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.tp-bloque {
+  display: grid;
+  gap: var(--espacio-2);
+}
+
+.tp-proximamente,
+.tp-aviso-supuesto,
+.tp-normativa,
+.tp-sin-resultado,
+.tp-articulo {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-tinta-2);
+}
+
+.tp-proximamente {
+  border: var(--grosor-filete) dashed var(--color-tinta);
+  padding: var(--espacio-3);
+}
+
+.tp-aviso-supuesto {
+  border: var(--grosor-filete-cabecera) solid var(--color-acento);
+  padding: var(--espacio-3);
+  color: var(--color-tinta);
+}
+
+.tp-resumen-errores {
+  border: var(--grosor-filete-cabecera) solid var(--color-acento);
+  padding: var(--espacio-4);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  color: var(--color-tinta);
+}
+
+.tp-resumen-errores p {
+  font-weight: var(--peso-semi);
+}
+
+.tp-resumen-errores ul {
+  margin: var(--espacio-2) 0 0;
+  padding-left: 1.25em;
+}
+
+.tp-boton {
+  justify-self: start;
+  min-height: var(--objetivo-tactil);
+  padding: 0 var(--espacio-6);
+  border: var(--grosor-filete) solid var(--color-tinta);
+  border-radius: var(--radio);
+  background: var(--color-tinta);
+  color: var(--color-papel);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  cursor: pointer;
+}
+
+.tp-boton:hover {
+  background: var(--color-filete);
+  color: var(--color-tinta);
+}
+
+.tp-error-motor {
+  border: var(--grosor-filete-cabecera) solid var(--color-acento);
+  padding: var(--espacio-4);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  color: var(--color-tinta);
+}
+
+.tp-error-motor > * + * {
+  margin-top: var(--espacio-2);
+}
+
+.tp-resultado {
+  display: grid;
+  gap: var(--espacio-5);
+}
+
+.tp-estado {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  border-left: 0;
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  padding-top: var(--espacio-2);
+}
+
+.tp-cifras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--espacio-4) var(--espacio-5);
+  margin: 0;
+}
+
+.tp-cifra {
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  padding-top: var(--espacio-2);
+}
+
+.tp-cifra dt {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta-2);
+}
+
+.tp-cifra dd {
+  margin: 0;
+  font-size: var(--texto-h3);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.tp-cifra-principal {
+  grid-column: 1 / -1;
+  border-top: var(--grosor-filete-cabecera) solid var(--color-acento);
+}
+
+.tp-cifra-principal dd {
+  font-size: var(--texto-h1);
+  line-height: var(--interlineado-h1);
+  letter-spacing: var(--tracking-h1);
+  font-weight: var(--peso-h1);
+  color: var(--color-acento);
+}
+
+.tp-cifra-detalle {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  color: var(--color-tinta-2);
+}
+
+.tp-subseccion {
+  display: grid;
+  gap: var(--espacio-3);
+}
+
+.tp-pasos {
+  display: grid;
+  gap: var(--espacio-5);
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.tp-paso > * + * {
+  margin-top: var(--espacio-2);
+}
+
+.tp-paso h4 {
+  margin: 0;
+  font-size: var(--texto-cuerpo);
+  font-weight: var(--peso-semi);
+}
+
+.tp-articulo {
+  color: var(--color-apagado);
+}
+
+.tp-avisos,
+.tp-limitaciones {
+  padding-left: 1.25em;
+  font-size: var(--texto-etiqueta);
+  font-family: var(--fuente-interfaz);
+  line-height: var(--interlineado-etiqueta);
+}
+
+.tp-avisos li + li,
+.tp-limitaciones li + li {
+  margin-top: var(--espacio-2);
+}
+
+.tp-supuestos > * + * {
+  margin-top: var(--espacio-4);
+}
+
+.tp-lecturas {
+  display: grid;
+  gap: var(--espacio-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tp-lectura {
+  padding: var(--espacio-3) 0 var(--espacio-3) var(--espacio-4);
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+}
+
+.tp-lectura > * + * {
+  margin-top: var(--espacio-2);
+}
+
+.tp-lectura h3 {
+  font-family: var(--fuente-lectura);
+  font-size: var(--texto-cuerpo);
+}
+
+/* El estado se lee en texto; el borde del recuadro lo refuerza (continuo, discontinuo, punteado). */
+.tp-etiqueta-estado {
+  display: inline-block;
+  padding: var(--espacio-1) var(--espacio-2);
+  border: var(--grosor-filete-cabecera) solid var(--color-tinta);
+  font-weight: var(--peso-semi);
+}
+
+.tp-lectura-provisional .tp-etiqueta-estado {
+  border-style: dashed;
+}
+
+.tp-lectura-pendiente .tp-etiqueta-estado {
+  border-style: dotted;
+  background: var(--color-filete);
+}
+
+.tp-lectura-datos {
+  display: grid;
+  gap: var(--espacio-2);
+  margin: 0;
+}
+
+.tp-lectura-datos dt {
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta-2);
+}
+
+.tp-lectura-datos dd {
+  margin: 0;
+}
+
+.tp-lectura-datos code {
+  font-family: var(--fuente-interfaz);
+  font-variant-numeric: lining-nums tabular-nums;
+}

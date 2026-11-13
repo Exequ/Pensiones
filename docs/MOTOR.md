@@ -1,6 +1,6 @@
 # Motor de pensiones: visión global
 
-Cierre de la Fase 2 (Fases 2-A, 2-B-1, 2-B-2 y 2-B-3). El motor es una librería pura en `src/engine/` (TypeScript estricto, sin React ni DOM) que calcula la pensión inicial de las prestaciones contributivas y no contributivas del Régimen General con el mismo patrón en todas: desglose por pasos con el parámetro de `/data` y el artículo que sostienen cada paso, normativa del año del hecho causante, y ninguna cifra legal escrita en el código. La Fase 3 (simulador) puede consumirlo entero a través de la fachada, sin tocar la lógica.
+Cierre de la Fase 2 (Fases 2-A, 2-B-1, 2-B-2 y 2-B-3). El motor es una librería pura en `src/engine/` (TypeScript estricto, sin React ni DOM) que calcula la pensión inicial de las prestaciones contributivas y no contributivas del Régimen General con el mismo patrón en todas: desglose por pasos con el parámetro de `/data` y el artículo que sostienen cada paso, normativa del año del hecho causante, y ninguna cifra legal escrita en el código. La Fase 3 (simulador) puede consumirlo entero a través de la fachada, sin tocar la lógica; la primera versión (Fase 3-A, jubilación ordinaria con carrera simple) está descrita en `docs/SIMULADOR.md`.
 
 ## Motores
 
