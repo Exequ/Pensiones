@@ -1,0 +1,77 @@
+{
+ "ss-cuantias-minimas.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/30434/30445",
+  "sha256": "fea4878fc0aad2add7b0d0af8b1d03fa9f77c0f4d7bfb0418bb9a996bd29c6cc",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-resumen-cuantias.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/36869/40885",
+  "sha256": "ef6dbdf6a52943899416b03e9bc4dd92b0f213ea9098f7ff2e502efaa5b1d40b",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-revalorizacion-2026.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/30431",
+  "sha256": "cd9cf92dac5dc7e5ba52d54eb02087cca093fc52dcf8a88e91e8052f8ae60de6",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-jubilacion-requisitos.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472",
+  "sha256": "17d4f4392cdcb3c3e71a553f450d08ebabd3474f8c33ab9b209b74cda2ebc863",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-jubilacion-cuantia.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28475",
+  "sha256": "86c8544a98192fa743ee029ddcb407773bc66ec5b914e1a4db5269ff958e51c4",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-brecha-genero-cuantia.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/4c43ce49-6636-4a12-bacf-5e6697eb81da/cuantia?changeLanguage=es",
+  "sha256": "2767941138166085200d172e16904dbe0352fda5d3062bfe770e7f7a8802c760",
+  "fetchedAt": "2026-11-13"
+ },
+ "eurostat-earn_mw_cur-ES.json": {
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_mw_cur?format=JSON&geo=ES&currency=EUR&lang=EN",
+  "sha256": "47796af3f4bc1236c47e9943ddc8bdc5830c85ff8158c669e014b272cee9c573",
+  "fetchedAt": "2026-11-13"
+ },
+ "ine-ipc-indice-general-IPC290751.json": {
+  "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=1000",
+  "sha256": "c619ba5bfc7ce9a8157ed065008e4f53fb4f163116fab2e22622560a485e8e15",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-bases-tipos-cotizacion.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537?changeLanguage=es&dbe437e9_page=1",
+  "sha256": "57c6191cfc30df093927c2c4c6c6fa837e202a57ef9bb1977098b78b2c217d83",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-viudedad-cuantia.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10964/10966/28489/28492/28617",
+  "sha256": "4d134b17fc54cb2814c76e939d8af088f0371cf7d4a20acc9a0828c4b1b99eaf",
+  "fetchedAt": "2026-11-13"
+ },
+ "ss-incapacidad-absoluta.html": {
+  "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10960/28750/28680/28729/28738/28741",
+  "sha256": "9eafb8aa8d57f06bee00604ff1aa696549e2069f3d77dd89bb0ef4e2a33be626",
+  "fetchedAt": "2026-11-13"
+ },
+ "BOE-A-2023-2472.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2023-2472",
+  "sha256": "a04f4fcc26821aaf94ab7b3c69916b93bf17b3e5ede611c8be758d9090bb4cda",
+  "fetchedAt": "2026-11-13"
+ },
+ "BOE-A-2024-1691.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2024-1691",
+  "sha256": "f078f960cd1f313ecb4d673ed6731bdef2be4f76b400dc188e253599595d6276",
+  "fetchedAt": "2026-11-13"
+ },
+ "BOE-A-2025-3780.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2025-3780",
+  "sha256": "161ec17ce640f1377f8f64fd4e222cca96ef1f5aacdccc71b55e9d406b0281b8",
+  "fetchedAt": "2026-11-13"
+ },
+ "BOE-A-2026-7296.xml": {
+  "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-7296",
+  "sha256": "ec4de765d771b2e9d6aaf87e9a77d7511dd33d3d8a08130f39d8172c219997cd",
+  "fetchedAt": "2026-11-13"
+ }
+}

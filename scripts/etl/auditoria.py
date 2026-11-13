@@ -172,7 +172,12 @@ def main():
         L.append('Ninguna.')
     L += ['', 'Tablas con claves de dimensión repetidas:', '']
     L += ([f'- {rel}: {n} claves repetidas (por ejemplo {k})' for rel, n, k in dup_filas] or ['Ninguna.'])
-    open(f'{REPO}/docs/AUDITORIA_DATOS.md', 'w', encoding='utf-8').write('\n'.join(L) + '\n')
+    ruta = f'{REPO}/docs/AUDITORIA_DATOS.md'
+    previa = ''
+    if os.path.exists(ruta):  # conserva la sección de la auditoría independiente (Fase 2-C)
+        m = re.search(r'<!-- auditoria-independiente:inicio -->.*?<!-- auditoria-independiente:fin -->\n?', open(ruta, encoding='utf-8').read(), re.S)
+        previa = '\n' + m.group(0) if m else ''
+    open(ruta, 'w', encoding='utf-8').write('\n'.join(L) + '\n' + previa)
     resumen = {'ficheros': len(ficheros), 'sin_fuente': len(sin_fuente), 'sin_fecha': len(sin_fecha), 'baja': len(baja), 'derivadas': len(derivadas), 'huecos': len(huecos_series),
                'grafias': len(grafias), 'incons': len(incons), 'dup_series': len(dup_series), 'dup_tablas': len(dup_filas)}
     json.dump(resumen, open(f'{REPO}/docs/auditoria-datos.json', 'w'), indent=1)

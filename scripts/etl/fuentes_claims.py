@@ -279,6 +279,15 @@ REVISION['param-mei-reglas'] = ('Lecturas abiertas del MEI y de la cotización d
 REVISION_POR_DEFECTO = 'no-requiere'
 
 ORG = {'Boletín Oficial del Estado (BOE)': 'BOE', 'Instituto Nacional de Estadística (INE)': 'INE'}
+
+# Segundas fuentes de la auditoría independiente (Fase 2-C): se registran como fuentes consultadas
+_ruta_aud = f'{REPO}/docs/auditoria-independiente.json'
+if os.path.exists(_ruta_aud):
+    _ORG = {'seg-social.es': 'Seguridad Social', 'ec.europa.eu': 'Eurostat', 'servicios.ine.es': 'INE', 'boe.es': 'BOE', 'imserso.es': 'IMSERSO', 'mites.gob.es': 'MITES'}
+    for _r in json.load(open(_ruta_aud, encoding='utf-8'))['registros']:
+        for _s in _r['segundaFuente']:
+            _dom = next((v for k, v in _ORG.items() if k in _s['url']), 'Otros')
+            anota({'title': _s['title'], 'publisher': _dom, 'url': _s['url']}, 'auditoría independiente (docs/AUDITORIA_DATOS.md)', _s['fetchedAt'])
 filas = ['# Fuentes', '',
          'Registro de las fuentes consultadas. Cada fila corresponde a un documento descargado en una sesión de trabajo; nunca a datos recordados. La fecha es la de descarga (`fetchedAt`). Generado por `scripts/etl/fuentes_claims.py` a partir de `/data`.', '',
          '| Organismo | Documento | URL | Descargado | Ficheros de `/data` que lo usan |', '| --------- | --------- | --- | ---------- | ------------------------------- |']

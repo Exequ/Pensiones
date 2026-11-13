@@ -924,20 +924,20 @@
     },
     {
       "id": "2012-jub65-gran-invalidez-conyuge-no-cargo",
-      "value": 7658.0,
+      "value": 12327.0,
       "unit": "euros/año",
       "period": "2012",
       "source": {
-        "title": "Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
+        "title": "Corrección de errores del Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público.",
         "publisher": "Boletín Oficial del Estado (BOE)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-20638",
-        "docId": "BOE-A-2011-20638"
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-352",
+        "docId": "BOE-A-2012-352"
       },
-      "fetchedAt": "2026-11-11",
+      "fetchedAt": "2026-11-13",
       "confidence": "alta",
-      "notes": "Cuantía mínima anual (con cónyuge no a cargo).",
-      "quote": "Titular con 65 años procedente de gran invalidez … 16.035,60, 12.997,60, 7.658,00",
-      "location": "Anexo I (cuadro de cuantías mínimas de las pensiones contributivas)"
+      "notes": "Cuantía mínima anual (con cónyuge no a cargo). Corregida en la Fase 2-C: el texto original del Real Decreto-ley 20/2011 decía 7.658,00 y la corrección de errores publicada el 10/01/2012 fija 12.327,00 (el texto consolidado del BOE ya la recoge). Ver docs/DISCREPANCIAS.md.",
+      "quote": "En el Anexo I, primer cuadro, tercera línea de cifras, la cuantía mínima para titular con 65 años procedente de gran invalidez, con cónyuge no a cargo, donde dice: «7.658,00», debe decir: «12.327,00».",
+      "location": "Corrección de errores, Anexos, página 146645 del BOE de 31/12/2011 (Anexo I, primer cuadro)"
     },
     {
       "id": "2013-jub65-conyuge-cargo",
