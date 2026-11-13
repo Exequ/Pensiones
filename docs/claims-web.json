@@ -276,6 +276,99 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-incapacidad-grados",
+      "texto": "Los grados de incapacidad permanente que calcula el simulador son parcial, total, absoluta y gran incapacidad, con las definiciones de la disposición transitoria vigésima sexta del texto refundido de la Ley General de la Seguridad Social, que rigen mientras no haya una lista reglamentaria de enfermedades.",
+      "ubicacion": "Página «Tu pensión», incapacidad permanente (Fase 3-C1)",
+      "datos": [
+        "parametros/incapacidad-permanente-reglas.json#grado-parcial",
+        "parametros/incapacidad-permanente-reglas.json#grado-total",
+        "parametros/incapacidad-permanente-reglas.json#grado-absoluta",
+        "parametros/incapacidad-permanente-reglas.json#grado-gran-incapacidad",
+        "parametros/incapacidad-permanente-reglas.json#grados-aplicables-hasta-desarrollo"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-incapacidad-parcial",
+      "texto": "La incapacidad permanente parcial no da una pensión periódica sino una cantidad a tanto alzado, igual a un número fijo de mensualidades de la base reguladora de la incapacidad temporal (art. 196.1 TRLGSS y art. 9 del Decreto 1646/1972).",
+      "ubicacion": "Página «Tu pensión», incapacidad permanente (Fase 3-C1)",
+      "datos": [
+        "parametros/incapacidad-permanente-reglas.json#parcial-mensualidades",
+        "parametros/incapacidad-permanente-reglas.json#parcial-tanto-alzado"
+      ],
+      "fuentes": [
+        {
+          "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+        },
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-incapacidad-sin-alta",
+      "texto": "Sin alta o situación asimilada, la ley solo reconoce la incapacidad permanente absoluta y la gran incapacidad por contingencias comunes, con un periodo mínimo de cotización propio (art. 195.4 TRLGSS).",
+      "ubicacion": "Página «Tu pensión», incapacidad permanente (Fase 3-C1)",
+      "datos": ["parametros/incapacidad-permanente-reglas.json#carencia-sin-alta-meses"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-incapacidad-trabajo",
+      "texto": "La pensión de incapacidad total es compatible con el salario de un trabajo en funciones distintas de las de la profesión habitual; en la absoluta y en la gran incapacidad, desde la fecha que fija la norma, el pago se suspende mientras se trabaja, salvo el complemento de gran incapacidad (art. 198 TRLGSS).",
+      "ubicacion": "Página «Tu pensión», incapacidad permanente (Fase 3-C1)",
+      "datos": [
+        "parametros/incapacidad-permanente-reglas.json#compatibilidad-total-salario",
+        "parametros/incapacidad-permanente-reglas.json#compatibilidad-absoluta-suspension-desde",
+        "parametros/incapacidad-permanente-reglas.json#compatibilidad-complemento-gi-no-se-suspende"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-incapacidad-profesionales",
+      "texto": "En el accidente de trabajo y la enfermedad profesional, la base reguladora se calcula con el salario real según el reglamento de 1969; el simulador no la calcula porque la carrera de cotización no recoge esos conceptos, y por eso esos orígenes aparecen desactivados.",
+      "ubicacion": "Página «Tu pensión», incapacidad permanente (Fase 3-C1)",
+      "datos": ["parametros/incapacidad-permanente-reglas.json#br-profesional-salario-real"],
+      "fuentes": [
+        {
+          "title": "Orden de 15 de abril de 1969 por la que se establecen normas para la aplicación y desarrollo de las prestaciones por invalidez en el Régimen General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1969-575"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada"
     }
   ]
 }

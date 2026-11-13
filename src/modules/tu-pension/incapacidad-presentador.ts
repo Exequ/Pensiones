@@ -392,7 +392,7 @@ export function presentarIncapacidad(
           )
         : [
             hayCarencia
-              ? 'En el accidente no laboral y en el de trabajo no se exige periodo mínimo de cotización.'
+              ? 'En el accidente no laboral no se exige periodo mínimo de cotización.'
               : 'Para este caso el simulador no exige un periodo mínimo de cotización.',
           ],
     articulo: 'art. 195 TRLGSS',
