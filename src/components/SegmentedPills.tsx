@@ -4,6 +4,8 @@ import './SegmentedPills.css';
 export interface OpcionPildora<T extends string | number> {
   readonly valor: T;
   readonly etiqueta: string;
+  /** Opción que existe pero no se puede elegir (se explica fuera, con texto). */
+  readonly deshabilitada?: boolean;
 }
 
 interface SegmentedPillsProps<T extends string | number> {
@@ -41,6 +43,7 @@ export function SegmentedPills<T extends string | number>({
               name={nombre}
               value={String(opcion.valor)}
               checked={opcion.valor === valor}
+              disabled={opcion.deshabilitada === true}
               onChange={() => {
                 onCambio(opcion.valor);
               }}

@@ -65,3 +65,14 @@
   outline: var(--grosor-foco) solid var(--color-acento);
   outline-offset: var(--separacion-foco);
 }
+
+.pildora-input:disabled {
+  cursor: not-allowed;
+}
+
+.pildora-input:disabled + .pildora-texto {
+  border-style: dashed;
+  border-color: var(--color-apagado);
+  background: var(--color-papel);
+  color: var(--color-apagado);
+}

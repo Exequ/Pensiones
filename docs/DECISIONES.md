@@ -3,6 +3,48 @@
 Registro de decisiones tomadas cuando algo era ambiguo o había que elegir. La más reciente,
 arriba dentro de cada fase.
 
+## Fase 3-C1 · Selector de prestación e incapacidad permanente en «Tu pensión»
+
+### Paso 0
+
+- **Rótulo de la opción por defecto**: «opción por defecto del cálculo» pasa a «valor con el que se calcula si no eliges otro» (`TEXTOS.opcionPorDefecto`). Describe qué ocurre sin elegir, sin sugerir que sea la lectura recomendada. Un test comprueba el texto y que no contiene palabras de recomendación.
+
+### Generalización a varias prestaciones
+
+- **Interfaz `Prestacion` y `Receta`** (`prestaciones.ts`, `receta.ts`): cada prestación aporta su mapeador, su llamada al motor, su presentador y sus lecturas; la orquestación (mapear → motor → presentar → comparar → efecto de cada lectura) es única (`calcularConReceta`). `calcular.ts` conserva su API (`calcularTuPension`) y despacha por `formulario.prestacion`. El diseño está en `docs/SIMULADOR.md`.
+- **Un solo formulario con campos de más** (`FormularioTuPension.prestacion`, `grado`, `origen`, `enAlta`, `trabaja`) en vez de un tipo por prestación: la carrera (simple y por tramos), las personas-ejemplo, el IPC supuesto y las lecturas son los mismos y comparten estado; así cambiar de prestación conserva los datos personales y la carrera. Es la opción más sencilla.
+- **La fecha final de la carrera sigue en `jubilacionMes`/`jubilacionAnio`** también en la incapacidad (allí es el hecho causante). Renombrar los campos obligaba a tocar los tests de la jubilación, que no se pueden debilitar; los mensajes, las etiquetas y el enlace (`hc=` en vez de `jub=`) sí hablan del hecho causante. Documentado en `tipos.ts`.
+- **Cambiar de prestación** conserva datos personales, carrera, opciones e IPC, y descarta el resultado y las lecturas elegidas (las lecturas son de cada prestación).
+- **Comparación y efecto por lectura genéricos** (`comparar-lecturas.ts`, `supuestos.ts`): reciben el ejecutor del motor y el motor de las lecturas con valores por defecto que no cambian la jubilación; todas las firmas anteriores siguen valiendo sin argumentos nuevos. Para la incapacidad parcial el importe comparado es la cantidad a tanto alzado (`importePrincipal`).
+
+### Selector de prestación
+
+- Botones de opción nativos (`SegmentedPills`, al que se añade `deshabilitada`): «Jubilación ordinaria» e «Incapacidad permanente» activas; viudedad, orfandad, favor de familiares y pensiones no contributivas, desactivadas y rotuladas «(próximamente)», sin cifras. Por defecto la página abre en jubilación.
+
+### Enlace compartible
+
+- Parámetro nuevo `p`: `inc` (incapacidad). **Sin `p` es una jubilación y el formato `v=1` no cambia ni un carácter**: escribir una jubilación no añade ningún parámetro nuevo (test de igualdad exacta con un enlace anterior). Un `p` desconocido se ignora con aviso y se trata como jubilación.
+- Parámetros solo de incapacidad: `hc` (fecha del hecho causante), `gr` (`par`, `tot`, `abs`, `gin`), `or` (`ec`, `anl`), `alt` y `trb` (`1`/`0`). En un enlace de jubilación se ignoran con aviso; en uno de incapacidad se ignora `jub`. Las lecturas del enlace se validan contra las de la prestación del enlace.
+- No se sube la versión (`v=1`): el cambio es aditivo y los lectores antiguos de la web ya ignoran con aviso los parámetros que no conocen.
+
+### Incapacidad permanente
+
+- **Orígenes disponibles**: enfermedad común y accidente no laboral. **Accidente de trabajo y enfermedad profesional aparecen desactivados** con explicación: el motor solo los calcula si se le da la base reguladora calculada fuera con el salario real (reglamento de 1969, limitación documentada en `docs/MOTOR_INCAPACIDAD.md`), y el formulario no la recoge ni la inventa. No se ha añadido un campo para escribirla (la persona tendría que calcularla con un criterio que el simulador no puede comprobar). Todos los grados son compatibles con los dos orígenes disponibles; no hay otra combinación que el motor rechace.
+- **Grado y origen sin valor por defecto**: hay que elegirlos (error de formulario si faltan), para no sugerir ningún grado. El grado lo reconoce el organismo competente; el aviso lo dice y añade que no es una valoración de un tribunal médico.
+- **Opciones propias**: «en alta o situación asimilada» (por defecto sí) y «trabajo tras el reconocimiento» (por defecto no): son las que cambian el cálculo de forma visible (requisitos sin alta, suspensión por trabajo). No se ofrecen `totalCualificada`, `ultimaBaseCotizacion`, `inicioIncapacidadTemporal`, `periodoElegidoDesde` ni `mesesAsimiladosIT`: el motor tiene valores por defecto razonables y avisa de cuáles usa (el aviso aparece en «Avisos del cálculo»).
+- **Carrera**: la misma carrera simple y por tramos que la jubilación (mismo componente), terminada el mes anterior al hecho causante. Hecho causante y nacimiento, día 1 del mes (como en la jubilación). Los mensajes de validación y de tramos hablan del hecho causante (`NombresFecha`, `anteriorA`).
+- **Gráfico de bases**: no se muestra. `ResultadoIncapacidad` no expone las bases del periodo (a diferencia de `basesPeriodo` de la jubilación, que se añadió en la 3-B1) y el encargo prohíbe cambiar el motor para esto. En su lugar, el resultado lo dice con una nota. Queda para una fase posterior exponer `basesPeriodo` en el motor de incapacidad.
+- **Cifras**: pensión mensual y anual (o cantidad a tanto alzado en la parcial), base reguladora, porcentaje según el grado (el aplicado: el del grado o el del art. 196.5), incremento de la total cualificada, complemento de gran incapacidad, importe en suspenso, tiempo cotizado, periodo mínimo exigido y acreditado, y meses añadidos hasta la edad ordinaria (el «periodo asumido» de la enfermedad común). Todo sale del motor; los pasos leen `valor` y `detalle` de la fachada, y un test fija el formato de los `detalle` que se leen.
+- **Lecturas**: se ofrecen las seis `incapacidad.*` (todas con dos valores). Las `jubilacion.*` también rigen en el motor de incapacidad (contexto común) con su valor por defecto, pero no se ofrecen para cambiar aquí: son lecturas de otra prestación y el panel no las mostraba. Se deja constancia en el texto de limitaciones del panel.
+- **Lecturas que intervienen** (`LecturasQueIntervienen`): junto al resultado se muestran las lecturas provisionales o pendientes cuya alternativa cambia el resultado y, **siempre que el origen es accidente no laboral, `incapacidad.lagunasAccidenteNoLaboral`** con su estado, motivo y el efecto de la alternativa (aunque con esos datos no cambie). Redacción neutra: «no indica cuál es la correcta». Si no cumple los requisitos no se mide el efecto y el bloque lo dice.
+- **Comparación** (`ComparacionLecturas`) con las etiquetas de la prestación (`EtiquetasComparacion`): «pensión mensual bruta» o «cantidad a tanto alzado».
+- **Hecho causante anterior a la cobertura del motor** (`NoImplementada`) y demás errores del motor se traducen en `errores.ts` con el nombre de la fecha de cada prestación.
+
+### Afirmaciones, fuentes y datos
+
+- Cinco afirmaciones nuevas en `docs/claims-web.json` (grados, parcial, sin alta, trabajo, orígenes profesionales), todas con datos de `/data` y fuentes ya registradas: `docs/FUENTES.md` no cambia salvo lo que regenera el script. El aviso dice que el grado lo reconoce el organismo competente (texto pedido en el encargo): no hay en `/data` un dato que lo respalde y no se ha descargado en esta sesión la norma de procedimiento, por lo que **no se ha registrado como afirmación verificada**; queda anotado en `docs/PENDIENTE_DATOS.md`.
+- Ningún dato nuevo en `/data`; ninguna cifra de datos escrita a mano (los textos nuevos están cubiertos por un test de «sin dígitos»).
+
 ## Fase 3-B2 · Lecturas alternativas y enlace compartible en «Tu pensión»
 
 ### Paso 0

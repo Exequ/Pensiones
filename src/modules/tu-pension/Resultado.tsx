@@ -24,15 +24,19 @@ interface ResultadoProps {
   modelo: ModeloResultado;
   /** IPC supuesto usado, en %, tal como se escribió. */
   ipcUsado: string | undefined;
-  /** Bases mes a mes del periodo de cálculo. */
-  bases: BasesPeriodoCalculo;
+  /** Bases mes a mes del periodo de cálculo; `undefined` si el motor no las expone (incapacidad). */
+  bases: BasesPeriodoCalculo | undefined;
   /** Bloque de comparación con las lecturas por defecto (va justo después de las cifras). */
   comparacion?: ReactNode;
+  /** Bloque propio de la prestación junto al resultado (lecturas abiertas que intervienen). */
+  aviso?: ReactNode;
+  /** Nota que explica por qué no hay gráfico de bases (cuando el motor no las expone). */
+  notaSinBases?: string | undefined;
 }
 
 /** Cifras principales, requisitos y explicación paso a paso. */
 export const Resultado = forwardRef<HTMLHeadingElement, ResultadoProps>(function Resultado(
-  { modelo, ipcUsado, bases, comparacion },
+  { modelo, ipcUsado, bases, comparacion, aviso, notaSinBases },
   ref,
 ) {
   return (
@@ -58,14 +62,15 @@ export const Resultado = forwardRef<HTMLHeadingElement, ResultadoProps>(function
         ))}
       </dl>
       {comparacion}
+      {aviso}
       <p className="tp-normativa">
-        Normativa aplicada: la del año de la jubilación ({modelo.anioNormativa}). Importes en euros
-        de ese año.
+        Normativa aplicada: la del año {modelo.momentoNormativa} ({modelo.anioNormativa}). Importes
+        en euros de ese año.
         {ipcUsado ? ` IPC anual supuesto para los meses sin dato: ${ipcUsado} %.` : ''}
       </p>
 
       <section className="tp-subseccion" aria-labelledby="tp-requisitos">
-        <h3 id="tp-requisitos">{TEXTOS.requisitosTitulo}</h3>
+        <h3 id="tp-requisitos">{modelo.tituloRequisitos}</h3>
         <DataTable
           titulo="Requisitos: lo acreditado frente a lo exigido"
           ocultarTitulo
@@ -84,13 +89,16 @@ export const Resultado = forwardRef<HTMLHeadingElement, ResultadoProps>(function
         />
       </section>
 
-      <section className="tp-subseccion" aria-labelledby="tp-bases">
-        <h3 id="tp-bases">{TEXTOS.graficoSeccion}</h3>
-        <GraficoBases bases={bases} />
-      </section>
+      {bases ? (
+        <section className="tp-subseccion" aria-labelledby="tp-bases">
+          <h3 id="tp-bases">{TEXTOS.graficoSeccion}</h3>
+          <GraficoBases bases={bases} />
+        </section>
+      ) : null}
 
       <section className="tp-subseccion" aria-labelledby="tp-como">
         <h3 id="tp-como">{TEXTOS.comoTitulo}</h3>
+        {bases === undefined && notaSinBases ? <p className="campo-ayuda">{notaSinBases}</p> : null}
         <ol className="tp-pasos">
           {modelo.pasos.map((p) => (
             <li key={p.id} className="tp-paso">

@@ -3,6 +3,7 @@
  * mensajes en español con la acción que la persona puede hacer. Texto sin cifras de datos.
  */
 import type { ErrorMotor } from '../../engine/fachada';
+import type { IdPrestacion } from './tipos';
 
 export interface MensajeError {
   readonly codigo: ErrorMotor['codigo'];
@@ -14,16 +15,34 @@ export interface MensajeError {
   readonly campo?: 'jubilacionAnio' | 'ipcSupuesto' | 'inicioAnio' | 'baseMensual';
 }
 
-export function traducirError(error: ErrorMotor): MensajeError {
+/** Cómo se llama en los mensajes la fecha en que termina la carrera de cada prestación. */
+const FECHA: Record<IdPrestacion, { fecha: string; elegir: string; pensionDe: string }> = {
+  jubilacion: {
+    fecha: 'La fecha de jubilación',
+    elegir: 'otra fecha de jubilación, más cercana al presente',
+    pensionDe: 'una jubilación en el año indicado',
+  },
+  incapacidad: {
+    fecha: 'La fecha del hecho causante',
+    elegir: 'otra fecha del hecho causante, más cercana al presente',
+    pensionDe: 'un hecho causante en el año indicado',
+  },
+};
+
+export function traducirError(
+  error: ErrorMotor,
+  prestacion: IdPrestacion = 'jubilacion',
+): MensajeError {
   const texto = error.mensaje;
+  const nombre = FECHA[prestacion];
   switch (error.codigo) {
     case 'EntradaInvalida': {
       if (/posterior al nacimiento/i.test(texto)) {
         return {
           codigo: error.codigo,
           titulo: 'Las fechas no son coherentes',
-          mensaje: 'La fecha de jubilación debe ser posterior a la de nacimiento.',
-          accion: 'Revisa el mes y el año de nacimiento y de jubilación.',
+          mensaje: `${nombre.fecha} debe ser posterior a la de nacimiento.`,
+          accion: `Revisa el mes y el año de nacimiento y ${prestacion === 'jubilacion' ? 'de jubilación' : 'del hecho causante'}.`,
           campo: 'jubilacionAnio',
         };
       }
@@ -49,7 +68,9 @@ export function traducirError(error: ErrorMotor): MensajeError {
           codigo: error.codigo,
           titulo: 'Falta un IPC supuesto',
           mensaje:
-            'Para esa fecha de jubilación hay meses sin dato publicado de IPC y el cálculo necesita un supuesto.',
+            prestacion === 'jubilacion'
+              ? 'Para esa fecha de jubilación hay meses sin dato publicado de IPC y el cálculo necesita un supuesto.'
+              : 'Para esa fecha del hecho causante hay meses sin dato publicado de IPC y el cálculo necesita un supuesto.',
           accion:
             'Escribe un IPC anual supuesto en el apartado «Escenario económico» y vuelve a calcular.',
           campo: 'ipcSupuesto',
@@ -59,9 +80,8 @@ export function traducirError(error: ErrorMotor): MensajeError {
         return {
           codigo: error.codigo,
           titulo: 'No hay reglas cargadas para esa fecha',
-          mensaje:
-            'El simulador no tiene las normas necesarias para una jubilación en el año indicado.',
-          accion: 'Elige otra fecha de jubilación, más cercana al presente.',
+          mensaje: `El simulador no tiene las normas necesarias para ${nombre.pensionDe}.`,
+          accion: `Elige ${nombre.elegir}.`,
           campo: 'jubilacionAnio',
         };
       }
@@ -69,8 +89,7 @@ export function traducirError(error: ErrorMotor): MensajeError {
         codigo: error.codigo,
         titulo: 'Falta un dato necesario',
         mensaje: `El cálculo necesita un dato que no está disponible. Detalle técnico: ${texto}`,
-        accion:
-          'Prueba con otra fecha de jubilación. Si persiste, consulta «Metodología» para ver qué datos faltan.',
+        accion: `Prueba con ${prestacion === 'jubilacion' ? 'otra fecha de jubilación' : 'otra fecha del hecho causante'}. Si persiste, consulta «Metodología» para ver qué datos faltan.`,
       };
     }
     case 'NoImplementada': {
@@ -79,7 +98,10 @@ export function traducirError(error: ErrorMotor): MensajeError {
         codigo: error.codigo,
         titulo: 'Este caso queda fuera del simulador',
         mensaje: `La ley regula este supuesto, pero el simulador todavía no lo calcula: ${regla}.`,
-        accion: 'Elige otra fecha de jubilación; las limitaciones del cálculo se listan más abajo.',
+        accion:
+          prestacion === 'jubilacion'
+            ? 'Elige otra fecha de jubilación; las limitaciones del cálculo se listan más abajo.'
+            : 'Cambia la fecha del hecho causante o las opciones del cálculo; las limitaciones del cálculo se listan más abajo.',
         campo: 'jubilacionAnio',
       };
     }

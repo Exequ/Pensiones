@@ -76,6 +76,8 @@ export interface ContextoTramos {
   readonly mesPrevio: number | undefined;
   /** Mes de nacimiento (meses absolutos), si es válido. */
   readonly nacimiento: number | undefined;
+  /** «a la jubilación» (por defecto) o «al hecho causante»: cómo se nombra el final de la carrera. */
+  readonly anteriorA?: string;
 }
 
 export interface ResultadoTramos {
@@ -272,13 +274,13 @@ export function procesarTramos(
       if (t.desde > ctx.mesPrevio) {
         error(
           'tramo',
-          `${nombre}: empieza en ${nombreDeMes(t.desde)}, después del mes anterior a la jubilación (${nombreDeMes(ctx.mesPrevio)}). Esos meses no se cuentan.`,
+          `${nombre}: empieza en ${nombreDeMes(t.desde)}, después del mes anterior ${ctx.anteriorA ?? 'a la jubilación'} (${nombreDeMes(ctx.mesPrevio)}). Esos meses no se cuentan.`,
         );
         ok = false;
       } else if (t.hasta > ctx.mesPrevio) {
         error(
           'hastaAnio',
-          `${nombre}: termina en ${nombreDeMes(t.hasta)}, después del mes anterior a la jubilación (${nombreDeMes(ctx.mesPrevio)}). Acórtalo hasta ese mes.`,
+          `${nombre}: termina en ${nombreDeMes(t.hasta)}, después del mes anterior ${ctx.anteriorA ?? 'a la jubilación'} (${nombreDeMes(ctx.mesPrevio)}). Acórtalo hasta ese mes.`,
         );
         ok = false;
       }

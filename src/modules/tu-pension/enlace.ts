@@ -21,6 +21,11 @@
  * | `min`, `max` | Complemento a mínimos y límite de pensión máxima: `1` aplicar, `0` no. |
  * | `ipc`     | IPC anual supuesto en %, tal como se escribió (vacío: sin escenario).     |
  * | `lec`     | Lecturas cambiadas, `id:valor` separadas por comas.                       |
+ * | `p`       | Prestación (Fase 3-C1): `inc` (incapacidad permanente). Sin `p`: jubilación; el enlace de jubilación no cambia. |
+ * | `hc`      | Solo incapacidad: fecha del hecho causante, `AAAA-MM` (en jubilación se usa `jub`). |
+ * | `gr`      | Solo incapacidad: grado, `par`, `tot`, `abs` o `gin`.                     |
+ * | `or`      | Solo incapacidad: origen, `ec` (enfermedad común) o `anl` (accidente no laboral). |
+ * | `alt`, `trb` | Solo incapacidad: en alta y trabaja tras el reconocimiento (`1` o `0`). |
  *
  * Al leer un enlace todo se valida: lo que no es válido (fechas o números fuera de rango, lecturas o
  * valores que no están en el registro, ids desconocidos, tramos mal formados) se **ignora** y se
@@ -31,8 +36,10 @@
  * tres cifras): no se puede calcular y así el enlace propio nunca produce avisos.
  */
 import { lecturasOfrecidas, normalizarEleccion } from '../../engine/comparar-lecturas.ts';
+import type { GradoIncapacidad, OrigenIncapacidad } from '../../engine/incapacidad/tipos.ts';
+import { esOrigenDisponible } from './incapacidad-mapeador.ts';
 import { leerEntero, leerNumero } from './lectura.ts';
-import type { FormularioTuPension } from './tipos.ts';
+import type { FormularioTuPension, IdPrestacion } from './tipos.ts';
 import { nuevoIdTramo, type ReferenciaTramo, type TramoFormulario } from './tramos.ts';
 
 export const VERSION_ENLACE = '1';
@@ -91,7 +98,34 @@ const PARAMETROS = [
   'max',
   'ipc',
   'lec',
+  'p',
+  'hc',
+  'gr',
+  'or',
+  'alt',
+  'trb',
 ] as const;
+
+/** Parámetros que solo existen en el enlace de la incapacidad permanente. */
+const SOLO_INCAPACIDAD = ['hc', 'gr', 'or', 'alt', 'trb'] as const;
+/** Código de cada prestación en `p` (la jubilación no lo escribe: es la ausencia de `p`). */
+const CODIGO_PRESTACION: Record<Exclude<IdPrestacion, 'jubilacion'>, string> = {
+  incapacidad: 'inc',
+};
+const CODIGO_GRADO: Record<GradoIncapacidad, string> = {
+  parcial: 'par',
+  total: 'tot',
+  absoluta: 'abs',
+  'gran-incapacidad': 'gin',
+};
+const CODIGO_ORIGEN: Partial<Record<OrigenIncapacidad, string>> = {
+  'enfermedad-comun': 'ec',
+  'accidente-no-laboral': 'anl',
+};
+const invertir = <T extends string>(r: Partial<Record<T, string>>): Map<string, T> =>
+  new Map(Object.entries(r).map(([k, v]) => [v as string, k as T]));
+const GRADO_DE_CODIGO = invertir<GradoIncapacidad>(CODIGO_GRADO);
+const ORIGEN_DE_CODIGO = invertir<OrigenIncapacidad>(CODIGO_ORIGEN);
 
 const SEPARADOR_TRAMOS = '~';
 const SEPARADOR_CAMPOS = ':';
@@ -188,8 +222,17 @@ export function escribirEnlace(f: FormularioTuPension, personaId?: string): stri
   const poner = (clave: string, valor: string | undefined): void => {
     if (valor !== undefined) partes.push([clave, valor]);
   };
+  const incapacidad = f.prestacion === 'incapacidad';
+  if (incapacidad) poner('p', CODIGO_PRESTACION.incapacidad);
   poner('nac', fechaATexto(f.nacimientoMes, f.nacimientoAnio));
-  poner('jub', fechaATexto(f.jubilacionMes, f.jubilacionAnio));
+  // La fecha en que termina la carrera: jubilación (`jub`) o hecho causante (`hc`).
+  poner(incapacidad ? 'hc' : 'jub', fechaATexto(f.jubilacionMes, f.jubilacionAnio));
+  if (incapacidad) {
+    if (f.grado !== '') poner('gr', CODIGO_GRADO[f.grado]);
+    if (f.origen !== '') poner('or', CODIGO_ORIGEN[f.origen]);
+    poner('alt', f.enAlta ? '1' : '0');
+    poner('trb', f.trabaja ? '1' : '0');
+  }
   if (f.sexo !== '') poner('sex', f.sexo === 'mujer' ? 'm' : 'h');
   if (
     f.sexo === 'mujer' &&
@@ -215,7 +258,9 @@ export function escribirEnlace(f: FormularioTuPension, personaId?: string): stri
   else if (numeroValido(ipc, LIMITES_ENLACE.ipcMinimo, LIMITES_ENLACE.ipcMaximo) !== undefined) {
     poner('ipc', ipc);
   }
-  const lecturas = Object.entries(normalizarEleccion(f.lecturas));
+  const lecturas = Object.entries(
+    normalizarEleccion(f.lecturas, incapacidad ? 'incapacidad' : 'jubilacion'),
+  );
   if (lecturas.length > 0) {
     poner('lec', lecturas.map(([id, valor]) => `${id}${SEPARADOR_CAMPOS}${valor}`).join(','));
   }
@@ -270,10 +315,30 @@ export function leerEnlace(search: string, contexto: ContextoEnlace): ResultadoE
   const ignorar = (que: string, motivo: string): void => {
     avisos.push(`Se ha ignorado ${que} del enlace: ${motivo}.`);
   };
+  // Prestación: sin `p` es la jubilación (los enlaces anteriores a la Fase 3-C1 no lo llevan).
+  let prestacion: IdPrestacion = 'jubilacion';
+  const codigoPrestacion = parametros.get('p');
+  if (codigoPrestacion !== null) {
+    if (codigoPrestacion === CODIGO_PRESTACION.incapacidad) prestacion = 'incapacidad';
+    else
+      ignorar(
+        'la prestación',
+        `«${codigoPrestacion}» no es una prestación que esta página calcule`,
+      );
+  }
+  cambios.prestacion = prestacion;
+  const incapacidad = prestacion === 'incapacidad';
   const repetidos = new Set<string>();
   for (const clave of parametros.keys()) {
     if (!(PARAMETROS as readonly string[]).includes(clave)) {
       ignorar(`el parámetro «${clave}»`, 'no existe en este formato');
+    } else if (!incapacidad && (SOLO_INCAPACIDAD as readonly string[]).includes(clave)) {
+      ignorar(`el parámetro «${clave}»`, 'solo existe en los enlaces de la incapacidad permanente');
+    } else if (incapacidad && clave === 'jub') {
+      ignorar(
+        'el parámetro «jub»',
+        'en la incapacidad permanente la fecha es la del hecho causante («hc»)',
+      );
     } else if (parametros.getAll(clave).length > 1 && !repetidos.has(clave)) {
       repetidos.add(clave);
       ignorar(`las repeticiones del parámetro «${clave}»`, 'solo se usa el primer valor');
@@ -296,10 +361,35 @@ export function leerEnlace(search: string, contexto: ContextoEnlace): ResultadoE
     cambios.nacimientoMes = f.mes;
     cambios.nacimientoAnio = f.anio;
   });
-  fecha('jub', 'jubilación', (f) => {
+  fecha(incapacidad ? 'hc' : 'jub', incapacidad ? 'hecho causante' : 'jubilación', (f) => {
     cambios.jubilacionMes = f.mes;
     cambios.jubilacionAnio = f.anio;
   });
+  if (incapacidad) {
+    const grado = dato('gr');
+    if (grado !== undefined) {
+      const g = GRADO_DE_CODIGO.get(grado);
+      if (g === undefined) ignorar('el grado de incapacidad', 'el valor no es válido');
+      else cambios.grado = g;
+    }
+    const origen = dato('or');
+    if (origen !== undefined) {
+      const o = ORIGEN_DE_CODIGO.get(origen);
+      if (o === undefined || !esOrigenDisponible(o)) {
+        ignorar('el origen de la incapacidad', 'el valor no es válido o no está disponible');
+      } else cambios.origen = o;
+    }
+    for (const [clave, nombre, campo] of [
+      ['alt', 'la opción de estar en alta', 'enAlta'],
+      ['trb', 'la opción de trabajar', 'trabaja'],
+    ] as const) {
+      const valor = dato(clave);
+      if (valor === undefined) continue;
+      if (valor === '1') cambios[campo] = true;
+      else if (valor === '0') cambios[campo] = false;
+      else ignorar(nombre, 'el valor no es válido');
+    }
+  }
   fecha('ini', 'inicio de la cotización', (f) => {
     cambios.inicioMes = f.mes;
     cambios.inicioAnio = f.anio;
@@ -392,7 +482,9 @@ export function leerEnlace(search: string, contexto: ContextoEnlace): ResultadoE
 
   const lecturas = dato('lec');
   if (lecturas !== undefined && lecturas !== '') {
-    const ofrecidas = new Map(lecturasOfrecidas().map((l) => [l.id, l]));
+    const ofrecidas = new Map(
+      lecturasOfrecidas(incapacidad ? 'incapacidad' : 'jubilacion').map((l) => [l.id, l]),
+    );
     const elegidas: Record<string, string> = {};
     for (const par of lecturas.split(',')) {
       const corte = par.indexOf(SEPARADOR_CAMPOS);

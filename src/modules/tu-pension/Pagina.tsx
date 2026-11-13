@@ -8,6 +8,10 @@ import { LIMITACIONES_MOTOR } from '../../engine/limitaciones';
 import { antetituloSeccion, buscarSeccion } from '../secciones';
 import { calcularTuPension, type RespuestaCalculo } from './calcular';
 import { ComparacionLecturas } from './ComparacionLecturas';
+import { LecturasQueIntervienen } from './LecturasQueIntervienen';
+import { prestacionDe } from './prestaciones';
+import { SelectorPrestacion } from './SelectorPrestacion';
+import { TEXTOS_INCAPACIDAD, TEXTOS_INCAPACIDAD_PROPIOS } from './textos-incapacidad';
 import { EnlaceCompartible } from './EnlaceCompartible';
 import { escribirEnlace, leerEnlace, tramosParaEnlace, type ResultadoEnlace } from './enlace';
 import { sugerenciaBase, supuestoIpcPorDefecto } from './datos';
@@ -27,8 +31,8 @@ import { crearMotorDelRepositorio, leerReferenciaDeRepositorio } from './motor';
 import { PanelSupuestos } from './PanelSupuestos';
 import { ErrorMotorVista, Resultado } from './Resultado';
 import { filasDelPanel } from './supuestos';
-import { TEXTOS } from './textos';
-import type { ErroresFormulario, FormularioTuPension, TipoCarrera } from './tipos';
+import { TEXTOS, TEXTOS_JUBILACION, type TextosPrestacion } from './textos';
+import type { ErroresFormulario, FormularioTuPension, IdPrestacion, TipoCarrera } from './tipos';
 import { tramoVacio, type ErrorTramo, type TramoFormulario } from './tramos';
 import './TuPension.css';
 
@@ -46,6 +50,9 @@ function enlaceCompleto(busqueda: string): string {
   return `${window.location.href.split('#')[0] ?? ''}#/${seccion.slug}${busqueda}`;
 }
 
+const textosDe = (p: IdPrestacion): TextosPrestacion =>
+  p === 'incapacidad' ? TEXTOS_INCAPACIDAD : TEXTOS_JUBILACION;
+
 interface OpcionesCalculo {
   /** No muestra errores de formulario ni mueve el foco (carga desde un enlace, cambio de lectura). */
   readonly silencioso?: boolean;
@@ -62,6 +69,12 @@ interface EstadoDeEnlace {
   readonly ultimoCalculado: FormularioTuPension | undefined;
 }
 
+/** Cómo se nombra el final de la carrera en los mensajes de las personas-ejemplo. */
+const contextoFecha = (p: IdPrestacion): { anteriorA: string; deFin: string } =>
+  p === 'incapacidad'
+    ? { anteriorA: 'al hecho causante', deFin: 'del hecho causante' }
+    : { anteriorA: 'a la jubilación', deFin: 'de jubilación' };
+
 function estadoDeEnlace(
   enlace: ResultadoEnlace,
   personas: readonly PersonaEjemplo[],
@@ -76,6 +89,7 @@ function estadoDeEnlace(
           jubilacion,
           catalogo,
           definicionMedia: enlace.formulario.definicionMedia,
+          ...contextoFecha(enlace.formulario.prestacion),
         })
       : undefined;
   // Con un enlace válido se calcula en silencio: si el formulario está incompleto, solo se rellena.
@@ -99,7 +113,7 @@ function estadoDeEnlace(
   };
 }
 
-/** Módulo «tu-pension»: jubilación ordinaria con carrera simple o por tramos, lecturas y enlace. */
+/** Módulo «tu-pension»: jubilación ordinaria e incapacidad permanente, con carrera simple o por tramos, lecturas y enlace. */
 export default function TuPension() {
   useTituloPagina(seccion.titulo);
   const base = useMemo(() => sugerenciaBase(), []);
@@ -108,6 +122,11 @@ export default function TuPension() {
   const personas = useMemo(() => personasDeRepositorio().personas, []);
   const defecto = useMemo<FormularioTuPension>(
     () => ({
+      prestacion: 'jubilacion',
+      grado: '',
+      origen: '',
+      enAlta: true,
+      trabaja: false,
       nacimientoMes: '',
       nacimientoAnio: '',
       sexo: '',
@@ -163,6 +182,10 @@ export default function TuPension() {
   const ultimoCalculado = useRef<FormularioTuPension | undefined>(estadoInicial?.ultimoCalculado);
   const encabezadoResultado = useRef<HTMLHeadingElement>(null);
   const errorMotor = useRef<HTMLDivElement>(null);
+
+  const prestacion = prestacionDe(valores.prestacion);
+  const textos = textosDe(valores.prestacion);
+  const incapacidad = valores.prestacion === 'incapacidad';
 
   const calcular = (
     aCalcular: FormularioTuPension = valores,
@@ -234,12 +257,24 @@ export default function TuPension() {
 
   /** Cambia las lecturas elegidas y, si ya había resultado, lo recalcula sin mover el foco. */
   const cambiarLecturas = (nuevas: Readonly<Record<string, string>>, reiniciadas: boolean) => {
-    const lecturas = normalizarEleccion(nuevas);
+    const lecturas = normalizarEleccion(nuevas, prestacion.id);
     setValores((v) => ({ ...v, lecturas }));
     setRestablecidas(reiniciadas);
     if (ultimoCalculado.current) {
       calcular({ ...ultimoCalculado.current, lecturas }, { silencioso: true, enfocar: false });
     }
+  };
+
+  /** Cambia de prestación: la carrera y los datos personales se conservan; el resultado y las lecturas, no. */
+  const cambiarPrestacion = (id: IdPrestacion) => {
+    if (id === valores.prestacion) return;
+    setValores((v) => ({ ...v, prestacion: id, lecturas: {} }));
+    setRespuesta(undefined);
+    setErroresVista({});
+    setErroresTramos([]);
+    setMensajePersona(undefined);
+    setRestablecidas(false);
+    ultimoCalculado.current = undefined;
   };
 
   const cambiarTipoCarrera = (tipo: TipoCarrera) => {
@@ -273,7 +308,7 @@ export default function TuPension() {
     const { nacimiento, jubilacion } = leerFechasFormulario(valores);
     if (!persona) return;
     if (!nacimiento || !jubilacion) {
-      setMensajePersona(TEXTOS.personaSinFechas);
+      setMensajePersona(textos.personaSinFechas);
       return;
     }
     const carga = cargarPersona(persona, {
@@ -281,6 +316,7 @@ export default function TuPension() {
       jubilacion,
       catalogo,
       definicionMedia: valores.definicionMedia,
+      ...contextoFecha(valores.prestacion),
     });
     if (!carga.ok) {
       setMensajePersona(carga.mensaje);
@@ -302,13 +338,14 @@ export default function TuPension() {
   const lecturas =
     respuesta?.tipo === 'resultado'
       ? respuesta.lecturas
-      : filasDelPanel(undefined, valores.lecturas);
+      : filasDelPanel(undefined, valores.lecturas, prestacion.id);
   const busquedaActual = useMemo(
     () => escribirEnlace(valores, personaCargada?.id),
     [valores, personaCargada],
   );
   const tramosOmitidos = tramosParaEnlace(valores.tramos).omitidosPorLimite;
-  const limitaciones = LIMITACIONES_MOTOR.filter((l) => l.motor === 'jubilacion');
+  const limitaciones = LIMITACIONES_MOTOR.filter((l) => l.motor === prestacion.motorLimitaciones);
+  const calculado = respuesta?.tipo === 'resultado' ? respuesta.formulario : valores;
 
   return (
     <article className="contenedor pagina tp-pagina">
@@ -320,7 +357,7 @@ export default function TuPension() {
         </header>
         <aside className="tp-aviso" aria-label={TEXTOS.avisoTitulo}>
           <p>
-            <strong>{TEXTOS.avisoTitulo}.</strong> {TEXTOS.aviso}
+            <strong>{TEXTOS.avisoTitulo}.</strong> {textos.aviso}
           </p>
         </aside>
         <MarginNote>
@@ -337,6 +374,8 @@ export default function TuPension() {
             </ul>
           </aside>
         ) : null}
+
+        <SelectorPrestacion valor={valores.prestacion} onCambio={cambiarPrestacion} />
 
         <section className="seccion" aria-labelledby="tp-datos">
           <h2 id="tp-datos">Tus datos y tu carrera</h2>
@@ -364,6 +403,7 @@ export default function TuPension() {
             personaCargada={personaCargada}
             mensajePersona={mensajePersona}
             onCargarPersona={cargarPersonaEjemplo}
+            textos={textos}
           />
         </section>
 
@@ -380,11 +420,18 @@ export default function TuPension() {
               modelo={respuesta.modelo}
               ipcUsado={respuesta.ipcUsado}
               bases={respuesta.bases}
+              notaSinBases={incapacidad ? TEXTOS_INCAPACIDAD_PROPIOS.sinGrafico : undefined}
               comparacion={
                 <ComparacionLecturas
                   comparacion={respuesta.comparacion}
                   restablecidas={restablecidas}
+                  etiquetas={prestacion.etiquetasComparacion(calculado)}
                 />
+              }
+              aviso={
+                incapacidad ? (
+                  <LecturasQueIntervienen lecturas={respuesta.lecturas} origen={calculado.origen} />
+                ) : undefined
               }
               ref={encabezadoResultado}
             />
@@ -394,6 +441,7 @@ export default function TuPension() {
         <PanelSupuestos
           lecturas={lecturas}
           conEfecto={respuesta?.tipo === 'resultado'}
+          introduccion={textos.supuestosIntro}
           onElegir={(id, valor) => {
             cambiarLecturas({ ...valores.lecturas, [id]: valor }, false);
           }}
@@ -409,7 +457,7 @@ export default function TuPension() {
 
         <section className="seccion" aria-labelledby="tp-limitaciones">
           <h2 id="tp-limitaciones">{TEXTOS.limitacionesTitulo}</h2>
-          <p>{TEXTOS.limitacionesIntro}</p>
+          <p>{textos.limitacionesIntro}</p>
           <ul className="tp-limitaciones">
             {limitaciones.map((l) => (
               <li key={l.regla}>

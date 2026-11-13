@@ -116,3 +116,44 @@ describe('errores reales del motor con datos del formulario', () => {
     expect(m.accion).toMatch(/fecha/);
   });
 });
+
+describe('traducirError en la incapacidad permanente', () => {
+  it('habla del hecho causante, no de la jubilación', () => {
+    const m = traducirError(
+      desde(new RangeError('El hecho causante debe ser posterior al nacimiento')),
+      'incapacidad',
+    );
+    expect(m.mensaje).toBe('La fecha del hecho causante debe ser posterior a la de nacimiento.');
+    expect(m.accion).toMatch(/hecho causante/);
+    expect(m.accion).not.toMatch(/jubilación/);
+  });
+
+  it('NoImplementada (hecho causante anterior a la cobertura): mensaje claro y acción', () => {
+    const m = traducirError(
+      desde(new NoImplementada('Incapacidad permanente con hecho causante en 2019', 'No cubierto')),
+      'incapacidad',
+    );
+    expect(m.codigo).toBe('NoImplementada');
+    expect(m.titulo).toBe('Este caso queda fuera del simulador');
+    expect(m.mensaje).toContain('hecho causante en 2019');
+    expect(m.accion).toMatch(/hecho causante/);
+  });
+
+  it('DatoNoDisponible: falta el IPC supuesto, con el hecho causante', () => {
+    const m = traducirError(
+      desde(
+        new DatoNoDisponible('el IPC de 2027 no está en /data y no se ha indicado un escenario'),
+      ),
+      'incapacidad',
+    );
+    expect(m.campo).toBe('ipcSupuesto');
+    expect(m.mensaje).toMatch(/hecho causante/);
+  });
+
+  it('para la jubilación no cambia nada (valor por defecto)', () => {
+    const m = traducirError(
+      desde(new RangeError('La jubilación debe ser posterior al nacimiento')),
+    );
+    expect(m.mensaje).toBe('La fecha de jubilación debe ser posterior a la de nacimiento.');
+  });
+});

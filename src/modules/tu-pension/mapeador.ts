@@ -30,10 +30,10 @@ import {
 
 export { leerNumero, numeroATexto };
 
-export type ResultadoMapeo =
+export type ResultadoMapeo<E = EntradaJubilacion> =
   | {
       readonly ok: true;
-      readonly entrada: EntradaJubilacion;
+      readonly entrada: E;
       readonly configuracion: ConfiguracionMotor;
       /** Resumen y avisos de la carrera por tramos (vacíos en la carrera simple). */
       readonly resumenTramos: ResumenCarrera | undefined;
@@ -46,15 +46,27 @@ export type ResultadoMapeo =
       readonly erroresTramos: readonly ErrorTramo[];
     };
 
+/**
+ * Cómo se llama en los mensajes la fecha en que termina la carrera: jubilación (por defecto) u
+ * otra (en la incapacidad permanente, el hecho causante). Mismas frases, distinto nombre.
+ */
+export interface NombresFecha {
+  /** «de jubilación», «del hecho causante»: «Elige el mes …», «La fecha …». */
+  readonly de: string;
+  /** «la jubilación», «el hecho causante»: «anterior a …». */
+  readonly a: string;
+}
+export const NOMBRES_JUBILACION: NombresFecha = { de: 'de jubilación', a: 'la jubilación' };
+
 const mes2 = (m: number): string => String(m).padStart(2, '0');
-const claveMes = (anio: number, mes: number): string => `${String(anio)}-${mes2(mes)}`;
+export const claveMes = (anio: number, mes: number): string => `${String(anio)}-${mes2(mes)}`;
 /** Meses absolutos (año × 12 + mes − 1) para sumar y restar meses sin tocar fechas. */
-const absoluto = (anio: number, mes: number): number => anio * 12 + mes - 1;
-function deAbsoluto(abs: number): string {
+export const absoluto = (anio: number, mes: number): number => anio * 12 + mes - 1;
+export function deAbsoluto(abs: number): string {
   return claveMes(Math.floor(abs / 12), (abs % 12) + 1);
 }
 
-interface MesAnio {
+export interface MesAnio {
   readonly anio: number;
   readonly mes: number;
 }
@@ -71,18 +83,21 @@ function leerMesAnio(
   const anio = leerEntero(anioTexto);
   let ok = true;
   if (mes === undefined || mes < 1 || mes > 12) {
-    errores[campoMes] = `Elige el mes de ${nombre}.`;
+    errores[campoMes] = `Elige el mes ${nombre}.`;
     ok = false;
   }
   if (anio === undefined || anioTexto.trim().length !== 4) {
-    errores[campoAnio] = `Escribe el año de ${nombre} con cuatro cifras.`;
+    errores[campoAnio] = `Escribe el año ${nombre} con cuatro cifras.`;
     ok = false;
   }
   return ok && mes !== undefined && anio !== undefined ? { anio, mes } : undefined;
 }
 
 /** Valida el formulario. Un objeto vacío significa que se puede calcular. */
-export function validarFormulario(f: FormularioTuPension): ErroresFormulario {
+export function validarFormulario(
+  f: FormularioTuPension,
+  nombres: NombresFecha = NOMBRES_JUBILACION,
+): ErroresFormulario {
   const errores: ErroresFormulario = {};
   const nac = leerMesAnio(
     f.nacimientoMes,
@@ -90,7 +105,7 @@ export function validarFormulario(f: FormularioTuPension): ErroresFormulario {
     errores,
     'nacimientoMes',
     'nacimientoAnio',
-    'nacimiento',
+    'de nacimiento',
   );
   const jub = leerMesAnio(
     f.jubilacionMes,
@@ -98,7 +113,7 @@ export function validarFormulario(f: FormularioTuPension): ErroresFormulario {
     errores,
     'jubilacionMes',
     'jubilacionAnio',
-    'jubilación',
+    nombres.de,
   );
   const simple = f.tipoCarrera === 'simple';
   // El inicio de la cotización, los meses sin cotizar y la base solo existen en la carrera simple.
@@ -109,7 +124,7 @@ export function validarFormulario(f: FormularioTuPension): ErroresFormulario {
         errores,
         'inicioMes',
         'inicioAnio',
-        'inicio de la cotización',
+        'de inicio de la cotización',
       )
     : undefined;
   if (f.sexo === '')
@@ -139,7 +154,7 @@ export function validarFormulario(f: FormularioTuPension): ErroresFormulario {
   }
 
   if (nac && jub && absoluto(jub.anio, jub.mes) <= absoluto(nac.anio, nac.mes)) {
-    errores.jubilacionAnio = 'La fecha de jubilación debe ser posterior a la de nacimiento.';
+    errores.jubilacionAnio = `La fecha ${nombres.de} debe ser posterior a la de nacimiento.`;
   }
   if (ini && nac && absoluto(ini.anio, ini.mes) <= absoluto(nac.anio, nac.mes)) {
     errores.inicioAnio = 'El inicio de la cotización debe ser posterior al nacimiento.';
@@ -150,12 +165,11 @@ export function validarFormulario(f: FormularioTuPension): ErroresFormulario {
     !errores.inicioAnio &&
     absoluto(ini.anio, ini.mes) >= absoluto(jub.anio, jub.mes)
   ) {
-    errores.inicioAnio = 'El inicio de la cotización debe ser anterior a la jubilación.';
+    errores.inicioAnio = `El inicio de la cotización debe ser anterior a ${nombres.a}.`;
   } else if (ini && jub && lagunas !== undefined && lagunas >= 0) {
     const meses = absoluto(jub.anio, jub.mes) - absoluto(ini.anio, ini.mes);
     if (lagunas >= meses) {
-      errores.mesesSinCotizar =
-        'Los meses sin cotizar deben ser menos que los meses entre el inicio y la jubilación.';
+      errores.mesesSinCotizar = `Los meses sin cotizar deben ser menos que los meses entre el inicio y ${nombres.a}.`;
     }
   }
   return errores;
@@ -272,6 +286,7 @@ export function analizarTramos(
     catalogo,
     definicionMedia: f.definicionMedia,
     ...fechasClave(f),
+    ...(f.prestacion === 'incapacidad' ? { anteriorA: 'al hecho causante' } : {}),
   });
 }
 

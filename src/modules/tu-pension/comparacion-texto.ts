@@ -4,10 +4,11 @@
  * `compararLecturas`; no calcula nada. El tono es neutro: describe qué se ha cambiado y cuánto
  * cambia el resultado, sin decir qué lectura es mejor o más correcta.
  */
-import type {
-  ComparacionLecturas,
-  DiferenciaImporte,
-  LecturaCambiada,
+import {
+  importePrincipal,
+  type ComparacionLecturas,
+  type DiferenciaImporte,
+  type LecturaCambiada,
 } from '../../engine/comparar-lecturas';
 import { formatearEuros, formatearNumero, formatearPorcentaje } from '../../engine/formato';
 import { TEXTOS } from './textos';
@@ -39,10 +40,36 @@ export function describirCambios(cambiadas: readonly LecturaCambiada[]): string 
     .join('; ');
 }
 
+/** Palabras que cambian de una prestación a otra en las frases y en la tabla de comparación. */
+export interface EtiquetasComparacion {
+  /** «de la jubilación ordinaria», «de la incapacidad permanente». */
+  readonly requisitos: string;
+  /** «la pensión mensual bruta», «la cantidad a tanto alzado». */
+  readonly importe: string;
+  /** Fila de la tabla: «Pensión mensual bruta (por paga)». */
+  readonly filaImporte: string;
+  /** Texto de «con las lecturas por defecto no hay pensión». */
+  readonly sinImporte: string;
+  /** Tras la diferencia en euros: « al mes» en una pensión mensual, nada en un pago único. */
+  readonly unidadDiferencia: string;
+}
+
+export const ETIQUETAS_JUBILACION: EtiquetasComparacion = {
+  requisitos: 'de la jubilación ordinaria',
+  importe: 'la pensión mensual bruta',
+  filaImporte: TEXTOS.comparacionFilaPension,
+  sinImporte: 'pensión',
+  unidadDiferencia: ' al mes',
+};
+
 const cuantas = (n: number): string => (n === 1 ? 'una lectura' : `${formatearNumero(n)} lecturas`);
 
 /** Frase neutra que resume la comparación; es también el texto de la región `aria-live`. */
-export function fraseComparacion(c: ComparacionLecturas, restablecidas = false): string {
+export function fraseComparacion(
+  c: ComparacionLecturas,
+  restablecidas = false,
+  et: EtiquetasComparacion = ETIQUETAS_JUBILACION,
+): string {
   if (c.tipo === 'sin-cambios') {
     return restablecidas ? TEXTOS.lecturasRestablecidas : TEXTOS.comparacionSinCambios;
   }
@@ -56,16 +83,16 @@ export function fraseComparacion(c: ComparacionLecturas, restablecidas = false):
     const dif = c.diferencia.pension;
     const resultado =
       dif.euros === 0 || Math.abs(dif.euros) < 0.005
-        ? 'la pensión mensual bruta no cambia'
-        : `la diferencia en la pensión mensual bruta es de ${eurosConSigno(dif.euros)} al mes (${porcentajeConSigno(dif.porcentaje)})`;
-    return `${quien} Con tus lecturas la pensión mensual bruta es ${eurosPlano(e.pensionMensual)}; con las lecturas por defecto, ${eurosPlano(d.pensionMensual)}: ${resultado}.`;
+        ? `${et.importe} no cambia`
+        : `la diferencia en ${et.importe} es de ${eurosConSigno(dif.euros)}${et.unidadDiferencia} (${porcentajeConSigno(dif.porcentaje)})`;
+    return `${quien} Con tus lecturas ${et.importe} es ${eurosPlano(importePrincipal(e))}; con las lecturas por defecto, ${eurosPlano(importePrincipal(d))}: ${resultado}.`;
   }
   if (!e.cumpleRequisitos && !d.cumpleRequisitos) {
-    return `${quien} Ni con tus lecturas ni con las de por defecto se cumplen los requisitos de la jubilación ordinaria: no hay pensión que comparar.`;
+    return `${quien} Ni con tus lecturas ni con las de por defecto se cumplen los requisitos ${et.requisitos}: no hay ${et.sinImporte} que comparar.`;
   }
   return e.cumpleRequisitos
-    ? `${quien} Con tus lecturas se cumplen los requisitos y la pensión mensual bruta es ${eurosPlano(e.pensionMensual)}; con las lecturas por defecto no se cumplen y no hay pensión.`
-    : `${quien} Con tus lecturas no se cumplen los requisitos y no hay pensión; con las lecturas por defecto se cumplen y la pensión mensual bruta es ${eurosPlano(d.pensionMensual)}.`;
+    ? `${quien} Con tus lecturas se cumplen los requisitos y ${et.importe} es ${eurosPlano(importePrincipal(e))}; con las lecturas por defecto no se cumplen y no hay ${et.sinImporte}.`
+    : `${quien} Con tus lecturas no se cumplen los requisitos y no hay ${et.sinImporte}; con las lecturas por defecto se cumplen y ${et.importe} es ${eurosPlano(importePrincipal(d))}.`;
 }
 
 export interface FilaComparacion {
@@ -90,13 +117,16 @@ const fila = (
 });
 
 /** Filas de la tabla de comparación; vacía si no hay pensión en los dos cálculos. */
-export function filasComparacion(c: ComparacionLecturas): readonly FilaComparacion[] {
+export function filasComparacion(
+  c: ComparacionLecturas,
+  et: EtiquetasComparacion = ETIQUETAS_JUBILACION,
+): readonly FilaComparacion[] {
   if (c.tipo !== 'comparado') return [];
   const e = c.elegido.detalle;
   const d = c.porDefecto.detalle;
   if (!e.cumpleRequisitos || !d.cumpleRequisitos) return [];
   return [
-    fila(TEXTOS.comparacionFilaPension, e.pensionMensual, d.pensionMensual, c.diferencia.pension),
+    fila(et.filaImporte, importePrincipal(e), importePrincipal(d), c.diferencia.pension),
     fila(
       TEXTOS.comparacionFilaBase,
       e.baseReguladora,

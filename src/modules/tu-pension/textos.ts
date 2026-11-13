@@ -50,6 +50,12 @@ export const TEXTOS = {
   avisoIpcVacio:
     'Si dejas el campo vacío y la fecha de jubilación necesita un IPC supuesto, el cálculo no podrá hacerse.',
   calcular: 'Calcular mi pensión',
+  // --- Selector de prestación (Fase 3-C1) ---
+  prestacionTitulo: 'Qué prestación quieres calcular',
+  prestacionLeyenda: 'Prestación',
+  prestacionAyuda:
+    'Elige la prestación que quieres simular. Las que aparecen como próximamente todavía no se calculan: no tienen cifras ni formulario.',
+  prestacionProximamente: 'próximamente',
   resultadoTitulo: 'Tu pensión estimada',
   comoTitulo: 'Cómo se ha calculado',
   requisitosTitulo: 'Requisitos de la jubilación ordinaria',
@@ -63,7 +69,7 @@ export const TEXTOS = {
   supuestosEfectoNota:
     'El efecto de cada alternativa se mide frente a tu elección actual, cambiando solo esa lectura.',
   valorElegidoEtiqueta: 'Elegida',
-  opcionPorDefecto: 'opción por defecto del cálculo',
+  opcionPorDefecto: 'valor con el que se calcula si no eliges otro',
   restablecerLecturas: 'Restablecer lecturas',
   restablecerAyuda: 'Devuelve todas las lecturas a su valor por defecto.',
   lecturasRestablecidas: 'Lecturas restablecidas: todas están en su valor por defecto.',
@@ -164,3 +170,43 @@ export const TEXTOS = {
     'Los cuadrados son meses anteriores al primer alta que, con la lectura elegida, no cuentan.',
   nota: 'Cada cifra del resultado sale del motor de cálculo del proyecto, que lee las normas y los parámetros de la carpeta de datos; las fuentes están en «Metodología» y en «Fuentes».',
 } as const;
+
+/**
+ * Los textos que cambian de una prestación a otra (Fase 3-C1): cómo se llama la fecha en que
+ * termina la carrera, el aviso, las introducciones. Los demás textos de `TEXTOS` son comunes.
+ */
+export interface TextosPrestacion {
+  /** «a la jubilación», «al hecho causante»: «posterior al mes anterior …». */
+  readonly anteriorA: string;
+  readonly aviso: string;
+  readonly introCarrera: string;
+  readonly ayudaLagunas: string;
+  readonly ubicacionFinal: string;
+  readonly resumenSinHuecos: string;
+  readonly personasIntro: string;
+  readonly personaSinFechas: string;
+  readonly avisoIpcVacio: string;
+  readonly supuestosIntro: string;
+  readonly etiquetaMes: string;
+  readonly etiquetaAnio: string;
+  readonly ayudaFecha: string;
+  readonly limitacionesIntro: string;
+}
+
+/** Los textos de la jubilación son los de siempre (no cambian ni una palabra). */
+export const TEXTOS_JUBILACION: TextosPrestacion = {
+  anteriorA: 'a la jubilación',
+  aviso: TEXTOS.aviso,
+  introCarrera: TEXTOS.introCarrera,
+  ayudaLagunas: TEXTOS.ayudaLagunas,
+  ubicacionFinal: 'Justo antes de jubilarme',
+  resumenSinHuecos: TEXTOS.resumenSinHuecos,
+  personasIntro: TEXTOS.personasIntro,
+  personaSinFechas: TEXTOS.personaSinFechas,
+  avisoIpcVacio: TEXTOS.avisoIpcVacio,
+  supuestosIntro: TEXTOS.supuestosIntro,
+  etiquetaMes: 'Mes de jubilación',
+  etiquetaAnio: 'Año de jubilación',
+  ayudaFecha: TEXTOS.ayudaFechaJubilacion,
+  limitacionesIntro: TEXTOS.limitacionesIntro,
+};

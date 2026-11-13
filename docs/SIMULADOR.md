@@ -1,6 +1,6 @@
 # Simulador «Tu pensión»: capa de entrada y presentación
 
-Fases 3-A, 3-B1 y 3-B2 (la carrera por tramos, las personas-ejemplo y el gráfico están en «Fase 3-B1»; las lecturas alternativas y el enlace compartible, en «Fase 3-B2», al final).
+Fases 3-A, 3-B1, 3-B2 y 3-C1 (la carrera por tramos, las personas-ejemplo y el gráfico están en «Fase 3-B1»; las lecturas alternativas y el enlace compartible, en «Fase 3-B2»; el selector de prestación y la incapacidad permanente, en «Fase 3-C1», al final).
 
 Fase 3-A. La página `#/tu-pension` calcula la **jubilación ordinaria con carrera simple** con el motor de `src/engine/` (sin cambiarlo) y explica el cálculo con las cifras reales del motor. Todo el código está en `src/modules/tu-pension/`; la única pieza nueva del sistema de diseño es `src/components/Field.tsx` (etiqueta, ayuda y error con `aria-live` asociados a un control).
 
@@ -110,3 +110,63 @@ Ejemplo (carrera simple, una lectura cambiada): `#/tu-pension?v=1&nac=1961-11&ju
 ### Pruebas
 
 `scripts/lecturas-usuario.test.ts` (capa de lecturas con tres casos de Sergio: elección por defecto idéntica a la llamada directa, alternativas idénticas a la llamada directa con esa lectura, elegir y restablecer), `enlace.test.ts` (ida y vuelta en modo simple, tramos y con lecturas; malformado, versión desconocida, fuera de rango, lectura inexistente; tamaño), `textos-lecturas.test.ts`, `comparacion-texto.test.ts`, `Lecturas.test.tsx` (selector, restablecer, comparación, copiar enlace, aviso) y `e2e/lecturas-enlace.spec.ts` (escritorio y móvil, axe, pestaña nueva con el mismo resultado).
+
+## Fase 3-C1: selector de prestación e incapacidad permanente
+
+La página calcula ahora dos prestaciones: **jubilación ordinaria** (sin ningún cambio de comportamiento ni de enlace) e **incapacidad permanente**. Supervivencia (3-C2) y no contributivas y MEI (3-C3) aparecen como «próximamente». Decisiones: `docs/DECISIONES.md` (Fase 3-C1).
+
+### Diseño de la generalización
+
+```
+FormularioTuPension (prestacion, datos, carrera, opciones, lecturas)
+        │
+        ▼  prestacionDe(f.prestacion)  →  Prestacion { id, etiqueta, motorLimitaciones, etiquetasComparacion, calcular }
+        │                                                      │
+        ▼                                                      ▼
+ calcularConReceta(receta, f, deps)  ◀── Receta<E, R> { motorLecturas, importeEfecto, mapear, ejecutar, presentar, bases }
+        │
+        ├─ receta.mapear(f)            → Entrada del motor + ConfiguracionMotor (o errores de formulario)
+        ├─ receta.ejecutar(motor, e)   → Resultado de la fachada (o error del motor → mensaje en español)
+        ├─ receta.presentar(r, f, deps)→ ModeloResultado (cifras formateadas, requisitos, pasos)
+        ├─ compararLecturas(...)       → con tus lecturas frente a las de por defecto (genérico)
+        └─ efectoPorLectura(...)       → efecto de cada alternativa de cada lectura (genérico)
+```
+
+| Archivo                                                   | Qué hace                                                                                                                                                                                     |
+| --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `prestaciones.ts`                                         | `Prestacion` y `Receta` de la jubilación y de la incapacidad, lista de prestaciones y de «próximamente», `calcularTuPension` (despacha por prestación).                                      |
+| `receta.ts`                                               | Orquestación común (era `calcular.ts`): mapear, motor, presentador, comparación y efectos. `calcular.ts` reexporta `calcularTuPension` y los tipos: los importes anteriores siguen valiendo. |
+| `incapacidad-mapeador.ts`                                 | Valida y traduce a `EntradaIncapacidad`: grado y origen (con los que el motor soporta), alta, trabajo; la carrera es la de la jubilación (`carreraSimple`, `analizarTramos`).                |
+| `incapacidad-presentador.ts`                              | Resultado del motor → cifras, requisitos y «Cómo se ha calculado» (carrera, periodo mínimo, base reguladora, grado, límites y complementos, trabajo, pensión inicial). Sin gráfico de bases. |
+| `textos-incapacidad.ts`, `textos.ts` (`TextosPrestacion`) | Textos propios de cada prestación (fecha final de la carrera, aviso, introducciones) y de la incapacidad. Sin dígitos (test).                                                                |
+| `SelectorPrestacion.tsx`                                  | Grupo de botones de opción: jubilación, incapacidad y las demás desactivadas «(próximamente)».                                                                                               |
+| `Formulario.tsx`                                          | Mismo formulario para las dos prestaciones; con incapacidad cambia el nombre de la fecha y se añade el grupo «Tu incapacidad» (grado, origen, alta, trabajo).                                |
+| `LecturasQueIntervienen.tsx`, `intervienen.ts`            | Bloque junto al resultado: lecturas sin decidir con firmeza que cambian el resultado y, con accidente no laboral, siempre la de los meses sin cotizar.                                       |
+| `src/engine/comparar-lecturas.ts`                         | `lecturasOfrecidas(motor)`, `normalizarEleccion(e, motor)`, `compararLecturas(…, ejecutor, motor)`: la jubilación es el valor por defecto de todos los parámetros nuevos.                    |
+
+La jubilación pasa por la misma receta que la incapacidad. Condición cumplida: los tests anteriores de jubilación (unitarios, de componentes, Playwright y equivalencias con los casos de Sergio) pasan sin cambiar ni una aserción; solo cambió el helper `FORMULARIO_BASE` (campos nuevos) y la lista de textos de lecturas que comprueba `textos-lecturas.test.ts` (ahora cubre las dos prestaciones).
+
+### Incapacidad permanente: entrada y resultado
+
+- **Entrada**: nacimiento y hecho causante (mes y año; el hecho causante está en los campos `jubilacion*` del formulario), sexo e hijos (complemento por hijos), grado, origen, alta, trabajo, carrera simple o por tramos con personas-ejemplo, mínimos, máxima e IPC supuesto.
+- **Grados**: parcial, total, absoluta y gran incapacidad. **Orígenes**: enfermedad común y accidente no laboral; accidente de trabajo y enfermedad profesional están desactivados porque el motor exige una base reguladora calculada fuera (véase limitaciones).
+- **Resultado**: cuantía mensual y anual por paga (o cantidad a tanto alzado en la parcial), base reguladora, porcentaje aplicable, complementos (total cualificada, gran incapacidad, hijos), importe en suspenso, periodo mínimo exigido, tiempo cotizado y meses añadidos hasta la edad ordinaria. Requisitos en tabla.
+- **Limitaciones del motor** (`LIMITACIONES_MOTOR`, motor `incapacidad`) siempre visibles al final.
+- **Lecturas**: las seis `incapacidad.*` se pueden cambiar, con comparación frente a las de por defecto y efecto por lectura. El bloque «Lecturas abiertas que intervienen en tu resultado» enseña estado y motivo y el efecto de la alternativa; con accidente no laboral muestra siempre `incapacidad.lagunasAccidenteNoLaboral`.
+
+### Enlace con `p=`
+
+| Parámetro | Contenido (solo incapacidad, salvo `p`)                                                             |
+| --------- | --------------------------------------------------------------------------------------------------- |
+| `p`       | `inc`. Sin `p`, jubilación: el enlace de jubilación no cambia en nada y los enlaces antiguos valen. |
+| `hc`      | Fecha del hecho causante, `AAAA-MM` (en lugar de `jub`).                                            |
+| `gr`      | Grado: `par`, `tot`, `abs`, `gin`.                                                                  |
+| `or`      | Origen: `ec` (enfermedad común) o `anl` (accidente no laboral).                                     |
+| `alt`     | En alta o situación asimilada: `1` o `0`.                                                           |
+| `trb`     | Trabaja tras el reconocimiento: `1` o `0`.                                                          |
+
+Se mantienen `nac`, `sex`, `hij`, `car`, `ini`, `lag`, `ubi`, `base`, `tr`, `med`, `pe`, `min`, `max`, `ipc` y `lec` (con las lecturas `incapacidad.*`). Ejemplo: `#/tu-pension?v=1&p=inc&nac=1981-03&hc=2026-03&gr=tot&or=ec&alt=1&trb=0&sex=h&car=s&ini=2000-01&lag=0&ubi=m&base=2000&med=media-cotizacion-rg&min=1&max=1&ipc=2`. Los parámetros de una prestación en el enlace de la otra se ignoran con aviso.
+
+### Pruebas
+
+`incapacidad-mapeador.test.ts`, `incapacidad-presentador.test.ts`, `enlace-incapacidad.test.ts` (incluida la compatibilidad con los enlaces `v=1` de jubilación), `errores.test.ts`, `Incapacidad.test.tsx` (selector, formulario, panel de lecturas, enlaces), `scripts/tu-pension-incapacidad-equivalencia.test.ts` (ocho casos de oro de la incapacidad, también con carrera por tramos, ±0,01 € frente a la llamada directa al motor) y `e2e/incapacidad.spec.ts` (flujo completo, selector con teclado, lectura del accidente no laboral, comparación, enlace en pestaña nueva, enlace antiguo de jubilación, errores, parcial, móvil y axe).

@@ -6,14 +6,17 @@
  * cada alternativa se mide volviendo a llamar al motor con una configuración que solo cambia esa
  * lectura respecto a la elección actual; no se calcula nada fuera del motor.
  */
-import type {
-  ConfiguracionMotor,
-  EntradaJubilacion,
-  Motor,
-  ResultadoOk,
-} from '../../engine/fachada';
+import type { ConfiguracionMotor, EntradaJubilacion, Motor } from '../../engine/fachada';
 import { formatearEuros } from '../../engine/formato';
-import { lecturasOfrecidas, valoresElegidos } from '../../engine/comparar-lecturas';
+import {
+  ejecutarJubilacion,
+  lecturasOfrecidas,
+  valoresElegidos,
+  type EjecutorPrestacion,
+  type MotorOfrecido,
+  type ResultadoComparable,
+  importePrincipal,
+} from '../../engine/comparar-lecturas';
 import { type LecturaAbierta } from '../../engine/lecturas';
 import { TEXTOS_LECTURAS } from './textos-lecturas';
 
@@ -75,15 +78,19 @@ const IGUAL = 0.005;
  * Efecto de cada alternativa de cada lectura en la pensión y en la base reguladora. Cada
  * alternativa se evalúa con una configuración que solo cambia esa lectura.
  */
-export function efectoPorLectura(
-  entrada: EntradaJubilacion,
+export function efectoPorLectura<E = EntradaJubilacion>(
+  entrada: E,
   configuracion: ConfiguracionMotor,
-  base: ResultadoOk<'jubilacion'>,
+  base: ResultadoComparable,
   fabrica: (c: ConfiguracionMotor) => Motor,
+  ejecutor: EjecutorPrestacion<E> = ejecutarJubilacion as unknown as EjecutorPrestacion<E>,
+  motorLecturas: MotorOfrecido = 'jubilacion',
+  /** «la pensión mensual», «la cantidad a tanto alzado»: lo que mide el importe comparado. */
+  importe = 'la pensión mensual',
 ): ReadonlyMap<string, { texto: string; afecta: boolean }> {
   const salida = new Map<string, { texto: string; afecta: boolean }>();
-  const actuales = valoresElegidos(configuracion.lecturas);
-  for (const lectura of lecturasDeJubilacion()) {
+  const actuales = valoresElegidos(configuracion.lecturas, motorLecturas);
+  for (const lectura of lecturasOfrecidas(motorLecturas)) {
     const partes: string[] = [];
     let afecta = false;
     let fallo = false;
@@ -94,17 +101,17 @@ export function efectoPorLectura(
           ...configuracion,
           lecturas: { ...configuracion.lecturas, [lectura.id]: alternativa },
         });
-        const r = motor.jubilacion(entrada);
+        const r = ejecutor(motor, entrada);
         if (!r.ok) {
           fallo = true;
           continue;
         }
-        const dPension = r.detalle.pensionMensual - base.detalle.pensionMensual;
+        const dPension = importePrincipal(r.detalle) - importePrincipal(base.detalle);
         const dBase = r.detalle.baseReguladora - base.detalle.baseReguladora;
         if (Math.abs(dPension) >= IGUAL) {
           afecta = true;
           partes.push(
-            `con «${nombre}» la pensión mensual sería ${eurosSinSigno(r.detalle.pensionMensual)} (${euros(dPension)})`,
+            `con «${nombre}» ${importe} sería ${eurosSinSigno(importePrincipal(r.detalle))} (${euros(dPension)})`,
           );
         } else if (Math.abs(dBase) >= IGUAL) {
           afecta = true;
@@ -134,9 +141,10 @@ export function efectoPorLectura(
 export function filasDelPanel(
   efectos?: ReadonlyMap<string, { texto: string; afecta: boolean }>,
   elegidas?: Readonly<Record<string, string>>,
+  motorLecturas: MotorOfrecido = 'jubilacion',
 ): readonly LecturaVista[] {
-  const valores = valoresElegidos(elegidas);
-  return lecturasDeJubilacion().map((l) => {
+  const valores = valoresElegidos(elegidas, motorLecturas);
+  return lecturasOfrecidas(motorLecturas).map((l) => {
     const e = efectos?.get(l.id);
     const textos = TEXTOS_LECTURAS[l.id];
     const valorActual = valores[l.id] ?? l.porDefecto;
