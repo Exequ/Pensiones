@@ -18,11 +18,13 @@ import type { CatalogoReferencias } from './referencias.ts';
 import type { ErroresFormulario, FormularioTuPension } from './tipos.ts';
 import {
   mesAbsoluto,
+  nuevoIdTramo,
   procesarTramos,
   type AvisoTramo,
   type ErrorTramo,
   type ResultadoTramos,
   type ResumenCarrera,
+  type TramoFormulario,
 } from './tramos.ts';
 
 export { leerNumero, numeroATexto };
@@ -199,6 +201,64 @@ function fechasClave(f: FormularioTuPension): {
   return {
     nacimiento: mes(f.nacimientoMes, f.nacimientoAnio),
     mesPrevio: jub === undefined ? undefined : jub - 1,
+  };
+}
+
+/**
+ * Tramos equivalentes a la carrera simple del formulario, para partir de ella al pasar a la carrera
+ * por tramos. `undefined` si la carrera simple no está completa o es inválida.
+ */
+export function tramosDeCarreraSimple(f: FormularioTuPension): TramoFormulario[] | undefined {
+  const errores = validarFormulario({ ...f, tipoCarrera: 'simple' });
+  const campos = [
+    'jubilacionMes',
+    'jubilacionAnio',
+    'inicioMes',
+    'inicioAnio',
+    'mesesSinCotizar',
+    'baseMensual',
+  ] as const;
+  if (campos.some((c) => errores[c] !== undefined)) return undefined;
+  const periodos = carreraSimple(
+    { anio: Number(f.inicioAnio), mes: Number(f.inicioMes) },
+    { anio: Number(f.jubilacionAnio), mes: Number(f.jubilacionMes) },
+    leerNumero(f.baseMensual) ?? 0,
+    leerEntero(f.mesesSinCotizar) ?? 0,
+    f.ubicacionLagunas,
+  );
+  return periodos.flatMap((p) => {
+    if (!('baseMensual' in p)) return [];
+    const [da = '', dm = ''] = p.desde.split('-');
+    const [ha = '', hm = ''] = p.hasta.split('-');
+    return [
+      {
+        id: nuevoIdTramo(),
+        desdeMes: String(Number(dm)),
+        desdeAnio: da,
+        hastaMes: String(Number(hm)),
+        hastaAnio: ha,
+        referencia: 'importe' as const,
+        importe: numeroATexto(p.baseMensual),
+      },
+    ];
+  });
+}
+
+/** Mes y año de nacimiento y de jubilación del formulario, si son válidos. */
+export function leerFechasFormulario(f: FormularioTuPension): {
+  nacimiento: MesAnio | undefined;
+  jubilacion: MesAnio | undefined;
+} {
+  const leer = (m: string, a: string): MesAnio | undefined => {
+    const mes = leerEntero(m);
+    const anio = leerEntero(a);
+    return mes !== undefined && mes >= 1 && mes <= 12 && anio !== undefined && a.trim().length === 4
+      ? { anio, mes }
+      : undefined;
+  };
+  return {
+    nacimiento: leer(f.nacimientoMes, f.nacimientoAnio),
+    jubilacion: leer(f.jubilacionMes, f.jubilacionAnio),
   };
 }
 

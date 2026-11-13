@@ -3,6 +3,7 @@
  * Todo con el motor y la lectura de datos inyectados (se prueban sin navegador ni Vite).
  */
 import type { ConfiguracionMotor, Motor } from '../../engine/fachada';
+import type { BasesPeriodoCalculo } from '../../engine/jubilacion/tipos';
 import { LECTURAS_ABIERTAS } from '../../engine/lecturas';
 import { traducirError, type MensajeError } from './errores';
 import { formularioAEntrada } from './mapeador';
@@ -19,6 +20,8 @@ export type RespuestaCalculo =
       readonly lecturas: readonly LecturaVista[];
       /** Escenario de IPC usado, en %, o `undefined` si no se indicó. */
       readonly ipcUsado: string | undefined;
+      /** Bases mes a mes del periodo de cálculo (para el gráfico). */
+      readonly bases: BasesPeriodoCalculo;
       /** Resumen y avisos de la carrera por tramos (`undefined` / vacío con la carrera simple). */
       readonly resumenTramos: ResumenCarrera | undefined;
       readonly avisosTramos: readonly AvisoTramo[];
@@ -70,6 +73,7 @@ export function calcularTuPension(
     modelo,
     lecturas: filasDelPanel(efectos),
     ipcUsado: formulario.ipcSupuesto.trim() === '' ? undefined : formulario.ipcSupuesto.trim(),
+    bases: resultado.detalle.basesPeriodo,
     resumenTramos: mapeo.resumenTramos,
     avisosTramos: mapeo.avisosTramos,
   };

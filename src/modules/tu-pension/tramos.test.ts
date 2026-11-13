@@ -21,7 +21,7 @@ let n = 0;
 function tramo(
   desde: [number, number],
   hasta: [number, number],
-  base: string | 'minima' | 'media' | 'maxima',
+  base: string,
 ): TramoFormulario {
   n += 1;
   const esReferencia = base === 'minima' || base === 'media' || base === 'maxima';

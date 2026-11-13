@@ -444,7 +444,6 @@ export const ArchivoTabla = z.strictObject({
   notes: z.string().trim().min(1).optional(),
 });
 
-
 // ---------------------------------------------------------------------------
 // Personas-ejemplo de «Tu pensión» (ilustrativas, elaboración propia)
 // ---------------------------------------------------------------------------
