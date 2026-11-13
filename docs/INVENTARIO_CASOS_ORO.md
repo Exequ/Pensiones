@@ -5,21 +5,26 @@ Generado por `scripts/inventario-casos-oro.ts` (un test comprueba que está al d
 - **independiente**: ejemplo resuelto publicado en una fuente oficial, con su URL. Contrasta el motor con algo que el motor no ha producido.
 - **derivado de la norma**: calculado a mano a partir del texto legal y de `/data`. Comprueba que el motor aplica nuestra lectura de la norma; **no** es una validación independiente.
 
-Los casos de oro de Sergio (`data-raw/casos-oro/casos-sergio.md`, formato en `docs/CASOS_SERGIO_PLANTILLA.md`) se ejecutarán además de estos cuando existan.
+Los casos de oro de Sergio (`data-raw/casos-oro/casos-sergio.md`, formato en `docs/CASOS_SERGIO_PLANTILLA.md`) son los ocho casos independientes de pensiones contributivas (jubilación ordinaria) generados con el autocálculo oficial de la Seguridad Social; se ejecutan con `npx tsx scripts/casos-sergio.ts` y con `scripts/casos-sergio.test.ts`. Un caso con la marca `diferenciaConocida` no coincide todavía y consta con su motivo.
 
-| Motor                      |   Casos | independiente | derivado de la norma | Fuente del resultado esperado                                                                                      | Fichero                                                     |
-| -------------------------- | ------: | ------------: | -------------------: | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| Jubilación                 |       6 |             0 |                    6 | Cálculo a mano, recalculado aparte en Python con los JSON de /data (docs/CASOS_ORO_MOTOR.md)                       | `src/engine/jubilacion/casos-oro-motor.test.ts`             |
-| Incapacidad permanente     |      20 |             0 |                   20 | Cuenta a mano en cada caso (bases constantes, hecho causante en 2026).                                             | `src/engine/incapacidad/casos-oro-incapacidad.test.ts`      |
-| Muerte y supervivencia     |      27 |             0 |                   27 | Cuenta a mano en cada caso (bases constantes de 2.000 euros, fallecimiento en 2026).                               | `src/engine/supervivencia/casos-oro-supervivencia.test.ts`  |
-| Pensiones no contributivas |      20 |             0 |                   20 | Cuenta a mano en cada caso (cuantías de 2026 y 2023).                                                              | `src/engine/no-contributivas/casos-oro-pnc.test.ts`         |
-| Pensiones no contributivas |      23 |            23 |                    0 | Cifras publicadas en las guías del IMSERSO de 2022 a 2026 (URL de cada guía en el test; PDF en data-raw/imserso/). | `src/engine/no-contributivas/casos-oro-pnc-imserso.test.ts` |
-| MEI y solidaridad          |      13 |             0 |                   13 | Cuenta a mano en cada caso (DT 42.ª y 43.ª, art. 19 bis).                                                          | `src/engine/mei/casos-oro-mei.test.ts`                      |
-| **Total**                  | **109** |        **23** |               **86** |                                                                                                                    |                                                             |
+| Motor                                     |   Casos | independiente | derivado de la norma | Fuente del resultado esperado                                                                                                                    | Fichero                                                     |
+| ----------------------------------------- | ------: | ------------: | -------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
+| Jubilación                                |       6 |             0 |                    6 | Cálculo a mano, recalculado aparte en Python con los JSON de /data (docs/CASOS_ORO_MOTOR.md)                                                     | `src/engine/jubilacion/casos-oro-motor.test.ts`             |
+| Jubilación contributiva (casos de Sergio) |       8 |             8 |                    0 | Autocálculo de jubilación ordinaria de la Sede electrónica de la Seguridad Social (informes del 13/11/2026); 1 con la marca «diferenciaConocida» | `data-raw/casos-oro/casos-sergio.md`                        |
+| Incapacidad permanente                    |      20 |             0 |                   20 | Cuenta a mano en cada caso (bases constantes, hecho causante en 2026).                                                                           | `src/engine/incapacidad/casos-oro-incapacidad.test.ts`      |
+| Muerte y supervivencia                    |      27 |             0 |                   27 | Cuenta a mano en cada caso (bases constantes de 2.000 euros, fallecimiento en 2026).                                                             | `src/engine/supervivencia/casos-oro-supervivencia.test.ts`  |
+| Pensiones no contributivas                |      20 |             0 |                   20 | Cuenta a mano en cada caso (cuantías de 2026 y 2023).                                                                                            | `src/engine/no-contributivas/casos-oro-pnc.test.ts`         |
+| Pensiones no contributivas                |      23 |            23 |                    0 | Cifras publicadas en las guías del IMSERSO de 2022 a 2026 (URL de cada guía en el test; PDF en data-raw/imserso/).                               | `src/engine/no-contributivas/casos-oro-pnc-imserso.test.ts` |
+| MEI y solidaridad                         |      13 |             0 |                   13 | Cuenta a mano en cada caso (DT 42.ª y 43.ª, art. 19 bis).                                                                                        | `src/engine/mei/casos-oro-mei.test.ts`                      |
+| **Total**                                 | **117** |        **31** |               **86** |                                                                                                                                                  |                                                             |
 
 Además, el contraste con el modelo M5 (`docs/CONTRASTE_M5.md`, 37 casos) y la verificación por rejilla (`scripts/verificacion-motor.ts`) no son casos de oro.
 
 ## Casos por motor
+
+### Jubilación contributiva, casos de Sergio (`casos-sergio.md`)
+
+`jub-ord-2026-plana-40a` (independiente), `jub-ord-2027-05-plana-40a` (independiente), `jub-ord-2027-11-plana-40a` (independiente), `jub-ord-2026-bases-crecientes` (independiente), `jub-ord-2026-bases-maximas-tope` (independiente), `jub-ord-2026-bases-minimas-sin-minimos` (independiente, con diferencia conocida), `jub-ord-2026-carrera-20a` (independiente), `jub-ord-2026-carrera-15a` (independiente)
 
 ### Incapacidad permanente (`casos-oro-incapacidad.test.ts`)
 

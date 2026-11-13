@@ -50,39 +50,44 @@ desenvolver(r); // devuelve el resultado o vuelve a lanzar el error original
 
 ## Registro único de lecturas abiertas (`src/engine/lecturas.ts`)
 
-Una lectura abierta es una duda de interpretación que el motor no decide: es una opción explícita con un valor por defecto (la lectura más sencilla, en `docs/DECISIONES.md`) y alternativas. El registro lista las 27 de todos los motores, cada una con identificador `motor.opcion`, descripción en lenguaje llano (sin cifras), valor por defecto **leído de las constantes de cada motor**, alternativas, efecto medido (sección y fila de `docs/INFORME_VERIFICACION.md`) e identificador de la pregunta de `docs/REVISION_ACTUARIAL.md`. Dos tests comprueban que el registro es completo (todas las opciones de cada motor y ninguna de más), que los enlaces existen y que las descripciones no llevan cifras. **Los valores por defecto los decide Sergio tras la revisión actuarial; el registro no cambia ninguno.**
+Una lectura abierta es una duda de interpretación que el motor no decide: es una opción explícita con un valor por defecto (la lectura más sencilla, en `docs/DECISIONES.md`) y alternativas. El registro lista las 28 de todos los motores, cada una con identificador `motor.opcion`, descripción en lenguaje llano (sin cifras), valor por defecto **leído de las constantes de cada motor**, alternativas, efecto medido (sección y fila de `docs/INFORME_VERIFICACION.md`) e identificador de la pregunta de `docs/REVISION_ACTUARIAL.md`. Dos tests comprueban que el registro es completo (todas las opciones de cada motor y ninguna de más), que los enlaces existen y que las descripciones no llevan cifras. **Los valores por defecto los decide Sergio tras la revisión actuarial; el registro no cambia ninguno** (única excepción, de la Fase 2-D: `jubilacion.interpolacionIPC` pasa a `mensual-ine`, una mejora de datos, no una lectura legal).
 
-**Configuración única (Fase 2-C)**: los valores por defecto están en `src/engine/config/lecturas-por-defecto.json` (id, valor, estado `pendiente` o `decidida`, fecha y pregunta de `docs/REVISION_ACTUARIAL.md`). Las constantes de cada motor (`LECTURAS_POR_DEFECTO`…) y el registro leen de ese fichero; un test comprueba que cubre exactamente las lecturas del registro y que `docs/DECISIONES_ACTUARIALES.md` lo refleja. Adoptar una decisión es cambiar una línea del JSON (y la fila del registro de decisiones). Clasificación de las 27 lecturas por impacto y fichas del grupo A: `docs/REVISION_PRIORIZADA.md`.
+**Configuración única (Fase 2-C)**: los valores por defecto están en `src/engine/config/lecturas-por-defecto.json` (id, valor, estado `pendiente` o `decidida`, fecha y pregunta de `docs/REVISION_ACTUARIAL.md`). Las constantes de cada motor (`LECTURAS_POR_DEFECTO`…) y el registro leen de ese fichero; un test comprueba que cubre exactamente las lecturas del registro y que `docs/DECISIONES_ACTUARIALES.md` lo refleja. Adoptar una decisión es cambiar una línea del JSON (y la fila del registro de decisiones). Clasificación de las lecturas por impacto y fichas del grupo A: `docs/REVISION_PRIORIZADA.md`.
 
-| Identificador                                        | Por defecto                | Alternativas               | Pregunta actuarial                             |
-| ---------------------------------------------------- | -------------------------- | -------------------------- | ---------------------------------------------- |
-| `jubilacion.baseMaxima`                              | `compuesto`                | `sobre-cifra-inicial`      | `param-base-maxima-incremento-futuro`          |
-| `jubilacion.pensionMaxima`                           | `compuesto`                | `incremento-creciente`     | `param-pension-maxima-incremento-futuro`       |
-| `jubilacion.referenciaBaseMinimaLagunas`             | `mes-de-la-laguna`         | `hecho-causante`           | `param-lagunas-integracion`                    |
-| `jubilacion.opcion25EnUltimoDia2040`                 | `incluida`                 | `excluida`                 | `param-opcion-25-anos-ventana`                 |
-| `jubilacion.lagunasAnterioresAlPrimerAlta`           | `integrar`                 | `ignorar`                  | `param-lagunas-integracion`                    |
-| `jubilacion.interpolacionIPC`                        | `interpolada`              | `escalon-anual`            | `param-actualizacion-bases`                    |
-| `jubilacion.fraccionDemora`                          | `desde-segundo-anio`       | `desde-primer-anio`        | `param-jubilacion-demora-reglas`               |
-| `jubilacion.maximaDesde2051`                         | `incremento-acumulado`     | `incremento-anual-literal` | `param-pension-maxima-incremento-2051-2065`    |
-| `incapacidad.edadFiccion`                            | `carrera-proyectada`       | `edad-general`             | `param-incapacidad-permanente-reglas`          |
-| `incapacidad.computoFiccion`                         | `meses`                    | `anios-completos`          | `param-incapacidad-permanente-reglas`          |
-| `incapacidad.divisorPeriodoCorto`                    | `coeficiente-rd-1799-1985` | `catorce-doceavos`         | `param-incapacidad-permanente-reglas`          |
-| `incapacidad.lagunasAccidenteNoLaboral`              | `sin-integrar`             | `integrar`                 | `param-incapacidad-permanente-reglas`          |
-| `incapacidad.redondeoEdadCarencia`                   | `sin-redondeo`             | `medio-anio`               | `param-incapacidad-permanente-reglas-carencia` |
-| `incapacidad.diasCotizadosParcial`                   | `naturales`                | `treinta-por-mes`          | `param-incapacidad-permanente-reglas-carencia` |
-| `supervivencia.ventanaBaseReguladora`                | `anterior-al-mes-previo`   | `decreto-1646-1972`        | `param-supervivencia-reglas`                   |
-| `supervivencia.diasCotizados`                        | `naturales`                | `treinta-por-mes`          | `param-supervivencia-reglas`                   |
-| `supervivencia.carenciaOrfandad`                     | `sin-carencia`             | `rd-1647-1997`             | `param-supervivencia-reglas`                   |
-| `supervivencia.carenciaFamiliaresAccidenteNoLaboral` | `exigir`                   | `exenta`                   | `param-supervivencia-reglas`                   |
-| `supervivencia.reduccionViudedad70`                  | `no-inferior-52`           | `sin-suelo`                | `param-supervivencia-reglas-cuantia`           |
-| `supervivencia.comparacionCompensatoria`             | `anual`                    | `mensual`                  | `param-supervivencia-reglas-cuantia`           |
-| `supervivencia.incrementoFamiliares`                 | `porcentaje-viudedad`      | `sin-incremento`           | `param-supervivencia-reglas-cuantia`           |
-| `supervivencia.reduccionLimiteConjunto`              | `orfandad`                 | `proporcional`             | `param-supervivencia-reglas-limites`           |
-| `no-contributivas.baseRentasCompatibles`             | `cuantia-integra`          | `cuantia-por-beneficiario` | `param-pnc-reglas`                             |
-| `no-contributivas.limiteTrabajo`                     | `cuantia-integra`          | `pension-reconocida`       | `param-pnc-reglas`                             |
-| `no-contributivas.rentasConTrabajoEnCuatroAnios`     | `sustituye-364-2`          | `se-suman`                 | `param-pnc-reglas`                             |
-| `no-contributivas.limiteConTerceraPersona`           | `con-complemento`          | `sin-complemento`          | `param-pnc-reglas`                             |
-| `mei.baseMEI`                                        | `base-cotizacion`          | `retribucion-completa`     | `param-mei-reglas`                             |
+| Identificador                                        | Por defecto                | Alternativas                   | Pregunta actuarial                             |
+| ---------------------------------------------------- | -------------------------- | ------------------------------ | ---------------------------------------------- |
+| `jubilacion.baseMaxima`                              | `compuesto`                | `sobre-cifra-inicial`          | `param-base-maxima-incremento-futuro`          |
+| `jubilacion.pensionMaxima`                           | `compuesto`                | `incremento-creciente`         | `param-pension-maxima-incremento-futuro`       |
+| `jubilacion.referenciaBaseMinimaLagunas`             | `mes-de-la-laguna`         | `hecho-causante`               | `param-lagunas-integracion`                    |
+| `jubilacion.opcion25EnUltimoDia2040`                 | `incluida`                 | `excluida`                     | `param-opcion-25-anos-ventana`                 |
+| `jubilacion.lagunasAnterioresAlPrimerAlta`           | `integrar`                 | `ignorar`                      | `param-lagunas-integracion`                    |
+| `jubilacion.interpolacionIPC`                        | `mensual-ine`              | `interpolada`, `escalon-anual` | `param-actualizacion-bases`                    |
+| `jubilacion.actualizacionFactorMinimo`               | `sin-suelo`                | `suelo-1`                      | `param-actualizacion-bases`                    |
+| `jubilacion.fraccionDemora`                          | `desde-segundo-anio`       | `desde-primer-anio`            | `param-jubilacion-demora-reglas`               |
+| `jubilacion.maximaDesde2051`                         | `incremento-acumulado`     | `incremento-anual-literal`     | `param-pension-maxima-incremento-2051-2065`    |
+| `incapacidad.edadFiccion`                            | `carrera-proyectada`       | `edad-general`                 | `param-incapacidad-permanente-reglas`          |
+| `incapacidad.computoFiccion`                         | `meses`                    | `anios-completos`              | `param-incapacidad-permanente-reglas`          |
+| `incapacidad.divisorPeriodoCorto`                    | `coeficiente-rd-1799-1985` | `catorce-doceavos`             | `param-incapacidad-permanente-reglas`          |
+| `incapacidad.lagunasAccidenteNoLaboral`              | `sin-integrar`             | `integrar`                     | `param-incapacidad-permanente-reglas`          |
+| `incapacidad.redondeoEdadCarencia`                   | `sin-redondeo`             | `medio-anio`                   | `param-incapacidad-permanente-reglas-carencia` |
+| `incapacidad.diasCotizadosParcial`                   | `naturales`                | `treinta-por-mes`              | `param-incapacidad-permanente-reglas-carencia` |
+| `supervivencia.ventanaBaseReguladora`                | `anterior-al-mes-previo`   | `decreto-1646-1972`            | `param-supervivencia-reglas`                   |
+| `supervivencia.diasCotizados`                        | `naturales`                | `treinta-por-mes`              | `param-supervivencia-reglas`                   |
+| `supervivencia.carenciaOrfandad`                     | `sin-carencia`             | `rd-1647-1997`                 | `param-supervivencia-reglas`                   |
+| `supervivencia.carenciaFamiliaresAccidenteNoLaboral` | `exigir`                   | `exenta`                       | `param-supervivencia-reglas`                   |
+| `supervivencia.reduccionViudedad70`                  | `no-inferior-52`           | `sin-suelo`                    | `param-supervivencia-reglas-cuantia`           |
+| `supervivencia.comparacionCompensatoria`             | `anual`                    | `mensual`                      | `param-supervivencia-reglas-cuantia`           |
+| `supervivencia.incrementoFamiliares`                 | `porcentaje-viudedad`      | `sin-incremento`               | `param-supervivencia-reglas-cuantia`           |
+| `supervivencia.reduccionLimiteConjunto`              | `orfandad`                 | `proporcional`                 | `param-supervivencia-reglas-limites`           |
+| `no-contributivas.baseRentasCompatibles`             | `cuantia-integra`          | `cuantia-por-beneficiario`     | `param-pnc-reglas`                             |
+| `no-contributivas.limiteTrabajo`                     | `cuantia-integra`          | `pension-reconocida`           | `param-pnc-reglas`                             |
+| `no-contributivas.rentasConTrabajoEnCuatroAnios`     | `sustituye-364-2`          | `se-suman`                     | `param-pnc-reglas`                             |
+| `no-contributivas.limiteConTerceraPersona`           | `con-complemento`          | `sin-complemento`              | `param-pnc-reglas`                             |
+| `mei.baseMEI`                                        | `base-cotizacion`          | `retribucion-completa`         | `param-mei-reglas`                             |
+
+## IPC mensual (Fase 2-D)
+
+La actualización de las bases (art. 209.1) usa por defecto el **índice mensual real del INE** (`data/parametros/ipc-indice-mensual.json`, lectura `jubilacion.interpolacionIPC = mensual-ine`; mejora de datos, no una lectura legal): de 2002-01 en adelante, la serie IPC290751 sin transformar (confianza alta); 2001, enlazado con las variaciones anuales de 2002 que publica el INE, y 1992-2000, la serie de base 1992 enlazada con un coeficiente (confianza media; el INE no publica el índice anterior a 2002 en la base vigente). `ctx.ipc(mes)` devuelve el índice publicado; después del último mes publicado encadena con la tasa anual del escenario repartida en tasas mensuales iguales (sin escenario, `DatoNoDisponible`); antes de 1992-01 interpola las medias anuales con aviso. `interpolada` (medias anuales interpoladas en logaritmos) y `escalon-anual` siguen disponibles como alternativas. La serie de medias anuales (`ipc-indice-medio-anual`) se mantiene para la conversión a euros constantes. Decisiones, alternativas descartadas y límites: `docs/DECISIONES.md` (Fase 2-D). **Suelo del factor de actualización** (`jubilacion.actualizacionFactorMinimo`, por defecto `sin-suelo`): con `suelo-1` el factor de cada base no baja de uno, como en los informes del autocálculo de la Seguridad Social; no lo ha decidido Sergio.
 
 ## Datos
 
@@ -94,7 +99,7 @@ Todas las cifras salen de `/data` con cita literal comprobada por código (la ci
 
 ## Casos de oro
 
-`docs/INVENTARIO_CASOS_ORO.md` (generado y comprobado por un test) lista los casos de cada motor con su etiqueta: «independiente» (ejemplo oficial con URL) o «derivado de la norma». El inventario no cambia en la Fase 2-C (no se ha tocado ningún caso; la corrección de datos de 2012 no afecta a ninguno). Los casos de Sergio se escribirán como una tabla (`docs/CASOS_SERGIO_PLANTILLA.md`) en `data-raw/casos-oro/casos-sergio.md` y se ejecutan con `npx tsx scripts/casos-sergio.ts` o con `scripts/casos-sergio.test.ts`; mientras el fichero no exista, nada falla.
+`docs/INVENTARIO_CASOS_ORO.md` (generado y comprobado por un test) lista los casos de cada motor con su etiqueta: «independiente» (ejemplo oficial con URL) o «derivado de la norma». El inventario de las Fases 2-A a 2-C no cambia; la Fase 2-D añade los ocho casos independientes de pensiones contributivas de Sergio. Los casos de Sergio (`data-raw/casos-oro/casos-sergio.md`, tabla descrita en `docs/CASOS_SERGIO_PLANTILLA.md`) son ocho cálculos del autocálculo oficial de la Seguridad Social: siete coinciden con el motor dentro de ±0,01 € y uno lleva la marca `diferenciaConocida` con su motivo; se ejecutan con `npx tsx scripts/casos-sergio.ts` o con `scripts/casos-sergio.test.ts`.
 
 ## Limitaciones consolidadas
 
@@ -104,7 +109,7 @@ Todas las cifras salen de `/data` con cita literal comprobada por código (la ci
 - **Contingencias profesionales**: la base reguladora por accidente de trabajo y enfermedad profesional (Reglamento de 1956) no está descargada; los motores lanzan `NoImplementada` salvo base calculada fuera. Indemnizaciones a tanto alzado, lesiones permanentes no incapacitantes y recargo de prestaciones.
 - **Normativa anterior**: jubilación anterior a 2013 (escala por años) y anticipadas, demora y parcial anteriores a 2022; incapacidad y supervivencia anteriores a 2022; PNC anteriores a 2022 (`NoImplementada`).
 - **Hechos posteriores al reconocimiento**: extinción, suspensión, revisión del grado, recálculo de los límites, trabajo de pensionistas fuera de lo regulado y pensiones concurrentes entre causantes.
-- **Datos que faltan**: base mínima de 2020 y 2021, umbral de pobreza (mínimas de 2027), límite de ingresos con cónyuge a cargo, complemento de alquiler de 2024, IPREM de 2024 a 2026 (sin norma expresa), IPC anterior a 2000 (hechos causantes de 2022 a 2024 con carreras anteriores a 2000 lanzan `DatoNoDisponible` sin escenario), SMI y tipos de contingencias comunes posteriores a 2026. Sondeo año a año de las funciones de la fachada: `docs/PENDIENTE_DATOS.md` («años futuros») y `npx tsx scripts/anios-futuros.ts`.
+- **Datos que faltan**: base mínima de 2020 y 2021, umbral de pobreza (mínimas de 2027), límite de ingresos con cónyuge a cargo, complemento de alquiler de 2024, IPREM de 2024 a 2026 (sin norma expresa), IPC mensual anterior a 1992 (hasta la Fase 2-D, los hechos causantes de 2022 a 2024 con carreras anteriores a 2000 lanzaban `DatoNoDisponible` sin escenario; ya no: la serie mensual cubre desde 1992), SMI y tipos de contingencias comunes posteriores a 2026. Sondeo año a año de las funciones de la fachada: `docs/PENDIENTE_DATOS.md` («años futuros») y `npx tsx scripts/anios-futuros.ts`.
 - **Fuera de alcance por decisión**: complementos autonómicos y haciendas forales de las PNC, proyecciones del MEI y RETA.
 
 ## Pruebas

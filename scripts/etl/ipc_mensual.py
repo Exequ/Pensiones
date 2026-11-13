@@ -9,7 +9,7 @@ Tramos (todos de series del INE descargadas en la sesión; datos de partida en d
 Entre la base 1992 (termina en 2001-12) y las demás bases (empiezan en 2002-01) no hay ningún mes de solape, y el propio INE
 advierte (nota de la tabla 249, base 2001) de que no se pueden calcular variaciones entre los índices de los sistemas
 IPC-92 e IPC-2001. Por eso el puente entre 2001 y 2002 son las variaciones publicadas por el INE (tramo B) y no un cociente
-de índices. Las bases 2001, 2006 (y las posteriores) empiezan también en 2002-01: no amplían la cobertura. Se comprueba que las
+de índices. Las bases 2001 y 2006 empiezan también en 2002-01 (las tablas de índices nacionales del catálogo de la operación empiezan en 2002): no amplían la cobertura. Se comprueba que las
 series de las bases 2001 y 2006 son proporcionales a la de base 2025 en 2002-2006 y 2002-2011 (cociente constante hasta el
 quinto decimal): la base 2025 ya recoge su historia. Alternativa descartada y documentada (docs/DECISIONES.md): un único
 coeficiente con la tasa mensual de enero de 2002 (serie IPC290752). Ejecutar con `python3 -I` y después `npx prettier --write`

@@ -57,7 +57,7 @@ Para scripts de Node, `calcularJubilacionConParametros(params, …)` recibe los 
 
 El motor nunca inventa un dato de `/data`. Donde `/data` termina (IPC en 2025, bases y pensiones en 2026, calendario legal en 2027 y 2037) aplica la regla legal con el `escenario` que se le dé, y lo anota en `avisos`:
 
-- **IPC**: media anual de `/data` (2002-2025). El índice mensual se obtiene interpolando en logaritmos entre medias anuales situadas a mitad de año (alternativa: escalón anual). Antes de mediados de 2002 se usa la variación de diciembre a diciembre del INE; después de 2025, la tasa del escenario. Sin escenario, un año sin dato lanza `DatoNoDisponible`.
+- **IPC**: desde la Fase 2-D, el índice mensual del INE de `data/parametros/ipc-indice-mensual.json` (1992-01 a 2026-10; lectura `mensual-ine`, por defecto). Después del último mes publicado, la tasa anual del escenario repartida en tasas mensuales iguales; antes de 1992-01, interpolación de las medias anuales con aviso. La media anual de `/data` (2002-2025, `ipc-indice-medio-anual`) sigue para la conversión a euros constantes y para las alternativas `interpolada` (interpolación en logaritmos entre medias anuales situadas a mitad de año) y `escalon-anual`. Detalle y decisiones: `docs/MOTOR.md` y `docs/DECISIONES.md`.
 - **Base máxima** (DT 38.ª): +revalorización +1,2 puntos hasta 2050; después, solo la revalorización.
 - **Pensión máxima** (DT 39.ª): +revalorización +0,115 puntos hasta 2050; tabla de la DT 39.ª.4 de 2051 a 2065 (lectura abierta); después, solo la revalorización.
 - **Base mínima**: con el IPC del escenario más allá de 2026. Si una laguna cae en 2020 o 2021 (sin dato en `/data`), el motor falla salvo `huecoBaseMinima: 'anterior'`.
@@ -68,16 +68,17 @@ El motor nunca inventa un dato de `/data`. Donde `/data` termina (IPC en 2025, b
 
 `LECTURAS_POR_DEFECTO` coincide con lo que ya reflejan los ficheros de `/data`. Cada una tiene un test que demuestra que cambiarla modifica el resultado en el sentido esperado (`lecturas-abiertas.test.ts`) y una fila en `docs/INFORME_VERIFICACION.md` con el efecto sobre un caso típico.
 
-| Opción                          | Por defecto            | Alternativa                | Origen                                              |
-| ------------------------------- | ---------------------- | -------------------------- | --------------------------------------------------- |
-| `baseMaxima`                    | `compuesto`            | `sobre-cifra-inicial`      | (a) DT 38.ª, «acumulativos»                         |
-| `pensionMaxima`                 | `compuesto`            | `incremento-creciente`     | (a) DT 39.ª, «acumulativos»                         |
-| `referenciaBaseMinimaLagunas`   | `mes-de-la-laguna`     | `hecho-causante`           | (b) art. 209.1.b desde 2026                         |
-| `opcion25EnUltimoDia2040`       | `incluida`             | `excluida`                 | (c) DT 4.ª.7                                        |
-| `lagunasAnterioresAlPrimerAlta` | `integrar`             | `ignorar`                  | (d) lagunas de la ventana previas a la primera alta |
-| `interpolacionIPC`              | `interpolada`          | `escalon-anual`            | (d) actualización de bases con IPC anual            |
-| `fraccionDemora`                | `desde-segundo-anio`   | `desde-primer-anio`        | (d) «a partir del segundo año completo»             |
-| `maximaDesde2051`               | `incremento-acumulado` | `incremento-anual-literal` | (d) tabla de la DT 39.ª.4                           |
+| Opción                          | Por defecto            | Alternativa                    | Origen                                              |
+| ------------------------------- | ---------------------- | ------------------------------ | --------------------------------------------------- |
+| `baseMaxima`                    | `compuesto`            | `sobre-cifra-inicial`          | (a) DT 38.ª, «acumulativos»                         |
+| `pensionMaxima`                 | `compuesto`            | `incremento-creciente`         | (a) DT 39.ª, «acumulativos»                         |
+| `referenciaBaseMinimaLagunas`   | `mes-de-la-laguna`     | `hecho-causante`               | (b) art. 209.1.b desde 2026                         |
+| `opcion25EnUltimoDia2040`       | `incluida`             | `excluida`                     | (c) DT 4.ª.7                                        |
+| `lagunasAnterioresAlPrimerAlta` | `integrar`             | `ignorar`                      | (d) lagunas de la ventana previas a la primera alta |
+| `interpolacionIPC`              | `mensual-ine`          | `interpolada`, `escalon-anual` | (d) actualización de bases con el IPC mensual       |
+| `actualizacionFactorMinimo`     | `sin-suelo`            | `suelo-1`                      | (d) suelo del factor de actualización               |
+| `fraccionDemora`                | `desde-segundo-anio`   | `desde-primer-anio`            | (d) «a partir del segundo año completo»             |
+| `maximaDesde2051`               | `incremento-acumulado` | `incremento-anual-literal`     | (d) tabla de la DT 39.ª.4                           |
 
 ## Decisiones de modelado
 

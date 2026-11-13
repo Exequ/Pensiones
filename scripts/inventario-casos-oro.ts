@@ -7,6 +7,7 @@
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import { leerCasosSergio } from './lib/casos-sergio.ts';
 import { RAIZ } from './lib/motor-jubilacion.ts';
 
 interface Origen {
@@ -77,6 +78,35 @@ export function inventario(): string {
   );
   sumar('derivado de la norma', 6);
   const detalle: string[] = [];
+  // Casos de Sergio (Fase 2-D): la etiqueta es la que él pone al inicio de «fuente o método».
+  const rutaSergio = path.join(RAIZ, 'data-raw/casos-oro/casos-sergio.md');
+  const sergio = leerCasosSergio(readFileSync(rutaSergio, 'utf8'));
+  if (sergio.errores.length > 0) throw new Error(`casos-sergio.md: ${sergio.errores.join('; ')}`);
+  const sInd = sergio.casos.filter((c) => c.fuente.startsWith('independiente')).length;
+  const sDer = sergio.casos.filter((c) => c.fuente.startsWith('derivado')).length;
+  if (sInd + sDer !== sergio.casos.length)
+    throw new Error(
+      'casos-sergio.md: la fuente de cada caso debe empezar por «independiente» o «derivado»',
+    );
+  const conMarca = sergio.casos.filter(
+    (c) => typeof c.esperado['diferenciaConocida'] === 'string',
+  ).length;
+  sumar('independiente', sInd);
+  sumar('derivado de la norma', sDer);
+  filas.push(
+    `| Jubilación contributiva (casos de Sergio) | ${sergio.casos.length} | ${sInd} | ${sDer} | Autocálculo de jubilación ordinaria de la Sede electrónica de la Seguridad Social (informes del 13/11/2026); ${conMarca === 0 ? 'todos coinciden' : `${conMarca} con la marca «diferenciaConocida»`} | \`data-raw/casos-oro/casos-sergio.md\` |`,
+  );
+  detalle.push(
+    '### Jubilación contributiva, casos de Sergio (`casos-sergio.md`)',
+    '',
+    sergio.casos
+      .map(
+        (c) =>
+          `\`${c.id}\` (${c.fuente.startsWith('independiente') ? 'independiente' : 'derivado de la norma'}${typeof c.esperado['diferenciaConocida'] === 'string' ? ', con diferencia conocida' : ''})`,
+      )
+      .join(', '),
+    '',
+  );
   for (const o of ORIGENES) {
     const lista = casos(o);
     const ind = lista.filter((c) => c.etiqueta === 'independiente').length;
@@ -105,7 +135,7 @@ export function inventario(): string {
     '- **independiente**: ejemplo resuelto publicado en una fuente oficial, con su URL. Contrasta el motor con algo que el motor no ha producido.',
     '- **derivado de la norma**: calculado a mano a partir del texto legal y de `/data`. Comprueba que el motor aplica nuestra lectura de la norma; **no** es una validación independiente.',
     '',
-    'Los casos de oro de Sergio (`data-raw/casos-oro/casos-sergio.md`, formato en `docs/CASOS_SERGIO_PLANTILLA.md`) se ejecutarán además de estos cuando existan.',
+    'Los casos de oro de Sergio (`data-raw/casos-oro/casos-sergio.md`, formato en `docs/CASOS_SERGIO_PLANTILLA.md`) son los ocho casos independientes de pensiones contributivas (jubilación ordinaria) generados con el autocálculo oficial de la Seguridad Social; se ejecutan con `npx tsx scripts/casos-sergio.ts` y con `scripts/casos-sergio.test.ts`. Un caso con la marca `diferenciaConocida` no coincide todavía y consta con su motivo.',
     '',
     ...filas,
     '',

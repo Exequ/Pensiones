@@ -19,7 +19,8 @@ describe('valores por defecto = lecturas ya reflejadas en /data', () => {
       referenciaBaseMinimaLagunas: 'mes-de-la-laguna',
       opcion25EnUltimoDia2040: 'incluida',
       lagunasAnterioresAlPrimerAlta: 'integrar',
-      interpolacionIPC: 'interpolada',
+      interpolacionIPC: 'mensual-ine',
+      actualizacionFactorMinimo: 'sin-suelo',
       fraccionDemora: 'desde-segundo-anio',
       maximaDesde2051: 'incremento-acumulado',
     });
@@ -160,16 +161,19 @@ describe('(d) otras lecturas del informe que afectan a la jubilación', () => {
 
   it('IPC mensual: interpolar la media anual o usar el escalón anual cambia la actualización de bases', () => {
     const carrera = [continua('1995-01', '2025-12', 2000)];
-    const por = (i: 'interpolada' | 'escalon-anual') =>
+    const por = (i: 'mensual-ine' | 'interpolada' | 'escalon-anual') =>
       calc(carrera, '1961-01-01', '2026-01-01', 'ordinaria', {
         escenario: ESC,
         usarOpcion25Anos: false,
         lecturas: { interpolacionIPC: i },
       });
+    const real = por('mensual-ine').baseReguladora;
     const a = por('interpolada').baseReguladora;
     const b = por('escalon-anual').baseReguladora;
     expect(a).not.toBe(b);
+    expect(real).not.toBe(a);
     expect(Math.abs(a / b - 1)).toBeLessThan(0.02);
+    expect(Math.abs(real / a - 1)).toBeLessThan(0.02);
   });
 
   it('demora: una fracción de más de 6 meses cuenta desde el primer año o desde el segundo', () => {

@@ -25,7 +25,7 @@ interface Clasificacion {
 const LECTURA: Record<string, Clasificacion> = {
   'jubilacion.baseMaxima': {
     grupo: 'cerrada',
-    efecto: '−0,48 % (solo con la base topada)',
+    efecto: '−0,47 % (solo con la base topada)',
     motivo:
       'Las bases máximas oficiales de 2025 y 2026 coinciden con la lectura compuesta y no con la alternativa (evidencia por código).',
   },
@@ -42,7 +42,7 @@ const LECTURA: Record<string, Clasificacion> = {
   },
   'jubilacion.opcion25EnUltimoDia2040': {
     grupo: 'B',
-    efecto: '−1,74 % (solo el 31/12/2040)',
+    efecto: '−1,63 % (solo el 31/12/2040)',
     motivo: 'Efecto menor pero real; afecta a un único día de jubilación.',
   },
   'jubilacion.lagunasAnterioresAlPrimerAlta': {
@@ -52,8 +52,15 @@ const LECTURA: Record<string, Clasificacion> = {
   },
   'jubilacion.interpolacionIPC': {
     grupo: 'C',
-    efecto: '−0,95 %',
-    motivo: 'Inferior al 1 %; se resuelve con la serie mensual del INE (docs/PENDIENTE_DATOS.md).',
+    efecto: '−0,86 % (escalón anual); +0,09 % (medias anuales interpoladas)',
+    motivo:
+      'Resuelta con datos en la Fase 2-D: el motor usa por defecto el índice mensual real del INE (mejora de datos, no una lectura legal).',
+  },
+  'jubilacion.actualizacionFactorMinimo': {
+    grupo: 'C',
+    efecto: 'hasta −0,014 % en los casos de Sergio; 0,00 % en un caso típico',
+    motivo:
+      'Inferior al 1 %; los nueve informes del autocálculo nunca muestran un factor menor que uno (Fase 2-D). Decide Sergio.',
   },
   'jubilacion.fraccionDemora': {
     grupo: 'B',
@@ -185,7 +192,7 @@ const PREGUNTA: Record<string, Clasificacion> = {
     grupo: 'A',
     efecto: 'ver ficha',
     motivo:
-      'Lectura «lagunas anteriores a la primera alta» (−14,6 % en el caso del informe); la base mínima de la laguna es C.',
+      'Lectura «lagunas anteriores a la primera alta» (−14,7 % en el caso del informe); la base mínima de la laguna es C.',
   },
   'param-actualizacion-bases': {
     grupo: 'C',
@@ -194,7 +201,7 @@ const PREGUNTA: Record<string, Clasificacion> = {
   },
   'param-opcion-25-anos-ventana': {
     grupo: 'B',
-    efecto: '−1,74 %',
+    efecto: '−1,63 %',
     motivo: 'Solo el 31/12/2040; el resto de la ventana coincide con la web (cerrado).',
   },
   'param-opcion-25-anos-divisor': {
@@ -255,7 +262,7 @@ const PREGUNTA: Record<string, Clasificacion> = {
   },
   'param-base-maxima-incremento-futuro': {
     grupo: 'cerrada',
-    efecto: '−0,48 %',
+    efecto: '−0,47 %',
     motivo: 'Lectura compuesta confirmada por la base máxima oficial de 2025 y 2026.',
   },
   'param-pension-maxima-incremento-futuro': {
@@ -705,6 +712,18 @@ function principal(): void {
   L.push(
     '',
     `Las ${preguntas.filter((p) => PREGUNTA[p.id] === undefined).length} preguntas no listadas arriba con motivo propio (definiciones de ratio, déficit, salario medio, comparativa internacional, afirmaciones circulantes, mortalidad y supuestos de la OCDE) son del grupo C: no cambian ningún resultado del motor y se deciden al usarlas en el modelo.`,
+    '',
+  );
+
+  L.push(
+    '## Fase 2-D: evidencia de los informes del autocálculo (casos de Sergio)',
+    '',
+    'Los ocho casos de `data-raw/casos-oro/casos-sergio.md` se generaron con el autocálculo de jubilación ordinaria de la Seguridad Social (informes del 13/11/2026). Este apartado resume lo que esos informes aportan a las preguntas del registro; no cambia ningún grupo ni decide nada.',
+    '',
+    '- **Suelo del factor de actualización** (`jubilacion.actualizacionFactorMinimo`, pregunta `param-actualizacion-bases`, grupo C): los nueve informes del autocálculo nunca muestran un factor de actualización menor que 1,0000000; cuando el índice del mes de referencia es menor que el del mes de la base, el factor sale 1. Con septiembre de 2024 como mes de referencia (hechos causantes de noviembre de 2026) hay meses anteriores de 2024 con índice mayor. El motor, sin suelo (por defecto), calcula un factor menor que uno en esos meses. Con `suelo-1`, la base reguladora de los casos que lo necesitan coincide con el informe al céntimo (dos casos pasan de −0,27 € y −0,11 € a +0,01 € y 0,00 €). El artículo 209 TRLGSS habla de actualizar «de acuerdo con la evolución del IPC» y no menciona ese suelo: la decisión es de Sergio. El efecto es de unos céntimos o decenas de céntimos al mes.',
+    '- **IPC mensual** (`jubilacion.interpolacionIPC`): el desfase medio del motor con respecto al autocálculo pasa de 9,18 € (0,56 %) con las medias anuales interpoladas a 1,06 € (0,12 %) con el índice mensual del INE; sin el caso en que el autocálculo aplicó otra regla de cálculo (opción de 25 años frente a regla general), el desfase absoluto medio es de 0,003 €. No es una lectura legal: es el dato que usa el autocálculo.',
+    '- **Meses de 2001**: el INE no publica el índice de 2001 en la base vigente; los informes del autocálculo muestran el factor de cada mes. Con las variaciones anuales de 2002 que publica el INE, los casos con meses de 2001 coinciden al céntimo; con un único coeficiente (tasa mensual de enero de 2002) se separaban hasta 0,38 € (`docs/DECISIONES.md`, Fase 2-D). Pregunta para Sergio: confirmar con el factor de 2001 de los informes (caso_1, caso_2, caso_4, caso_5 y caso_6), que no están en el repositorio.',
+    '- **Regla general frente a opción de 25 años** (sin pregunta nueva): en `jub-ord-2026-bases-minimas-sin-minimos` el tramo de relleno de base 1000 cae dentro de la ventana de 304 meses de la regla general; el autocálculo mostró la opción de 25 años. Con ese relleno, el motor elige la regla general; ver `docs/DISCREPANCIAS.md`.',
     '',
   );
 

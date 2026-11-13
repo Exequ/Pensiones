@@ -6,6 +6,10 @@ Fase 2-A. Los 37 casos de `data-raw/casos-oro/casos_oro_m5.json` (modelo simplif
 
 M5 supone una carrera continua desde la edad de inicio hasta la edad ordinaria, salario individual = salario relativo × salario medio (EAES 2024 de `data/macro`, entre 12) que crece `(1 + g)(1 + IPC)` al año, IPC constante (también en el pasado), jubilación el 1 de enero del año T. El adaptador construye esa carrera **mes a mes con la misma fórmula** y la da al motor como _entrada_ (bases por mes); el motor aplica las reglas legales con `escenario: { ipc, sustituirHistoricoIPC: true }`. Los topes, la actualización y la mínima se activan o apagan como en cada caso (`topes`, `actualizar`). La edad es la de M5 (65 años si los meses potenciales hasta los 65 alcanzan la carrera de la DT 7.ª; si no, la edad del año).
 
+## Efecto del IPC mensual del INE (Fase 2-D)
+
+Sin cambios: el contraste reproduce M5 con un escenario de IPC constante que **sustituye** también el histórico del IPC (`sustituirHistoricoIPC`), de modo que ni el índice mensual del INE ni el suelo del factor de actualización intervienen. La tabla siguiente es idéntica antes y después de la Fase 2-D (diferencia máxima 0,41 %; 37 de 37 casos dentro del 0,5 %). El desfase respecto a M5 sigue siendo el de la regla del mes previo; no se tocó `modelos/` ni `docs/modelos/`.
+
 ## Resultado
 
 Diferencia máxima: 0,41 %; casos con diferencia ≤ 0,5 %: 37 de 37; ≤ 1,5 %: 37 de 37.

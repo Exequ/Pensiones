@@ -63,6 +63,8 @@ const MULTIPLES_POR_ANIO = [
   'revalorizacion-regla',
   'prestamos-',
   'mei-destino',
+  // Serie mensual (id AAAA-MM, periodo = año): su coherencia mensual está en ipc-mensual.test.ts.
+  'ipc-indice-mensual',
   ...FICHEROS_REGLAS_2A,
   ...FICHEROS_REGLAS_2B1,
   ...FICHEROS_REGLAS_2B2,
@@ -70,6 +72,7 @@ const MULTIPLES_POR_ANIO = [
 ];
 /** Ficheros por versión de una regla (el periodo es el año desde el que rige): sin exigir años seguidos. */
 const POR_VERSION = [
+  'ipc-indice-mensual',
   'actualizacion-bases',
   'lagunas-integracion',
   'revalorizacion-regla',
