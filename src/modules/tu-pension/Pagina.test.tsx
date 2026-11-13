@@ -77,9 +77,16 @@ describe('página «Tu pensión»', () => {
     expect(textos).toContain('Estado: Provisional');
     expect(textos).toContain('Estado: Pendiente de decidir');
     expect(textos).toContain('Estado: Decidida');
-    // Sin selectores para cambiar las lecturas.
-    expect(within(panel).queryAllByRole('combobox')).toHaveLength(0);
-    expect(within(panel).queryAllByRole('radio')).toHaveLength(0);
+    // Desde la Fase 3-B2 cada lectura es un grupo de opciones con una elegida (la de por defecto).
+    const grupos = within(panel).getAllByRole('group');
+    expect(grupos.length).toBeGreaterThan(5);
+    for (const g of grupos) {
+      expect(
+        within(g)
+          .getAllByRole('radio')
+          .filter((r) => (r as HTMLInputElement).checked),
+      ).toHaveLength(1);
+    }
   });
 
   it('muestra las limitaciones del motor sin esconderlas', () => {

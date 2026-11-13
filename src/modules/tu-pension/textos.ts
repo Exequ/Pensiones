@@ -56,8 +56,48 @@ export const TEXTOS = {
   avisosTitulo: 'Avisos del cálculo',
   supuestosTitulo: 'Supuestos y lecturas',
   supuestosIntro:
-    'Una lectura abierta es una duda de interpretación de la norma que el cálculo no resuelve por sí solo: se aplica una opción por defecto y se deja constancia. Aquí se describen las que afectan a la jubilación, con su estado. Esta versión solo las muestra; no se pueden cambiar.',
+    'Una lectura abierta es una duda de interpretación de la norma que el cálculo no resuelve por sí solo: se aplica una opción por defecto y se deja constancia. Aquí aparecen las que afectan a la jubilación, con su estado. Puedes elegir otra opción en cualquiera de ellas para ver cuánto cambia tu resultado; ninguna opción se presenta como la correcta.',
+  supuestosEstadoNota:
+    'El estado indica en qué punto está la revisión actuarial de cada lectura: es información sobre el proyecto, no una indicación de cuál elegir. Las lecturas provisionales y las pendientes se muestran igual que las decididas.',
   supuestosEfecto: 'Efecto en tu resultado',
+  supuestosEfectoNota:
+    'El efecto de cada alternativa se mide frente a tu elección actual, cambiando solo esa lectura.',
+  valorElegidoEtiqueta: 'Elegida',
+  opcionPorDefecto: 'opción por defecto del cálculo',
+  restablecerLecturas: 'Restablecer lecturas',
+  restablecerAyuda: 'Devuelve todas las lecturas a su valor por defecto.',
+  lecturasRestablecidas: 'Lecturas restablecidas: todas están en su valor por defecto.',
+  lecturaMotivo: 'Motivo del registro',
+  lecturaSinDecidir: 'Sin decidir todavía.',
+  // --- Comparación con las lecturas por defecto (Fase 3-B2) ---
+  comparacionTitulo: 'Con tus lecturas y con las lecturas por defecto',
+  comparacionSinCambios: 'Todas las lecturas están en su valor por defecto.',
+  comparacionConTusLecturas: 'Con tus lecturas',
+  comparacionPorDefecto: 'Con las lecturas por defecto',
+  comparacionConcepto: 'Concepto',
+  comparacionDiferenciaEuros: 'Diferencia (euros al mes)',
+  comparacionDiferenciaPorcentaje: 'Diferencia (%)',
+  comparacionTabla: 'Pensión y base reguladora con tus lecturas y con las lecturas por defecto',
+  comparacionFilaPension: 'Pensión mensual bruta (por paga)',
+  comparacionFilaBase: 'Base reguladora (euros al mes)',
+  comparacionNota:
+    'Las lecturas por defecto son el punto de referencia de la comparación, no una recomendación ni la lectura correcta: son la opción que aplica el cálculo mientras no se elige otra.',
+  // --- Enlace compartible (Fase 3-B2) ---
+  enlaceTitulo: 'Compartir tu simulación',
+  enlaceIntro:
+    'El enlace contiene los valores del formulario, la carrera, las opciones, el IPC supuesto y las lecturas elegidas. Al abrirlo, el formulario se rellena y se calcula el resultado.',
+  enlaceCampo: 'Enlace a esta simulación',
+  enlaceCopiar: 'Copiar enlace',
+  enlaceCopiado: 'Enlace copiado al portapapeles.',
+  enlaceNoCopiado:
+    'No se ha podido copiar el enlace automáticamente: selecciónalo en el campo y cópialo.',
+  enlacePrivacidad:
+    'Todo se calcula en tu navegador y ningún dato personal sale de esta web. El enlace es la única forma de compartir tu simulación: quien lo tenga puede ver los valores que has escrito.',
+  enlaceTramosOmitidos:
+    'La tabla tiene más tramos de los que admite el enlace: el enlace no incluye los últimos.',
+  enlaceAvisoTitulo: 'Qué se ha ignorado del enlace',
+  enlaceAvisoIntro:
+    'El enlace que has abierto tenía valores que no se pueden usar. La página ha cargado los demás valores, o los valores por defecto si el enlace entero no era válido.',
   limitacionesTitulo: 'Qué no tiene en cuenta el cálculo',
   limitacionesIntro:
     'La ley regula situaciones que este cálculo todavía no recoge. Si alguna te afecta, el resultado no es aplicable a tu caso.',

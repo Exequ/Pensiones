@@ -542,3 +542,131 @@
 .tp-referencias-otras > * + * {
   margin-top: var(--espacio-3);
 }
+
+/* --- Lecturas alternativas y enlace compartible (Fase 3-B2) --- */
+
+.tp-restablecer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espacio-3);
+}
+
+.tp-opciones-lectura {
+  display: grid;
+  gap: var(--espacio-1);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.tp-opciones-lectura legend {
+  padding: 0;
+  margin-bottom: var(--espacio-2);
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta-2);
+}
+
+.tp-opcion-etiqueta {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espacio-3);
+  min-height: var(--objetivo-tactil);
+  padding: var(--espacio-2) var(--espacio-3);
+  border: var(--grosor-filete) solid var(--color-filete);
+  border-radius: var(--radio);
+  cursor: pointer;
+}
+
+.tp-opcion-etiqueta:hover {
+  background: var(--color-filete);
+}
+
+.tp-opcion-etiqueta input {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  accent-color: var(--color-acento);
+}
+
+.tp-opcion-etiqueta:has(input:checked) {
+  border-color: var(--color-tinta);
+  border-width: var(--grosor-filete-cabecera);
+}
+
+.tp-opcion-etiqueta:has(input:focus-visible) {
+  outline: var(--grosor-foco) solid var(--color-acento);
+  outline-offset: var(--separacion-foco);
+}
+
+.tp-opcion-texto {
+  display: grid;
+  gap: var(--espacio-1);
+  min-width: 0;
+}
+
+.tp-opcion-nombre {
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta);
+}
+
+.tp-opcion-defecto {
+  font-weight: var(--peso-normal);
+  color: var(--color-tinta-2);
+}
+
+.tp-opcion-que {
+  color: var(--color-tinta-2);
+}
+
+.tp-comparacion {
+  display: grid;
+  gap: var(--espacio-3);
+  padding: var(--espacio-4) 0;
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  border-bottom: var(--grosor-filete) solid var(--color-tinta);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+}
+
+.tp-comparacion h3 {
+  font-family: var(--fuente-lectura);
+  font-size: var(--texto-cuerpo);
+}
+
+.tp-comparacion-frase {
+  margin: 0;
+  color: var(--color-tinta);
+}
+
+.tp-nota-lecturas {
+  margin: 0;
+  color: var(--color-tinta-2);
+}
+
+.tp-aviso-enlace h2 {
+  font-size: var(--texto-cuerpo);
+}
+
+.tp-aviso-enlace ul {
+  margin: var(--espacio-2) 0 0;
+  padding-left: 1.25em;
+}
+
+.tp-enlace > * + * {
+  margin-top: var(--espacio-3);
+}
+
+.tp-enlace input[type='text'] {
+  width: 100%;
+}
+
+.tp-copia-estado {
+  margin: 0;
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  color: var(--color-tinta-2);
+}
