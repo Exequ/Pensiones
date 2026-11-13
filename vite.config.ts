@@ -9,6 +9,10 @@ export default defineConfig({
   build: {
     // Las fuentes se empaquetan como ficheros propios; nada se carga de dominios externos.
     assetsInlineLimit: 0,
+    // El chunk de «Tu pensión» (motor + /data/parametros) supera los 500 kB a propósito: no se divide
+    // en la Fase 3-B1 (véase docs/DECISIONES.md, «Fase 3-B1»). Se sube el límite para no ocultar
+    // avisos nuevos de otros chunks por debajo de este tamaño.
+    chunkSizeWarningLimit: 3000,
   },
   test: {
     globals: true,

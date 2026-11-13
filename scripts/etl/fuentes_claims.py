@@ -96,6 +96,8 @@ for ruta in sorted(glob.glob(f'{REPO}/data/*/*.json')):
             huellas.append((d['id'], o['period'], o['url'], o['sha256']))
     for n in d.get('normas', []):
         anota(n['source'], rel)
+    for pe in d.get('personas', []):
+        anota(pe['source'], rel, pe.get('fetchedAt', HOY))
     for p in d.get('prestaciones', []):
         anota(p['source'], rel)
         for a in p.get('fuentesAdicionales', []):

@@ -224,7 +224,7 @@ export async function validarDirectorio(
 export function idsDeArchivo(json: unknown): Set<string> {
   const ids = new Set<string>();
   if (!esObjeto(json)) return ids;
-  for (const coleccion of ['data', 'series', 'normas', 'prestaciones']) {
+  for (const coleccion of ['data', 'series', 'normas', 'prestaciones', 'personas']) {
     const elementos = json[coleccion];
     if (!Array.isArray(elementos)) continue;
     for (const elemento of elementos) {

@@ -18,11 +18,7 @@ const CTX: ContextoTramos = {
 };
 
 let n = 0;
-function tramo(
-  desde: [number, number],
-  hasta: [number, number],
-  base: string,
-): TramoFormulario {
+function tramo(desde: [number, number], hasta: [number, number], base: string): TramoFormulario {
   n += 1;
   const esReferencia = base === 'minima' || base === 'media' || base === 'maxima';
   return {
