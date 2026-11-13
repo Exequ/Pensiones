@@ -6,7 +6,8 @@ describe('registro de secciones', () => {
   it('cada sección tiene su módulo y una ruta única', () => {
     const slugs = SECCIONES.map((s) => s.slug);
     expect(new Set(slugs).size).toBe(slugs.length);
-    for (const slug of slugs) expect(PAGINAS[slug]).toBeTypeOf('function');
+    // Una página puede ser un componente o un componente perezoso (objeto con `$$typeof`).
+    for (const slug of slugs) expect(['function', 'object']).toContain(typeof PAGINAS[slug]);
   });
 
   it('los textos de las secciones no contienen cifras escritas a mano', () => {

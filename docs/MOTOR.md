@@ -1,6 +1,6 @@
 # Motor de pensiones: visión global
 
-Cierre de la Fase 2 (Fases 2-A, 2-B-1, 2-B-2 y 2-B-3). El motor es una librería pura en `src/engine/` (TypeScript estricto, sin React ni DOM) que calcula la pensión inicial de las prestaciones contributivas y no contributivas del Régimen General con el mismo patrón en todas: desglose por pasos con el parámetro de `/data` y el artículo que sostienen cada paso, normativa del año del hecho causante, y ninguna cifra legal escrita en el código. La Fase 3 (simulador) puede consumirlo entero a través de la fachada, sin tocar la lógica.
+Cierre de la Fase 2 (Fases 2-A, 2-B-1, 2-B-2 y 2-B-3). El motor es una librería pura en `src/engine/` (TypeScript estricto, sin React ni DOM) que calcula la pensión inicial de las prestaciones contributivas y no contributivas del Régimen General con el mismo patrón en todas: desglose por pasos con el parámetro de `/data` y el artículo que sostienen cada paso, normativa del año del hecho causante, y ninguna cifra legal escrita en el código. La Fase 3 (simulador) puede consumirlo entero a través de la fachada, sin tocar la lógica; la primera versión (Fase 3-A, jubilación ordinaria con carrera simple) está descrita en `docs/SIMULADOR.md`.
 
 ## Motores
 
@@ -101,7 +101,7 @@ Todas las cifras salen de `/data` con cita literal comprobada por código (la ci
 
 ## Casos de oro
 
-`docs/INVENTARIO_CASOS_ORO.md` (generado y comprobado por un test) lista los casos de cada motor con su etiqueta: «independiente» (ejemplo oficial con URL) o «derivado de la norma». El inventario de las Fases 2-A a 2-C no cambia; la Fase 2-D añade los ocho casos independientes de pensiones contributivas de Sergio. Los casos de Sergio (`data-raw/casos-oro/casos-sergio.md`, tabla descrita en `docs/CASOS_SERGIO_PLANTILLA.md`) son ocho cálculos del autocálculo oficial de la Seguridad Social: siete coinciden con el motor dentro de ±0,01 € y uno lleva la marca `diferenciaConocida` con su motivo; se ejecutan con `npx tsx scripts/casos-sergio.ts` o con `scripts/casos-sergio.test.ts`.
+`docs/INVENTARIO_CASOS_ORO.md` (generado y comprobado por un test) lista los casos de cada motor con su etiqueta: «independiente» (ejemplo oficial con URL) o «derivado de la norma». El inventario de las Fases 2-A a 2-C no cambia; la Fase 2-D añade los ocho casos independientes de pensiones contributivas de Sergio. Los casos de Sergio (`data-raw/casos-oro/casos-sergio.md`, tabla descrita en `docs/CASOS_SERGIO_PLANTILLA.md`) son ocho cálculos del autocálculo oficial de la Seguridad Social: los ocho coinciden con el motor dentro de ±0,01 € (uno, con una tolerancia de 0,02 € por redondeo del autocálculo; Fase 3-A); se ejecutan con `npx tsx scripts/casos-sergio.ts` o con `scripts/casos-sergio.test.ts`.
 
 ## Limitaciones consolidadas
 

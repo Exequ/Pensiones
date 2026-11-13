@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fase 3-A). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md).",
+  "claims": [
+    {
+      "id": "web-tu-pension-base-sugerida",
+      "texto": "El simulador propone como base mensual inicial la base media de cotización por contingencias comunes del Régimen General en el último año completo de la serie (media ponderada por cotizantes); es una referencia de los datos, no la base de la persona.",
+      "ubicacion": "Página «Tu pensión» (Fase 3-A)",
+      "datos": ["macro/salario-medio-definiciones.json#base-media-cotizacion-rg-ambos"],
+      "fuentes": [
+        {
+          "title": "Estadística de Bases de Cotización al Régimen General: tablas de bases medias y cotizantes",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/c9bd51e5-79bc-44f2-9618-14d6094eb585",
+          "docId": "TGSS-bases-medias-RG"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente"
+    },
+    {
+      "id": "web-tu-pension-ipc-supuesto",
+      "texto": "El IPC anual supuesto por defecto es el supuesto de inflación del escenario base de «Pensions at a Glance 2025» (OCDE); es un supuesto de cálculo y no una previsión de inflación para España.",
+      "ubicacion": "Página «Tu pensión» (Fase 3-A)",
+      "datos": ["internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-inflacion-base"],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-actualizacion-ipc",
+      "texto": "En el cálculo de la base reguladora, los meses más recientes entran por su valor nominal y las bases anteriores se actualizan con el IPC hasta el mes de referencia que fija la norma (art. 209.1 TRLGSS).",
+      "ubicacion": "Página «Tu pensión» (Fase 3-A)",
+      "datos": ["parametros/actualizacion-bases.json#2026-meses-nominales"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-lagunas",
+      "texto": "Los meses sin base dentro del periodo de cálculo se integran con la base mínima de cotización: los primeros meses con laguna, contados desde la jubilación hacia atrás, al cien por cien y el resto a un porcentaje menor (art. 209.1.b TRLGSS).",
+      "ubicacion": "Página «Tu pensión» (Fase 3-A)",
+      "datos": ["parametros/lagunas-integracion.json#2026-tramo1-meses"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-lagunas-reforzada",
+      "texto": "Para las mujeres, la regla general aplica una integración de lagunas reforzada (DT 41.ª TRLGSS) cuando rige en el año de jubilación.",
+      "ubicacion": "Página «Tu pensión» (Fase 3-A)",
+      "datos": ["parametros/lagunas-integracion-brecha-genero.json#2026-tramo-a-desde-mes"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-periodo-calculo",
+      "texto": "La regla general toma las bases de mayor importe de una ventana de meses anteriores a la jubilación y descarta las más bajas; la opción de 25 años (DT 4.ª.7 TRLGSS) toma todas las bases de su ventana; se aplica la que da la base reguladora más alta.",
+      "ubicacion": "Página «Tu pensión» (Fase 3-A)",
+      "datos": ["parametros/periodo-calculo-base-reguladora.json#2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-porcentaje",
+      "texto": "El porcentaje de la base reguladora depende de los meses cotizados según una escala (art. 210.1 y DT 9.ª TRLGSS).",
+      "ubicacion": "Página «Tu pensión» (Fase 3-A)",
+      "datos": ["parametros/escala-jubilacion-tramos.json#2013-tramo1-pct"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-pension-maxima",
+      "texto": "La pensión inicial está limitada por una cuantía máxima anual (art. 57 TRLGSS).",
+      "ubicacion": "Página «Tu pensión» (Fase 3-A)",
+      "datos": ["parametros/pension-maxima.json#2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-2548",
+          "docId": "BOE-A-2026-2548"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-minimos",
+      "texto": "El complemento a mínimos eleva la pensión contributiva hasta la cuantía mínima de su clase cuando se cumplen las condiciones (art. 59 TRLGSS).",
+      "ubicacion": "Página «Tu pensión» (Fase 3-A)",
+      "datos": ["parametros/pension-minima-jubilacion.json#2026-jub65-unipersonal"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-hijos",
+      "texto": "El complemento por hijos se suma a la pensión y no cuenta para el límite de pensión máxima; el simulador lo aplica a las mujeres.",
+      "ubicacion": "Página «Tu pensión» (Fase 3-A)",
+      "datos": ["parametros/complemento-brecha-genero-reglas.json#computa-limite-pension-maxima"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-carencia-edad",
+      "texto": "La jubilación ordinaria exige un periodo mínimo de cotización y una edad ordinaria que depende de los meses cotizados (art. 205 TRLGSS).",
+      "ubicacion": "Página «Tu pensión» (Fase 3-A)",
+      "datos": ["parametros/carencia-jubilacion.json#2026"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    }
+  ]
+}

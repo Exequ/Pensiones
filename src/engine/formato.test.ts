@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  formatearDuracion,
   formatearEuros,
   formatearFechaIso,
   formatearNumero,
@@ -88,5 +89,22 @@ describe('otros formatos', () => {
     expect(formatearPeriodo('2023-T1')).toBe('1.er trimestre de 2023');
     expect(formatearPeriodo('2023-T2')).toBe('2.º trimestre de 2023');
     expect(() => formatearPeriodo('2023-T5')).toThrow(RangeError);
+  });
+});
+
+describe('formatearDuracion', () => {
+  it('años y meses con singulares', () => {
+    expect(formatearDuracion(0)).toBe('0 meses');
+    expect(formatearDuracion(1)).toBe('1 mes');
+    expect(formatearDuracion(5)).toBe('5 meses');
+    expect(formatearDuracion(12)).toBe('1 año');
+    expect(formatearDuracion(14)).toBe('1 año y 2 meses');
+    expect(formatearDuracion(459)).toBe('38 años y 3 meses');
+    expect(formatearDuracion(780)).toBe('65 años');
+  });
+  it('rechaza valores no válidos', () => {
+    expect(() => formatearDuracion(-1)).toThrow(RangeError);
+    expect(() => formatearDuracion(1.5)).toThrow(RangeError);
+    expect(() => formatearDuracion(Number.NaN)).toThrow(RangeError);
   });
 });

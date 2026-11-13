@@ -100,3 +100,20 @@ export function formatearPeriodo(periodo: string): string {
   const ordinales: Record<string, string> = { '1': '1.er', '2': '2.º', '3': '3.er', '4': '4.º' };
   return `${ordinales[trimestre] ?? trimestre} trimestre de ${coincidencia[1]}`;
 }
+
+/**
+ * Duración en meses como «38 años y 3 meses» (con singulares y sin partes nulas):
+ * 12 → «1 año», 14 → «1 año y 2 meses», 5 → «5 meses», 0 → «0 meses».
+ */
+export function formatearDuracion(meses: number): string {
+  comprobarFinito(meses);
+  if (!Number.isInteger(meses) || meses < 0) {
+    throw new RangeError(`Duración en meses no válida: ${meses}`);
+  }
+  const anios = Math.floor(meses / 12);
+  const resto = meses % 12;
+  const textoAnios = `${formatearNumero(anios)} ${anios === 1 ? 'año' : 'años'}`;
+  const textoMeses = `${formatearNumero(resto)} ${resto === 1 ? 'mes' : 'meses'}`;
+  if (anios === 0) return textoMeses;
+  return resto === 0 ? textoAnios : `${textoAnios} y ${textoMeses}`;
+}

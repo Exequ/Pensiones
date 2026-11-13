@@ -303,6 +303,10 @@ for tabla, per, url, sha in huellas:
 with open(f'{REPO}/docs/FUENTES.md', 'w', encoding='utf-8') as f:
     f.write('\n'.join(filas) + '\n')
 REVISION.update(MITO_PREGUNTAS)
+# Afirmaciones de los textos de la web (Fase 3-A): se mantienen a mano en docs/claims-web.json
+_ruta_web = f'{REPO}/docs/claims-web.json'
+if os.path.exists(_ruta_web):
+    claims.extend(json.load(open(_ruta_web, encoding='utf-8'))['claims'])
 ids = {c['id'] for c in claims}
 faltan = sorted(set(REVISION) - ids)
 assert not faltan, f'Ids de REVISION sin afirmación: {faltan}'

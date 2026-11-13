@@ -9,6 +9,15 @@ import { SECCIONES } from './modules/secciones';
 // El laboratorio de diseño (y Observable Plot) se carga solo si se visita /diseno.
 const DesignLab = lazy(() => import('./design-lab/DesignLab'));
 
+/** Aviso mientras se descarga el módulo de una página (carga perezosa). */
+function Cargando() {
+  return (
+    <p className="contenedor pagina texto-interfaz" role="status">
+      Cargando…
+    </p>
+  );
+}
+
 /** Rutas de la web. HashRouter evita errores 404 al recargar en GitHub Pages. */
 export function App() {
   return (
@@ -18,20 +27,24 @@ export function App() {
           <Route index element={<Inicio />} />
           {SECCIONES.map(({ slug }) => {
             const Pagina = PAGINAS[slug];
-            return <Route key={slug} path={slug} element={<Pagina />} />;
+            return (
+              <Route
+                key={slug}
+                path={slug}
+                element={
+                  <Suspense fallback={<Cargando />}>
+                    <Pagina />
+                  </Suspense>
+                }
+              />
+            );
           })}
           <Route path="fuentes" element={<Fuentes />} />
           <Route path="cambios" element={<RegistroCambios />} />
           <Route
             path="diseno"
             element={
-              <Suspense
-                fallback={
-                  <p className="contenedor pagina texto-interfaz" role="status">
-                    Cargando…
-                  </p>
-                }
-              >
+              <Suspense fallback={<Cargando />}>
                 <DesignLab />
               </Suspense>
             }
