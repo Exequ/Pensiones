@@ -508,6 +508,16 @@ export function calcularJubilacionConParametros(
     edadMeses,
     mesesCotizados: mesesCot,
     baseReguladora: br,
+    basesPeriodo: {
+      regla: mejor.regla.id,
+      ventana: mejor.regla.ventana,
+      nBases: mejor.regla.nBases,
+      divisor: mejor.regla.divisor,
+      mesesNominales: mejor.mesesNominales,
+      sumaBases: mejor.sumaBases,
+      baseReguladora: br,
+      meses: mejor.meses,
+    },
     porcentaje: pct,
     pasos,
   };
