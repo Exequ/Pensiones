@@ -1644,6 +1644,22 @@
       "comparados": 6,
       "difieren": [],
       "detalle": "Tipos por tramo de la DT 42.ª frente a los de las órdenes de 2025 y 2026 (otra norma). 2027-2045: solo la DT 42.ª."
+    },
+    {
+      "serie": "correcciones de errores del BOE de las normas citadas (todas las series)",
+      "fichero": "todos los ficheros de data/parametros que leen los motores",
+      "anios": "1969-2025",
+      "segundaFuente": [
+        {
+          "title": "BOE: 26 correcciones de errores de las normas citadas (campo «posteriores» de cada norma)",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2012-352",
+          "fetchedAt": "2026-11-13"
+        }
+      ],
+      "resultado": "coincide con salvedades",
+      "comparados": 25,
+      "difieren": [],
+      "detalle": "Se revisaron las 108 normas del BOE que citan los datos de los motores: 26 tienen correcciones de errores publicadas (los textos están en data-raw/auditoria/correcciones/). Solo una cambia cifras de /data (BOE-A-2012-352, gran invalidez de 2012: corregida en esta fase, ver «Hallazgos»). Las demás son de redacción o de cifras ajenas a /data; las que sustituyen cuadros (bases de 2019, 2023 y 2024, orfandad y favor de familiares de 2017, pensión máxima de 2005) coinciden con /data. Cifras de «donde dice» que aparecen en /data y se han revisado a mano (no son errores de /data): BOE-A-2012-352 «7.658,00»: es el valor correcto de otra fila del mismo cuadro (jubilación de titular menor de 65 años, cónyuge no a cargo, 2012); BOE-A-2013-832 «7.063,07»: la corrección cambia el texto («no excedan» por «excedan»), no la cifra del límite de ingresos de 2013; BOE-A-2014-1505 «753,00»: la errata es del grupo de cotización 3; /data usa los grupos 4 a 7 (753,00 es correcto). Ninguna otra cifra errónea corregida figura en /data."
     }
   ],
   "sinContraste": {

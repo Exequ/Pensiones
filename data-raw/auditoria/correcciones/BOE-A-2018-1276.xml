@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fecha_actualizacion="20251220115601">
+  <metadatos>
+    <identificador>BOE-A-2018-1276</identificador>
+    <origen_legislativo codigo="1">Estatal</origen_legislativo>
+    <departamento codigo="9218">Ministerio de Empleo y Seguridad Social</departamento>
+    <rango codigo="1590">Corrección (errores o erratas)</rango>
+    <fecha_disposicion/>
+    <numero_oficial/>
+    <titulo>Corrección de errores del Real Decreto 1077/2017, de 29 de diciembre, por el que se fija el salario mínimo interprofesional para 2018.</titulo>
+    <diario codigo="BOE">Boletín Oficial del Estado</diario>
+    <fecha_publicacion>20180131</fecha_publicacion>
+    <diario_numero>28</diario_numero>
+    <seccion>1</seccion>
+    <subseccion/>
+    <pagina_inicial>12290</pagina_inicial>
+    <pagina_final>12290</pagina_final>
+    <suplemento_pagina_inicial/>
+    <suplemento_pagina_final/>
+    <url_pdf>https://www.boe.es/boe/dias/2018/01/31/pdfs/BOE-A-2018-1276.pdf</url_pdf>
+    <url_epub>
+      <url_epub>https://www.boe.es/diario_boe/epub.php?id=BOE-A-2018-1276</url_epub>
+    </url_epub>
+    <url_pdf_catalan/>
+    <url_pdf_euskera/>
+    <url_pdf_gallego/>
+    <url_pdf_valenciano/>
+    <estatus_legislativo>L</estatus_legislativo>
+    <fecha_vigencia/>
+    <estatus_derogacion>N</estatus_derogacion>
+    <fecha_derogacion/>
+    <judicialmente_anulada>N</judicialmente_anulada>
+    <fecha_anulacion/>
+    <vigencia_agotada>S</vigencia_agotada>
+    <estado_consolidacion codigo="0"/>
+    <letra_imagen>A</letra_imagen>
+    <suplemento_letra_imagen/>
+    <url_eli>https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131</url_eli>
+  </metadatos>
+  <metadata-eli>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:eli="http://data.europa.eu/eli/ontology#">
+      <eli:LegalResource rdf:about="https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131">
+        <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+        <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/rd"/>
+        <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2018-1276</eli:id_local>
+        <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-12-29</eli:date_document>
+        <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1077</eli:number>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/6256"/>
+        <eli:subtype_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/corrigendum"/>
+        <eli:has_member>
+          <eli:LegalResource rdf:about="https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131/dof">
+            <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+            <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/rd"/>
+            <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2018-1276</eli:id_local>
+            <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-12-29</eli:date_document>
+            <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1077</eli:number>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/6256"/>
+            <eli:subtype_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/corrigendum"/>
+            <eli:version rdf:resource="http://www.elidata.es/mdr/authority/version/dof"/>
+            <eli:corrects rdf:resource="https://www.boe.es/eli/es/rd/2017/12/29/1077/dof"/>
+            <eli:is_member_of rdf:resource="https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131"/>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131/dof/spa">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/spa"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corrección de errores del Real Decreto 1077/2017, de 29 de diciembre, por el que se fija el salario mínimo interprofesional para 2018.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-01-31</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131/dof/spa/epub">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/epub+zip"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131/dof/spa/html">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/text/html"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131/dof/spa/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131/dof/spa/xml">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/xml"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2017/12/29/1077/corrigendum/20180131/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+          </eli:LegalResource>
+        </eli:has_member>
+      </eli:LegalResource>
+    </rdf:RDF>
+  </metadata-eli>
+  <analisis>
+    <materias>
+      <materia codigo="6256" orden="">Salario Mínimo Interprofesional</materia>
+    </materias>
+    <notas>
+      <nota codigo="151" orden="335">Esta disposición ha dejado de estar vigente</nota>
+    </notas>
+    <referencias>
+      <anteriores>
+        <anterior referencia="BOE-A-2017-15848" orden="2120">
+          <palabra codigo="201">CORRECCIÓN de errores</palabra>
+          <texto>Real Decreto 1077/2017, de 29 de diciembre</texto>
+        </anterior>
+      </anteriores>
+      <posteriores/>
+    </referencias>
+    <alertas>
+      <alerta codigo="131" orden="">Trabajo y empleo</alerta>
+    </alertas>
+  </analisis>
+  <texto>
+    <p xmlns:xhtml="http://www.w3.org/1999/xhtml" class="parrafo">Advertidos errores en el Real Decreto 1077/2017, de 29 de diciembre, por el que se fija el salario mínimo interprofesional para 2018, publicado en el «Boletín Oficial del Estado» número 317, de 30 de diciembre de 2017, se procede a efectuar las oportunas rectificaciones:</p>
+    <p xmlns:xhtml="http://www.w3.org/1999/xhtml" class="parrafo_2">En la página 130800, al final del segundo párrafo, donde dice: «… Real Decreto-ley 20/2017, de 29 de diciembre, por el que se prorrogan y aprueban diversas medidas tributarias.», debe decir: «… Real Decreto-ley 20/2017, de 29 de diciembre, por el que se prorrogan y aprueban diversas medidas tributarias y otras medidas urgentes en materia social.».</p>
+    <p xmlns:xhtml="http://www.w3.org/1999/xhtml" class="parrafo">En la página 130802, en la disposición transitoria primera, apartado 1, donde dice: «… Real Decreto-ley 20/2017, de 29 de diciembre, por el que se prorrogan y aprueban diversas medidas tributarias, …», debe decir: «… Real Decreto-ley 20/2017, de 29 de diciembre, por el que se prorrogan y aprueban diversas medidas tributarias y otras medidas urgentes en materia social, …».</p>
+    <p xmlns:xhtml="http://www.w3.org/1999/xhtml" class="parrafo">En la página 130802, en la disposición transitoria primera, apartado 2, donde dice: «… Real Decreto-ley 20/2017, …», debe decir: «… Real Decreto-ley 20/2017, de 29 de diciembre, …».</p>
+  </texto>
+</documento>

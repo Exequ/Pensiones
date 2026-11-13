@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fecha_actualizacion="20251219185601">
+  <metadatos>
+    <identificador>BOE-A-2013-832</identificador>
+    <origen_legislativo codigo="1">Estatal</origen_legislativo>
+    <departamento codigo="7723">Jefatura del Estado</departamento>
+    <rango codigo="1590">Corrección (errores o erratas)</rango>
+    <fecha_disposicion/>
+    <numero_oficial/>
+    <titulo>Corrección de errores del Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.</titulo>
+    <diario codigo="BOE">Boletín Oficial del Estado</diario>
+    <fecha_publicacion>20130129</fecha_publicacion>
+    <diario_numero>25</diario_numero>
+    <seccion>1</seccion>
+    <subseccion/>
+    <pagina_inicial>6523</pagina_inicial>
+    <pagina_final>6524</pagina_final>
+    <suplemento_pagina_inicial/>
+    <suplemento_pagina_final/>
+    <url_pdf>https://www.boe.es/boe/dias/2013/01/29/pdfs/BOE-A-2013-832.pdf</url_pdf>
+    <url_epub>
+      <url_epub>https://www.boe.es/diario_boe/epub.php?id=BOE-A-2013-832</url_epub>
+    </url_epub>
+    <url_pdf_catalan>/boe_catalan/dias/2013/01/29/pdfs/BOE-A-2013-832-C.pdf</url_pdf_catalan>
+    <url_pdf_euskera>/boe_euskera/dias/2013/01/29/pdfs/BOE-A-2013-832-E.pdf</url_pdf_euskera>
+    <url_pdf_gallego>/boe_gallego/dias/2013/01/29/pdfs/BOE-A-2013-832-G.pdf</url_pdf_gallego>
+    <url_pdf_valenciano>/boe_valenciano/dias/2013/01/29/pdfs/BOE-A-2013-832-V.pdf</url_pdf_valenciano>
+    <estatus_legislativo>L</estatus_legislativo>
+    <fecha_vigencia/>
+    <estatus_derogacion>N</estatus_derogacion>
+    <fecha_derogacion/>
+    <judicialmente_anulada>N</judicialmente_anulada>
+    <fecha_anulacion/>
+    <vigencia_agotada>N</vigencia_agotada>
+    <estado_consolidacion codigo="0"/>
+    <letra_imagen>A</letra_imagen>
+    <suplemento_letra_imagen/>
+    <url_eli>https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129</url_eli>
+  </metadatos>
+  <metadata-eli>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:eli="http://data.europa.eu/eli/ontology#">
+      <eli:LegalResource rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129">
+        <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+        <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/rdl"/>
+        <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2013-832</eli:id_local>
+        <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-12-28</eli:date_document>
+        <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29</eli:number>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/619"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/1754"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/3158"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/3188"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/3889"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/4555"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/5541"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/5665"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/5724"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/6499"/>
+        <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/6659"/>
+        <eli:subtype_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/corrigendum"/>
+        <eli:has_member>
+          <eli:LegalResource rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof">
+            <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+            <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/rdl"/>
+            <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2013-832</eli:id_local>
+            <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-12-28</eli:date_document>
+            <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29</eli:number>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/619"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/1754"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/3158"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/3188"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/3889"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/4555"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/5541"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/5665"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/5724"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/6499"/>
+            <eli:is_about rdf:resource="https://www.boe.es/legislacion/eli/materias/6659"/>
+            <eli:subtype_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/corrigendum"/>
+            <eli:version rdf:resource="http://www.elidata.es/mdr/authority/version/dof"/>
+            <eli:corrects rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/dof"/>
+            <eli:is_member_of rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129"/>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/spa">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/spa"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corrección de errores del Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-01-29</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/spa/epub">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/epub+zip"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/spa/html">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/text/html"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/spa/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/spa/xml">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/xml"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/cat">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/cat"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Correcció d'errors del Reial decret llei 29/2012, de 28 de desembre, de millora de gestió i protecció social en el Sistema especial per a empleats de la llar i altres mesures de caràcter econòmic i social.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-01-29</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/cat/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/cat"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/eus">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/eus"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hutsen zuzenketa, honako errege lege-dekretu honena: 29/2012 Errege Lege Dekretua, abenduaren 28koa, Etxeko Langileen Sistema Berezian kudeaketa eta babes soziala hobetzekoa eta izaera ekonomiko eta sozialeko beste neurri batzuk hartzekoa.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-01-29</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/eus/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/eus"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/glg">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/glg"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corrección de erros do Real decreto lei 29/2012, do 28 de decembro, de mellora de xestión e protección social no sistema especial para empregados de fogar e outras medidas de carácter económico e social.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-01-29</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/glg/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/glg"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/vci">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/vci"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Correcció d'errors del Reial Decret Llei 29/2012, de 28 de desembre, de millora de gestió i protecció social en el Sistema Especial per a Empleats de Llar i altres mesures de caràcter econòmic i social.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-01-29</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/vci/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rdl/2012/12/28/29/corrigendum/20130129/dof/vci"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+          </eli:LegalResource>
+        </eli:has_member>
+      </eli:LegalResource>
+    </rdf:RDF>
+  </metadata-eli>
+  <analisis>
+    <materias>
+      <materia codigo="619" orden="">Carburantes y combustibles</materia>
+      <materia codigo="1754" orden="">Cotización a la Seguridad Social</materia>
+      <materia codigo="3158" orden="">Empleados de Hogar</materia>
+      <materia codigo="3188" orden="">Energía eléctrica</materia>
+      <materia codigo="3889" orden="">Gas</materia>
+      <materia codigo="4555" orden="">Jubilación</materia>
+      <materia codigo="5541" orden="">Pensiones</materia>
+      <materia codigo="5665" orden="">Precios</materia>
+      <materia codigo="5724" orden="">Producción de energía</materia>
+      <materia codigo="6499" orden="">Seguridad Social</materia>
+      <materia codigo="6659" orden="">Sistemas especiales de la Seguridad Social</materia>
+    </materias>
+    <notas/>
+    <referencias>
+      <anteriores>
+        <anterior referencia="BOE-A-2012-15764" orden="2120">
+          <palabra codigo="201">CORRECCIÓN de errores</palabra>
+          <texto>en el Real Decreto-ley 29/2012, de 28 de diciembre</texto>
+        </anterior>
+      </anteriores>
+      <posteriores/>
+    </referencias>
+    <alertas>
+      <alerta codigo="104" orden="">Asuntos sociales</alerta>
+      <alerta codigo="115" orden="">Energía</alerta>
+      <alerta codigo="125" orden="">Seguridad Social</alerta>
+      <alerta codigo="131" orden="">Trabajo y empleo</alerta>
+    </alertas>
+  </analisis>
+  <texto>
+    <p class="parrafo">Advertidos errores en el Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social, publicado en el «Boletín Oficial del Estado» número 314, de 31 de diciembre de 2012, se procede a efectuar las oportunas rectificaciones:</p>
+    <p class="parrafo_2">En la página 89538, en la exposición de motivos, en el apartado III, segundo párrafo, cuarta y quinta líneas, donde dice: «… del texto refundido de la Ley General de la Seguridad Social, ...», debe decir: «del texto refundido de la Ley General de la Seguridad Social, aprobado por el Real Decreto Legislativo 1/1994, de 20 de junio, ...».</p>
+    <p class="parrafo">En la página 89538, en la exposición de motivos, en el apartado III, último párrafo, penúltima línea, donde dice: «… Ley 17/2012, de 27 de septiembre, de Presupuestos Generales del Estado para el año 2013…», debe decir: «… Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013…».</p>
+    <p class="parrafo">En la página 89543, en la exposición de motivos, en el apartado IX, quinto párrafo, segunda línea, donde dice: «… Ley 17/2012, de 27 de septiembre, de Presupuestos Generales del Estado para el año 2013…», debe decir: «… Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013…».</p>
+    <p class="parrafo">En la página 89543, en la exposición de motivos, en el apartado IX, quinto párrafo, séptima línea, donde dice: «… necesidad de regular también el presente…», debe decir: «… necesidad de regular también en el presente…».</p>
+    <p class="parrafo">En la página 89547, en el artículo 5, apartado 1, primer párrafo, primera línea, donde dice: «… Ley 27/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013…», debe decir: «… Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013…».</p>
+    <p class="parrafo">En la página 89548, en el artículo 5, apartado 1, último párrafo, primera línea, donde dice: «… Ley 27/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013…», debe decir: «… Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013…».</p>
+    <p class="parrafo">En la página 89548, en el artículo 5, apartado 1, último párrafo, séptima línea, donde dice: «… asignaciones por hijo a cargo minusválido mayor de 18 años…», debe decir: «… asignaciones por hijo a cargo mayor de 18 años…».</p>
+    <p class="parrafo">En la página 89549, en el artículo 5, apartado 4.c), segundo párrafo, tercera línea, donde dice: «… revalorizadas aquéllas…», debe decir «… incrementadas aquéllas…».</p>
+    <p class="parrafo">En la página 89549, en el artículo 5, apartado 4.c), segundo párrafo, quinta línea, donde dice «… se revalorizará en un importe igual a…», debe decir: «… se incrementará en un importe igual a…».</p>
+    <p class="parrafo">En la página 89549, en el artículo 5, apartado 4.d), segunda línea, donde dice: «…Mutualidad General de Funcionarios Civiles del Estado que, a 31 de diciembre de 2011, …», debe decir: «… Mutualidad General de Funcionarios Civiles del Estado que, a 31 de diciembre de 2012, ...».</p>
+    <p class="parrafo">En la página 89550, en el artículo 6, apartado 2, segunda línea, donde dice: «… percibiéndolos, no excedan de 7.063,07 euros al año.», debe decir: «… percibiéndolos, excedan de 7.063,07 euros al año.»</p>
+    <p class="parrafo">En la página 89550, en el artículo 6, apartado 4, segundo párrafo, segunda línea, donde dice: «… a que se refiere el apartado anterior…», debe decir: «… a que se refiere el párrafo anterior…».</p>
+    <p class="parrafo">En la página 89553, en la disposición adicional tercera, tercera línea, donde dice: «… Ley 27/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013…», debe decir: «… Ley 17/2012, de 27 de diciembre, de Presupuestos Generales del Estado para el año 2013…».</p>
+    <p class="parrafo">En la página 89554, en la disposición final primera, primer párrafo, inciso final, donde dice: «… queda redactado del siguiente modo:», debe decir: «… queda redactada del siguiente modo:».</p>
+  </texto>
+</documento>

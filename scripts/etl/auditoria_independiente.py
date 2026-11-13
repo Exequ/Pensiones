@@ -71,6 +71,33 @@ BOE_ORDENES = {
     'BOE-A-2025-3780': 'Orden PJC/178/2025, de 25 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2025.',
     'BOE-A-2026-7296': 'Orden PJC/297/2026, de 30 de marzo, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2026.',
 }
+# Correcciones de errores publicadas en el BOE de las normas que citan los datos de los motores (campo «posteriores»
+# del BOE, código 201), obtenidas el 2026-11-13 al revisar las 108 normas citadas.
+CORRECCIONES = {
+    'BOE-A-1969-575': ['BOE-A-1969-1003'],
+    'BOE-A-1999-24922': ['BOE-A-2000-1284'],
+    'BOE-A-2002-2195': ['BOE-A-2002-5470', 'BOE-A-2002-3601'],
+    'BOE-A-2004-21839': ['BOE-A-2005-1413'],
+    'BOE-A-2008-1466': ['BOE-A-2008-2334'],
+    'BOE-A-2009-1169': ['BOE-A-2009-2322'],
+    'BOE-A-2010-729': ['BOE-A-2010-1703'],
+    'BOE-A-2011-20638': ['BOE-A-2012-352'],
+    'BOE-A-2012-15651': ['BOE-A-2013-1461'],
+    'BOE-A-2012-15764': ['BOE-A-2013-832'],
+    'BOE-A-2013-835': ['BOE-A-2013-2343', 'BOE-A-2013-1274'],
+    'BOE-A-2014-1051': ['BOE-A-2014-1505'],
+    'BOE-A-2015-11724': ['BOE-A-2016-1320'],
+    'BOE-A-2015-847': ['BOE-A-2015-3507'],
+    'BOE-A-2016-12605': ['BOE-A-2017-2462', 'BOE-A-2017-1573'],
+    'BOE-A-2017-15848': ['BOE-A-2018-1276'],
+    'BOE-A-2018-17992': ['BOE-A-2019-647'],
+    'BOE-A-2019-1366': ['BOE-A-2019-1932'],
+    'BOE-A-2020-17339': ['BOE-A-2021-6240'],
+    'BOE-A-2022-1189': ['BOE-A-2022-2981'],
+    'BOE-A-2023-8121': ['BOE-A-2023-8706'],
+    'BOE-A-2024-6218': ['BOE-A-2024-6627'],
+    'BOE-A-2025-3780': ['BOE-A-2025-7292'],
+}
 EXTERNAS = {
     'eurostat-earn_mw_cur-ES.json': (
         'https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_mw_cur?format=JSON&geo=ES&currency=EUR&lang=EN',
@@ -95,7 +122,7 @@ def descarga(nombre, url):
     if not os.path.exists(ruta):
         if LOCAL:
             raise SystemExit(f'Falta {ruta} (MODO=local)')
-        os.makedirs(RAW, exist_ok=True)
+        os.makedirs(os.path.dirname(ruta), exist_ok=True)
         subprocess.run(['curl', '-sSL', '-m', '60', '-o', ruta, '--fail', url], check=True)
     origen = f'{RAW}/origen.json'
     o = json.load(open(origen, encoding='utf-8')) if os.path.exists(origen) else {}
@@ -991,6 +1018,83 @@ def audita_varios():
 
 
 # --------------------------------------------------------------------------------------------
+# I. Correcciones de errores del BOE de las normas citadas
+# --------------------------------------------------------------------------------------------
+def audita_correcciones():
+    textos = {}
+    for corr in sorted({c for v in CORRECCIONES.values() for c in v}):
+        t = open(f'{RAW}/correcciones/{corr}.xml', encoding='utf-8', errors='replace').read()
+        textos[corr] = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', t)))
+    valores = set()
+    for f in sorted(os.listdir(f'{REPO}/data/parametros')):
+        if not f.endswith('.json'):
+            continue
+        for x in json.load(open(f'{REPO}/data/parametros/{f}', encoding='utf-8'))['data']:
+            if isinstance(x['value'], (int, float)):
+                valores.add(round(float(x['value']), 2))
+    revisadas = {
+        ('BOE-A-2012-352', '7.658,00'): 'es el valor correcto de otra fila del mismo cuadro (jubilación de titular menor de 65 años, cónyuge no a cargo, 2012)',
+        ('BOE-A-2013-832', '7.063,07'): 'la corrección cambia el texto («no excedan» por «excedan»), no la cifra del límite de ingresos de 2013',
+        ('BOE-A-2014-1505', '753,00'): 'la errata es del grupo de cotización 3; /data usa los grupos 4 a 7 (753,00 es correcto)',
+    }
+    difs, n, aclaradas = [], 0, []
+    for corr, s in textos.items():
+        for m in re.finditer(r'donde dice:? ?«[^»]*?(\d{1,3}(?:\.\d{3})*,\d{2})[^»]*»', s):
+            n += 1
+            if num(m.group(1)) in valores:
+                if (corr, m.group(1)) in revisadas:
+                    aclaradas.append(f'{corr} «{m.group(1)}»: {revisadas[(corr, m.group(1))]}')
+                else:
+                    difs.append({'id': corr, 'valor': m.group(1), 'segundaFuente': 'cifra corregida como errónea y presente en /data'})
+    # Cuadros que las correcciones sustituyen: se comprueba que /data coincide con el cuadro corregido
+    bm, bx = datos('base-minima-rg'), datos('base-maxima-rg')
+    for anio, corr in ((2019, 'BOE-A-2019-1932'), (2023, 'BOE-A-2023-8706'), (2024, 'BOE-A-2024-6627')):
+        m = re.search(r'7 Auxiliares [Aa]dministrativos\.? ([\d.]+,\d\d) ([\d.]+,\d\d)', textos[corr])
+        n += 2
+        if abs(bm[str(anio)]['value'] - num(m.group(1))) > 0.005:
+            difs.append({'id': f'base-minima-rg {anio}', 'valor': bm[str(anio)]['value'], 'segundaFuente': num(m.group(1))})
+        if abs(bx[str(anio)]['value'] - num(m.group(2))) > 0.005:
+            difs.append({'id': f'base-maxima-rg {anio}', 'valor': bx[str(anio)]['value'], 'segundaFuente': num(m.group(2))})
+    of = datos('pension-minima-orfandad-familiares')
+    s = textos['BOE-A-2017-1573']
+    for id_, pat in (
+        ('2017-orf-unico', r'Orfandad Por beneficiario ([\d.]+,\d\d) Por beneficiario con discapacidad'),
+        ('2017-orf-discapacidad65-unico', r'menor de 18 años con una discapacidad en grado igual o superior al 65 por 100 ([\d.]+,\d\d) En la orfandad absoluta'),
+        ('2017-fam-unico', r'En favor de familiares Por beneficiario ([\d.]+,\d\d) Si no existe'),
+        ('2017-fam1-65-unico', r'Un solo beneficiario con sesenta y cinco años ([\d.]+,\d\d)'),
+        ('2017-fam1-menor65-unico', r'Un solo beneficiario menor de sesenta y cinco años ([\d.]+,\d\d)'),
+    ):
+        # el cuadro corregido es el segundo bloque del texto (tras «debe ser sustituida por la siguiente»)
+        corregido = s[s.index('debe ser sustituida por la siguiente') :]
+        m = re.search(pat, corregido)
+        n += 1
+        if not m or abs(of[id_]['value'] - num(m.group(1))) > 0.005:
+            difs.append({'id': id_, 'valor': of[id_]['value'], 'segundaFuente': m.group(1) if m else None})
+    mx = datos('pension-maxima')['2005']['value'] * 14
+    n += 1
+    if '30.227,68' not in textos['BOE-A-2005-1413'] or abs(mx - 30227.68) > 0.005:
+        difs.append({'id': 'pension-maxima 2005', 'valor': mx, 'segundaFuente': 30227.68})
+    n += 2
+    for id_, f in (('2012-ip-gran-invalidez-conyuge-no-cargo', 'pension-minima-incapacidad'), ('2012-jub65-gran-invalidez-conyuge-no-cargo', 'pension-minima-jubilacion')):
+        if abs(datos(f)[id_]['value'] - 12327.0) > 0.005:
+            difs.append({'id': id_, 'valor': datos(f)[id_]['value'], 'segundaFuente': 12327.0})
+    n_corr = len(textos)
+    registra(
+        'correcciones de errores del BOE de las normas citadas (todas las series)',
+        'todos los ficheros de data/parametros que leen los motores',
+        '1969-2025',
+        [{'title': f'BOE: {n_corr} correcciones de errores de las normas citadas (campo «posteriores» de cada norma)', 'url': 'https://www.boe.es/diario_boe/xml.php?id=BOE-A-2012-352', 'fetchedAt': HOY}],
+        clasifica(n, difs) if not (aclaradas and not difs) else 'coincide con salvedades',
+        n,
+        f'Se revisaron las 108 normas del BOE que citan los datos de los motores: {n_corr} tienen correcciones de errores publicadas (los textos están en data-raw/auditoria/correcciones/). '
+        'Solo una cambia cifras de /data (BOE-A-2012-352, gran invalidez de 2012: corregida en esta fase, ver «Hallazgos»). Las demás son de redacción o de cifras ajenas a /data; '
+        'las que sustituyen cuadros (bases de 2019, 2023 y 2024, orfandad y favor de familiares de 2017, pensión máxima de 2005) coinciden con /data. '
+        'Cifras de «donde dice» que aparecen en /data y se han revisado a mano (no son errores de /data): ' + '; '.join(aclaradas) + '. Ninguna otra cifra errónea corregida figura en /data.',
+        difs,
+    )
+
+
+# --------------------------------------------------------------------------------------------
 # Escritura
 # --------------------------------------------------------------------------------------------
 def principal():
@@ -998,6 +1102,8 @@ def principal():
         descarga(nombre, url)
     for doc in BOE_ORDENES:
         descarga(f'{doc}.xml', f'https://www.boe.es/diario_boe/xml.php?id={doc}')
+    for corr in sorted({c for v in CORRECCIONES.values() for c in v}):
+        descarga(f'correcciones/{corr}.xml', f'https://www.boe.es/diario_boe/xml.php?id={corr}')
     audita_bel()
     audita_ss_2026()
     audita_ss_otros()
@@ -1008,6 +1114,7 @@ def principal():
     audita_pnc()
     audita_reglas_ss()
     audita_varios()
+    audita_correcciones()
     return REGISTROS
 
 
