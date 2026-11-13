@@ -10,7 +10,14 @@ import { parametrosIncapacidadDelRepositorio } from './parametros-datos.ts';
 import { calcularIncapacidadPermanente } from './repositorio.ts';
 import type { Carrera, GradoIncapacidad, OpcionesIncapacidad, OrigenIncapacidad } from './tipos.ts';
 
-const ESC: OpcionesIncapacidad = { escenario: { ipc: 0.02 }, huecoBaseMinima: 'anterior' };
+// Fase 2-E: el valor por defecto de las lagunas del accidente no laboral pasó a `integrar`. Con
+// bases inferiores a la mínima (nivel 900) integrar sube la pensión de la carrera más corta, así
+// que la propiedad de monotonía se comprueba con la lectura antigua; el valor nuevo tiene su test.
+const ESC: OpcionesIncapacidad = {
+  escenario: { ipc: 0.02 },
+  huecoBaseMinima: 'anterior',
+  lecturasIncapacidad: { lagunasAccidenteNoLaboral: 'sin-integrar' },
+};
 const P = parametrosIncapacidadDelRepositorio();
 const ctx = crearContexto(P, ESC);
 

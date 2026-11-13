@@ -292,18 +292,18 @@ Verificación del motor (`src/engine/jubilacion/`, descrito en `docs/MOTOR_JUBIL
 
 Cada lectura abierta es una opción del motor (por defecto, la que reflejan los ficheros de `/data`). Para cada una, un caso típico (importes en euros nominales; base reguladora o pensión mensual por paga según el caso; escenario de IPC del 2 %; opción de 25 años apagada salvo en el caso (c); generado con `npx tsx scripts/lecturas-abiertas.ts`):
 
-| Lectura                                  | Caso                                 | Alternativa                    | Por defecto | Alternativa (€) | Variación |
-| ---------------------------------------- | ------------------------------------ | ------------------------------ | ----------: | --------------: | --------: |
-| (a) DT 38.ª, base máxima                 | topado por la base máxima, 2040      | «sobre la cifra inicial»       |     5627,47 |         5601,00 |   -0,47 % |
-| (a) DT 39.ª, pensión máxima              | topado, 2040                         | «incremento creciente»         |     4503,41 |         5145,23 |   14,25 % |
-| (b) lagunas, base mínima                 | 40 meses de laguna finales, 2040     | base mínima del hecho causante |     2351,23 |         2353,27 |    0,09 % |
-| (c) opción de 25 años el 31/12/2040      | salarios con +2 % real, 31/12/2040   | excluida                       |     4033,62 |         3967,71 |   -1,63 % |
-| (d) lagunas anteriores a la primera alta | 15 años cotizados, 2030              | ignorar                        |     1729,67 |         1475,58 |  -14,69 % |
-| (d) IPC mensual                          | 31 años a 2.000 €, 2026              | escalón anual                  |     2185,32 |         2166,53 |   -0,86 % |
-| (d) IPC mensual interpolado              | 31 años a 2.000 €, 2026              | medias anuales interpoladas    |     2185,32 |         2187,29 |    0,09 % |
-| (d) suelo del factor de actualización    | 31 años a 2.000 €, noviembre de 2026 | suelo de uno                   |     2177,03 |         2177,12 |    0,00 % |
-| (d) fracción de la demora                | 1 año y 9 meses de demora            | desde el primer año            |     2983,16 |         3040,52 |    1,92 % |
-| (d) pensión máxima desde 2051            | topado, 2055                         | incremento anual literal       |     6279,06 |         7512,96 |   19,65 % |
+| Lectura                                  | Caso                                 | Alternativa                                             | Por defecto | Alternativa (€) | Variación |
+| ---------------------------------------- | ------------------------------------ | ------------------------------------------------------- | ----------: | --------------: | --------: |
+| (a) DT 38.ª, base máxima                 | topado por la base máxima, 2040      | «sobre la cifra inicial»                                |     5627,47 |         5601,00 |   -0,47 % |
+| (a) DT 39.ª, pensión máxima              | topado, 2040                         | «incremento creciente»                                  |     4503,41 |         5145,23 |   14,25 % |
+| (b) lagunas, base mínima                 | 40 meses de laguna finales, 2040     | base mínima del hecho causante                          |     2351,23 |         2353,27 |    0,09 % |
+| (c) opción de 25 años el 31/12/2040      | salarios con +2 % real, 31/12/2040   | excluida                                                |     4033,62 |         3967,71 |   -1,63 % |
+| (d) lagunas anteriores a la primera alta | 15 años cotizados, 2030              | ignorar                                                 |     1729,67 |         1475,58 |  -14,69 % |
+| (d) IPC mensual                          | 31 años a 2.000 €, 2026              | escalón anual                                           |     2185,32 |         2166,53 |   -0,86 % |
+| (d) IPC mensual interpolado              | 31 años a 2.000 €, 2026              | medias anuales interpoladas                             |     2185,32 |         2187,29 |    0,09 % |
+| (d) suelo del factor de actualización    | 31 años a 2.000 €, noviembre de 2026 | sin suelo (por defecto desde la Fase 2-E: suelo de uno) |     2177,12 |         2177,03 |   -0,00 % |
+| (d) fracción de la demora                | 1 año y 9 meses de demora            | desde el primer año                                     |     2983,16 |         3040,52 |    1,92 % |
+| (d) pensión máxima desde 2051            | topado, 2055                         | incremento anual literal                                |     6279,06 |         7512,96 |   19,65 % |
 
 Lectura de la tabla:
 
@@ -340,15 +340,15 @@ Rejilla de 7 años (2022-2040, IPC del 2 % desde el último dato) × 5 edades ×
 
 Generado con `npx tsx scripts/lecturas-abiertas-incapacidad.ts` (sin complemento a mínimos, para ver el efecto sobre la pensión contributiva; IPC del 2 %):
 
-| Lectura                                              | Caso                                      | Alternativa                    | Magnitud         | Por defecto | Alternativa | Variación |
-| ---------------------------------------------------- | ----------------------------------------- | ------------------------------ | ---------------- | ----------: | ----------: | --------: |
-| (a) edad de la ficción (art. 197.1.b)                | 58 años, 191 meses cotizados, 2026        | edad general sin carrera larga | pensión €/mes    |     1355,77 |     1355,77 |    0,00 % |
-| (b) años añadidos por meses o años completos         | el mismo caso                             | años completos                 | pensión €/mes    |     1355,77 |     1337,94 |   -1,31 % |
-| (c) redondeo de la edad a medios años (RD 1799/1985) | 45 años y 5 meses, 2026                   | medio año                      | meses exigidos   |       76,00 |       75,00 |   -1,32 % |
-| (c) ídem, efecto en la base del periodo corto        | bases crecientes (100 € al año)           | medio año                      | pensión €/mes    |     1518,48 |     1519,18 |    0,05 % |
-| (d) divisor del periodo corto (art. 197.2)           | 42 años, 2026                             | meses × 14/12                  | pensión €/mes    |     1802,96 |     1802,86 |   -0,01 % |
-| (e) meses sin cotizar en el accidente no laboral     | 24 meses elegidos con 6 sin cotizar, 2026 | integrarlos con la base mínima | pensión €/mes    |      530,36 |      693,14 |   30,69 % |
-| (f) días cotizados de la parcial                     | 59 meses cotizados                        | treinta días por mes           | días acreditados |     1796,00 |     1770,00 |   -1,45 % |
+| Lectura                                              | Caso                                      | Alternativa                        | Magnitud         | Por defecto | Alternativa | Variación |
+| ---------------------------------------------------- | ----------------------------------------- | ---------------------------------- | ---------------- | ----------: | ----------: | --------: |
+| (a) edad de la ficción (art. 197.1.b)                | 58 años, 191 meses cotizados, 2026        | edad general sin carrera larga     | pensión €/mes    |     1355,77 |     1355,77 |    0,00 % |
+| (b) años añadidos por meses o años completos         | el mismo caso                             | años completos                     | pensión €/mes    |     1355,77 |     1337,94 |   -1,31 % |
+| (c) redondeo de la edad a medios años (RD 1799/1985) | 45 años y 5 meses, 2026                   | medio año                          | meses exigidos   |       76,00 |       75,00 |   -1,32 % |
+| (c) ídem, efecto en la base del periodo corto        | bases crecientes (100 € al año)           | medio año                          | pensión €/mes    |     1518,48 |     1519,18 |    0,05 % |
+| (d) divisor del periodo corto (art. 197.2)           | 42 años, 2026                             | meses × 14/12                      | pensión €/mes    |     1802,96 |     1802,86 |   -0,01 % |
+| (e) meses sin cotizar en el accidente no laboral     | 24 meses elegidos con 6 sin cotizar, 2026 | no integrarlos (cuentan como cero) | pensión €/mes    |      693,14 |      530,36 |  -23,49 % |
+| (f) días cotizados de la parcial                     | 59 meses cotizados                        | treinta días por mes               | días acreditados |     1796,00 |     1770,00 |   -1,45 % |
 
 Lectura de la tabla:
 
@@ -356,7 +356,7 @@ Lectura de la tabla:
 - **(b) Meses o años completos**: hasta 11 meses menos en la escala (−1,3 % en el caso típico; nada si ya se llega al 100 %).
 - **(c) Redondeo de la edad**: cambia el periodo exigido en un mes y, con él, el número de bases del periodo corto (efecto en la pensión del orden del 0,05 %); puede decidir el derecho en el límite.
 - **(d) Divisor del periodo corto**: 1,1666 frente a 14/12 = 1,16667: −0,01 %.
-- **(e) Meses sin cotizar en el accidente no laboral**: es la lectura de mayor efecto (+31 % con seis meses sin cotizar dentro del periodo elegido); con el periodo más favorable, el efecto desaparece si hay 24 meses seguidos cotizados en los siete años.
+- **(e) Meses sin cotizar en el accidente no laboral**: es la lectura de mayor efecto (desde la Fase 2-E el valor por defecto es integrarlos con la base mínima, provisional; la tabla muestra la alternativa de dejarlos a cero: −23 % con seis meses sin cotizar dentro del periodo elegido, que equivale a +31 % del valor por defecto frente al anterior); con el periodo más favorable, el efecto desaparece si hay 24 meses seguidos cotizados en los siete años.
 - **(f) Días de la parcial**: solo decide el derecho cerca de los 1.800 días.
 
 ### Limitaciones de la verificación
@@ -498,3 +498,40 @@ El único caso con desfase (`jub-ord-2026-bases-minimas-sin-minimos`, 8,48 €) 
 **Serie mensual del IPC**: 418 meses, de 1992-01 a 2026-10 (último publicado por el INE al descargar). Tramos: 2002-01 a 2026-10, serie IPC290751 (confianza alta); 2001, enlazado con las variaciones anuales de 2002 (confianza media); 1992-01 a 2000-12, serie IPC2401 de base 1992 enlazada con un coeficiente (confianza media). Comprobaciones por código (`scripts/ipc-mensual.test.ts`): los valores se recalculan desde los ficheros del INE de `data-raw/ine/ipc-mensual/` (con su SHA-256), las citas contienen la cifra de partida y las series de las bases 2001 y 2006 son proporcionales a la de base 2025 (no amplían la cobertura). El motor usa la serie mensual con la lectura `mensual-ine` (por defecto); después del último mes encadena con la tasa del escenario y antes de 1992-01 interpola las medias anuales con aviso.
 
 **Qué cambia el IPC mensual en el resto de casos de oro**: ningún caso de oro independiente del IMSERSO cambia (todas las pensiones no contributivas son importes fijos) y los casos del motor de jubilación, incapacidad y supervivencia siguen pasando sin modificar sus valores esperados salvo los que se indican en `docs/DISCREPANCIAS.md`.
+
+## Fase 2-E: decisiones actuariales, IPC frente a los informes y base máxima de 2018
+
+**Estado de las lecturas** (`docs/DECISIONES_ACTUARIALES.md`): 11 decididas (6 con confianza actuarial alta y 5 por evidencia con visto bueno de Sergio, sin cambio de valor), 7 provisionales (confianza baja o media) y 10 pendientes. Dos valores por defecto cambian, ambos provisionales; no cambia ninguna otra regla del motor ni la interfaz.
+
+**Efecto de los dos cambios de valor por defecto** (medido con el motor; escenario de IPC del 2 %; sin complemento a mínimos en los casos de incapacidad):
+
+| Lectura                                                               | Caso                                                                                                                       |    Antes |    Ahora | Variación |
+| --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------: | -------: | --------: |
+| `incapacidad.lagunasAccidenteNoLaboral` (`sin-integrar` → `integrar`) | accidente no laboral, incapacidad total, base 1.500 €, 6 meses sin cotizar dentro de los 24 elegidos, 2026 (pensión €/mes) |   530,36 |   693,14 |  +30,69 % |
+| ídem                                                                  | ídem con 3 meses sin cotizar                                                                                               |   618,75 |   700,14 |  +13,15 % |
+| ídem                                                                  | ídem con 12 meses sin cotizar                                                                                              |   353,57 |   679,14 |  +92,08 % |
+| ídem                                                                  | test de la regla: 18 meses de 2.000 € y 6 de laguna, base reguladora €/mes                                                 | 1.285,71 | 1.581,69 |  +23,02 % |
+| `jubilacion.actualizacionFactorMinimo` (`sin-suelo` → `suelo-1`)      | 31 años a 2.000 €, noviembre de 2026 (base reguladora €/mes)                                                               | 2.177,03 | 2.177,12 |  +0,004 % |
+
+En los casos de Sergio, pensión mensual del motor con cada lectura frente al autocálculo (euros):
+
+| Caso                                                                                    | Sin suelo | Con suelo de uno | Autocálculo |
+| --------------------------------------------------------------------------------------- | --------: | ---------------: | ----------: |
+| `jub-ord-2026-plana-40a`                                                                |  2.721,28 |         2.721,39 |    2.721,39 |
+| `jub-ord-2027-05-plana-40a`                                                             |  2.757,50 |         2.757,50 |    2.757,50 |
+| `jub-ord-2027-11-plana-40a`                                                             |  2.754,82 |         2.754,82 |    2.754,82 |
+| `jub-ord-2026-bases-crecientes`                                                         |  2.198,65 |         2.198,93 |    2.198,92 |
+| `jub-ord-2026-bases-maximas-tope` (pensión topada; base reguladora 3.769,03 → 3.769,47) |  3.359,60 |         3.359,60 |    3.359,60 |
+| `jub-ord-2026-bases-minimas-sin-minimos` (marca `diferenciaConocida`)                   |    897,71 |           897,83 |      889,35 |
+| `jub-ord-2026-carrera-20a`                                                              |  1.026,48 |         1.026,49 |    1.026,48 |
+| `jub-ord-2026-carrera-15a`                                                              |    592,98 |           592,99 |      592,99 |
+
+El efecto máximo del suelo es de 0,28 € al mes (0,013 %). Con el nuevo valor por defecto los cuatro casos que fijaban `suelo-1` (`jub-ord-2026-plana-40a`, `jub-ord-2026-bases-crecientes`, `jub-ord-2026-bases-minimas-sin-minimos`, `jub-ord-2026-carrera-15a`) ya no necesitan la clave y siguen coincidiendo (±0,01 €). `jub-ord-2026-carrera-20a` coincidía sin suelo (−0,003 €) y con suelo se desvía +0,013 €: fija `sin-suelo` en su configuración. Los casos de oro derivados de las Fases 2-A a 2-B-3 y de M5 no cambian de resultado; los tests cuyas expectativas dependían del valor antiguo fijan ahora la lectura antigua con un comentario y hay tests nuevos del valor por defecto (`docs/DISCREPANCIAS.md`, Fase 2-E).
+
+**IPC mensual frente a los informes del autocálculo** (cierra la pregunta de la Fase 2-D sobre confirmar el índice de 2001, con una salvedad): `src/engine/jubilacion/ipc-informes.test.ts` compara `ctx.ipc(referencia) / ctx.ipc(mes)` con el factor de actualización que muestran cuatro informes (informe del autocálculo de la Seguridad Social, 13/11/2026; 36 valores). Criterio: error relativo ≤ 1e-6 desde 2002-01 y ≤ 5e-4 en 2001 (tramo enlazado, confianza media). Comprobación hecha por el coordinador sobre los factores completos de los informes: desde 2002 la desviación máxima es 0,05 ppm; en 2001, hasta 0,038 % (agosto); efecto en la pensión: céntimos. Sobre los 36 valores del test las desviaciones máximas son 0,04 ppm y 0,038 %. No se cambia el enlace de 2001 ni la serie. Opción futura: sustituir los meses de 2001 por los índices implícitos de los informes (solo cubren 2001-06 a 2001-12). La salvedad: los informes de Sergio no son una fuente independiente de 2001 más allá de esos siete meses.
+
+**Base máxima de 2018**: verificada en el texto de la Ley 6/2018 (art. 130.Dos.1.b: 3.803,70 euros mensuales «a partir del día primero del mes siguiente al de la entrada en vigor»; publicada el 04/07/2018, en vigor el 05/07/2018, por tanto desde el 01/08/2018; confianza alta). No se incorpora a `/data` porque las series son anuales (valor vigente el 1 de enero; los cambios dentro del año constan en las notas) y el motor no admite vigencias dentro del año; hueco en `docs/PENDIENTE_DATOS.md`. Efecto medido si se aplicara 3.803,70 a todo 2018: la base reguladora de `jub-ord-2026-bases-maximas-tope` pasaría de 3.769,47 a 3.770,36 (informe: 3.770,35), la pensión topada no cambia y ningún otro caso cambia.
+
+**Caso `jub-ord-2026-bases-minimas-sin-minimos`** (marca `diferenciaConocida`, sin cambios en el caso): el informe muestra el periodo de octubre de 2001 a septiembre de 2026 (300 meses, opción de 25 años, base reguladora 889,35). Con los meses 2001-06 a 2001-09 a 1000 la regla general daría 897,83; a cero, 883,47 y la herramienta elegiría la de 25 años (ambas cifras comprobadas con el motor). Probable diferencia de entrada; pendiente de que Sergio repita el caso.
+
+**Textos incorporados** (`docs/PENDIENTE_DATOS.md`, Fase 2-E): arts. 17 y 18 de la Orden de 13/02/1967 (alta; el art. 17 coincide con el control de Sergio y no zanja `supervivencia.reduccionLimiteConjunto`), arts. 58 a 63 del Reglamento de accidentes del trabajo de 1956 (OCR, confianza media; cifras clave comprobadas en los dos ficheros) y la Ley 6/2018. Pruebas: `scripts/textos-fase-2e.test.ts`.

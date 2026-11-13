@@ -1,18 +1,20 @@
 {
-  "descripcion": "Valor por defecto de cada lectura abierta del motor. «pendiente»: lo decide Sergio tras la revisión actuarial (docs/REVISION_PRIORIZADA.md); «decidida»: ya decidido y registrado en docs/DECISIONES_ACTUARIALES.md. Cambiar una decisión es cambiar `valor` (y `estado` y `fecha`) de una entrada; los motores y el registro de lecturas (src/engine/lecturas.ts) leen este fichero.",
+  "descripcion": "Valor por defecto de cada lectura abierta del motor. «pendiente»: sin decidir (docs/REVISION_PRIORIZADA.md); «provisional»: decidida con confianza actuarial baja o media, abierta a revisión; «decidida»: decisión firme. El motivo de las no pendientes se muestra en la interfaz. Todo se registra en docs/DECISIONES_ACTUARIALES.md. Cambiar una decisión es cambiar `valor` (y `estado`, `fecha` y `motivo`) de una entrada; los motores y el registro de lecturas (src/engine/lecturas.ts) leen este fichero.",
   "lecturas": [
     {
       "id": "jubilacion.baseMaxima",
       "valor": "compuesto",
-      "estado": "pendiente",
+      "estado": "decidida",
       "fecha": "2026-11-13",
+      "motivo": "Decidida por evidencia, con el visto bueno de Sergio: las bases máximas oficiales de 2025 y 2026 coinciden con la lectura compuesta (docs/REVISION_PRIORIZADA.md, «Cerradas por evidencia»).",
       "pregunta": "param-base-maxima-incremento-futuro"
     },
     {
       "id": "jubilacion.pensionMaxima",
       "valor": "compuesto",
-      "estado": "pendiente",
+      "estado": "decidida",
       "fecha": "2026-11-13",
+      "motivo": "Decidida por evidencia, con el visto bueno de Sergio: la pensión máxima oficial de 2026 coincide con el incremento constante (docs/REVISION_PRIORIZADA.md, «Cerradas por evidencia»).",
       "pregunta": "param-pension-maxima-incremento-futuro"
     },
     {
@@ -32,8 +34,9 @@
     {
       "id": "jubilacion.lagunasAnterioresAlPrimerAlta",
       "valor": "integrar",
-      "estado": "pendiente",
+      "estado": "provisional",
       "fecha": "2026-11-13",
+      "motivo": "Confianza actuarial media. El art. 209.1.b integra los «meses sin obligación de cotizar» sin excluir los anteriores a la primera alta.",
       "pregunta": "param-lagunas-integracion"
     },
     {
@@ -45,9 +48,10 @@
     },
     {
       "id": "jubilacion.actualizacionFactorMinimo",
-      "valor": "sin-suelo",
-      "estado": "pendiente",
+      "valor": "suelo-1",
+      "estado": "provisional",
       "fecha": "2026-11-13",
+      "motivo": "Confianza actuarial media. Cambia el valor por defecto (antes sin-suelo): criterio de gestión observado en los nueve informes del autocálculo; el art. 209.1.d no lo dice; efecto de céntimos.",
       "pregunta": "param-actualizacion-bases"
     },
     {
@@ -60,15 +64,17 @@
     {
       "id": "jubilacion.maximaDesde2051",
       "valor": "incremento-acumulado",
-      "estado": "pendiente",
+      "estado": "decidida",
       "fecha": "2026-11-13",
+      "motivo": "Confianza actuarial alta. El último párrafo habla de «incremento total de 30 puntos»; la lectura anual literal sumaría más del doble.",
       "pregunta": "param-pension-maxima-incremento-2051-2065"
     },
     {
       "id": "incapacidad.edadFiccion",
       "valor": "carrera-proyectada",
-      "estado": "pendiente",
+      "estado": "decidida",
       "fecha": "2026-11-13",
+      "motivo": "Decidida por evidencia, con el visto bueno de Sergio: las dos lecturas dan el mismo resultado en todo el dominio soportado (docs/REVISION_PRIORIZADA.md, «Cerradas por evidencia»).",
       "pregunta": "param-incapacidad-permanente-reglas"
     },
     {
@@ -87,9 +93,10 @@
     },
     {
       "id": "incapacidad.lagunasAccidenteNoLaboral",
-      "valor": "sin-integrar",
-      "estado": "pendiente",
+      "valor": "integrar",
+      "estado": "provisional",
       "fecha": "2026-11-13",
+      "motivo": "Confianza actuarial media. Cambia el valor por defecto (antes sin-integrar): el art. 197.4 habla del «período que haya de tomarse» y el art. 7.1 del Decreto no menciona lagunas.",
       "pregunta": "param-incapacidad-permanente-reglas"
     },
     {
@@ -123,78 +130,89 @@
     {
       "id": "supervivencia.carenciaOrfandad",
       "valor": "sin-carencia",
-      "estado": "pendiente",
+      "estado": "decidida",
       "fecha": "2026-11-13",
+      "motivo": "Confianza actuarial alta. El art. 224.1 TRLGSS pide alta, situación asimilada o pensionista; solo importa el art. 219.1, párr. 2.º, no los 500 días del RD 1647/1997.",
       "pregunta": "param-supervivencia-reglas"
     },
     {
       "id": "supervivencia.carenciaFamiliaresAccidenteNoLaboral",
       "valor": "exigir",
-      "estado": "pendiente",
+      "estado": "provisional",
       "fecha": "2026-11-13",
+      "motivo": "Confianza actuarial baja. El art. 226.1 remite solo al art. 219.1, párr. 2.º; la Orden de 1967 solo exime el accidente de trabajo y la enfermedad profesional.",
       "pregunta": "param-supervivencia-reglas"
     },
     {
       "id": "supervivencia.reduccionViudedad70",
       "valor": "no-inferior-52",
-      "estado": "pendiente",
+      "estado": "decidida",
       "fecha": "2026-11-13",
+      "motivo": "Confianza actuarial alta. Sin suelo, quien cumple los requisitos del 70 % cobraría menos que quien no los cumple (lectura sistemática).",
       "pregunta": "param-supervivencia-reglas-cuantia"
     },
     {
       "id": "supervivencia.comparacionCompensatoria",
       "valor": "anual",
-      "estado": "pendiente",
+      "estado": "provisional",
       "fecha": "2026-11-13",
+      "motivo": "Confianza actuarial baja. La viudedad de catorce pagas y la compensatoria de doce se comparan por lo cobrado al año; sin criterio publicado del INSS.",
       "pregunta": "param-supervivencia-reglas-cuantia"
     },
     {
       "id": "supervivencia.incrementoFamiliares",
       "valor": "porcentaje-viudedad",
-      "estado": "pendiente",
+      "estado": "decidida",
       "fecha": "2026-11-13",
+      "motivo": "Confianza actuarial alta. El art. 23.2 de la Orden de 1967 remite al art. 17.2; art. 233.1 TRLGSS.",
       "pregunta": "param-supervivencia-reglas-cuantia"
     },
     {
       "id": "supervivencia.reduccionLimiteConjunto",
       "valor": "orfandad",
-      "estado": "pendiente",
+      "estado": "provisional",
       "fecha": "2026-11-13",
+      "motivo": "Confianza actuarial baja. El art. 18 de la Orden de 1967 no dice qué se reduce; el art. 17 tampoco (texto incorporado en la Fase 2-E); apoyo solo en el art. 229.3.",
       "pregunta": "param-supervivencia-reglas-limites"
     },
     {
       "id": "no-contributivas.baseRentasCompatibles",
       "valor": "cuantia-integra",
-      "estado": "pendiente",
+      "estado": "decidida",
       "fecha": "2026-11-13",
+      "motivo": "Decidida por evidencia, con el visto bueno de Sergio: la guía del IMSERSO de 2026 aplica el porcentaje sobre el importe anual de la pensión (docs/REVISION_PRIORIZADA.md, «Cerradas por evidencia»).",
       "pregunta": "param-pnc-reglas"
     },
     {
       "id": "no-contributivas.limiteTrabajo",
       "valor": "cuantia-integra",
-      "estado": "pendiente",
+      "estado": "decidida",
       "fecha": "2026-11-13",
+      "motivo": "Decidida por evidencia, con el visto bueno de Sergio: la guía del IMSERSO suma el IPREM y la cuantía íntegra y cifra el límite (docs/REVISION_PRIORIZADA.md, «Cerradas por evidencia»).",
       "pregunta": "param-pnc-reglas"
     },
     {
       "id": "no-contributivas.rentasConTrabajoEnCuatroAnios",
       "valor": "sustituye-364-2",
-      "estado": "pendiente",
+      "estado": "decidida",
       "fecha": "2026-11-13",
+      "motivo": "Confianza actuarial alta. El propio art. 364.2 acaba con «salvo lo dispuesto en el artículo 366».",
       "pregunta": "param-pnc-reglas"
     },
     {
       "id": "no-contributivas.limiteConTerceraPersona",
       "valor": "con-complemento",
-      "estado": "pendiente",
+      "estado": "provisional",
       "fecha": "2026-11-13",
+      "motivo": "Confianza actuarial baja. El texto del art. 363.1.d apunta a sin complemento; el valor se apoya solo en la guía del IMSERSO.",
       "pregunta": "param-pnc-reglas"
     },
     {
       "id": "mei.baseMEI",
       "valor": "base-cotizacion",
-      "estado": "pendiente",
+      "estado": "decidida",
       "fecha": "2026-11-13",
+      "motivo": "Confianza actuarial alta. Art. 127 bis TRLGSS: lo que supera la base máxima tributa por la cuota de solidaridad (art. 19 bis).",
       "pregunta": "param-mei-reglas"
     }
   ]

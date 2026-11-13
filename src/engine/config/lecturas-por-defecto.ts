@@ -12,13 +12,22 @@
 import { z } from 'zod';
 import cruda from './lecturas-por-defecto.json' with { type: 'json' };
 
-const Entrada = z.strictObject({
-  id: z.string().regex(/^[a-z]+(?:-[a-z]+)*\.[A-Za-z0-9]+$/),
-  valor: z.string().min(1),
-  estado: z.enum(['pendiente', 'decidida']),
-  fecha: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
-  pregunta: z.string().min(1),
-});
+export const ESTADOS_LECTURA = ['pendiente', 'provisional', 'decidida'] as const;
+
+const Entrada = z
+  .strictObject({
+    id: z.string().regex(/^[a-z]+(?:-[a-z]+)*\.[A-Za-z0-9]+$/),
+    valor: z.string().min(1),
+    estado: z.enum(ESTADOS_LECTURA),
+    fecha: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    /** Motivo corto (con la confianza actuarial, solo con palabras); obligatorio si no es «pendiente». */
+    motivo: z.string().min(1).optional(),
+    pregunta: z.string().min(1),
+  })
+  .refine((e) => e.estado === 'pendiente' || e.motivo !== undefined, {
+    message: 'Una lectura provisional o decidida necesita motivo',
+    path: ['motivo'],
+  });
 const Configuracion = z.strictObject({
   descripcion: z.string().min(1),
   lecturas: z.array(Entrada).min(1),

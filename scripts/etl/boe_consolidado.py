@@ -43,6 +43,8 @@ NORMAS = {
     'BOE-A-2018-10397': ('rd-900-2018.txt', 'Real Decreto 900/2018, de 20 de julio (porcentaje de la base reguladora de la pensión de viudedad de pensionistas con 65 o más años)'),
     'BOE-A-1997-24163': ('rd-1647-1997.txt', 'Real Decreto 1647/1997, de 31 de octubre (desarrollo de determinados aspectos de la Ley 24/1997 en materia de muerte y supervivencia)'),
     'BOE-A-2015-11724': ('trlgss-2015-versiones.txt', 'Texto refundido de la Ley General de la Seguridad Social (Real Decreto Legislativo 8/2015), con todas las versiones de cada precepto'),
+    # Fase 2-E (base máxima de 2018)
+    'BOE-A-2018-9268': ('ley-6-2018.txt', 'Ley 6/2018, de 3 de julio, de Presupuestos Generales del Estado para el año 2018'),
 }
 # SOLO=<id>,<id> limita la ejecución a esas normas (para no volver a descargar las de fases anteriores).
 SOLO = [x for x in os.environ.get('SOLO', '').split(',') if x]

@@ -231,7 +231,7 @@ export function medir(): { medidas: Medida[]; evidencias: Evidencia[] } {
   ];
   medidas.push({
     id: 'incapacidad.lagunasAccidenteNoLaboral',
-    alternativa: 'integrar',
+    alternativa: 'sin-integrar',
     casos: [
       ['6 meses sin cotizar dentro de los 24 elegidos', conLaguna('2024-12', '2025-07')],
       ['3 meses sin cotizar dentro de los 24 elegidos', conLaguna('2025-03', '2025-07')],
@@ -240,7 +240,7 @@ export function medir(): { medidas: Medida[]; evidencias: Evidencia[] } {
       descripcion: `accidente no laboral, incapacidad total, base 1.500 €, ${d as string}, 2026`,
       magnitud: 'pensión de incapacidad total €/mes (sin complementos a mínimos)',
       defecto: inc(car as Carrera, '2024-06', {}),
-      alternativa: inc(car as Carrera, '2024-06', { lagunasAccidenteNoLaboral: 'integrar' }),
+      alternativa: inc(car as Carrera, '2024-06', { lagunasAccidenteNoLaboral: 'sin-integrar' }),
     })),
   });
 

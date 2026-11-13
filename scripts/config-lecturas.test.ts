@@ -9,7 +9,7 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { LECTURAS_INCAPACIDAD_POR_DEFECTO } from '../src/engine/incapacidad/tipos.ts';
 import { LECTURAS_POR_DEFECTO } from '../src/engine/jubilacion/tipos.ts';
-import { LECTURAS_ABIERTAS, valoresPorDefecto } from '../src/engine/lecturas.ts';
+import { LECTURAS_ABIERTAS, lecturaPorId, valoresPorDefecto } from '../src/engine/lecturas.ts';
 import { LECTURAS_MEI_POR_DEFECTO } from '../src/engine/mei/tipos.ts';
 import { LECTURAS_PNC_POR_DEFECTO } from '../src/engine/no-contributivas/tipos.ts';
 import { LECTURAS_SUPERVIVENCIA_POR_DEFECTO } from '../src/engine/supervivencia/tipos.ts';
@@ -60,6 +60,35 @@ describe('configuración única de las lecturas abiertas', () => {
     );
     for (const e of CONFIG_LECTURAS)
       expect(preguntas.has(e.pregunta), `${e.id}: ${e.pregunta}`).toBe(true);
+  });
+
+  it('las lecturas no pendientes llevan motivo, expuesto por el registro; las pendientes, no', () => {
+    for (const l of LECTURAS_ABIERTAS) {
+      if (l.estado === 'pendiente') expect(l.motivo, l.id).toBeNull();
+      else expect(l.motivo, l.id).toMatch(/\S/);
+    }
+    const estados = LECTURAS_ABIERTAS.map((l) => l.estado);
+    expect(estados.filter((e) => e === 'decidida')).toHaveLength(11);
+    expect(estados.filter((e) => e === 'provisional')).toHaveLength(7);
+    expect(estados.filter((e) => e === 'pendiente')).toHaveLength(10);
+    expect(lecturaPorId('jubilacion.interpolacionIPC')?.estado).toBe('pendiente');
+  });
+
+  it('la confianza actuarial del motivo va solo con palabras, sin porcentajes', () => {
+    for (const e of CONFIG_LECTURAS) {
+      if (e.motivo === undefined) continue;
+      expect(e.motivo, e.id).not.toMatch(/confianza[^.]*\d/i);
+    }
+  });
+
+  it('los dos valores por defecto que cambian en la Fase 2-E son provisionales', () => {
+    for (const id of [
+      'incapacidad.lagunasAccidenteNoLaboral',
+      'jubilacion.actualizacionFactorMinimo',
+    ])
+      expect(lecturaPorId(id)?.estado, id).toBe('provisional');
+    expect(entradaDeLectura('incapacidad.lagunasAccidenteNoLaboral').valor).toBe('integrar');
+    expect(entradaDeLectura('jubilacion.actualizacionFactorMinimo').valor).toBe('suelo-1');
   });
 
   it('el registro de decisiones (docs/DECISIONES_ACTUARIALES.md) lista todas las lecturas y su estado', () => {
