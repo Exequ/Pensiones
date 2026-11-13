@@ -18,10 +18,7 @@ import type { LecturasAbiertas, PeriodoCarrera } from '../src/engine/jubilacion/
 import { cotizacionAdicionalMensual } from '../src/engine/mei/calculo.ts';
 import { construirParametrosMEI } from '../src/engine/mei/parametros.ts';
 import type { LecturasMEI } from '../src/engine/mei/tipos.ts';
-import {
-  calcularPNCInvalidezConParametros,
-  calcularPNCJubilacionConParametros,
-} from '../src/engine/no-contributivas/calculo.ts';
+import { calcularPNCInvalidezConParametros } from '../src/engine/no-contributivas/calculo.ts';
 import { construirParametrosPNC } from '../src/engine/no-contributivas/parametros.ts';
 import type {
   LecturasPNC,
@@ -182,7 +179,6 @@ function pnc(s: SolicitantePNC, o: OpcionesPNC, l: Partial<LecturasPNC>): number
   const r = calcularPNCInvalidezConParametros(pp, s, { ...o, lecturasPNC: l });
   return r.cumpleRequisitos ? r.pensionAnual : 0;
 }
-void calcularPNCJubilacionConParametros;
 
 // ---------------------------------------------------------------------------------------------
 export function medir(): { medidas: Medida[]; evidencias: Evidencia[] } {
@@ -525,15 +521,11 @@ export function medir(): { medidas: Medida[]; evidencias: Evidencia[] } {
   // ------------------------------------------------------------------------------------------
   const evidencias: Evidencia[] = [];
   const dato = (fichero: string, id: string): number =>
-    Number(
-      (
-        (
-          JSON.parse(
-            readFileSync(path.join(RAIZ, 'data/parametros', `${fichero}.json`), 'utf8'),
-          ) as { data: { id: string; value: number }[] }
-        ).data.find((x) => x.id === id) ?? { value: NaN }
-      ).value,
-    );
+    (
+      JSON.parse(readFileSync(path.join(RAIZ, 'data/parametros', `${fichero}.json`), 'utf8')) as {
+        data: { id: string; value: number }[];
+      }
+    ).data.find((x) => x.id === id)?.value ?? NaN;
   const bm = (a: number) => dato('base-maxima-rg', String(a));
   const rv = (a: number) => dato('revalorizacion-general', String(a));
   const pmx = (a: number) => dato('pension-maxima', String(a));
@@ -618,4 +610,3 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   }
   for (const e of r.evidencias) console.log(e.id, '·', e.texto);
 }
-void parametrosDesdeDisco;

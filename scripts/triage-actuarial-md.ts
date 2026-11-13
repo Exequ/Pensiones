@@ -329,6 +329,13 @@ const PREGUNTA: Record<string, Clasificacion> = {
     motivo: 'Reducción por el límite conjunto (−10,7 % a −34,2 %).',
   },
 };
+function clasificacionDe(id: string): Clasificacion {
+  const c = LECTURA[id];
+  if (c === undefined) throw new Error(`Lectura sin clasificar: ${id}`);
+  return c;
+}
+const grupoDe = (id: string): Grupo => clasificacionDe(id).grupo;
+
 const GRUPO_PREGUNTA_POR_DEFECTO: Clasificacion = {
   grupo: 'C',
   efecto: 'solo documental',
@@ -492,7 +499,7 @@ function ficha(
     );
     L.push(`- ${ALTERNATIVAS_TEXTO[l.id] ?? ''}`);
     L.push(
-      `- Qué cambia en el código: con la alternativa se cambia solo la lectura (\`motor.… opciones.lecturas.${l.opcion}\`, o en la configuración del motor \`lecturas['${l.id}']\`); la rama está en ${lineaDeCodigo(l.opcion)}. No hay más cambios.`,
+      `- Qué cambia en el código: una línea. Para adoptar la alternativa, en \`src/engine/config/lecturas-por-defecto.json\` se pone el \`valor\` de la entrada \`${l.id}\` en una de las alternativas (con \`estado\` «decidida» y la fecha) y se anota en \`docs/DECISIONES_ACTUARIALES.md\`. La rama del motor que cambia está en ${lineaDeCodigo(l.opcion)}; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con \`lecturas['${l.id}']\` en la configuración del motor.`,
     );
     L.push(
       '',
@@ -668,9 +675,9 @@ function principal(): void {
   );
   const orden = { A: 0, B: 1, C: 2, cerrada: 3 } as const;
   for (const l of [...LECTURAS_ABIERTAS].sort(
-    (x, y) => orden[LECTURA[x.id]!.grupo] - orden[LECTURA[y.id]!.grupo],
+    (x, y) => orden[grupoDe(x.id)] - orden[grupoDe(y.id)],
   )) {
-    const c = LECTURA[l.id]!;
+    const c = clasificacionDe(l.id);
     const m = medidas.find((x) => x.id === l.id);
     const efecto =
       c.efecto === 'ver ficha' && m

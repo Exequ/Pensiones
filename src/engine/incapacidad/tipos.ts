@@ -9,6 +9,7 @@ import type {
   Paso,
   Requisito,
 } from '../jubilacion/tipos.ts';
+import { porDefectoDelMotor } from '../config/lecturas-por-defecto.ts';
 
 export type { Carrera, Paso, Requisito };
 
@@ -42,14 +43,8 @@ export interface LecturasIncapacidad {
   readonly diasCotizadosParcial: 'naturales' | 'treinta-por-mes';
 }
 
-export const LECTURAS_INCAPACIDAD_POR_DEFECTO: LecturasIncapacidad = {
-  edadFiccion: 'carrera-proyectada',
-  computoFiccion: 'meses',
-  redondeoEdadCarencia: 'sin-redondeo',
-  divisorPeriodoCorto: 'coeficiente-rd-1799-1985',
-  lagunasAccidenteNoLaboral: 'sin-integrar',
-  diasCotizadosParcial: 'naturales',
-};
+export const LECTURAS_INCAPACIDAD_POR_DEFECTO: LecturasIncapacidad =
+  porDefectoDelMotor<LecturasIncapacidad>('incapacidad');
 
 /** Opciones comunes con la jubilación (escenario, lecturas de la Fase 2-A, mínimos, brecha…). */
 type OpcionesComunes = Pick<

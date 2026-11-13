@@ -4,6 +4,7 @@
  * indicado; tipos en porcentaje.
  */
 import type { OpcionesJubilacion, Paso } from '../jubilacion/tipos.ts';
+import { porDefectoDelMotor } from '../config/lecturas-por-defecto.ts';
 
 export type { Paso };
 
@@ -28,7 +29,7 @@ export interface LecturasMEI {
   readonly baseMEI: 'base-cotizacion' | 'retribucion-completa';
 }
 
-export const LECTURAS_MEI_POR_DEFECTO: LecturasMEI = { baseMEI: 'base-cotizacion' };
+export const LECTURAS_MEI_POR_DEFECTO: LecturasMEI = porDefectoDelMotor<LecturasMEI>('mei');
 
 export interface OpcionesMEI extends Pick<OpcionesJubilacion, 'escenario' | 'lecturas'> {
   readonly lecturasMEI?: Partial<LecturasMEI>;

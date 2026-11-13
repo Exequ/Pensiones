@@ -49,7 +49,7 @@ Pregunta: `param-supervivencia-reglas` (docs/REVISION_ACTUARIAL.md, punto 28).
 
 - Valor por defecto actual: `sin-carencia`. Alternativas: `rd-1647-1997`.
 - Por defecto («sin-carencia»): la orfandad con causante en alta no exige periodo previo (art. 224.1 TRLGSS). Alternativa («rd-1647-1997»): se exigen 500 días en los cinco años anteriores (art. 9.1 del RD 1647/1997, redacción de 2001).
-- Qué cambia en el código: con la alternativa se cambia solo la lectura (`motor.… opciones.lecturas.carenciaOrfandad`, o en la configuración del motor `lecturas['supervivencia.carenciaOrfandad']`); la rama está en `src/engine/supervivencia/calculo.ts:198`. No hay más cambios.
+- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `supervivencia.carenciaOrfandad` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/supervivencia/calculo.ts:198`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['supervivencia.carenciaOrfandad']` en la configuración del motor.
 
 | Caso                                               | Magnitud       | Por defecto | Alternativa | Variación |
 | -------------------------------------------------- | -------------- | ----------: | ----------: | --------: |
@@ -61,7 +61,7 @@ Pregunta: `param-supervivencia-reglas` (docs/REVISION_ACTUARIAL.md, punto 28).
 
 - Valor por defecto actual: `exigir`. Alternativas: `exenta`.
 - Por defecto («exigir»): el favor de familiares tras un accidente no laboral exige los 500 días (Orden de 1967: solo exime el accidente de trabajo y la enfermedad profesional). Alternativa («exenta»): se exime también el accidente no laboral, como en la viudedad (art. 219.1).
-- Qué cambia en el código: con la alternativa se cambia solo la lectura (`motor.… opciones.lecturas.carenciaFamiliaresAccidenteNoLaboral`, o en la configuración del motor `lecturas['supervivencia.carenciaFamiliaresAccidenteNoLaboral']`); la rama está en `src/engine/supervivencia/calculo.ts:181`. No hay más cambios.
+- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `supervivencia.carenciaFamiliaresAccidenteNoLaboral` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/supervivencia/calculo.ts:181`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['supervivencia.carenciaFamiliaresAccidenteNoLaboral']` en la configuración del motor.
 
 | Caso                               | Magnitud                  | Por defecto | Alternativa |     Variación |
 | ---------------------------------- | ------------------------- | ----------: | ----------: | ------------: |
@@ -87,7 +87,7 @@ Pregunta: `param-mei-reglas` (docs/REVISION_ACTUARIAL.md, punto 27).
 
 - Valor por defecto actual: `base-cotizacion`. Alternativas: `retribucion-completa`.
 - Por defecto («base-cotizacion»): el tipo del MEI se aplica a la base de cotización por contingencias comunes (con tope). Alternativa («retribucion-completa»): se aplica a toda la retribución, también la que supera la base máxima.
-- Qué cambia en el código: con la alternativa se cambia solo la lectura (`motor.… opciones.lecturas.baseMEI`, o en la configuración del motor `lecturas['mei.baseMEI']`); la rama está en `src/engine/mei/calculo.ts:282`. No hay más cambios.
+- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `mei.baseMEI` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/mei/calculo.ts:282`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['mei.baseMEI']` en la configuración del motor.
 
 | Caso                              | Magnitud                  | Por defecto | Alternativa | Variación |
 | --------------------------------- | ------------------------- | ----------: | ----------: | --------: |
@@ -114,7 +114,7 @@ Pregunta: `param-pnc-reglas` (docs/REVISION_ACTUARIAL.md, punto 26).
 
 - Valor por defecto actual: `sustituye-364-2`. Alternativas: `se-suman`.
 - Por defecto («sustituye-364-2»): durante los cuatro primeros años de actividad el límite del art. 366 sustituye a la reducción general por rentas. Alternativa («se-suman»): se aplican las dos reducciones.
-- Qué cambia en el código: con la alternativa se cambia solo la lectura (`motor.… opciones.lecturas.rentasConTrabajoEnCuatroAnios`, o en la configuración del motor `lecturas['no-contributivas.rentasConTrabajoEnCuatroAnios']`); la rama está en `src/engine/no-contributivas/calculo.ts:228`. No hay más cambios.
+- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `no-contributivas.rentasConTrabajoEnCuatroAnios` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/no-contributivas/calculo.ts:228`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['no-contributivas.rentasConTrabajoEnCuatroAnios']` en la configuración del motor.
 
 | Caso                                                                             | Magnitud      | Por defecto | Alternativa | Variación |
 | -------------------------------------------------------------------------------- | ------------- | ----------: | ----------: | --------: |
@@ -140,7 +140,7 @@ Pregunta: `param-incapacidad-permanente-reglas` (docs/REVISION_ACTUARIAL.md, pun
 
 - Valor por defecto actual: `sin-integrar`. Alternativas: `integrar`.
 - Por defecto («sin-integrar»): los meses sin cotizar dentro del periodo de 24 meses elegido cuentan como cero. Alternativa («integrar»): se rellenan con la base mínima.
-- Qué cambia en el código: con la alternativa se cambia solo la lectura (`motor.… opciones.lecturas.lagunasAccidenteNoLaboral`, o en la configuración del motor `lecturas['incapacidad.lagunasAccidenteNoLaboral']`); la rama está en `src/engine/incapacidad/calculo.ts:483`. No hay más cambios.
+- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `incapacidad.lagunasAccidenteNoLaboral` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/incapacidad/calculo.ts:483`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['incapacidad.lagunasAccidenteNoLaboral']` en la configuración del motor.
 
 | Caso                                                                                                        | Magnitud                                                        | Por defecto | Alternativa | Variación |
 | ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ----------: | ----------: | --------: |
@@ -169,7 +169,7 @@ Pregunta: `param-supervivencia-reglas-cuantia` (docs/REVISION_ACTUARIAL.md, punt
 
 - Valor por defecto actual: `no-inferior-52`. Alternativas: `sin-suelo`.
 - Por defecto («no-inferior-52»): la reducción del 70 % por el límite de rendimientos no baja la pensión del 52 %. Alternativa («sin-suelo»): la pensión puede quedar por debajo del 52 %.
-- Qué cambia en el código: con la alternativa se cambia solo la lectura (`motor.… opciones.lecturas.reduccionViudedad70`, o en la configuración del motor `lecturas['supervivencia.reduccionViudedad70']`); la rama está en `src/engine/supervivencia/calculo.ts:424`. No hay más cambios.
+- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `supervivencia.reduccionViudedad70` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/supervivencia/calculo.ts:424`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['supervivencia.reduccionViudedad70']` en la configuración del motor.
 
 | Caso                                                       | Magnitud       | Por defecto | Alternativa | Variación |
 | ---------------------------------------------------------- | -------------- | ----------: | ----------: | --------: |
@@ -181,7 +181,7 @@ Pregunta: `param-supervivencia-reglas-cuantia` (docs/REVISION_ACTUARIAL.md, punt
 
 - Valor por defecto actual: `anual`. Alternativas: `mensual`.
 - Por defecto («anual»): la viudedad del excónyuge se compara con la compensatoria en cómputo anual (14 pagas). Alternativa («mensual»): se comparan importes mensuales (entre 12).
-- Qué cambia en el código: con la alternativa se cambia solo la lectura (`motor.… opciones.lecturas.comparacionCompensatoria`, o en la configuración del motor `lecturas['supervivencia.comparacionCompensatoria']`); la rama está en `src/engine/supervivencia/calculo.ts:568`. No hay más cambios.
+- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `supervivencia.comparacionCompensatoria` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/supervivencia/calculo.ts:568`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['supervivencia.comparacionCompensatoria']` en la configuración del motor.
 
 | Caso                                       | Magnitud       | Por defecto | Alternativa | Variación |
 | ------------------------------------------ | -------------- | ----------: | ----------: | --------: |
@@ -193,7 +193,7 @@ Pregunta: `param-supervivencia-reglas-cuantia` (docs/REVISION_ACTUARIAL.md, punt
 
 - Valor por defecto actual: `porcentaje-viudedad`. Alternativas: `sin-incremento`.
 - Por defecto («porcentaje-viudedad»): sin cónyuge superviviente, el incremento del favor de familiares es el porcentaje de la viudedad. Alternativa («sin-incremento»): no hay incremento.
-- Qué cambia en el código: con la alternativa se cambia solo la lectura (`motor.… opciones.lecturas.incrementoFamiliares`, o en la configuración del motor `lecturas['supervivencia.incrementoFamiliares']`); la rama está en `src/engine/supervivencia/calculo.ts:874`. No hay más cambios.
+- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `supervivencia.incrementoFamiliares` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/supervivencia/calculo.ts:874`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['supervivencia.incrementoFamiliares']` en la configuración del motor.
 
 | Caso                                         | Magnitud                                        | Por defecto | Alternativa | Variación |
 | -------------------------------------------- | ----------------------------------------------- | ----------: | ----------: | --------: |
@@ -217,7 +217,7 @@ Pregunta: `param-pension-maxima-incremento-2051-2065` (docs/REVISION_ACTUARIAL.m
 
 - Valor por defecto actual: `incremento-acumulado`. Alternativas: `incremento-anual-literal`.
 - Por defecto («incremento-acumulado»): la pensión máxima crece cada año la revalorización más la diferencia entre el incremento acumulado de ese año y el del anterior. Alternativa («incremento-anual-literal»): se suma a la revalorización el valor de la tabla de ese año.
-- Qué cambia en el código: con la alternativa se cambia solo la lectura (`motor.… opciones.lecturas.maximaDesde2051`, o en la configuración del motor `lecturas['jubilacion.maximaDesde2051']`); la rama está en `src/engine/jubilacion/contexto.ts:221`. No hay más cambios.
+- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `jubilacion.maximaDesde2051` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/jubilacion/contexto.ts:221`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['jubilacion.maximaDesde2051']` en la configuración del motor.
 
 | Caso                                             | Magnitud                                                          | Por defecto | Alternativa | Variación |
 | ------------------------------------------------ | ----------------------------------------------------------------- | ----------: | ----------: | --------: |
@@ -244,7 +244,7 @@ Pregunta: `param-supervivencia-reglas-limites` (docs/REVISION_ACTUARIAL.md, punt
 
 - Valor por defecto actual: `orfandad`. Alternativas: `proporcional`.
 - Por defecto («orfandad»): al superar el límite conjunto se reducen las orfandades y se mantiene la viudedad. Alternativa («proporcional»): se reducen todas las pensiones en proporción.
-- Qué cambia en el código: con la alternativa se cambia solo la lectura (`motor.… opciones.lecturas.reduccionLimiteConjunto`, o en la configuración del motor `lecturas['supervivencia.reduccionLimiteConjunto']`); la rama está en `src/engine/supervivencia/calculo.ts:928`. No hay más cambios.
+- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `supervivencia.reduccionLimiteConjunto` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/supervivencia/calculo.ts:928`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['supervivencia.reduccionLimiteConjunto']` en la configuración del motor.
 
 | Caso                                 | Magnitud       | Por defecto | Alternativa | Variación |
 | ------------------------------------ | -------------- | ----------: | ----------: | --------: |
@@ -265,7 +265,7 @@ Pregunta: `param-lagunas-integracion` (docs/REVISION_ACTUARIAL.md, punto 4).
 
 - Valor por defecto actual: `integrar`. Alternativas: `ignorar`.
 - Por defecto («integrar»): los meses de la ventana anteriores al primer alta se cuentan como laguna y se rellenan con la base mínima (100 % las primeras 48 mensualidades y 50 % el resto). Alternativa («ignorar»): esos meses no se cuentan.
-- Qué cambia en el código: con la alternativa se cambia solo la lectura (`motor.… opciones.lecturas.lagunasAnterioresAlPrimerAlta`, o en la configuración del motor `lecturas['jubilacion.lagunasAnterioresAlPrimerAlta']`); la rama está en `src/engine/comun/base-reguladora.ts:72`. No hay más cambios.
+- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `jubilacion.lagunasAnterioresAlPrimerAlta` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/comun/base-reguladora.ts:72`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['jubilacion.lagunasAnterioresAlPrimerAlta']` en la configuración del motor.
 
 | Caso                                              | Magnitud                                                          | Por defecto | Alternativa | Variación |
 | ------------------------------------------------- | ----------------------------------------------------------------- | ----------: | ----------: | --------: |
