@@ -39,7 +39,7 @@ const OPCIONES_PENSION = [
  */
 export function NotaPib() {
   return (
-    <p className="hist-aviso" id="proy-nota-pib">
+    <p className="hist-aviso">
       <strong>Cambio de definición del PIB.</strong> Los porcentajes observados se calculan con el
       PIB corriente del INE; los proyectados, con el PIB de {MODELO.m4}, que es un indicador
       aproximado (afiliados por salario nominal) y no una previsión macroeconómica. El PIB del INE

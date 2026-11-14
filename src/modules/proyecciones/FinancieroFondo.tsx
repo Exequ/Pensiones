@@ -35,8 +35,8 @@ export function FinancieroFondo({ d }: { d: DatosFinanciero }) {
     (f) => f.disposicionSobreLimite !== null && Math.abs(f.disposicionSobreLimite - 100) < 1e-6,
   );
   const primerAnioDisposicion = disposicion.find((p) => p.valor > 0)?.anio;
-  const totalAdicional = adicional.reduce((a, p) => a + p.valor, 0);
-  const aniosConAdicional = adicional.filter((p) => p.valor > 0).length;
+  const ultimoAnioAdicional = adicional.at(-1)?.anio;
+  const ultimaAdicional = adicional.at(-1)?.valor;
 
   return (
     <>
@@ -188,12 +188,15 @@ export function FinancieroFondo({ d }: { d: DatosFinanciero }) {
           </>
         }
       />
-      <p>
-        La suma de la financiación adicional de todos los años proyectados es de{' '}
-        {decimal1(totalAdicional / MIL)} miles de millones de euros corrientes, repartida en{' '}
-        {aniosConAdicional} años. La suma de importes de años distintos mezcla euros de fechas
-        distintas: es un total descriptivo, no un valor presente.
-      </p>
+      {ultimaAdicional === undefined || ultimoAnioAdicional === undefined ? null : (
+        <p>
+          En {ultimoAnioAdicional}, el último año calculado, el modelo estima una disposición del
+          Fondo de {decimal1((valorEn(disposicion, ultimoAnioAdicional) ?? 0) / MIL)} miles de
+          millones de euros y una financiación adicional de {decimal1(ultimaAdicional / MIL)} miles
+          de millones. La financiación adicional se registra año a año: sumar importes de años
+          distintos mezclaría euros de fechas distintas.
+        </p>
+      )}
     </>
   );
 }
