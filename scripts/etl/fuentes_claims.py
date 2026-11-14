@@ -307,8 +307,12 @@ with open(f'{REPO}/docs/FUENTES.md', 'w', encoding='utf-8') as f:
 REVISION.update(MITO_PREGUNTAS)
 # Afirmaciones de los textos de la web (Fase 3-A): se mantienen a mano en docs/claims-web.json
 _ruta_web = f'{REPO}/docs/claims-web.json'
+# Revisión actuarial declarada en claims-web.json (revisada, rechazada, pendiente o no-requiere): se respeta.
+REVISION_WEB = {}
 if os.path.exists(_ruta_web):
-    claims.extend(json.load(open(_ruta_web, encoding='utf-8'))['claims'])
+    _web = json.load(open(_ruta_web, encoding='utf-8'))['claims']
+    REVISION_WEB = {c['id']: c['revisionActuarial'] for c in _web if 'revisionActuarial' in c}
+    claims.extend(_web)
 ids = {c['id'] for c in claims}
 faltan = sorted(set(REVISION) - ids)
 assert not faltan, f'Ids de REVISION sin afirmación: {faltan}'
@@ -316,6 +320,8 @@ for c in claims:
     if c['id'] in REVISION:
         c['revisionActuarial'] = 'pendiente'
         c['preguntaActuarial'] = REVISION[c['id']]
+    elif c['id'] in REVISION_WEB:
+        c['revisionActuarial'] = REVISION_WEB[c['id']]   # la declarada a mano en claims-web.json
     else:
         c.pop('revisionActuarial', None)   # hereda revisionActuarialPorDefecto
 with open(f'{REPO}/docs/claims.json', 'w', encoding='utf-8') as f:
@@ -331,7 +337,8 @@ md = ['# Revisión actuarial', '',
       'Lista de las afirmaciones de `docs/claims.json` que requieren criterio actuarial (no son la transcripción literal de una norma o de una cifra publicada): reglas de cálculo de la pensión de jubilación, '
       'reglas de evolución futura, reglas de incapacidad permanente y de muerte y supervivencia, definiciones y las definiciones de salario medio. Para cada una: el identificador del claim, qué se afirma y una pregunta concreta sobre qué debe comprobar el actuario y con qué dato o fórmula. '
       'Generado por `scripts/etl/fuentes_claims.py` (diccionario `REVISION`); la pregunta también está en el campo `preguntaActuarial` de `docs/claims.json`.', '',
-      f'**Resto de afirmaciones ({len(claims) - len(REVISION)})**: no llevan `revisionActuarial` y heredan `revisionActuarialPorDefecto: "no-requiere"` — no requieren revisión actuarial (transcripción literal de una norma o de una cifra publicada, contrastada con su fuente). '
+      f'**Revisadas ({sum(1 for c in claims if c.get("revisionActuarial") == "revisada")})**: afirmaciones de `docs/claims-web.json` que llevan `revisionActuarial: "revisada"` (la revisión actuarial del 14-11-2026 está incorporada; el criterio está en `notas`); no figuran en las listas siguientes. '
+      f'**Resto de afirmaciones ({sum(1 for c in claims if "revisionActuarial" not in c)})**: no llevan `revisionActuarial` y heredan `revisionActuarialPorDefecto: "no-requiere"` — no requieren revisión actuarial (transcripción literal de una norma o de una cifra publicada, contrastada con su fuente). '
       'Para cambiar el estado de una afirmación basta con añadirle `revisionActuarial` (`revisada`, `rechazada` o `pendiente` con `preguntaActuarial`); `npm run validate:data` exige la pregunta en las pendientes.', '',
       'Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"`) en la afirmación de `docs/claims.json` y anotar el criterio en `notas`.', '']
 grupos = [('Reglas de cálculo de la pensión de jubilación', [i for i in REVISION if i.startswith('param-') and any(k in i for k in ('escala', 'divisor', 'periodo', 'lagunas', 'actualizacion', 'opcion', 'coeficientes', 'demora', 'carrera'))]),
