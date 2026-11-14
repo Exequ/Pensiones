@@ -183,7 +183,7 @@ export function Pensiones() {
         decimalesEje={1}
         incluirCero
         fuentes={[pensiones.dato]}
-        nota="Proyección de modelo propio: no es un dato observado ni una previsión. El primer año coincide con la foto de partida, salvo las pensiones de edad desconocida."
+        nota="Proyección de modelo propio: no es un dato observado ni una previsión. Todas las líneas de este gráfico son proyección: aquí el tipo de trazo solo distingue el sexo, porque no hay datos observados por edad en el año elegido. El año de partida coincide con la foto de partida, salvo las pensiones de edad desconocida."
         comoLeerlo={
           <>
             <p>
@@ -217,7 +217,7 @@ export function Pensiones() {
         decimales={1}
         decimalesEje={0}
         fuentes={fuentesContraste}
-        nota="El Ageing Report es la proyección de referencia de la Comisión Europea y de los Estados miembros; tiene sus propios supuestos demográficos y de empleo."
+        nota="El Ageing Report es una proyección de la Comisión Europea y del Comité de Política Económica, con su escenario de referencia y sus propios supuestos demográficos, de empleo y de productividad."
         comoLeerlo={
           <>
             <p>

@@ -183,7 +183,7 @@ export function Demografia() {
 
       <GraficoProyeccion
         titulo={`Población de mayores: observada, modelo ${MODELO.m1} y proyección del INE`}
-        descripcion={`${descripcionDe(contraste, COL.mayoresM1)} Unidad: millones de personas, a primero de enero.`}
+        descripcion={`${descripcionDe(contraste, COL.mayoresM1)}, a primero de enero. Unidad: millones de personas.`}
         series={serieMayores}
         unidadEje="Millones de personas"
         divisorEje={MILLON}
