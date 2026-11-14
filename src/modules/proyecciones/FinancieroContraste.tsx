@@ -52,10 +52,11 @@ export function FinancieroContraste({ d }: { d: DatosFinanciero }) {
       <p>
         El Ageing Report proyecta el gasto en pensiones públicas de España en porcentaje del PIB. Se
         compara con el gasto de {MODELO.m4} en índice, con el primer año proyectado igual a{' '}
-        {BASE_INDICE}, porque las dos series no miden lo mismo: el Ageing Report incluye clases
-        pasivas y otros regímenes públicos, y {MODELO.m4} solo las pensiones contributivas de la
-        Seguridad Social; además, el PIB de cada una es distinto. Los niveles no son comparables; sí
-        lo es cuánto crece cada serie respecto al primer año.
+        {BASE_INDICE}, porque las dos series no miden lo mismo: según la descripción de {MODELO.m4},
+        el Ageing Report incluye clases pasivas y otros regímenes públicos, mientras que {MODELO.m4}
+        calcula las pensiones contributivas; además, el PIB de cada una es distinto. Los niveles no
+        son comparables; sí lo es cuánto crece cada serie respecto al primer año. La cobertura del
+        Ageing Report que describe el modelo no se ha comprobado aquí con la fuente.
       </p>
       <GraficoProyeccion
         titulo={`Gasto en pensiones sobre el PIB: ${MODELO.m4} y Ageing Report, índice ${c.anioBase} = ${BASE_INDICE}`}
@@ -116,7 +117,7 @@ export function FinancieroContraste({ d }: { d: DatosFinanciero }) {
             },
           ]}
           filas={filas}
-          pie="Los niveles no son comparables entre sí: el Ageing Report incluye clases pasivas y otros regímenes públicos, y el PIB de cada serie es distinto."
+          pie="Los niveles no son comparables entre sí: según la descripción del modelo, el Ageing Report incluye clases pasivas y otros regímenes públicos, y el PIB de cada serie es distinto."
         />
         <SourceLine datos={fuentes} />
       </details>

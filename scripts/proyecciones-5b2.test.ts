@@ -299,6 +299,66 @@ describe('lo que la salida cumple pero la descripción no declara (se describe, 
   });
 });
 
+describe('la salida reproduce los resultados que recoge la descripción de M4 (redondeados como allí)', () => {
+  // Cifras del apartado 3 de docs/modelos/M4_descripcion.md, solo para comprobar la salida: no se usan en la web.
+  const fila = (anio: number): Fila => f4.find((r) => r['anio'] === anio)!;
+  // Redondeo con el .5 alejado de cero, como el de la descripción (−2,35 → −2,4).
+  const r1 = (v: number) => (Math.sign(v) * Math.round(Math.abs(v) * 10)) / 10;
+
+  it.each([
+    [2026, 11.0, -0.5, -0.6, 19, 193],
+    // La descripción da −2,4 para el saldo no financiero de 2035; la salida da −2,348 (docs/DISCREPANCIAS.md).
+    [2035, 12.8, -2.3, -2.3, 91, 305],
+    [2040, 14.2, -3.6, -3.7, 122, 387],
+    [2050, 16.1, -5.5, -5.6, 26, 575],
+  ])(
+    '%i: gasto y saldos en %% del PIB, Fondo y gasto en euros',
+    (anio, gasto, cotPens, saldo, fondo, euros) => {
+      const r = fila(anio);
+      expect(r1(num(r, 'gasto_pensiones_pct_pib'))).toBe(gasto);
+      expect(r1(num(r, 'saldo_cot_pens_pct_pib'))).toBe(cotPens);
+      expect(r1(num(r, 'saldo_no_financiero_pct_pib'))).toBe(saldo);
+      expect(Math.round(num(r, 'fondo_reserva') / 1000)).toBe(fondo);
+      expect(Math.round(num(r, 'gasto_pensiones') / 1000)).toBe(euros);
+    },
+  );
+
+  it('pensión media de todas las clases en el primer y el último año; pensiones un 49 % más hasta el último año', () => {
+    expect(Math.round(num(fila(2026), 'pension_media_total'))).toBe(1376);
+    expect(Math.round(num(fila(2050), 'pension_media_total'))).toBe(2745);
+    expect(
+      Math.round((num(fila(2050), 'pensiones_oct') / num(fila(2026), 'pensiones_oct') - 1) * 100),
+    ).toBe(49);
+  });
+
+  it('el valor del Fondo en el último año es menor que la disposición de ese año', () => {
+    expect(num(fila(2050), 'fondo_reserva')).toBeLessThan(num(fila(2050), 'disposicion_fondo'));
+    expect(Math.round(num(fila(2050), 'disposicion_fondo') / 1000)).toBe(29);
+  });
+
+  it('contraste con el Ageing Report en índice: M4 y Ageing Report en 2040 y 2050', () => {
+    const ageing = JSON.parse(leer('data/demografia/ageing-report-2024-espana.json')) as {
+      series: { id: string; points: { period: string; value: number }[] }[];
+    };
+    const gasto = new Map(
+      ageing.series
+        .find((s) => s.id.endsWith('ii-1-64'))!
+        .points.map((p) => [Number(p.period), p.value]),
+    );
+    const indice = (anio: number) =>
+      (100 * num(fila(anio), 'gasto_pensiones_pct_pib')) /
+      num(fila(2026), 'gasto_pensiones_pct_pib');
+    const indiceAgeing = (anio: number) => (100 * gasto.get(anio)!) / gasto.get(2026)!;
+    expect([Math.round(indice(2040)), Math.round(indice(2050))]).toEqual([129, 147]);
+    expect([Math.round(indiceAgeing(2040)), Math.round(indiceAgeing(2050))]).toEqual([117, 125]);
+    expect(r1(gasto.get(2025)!)).toBe(13.7);
+  });
+
+  it('lo que la salida no permite comprobar: no hay 2025 (M4 empieza en 2026)', () => {
+    expect(f4.some((r) => r['anio'] === 2025)).toBe(false);
+  });
+});
+
 describe('la ejecución del presupuesto respalda la lectura de las cotizaciones de M4', () => {
   const filas = filasCsv(leer('data/sistema/presupuesto-ss-ejecucion.csv')).filter(
     (f) => f['periodo'] === '2025-T4' && f['columna'] === 'principal',
