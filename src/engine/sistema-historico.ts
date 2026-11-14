@@ -127,3 +127,65 @@ export function mesesDeGasto(
   }
   return salida;
 }
+
+/** Fila mínima de altas y bajas para comparar la pensión media de unas y otras. */
+export interface FilaMediaAltaBaja {
+  readonly anio: number;
+  readonly movimiento: string;
+  readonly clase: string;
+  readonly sexo: string;
+  readonly pensionMedia: number | null;
+}
+
+export interface ComparacionAltasBajas {
+  /** Clases en que la media de las altas supera a la de las bajas en todos los años con dato de ambas. */
+  readonly altasSuperior: readonly string[];
+  /** Clases en que la media de las altas es inferior a la de las bajas en todos esos años. */
+  readonly altasInferior: readonly string[];
+  /** Resto de clases (signo distinto según el año, o sin años con dato de ambas). */
+  readonly mixtas: readonly string[];
+  readonly desde: number;
+  readonly hasta: number;
+}
+
+/**
+ * Compara, clase a clase y con ambos sexos, la pensión media de las altas iniciales y de las
+ * bajas definitivas. Solo cuenta los años en que hay media de las dos. Sirve para describir el
+ * efecto composición de la pensión media de las pensiones en vigor sin suponer su sentido.
+ */
+export function compararMediaAltasBajas(
+  filas: readonly FilaMediaAltaBaja[],
+  clases: readonly string[],
+): ComparacionAltasBajas {
+  const altasSuperior: string[] = [];
+  const altasInferior: string[] = [];
+  const mixtas: string[] = [];
+  const anios: number[] = [];
+  for (const clase of clases) {
+    const media = (movimiento: string, anio: number) =>
+      filas.find(
+        (f) =>
+          f.clase === clase && f.sexo === 'ambos' && f.movimiento === movimiento && f.anio === anio,
+      )?.pensionMedia ?? null;
+    const aniosClase = [
+      ...new Set(filas.filter((f) => f.clase === clase && f.sexo === 'ambos').map((f) => f.anio)),
+    ].sort((a, b) => a - b);
+    const signos = aniosClase.flatMap((anio) => {
+      const alta = media('alta-inicial', anio);
+      const baja = media('baja-definitiva', anio);
+      if (alta === null || baja === null || alta === baja) return [];
+      anios.push(anio);
+      return [alta > baja ? 1 : -1];
+    });
+    if (signos.length > 0 && signos.every((s) => s === 1)) altasSuperior.push(clase);
+    else if (signos.length > 0 && signos.every((s) => s === -1)) altasInferior.push(clase);
+    else mixtas.push(clase);
+  }
+  return {
+    altasSuperior,
+    altasInferior,
+    mixtas,
+    desde: anios.length === 0 ? 0 : Math.min(...anios),
+    hasta: anios.length === 0 ? 0 : Math.max(...anios),
+  };
+}

@@ -6,7 +6,9 @@ import {
   flujoDelTrimestre,
   flujosTrimestrales,
   aniosConDescenso,
+  apoyoFinancieroDelEstado,
   mesesDeFlujo,
+  posicionNeta,
   posicionIlustrativa,
   puntosTrimestrales,
   type PuntoTrimestral,
@@ -267,5 +269,98 @@ describe('puntosTrimestrales y aniosConDescenso', () => {
         { anio: 2023, valor: 5 },
       ]),
     ).toEqual([2020]);
+  });
+});
+
+describe('posicionNeta («Fondo menos deuda»)', () => {
+  // Cálculo a mano: 2020: 10 − 25 = −15; 2021: 8 − 25 = −17; 2022: 30 − 20 = +10 (activo mayor que pasivo).
+  const fondo = [
+    { anio: 2020, valor: 10 },
+    { anio: 2021, valor: 8 },
+    { anio: 2022, valor: 30 },
+    { anio: 2023, valor: 5 },
+  ];
+  const deuda = [
+    { anio: 2019, valor: 99 },
+    { anio: 2020, valor: 25 },
+    { anio: 2021, valor: 25 },
+    { anio: 2022, valor: 20 },
+  ];
+
+  it('resta la deuda al Fondo año a año y conserva el signo', () => {
+    expect(posicionNeta(fondo, deuda).map((f) => [f.anio, f.neta])).toEqual([
+      [2020, -15],
+      [2021, -17],
+      [2022, 10],
+    ]);
+  });
+
+  it('solo incluye los años con los dos datos', () => {
+    const anios = posicionNeta(fondo, deuda).map((f) => f.anio);
+    expect(anios).not.toContain(2019);
+    expect(anios).not.toContain(2023);
+  });
+
+  it('devuelve también cada componente, para la tabla accesible', () => {
+    expect(posicionNeta(fondo, deuda)[0]).toEqual({ anio: 2020, fondo: 10, deuda: 25, neta: -15 });
+  });
+
+  it('sin años comunes, no hay filas', () => {
+    expect(posicionNeta([{ anio: 2000, valor: 1 }], [{ anio: 2001, valor: 1 }])).toEqual([]);
+  });
+});
+
+describe('apoyoFinancieroDelEstado («deuda más transferencias acumuladas»)', () => {
+  // Cálculo a mano con inicio en 2021: transferencias anuales 2020: 7 (no cuenta), 2021: 4, 2022: 6, 2023: 1.
+  // Acumuladas desde 2021: 4, 10, 11. Deuda: 2021: 20, 2022: 22, 2023: 21.
+  // Apoyo = deuda + acumuladas: 24, 32, 32.
+  const transferenciasAnuales = [
+    { anio: 2020, valor: 7 },
+    { anio: 2021, valor: 4 },
+    { anio: 2022, valor: 6 },
+    { anio: 2023, valor: 1 },
+  ];
+  const deuda = [
+    { anio: 2020, valor: 18 },
+    { anio: 2021, valor: 20 },
+    { anio: 2022, valor: 22 },
+    { anio: 2023, valor: 21 },
+  ];
+
+  it('suma la deuda de cada año y las transferencias acumuladas desde el año de inicio', () => {
+    expect(
+      apoyoFinancieroDelEstado({ deuda, transferenciasAnuales }, 2021).map((f) => [
+        f.anio,
+        f.transferencias,
+        f.apoyo,
+      ]),
+    ).toEqual([
+      [2021, 4, 24],
+      [2022, 10, 32],
+      [2023, 11, 32],
+    ]);
+  });
+
+  it('con otro año de inicio cambia solo la parte de transferencias', () => {
+    // Inicio en 2020: acumuladas 7, 11, 17, 18; apoyo 25, 31, 39, 39.
+    expect(
+      apoyoFinancieroDelEstado({ deuda, transferenciasAnuales }, 2020).map((f) => f.apoyo),
+    ).toEqual([25, 31, 39, 39]);
+  });
+
+  it('no incluye años anteriores al de inicio ni años sin deuda', () => {
+    const filas = apoyoFinancieroDelEstado(
+      { deuda: deuda.filter((p) => p.anio !== 2022), transferenciasAnuales },
+      2021,
+    );
+    expect(filas.map((f) => f.anio)).toEqual([2021, 2023]);
+    // La acumulada de 2023 sigue contando 2022 aunque no haya deuda ese año: 4 + 6 + 1 = 11.
+    expect(filas[1]?.transferencias).toBe(11);
+  });
+
+  it('falla si el año de inicio no tiene dato (no empieza en otro año sin avisar)', () => {
+    expect(() => apoyoFinancieroDelEstado({ deuda, transferenciasAnuales }, 2010)).toThrow(
+      RangeError,
+    );
   });
 });

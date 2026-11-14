@@ -9,6 +9,7 @@ import altasBajasCsv from '../../../data/sistema/altas-bajas-anual-clase-sexo.cs
 import altasBajasJson from '../../../data/sistema/altas-bajas-anual-clase-sexo.json';
 import edadMediaAltasJson from '../../../data/sistema/edad-media-altas-jubilacion.json';
 import ipcJson from '../../../data/parametros/ipc-indice-medio-anual.json';
+import ipcMensualJson from '../../../data/parametros/ipc-indice-mensual.json';
 import pensionMediaJson from '../../../data/sistema/pensiones-vigor-pension-media.json';
 import pensionesEdadCsv from '../../../data/sistema/pensiones-vigor-edad-clase-sexo.csv?raw';
 import pensionesEdadJson from '../../../data/sistema/pensiones-vigor-edad-clase-sexo.json';
@@ -16,7 +17,11 @@ import numeroPensionesJson from '../../../data/sistema/pensiones-vigor-numero.js
 import pensionistasJson from '../../../data/sistema/pensionistas-pensiones-historico.json';
 import relacionAlt1Json from '../../../data/sistema/relacion-afiliados-pensiones-alternativa-1.json';
 import relacionJson from '../../../data/sistema/relacion-afiliados-pensiones.json';
-import { serieIPCDesdeArchivo, type SerieIPC } from '../../engine/euros-constantes';
+import {
+  serieIPCDesdeArchivo,
+  serieIPCDiciembreDesdeArchivo,
+  type SerieIPC,
+} from '../../engine/euros-constantes';
 import type { Dato } from '../../engine/esquema-datos';
 import { filasCsv, numeroCsv } from '../../engine/series-historicas';
 import { CLASES_PENSION, type ClasePension } from '../../engine/sistema-historico';
@@ -76,13 +81,16 @@ export interface DatosCotizantes {
   >;
   readonly ipc: SerieIPC;
   readonly datoIpc: Dato;
+  /** IPC de diciembre de cada año (índice mensual del INE), para deflactar valores a 1 de diciembre. */
+  readonly ipcDiciembre: SerieIPC;
+  readonly datoIpcDiciembre: Dato;
   readonly relacion: {
     readonly porPensionDiciembre: SerieCargada;
     readonly porPensionMediaAnual: SerieCargada;
     readonly porPensionistaDiciembre: SerieCargada;
     readonly porPensionistaMediaAnual: SerieCargada;
-    readonly porPensionAlt1: SerieCargada;
-    readonly porPensionistaAlt1: SerieCargada;
+    readonly porPensionUltimoDia: SerieCargada;
+    readonly porPensionistaUltimoDia: SerieCargada;
   };
   readonly edad: {
     readonly mes: string;
@@ -128,6 +136,11 @@ export const datosCotizantes = memorizar((): DatosCotizantes => {
   const ipc = validarArchivo(ipcJson);
   const ipcDato = ipc.data?.at(-1);
   if (!ipcDato) throw new Error('El fichero del IPC no tiene datos');
+  const ipcMensual = validarArchivo(ipcMensualJson);
+  const ipcDiciembre = serieIPCDiciembreDesdeArchivo(ipcMensual);
+  const ultimoDiciembre = ipcDiciembre.puntos.at(-1);
+  const ipcDatoDiciembre = ipcMensual.data?.find((d) => d.id === `${ultimoDiciembre?.anio}-12`);
+  if (!ipcDatoDiciembre) throw new Error('El IPC mensual no tiene diciembre');
 
   const tablaEdad = validarTabla(pensionesEdadJson);
   const tablaAfEdad = validarTabla(afiliadosEdadJson);
@@ -178,13 +191,18 @@ export const datosCotizantes = memorizar((): DatosCotizantes => {
       const { id: _id, ...sinId } = ipcDato;
       return sinId;
     })(),
+    ipcDiciembre,
+    datoIpcDiciembre: (() => {
+      const { id: _id, ...sinId } = ipcDatoDiciembre;
+      return sinId;
+    })(),
     relacion: {
       porPensionDiciembre: cargarSerie(relacion, 'afiliados-diciembre-por-pension'),
       porPensionMediaAnual: cargarSerie(relacion, 'afiliados-media-anual-por-pension'),
       porPensionistaDiciembre: cargarSerie(relacion, 'afiliados-diciembre-por-pensionista'),
       porPensionistaMediaAnual: cargarSerie(relacion, 'afiliados-media-anual-por-pensionista'),
-      porPensionAlt1: cargarSerie(alt1, 'afiliados-por-pension-alternativa-1'),
-      porPensionistaAlt1: cargarSerie(alt1, 'afiliados-por-pensionista-alternativa-1'),
+      porPensionUltimoDia: cargarSerie(alt1, 'afiliados-por-pension-alternativa-1'),
+      porPensionistaUltimoDia: cargarSerie(alt1, 'afiliados-por-pensionista-alternativa-1'),
     },
     edad: { mes, filas: filasEdad, dato: datoDeTabla(tablaEdad, mes.slice(0, 4)) },
     afiliadosEdad: {

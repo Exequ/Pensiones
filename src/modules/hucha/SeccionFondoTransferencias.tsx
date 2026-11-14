@@ -38,8 +38,15 @@ export function SeccionFondoTransferencias() {
         Otra forma de situar el tamaño del Fondo es compararlo con las transferencias que el Estado
         envía a la Seguridad Social: cuántos meses o trimestres de transferencias equivale su valor.
         El resultado depende del periodo con el que se midan las transferencias, por lo que se
-        muestran dos definiciones: las transferencias de todo el año y las del último trimestre del
-        año.
+        muestran dos definiciones: las transferencias de todo el año, que es la medida principal, y
+        las del último trimestre del año, que es la secundaria.
+      </p>
+      <p className="hist-aviso">
+        Los flujos trimestrales no son un dato publicado por trimestre: son diferencias entre
+        acumulados de la ejecución (derechos reconocidos netos). Los derechos reconocidos de cada
+        trimestre no se reparten por igual a lo largo del año (véase el gráfico por trimestre de la
+        sección anterior), de modo que un trimestre aislado puede no ser representativo del resto.
+        El Fondo se valora a precio de adquisición.
       </p>
       <div className="hist-selector">
         <SegmentedPills
@@ -58,12 +65,12 @@ export function SeccionFondoTransferencias() {
         series={[
           {
             clave: 'anual',
-            etiqueta: 'Con las transferencias del año',
+            etiqueta: 'Principal: transferencias del año',
             puntos: serieAnio,
           },
           {
             clave: 'trimestral',
-            etiqueta: 'Con las del cuarto trimestre',
+            etiqueta: 'Secundaria: cuarto trimestre',
             puntos: serieTrimestre,
           },
         ]}
@@ -72,25 +79,27 @@ export function SeccionFondoTransferencias() {
         decimales={2}
         decimalesEje={1}
         fuentes={[d.valor.dato, t.delEstado.dato, t.datoTrimestral]}
-        nota="Cálculos propios (confianza media). Definición del año: valor del Fondo a fin de año ÷ (transferencias del año ÷ doce). Definición del trimestre: valor del Fondo a fin de año ÷ (transferencias del cuarto trimestre del mismo año ÷ tres). Un trimestre equivale a tres meses. Las transferencias son las corrientes del Estado y organismos autónomos de la ejecución del presupuesto; el Fondo está a precio de adquisición."
+        nota="Cálculos propios (confianza media). Medida principal (año completo): valor del Fondo a fin de año ÷ (transferencias del año ÷ doce). Medida secundaria (cuarto trimestre): valor del Fondo a fin de año ÷ (transferencias del cuarto trimestre del mismo año ÷ tres). Un trimestre equivale a tres meses. Los flujos trimestrales son diferencias entre acumulados. Las transferencias son las corrientes del Estado y organismos autónomos de la ejecución del presupuesto; el Fondo está a precio de adquisición."
         comoLeerlo={
           <>
             <p>
               En {ultimoA.anio} el valor del Fondo ({millonesEuros(valorUltimo?.valor ?? 0)})
-              equivale a {decimal2(ultimoA.valor)} meses de las transferencias del año
+              equivale a {decimal2(ultimoA.valor)} meses de las transferencias del año (medida
+              principal)
               {ultimoT === undefined
                 ? ''
-                : ` y a ${decimal2(ultimoT.valor)} meses de las del cuarto trimestre`}
+                : ` y a ${decimal2(ultimoT.valor)} meses de las del cuarto trimestre (medida secundaria)`}
               . En {primeroA.anio} equivalía a {decimal2(primeroA.valor)} meses de las del año. En
               trimestres, el valor de {ultimoA.anio} es de {decimal2(ultimoA.valor / 3)} trimestres
               de las transferencias del año.
             </p>
             <p>
-              Es una comparación de tamaños en un año concreto: las transferencias no son constantes
-              (el cuarto trimestre no es representativo de los demás) ni existe una regla que
-              relacione el Fondo con ellas. El último dato del Fondo es de cierre de año; la
-              ejecución de las transferencias llega a un trimestre posterior, pero no hay un valor
-              del Fondo más reciente con el que compararlo.
+              Es una comparación de tamaños en un año concreto: los derechos reconocidos por
+              transferencias no son uniformes entre trimestres (el cuarto trimestre no es
+              representativo de los demás) ni existe una regla que relacione el Fondo con ellas. El
+              último dato del Fondo es de cierre de año; la ejecución de las transferencias llega a
+              un trimestre posterior, pero no hay un valor del Fondo más reciente con el que
+              compararlo.
             </p>
           </>
         }

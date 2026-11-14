@@ -60,8 +60,10 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
       <p>
         El Sistema de la Seguridad Social presenta su presupuesto con una clasificación económica de
         ingresos y gastos. Las cifras de cada año son las de la ejecución a fin de ejercicio:
-        derechos reconocidos (ingresos) y obligaciones reconocidas (gastos) por operaciones no
-        financieras, es decir, sin activos ni pasivos financieros.
+        derechos reconocidos netos (ingresos) y obligaciones reconocidas (gastos) por operaciones no
+        financieras, es decir, sin activos ni pasivos financieros. Son importes reconocidos en la
+        contabilidad presupuestaria, no cobros ni pagos: la fuente publica aparte la recaudación y
+        los pagos, que no se usan en esta página.
       </p>
 
       <GraficoSeries
@@ -102,7 +104,7 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
 
       <GraficoSeries
         titulo="De dónde proceden los ingresos no financieros"
-        descripcion="Cotizaciones sociales, transferencias corrientes del Estado y resto de ingresos no financieros. Unidad: millones de euros."
+        descripcion="Cotizaciones sociales, transferencias corrientes del Estado y organismos autónomos y resto (por diferencia), en derechos reconocidos netos. Unidad: miles de millones de euros."
         tipo="barras-apiladas"
         series={[
           {
@@ -112,10 +114,10 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
           },
           {
             clave: 'estado',
-            etiqueta: 'Transferencias corrientes del Estado',
+            etiqueta: 'Transferencias corrientes del Estado y OO. AA.',
             puntos: presupuesto.transferenciasEstado.puntos,
           },
-          { clave: 'resto', etiqueta: 'Resto de ingresos no financieros', puntos: resto },
+          { clave: 'resto', etiqueta: 'Resto (por diferencia)', puntos: resto },
         ]}
         unidadEje="Miles de millones de euros"
         divisorEje={1000}
@@ -126,7 +128,7 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
           presupuesto.transferenciasEstado.dato,
           presupuesto.derechosNoFinancieros.dato,
         ]}
-        nota="El resto se calcula como ingresos no financieros menos cotizaciones menos transferencias corrientes del Estado y organismos autónomos (dato derivado, confianza media): incluye otras transferencias, tasas, ingresos patrimoniales y de capital."
+        nota="Importes en derechos reconocidos netos, no en caja. «Resto (por diferencia)» es un cálculo propio (dato derivado, confianza media): ingresos no financieros menos cotizaciones menos transferencias corrientes del Estado y organismos autónomos; incluye las demás transferencias, tasas, ingresos patrimoniales y de capital."
         comoLeerlo={
           <>
             <p>
@@ -139,10 +141,19 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
                 : ` La mayor variación entre dos años consecutivos de las transferencias es la de ${salto.desde} a ${salto.hasta}: de ${entero(salto.valorDesde)} a ${entero(salto.valorHasta)} millones de euros.`}
             </p>
             <p>
-              La gráfica muestra de dónde procede cada euro de ingreso, no por qué cambia su
-              composición. Un cambio en la composición puede deberse a cambios de criterio de
+              La gráfica muestra de dónde procede cada euro de ingreso reconocido, no por qué cambia
+              su composición. Un cambio en la composición puede deberse a cambios de criterio de
               clasificación o de financiación entre años; el desglose de las transferencias por
               finalidad no está disponible en los datos descargados.
+            </p>
+            <p>
+              «Transferencias corrientes del Estado y organismos autónomos» es la fila de ingresos
+              cuyo origen es el Estado o sus organismos autónomos, clasificada por origen y no por
+              finalidad. No equivale a «aportación del Estado»: el Tribunal de Cuentas cifra por
+              finalidad las transferencias corrientes (apoyo al equilibrio presupuestario y costes
+              que el Informe del Pacto de Toledo considera ajenos a la Seguridad Social) y cita
+              aparte las aportaciones de naturaleza no contributiva. Las dos cifras no coinciden y
+              con los datos descargados no se pueden conciliar una a una.
             </p>
           </>
         }
@@ -157,15 +168,16 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
         divisorEje={1000}
         decimales={0}
         fuentes={ejecucion.sumaPensiones.dato}
-        nota="No se incluyen Clases Pasivas ni pensiones no contributivas. El complemento a mínimos de las pensiones contributivas se registra en otra fila de la ejecución (capítulo de transferencias corrientes, apartado de pensiones no contributivas y complementos) y no está en estas barras."
+        nota="No se incluyen Clases Pasivas ni pensiones no contributivas. En la ejecución, el complemento a mínimos de las pensiones contributivas se anota en el capítulo de transferencias corrientes, en el bloque «pensiones no contributivas y complementos a mínimos de pensiones contributivas», en una fila propia («complemento a mínimos pensiones contributivas»); no forma parte de la fila «suma de pensiones» y por eso no está en estas barras."
         comoLeerlo={
           <>
             <p>
               El gasto en pensiones contributivas pasa {entero(vPensiones.valorDesde)} millones de
               euros en {vPensiones.desde} a {entero(vPensiones.valorHasta)} en {vPensiones.hasta} (
               {variacionRelativa(vPensiones.relativa ?? 0)}). El complemento a mínimos, que la
-              ejecución anota aparte, fue de {millonesEuros(ultimoComplemento?.valor ?? 0)} en{' '}
-              {ultimoComplemento?.anio ?? ''}; sumado a las pensiones, el total es de{' '}
+              ejecución anota en una fila propia, fue de{' '}
+              {millonesEuros(ultimoComplemento?.valor ?? 0)} en {ultimoComplemento?.anio ?? ''};
+              sumado a las pensiones, el total es de{' '}
               {millonesEuros(conComplemento.at(-1)?.valor ?? 0)}.
             </p>
             <p>

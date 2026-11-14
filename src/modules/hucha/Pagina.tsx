@@ -10,6 +10,7 @@ import {
   mayorCaida,
   maximo,
   porcentajeDelPib,
+  suma,
   valorEn,
   type PuntoAnual,
 } from '../../engine/series-historicas';
@@ -68,7 +69,9 @@ export default function Hucha() {
     puntosPorClase(d.numeroPorClase),
     puntosPorClase(d.pensionMediaPorClase),
   );
-  const mesesA = mesesDeGasto(valor, d.gastoEjecucion.puntos);
+  // Referencia: obligaciones reconocidas con el complemento a mínimos. Contraste: catorce pagas.
+  const gastoConComplemento = suma(d.gastoEjecucion.puntos, d.complementoMinimos.puntos);
+  const mesesA = mesesDeGasto(valor, gastoConComplemento);
   const mesesB = mesesDeGasto(valor, gastoAproximado);
   const ultimoA = mesesA.at(-1);
   const ultimoB = mesesB.at(-1);
@@ -190,18 +193,27 @@ export default function Hucha() {
           <p>
             Una forma de medir el tamaño del Fondo es compararlo con el gasto: cuántos meses de
             gasto en pensiones contributivas equivale su valor. El resultado depende de cómo se mida
-            el gasto, por lo que se muestran dos definiciones: las obligaciones reconocidas de la
-            ejecución del presupuesto y un cálculo aproximado a partir del número de pensiones y de
-            la pensión media.
+            el gasto. La referencia son las obligaciones reconocidas de la ejecución del presupuesto
+            con el complemento a mínimos, que se abona como parte de la pensión; como contraste se
+            muestra un cálculo aproximado a partir del número de pensiones, de la pensión media y de
+            catorce pagas.
+          </p>
+          <p className="hist-aviso">
+            El Fondo se valora a precio de adquisición, no a valor de mercado: los meses de gasto
+            que se obtienen con ese valor no reflejan lo que se obtendría al venderlo.
           </p>
           <GraficoSeries
             titulo="Meses de gasto en pensiones que equivale el valor del Fondo"
             descripcion="Valor del Fondo al cierre del año dividido entre el gasto anual en pensiones contributivas y multiplicado por doce. Unidad: meses de gasto."
             series={[
-              { clave: 'ejecucion', etiqueta: 'Gasto: obligaciones reconocidas', puntos: mesesA },
+              {
+                clave: 'ejecucion',
+                etiqueta: 'Referencia: con complemento a mínimos',
+                puntos: mesesA,
+              },
               {
                 clave: 'aprox',
-                etiqueta: 'Gasto: pensiones × pensión media × pagas',
+                etiqueta: 'Contraste: catorce pagas',
                 puntos: mesesB,
               },
             ]}
@@ -212,22 +224,25 @@ export default function Hucha() {
             fuentes={[
               d.valor.dato,
               d.gastoEjecucion.dato,
+              d.complementoMinimos.dato,
               d.numeroPorClase.jubilacion.dato,
               d.pensionMediaPorClase.jubilacion.dato,
             ]}
-            nota="Cálculos propios (confianza media). Definición A: valor del Fondo ÷ (obligaciones reconocidas de «suma de pensiones» ÷ doce). Definición B: valor del Fondo ÷ (suma de las cinco clases de número de pensiones × pensión media mensual × catorce pagas ÷ doce). Los dos gastos difieren porque la ejecución anota el complemento a mínimos en otra fila y B no incluye atrasos ni efectos de calendario."
+            nota="Cálculos propios (confianza media). Referencia: valor del Fondo ÷ ((obligaciones reconocidas de «suma de pensiones» + complemento a mínimos de pensiones contributivas) ÷ doce). Contraste: valor del Fondo ÷ (suma de las cinco clases de número de pensiones × pensión media mensual × catorce pagas ÷ doce); no incluye atrasos ni efectos de calendario y no coincide con la referencia. El Fondo está a precio de adquisición."
             comoLeerlo={
               <>
                 <p>
                   En {ultimoA?.anio ?? ''} el valor del Fondo equivale a{' '}
-                  {decimal2(ultimoA?.valor ?? 0)} meses del gasto medido con la ejecución y a{' '}
-                  {decimal2(ultimoB?.valor ?? 0)} meses con la aproximación. El valor más alto de la
-                  definición B se da en {maxB.anio}, con {decimal1(maxB.valor)} meses.
+                  {decimal2(ultimoA?.valor ?? 0)} meses del gasto medido con la ejecución y el
+                  complemento a mínimos (referencia) y a {decimal2(ultimoB?.valor ?? 0)} meses con
+                  el cálculo de contraste. El valor más alto del contraste se da en {maxB.anio}, con{' '}
+                  {decimal1(maxB.valor)} meses.
                 </p>
                 <p>
                   Un número de meses más bajo no dice por sí solo cuánto tiempo podría sostener el
                   Fondo las pensiones: el gasto no es constante y el Fondo no está pensado para
-                  sustituir las cotizaciones. Es solo una comparación de tamaños en un año concreto.
+                  sustituir las cotizaciones. Es solo una comparación de tamaños en un año concreto,
+                  con el Fondo a precio de adquisición.
                 </p>
               </>
             }

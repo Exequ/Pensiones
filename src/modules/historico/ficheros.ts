@@ -11,6 +11,7 @@ export const FICHEROS_COTIZANTES = [
   'data/sistema/altas-bajas-anual-clase-sexo.json',
   'data/sistema/edad-media-altas-jubilacion.json',
   'data/parametros/ipc-indice-medio-anual.json',
+  'data/parametros/ipc-indice-mensual.json',
   'data/sistema/pensiones-vigor-pension-media.json',
   'data/sistema/pensiones-vigor-edad-clase-sexo.json',
   'data/sistema/pensiones-vigor-numero.json',

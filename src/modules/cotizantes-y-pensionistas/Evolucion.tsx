@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { SegmentedPills } from '../../components/SegmentedPills';
-import { serieAEurosConstantes } from '../../engine/euros-constantes';
+import { mayorDiferenciaEntreIndices, serieAEurosConstantes } from '../../engine/euros-constantes';
 import {
   extremos,
   indiceBase100,
@@ -10,7 +10,7 @@ import {
   variacion,
   type PuntoAnual,
 } from '../../engine/series-historicas';
-import { CLASES_PENSION } from '../../engine/sistema-historico';
+import { CLASES_PENSION, compararMediaAltasBajas } from '../../engine/sistema-historico';
 import { GraficoSeries, type SerieGrafico } from '../historico/GraficoSeries';
 import {
   decimal1,
@@ -18,14 +18,18 @@ import {
   entero,
   ETIQUETA_CLASE,
   euros,
+  puntosAPorcentaje,
   variacionRelativa,
 } from '../historico/formatos';
 import { datosCotizantes } from '../historico/datos-cotizantes';
+
+type Deflactor = 'diciembre' | 'media-anual';
 
 /** Evolución de afiliados, pensiones y pensionistas, y de la pensión media. */
 export function Evolucion() {
   const d = datosCotizantes();
   const [precios, setPrecios] = useState<'corrientes' | 'constantes'>('corrientes');
+  const [deflactor, setDeflactor] = useState<Deflactor>('diciembre');
 
   const afiliados: SerieGrafico[] = [
     { clave: 'total', etiqueta: 'Total del sistema', puntos: d.afiliados.diciembreTotal.puntos },
@@ -73,32 +77,46 @@ export function Evolucion() {
   const finIndice = (clave: string) =>
     indice.series.find((s) => s.clave === clave)?.puntos.at(-1)?.valor ?? 0;
 
-  const anioBaseIpc = extremos(d.ipc.puntos.map((p) => ({ anio: p.anio, valor: p.indice }))).ultimo
-    .anio;
+  // Deflactor de los euros constantes. La pensión media es un valor a 1 de diciembre, por lo que el
+  // IPC de diciembre es el de referencia; el IPC medio anual queda como variante.
+  const indices = deflactor === 'diciembre' ? d.ipcDiciembre : d.ipc;
+  const anioBaseIpc = extremos(indices.puntos.map((p) => ({ anio: p.anio, valor: p.indice })))
+    .ultimo.anio;
+  const fuenteDeflactor = deflactor === 'diciembre' ? d.datoIpcDiciembre : d.datoIpc;
+  const aConstantes = (puntos: readonly PuntoAnual[]): PuntoAnual[] =>
+    serieAEurosConstantes(
+      puntos.map((p) => ({ anio: p.anio, importe: p.valor })),
+      anioBaseIpc,
+      indices,
+    ).map((p) => ({ anio: p.anio, valor: p.importe }));
   const mediaPorClase: SerieGrafico[] = CLASES_PENSION.map((c, i) => {
     const nominal = d.pensionMediaPorClase[c].puntos;
     return {
       clave: c,
       etiqueta: ETIQUETA_CLASE[c] ?? c,
       color: i,
-      puntos:
-        precios === 'corrientes'
-          ? nominal
-          : serieAEurosConstantes(
-              nominal.map((p) => ({ anio: p.anio, importe: p.valor })),
-              anioBaseIpc,
-              d.ipc,
-            ).map((p) => ({ anio: p.anio, valor: p.importe })),
+      puntos: precios === 'corrientes' ? nominal : aConstantes(nominal),
     };
   });
   const vMediaTotal = variacion(d.pensionMediaTotal.puntos);
-  const vMediaConstantes = variacion(
-    serieAEurosConstantes(
-      d.pensionMediaTotal.puntos.map((p) => ({ anio: p.anio, importe: p.valor })),
-      anioBaseIpc,
-      d.ipc,
-    ).map((p) => ({ anio: p.anio, valor: p.importe })),
+  const vMediaConstantes = variacion(aConstantes(d.pensionMediaTotal.puntos));
+  const primerAnioMedia = extremos(d.pensionMediaTotal.puntos).primero.anio;
+  const ultimoAnioMedia = extremos(d.pensionMediaTotal.puntos).ultimo.anio;
+  const diferenciaDeflactores = mayorDiferenciaEntreIndices(
+    d.ipcDiciembre,
+    d.ipc,
+    primerAnioMedia,
+    ultimoAnioMedia,
   );
+  const etiquetaDeflactor = deflactor === 'diciembre' ? 'IPC de diciembre' : 'IPC medio anual';
+  const etiquetaBase =
+    deflactor === 'diciembre' ? `diciembre de ${anioBaseIpc}` : String(anioBaseIpc);
+  const comparacion = compararMediaAltasBajas(
+    d.altasBajas.filas,
+    CLASES_PENSION.map((c) => c as string),
+  );
+  const nombresClases = (claves: readonly string[]) =>
+    claves.map((c) => (ETIQUETA_CLASE[c] ?? c).toLowerCase()).join(', ');
   const jubilacionMedia = maximo(d.pensionMediaPorClase.jubilacion.puntos);
 
   return (
@@ -228,25 +246,40 @@ export function Evolucion() {
         <h2 id="pension-media">Pensión media por clase</h2>
         <p>
           La pensión media es el importe mensual medio de las pensiones en vigor de cada clase a
-          principios de diciembre. Se puede ver en euros de cada año (corrientes) o en euros de{' '}
-          {anioBaseIpc} (constantes), que descuentan la variación del IPC medio anual.
+          principios de diciembre. Se puede ver en euros de cada año (corrientes) o en euros de un
+          año base (constantes), que descuentan la variación de los precios. Como el dato es un
+          valor a principios de diciembre, el deflactor de referencia es el IPC de diciembre; el IPC
+          medio anual está disponible como variante.
         </p>
         <div className="hist-selector">
           <SegmentedPills
             leyenda="Precios"
             opciones={[
               { valor: 'corrientes', etiqueta: 'Euros corrientes' },
-              { valor: 'constantes', etiqueta: `Euros constantes de ${anioBaseIpc}` },
+              { valor: 'constantes', etiqueta: 'Euros constantes' },
             ]}
             valor={precios}
             onCambio={setPrecios}
           />
         </div>
+        {precios === 'constantes' ? (
+          <div className="hist-selector">
+            <SegmentedPills
+              leyenda="Índice de precios para los euros constantes"
+              opciones={[
+                { valor: 'diciembre', etiqueta: 'IPC de diciembre' },
+                { valor: 'media-anual', etiqueta: 'IPC medio anual' },
+              ]}
+              valor={deflactor}
+              onCambio={setDeflactor}
+            />
+          </div>
+        ) : null}
         <GraficoSeries
           titulo={
             precios === 'corrientes'
               ? 'Pensión media mensual por clase, en euros corrientes'
-              : `Pensión media mensual por clase, en euros constantes de ${anioBaseIpc}`
+              : `Pensión media mensual por clase, en euros constantes de ${etiquetaBase}`
           }
           descripcion="Pensión media de las pensiones contributivas en vigor a principios de diciembre. Unidad: euros al mes."
           series={mediaPorClase}
@@ -254,10 +287,13 @@ export function Evolucion() {
           incluirCero={false}
           decimalesEje={0}
           decimales={2}
-          fuentes={[...CLASES_PENSION.map((c) => d.pensionMediaPorClase[c].dato), d.datoIpc]}
+          fuentes={[
+            ...CLASES_PENSION.map((c) => d.pensionMediaPorClase[c].dato),
+            ...(precios === 'constantes' ? [fuenteDeflactor] : []),
+          ]}
           nota={
             precios === 'constantes'
-              ? 'Euros constantes: importe × IPC medio del año base ÷ IPC medio del año del importe (cálculo propio, dato derivado).'
+              ? `Euros constantes: importe × ${etiquetaDeflactor} del año base ÷ ${etiquetaDeflactor} del año del importe (cálculo propio, dato derivado). El IPC de diciembre sale de la serie mensual del INE; no se usa el deflactor del consumo de los hogares.`
               : undefined
           }
           comoLeerlo={
@@ -266,18 +302,45 @@ export function Evolucion() {
                 La pensión media del total del sistema pasa{' '}
                 {deAHasta(d.pensionMediaTotal.puntos, euros)} en euros corrientes (
                 {variacionRelativa(vMediaTotal.relativa ?? 0)}) y, en euros constantes de{' '}
-                {anioBaseIpc}, {variacionRelativa(vMediaConstantes.relativa ?? 0)}. La pensión media
-                de jubilación alcanza su valor más alto en {jubilacionMedia.anio}, con{' '}
+                {etiquetaBase} (con el {etiquetaDeflactor}),{' '}
+                {variacionRelativa(vMediaConstantes.relativa ?? 0)}. La pensión media de jubilación
+                alcanza su valor más alto en {jubilacionMedia.anio}, con{' '}
                 {euros(jubilacionMedia.valor)}.
               </p>
               <p>
-                La media mezcla pensiones de distinta antigüedad e importe: que la media suba no
-                significa que cada pensión individual suba en la misma proporción. El gráfico no
-                distingue por antigüedad de la pensión ni por años cotizados.
+                Elegir un deflactor u otro cambia el resultado: el dato es un valor a principios de
+                diciembre y el IPC medio anual promedia los doce meses del año.
+                {diferenciaDeflactores === null
+                  ? ''
+                  : ` Entre los años de la serie, la mayor diferencia relativa entre el IPC de diciembre y el IPC medio del mismo año es la de ${diferenciaDeflactores.anio} (${puntosAPorcentaje(diferenciaDeflactores.relativa * 100)}); depende de cómo evolucionen los precios dentro de cada año, no solo de su nivel.`}
               </p>
             </>
           }
         />
+        <h3 id="pension-media-advertencias">Qué es y qué no es esta pensión media</h3>
+        <ul className="hist-estado-lista">
+          <li>
+            Es una media por pensión, no por pensionista: quien cobra más de una pensión cuenta en
+            cada una de ellas.
+          </li>
+          <li>Incluye los complementos a mínimos de las pensiones que los perciben.</li>
+          <li>
+            Mezcla regímenes cuyas pensiones medias tienen niveles distintos, de modo que su valor
+            depende también del peso de cada régimen.
+          </li>
+          <li>
+            No es la pensión media de las altas nuevas: esa es otra serie (véase la sección de altas
+            y bajas).
+          </li>
+          <li>
+            Tiene efecto composición: cada año entran pensiones nuevas y salen otras, y las cuantías
+            de unas y otras no coinciden, de modo que la media cambia aunque ninguna pensión se
+            revalorice.
+            {comparacion.altasSuperior.length + comparacion.altasInferior.length === 0
+              ? ''
+              : ` Con los datos de altas y bajas de esta página (de ${comparacion.desde} a ${comparacion.hasta}), la pensión media de las altas es superior a la de las bajas en ${nombresClases(comparacion.altasSuperior) || 'ninguna clase'}${comparacion.altasInferior.length === 0 ? '' : ` y es inferior en ${nombresClases(comparacion.altasInferior)}`}; por eso el sentido del efecto depende de la clase.`}
+          </li>
+        </ul>
       </section>
     </>
   );

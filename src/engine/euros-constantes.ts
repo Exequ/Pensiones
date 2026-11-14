@@ -145,3 +145,63 @@ export function serieIPCDesdeArchivo(archivo: ArchivoDatos): SerieIPC {
     }),
   };
 }
+
+/**
+ * Serie anual del IPC de diciembre a partir de un fichero de /data con un dato por mes (p. ej.
+ * data/parametros/ipc-indice-mensual.json, con identificadores «AAAA-MM» y el año en `period`).
+ * Se queda con el mes de diciembre de cada año. Sirve para deflactar importes que son un valor
+ * a 1 de diciembre (como la pensión media en vigor) con el precio del mismo mes. Rechaza valores
+ * no numéricos y años con dos datos de diciembre.
+ */
+export function serieIPCDiciembreDesdeArchivo(archivo: ArchivoDatos): SerieIPC {
+  const puntos: PuntoIndice[] = [];
+  for (const dato of archivo.data ?? []) {
+    const m = /^(\d{4})-12$/.exec(dato.id);
+    if (m?.[1] === undefined) continue;
+    if (typeof dato.value !== 'number') {
+      throw new RangeError(`${archivo.id}: valor no numérico en ${dato.id}`);
+    }
+    const anio = Number(m[1]);
+    if (puntos.some((p) => p.anio === anio)) {
+      throw new RangeError(`${archivo.id}: dos datos de diciembre en ${anio}`);
+    }
+    puntos.push({ anio, indice: dato.value });
+  }
+  if (puntos.length === 0) {
+    throw new RangeError(`${archivo.id}: no hay datos de diciembre`);
+  }
+  return {
+    id: `${archivo.id}-diciembre`,
+    descripcion: `${archivo.title} (solo diciembre)`,
+    puntos: puntos.sort((a, b) => a.anio - b.anio),
+  };
+}
+
+export interface DiferenciaEntreIndices {
+  readonly anio: number;
+  /** (índice de `a` ÷ índice de `b`) − 1 en ese año. */
+  readonly relativa: number;
+}
+
+/**
+ * Año de mayor diferencia relativa (en valor absoluto) entre dos índices anuales, entre los años
+ * comunes que cumplen `desde` y `hasta`. Describe cuánto separa elegir un deflactor u otro; no
+ * supone que la diferencia dependa del nivel de la inflación. `null` si no hay años comunes.
+ */
+export function mayorDiferenciaEntreIndices(
+  a: SerieIPC,
+  b: SerieIPC,
+  desde = Number.NEGATIVE_INFINITY,
+  hasta = Number.POSITIVE_INFINITY,
+): DiferenciaEntreIndices | null {
+  const mapaA = indexarSerie(a);
+  const mapaB = indexarSerie(b);
+  let mejor: DiferenciaEntreIndices | null = null;
+  for (const [anio, indiceA] of mapaA) {
+    const indiceB = mapaB.get(anio);
+    if (indiceB === undefined || anio < desde || anio > hasta) continue;
+    const relativa = indiceA / indiceB - 1;
+    if (mejor === null || Math.abs(relativa) > Math.abs(mejor.relativa)) mejor = { anio, relativa };
+  }
+  return mejor;
+}
