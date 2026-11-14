@@ -7,7 +7,7 @@ import { aniosOcde, serieEurostat, serieOcde, valoresEurostat, valoresOcde } fro
 import { datosSistemas } from './datos-sistemas';
 import { GraficoBarrasPaises, GraficoLineasPaises } from './GraficoPaises';
 import { CONTRASTE, INDICADOR_EUROSTAT_GASTO, MEDIDA, UNIDAD_EUROSTAT_PIB } from './ids-datos';
-import { CODIGOS_PAISES, CODIGO_ESPANA } from './paises';
+import { CODIGOS_PAISES, CODIGO_ESPANA, CODIGO_REINO_UNIDO, CODIGO_UE } from './paises';
 
 const FILTRO_OCDE = { medida: MEDIDA.gasto } as const;
 const FILTRO_EUROSTAT = {
@@ -69,11 +69,15 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
   const propio = d.contraste.serie(CONTRASTE.gastoPropio);
   const espanaPropio = valorEnAnio(propio.puntos, anio);
 
-  const datoOcde = d.ocde.dato('2021');
-  const datoEurostat = d.eurostat.dato('2025');
+  const datoOcde = d.ocde.dato(String(anio));
+  const datoEurostat = d.eurostat.dato(String(anio));
+  const primeraUE = serieEurostat(d.eurostat.observaciones, FILTRO_EUROSTAT, CODIGO_UE)[0]?.anio;
+  const ultimaGBR = serieEurostat(d.eurostat.observaciones, FILTRO_EUROSTAT, CODIGO_REINO_UNIDO).at(
+    -1,
+  )?.anio;
 
   return (
-    <section className="seccion prosa sistemas-seccion" aria-labelledby="gasto">
+    <section className="seccion prosa sistemas-seccion ancho-completo" aria-labelledby="gasto">
       <h2 id="gasto">Gasto público en pensiones sobre el PIB</h2>
       <p>
         El mismo concepto —cuánto gasta el sector público en pensiones, en proporción a lo que
@@ -135,8 +139,8 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
             <>
               Perímetro de la serie de Eurostat: no verificado en las fuentes descargadas (los
               metadatos solo dicen que es gasto en prestaciones de protección social por función).
-              Eurostat no publica Estados Unidos ni, antes de 2008, la Unión Europea, y para el
-              Reino Unido solo hasta donde lo publica.
+              Eurostat no publica Estados Unidos; publica la Unión Europea desde {primeraUE} y el
+              Reino Unido hasta {ultimaGBR}.
             </>
           }
           comoLeerlo={
@@ -163,7 +167,7 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
         pensiones contributivas del Sistema de la Seguridad Social y el PIB (cálculo derivado de los
         datos de la sección «Financiación y déficit»).
       </p>
-      <div className="sistemas-ancho sistemas-tabla">
+      <div className="sistemas-tabla">
         <DataTable
           titulo="Gasto sobre el PIB de España en el año elegido, según tres delimitaciones"
           columnas={[

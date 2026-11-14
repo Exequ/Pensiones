@@ -24,6 +24,8 @@ export const NIVELES_REPOSICION = [
   { codigo: '200', veces: 2 },
 ] as const;
 export type CodigoNivel = (typeof NIVELES_REPOSICION)[number]['codigo'];
+/** Nivel que se muestra al abrir la página: el salario medio. */
+export const NIVEL_INICIAL: CodigoNivel = '100';
 
 export const medidaReposicion = (tipo: 'bruta' | 'neta', nivel: CodigoNivel): string =>
   `${tipo === 'bruta' ? 'GPRR' : 'NPRR'}${nivel}`;
@@ -103,3 +105,10 @@ export const SUPUESTO_DEFINICION = {
   sensibilidadEspana: 'ocde-pag-2025-sensibilidad-espana-valorizacion-precios',
   tasaNeta: 'ocde-pag-2025-tasa-neta-definicion',
 } as const;
+
+/**
+ * Elementos de `paises-sistemas` que no se muestran en la estructura: no describen la estructura del
+ * sistema, sino una proyección publicada (AIReF y la fecha de agotamiento del fondo fiduciario de
+ * Estados Unidos). Las proyecciones se dejan para la sección «Proyecciones».
+ */
+export const RASGOS_EXCLUIDOS: readonly string[] = ['sistema-esp-9', 'sistema-usa-7'];

@@ -1,6 +1,7 @@
 import { Definition } from '../../components/Definition';
 import { SourceLine } from '../../components/SourceLine';
 import { datosSistemas } from './datos-sistemas';
+import { RASGOS_EXCLUIDOS } from './ids-datos';
 import { CODIGOS_PAISES, esAgregado, nombrePais } from './paises';
 
 /**
@@ -50,7 +51,9 @@ export function SeccionEstructura({ seleccion }: { readonly seleccion: ReadonlyS
       ) : null}
 
       {paises.map((codigo) => {
-        const rasgos = d.rasgos.filter((r) => r.pais === codigo);
+        const rasgos = d.rasgos.filter(
+          (r) => r.pais === codigo && !RASGOS_EXCLUIDOS.includes(r.id),
+        );
         return (
           <article key={codigo} className="sistemas-pais" aria-label={nombrePais(codigo)}>
             <h3>{nombrePais(codigo)}</h3>

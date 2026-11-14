@@ -50,7 +50,7 @@ export function SeccionEdad({ seleccion }: { readonly seleccion: ReadonlySet<str
   const definicionEfectiva = d.supuesto(SUPUESTO_DEFINICION.edadEfectiva);
 
   return (
-    <section className="seccion prosa sistemas-seccion" aria-labelledby="edad">
+    <section className="seccion prosa sistemas-seccion ancho-completo" aria-labelledby="edad">
       <h2 id="edad">Edad de jubilación</h2>
       <p>
         Hay al menos tres edades distintas que suelen llamarse «edad de jubilación»: la que fija la
@@ -152,7 +152,7 @@ export function SeccionEdad({ seleccion }: { readonly seleccion: ReadonlySet<str
         modela una carrera ininterrumpida desde el comienzo de la vida laboral; la norma española
         fija la edad ordinaria según los meses cotizados.
       </p>
-      <div className="sistemas-ancho sistemas-tabla">
+      <div className="sistemas-tabla">
         <DataTable
           titulo="Edad de jubilación de España según la OCDE y según la normativa propia"
           columnas={[

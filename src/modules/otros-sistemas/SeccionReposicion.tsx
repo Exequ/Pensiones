@@ -11,6 +11,7 @@ import { GraficoBarrasPaises } from './GraficoPaises';
 import {
   CONTRASTE,
   NIVEL_ESCENARIO,
+  NIVEL_INICIAL,
   NIVELES_REPOSICION,
   SUPUESTO_DEFINICION,
   SUPUESTO_ESCENARIO_PAIS,
@@ -43,7 +44,7 @@ const ETIQUETA_SUPUESTO: Readonly<Record<string, string>> = {
 /** Tasa de reposición teórica de la OCDE: bruta y neta lado a lado, con sus supuestos a la vista. */
 export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlySet<string> }) {
   const d = datosSistemas();
-  const [nivel, setNivel] = useState<CodigoNivel>('100');
+  const [nivel, setNivel] = useState<CodigoNivel>(NIVEL_INICIAL);
   const [sexo, setSexo] = useState<Sexo>('hombres');
   const [obligatoriedad, setObligatoriedad] = useState<Obligatoriedad>('M');
   // La OCDE solo publica «obligatoria y voluntaria» para hombres: con mujeres se usa «obligatoria».
@@ -81,6 +82,7 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
   const datoOcde = d.ocde.dato(String(anio));
   const textoNivel = `${formatearNumero(veces)} ${veces === 1 ? 'vez' : 'veces'} el salario medio`;
   const definicionNeta = d.supuesto(SUPUESTO_DEFINICION.tasaNeta);
+  const fuenteSupuestos = d.supuesto(SUPUESTOS_TEXTO[0]).dato.source.title;
   const sinMujeresVoluntaria = sexo === 'mujeres' && obligatoriedad === 'MV';
 
   // Tabla de supuestos
@@ -146,7 +148,7 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
   ];
 
   return (
-    <section className="seccion prosa sistemas-seccion" aria-labelledby="reposicion">
+    <section className="seccion prosa sistemas-seccion ancho-completo" aria-labelledby="reposicion">
       <h2 id="reposicion">Tasa de reposición teórica</h2>
       <p>
         La tasa de reposición compara la primera pensión con el salario previo a la jubilación. La
@@ -253,10 +255,10 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
       <h3 id="reposicion-supuestos">Supuestos de la OCDE a la vista</h3>
       <p>
         Estos son los supuestos con los que la OCDE calcula las tasas anteriores, tal como constan
-        en «Pensions at a Glance 2025». El escenario alternativo se usa solo para comprobar cómo
-        cambia el resultado con otros supuestos económicos.
+        en «{fuenteSupuestos}». El escenario alternativo se usa solo para comprobar cómo cambia el
+        resultado con otros supuestos económicos.
       </p>
-      <div className="sistemas-ancho sistemas-tabla">
+      <div className="sistemas-tabla">
         <DataTable
           titulo="Supuestos del cálculo de la tasa de reposición teórica de la OCDE"
           columnas={[
@@ -266,20 +268,18 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
           filas={filasTexto.map(({ supuesto, valor }) => ({ supuesto, valor }))}
         />
       </div>
-      <div className="sistemas-ancho sistemas-tabla">
+      <div className="sistemas-tabla">
         <DataTable
           titulo="Supuestos económicos del escenario base y del escenario alternativo de la OCDE"
           columnas={[
-            { clave: 'concepto', titulo: 'Supuesto económico' },
-            { clave: 'base', titulo: 'Escenario base', tipo: 'numero' },
-            { clave: 'alternativo', titulo: 'Escenario alternativo', tipo: 'numero' },
-            { clave: 'unidad', titulo: 'Unidad' },
+            { clave: 'concepto', titulo: 'Supuesto económico (unidad)' },
+            { clave: 'base', titulo: 'Base', tipo: 'numero' },
+            { clave: 'alternativo', titulo: 'Alternativo', tipo: 'numero' },
           ]}
           filas={filasNumericas.map(({ concepto, base, alternativo, unidad }) => ({
-            concepto,
+            concepto: `${concepto} (${unidad})`,
             base,
             alternativo,
-            unidad,
           }))}
         />
         <SourceLine datos={datosSupuestos} />
@@ -291,26 +291,26 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
         de cada país depende de cómo revaloriza los ingresos pasados y, por tanto, de los supuestos
         de crecimiento. {String(d.supuesto(SUPUESTO_DEFINICION.sensibilidadEspana).valor)}
       </p>
-      <div className="sistemas-ancho sistemas-tabla">
+      <div className="sistemas-tabla">
         <DataTable
           titulo="Tasa bruta de reposición del escenario base y del alternativo, hombres, carrera completa al salario medio"
           columnas={[
             { clave: 'pais', titulo: 'País' },
             {
               clave: 'base',
-              titulo: 'Escenario base (% de los ingresos brutos)',
+              titulo: 'Base (%)',
               tipo: 'numero',
               decimales: 1,
             },
             {
               clave: 'alternativo',
-              titulo: 'Escenario alternativo (%)',
+              titulo: 'Alternativo (%)',
               tipo: 'numero',
               decimales: 1,
             },
             {
               clave: 'diferencia',
-              titulo: 'Diferencia (puntos porcentuales)',
+              titulo: 'Diferencia (puntos)',
               tipo: 'numero',
               decimales: 1,
             },
@@ -335,7 +335,7 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
         definición de salario medio. Se ponen juntos para ver el orden de magnitud, no para decidir
         cuál es la «verdadera» tasa de reposición.
       </p>
-      <div className="sistemas-ancho sistemas-tabla">
+      <div className="sistemas-tabla">
         <DataTable
           titulo="Tasa de reposición de la OCDE para España y cocientes entre pensión media y salario medio de datos propios"
           columnas={[

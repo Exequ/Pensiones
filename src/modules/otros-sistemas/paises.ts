@@ -4,6 +4,9 @@
  * oficial del agregado de la Unión Europea (27 países) que usan las dos fuentes.
  */
 export const CODIGO_ESPANA = 'ESP';
+export const CODIGO_REINO_UNIDO = 'GBR';
+/** Agregado de la Unión Europea (27 países) de la OCDE y de Eurostat. */
+export const CODIGO_UE = 'EU27';
 
 export interface InfoPais {
   /** Código de área de la fuente (ISO 3 o agregado: `OECD_REP`, `EU27`). */

@@ -190,7 +190,7 @@ describe('página «Otros sistemas»', () => {
       const { container } = pintar();
       const seccion = container.querySelector('#reposicion')?.closest('section')?.textContent ?? '';
       expect(seccion).toMatch(/Supuestos de la OCDE a la vista/);
-      expect(seccion).toMatch(/Escenario alternativo/);
+      expect(seccion).toMatch(/escenario alternativo/);
       expect(seccion).toMatch(/Persona modelo/);
       expect(seccion).toMatch(/no equivale a los cocientes/);
     });

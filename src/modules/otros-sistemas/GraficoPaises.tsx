@@ -2,7 +2,7 @@ import * as Plot from '@observablehq/plot';
 import { useMemo, type ReactNode } from 'react';
 import { Chart } from '../../components/Chart';
 import type { Columna } from '../../components/DataTable';
-import { token } from '../../components/estiloGrafico';
+import { TINTA_SECUNDARIA, token } from '../../components/estiloGrafico';
 import {
   diferenciasRespectoA,
   ordenarPorValor,
@@ -12,7 +12,7 @@ import {
 } from '../../engine/comparativa-internacional';
 import type { Dato } from '../../engine/esquema-datos';
 import { formatearNumero } from '../../engine/formato';
-import { ticksAnuales } from '../historico/grafico-series';
+import { TRAZOS, ticksAnuales } from '../historico/grafico-series';
 import { ComoLeerlo } from '../historico/ComoLeerlo';
 import { CODIGO_ESPANA, esAgregado, nombreCortoPais, nombrePais } from './paises';
 
@@ -270,7 +270,7 @@ export function GraficoLineasPaises({
               y: 'valor',
               stroke: espana ? token('resaltado') : token('apagado'),
               strokeWidth: espana ? 3 : 1.5,
-              strokeDasharray: esAgregado(s.pais) ? '6 3' : 'none',
+              strokeDasharray: esAgregado(s.pais) ? (TRAZOS[1] ?? 'none') : 'none',
             });
           }),
           // Con pocos puntos (series de la OCDE por años sueltos) se marcan los puntos.
@@ -294,7 +294,7 @@ export function GraficoLineasPaises({
               dx: 8,
               textAnchor: 'start',
               fontWeight: 500,
-              fill: token('tinta-2'),
+              fill: TINTA_SECUNDARIA,
             },
           ),
           Plot.text(
