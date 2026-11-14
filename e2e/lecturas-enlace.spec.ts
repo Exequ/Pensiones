@@ -191,7 +191,7 @@ test.describe('Tu pensión: enlace compartible', () => {
     await page.getByRole('radio', { name: 'Hombre' }).check();
     await page.getByLabel('Mes de jubilación').selectOption('11');
     await page.getByLabel('Año de jubilación').fill('2026');
-    await page.getByRole('radio', { name: 'Carrera por tramos' }).check({ force: true });
+    await page.getByRole('radio', { name: 'Carrera por tramos' }).check();
     await page
       .getByRole('button', { name: /Cargar la persona «Carrera con bases máximas»/ })
       .click();

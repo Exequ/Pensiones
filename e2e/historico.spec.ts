@@ -87,14 +87,14 @@ test.describe('interacción', () => {
     await page.goto(url('/cotizantes-y-pensionistas'));
     await esperarPagina(page);
     const grupo = page.getByRole('group', { name: 'Clase de pensión' }).first();
-    await grupo.getByRole('radio', { name: 'Jubilación' }).check({ force: true });
+    await grupo.getByRole('radio', { name: 'Jubilación' }).check();
     await expect(page.locator('.grafico-titulo', { hasText: 'jubilación' }).first()).toBeVisible();
   });
 
   test('«Financiación»: el selector de unidades cambia a porcentaje del PIB', async ({ page }) => {
     await page.goto(url('/financiacion-y-deficit'));
     await esperarPagina(page);
-    await page.getByRole('radio', { name: 'Porcentaje del PIB' }).check({ force: true });
+    await page.getByRole('radio', { name: 'Porcentaje del PIB' }).check();
     await expect(
       page.locator('.grafico-descripcion', { hasText: 'porcentaje del PIB corriente' }).first(),
     ).toBeVisible();

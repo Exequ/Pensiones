@@ -146,7 +146,7 @@ test.describe('Tu pensión: carrera por tramos', () => {
     await page.goto(url('/tu-pension'));
     await esperarPagina(page);
     await datosBasicos(page);
-    await page.getByRole('radio', { name: 'Carrera por tramos' }).check({ force: true });
+    await page.getByRole('radio', { name: 'Carrera por tramos' }).check();
     await rellenarTramo(page, 1, ['11', '1986'], ['12', '2005'], '1200');
     await page.getByRole('button', { name: 'Añadir tramo' }).click();
     await expect(page.getByLabel('Tramo 2, Desde: mes')).toBeFocused();
@@ -171,7 +171,7 @@ test.describe('Tu pensión: carrera por tramos', () => {
     await page.goto(url('/tu-pension'));
     await esperarPagina(page);
     await datosBasicos(page);
-    await page.getByRole('radio', { name: 'Carrera por tramos' }).check({ force: true });
+    await page.getByRole('radio', { name: 'Carrera por tramos' }).check();
     await page
       .getByRole('button', { name: /Cargar la persona «Carrera con bases máximas»/ })
       .click();
@@ -192,7 +192,7 @@ test.describe('Tu pensión: carrera por tramos', () => {
     await page.goto(url('/tu-pension'));
     await esperarPagina(page);
     await datosBasicos(page);
-    await page.getByRole('radio', { name: 'Carrera por tramos' }).check({ force: true });
+    await page.getByRole('radio', { name: 'Carrera por tramos' }).check();
     await rellenarTramo(page, 1, ['1', '2000'], ['12', '2010'], '1500');
     await page.getByRole('button', { name: 'Añadir tramo' }).click();
     await rellenarTramo(page, 2, ['6', '2008'], ['12', '2012'], '1800');
@@ -207,7 +207,7 @@ test.describe('Tu pensión: carrera por tramos', () => {
   test('quitar y duplicar tramos con el teclado', async ({ page }) => {
     await page.goto(url('/tu-pension'));
     await esperarPagina(page);
-    await page.getByRole('radio', { name: 'Carrera por tramos' }).check({ force: true });
+    await page.getByRole('radio', { name: 'Carrera por tramos' }).check();
     await rellenarTramo(page, 1, ['1', '2000'], ['12', '2005'], '1500');
     await page.getByRole('button', { name: 'Duplicar el tramo 1' }).focus();
     await page.keyboard.press('Enter');
@@ -223,7 +223,7 @@ test.describe('Tu pensión: carrera por tramos', () => {
     await page.goto(url('/tu-pension'));
     await esperarPagina(page);
     await datosBasicos(page);
-    await page.getByRole('radio', { name: 'Carrera por tramos' }).check({ force: true });
+    await page.getByRole('radio', { name: 'Carrera por tramos' }).check();
     await page
       .getByRole('button', { name: /Cargar la persona «Carrera con una interrupción larga»/ })
       .click();
@@ -260,7 +260,7 @@ test.describe('Tu pensión: carrera por tramos', () => {
     await page.goto(url('/tu-pension'));
     await esperarPagina(page);
     await datosBasicos(page);
-    await page.getByRole('radio', { name: 'Carrera por tramos' }).check({ force: true });
+    await page.getByRole('radio', { name: 'Carrera por tramos' }).check();
     await page
       .getByRole('button', { name: /Cargar la persona «Carrera con bases máximas»/ })
       .click();
@@ -279,7 +279,7 @@ test.describe('Tu pensión: carrera por tramos', () => {
     await page.goto(url('/tu-pension'));
     await esperarPagina(page);
     await datosBasicos(page);
-    await page.getByRole('radio', { name: 'Carrera por tramos' }).check({ force: true });
+    await page.getByRole('radio', { name: 'Carrera por tramos' }).check();
     await rellenarTramo(page, 1, ['1', '2000'], ['12', '2010'], '1500');
     await page.getByRole('button', { name: 'Añadir tramo' }).click();
     await rellenarTramo(page, 2, ['6', '2008'], ['12', '2012'], '1800');
