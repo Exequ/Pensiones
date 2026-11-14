@@ -642,7 +642,7 @@
     {
       "id": "web-hist-gasto-sobre-pib",
       "texto": "El gasto en pensiones sobre el PIB difiere según la medida: obligaciones reconocidas por pensiones contributivas con o sin complemento a mínimos (cálculo propio con el PIB del INE), prestaciones de vejez y de vejez más supervivencia de Eurostat (suma de dos series) y gasto público en pensiones de la OCDE; los datos descargados no permiten reconciliarlas una a una. El gasto en pensiones contributivas por clase son las obligaciones reconocidas de la ejecución; el complemento a mínimos de las pensiones contributivas figura en otra fila de la ejecución (transferencias corrientes, pensiones no contributivas y complementos), por lo que el total depende de si se incluye o no. Los meses de gasto que equivale el Fondo se calculan con dos definiciones de gasto: las obligaciones reconocidas por pensiones contributivas de la ejecución y la suma de las cinco clases de número de pensiones por pensión media mensual por catorce pagas; los dos gastos difieren porque la ejecución anota el complemento a mínimos en otra fila y el segundo no incluye atrasos ni efectos de calendario.",
-      "ubicacion": "Página «Financiación y déficit»: gasto en pensiones sobre el PIB (Fase 5-A); Página «Financiación y déficit»: gasto en pensiones contributivas; Página «Hucha»: meses de gasto",
+      "ubicacion": "Página «Financiación y déficit»: gasto en pensiones sobre el PIB (Fase 5-A); Página «Financiación y déficit»: gasto en pensiones contributivas; Página «Hucha»: meses de gasto; Página «Hucha»: meses de transferencias y construcción ilustrativa (Fase 5-A2)",
       "datos": [
         "internacional/contraste-espana.json#gasto-pensiones-contributivas-sobre-pib",
         "internacional/eurostat-espana.json#gasto-old-no-aplica-no-aplica-pc-gdp",
@@ -691,7 +691,7 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "¿Es correcto sumar vejez y supervivencia de Eurostat como medida comparable al gasto propio? ¿Qué perímetro (Clases Pasivas, no contributivas) debe atribuirse a cada medida? ¿Debe el complemento a mínimos contarse como gasto en pensiones contributivas cuando se divide el gasto entre el PIB? ¿Es correcta la descripción de dónde lo anota la ejecución? ¿Es adecuada la comparación del valor del Fondo con el gasto anual en meses y la aproximación con catorce pagas? ¿Qué definición de gasto prefieres como referencia?"
+      "preguntaActuarial": "¿Es correcto sumar vejez y supervivencia de Eurostat como medida comparable al gasto propio? ¿Qué perímetro (Clases Pasivas, no contributivas) debe atribuirse a cada medida? ¿Debe el complemento a mínimos contarse como gasto en pensiones contributivas cuando se divide el gasto entre el PIB? ¿Es correcta la descripción de dónde lo anota la ejecución? ¿Es adecuada la comparación del valor del Fondo con el gasto anual en meses y la aproximación con catorce pagas? ¿Qué definición de gasto prefieres como referencia? Fase 5-A2: ¿es adecuado expresar el valor del Fondo en meses de transferencias del Estado con las dos definiciones de periodo (año completo y cuarto trimestre) y el trimestre como tres meses? ¿Es aceptable presentar como «construcción ilustrativa» la suma de dos saldos (Fondo a precio de adquisición y deuda PDE de la Seguridad Social) con un flujo acumulado (transferencias del Estado desde un año de inicio), con las advertencias que lleva la página, o debe evitarse esa suma? ¿Qué debe decirse de la relación entre los préstamos, las transferencias y el Fondo para no dar a entender que las partidas son aditivas?"
     },
     {
       "id": "web-hist-fondo-valor",
@@ -739,6 +739,247 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-hucha-aportaciones-estado",
+      "texto": "El texto refundido de la Ley General de la Seguridad Social incluye entre los recursos del sistema las aportaciones del Estado consignadas en los Presupuestos Generales del Estado y dispone que la modalidad no contributiva y universal se financia mediante aportaciones del Estado; clasifica los complementos por mínimos de las pensiones, las prestaciones familiares y el ingreso mínimo vital entre las prestaciones de naturaleza no contributiva.",
+      "ubicacion": "Página «Hucha»: «De dónde procede el dinero» (Fase 5-A2)",
+      "datos": [
+        "normativa/trlgss-financiacion.json#aportaciones-estado-presupuestos",
+        "normativa/trlgss-financiacion.json#no-contributiva-aportaciones-estado",
+        "normativa/trlgss-financiacion.json#naturaleza-no-contributiva-minimos",
+        "normativa/trlgss-financiacion.json#naturaleza-no-contributiva-familiares-imv"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-hucha-transferencias-ejecucion",
+      "texto": "En la ejecución del presupuesto de la Seguridad Social las transferencias corrientes figuran como ingresos distinguidos por organismo de origen; la serie de la página usa las del Estado y organismos autónomos (derechos reconocidos netos). Los flujos trimestrales son la diferencia entre acumulados de cierre de trimestre consecutivos (dato derivado) y las transferencias de capital solo constan en total y de cualquier origen.",
+      "ubicacion": "Página «Hucha»: Transferencias en el tiempo (Fase 5-A2)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-hucha-prestamos-estado",
+      "texto": "Los préstamos a largo plazo del Estado a la Tesorería General de la Seguridad Social se concedieron para cubrir gastos de gestión ordinaria, sin devengo de intereses y con cancelación en un plazo máximo de diez años desde el año siguiente al de su concesión (Tribunal de Cuentas); se contabilizan como pasivos financieros en la ejecución y el Banco de España los recoge en la deuda de la Seguridad Social, sin efecto en la deuda del total de las Administraciones Públicas.",
+      "ubicacion": "Página «Hucha»: «De dónde procede el dinero» (Fase 5-A2)",
+      "datos": [
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#origen-prestamos-gestion-ordinaria",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#condiciones-prestamos-recientes",
+        "sistema/deuda-pde-seguridad-social.json#deuda-pde-fin-ano",
+        "sistema/deficit-presupuestario-seguridad-social.json#pasivos-financieros"
+      ],
+      "fuentes": [
+        {
+          "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+          "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+          "docId": "BOE-A-2025-25090"
+        },
+        {
+          "title": "Boletín Estadístico: Deuda PDE. Admón. Seguridad Social (DTNPDE2010_P00000_PS_ASG), serie trimestral",
+          "publisher": "Banco de España",
+          "url": "https://app.bde.es/bie_www?SERIE=DTNPDE2010_P00000_PS_ASG"
+        },
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-hucha-gastos-impropios-tribunal",
+      "texto": "El Tribunal de Cuentas recoge del Informe de Evaluación y Reforma del Pacto de Toledo la constatación de que las cotizaciones sociales siguen sufragando prestaciones, políticas o partidas de gastos que no pertenecen estrictamente al ámbito de la Seguridad Social y que deberían financiarse con la fiscalidad general, y la finalidad de las transferencias anuales de asumir progresivamente esos costes «impropios»; no consta en las fuentes descargadas una definición única de gastos impropios.",
+      "ubicacion": "Página «Hucha»: «De dónde procede el dinero» (Fase 5-A2)",
+      "datos": [
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#definicion-costes-impropios-pacto-toledo",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#objetivo-transferencias-pacto-toledo"
+      ],
+      "fuentes": [
+        {
+          "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+          "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+          "docId": "BOE-A-2025-25090"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-hucha-clasificaciones",
+      "texto": "Las cifras del Tribunal de Cuentas (transferencias corrientes aportadas por el Estado y préstamos concedidos, acumulados 2018-2022 y 2017-2022) y las de la ejecución del presupuesto (transferencias corrientes del Estado y organismos autónomos; pasivos financieros) difieren porque cada fuente delimita las partidas de un modo; con los datos descargados no se concilian partida a partida. Los préstamos de 2017 a 2022 coinciden con los pasivos financieros de la ejecución dentro de una diferencia inferior al 0,1 %.",
+      "ubicacion": "Página «Hucha»: «De dónde procede el dinero»: tabla de clasificaciones (Fase 5-A2)",
+      "datos": [
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#transferencias-corrientes-2018-2022",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#prestamos-concedidos-2017-2022",
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes",
+        "sistema/deficit-presupuestario-seguridad-social.json#pasivos-financieros"
+      ],
+      "fuentes": [
+        {
+          "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+          "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+          "docId": "BOE-A-2025-25090"
+        },
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-hucha-finalidad-tribunal",
+      "texto": "Según el Tribunal de Cuentas, de las transferencias corrientes del Estado de 2018 a 2022, una parte de las de 2018 a 2021 tuvo por finalidad apoyar el equilibrio presupuestario (incluidas las concedidas por la covid en 2020 y 2021) y las de 2021 y 2022 se basan en la modificación del texto refundido por la ley de presupuestos de 2021; las aportaciones de naturaleza no contributiva de 2022 se citan aparte.",
+      "ubicacion": "Página «Hucha»: Transferencias por finalidad (Fase 5-A2)",
+      "datos": [
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#transferencias-equilibrio-2018-2021",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#transferencias-covid-2020",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#transferencias-covid-2021",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#transferencias-costes-impropios-2021-2022",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#aportaciones-no-contributivas-2022"
+      ],
+      "fuentes": [
+        {
+          "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+          "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+          "docId": "BOE-A-2025-25090"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-hucha-deuda-composicion",
+      "texto": "A 31 de diciembre de 2022 el endeudamiento de la Seguridad Social frente al Estado era, según el Tribunal de Cuentas, la suma de los préstamos concedidos entre 1992 y 1999 y los concedidos desde 2017; la deuda PDE de la Seguridad Social del Banco de España a fin de ese año coincide con esa cifra dentro de una diferencia inferior al 0,1 %.",
+      "ubicacion": "Página «Hucha»: Deuda con el Estado (Fase 5-A2)",
+      "datos": [
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#deuda-ss-con-estado-2022",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#prestamos-1992-1999",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#prestamos-concedidos-2017-2022",
+        "sistema/deuda-pde-seguridad-social.json#deuda-pde-fin-ano"
+      ],
+      "fuentes": [
+        {
+          "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+          "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+          "docId": "BOE-A-2025-25090"
+        },
+        {
+          "title": "Boletín Estadístico: Deuda PDE. Admón. Seguridad Social (DTNPDE2010_P00000_PS_ASG), serie trimestral",
+          "publisher": "Banco de España",
+          "url": "https://app.bde.es/bie_www?SERIE=DTNPDE2010_P00000_PS_ASG"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-hucha-prestamos-sin-cancelacion",
+      "texto": "Las fuentes descargadas recogen una recomendación del Tribunal de Cuentas de que el Estado asuma por condonación o transferencias la amortización de tres préstamos antiguos, un acuerdo de la Comisión Mixta que pide medidas legislativas sobre el endeudamiento frente al Estado, la observación de que los préstamos antiguos no se han devuelto y se han prorrogado, y la concesión de un nuevo plazo de diez años desde 2026 a préstamos de 1992, 1994 y 1995; no recogen ninguna cancelación ni conversión en transferencia.",
+      "ubicacion": "Página «Hucha»: Deuda con el Estado: anotaciones (Fase 5-A2)",
+      "datos": [
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#recomendacion-amortizacion-insalud",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#acuerdo-cortes-endeudamiento",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#prestamos-sin-devolver-y-prorrogados",
+        "parametros/prestamos-plazo-ampliado-2026.json#apartado-1-plazo-anios"
+      ],
+      "fuentes": [
+        {
+          "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+          "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+          "docId": "BOE-A-2025-25090"
+        },
+        {
+          "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-2548",
+          "docId": "BOE-A-2026-2548"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-hucha-meses-transferencias",
+      "texto": "El valor del Fondo de Reserva a fin de año se expresa en meses de transferencias como valor del Fondo ÷ (transferencias del periodo ÷ meses del periodo), con dos definiciones de periodo (año completo y cuarto trimestre) y un trimestre equivalente a tres meses (cálculo propio, dato derivado).",
+      "ubicacion": "Página «Hucha»: El Fondo frente a las transferencias (Fase 5-A2)",
+      "datos": [
+        "sistema/fondo-reserva-series.json#valor-fin-ano",
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+      ],
+      "fuentes": [
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        },
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-hucha-construccion-ilustrativa",
+      "texto": "La construcción ilustrativa suma, para cada año, los componentes seleccionados entre el valor del Fondo a fin de año, la deuda PDE de la Seguridad Social a fin de año y las transferencias corrientes del Estado acumuladas desde un año de inicio; combina dos saldos con un flujo acumulado, depende del año de inicio y de los componentes incluidos, y no es una cifra oficial (cálculo propio, dato derivado).",
+      "ubicacion": "Página «Hucha»: Construcción ilustrativa (Fase 5-A2)",
+      "datos": [
+        "sistema/fondo-reserva-series.json#valor-fin-ano",
+        "sistema/deuda-pde-seguridad-social.json#deuda-pde-fin-ano",
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+      ],
+      "fuentes": [
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        },
+        {
+          "title": "Boletín Estadístico: Deuda PDE. Admón. Seguridad Social (DTNPDE2010_P00000_PS_ASG), serie trimestral",
+          "publisher": "Banco de España",
+          "url": "https://app.bde.es/bie_www?SERIE=DTNPDE2010_P00000_PS_ASG"
+        },
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada"
     }
   ]
 }
