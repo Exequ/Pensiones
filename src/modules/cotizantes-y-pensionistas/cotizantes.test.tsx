@@ -150,7 +150,9 @@ describe('«Cotizantes y pensionistas»: pensión media en euros constantes', ()
     }).nextElementSibling;
     const texto = lista?.textContent ?? '';
     expect(texto).toMatch(/media por pensión, no por pensionista/);
-    expect(texto).toMatch(/Incluye los complementos a mínimos/);
+    // Fase 5-B1: la advertencia sobre los complementos a mínimos se retiró (ninguna fuente
+    // descargada la confirma; consta como pendiente en docs/PENDIENTE_DATOS.md).
+    expect(texto).not.toMatch(/complementos? a mínimos/);
     expect(texto).toMatch(/Mezcla regímenes/);
     expect(texto).toMatch(/No es la pensión media de las altas nuevas/);
     expect(texto).toMatch(/efecto composición/);

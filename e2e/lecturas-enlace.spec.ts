@@ -5,7 +5,7 @@ import { esperarPagina, url, vigilar } from './utilidades.ts';
 async function rellenar(page: Page) {
   await page.getByLabel('Mes de nacimiento').selectOption('11');
   await page.getByLabel('Año de nacimiento').fill('1961');
-  await page.getByRole('radio', { name: 'Hombre' }).check({ force: true });
+  await page.getByRole('radio', { name: 'Hombre' }).check();
   await page.getByLabel('Mes de jubilación').selectOption('11');
   await page.getByLabel('Año de jubilación').fill('2026');
   await page.getByLabel('Mes de inicio de la cotización').selectOption('11');
@@ -188,7 +188,7 @@ test.describe('Tu pensión: enlace compartible', () => {
     await esperarPagina(page);
     await page.getByLabel('Mes de nacimiento').selectOption('11');
     await page.getByLabel('Año de nacimiento').fill('1961');
-    await page.getByRole('radio', { name: 'Hombre' }).check({ force: true });
+    await page.getByRole('radio', { name: 'Hombre' }).check();
     await page.getByLabel('Mes de jubilación').selectOption('11');
     await page.getByLabel('Año de jubilación').fill('2026');
     await page.getByRole('radio', { name: 'Carrera por tramos' }).check({ force: true });

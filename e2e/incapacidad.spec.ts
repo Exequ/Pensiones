@@ -7,7 +7,7 @@ async function rellenar(page: Page, grado = 'Total', origen = 'Enfermedad común
   await page.getByRole('radio', { name: 'Incapacidad permanente' }).check({ force: true });
   await page.getByLabel('Mes de nacimiento').selectOption('3');
   await page.getByLabel('Año de nacimiento').fill('1981');
-  await page.getByRole('radio', { name: 'Hombre' }).check({ force: true });
+  await page.getByRole('radio', { name: 'Hombre' }).check();
   await page.getByLabel('Mes del hecho causante').selectOption('3');
   await page.getByLabel('Año del hecho causante').fill('2026');
   await page.getByLabel('Mes de inicio de la cotización').selectOption('1');

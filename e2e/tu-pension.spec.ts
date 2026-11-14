@@ -5,7 +5,7 @@ import { esperarPagina, url, vigilar } from './utilidades.ts';
 async function rellenar(page: Page, anioJubilacion = '2026') {
   await page.getByLabel('Mes de nacimiento').selectOption('11');
   await page.getByLabel('Año de nacimiento').fill('1961');
-  await page.getByRole('radio', { name: 'Hombre' }).check({ force: true });
+  await page.getByRole('radio', { name: 'Hombre' }).check();
   await page.getByLabel('Mes de jubilación').selectOption('11');
   await page.getByLabel('Año de jubilación').fill(anioJubilacion);
   await page.getByLabel('Mes de inicio de la cotización').selectOption('11');
@@ -120,7 +120,7 @@ test.describe('Tu pensión', () => {
 async function datosBasicos(page: Page) {
   await page.getByLabel('Mes de nacimiento').selectOption('11');
   await page.getByLabel('Año de nacimiento').fill('1961');
-  await page.getByRole('radio', { name: 'Hombre' }).check({ force: true });
+  await page.getByRole('radio', { name: 'Hombre' }).check();
   await page.getByLabel('Mes de jubilación').selectOption('11');
   await page.getByLabel('Año de jubilación').fill('2026');
 }

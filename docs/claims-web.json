@@ -1015,7 +1015,7 @@
     {
       "id": "web-hist-complemento-pension",
       "texto": "El complemento a mínimos forma parte de lo que se abona al pensionista como parte de su pensión y, por tanto, está incluido en la pensión media de las pensiones en vigor. Es una afirmación de la revisión actuarial del 14-11-2026: en las fuentes descargadas no hay una frase de la Seguridad Social que lo confirme (la fuente calcula el importe medio a partir de los importes de la nómina de pensiones y publica aparte las pensiones con complemento a mínimos).",
-      "ubicacion": "Página «Cotizantes y pensionistas»: advertencias sobre la pensión media; Páginas «Financiación y déficit» y «Hucha»: referencia con complemento a mínimos",
+      "ubicacion": "Páginas «Financiación y déficit» y «Hucha»: referencia con complemento a mínimos (la advertencia de la página «Cotizantes y pensionistas» se retiró en la Fase 5-B1)",
       "datos": ["sistema/pensiones-vigor-pension-media.json#total-ambos"],
       "fuentes": [
         {
@@ -1026,7 +1026,7 @@
       ],
       "fetchedAt": "2026-11-14",
       "estado": "pendiente",
-      "notas": "Sin verificar: se anota en docs/PENDIENTE_DATOS.md. Indicio no concluyente: el texto refundido llama a los complementos «complementos por mínimos de las pensiones» (art. 109.3.b.4.ª)."
+      "notas": "Sin verificar: se anota en docs/PENDIENTE_DATOS.md. Fase 5-B1: la advertencia «incluye los complementos a mínimos» se quita de las advertencias de la pensión media de «Cotizantes y pensionistas»; la afirmación sigue pendiente de una fuente. Indicio no concluyente: el texto refundido llama a los complementos «complementos por mínimos de las pensiones» (art. 109.3.b.4.ª)."
     }
   ]
 }
