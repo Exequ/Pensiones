@@ -17,3 +17,52 @@ Cada afirmación que proponía la revisión se contrastó con ficheros ya descar
 | **Adicional** (paso 2) Los funcionarios de Clases Pasivas no están ni en los afiliados ni en las pensiones del sistema                                                                                           | **Verificado (fuente) en parte**                                                                    | Las series son las de afiliación por regímenes de la Seguridad Social (la lista de regímenes de `serie-afiliacion-media-regimenes.xlsx` no incluye Clases Pasivas) y las pensiones contributivas del sistema de la Seguridad Social; el Régimen de Clases Pasivas tiene su propia norma (RDLeg 670/1987, `data/normativa/prestaciones.json`). Los ficheros de afiliación no dicen qué colectivos de funcionarios cuentan en cada régimen.                                                                                                                                                                                 | Aviso de perímetro redactado sobre lo verificado: la razón usa afiliados de los regímenes de la Seguridad Social y pensiones contributivas del sistema; el Régimen de Clases Pasivas es otro régimen y no entra en estas series.                                                                                   |
 
 Todo lo anterior queda también como afirmación o pendiente en `docs/claims-web.json` y `docs/PENDIENTE_DATOS.md`.
+
+## Qué cambió
+
+**Cotizantes y pensionistas**
+
+- Las seis definiciones de la relación indican qué cuenta el denominador (pensiones o personas) y la fecha de referencia de numerador y denominador; las dos parejas con fechas contiguas llevan la marca «misma fecha de referencia (fechas contiguas)», sin presentarlas como la mejor (la revisión ponía como ejemplo pensiones a 1 de diciembre; los datos tienen 1 de enero siguiente: `docs/DISCREPANCIAS.md`).
+- Aviso de perímetro (Clases Pasivas) redactado sobre lo verificado; la definición con cotizantes efectivos no se muestra y queda en `docs/PENDIENTE_DATOS.md`; no se añade «sin sistemas especiales».
+- Pensión media en euros constantes: selector «IPC de diciembre» (por defecto) / «IPC medio anual», con el IPC mensual del repo; cinco advertencias sobre la media (el efecto composición, con los datos de altas y bajas por clase).
+
+**Financiación y déficit**
+
+- «Resto (por diferencia)» en derechos reconocidos netos, no caja; aclaración de que las transferencias del Estado y OO. AA. no equivalen a «aportación del Estado».
+- Definición del SEC sin «base devengo» ni perímetro con SEPE y FOGASA (no verificables).
+- Saldo «Saldo no financiero menos transferencias corrientes del Estado y OO. AA. (cálculo propio)» con la advertencia neutral.
+- Gastos impropios: retiradas las lecturas que los sumaban al saldo; solo la cifra como «estimación de 2020, no dato observado».
+- Gasto sobre el PIB: Eurostat como ESSPROS, advertencia de no comparabilidad con el gasto contributivo (incluye incapacidad), referencia con complemento a mínimos y variante sin complemento (selector).
+
+**Hucha**
+
+- Meses de gasto: referencia con complemento a mínimos y contraste con catorce pagas; aviso del precio de adquisición.
+- Meses de transferencias: año completo (principal) y cuarto trimestre (secundaria), con aviso de diferencias de acumulados y de irregularidad de los derechos reconocidos.
+- Dos lecturas separadas («Fondo menos deuda» y «deuda más transferencias acumuladas»: apoyo financiero del Estado), cada una con gráfico, definición, signo, tabla y «Cómo leerlo»; suma conjunta solo como opción (casilla desactivada por defecto) con aviso reforzado.
+
+**Simulador**: frase del aviso de incapacidad («El grado lo reconoce el organismo competente»), sin referencia médica.
+
+## Afirmaciones (`docs/claims-web.json`)
+
+- Las cinco afirmaciones pendientes pasan a `revisionActuarial: "revisada"` con los textos nuevos (el esquema admite `revisada`). Se actualizan `web-hucha-meses-transferencias` y `web-hucha-construccion-ilustrativa` y se añade `web-hist-complemento-pension` con estado `pendiente` (sin fuente que lo confirme).
+- Pendientes de revisión en `docs/claims.json`: 65 (tope del test: 70). El generador borraba antes el estado de las afirmaciones de `claims-web.json`; ahora lo respeta (`docs/DECISIONES.md`).
+
+## Qué quedó fuera
+
+Perímetro del S.1314 y base devengo; perímetro de ESSPROS; contraste de gastos impropios con el Informe del Pacto de Toledo de 2020 y la AIReF; cotizantes efectivos; confirmación de que la pensión media incluye los complementos a mínimos; pauta de los desembolsos. Todo en `docs/PENDIENTE_DATOS.md`.
+
+## Pruebas
+
+- Unitarias: `euros-constantes.test.ts` (IPC de diciembre y media anual, con casos a mano), `transferencias.test.ts` (posición neta y apoyo financiero), `sistema-historico.test.ts` (media de altas y bajas).
+- Componentes: `cotizantes.test.tsx`, `financiacion.test.tsx`, `hucha.test.tsx`, neutralidad en las tres páginas.
+- Playwright: `e2e/ajustes-actuariales-2.spec.ts` y `e2e/hucha.spec.ts` (consola, selector de deflactor, casilla de suma conjunta desactivada por defecto, móvil, axe). Todo el e2e existente pasa en local (264 pruebas).
+
+## Tamaño de los chunks (antes → después, kB; gzip entre paréntesis)
+
+| Página                    | Antes          | Después        |
+| ------------------------- | -------------- | -------------- |
+| Cotizantes y pensionistas | 102,19 (22,07) | 107,82 (26,76) |
+| Financiación y déficit    | 20,79 (6,50)   | 22,69 (6,95)   |
+| Hucha                     | 149,73 (34,89) | 157,33 (36,70) |
+
+El IPC mensual (252,93 kB, 12,40 gzip) pasa a un chunk compartido que carga ahora también «Cotizantes y pensionistas» (antes iba dentro del chunk de «Tu pensión», que baja de 2.929 a 2.695 kB).
