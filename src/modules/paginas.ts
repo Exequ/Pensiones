@@ -3,9 +3,6 @@ import type { SlugSeccion } from './secciones';
 import TiposDePension from './tipos-de-pension/Pagina';
 import ComoSeCalcula from './como-se-calcula/Pagina';
 import Reformas from './reformas/Pagina';
-import FinanciacionYDeficit from './financiacion-y-deficit/Pagina';
-import Hucha from './hucha/Pagina';
-import CotizantesYPensionistas from './cotizantes-y-pensionistas/Pagina';
 import OtrosSistemas from './otros-sistemas/Pagina';
 import MitosYRealidades from './mitos-y-realidades/Pagina';
 import Metodologia from './metodologia/Pagina';
@@ -15,6 +12,14 @@ import Metodologia from './metodologia/Pagina';
  * (`import.meta.glob`), que no deben engordar el resto de la web.
  */
 const TuPension = lazy(() => import('./tu-pension/Pagina'));
+
+/**
+ * Las páginas históricas (Fase 5-A) también se cargan solo al visitarlas: arrastran sus ficheros de
+ * /data (en particular, la ejecución del presupuesto en CSV) y Observable Plot.
+ */
+const CotizantesYPensionistas = lazy(() => import('./cotizantes-y-pensionistas/Pagina'));
+const FinanciacionYDeficit = lazy(() => import('./financiacion-y-deficit/Pagina'));
+const Hucha = lazy(() => import('./hucha/Pagina'));
 
 /** Componente de página de cada sección, indexado por su ruta. */
 export const PAGINAS: Record<SlugSeccion, ComponentType> = {

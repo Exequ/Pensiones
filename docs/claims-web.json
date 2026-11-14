@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1 y 3-B2). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md).",
+  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1, 3-B2 y 5-A). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md).",
   "claims": [
     {
       "id": "web-tu-pension-base-sugerida",
@@ -369,6 +369,376 @@
       ],
       "fetchedAt": "2026-11-12",
       "estado": "verificada"
+    },
+    {
+      "id": "web-hist-afiliados-diciembre",
+      "texto": "Se muestran los afiliados medios en alta de diciembre del total del sistema, del régimen general y de los autónomos, tal como figuran en el fichero de la Seguridad Social; las cifras de los textos son el primer y el último valor de la serie, su variación relativa y la mayor caída entre dos años, calculadas a partir de esos valores.",
+      "ubicacion": "Página «Cotizantes y pensionistas»: afiliados en alta (Fase 5-A)",
+      "datos": [
+        "sistema/afiliacion-anual.json#diciembre-total-sistema",
+        "sistema/afiliacion-anual.json#diciembre-general",
+        "sistema/afiliacion-anual.json#diciembre-autonomos"
+      ],
+      "fuentes": [
+        {
+          "title": "Afiliados medios en alta por regímenes (serie 2001-2026, total sistema)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST290/EST291"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-hist-pensiones-pensionistas",
+      "texto": "Los pensionistas son las personas que perciben al menos una pensión contributiva y las pensiones son el número de pensiones en vigor a diciembre; un pensionista puede percibir varias, por lo que hay más pensiones que pensionistas.",
+      "ubicacion": "Página «Cotizantes y pensionistas»: pensiones y pensionistas (Fase 5-A)",
+      "datos": [
+        "sistema/pensionistas-pensiones-historico.json#pensionistas",
+        "sistema/pensionistas-pensiones-historico.json#pensiones"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-hist-pensiones-clase",
+      "texto": "Número de pensiones contributivas en vigor a 1 de diciembre por clase (jubilación, viudedad, incapacidad permanente, orfandad y en favor de familiares), ambos sexos, total del sistema; las variaciones de los textos se calculan con el primer y el último año de la serie.",
+      "ubicacion": "Página «Cotizantes y pensionistas»: pensiones por clase (Fase 5-A)",
+      "datos": [
+        "sistema/pensiones-vigor-numero.json#jubilacion-ambos",
+        "sistema/pensiones-vigor-numero.json#viudedad-ambos",
+        "sistema/pensiones-vigor-numero.json#incapacidad-ambos",
+        "sistema/pensiones-vigor-numero.json#orfandad-ambos",
+        "sistema/pensiones-vigor-numero.json#favor-familiares-ambos"
+      ],
+      "fuentes": [
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-hist-indice-base-100",
+      "texto": "Índice base cien en el primer año común de las series de afiliados de diciembre, pensiones y pensionistas: valor de cada año dividido por el valor del año base y multiplicado por cien (cálculo propio con las series publicadas).",
+      "ubicacion": "Página «Cotizantes y pensionistas»: crecimiento comparado (Fase 5-A)",
+      "datos": [
+        "sistema/afiliacion-anual.json#diciembre-total-sistema",
+        "sistema/pensionistas-pensiones-historico.json#pensiones",
+        "sistema/pensionistas-pensiones-historico.json#pensionistas"
+      ],
+      "fuentes": [
+        {
+          "title": "Afiliados medios en alta por regímenes (serie 2001-2026, total sistema)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST290/EST291"
+        },
+        {
+          "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-hist-pension-media",
+      "texto": "Pensión media mensual de las pensiones contributivas en vigor a 1 de diciembre por clase; en euros constantes se multiplica por el IPC medio del último año y se divide por el IPC medio del año del importe (cálculo propio).",
+      "ubicacion": "Página «Cotizantes y pensionistas»: pensión media por clase (Fase 5-A)",
+      "datos": [
+        "sistema/pensiones-vigor-pension-media.json#total-ambos",
+        "sistema/pensiones-vigor-pension-media.json#jubilacion-ambos",
+        "parametros/ipc-indice-medio-anual.json#2025"
+      ],
+      "fuentes": [
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        },
+        {
+          "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+          "docId": "IPC290751"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "¿Es adecuado expresar la pensión media en euros constantes con el IPC medio anual (base del último año), o debe usarse otro deflactor (IPC de diciembre, deflactor del consumo de los hogares)? ¿Debe advertirse algo más sobre la composición de la media?"
+    },
+    {
+      "id": "web-hist-relacion-afiliados-pensiones",
+      "texto": "La relación entre afiliados y pensiones o pensionistas se calcula como cociente de dos series publicadas y depende de si el denominador cuenta pensiones o personas, de si los afiliados son los de diciembre, la media anual o los del último día de diciembre, y de la fecha del denominador; la Seguridad Social no publica esta razón como tal en los ficheros descargados. La definición por pensionista con afiliados del último día de diciembre solo existe para un año.",
+      "ubicacion": "Página «Cotizantes y pensionistas»: relación entre afiliados y pensiones (Fase 5-A)",
+      "datos": [
+        "sistema/relacion-afiliados-pensiones.json#afiliados-diciembre-por-pension",
+        "sistema/relacion-afiliados-pensiones.json#afiliados-media-anual-por-pension",
+        "sistema/relacion-afiliados-pensiones.json#afiliados-diciembre-por-pensionista",
+        "sistema/relacion-afiliados-pensiones.json#afiliados-media-anual-por-pensionista",
+        "sistema/relacion-afiliados-pensiones-alternativa-1.json#afiliados-por-pension-alternativa-1",
+        "sistema/relacion-afiliados-pensiones-alternativa-1.json#afiliados-por-pensionista-alternativa-1"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271"
+        },
+        {
+          "title": "Afiliados último día: serie de afiliados a último día por regímenes 1985-septiembre 2026 (fila de diciembre, columna TOTAL SISTEMA)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST305/EST306",
+          "docId": "SS-afiliados-ultimo-dia"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "¿Están bien descritos el numerador y el denominador de cada una de las seis definiciones y es correcto presentarlas sin jerarquizar? ¿Falta alguna definición relevante (cotizantes efectivos, ocupados sin sistemas especiales) que no se ha podido descargar?"
+    },
+    {
+      "id": "web-hist-edad-media-altas",
+      "texto": "La edad media de las altas iniciales de jubilación es la edad a la que se reconoce la pensión según la fuente; no es la edad efectiva de salida del mercado laboral, cuya serie no está en los datos descargados.",
+      "ubicacion": "Página «Cotizantes y pensionistas»: altas y bajas (Fase 5-A)",
+      "datos": ["sistema/edad-media-altas-jubilacion.json#edad-media-altas-jubilacion"],
+      "fuentes": [
+        {
+          "title": "Altas y bajas de pensiones contributivas: evolución 2022-2026 (fichero EVO), hoja EVO_acumula_altas_jub_edad",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-hist-ingresos-gastos-no-financieros",
+      "texto": "Los ingresos y gastos no financieros son los derechos reconocidos y las obligaciones reconocidas por operaciones no financieras de la ejecución del presupuesto del Sistema de la Seguridad Social a fin de ejercicio; en porcentaje del PIB se dividen entre el PIB corriente del INE.",
+      "ubicacion": "Página «Financiación y déficit»: ingresos y gastos no financieros (Fase 5-A)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#derechos-no-financieros",
+        "sistema/deficit-presupuestario-seguridad-social.json#obligaciones-no-financieras",
+        "macro/pib-ine.json#pib-corriente"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        },
+        {
+          "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: PIB a precios de mercado y sus componentes",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+          "docId": "INE-CNA-pib95_25"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-hist-composicion-ingresos",
+      "texto": "Los ingresos no financieros se descomponen en cotizaciones sociales, transferencias corrientes del Estado y organismos autónomos y un resto calculado como diferencia; el desglose de las transferencias por finalidad no está en los datos descargados.",
+      "ubicacion": "Página «Financiación y déficit»: composición de los ingresos (Fase 5-A)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#derechos-no-financieros",
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "¿Es correcto presentar el resto como diferencia (otras transferencias, tasas, ingresos patrimoniales y de capital) y atribuir a la clasificación económica de la fuente la composición de los ingresos? ¿Debe indicarse el criterio de las transferencias entre entidades del propio sistema?"
+    },
+    {
+      "id": "web-hist-definiciones-saldo",
+      "texto": "Las fuentes descargadas ofrecen tres definiciones de saldo: el saldo presupuestario no financiero, el saldo presupuestario total (con operaciones financieras, entre ellas los préstamos del Estado) y la capacidad o necesidad de financiación de los fondos de la Seguridad Social en contabilidad nacional (SEC), con su cambio de perímetro por la sanidad; ninguna se presenta como la correcta. Restar del saldo no financiero las transferencias corrientes del Estado y organismos autónomos es un cálculo propio que no equivale a ninguna definición publicada; la lectura que además suma los gastos impropios previstos es ilustrativa, mezcla una previsión con datos de ejecución y no es una estimación del déficit. Las cifras sobre gastos impropios proceden de un artículo de la Revista de la Seguridad Social que cita previsiones anteriores a los ejercicios que describen (gastos impropios y déficit estimados para 2023, transferencia aproximada prevista en el proyecto de presupuestos de 2021 y aportación del Estado al gasto en pensiones en 2016); son fuente secundaria, con confianza media o baja, y no datos observados.",
+      "ubicacion": "Página «Financiación y déficit»: definiciones de saldo (Fase 5-A); Página «Financiación y déficit»: saldo con y sin transferencias del Estado; Página «Financiación y déficit»: gastos impropios",
+      "datos": [
+        "sistema/deficit-definiciones.json#saldo-presupuestario-no-financiero",
+        "sistema/deficit-definiciones.json#saldo-presupuestario-total",
+        "sistema/deficit-definiciones.json#necesidad-financiacion-sec-s1314",
+        "sistema/deficit-definiciones.json#nota-espana-sanidad-2002",
+        "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-no-financiero",
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes",
+        "sistema/gastos-impropios.json#gastos-impropios-previstos-2023",
+        "sistema/gastos-impropios.json#deficit-estimado-2023",
+        "sistema/gastos-impropios.json#transferencia-prevista-pge-2021",
+        "sistema/gastos-impropios.json#aportacion-estado-gasto-pensiones-espana-2016"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        },
+        {
+          "title": "Government revenue, expenditure and main aggregates (gov_10a_main): metadatos de referencia (ESMS)",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/cache/metadata/en/gov_10a_main_esms.htm"
+        },
+        {
+          "title": "¿Qué gastos no contributivos financia la Seguridad Social? (Revista Seguridad Social, 29/10/2020; antes «¿Qué son los gastos impropios de la Seguridad Social?»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://revista.seg-social.es/2020/10/29/que-son-los-gastos-impropios-de-la-seguridad-social/"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "¿Es correcta la explicación de qué incluye cada definición de saldo y de en qué se diferencian (operaciones financieras, perímetro, criterios SEC)? ¿Falta la definición de la IGAE o de la AIReF, no descargadas? ¿Es aceptable mostrar el saldo sin las transferencias del Estado y la lectura ilustrativa que suma los gastos impropios previstos? ¿Qué nombre o advertencia debe llevar para no confundirse con el «saldo contributivo ajustado»? ¿La descripción de «gastos impropios» recogida de la fuente secundaria es fiel? ¿Debe contrastarse con la fuente primaria (AIReF, Ministerio), no descargada, antes de mostrarla?"
+    },
+    {
+      "id": "web-hist-saldos-series",
+      "texto": "Los dos saldos presupuestarios son diferencias de dos líneas de la ejecución (derivadas, confianza media) y el saldo SEC es el publicado por Eurostat; se muestran en millones de euros y como porcentaje del PIB.",
+      "ubicacion": "Página «Financiación y déficit»: saldo según tres definiciones (Fase 5-A)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-no-financiero",
+        "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-total",
+        "sistema/deficit-sec-fondos-seguridad-social.json#b9-mio-eur",
+        "sistema/deficit-sec-fondos-seguridad-social.json#b9-pc-gdp"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        },
+        {
+          "title": "Government revenue, expenditure and main aggregates (gov_10a_main), sector S.1314 Social security funds, España",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-hist-gasto-sobre-pib",
+      "texto": "El gasto en pensiones sobre el PIB difiere según la medida: obligaciones reconocidas por pensiones contributivas con o sin complemento a mínimos (cálculo propio con el PIB del INE), prestaciones de vejez y de vejez más supervivencia de Eurostat (suma de dos series) y gasto público en pensiones de la OCDE; los datos descargados no permiten reconciliarlas una a una. El gasto en pensiones contributivas por clase son las obligaciones reconocidas de la ejecución; el complemento a mínimos de las pensiones contributivas figura en otra fila de la ejecución (transferencias corrientes, pensiones no contributivas y complementos), por lo que el total depende de si se incluye o no. Los meses de gasto que equivale el Fondo se calculan con dos definiciones de gasto: las obligaciones reconocidas por pensiones contributivas de la ejecución y la suma de las cinco clases de número de pensiones por pensión media mensual por catorce pagas; los dos gastos difieren porque la ejecución anota el complemento a mínimos en otra fila y el segundo no incluye atrasos ni efectos de calendario.",
+      "ubicacion": "Página «Financiación y déficit»: gasto en pensiones sobre el PIB (Fase 5-A); Página «Financiación y déficit»: gasto en pensiones contributivas; Página «Hucha»: meses de gasto",
+      "datos": [
+        "internacional/contraste-espana.json#gasto-pensiones-contributivas-sobre-pib",
+        "internacional/eurostat-espana.json#gasto-old-no-aplica-no-aplica-pc-gdp",
+        "internacional/eurostat-espana.json#gasto-srv-no-aplica-no-aplica-pc-gdp",
+        "internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq",
+        "macro/pib-ine.json#pib-corriente",
+        "sistema/fondo-reserva-series.json#valor-fin-ano",
+        "sistema/pensiones-vigor-numero.json#jubilacion-ambos",
+        "sistema/pensiones-vigor-pension-media.json#jubilacion-ambos"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        },
+        {
+          "title": "Expenditure on social benefits by function (spr_exp_func)",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+          "docId": "eurostat-spr_exp_func"
+        },
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        },
+        {
+          "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: PIB a precios de mercado y sus componentes",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+          "docId": "INE-CNA-pib95_25"
+        },
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        },
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "¿Es correcto sumar vejez y supervivencia de Eurostat como medida comparable al gasto propio? ¿Qué perímetro (Clases Pasivas, no contributivas) debe atribuirse a cada medida? ¿Debe el complemento a mínimos contarse como gasto en pensiones contributivas cuando se divide el gasto entre el PIB? ¿Es correcta la descripción de dónde lo anota la ejecución? ¿Es adecuada la comparación del valor del Fondo con el gasto anual en meses y la aproximación con catorce pagas? ¿Qué definición de gasto prefieres como referencia?"
+    },
+    {
+      "id": "web-hist-fondo-valor",
+      "texto": "El valor del Fondo de Reserva se publica a 31 de diciembre de cada año a precio de adquisición; las dotaciones y disposiciones anuales son diferencias de los acumulados publicados (datos derivados).",
+      "ubicacion": "Página «Hucha»: valor del Fondo de Reserva (Fase 5-A)",
+      "datos": [
+        "sistema/fondo-reserva-series.json#valor-fin-ano",
+        "sistema/fondo-reserva-series.json#disposiciones-anuales",
+        "sistema/fondo-reserva-series.json#dotaciones-mei-anuales"
+      ],
+      "fuentes": [
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-hist-fondo-reglas",
+      "texto": "Desde el año fijado en el artículo 121.2 del texto refundido de la Ley General de la Seguridad Social, la ley de presupuestos fija cada año el desembolso del Fondo de Reserva, que se destina en exclusiva a las pensiones contributivas, con un límite máximo en porcentaje del PIB; la cotización del Mecanismo de Equidad Intergeneracional nutre el Fondo; las normas anteriores constan en la cronología normativa.",
+      "ubicacion": "Página «Hucha»: reglas de dotación y disposición (Fase 5-A)",
+      "datos": [
+        "parametros/fondo-reserva-desembolso-maximo.json#2033",
+        "parametros/fondo-reserva-desembolso-maximo.json#2053",
+        "parametros/mei-destino.json#destino-fondo-reserva",
+        "normativa/cronologia.json#ley-28-2003"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        },
+        {
+          "title": "Ley 28/2003, de 29 de septiembre, reguladora del Fondo de Reserva de la Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2003-18089",
+          "docId": "BOE-A-2003-18089"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
     }
   ]
 }
