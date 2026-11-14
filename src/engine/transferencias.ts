@@ -207,3 +207,63 @@ export function posicionIlustrativa(
   }
   return filas;
 }
+
+export interface FilaPosicionNeta {
+  readonly anio: number;
+  readonly fondo: number;
+  readonly deuda: number;
+  /** Fondo menos deuda: positiva si el activo supera al pasivo, negativa en caso contrario. */
+  readonly neta: number;
+}
+
+/**
+ * Lectura «Fondo menos deuda» (posición neta): resta, año a año, el saldo de la deuda con el
+ * Estado al valor del Fondo de Reserva. Compara un activo con un pasivo, ambos saldos a fin de
+ * año. Solo los años con los dos datos. No es una cifra oficial ni un patrimonio neto contable.
+ */
+export function posicionNeta(
+  fondo: readonly PuntoAnual[],
+  deuda: readonly PuntoAnual[],
+): FilaPosicionNeta[] {
+  const deudaPorAnio = new Map(deuda.map((p) => [p.anio, p.valor]));
+  return [...fondo]
+    .sort((a, b) => a.anio - b.anio)
+    .flatMap(({ anio, valor }) => {
+      const d = deudaPorAnio.get(anio);
+      return d === undefined ? [] : [{ anio, fondo: valor, deuda: d, neta: valor - d }];
+    });
+}
+
+export interface FilaApoyoFinanciero {
+  readonly anio: number;
+  readonly deuda: number;
+  /** Transferencias acumuladas desde el año de inicio hasta este año, inclusive. */
+  readonly transferencias: number;
+  /** Deuda más transferencias acumuladas. */
+  readonly apoyo: number;
+}
+
+/**
+ * Lectura «deuda más transferencias acumuladas desde un año de inicio» («apoyo financiero del
+ * Estado»): suma, año a año, el saldo de la deuda con el Estado (un pasivo a devolver) y las
+ * transferencias acumuladas (un flujo no reembolsable). Las dos partidas se muestran juntas pero
+ * son de naturaleza distinta; el saldo de la deuda incluye préstamos anteriores al año de inicio,
+ * mientras que las transferencias solo cuentan desde él. Solo los años con los dos datos.
+ */
+export function apoyoFinancieroDelEstado(
+  entrada: {
+    readonly deuda: readonly PuntoAnual[];
+    readonly transferenciasAnuales: readonly PuntoAnual[];
+  },
+  anioInicio: number,
+): FilaApoyoFinanciero[] {
+  const deudaPorAnio = new Map(entrada.deuda.map((p) => [p.anio, p.valor]));
+  return acumuladaDesde(entrada.transferenciasAnuales, anioInicio).flatMap(
+    ({ anio, valor: transferencias }) => {
+      const deuda = deudaPorAnio.get(anio);
+      return deuda === undefined
+        ? []
+        : [{ anio, deuda, transferencias, apoyo: deuda + transferencias }];
+    },
+  );
+}

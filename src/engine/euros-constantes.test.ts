@@ -1,10 +1,13 @@
 import { describe, expect, it } from 'vitest';
+import type { ArchivoDatos } from './esquema-datos';
 import {
   aEurosConstantes,
   factorEurosConstantes,
+  mayorDiferenciaEntreIndices,
   rebasarSerie,
   serieAEurosConstantes,
   serieIPCDesdeDatos,
+  serieIPCDiciembreDesdeArchivo,
   type SerieIPC,
 } from './euros-constantes';
 
@@ -110,5 +113,109 @@ describe('euros constantes', () => {
     expect(() =>
       serieIPCDesdeDatos({ ...base, points: [{ period: '2020-T1', value: 100 }] }),
     ).toThrow(/no es anual/);
+  });
+});
+
+describe('IPC de diciembre frente a IPC medio anual (Ajustes actuariales 2)', () => {
+  /** Archivo mensual de PRUEBA, inventado: junio y diciembre de 2020, enero y diciembre de 2025. */
+  const mensual = {
+    id: 'ipc-mensual-prueba',
+    title: 'IPC mensual inventado',
+    data: [
+      { id: '2025-12', value: 130 },
+      { id: '2020-06', value: 99 },
+      { id: '2020-12', value: 104 },
+      { id: '2025-01', value: 120 },
+      { id: '2021-12', value: 108 },
+    ],
+  } as unknown as ArchivoDatos;
+  const medias: SerieIPC = {
+    id: 'ipc-medias-prueba',
+    puntos: [
+      { anio: 2020, indice: 100 },
+      { anio: 2025, indice: 120 },
+    ],
+  };
+
+  it('se queda con el mes de diciembre de cada año y los ordena', () => {
+    expect(serieIPCDiciembreDesdeArchivo(mensual).puntos).toEqual([
+      { anio: 2020, indice: 104 },
+      { anio: 2021, indice: 108 },
+      { anio: 2025, indice: 130 },
+    ]);
+  });
+
+  it('caso a mano: 1.000 euros de diciembre de 2020 valen 1.250 euros de diciembre de 2025 (130 ÷ 104)', () => {
+    const diciembre = serieIPCDiciembreDesdeArchivo(mensual);
+    expect(aEurosConstantes(1000, 2020, 2025, diciembre)).toBeCloseTo(1250, 9);
+  });
+
+  it('con la media anual el mismo importe da 1.200 euros (120 ÷ 100): el deflactor cambia el resultado', () => {
+    expect(aEurosConstantes(1000, 2020, 2025, medias)).toBeCloseTo(1200, 9);
+    const diciembre = serieIPCDiciembreDesdeArchivo(mensual);
+    expect(aEurosConstantes(1000, 2020, 2025, diciembre)).not.toBeCloseTo(
+      aEurosConstantes(1000, 2020, 2025, medias),
+      3,
+    );
+  });
+
+  it('el año base conserva el importe con cualquiera de los dos deflactores', () => {
+    const diciembre = serieIPCDiciembreDesdeArchivo(mensual);
+    expect(aEurosConstantes(777, 2025, 2025, diciembre)).toBe(777);
+    expect(aEurosConstantes(777, 2025, 2025, medias)).toBe(777);
+  });
+
+  it('rechaza un archivo sin diciembres, con diciembre repetido o con valor no numérico', () => {
+    const sin = { id: 'x', title: 't', data: [{ id: '2020-06', value: 1 }] } as unknown as ArchivoDatos;
+    expect(() => serieIPCDiciembreDesdeArchivo(sin)).toThrow(RangeError);
+    const doble = {
+      id: 'x',
+      title: 't',
+      data: [
+        { id: '2020-12', value: 1 },
+        { id: '2020-12', value: 2 },
+      ],
+    } as unknown as ArchivoDatos;
+    expect(() => serieIPCDiciembreDesdeArchivo(doble)).toThrow(RangeError);
+    const texto = { id: 'x', title: 't', data: [{ id: '2020-12', value: 'a' }] } as unknown as ArchivoDatos;
+    expect(() => serieIPCDiciembreDesdeArchivo(texto)).toThrow(RangeError);
+  });
+});
+
+describe('mayorDiferenciaEntreIndices', () => {
+  const dic: SerieIPC = {
+    id: 'dic',
+    puntos: [
+      { anio: 2020, indice: 102 },
+      { anio: 2021, indice: 110 },
+      { anio: 2022, indice: 121 },
+    ],
+  };
+  const media: SerieIPC = {
+    id: 'media',
+    puntos: [
+      { anio: 2020, indice: 100 },
+      { anio: 2021, indice: 100 },
+      { anio: 2022, indice: 120 },
+      { anio: 2023, indice: 130 },
+    ],
+  };
+
+  it('devuelve el año de mayor diferencia relativa absoluta entre los años comunes', () => {
+    // 2020: 102 ÷ 100 − 1 = 0,02; 2021: 110 ÷ 100 − 1 = 0,10; 2022: 121 ÷ 120 − 1 ≈ 0,00833.
+    const r = mayorDiferenciaEntreIndices(dic, media);
+    expect(r?.anio).toBe(2021);
+    expect(r?.relativa).toBeCloseTo(0.1, 12);
+  });
+
+  it('respeta el rango de años y cuenta las diferencias negativas por su valor absoluto', () => {
+    const r = mayorDiferenciaEntreIndices(dic, media, 2022, 2022);
+    expect(r?.anio).toBe(2022);
+    const bajo: SerieIPC = { id: 'bajo', puntos: [{ anio: 2020, indice: 80 }] };
+    expect(mayorDiferenciaEntreIndices(bajo, media)?.relativa).toBeCloseTo(-0.2, 12);
+  });
+
+  it('sin años comunes devuelve null', () => {
+    expect(mayorDiferenciaEntreIndices(dic, media, 2030)).toBeNull();
   });
 });

@@ -3,7 +3,11 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import { formatearNumero } from '../../engine/formato';
-import { posicionIlustrativa } from '../../engine/transferencias';
+import {
+  apoyoFinancieroDelEstado,
+  posicionIlustrativa,
+  posicionNeta,
+} from '../../engine/transferencias';
 import { datosHucha } from '../historico/datos-hucha';
 import Hucha from './Pagina';
 
@@ -40,16 +44,26 @@ describe('página «Hucha»: secciones de transferencias', () => {
       /De dónde procede el dinero/,
       /transferencias del Estado a la Seguridad Social en el tiempo/,
       /El Fondo de Reserva frente a las transferencias/,
-      /Una construcción ilustrativa/,
+      /dos lecturas separadas/,
     ]) {
       expect(screen.getByRole('heading', { level: 2, name: nombre })).toBeInTheDocument();
     }
   });
 
-  it('la construcción lleva el aviso de «no es una cifra oficial» y en el título del gráfico', () => {
+  it('las construcciones llevan el aviso de «no son cifras oficiales» y un título propio cada una', () => {
     const { container } = pintar();
-    expect(screen.getAllByText(/no una cifra oficial/i).length).toBeGreaterThanOrEqual(2);
-    expect(figura(container, 'Construcción ilustrativa, no una cifra oficial')).toBeTruthy();
+    expect(screen.getAllByText(/no cifras oficiales/i).length).toBeGreaterThanOrEqual(1);
+    expect(figura(container, 'Fondo menos deuda: valor del Fondo de Reserva')).toBeTruthy();
+    expect(figura(container, 'Apoyo financiero del Estado: deuda más transferencias')).toBeTruthy();
+  });
+
+  it('el texto dice que préstamos, transferencias y Fondo no son aditivos y de qué naturaleza es cada uno', () => {
+    const { container } = pintar();
+    const seccion = container.querySelector('#posicion')?.closest('section')?.textContent ?? '';
+    expect(seccion).toMatch(/no son\s+partidas aditivas/);
+    expect(seccion).toMatch(/pasivo a devolver/);
+    expect(seccion).toMatch(/flujo no reembolsable/);
+    expect(seccion).toMatch(/activo acumulado/);
   });
 
   it('cada gráfico nuevo tiene tabla, línea de fuente y «Cómo leerlo»', () => {
@@ -59,7 +73,8 @@ describe('página «Hucha»: secciones de transferencias', () => {
       'por trimestre',
       'Transferencias acumuladas desde',
       'El valor del Fondo de Reserva, en meses de transferencias',
-      'Construcción ilustrativa',
+      'Fondo menos deuda: valor del Fondo de Reserva',
+      'Apoyo financiero del Estado: deuda más transferencias',
       'Deuda PDE de las Administraciones de Seguridad Social',
     ]) {
       const f = figura(container, titulo);
@@ -69,11 +84,29 @@ describe('página «Hucha»: secciones de transferencias', () => {
     }
   });
 
-  it('las casillas son casillas con etiqueta, accesibles por teclado, y recalculan la suma', async () => {
+  it('la suma conjunta es una opción desactivada por defecto, con aviso reforzado cuando se activa', async () => {
+    const usuario = userEvent.setup();
+    const { container } = pintar();
+    const casilla = screen.getByRole('checkbox', { name: /Mostrar la suma conjunta/ });
+    expect(casilla).not.toBeChecked();
+    expect(() => figura(container, 'Suma conjunta')).toThrow();
+    expect(screen.queryByRole('checkbox', { name: /Deuda con el Estado/ })).toBeNull();
+    await usuario.click(casilla);
+    expect(casilla).toBeChecked();
+    expect(figura(container, 'Suma conjunta, no aditiva')).toBeTruthy();
+    const aviso = screen.getByText(/esta suma junta un activo \(el Fondo\), un pasivo \(la deuda\)/);
+    expect(aviso.textContent).toMatch(/no son aditivas/);
+    expect(aviso.textContent).toMatch(/un flujo/);
+    await usuario.click(casilla);
+    expect(() => figura(container, 'Suma conjunta')).toThrow();
+  });
+
+  it('las casillas de la suma conjunta son casillas con etiqueta, accesibles por teclado, y recalculan la suma', async () => {
     const usuario = userEvent.setup();
     const { container } = pintar();
     const d = datosHucha();
-    const grafico = () => figura(container, 'Construcción ilustrativa');
+    await usuario.click(screen.getByRole('checkbox', { name: /Mostrar la suma conjunta/ }));
+    const grafico = () => figura(container, 'Suma conjunta, no aditiva');
     const esperada = (seleccion: { fondo: boolean; deuda: boolean; transferencias: boolean }) => {
       const filas = posicionIlustrativa(
         {
@@ -107,18 +140,76 @@ describe('página «Hucha»: secciones de transferencias', () => {
     expect(grafico().querySelector('svg')?.textContent).toMatch(/Ningún componente seleccionado/);
   });
 
-  it('el año de inicio cambia las transferencias acumuladas de la construcción', async () => {
+  it('«Fondo menos deuda»: la tabla lleva Fondo, deuda y su diferencia con el signo', () => {
+    const { container } = pintar();
+    const d = datosHucha();
+    const esperada = posicionNeta(d.valor.puntos, d.deuda.finAno.puntos).at(-1);
+    const f = figura(container, 'Fondo menos deuda: valor del Fondo de Reserva');
+    const fila = ultimaFila(f);
+    expect(fila[0]).toBe(String(esperada?.anio));
+    expect(fila[1]).toBe(entero(esperada?.fondo ?? 0));
+    expect(fila[2]).toBe(entero(esperada?.deuda ?? 0));
+    expect(fila[3]).toBe(entero(esperada?.neta ?? 0));
+    // El signo es explícito: la cabecera lo dice y, si la diferencia es negativa, la celda lleva «−».
+    expect(f.querySelector('thead')?.textContent).toMatch(/negativo si la deuda supera al Fondo/);
+    if ((esperada?.neta ?? 0) < 0) expect(fila[3]).toMatch(/^[−-]/);
+    const bloque = f.closest('.bloque-grafico')?.textContent ?? '';
+    expect(bloque).toMatch(/Cómo leerlo/);
+    expect(bloque).toMatch(/compara un activo con un pasivo|diferencia entre un activo y un pasivo/i);
+  });
+
+  it('«Apoyo financiero del Estado»: deuda y transferencias por separado y su suma, según el año de inicio', async () => {
     const usuario = userEvent.setup();
     const { container } = pintar();
     const d = datosHucha();
     const anios = d.transferencias.delEstado.puntos.map((p) => p.anio);
+    const calcular = (inicio: number) =>
+      apoyoFinancieroDelEstado(
+        {
+          deuda: d.deuda.finAno.puntos,
+          transferenciasAnuales: d.transferencias.delEstado.puntos,
+        },
+        inicio,
+      ).at(-1);
+    const titulo = 'Apoyo financiero del Estado: deuda más transferencias';
+    const primera = calcular(anios[0] ?? 0);
+    let fila = ultimaFila(figura(container, titulo));
+    expect(fila[1]).toBe(entero(primera?.deuda ?? 0));
+    expect(fila[2]).toBe(entero(primera?.transferencias ?? 0));
+    expect(fila[3]).toBe(entero(primera?.apoyo ?? 0));
+
     const otro = anios[3] ?? 0;
-    const antes = ultimaFila(figura(container, 'Construcción ilustrativa')).join('|');
-    const selector = screen.getByLabelText('Año de inicio de las transferencias acumuladas');
-    await usuario.selectOptions(selector, String(otro));
-    const f = figura(container, 'Construcción ilustrativa');
-    expect(ultimaFila(f).join('|')).not.toBe(antes);
-    expect(f.querySelector('thead')?.textContent).toContain(`desde ${otro}`);
+    await usuario.selectOptions(
+      screen.getByLabelText('Año de inicio de las transferencias acumuladas'),
+      String(otro),
+    );
+    const segunda = calcular(otro);
+    fila = ultimaFila(figura(container, titulo));
+    expect(fila[3]).toBe(entero(segunda?.apoyo ?? 0));
+    // La deuda no cambia con el año de inicio; las transferencias acumuladas, sí.
+    expect(fila[1]).toBe(entero(primera?.deuda ?? 0));
+    expect(fila[2]).not.toBe(entero(primera?.transferencias ?? 0));
+    expect(figura(container, titulo).querySelector('thead')?.textContent).toContain(`desde ${otro}`);
+  });
+
+  it('los meses de gasto del Fondo usan la referencia con complemento, el contraste de catorce pagas y avisan del precio de adquisición', () => {
+    const { container } = pintar();
+    const f = figura(container, 'Meses de gasto en pensiones que equivale el valor del Fondo');
+    const cabecera = f.querySelector('thead')?.textContent ?? '';
+    expect(cabecera).toMatch(/Referencia: obligaciones reconocidas con complemento/);
+    expect(cabecera).toMatch(/Contraste: pensiones × pensión media × catorce pagas/);
+    expect(container.textContent).toMatch(/El Fondo se valora a precio de adquisición/);
+  });
+
+  it('los meses de transferencias presentan el año completo como medida principal y el cuarto trimestre como secundaria', () => {
+    const { container } = pintar();
+    const f = figura(container, 'en meses de transferencias');
+    const cabecera = f.querySelector('thead')?.textContent ?? '';
+    expect(cabecera).toMatch(/Principal: transferencias del año/);
+    expect(cabecera).toMatch(/Secundaria: cuarto trimestre/);
+    const seccion = container.querySelector('#fondo-transferencias')?.closest('section')?.textContent ?? '';
+    expect(seccion).toMatch(/son diferencias entre\s+acumulados/);
+    expect(seccion).toMatch(/no se reparten por igual/);
   });
 
   it('el selector de unidad pasa de meses a trimestres de transferencias', async () => {

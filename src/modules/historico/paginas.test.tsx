@@ -94,7 +94,7 @@ describe('interacciones', () => {
   it('«Cotizantes»: el selector de precios pasa a euros constantes', async () => {
     const usuario = userEvent.setup();
     const { container } = pintar(Cotizantes);
-    await usuario.click(screen.getByRole('radio', { name: /Euros constantes de/ }));
+    await usuario.click(screen.getByRole('radio', { name: 'Euros constantes' }));
     const titulos = [...container.querySelectorAll('.grafico-titulo')].map((t) => t.textContent);
     expect(titulos.some((t) => t.includes('euros constantes'))).toBe(true);
   });

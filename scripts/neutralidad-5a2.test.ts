@@ -19,9 +19,19 @@ describe('el detector de valoraciones', () => {
       [],
     );
   });
+
+  it('detecta también los términos añadidos en Ajustes actuariales 2', () => {
+    expect(valoracionesEn('Una amenaza para las cuentas')).toEqual(['amenaza']);
+    expect(valoracionesEn('Una cifra desmesurada y un gasto desbocado').sort()).toEqual([
+      'desbocad',
+      'desmesurad',
+    ]);
+    expect(valoracionesEn('Un modelo ejemplar')).toEqual(['ejemplar']);
+    expect(valoracionesEn('La razón entre afiliados y pensiones por pensionista')).toEqual([]);
+  });
 });
 
-describe.each(['hucha', 'financiacion-y-deficit'] as const)(
+describe.each(['hucha', 'financiacion-y-deficit', 'cotizantes-y-pensionistas'] as const)(
   'neutralidad de la sección «%s»',
   (slug) => {
     it('el resumen y los contenidos de la sección no contienen palabras de valoración', () => {
@@ -38,6 +48,7 @@ describe('neutralidad del código de las páginas', () => {
   const directorios = [
     'src/modules/hucha',
     'src/modules/financiacion-y-deficit',
+    'src/modules/cotizantes-y-pensionistas',
     'src/modules/historico',
   ];
   const ficheros = directorios.flatMap((dir) =>

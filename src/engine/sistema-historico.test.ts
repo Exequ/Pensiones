@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import type { PuntoAnual } from './series-historicas';
 import {
   CLASES_PENSION,
+  compararMediaAltasBajas,
   gastoAproximadoPensiones,
   leerEjecucion,
   mesesDeGasto,
@@ -146,5 +147,54 @@ describe('mesesDeGasto', () => {
       ),
     ).toEqual([{ anio: 2019, valor: 6 }]);
     expect(() => mesesDeGasto([{ anio: 2020, valor: 1 }], [{ anio: 2020, valor: 0 }])).toThrow();
+  });
+});
+
+describe('compararMediaAltasBajas', () => {
+  const f = (anio: number, movimiento: string, clase: string, pensionMedia: number | null, sexo = 'ambos') => ({
+    anio,
+    movimiento,
+    clase,
+    sexo,
+    pensionMedia,
+  });
+  const filas = [
+    // Clase A: altas por encima de bajas en los dos años (1.200 > 900 y 1.300 > 1.000).
+    f(2024, 'alta-inicial', 'a', 1200),
+    f(2024, 'baja-definitiva', 'a', 900),
+    f(2025, 'alta-inicial', 'a', 1300),
+    f(2025, 'baja-definitiva', 'a', 1000),
+    // Clase B: altas por debajo de bajas en los dos años.
+    f(2024, 'alta-inicial', 'b', 400),
+    f(2024, 'baja-definitiva', 'b', 450),
+    f(2025, 'alta-inicial', 'b', 410),
+    f(2025, 'baja-definitiva', 'b', 460),
+    // Clase C: signo distinto según el año.
+    f(2024, 'alta-inicial', 'c', 500),
+    f(2024, 'baja-definitiva', 'c', 400),
+    f(2025, 'alta-inicial', 'c', 500),
+    f(2025, 'baja-definitiva', 'c', 600),
+    // Clase D: solo hay media de las altas; no se puede comparar. Otro sexo: se ignora.
+    f(2025, 'alta-inicial', 'd', 700),
+    f(2025, 'alta-inicial', 'a', 1, 'mujeres'),
+  ];
+
+  it('clasifica cada clase según el signo de la diferencia en todos los años con dato', () => {
+    const r = compararMediaAltasBajas(filas, ['a', 'b', 'c', 'd']);
+    expect(r.altasSuperior).toEqual(['a']);
+    expect(r.altasInferior).toEqual(['b']);
+    expect(r.mixtas).toEqual(['c', 'd']);
+  });
+
+  it('informa del primer y el último año comparados y no usa otro sexo que «ambos»', () => {
+    const r = compararMediaAltasBajas(filas, ['a']);
+    expect(r.desde).toBe(2024);
+    expect(r.hasta).toBe(2025);
+    expect(r.altasSuperior).toEqual(['a']);
+  });
+
+  it('sin datos devuelve años cero y todas las clases como mixtas', () => {
+    const r = compararMediaAltasBajas([], ['a']);
+    expect(r).toEqual({ altasSuperior: [], altasInferior: [], mixtas: ['a'], desde: 0, hasta: 0 });
   });
 });

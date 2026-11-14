@@ -6,54 +6,27 @@ import { extremos } from '../../engine/series-historicas';
 import { GraficoSeries } from '../historico/GraficoSeries';
 import { decimal2 } from '../historico/formatos';
 import { datosCotizantes } from '../historico/datos-cotizantes';
+import {
+  DEFINICIONES_RELACION,
+  MARCA_FECHAS_DISTINTAS,
+  MARCA_MISMA_FECHA,
+} from './definiciones-relacion';
 
 /** Relación entre afiliados y pensiones o pensionistas con las definiciones disponibles. */
 export function Relacion() {
   const { relacion } = datosCotizantes();
 
-  const filas = [
-    {
-      definicion: 'Afiliados de diciembre por pensión',
-      numerador: 'Afiliados medios en alta de diciembre',
-      denominador: 'Pensiones contributivas en vigor a diciembre',
-      serie: relacion.porPensionDiciembre,
-    },
-    {
-      definicion: 'Afiliados medios del año por pensión',
-      numerador: 'Media de los afiliados medios mensuales del año',
-      denominador: 'Pensiones contributivas en vigor a diciembre',
-      serie: relacion.porPensionMediaAnual,
-    },
-    {
-      definicion: 'Afiliados a último día de diciembre por pensión',
-      numerador: 'Afiliados en alta el último día de diciembre',
-      denominador: 'Pensiones contributivas en vigor el primer día de enero siguiente',
-      serie: relacion.porPensionAlt1,
-    },
-    {
-      definicion: 'Afiliados de diciembre por pensionista',
-      numerador: 'Afiliados medios en alta de diciembre',
-      denominador: 'Pensionistas (personas) a diciembre',
-      serie: relacion.porPensionistaDiciembre,
-    },
-    {
-      definicion: 'Afiliados medios del año por pensionista',
-      numerador: 'Media de los afiliados medios mensuales del año',
-      denominador: 'Pensionistas (personas) a diciembre',
-      serie: relacion.porPensionistaMediaAnual,
-    },
-    {
-      definicion: 'Afiliados a último día de diciembre por pensionista',
-      numerador: 'Afiliados en alta el último día de diciembre',
-      denominador: 'Pensionistas (personas) el primer día de enero siguiente',
-      serie: relacion.porPensionistaAlt1,
-    },
-  ].map((f) => {
-    const { primero, ultimo } = extremos(f.serie.puntos);
+  const filas = DEFINICIONES_RELACION.map((f) => {
+    const serie = relacion[f.serie];
+    const { primero, ultimo } = extremos(serie.puntos);
     return {
       definicion: f.definicion,
+      cuenta: f.cuenta,
       numerador: f.numerador,
+      fechaNumerador: f.fechaNumerador,
       denominador: f.denominador,
+      fechaDenominador: f.fechaDenominador,
+      marca: f.mismaFecha ? MARCA_MISMA_FECHA : MARCA_FECHAS_DISTINTAS,
       periodo:
         primero.anio === ultimo.anio ? String(ultimo.anio) : `${primero.anio} a ${ultimo.anio}`,
       ultimo: ultimo.valor,
@@ -64,7 +37,7 @@ export function Relacion() {
   const ultimoPension = (s: { puntos: readonly { anio: number; valor: number }[] }) =>
     s.puntos.at(-1);
   const pD = ultimoPension(relacion.porPensionDiciembre);
-  const pA = ultimoPension(relacion.porPensionAlt1);
+  const pA = ultimoPension(relacion.porPensionUltimoDia);
   const sD = ultimoPension(relacion.porPensionistaDiciembre);
   const sM = ultimoPension(relacion.porPensionistaMediaAnual);
 
@@ -77,19 +50,22 @@ export function Relacion() {
         denominador cuenta pensiones o personas, si los afiliados son los de un mes concreto o la
         media del año, y en qué fecha se toma cada cifra. La Seguridad Social no publica esta razón
         como tal en los ficheros descargados: son cocientes calculados a partir de datos publicados.
-        Aquí se muestran todas las definiciones disponibles, sin escoger ninguna como la correcta.
+        Aquí se muestran las seis definiciones disponibles, con la fecha de referencia de cada
+        serie, sin escoger ninguna como la correcta.
       </p>
       <Definition termino="Razón entre afiliados y pensiones">
         Número de afiliados (numerador) dividido entre el de pensiones o pensionistas (denominador).
         Una razón de {decimal2(pD?.valor ?? 0)}, por ejemplo, significa que hay esa cantidad de
         afiliados por cada pensión en vigor.
       </Definition>
-      <MarginNote etiqueta="Definición alternativa">
+      <MarginNote etiqueta="Fechas de referencia">
         <p>
-          La quinta definición mide ambos stocks en fechas contiguas (el último día de diciembre y
-          el primer día de enero siguiente), de modo que no hay desfase de medio año entre numerador
-          y denominador. Solo existe para pensionistas en un año, porque la Seguridad Social publica
-          el número de pensionistas por mes únicamente del año en curso.
+          La marca «{MARCA_MISMA_FECHA}» describe las parejas cuyo numerador y denominador se miden
+          en fechas contiguas (el último día de diciembre y el primer día de enero siguiente), sin
+          desfase de meses. Es una descripción de las fechas, no una indicación de que esa
+          definición sea más adecuada que las demás. La definición por pensionista con esa pareja
+          de fechas solo existe para un año, porque la Seguridad Social publica el número de
+          pensionistas por mes únicamente del año en curso.
         </p>
       </MarginNote>
 
@@ -98,8 +74,12 @@ export function Relacion() {
           titulo="Definiciones de la relación entre afiliados y pensiones o pensionistas"
           columnas={[
             { clave: 'definicion', titulo: 'Definición' },
+            { clave: 'cuenta', titulo: 'El denominador cuenta' },
             { clave: 'numerador', titulo: 'Numerador' },
+            { clave: 'fechaNumerador', titulo: 'Fecha de referencia del numerador' },
             { clave: 'denominador', titulo: 'Denominador' },
+            { clave: 'fechaDenominador', titulo: 'Fecha de referencia del denominador' },
+            { clave: 'marca', titulo: 'Fechas de referencia' },
             { clave: 'periodo', titulo: 'Años con dato' },
             { clave: 'anioUltimo', titulo: 'Último año' },
             { clave: 'ultimo', titulo: 'Valor del último año', tipo: 'numero', decimales: 2 },
@@ -109,11 +89,25 @@ export function Relacion() {
         <SourceLine
           datos={[
             relacion.porPensionDiciembre.dato,
-            relacion.porPensionAlt1.dato,
-            relacion.porPensionistaAlt1.dato,
+            relacion.porPensionUltimoDia.dato,
+            relacion.porPensionistaUltimoDia.dato,
           ]}
         />
       </div>
+
+      <h3 id="relacion-perimetro">Perímetro y definiciones que no se muestran</h3>
+      <p>
+        Los afiliados son los de los regímenes de la Seguridad Social y las pensiones son las
+        contributivas del Sistema de la Seguridad Social, que gestionan el Instituto Nacional de la
+        Seguridad Social y el Instituto Social de la Marina. El Régimen de Clases Pasivas del Estado
+        es otro régimen, con su propia norma, y sus pensiones no figuran en estas series: la razón
+        no recoge a ese colectivo ni en el numerador ni en el denominador.
+      </p>
+      <p>
+        No se muestra la definición con cotizantes efectivos (sin suspendidos ni convenio especial):
+        los ficheros de afiliación descargados no separan esas situaciones, por lo que queda como
+        dato pendiente. Tampoco se muestra ninguna definición que excluya sistemas especiales.
+      </p>
 
       <GraficoSeries
         titulo="Afiliados por cada pensión contributiva"
@@ -132,7 +126,7 @@ export function Relacion() {
           {
             clave: 'alt',
             etiqueta: 'Último día de diciembre y primer día de enero',
-            puntos: relacion.porPensionAlt1.puntos,
+            puntos: relacion.porPensionUltimoDia.puntos,
           },
         ]}
         unidadEje="Afiliados por pensión"
@@ -142,7 +136,7 @@ export function Relacion() {
         fuentes={[
           relacion.porPensionDiciembre.dato,
           relacion.porPensionMediaAnual.dato,
-          relacion.porPensionAlt1.dato,
+          relacion.porPensionUltimoDia.dato,
         ]}
         nota="Datos derivados (cociente de dos series publicadas), con confianza media. Las tres definiciones se muestran sin elegir una."
         comoLeerlo={
@@ -180,7 +174,7 @@ export function Relacion() {
           {
             clave: 'alt',
             etiqueta: 'Último día de diciembre y primer día de enero',
-            puntos: relacion.porPensionistaAlt1.puntos,
+            puntos: relacion.porPensionistaUltimoDia.puntos,
           },
         ]}
         unidadEje="Afiliados por pensionista"
@@ -190,7 +184,7 @@ export function Relacion() {
         fuentes={[
           relacion.porPensionistaDiciembre.dato,
           relacion.porPensionistaMediaAnual.dato,
-          relacion.porPensionistaAlt1.dato,
+          relacion.porPensionistaUltimoDia.dato,
         ]}
         nota="Datos derivados (cociente de dos series publicadas), con confianza media. La tercera definición solo tiene un año."
         comoLeerlo={

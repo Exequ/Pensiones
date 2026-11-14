@@ -32,6 +32,8 @@ import {
 /** Identificadores de las definiciones y notas de `deficit-definiciones` que usa la página. */
 export const ID_DEFINICION_SEC = 'necesidad-financiacion-sec-s1314';
 export const ID_NOTA_SANIDAD = 'nota-espana-sanidad-2002';
+/** Única cifra de gastos impropios que muestra la página: una estimación, no un dato observado. */
+export const ID_ESTIMACION_GASTOS_IMPROPIOS = 'gastos-impropios-previstos-2023';
 
 /** Primer y último ejercicio con cifra de fin de año en la ejecución (2017 es la comparativa de 2018). */
 export const PRIMER_EJERCICIO = 2017;

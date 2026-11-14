@@ -6,17 +6,21 @@ import {
   diferencia,
   porcentajeDelPib,
   recortar,
-  valorEn,
   type PuntoAnual,
 } from '../../engine/series-historicas';
 import { GraficoSeries } from '../historico/GraficoSeries';
-import { entero, millonesEuros } from '../historico/formatos';
+import { millonesEuros } from '../historico/formatos';
 import {
   datosFinanciacion,
   ID_DEFINICION_SEC,
+  ID_ESTIMACION_GASTOS_IMPROPIOS,
   ID_NOTA_SANIDAD,
 } from '../historico/datos-financiacion';
 import { UnidadFinanciera, type Unidad } from './unidad';
+
+/** Rótulo del saldo no financiero menos las transferencias corrientes (cálculo propio, sin otra etiqueta). */
+export const ROTULO_SALDO_SIN_TRANSFERENCIAS =
+  'Saldo no financiero menos transferencias corrientes del Estado y OO. AA. (cálculo propio)';
 
 const ROTULO_DEFINICION: Readonly<Record<string, string>> = {
   'saldo-presupuestario-no-financiero': 'Saldo presupuestario no financiero',
@@ -31,7 +35,7 @@ const EXPLICACION_DEFINICION: Readonly<Record<string, string>> = {
   'saldo-presupuestario-total':
     'Total de ingresos menos total de gastos de la ejecución, incluidas las operaciones financieras: entre ellas, los préstamos que la Tesorería recibe del Estado figuran como ingreso (pasivos financieros).',
   'necesidad-financiacion-sec-s1314':
-    'Diferencia entre ingresos y gastos totales del subsector «fondos de la Seguridad Social» según el sistema europeo de cuentas (SEC), publicada por Eurostat a partir de la transmisión de cada país. Su perímetro y sus criterios de imputación no coinciden con los del presupuesto.',
+    'Diferencia entre ingresos y gastos totales del subsector «fondos de la Seguridad Social» según el sistema europeo de cuentas (SEC), publicada por Eurostat a partir de la transmisión de cada país; Eurostat indica que las convenciones contables son las del sistema europeo de cuentas. Los metadatos descargados no detallan las entidades que componen el subsector, por lo que esta página no afirma que su perímetro coincida con el del presupuesto ni describe en qué se diferencia.',
 };
 
 /** Definiciones de saldo, gastos impropios y lectura del saldo con y sin transferencias. */
@@ -55,45 +59,14 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
   const ultimoTotal = presupuesto.saldoTotal.puntos.at(-1);
   const ultimoSec = secEnRango.at(-1);
 
-  // Lectura ilustrativa del año de la previsión de gastos impropios.
-  const prevision = d.previsiones.find((p) => p.id.startsWith('gastos-impropios-previstos'));
-  const anioPrevision = prevision === undefined ? undefined : Number(prevision.periodo);
-  const filasLecturas =
-    prevision === undefined || anioPrevision === undefined
-      ? []
-      : (() => {
-          const saldo = valorEn(presupuesto.saldoNoFinanciero.puntos, anioPrevision) ?? 0;
-          const transf = valorEn(presupuesto.transferenciasEstado.puntos, anioPrevision) ?? 0;
-          return [
-            {
-              lectura: 'Saldo no financiero de la ejecución',
-              incluye:
-                'Ingresos y gastos no financieros, con las transferencias del Estado como ingreso',
-              importe: saldo,
-              confianza: presupuesto.saldoNoFinanciero.dato.confidence,
-            },
-            {
-              lectura: 'Sin las transferencias corrientes del Estado',
-              incluye:
-                'El saldo anterior menos las transferencias corrientes del Estado y organismos autónomos',
-              importe: saldo - transf,
-              confianza: presupuesto.saldoNoFinanciero.dato.confidence,
-            },
-            {
-              lectura: 'Gastos impropios previstos para este año (previsión anterior)',
-              incluye:
-                'Previsión (no dato observado) de la AIReF y del Ministerio, según una fuente secundaria',
-              importe: prevision.valor,
-              confianza: prevision.dato.confidence,
-            },
-            {
-              lectura: 'Sin transferencias del Estado y sin los gastos impropios previstos',
-              incluye: 'Cálculo ilustrativo: la segunda lectura más los gastos impropios previstos',
-              importe: saldo - transf + prevision.valor,
-              confianza: prevision.dato.confidence,
-            },
-          ];
-        })();
+  // Única cifra de «gastos impropios» que se conserva: una estimación anterior a los ejercicios que
+  // describe (el año de la estimación sale de la nota del dato, no se escribe a mano).
+  const estimacion = d.previsiones.find((p) => p.id === ID_ESTIMACION_GASTOS_IMPROPIOS);
+  const anioEstimacion = /Previsión de (\d{4})/.exec(estimacion?.notas ?? '')?.[1];
+  const enumeracionImpropios =
+    /«Gastos impropios» es la expresión de la fuente: (.*?)\. Fuente secundaria/.exec(
+      estimacion?.notas ?? '',
+    )?.[1];
 
   const principales = Object.keys(ROTULO_DEFINICION);
 
@@ -209,17 +182,22 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
         }
       />
 
-      <h3>Gastos impropios y transferencias del Estado</h3>
+      <h3 id="saldo-sin-transferencias">
+        Saldo no financiero menos las transferencias corrientes del Estado
+      </h3>
       <p>
-        La expresión «gastos impropios» no tiene una definición única en los ficheros descargados.
-        La fuente que la usa la describe así: {prevision?.notas ?? ''} Qué gastos deben financiarse
-        con cotizaciones y cuáles con impuestos es una cuestión sobre la que existen planteamientos
-        distintos; aquí solo se muestran las cifras de las fuentes y qué cambia en el saldo según se
-        cuenten o no.
+        Restar al saldo no financiero las transferencias corrientes del Estado y organismos
+        autónomos es un cálculo propio que no equivale a ninguna definición publicada. Se muestra
+        con este rótulo: «{ROTULO_SALDO_SIN_TRANSFERENCIAS}».
+      </p>
+      <p className="hist-aviso">
+        Advertencia: la resta quita también la financiación de partidas que no son pensiones
+        contributivas (por ejemplo, las prestaciones que la ley clasifica como de naturaleza no
+        contributiva), por lo que no equivale al saldo del sistema contributivo.
       </p>
 
       <GraficoSeries
-        titulo="Saldo no financiero con y sin las transferencias corrientes del Estado"
+        titulo="Saldo no financiero y saldo no financiero menos transferencias corrientes del Estado y OO. AA. (cálculo propio)"
         descripcion={`Saldo no financiero de la ejecución y ese mismo saldo restando las transferencias corrientes del Estado y organismos autónomos. Unidad: ${u.descripcion}.`}
         tipo="barras-agrupadas"
         series={[
@@ -230,7 +208,7 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
           },
           {
             clave: 'sin',
-            etiqueta: 'Sin transferencias corrientes del Estado',
+            etiqueta: 'Saldo menos transferencias (cálculo propio)',
             puntos: conv(sinTransferencias),
           },
         ]}
@@ -243,7 +221,7 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
           presupuesto.transferenciasEstado.dato,
           ...fuentesPib,
         ]}
-        nota="Cálculo propio (diferencia de dos series publicadas; confianza media). No equivale a ninguna definición publicada: la de «saldo contributivo ajustado» de la AIReF y del Ministerio no se ha podido descargar."
+        nota={`«Saldo menos transferencias (cálculo propio)» es: ${ROTULO_SALDO_SIN_TRANSFERENCIAS}. Diferencia de dos series publicadas (confianza media). No equivale a ninguna definición publicada ni al saldo de un subconjunto de prestaciones.`}
         comoLeerlo={
           <>
             <p>
@@ -253,76 +231,51 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
               {presupuesto.transferenciasEstado.puntos.at(-1)?.anio ?? ''}.
             </p>
             <p>
-              Qué parte de esas transferencias corresponde a gastos que se consideran «impropios» y
-              cuál financia otras partidas no se puede separar con los datos descargados. La gráfica
-              no atribuye la transferencia a ningún gasto concreto.
+              Esa transferencia financia partidas de distinta naturaleza y con los datos descargados
+              no se puede separar qué parte corresponde a cada una. La gráfica no atribuye la
+              transferencia a ningún gasto concreto; por eso la resta no mide el saldo de las
+              pensiones contributivas.
             </p>
           </>
         }
       />
 
-      {filasLecturas.length > 0 && anioPrevision !== undefined ? (
+      <h3 id="gastos-impropios">Gastos impropios: una estimación de {anioEstimacion ?? ''}</h3>
+      <p>
+        La expresión «gastos impropios» no tiene una definición única en los ficheros descargados.
+        La fuente que la usa la describe así: {enumeracionImpropios ?? ''}. Qué gastos deben
+        financiarse con cotizaciones y cuáles con impuestos es una cuestión sobre la que existen
+        planteamientos distintos; aquí solo se recoge la cifra de la fuente.
+      </p>
+      {estimacion === undefined ? null : (
         <div className="hist-definiciones">
           <DataTable
-            titulo={`Cuatro lecturas del saldo de ${anioPrevision} (millones de euros)`}
+            titulo={`Gastos impropios: estimación de ${anioEstimacion ?? ''}, no dato observado`}
             columnas={[
-              { clave: 'lectura', titulo: 'Lectura' },
-              { clave: 'incluye', titulo: 'Qué incluye' },
-              { clave: 'importe', titulo: 'Importe (M€)', tipo: 'numero' },
+              { clave: 'concepto', titulo: 'Concepto' },
+              { clave: 'periodo', titulo: 'Año al que se refiere' },
+              { clave: 'valor', titulo: 'Valor (millones de euros)', tipo: 'numero', decimales: 0 },
               { clave: 'confianza', titulo: 'Confianza' },
             ]}
-            filas={filasLecturas}
-          />
-          <SourceLine
-            datos={[
-              presupuesto.saldoNoFinanciero.dato,
-              presupuesto.transferenciasEstado.dato,
-              ...(prevision ? [prevision.dato] : []),
+            filas={[
+              {
+                concepto: `Gastos impropios (estimación de ${anioEstimacion ?? ''}, no dato observado)`,
+                periodo: estimacion.periodo,
+                valor: estimacion.valor,
+                confianza: estimacion.dato.confidence,
+              },
             ]}
           />
+          <SourceLine datos={[estimacion.dato]} />
           <p className="como-leerlo-texto">
-            La tercera fila es una previsión anterior al ejercicio, no un dato observado, y la
-            cuarta es un cálculo ilustrativo que suma una previsión a datos de ejecución: sirve para
-            ver cuánto cambia la cifra según qué se cuente (de{' '}
-            {entero(filasLecturas[0]?.importe ?? 0)} a {entero(filasLecturas[3]?.importe ?? 0)}{' '}
-            millones de euros), no como estimación del déficit.
+            Es una estimación de {anioEstimacion ?? ''} de la AIReF y del Ministerio, anterior al
+            ejercicio al que se refiere, citada por un artículo de la Revista de la Seguridad
+            Social: no es un dato observado y la fuente no es primaria. No se suma ni se compara con
+            ninguna serie de ejecución de esta página. Está pendiente de contrastar con el Informe
+            de evaluación y reforma del Pacto de Toledo de {anioEstimacion ?? ''} y con la AIReF.
           </p>
         </div>
-      ) : null}
-
-      <div className="hist-definiciones">
-        <DataTable
-          titulo="Cifras sobre «gastos impropios» recogidas de una fuente secundaria"
-          columnas={[
-            { clave: 'concepto', titulo: 'Concepto' },
-            { clave: 'periodo', titulo: 'Año' },
-            { clave: 'valor', titulo: 'Valor', tipo: 'numero' },
-            { clave: 'unidad', titulo: 'Unidad' },
-            { clave: 'confianza', titulo: 'Confianza' },
-          ]}
-          filas={d.previsiones.map((p) => ({
-            concepto: ETIQUETA_PREVISION[p.id] ?? p.id,
-            periodo: p.periodo,
-            valor: p.valor,
-            unidad: p.unidad,
-            confianza: p.dato.confidence,
-          }))}
-        />
-        <SourceLine datos={d.previsiones.map((p) => p.dato)} />
-        <p className="como-leerlo-texto">
-          Son previsiones anteriores a los ejercicios que describen (o una cifra aproximada de un
-          proyecto de presupuestos) citadas por un artículo de la Revista de la Seguridad Social, no
-          datos observados. La fuente no es primaria; por eso su confianza es media o baja.
-        </p>
-      </div>
+      )}
     </section>
   );
 }
-
-const ETIQUETA_PREVISION: Readonly<Record<string, string>> = {
-  'gastos-impropios-previstos-2023': 'Gastos impropios previstos',
-  'deficit-estimado-2023': 'Déficit estimado en la misma previsión',
-  'transferencia-prevista-pge-2021': 'Transferencia prevista en el proyecto de presupuestos',
-  'aportacion-estado-gasto-pensiones-espana-2016':
-    'Aportación del Estado al gasto en pensiones (Ageing Report de la Comisión Europea)',
-};

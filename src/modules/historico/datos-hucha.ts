@@ -128,6 +128,8 @@ export interface DatosHucha {
   readonly numeroPorClase: Readonly<Record<ClasePension, SerieCargada>>;
   readonly pensionMediaPorClase: Readonly<Record<ClasePension, SerieCargada>>;
   readonly gastoEjecucion: { readonly puntos: readonly PuntoAnual[]; readonly dato: Dato };
+  /** Complemento a mínimos de las pensiones contributivas (fila propia de la ejecución). */
+  readonly complementoMinimos: { readonly puntos: readonly PuntoAnual[]; readonly dato: Dato };
   readonly transferencias: DatosTransferencias;
   readonly deuda: DatosDeuda;
   /** Cifras y citas del Tribunal de Cuentas (BOE-A-2025-25090), por identificador. */
@@ -224,6 +226,10 @@ export const datosHucha = memorizar((): DatosHucha => {
     gastoEjecucion: {
       puntos: financiacion.ejecucion.sumaPensiones.puntos,
       dato: financiacion.ejecucion.sumaPensiones.dato,
+    },
+    complementoMinimos: {
+      puntos: financiacion.ejecucion.complementoMinimos.puntos,
+      dato: financiacion.ejecucion.complementoMinimos.dato,
     },
     transferencias: {
       delEstado: deDeEjecucion('ingresos-cap1-cap4', 'DEL ESTADO Y ORG.AUTÓNOMOS'),
