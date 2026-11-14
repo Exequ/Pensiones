@@ -96,9 +96,10 @@ export function SeccionFondoTransferencias() {
             <p>
               Es una comparación de tamaños en un año concreto: los derechos reconocidos por
               transferencias no son uniformes entre trimestres (el cuarto trimestre no es
-              representativo de los demás) ni existe una regla que relacione el Fondo con ellas. El último dato del Fondo es de cierre de año; la
-              ejecución de las transferencias llega a un trimestre posterior, pero no hay un valor
-              del Fondo más reciente con el que compararlo.
+              representativo de los demás) ni existe una regla que relacione el Fondo con ellas. El
+              último dato del Fondo es de cierre de año; la ejecución de las transferencias llega a
+              un trimestre posterior, pero no hay un valor del Fondo más reciente con el que
+              compararlo.
             </p>
           </>
         }

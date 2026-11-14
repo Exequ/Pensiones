@@ -4,7 +4,14 @@ import { esperarPagina, url, vigilar } from './utilidades.ts';
 
 /** Fase 5-A2: la página «Hucha» frente a las transferencias del Estado. */
 
-const GRAFICO_POSICION = 'figure.grafico:has(.grafico-titulo:text("Construcción ilustrativa"))';
+const GRAFICO_POSICION = 'figure.grafico:has(.grafico-titulo:text("Suma conjunta"))';
+const GRAFICO_FONDO_MENOS_DEUDA = 'figure.grafico:has(.grafico-titulo:text("Fondo menos deuda"))';
+const GRAFICO_APOYO = 'figure.grafico:has(.grafico-titulo:text("Apoyo financiero del Estado"))';
+
+/** Activa la suma conjunta (opción desactivada por defecto). */
+async function activarSumaConjunta(page: import('@playwright/test').Page): Promise<void> {
+  await page.getByRole('checkbox', { name: /Mostrar la suma conjunta/ }).check();
+}
 
 /** Trazo de la línea de suma: el `path` más largo del gráfico (las barras son `rect`, los ejes `line`). */
 async function datosDeLaLinea(page: import('@playwright/test').Page): Promise<string> {
@@ -26,20 +33,42 @@ test.describe('página «Hucha»: transferencias', () => {
       /De dónde procede el dinero/,
       /transferencias del Estado a la Seguridad Social en el tiempo/,
       /El Fondo de Reserva frente a las transferencias/,
-      /Una construcción ilustrativa/,
+      /dos lecturas separadas/,
     ]) {
       await expect(page.getByRole('heading', { level: 2, name: nombre })).toBeVisible();
     }
-    await expect(page.locator(GRAFICO_POSICION)).toHaveCount(1);
-    await expect(page.getByText('Construcción ilustrativa, no una cifra oficial.')).toBeVisible();
+    await expect(page.locator(GRAFICO_FONDO_MENOS_DEUDA)).toHaveCount(1);
+    await expect(page.locator(GRAFICO_APOYO)).toHaveCount(1);
+    // La suma conjunta es una opción: desactivada por defecto y sin gráfico hasta que se activa.
+    await expect(
+      page.getByRole('checkbox', { name: /Mostrar la suma conjunta/ }),
+    ).not.toBeChecked();
+    await expect(page.locator(GRAFICO_POSICION)).toHaveCount(0);
+    await expect(page.getByText(/Construcciones ilustrativas, no cifras oficiales/)).toBeVisible();
     expect(registro.errores, 'errores de consola').toEqual([]);
     expect(registro.externas, 'peticiones a dominios externos').toEqual([]);
+  });
+
+  test('la casilla de la suma conjunta muestra el aviso reforzado al activarla y la oculta al desactivarla', async ({
+    page,
+  }) => {
+    await page.goto(url('/hucha'));
+    await esperarPagina(page);
+    await activarSumaConjunta(page);
+    await expect(page.locator(GRAFICO_POSICION)).toHaveCount(1);
+    await expect(page.getByText(/no son aditivas/).first()).toBeVisible();
+    await expect(
+      page.getByText(/esta suma junta un activo \(el Fondo\), un pasivo \(la deuda\)/),
+    ).toBeVisible();
+    await page.getByRole('checkbox', { name: /Mostrar la suma conjunta/ }).uncheck();
+    await expect(page.locator(GRAFICO_POSICION)).toHaveCount(0);
   });
 
   test('las casillas cambian la línea de suma y se manejan con el teclado', async ({ page }) => {
     await page.goto(url('/hucha'));
     await esperarPagina(page);
     await page.waitForLoadState('networkidle');
+    await activarSumaConjunta(page);
     await page.locator(GRAFICO_POSICION).scrollIntoViewIfNeeded();
     const todas = await datosDeLaLinea(page);
     expect(todas.length).toBeGreaterThan(10);
@@ -59,7 +88,7 @@ test.describe('página «Hucha»: transferencias', () => {
     );
   });
 
-  test('el año de inicio cambia la tabla de la construcción', async ({ page }) => {
+  test('el año de inicio cambia la tabla del apoyo financiero del Estado', async ({ page }) => {
     await page.goto(url('/hucha'));
     await esperarPagina(page);
     const selector = page.getByLabel('Año de inicio de las transferencias acumuladas', {
@@ -68,7 +97,7 @@ test.describe('página «Hucha»: transferencias', () => {
     const opciones = await selector.locator('option').allTextContents();
     const otro = opciones[3] ?? '';
     await selector.selectOption(otro);
-    await expect(page.locator(`${GRAFICO_POSICION} thead`)).toContainText(`desde ${otro}`);
+    await expect(page.locator(`${GRAFICO_APOYO} thead`)).toContainText(`desde ${otro}`);
   });
 
   test('en móvil no desborda y las casillas tienen un objetivo táctil de 44 px', async ({
@@ -87,6 +116,7 @@ test.describe('página «Hucha»: transferencias', () => {
       return { desborda: raiz.scrollWidth > raiz.clientWidth, fuera };
     });
     expect(medidas).toEqual({ desborda: false, fuera: 0 });
+    await activarSumaConjunta(page);
     for (const casilla of await page.locator('.hucha-casilla').all()) {
       const caja = await casilla.boundingBox();
       expect(caja?.height ?? 0).toBeGreaterThanOrEqual(44);
@@ -97,6 +127,7 @@ test.describe('página «Hucha»: transferencias', () => {
   test('axe sin violaciones con las casillas y el selector en uso', async ({ page }) => {
     await page.goto(url('/hucha'));
     await esperarPagina(page);
+    await activarSumaConjunta(page);
     await page.getByRole('checkbox', { name: /Fondo de Reserva/ }).uncheck();
     await page.evaluate(() => {
       for (const d of document.querySelectorAll('details')) d.open = true;

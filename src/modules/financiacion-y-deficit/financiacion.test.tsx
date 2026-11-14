@@ -58,7 +58,10 @@ describe('«Financiación y déficit»: saldos', () => {
       'Saldo no financiero menos transferencias corrientes del Estado y OO. AA. (cálculo propio)',
     );
     expect(ROTULO_SALDO_SIN_TRANSFERENCIAS).not.toMatch(/ajustad|contributiv/i);
-    const f = figura(container, 'menos transferencias corrientes del Estado y OO. AA. (cálculo propio)');
+    const f = figura(
+      container,
+      'menos transferencias corrientes del Estado y OO. AA. (cálculo propio)',
+    );
     expect(f.querySelector('.grafico-titulo')?.textContent).not.toMatch(/ajustad|contributiv/i);
     expect(cabeceras(f).join(' ')).not.toMatch(/ajustad|contributiv/i);
     const aviso = screen.getByText(/Advertencia: la resta quita también la financiación/);
@@ -98,7 +101,9 @@ describe('«Financiación y déficit»: saldos', () => {
     const dato = datosFinanciacion().previsiones.find((p) => p.id.startsWith('gastos-impropios'));
     expect(dato).toBeDefined();
     expect(texto).toMatch(/No se suma ni se compara con\s+ninguna serie de ejecución/);
-    expect(texto).toMatch(/pendiente de contrastar con el Informe\s+de evaluación y reforma del Pacto de Toledo/);
+    expect(texto).toMatch(
+      /pendiente de contrastar con el Informe\s+de evaluación y reforma del Pacto de Toledo/,
+    );
   });
 });
 

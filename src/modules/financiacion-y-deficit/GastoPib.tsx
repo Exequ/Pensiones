@@ -117,20 +117,20 @@ export function GastoPib() {
           <>
             <p>
               En {anioComun ?? ''}, último año con todas las medidas, el gasto es del{' '}
-              {puntosAPorcentaje(en(propioConComplemento))} del PIB con las pensiones contributivas de
-              la ejecución y el complemento a mínimos (referencia), del {puntosAPorcentaje(en(propio))}{' '}
-              sin el complemento, del {puntosAPorcentaje(en(vejez))} según ESSPROS (vejez), del{' '}
-              {puntosAPorcentaje(en(vejezMasSupervivencia))} (vejez y supervivientes) y del{' '}
-              {puntosAPorcentaje(en(ocde))} según la OCDE.
+              {puntosAPorcentaje(en(propioConComplemento))} del PIB con las pensiones contributivas
+              de la ejecución y el complemento a mínimos (referencia), del{' '}
+              {puntosAPorcentaje(en(propio))} sin el complemento, del {puntosAPorcentaje(en(vejez))}{' '}
+              según ESSPROS (vejez), del {puntosAPorcentaje(en(vejezMasSupervivencia))} (vejez y
+              supervivientes) y del {puntosAPorcentaje(en(ocde))} según la OCDE.
             </p>
             <p>
               Las líneas difieren por el perímetro: qué prestaciones y qué regímenes entran en cada
               una. El gasto contributivo propio incluye incapacidad permanente y no incluye Clases
               Pasivas ni pensiones no contributivas; de las demás medidas no se conoce el detalle
               con los metadatos descargados. Con los datos descargados no se pueden reconciliar una
-              a una. Una cifra más alta no significa
-              un sistema más caro en términos absolutos: depende también de la evolución del PIB (
-              {decimal1(en(pib.puntos) / 1000)} miles de millones de euros ese año).
+              a una. Una cifra más alta no significa un sistema más caro en términos absolutos:
+              depende también de la evolución del PIB ({decimal1(en(pib.puntos) / 1000)} miles de
+              millones de euros ese año).
             </p>
           </>
         }

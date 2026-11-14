@@ -166,7 +166,11 @@ describe('IPC de diciembre frente a IPC medio anual (Ajustes actuariales 2)', ()
   });
 
   it('rechaza un archivo sin diciembres, con diciembre repetido o con valor no numérico', () => {
-    const sin = { id: 'x', title: 't', data: [{ id: '2020-06', value: 1 }] } as unknown as ArchivoDatos;
+    const sin = {
+      id: 'x',
+      title: 't',
+      data: [{ id: '2020-06', value: 1 }],
+    } as unknown as ArchivoDatos;
     expect(() => serieIPCDiciembreDesdeArchivo(sin)).toThrow(RangeError);
     const doble = {
       id: 'x',
@@ -177,7 +181,11 @@ describe('IPC de diciembre frente a IPC medio anual (Ajustes actuariales 2)', ()
       ],
     } as unknown as ArchivoDatos;
     expect(() => serieIPCDiciembreDesdeArchivo(doble)).toThrow(RangeError);
-    const texto = { id: 'x', title: 't', data: [{ id: '2020-12', value: 'a' }] } as unknown as ArchivoDatos;
+    const texto = {
+      id: 'x',
+      title: 't',
+      data: [{ id: '2020-12', value: 'a' }],
+    } as unknown as ArchivoDatos;
     expect(() => serieIPCDiciembreDesdeArchivo(texto)).toThrow(RangeError);
   });
 });

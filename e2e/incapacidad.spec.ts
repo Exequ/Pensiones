@@ -43,7 +43,9 @@ test.describe('Tu pensión: incapacidad permanente', () => {
     // Sin gráfico de bases (el motor no las expone), con la nota que lo explica.
     await expect(page.locator('#tp-bases')).toHaveCount(0);
     await expect(page.getByText(/no expone las bases mes a mes/)).toBeVisible();
-    await expect(page.getByText(/El grado lo reconoce el organismo competente/).first()).toBeVisible();
+    await expect(
+      page.getByText(/El grado lo reconoce el organismo competente/).first(),
+    ).toBeVisible();
     await expect(page.getByText(/tribunal médico|valoración médica/)).toHaveCount(0);
     await expect(
       page.getByRole('heading', { name: 'Qué no tiene en cuenta el cálculo' }),

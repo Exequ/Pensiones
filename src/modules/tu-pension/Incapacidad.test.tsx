@@ -127,7 +127,9 @@ describe('selector de prestación', () => {
     expect(nombres.every((n) => n.startsWith('incapacidad.'))).toBe(true);
     // Ajustes actuariales 1: los orígenes profesionales se activan y se explica por qué se pide la base reguladora.
     expect(screen.getByText(TEXTOS_INCAPACIDAD_PROPIOS.origenAyuda)).toBeVisible();
-    expect(screen.getAllByText(/El grado lo reconoce el organismo competente/).length).toBeGreaterThan(0);
+    expect(
+      screen.getAllByText(/El grado lo reconoce el organismo competente/).length,
+    ).toBeGreaterThan(0);
     expect(screen.queryByText(/tribunal médico|valoración médica/)).toBeNull();
     // Limitaciones del motor de incapacidad (no las de la jubilación).
     const lim = screen

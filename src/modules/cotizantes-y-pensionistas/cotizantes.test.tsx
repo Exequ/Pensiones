@@ -30,11 +30,6 @@ function figura(contenedor: HTMLElement, titulo: string): HTMLElement {
   return encontrada;
 }
 
-function ultimaFila(f: HTMLElement): string[] {
-  const filas = f.querySelectorAll('tbody tr');
-  return [...(filas[filas.length - 1]?.querySelectorAll('th, td') ?? [])].map((c) => c.textContent);
-}
-
 describe('«Cotizantes y pensionistas»: definiciones de la relación', () => {
   it('la tabla indica, de cada una de las seis definiciones, qué cuenta el denominador y la fecha de cada serie', () => {
     pintar();
@@ -105,7 +100,9 @@ describe('«Cotizantes y pensionistas»: pensión media en euros constantes', ()
     pintar();
     expect(screen.queryByRole('group', { name: /Índice de precios/ })).toBeNull();
     await usuario.click(screen.getByRole('radio', { name: 'Euros constantes' }));
-    const grupo = screen.getByRole('group', { name: 'Índice de precios para los euros constantes' });
+    const grupo = screen.getByRole('group', {
+      name: 'Índice de precios para los euros constantes',
+    });
     expect(within(grupo).getByRole('radio', { name: 'IPC de diciembre' })).toBeChecked();
     expect(within(grupo).getByRole('radio', { name: 'IPC medio anual' })).not.toBeChecked();
   });
@@ -138,9 +135,9 @@ describe('«Cotizantes y pensionistas»: pensión media en euros constantes', ()
     expect(f.querySelector('.grafico-titulo')?.textContent).toContain(String(baseMedia));
     expect(f.querySelector('.grafico-titulo')?.textContent).not.toContain('diciembre de');
     expect(f.textContent).toMatch(/IPC medio anual del año base/);
-    const celdas2 = [
-      ...(f.querySelector('tbody tr')?.querySelectorAll('th, td') ?? []),
-    ].map((c) => c.textContent);
+    const celdas2 = [...(f.querySelector('tbody tr')?.querySelectorAll('th, td') ?? [])].map(
+      (c) => c.textContent,
+    );
     expect(celdas2[1]).toBe(euros2(conMedia));
     // La fuente del deflactor aparece junto al gráfico y no se usa el deflactor del consumo de los hogares.
     expect(f.textContent).toMatch(/no se usa el deflactor del consumo de los hogares/);
@@ -148,9 +145,9 @@ describe('«Cotizantes y pensionistas»: pensión media en euros constantes', ()
 
   it('lleva las advertencias sobre la media', () => {
     pintar();
-    const lista = screen
-      .getByRole('heading', { name: 'Qué es y qué no es esta pensión media' })
-      .nextElementSibling;
+    const lista = screen.getByRole('heading', {
+      name: 'Qué es y qué no es esta pensión media',
+    }).nextElementSibling;
     const texto = lista?.textContent ?? '';
     expect(texto).toMatch(/media por pensión, no por pensionista/);
     expect(texto).toMatch(/Incluye los complementos a mínimos/);

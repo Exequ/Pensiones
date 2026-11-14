@@ -63,8 +63,8 @@ export function Relacion() {
           La marca «{MARCA_MISMA_FECHA}» describe las parejas cuyo numerador y denominador se miden
           en fechas contiguas (el último día de diciembre y el primer día de enero siguiente), sin
           desfase de meses. Es una descripción de las fechas, no una indicación de que esa
-          definición sea más adecuada que las demás. La definición por pensionista con esa pareja
-          de fechas solo existe para un año, porque la Seguridad Social publica el número de
+          definición sea más adecuada que las demás. La definición por pensionista con esa pareja de
+          fechas solo existe para un año, porque la Seguridad Social publica el número de
           pensionistas por mes únicamente del año en curso.
         </p>
       </MarginNote>

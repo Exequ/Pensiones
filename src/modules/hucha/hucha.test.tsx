@@ -94,7 +94,9 @@ describe('página «Hucha»: secciones de transferencias', () => {
     await usuario.click(casilla);
     expect(casilla).toBeChecked();
     expect(figura(container, 'Suma conjunta, no aditiva')).toBeTruthy();
-    const aviso = screen.getByText(/esta suma junta un activo \(el Fondo\), un pasivo \(la deuda\)/);
+    const aviso = screen.getByText(
+      /esta suma junta un activo \(el Fondo\), un pasivo \(la deuda\)/,
+    );
     expect(aviso.textContent).toMatch(/no son aditivas/);
     expect(aviso.textContent).toMatch(/un flujo/);
     await usuario.click(casilla);
@@ -155,7 +157,9 @@ describe('página «Hucha»: secciones de transferencias', () => {
     if ((esperada?.neta ?? 0) < 0) expect(fila[3]).toMatch(/^[−-]/);
     const bloque = f.closest('.bloque-grafico')?.textContent ?? '';
     expect(bloque).toMatch(/Cómo leerlo/);
-    expect(bloque).toMatch(/compara un activo con un pasivo|diferencia entre un activo y un pasivo/i);
+    expect(bloque).toMatch(
+      /compara un activo con un pasivo|diferencia entre un activo y un pasivo/i,
+    );
   });
 
   it('«Apoyo financiero del Estado»: deuda y transferencias por separado y su suma, según el año de inicio', async () => {
@@ -189,15 +193,17 @@ describe('página «Hucha»: secciones de transferencias', () => {
     // La deuda no cambia con el año de inicio; las transferencias acumuladas, sí.
     expect(fila[1]).toBe(entero(primera?.deuda ?? 0));
     expect(fila[2]).not.toBe(entero(primera?.transferencias ?? 0));
-    expect(figura(container, titulo).querySelector('thead')?.textContent).toContain(`desde ${otro}`);
+    expect(figura(container, titulo).querySelector('thead')?.textContent).toContain(
+      `desde ${otro}`,
+    );
   });
 
   it('los meses de gasto del Fondo usan la referencia con complemento, el contraste de catorce pagas y avisan del precio de adquisición', () => {
     const { container } = pintar();
     const f = figura(container, 'Meses de gasto en pensiones que equivale el valor del Fondo');
     const cabecera = f.querySelector('thead')?.textContent ?? '';
-    expect(cabecera).toMatch(/Referencia: obligaciones reconocidas con complemento/);
-    expect(cabecera).toMatch(/Contraste: pensiones × pensión media × catorce pagas/);
+    expect(cabecera).toMatch(/Referencia: con complemento a mínimos/);
+    expect(cabecera).toMatch(/Contraste: catorce pagas/);
     expect(container.textContent).toMatch(/El Fondo se valora a precio de adquisición/);
   });
 
@@ -207,7 +213,8 @@ describe('página «Hucha»: secciones de transferencias', () => {
     const cabecera = f.querySelector('thead')?.textContent ?? '';
     expect(cabecera).toMatch(/Principal: transferencias del año/);
     expect(cabecera).toMatch(/Secundaria: cuarto trimestre/);
-    const seccion = container.querySelector('#fondo-transferencias')?.closest('section')?.textContent ?? '';
+    const seccion =
+      container.querySelector('#fondo-transferencias')?.closest('section')?.textContent ?? '';
     expect(seccion).toMatch(/son diferencias entre\s+acumulados/);
     expect(seccion).toMatch(/no se reparten por igual/);
   });

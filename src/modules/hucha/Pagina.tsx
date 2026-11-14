@@ -208,12 +208,12 @@ export default function Hucha() {
             series={[
               {
                 clave: 'ejecucion',
-                etiqueta: 'Referencia: obligaciones reconocidas con complemento',
+                etiqueta: 'Referencia: con complemento a mínimos',
                 puntos: mesesA,
               },
               {
                 clave: 'aprox',
-                etiqueta: 'Contraste: pensiones × pensión media × catorce pagas',
+                etiqueta: 'Contraste: catorce pagas',
                 puntos: mesesB,
               },
             ]}
@@ -241,8 +241,8 @@ export default function Hucha() {
                 <p>
                   Un número de meses más bajo no dice por sí solo cuánto tiempo podría sostener el
                   Fondo las pensiones: el gasto no es constante y el Fondo no está pensado para
-                  sustituir las cotizaciones. Es solo una comparación de tamaños en un año
-                  concreto, con el Fondo a precio de adquisición.
+                  sustituir las cotizaciones. Es solo una comparación de tamaños en un año concreto,
+                  con el Fondo a precio de adquisición.
                 </p>
               </>
             }

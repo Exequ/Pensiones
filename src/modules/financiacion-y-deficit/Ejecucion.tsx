@@ -175,8 +175,9 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
               El gasto en pensiones contributivas pasa {entero(vPensiones.valorDesde)} millones de
               euros en {vPensiones.desde} a {entero(vPensiones.valorHasta)} en {vPensiones.hasta} (
               {variacionRelativa(vPensiones.relativa ?? 0)}). El complemento a mínimos, que la
-              ejecución anota en una fila propia, fue de {millonesEuros(ultimoComplemento?.valor ?? 0)} en{' '}
-              {ultimoComplemento?.anio ?? ''}; sumado a las pensiones, el total es de{' '}
+              ejecución anota en una fila propia, fue de{' '}
+              {millonesEuros(ultimoComplemento?.valor ?? 0)} en {ultimoComplemento?.anio ?? ''};
+              sumado a las pensiones, el total es de{' '}
               {millonesEuros(conComplemento.at(-1)?.valor ?? 0)}.
             </p>
             <p>

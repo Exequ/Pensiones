@@ -108,8 +108,7 @@ export function Evolucion() {
     primerAnioMedia,
     ultimoAnioMedia,
   );
-  const etiquetaDeflactor =
-    deflactor === 'diciembre' ? 'IPC de diciembre' : 'IPC medio anual';
+  const etiquetaDeflactor = deflactor === 'diciembre' ? 'IPC de diciembre' : 'IPC medio anual';
   const etiquetaBase =
     deflactor === 'diciembre' ? `diciembre de ${anioBaseIpc}` : String(anioBaseIpc);
   const comparacion = compararMediaAltasBajas(
@@ -330,13 +329,13 @@ export function Evolucion() {
             depende también del peso de cada régimen.
           </li>
           <li>
-            No es la pensión media de las altas nuevas: esa es otra serie (véase la sección de
-            altas y bajas).
+            No es la pensión media de las altas nuevas: esa es otra serie (véase la sección de altas
+            y bajas).
           </li>
           <li>
-            Tiene efecto composición: cada año entran pensiones nuevas y salen otras, y las
-            cuantías de unas y otras no coinciden, de modo que la media cambia aunque ninguna
-            pensión se revalorice.
+            Tiene efecto composición: cada año entran pensiones nuevas y salen otras, y las cuantías
+            de unas y otras no coinciden, de modo que la media cambia aunque ninguna pensión se
+            revalorice.
             {comparacion.altasSuperior.length + comparacion.altasInferior.length === 0
               ? ''
               : ` Con los datos de altas y bajas de esta página (de ${comparacion.desde} a ${comparacion.hasta}), la pensión media de las altas es superior a la de las bajas en ${nombresClases(comparacion.altasSuperior) || 'ninguna clase'}${comparacion.altasInferior.length === 0 ? '' : ` y es inferior en ${nombresClases(comparacion.altasInferior)}`}; por eso el sentido del efecto depende de la clase.`}

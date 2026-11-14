@@ -151,7 +151,13 @@ describe('mesesDeGasto', () => {
 });
 
 describe('compararMediaAltasBajas', () => {
-  const f = (anio: number, movimiento: string, clase: string, pensionMedia: number | null, sexo = 'ambos') => ({
+  const f = (
+    anio: number,
+    movimiento: string,
+    clase: string,
+    pensionMedia: number | null,
+    sexo = 'ambos',
+  ) => ({
     anio,
     movimiento,
     clase,
