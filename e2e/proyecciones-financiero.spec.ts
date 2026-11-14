@@ -201,7 +201,10 @@ test.describe('bloque «Sistema financiero (M4)» de «Proyecciones»', () => {
       .locator('.pildora-texto, details > summary')
       .evaluateAll((nodos) =>
         nodos
-          .map((e) => ({ clase: e.getAttribute('class') ?? e.tagName, alto: e.getBoundingClientRect().height }))
+          .map((e) => ({
+            clase: e.getAttribute('class') ?? e.tagName,
+            alto: e.getBoundingClientRect().height,
+          }))
           .filter((e) => e.alto < 43.5),
       );
     expect(pequenos).toEqual([]);

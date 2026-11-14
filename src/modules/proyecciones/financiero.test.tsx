@@ -169,7 +169,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
     ]) {
       expect(cabeceras).toContain(medida);
     }
-    expect(cabeceras).not.toContain('Ageing Report: balance del sistema de pensiones');
+    expect(cabeceras).not.toContain('Ageing Report: balance de pensiones');
     const definiciones = [...container.querySelectorAll('table')].find((t) =>
       t.querySelector('caption')?.textContent.includes('Definición de las tres medidas'),
     );
@@ -184,7 +184,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
     await usuario.click(within(grupo).getByRole('radio', { name: 'Porcentaje del PIB' }));
     const pib = figuraDe(container, 'Saldos del sistema: porcentaje del PIB');
     expect([...pib.querySelectorAll('thead th')].map((c) => c.textContent)).toContain(
-      'Ageing Report: balance del sistema de pensiones',
+      'Ageing Report: balance de pensiones',
     );
     expect(pib.querySelector('.linea-fuente')?.textContent).toMatch(
       /proyección publicada por la fuente/,

@@ -195,6 +195,9 @@ describe('c) y d) ingresos, gasto y saldos', () => {
     const ageing = pib.find((x) => x.clave === 'ageing')!;
     expect(ageing.origen).toBe('publicada');
     expect(ageing.proyeccion[0]?.anio).toBe(d.anioInicio);
+    // No pasa del último año que calcula M4, aunque el Ageing Report llegue más lejos.
+    expect(ageing.proyeccion.at(-1)?.anio).toBe(columnaM4(d, COL4.pib).at(-1)?.anio);
+    expect(Math.max(...anios(d.ageing.saldoSistemaPensiones.puntos))).toBeGreaterThan(2050);
     expect(ageing.observado).toBeUndefined();
   });
 

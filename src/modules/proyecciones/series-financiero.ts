@@ -243,10 +243,14 @@ export function seriesSaldos(d: DatosFinanciero, unidad: UnidadImporte): SeriePr
     };
   });
   if (unidad === 'pib') {
+    // Solo los años que calcula M4: el Ageing Report llega más lejos, pero el gráfico no proyecta más allá.
+    const ultimoAnio = pib.at(-1)?.anio ?? d.anioInicio;
     series.push({
       clave: 'ageing',
-      etiqueta: 'Ageing Report: balance del sistema de pensiones',
-      proyeccion: d.ageing.saldoSistemaPensiones.puntos.filter((p) => p.anio >= d.anioInicio),
+      etiqueta: 'Ageing Report: balance de pensiones',
+      proyeccion: d.ageing.saldoSistemaPensiones.puntos.filter(
+        (p) => p.anio >= d.anioInicio && p.anio <= ultimoAnio,
+      ),
       origen: 'publicada',
       color: 3,
     });

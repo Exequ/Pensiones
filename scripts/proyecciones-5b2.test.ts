@@ -12,7 +12,6 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { ArchivoProyeccion } from '../src/engine/esquema-datos.ts';
-import { filasCsv } from '../src/engine/series-historicas.ts';
 import { validarContenido } from './lib/validar-datos.ts';
 
 const RAIZ = path.resolve(import.meta.dirname, '..');
@@ -40,6 +39,37 @@ const m3 = cargar('data/proyecciones/m3-resumen.json');
 const leeme = leer('data-raw/modelos-salidas/LEEME.txt');
 const fechaLeeme = /el (\d{4}-\d{2}-\d{2})/.exec(leeme)![1]!;
 const commitLeeme = /commit que modifica modelos\/: ([0-9a-f]{7,40})/.exec(leeme)![1]!;
+
+/** Filas de un CSV con campos entre comillas (los conceptos de la ejecución llevan comas). */
+function filasCsv(texto: string): Record<string, string>[] {
+  const registros: string[][] = [];
+  let campo = '';
+  let fila: string[] = [];
+  let entreComillas = false;
+  for (let i = 0; i < texto.length; i++) {
+    const c = texto[i]!;
+    if (entreComillas) {
+      if (c === '"' && texto[i + 1] === '"') {
+        campo += '"';
+        i++;
+      } else if (c === '"') entreComillas = false;
+      else campo += c;
+    } else if (c === '"') entreComillas = true;
+    else if (c === ',') {
+      fila.push(campo);
+      campo = '';
+    } else if (c === '\n' || c === '\r') {
+      if (c === '\r' && texto[i + 1] === '\n') i++;
+      fila.push(campo);
+      campo = '';
+      if (fila.some((x) => x !== '')) registros.push(fila);
+      fila = [];
+    } else campo += c;
+  }
+  if (campo !== '' || fila.length > 0) registros.push([...fila, campo]);
+  const [cabecera = [], ...datos] = registros;
+  return datos.map((r) => Object.fromEntries(cabecera.map((k, j) => [k, r[j] ?? ''])));
+}
 
 const ANIOS = Array.from({ length: 25 }, (_, i) => 2026 + i);
 

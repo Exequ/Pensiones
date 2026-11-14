@@ -14,14 +14,14 @@ export function FinancieroContraste({ d }: { d: DatosFinanciero }) {
   const series: SerieProyectada[] = [
     {
       clave: 'modelo',
-      etiqueta: `Modelo ${MODELO.m4}: gasto en pensiones contributivas`,
+      etiqueta: `Modelo ${MODELO.m4}: gasto`,
       proyeccion: c.indiceM4,
       origen: 'modelo',
       color: 0,
     },
     {
       clave: 'ageing',
-      etiqueta: 'Ageing Report: gasto en pensiones públicas',
+      etiqueta: 'Ageing Report: gasto',
       proyeccion: c.indiceAgeing,
       origen: 'publicada',
       color: 1,
