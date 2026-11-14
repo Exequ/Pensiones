@@ -14,6 +14,8 @@ interface PersonasEjemploProps {
   cargada: PersonaCargada | undefined;
   /** Introducción propia de la prestación (por defecto, la de la jubilación). */
   introduccion?: string;
+  /** Nota sobre el «salario medio ilustrativo» (cobertura de la definición elegida). */
+  notaMedia?: string;
 }
 
 /** Personas-ejemplo ilustrativas: cada una carga su carrera, en tramos, en la tabla. */
@@ -23,12 +25,14 @@ export function PersonasEjemplo({
   mensaje,
   cargada,
   introduccion,
+  notaMedia,
 }: PersonasEjemploProps) {
   const persona = personas.find((p) => p.id === cargada?.id);
   return (
     <section className="tp-personas" aria-labelledby="tp-personas-titulo">
       <h3 id="tp-personas-titulo">{TEXTOS.personasTitulo}</h3>
       <p className="campo-ayuda">{introduccion ?? TEXTOS.personasIntro}</p>
+      {notaMedia ? <p className="campo-ayuda tp-nota-media">{notaMedia}</p> : null}
       <ul className="tp-personas-lista">
         {personas.map((p) => (
           <li key={p.id} className="tp-persona">

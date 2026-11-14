@@ -1,7 +1,10 @@
 import { cleanup, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { lecturaPorId } from '../../engine/lecturas';
 import { escribirEnlace } from './enlace';
+import { LECTURAS_JUBILACION_EN_INCAPACIDAD } from './lecturas-jubilacion-en-incapacidad';
+import { ETIQUETA_ESTADO } from './supuestos';
 import TuPension from './Pagina';
 import { FORMULARIO_BASE, FORMULARIO_INCAPACIDAD } from './pruebas';
 import { MESES, TEXTOS, TEXTOS_JUBILACION } from './textos';
@@ -270,6 +273,47 @@ describe('panel de lecturas de incapacidad', () => {
     expect(comparacion).toHaveTextContent(/Has cambiado una lectura/);
     expect(within(comparacion).getByRole('table')).toBeInTheDocument();
     expect(comparacion).toHaveTextContent('no una recomendación');
+  });
+});
+
+describe('nota «Qué lecturas de jubilación se aplican aquí»', () => {
+  it('solo está en la pantalla de incapacidad, plegable y con los valores aplicados leídos del registro', async () => {
+    const usuario = userEvent.setup();
+    render(<TuPension />);
+    expect(screen.queryByText(TEXTOS_INCAPACIDAD_PROPIOS.jubilacionAplicadaTitulo)).toBeNull();
+    await elegirIncapacidad(usuario);
+    const resumen = screen.getByText(TEXTOS_INCAPACIDAD_PROPIOS.jubilacionAplicadaTitulo);
+    const nota = resumen.closest('details')!;
+    expect(nota).not.toHaveAttribute('open');
+    await usuario.click(resumen);
+    expect(nota).toHaveAttribute('open');
+    const filas = within(nota).getAllByRole('listitem');
+    expect(filas.map((f) => f.textContent)).toHaveLength(LECTURAS_JUBILACION_EN_INCAPACIDAD.length);
+    for (const id of LECTURAS_JUBILACION_EN_INCAPACIDAD) {
+      const l = lecturaPorId(id)!;
+      const t = TEXTOS_LECTURAS[id]!;
+      const fila = filas.find((f) => f.textContent?.includes(t.titulo));
+      expect(fila, id).toBeDefined();
+      expect(fila).toHaveTextContent(t.valores[l.porDefecto]!.etiqueta);
+      expect(fila).toHaveTextContent(ETIQUETA_ESTADO[l.estado]);
+    }
+    // No son editables aquí: la nota no añade controles de elección al panel de lecturas.
+    expect(within(nota).queryAllByRole('radio')).toHaveLength(0);
+    expect(nota).toHaveTextContent(/no se pueden cambiar/);
+  });
+
+  it('el botón lleva a la pantalla de jubilación sin perder los datos personales', async () => {
+    const usuario = userEvent.setup();
+    render(<TuPension />);
+    await elegirIncapacidad(usuario);
+    await usuario.type(screen.getByLabelText('Año de nacimiento'), '1981');
+    await usuario.click(screen.getByText(TEXTOS_INCAPACIDAD_PROPIOS.jubilacionAplicadaTitulo));
+    await usuario.click(
+      screen.getByRole('button', { name: TEXTOS_INCAPACIDAD_PROPIOS.jubilacionAplicadaEnlace }),
+    );
+    expect(screen.getByRole('radio', { name: 'Jubilación ordinaria' })).toBeChecked();
+    expect(screen.getByLabelText('Año de nacimiento')).toHaveValue('1981');
+    expect(screen.queryByText(TEXTOS_INCAPACIDAD_PROPIOS.jubilacionAplicadaTitulo)).toBeNull();
   });
 });
 

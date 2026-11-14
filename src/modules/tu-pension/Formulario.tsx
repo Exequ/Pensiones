@@ -4,7 +4,7 @@ import { SegmentedPills } from '../../components/SegmentedPills';
 import { SourceLine } from '../../components/SourceLine';
 import type { Dato } from '../../engine/esquema-datos';
 import { PersonasEjemplo, type PersonaCargada } from './PersonasEjemplo';
-import type { PersonaEjemplo } from './personas';
+import { notaSalarioMedioIlustrativo, type PersonaEjemplo } from './personas';
 import type { CatalogoReferencias } from './referencias';
 import { ReferenciasBase } from './ReferenciasBase';
 import { ResumenTramos } from './ResumenTramos';
@@ -411,6 +411,7 @@ export function Formulario({
               mensaje={mensajePersona}
               cargada={personaCargada}
               introduccion={textos.personasIntro}
+              notaMedia={notaSalarioMedioIlustrativo(catalogo, valores.definicionMedia)}
             />
             <section className="tp-tramos-seccion" aria-labelledby="tp-tramos-titulo">
               <h3 id="tp-tramos-titulo">{TEXTOS.tramosTitulo}</h3>

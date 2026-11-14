@@ -7,7 +7,7 @@
  */
 import { ArchivoPersonas, type PersonaEjemplo } from '../../engine/esquema-datos.ts';
 import { formatearNumero } from '../../engine/formato.ts';
-import { referenciaDeTipo, type CatalogoReferencias } from './referencias.ts';
+import { buscarReferencia, referenciaDeTipo, type CatalogoReferencias } from './referencias.ts';
 import {
   mesAbsoluto,
   nombreDeMes,
@@ -23,10 +23,15 @@ export function construirPersonas(json: unknown): readonly PersonaEjemplo[] {
   return ArchivoPersonas.parse(json).personas;
 }
 
+/**
+ * Cómo se nombra cada referencia en la descripción de una persona (con su artículo). La referencia
+ * «media» se rotula «salario medio ilustrativo» y no «base media de cotización»: según la definición
+ * elegida es una base de cotización o un salario (ajustes actuariales 1, `docs/DECISIONES.md`).
+ */
 const ROTULO_REFERENCIA: Record<'minima' | 'media' | 'maxima', string> = {
-  minima: 'base mínima',
-  media: 'base media',
-  maxima: 'base máxima',
+  minima: 'la base mínima',
+  media: 'el salario medio ilustrativo',
+  maxima: 'la base máxima',
 };
 
 const plural = (n: number, singular: string, pluralTexto: string): string =>
@@ -41,7 +46,7 @@ export function describirPersona(p: PersonaEjemplo): string {
         : `durante ${plural(t.anios, 'año', 'años')}`;
     return t.referencia === 'sin-cotizar'
       ? `sin cotizar ${cuanto}`
-      : `con la ${ROTULO_REFERENCIA[t.referencia]} ${cuanto}`;
+      : `con ${ROTULO_REFERENCIA[t.referencia]} ${cuanto}`;
   });
   return `Empieza a cotizar a los ${plural(p.edadInicio, 'año', 'años')} y cotiza ${partes.join(', luego ')}.`;
 }
@@ -140,4 +145,32 @@ export function cargarPersona(p: PersonaEjemplo, ctx: ContextoPersona): CargaPer
     };
   }
   return { ok: true, tramos, notas };
+}
+
+/**
+ * Nota sobre el «salario medio ilustrativo» de las personas-ejemplo (ajustes actuariales 1). Describe,
+ * con los años del catálogo de /data, qué cubre la definición de «base media» elegida y qué ocurre
+ * antes de su primer año: el simulador no completa esos años con otra serie (la calibración posible,
+ * entre la base media del Régimen General y el salario, está en `docs/PENDIENTE_DATOS.md`).
+ */
+export function notaSalarioMedioIlustrativo(
+  catalogo: CatalogoReferencias,
+  definicionMedia: string,
+): string {
+  const elegida =
+    buscarReferencia(catalogo, definicionMedia) ??
+    buscarReferencia(catalogo, catalogo.mediaPorDefecto);
+  if (!elegida) return '';
+  const otras = catalogo.referencias
+    .filter((r) => r.tipo === 'media' && r.id !== elegida.id && r.primerAnio < elegida.primerAnio)
+    .map((r) => `${r.etiqueta} (desde ${String(r.primerAnio)})`);
+  const antes =
+    otras.length === 0
+      ? ''
+      : ` Otras definiciones de la «base media» empiezan antes: ${otras.join('; ')}. Son salarios y no bases de cotización, y no miden lo mismo.`;
+  return (
+    `«Salario medio ilustrativo» es la referencia «media» de los tramos de la persona; según la definición elegida es una base de cotización o un salario. ` +
+    `La elegida ahora, «${elegida.etiqueta}», tiene datos de ${String(elegida.primerAnio)} a ${String(elegida.ultimoAnio)}. ` +
+    `Para los años anteriores a ${String(elegida.primerAnio)} no hay dato de esa serie: el tramo empieza en el primer año con datos y los meses anteriores cuentan como meses sin cotizar; el simulador no los completa con otra serie.${antes}`
+  );
 }

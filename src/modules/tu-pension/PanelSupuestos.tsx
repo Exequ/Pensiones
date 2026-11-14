@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { TEXTOS } from './textos';
 import type { LecturaVista } from './supuestos';
 
@@ -10,6 +11,8 @@ interface PanelSupuestosProps {
   onRestablecer: () => void;
   /** Introducción propia de la prestación (por defecto, la de la jubilación). */
   introduccion?: string;
+  /** Contenido propio de la prestación al final del panel (p. ej., la nota de lecturas de jubilación). */
+  pie?: ReactNode;
 }
 
 /**
@@ -24,6 +27,7 @@ export function PanelSupuestos({
   onElegir,
   onRestablecer,
   introduccion,
+  pie,
 }: PanelSupuestosProps) {
   return (
     <section className="seccion tp-supuestos" aria-labelledby="tp-supuestos">
@@ -115,6 +119,7 @@ export function PanelSupuestos({
         ))}
       </ul>
       {conEfecto ? <p className="campo-ayuda">{TEXTOS.supuestosEfectoNota}</p> : null}
+      {pie}
     </section>
   );
 }

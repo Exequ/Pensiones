@@ -6,8 +6,8 @@
   "personas": [
     {
       "id": "carrera-completa-base-media",
-      "nombre": "Carrera completa con base media",
-      "descripcion": "Cotiza todos los meses desde que empieza hasta el mes anterior a la jubilación con la base media.",
+      "nombre": "Carrera completa con salario medio ilustrativo",
+      "descripcion": "Cotiza todos los meses desde que empieza hasta el mes anterior a la jubilación con un salario medio ilustrativo.",
       "ilustrativo": true,
       "edadInicio": 22,
       "tramos": [
@@ -67,7 +67,7 @@
     {
       "id": "interrupcion-larga",
       "nombre": "Carrera con una interrupción larga",
-      "descripcion": "Cotiza con la base media, deja de cotizar durante un periodo largo y vuelve a cotizar con la base media hasta el mes anterior a la jubilación.",
+      "descripcion": "Cotiza con un salario medio ilustrativo, deja de cotizar durante un periodo largo y vuelve a cotizar con un salario medio ilustrativo hasta el mes anterior a la jubilación.",
       "ilustrativo": true,
       "edadInicio": 22,
       "tramos": [
@@ -95,7 +95,7 @@
     {
       "id": "inicio-tardio",
       "nombre": "Inicio tardío de la cotización",
-      "descripcion": "Empieza a cotizar más tarde y lo hace con la base media hasta el mes anterior a la jubilación.",
+      "descripcion": "Empieza a cotizar más tarde y lo hace con un salario medio ilustrativo hasta el mes anterior a la jubilación.",
       "ilustrativo": true,
       "edadInicio": 35,
       "tramos": [

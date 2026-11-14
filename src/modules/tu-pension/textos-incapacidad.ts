@@ -70,6 +70,13 @@ export const TEXTOS_INCAPACIDAD_PROPIOS = {
   intervienenSinEfecto: 'Con tus datos no se ha podido medir el efecto de la alternativa.',
   intervienenNota:
     'Un estado provisional o pendiente significa que la revisión actuarial no ha cerrado la lectura; no indica cuál es la correcta. Puedes cambiarla en «Supuestos y lecturas».',
+  // Nota plegable de las lecturas de jubilación que rigen en la incapacidad
+  jubilacionAplicadaTitulo: 'Qué lecturas de jubilación se aplican aquí',
+  jubilacionAplicadaIntro:
+    'El cálculo de la incapacidad comparte con el de la jubilación parte de su mecánica: la actualización de las bases con el IPC, el relleno de los meses sin cotizar y los límites de la base y de la pensión máxima. Por eso le afectan estas lecturas de jubilación. Aquí se aplican con el valor de por defecto del registro y no se pueden cambiar: las que se cambian en la pantalla de jubilación no pasan a la incapacidad.',
+  jubilacionAplicadaValor: 'Valor aplicado',
+  jubilacionAplicadaEstado: 'Estado',
+  jubilacionAplicadaEnlace: 'Ir a la pantalla de jubilación',
   // Gráfico
   sinGrafico:
     'El motor de incapacidad no expone las bases mes a mes del periodo de cálculo, por lo que este resultado no incluye el gráfico de bases.',
