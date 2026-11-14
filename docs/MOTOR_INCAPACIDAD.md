@@ -71,11 +71,13 @@ Referencias `id` = `data/parametros/incapacidad-permanente-reglas.json#id` salvo
 | `redondeoEdadCarencia`      | `sin-redondeo`             | `medio-anio`       | `param-incapacidad-permanente-reglas-carencia` (a) |
 | `diasCotizadosParcial`      | `naturales`                | `treinta-por-mes`  | `param-incapacidad-permanente-reglas-carencia` (c) |
 
+**`lagunasAccidenteNoLaboral`** (actualización del 14-11-2026): el valor por defecto es `sin-integrar` (los meses sin cotizar del periodo elegido cuentan como cero); `integrar` los rellena al cien por cien de la base mínima del año de cada mes, porque el periodo elegido es más corto que las primeras mensualidades que se integran a ese porcentaje (art. 197.4). La lectura está pendiente (decisión de Sergio, `docs/DECISIONES.md`, «Ajustes actuariales 1»). Entre la Fase 2-E y esa fecha el valor por defecto fue `integrar`.
+
 El efecto de cada una está en `docs/INFORME_VERIFICACION.md` (Fase 2-B-1). Las lecturas de la Fase 2-A (`lecturas`) también se aplican (lagunas, IPC mensual, base y pensión máximas).
 
 ## Ejemplos (casos de oro, todos «derivados de la norma»)
 
-`src/engine/incapacidad/casos-oro-incapacidad.test.ts` tiene 20 casos calculados a mano (bases constantes, sin actualización por IPC, hecho causante en 2026). Ninguno es un ejemplo oficial publicado: comprueban que el motor aplica nuestra lectura de la norma, no la validan de forma independiente. Tres ejemplos:
+`src/engine/incapacidad/casos-oro-incapacidad.test.ts` tiene 22 casos calculados a mano (bases constantes, sin actualización por IPC, hecho causante en 2026). Ninguno es un ejemplo oficial publicado: comprueban que el motor aplica nuestra lectura de la norma, no la validan de forma independiente. Tres ejemplos:
 
 - **Total por enfermedad común, 58 años** (nacida el 20/01/1968, 314 meses cotizados a 2.000 €): periodo exigido (697 − 240) / 4 = 114 meses (≥ 96), base 96 × 2.000 / 112 = 1.714,29; edad ordinaria de 66 años y 10 meses (la carrera proyectada no llega a la de los 65), faltan 104 meses → 418 meses → 96,20 % → base 1.649,14; 55 % = 907,03 + cualificada 20 % = 329,83 → **1.236,86 €/paga**.
 - **Absoluta por enfermedad común, 22 años**: periodo exigido (264 − 192) / 3 = 24 meses (< 96), base 24 × 1.500 / (24 × 1,1666) = 1.285,79; 100 % → **1.285,79 €/paga**.

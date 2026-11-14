@@ -50,25 +50,25 @@
     },
     {
       "id": "incapacidad.lagunasAccidenteNoLaboral",
-      "alternativa": "sin-integrar",
+      "alternativa": "integrar",
       "casos": [
         {
           "descripcion": "accidente no laboral, incapacidad total, base 1.500 €, 6 meses sin cotizar dentro de los 24 elegidos, 2026",
           "magnitud": "pensión de incapacidad total €/mes (sin complementos a mínimos)",
-          "defecto": 693.1414285714287,
-          "alternativa": 530.3571428571429
+          "defecto": 530.3571428571429,
+          "alternativa": 693.1414285714287
         },
         {
           "descripcion": "accidente no laboral, incapacidad total, base 1.500 €, 3 meses sin cotizar dentro de los 24 elegidos, 2026",
           "magnitud": "pensión de incapacidad total €/mes (sin complementos a mínimos)",
-          "defecto": 700.1421428571429,
-          "alternativa": 618.75
+          "defecto": 618.75,
+          "alternativa": 700.1421428571429
         },
         {
           "descripcion": "accidente no laboral, incapacidad total, base 1.500 €, 12 meses sin cotizar dentro de los 24 elegidos, 2026",
           "magnitud": "pensión de incapacidad total €/mes (sin complementos a mínimos)",
-          "defecto": 679.1400000000003,
-          "alternativa": 353.5714285714286
+          "defecto": 353.5714285714286,
+          "alternativa": 679.1400000000003
         }
       ]
     },

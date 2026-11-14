@@ -14,7 +14,8 @@
  * - valida y traduce una configuración (`{ 'jubilacion.baseMaxima': 'sobre-cifra-inicial' }`) a las
  *   opciones de cada motor.
  *
- * Los valores por defecto los decide Sergio tras la revisión actuarial: este módulo no los cambia.
+ * Los valores por defecto los decide Sergio tras la revisión actuarial: este módulo no los cambia
+ * (el 14-11-2026 solo cambió el de `incapacidad.lagunasAccidenteNoLaboral`, en `config/lecturas-por-defecto.json`).
  * Las descripciones no llevan cifras (lo comprueba un test), para poder mostrarse en la interfaz.
  */
 import { entradaDeLectura, ESTADOS_LECTURA } from './config/lecturas-por-defecto.ts';
@@ -36,10 +37,11 @@ export interface LecturaAbierta {
   readonly porDefecto: string;
   /**
    * `pendiente` (sin decidir), `provisional` (decidida con confianza actuarial baja o media, abierta
-   * a revisión) o `decidida` (firme). Todas constan en docs/DECISIONES_ACTUARIALES.md.
+   * a revisión) o `decidida` (firme). Todas constan en docs/DECISIONES_ACTUARIALES.md. Una lectura
+   * pendiente puede llevar motivo si hay una decisión que documentar.
    */
   readonly estado: EstadoLectura;
-  /** Motivo corto de la decisión, con la confianza actuarial en palabras; `null` si está pendiente. */
+  /** Motivo corto de la decisión, con la confianza actuarial; `null` si está pendiente sin decisión que documentar. */
   readonly motivo: string | null;
   /** Fecha (`AAAA-MM-DD`) del último cambio de estado. */
   readonly fechaEstado: string;
@@ -104,7 +106,7 @@ export const LECTURAS_ABIERTAS: readonly LecturaAbierta[] = [
   lectura(
     'jubilacion',
     'pensionMaxima',
-    'Cómo crece el límite de la pensión máxima con el incremento adicional anual: una cantidad fija cada año o una que va creciendo.',
+    'Cómo crece el límite de la pensión máxima con el incremento adicional anual: el mismo porcentaje cada año sobre la cifra del año anterior, o un incremento que va creciendo cada año.',
     ['compuesto', 'incremento-creciente'],
     S_2A,
     '(a) DT 39.ª, pensión máxima',
@@ -122,7 +124,7 @@ export const LECTURAS_ABIERTAS: readonly LecturaAbierta[] = [
   lectura(
     'jubilacion',
     'opcion25EnUltimoDia2040',
-    'Si el último día en que rige la opción de contar más años de cotización queda dentro o fuera de ella.',
+    'Si el último día en que rige la opción de calcular la base reguladora con un periodo más largo de los últimos años queda dentro o fuera de ella.',
     ['incluida', 'excluida'],
     S_2A,
     '(c) opción de 25 años el 31/12/2040',

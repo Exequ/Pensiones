@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { valoresElegidos } from '../../engine/comparar-lecturas';
 import { escribirEnlace, leerEnlace, VERSION_ENLACE, type ContextoEnlace } from './enlace';
 import { FORMULARIO_BASE, FORMULARIO_INCAPACIDAD } from './pruebas';
 import type { FormularioTuPension } from './tipos';
@@ -37,7 +38,7 @@ describe('enlace de la incapacidad permanente (p=inc)', () => {
       enAlta: false,
       trabaja: true,
       mesesSinCotizar: '12',
-      lecturas: { 'incapacidad.lagunasAccidenteNoLaboral': 'sin-integrar' },
+      lecturas: { 'incapacidad.lagunasAccidenteNoLaboral': 'integrar' },
     };
     const busqueda = escribirEnlace(f);
     expect(busqueda.startsWith(`?v=${VERSION_ENLACE}&p=inc&`)).toBe(true);
@@ -45,10 +46,48 @@ describe('enlace de la incapacidad permanente (p=inc)', () => {
     expect(busqueda).not.toContain('jub=');
     expect(busqueda).toContain('gr=gin');
     expect(busqueda).toContain('or=anl');
-    expect(busqueda).toContain('lec=incapacidad.lagunasAccidenteNoLaboral:sin-integrar');
+    expect(busqueda).toContain('lec=incapacidad.lagunasAccidenteNoLaboral:integrar');
     const r = leer(busqueda);
     expect(r.avisos).toEqual([]);
     expect(r.formulario).toEqual({ ...f, tramos: [] });
+  });
+
+  describe('lagunas del accidente no laboral: el valor por defecto pasó a «sin-integrar» (14-11-2026)', () => {
+    const ID = 'incapacidad.lagunasAccidenteNoLaboral';
+    const base =
+      '?v=1&p=inc&nac=1981-03&hc=2026-03&gr=tot&or=anl&sex=h&car=s&ini=2000-01&base=2000';
+
+    it('el enlace solo guarda la lectura si difiere del valor por defecto: «integrar» se escribe y «sin-integrar» no', () => {
+      const f = {
+        ...FORMULARIO_INCAPACIDAD,
+        grado: 'total',
+        origen: 'accidente-no-laboral',
+      } as const;
+      expect(escribirEnlace({ ...f, lecturas: { [ID]: 'integrar' } })).toContain(
+        `lec=${ID}:integrar`,
+      );
+      expect(escribirEnlace({ ...f, lecturas: { [ID]: 'sin-integrar' } })).not.toContain('lec=');
+    });
+
+    it('un enlace antiguo sin `lec` (que significaba «integrar») se lee ahora con el valor por defecto «sin-integrar»', () => {
+      const r = leer(base);
+      expect(r.avisos).toEqual([]);
+      expect(r.formulario.lecturas).toEqual({});
+      expect(valoresElegidos(r.formulario.lecturas, 'incapacidad')[ID]).toBe('sin-integrar');
+    });
+
+    it('un enlace antiguo con «sin-integrar» (alternativa entonces, valor por defecto ahora) se lee sin avisos y sin lectura cambiada', () => {
+      const r = leer(`${base}&lec=${ID}:sin-integrar`);
+      expect(r.avisos).toEqual([]);
+      expect(r.formulario.lecturas).toEqual({});
+    });
+
+    it('un enlace con «integrar» explícito conserva esa lectura', () => {
+      const r = leer(`${base}&lec=${ID}:integrar`);
+      expect(r.avisos).toEqual([]);
+      expect(r.formulario.lecturas).toEqual({ [ID]: 'integrar' });
+      expect(valoresElegidos(r.formulario.lecturas, 'incapacidad')[ID]).toBe('integrar');
+    });
   });
 
   it('cada grado y origen disponible se conserva', () => {

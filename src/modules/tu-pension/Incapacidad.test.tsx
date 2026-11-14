@@ -212,8 +212,13 @@ describe('formulario de incapacidad', () => {
       await screen.findByRole('heading', { name: TEXTOS_INCAPACIDAD_PROPIOS.intervienenTitulo })
     ).closest('section')!;
     expect(bloque).toHaveTextContent(TEXTOS_INCAPACIDAD_PROPIOS.intervienenAnlTitulo);
-    expect(bloque).toHaveTextContent('Provisional');
-    expect(bloque).toHaveTextContent(/Confianza actuarial media/);
+    // Decisión del 14-11-2026: valor por defecto «sin-integrar» y lectura pendiente, con su motivo.
+    expect(bloque).toHaveTextContent('Pendiente de decidir');
+    expect(bloque).toHaveTextContent(/Decisión de Sergio del 14-11-2026/);
+    expect(bloque).toHaveTextContent(/confianza del 55 al 60\s%/);
+    // La alternativa que se mide ahora es «integrar» y el texto no dice cuál es la correcta.
+    expect(bloque).toHaveTextContent(/Rellenarlos con la base mínima/);
+    expect(bloque).not.toHaveTextContent(/La lectura está en estado provisional/);
     expect(bloque).toHaveTextContent(TEXTOS_INCAPACIDAD_PROPIOS.intervienenEfecto);
     expect(bloque).toHaveTextContent(/no cambia el resultado|sería/);
   });
@@ -253,11 +258,12 @@ describe('panel de lecturas de incapacidad', () => {
     const grupo = within(panel()).getByRole('group', {
       name: `Cómo se lee: ${TEXTOS_LECTURAS['incapacidad.lagunasAccidenteNoLaboral']!.titulo}`,
     });
-    expect(
-      within(grupo).getByRole('radio', { name: /Rellenarlos con la base mínima/ }),
-    ).toBeChecked();
+    // El valor por defecto es «Contarlos como cero» (decisión del 14-11-2026).
+    expect(within(grupo).getByRole('radio', { name: /Contarlos como cero/ })).toBeChecked();
     expect(grupo).toHaveTextContent(TEXTOS.opcionPorDefecto);
-    await usuario.click(within(grupo).getByRole('radio', { name: /Contarlos como cero/ }));
+    await usuario.click(
+      within(grupo).getByRole('radio', { name: /Rellenarlos con la base mínima/ }),
+    );
     const comparacion = screen
       .getByRole('heading', { name: TEXTOS.comparacionTitulo })
       .closest('section')!;

@@ -62,33 +62,86 @@ describe('configuración única de las lecturas abiertas', () => {
       expect(preguntas.has(e.pregunta), `${e.id}: ${e.pregunta}`).toBe(true);
   });
 
-  it('las lecturas no pendientes llevan motivo, expuesto por el registro; las pendientes, no', () => {
+  it('las lecturas no pendientes llevan motivo, expuesto por el registro; las pendientes, no (salvo la que documenta una decisión de Sergio)', () => {
+    // Una lectura pendiente puede llevar motivo si hay una decisión que documentar: hoy, solo esta.
+    const pendientesConMotivo = ['incapacidad.lagunasAccidenteNoLaboral'];
     for (const l of LECTURAS_ABIERTAS) {
-      if (l.estado === 'pendiente') expect(l.motivo, l.id).toBeNull();
+      if (l.estado === 'pendiente' && !pendientesConMotivo.includes(l.id))
+        expect(l.motivo, l.id).toBeNull();
       else expect(l.motivo, l.id).toMatch(/\S/);
     }
     const estados = LECTURAS_ABIERTAS.map((l) => l.estado);
-    expect(estados.filter((e) => e === 'decidida')).toHaveLength(11);
-    expect(estados.filter((e) => e === 'provisional')).toHaveLength(7);
-    expect(estados.filter((e) => e === 'pendiente')).toHaveLength(10);
-    expect(lecturaPorId('jubilacion.interpolacionIPC')?.estado).toBe('pendiente');
+    // Revisión actuarial del 14-11-2026 (Ajustes actuariales 1).
+    expect(estados.filter((e) => e === 'decidida')).toHaveLength(17);
+    expect(estados.filter((e) => e === 'provisional')).toHaveLength(10);
+    expect(estados.filter((e) => e === 'pendiente')).toHaveLength(1);
+    expect(lecturaPorId('jubilacion.interpolacionIPC')?.estado).toBe('decidida');
+    expect(lecturaPorId('incapacidad.lagunasAccidenteNoLaboral')?.estado).toBe('pendiente');
   });
 
-  it('la confianza actuarial del motivo va solo con palabras, sin porcentajes', () => {
+  it('la confianza actuarial del motivo va en palabras o como porcentaje de la revisión del 14-11-2026, nunca con otra cifra', () => {
+    // Fase 2-E: solo palabras. Desde el 14-11-2026 la revisión da porcentajes: «con confianza del 85 al 95 %»
+    // o «del 70 %» (con espacio de no separación antes de «%»).
+    const porcentaje = /confianza del \d{2}(?: al \d{2})?\u00a0%/;
     for (const e of CONFIG_LECTURAS) {
       if (e.motivo === undefined) continue;
-      expect(e.motivo, e.id).not.toMatch(/confianza[^.]*\d/i);
+      for (const frase of e.motivo.split(/(?<=\.)\s/)) {
+        if (!/confianza/i.test(frase) || !/\d/.test(frase)) continue;
+        expect(frase, `${e.id}: ${frase}`).toMatch(porcentaje);
+        // Un solo bloque de cifras (el porcentaje o su intervalo) en la frase de la confianza, más la fecha de la revisión.
+        expect(frase.replace(/\d{1,2}-\d{2}-\d{4}/, '').replace(porcentaje, ''), e.id).not.toMatch(
+          /\d/,
+        );
+      }
     }
   });
 
-  it('los dos valores por defecto que cambian en la Fase 2-E son provisionales', () => {
-    for (const id of [
-      'incapacidad.lagunasAccidenteNoLaboral',
-      'jubilacion.actualizacionFactorMinimo',
-    ])
-      expect(lecturaPorId(id)?.estado, id).toBe('provisional');
-    expect(entradaDeLectura('incapacidad.lagunasAccidenteNoLaboral').valor).toBe('integrar');
+  it('los valores por defecto que cambiaron: el suelo del factor (Fase 2-E, provisional) y las lagunas del accidente no laboral (14-11-2026, vuelve a sin-integrar y queda pendiente)', () => {
+    expect(lecturaPorId('jubilacion.actualizacionFactorMinimo')?.estado).toBe('provisional');
     expect(entradaDeLectura('jubilacion.actualizacionFactorMinimo').valor).toBe('suelo-1');
+    expect(lecturaPorId('incapacidad.lagunasAccidenteNoLaboral')?.estado).toBe('pendiente');
+    expect(entradaDeLectura('incapacidad.lagunasAccidenteNoLaboral').valor).toBe('sin-integrar');
+  });
+
+  it('los cambios de estado del 14-11-2026 llevan esa fecha y el valor no cambia (salvo las lagunas del accidente no laboral)', () => {
+    const decididas = [
+      ['jubilacion.opcion25EnUltimoDia2040', 'incluida'],
+      ['jubilacion.fraccionDemora', 'desde-segundo-anio'],
+      ['supervivencia.ventanaBaseReguladora', 'anterior-al-mes-previo'],
+      ['jubilacion.referenciaBaseMinimaLagunas', 'mes-de-la-laguna'],
+      ['jubilacion.interpolacionIPC', 'mensual-ine'],
+      ['incapacidad.divisorPeriodoCorto', 'coeficiente-rd-1799-1985'],
+    ] as const;
+    const provisionales = [
+      ['incapacidad.computoFiccion', 'meses'],
+      ['incapacidad.redondeoEdadCarencia', 'sin-redondeo'],
+      ['incapacidad.diasCotizadosParcial', 'naturales'],
+      ['supervivencia.diasCotizados', 'naturales'],
+    ] as const;
+    for (const [id, valor] of decididas) {
+      const e = entradaDeLectura(id);
+      expect([e.estado, e.valor, e.fecha], id).toEqual(['decidida', valor, '2026-11-14']);
+    }
+    for (const [id, valor] of provisionales) {
+      const e = entradaDeLectura(id);
+      expect([e.estado, e.valor, e.fecha], id).toEqual(['provisional', valor, '2026-11-14']);
+    }
+    // Siguen provisionales y la revisión se añade al motivo.
+    for (const id of [
+      'jubilacion.lagunasAnterioresAlPrimerAlta',
+      'jubilacion.actualizacionFactorMinimo',
+      'supervivencia.carenciaFamiliaresAccidenteNoLaboral',
+      'supervivencia.comparacionCompensatoria',
+      'supervivencia.reduccionLimiteConjunto',
+      'no-contributivas.limiteConTerceraPersona',
+    ]) {
+      const e = entradaDeLectura(id);
+      expect(e.estado, id).toBe('provisional');
+      expect(e.motivo, id).toContain('revisión actuarial del 14-11-2026');
+    }
+    expect(entradaDeLectura('no-contributivas.limiteConTerceraPersona').motivo).toContain(
+      'real decreto de revalorización de 2026',
+    );
   });
 
   it('el registro de decisiones (docs/DECISIONES_ACTUARIALES.md) lista todas las lecturas y su estado', () => {

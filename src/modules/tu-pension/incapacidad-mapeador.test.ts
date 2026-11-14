@@ -84,16 +84,30 @@ describe('mapeo a la entrada del motor', () => {
     const m = formularioAEntradaIncapacidad({
       ...F,
       lecturas: {
-        'incapacidad.lagunasAccidenteNoLaboral': 'sin-integrar',
+        'incapacidad.lagunasAccidenteNoLaboral': 'integrar',
         'incapacidad.edadFiccion': 'carrera-proyectada', // el valor por defecto: se omite
         'jubilacion.baseMaxima': 'sobre-cifra-inicial', // de otra prestación: se omite
       },
     });
     if (!m.ok) throw new Error('inválido');
     expect(m.configuracion.lecturas).toEqual({
-      'incapacidad.lagunasAccidenteNoLaboral': 'sin-integrar',
+      'incapacidad.lagunasAccidenteNoLaboral': 'integrar',
     });
   });
+
+  it.each(['sin-integrar', 'integrar'] as const)(
+    'las lagunas del accidente no laboral «%s»: solo se pasa al motor la que difiere del valor por defecto («sin-integrar»)',
+    (valor) => {
+      const m = formularioAEntradaIncapacidad({
+        ...F,
+        lecturas: { 'incapacidad.lagunasAccidenteNoLaboral': valor },
+      });
+      if (!m.ok) throw new Error('inválido');
+      expect(m.configuracion.lecturas).toEqual(
+        valor === 'integrar' ? { 'incapacidad.lagunasAccidenteNoLaboral': 'integrar' } : undefined,
+      );
+    },
+  );
 
   it('devuelve los errores del formulario sin llamar al motor', () => {
     const m = formularioAEntradaIncapacidad({ ...F, grado: '' });

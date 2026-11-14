@@ -146,30 +146,47 @@ describe('lecturas de la incapacidad', () => {
     ]);
     for (const l of r.lecturas) expect(l.opciones.length).toBeGreaterThanOrEqual(2);
     const anl = r.lecturas.find((l) => l.id === 'incapacidad.lagunasAccidenteNoLaboral')!;
-    expect(anl.estado).toBe('provisional');
+    // Decisión de Sergio del 14-11-2026: vuelve a «sin-integrar» y queda pendiente, con su motivo.
+    expect(anl.estado).toBe('pendiente');
+    expect(anl.valorPorDefecto).toBe('sin-integrar');
     expect(anl.motivo).toBeTruthy();
   });
 
-  it('cambiar la lectura de las lagunas del accidente no laboral cambia el resultado y se compara', () => {
-    const f: FormularioTuPension = {
-      ...F,
-      origen: 'accidente-no-laboral',
-      mesesSinCotizar: '70',
-      ubicacionLagunas: 'final',
-    };
-    const por = resultado(f);
-    const cambiado = resultado({
-      ...f,
-      lecturas: { 'incapacidad.lagunasAccidenteNoLaboral': 'sin-integrar' },
-    });
-    expect(por.comparacion.tipo).toBe('sin-cambios');
-    expect(cambiado.comparacion.tipo).toBe('comparado');
-    if (cambiado.comparacion.tipo === 'comparado') {
-      expect(Math.abs(cambiado.comparacion.diferencia.pension.euros)).toBeGreaterThan(0.005);
-    }
-    // El efecto de la alternativa se mide en el resultado por defecto.
-    const anl = por.lecturas.find((l) => l.id === 'incapacidad.lagunasAccidenteNoLaboral')!;
-    expect(anl.afectaAlResultado).toBe(true);
-    expect(anl.efecto).toMatch(/Sin integrar|Contarlos como cero/);
-  });
+  describe.each(['sin-integrar', 'integrar'] as const)(
+    'lagunas del accidente no laboral con la lectura «%s» puesta explícitamente',
+    (valor) => {
+      const f: FormularioTuPension = {
+        ...F,
+        origen: 'accidente-no-laboral',
+        mesesSinCotizar: '70',
+        ubicacionLagunas: 'final',
+      };
+      const elegido = resultado({
+        ...f,
+        lecturas: { 'incapacidad.lagunasAccidenteNoLaboral': valor },
+      });
+      const defecto = resultado(f);
+
+      it('solo se compara con los valores por defecto si la lectura elegida difiere de «sin-integrar»', () => {
+        if (valor === 'sin-integrar') {
+          // Es el valor por defecto: el resultado es el mismo y no hay comparación.
+          expect(elegido.comparacion.tipo).toBe('sin-cambios');
+          expect(elegido.modelo).toEqual(defecto.modelo);
+        } else {
+          expect(elegido.comparacion.tipo).toBe('comparado');
+          if (elegido.comparacion.tipo === 'comparado') {
+            expect(Math.abs(elegido.comparacion.diferencia.pension.euros)).toBeGreaterThan(0.005);
+          }
+        }
+      });
+
+      it('el efecto de la alternativa se mide frente a la elegida y nombra la otra opción', () => {
+        const anl = elegido.lecturas.find((l) => l.id === 'incapacidad.lagunasAccidenteNoLaboral')!;
+        expect(anl.afectaAlResultado).toBe(true);
+        expect(anl.efecto).toMatch(
+          valor === 'sin-integrar' ? /Rellenarlos con la base mínima/ : /Contarlos como cero/,
+        );
+      });
+    },
+  );
 });

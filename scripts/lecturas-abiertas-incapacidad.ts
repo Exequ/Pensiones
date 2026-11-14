@@ -150,14 +150,14 @@ const corta: Carrera = [{ desde: '2010-07', hasta: '2026-05', baseMensual: 2000 
   const a = calc(...args, {}, { periodoElegidoDesde: '2024-06' });
   const b = calc(
     ...args,
-    { lagunasAccidenteNoLaboral: 'sin-integrar' },
+    { lagunasAccidenteNoLaboral: 'integrar' },
     { periodoElegidoDesde: '2024-06' },
   );
-  // Por defecto (Fase 2-E, provisional): integrarlos con la base mínima.
+  // Por defecto (decisión del 14-11-2026, pendiente): no integrarlos (cuentan como cero).
   fila(
     '(e) meses sin cotizar en el accidente no laboral',
     '24 meses elegidos con 6 sin cotizar, 2026',
-    'no integrarlos (cuentan como cero)',
+    'integrarlos con la base mínima',
     'pensión €/mes',
     a.pensionMensual,
     b.pensionMensual,

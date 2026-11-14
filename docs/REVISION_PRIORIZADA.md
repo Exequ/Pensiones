@@ -18,8 +18,8 @@ Resumen: de las 28 lecturas abiertas del registro, 6 se cierran por evidencia, 1
 |     1 | 28. `param-supervivencia-reglas`                | `supervivencia.carenciaOrfandad`, `supervivencia.carenciaFamiliaresAccidenteNoLaboral`                              |          todo o nada |
 |     2 | 27. `param-mei-reglas`                          | `mei.baseMEI`                                                                                                       |             135,24 % |
 |     3 | 26. `param-pnc-reglas`                          | `no-contributivas.rentasConTrabajoEnCuatroAnios`                                                                    |             100,00 % |
-|     4 | 29. `param-supervivencia-reglas-cuantia`        | `supervivencia.reduccionViudedad70`, `supervivencia.comparacionCompensatoria`, `supervivencia.incrementoFamiliares` |              72,22 % |
-|     5 | 23. `param-incapacidad-permanente-reglas`       | `incapacidad.lagunasAccidenteNoLaboral`                                                                             |              47,94 % |
+|     4 | 23. `param-incapacidad-permanente-reglas`       | `incapacidad.lagunasAccidenteNoLaboral`                                                                             |              92,08 % |
+|     5 | 29. `param-supervivencia-reglas-cuantia`        | `supervivencia.reduccionViudedad70`, `supervivencia.comparacionCompensatoria`, `supervivencia.incrementoFamiliares` |              72,22 % |
 |     6 | 21. `param-pension-maxima-incremento-2051-2065` | `jubilacion.maximaDesde2051`                                                                                        |              38,49 % |
 |     7 | 30. `param-supervivencia-reglas-limites`        | `supervivencia.reduccionLimiteConjunto`                                                                             |              34,21 % |
 |     8 | 4. `param-lagunas-integracion`                  | `jubilacion.lagunasAnterioresAlPrimerAlta`                                                                          |              14,69 % |
@@ -124,7 +124,33 @@ Pregunta: `param-pnc-reglas` (docs/REVISION_ACTUARIAL.md, punto 26).
 
 Otras lecturas de la misma pregunta: `no-contributivas.baseRentasCompatibles` (cerrada por evidencia, −7,04 %); `no-contributivas.limiteTrabajo` (cerrada por evidencia, −40,79 %); `no-contributivas.limiteConTerceraPersona` (cerrada por evidencia, −100 % (sin derecho)).
 
-### Ficha 29: Cuantía de la viudedad, la orfandad y el favor de familiares (orden 4)
+### Ficha 23: Base reguladora de la incapacidad permanente (orden 4)
+
+Pregunta: `param-incapacidad-permanente-reglas` (docs/REVISION_ACTUARIAL.md, punto 23).
+
+**Texto de la norma** (cita literal de `/data`; la fuente y el artículo están en cada dato):
+
+> «La base reguladora de las pensiones de incapacidad permanente, derivadas de accidente no laboral, será el cociente que resulte de dividir por 28 la suma de las bases de cotización del interesado durante un período ininterrumpido de 24 meses, elegido por el beneficiario dentro de los siete años inmediatamente anteriores a la fecha del hecho causante de la pensión.»
+> — `incapacidad-permanente-reglas#br-anl-meses` · art. 7.1 Decreto 1646/1972 (redacción del RD 1795/2003, vigente desde el 01/01/2004) · <https://www.boe.es/buscar/act.php?id=BOE-A-1972-944>
+
+> «elegido por el beneficiario dentro de los siete años inmediatamente anteriores a la fecha del hecho causante de la pensión»
+> — `incapacidad-permanente-reglas#br-anl-ventana-meses` · art. 7.1 Decreto 1646/1972 · <https://www.boe.es/buscar/act.php?id=BOE-A-1972-944>
+
+**Lectura `incapacidad.lagunasAccidenteNoLaboral`** — En el accidente no laboral, qué se hace con los meses sin cotizar dentro del periodo elegido: contarlos como cero o rellenarlos con la base mínima.
+
+- Valor por defecto actual: `sin-integrar`. Alternativas: `integrar`.
+- Por defecto («sin-integrar», pendiente desde el 14-11-2026): los meses sin cotizar dentro del periodo de 24 meses elegido cuentan como cero. Alternativa («integrar»): se rellenan con la base mínima.
+- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `incapacidad.lagunasAccidenteNoLaboral` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/incapacidad/calculo.ts:483`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['incapacidad.lagunasAccidenteNoLaboral']` en la configuración del motor.
+
+| Caso                                                                                                        | Magnitud                                                        | Por defecto | Alternativa | Variación |
+| ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ----------: | ----------: | --------: |
+| accidente no laboral, incapacidad total, base 1.500 €, 6 meses sin cotizar dentro de los 24 elegidos, 2026  | pensión de incapacidad total €/mes (sin complementos a mínimos) |      530,36 |      693,14 |   30,69 % |
+| accidente no laboral, incapacidad total, base 1.500 €, 3 meses sin cotizar dentro de los 24 elegidos, 2026  | pensión de incapacidad total €/mes (sin complementos a mínimos) |      618,75 |      700,14 |   13,15 % |
+| accidente no laboral, incapacidad total, base 1.500 €, 12 meses sin cotizar dentro de los 24 elegidos, 2026 | pensión de incapacidad total €/mes (sin complementos a mínimos) |      353,57 |      679,14 |   92,08 % |
+
+Otras lecturas de la misma pregunta: `incapacidad.edadFiccion` (cerrada por evidencia, 0,00 % en todas las combinaciones probadas); `incapacidad.computoFiccion` (grupo B, −1,31 %); `incapacidad.divisorPeriodoCorto` (grupo C, −0,01 %).
+
+### Ficha 29: Cuantía de la viudedad, la orfandad y el favor de familiares (orden 5)
 
 Pregunta: `param-supervivencia-reglas-cuantia` (docs/REVISION_ACTUARIAL.md, punto 29).
 
@@ -174,32 +200,6 @@ Pregunta: `param-supervivencia-reglas-cuantia` (docs/REVISION_ACTUARIAL.md, punt
 | un nieto huérfano, sin viudo ni huérfanos    | favor de familiares €/mes (primer beneficiario) |     1234,29 |      342,86 |  -72,22 % |
 | dos nietos huérfanos, sin viudo ni huérfanos | favor de familiares €/mes (primer beneficiario) |      788,57 |      342,86 |  -56,52 % |
 | un hermano huérfano, sin viudo ni huérfanos  | favor de familiares €/mes (primer beneficiario) |     1234,29 |      342,86 |  -72,22 % |
-
-### Ficha 23: Base reguladora de la incapacidad permanente (orden 5)
-
-Pregunta: `param-incapacidad-permanente-reglas` (docs/REVISION_ACTUARIAL.md, punto 23).
-
-**Texto de la norma** (cita literal de `/data`; la fuente y el artículo están en cada dato):
-
-> «La base reguladora de las pensiones de incapacidad permanente, derivadas de accidente no laboral, será el cociente que resulte de dividir por 28 la suma de las bases de cotización del interesado durante un período ininterrumpido de 24 meses, elegido por el beneficiario dentro de los siete años inmediatamente anteriores a la fecha del hecho causante de la pensión.»
-> — `incapacidad-permanente-reglas#br-anl-meses` · art. 7.1 Decreto 1646/1972 (redacción del RD 1795/2003, vigente desde el 01/01/2004) · <https://www.boe.es/buscar/act.php?id=BOE-A-1972-944>
-
-> «elegido por el beneficiario dentro de los siete años inmediatamente anteriores a la fecha del hecho causante de la pensión»
-> — `incapacidad-permanente-reglas#br-anl-ventana-meses` · art. 7.1 Decreto 1646/1972 · <https://www.boe.es/buscar/act.php?id=BOE-A-1972-944>
-
-**Lectura `incapacidad.lagunasAccidenteNoLaboral`** — En el accidente no laboral, qué se hace con los meses sin cotizar dentro del periodo elegido: contarlos como cero o rellenarlos con la base mínima.
-
-- Valor por defecto actual: `integrar`. Alternativas: `sin-integrar`.
-- Por defecto («integrar», provisional desde la Fase 2-E): los meses sin cotizar dentro del periodo de 24 meses elegido se rellenan con la base mínima. Alternativa («sin-integrar»): cuentan como cero.
-- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `incapacidad.lagunasAccidenteNoLaboral` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/incapacidad/calculo.ts:483`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['incapacidad.lagunasAccidenteNoLaboral']` en la configuración del motor.
-
-| Caso                                                                                                        | Magnitud                                                        | Por defecto | Alternativa | Variación |
-| ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ----------: | ----------: | --------: |
-| accidente no laboral, incapacidad total, base 1.500 €, 6 meses sin cotizar dentro de los 24 elegidos, 2026  | pensión de incapacidad total €/mes (sin complementos a mínimos) |      693,14 |      530,36 |  -23,49 % |
-| accidente no laboral, incapacidad total, base 1.500 €, 3 meses sin cotizar dentro de los 24 elegidos, 2026  | pensión de incapacidad total €/mes (sin complementos a mínimos) |      700,14 |      618,75 |  -11,63 % |
-| accidente no laboral, incapacidad total, base 1.500 €, 12 meses sin cotizar dentro de los 24 elegidos, 2026 | pensión de incapacidad total €/mes (sin complementos a mínimos) |      679,14 |      353,57 |  -47,94 % |
-
-Otras lecturas de la misma pregunta: `incapacidad.edadFiccion` (cerrada por evidencia, 0,00 % en todas las combinaciones probadas); `incapacidad.computoFiccion` (grupo B, −1,31 %); `incapacidad.divisorPeriodoCorto` (grupo C, −0,01 %).
 
 ### Ficha 21: Incrementos de la pensión máxima inicial de 2051 a 2065 (DT 39.ª.4 TRLGSS) (orden 6)
 
@@ -265,7 +265,7 @@ Pregunta: `param-lagunas-integracion` (docs/REVISION_ACTUARIAL.md, punto 4).
 
 - Valor por defecto actual: `integrar`. Alternativas: `ignorar`.
 - Por defecto («integrar»): los meses de la ventana anteriores al primer alta se cuentan como laguna y se rellenan con la base mínima (100 % las primeras 48 mensualidades y 50 % el resto). Alternativa («ignorar»): esos meses no se cuentan.
-- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `jubilacion.lagunasAnterioresAlPrimerAlta` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/comun/base-reguladora.ts:72`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['jubilacion.lagunasAnterioresAlPrimerAlta']` en la configuración del motor.
+- Qué cambia en el código: una línea. Para adoptar la alternativa, en `src/engine/config/lecturas-por-defecto.json` se pone el `valor` de la entrada `jubilacion.lagunasAnterioresAlPrimerAlta` en una de las alternativas (con `estado` «decidida» y la fecha) y se anota en `docs/DECISIONES_ACTUARIALES.md`. La rama del motor que cambia está en `src/engine/comun/base-reguladora.ts:100`; no hay más cambios. Quien use el motor puede elegirla sin tocar el fichero con `lecturas['jubilacion.lagunasAnterioresAlPrimerAlta']` en la configuración del motor.
 
 | Caso                                              | Magnitud                                                          | Por defecto | Alternativa | Variación |
 | ------------------------------------------------- | ----------------------------------------------------------------- | ----------: | ----------: | --------: |
@@ -364,7 +364,7 @@ Todas las evidencias de «cerrada» son de los datos oficiales descargados en es
 | ---------------------------------------------------- | -------------------------- | --------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `jubilacion.lagunasAnterioresAlPrimerAlta`           | `integrar`                 | A                     | -14,69 % / -10,14 % / -5,25 %                                   | Más del 5 % en carreras cortas.                                                                                                                                         |
 | `jubilacion.maximaDesde2051`                         | `incremento-acumulado`     | A                     | 6,15 % / 19,65 % / 38,49 %                                      | Más del 5 % para todo quien se jubile topado desde 2051.                                                                                                                |
-| `incapacidad.lagunasAccidenteNoLaboral`              | `integrar`                 | A                     | -23,49 % / -11,63 % / -47,94 %                                  | Más del 5 % con meses sin cotizar dentro del periodo elegido.                                                                                                           |
+| `incapacidad.lagunasAccidenteNoLaboral`              | `sin-integrar`             | A                     | 30,69 % / 13,15 % / 92,08 %                                     | Más del 5 % con meses sin cotizar dentro del periodo elegido.                                                                                                           |
 | `supervivencia.carenciaOrfandad`                     | `sin-carencia`             | A                     | -100,00 % / -100,00 % / -100,00 %                               | Todo o nada para la orfandad con causante en alta y menos de 500 días.                                                                                                  |
 | `supervivencia.carenciaFamiliaresAccidenteNoLaboral` | `exigir`                   | A                     | de 0 a 617,14 / de 0 a 360,00 / de 0 a 720,00                   | Todo o nada para el favor de familiares tras accidente no laboral.                                                                                                      |
 | `supervivencia.reduccionViudedad70`                  | `no-inferior-52`           | A                     | -16,88 % / -0,85 % / -24,89 %                                   | Más del 5 % en la viudedad del 70 % con rentas cercanas al límite.                                                                                                      |

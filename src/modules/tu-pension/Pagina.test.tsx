@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { Field } from '../../components/Field';
 import { SECCIONES } from '../secciones';
 import TuPension from './Pagina';
+import { ETIQUETA_ESTADO, lecturasDeJubilacion } from './supuestos';
 import { MESES, TEXTOS } from './textos';
 
 async function rellenar(usuario: ReturnType<typeof userEvent.setup>, anioJubilacion = '2026') {
@@ -74,8 +75,13 @@ describe('página «Tu pensión»', () => {
     const estados = within(panel).getAllByText(/^Estado: /);
     expect(estados.length).toBeGreaterThan(5);
     const textos = new Set(estados.map((e) => e.textContent));
+    // Los estados que se ven son exactamente los de las lecturas de jubilación del registro
+    // (el 14-11-2026 ninguna de ellas queda pendiente: solo hay una pendiente, la de incapacidad).
+    const esperados = new Set(
+      lecturasDeJubilacion().map((l) => `Estado: ${ETIQUETA_ESTADO[l.estado]}`),
+    );
+    expect(textos).toEqual(esperados);
     expect(textos).toContain('Estado: Provisional');
-    expect(textos).toContain('Estado: Pendiente de decidir');
     expect(textos).toContain('Estado: Decidida');
     // Desde la Fase 3-B2 cada lectura es un grupo de opciones con una elegida (la de por defecto).
     const grupos = within(panel).getAllByRole('group');

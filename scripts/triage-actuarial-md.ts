@@ -450,7 +450,7 @@ const ALTERNATIVAS_TEXTO: Record<string, string> = {
   'jubilacion.maximaDesde2051':
     'Por defecto («incremento-acumulado»): la pensión máxima crece cada año la revalorización más la diferencia entre el incremento acumulado de ese año y el del anterior. Alternativa («incremento-anual-literal»): se suma a la revalorización el valor de la tabla de ese año.',
   'incapacidad.lagunasAccidenteNoLaboral':
-    'Por defecto («integrar», provisional desde la Fase 2-E): los meses sin cotizar dentro del periodo de 24 meses elegido se rellenan con la base mínima. Alternativa («sin-integrar»): cuentan como cero.',
+    'Por defecto («sin-integrar», pendiente desde el 14-11-2026): los meses sin cotizar dentro del periodo de 24 meses elegido cuentan como cero. Alternativa («integrar»): se rellenan con la base mínima.',
   'supervivencia.carenciaOrfandad':
     'Por defecto («sin-carencia»): la orfandad con causante en alta no exige periodo previo (art. 224.1 TRLGSS). Alternativa («rd-1647-1997»): se exigen 500 días en los cinco años anteriores (art. 9.1 del RD 1647/1997, redacción de 2001).',
   'supervivencia.carenciaFamiliaresAccidenteNoLaboral':

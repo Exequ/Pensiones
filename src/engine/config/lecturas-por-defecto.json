@@ -1,5 +1,5 @@
 {
-  "descripcion": "Valor por defecto de cada lectura abierta del motor. «pendiente»: sin decidir (docs/REVISION_PRIORIZADA.md); «provisional»: decidida con confianza actuarial baja o media, abierta a revisión; «decidida»: decisión firme. El motivo de las no pendientes se muestra en la interfaz. Todo se registra en docs/DECISIONES_ACTUARIALES.md. Cambiar una decisión es cambiar `valor` (y `estado`, `fecha` y `motivo`) de una entrada; los motores y el registro de lecturas (src/engine/lecturas.ts) leen este fichero.",
+  "descripcion": "Valor por defecto de cada lectura abierta del motor. «pendiente»: sin decidir (docs/REVISION_PRIORIZADA.md; puede llevar motivo si hay una decisión que documentar); «provisional»: decidida con confianza actuarial baja o media, abierta a revisión; «decidida»: decisión firme. El motivo de las no pendientes se muestra en la interfaz. Todo se registra en docs/DECISIONES_ACTUARIALES.md. Cambiar una decisión es cambiar `valor` (y `estado`, `fecha` y `motivo`) de una entrada; los motores y el registro de lecturas (src/engine/lecturas.ts) leen este fichero.",
   "lecturas": [
     {
       "id": "jubilacion.baseMaxima",
@@ -20,45 +20,49 @@
     {
       "id": "jubilacion.referenciaBaseMinimaLagunas",
       "valor": "mes-de-la-laguna",
-      "estado": "pendiente",
-      "fecha": "2026-11-13",
+      "estado": "decidida",
+      "fecha": "2026-11-14",
+      "motivo": "Revisión actuarial del 14-11-2026, con confianza del 85 al 95 %. El art. 209.1.b integra con «la base mínima de cotización del Régimen General que corresponda al mes respectivo».",
       "pregunta": "param-lagunas-integracion"
     },
     {
       "id": "jubilacion.opcion25EnUltimoDia2040",
       "valor": "incluida",
-      "estado": "pendiente",
-      "fecha": "2026-11-13",
+      "estado": "decidida",
+      "fecha": "2026-11-14",
+      "motivo": "Revisión actuarial del 14-11-2026, con confianza del 85 al 95 %. La exposición de motivos del RDL 2/2023 habla de solicitudes «antes de 1 de enero de 2041», lo que deja dentro el último día de 2040.",
       "pregunta": "param-opcion-25-anos-ventana"
     },
     {
       "id": "jubilacion.lagunasAnterioresAlPrimerAlta",
       "valor": "integrar",
       "estado": "provisional",
-      "fecha": "2026-11-13",
-      "motivo": "Confianza actuarial media. El art. 209.1.b integra los «meses sin obligación de cotizar» sin excluir los anteriores a la primera alta.",
+      "fecha": "2026-11-14",
+      "motivo": "Confianza actuarial media. El art. 209.1.b integra los «meses sin obligación de cotizar» sin excluir los anteriores a la primera alta. Revisada y confirmada por la revisión actuarial del 14-11-2026 con confianza del 65 al 70 %.",
       "pregunta": "param-lagunas-integracion"
     },
     {
       "id": "jubilacion.interpolacionIPC",
       "valor": "mensual-ine",
-      "estado": "pendiente",
-      "fecha": "2026-11-13",
+      "estado": "decidida",
+      "fecha": "2026-11-14",
+      "motivo": "Revisión actuarial del 14-11-2026, con confianza del 85 al 95 %. El art. 209.1.d actualiza cada base con el IPC «desde el mes a que aquellas correspondan», lo que exige el índice mensual.",
       "pregunta": "param-actualizacion-bases"
     },
     {
       "id": "jubilacion.actualizacionFactorMinimo",
       "valor": "suelo-1",
       "estado": "provisional",
-      "fecha": "2026-11-13",
-      "motivo": "Confianza actuarial media. Cambia el valor por defecto (antes sin-suelo): criterio de gestión observado en los nueve informes del autocálculo; el art. 209.1.d no lo dice; efecto de céntimos.",
+      "fecha": "2026-11-14",
+      "motivo": "Confianza actuarial media. Cambia el valor por defecto (antes sin-suelo): criterio de gestión observado en los nueve informes del autocálculo; el art. 209.1.d no lo dice; efecto de céntimos. Revisada y confirmada por la revisión actuarial del 14-11-2026 con confianza del 70 %.",
       "pregunta": "param-actualizacion-bases"
     },
     {
       "id": "jubilacion.fraccionDemora",
       "valor": "desde-segundo-anio",
-      "estado": "pendiente",
-      "fecha": "2026-11-13",
+      "estado": "decidida",
+      "fecha": "2026-11-14",
+      "motivo": "Revisión actuarial del 14-11-2026, con confianza del 85 al 95 %. El art. 210.2.a dice que «a partir del segundo año completo de demora» se computan los periodos de más de seis meses y menos de un año.",
       "pregunta": "param-jubilacion-demora-reglas"
     },
     {
@@ -80,51 +84,57 @@
     {
       "id": "incapacidad.computoFiccion",
       "valor": "meses",
-      "estado": "pendiente",
-      "fecha": "2026-11-13",
+      "estado": "provisional",
+      "fecha": "2026-11-14",
+      "motivo": "Revisión actuarial del 14-11-2026, con confianza del 60 al 70 %. El art. 197.1.b habla de «los años que le resten», pero la escala del art. 210.1 es por meses.",
       "pregunta": "param-incapacidad-permanente-reglas"
     },
     {
       "id": "incapacidad.divisorPeriodoCorto",
       "valor": "coeficiente-rd-1799-1985",
-      "estado": "pendiente",
-      "fecha": "2026-11-13",
+      "estado": "decidida",
+      "fecha": "2026-11-14",
+      "motivo": "Revisión actuarial del 14-11-2026, con confianza del 85 al 95 %. El art. 197.2 manda calcular «de forma análoga» sin fijar el divisor; el divisor lo fija el RD 1799/1985.",
       "pregunta": "param-incapacidad-permanente-reglas"
     },
     {
       "id": "incapacidad.lagunasAccidenteNoLaboral",
-      "valor": "integrar",
-      "estado": "provisional",
-      "fecha": "2026-11-13",
-      "motivo": "Confianza actuarial media. Cambia el valor por defecto (antes sin-integrar): el art. 197.4 habla del «período que haya de tomarse» y el art. 7.1 del Decreto no menciona lagunas.",
+      "valor": "sin-integrar",
+      "estado": "pendiente",
+      "fecha": "2026-11-14",
+      "motivo": "Decisión de Sergio del 14-11-2026: el valor por defecto pasa a «sin-integrar» y la lectura queda pendiente, porque la revisión actuarial da solo una confianza del 55 al 60 % a «integrar». El art. 197.3 extiende el 197.1.a al accidente no laboral solo para la absoluta y la gran incapacidad del art. 195.4, y el art. 7.1 del Decreto 1646/1972 no menciona lagunas.",
       "pregunta": "param-incapacidad-permanente-reglas"
     },
     {
       "id": "incapacidad.redondeoEdadCarencia",
       "valor": "sin-redondeo",
-      "estado": "pendiente",
-      "fecha": "2026-11-13",
+      "estado": "provisional",
+      "fecha": "2026-11-14",
+      "motivo": "Revisión actuarial del 14-11-2026, con confianza del 60 al 70 %. El art. 195.3 habla del «tiempo transcurrido», sin redondeo.",
       "pregunta": "param-incapacidad-permanente-reglas-carencia"
     },
     {
       "id": "incapacidad.diasCotizadosParcial",
       "valor": "naturales",
-      "estado": "pendiente",
-      "fecha": "2026-11-13",
+      "estado": "provisional",
+      "fecha": "2026-11-14",
+      "motivo": "Revisión actuarial del 14-11-2026, con confianza del 60 al 70 %. La vida laboral cuenta días de alta, es decir, días naturales.",
       "pregunta": "param-incapacidad-permanente-reglas-carencia"
     },
     {
       "id": "supervivencia.ventanaBaseReguladora",
       "valor": "anterior-al-mes-previo",
-      "estado": "pendiente",
-      "fecha": "2026-11-13",
+      "estado": "decidida",
+      "fecha": "2026-11-14",
+      "motivo": "Revisión actuarial del 14-11-2026, con confianza del 85 al 95 %. El art. 228 toma el periodo «anterior al mes previo al del hecho causante».",
       "pregunta": "param-supervivencia-reglas"
     },
     {
       "id": "supervivencia.diasCotizados",
       "valor": "naturales",
-      "estado": "pendiente",
-      "fecha": "2026-11-13",
+      "estado": "provisional",
+      "fecha": "2026-11-14",
+      "motivo": "Revisión actuarial del 14-11-2026, con confianza del 60 al 70 %. La vida laboral cuenta días de alta, es decir, días naturales.",
       "pregunta": "param-supervivencia-reglas"
     },
     {
@@ -139,8 +149,8 @@
       "id": "supervivencia.carenciaFamiliaresAccidenteNoLaboral",
       "valor": "exigir",
       "estado": "provisional",
-      "fecha": "2026-11-13",
-      "motivo": "Confianza actuarial baja. El art. 226.1 remite solo al art. 219.1, párr. 2.º; la Orden de 1967 solo exime el accidente de trabajo y la enfermedad profesional.",
+      "fecha": "2026-11-14",
+      "motivo": "Confianza actuarial baja. El art. 226.1 remite solo al art. 219.1, párr. 2.º; la Orden de 1967 solo exime el accidente de trabajo y la enfermedad profesional. Revisada y confirmada por la revisión actuarial del 14-11-2026 con confianza del 70 %.",
       "pregunta": "param-supervivencia-reglas"
     },
     {
@@ -155,8 +165,8 @@
       "id": "supervivencia.comparacionCompensatoria",
       "valor": "anual",
       "estado": "provisional",
-      "fecha": "2026-11-13",
-      "motivo": "Confianza actuarial baja. La viudedad de catorce pagas y la compensatoria de doce se comparan por lo cobrado al año; sin criterio publicado del INSS.",
+      "fecha": "2026-11-14",
+      "motivo": "Confianza actuarial baja. La viudedad de catorce pagas y la compensatoria de doce se comparan por lo cobrado al año; sin criterio publicado del INSS. Revisada y confirmada por la revisión actuarial del 14-11-2026 con confianza del 65 %.",
       "pregunta": "param-supervivencia-reglas-cuantia"
     },
     {
@@ -171,8 +181,8 @@
       "id": "supervivencia.reduccionLimiteConjunto",
       "valor": "orfandad",
       "estado": "provisional",
-      "fecha": "2026-11-13",
-      "motivo": "Confianza actuarial baja. El art. 18 de la Orden de 1967 no dice qué se reduce; el art. 17 tampoco (texto incorporado en la Fase 2-E); apoyo solo en el art. 229.3.",
+      "fecha": "2026-11-14",
+      "motivo": "Confianza actuarial baja. El art. 18 de la Orden de 1967 no dice qué se reduce; el art. 17 tampoco (texto incorporado en la Fase 2-E); apoyo solo en el art. 229.3. Revisada y confirmada por la revisión actuarial del 14-11-2026 con confianza del 65 %.",
       "pregunta": "param-supervivencia-reglas-limites"
     },
     {
@@ -203,8 +213,8 @@
       "id": "no-contributivas.limiteConTerceraPersona",
       "valor": "con-complemento",
       "estado": "provisional",
-      "fecha": "2026-11-13",
-      "motivo": "Confianza actuarial baja. El texto del art. 363.1.d apunta a sin complemento; el valor se apoya solo en la guía del IMSERSO.",
+      "fecha": "2026-11-14",
+      "motivo": "Confianza actuarial baja. El texto del art. 363.1.d apunta a sin complemento; el valor se apoya solo en la guía del IMSERSO. Revisada y confirmada por la revisión actuarial del 14-11-2026 con confianza del 55 %. Se prevé cerrarla con el real decreto de revalorización de 2026.",
       "pregunta": "param-pnc-reglas"
     },
     {

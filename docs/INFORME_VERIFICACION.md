@@ -340,15 +340,15 @@ Rejilla de 7 años (2022-2040, IPC del 2 % desde el último dato) × 5 edades ×
 
 Generado con `npx tsx scripts/lecturas-abiertas-incapacidad.ts` (sin complemento a mínimos, para ver el efecto sobre la pensión contributiva; IPC del 2 %):
 
-| Lectura                                              | Caso                                      | Alternativa                        | Magnitud         | Por defecto | Alternativa | Variación |
-| ---------------------------------------------------- | ----------------------------------------- | ---------------------------------- | ---------------- | ----------: | ----------: | --------: |
-| (a) edad de la ficción (art. 197.1.b)                | 58 años, 191 meses cotizados, 2026        | edad general sin carrera larga     | pensión €/mes    |     1355,77 |     1355,77 |    0,00 % |
-| (b) años añadidos por meses o años completos         | el mismo caso                             | años completos                     | pensión €/mes    |     1355,77 |     1337,94 |   -1,31 % |
-| (c) redondeo de la edad a medios años (RD 1799/1985) | 45 años y 5 meses, 2026                   | medio año                          | meses exigidos   |       76,00 |       75,00 |   -1,32 % |
-| (c) ídem, efecto en la base del periodo corto        | bases crecientes (100 € al año)           | medio año                          | pensión €/mes    |     1518,48 |     1519,18 |    0,05 % |
-| (d) divisor del periodo corto (art. 197.2)           | 42 años, 2026                             | meses × 14/12                      | pensión €/mes    |     1802,96 |     1802,86 |   -0,01 % |
-| (e) meses sin cotizar en el accidente no laboral     | 24 meses elegidos con 6 sin cotizar, 2026 | no integrarlos (cuentan como cero) | pensión €/mes    |      693,14 |      530,36 |  -23,49 % |
-| (f) días cotizados de la parcial                     | 59 meses cotizados                        | treinta días por mes               | días acreditados |     1796,00 |     1770,00 |   -1,45 % |
+| Lectura                                              | Caso                                      | Alternativa                    | Magnitud         | Por defecto | Alternativa | Variación |
+| ---------------------------------------------------- | ----------------------------------------- | ------------------------------ | ---------------- | ----------: | ----------: | --------: |
+| (a) edad de la ficción (art. 197.1.b)                | 58 años, 191 meses cotizados, 2026        | edad general sin carrera larga | pensión €/mes    |     1355,77 |     1355,77 |    0,00 % |
+| (b) años añadidos por meses o años completos         | el mismo caso                             | años completos                 | pensión €/mes    |     1355,77 |     1337,94 |   -1,31 % |
+| (c) redondeo de la edad a medios años (RD 1799/1985) | 45 años y 5 meses, 2026                   | medio año                      | meses exigidos   |       76,00 |       75,00 |   -1,32 % |
+| (c) ídem, efecto en la base del periodo corto        | bases crecientes (100 € al año)           | medio año                      | pensión €/mes    |     1518,48 |     1519,18 |    0,05 % |
+| (d) divisor del periodo corto (art. 197.2)           | 42 años, 2026                             | meses × 14/12                  | pensión €/mes    |     1802,96 |     1802,86 |   -0,01 % |
+| (e) meses sin cotizar en el accidente no laboral     | 24 meses elegidos con 6 sin cotizar, 2026 | integrarlos con la base mínima | pensión €/mes    |      530,36 |      693,14 |   30,69 % |
+| (f) días cotizados de la parcial                     | 59 meses cotizados                        | treinta días por mes           | días acreditados |     1796,00 |     1770,00 |   -1,45 % |
 
 Lectura de la tabla:
 

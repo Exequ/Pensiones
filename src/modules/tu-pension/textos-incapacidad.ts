@@ -57,7 +57,7 @@ export const TEXTOS_INCAPACIDAD_PROPIOS = {
     'En este resultado influyen dudas de interpretación de la norma que todavía no están decididas con firmeza. Se muestran con su estado y con el efecto de la alternativa, sin recomendar ninguna.',
   intervienenAnlTitulo: 'Accidente no laboral: meses sin cotizar dentro del periodo elegido',
   intervienenAnlIntro:
-    'Con este origen, la forma de tratar los meses sin cotizar del periodo elegido puede cambiar la base reguladora. La lectura está en estado provisional: sigue abierta a revisión.',
+    'Con este origen, la forma de tratar los meses sin cotizar del periodo elegido puede cambiar la base reguladora. La lectura sigue abierta a revisión: su estado y su motivo se muestran debajo, junto con el efecto de la alternativa.',
   intervienenEstado: 'Estado',
   intervienenMotivo: 'Motivo del registro',
   intervienenEfecto: 'Efecto de la alternativa',
