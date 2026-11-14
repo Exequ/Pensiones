@@ -1,0 +1,7 @@
+Extracto de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado 2023.
+Original: declaracion_2023.pdf (572 páginas, 38 MB), no incluido en el repo.
+SHA-256 del original: c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb
+Origen: https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf
+Descargado el: 2026-11-14 (manual, por Sergio)
+Páginas del original incluidas (numeración física del PDF): 1-3,15,35-47,59-62,67,73-76,84,94,102,120,128-129,135-137,262,467-470,511,553
+Criterio: páginas donde coinciden «Seguridad Social» con «préstamo» o «transferencia», con una página de margen, más portada e índice.
