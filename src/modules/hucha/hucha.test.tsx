@@ -241,6 +241,17 @@ describe('página «Hucha»: secciones de transferencias', () => {
     expect(tabla.querySelectorAll('tbody tr').length).toBeGreaterThanOrEqual(5);
   });
 
+  it('explica que la ejecución clasifica por origen y el Tribunal de Cuentas por finalidad, y que la causa completa no está verificada', () => {
+    const { container } = pintar();
+    const nota = container.querySelector('#origen-clasificacion')?.textContent ?? '';
+    expect(nota).toMatch(/clasifica las transferencias por su origen/);
+    expect(nota).toMatch(/Tribunal de Cuentas las cifra\s+por su finalidad/);
+    expect(nota).toMatch(/causa completa de la diferencia[\s\S]*no está verificada/);
+    // La sección no atribuye la diferencia a una causa concreta no verificada.
+    const seccion = container.querySelector('#origen')?.closest('section')?.textContent ?? '';
+    expect(seccion).not.toMatch(/No coinciden, porque/);
+  });
+
   it('las anotaciones de la deuda dicen que no consta cancelación ni conversión', () => {
     const { container } = pintar();
     expect(container.textContent).toMatch(/no consta\s+ninguna cancelación ni conversión/);

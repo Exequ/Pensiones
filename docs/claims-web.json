@@ -1270,6 +1270,27 @@
       ],
       "fetchedAt": "2026-11-14",
       "estado": "verificada"
+    },
+    {
+      "id": "web-hucha-origen-finalidad",
+      "texto": "La ejecución del presupuesto de la Seguridad Social clasifica las transferencias del Estado por origen y el Tribunal de Cuentas las cifra por finalidad; las dos cifras no coinciden y con los datos descargados no se concilian partida a partida; la causa completa de la diferencia no está verificada.",
+      "ubicacion": "Página «Hucha»: De dónde procede el dinero (Fase 5-C, paso 0)",
+      "datos": [
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#transferencias-equilibrio-2018-2021",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#transferencias-costes-impropios-2021-2022"
+      ],
+      "fuentes": [
+        {
+          "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+          "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+          "docId": "BOE-A-2025-25090"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Solo se afirma lo verificado (criterio de clasificación de cada fuente); la causa completa de la diferencia queda sin atribuir. Complementa web-hucha-clasificaciones."
     }
   ]
 }
