@@ -292,7 +292,7 @@ describe('nota «Qué lecturas de jubilación se aplican aquí»', () => {
     for (const id of LECTURAS_JUBILACION_EN_INCAPACIDAD) {
       const l = lecturaPorId(id)!;
       const t = TEXTOS_LECTURAS[id]!;
-      const fila = filas.find((f) => f.textContent?.includes(t.titulo));
+      const fila = filas.find((f) => f.textContent.includes(t.titulo));
       expect(fila, id).toBeDefined();
       expect(fila).toHaveTextContent(t.valores[l.porDefecto]!.etiqueta);
       expect(fila).toHaveTextContent(ETIQUETA_ESTADO[l.estado]);
