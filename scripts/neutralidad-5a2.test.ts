@@ -31,17 +31,45 @@ describe('el detector de valoraciones', () => {
   });
 });
 
-describe.each(['hucha', 'financiacion-y-deficit', 'cotizantes-y-pensionistas'] as const)(
-  'neutralidad de la sección «%s»',
-  (slug) => {
-    it('el resumen y los contenidos de la sección no contienen palabras de valoración', () => {
-      const seccion = buscarSeccion(slug);
-      expect(
-        valoracionesEn([seccion.titulo, seccion.resumen, ...seccion.previsto].join(' ')),
-      ).toEqual([]);
-    });
-  },
-);
+describe('términos de alarma o de juicio sobre proyecciones (Fase 5-B1)', () => {
+  it.each([
+    ['El sistema se encamina al colapso', ['colaps']],
+    ['Una situación insostenible, de insostenibilidad', ['insostenible', 'insostenibilidad']],
+    ['Un resultado preocupante y una preocupación', ['preocupante', 'preocupacion']],
+    ['Un escenario catastrófico', ['catastrof']],
+    ['El hundimiento es inevitable', ['hundimiento', 'inevitable']],
+    ['Un futuro sombrío y alarmista', ['sombri', 'alarmist']],
+    ['Un resultado tranquilizador y alentador', ['tranquiliz', 'alentador']],
+  ])('detecta «%s»', (texto, esperadas) => {
+    const halladas = valoracionesEn(texto);
+    for (const e of esperadas) expect(halladas).toContain(e);
+  });
+
+  it('no marca la descripción neutral de una proyección', () => {
+    expect(
+      valoracionesEn(
+        'El modelo calcula con la legislación congelada y supuestos explícitos; la diferencia con el INE es de unas décimas.',
+      ),
+    ).toEqual([]);
+    expect(
+      valoracionesEn('Sostenibilidad financiera del sistema y estabilidad de las cuentas'),
+    ).toEqual([]);
+  });
+});
+
+describe.each([
+  'hucha',
+  'financiacion-y-deficit',
+  'cotizantes-y-pensionistas',
+  'proyecciones',
+] as const)('neutralidad de la sección «%s»', (slug) => {
+  it('el resumen y los contenidos de la sección no contienen palabras de valoración', () => {
+    const seccion = buscarSeccion(slug);
+    expect(
+      valoracionesEn([seccion.titulo, seccion.resumen, ...seccion.previsto].join(' ')),
+    ).toEqual([]);
+  });
+});
 
 describe('neutralidad del código de las páginas', () => {
   const RAIZ = path.resolve(import.meta.dirname, '..');
@@ -50,6 +78,7 @@ describe('neutralidad del código de las páginas', () => {
     'src/modules/financiacion-y-deficit',
     'src/modules/cotizantes-y-pensionistas',
     'src/modules/historico',
+    'src/modules/proyecciones',
   ];
   const ficheros = directorios.flatMap((dir) =>
     readdirSync(path.join(RAIZ, dir))

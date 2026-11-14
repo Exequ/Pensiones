@@ -1,0 +1,140 @@
+/**
+ * Utilidades para unir lo observado con la proyección de un modelo propio y compararla con otra
+ * serie (Fase 5-B1).
+ *
+ * Lógica pura, sin React ni DOM. Nunca mezcla observado y proyectado en una misma serie: devuelve
+ * siempre dos listas separadas, para que la interfaz las dibuje con trazos distintos y las rotule.
+ */
+import { indiceBase100, type PuntoAnual } from './series-historicas';
+
+/** Serie observada y proyección de la misma magnitud, separadas por el año de inicio. */
+export interface ObservadoYProyeccion {
+  /** Puntos observados anteriores al año de inicio de la proyección, en orden. */
+  readonly observado: readonly PuntoAnual[];
+  /** Puntos de la proyección del modelo, en orden. */
+  readonly proyeccion: readonly PuntoAnual[];
+  /** Primer año de la proyección. */
+  readonly anioInicio: number;
+  /** Puntos observados descartados por coincidir en año con la proyección o ser posteriores. */
+  readonly solapados: number;
+}
+
+/** Valor del índice en el año base («2026 = 100»). */
+export const BASE_INDICE = 100;
+
+const porAnio = (a: PuntoAnual, b: PuntoAnual): number => a.anio - b.anio;
+
+/**
+ * Une la serie observada con la proyección. El año de inicio es el primer año de la proyección: lo
+ * observado de ese año en adelante no se dibuja en la línea observada (el año de inicio pertenece a
+ * la proyección), de modo que un mismo año nunca aparece en las dos listas. Falla si la proyección
+ * está vacía o repite años.
+ */
+export function unirObservadoProyeccion(
+  observado: readonly PuntoAnual[],
+  proyeccion: readonly PuntoAnual[],
+): ObservadoYProyeccion {
+  if (proyeccion.length === 0) throw new RangeError('La proyección no tiene puntos');
+  const ordenada = [...proyeccion].sort(porAnio);
+  for (let i = 1; i < ordenada.length; i++) {
+    if (ordenada[i]?.anio === ordenada[i - 1]?.anio) {
+      throw new RangeError(`La proyección repite el año ${ordenada[i]?.anio}`);
+    }
+  }
+  const anioInicio = ordenada[0]?.anio ?? 0;
+  const previos = [...observado].filter((p) => p.anio < anioInicio).sort(porAnio);
+  return {
+    observado: previos,
+    proyeccion: ordenada,
+    anioInicio,
+    solapados: observado.length - previos.length,
+  };
+}
+
+/** Proyección dividida en lo presentado y lo ilustrativo (posterior al horizonte). */
+export interface TramosDeProyeccion {
+  /** Años hasta el horizonte, inclusive. */
+  readonly presentada: readonly PuntoAnual[];
+  /**
+   * Años desde el horizonte, inclusive: el punto del horizonte se repite para que las dos líneas se
+   * toquen. Vacía si la proyección no pasa del horizonte.
+   */
+  readonly ilustrativa: readonly PuntoAnual[];
+}
+
+/**
+ * Divide la proyección en el tramo presentado y el ilustrativo. Sin horizonte (`undefined`), todo es
+ * presentado. Lo posterior al horizonte se etiqueta «ilustrativo» en la interfaz.
+ */
+export function partirIlustrativo(
+  proyeccion: readonly PuntoAnual[],
+  horizonte: number | undefined,
+): TramosDeProyeccion {
+  if (horizonte === undefined) return { presentada: proyeccion, ilustrativa: [] };
+  const presentada = proyeccion.filter((p) => p.anio <= horizonte);
+  const posterior = proyeccion.filter((p) => p.anio > horizonte);
+  if (posterior.length === 0) return { presentada, ilustrativa: [] };
+  const punto = presentada.at(-1);
+  return { presentada, ilustrativa: punto ? [punto, ...posterior] : posterior };
+}
+
+/** ¿Es ilustrativo el año? (posterior al horizonte de presentación). */
+export function esIlustrativo(anio: number, horizonte: number | undefined): boolean {
+  return horizonte !== undefined && anio > horizonte;
+}
+
+/** Fila de comparación de dos series en un año. */
+export interface DiferenciaAnual {
+  readonly anio: number;
+  readonly a: number;
+  readonly b: number;
+  /** a − b, en la unidad de las series. */
+  readonly diferencia: number;
+  /** (a − b) / b como fracción; `null` si b es cero. */
+  readonly relativa: number | null;
+}
+
+/** Diferencias año a año entre dos series (solo los años comunes, en orden). */
+export function diferenciasPorAnio(
+  a: readonly PuntoAnual[],
+  b: readonly PuntoAnual[],
+): DiferenciaAnual[] {
+  const deB = new Map(b.map((p) => [p.anio, p.valor]));
+  return [...a].sort(porAnio).flatMap((p) => {
+    const otro = deB.get(p.anio);
+    if (otro === undefined) return [];
+    return [
+      {
+        anio: p.anio,
+        a: p.valor,
+        b: otro,
+        diferencia: p.valor - otro,
+        relativa: otro === 0 ? null : (p.valor - otro) / otro,
+      },
+    ];
+  });
+}
+
+/**
+ * Índice base 100 en `anioBase` de una serie recortada a los años desde la base (los anteriores no
+ * tienen sentido en un contraste «2026 = 100»). Falla si falta el año base.
+ */
+export function indiceDesdeBase(puntos: readonly PuntoAnual[], anioBase: number): PuntoAnual[] {
+  return indiceBase100(
+    puntos.filter((p) => p.anio >= anioBase),
+    anioBase,
+  );
+}
+
+/** Cociente de dos series con un factor, año a año; ignora los años en que el denominador es cero. */
+export function razonPorAnio(
+  numerador: readonly PuntoAnual[],
+  denominador: readonly PuntoAnual[],
+  factor = 1,
+): PuntoAnual[] {
+  const deD = new Map(denominador.map((p) => [p.anio, p.valor]));
+  return numerador.flatMap((p) => {
+    const d = deD.get(p.anio);
+    return d === undefined || d === 0 ? [] : [{ anio: p.anio, valor: (p.valor / d) * factor }];
+  });
+}

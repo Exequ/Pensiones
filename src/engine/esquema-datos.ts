@@ -61,14 +61,21 @@ export const Confianza = z.enum(['alta', 'media', 'baja'], {
 
 /**
  * Naturaleza de un dato (Fase 5-B1). Distingue lo que mide una fuente (`observado`), lo que se
- * calcula a partir de datos observados (`derivado`) y lo que produce un modelo propio con supuestos
+ * calcula a partir de datos observados (`derivado`), la proyección que publica una institución
+ * (`proyeccion-publicada`: INE, Ageing Report) y lo que produce un modelo propio con supuestos
  * explícitos (`proyeccion-de-modelo`). Es opcional en los datos anteriores a la Fase 5-B1, que se
  * entienden `observado` o `derivado` según sus notas; es obligatoria en los ficheros de
  * `data/proyecciones/` y la interfaz la muestra siempre junto a la fuente.
  */
-export const NATURALEZAS = ['observado', 'derivado', 'proyeccion-de-modelo'] as const;
+export const NATURALEZAS = [
+  'observado',
+  'derivado',
+  'proyeccion-publicada',
+  'proyeccion-de-modelo',
+] as const;
 export const Naturaleza = z.enum(NATURALEZAS, {
-  error: 'naturaleza debe ser "observado", "derivado" o "proyeccion-de-modelo"',
+  error:
+    'naturaleza debe ser "observado", "derivado", "proyeccion-publicada" o "proyeccion-de-modelo"',
 });
 
 /** Valor de un dato: número finito o texto (para reglas o datos cualitativos). */

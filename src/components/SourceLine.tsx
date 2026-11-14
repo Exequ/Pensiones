@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import type { Dato } from '../engine/esquema-datos';
-import { fuentesUnicas } from './fuentes';
+import { ETIQUETA_NATURALEZA, fuentesUnicas } from './fuentes';
 import './SourceLine.css';
 
 interface SourceLineProps {
@@ -10,7 +10,9 @@ interface SourceLineProps {
 
 /**
  * Línea de fuente generada a partir de los datos:
- * «Fuente: título (organismo) · descargado el AAAA-MM-DD · confianza: alta».
+ * «Fuente: título (organismo) · descargado el AAAA-MM-DD · confianza: alta». Si el dato declara su
+ * naturaleza (Fase 5-B1), se añade «· naturaleza: proyección de modelo propio» (o «observado»,
+ * «derivado de datos observados»), de modo que una proyección nunca se lea como un dato observado.
  */
 export function SourceLine({ datos }: SourceLineProps) {
   const lista: readonly Dato[] = Array.isArray(datos) ? datos : [datos as Dato];
@@ -25,6 +27,7 @@ export function SourceLine({ datos }: SourceLineProps) {
           <a href={fuente.url}>{fuente.titulo}</a> ({fuente.organismo}
           {fuente.docId ? `, ${fuente.docId}` : ''}) · descargado el{' '}
           <time dateTime={fuente.fecha}>{fuente.fecha}</time> · confianza: {fuente.confianza}
+          {fuente.naturaleza ? ` · naturaleza: ${ETIQUETA_NATURALEZA[fuente.naturaleza]}` : ''}
         </Fragment>
       ))}
     </p>
