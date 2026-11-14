@@ -80,7 +80,13 @@ test.describe('todas las rutas', () => {
 });
 
 test.describe('sistema de diseño en el navegador', () => {
-  for (const ruta of ['/', '/diseno']) {
+  for (const ruta of [
+    '/',
+    '/diseno',
+    '/cotizantes-y-pensionistas',
+    '/financiacion-y-deficit',
+    '/hucha',
+  ]) {
     test(`${ruta}: sin sombras, degradados, radios > 2 px ni colores fuera de los tokens`, async ({
       page,
     }) => {

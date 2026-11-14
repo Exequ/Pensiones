@@ -78,12 +78,15 @@ export const SECCIONES = [
     titulo: 'Financiación y déficit',
     tituloNav: 'Financiación y déficit',
     resumen:
-      'De dónde sale el dinero de las pensiones, cuánto aportan las cotizaciones y el Estado, y qué se entiende por déficit según la definición que se use.',
+      'De dónde sale el dinero de las pensiones, cuánto aportan las cotizaciones y el Estado, y qué se entiende por déficit según la definición que se use, con las cifras publicadas y su evolución.',
     previsto: [
-      'Ingresos por cotizaciones y transferencias del Estado.',
-      'Gasto en pensiones contributivas y no contributivas.',
-      'Distintas definiciones de déficit y qué incluye cada una.',
-      'El Mecanismo de Equidad Intergeneracional (MEI).',
+      'Ingresos y gastos no financieros del Sistema, en millones de euros y como porcentaje del PIB (disponible).',
+      'Ingresos por cotizaciones y transferencias del Estado (disponible).',
+      'Gasto en pensiones contributivas por clase, con el complemento a mínimos aparte (disponible).',
+      'Distintas definiciones de déficit y qué incluye cada una, lado a lado (disponible).',
+      'Gastos impropios: cifras de la fuente y qué cambia en el saldo según se cuenten o no (disponible).',
+      'Gasto en pensiones sobre el PIB según varias medidas (disponible).',
+      'Desglose de las transferencias del Estado por finalidad y gasto de Clases Pasivas: sin datos descargados todavía.',
     ],
   },
   {
@@ -91,11 +94,13 @@ export const SECCIONES = [
     titulo: 'La «hucha» de las pensiones',
     tituloNav: 'La «hucha»',
     resumen:
-      'El Fondo de Reserva de la Seguridad Social: para qué se creó, cómo se ha dotado y cómo se ha usado.',
+      'El Fondo de Reserva de la Seguridad Social: para qué se creó, cómo se ha dotado y cómo se ha usado, y cuántos meses de gasto en pensiones representa su valor.',
     previsto: [
-      'Evolución del saldo del Fondo de Reserva.',
-      'Dotaciones y disposiciones, año a año.',
-      'Su relación con el Mecanismo de Equidad Intergeneracional.',
+      'Evolución del valor del Fondo de Reserva (disponible).',
+      'Dotaciones y disposiciones, año a año (disponible).',
+      'Meses de gasto en pensiones que equivale el Fondo, con dos definiciones de gasto (disponible).',
+      'Reglas de dotación y de disposición, con el límite de desembolso por porcentaje del PIB (disponible).',
+      'Su relación con el Mecanismo de Equidad Intergeneracional (disponible).',
     ],
   },
   {
@@ -103,11 +108,15 @@ export const SECCIONES = [
     titulo: 'Cotizantes y pensionistas',
     tituloNav: 'Cotizantes/pensionistas',
     resumen:
-      'La relación entre quienes cotizan y quienes cobran una pensión, cómo se mide y qué cambia según el numerador y el denominador elegidos.',
+      'La relación entre quienes cotizan y quienes cobran una pensión, cómo se mide y qué cambia según el numerador y el denominador elegidos, con la evolución histórica y la situación actual.',
     previsto: [
-      'Ratio entre afiliados y pensiones, y entre afiliados y pensionistas.',
-      'Evolución histórica y proyecciones demográficas publicadas.',
-      'Por qué la ratio por sí sola no basta para juzgar la sostenibilidad.',
+      'Evolución de afiliados, pensiones y pensionistas (disponible).',
+      'Relación entre afiliados y pensiones, y entre afiliados y pensionistas, con todas las definiciones disponibles (disponible).',
+      'Pensión media por clase, en euros corrientes y constantes (disponible).',
+      'Pensiones en vigor por clase, sexo y edad, y afiliados por edad (disponible).',
+      'Altas y bajas de pensiones (disponible).',
+      'Proyecciones demográficas publicadas: pendiente de una fase posterior.',
+      'Por qué la ratio por sí sola no explica la situación financiera del sistema (se explica en cada gráfico).',
     ],
   },
   {

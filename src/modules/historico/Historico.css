@@ -1,0 +1,75 @@
+/* Páginas históricas (Fase 5-A): solo tokens de src/styles/tokens.css. */
+
+.bloque-grafico {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-4);
+  margin-top: var(--espacio-6);
+}
+
+.como-leerlo {
+  display: grid;
+  gap: var(--espacio-1);
+  padding-top: var(--espacio-3);
+  border-top: var(--grosor-filete) solid var(--color-filete);
+}
+
+.como-leerlo-etiqueta {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  font-weight: var(--peso-semi);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-tinta-2);
+}
+
+.como-leerlo-texto {
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-cuerpo);
+  color: var(--color-tinta-2);
+  display: grid;
+  gap: var(--espacio-2);
+}
+
+.hist-bloque {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-4);
+}
+
+.hist-selector {
+  margin-top: var(--espacio-5);
+}
+
+.hist-definiciones {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-4);
+  margin-top: var(--espacio-5);
+}
+
+.hist-literal {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-tinta-2);
+}
+
+.hist-cifras {
+  display: grid;
+  gap: var(--espacio-2);
+}
+
+.hist-aviso {
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  border-bottom: var(--grosor-filete) solid var(--color-tinta);
+  padding-block: var(--espacio-3);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-tinta-2);
+}
+
+.hist-estado-lista {
+  padding-left: 1.25em;
+}
