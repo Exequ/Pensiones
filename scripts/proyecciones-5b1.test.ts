@@ -51,15 +51,12 @@ const fechaLeeme = /el (\d{4}-\d{2}-\d{2})/.exec(leeme)![1]!;
 const commitLeeme = /commit que modifica modelos\/: ([0-9a-f]{7,40})/.exec(leeme)![1]!;
 
 describe('procedencia de data/proyecciones', () => {
-  it('contiene exactamente los siete ficheros previstos (sin M4)', () => {
+  it('contiene los siete ficheros de la fase 5-B1 y, aparte, el de M4 (fase 5-B2)', () => {
     const ficheros = readdirSync(path.join(RAIZ, 'data/proyecciones'))
       .filter((f) => f.endsWith('.json'))
       .map((f) => f.replace(/\.json$/, ''))
       .sort();
-    expect(ficheros).toEqual([...ESPERADOS].sort());
-    expect(readdirSync(path.join(RAIZ, 'data/proyecciones')).some((f) => /m4/i.test(f))).toBe(
-      false,
-    );
+    expect(ficheros).toEqual([...ESPERADOS, 'm4-financiero'].sort());
   });
 
   it.each(ESPERADOS)('%s: esquema, fuente, fecha, confianza y naturaleza', (id) => {

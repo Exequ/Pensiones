@@ -470,7 +470,7 @@ export const ArchivoTabla = z.strictObject({
 // Salidas de modelos propios (Fase 5-B1): proyecciones, no observaciones
 // ---------------------------------------------------------------------------
 
-export const MODELOS_PROYECCION = ['m1', 'm2', 'm3'] as const;
+export const MODELOS_PROYECCION = ['m1', 'm2', 'm3', 'm4'] as const;
 
 /** Columna de una salida de modelo: cada celda de `filas` es un número o un texto según `tipo`. */
 export const ColumnaProyeccion = z.strictObject({

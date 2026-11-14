@@ -1,6 +1,6 @@
-"""Fase 5-B1. Convierte las salidas CSV de los modelos propios M1, M2 y M3 (data-raw/modelos-salidas/)
-en ficheros JSON de data/proyecciones/ (uno por CSV), con el esquema `ArchivoProyeccion` de
-src/engine/esquema-datos.ts.
+"""Fases 5-B1 y 5-B2. Convierte las salidas CSV de los modelos propios M1, M2, M3 y M4
+(data-raw/modelos-salidas/) en ficheros JSON de data/proyecciones/ (uno por CSV), con el esquema
+`ArchivoProyeccion` de src/engine/esquema-datos.ts.
 
 Qué hace
   - Lee data-raw/modelos-salidas/LEEME.txt: fecha de ejecución, hash del último commit que modifica
@@ -9,7 +9,7 @@ Qué hace
   - Escribe `naturaleza: "proyeccion-de-modelo"`, el escenario, la fuente (URL del script del modelo en
     GitHub, en el commit indicado por el LEEME) y las columnas con su descripción y unidad. Las
     descripciones salen de docs/modelos/Mx_descripcion.md; no se añade nada que ahí no conste.
-  - No usa M4 (fase 5-B2) ni modifica los CSV.
+  - No modifica los CSV ni ejecuta los modelos.
 
 Ejecutar desde la raíz del repositorio con `python3 -I scripts/etl/modelos_salidas.py`. Después se
 formatea con Prettier (el propio script lo intenta) y se comprueba con `npm run validate:data`.
@@ -33,8 +33,12 @@ ESCENARIO_APLICACION = {
     'm1': 'g e IPC no intervienen en la demografía; las variantes de fecundidad, mortalidad y migración se indican en cada escenario.',
     'm2': 'g e IPC solo cambian los importes (base de cotización y recaudación), no el número de personas.',
     'm3': 'g e IPC no intervienen: el modelo cuenta pensiones, no importes.',
+    'm4': 'g e IPC intervienen en la pensión de las altas, en las bases de cotización y en el PIB aproximado (afiliados por salario nominal); las pensiones en vigor se revalorizan con el IPC.',
 }
 
+MEUR = 'millones de euros'
+EUR_MES = 'euros al mes'
+PCT_PIB = '% del PIB aproximado de M4'
 HUECO_DEP = 'razón (personas de 65 o más por persona de 16 a 64)'
 POBL = 'personas'
 PENS = 'pensiones'
@@ -183,12 +187,58 @@ FICHEROS = [
             ('pensionistas_aprox', 'numero', 'Pensionistas (personas), estimación', 'pensionistas'),
         ],
     },
+    {
+        'modelo': 'm4', 'csv': 'm4/m4_financiero.csv', 'id': 'm4-financiero', 'confidence': 'media',
+        'title': 'M4 · Modelo financiero del sistema: gasto en pensiones, ingresos, saldos y Fondo de Reserva (2026-2050)',
+        'description': (
+            'Gasto en pensiones contributivas (pensiones de cada clase por pensión media y catorce pagas), cotizaciones, Mecanismo de Equidad '
+            'Intergeneracional (MEI), resto de gastos, transferencias del Estado y otros ingresos, tres medidas de saldo, dotación, disposición y '
+            'valor del Fondo de Reserva y financiación adicional, calculados por el modelo financiero M4 con la legislación actual congelada. '
+            'Junta M1 (población), M2 (cotizantes y bases) y M3 (pensiones) y se calibra con la ejecución presupuestaria de 2025. Es un cálculo '
+            'propio con un solo escenario de referencia: no es una previsión.'
+        ),
+        'notes': (
+            'Importes en millones de euros corrientes (con inflación) salvo las pensiones medias (euros al mes). El PIB de M4 es un indicador '
+            'aproximado (afiliados por salario nominal): no es una previsión macroeconómica ni coincide con el PIB del INE. La descripción de M4 '
+            'enumera los ingresos como «cotizaciones de 2025 escaladas con la masa de bases de M2, más el MEI»; en esta salida el MEI está '
+            'incluido en «cotizaciones» (las cotizaciones sin el MEI evolucionan como la base total de M2; se comprueba en '
+            'scripts/proyecciones-5b2.test.ts, y consta en docs/DISCREPANCIAS.md). «saldo_sin_transferencias» no se define por su nombre en la '
+            'descripción: es el saldo no financiero sin las transferencias del Estado y otros ingresos (cotizaciones menos gasto en pensiones '
+            'menos resto de gastos); se comprueba en el mismo test. La descripción no da la rentabilidad del Fondo: la salida solo permite '
+            'obtener la implícita.'
+        ),
+        'columnas': [
+            ('anio', 'numero', 'Año', None),
+            ('pensiones_oct', 'numero', 'Pensiones contributivas en vigor en octubre, todas las clases (M3)', PENS),
+            ('pension_media_jub', 'numero', 'Pensión media de jubilación, en euros corrientes de cada año', EUR_MES),
+            ('pension_media_total', 'numero', 'Pensión media de todas las clases, en euros corrientes de cada año', EUR_MES),
+            ('gasto_pensiones', 'numero', 'Gasto en pensiones contributivas: número de pensiones de cada clase por pensión media por catorce pagas', MEUR),
+            ('cotizaciones', 'numero', 'Cotizaciones: las de 2025 escaladas con la masa de bases de M2, más el MEI, que está incluido en esta columna', MEUR),
+            ('mei', 'numero', 'Cotización del Mecanismo de Equidad Intergeneracional (MEI), con el tipo legal creciente hasta su último año de vigencia en el modelo', MEUR),
+            ('otros_gastos', 'numero', 'Resto de gastos: bajas por enfermedad, maternidad, pensiones no contributivas, Ingreso Mínimo Vital, personal y otros', MEUR),
+            ('transferencias_y_otros', 'numero', 'Transferencias del Estado y otros ingresos', MEUR),
+            ('saldo_cotizaciones_menos_pensiones', 'numero', 'Saldo de cotizaciones menos pensiones: cotizaciones menos gasto en pensiones contributivas', MEUR),
+            ('saldo_sin_transferencias', 'numero', 'Saldo sin transferencias: cotizaciones menos gasto en pensiones menos resto de gastos, sin transferencias del Estado ni otros ingresos', MEUR),
+            ('saldo_no_financiero', 'numero', 'Saldo no financiero: ingresos menos gasto en pensiones menos resto de gastos, con las transferencias del Estado y otros ingresos', MEUR),
+            ('dotacion_fondo', 'numero', 'Dotación anual al Fondo de Reserva, que se nutre del MEI', MEUR),
+            ('disposicion_fondo', 'numero', 'Disposición anual del Fondo de Reserva para cubrir déficit, con el límite legal anual en porcentaje del PIB', MEUR),
+            ('fondo_reserva', 'numero', 'Valor del Fondo de Reserva a fin de año', MEUR),
+            ('financiacion_adicional', 'numero', 'Financiación adicional: lo que el Fondo de Reserva no cubre', MEUR),
+            ('pib_proxy', 'numero', 'PIB aproximado de M4: afiliados por salario nominal; no es una previsión macroeconómica', MEUR),
+            ('gasto_pensiones_pct_pib', 'numero', 'Gasto en pensiones contributivas', PCT_PIB),
+            ('saldo_cot_pens_pct_pib', 'numero', 'Saldo de cotizaciones menos pensiones', PCT_PIB),
+            ('saldo_no_financiero_pct_pib', 'numero', 'Saldo no financiero', PCT_PIB),
+            ('fondo_pct_pib', 'numero', 'Valor del Fondo de Reserva a fin de año', PCT_PIB),
+            ('afiliados_por_pension', 'numero', 'Afiliados (M2) por pensión (M3)', 'afiliados por pensión'),
+        ],
+    },
 ]
 
 MODELOS = {
     'm1': ('M1 · Modelo demográfico', 'docs/modelos/M1_descripcion.md', 'modelos/m1/m1_demografia.py'),
     'm2': ('M2 · Cotizantes y bases de cotización (v0)', 'docs/modelos/M2_descripcion.md', 'modelos/m2/m2_cotizantes.py'),
     'm3': ('M3 · Pensiones contributivas en vigor', 'docs/modelos/M3_descripcion.md', 'modelos/m3/m3_pensiones.py'),
+    'm4': ('M4 · Modelo financiero del sistema (v1)', 'docs/modelos/M4_descripcion.md', 'modelos/m4/m4_financiero.py'),
 }
 
 
