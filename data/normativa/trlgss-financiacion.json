@@ -1,0 +1,93 @@
+{
+  "tipo": "datos",
+  "id": "trlgss-financiacion",
+  "title": "TRLGSS, artículo 109: recursos de la Seguridad Social y naturaleza de las prestaciones",
+  "description": "Frases literales del artículo 109 del texto refundido de la Ley General de la Seguridad Social sobre las aportaciones del Estado y la clasificación de las prestaciones como contributivas o no contributivas.",
+  "data": [
+    {
+      "id": "aportaciones-estado-presupuestos",
+      "value": "Las aportaciones progresivas del Estado, que se consignarán con carácter permanente en sus Presupuestos Generales, y las que se acuerden para atenciones especiales o resulten precisas por exigencia de la coyuntura",
+      "unit": "cita literal",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "El TRLGSS incluye entre los recursos de la Seguridad Social las aportaciones del Estado consignadas en los Presupuestos Generales del Estado. Texto vigente desde el 1 de enero de 2023 según el consolidado del BOE.",
+      "quote": "Las aportaciones progresivas del Estado, que se consignarán con carácter permanente en sus Presupuestos Generales, y las que se acuerden para atenciones especiales o resulten precisas por exigencia de la coyuntura",
+      "location": "art. 109.1.a"
+    },
+    {
+      "id": "no-contributiva-aportaciones-estado",
+      "value": "La acción protectora de la Seguridad Social, en su modalidad no contributiva y universal, se financiará mediante aportaciones del Estado al Presupuesto de la Seguridad Social",
+      "unit": "cita literal",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "La modalidad no contributiva y universal se financia con aportaciones del Estado (con la excepción de la asistencia sanitaria y los servicios sociales transferidos a las comunidades autónomas). Texto vigente desde el 1 de enero de 2023 según el consolidado del BOE.",
+      "quote": "La acción protectora de la Seguridad Social, en su modalidad no contributiva y universal, se financiará mediante aportaciones del Estado al Presupuesto de la Seguridad Social",
+      "location": "art. 109.2, primer párrafo"
+    },
+    {
+      "id": "contributivas-financiacion-basica",
+      "value": "Las prestaciones contributivas, los gastos derivados de su gestión y los de funcionamiento de los servicios correspondientes a las funciones de afiliación, recaudación y gestión económico-financiera y patrimonial serán financiadas básicamente con los recursos a que se refieren las letras b), c), d) y e) del apartado anterior, así como, en su caso, por las aportaciones del Estado que se acuerden para atenciones específicas",
+      "unit": "cita literal",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Las prestaciones contributivas se financian básicamente con cuotas y otros recursos propios, y en su caso con aportaciones del Estado para atenciones específicas. Texto vigente desde el 1 de enero de 2023 según el consolidado del BOE.",
+      "quote": "Las prestaciones contributivas, los gastos derivados de su gestión y los de funcionamiento de los servicios correspondientes a las funciones de afiliación, recaudación y gestión económico-financiera y patrimonial serán financiadas básicamente con los recursos a que se refieren las letras b), c), d) y e) del apartado anterior, así como, en su caso, por las aportaciones del Estado que se acuerden para atenciones específicas",
+      "location": "art. 109.2, segundo párrafo"
+    },
+    {
+      "id": "naturaleza-no-contributiva-minimos",
+      "value": "4.ª Los complementos por mínimos de las pensiones de la Seguridad Social.",
+      "unit": "cita literal",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "La ley clasifica los complementos por mínimos de las pensiones entre las prestaciones de naturaleza no contributiva (a efectos de la financiación del apartado 2). Texto vigente desde el 1 de enero de 2023 según el consolidado del BOE.",
+      "quote": "4.ª Los complementos por mínimos de las pensiones de la Seguridad Social.",
+      "location": "art. 109.3.b.4.ª"
+    },
+    {
+      "id": "naturaleza-no-contributiva-familiares-imv",
+      "value": "5.ª Las prestaciones familiares reguladas en el capítulo I del título VI.\n6.ª El ingreso mínimo vital.",
+      "unit": "cita literal",
+      "period": "2023",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+        "docId": "BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "La ley clasifica las prestaciones familiares y el ingreso mínimo vital entre las de naturaleza no contributiva. Texto vigente desde el 1 de enero de 2023 según el consolidado del BOE.",
+      "quote": "5.ª Las prestaciones familiares reguladas en el capítulo I del título VI.\n6.ª El ingreso mínimo vital.",
+      "location": "art. 109.3.b.5.ª y 6.ª"
+    }
+  ]
+}

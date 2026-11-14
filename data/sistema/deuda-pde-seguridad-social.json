@@ -1,0 +1,674 @@
+{
+  "tipo": "datos",
+  "id": "deuda-pde-seguridad-social",
+  "title": "Deuda PDE de las Administraciones de Seguridad Social (1994-T4 a 2026-T2)",
+  "description": "Saldo de la deuda según el PDE del subsector Seguridad Social, trimestral y a fin de año, publicado por el Banco de España.",
+  "series": [
+    {
+      "id": "deuda-pde-trimestral",
+      "title": "Deuda PDE de las Administraciones de Seguridad Social, saldo al final de cada trimestre",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Boletín Estadístico: Deuda PDE. Admón. Seguridad Social (DTNPDE2010_P00000_PS_ASG), serie trimestral",
+        "publisher": "Banco de España",
+        "url": "https://app.bde.es/bie_www?SERIE=DTNPDE2010_P00000_PS_ASG"
+      },
+      "confidence": "alta",
+      "notes": "Banco de España, BIE, serie DTNPDE2010_P00000_PS_ASG («Deuda PDE. Admón. Seguridad Social»; unidad: millones de euros; frecuencia trimestral), descargada de la API del BIE (https://app.bde.es/bierest/resources/srdatosapp/listaSeries?idioma=es&series=DTNPDE2010_P00000_PS_ASG&rango=MAX); sha256 del JSON: 1ca9381cd514cfe474536084bd9f809a322d68bbb1c5223b71de5108957554ff. Deuda según el Protocolo de Déficit Excesivo (PDE): pasivos en efectivo y depósitos, valores y préstamos a valor nominal; la del subsector Seguridad Social no se consolida con la de otros subsectores. La nota de prensa trimestral del Banco de España explica que la variación de esta deuda se debe a los préstamos concedidos por el Estado a la Tesorería General de la Seguridad Social, que no afectan a la deuda del total de las Administraciones Públicas por ser operaciones entre subsectores. La serie no desglosa por acreedor.",
+      "points": [
+        {
+          "period": "1994-T4",
+          "value": 7268
+        },
+        {
+          "period": "1995-T1",
+          "value": 8810
+        },
+        {
+          "period": "1995-T2",
+          "value": 9103
+        },
+        {
+          "period": "1995-T3",
+          "value": 9727
+        },
+        {
+          "period": "1995-T4",
+          "value": 10649
+        },
+        {
+          "period": "1996-T1",
+          "value": 10693
+        },
+        {
+          "period": "1996-T2",
+          "value": 11064
+        },
+        {
+          "period": "1996-T3",
+          "value": 12102
+        },
+        {
+          "period": "1996-T4",
+          "value": 13780
+        },
+        {
+          "period": "1997-T1",
+          "value": 13842
+        },
+        {
+          "period": "1997-T2",
+          "value": 14484
+        },
+        {
+          "period": "1997-T3",
+          "value": 15125
+        },
+        {
+          "period": "1997-T4",
+          "value": 16348
+        },
+        {
+          "period": "1998-T1",
+          "value": 16431
+        },
+        {
+          "period": "1998-T2",
+          "value": 17145
+        },
+        {
+          "period": "1998-T3",
+          "value": 17860
+        },
+        {
+          "period": "1998-T4",
+          "value": 18524
+        },
+        {
+          "period": "1999-T1",
+          "value": 18656
+        },
+        {
+          "period": "1999-T2",
+          "value": 18789
+        },
+        {
+          "period": "1999-T3",
+          "value": 18921
+        },
+        {
+          "period": "1999-T4",
+          "value": 18959
+        },
+        {
+          "period": "2000-T1",
+          "value": 18959
+        },
+        {
+          "period": "2000-T2",
+          "value": 18959
+        },
+        {
+          "period": "2000-T3",
+          "value": 18959
+        },
+        {
+          "period": "2000-T4",
+          "value": 18832
+        },
+        {
+          "period": "2001-T1",
+          "value": 18832
+        },
+        {
+          "period": "2001-T2",
+          "value": 18832
+        },
+        {
+          "period": "2001-T3",
+          "value": 18832
+        },
+        {
+          "period": "2001-T4",
+          "value": 18704
+        },
+        {
+          "period": "2002-T1",
+          "value": 18704
+        },
+        {
+          "period": "2002-T2",
+          "value": 18704
+        },
+        {
+          "period": "2002-T3",
+          "value": 18704
+        },
+        {
+          "period": "2002-T4",
+          "value": 18577
+        },
+        {
+          "period": "2003-T1",
+          "value": 18577
+        },
+        {
+          "period": "2003-T2",
+          "value": 18577
+        },
+        {
+          "period": "2003-T3",
+          "value": 18577
+        },
+        {
+          "period": "2003-T4",
+          "value": 18450
+        },
+        {
+          "period": "2004-T1",
+          "value": 18450
+        },
+        {
+          "period": "2004-T2",
+          "value": 18450
+        },
+        {
+          "period": "2004-T3",
+          "value": 18450
+        },
+        {
+          "period": "2004-T4",
+          "value": 18323
+        },
+        {
+          "period": "2005-T1",
+          "value": 18323
+        },
+        {
+          "period": "2005-T2",
+          "value": 18323
+        },
+        {
+          "period": "2005-T3",
+          "value": 18323
+        },
+        {
+          "period": "2005-T4",
+          "value": 18246
+        },
+        {
+          "period": "2006-T1",
+          "value": 18246
+        },
+        {
+          "period": "2006-T2",
+          "value": 18246
+        },
+        {
+          "period": "2006-T3",
+          "value": 18246
+        },
+        {
+          "period": "2006-T4",
+          "value": 18169
+        },
+        {
+          "period": "2007-T1",
+          "value": 18169
+        },
+        {
+          "period": "2007-T2",
+          "value": 17169
+        },
+        {
+          "period": "2007-T3",
+          "value": 17169
+        },
+        {
+          "period": "2007-T4",
+          "value": 17169
+        },
+        {
+          "period": "2008-T1",
+          "value": 17169
+        },
+        {
+          "period": "2008-T2",
+          "value": 17169
+        },
+        {
+          "period": "2008-T3",
+          "value": 17169
+        },
+        {
+          "period": "2008-T4",
+          "value": 17169
+        },
+        {
+          "period": "2009-T1",
+          "value": 17169
+        },
+        {
+          "period": "2009-T2",
+          "value": 17169
+        },
+        {
+          "period": "2009-T3",
+          "value": 17169
+        },
+        {
+          "period": "2009-T4",
+          "value": 17169
+        },
+        {
+          "period": "2010-T1",
+          "value": 17169
+        },
+        {
+          "period": "2010-T2",
+          "value": 17169
+        },
+        {
+          "period": "2010-T3",
+          "value": 17169
+        },
+        {
+          "period": "2010-T4",
+          "value": 17169
+        },
+        {
+          "period": "2011-T1",
+          "value": 17169
+        },
+        {
+          "period": "2011-T2",
+          "value": 17169
+        },
+        {
+          "period": "2011-T3",
+          "value": 17169
+        },
+        {
+          "period": "2011-T4",
+          "value": 17169
+        },
+        {
+          "period": "2012-T1",
+          "value": 17169
+        },
+        {
+          "period": "2012-T2",
+          "value": 17169
+        },
+        {
+          "period": "2012-T3",
+          "value": 17195
+        },
+        {
+          "period": "2012-T4",
+          "value": 17188
+        },
+        {
+          "period": "2013-T1",
+          "value": 17188
+        },
+        {
+          "period": "2013-T2",
+          "value": 17202
+        },
+        {
+          "period": "2013-T3",
+          "value": 17190
+        },
+        {
+          "period": "2013-T4",
+          "value": 17187
+        },
+        {
+          "period": "2014-T1",
+          "value": 17188
+        },
+        {
+          "period": "2014-T2",
+          "value": 17203
+        },
+        {
+          "period": "2014-T3",
+          "value": 17200
+        },
+        {
+          "period": "2014-T4",
+          "value": 17188
+        },
+        {
+          "period": "2015-T1",
+          "value": 17190
+        },
+        {
+          "period": "2015-T2",
+          "value": 17196
+        },
+        {
+          "period": "2015-T3",
+          "value": 17197
+        },
+        {
+          "period": "2015-T4",
+          "value": 17188
+        },
+        {
+          "period": "2016-T1",
+          "value": 17188
+        },
+        {
+          "period": "2016-T2",
+          "value": 17174
+        },
+        {
+          "period": "2016-T3",
+          "value": 17174
+        },
+        {
+          "period": "2016-T4",
+          "value": 17173
+        },
+        {
+          "period": "2017-T1",
+          "value": 17173
+        },
+        {
+          "period": "2017-T2",
+          "value": 17173
+        },
+        {
+          "period": "2017-T3",
+          "value": 23187
+        },
+        {
+          "period": "2017-T4",
+          "value": 27393
+        },
+        {
+          "period": "2018-T1",
+          "value": 27363
+        },
+        {
+          "period": "2018-T2",
+          "value": 34888
+        },
+        {
+          "period": "2018-T3",
+          "value": 34863
+        },
+        {
+          "period": "2018-T4",
+          "value": 41194
+        },
+        {
+          "period": "2019-T1",
+          "value": 43068
+        },
+        {
+          "period": "2019-T2",
+          "value": 48693
+        },
+        {
+          "period": "2019-T3",
+          "value": 52445
+        },
+        {
+          "period": "2019-T4",
+          "value": 55024
+        },
+        {
+          "period": "2020-T1",
+          "value": 55025
+        },
+        {
+          "period": "2020-T2",
+          "value": 68855
+        },
+        {
+          "period": "2020-T3",
+          "value": 74855
+        },
+        {
+          "period": "2020-T4",
+          "value": 85356
+        },
+        {
+          "period": "2021-T1",
+          "value": 85355
+        },
+        {
+          "period": "2021-T2",
+          "value": 91855
+        },
+        {
+          "period": "2021-T3",
+          "value": 91855
+        },
+        {
+          "period": "2021-T4",
+          "value": 97185
+        },
+        {
+          "period": "2022-T1",
+          "value": 99187
+        },
+        {
+          "period": "2022-T2",
+          "value": 99185
+        },
+        {
+          "period": "2022-T3",
+          "value": 99192
+        },
+        {
+          "period": "2022-T4",
+          "value": 106178
+        },
+        {
+          "period": "2023-T1",
+          "value": 106172
+        },
+        {
+          "period": "2023-T2",
+          "value": 106174
+        },
+        {
+          "period": "2023-T3",
+          "value": 106172
+        },
+        {
+          "period": "2023-T4",
+          "value": 116173
+        },
+        {
+          "period": "2024-T1",
+          "value": 116170
+        },
+        {
+          "period": "2024-T2",
+          "value": 116171
+        },
+        {
+          "period": "2024-T3",
+          "value": 116171
+        },
+        {
+          "period": "2024-T4",
+          "value": 126173
+        },
+        {
+          "period": "2025-T1",
+          "value": 126174
+        },
+        {
+          "period": "2025-T2",
+          "value": 126178
+        },
+        {
+          "period": "2025-T3",
+          "value": 126173
+        },
+        {
+          "period": "2025-T4",
+          "value": 136179
+        },
+        {
+          "period": "2026-T1",
+          "value": 136178
+        },
+        {
+          "period": "2026-T2",
+          "value": 136178
+        }
+      ],
+      "fetchedAt": "2026-11-14"
+    },
+    {
+      "id": "deuda-pde-fin-ano",
+      "title": "Deuda PDE de las Administraciones de Seguridad Social, saldo a 31 de diciembre",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Boletín Estadístico: Deuda PDE. Admón. Seguridad Social (DTNPDE2010_P00000_PS_ASG), serie trimestral",
+        "publisher": "Banco de España",
+        "url": "https://app.bde.es/bie_www?SERIE=DTNPDE2010_P00000_PS_ASG"
+      },
+      "confidence": "alta",
+      "notes": "Valor del cuarto trimestre de la serie trimestral (selección, sin cálculo). Banco de España, BIE, serie DTNPDE2010_P00000_PS_ASG («Deuda PDE. Admón. Seguridad Social»; unidad: millones de euros; frecuencia trimestral), descargada de la API del BIE (https://app.bde.es/bierest/resources/srdatosapp/listaSeries?idioma=es&series=DTNPDE2010_P00000_PS_ASG&rango=MAX); sha256 del JSON: 1ca9381cd514cfe474536084bd9f809a322d68bbb1c5223b71de5108957554ff. Deuda según el Protocolo de Déficit Excesivo (PDE): pasivos en efectivo y depósitos, valores y préstamos a valor nominal; la del subsector Seguridad Social no se consolida con la de otros subsectores. La nota de prensa trimestral del Banco de España explica que la variación de esta deuda se debe a los préstamos concedidos por el Estado a la Tesorería General de la Seguridad Social, que no afectan a la deuda del total de las Administraciones Públicas por ser operaciones entre subsectores. La serie no desglosa por acreedor.",
+      "points": [
+        {
+          "period": "1994",
+          "value": 7268
+        },
+        {
+          "period": "1995",
+          "value": 10649
+        },
+        {
+          "period": "1996",
+          "value": 13780
+        },
+        {
+          "period": "1997",
+          "value": 16348
+        },
+        {
+          "period": "1998",
+          "value": 18524
+        },
+        {
+          "period": "1999",
+          "value": 18959
+        },
+        {
+          "period": "2000",
+          "value": 18832
+        },
+        {
+          "period": "2001",
+          "value": 18704
+        },
+        {
+          "period": "2002",
+          "value": 18577
+        },
+        {
+          "period": "2003",
+          "value": 18450
+        },
+        {
+          "period": "2004",
+          "value": 18323
+        },
+        {
+          "period": "2005",
+          "value": 18246
+        },
+        {
+          "period": "2006",
+          "value": 18169
+        },
+        {
+          "period": "2007",
+          "value": 17169
+        },
+        {
+          "period": "2008",
+          "value": 17169
+        },
+        {
+          "period": "2009",
+          "value": 17169
+        },
+        {
+          "period": "2010",
+          "value": 17169
+        },
+        {
+          "period": "2011",
+          "value": 17169
+        },
+        {
+          "period": "2012",
+          "value": 17188
+        },
+        {
+          "period": "2013",
+          "value": 17187
+        },
+        {
+          "period": "2014",
+          "value": 17188
+        },
+        {
+          "period": "2015",
+          "value": 17188
+        },
+        {
+          "period": "2016",
+          "value": 17173
+        },
+        {
+          "period": "2017",
+          "value": 27393
+        },
+        {
+          "period": "2018",
+          "value": 41194
+        },
+        {
+          "period": "2019",
+          "value": 55024
+        },
+        {
+          "period": "2020",
+          "value": 85356
+        },
+        {
+          "period": "2021",
+          "value": 97185
+        },
+        {
+          "period": "2022",
+          "value": 106178
+        },
+        {
+          "period": "2023",
+          "value": 116173
+        },
+        {
+          "period": "2024",
+          "value": 126173
+        },
+        {
+          "period": "2025",
+          "value": 136179
+        }
+      ],
+      "fetchedAt": "2026-11-14"
+    }
+  ]
+}
