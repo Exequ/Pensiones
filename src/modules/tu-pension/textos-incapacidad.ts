@@ -8,7 +8,7 @@ import type { TextosPrestacion } from './textos';
 export const TEXTOS_INCAPACIDAD: TextosPrestacion = {
   anteriorA: 'al hecho causante',
   aviso:
-    'Es una estimación divulgativa, no un cálculo oficial ni una resolución de la Seguridad Social, y no es una valoración de un tribunal médico: el grado de incapacidad lo reconoce el organismo competente, y aquí es un dato que eliges tú. Sirve para entender cómo se llega a una cifra, no para tomar decisiones.',
+    'Es una estimación divulgativa, no un cálculo oficial ni una resolución de la Seguridad Social. El grado lo reconoce el organismo competente; aquí es un dato que eliges tú. Sirve para entender cómo se llega a una cifra, no para tomar decisiones.',
   introCarrera:
     'Esta versión usa una carrera simple: cotizas todos los meses desde que empiezas hasta el mes anterior al hecho causante, con la misma base mensual, salvo los meses sin cotizar que indiques.',
   ayudaLagunas:
@@ -34,7 +34,7 @@ export const TEXTOS_INCAPACIDAD: TextosPrestacion = {
 export const TEXTOS_INCAPACIDAD_PROPIOS = {
   tituloIncapacidad: 'Tu incapacidad',
   introIncapacidad:
-    'El grado y el origen los fija el organismo competente tras una valoración médica; aquí son datos que eliges para ver cómo se calcularía la prestación.',
+    'El grado lo reconoce el organismo competente; aquí el grado y el origen son datos que eliges para ver cómo se calcularía la prestación.',
   gradoLeyenda: 'Grado de incapacidad',
   origenLeyenda: 'Origen de la incapacidad',
   origenAyuda:

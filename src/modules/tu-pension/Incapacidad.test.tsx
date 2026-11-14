@@ -56,10 +56,15 @@ describe('textos de la incapacidad', () => {
     expect(todo).not.toMatch(/\d/);
   });
 
-  it('el aviso aclara que no es un cálculo oficial ni una valoración médica', () => {
+  it('el aviso aclara que no es un cálculo oficial y que el grado lo reconoce el organismo competente, sin referencias médicas (Ajustes actuariales 2)', () => {
     expect(TEXTOS_INCAPACIDAD.aviso).toMatch(/no un cálculo oficial|no es un cálculo oficial/i);
-    expect(TEXTOS_INCAPACIDAD.aviso).toMatch(/tribunal médico/);
-    expect(TEXTOS_INCAPACIDAD.aviso).toMatch(/organismo competente/);
+    expect(TEXTOS_INCAPACIDAD.aviso).toMatch(/El grado lo reconoce el organismo competente/);
+    expect(TEXTOS_INCAPACIDAD_PROPIOS.introIncapacidad).toMatch(
+      /El grado lo reconoce el organismo competente/,
+    );
+    const todo = [TEXTOS_INCAPACIDAD.aviso, TEXTOS_INCAPACIDAD_PROPIOS.introIncapacidad].join(' ');
+    expect(todo).not.toMatch(/médic/i);
+    expect(todo).not.toMatch(/tribunal/i);
   });
 
   it('el texto de la opción por defecto no puede leerse como una recomendación (Paso 0)', () => {
@@ -122,7 +127,8 @@ describe('selector de prestación', () => {
     expect(nombres.every((n) => n.startsWith('incapacidad.'))).toBe(true);
     // Ajustes actuariales 1: los orígenes profesionales se activan y se explica por qué se pide la base reguladora.
     expect(screen.getByText(TEXTOS_INCAPACIDAD_PROPIOS.origenAyuda)).toBeVisible();
-    expect(screen.getByText(/tribunal médico/)).toBeVisible();
+    expect(screen.getAllByText(/El grado lo reconoce el organismo competente/).length).toBeGreaterThan(0);
+    expect(screen.queryByText(/tribunal médico|valoración médica/)).toBeNull();
     // Limitaciones del motor de incapacidad (no las de la jubilación).
     const lim = screen
       .getByRole('heading', { name: TEXTOS.limitacionesTitulo })
