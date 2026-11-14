@@ -34,6 +34,7 @@ const filasDeTabla = (figura: HTMLElement) =>
   }));
 
 describe('bloque «Sistema financiero (M4)»', () => {
+  // La carga diferida en un ejecutor lento (CI) puede tardar más de los cinco segundos por defecto.
   it('se carga bajo demanda dentro de la página «Proyecciones»', async () => {
     render(
       <MemoryRouter>
@@ -41,11 +42,11 @@ describe('bloque «Sistema financiero (M4)»', () => {
       </MemoryRouter>,
     );
     expect(
-      await screen.findByRole('heading', { name: /^Sistema financiero/ }, { timeout: 10_000 }),
+      await screen.findByRole('heading', { name: /^Sistema financiero/ }, { timeout: 40_000 }),
     ).toBeInTheDocument();
     // Los bloques anteriores siguen ahí.
     expect(screen.getByRole('heading', { name: /^Cotizantes y bases/ })).toBeInTheDocument();
-  });
+  }, 60_000);
 
   it('muestra los siete apartados con título, subtítulos y el escenario leído de los metadatos', () => {
     const { container } = pintar();

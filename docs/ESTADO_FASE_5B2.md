@@ -70,4 +70,6 @@ Ver `docs/PENDIENTE_DATOS.md`, sección «Fase 5-B2»: cobertura del Ageing Repo
 
 ## CI y despliegue
 
-Se anota en el PR y en el informe final (el resultado del CI y del despliegue no se conoce hasta después de fusionar y no se escribe aquí de antemano).
+- PR [Exequ/Pensiones#30](https://github.com/Exequ/Pensiones/pull/30): CI en verde (lint, tipos, tests, datos, compilación y Playwright); fusionado con squash. El despliegue en GitHub Pages terminó con éxito y la URL pública respondió 200.
+- El CI de `main` tras la fusión falló una vez en `financiero.test.tsx` («se carga bajo demanda»): superó los cinco segundos por defecto en un ejecutor lento (en el PR pasó). Se amplió el margen de ese test (sin quitar ninguna comprobación) en un PR posterior.
+- La comprobación en un navegador contra la URL publicada (1360 y 390 px, con los selectores) se describe en el informe final.
