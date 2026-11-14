@@ -213,7 +213,7 @@ FICHEROS = [
             ('pension_media_jub', 'numero', 'Pensión media de jubilación, en euros corrientes de cada año', EUR_MES),
             ('pension_media_total', 'numero', 'Pensión media de todas las clases, en euros corrientes de cada año', EUR_MES),
             ('gasto_pensiones', 'numero', 'Gasto en pensiones contributivas: número de pensiones de cada clase por pensión media por catorce pagas', MEUR),
-            ('cotizaciones', 'numero', 'Cotizaciones: las de 2025 escaladas con la masa de bases de M2, más el MEI, que está incluido en esta columna', MEUR),
+            ('cotizaciones', 'numero', 'Cotizaciones: las del año de calibración escaladas con la masa de bases de M2, más el MEI, que está incluido en esta columna', MEUR),
             ('mei', 'numero', 'Cotización del Mecanismo de Equidad Intergeneracional (MEI), con el tipo legal creciente hasta su último año de vigencia en el modelo', MEUR),
             ('otros_gastos', 'numero', 'Resto de gastos: bajas por enfermedad, maternidad, pensiones no contributivas, Ingreso Mínimo Vital, personal y otros', MEUR),
             ('transferencias_y_otros', 'numero', 'Transferencias del Estado y otros ingresos', MEUR),

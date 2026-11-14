@@ -63,7 +63,7 @@
     },
     {
       "id": "cotizaciones",
-      "descripcion": "Cotizaciones: las de 2025 escaladas con la masa de bases de M2, más el MEI, que está incluido en esta columna",
+      "descripcion": "Cotizaciones: las del año de calibración escaladas con la masa de bases de M2, más el MEI, que está incluido en esta columna",
       "tipo": "numero",
       "unidad": "millones de euros"
     },

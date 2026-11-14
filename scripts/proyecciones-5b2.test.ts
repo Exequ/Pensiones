@@ -104,7 +104,8 @@ describe('procedencia de data/proyecciones/m4-financiero.json', () => {
     for (const c of m4.columnas) {
       expect(c.descripcion.length, c.id).toBeGreaterThan(2);
       if (c.id !== 'anio') expect(c.unidad, c.id).toBeTruthy();
-      expect(c.descripcion, c.id).not.toMatch(/\d/);
+      // Solo pueden llevar dígitos los nombres de los modelos («M3»), no cifras de datos.
+      expect(c.descripcion.replace(/\bM\d\b/g, ''), c.id).not.toMatch(/\d/);
     }
   });
 });
