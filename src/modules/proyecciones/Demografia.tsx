@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { DataTable } from '../../components/DataTable';
 import { SegmentedPills } from '../../components/SegmentedPills';
 import { SourceLine } from '../../components/SourceLine';
@@ -104,7 +104,7 @@ export function Demografia() {
   }));
 
   // Escenarios demográficos.
-  const nombresEscenarios = useMemo(() => valoresDe(escenarios.filas, 'escenario'), [escenarios]);
+  const nombresEscenarios = valoresDe(escenarios.filas, 'escenario');
   const base = nombresEscenarios[0] ?? '';
   const delEscenario = (nombre: string, columna: string) =>
     puntosDeColumna(escenarios.filas, columna, (f) => f['escenario'] === nombre);

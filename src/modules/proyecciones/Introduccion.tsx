@@ -4,7 +4,7 @@ import { formatearFechaIso, formatearPorcentaje } from '../../engine/formato';
 import { datosProyecciones } from './datos-proyecciones';
 
 /** Escenario de referencia, leído de los metadatos de las salidas de los modelos. */
-export function escenarioDeReferencia() {
+function escenarioDeReferencia() {
   const { archivo } = datosProyecciones().m3.resumen;
   return {
     g: archivo.escenario.g,

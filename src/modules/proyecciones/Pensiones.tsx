@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { DataTable } from '../../components/DataTable';
 import { SegmentedPills } from '../../components/SegmentedPills';
 import { SourceLine } from '../../components/SourceLine';
@@ -22,7 +22,7 @@ const etiquetaClase = (c: string): string => ETIQUETA_CLASE[c] ?? c;
 export function Pensiones() {
   const d = datosProyecciones();
   const { pensiones, resumen } = d.m3;
-  const anios = useMemo(() => aniosDe(resumen.filas), [resumen]);
+  const anios = aniosDe(resumen.filas);
   const anioInicio = anios[0] ?? 0;
   const [clase, setClase] = useState<ClaseOTotal>('total');
   const [anio, setAnio] = useState<number>(anioInicio);

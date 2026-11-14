@@ -303,7 +303,7 @@ describe('coherencias internas de las salidas', () => {
 });
 
 describe('validate:data exige la naturaleza y la carpeta', () => {
-  const base: Record<string, unknown> = JSON.parse(leer('data/proyecciones/m3-resumen.json'));
+  const base = JSON.parse(leer('data/proyecciones/m3-resumen.json')) as Record<string, unknown>;
 
   it('el fichero válido no da errores', () => {
     expect(validarContenido(base, 'data/proyecciones/m3-resumen.json')).toEqual([]);

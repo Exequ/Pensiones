@@ -202,30 +202,29 @@ export function GraficoProyeccion({
                 paintOrder: 'stroke',
               }),
             ];
-      const marcaIlustrativo =
-        hayIlustrativo && horizonte !== undefined
-          ? [
-              Plot.rectX([{ desde: horizonte, hasta: anioFin }], {
-                x1: 'desde',
-                x2: 'hasta',
-                fill: token('filete'),
-                fillOpacity: 0.35,
-              }),
-              Plot.ruleX([horizonte], { stroke: token('apagado'), strokeDasharray: TRAZO_REGLA }),
-              Plot.text(['ilustrativo'], {
-                x: anioFin,
-                frameAnchor: 'bottom',
-                textAnchor: 'end',
-                dx: -5,
-                dy: -6,
-                fill: token('tinta'),
-                fontWeight: 600,
-                stroke: token('papel'),
-                strokeWidth: 3,
-                paintOrder: 'stroke',
-              }),
-            ]
-          : [];
+      const marcaIlustrativo = hayIlustrativo
+        ? [
+            Plot.rectX([{ desde: horizonte, hasta: anioFin }], {
+              x1: 'desde',
+              x2: 'hasta',
+              fill: token('filete'),
+              fillOpacity: 0.35,
+            }),
+            Plot.ruleX([horizonte], { stroke: token('apagado'), strokeDasharray: TRAZO_REGLA }),
+            Plot.text(['ilustrativo'], {
+              x: anioFin,
+              frameAnchor: 'bottom',
+              textAnchor: 'end',
+              dx: -5,
+              dy: -6,
+              fill: token('tinta'),
+              fontWeight: 600,
+              stroke: token('papel'),
+              strokeWidth: 3,
+              paintOrder: 'stroke',
+            }),
+          ]
+        : [];
       return {
         marginLeft: estrecho ? 56 : 68,
         marginRight: 24,
