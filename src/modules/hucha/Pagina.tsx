@@ -17,6 +17,7 @@ import {
 import { gastoAproximadoPensiones, mesesDeGasto } from '../../engine/sistema-historico';
 import { datosHucha } from '../historico/datos-hucha';
 import { ContenidoPagina } from '../historico/ContenidoPagina';
+import { EnlaceFinanciero } from '../proyecciones/EnlaceFinanciero';
 import { GraficoSeries } from '../historico/GraficoSeries';
 import { decimal1, decimal2, millonesEuros, puntosAPorcentaje } from '../historico/formatos';
 import '../historico/Historico.css';
@@ -308,6 +309,7 @@ export default function Hucha() {
         <SeccionTransferencias />
         <SeccionFondoTransferencias />
         <SeccionPosicion />
+        <EnlaceFinanciero origen="hucha" />
         <ContenidoPagina contenidos={seccion.previsto} />
       </div>
     </article>

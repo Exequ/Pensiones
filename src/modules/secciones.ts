@@ -129,13 +129,13 @@ export const SECCIONES = [
     titulo: 'Proyecciones',
     tituloNav: 'Proyecciones',
     resumen:
-      'Qué resulta de tres modelos propios, con la legislación actual congelada y supuestos explícitos: población, pensiones en vigor, cotizantes y bases de cotización, junto a lo observado y a otras proyecciones publicadas. No son predicciones ni pronósticos oficiales.',
+      'Qué resulta de cuatro modelos propios, con la legislación actual congelada y supuestos explícitos: población, pensiones en vigor, cotizantes y bases de cotización y sistema financiero (gasto, saldos y Fondo de Reserva), junto a lo observado y a otras proyecciones publicadas. No son predicciones ni pronósticos oficiales.',
     previsto: [
       'Demografía: población de mayores y relación de dependencia frente a las proyecciones del INE, prueba hacia atrás y escenarios demográficos (disponible).',
       'Pensiones contributivas en vigor por clase, edad y sexo, con el histórico en la misma figura y el contraste con el Ageing Report (disponible).',
       'Afiliados, cotizantes del Régimen General, bases de cotización y afiliados por pensión, con el histórico y el contraste con el Ageing Report (disponible).',
       'Cómo funciona cada modelo, qué supone y qué se puede cambiar en su código (disponible).',
-      'Gasto en pensiones, saldo financiero, Fondo de Reserva y contraste con el gasto sobre el PIB del Ageing Report: fuera de esta fase.',
+      'Sistema financiero: gasto en pensiones contributivas y pensión media, cotizaciones y MEI, tres medidas de saldo, Fondo de Reserva y financiación adicional, y contraste con el gasto sobre el PIB del Ageing Report (disponible).',
       'Un solo escenario económico (el de referencia): los escenarios alternativos solo existen para la demografía.',
     ],
   },

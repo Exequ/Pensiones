@@ -63,7 +63,9 @@ describe('la página lee /data solo a través de datos-proyecciones.ts', () => {
 
   it('ningún otro módulo de la página importa /data directamente', () => {
     for (const ruta of fuentesDe(DIR)) {
-      if (ruta.endsWith('/datos-proyecciones.ts')) continue;
+      // El bloque financiero (fase 5-B2) tiene su propio módulo de datos, comprobado en proyecciones-modulo-5b2.test.ts.
+      if (ruta.endsWith('/datos-proyecciones.ts') || ruta.endsWith('/datos-financiero.ts'))
+        continue;
       expect(importesDeData(ruta), ruta).toEqual([]);
     }
   });
@@ -80,16 +82,29 @@ describe('la página lee /data solo a través de datos-proyecciones.ts', () => {
     expect([...new Set(importados)]).toEqual([...FICHEROS_PROYECCIONES].sort());
   });
 
-  it('la página no importa M4 ni nada del Fondo de Reserva (fase 5-B2)', () => {
-    for (const ruta of fuentesDe(DIR)) {
-      expect(leer(ruta), ruta).not.toMatch(/m4-|fondo-reserva/);
+  it('los bloques de M1 a M3 siguen sin leer M4 ni nada del Fondo de Reserva (son de la fase 5-B1)', () => {
+    for (const nombre of [
+      'Demografia.tsx',
+      'Pensiones.tsx',
+      'Cotizantes.tsx',
+      'Introduccion.tsx',
+      'datos-proyecciones.ts',
+    ]) {
+      expect(leer(`${DIR}/${nombre}`), nombre).not.toMatch(/m4-|fondo-reserva|datos-financiero/);
     }
   });
 });
 
 describe('sin cifras escritas a mano en los textos de la página «Proyecciones»', () => {
   // Identificadores de /data, rutas y patrones de dibujo: sin textos visibles.
-  const EXCLUIDOS = ['datos-proyecciones.ts', 'ficheros.ts', 'ids-datos.ts', 'grafico-trazos.ts'];
+  const EXCLUIDOS = [
+    'datos-proyecciones.ts',
+    'datos-financiero.ts',
+    'ficheros.ts',
+    'ids-datos.ts',
+    'ids-financiero.ts',
+    'grafico-trazos.ts',
+  ];
   const ficheros = fuentesDe(DIR).filter((r) => !EXCLUIDOS.some((e) => r.endsWith(`/${e}`)));
 
   it('hay ficheros que revisar', () => {

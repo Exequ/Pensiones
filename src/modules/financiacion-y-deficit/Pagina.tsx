@@ -6,6 +6,7 @@ import { MarginNote } from '../../components/MarginNote';
 import { SegmentedPills } from '../../components/SegmentedPills';
 import { antetituloSeccion, buscarSeccion } from '../secciones';
 import { ContenidoPagina } from '../historico/ContenidoPagina';
+import { EnlaceFinanciero } from '../proyecciones/EnlaceFinanciero';
 import '../historico/Historico.css';
 import { Ejecucion } from './Ejecucion';
 import { GastoPib } from './GastoPib';
@@ -50,6 +51,7 @@ export default function FinanciacionYDeficit() {
         <Ejecucion unidad={unidad} />
         <Saldos unidad={unidad} />
         <GastoPib />
+        <EnlaceFinanciero origen="financiacion" />
         <ContenidoPagina contenidos={seccion.previsto} />
       </div>
     </article>

@@ -57,6 +57,41 @@ describe('términos de alarma o de juicio sobre proyecciones (Fase 5-B1)', () =>
   });
 });
 
+describe('términos de juicio sobre proyecciones financieras (Fase 5-B2)', () => {
+  it.each([
+    ['Es un aviso de tensión para el sistema', ['aviso de tension']],
+    ['El Fondo se agotaría poco después', ['agotaria']],
+    ['M4 proyecta un coste más alto: resulta más caro', ['coste mas alto', 'resulta mas caro']],
+    ['Un déficit estructural creciente', ['deficit estructural']],
+    ['Una señal de alarma y un gasto elevado', ['senal de alarma', 'gasto elevado']],
+    ['Un sistema sin margen y al borde de la sobrecarga', ['sin margen', 'sobrecarga']],
+  ])('detecta «%s»', (texto, esperadas) => {
+    const halladas = valoracionesEn(texto);
+    for (const e of esperadas) expect(halladas).toContain(e);
+  });
+
+  it('no marca las comparaciones calculadas con las que se describe el resultado de un modelo', () => {
+    expect(
+      valoracionesEn(
+        'A fin del último año, el valor del Fondo es menor que la disposición de ese año; el gasto sobre el PIB del modelo crece más que el del Ageing Report.',
+      ),
+    ).toEqual([]);
+    expect(valoracionesEn('Financiación adicional: lo que el Fondo no cubre')).toEqual([]);
+    // La condición literal de la norma no es una valoración; la expresión suelta, sí.
+    expect(
+      valoracionesEn('solo para pensiones contributivas en déficit estructural, con límite anual'),
+    ).toEqual([]);
+    expect(
+      valoracionesEn('una cifra más alta no significa un sistema más caro en términos absolutos'),
+    ).toEqual([]);
+    expect(
+      valoracionesEn(
+        'Saldo no financiero, saldo sin transferencias y cotizaciones menos pensiones',
+      ),
+    ).toEqual([]);
+  });
+});
+
 describe.each([
   'hucha',
   'financiacion-y-deficit',

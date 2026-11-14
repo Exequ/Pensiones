@@ -14,6 +14,7 @@ import {
   anioPrimeroDe,
   filasDeTabla,
   leyendaDeTipos,
+  TIPO_OBSERVADO,
   TRAZOS_PROYECCION,
   type FilaProyeccion,
   type SerieProyectada,
@@ -21,6 +22,7 @@ import {
 import { TRAZO_ILUSTRATIVO, TRAZO_OBSERVADO, TRAZO_REGLA } from './grafico-trazos';
 
 const ALTO_ETIQUETA = 18;
+const CLAVE_EXTRA = 'definicion';
 
 interface GraficoProyeccionProps {
   titulo: string;
@@ -42,6 +44,13 @@ interface GraficoProyeccionProps {
   puntos?: boolean;
   incluirCero?: boolean;
   alto?: number;
+  /** Rótulo de la regla vertical del año de inicio (por defecto, «Proyección →»). */
+  rotuloInicio?: string;
+  /**
+   * Columna adicional de la tabla alternativa con el texto que corresponde a lo observado y a lo
+   * proyectado (p. ej., la definición de una magnitud que cambia entre los dos tramos).
+   */
+  columnaExtra?: { titulo: string; observado: string; proyeccion: string };
 }
 
 const colorDe = (s: SerieProyectada, i: number, texto: boolean): string => {
@@ -72,6 +81,8 @@ export function GraficoProyeccion({
   puntos = false,
   incluirCero = false,
   alto = 400,
+  rotuloInicio = 'Proyección →',
+  columnaExtra,
 }: GraficoProyeccionProps) {
   const anioInicio = anioInicioDe(series);
   const anioFin = anioFinDe(series);
@@ -79,14 +90,21 @@ export function GraficoProyeccion({
   const hayIlustrativo = horizonte !== undefined && anioFin > horizonte;
   const leyenda = useMemo(() => leyendaDeTipos(series, hayIlustrativo), [series, hayIlustrativo]);
 
-  const filas = useMemo(
-    () => filasDeTabla(series, anioInicio, horizonte),
-    [series, anioInicio, horizonte],
-  );
+  const filas = useMemo(() => {
+    const base = filasDeTabla(series, anioInicio, horizonte);
+    if (columnaExtra === undefined) return base;
+    return base.map((f) => ({
+      ...f,
+      [CLAVE_EXTRA]:
+        f['tipo'] === TIPO_OBSERVADO ? columnaExtra.observado : columnaExtra.proyeccion,
+    }));
+  }, [series, anioInicio, horizonte, columnaExtra]);
+  const tituloExtra = columnaExtra?.titulo;
   const columnas = useMemo<Columna<FilaProyeccion>[]>(
     () => [
       { clave: 'anio', titulo: 'Año' },
       { clave: 'tipo', titulo: 'Naturaleza del dato' },
+      ...(tituloExtra === undefined ? [] : [{ clave: CLAVE_EXTRA, titulo: tituloExtra }]),
       ...series.map((s) => ({
         clave: s.clave,
         titulo: s.etiqueta,
@@ -94,7 +112,7 @@ export function GraficoProyeccion({
         decimales,
       })),
     ],
-    [series, decimales],
+    [series, decimales, tituloExtra],
   );
 
   const opciones = useMemo(() => {
@@ -189,7 +207,7 @@ export function GraficoProyeccion({
           ? []
           : [
               Plot.ruleX([anioInicio], { stroke: token('apagado'), strokeDasharray: TRAZO_REGLA }),
-              Plot.text(['Proyección →'], {
+              Plot.text([rotuloInicio], {
                 x: anioInicio,
                 frameAnchor: 'bottom',
                 textAnchor: 'start',
@@ -269,6 +287,7 @@ export function GraficoProyeccion({
     divisorEje,
     decimalesEje,
     puntos,
+    rotuloInicio,
   ]);
 
   return (
