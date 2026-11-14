@@ -5,6 +5,8 @@
 
 /** Trazos distintos por serie (guiones SVG): la lectura no depende solo del color. */
 export const TRAZOS = ['none', '7 3', '2 3', '9 3 2 3', '1 4'] as const;
+/** Trazo de la regla vertical de las anotaciones. */
+export const TRAZO_ANOTACION = '2 3';
 /** Glifos de la etiqueta directa de cada línea, con el mismo trazo. */
 export const GLIFOS_LINEA = ['━', '╍', '┅', '╌', '┈'] as const;
 

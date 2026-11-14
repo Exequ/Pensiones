@@ -71,6 +71,14 @@ En los ficheros por versión, `period` es el año desde el que rige y el `id` em
 
 La ejecución del presupuesto usa los rótulos de la fuente, que cambian entre años; «T4» es el ejercicio completo. Las cifras derivadas (saldos, flujos anuales del Fondo) están marcadas como tales en sus notas. Los CSV pueden llevar celdas entre comillas con comas.
 
+## Contenido (Fase 5-A2: la hucha frente a las transferencias del Estado)
+
+| Fichero                                             | Qué contiene                                                                                                                                                                                                                                               | Periodo           | Unidad                   |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | ------------------------ |
+| `sistema/deuda-pde-seguridad-social`                | Deuda PDE de las Administraciones de Seguridad Social (Banco de España, serie `DTNPDE2010_P00000_PS_ASG`): saldo trimestral y a fin de año. Script `scripts/etl/bde_deuda_ss.py`                                                                           | 1994-T4 a 2026-T2 | millones de euros        |
+| `sistema/prestamos-transferencias-tribunal-cuentas` | Cifras y citas del Tribunal de Cuentas (BOE-A-2025-25090): endeudamiento frente al Estado a 31-12-2022 y su composición, transferencias por finalidad, aportaciones no contributivas, recomendaciones. Script `scripts/etl/tc_cge2022_seguridad_social.py` | 1991-2025         | millones de euros; citas |
+| `normativa/trlgss-financiacion`                     | Frases literales del artículo 109 del TRLGSS sobre las aportaciones del Estado y la naturaleza de las prestaciones. Script `scripts/etl/trlgss_financiacion.py`                                                                                            | 2023              | citas                    |
+
 ## Contenido (Fase 1B-1: `sistema/`)
 
 | Fichero                                                   | Contenido                                                                       | Periodo   | Unidad                  |

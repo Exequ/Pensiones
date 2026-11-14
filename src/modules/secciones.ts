@@ -94,13 +94,18 @@ export const SECCIONES = [
     titulo: 'La «hucha» de las pensiones',
     tituloNav: 'La «hucha»',
     resumen:
-      'El Fondo de Reserva de la Seguridad Social: para qué se creó, cómo se ha dotado y cómo se ha usado, y cuántos meses de gasto en pensiones representa su valor.',
+      'El Fondo de Reserva de la Seguridad Social: para qué se creó, cómo se ha dotado y cómo se ha usado, cuántos meses de gasto en pensiones representa su valor y cómo se sitúa frente a las transferencias del Estado y a la deuda de la Seguridad Social con el Estado.',
     previsto: [
       'Evolución del valor del Fondo de Reserva (disponible).',
       'Dotaciones y disposiciones, año a año (disponible).',
       'Meses de gasto en pensiones que equivale el Fondo, con dos definiciones de gasto (disponible).',
       'Reglas de dotación y de disposición, con el límite de desembolso por porcentaje del PIB (disponible).',
       'Su relación con el Mecanismo de Equidad Intergeneracional (disponible).',
+      'De dónde procede el dinero: transferencias del Estado, préstamos del Estado y gastos impropios, con las distintas clasificaciones de las partidas (disponible).',
+      'Transferencias del Estado a la Seguridad Social por año, por trimestre y acumuladas desde un año de inicio elegible (disponible; el desglose anual por finalidad y los años anteriores al primero con datos están pendientes de datos).',
+      'El Fondo de Reserva medido en meses o trimestres de transferencias del Estado, con dos definiciones de periodo (disponible; no hay valor del Fondo más frecuente que el anual).',
+      'Construcción ilustrativa que suma el Fondo, la deuda con el Estado y las transferencias acumuladas, con componentes seleccionables y anotaciones sobre los préstamos (disponible; no es una cifra oficial).',
+      'Proyecciones del Fondo y del sistema (fuera de esta fase).',
     ],
   },
   {

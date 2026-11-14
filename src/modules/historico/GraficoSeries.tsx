@@ -6,7 +6,7 @@ import { CATEGORICOS, CATEGORICOS_TEXTO, token } from '../../components/estiloGr
 import type { Dato } from '../../engine/esquema-datos';
 import { formatearNumero } from '../../engine/formato';
 import type { PuntoAnual } from '../../engine/series-historicas';
-import { GLIFOS_LINEA, TRAZOS, ticksAnuales, tramoDelEje } from './grafico-series';
+import { GLIFOS_LINEA, TRAZO_ANOTACION, TRAZOS, ticksAnuales, tramoDelEje } from './grafico-series';
 import { ComoLeerlo } from './ComoLeerlo';
 
 export interface SerieGrafico {
@@ -17,6 +17,13 @@ export interface SerieGrafico {
   readonly puntos: readonly PuntoAnual[];
   /** Color categórico (índice 0-4); por defecto, el orden de la serie. */
   readonly color?: number;
+}
+
+/** Hecho que se señala sobre una serie anual de líneas: una letra en el eje y una regla vertical. */
+export interface AnotacionGrafico {
+  readonly anio: number;
+  /** Letra que remite a la tabla de anotaciones («a», «b»…). */
+  readonly letra: string;
 }
 
 export type TipoGrafico = 'lineas' | 'barras-apiladas' | 'barras-agrupadas';
@@ -52,6 +59,8 @@ interface GraficoSeriesProps {
   etiquetasX?: readonly string[];
   /** Cabecera de la primera columna de la tabla (por defecto, «Año»). */
   tituloX?: string;
+  /** Anotaciones sobre el eje de años; solo para líneas con eje de años. */
+  anotaciones?: readonly AnotacionGrafico[];
 }
 
 type FilaTabla = Record<string, string | number | null>;
@@ -77,6 +86,7 @@ export function GraficoSeries({
   incluirCero,
   etiquetasX,
   tituloX = 'Año',
+  anotaciones,
 }: GraficoSeriesProps) {
   const cero = incluirCero ?? tipo !== 'lineas';
 
@@ -176,6 +186,24 @@ export function GraficoSeries({
                     r: 4,
                   }),
             ),
+            ...(anotaciones === undefined || anotaciones.length === 0
+              ? []
+              : [
+                  Plot.ruleX(
+                    anotaciones.map((a) => a.anio),
+                    { stroke: token('apagado'), strokeDasharray: TRAZO_ANOTACION },
+                  ),
+                  Plot.text(anotaciones, {
+                    x: 'anio',
+                    text: 'letra',
+                    frameAnchor: 'bottom',
+                    dy: -6,
+                    dx: 6,
+                    textAnchor: 'start',
+                    fill: token('tinta'),
+                    fontWeight: 600,
+                  }),
+                ]),
             ...etiquetas,
           ],
         };
@@ -242,7 +270,7 @@ export function GraficoSeries({
         ],
       };
     };
-  }, [series, tipo, cero, alto, unidadEje, divisorEje, decimalesEje, etiquetasX]);
+  }, [series, tipo, cero, alto, unidadEje, divisorEje, decimalesEje, etiquetasX, anotaciones]);
 
   return (
     <div className="bloque-grafico">

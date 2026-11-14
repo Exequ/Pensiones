@@ -32,9 +32,14 @@ export const FICHEROS_FINANCIACION = [
 
 export const FICHEROS_HUCHA = [
   'data/normativa/cronologia.json',
+  'data/normativa/trlgss-financiacion.json',
   'data/macro/pib-ine.json',
   'data/parametros/fondo-reserva-desembolso-maximo.json',
   'data/parametros/mei-destino.json',
+  'data/parametros/prestamos-estado-seguridad-social.json',
+  'data/parametros/prestamos-plazo-ampliado-2026.json',
+  'data/sistema/deuda-pde-seguridad-social.json',
+  'data/sistema/prestamos-transferencias-tribunal-cuentas.json',
   'data/sistema/fondo-reserva-anual.json',
   'data/sistema/fondo-reserva-series.json',
   'data/sistema/pensiones-vigor-pension-media.json',

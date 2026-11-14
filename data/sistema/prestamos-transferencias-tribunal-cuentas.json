@@ -1,0 +1,382 @@
+{
+  "tipo": "datos",
+  "id": "prestamos-transferencias-tribunal-cuentas",
+  "title": "Préstamos y transferencias del Estado a la Seguridad Social según la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022",
+  "description": "Cifras y citas del Tribunal de Cuentas publicadas en el BOE (BOE-A-2025-25090): saldo de endeudamiento de la Seguridad Social frente al Estado a 31-12-2022 y su composición, transferencias corrientes 2018-2022 por finalidad, aportaciones no contributivas y recomendaciones sobre los préstamos antiguos.",
+  "data": [
+    {
+      "id": "prestamos-insalud-1991",
+      "value": 3372.4,
+      "unit": "millones de euros",
+      "period": "1991",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Parte de los préstamos de 1992-1999: tres préstamos para obligaciones pendientes del INSALUD a 31 de diciembre de 1991. PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "tres préstamos concedidos para la cancelación de obligaciones pendientes de pago a 31 de diciembre de 1991 del extinto INSALUD, por un importe conjunto de 3.372,4 millones",
+      "location": "nota 102 (seguimiento de las resoluciones)"
+    },
+    {
+      "id": "prestamos-1992-1999",
+      "value": 17168.6,
+      "unit": "millones de euros",
+      "period": "1999",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Importe de los préstamos concedidos entre 1992 y 1999, que forman parte del saldo de 2022. PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "se suman los 17.168,6 millones que derivan de los préstamos concedidos entre 1992 y 1999",
+      "location": "Declaración del Tribunal de Cuentas sobre la CGE de 2022, apartado 4.28"
+    },
+    {
+      "id": "prestamos-desfases-tesoreria-90",
+      "value": 4207.1,
+      "unit": "millones de euros",
+      "period": "1999",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Parte de los préstamos de 1992-1999: dos préstamos para cubrir desfases de tesorería. PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "dos préstamos concedidos para cubrir desfases de tesorería por 4.207,1 millones",
+      "location": "nota 102 (seguimiento de las resoluciones)"
+    },
+    {
+      "id": "prestamos-equilibrio-presupuestario-90",
+      "value": 9589.2,
+      "unit": "millones de euros",
+      "period": "1999",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Parte de los préstamos de 1992-1999: seis préstamos para financiar obligaciones y posibilitar el equilibrio presupuestario. PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "seis préstamos otorgados para la financiación de obligaciones de la Seguridad Social y posibilitar su equilibrio presupuestario, por un total de 9.589,2 millones",
+      "location": "nota 102 (seguimiento de las resoluciones)"
+    },
+    {
+      "id": "transferencias-covid-2020",
+      "value": 20002.6,
+      "unit": "millones de euros",
+      "period": "2020",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Transferencias concedidas en 2020 para equilibrar el impacto de la COVID-19 en las cuentas de la Seguridad Social (parte del total de 25.014,6 millones de 2020 y 2021). PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "25.014,6 millones de euros se han concedido para equilibrar el impacto derivado del COVID-19 en las cuentas de la Seguridad Social, de los que 20.002,6 millones corresponden a 2020",
+      "location": "nota 68 al apartado 4.28"
+    },
+    {
+      "id": "transferencias-covid-2021",
+      "value": 5012.0,
+      "unit": "millones de euros",
+      "period": "2021",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Transferencias concedidas en 2021 con la misma finalidad (parte del total de 25.014,6 millones de 2020 y 2021). PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "20.002,6 millones corresponden a 2020 y 5.012 millones a 2021",
+      "location": "nota 68 al apartado 4.28"
+    },
+    {
+      "id": "transferencias-equilibrio-2018-2021",
+      "value": 29616.3,
+      "unit": "millones de euros",
+      "period": "2021",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Parte de las transferencias de 2018-2021 con finalidad de apoyar el equilibrio presupuestario (acumulado 2018-2021). PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "De este total, 29.616,3 millones de las transferencias recibidas entre 2018 y 2021, han tenido por finalidad apoyar su equilibrio presupuestario",
+      "location": "Declaración del Tribunal de Cuentas sobre la CGE de 2022, apartado 4.28"
+    },
+    {
+      "id": "aportaciones-no-contributivas-2022",
+      "value": 17910.0,
+      "unit": "millones de euros",
+      "period": "2022",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Aportaciones del Estado en 2022 para la financiación de conceptos de naturaleza no contributiva, según el Tribunal de Cuentas (cifra de 2022 que cita el texto). PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "para 2022, ascienden a 17.910 millones",
+      "location": "apartado 4.28"
+    },
+    {
+      "id": "condiciones-prestamos-recientes",
+      "value": "Todos estos préstamos se han concedido sin devengo de intereses y con cancelación en un plazo máximo de 10 años, a partir del año siguiente al de su concesión",
+      "unit": "cita literal",
+      "period": "2022",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Condiciones de los préstamos de 2017 a 2022 según el Tribunal de Cuentas. PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "Todos estos préstamos se han concedido sin devengo de intereses y con cancelación en un plazo máximo de 10 años, a partir del año siguiente al de su concesión",
+      "location": "nota 65 al apartado 4.28"
+    },
+    {
+      "id": "definicion-costes-impropios-pacto-toledo",
+      "value": "las cotizaciones sociales siguen sufragando prestaciones, políticas o partidas de gastos que no pertenecen estrictamente al ámbito de la Seguridad Social y que, por tanto, deberían ser objeto de financiación por la fiscalidad general",
+      "unit": "cita literal",
+      "period": "2022",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Constatación del Informe de Evaluación y Reforma del Pacto de Toledo (3 de noviembre de 2020) tal como la recoge el Tribunal de Cuentas; base de las transferencias por costes «impropios». PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "las cotizaciones sociales siguen sufragando prestaciones, políticas o partidas de gastos que no pertenecen estrictamente al ámbito de la Seguridad Social y que, por tanto, deberían ser objeto de financiación por la fiscalidad general",
+      "location": "Declaración del Tribunal de Cuentas sobre la CGE de 2022, apartado 4.28"
+    },
+    {
+      "id": "deuda-ss-con-estado-2022",
+      "value": 106162.6,
+      "unit": "millones de euros",
+      "period": "2022",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Saldo a 31 de diciembre de 2022 del endeudamiento de la Seguridad Social frente al Estado (préstamos), según el Tribunal de Cuentas. PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "acumulando la Seguridad Social un endeudamiento frente al Estado, a 31 de diciembre de 2022, de 106.162,6 millones",
+      "location": "Declaración del Tribunal de Cuentas sobre la CGE de 2022, apartado 4.28"
+    },
+    {
+      "id": "objetivo-transferencias-pacto-toledo",
+      "value": "La realización anual de estas transferencias a la Seguridad Social tiene por objeto, según consta en el mencionado Informe del pacto de Toledo, la asunción progresiva por el Estado de estos costes impropios, y terminar así, en el corto plazo, con el déficit financiero del sistema, reforzando su sostenibilidad a largo plazo y acabando definitivamente con la política de préstamos en un plazo que no podrá exceder de 2023",
+      "unit": "cita literal",
+      "period": "2022",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Finalidad de las transferencias anuales según el Tribunal de Cuentas, que cita el Informe del Pacto de Toledo. PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "La realización anual de estas transferencias a la Seguridad Social tiene por objeto, según consta en el mencionado Informe del pacto de Toledo, la asunción progresiva por el Estado de estos costes impropios, y terminar así, en el corto plazo, con el déficit financiero del sistema, reforzando su sostenibilidad a largo plazo y acabando definitivamente con la política de préstamos en un plazo que no podrá exceder de 2023",
+      "location": "apartado 4.28"
+    },
+    {
+      "id": "origen-prestamos-gestion-ordinaria",
+      "value": "La solución adoptada inicialmente para cubrir estos gastos de gestión ordinaria ha sido la concesión de sucesivos préstamos a largo plazo por el Estado a la TGSS",
+      "unit": "cita literal",
+      "period": "2022",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Cómo describe el Tribunal de Cuentas el origen de los préstamos de 2017 a 2022 (antecedente: recursos propios insuficientes para los gastos de gestión ordinaria). PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "La solución adoptada inicialmente para cubrir estos gastos de gestión ordinaria ha sido la concesión de sucesivos préstamos a largo plazo por el Estado a la TGSS",
+      "location": "Declaración del Tribunal de Cuentas sobre la CGE de 2022, apartado 4.28"
+    },
+    {
+      "id": "prestamos-concedidos-2017-2022",
+      "value": 88994.0,
+      "unit": "millones de euros",
+      "period": "2022",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Suma de los préstamos a largo plazo concedidos por el Estado a la TGSS entre 2017 y 2022 (acumulado, no un dato anual). PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "desde 2017 hasta 2022, han ascendido a 88.994 millones",
+      "location": "Declaración del Tribunal de Cuentas sobre la CGE de 2022, apartado 4.28"
+    },
+    {
+      "id": "prestamos-sin-devolver-y-prorrogados",
+      "value": "no han sido devueltos, ya que los que carecen de plazo de vencimiento continúan sin ser reintegrados y los que sí lo tienen han sido sistemáticamente prorrogados",
+      "unit": "cita literal",
+      "period": "2022",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Estado de los préstamos antiguos descrito por el Tribunal de Cuentas. PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "no han sido devueltos, ya que los que carecen de plazo de vencimiento continúan sin ser reintegrados y los que sí lo tienen han sido sistemáticamente prorrogados",
+      "location": "Declaración del Tribunal de Cuentas sobre la CGE de 2022, apartado 4.28"
+    },
+    {
+      "id": "recomendacion-amortizacion-insalud",
+      "value": "recoge una recomendación para que el Estado asuma la amortización (bien por condonación o por la concesión de transferencias) de tres de estos préstamos concedidos a la Seguridad Social, por 3.372 millones",
+      "unit": "cita literal",
+      "period": "2022",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Recomendación del Tribunal de Cuentas (Resolución de la Comisión Mixta de 19 de mayo de 2022). Es una recomendación, no una decisión de condonación o conversión. PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "recoge una recomendación para que el Estado asuma la amortización (bien por condonación o por la concesión de transferencias) de tres de estos préstamos concedidos a la Seguridad Social, por 3.372 millones",
+      "location": "Declaración del Tribunal de Cuentas sobre la CGE de 2022, apartado 4.28"
+    },
+    {
+      "id": "transferencias-corrientes-2018-2022",
+      "value": 61941.3,
+      "unit": "millones de euros",
+      "period": "2022",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Transferencias corrientes del Estado a la Seguridad Social, acumulado 2018-2022, en el concepto del Tribunal de Cuentas (apoyo al equilibrio presupuestario y costes que el Informe del Pacto de Toledo considera ajenos al ámbito de la Seguridad Social). No coincide con la suma de «transferencias del Estado y organismos autónomos» de la ejecución del presupuesto, que incluye además otras aportaciones (por ejemplo, las de naturaleza no contributiva). PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "entre 2018 y 2022, el Estado ha aportado a la Seguridad Social transferencias corrientes por 61.941,3 millones",
+      "location": "Declaración del Tribunal de Cuentas sobre la CGE de 2022, apartado 4.28"
+    },
+    {
+      "id": "transferencias-costes-impropios-2021-2022",
+      "value": 32325.0,
+      "unit": "millones de euros",
+      "period": "2022",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Transferencias de 2021 y 2022 (acumulado) basadas en la modificación del TRLGSS por la LPGE para 2021, con la base del Informe de Evaluación y Reforma del Pacto de Toledo de 3 de noviembre de 2020. PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "otorgadas en 2021 y 2022 por 32.325 millones, se fundamentan en la modificación normativa que la LPGE para 2021 ha introducido en el TRLGSS",
+      "location": "Declaración del Tribunal de Cuentas sobre la CGE de 2022, apartado 4.28"
+    },
+    {
+      "id": "transferencias-forma-preferida-tribunal",
+      "value": "Esta fórmula de financiación ha sido propuesta por el Tribunal de Cuentas como la más idónea, para evitar recurrir a nuevos préstamos",
+      "unit": "cita literal",
+      "period": "2022",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Opinión del Tribunal de Cuentas sobre la forma de financiación mediante transferencias corrientes. PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "Esta fórmula de financiación ha sido propuesta por el Tribunal de Cuentas como la más idónea, para evitar recurrir a nuevos préstamos",
+      "location": "nota 67 al apartado 4.28"
+    },
+    {
+      "id": "prestamo-previsto-lpge-2023",
+      "value": 10003.8,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Previsión de la LPGE para 2023 (no un dato de ejecución). PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "prevé la concesión de un nuevo préstamo con las mismas condiciones por 10.003,8 millones de euros",
+      "location": "nota 65 al apartado 4.28"
+    },
+    {
+      "id": "transferencias-previstas-lpge-2023",
+      "value": 19888.0,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Previsión de la LPGE para 2023 (no un dato de ejecución). PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "la LPGE para 2023 prevé también la concesión, con idéntica finalidad, de transferencias a la Seguridad Social por 19.888 millones",
+      "location": "Declaración del Tribunal de Cuentas sobre la CGE de 2022, apartado 4.28"
+    },
+    {
+      "id": "acuerdo-cortes-endeudamiento",
+      "value": "Adoptar las medidas legislativas necesarias para resolver la situación financiera del endeudamiento del Sistema de la Seguridad Social frente al Estado, en particular la de los préstamos y deudas pendientes de amortización desde la década de los años 90",
+      "unit": "cita literal",
+      "period": "2025",
+      "source": {
+        "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+        "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+        "docId": "BOE-A-2025-25090"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "notes": "Acuerdo de la Comisión Mixta para las Relaciones con el Tribunal de Cuentas (publicado en 2025). Pide medidas legislativas; no establece ninguna cancelación o conversión. PDF del BOE sha256 979f94dc58c36d83515cd9dcd8c447b5ed0f916b0912dd49c4f9ba89289a54b3.",
+      "quote": "Adoptar las medidas legislativas necesarias para resolver la situación financiera del endeudamiento del Sistema de la Seguridad Social frente al Estado, en particular la de los préstamos y deudas pendientes de amortización desde la década de los años 90",
+      "location": "Acuerdos de la Comisión Mixta publicados en el BOE de 9 de diciembre de 2025"
+    }
+  ]
+}
