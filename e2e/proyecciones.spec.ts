@@ -33,7 +33,7 @@ test.describe('página «Proyecciones»', () => {
       await expect(figura.locator('.linea-fuente')).toContainText('naturaleza:');
     }
     await expect(page.locator('.como-leerlo')).toHaveCount(await figuras.count());
-    await expect(page.locator('details.proy-funciona')).toHaveCount(3);
+    await expect(page.locator('details.proy-funciona')).toHaveCount(4);
     expect(registro.errores, 'errores de consola').toEqual([]);
     expect(registro.externas, 'peticiones a dominios externos').toEqual([]);
   });
@@ -147,6 +147,8 @@ test.describe('página «Proyecciones»', () => {
   test('los controles táctiles miden al menos 44 px', async ({ page }) => {
     await page.goto(url(RUTA));
     await esperarPagina(page);
+    // El bloque financiero se carga bajo demanda: se espera a que esté para medir también sus controles.
+    await page.getByRole('heading', { name: /^Sistema financiero/ }).waitFor();
     const pequenos = await page.evaluate(() =>
       [
         ...document.querySelectorAll<HTMLElement>(
@@ -164,6 +166,7 @@ test.describe('página «Proyecciones»', () => {
   }) => {
     await page.goto(url(RUTA));
     await esperarPagina(page);
+    await page.getByRole('heading', { name: /^Sistema financiero/ }).waitFor();
     await page
       .getByRole('group', { name: 'Escenario demográfico' })
       .getByRole('radio', { name: 'migración -50 %' })

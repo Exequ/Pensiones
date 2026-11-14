@@ -30,7 +30,7 @@ const figuraDe = (container: HTMLElement, parte: string): HTMLElement => {
 const filasDeTabla = (figura: HTMLElement) =>
   [...figura.querySelectorAll('tbody tr')].map((f) => ({
     anio: Number(f.querySelector('th')?.textContent),
-    celdas: [...f.querySelectorAll('td')].map((c) => c.textContent ?? ''),
+    celdas: [...f.querySelectorAll('td')].map((c) => c.textContent),
   }));
 
 describe('bloque «Sistema financiero (M4)»', () => {
@@ -189,7 +189,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
     expect(pib.querySelector('.linea-fuente')?.textContent).toMatch(
       /proyección publicada por la fuente/,
     );
-    expect(container.textContent?.match(/Cambio de definición del PIB/g)).toHaveLength(2);
+    expect(container.textContent.match(/Cambio de definición del PIB/g)).toHaveLength(2);
   });
 
   it('Fondo: valor, dotaciones, disposiciones, límite legal y financiación adicional, con enlace a «Hucha»', () => {
@@ -256,7 +256,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
     const plegable = container.querySelector('details.proy-funciona')!;
     expect(plegable.hasAttribute('open')).toBe(false);
     expect(plegable.querySelector('summary')?.textContent).toBe('Cómo funciona este modelo');
-    const texto = plegable.textContent ?? '';
+    const texto = plegable.textContent;
     for (const apartado of [
       'Qué responde',
       'Cómo funciona',
@@ -280,7 +280,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
     );
     // El texto escrito a mano (sin la lista de variables) no lleva cifras de datos.
     const sinVariables = [...plegable.querySelectorAll('.proy-funciona-contenido > p')]
-      .map((p) => p.textContent ?? '')
+      .map((p) => p.textContent)
       .join(' ')
       .replace(/\bM\d\b/g, '');
     expect(sinVariables).not.toMatch(/\d/);
@@ -288,7 +288,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
 
   it('no muestra valores vacíos ni no numéricos y el texto no contiene palabras de valoración ni de alarma', () => {
     const { container } = pintar();
-    const texto = container.textContent ?? '';
+    const texto = container.textContent;
     expect(texto).not.toMatch(/NaN|undefined|Infinity|\[object/);
     expect(texto.length).toBeGreaterThan(8000);
     expect(valoracionesEn(texto)).toEqual([]);

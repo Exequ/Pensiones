@@ -12,6 +12,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { ArchivoProyeccion } from '../src/engine/esquema-datos.ts';
+import { filasCsv } from '../src/engine/series-historicas.ts';
 import { validarContenido } from './lib/validar-datos.ts';
 
 const RAIZ = path.resolve(import.meta.dirname, '..');
@@ -295,6 +296,49 @@ describe('lo que la salida cumple pero la descripción no declara (se describe, 
       const tope = ((limite.get(Number(r['anio'])) ?? 0) / 100) * num(r, 'pib_proxy');
       expect(num(r, 'disposicion_fondo')).toBeCloseTo(tope, 3);
     }
+  });
+});
+
+describe('la ejecución del presupuesto respalda la lectura de las cotizaciones de M4', () => {
+  const filas = filasCsv(leer('data/sistema/presupuesto-ss-ejecucion.csv')).filter(
+    (f) => f['periodo'] === '2025-T4' && f['columna'] === 'principal',
+  );
+  const importe = (tabla: string, concepto: string): number =>
+    Number(
+      filas.find((f) => f['tabla'] === tabla && f['concepto'] === concepto)![
+        'derechos_u_obligaciones_meur'
+      ],
+    );
+
+  it('el MEI es una partida de las cotizaciones sociales: la suma de partidas coincide con el total', () => {
+    const delCapitulo = filas.filter((f) => f['tabla'] === 'ingresos-cap1-cap4');
+    const total = importe('ingresos-cap1-cap4', 'TOTAL COTIZACIONES SOCIALES');
+    const partidas = delCapitulo.slice(
+      0,
+      delCapitulo.findIndex((f) => f['concepto'] === 'TOTAL COTIZACIONES SOCIALES'),
+    );
+    expect(partidas.map((f) => f['concepto'])).toContain('MECANISMO DE EQUIDAD INTERGENERACIONAL');
+    expect(partidas.reduce((a, f) => a + Number(f['derechos_u_obligaciones_meur']), 0)).toBeCloseTo(
+      total,
+      1,
+    );
+    expect(importe('ingresos', '1. COTIZACIONES SOCIALES')).toBeCloseTo(total, 6);
+  });
+
+  it('los ingresos y gastos no financieros de la ejecución son los de la serie de saldo presupuestario', () => {
+    const saldo = JSON.parse(leer('data/sistema/deficit-presupuestario-seguridad-social.json')) as {
+      series: { id: string; points: { period: string; value: number }[] }[];
+    };
+    const ultimo = (id: string) => saldo.series.find((s) => s.id === id)!.points.at(-1)!;
+    expect(ultimo('derechos-no-financieros').period).toBe('2025');
+    expect(importe('ingresos', 'SUMA DE OPERACIONES NO FINANCIERAS')).toBeCloseTo(
+      ultimo('derechos-no-financieros').value,
+      2,
+    );
+    expect(importe('gastos', 'SUMA DE OPERACIONES NO FINANCIERAS')).toBeCloseTo(
+      ultimo('obligaciones-no-financieras').value,
+      2,
+    );
   });
 });
 

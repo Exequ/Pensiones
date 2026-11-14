@@ -5041,6 +5041,150 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "notas": "Dato derivado (cociente de dos series de /data/sistema). La definición del modelo (pensiones de octubre) procede de la descripción de M2, elaboración propia."
+    },
+    {
+      "id": "web-fin-gasto-ejecucion-pib",
+      "texto": "El gasto en pensiones contributivas observado que se muestra junto a la proyección de M4 es la suma de pensiones de la ejecución del presupuesto del Sistema de la Seguridad Social (obligaciones reconocidas a fin de ejercicio, millones de euros corrientes); el porcentaje del PIB observado divide ese gasto entre el PIB corriente del INE.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Fase 5-B2)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#obligaciones-no-financieras",
+        "macro/pib-ine.json#pib-corriente"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        },
+        {
+          "title": "Contabilidad Nacional Anual de España, Revisión Estadística 2024: PIB a precios de mercado y sus componentes",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177057&menu=resultados&idp=1254735576581",
+          "docId": "INE-CNA-pib95_25"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "notas": "La suma de pensiones es una fila de la tabla de ejecución (sistema/presupuesto-ss-ejecucion), que no tiene identificadores de elemento; se referencia la serie de obligaciones no financieras de la misma fuente."
+    },
+    {
+      "id": "web-fin-mei-en-cotizaciones",
+      "texto": "En la ejecución del presupuesto de la Seguridad Social, el Mecanismo de Equidad Intergeneracional (MEI) es una de las partidas del capítulo de cotizaciones sociales: la suma de las partidas, MEI incluido, coincide con el total de cotizaciones sociales.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Fase 5-B2)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#derechos-no-financieros",
+        "sistema/fondo-reserva-series.json#dotaciones-mei-anuales"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        },
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "notas": "Comprobado en scripts/proyecciones-5b2.test.ts con las filas de la ejecución de 2025 (sistema/presupuesto-ss-ejecucion.csv, tabla ingresos-cap1-cap4)."
+    },
+    {
+      "id": "web-fin-saldos-observados",
+      "texto": "Los equivalentes observados de las tres medidas de saldo se calculan con la ejecución del presupuesto de la Seguridad Social: cotizaciones menos suma de pensiones; cotizaciones menos obligaciones no financieras; y derechos menos obligaciones no financieras (saldo presupuestario no financiero).",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Fase 5-B2)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#obligaciones-no-financieras",
+        "sistema/deficit-presupuestario-seguridad-social.json#derechos-no-financieros",
+        "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-no-financiero"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "notas": "Cálculo propio con datos observados (naturaleza «derivado» en la interfaz); las definiciones son las que usa la descripción de M4 en su calibración con la ejecución del último año observado."
+    },
+    {
+      "id": "web-fin-pension-media-observada",
+      "texto": "La pensión media observada que se muestra junto a la proyección de M4 es la pensión media mensual en vigor a primero de diciembre, ambos sexos, de jubilación y de todas las clases contributivas.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Fase 5-B2)",
+      "datos": [
+        "sistema/pensiones-vigor-pension-media.json#total-ambos",
+        "sistema/pensiones-vigor-pension-media.json#jubilacion-ambos"
+      ],
+      "fuentes": [
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-fin-euros-constantes-ipc",
+      "texto": "Los euros constantes de la parte observada se calculan con la media anual del índice de precios de consumo (IPC) general nacional del INE; los de la parte proyectada, con la inflación anual constante del escenario de los modelos, que figura en los metadatos de la salida de M4.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Fase 5-B2)",
+      "datos": ["parametros/ipc-indice-medio-anual.json#2025"],
+      "fuentes": [
+        {
+          "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+          "docId": "IPC290751"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "notas": "El IPC supuesto no es un dato observado: procede del LEEME de las salidas de los modelos (data-raw/modelos-salidas/LEEME.txt) y de los metadatos de data/proyecciones/m4-financiero.json."
+    },
+    {
+      "id": "web-fin-fondo-flujos-observados",
+      "texto": "Las dotaciones del MEI al Fondo de Reserva y las disposiciones anuales observadas son las de las series del Fondo de la Seguridad Social; las disposiciones figuran con signo negativo en la fuente y se muestran en valor absoluto, y el valor del Fondo está a precio de adquisición.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Fase 5-B2)",
+      "datos": [
+        "sistema/fondo-reserva-series.json#valor-fin-ano",
+        "sistema/fondo-reserva-series.json#disposiciones-anuales",
+        "sistema/fondo-reserva-series.json#dotaciones-mei-anuales"
+      ],
+      "fuentes": [
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-fin-ageing-series",
+      "texto": "El Ageing Report 2024 publica, para España, el gasto bruto en pensiones públicas en porcentaje del PIB (tabla II.1.64), el balance del sistema de pensiones como cotizaciones menos gasto bruto (II.1.74), la tasa de reposición bruta en la jubilación (II.1.80) y el crecimiento del PIB potencial (II.1.14); son proyecciones de la Comisión Europea con sus propios supuestos.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Fase 5-B2)",
+      "datos": [
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-64",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-74",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-80",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-14"
+      ],
+      "fuentes": [
+        {
+          "title": "The 2024 Ageing Report: Economic and Budgetary Projections for the EU Member States (2022-2070), Statistical annex: cross-country tables",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en",
+          "docId": "ip279"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada"
     }
   ]
 }

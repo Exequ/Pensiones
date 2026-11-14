@@ -1,5 +1,8 @@
 .grafico {
   display: grid;
+  /* Una sola columna que puede encogerse: sin esto, la tabla de datos abierta ensancha la figura
+     más allá de la ventana en pantallas estrechas (Fase 5-B2). */
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--espacio-3);
 }
 
