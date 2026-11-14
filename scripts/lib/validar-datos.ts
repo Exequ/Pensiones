@@ -11,6 +11,7 @@ import {
   ArchivoDatos,
   ArchivoPersonas,
   ArchivoPrestaciones,
+  ArchivoProyeccion,
   ArchivoTabla,
   RegistroAfirmaciones,
 } from '../../src/engine/esquema-datos.ts';
@@ -100,7 +101,9 @@ export function validarContenido(json: unknown, fichero: string): ErrorValidacio
             ? ArchivoMitos
             : tipo === 'personas'
               ? ArchivoPersonas
-              : ArchivoDatos;
+              : tipo === 'proyeccion'
+                ? ArchivoProyeccion
+                : ArchivoDatos;
   const resultado = esquema.safeParse(json);
   if (!resultado.success) {
     for (const problema of resultado.error.issues) {
@@ -110,6 +113,23 @@ export function validarContenido(json: unknown, fichero: string): ErrorValidacio
         mensaje: problema.message,
       });
     }
+  }
+  // Fase 5-B1: lo que sale de un modelo se distingue siempre de lo observado. Todo fichero de
+  // `data/proyecciones/` es una proyección de modelo y ninguna proyección vive fuera de esa carpeta.
+  const enCarpetaProyecciones = /(^|[\\/])proyecciones[\\/][^\\/]+\.json$/.test(fichero);
+  if (enCarpetaProyecciones && tipo !== 'proyeccion') {
+    errores.push({
+      fichero,
+      ruta: 'tipo',
+      mensaje: 'Los ficheros de data/proyecciones/ deben ser de tipo «proyeccion»',
+    });
+  }
+  if (!enCarpetaProyecciones && tipo === 'proyeccion') {
+    errores.push({
+      fichero,
+      ruta: 'tipo',
+      mensaje: 'Los ficheros de tipo «proyeccion» solo pueden estar en data/proyecciones/',
+    });
   }
   return errores;
 }

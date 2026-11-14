@@ -1,0 +1,147 @@
+{
+  "tipo": "proyeccion",
+  "id": "m1-escenarios",
+  "title": "M1 · Escenarios demográficos (2026, 2035, 2050 y 2076)",
+  "description": "Población a 1 de enero por grandes grupos de edad en los escenarios demográficos que calcula M1: la base del INE y variaciones de la fecundidad, la mortalidad y la migración, en cuatro años de referencia. Son escenarios, no predicciones: cada variación cambia una sola hipótesis del INE. Lo posterior a 2050 se debe leer como ilustrativo (M1, apartado 6).",
+  "naturaleza": "proyeccion-de-modelo",
+  "modelo": {
+    "id": "m1",
+    "nombre": "M1 · Modelo demográfico",
+    "descripcion": "docs/modelos/M1_descripcion.md",
+    "horizontePresentacion": 2050
+  },
+  "escenario": {
+    "g": 0.01,
+    "ipc": 0.02,
+    "legislacion": "congelada",
+    "literal": "Escenario: g = 1 %, IPC = 2 %, legislación congelada (valores por defecto de cada script)",
+    "aplicacion": "g e IPC no intervienen en la demografía; las variantes de fecundidad, mortalidad y migración se indican en cada escenario."
+  },
+  "source": {
+    "title": "M1 · Modelo demográfico: código del modelo en el repositorio y salidas de su ejecución",
+    "publisher": "Elaboración propia: modelo de proyección",
+    "url": "https://github.com/Exequ/Pensiones/blob/15651e83ec29111cffee572346a9c746ee1e57e0/modelos/m1/m1_demografia.py"
+  },
+  "fetchedAt": "2026-11-14",
+  "confidence": "media",
+  "origen": {
+    "csv": "data-raw/modelos-salidas/m1/m1_escenarios.csv",
+    "sha256": "03b9229e05b2117b72ba36fb6d254cde5fcc3bf10a0196adfdc6940b3a008006",
+    "commitModelos": "15651e83ec29111cffee572346a9c746ee1e57e0",
+    "leeme": "data-raw/modelos-salidas/LEEME.txt",
+    "ejecutadoEl": "2026-11-14"
+  },
+  "columnas": [
+    {
+      "id": "escenario",
+      "descripcion": "Escenario demográfico (rótulo del CSV)",
+      "tipo": "texto",
+      "unidad": null
+    },
+    {
+      "id": "anio",
+      "descripcion": "Año (población a 1 de enero)",
+      "tipo": "numero",
+      "unidad": null
+    },
+    {
+      "id": "total",
+      "descripcion": "Población total",
+      "tipo": "numero",
+      "unidad": "personas"
+    },
+    {
+      "id": "0_15",
+      "descripcion": "Población de 0 a 15 años",
+      "tipo": "numero",
+      "unidad": "personas"
+    },
+    {
+      "id": "16_64",
+      "descripcion": "Población de 16 a 64 años",
+      "tipo": "numero",
+      "unidad": "personas"
+    },
+    {
+      "id": "65_mas",
+      "descripcion": "Población de 65 años o más",
+      "tipo": "numero",
+      "unidad": "personas"
+    },
+    {
+      "id": "80_mas",
+      "descripcion": "Población de 80 años o más",
+      "tipo": "numero",
+      "unidad": "personas"
+    },
+    {
+      "id": "dep_65",
+      "descripcion": "Tasa de dependencia de mayores (65 o más entre 16 a 64)",
+      "tipo": "numero",
+      "unidad": "razón (personas de 65 o más por persona de 16 a 64)"
+    }
+  ],
+  "filas": [
+    ["INE (base)", 2026, 49590099.0, 6762258.0, 32388947.0, 10438894.0, 3123589.0, 0.322],
+    ["INE (base)", 2035, 52876552.0, 6093229.0, 33765621.0, 13017703.0, 3917791.0, 0.386],
+    ["INE (base)", 2050, 54469060.0, 6419028.0, 31550157.0, 16499876.0, 5886503.0, 0.523],
+    ["INE (base)", 2076, 52532279.0, 5801605.0, 30104724.0, 16625950.0, 6549878.0, 0.552],
+    ["fecundidad -20 %", 2026, 49590099.0, 6762258.0, 32388947.0, 10438894.0, 3123589.0, 0.322],
+    ["fecundidad -20 %", 2035, 52261403.0, 5478079.0, 33765621.0, 13017703.0, 3917791.0, 0.386],
+    ["fecundidad -20 %", 2050, 52724406.0, 5216755.0, 31007776.0, 16499876.0, 5886503.0, 0.532],
+    ["fecundidad -20 %", 2076, 48472962.0, 4250532.0, 27596480.0, 16625950.0, 6549878.0, 0.602],
+    ["fecundidad +20 %", 2026, 49590099.0, 6762258.0, 32388947.0, 10438894.0, 3123589.0, 0.322],
+    ["fecundidad +20 %", 2035, 53491702.0, 6708378.0, 33765621.0, 13017703.0, 3917791.0, 0.386],
+    ["fecundidad +20 %", 2050, 56217283.0, 7624870.0, 32092537.0, 16499876.0, 5886503.0, 0.514],
+    ["fecundidad +20 %", 2076, 56876287.0, 7590877.0, 32659459.0, 16625950.0, 6549878.0, 0.509],
+    ["sin migración", 2026, 49590099.0, 6762258.0, 32388947.0, 10438894.0, 3123589.0, 0.322],
+    ["sin migración", 2035, 48146467.0, 5223646.0, 30027594.0, 12895226.0, 3906336.0, 0.429],
+    ["sin migración", 2050, 44128428.0, 4553869.0, 23312882.0, 16261677.0, 5963065.0, 0.698],
+    ["sin migración", 2076, 31880519.0, 2779158.0, 15256528.0, 13844833.0, 6310897.0, 0.907],
+    ["migración -50 %", 2026, 49590099.0, 6762258.0, 32388947.0, 10438894.0, 3123589.0, 0.322],
+    ["migración -50 %", 2035, 50511510.0, 5658437.0, 31896608.0, 12956465.0, 3912064.0, 0.406],
+    ["migración -50 %", 2050, 49298744.0, 5486449.0, 27431519.0, 16380776.0, 5924784.0, 0.597],
+    ["migración -50 %", 2076, 42206399.0, 4290382.0, 22680626.0, 15235391.0, 6430388.0, 0.672],
+    [
+      "mortalidad -1 % anual extra",
+      2026,
+      49590099.0,
+      6762258.0,
+      32388947.0,
+      10438894.0,
+      3123589.0,
+      0.322
+    ],
+    [
+      "mortalidad -1 % anual extra",
+      2035,
+      53046184.0,
+      6093834.0,
+      33783049.0,
+      13169300.0,
+      4026919.0,
+      0.39
+    ],
+    [
+      "mortalidad -1 % anual extra",
+      2050,
+      55400935.0,
+      6422889.0,
+      31603677.0,
+      17374369.0,
+      6567602.0,
+      0.55
+    ],
+    [
+      "mortalidad -1 % anual extra",
+      2076,
+      55251466.0,
+      5811163.0,
+      30194789.0,
+      19245514.0,
+      8857102.0,
+      0.637
+    ]
+  ],
+  "notes": "Los rótulos de los escenarios son los del CSV. «INE (base)» es el modelo M1 ejecutado con las hipótesis base de las proyecciones del INE (no la proyección publicada del INE, con la que se contrasta en m1-contraste-ine). La columna «dep_65» viene redondeada a tres decimales en el CSV de origen."
+}
