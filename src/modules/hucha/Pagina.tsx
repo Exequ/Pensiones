@@ -20,6 +20,11 @@ import { GraficoSeries } from '../historico/GraficoSeries';
 import { decimal1, decimal2, millonesEuros, puntosAPorcentaje } from '../historico/formatos';
 import '../historico/Historico.css';
 import { antetituloSeccion, buscarSeccion } from '../secciones';
+import './Hucha.css';
+import { SeccionFondoTransferencias } from './SeccionFondoTransferencias';
+import { SeccionOrigen } from './SeccionOrigen';
+import { SeccionPosicion } from './SeccionPosicion';
+import { SeccionTransferencias } from './SeccionTransferencias';
 
 const seccion = buscarSeccion('hucha');
 
@@ -284,6 +289,10 @@ export default function Hucha() {
           />
           <SourceLine datos={[d.limiteDesembolso.dato, d.destinoMei.dato]} />
         </section>
+        <SeccionOrigen />
+        <SeccionTransferencias />
+        <SeccionFondoTransferencias />
+        <SeccionPosicion />
         <ContenidoPagina contenidos={seccion.previsto} />
       </div>
     </article>

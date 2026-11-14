@@ -6,7 +6,7 @@ import { esperarPagina, url, vigilar } from './utilidades.ts';
 const PAGINAS = [
   { ruta: '/cotizantes-y-pensionistas', titulo: 'Cotizantes y pensionistas', graficos: 10 },
   { ruta: '/financiacion-y-deficit', titulo: 'Financiación y déficit', graficos: 6 },
-  { ruta: '/hucha', titulo: 'La «hucha» de las pensiones', graficos: 4 },
+  { ruta: '/hucha', titulo: 'La «hucha» de las pensiones', graficos: 10 },
 ] as const;
 
 for (const { ruta, titulo, graficos } of PAGINAS) {

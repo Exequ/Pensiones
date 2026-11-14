@@ -142,12 +142,14 @@ function textosConCifras(ruta: string): string[] {
 }
 
 describe('sin cifras escritas a mano en los textos de las páginas', () => {
-  // `datos-*.ts` y `ficheros.ts` solo contienen rutas e identificadores de /data; `grafico-series.ts`, guiones SVG.
+  // `datos-*.ts`, `ficheros.ts` e `ids-datos.ts` solo contienen rutas e identificadores de /data
+  // (algunos llevan un año en el nombre); `grafico-series.ts`, guiones SVG.
   const ficheros = MODULOS.flatMap(fuentesDe).filter(
     (r) =>
       !/\/datos-[a-z]+\.ts$/.test(r) &&
       !r.endsWith('/grafico-series.ts') &&
-      !r.endsWith('/ficheros.ts'),
+      !r.endsWith('/ficheros.ts') &&
+      !r.endsWith('/ids-datos.ts'),
   );
 
   it('hay ficheros que revisar', () => {
