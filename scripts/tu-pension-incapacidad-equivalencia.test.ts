@@ -160,6 +160,72 @@ const CASOS: readonly Caso[] = [
     },
     esperado: { baseReguladora: 2571.4286, pensionMensual: 1414.2857 },
   },
+  // Contingencias profesionales (ajustes actuariales 1): la base reguladora del formulario es la que
+  // el motor recibe en `baseReguladoraProfesional` (o `baseReguladoraIT` en la parcial).
+  {
+    id: 'total-at-base-facilitada (caso de oro total-at-base-facilitada)',
+    formulario: {
+      ...COMUN,
+      grado: 'total',
+      origen: 'accidente-trabajo',
+      baseReguladora: '2500',
+    },
+    directa: {
+      ...DIRECTA,
+      grado: 'total',
+      origen: 'accidente-trabajo',
+      opciones: { ...BASE, baseReguladoraProfesional: 2500 },
+    },
+    esperado: { pensionMensual: 1375 },
+  },
+  {
+    id: 'absoluta-ep-base-facilitada',
+    formulario: {
+      ...COMUN,
+      grado: 'absoluta',
+      origen: 'enfermedad-profesional',
+      baseReguladora: '2500',
+    },
+    directa: {
+      ...DIRECTA,
+      grado: 'absoluta',
+      origen: 'enfermedad-profesional',
+      opciones: { ...BASE, baseReguladoraProfesional: 2500 },
+    },
+    esperado: { pensionMensual: 2500 },
+  },
+  {
+    id: 'gran-incapacidad-at-base-facilitada',
+    formulario: {
+      ...COMUN,
+      grado: 'gran-incapacidad',
+      origen: 'accidente-trabajo',
+      baseReguladora: '2500',
+    },
+    directa: {
+      ...DIRECTA,
+      grado: 'gran-incapacidad',
+      origen: 'accidente-trabajo',
+      opciones: { ...BASE, baseReguladoraProfesional: 2500 },
+    },
+    esperado: {},
+  },
+  {
+    id: 'parcial-at-base-facilitada',
+    formulario: {
+      ...COMUN,
+      grado: 'parcial',
+      origen: 'accidente-trabajo',
+      baseReguladora: '2500',
+    },
+    directa: {
+      ...DIRECTA,
+      grado: 'parcial',
+      origen: 'accidente-trabajo',
+      opciones: { ...BASE, baseReguladoraIT: 2500 },
+    },
+    esperado: { cantidadTantoAlzado: 60000, pensionMensual: 0 },
+  },
 ];
 
 describe('el mapeador de incapacidad equivale a la llamada directa al motor (casos de oro)', () => {

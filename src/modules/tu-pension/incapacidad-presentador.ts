@@ -44,6 +44,10 @@ const NOMBRE_ORIGEN = {
   'enfermedad-profesional': 'enfermedad profesional',
 } as const;
 
+/** Accidente de trabajo y enfermedad profesional: la base reguladora la ha escrito la persona. */
+const esProfesional = (origen: string): boolean =>
+  origen === 'accidente-trabajo' || origen === 'enfermedad-profesional';
+
 const euros = (v: number): string => formatearEuros(v, { decimales: 2 });
 const eurosMes = (v: number): string => `${euros(v)} al mes`;
 const porc = (v: number): string => formatearPorcentaje(v / 100, { decimales: 2 });
@@ -103,7 +107,11 @@ function pasoBase(
   const bases = paso(pasos, 'base-reguladora-bases');
   const elegido = paso(pasos, 'base-reguladora');
   const periodo = leerPeriodoElegido(elegido);
-  if (d.origen === 'accidente-no-laboral' && periodo) {
+  if (esProfesional(d.origen)) {
+    parrafos.push(
+      `En el ${NOMBRE_ORIGEN[d.origen]} la base reguladora se calcula con el salario real. Este simulador no la calcula: usa la que has introducido, ${eurosMes(d.baseReguladora)}, sin comprobarla.`,
+    );
+  } else if (d.origen === 'accidente-no-laboral' && periodo) {
     const n = ref(ctx.leerReferencia, 'br-anl-meses');
     const v = ref(ctx.leerReferencia, 'br-anl-ventana-meses');
     parrafos.push(
@@ -159,8 +167,9 @@ function pasoBase(
     id: 'base',
     titulo: 'Base reguladora',
     parrafos,
-    articulo:
-      d.origen === 'accidente-no-laboral' && periodo
+    articulo: esProfesional(d.origen)
+      ? (elegido?.articulo ?? 'art. 15.2.b) Orden de 15/04/1969')
+      : d.origen === 'accidente-no-laboral' && periodo
         ? 'art. 7.1 Decreto 1646/1972 y art. 197.3 TRLGSS'
         : 'arts. 197.1 a 197.4 TRLGSS',
   };
@@ -318,9 +327,11 @@ export function presentarIncapacidad(
     );
   }
   if (cumple) {
+    const introducida = esProfesional(d.origen);
     cifras.push({
-      etiqueta: parcial ? 'Base reguladora de la incapacidad temporal' : 'Base reguladora',
+      etiqueta: `${parcial ? 'Base reguladora de la incapacidad temporal' : 'Base reguladora'}${introducida ? ' (la que has introducido)' : ''}`,
       valor: eurosMes(d.baseReguladora),
+      ...(introducida ? { detalle: 'el simulador no la calcula ni la comprueba' } : {}),
     });
     if (!parcial) {
       cifras.push({
@@ -403,7 +414,7 @@ export function presentarIncapacidad(
       id: 'parcial',
       titulo: 'Cantidad a tanto alzado',
       parrafos: [
-        `La incapacidad permanente parcial no da una pensión periódica sino una cantidad única: ${tanto?.detalle ?? 'varias mensualidades de la base reguladora.'} Con una base de ${eurosMes(d.baseReguladora)} resulta ${euros(d.cantidadTantoAlzado)}.`,
+        `La incapacidad permanente parcial no da una pensión periódica sino una cantidad única: ${tanto?.detalle ?? 'varias mensualidades de la base reguladora.'} Con una base de ${eurosMes(d.baseReguladora)}${esProfesional(d.origen) ? ' (la base reguladora que has introducido; el simulador no la calcula ni la comprueba)' : ''} resulta ${euros(d.cantidadTantoAlzado)}.`,
       ],
       articulo: 'art. 196.1 TRLGSS',
     });

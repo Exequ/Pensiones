@@ -4272,8 +4272,8 @@
     },
     {
       "id": "web-tu-pension-incapacidad-profesionales",
-      "texto": "En el accidente de trabajo y la enfermedad profesional, la base reguladora se calcula con el salario real según el reglamento de 1969; el simulador no la calcula porque la carrera de cotización no recoge esos conceptos, y por eso esos orígenes aparecen desactivados.",
-      "ubicacion": "Página «Tu pensión», incapacidad permanente (Fase 3-C1)",
+      "texto": "En el accidente de trabajo y la enfermedad profesional, la base reguladora se calcula con el salario real según el reglamento de 1969; el simulador no la calcula porque la carrera de cotización no recoge esos conceptos, y por eso pide la base reguladora ya calculada (la de la resolución o la que la persona haya calculado por su cuenta).",
+      "ubicacion": "Página «Tu pensión», incapacidad permanente (Fase 3-C1; formulario de la base reguladora, ajustes actuariales 1)",
       "datos": ["parametros/incapacidad-permanente-reglas.json#br-profesional-salario-real"],
       "fuentes": [
         {
@@ -4283,6 +4283,21 @@
         }
       ],
       "fetchedAt": "2026-11-12",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-tu-pension-incapacidad-grado-organismo",
+      "texto": "El grado de incapacidad permanente lo reconoce el organismo competente: el Instituto Nacional de la Seguridad Social declara la situación de incapacidad permanente (art. 200.1 TRLGSS) y la clasificación en grados depende del porcentaje de reducción de la capacidad de trabajo (art. 194 TRLGSS), que solo se aplica desde que se apruebe la lista reglamentaria de enfermedades; mientras tanto rigen las definiciones de la disposición transitoria vigésima sexta.",
+      "ubicacion": "Página «Tu pensión», aviso de la incapacidad permanente (Fase 3-C1; claim registrado en los ajustes actuariales 1)",
+      "datos": ["parametros/incapacidad-permanente-reglas.json#grados-aplicables-hasta-desarrollo"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
       "estado": "verificada"
     },
     {

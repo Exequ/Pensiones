@@ -8,6 +8,7 @@ import { LIMITACIONES_MOTOR } from '../../engine/limitaciones';
 import { antetituloSeccion, buscarSeccion } from '../secciones';
 import { calcularTuPension, type RespuestaCalculo } from './calcular';
 import { ComparacionLecturas } from './ComparacionLecturas';
+import { LecturasJubilacionEnIncapacidad } from './LecturasJubilacionEnIncapacidad';
 import { LecturasQueIntervienen } from './LecturasQueIntervienen';
 import { prestacionDe } from './prestaciones';
 import { SelectorPrestacion } from './SelectorPrestacion';
@@ -127,6 +128,7 @@ export default function TuPension() {
       origen: '',
       enAlta: true,
       trabaja: false,
+      baseReguladora: '',
       nacimientoMes: '',
       nacimientoAnio: '',
       sexo: '',
@@ -442,6 +444,15 @@ export default function TuPension() {
           lecturas={lecturas}
           conEfecto={respuesta?.tipo === 'resultado'}
           introduccion={textos.supuestosIntro}
+          pie={
+            incapacidad ? (
+              <LecturasJubilacionEnIncapacidad
+                onIrAJubilacion={() => {
+                  cambiarPrestacion('jubilacion');
+                }}
+              />
+            ) : undefined
+          }
           onElegir={(id, valor) => {
             cambiarLecturas({ ...valores.lecturas, [id]: valor }, false);
           }}

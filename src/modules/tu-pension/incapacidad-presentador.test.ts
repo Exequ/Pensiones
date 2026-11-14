@@ -133,6 +133,48 @@ describe('resultado de la incapacidad permanente', () => {
   });
 });
 
+describe('contingencias profesionales: la base reguladora es la introducida', () => {
+  const profesional = (
+    origen: FormularioTuPension['origen'],
+    grado: FormularioTuPension['grado'],
+  ) => resultado({ ...F, origen, grado, baseReguladora: '2500' });
+
+  it.each(['accidente-trabajo', 'enfermedad-profesional'] as const)(
+    '%s, total: la pensión sale de la base introducida y el resultado lo dice',
+    (origen) => {
+      const r = profesional(origen, 'total');
+      // Cálculo a mano: el 55 % de 2.500 euros = 1.375 euros (sin mínima: menor de 60 años y no enfermedad común).
+      expect(cifra(r, 'Pensión mensual bruta')).toBe('1.375,00\u00a0€');
+      expect(cifra(r, 'Base reguladora (la que has introducido)')).toBe('2.500,00\u00a0€ al mes');
+      const base = r.modelo.pasos.find((p) => p.id === 'base')!;
+      expect(base.parrafos.join(' ')).toMatch(/la que has introducido, 2\.500,00\u00a0€ al mes/);
+      expect(base.parrafos.join(' ')).toMatch(/no la calcula/);
+      expect(r.modelo.avisos.join(' ')).toMatch(/base reguladora la ha facilitado/);
+    },
+  );
+
+  it('parcial: la cantidad a tanto alzado se calcula con la base introducida', () => {
+    const r = profesional('accidente-trabajo', 'parcial');
+    expect(cifra(r, 'Cantidad a tanto alzado')).toBe('60.000,00\u00a0€');
+    expect(cifra(r, 'Base reguladora de la incapacidad temporal (la que has introducido)')).toBe(
+      '2.500,00\u00a0€ al mes',
+    );
+    const parcial = r.modelo.pasos.find((p) => p.id === 'parcial')!;
+    expect(parcial.parrafos.join(' ')).toMatch(/la base reguladora que has introducido/);
+  });
+
+  it('sin base reguladora el cálculo no se hace: errores del formulario', () => {
+    const r = calcularTuPension({ ...F, origen: 'accidente-trabajo', baseReguladora: '' }, deps);
+    expect(r.tipo).toBe('errores-formulario');
+  });
+
+  it('con origen común no aparece nada de la base introducida', () => {
+    const r = resultado({ ...F, baseReguladora: '2500' });
+    expect(cifra(r, 'Base reguladora (la que has introducido)')).toBeUndefined();
+    expect(cifra(r, 'Base reguladora')).toBeDefined();
+  });
+});
+
 describe('lecturas de la incapacidad', () => {
   it('ofrece las seis lecturas de incapacidad con estado y motivo, y no las de jubilación', () => {
     const r = resultado(F);
@@ -146,30 +188,47 @@ describe('lecturas de la incapacidad', () => {
     ]);
     for (const l of r.lecturas) expect(l.opciones.length).toBeGreaterThanOrEqual(2);
     const anl = r.lecturas.find((l) => l.id === 'incapacidad.lagunasAccidenteNoLaboral')!;
-    expect(anl.estado).toBe('provisional');
+    // Decisión de Sergio del 14-11-2026: vuelve a «sin-integrar» y queda pendiente, con su motivo.
+    expect(anl.estado).toBe('pendiente');
+    expect(anl.valorPorDefecto).toBe('sin-integrar');
     expect(anl.motivo).toBeTruthy();
   });
 
-  it('cambiar la lectura de las lagunas del accidente no laboral cambia el resultado y se compara', () => {
-    const f: FormularioTuPension = {
-      ...F,
-      origen: 'accidente-no-laboral',
-      mesesSinCotizar: '70',
-      ubicacionLagunas: 'final',
-    };
-    const por = resultado(f);
-    const cambiado = resultado({
-      ...f,
-      lecturas: { 'incapacidad.lagunasAccidenteNoLaboral': 'sin-integrar' },
-    });
-    expect(por.comparacion.tipo).toBe('sin-cambios');
-    expect(cambiado.comparacion.tipo).toBe('comparado');
-    if (cambiado.comparacion.tipo === 'comparado') {
-      expect(Math.abs(cambiado.comparacion.diferencia.pension.euros)).toBeGreaterThan(0.005);
-    }
-    // El efecto de la alternativa se mide en el resultado por defecto.
-    const anl = por.lecturas.find((l) => l.id === 'incapacidad.lagunasAccidenteNoLaboral')!;
-    expect(anl.afectaAlResultado).toBe(true);
-    expect(anl.efecto).toMatch(/Sin integrar|Contarlos como cero/);
-  });
+  describe.each(['sin-integrar', 'integrar'] as const)(
+    'lagunas del accidente no laboral con la lectura «%s» puesta explícitamente',
+    (valor) => {
+      const f: FormularioTuPension = {
+        ...F,
+        origen: 'accidente-no-laboral',
+        mesesSinCotizar: '70',
+        ubicacionLagunas: 'final',
+      };
+      const elegido = resultado({
+        ...f,
+        lecturas: { 'incapacidad.lagunasAccidenteNoLaboral': valor },
+      });
+      const defecto = resultado(f);
+
+      it('solo se compara con los valores por defecto si la lectura elegida difiere de «sin-integrar»', () => {
+        if (valor === 'sin-integrar') {
+          // Es el valor por defecto: el resultado es el mismo y no hay comparación.
+          expect(elegido.comparacion.tipo).toBe('sin-cambios');
+          expect(elegido.modelo).toEqual(defecto.modelo);
+        } else {
+          expect(elegido.comparacion.tipo).toBe('comparado');
+          if (elegido.comparacion.tipo === 'comparado') {
+            expect(Math.abs(elegido.comparacion.diferencia.pension.euros)).toBeGreaterThan(0.005);
+          }
+        }
+      });
+
+      it('el efecto de la alternativa se mide frente a la elegida y nombra la otra opción', () => {
+        const anl = elegido.lecturas.find((l) => l.id === 'incapacidad.lagunasAccidenteNoLaboral')!;
+        expect(anl.afectaAlResultado).toBe(true);
+        expect(anl.efecto).toMatch(
+          valor === 'sin-integrar' ? /Rellenarlos con la base mínima/ : /Contarlos como cero/,
+        );
+      });
+    },
+  );
 });

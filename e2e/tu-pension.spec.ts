@@ -26,7 +26,8 @@ test.describe('Tu pensión', () => {
     await expect(page.locator('.tp-paso')).toHaveCount(7);
     await expect(page.getByRole('heading', { name: 'Supuestos y lecturas' })).toBeVisible();
     await expect(page.getByText('Estado: Provisional').first()).toBeVisible();
-    await expect(page.getByText('Estado: Pendiente de decidir').first()).toBeVisible();
+    // Desde el 14-11-2026 ninguna lectura de jubilación queda pendiente (la única pendiente es la de incapacidad).
+    await expect(page.getByText('Estado: Decidida').first()).toBeVisible();
     await expect(
       page.getByRole('heading', { name: 'Qué no tiene en cuenta el cálculo' }),
     ).toBeVisible();

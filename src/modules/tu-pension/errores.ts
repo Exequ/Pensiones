@@ -12,7 +12,8 @@ export interface MensajeError {
   /** Qué puede hacer la persona. */
   readonly accion: string;
   /** Campo del formulario al que llevar el foco, si se sabe. */
-  readonly campo?: 'jubilacionAnio' | 'ipcSupuesto' | 'inicioAnio' | 'baseMensual';
+  readonly campo?:
+    'jubilacionAnio' | 'ipcSupuesto' | 'inicioAnio' | 'baseMensual' | 'baseReguladora';
 }
 
 /** Cómo se llama en los mensajes la fecha en que termina la carrera de cada prestación. */
@@ -94,6 +95,18 @@ export function traducirError(
     }
     case 'NoImplementada': {
       const regla = error.regla ?? texto;
+      if (/contingencias profesionales|accidente de trabajo/i.test(`${regla} ${texto}`)) {
+        // Accidente de trabajo y enfermedad profesional: el motor necesita la base reguladora ya
+        // calculada y no admite el caso sin alta.
+        return {
+          codigo: error.codigo,
+          titulo: 'Falta un dato de las contingencias profesionales',
+          mensaje: `Con accidente de trabajo o enfermedad profesional, el simulador solo calcula la prestación con la base reguladora que escribas tú y en alta o situación asimilada: ${regla}.`,
+          accion:
+            'Escribe la base reguladora mensual (la de tu resolución o la que hayas calculado por tu cuenta) y elige «En alta o situación asimilada».',
+          campo: 'baseReguladora',
+        };
+      }
       return {
         codigo: error.codigo,
         titulo: 'Este caso queda fuera del simulador',

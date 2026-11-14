@@ -45,6 +45,12 @@ export interface FormularioTuPension {
   readonly grado: GradoIncapacidad | '';
   /** Incapacidad permanente: contingencia de la que deriva. */
   readonly origen: OrigenIncapacidad | '';
+  /**
+   * Incapacidad permanente por accidente de trabajo o enfermedad profesional: base reguladora
+   * mensual en euros (texto), la que figura en la resolución o la calculada por la persona. El
+   * simulador no la calcula a partir del salario real. Se ignora con los demás orígenes.
+   */
+  readonly baseReguladora: string;
   /** Incapacidad permanente: en alta o situación asimilada en la fecha del hecho causante. */
   readonly enAlta: boolean;
   /** Incapacidad permanente: trabaja tras el reconocimiento de la pensión. */

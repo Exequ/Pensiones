@@ -8,6 +8,11 @@
  * - La carrera es la misma que la de la jubilación (simple o por tramos) y termina el mes anterior
  *   al hecho causante.
  * - El grado lo reconoce el organismo competente: aquí es un dato que elige la persona.
+ * - Accidente de trabajo y enfermedad profesional (ajustes actuariales 1): el motor solo los calcula
+ *   si recibe la base reguladora ya calculada con el salario real, que la web no calcula. El
+ *   formulario la pide («Base reguladora mensual») y se pasa al motor como `baseReguladoraProfesional`
+ *   o, en la incapacidad parcial, como `baseReguladoraIT` (el motor calcula la cantidad a tanto alzado
+ *   con la base reguladora de la incapacidad temporal; véase docs/DECISIONES.md).
  */
 import { normalizarEleccion } from '../../engine/comparar-lecturas.ts';
 import type { ConfiguracionMotor, EntradaIncapacidad } from '../../engine/fachada.ts';
@@ -78,9 +83,18 @@ export interface OpcionOrigen {
 export const ORIGENES: readonly OpcionOrigen[] = [
   { valor: 'enfermedad-comun', etiqueta: 'Enfermedad común', disponible: true },
   { valor: 'accidente-no-laboral', etiqueta: 'Accidente no laboral', disponible: true },
-  { valor: 'accidente-trabajo', etiqueta: 'Accidente de trabajo', disponible: false },
-  { valor: 'enfermedad-profesional', etiqueta: 'Enfermedad profesional', disponible: false },
+  { valor: 'accidente-trabajo', etiqueta: 'Accidente de trabajo', disponible: true },
+  { valor: 'enfermedad-profesional', etiqueta: 'Enfermedad profesional', disponible: true },
 ];
+
+/** Orígenes por contingencias profesionales: el motor necesita la base reguladora ya calculada. */
+export const esOrigenProfesional = (
+  o: string,
+): o is Extract<OrigenIncapacidad, 'accidente-trabajo' | 'enfermedad-profesional'> =>
+  o === 'accidente-trabajo' || o === 'enfermedad-profesional';
+
+/** Límite de sensatez de la base reguladora escrita a mano (no es una regla de la norma). */
+export const BASE_REGULADORA_MAXIMA = 1_000_000;
 
 export const esOrigenDisponible = (o: string): o is OrigenIncapacidad =>
   ORIGENES.some((x) => x.valor === o && x.disponible);
@@ -94,7 +108,18 @@ export function validarFormularioIncapacidad(f: FormularioTuPension): ErroresFor
   if (f.origen === '') errores.origen = 'Elige el origen de la incapacidad.';
   else if (!esOrigenDisponible(f.origen)) {
     errores.origen =
-      'Este origen no está disponible en el simulador: elige enfermedad común o accidente no laboral.';
+      'Este origen no está disponible en el simulador: elige otro origen de los que se ofrecen.';
+  } else if (esOrigenProfesional(f.origen)) {
+    const base = leerNumero(f.baseReguladora);
+    if (f.baseReguladora.trim() === '') {
+      errores.baseReguladora = 'Escribe la base reguladora mensual, en euros.';
+    } else if (base === undefined || base <= 0 || base > BASE_REGULADORA_MAXIMA) {
+      errores.baseReguladora = 'La base reguladora debe ser un importe mensual positivo, en euros.';
+    }
+    if (!f.enAlta) {
+      errores.enAlta =
+        'Con accidente de trabajo o enfermedad profesional, el simulador solo calcula la prestación en alta o situación asimilada.';
+    }
   }
   return errores;
 }
@@ -135,6 +160,18 @@ export function formularioAEntradaIncapacidad(
       leerEntero(f.mesesSinCotizar) ?? 0,
       f.ubicacionLagunas,
     );
+  // Contingencias profesionales: la base reguladora es la que escribe la persona. En la parcial, el
+  // motor la usa como base reguladora de la incapacidad temporal (con ella calcula la cantidad).
+  const baseProfesional = esOrigenProfesional(f.origen) ? leerNumero(f.baseReguladora) : undefined;
+  const opcionesMotor: OpcionesIncapacidad =
+    baseProfesional === undefined
+      ? opciones
+      : {
+          ...opciones,
+          ...(f.grado === 'parcial'
+            ? { baseReguladoraIT: baseProfesional }
+            : { baseReguladoraProfesional: baseProfesional }),
+        };
   const configuracion: ConfiguracionMotor = {
     ...(ipc === undefined ? {} : { escenario: { ipc: ipc / 100 } }),
     ...(Object.keys(lecturas).length === 0 ? {} : { lecturas }),
@@ -147,7 +184,7 @@ export function formularioAEntradaIncapacidad(
       fechaHechoCausante: `${claveMes(hc.anio, hc.mes)}-01`,
       grado: f.grado as GradoIncapacidad,
       origen: f.origen as OrigenIncapacidad,
-      opciones,
+      opciones: opcionesMotor,
     },
     configuracion,
     resumenTramos: tramos?.resumen,

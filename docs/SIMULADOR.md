@@ -149,24 +149,32 @@ La jubilación pasa por la misma receta que la incapacidad. Condición cumplida:
 ### Incapacidad permanente: entrada y resultado
 
 - **Entrada**: nacimiento y hecho causante (mes y año; el hecho causante está en los campos `jubilacion*` del formulario), sexo e hijos (complemento por hijos), grado, origen, alta, trabajo, carrera simple o por tramos con personas-ejemplo, mínimos, máxima e IPC supuesto.
-- **Grados**: parcial, total, absoluta y gran incapacidad. **Orígenes**: enfermedad común y accidente no laboral; accidente de trabajo y enfermedad profesional están desactivados porque el motor exige una base reguladora calculada fuera (véase limitaciones).
+- **Grados**: parcial, total, absoluta y gran incapacidad. **Orígenes** (ajustes actuariales 1): los cuatro están activos; con accidente de trabajo o enfermedad profesional el formulario pide el campo obligatorio «Base reguladora mensual (€)» (la de la resolución o la calculada por la persona; la web no la calcula) y se pasa al motor como `baseReguladoraProfesional` (como `baseReguladoraIT` en la parcial); solo se calcula en alta. Antes estaban desactivados porque el motor exige una base reguladora calculada fuera (véase limitaciones).
 - **Resultado**: cuantía mensual y anual por paga (o cantidad a tanto alzado en la parcial), base reguladora, porcentaje aplicable, complementos (total cualificada, gran incapacidad, hijos), importe en suspenso, periodo mínimo exigido, tiempo cotizado y meses añadidos hasta la edad ordinaria. Requisitos en tabla.
 - **Limitaciones del motor** (`LIMITACIONES_MOTOR`, motor `incapacidad`) siempre visibles al final.
 - **Lecturas**: las seis `incapacidad.*` se pueden cambiar, con comparación frente a las de por defecto y efecto por lectura. El bloque «Lecturas abiertas que intervienen en tu resultado» enseña estado y motivo y el efecto de la alternativa; con accidente no laboral muestra siempre `incapacidad.lagunasAccidenteNoLaboral`.
 
 ### Enlace con `p=`
 
-| Parámetro | Contenido (solo incapacidad, salvo `p`)                                                             |
-| --------- | --------------------------------------------------------------------------------------------------- |
-| `p`       | `inc`. Sin `p`, jubilación: el enlace de jubilación no cambia en nada y los enlaces antiguos valen. |
-| `hc`      | Fecha del hecho causante, `AAAA-MM` (en lugar de `jub`).                                            |
-| `gr`      | Grado: `par`, `tot`, `abs`, `gin`.                                                                  |
-| `or`      | Origen: `ec` (enfermedad común) o `anl` (accidente no laboral).                                     |
-| `alt`     | En alta o situación asimilada: `1` o `0`.                                                           |
-| `trb`     | Trabaja tras el reconocimiento: `1` o `0`.                                                          |
+| Parámetro | Contenido (solo incapacidad, salvo `p`)                                                                                     |
+| --------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `p`       | `inc`. Sin `p`, jubilación: el enlace de jubilación no cambia en nada y los enlaces antiguos valen.                         |
+| `hc`      | Fecha del hecho causante, `AAAA-MM` (en lugar de `jub`).                                                                    |
+| `gr`      | Grado: `par`, `tot`, `abs`, `gin`.                                                                                          |
+| `or`      | Origen: `ec` (enfermedad común), `anl` (accidente no laboral), `at` (accidente de trabajo) o `ep` (enfermedad profesional). |
+| `br`      | Base reguladora mensual, tal como se escribió; solo con `or=at` o `or=ep`.                                                  |
+| `alt`     | En alta o situación asimilada: `1` o `0`.                                                                                   |
+| `trb`     | Trabaja tras el reconocimiento: `1` o `0`.                                                                                  |
 
 Se mantienen `nac`, `sex`, `hij`, `car`, `ini`, `lag`, `ubi`, `base`, `tr`, `med`, `pe`, `min`, `max`, `ipc` y `lec` (con las lecturas `incapacidad.*`). Ejemplo: `#/tu-pension?v=1&p=inc&nac=1981-03&hc=2026-03&gr=tot&or=ec&alt=1&trb=0&sex=h&car=s&ini=2000-01&lag=0&ubi=m&base=2000&med=media-cotizacion-rg&min=1&max=1&ipc=2`. Los parámetros de una prestación en el enlace de la otra se ignoran con aviso.
 
 ### Pruebas
 
 `incapacidad-mapeador.test.ts`, `incapacidad-presentador.test.ts`, `enlace-incapacidad.test.ts` (incluida la compatibilidad con los enlaces `v=1` de jubilación), `errores.test.ts`, `Incapacidad.test.tsx` (selector, formulario, panel de lecturas, enlaces), `scripts/tu-pension-incapacidad-equivalencia.test.ts` (ocho casos de oro de la incapacidad, también con carrera por tramos, ±0,01 € frente a la llamada directa al motor) y `e2e/incapacidad.spec.ts` (flujo completo, selector con teclado, lectura del accidente no laboral, comparación, enlace en pestaña nueva, enlace antiguo de jubilación, errores, parcial, móvil y axe).
+
+## Ajustes actuariales 1 (2026-11-14)
+
+- **Lecturas**: el valor por defecto de `incapacidad.lagunasAccidenteNoLaboral` es `sin-integrar` (estado pendiente); el bloque «Lecturas abiertas que intervienen» muestra siempre, con accidente no laboral, su estado, su motivo y el efecto de la alternativa «integrar». Los estados de las demás lecturas cambian según `docs/DECISIONES_ACTUARIALES.md`. Los textos «qué cambia» están revisados (`docs/DECISIONES.md`).
+- **Nota plegable «Qué lecturas de jubilación se aplican aquí»** en el panel de supuestos de la incapacidad: siete lecturas `jubilacion.*` con su valor aplicado (el del registro) y su estado; no son editables y los cambios de la pantalla de jubilación no pasan a la incapacidad. Componente `LecturasJubilacionEnIncapacidad`; lista en `lecturas-jubilacion-en-incapacidad.ts`, comprobada contra el motor por `scripts/lecturas-jubilacion-incapacidad.test.ts`.
+- **Personas-ejemplo**: la referencia «media» se rotula «salario medio ilustrativo» y una nota (`notaSalarioMedioIlustrativo`) explica la cobertura de la definición elegida.
+- **Pruebas nuevas**: componentes (`Incapacidad.test.tsx`: origen profesional, nota), mapeador, presentador y enlace de incapacidad, `personas.test.ts`, equivalencia con el motor (`scripts/tu-pension-incapacidad-equivalencia.test.ts`) y Playwright (`e2e/incapacidad.spec.ts`: accidente no laboral con el nuevo valor por defecto y su alternativa, enlace antiguo, origen profesional, nota, móvil y axe).

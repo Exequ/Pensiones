@@ -24,7 +24,8 @@
  * | `p`       | Prestación (Fase 3-C1): `inc` (incapacidad permanente). Sin `p`: jubilación; el enlace de jubilación no cambia. |
  * | `hc`      | Solo incapacidad: fecha del hecho causante, `AAAA-MM` (en jubilación se usa `jub`). |
  * | `gr`      | Solo incapacidad: grado, `par`, `tot`, `abs` o `gin`.                     |
- * | `or`      | Solo incapacidad: origen, `ec` (enfermedad común) o `anl` (accidente no laboral). |
+ * | `or`      | Solo incapacidad: origen, `ec` (enfermedad común), `anl` (accidente no laboral), `at` (accidente de trabajo) o `ep` (enfermedad profesional). |
+ * | `br`      | Solo incapacidad por `at` o `ep`: base reguladora mensual, tal como se escribió (`2500`, `2286,22`). |
  * | `alt`, `trb` | Solo incapacidad: en alta y trabaja tras el reconocimiento (`1` o `0`). |
  *
  * Al leer un enlace todo se valida: lo que no es válido (fechas o números fuera de rango, lecturas o
@@ -37,7 +38,7 @@
  */
 import { lecturasOfrecidas, normalizarEleccion } from '../../engine/comparar-lecturas.ts';
 import type { GradoIncapacidad, OrigenIncapacidad } from '../../engine/incapacidad/tipos.ts';
-import { esOrigenDisponible } from './incapacidad-mapeador.ts';
+import { esOrigenDisponible, esOrigenProfesional } from './incapacidad-mapeador.ts';
 import { leerEntero, leerNumero } from './lectura.ts';
 import type { FormularioTuPension, IdPrestacion } from './tipos.ts';
 import { nuevoIdTramo, type ReferenciaTramo, type TramoFormulario } from './tramos.ts';
@@ -104,10 +105,11 @@ const PARAMETROS = [
   'or',
   'alt',
   'trb',
+  'br',
 ] as const;
 
 /** Parámetros que solo existen en el enlace de la incapacidad permanente. */
-const SOLO_INCAPACIDAD = ['hc', 'gr', 'or', 'alt', 'trb'] as const;
+const SOLO_INCAPACIDAD = ['hc', 'gr', 'or', 'alt', 'trb', 'br'] as const;
 /** Código de cada prestación en `p` (la jubilación no lo escribe: es la ausencia de `p`). */
 const CODIGO_PRESTACION: Record<Exclude<IdPrestacion, 'jubilacion'>, string> = {
   incapacidad: 'inc',
@@ -121,6 +123,8 @@ const CODIGO_GRADO: Record<GradoIncapacidad, string> = {
 const CODIGO_ORIGEN: Partial<Record<OrigenIncapacidad, string>> = {
   'enfermedad-comun': 'ec',
   'accidente-no-laboral': 'anl',
+  'accidente-trabajo': 'at',
+  'enfermedad-profesional': 'ep',
 };
 const invertir = <T extends string>(r: Partial<Record<T, string>>): Map<string, T> =>
   new Map(Object.entries(r).map(([k, v]) => [v as string, k as T]));
@@ -232,6 +236,10 @@ export function escribirEnlace(f: FormularioTuPension, personaId?: string): stri
     if (f.origen !== '') poner('or', CODIGO_ORIGEN[f.origen]);
     poner('alt', f.enAlta ? '1' : '0');
     poner('trb', f.trabaja ? '1' : '0');
+    if (f.origen !== '' && esOrigenProfesional(f.origen)) {
+      const br = f.baseReguladora.trim();
+      if (importeValido(br) !== undefined) poner('br', br);
+    }
   }
   if (f.sexo !== '') poner('sex', f.sexo === 'mujer' ? 'm' : 'h');
   if (
@@ -378,6 +386,12 @@ export function leerEnlace(search: string, contexto: ContextoEnlace): ResultadoE
       if (o === undefined || !esOrigenDisponible(o)) {
         ignorar('el origen de la incapacidad', 'el valor no es válido o no está disponible');
       } else cambios.origen = o;
+    }
+    const baseReguladora = dato('br');
+    if (baseReguladora !== undefined) {
+      if (importeValido(baseReguladora) === undefined) {
+        ignorar('la base reguladora', 'no es un importe válido dentro del rango admitido');
+      } else cambios.baseReguladora = baseReguladora;
     }
     for (const [clave, nombre, campo] of [
       ['alt', 'la opción de estar en alta', 'enAlta'],

@@ -27,12 +27,12 @@ export const TEXTOS_LECTURAS: Readonly<Record<string, TextoLectura>> = {
       compuesto: {
         etiqueta: 'Año a año, sobre la cifra del año anterior',
         queCambia:
-          'Cada incremento adicional de la base máxima se aplica sobre la cifra del año anterior, de modo que los incrementos se acumulan unos sobre otros.',
+          'Cada año el incremento adicional se suma al porcentaje de revalorización y se aplica sobre la base máxima del año anterior, de modo que los incrementos se acumulan unos sobre otros.',
       },
       'sobre-cifra-inicial': {
         etiqueta: 'Sumados sobre la cifra inicial',
         queCambia:
-          'Los incrementos adicionales se suman todos sobre la cifra inicial, sin acumularse entre sí. Solo cambia el resultado si alguna base queda limitada por la base máxima.',
+          'La base máxima del año anterior crece con la revalorización y, además, cada año se le añade el incremento adicional como un importe fijo calculado sobre la cifra inicial, sin acumularse entre sí. Solo cambia el resultado si alguna base queda limitada por la base máxima.',
       },
     },
   },
@@ -40,14 +40,14 @@ export const TEXTOS_LECTURAS: Readonly<Record<string, TextoLectura>> = {
     titulo: 'Límite de la pensión máxima con el incremento adicional anual',
     valores: {
       compuesto: {
-        etiqueta: 'Incremento adicional fijo cada año',
+        etiqueta: 'Mismo porcentaje cada año, sobre la cifra del año anterior',
         queCambia:
-          'El incremento adicional anual del límite de la pensión máxima es la misma cantidad todos los años.',
+          'El incremento adicional anual del límite de la pensión máxima es el mismo porcentaje todos los años y se aplica sobre la pensión máxima del año anterior, de modo que su efecto se acumula; no es la misma cantidad en euros.',
       },
       'incremento-creciente': {
         etiqueta: 'Incremento adicional que crece cada año',
         queCambia:
-          'El incremento adicional anual del límite de la pensión máxima va creciendo de un año a otro. Solo cambia el resultado si la pensión queda limitada por la máxima.',
+          'El incremento adicional anual del límite de la pensión máxima crece cada año de forma regular a lo largo de la tabla. Solo cambia el resultado si la pensión queda limitada por la máxima.',
       },
     },
   },
@@ -56,27 +56,29 @@ export const TEXTOS_LECTURAS: Readonly<Record<string, TextoLectura>> = {
     valores: {
       'mes-de-la-laguna': {
         etiqueta: 'La del mes en que ocurrió',
-        queCambia: 'Cada mes sin cotizar se rellena con la base mínima vigente en ese mismo mes.',
+        queCambia:
+          'Cada mes sin cotizar se rellena con la base mínima vigente en ese mismo mes y, como el resto de las bases, esa cifra se actualiza con el IPC.',
       },
       'hecho-causante': {
         etiqueta: 'La del momento de la jubilación',
         queCambia:
-          'Todos los meses sin cotizar se rellenan con la base mínima vigente en el momento de la jubilación.',
+          'Todos los meses sin cotizar se rellenan con la base mínima vigente en el momento de la jubilación, y esa cifra no se actualiza con el IPC.',
       },
     },
   },
   'jubilacion.opcion25EnUltimoDia2040': {
-    titulo: 'Último día en que rige la opción de contar más años de cotización',
+    titulo:
+      'Último día de la ventana en que rige la opción de calcular la base reguladora con un periodo más largo',
     valores: {
       incluida: {
         etiqueta: 'El último día queda dentro de la opción',
         queCambia:
-          'Quien se jubila ese último día puede acogerse a la opción de contar más años de cotización.',
+          'Quien se jubila ese último día puede calcular la base reguladora con un periodo más largo de los últimos años, y se aplica el resultado más favorable entre ese cálculo y la regla general.',
       },
       excluida: {
         etiqueta: 'El último día queda fuera de la opción',
         queCambia:
-          'Quien se jubila ese último día no puede acogerse a la opción de contar más años de cotización. Solo afecta a una jubilación en esa fecha exacta.',
+          'Quien se jubila ese último día no puede usar el periodo más largo y se le aplica la regla general. Solo afecta a una jubilación en esa fecha exacta.',
       },
     },
   },
@@ -136,11 +138,12 @@ export const TEXTOS_LECTURAS: Readonly<Record<string, TextoLectura>> = {
       'desde-segundo-anio': {
         etiqueta: 'Desde el segundo año completo',
         queCambia:
-          'Las fracciones de año de demora solo cuentan a partir del segundo año completo de demora.',
+          'La fracción de año de demora solo cuenta a partir del segundo año completo de demora, según el artículo del texto refundido que regula el complemento por demora. Además, tiene que superar un número mínimo de meses y vale la mitad del incremento de un año completo.',
       },
       'desde-primer-anio': {
         etiqueta: 'Desde el primer año',
-        queCambia: 'Las fracciones de año de demora cuentan desde el primer año de demora.',
+        queCambia:
+          'La fracción de año de demora cuenta a partir del primer año completo de demora, un año antes que con la otra lectura. Con las dos tiene que superar un número mínimo de meses y vale la mitad del incremento de un año completo; si no se ha completado ningún año de demora, no cuenta.',
       },
     },
   },
@@ -150,7 +153,7 @@ export const TEXTOS_LECTURAS: Readonly<Record<string, TextoLectura>> = {
       'incremento-acumulado': {
         etiqueta: 'Incremento acumulado total',
         queCambia:
-          'Cada valor de la tabla de incrementos se lee como el incremento total acumulado hasta ese año.',
+          'Cada valor de la tabla de incrementos se lee como el incremento total acumulado hasta ese año: cada año la pensión máxima crece con la revalorización y con la diferencia entre el valor de la tabla de ese año y el del año anterior (el primer año, frente a lo ya acumulado por los incrementos anuales anteriores).',
       },
       'incremento-anual-literal': {
         etiqueta: 'Incremento anual literal',
@@ -216,7 +219,7 @@ export const TEXTOS_LECTURAS: Readonly<Record<string, TextoLectura>> = {
       integrar: {
         etiqueta: 'Rellenarlos con la base mínima',
         queCambia:
-          'Los meses sin cotizar dentro del periodo elegido se rellenan con una parte de la base mínima de cotización, como en el resto de las bases reguladoras. Solo cambia el resultado en el accidente no laboral con meses sin cotizar en ese periodo.',
+          'Los meses sin cotizar dentro del periodo elegido se rellenan con la base mínima de cotización del año de cada mes, completa y sin reducción: el periodo elegido es más corto que el tramo de meses que la norma integra sin reducir en el resto de las bases reguladoras. Solo cambia el resultado en el accidente no laboral con meses sin cotizar en ese periodo.',
       },
     },
   },

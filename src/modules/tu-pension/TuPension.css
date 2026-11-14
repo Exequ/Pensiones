@@ -546,6 +546,34 @@
 
 /* --- Lecturas alternativas y enlace compartible (Fase 3-B2) --- */
 
+/* Nota plegable de las lecturas de jubilación que rigen en la incapacidad (ajustes actuariales 1). */
+.tp-jubilacion-aplicada {
+  margin-top: var(--espacio-4);
+  padding-top: var(--espacio-3);
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+}
+
+.tp-jubilacion-aplicada summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--objetivo-tactil);
+  font-weight: var(--peso-semi);
+  cursor: pointer;
+}
+
+.tp-jubilacion-aplicada > * + * {
+  margin-top: var(--espacio-3);
+}
+
+.tp-lecturas-aplicadas {
+  display: grid;
+  gap: var(--espacio-2);
+  margin: 0;
+  padding-left: var(--espacio-4);
+}
+
 .tp-restablecer {
   display: flex;
   flex-wrap: wrap;

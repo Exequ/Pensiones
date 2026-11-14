@@ -1,7 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { ArchivoPersonas } from '../../engine/esquema-datos';
 import { formularioAEntrada } from './mapeador';
-import { describirPersona, cargarPersona, type PersonaEjemplo } from './personas';
+import {
+  describirPersona,
+  cargarPersona,
+  notaSalarioMedioIlustrativo,
+  type PersonaEjemplo,
+} from './personas';
 import { personasDeRepositorio } from './personas-datos';
 import { crearMotorDelRepositorio } from './motor';
 import { FORMULARIO_BASE } from './pruebas';
@@ -87,6 +92,50 @@ describe('personas-ejemplo de /data', () => {
     expect(d).toContain(`a los ${String(p.edadInicio)} años`);
     expect(d).toContain('sin cotizar durante');
     expect(d).toContain('hasta el mes anterior a la jubilación');
+  });
+});
+
+describe('«salario medio ilustrativo» (ajustes actuariales 1)', () => {
+  it('la persona de la carrera completa y las que usan la referencia «media» no hablan de «base media de cotización»', () => {
+    const p = persona('carrera-completa-base-media');
+    expect(p.id).toBe('carrera-completa-base-media'); // el id no cambia: lo usan los enlaces (`pe=`)
+    expect(p.nombre).toBe('Carrera completa con salario medio ilustrativo');
+    expect(p.descripcion).toContain('salario medio ilustrativo');
+    for (const x of personas) {
+      expect(`${x.nombre} ${x.descripcion} ${describirPersona(x)}`).not.toMatch(/base media/i);
+    }
+    expect(describirPersona(p)).toContain('con el salario medio ilustrativo hasta el mes anterior');
+  });
+
+  it('no cambia ni los valores ni el cálculo: los mismos tramos y la misma edad de inicio', () => {
+    const p = persona('carrera-completa-base-media');
+    expect(p.edadInicio).toBe(22);
+    expect(p.tramos).toEqual([{ hastaJubilacion: true, referencia: 'media' }]);
+    const r = cargarPersona(p, CTX);
+    expect(r.ok).toBe(true);
+    if (r.ok) expect(r.tramos[0]?.referencia).toBe('media');
+  });
+
+  it('la nota dice qué cubre la definición elegida y que antes de su primer año no se completa con otra serie', () => {
+    const media = catalogo.referencias.find((r) => r.id === catalogo.mediaPorDefecto)!;
+    const nota = notaSalarioMedioIlustrativo(catalogo, catalogo.mediaPorDefecto);
+    expect(nota).toContain(media.etiqueta);
+    expect(nota).toContain(String(media.primerAnio));
+    expect(nota).toContain(String(media.ultimoAnio));
+    expect(nota).toMatch(/no los completa con otra serie/);
+    // Las definiciones de salario que empiezan antes se citan con su primer año y como salarios.
+    const anteriores = catalogo.referencias.filter(
+      (r) => r.tipo === 'media' && r.primerAnio < media.primerAnio,
+    );
+    expect(anteriores.length).toBeGreaterThan(0);
+    for (const r of anteriores)
+      expect(nota).toContain(`${r.etiqueta} (desde ${String(r.primerAnio)})`);
+    expect(nota).toMatch(/salarios y no bases de cotización/);
+    // La definición más antigua no menciona otras que empiecen antes.
+    const masAntigua = [...catalogo.referencias.filter((r) => r.tipo === 'media')].sort(
+      (a, b) => a.primerAnio - b.primerAnio,
+    )[0]!;
+    expect(notaSalarioMedioIlustrativo(catalogo, masAntigua.id)).not.toMatch(/empiezan antes/);
   });
 });
 

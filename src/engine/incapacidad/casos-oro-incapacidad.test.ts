@@ -191,6 +191,32 @@ const CASOS: readonly CasoOro[] = [
     esperado: { baseReguladora: 2571.4286, pensionMensual: 1414.2857 },
   },
   {
+    id: 'total-anl-lagunas-sin-integrar',
+    etiqueta: 'derivado de la norma',
+    cuenta:
+      'Carrera de 18 meses a 2.000 (2024-01 a 2025-06); periodo elegido 2024-01 a 2025-12 con 6 meses sin cotizar contados como cero (lectura «sin-integrar», valor por defecto desde el 14-11-2026): 36.000 / 28 = 1.285,7143; 55 % = 707,1429',
+    carrera: [c('2024-01', '2025-06', 2000)],
+    nacimiento: '1981-03-10',
+    hc: '2026-03-15',
+    grado: 'total',
+    origen: 'accidente-no-laboral',
+    opciones: { ...BASE, lecturasIncapacidad: { lagunasAccidenteNoLaboral: 'sin-integrar' } },
+    esperado: { baseReguladora: 1285.7143, pensionMensual: 707.1429 },
+  },
+  {
+    id: 'total-anl-lagunas-integrar',
+    etiqueta: 'derivado de la norma',
+    cuenta:
+      'Mismo caso con la lectura «integrar»: las 6 lagunas (2025-07 a 2025-12) se integran al 100 % de la base mínima de 2025 (6 × 1.381,20 = 8.287,20; son menos de 48 meses): (36.000 + 8.287,20) / 28 = 1.581,6857; 55 % = 869,9271',
+    carrera: [c('2024-01', '2025-06', 2000)],
+    nacimiento: '1981-03-10',
+    hc: '2026-03-15',
+    grado: 'total',
+    origen: 'accidente-no-laboral',
+    opciones: { ...BASE, lecturasIncapacidad: { lagunasAccidenteNoLaboral: 'integrar' } },
+    esperado: { baseReguladora: 1581.6857, pensionMensual: 869.9271 },
+  },
+  {
     id: 'total-anl-periodo-elegido',
     etiqueta: 'derivado de la norma',
     cuenta: 'Periodo elegido 2024-01 a 2025-12: 24 × 1.800 / 28 = 1.542,8571; 55 % = 848,5714',

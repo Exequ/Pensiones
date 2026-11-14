@@ -37,8 +37,14 @@ export const TEXTOS_INCAPACIDAD_PROPIOS = {
     'El grado y el origen los fija el organismo competente tras una valoración médica; aquí son datos que eliges para ver cómo se calcularía la prestación.',
   gradoLeyenda: 'Grado de incapacidad',
   origenLeyenda: 'Origen de la incapacidad',
-  origenNoDisponible:
-    'Accidente de trabajo y enfermedad profesional no están disponibles: su base reguladora se calcula con el salario real, con conceptos que la carrera de cotización de este simulador no recoge. Aparecen desactivados y se explican entre las limitaciones del cálculo.',
+  origenAyuda:
+    'En el accidente de trabajo y en la enfermedad profesional la base reguladora se calcula con el salario real, con conceptos que la carrera de cotización de este simulador no recoge: por eso aquí la escribes tú.',
+  baseReguladoraEtiqueta: 'Base reguladora mensual (€)',
+  baseReguladoraAyuda: 'La que figura en tu resolución o la que hayas calculado por tu cuenta.',
+  baseReguladoraAyudaParcial:
+    'En la incapacidad parcial, la base reguladora mensual de la incapacidad temporal de la que deriva: con ella se calcula la cantidad a tanto alzado.',
+  baseReguladoraAviso:
+    'Esta web no calcula la base reguladora a partir del salario real: usa la que escribes aquí, sin comprobarla. El resultado depende de ese dato.',
   enAltaLeyenda: 'Situación en el hecho causante',
   enAltaSi: 'En alta o situación asimilada',
   enAltaNo: 'Sin alta',
@@ -57,13 +63,20 @@ export const TEXTOS_INCAPACIDAD_PROPIOS = {
     'En este resultado influyen dudas de interpretación de la norma que todavía no están decididas con firmeza. Se muestran con su estado y con el efecto de la alternativa, sin recomendar ninguna.',
   intervienenAnlTitulo: 'Accidente no laboral: meses sin cotizar dentro del periodo elegido',
   intervienenAnlIntro:
-    'Con este origen, la forma de tratar los meses sin cotizar del periodo elegido puede cambiar la base reguladora. La lectura está en estado provisional: sigue abierta a revisión.',
+    'Con este origen, la forma de tratar los meses sin cotizar del periodo elegido puede cambiar la base reguladora. La lectura sigue abierta a revisión: su estado y su motivo se muestran debajo, junto con el efecto de la alternativa.',
   intervienenEstado: 'Estado',
   intervienenMotivo: 'Motivo del registro',
   intervienenEfecto: 'Efecto de la alternativa',
   intervienenSinEfecto: 'Con tus datos no se ha podido medir el efecto de la alternativa.',
   intervienenNota:
     'Un estado provisional o pendiente significa que la revisión actuarial no ha cerrado la lectura; no indica cuál es la correcta. Puedes cambiarla en «Supuestos y lecturas».',
+  // Nota plegable de las lecturas de jubilación que rigen en la incapacidad
+  jubilacionAplicadaTitulo: 'Qué lecturas de jubilación se aplican aquí',
+  jubilacionAplicadaIntro:
+    'El cálculo de la incapacidad comparte con el de la jubilación parte de su mecánica: la actualización de las bases con el IPC, el relleno de los meses sin cotizar y los límites de la base y de la pensión máxima. Por eso le afectan estas lecturas de jubilación. Aquí se aplican con el valor de por defecto del registro y no se pueden cambiar: las que se cambian en la pantalla de jubilación no pasan a la incapacidad.',
+  jubilacionAplicadaValor: 'Valor aplicado',
+  jubilacionAplicadaEstado: 'Estado',
+  jubilacionAplicadaEnlace: 'Ir a la pantalla de jubilación',
   // Gráfico
   sinGrafico:
     'El motor de incapacidad no expone las bases mes a mes del periodo de cálculo, por lo que este resultado no incluye el gráfico de bases.',
