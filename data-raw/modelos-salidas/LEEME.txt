@@ -1,0 +1,6 @@
+Salidas de los modelos M1 a M4 de la web de pensiones.
+Ejecutadas por Sergio en local el 2026-11-14, con el código de modelos/ del repositorio (último commit que modifica modelos/: 15651e8).
+Escenario: g = 1 %, IPC = 2 %, legislación congelada (valores por defecto de cada script).
+Orden de ejecución: M1, M3, M2, M4. Los tests de cada modelo pasaron antes de generar las salidas (M1: 7, M2: 6, M3: 7, M4: 12).
+Ficheros: m1/m1_contraste_ine.csv, m1/m1_backtest.csv, m1/m1_escenarios.csv, m2/m2_cotizantes.csv, m2/m2_relacion_pensiones.csv, m3/m3_pensiones.csv, m3/m3_resumen.csv, m4/m4_financiero.csv.
+Son resultados de un modelo propio, no datos de una fuente oficial.
