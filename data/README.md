@@ -5,16 +5,17 @@ Cada fichero JSON de esta carpeta sigue el esquema `ArchivoDatos` de
 `npm run validate:data`, que falla si algún valor numérico no tiene una fuente con URL y
 fecha de descarga (`fetchedAt`).
 
-| Carpeta          | Contenido                                                          |
-| ---------------- | ------------------------------------------------------------------ |
-| `normativa/`     | Parámetros fijados por ley o reglamento (con referencia al BOE).   |
-| `parametros/`    | Parámetros anuales del sistema: bases, topes, revalorización…      |
-| `sistema/`       | Estadísticas del sistema: pensiones, gasto, ingresos, afiliación.  |
-| `demografia/`    | Población, mortalidad, fecundidad, migraciones y proyecciones.     |
-| `macro/`         | PIB, mercado de trabajo, salarios y tipos de interés.              |
-| `internacional/` | Comparativa internacional (OCDE y Eurostat) y contraste de España. |
-| `mitos/`         | Catálogo de afirmaciones circulantes, con datos y definiciones.    |
-| `ejemplos/`      | Personas-ejemplo ilustrativas del simulador (elaboración propia).  |
+| Carpeta          | Contenido                                                            |
+| ---------------- | -------------------------------------------------------------------- |
+| `normativa/`     | Parámetros fijados por ley o reglamento (con referencia al BOE).     |
+| `parametros/`    | Parámetros anuales del sistema: bases, topes, revalorización…        |
+| `sistema/`       | Estadísticas del sistema: pensiones, gasto, ingresos, afiliación.    |
+| `demografia/`    | Población, mortalidad, fecundidad, migraciones y proyecciones.       |
+| `macro/`         | PIB, mercado de trabajo, salarios y tipos de interés.                |
+| `internacional/` | Comparativa internacional (OCDE y Eurostat) y contraste de España.   |
+| `mitos/`         | Catálogo de afirmaciones circulantes, con datos y definiciones.      |
+| `ejemplos/`      | Personas-ejemplo ilustrativas del simulador (elaboración propia).    |
+| `proyecciones/`  | Salidas de los modelos propios M1, M2 y M3 (proyecciones de modelo). |
 
 Los ejemplos de los tests están en `scripts/fixtures/` y **no** deben copiarse aquí.
 
@@ -119,6 +120,10 @@ Generados por `scripts/etl/jubilacion_reglas.py` (cita literal comprobada por c�
 | `lagunas-integracion-brecha-genero`                                          | DT 41.ª: mensualidades 49.ª a 84.ª y porcentajes de la base mínima                   | 2026                             | mensualidad; %                 |
 | `pension-maxima-incremento-2051-2065`                                        | Tabla de la DT 39.ª.4                                                                | 2051-2065                        | puntos porcentuales            |
 | `complemento-brecha-genero-reglas`                                           | Art. 60: hijos, tope de 4 veces, límite máximo, mínimas, parcial, número de pagas    | desde 2023                       | hijos; veces; indicador; pagas |
+
+## Contenido (Fase 5-B1: `proyecciones/`)
+
+Salidas de los modelos propios M1, M2 y M3, **proyecciones de modelo y no datos observados** (`tipo: "proyeccion"`, `naturaleza: "proyeccion-de-modelo"`). Detalle, escenario, procedencia y cómo regenerarlas en [proyecciones/README.md](proyecciones/README.md).
 
 ## Formato
 

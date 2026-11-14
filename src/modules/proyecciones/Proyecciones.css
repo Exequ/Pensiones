@@ -1,0 +1,43 @@
+/* Página «Proyecciones» (Fase 5-B1): solo tokens de src/styles/tokens.css. */
+
+.proy-controles {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-4);
+  margin-top: var(--espacio-5);
+}
+
+.proy-selector {
+  max-width: 14rem;
+}
+
+.proy-funciona {
+  margin-top: var(--espacio-6);
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  border-bottom: var(--grosor-filete) solid var(--color-filete);
+}
+
+.proy-funciona summary {
+  display: flex;
+  align-items: center;
+  min-height: var(--objetivo-tactil);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta);
+  cursor: pointer;
+}
+
+.proy-funciona summary:hover {
+  color: var(--color-acento);
+}
+
+.proy-funciona[open] summary {
+  border-bottom: var(--grosor-filete) solid var(--color-filete);
+}
+
+.proy-funciona-contenido {
+  padding-block: var(--espacio-4);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-cuerpo);
+}

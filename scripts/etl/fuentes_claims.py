@@ -89,6 +89,8 @@ for ruta in sorted(glob.glob(f'{REPO}/data/*/*.json')):
             anota(x['crossCheck']['source'], rel)
     for s in d.get('series', []):
         anota(s['source'], rel)
+    if d.get('tipo') == 'proyeccion':
+        anota(d['source'], rel, d.get('fetchedAt', HOY))
     if d.get('tipo') == 'tabla':
         anota(d['source'], rel, d.get('fetchedAt', HOY))
         for o in d.get('origenes', []):

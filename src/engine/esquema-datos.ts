@@ -59,6 +59,25 @@ export const Confianza = z.enum(['alta', 'media', 'baja'], {
   error: 'confidence debe ser "alta", "media" o "baja"',
 });
 
+/**
+ * Naturaleza de un dato (Fase 5-B1). Distingue lo que mide una fuente (`observado`), lo que se
+ * calcula a partir de datos observados (`derivado`), la proyección que publica una institución
+ * (`proyeccion-publicada`: INE, Ageing Report) y lo que produce un modelo propio con supuestos
+ * explícitos (`proyeccion-de-modelo`). Es opcional en los datos anteriores a la Fase 5-B1, que se
+ * entienden `observado` o `derivado` según sus notas; es obligatoria en los ficheros de
+ * `data/proyecciones/` y la interfaz la muestra siempre junto a la fuente.
+ */
+export const NATURALEZAS = [
+  'observado',
+  'derivado',
+  'proyeccion-publicada',
+  'proyeccion-de-modelo',
+] as const;
+export const Naturaleza = z.enum(NATURALEZAS, {
+  error:
+    'naturaleza debe ser "observado", "derivado", "proyeccion-publicada" o "proyeccion-de-modelo"',
+});
+
 /** Valor de un dato: número finito o texto (para reglas o datos cualitativos). */
 const ValorDato = z.union([z.number(), z.string().trim().min(1)], {
   error: 'value debe ser un número finito o un texto no vacío',
@@ -84,6 +103,8 @@ const camposDato = {
   source: Fuente,
   fetchedAt: FechaDescarga,
   confidence: Confianza,
+  /** Naturaleza del dato; solo es obligatoria en las proyecciones de modelo. */
+  naturaleza: Naturaleza.optional(),
   notes: z.string().trim().min(1).optional(),
   /** Cita literal del documento donde aparece el valor. */
   quote: z.string().trim().min(1).optional(),
@@ -119,6 +140,7 @@ export const Serie = z
     source: Fuente,
     fetchedAt: FechaDescarga,
     confidence: Confianza,
+    naturaleza: Naturaleza.optional(),
     notes: z.string().trim().min(1).optional(),
     points: z.array(PuntoSerie).min(1, { error: 'La serie debe tener al menos un punto' }),
   })
@@ -445,6 +467,110 @@ export const ArchivoTabla = z.strictObject({
 });
 
 // ---------------------------------------------------------------------------
+// Salidas de modelos propios (Fase 5-B1): proyecciones, no observaciones
+// ---------------------------------------------------------------------------
+
+export const MODELOS_PROYECCION = ['m1', 'm2', 'm3'] as const;
+
+/** Columna de una salida de modelo: cada celda de `filas` es un número o un texto según `tipo`. */
+export const ColumnaProyeccion = z.strictObject({
+  id: z.string().regex(/^[a-z0-9_%-]+$/, { error: 'id de columna con formato no válido' }),
+  descripcion: textoObligatorio('columna.descripcion'),
+  tipo: z.enum(['numero', 'texto']),
+  /** Unidad de la columna; `null` para identificadores y categorías. */
+  unidad: z.string().trim().min(1).nullable(),
+});
+
+/**
+ * Escenario con el que se ejecutó el modelo: crecimiento real de los salarios (`g`), IPC (ambos como
+ * fracción: 0,01 = 1 %) y legislación congelada. Se lee del LEEME de las salidas.
+ */
+export const EscenarioProyeccion = z.strictObject({
+  g: z.number({ error: 'escenario.g debe ser un número' }),
+  ipc: z.number({ error: 'escenario.ipc debe ser un número' }),
+  legislacion: z.literal('congelada', { error: 'escenario.legislacion debe ser "congelada"' }),
+  /** Frase del LEEME que lo describe, tal cual. */
+  literal: textoObligatorio('escenario.literal'),
+  /** Qué parte del escenario influye en esta salida (según la descripción del modelo). */
+  aplicacion: textoObligatorio('escenario.aplicacion'),
+});
+
+/** Procedencia del CSV que generó el fichero: ruta, huella y versión del código del modelo. */
+export const OrigenProyeccion = z.strictObject({
+  csv: textoObligatorio('origen.csv'),
+  sha256: z.string().regex(/^[0-9a-f]{64}$/, { error: 'sha256 no válido' }),
+  /** Último commit que modifica `modelos/`, según el LEEME. */
+  commitModelos: z
+    .string()
+    .regex(/^[0-9a-f]{40}$/, { error: 'commitModelos debe ser el hash completo' }),
+  leeme: textoObligatorio('origen.leeme'),
+  /** Fecha de ejecución de los modelos, según el LEEME (AAAA-MM-DD). */
+  ejecutadoEl: z.iso.date({ error: 'ejecutadoEl debe ser una fecha AAAA-MM-DD' }),
+});
+
+export const ModeloProyeccion = z.strictObject({
+  id: z.enum(MODELOS_PROYECCION),
+  nombre: textoObligatorio('modelo.nombre'),
+  /** Descripción del modelo en el repositorio (docs/modelos/Mx_descripcion.md). */
+  descripcion: textoObligatorio('modelo.descripcion'),
+  /**
+   * Último año hasta el que el modelo se presenta como resultado; lo posterior es ilustrativo
+   * (solo M1; se lee de su descripción).
+   */
+  horizontePresentacion: z.number().int().optional(),
+  /** Año de los euros reales de la salida (solo M2; se lee del nombre de la columna). */
+  anioBaseReal: z.number().int().optional(),
+});
+
+/**
+ * Salida de un modelo propio (M1, M2 o M3), una tabla por CSV. No es un dato observado: lleva
+ * `naturaleza: "proyeccion-de-modelo"`, el escenario, el commit del código y la huella del CSV.
+ * `validate:data` exige este esquema a todo fichero de `data/proyecciones/`.
+ */
+export const ArchivoProyeccion = z
+  .strictObject({
+    tipo: z.literal('proyeccion'),
+    id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
+    title: textoObligatorio('title'),
+    description: textoObligatorio('description'),
+    naturaleza: z.literal('proyeccion-de-modelo', {
+      error: 'Toda salida de modelo debe llevar naturaleza: "proyeccion-de-modelo"',
+    }),
+    modelo: ModeloProyeccion,
+    escenario: EscenarioProyeccion,
+    source: Fuente,
+    fetchedAt: FechaDescarga,
+    confidence: Confianza,
+    origen: OrigenProyeccion,
+    columnas: z.array(ColumnaProyeccion).min(2),
+    filas: z.array(z.array(z.union([z.number(), z.string()]))).min(1),
+    notes: z.string().trim().min(1).optional(),
+  })
+  .superRefine((archivo, ctx) => {
+    archivo.filas.forEach((fila, i) => {
+      if (fila.length !== archivo.columnas.length) {
+        ctx.addIssue({
+          code: 'custom',
+          message: `La fila ${i} tiene ${fila.length} celdas y hay ${archivo.columnas.length} columnas`,
+          path: ['filas', i],
+        });
+        return;
+      }
+      archivo.columnas.forEach((columna, j) => {
+        const celda = fila[j];
+        const esperado = columna.tipo === 'numero' ? 'number' : 'string';
+        if (typeof celda !== esperado || (typeof celda === 'number' && !Number.isFinite(celda))) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `La celda «${columna.id}» de la fila ${i} debe ser ${columna.tipo === 'numero' ? 'un número finito' : 'un texto'}`,
+            path: ['filas', i, j],
+          });
+        }
+      });
+    });
+  });
+
+// ---------------------------------------------------------------------------
 // Personas-ejemplo de «Tu pensión» (ilustrativas, elaboración propia)
 // ---------------------------------------------------------------------------
 
@@ -517,6 +643,8 @@ export type ArchivoPersonas = z.infer<typeof ArchivoPersonas>;
 export type PersonaEjemplo = z.infer<typeof PersonaEjemplo>;
 
 export type ArchivoTabla = z.infer<typeof ArchivoTabla>;
+export type ArchivoProyeccion = z.infer<typeof ArchivoProyeccion>;
+export type Naturaleza = z.infer<typeof Naturaleza>;
 export type Periodo = z.infer<typeof Periodo>;
 export type Fuente = z.infer<typeof Fuente>;
 export type Confianza = z.infer<typeof Confianza>;

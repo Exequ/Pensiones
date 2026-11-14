@@ -4930,7 +4930,7 @@
     {
       "id": "web-hist-complemento-pension",
       "texto": "El complemento a mínimos forma parte de lo que se abona al pensionista como parte de su pensión y, por tanto, está incluido en la pensión media de las pensiones en vigor. Es una afirmación de la revisión actuarial del 14-11-2026: en las fuentes descargadas no hay una frase de la Seguridad Social que lo confirme (la fuente calcula el importe medio a partir de los importes de la nómina de pensiones y publica aparte las pensiones con complemento a mínimos).",
-      "ubicacion": "Página «Cotizantes y pensionistas»: advertencias sobre la pensión media; Páginas «Financiación y déficit» y «Hucha»: referencia con complemento a mínimos",
+      "ubicacion": "Páginas «Financiación y déficit» y «Hucha»: referencia con complemento a mínimos (la advertencia de la página «Cotizantes y pensionistas» se retiró en la Fase 5-B1)",
       "datos": ["sistema/pensiones-vigor-pension-media.json#total-ambos"],
       "fuentes": [
         {
@@ -4941,7 +4941,106 @@
       ],
       "fetchedAt": "2026-11-14",
       "estado": "pendiente",
-      "notas": "Sin verificar: se anota en docs/PENDIENTE_DATOS.md. Indicio no concluyente: el texto refundido llama a los complementos «complementos por mínimos de las pensiones» (art. 109.3.b.4.ª)."
+      "notas": "Sin verificar: se anota en docs/PENDIENTE_DATOS.md. Fase 5-B1: la advertencia «incluye los complementos a mínimos» se quita de las advertencias de la pensión media de «Cotizantes y pensionistas»; la afirmación sigue pendiente de una fuente. Indicio no concluyente: el texto refundido llama a los complementos «complementos por mínimos de las pensiones» (art. 109.3.b.4.ª)."
+    },
+    {
+      "id": "web-proy-pensiones-observado-diciembre",
+      "texto": "Las pensiones contributivas en vigor observadas que se muestran junto a la proyección de M3 son las de principios de diciembre de cada año; la proyección del modelo corresponde a octubre (según el LEEME y la descripción de M3, elaboración propia).",
+      "ubicacion": "Página «Proyecciones» (Fase 5-B1)",
+      "datos": ["sistema/pensiones-vigor-numero.json#total-ambos"],
+      "fuentes": [
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "notas": "La fecha de la proyección (octubre) procede de la descripción de M3 en docs/modelos/M3_descripcion.md; no es una afirmación de datos observados."
+    },
+    {
+      "id": "web-proy-ageing-pensionistas",
+      "texto": "El Ageing Report 2024 publica una proyección del número de pensionistas públicos de España (tabla II.1.76, en miles), con el escenario de referencia (baseline).",
+      "ubicacion": "Página «Proyecciones» (Fase 5-B1)",
+      "datos": ["demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-76"],
+      "fuentes": [
+        {
+          "title": "The 2024 Ageing Report: Economic and Budgetary Projections for the EU Member States (2022-2070), Statistical annex: cross-country tables",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en",
+          "docId": "ip279"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-proy-ageing-apoyo",
+      "texto": "El Ageing Report 2024 publica la relación de cotizantes por cada cien pensionistas de las pensiones públicas de España (tabla II.1.84, «support ratio»).",
+      "ubicacion": "Página «Proyecciones» (Fase 5-B1)",
+      "datos": ["demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-84"],
+      "fuentes": [
+        {
+          "title": "The 2024 Ageing Report: Economic and Budgetary Projections for the EU Member States (2022-2070), Statistical annex: cross-country tables",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en",
+          "docId": "ip279"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-proy-ageing-supuestos",
+      "texto": "El Ageing Report 2024 es una proyección de la Comisión Europea y del Comité de Política Económica con sus propios supuestos demográficos (fecundidad), de empleo y de productividad (tablas II.1.1, II.1.15 y II.1.17).",
+      "ubicacion": "Página «Proyecciones» (Fase 5-B1)",
+      "datos": [
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-1",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-15",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-17"
+      ],
+      "fuentes": [
+        {
+          "title": "The 2024 Ageing Report: Economic and Budgetary Projections for the EU Member States (2022-2070), Statistical annex: cross-country tables",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en",
+          "docId": "ip279"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-proy-afiliados-diciembre",
+      "texto": "Los afiliados de diciembre observados que se muestran junto a la proyección de M2 son los afiliados medios del mes de diciembre del total del sistema (todos los regímenes y sistemas especiales).",
+      "ubicacion": "Página «Proyecciones» (Fase 5-B1)",
+      "datos": ["sistema/afiliacion-anual.json#diciembre-total-sistema"],
+      "fuentes": [
+        {
+          "title": "Afiliados medios en alta por regímenes (serie 2001-2026, total sistema)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST290/EST291"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada"
+    },
+    {
+      "id": "web-proy-relacion-historico",
+      "texto": "La definición histórica más próxima a la del modelo en «Cotizantes y pensionistas» divide los afiliados medios de diciembre entre las pensiones contributivas en vigor (no personas), a primero de diciembre.",
+      "ubicacion": "Página «Proyecciones» (Fase 5-B1)",
+      "datos": ["sistema/relacion-afiliados-pensiones.json#afiliados-diciembre-por-pension"],
+      "fuentes": [
+        {
+          "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "notas": "Dato derivado (cociente de dos series de /data/sistema). La definición del modelo (pensiones de octubre) procede de la descripción de M2, elaboración propia."
     }
   ]
 }

@@ -21,6 +21,9 @@ const CotizantesYPensionistas = lazy(() => import('./cotizantes-y-pensionistas/P
 const FinanciacionYDeficit = lazy(() => import('./financiacion-y-deficit/Pagina'));
 const Hucha = lazy(() => import('./hucha/Pagina'));
 
+/** «Proyecciones» (Fase 5-B1) también se carga solo al visitarla: arrastra las salidas de los modelos. */
+const Proyecciones = lazy(() => import('./proyecciones/Pagina'));
+
 /** Componente de página de cada sección, indexado por su ruta. */
 export const PAGINAS: Record<SlugSeccion, ComponentType> = {
   'tu-pension': TuPension,
@@ -30,6 +33,7 @@ export const PAGINAS: Record<SlugSeccion, ComponentType> = {
   'financiacion-y-deficit': FinanciacionYDeficit,
   hucha: Hucha,
   'cotizantes-y-pensionistas': CotizantesYPensionistas,
+  proyecciones: Proyecciones,
   'otros-sistemas': OtrosSistemas,
   'mitos-y-realidades': MitosYRealidades,
   metodologia: Metodologia,

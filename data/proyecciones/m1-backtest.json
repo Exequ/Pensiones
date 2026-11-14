@@ -1,0 +1,141 @@
+{
+  "tipo": "proyeccion",
+  "id": "m1-backtest",
+  "title": "M1 · Prueba hacia atrás (2011-2025): población del modelo frente a la observada",
+  "description": "Partiendo de la población de 2010 y con las tasas realmente observadas, el modelo proyecta la población de los años siguientes; este fichero la compara con la población observada (INE) a 1 de enero. Mide cuánto se aparta el modelo de lo ocurrido; no mide el acierto de una proyección hacia el futuro (M1, apartado 7).",
+  "naturaleza": "proyeccion-de-modelo",
+  "modelo": {
+    "id": "m1",
+    "nombre": "M1 · Modelo demográfico",
+    "descripcion": "docs/modelos/M1_descripcion.md",
+    "horizontePresentacion": 2050
+  },
+  "escenario": {
+    "g": 0.01,
+    "ipc": 0.02,
+    "legislacion": "congelada",
+    "literal": "Escenario: g = 1 %, IPC = 2 %, legislación congelada (valores por defecto de cada script)",
+    "aplicacion": "g e IPC no intervienen en la demografía; las variantes de fecundidad, mortalidad y migración se indican en cada escenario."
+  },
+  "source": {
+    "title": "M1 · Modelo demográfico: código del modelo en el repositorio y salidas de su ejecución",
+    "publisher": "Elaboración propia: modelo de proyección",
+    "url": "https://github.com/Exequ/Pensiones/blob/15651e83ec29111cffee572346a9c746ee1e57e0/modelos/m1/m1_demografia.py"
+  },
+  "fetchedAt": "2026-11-14",
+  "confidence": "media",
+  "origen": {
+    "csv": "data-raw/modelos-salidas/m1/m1_backtest.csv",
+    "sha256": "6b5b2fb58c0b69a19f0ceb8fe0a8897ec0a8d71f00e8189ed9f3d05b948be70e",
+    "commitModelos": "15651e83ec29111cffee572346a9c746ee1e57e0",
+    "leeme": "data-raw/modelos-salidas/LEEME.txt",
+    "ejecutadoEl": "2026-11-14"
+  },
+  "columnas": [
+    {
+      "id": "anio",
+      "descripcion": "Año (población a 1 de enero)",
+      "tipo": "numero",
+      "unidad": null
+    },
+    {
+      "id": "total_m1",
+      "descripcion": "Población total calculada por el modelo",
+      "tipo": "numero",
+      "unidad": "personas"
+    },
+    {
+      "id": "total_real",
+      "descripcion": "Población total observada",
+      "tipo": "numero",
+      "unidad": "personas"
+    },
+    {
+      "id": "err_total_%",
+      "descripcion": "Error en la población total: (modelo − observado) / observado",
+      "tipo": "numero",
+      "unidad": "%"
+    },
+    {
+      "id": "err_65_mas_%",
+      "descripcion": "Error en la población de 65 años o más",
+      "tipo": "numero",
+      "unidad": "%"
+    },
+    {
+      "id": "err_16_64_%",
+      "descripcion": "Error en la población de 16 a 64 años",
+      "tipo": "numero",
+      "unidad": "%"
+    },
+    {
+      "id": "err_0_15_%",
+      "descripcion": "Error en la población de 0 a 15 años",
+      "tipo": "numero",
+      "unidad": "%"
+    }
+  ],
+  "filas": [
+    [
+      2011, 46551070.5783602, 46667174.0, -0.24879034166457314, -0.15540494281788275,
+      -0.2999191581930738, -0.13419538799466224
+    ],
+    [
+      2012, 46600619.36738146, 46818219.0, -0.4647755452178548, -0.27072205075604483,
+      -0.5537397376288444, -0.30518441461391266
+    ],
+    [
+      2013, 46511755.16061276, 46712650.0, -0.4300651737532246, -0.14130615212847308,
+      -0.5722193409925302, -0.1615785509401113
+    ],
+    [
+      2014, 46297403.40742369, 46495744.0, -0.4265779521160251, -0.041387000841275334,
+      -0.6246669624945467, -0.049972845402290744
+    ],
+    [
+      2015, 46235577.3585152, 46425722.0, -0.4095674408354899, 0.07358900985359185,
+      -0.6562552247327602, 0.04035476356878398
+    ],
+    [
+      2016, 46232146.4388904, 46418884.0, -0.40228791607657133, 0.15466359481473013,
+      -0.6952865058854063, 0.14205840877712372
+    ],
+    [
+      2017, 46320509.99164325, 46497393.0, -0.3804148941355723, 0.23037976185944498,
+      -0.7154494169274606, 0.26409891920382567
+    ],
+    [
+      2018, 46453268.94738609, 46645070.0, -0.41119254963901675, 0.2573624374208716,
+      -0.7782542016601779, 0.2876989061784796
+    ],
+    [
+      2019, 46732206.5096649, 46918951.0, -0.3980150586382458, 0.31830918104716055,
+      -0.7950977771333134, 0.36557557899494775
+    ],
+    [
+      2020, 47127308.55977345, 47318050.0, -0.40310503122286123, 0.37029150463807614,
+      -0.8205458040442593, 0.3791361246163527
+    ],
+    [
+      2021, 47192339.655896924, 47400798.0, -0.43977813222274564, 0.3739312778998194,
+      -0.8780387822600821, 0.38651927535113817
+    ],
+    [
+      2022, 47268254.265484676, 47486727.0, -0.4600711573895633, 0.31541743469549743,
+      -0.8634209120083947, 0.26075745832867536
+    ],
+    [
+      2023, 47861700.57294943, 48085361.0, -0.4651320534966308, 0.26320593085988886,
+      -0.8337667736905585, 0.17249198506334995
+    ],
+    [
+      2024, 48389025.959971026, 48619695.0, -0.4744353909027499, 0.19794431439923432,
+      -0.7999375503028539, 0.048639547216211554
+    ],
+    [
+      2025, 48898629.63752667, 49128297.0, -0.46748488447163616, 0.1541334461859778,
+      -0.7305722520935976, -0.1603900450848572
+    ]
+  ],
+  "notes": "Los errores son (modelo − observado) / observado, en %."
+}

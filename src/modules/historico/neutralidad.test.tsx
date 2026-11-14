@@ -1,6 +1,6 @@
 /**
  * Neutralidad verificable (regla c de CLAUDE.md): el texto renderizado de las páginas «Hucha»,
- * «Financiación y déficit» y «Cotizantes y pensionistas», incluidas las citas de fuentes y las
+ * «Financiación y déficit», «Cotizantes y pensionistas» y «Proyecciones» (Fase 5-B1), incluidas las citas de fuentes y las
  * tablas de datos, no usa palabras de valoración (lista en `scripts/lib/valoraciones.ts`). Si una cita literal de una fuente
  * contuviera una de ellas, el test fallaría y habría que decidir si se muestra.
  */
@@ -11,11 +11,13 @@ import { valoracionesEn } from '../../../scripts/lib/valoraciones.ts';
 import Cotizantes from '../cotizantes-y-pensionistas/Pagina';
 import Financiacion from '../financiacion-y-deficit/Pagina';
 import Hucha from '../hucha/Pagina';
+import Proyecciones from '../proyecciones/Pagina';
 
 describe.each([
   { nombre: 'Hucha', Pagina: Hucha },
   { nombre: 'Financiación y déficit', Pagina: Financiacion },
   { nombre: 'Cotizantes y pensionistas', Pagina: Cotizantes },
+  { nombre: 'Proyecciones', Pagina: Proyecciones },
 ])('neutralidad de la página «$nombre»', ({ Pagina }) => {
   it('el texto renderizado no contiene palabras de valoración', () => {
     const { container } = render(

@@ -4,17 +4,17 @@ import { esperarPagina, url, vigilar } from './utilidades.ts';
 
 /** Total por enfermedad común: nacida en marzo de 1981, 26 años cotizados a 2.000 €, hecho causante en marzo de 2026. */
 async function rellenar(page: Page, grado = 'Total', origen = 'Enfermedad común') {
-  await page.getByRole('radio', { name: 'Incapacidad permanente' }).check({ force: true });
+  await page.getByRole('radio', { name: 'Incapacidad permanente' }).check();
   await page.getByLabel('Mes de nacimiento').selectOption('3');
   await page.getByLabel('Año de nacimiento').fill('1981');
-  await page.getByRole('radio', { name: 'Hombre' }).check({ force: true });
+  await page.getByRole('radio', { name: 'Hombre' }).check();
   await page.getByLabel('Mes del hecho causante').selectOption('3');
   await page.getByLabel('Año del hecho causante').fill('2026');
   await page.getByLabel('Mes de inicio de la cotización').selectOption('1');
   await page.getByLabel('Año de inicio de la cotización').fill('2000');
   await page.getByLabel('Base mensual de cotización (euros)').fill('2000');
-  await page.getByRole('radio', { name: grado, exact: true }).check({ force: true });
-  await page.getByRole('radio', { name: origen, exact: true }).check({ force: true });
+  await page.getByRole('radio', { name: grado, exact: true }).check();
+  await page.getByRole('radio', { name: origen, exact: true }).check();
 }
 
 async function calcular(page: Page, grado?: string, origen?: string) {
@@ -76,9 +76,7 @@ test.describe('Tu pensión: incapacidad permanente', () => {
     await esperarPagina(page);
     await rellenar(page, 'Total', 'Accidente no laboral');
     await page.getByLabel('Meses sin cotizar (lagunas)').fill('70');
-    await page
-      .getByRole('radio', { name: 'Justo antes del hecho causante' })
-      .check({ force: true });
+    await page.getByRole('radio', { name: 'Justo antes del hecho causante' }).check();
     await page.getByRole('button', { name: 'Calcular mi pensión' }).click();
     const bloque = page.locator('.tp-intervienen');
     await expect(bloque).toBeVisible();
@@ -100,9 +98,7 @@ test.describe('Tu pensión: incapacidad permanente', () => {
     await esperarPagina(page);
     await rellenar(page, 'Total', 'Accidente no laboral');
     await page.getByLabel('Meses sin cotizar (lagunas)').fill('70');
-    await page
-      .getByRole('radio', { name: 'Justo antes del hecho causante' })
-      .check({ force: true });
+    await page.getByRole('radio', { name: 'Justo antes del hecho causante' }).check();
     await page.getByRole('button', { name: 'Calcular mi pensión' }).click();
     await expect(page.getByRole('heading', { name: 'Tu pensión estimada' })).toBeVisible();
     const antes = await pensionPrincipal(page).innerText();
@@ -168,7 +164,7 @@ test.describe('Tu pensión: incapacidad permanente', () => {
   }) => {
     await page.goto(url('/tu-pension'));
     await esperarPagina(page);
-    await page.getByRole('radio', { name: 'Incapacidad permanente' }).check({ force: true });
+    await page.getByRole('radio', { name: 'Incapacidad permanente' }).check();
     await page.getByRole('button', { name: 'Calcular mi pensión' }).click();
     const alerta = page.getByRole('alert').first();
     await expect(alerta).toContainText('Elige el grado de incapacidad.');
@@ -217,7 +213,7 @@ test.describe('Tu pensión: incapacidad permanente', () => {
   }) => {
     await page.goto(url('/tu-pension'));
     await esperarPagina(page);
-    await page.getByRole('radio', { name: 'Incapacidad permanente' }).check({ force: true });
+    await page.getByRole('radio', { name: 'Incapacidad permanente' }).check();
     const configuracion = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
     const sinFormulario = await new AxeBuilder({ page }).withTags(configuracion).analyze();
     expect(sinFormulario.violations.map((v) => v.id + ': ' + v.help)).toEqual([]);
@@ -243,9 +239,7 @@ test.describe('Tu pensión: incapacidad permanente', () => {
     await esperarPagina(page);
     await rellenar(page, 'Total', 'Accidente no laboral');
     await page.getByLabel('Meses sin cotizar (lagunas)').fill('70');
-    await page
-      .getByRole('radio', { name: 'Justo antes del hecho causante' })
-      .check({ force: true });
+    await page.getByRole('radio', { name: 'Justo antes del hecho causante' }).check();
     await page.getByRole('button', { name: 'Calcular mi pensión' }).click();
     await expect(page.getByRole('heading', { name: 'Tu pensión estimada' })).toBeVisible();
     const radio = (p: Page, nombre: RegExp) =>
@@ -347,13 +341,11 @@ test.describe('Tu pensión: incapacidad permanente', () => {
       await base(page).fill('2500');
       await page.getByRole('button', { name: 'Calcular mi pensión' }).click();
       await expect(pensionPrincipal(page)).toHaveText('2.500,00 €');
-      await page.getByRole('radio', { name: 'Parcial', exact: true }).check({ force: true });
+      await page.getByRole('radio', { name: 'Parcial', exact: true }).check();
       await expect(
         page.getByText(/base reguladora mensual de la incapacidad temporal/i).first(),
       ).toBeVisible();
-      await page
-        .getByRole('radio', { name: 'Accidente de trabajo', exact: true })
-        .check({ force: true });
+      await page.getByRole('radio', { name: 'Accidente de trabajo', exact: true }).check();
       await page.getByRole('button', { name: 'Calcular mi pensión' }).click();
       await expect(page.getByText('Cantidad a tanto alzado (pago único)')).toBeVisible();
       await expect(pensionPrincipal(page)).toHaveText('60.000,00 €');
@@ -371,7 +363,7 @@ test.describe('Tu pensión: incapacidad permanente', () => {
     await page.goto(url('/tu-pension'));
     await esperarPagina(page);
     await expect(page.getByText('Qué lecturas de jubilación se aplican aquí')).toHaveCount(0);
-    await page.getByRole('radio', { name: 'Incapacidad permanente' }).check({ force: true });
+    await page.getByRole('radio', { name: 'Incapacidad permanente' }).check();
     const nota = page.locator('details.tp-jubilacion-aplicada');
     await expect(nota).not.toHaveAttribute('open', '');
     await nota.locator('summary').click();

@@ -80,6 +80,28 @@ export const PALABRAS_DE_VALORACION = [
   'engano',
   'tapadera',
   'maquillaj',
+  // Fase 5-B1: términos de alarma, de tranquilidad o de juicio sobre proyecciones. Las proyecciones
+  // se describen con sus supuestos y sus diferencias calculadas, sin anticipar un desenlace.
+  'colaps',
+  'insostenibilidad',
+  'preocupacion',
+  'preocuparse',
+  'cataclism',
+  'apocalip',
+  'hecatombe',
+  'alarmist',
+  'inquietante',
+  'sombri',
+  'fatidic',
+  'inviab',
+  'ineludible',
+  'inevitable',
+  'sin remedio',
+  'tranquiliz',
+  'alentador',
+  'esperanzador',
+  'optimista',
+  'pesimista',
 ] as const;
 
 const normalizar = (t: string): string =>

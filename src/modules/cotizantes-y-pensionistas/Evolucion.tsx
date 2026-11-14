@@ -323,7 +323,6 @@ export function Evolucion() {
             Es una media por pensión, no por pensionista: quien cobra más de una pensión cuenta en
             cada una de ellas.
           </li>
-          <li>Incluye los complementos a mínimos de las pensiones que los perciben.</li>
           <li>
             Mezcla regímenes cuyas pensiones medias tienen niveles distintos, de modo que su valor
             depende también del peso de cada régimen.
