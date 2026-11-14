@@ -40,4 +40,4 @@ export const COL = {
 } as const;
 
 /** Rótulos de los modelos («M1» no se escribe en los textos: sale de aquí). */
-export const MODELO = { m1: 'M1', m2: 'M2', m3: 'M3' } as const;
+export const MODELO = { m1: 'M1', m2: 'M2', m3: 'M3', m4: 'M4', m5: 'M5' } as const;

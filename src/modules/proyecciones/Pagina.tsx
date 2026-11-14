@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import { useTituloPagina } from '../../app/useTituloPagina';
 import { Kicker } from '../../components/Kicker';
 import { Lead } from '../../components/Lead';
@@ -13,7 +14,13 @@ import './Proyecciones.css';
 
 const seccion = buscarSeccion('proyecciones');
 
-/** Módulo «proyecciones»: salidas de los modelos propios M1, M2 y M3 junto a lo observado. */
+/**
+ * El bloque «Sistema financiero (M4)» (Fase 5-B2) se carga bajo demanda, para no engordar el trozo de
+ * la página con la salida de M4 y los datos observados con los que se compara.
+ */
+const Financiero = lazy(() => import('./Financiero'));
+
+/** Módulo «proyecciones»: salidas de los modelos propios M1 a M4 junto a lo observado. */
 export default function Proyecciones() {
   useTituloPagina(seccion.titulo);
   return (
@@ -39,6 +46,9 @@ export default function Proyecciones() {
         <Demografia />
         <Pensiones />
         <Cotizantes />
+        <Suspense fallback={<p className="hist-aviso">Cargando el bloque financiero…</p>}>
+          <Financiero />
+        </Suspense>
         <ContenidoPagina contenidos={seccion.previsto} />
       </div>
     </article>

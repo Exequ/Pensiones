@@ -1,12 +1,17 @@
 import { describe, expect, it } from 'vitest';
 import {
+  aEurosConstantesConIpcSupuesto,
   diferenciasPorAnio,
   esIlustrativo,
   indiceDesdeBase,
   partirIlustrativo,
+  porcentajeAImporte,
   razonPorAnio,
+  tasaDeVariacionAnual,
+  tasaReal,
   unirObservadoProyeccion,
 } from './proyecciones';
+import { porcentajeDelPib } from './series-historicas';
 
 const p = (anio: number, valor: number) => ({ anio, valor });
 
@@ -115,5 +120,105 @@ describe('razonPorAnio', () => {
   it('divide año a año con un factor y salta los denominadores nulos o ausentes', () => {
     const r = razonPorAnio([p(2026, 30), p(2027, 10), p(2028, 8)], [p(2026, 60), p(2027, 0)], 100);
     expect(r).toEqual([p(2026, 50)]);
+  });
+});
+
+describe('Fase 5-B2: euros constantes con el IPC supuesto', () => {
+  it('con un IPC del 2 % y base 2025: 2025 no cambia, 2026 se divide entre 1,02 y 2027 entre 1,02²', () => {
+    // Casos calculados a mano: 1.020 / 1,02 = 1.000; 1.040,4 / 1,0404 = 1.000.
+    const r = aEurosConstantesConIpcSupuesto(
+      [p(2025, 1000), p(2026, 1020), p(2027, 1040.4)],
+      0.02,
+      2025,
+    );
+    expect(r[0]?.valor).toBeCloseTo(1000, 9);
+    expect(r[1]?.valor).toBeCloseTo(1000, 9);
+    expect(r[2]?.valor).toBeCloseTo(1000, 9);
+  });
+
+  it('un año anterior a la base se revaloriza hasta ella y un IPC nulo no cambia nada', () => {
+    // 1.000 de 2024 son 1.020 euros de 2025 con un 2 % de inflación.
+    expect(aEurosConstantesConIpcSupuesto([p(2024, 1000)], 0.02, 2025)[0]?.valor).toBeCloseTo(
+      1020,
+      9,
+    );
+    expect(aEurosConstantesConIpcSupuesto([p(2030, 1234)], 0, 2025)[0]?.valor).toBe(1234);
+  });
+
+  it('un IPC de −100 % o inferior no es válido', () => {
+    expect(() => aEurosConstantesConIpcSupuesto([p(2026, 1)], -1, 2025)).toThrow(RangeError);
+  });
+
+  it('coincide con la fórmula del euro constante con un índice de precios que crece a la misma tasa', () => {
+    const indice = (anio: number) => 100 * 1.03 ** (anio - 2025);
+    const importe = 5000;
+    const esperado = (importe * indice(2025)) / indice(2030);
+    expect(aEurosConstantesConIpcSupuesto([p(2030, importe)], 0.03, 2025)[0]?.valor).toBeCloseTo(
+      esperado,
+      9,
+    );
+  });
+});
+
+describe('Fase 5-B2: porcentaje del PIB y límites en euros', () => {
+  it('importe ÷ PIB × 100: 11 de 200 es el 5,5 %', () => {
+    const r = porcentajeDelPib([p(2026, 11), p(2027, 30)], [p(2026, 200), p(2027, 400)]);
+    expect(r.map((x) => x.valor)).toEqual([5.5, 7.5]);
+  });
+
+  it('un límite del 0,5 % de un PIB de 200.000 son 1.000, y solo en los años comunes', () => {
+    const r = porcentajeAImporte(
+      [p(2033, 0.5), p(2034, 0.25), p(2099, 1)],
+      [p(2033, 200000), p(2034, 400000)],
+    );
+    expect(r).toEqual([p(2033, 1000), p(2034, 1000)]);
+  });
+
+  it('el porcentaje y su paso inverso son coherentes', () => {
+    const pib = [p(2040, 3_000_000)];
+    const importe = porcentajeAImporte([p(2040, 0.28)], pib);
+    expect(porcentajeDelPib(importe, pib)[0]?.valor).toBeCloseTo(0.28, 12);
+  });
+});
+
+describe('Fase 5-B2: índice base cien del gasto sobre el PIB', () => {
+  it('11, 12,1 y 13,2 con base en el primero dan 100, 110 y 120', () => {
+    const r = indiceDesdeBase([p(2026, 11), p(2027, 12.1), p(2028, 13.2)], 2026);
+    expect(r[0]?.valor).toBeCloseTo(100, 9);
+    expect(r[1]?.valor).toBeCloseTo(110, 9);
+    expect(r[2]?.valor).toBeCloseTo(120, 9);
+  });
+
+  it('dos series con niveles distintos (11 y 13,7) y el mismo crecimiento tienen el mismo índice y diferencia nula', () => {
+    const a = indiceDesdeBase([p(2026, 11), p(2030, 12.1)], 2026);
+    const b = indiceDesdeBase([p(2026, 13.7), p(2030, 15.07)], 2026);
+    const d = diferenciasPorAnio(a, b);
+    expect(d).toHaveLength(2);
+    for (const x of d) expect(x.diferencia).toBeCloseTo(0, 9);
+  });
+
+  it('la diferencia es modelo menos referencia: 120 frente a 110 son +10 puntos de índice', () => {
+    const d = diferenciasPorAnio([p(2040, 120)], [p(2040, 110)]);
+    expect(d[0]?.diferencia).toBe(10);
+  });
+});
+
+describe('Fase 5-B2: tasas anuales', () => {
+  it('100, 110 y 121 crecen un 10 % cada año; el primer año no tiene tasa', () => {
+    const r = tasaDeVariacionAnual([p(2026, 100), p(2027, 110), p(2028, 121)]);
+    expect(r.map((x) => x.anio)).toEqual([2027, 2028]);
+    expect(r[0]?.valor).toBeCloseTo(0.1, 12);
+    expect(r[1]?.valor).toBeCloseTo(0.1, 12);
+  });
+
+  it('salta los años sin el anterior inmediato y los saltos por un valor previo nulo', () => {
+    expect(tasaDeVariacionAnual([p(2026, 100), p(2028, 121)])).toEqual([]);
+    expect(tasaDeVariacionAnual([p(2026, 0), p(2027, 5)])).toEqual([]);
+  });
+
+  it('tasa real: un 3,02 % nominal con un 2 % de IPC es un 1 % real (1,0302 / 1,02 = 1,01)', () => {
+    expect(tasaReal(0.0302, 0.02)).toBeCloseTo(0.01, 12);
+    expect(tasaReal(0.02, 0.02)).toBeCloseTo(0, 12);
+    expect(() => tasaReal(0.01, -1)).toThrow(RangeError);
   });
 });

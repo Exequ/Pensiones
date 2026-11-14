@@ -138,3 +138,57 @@ export function razonPorAnio(
     return d === undefined || d === 0 ? [] : [{ anio: p.anio, valor: (p.valor / d) * factor }];
   });
 }
+
+// ---------------------------------------------------------------------------
+// Fase 5-B2: pasos propios del bloque financiero (M4)
+// ---------------------------------------------------------------------------
+
+/**
+ * Euros constantes de `anioBase` de una serie en euros corrientes, con una inflación anual constante
+ * (el IPC supuesto del escenario): valor(t) ÷ (1 + IPC)^(t − año base). Para años anteriores al año
+ * base el exponente es negativo y el valor se revaloriza hasta la base. Falla si el IPC no es
+ * superior a −1.
+ */
+export function aEurosConstantesConIpcSupuesto(
+  puntos: readonly PuntoAnual[],
+  ipc: number,
+  anioBase: number,
+): PuntoAnual[] {
+  if (!(ipc > -1)) throw new RangeError(`IPC supuesto no válido: ${ipc}`);
+  return puntos.map((p) => ({ anio: p.anio, valor: p.valor / (1 + ipc) ** (p.anio - anioBase) }));
+}
+
+/**
+ * Importe a partir de un porcentaje de otra magnitud: porcentaje ÷ 100 × magnitud, año a año (solo
+ * los años comunes). Sirve para expresar en euros un límite dado en porcentaje del PIB.
+ */
+export function porcentajeAImporte(
+  porcentaje: readonly PuntoAnual[],
+  magnitud: readonly PuntoAnual[],
+): PuntoAnual[] {
+  const deM = new Map(magnitud.map((p) => [p.anio, p.valor]));
+  return porcentaje.flatMap((p) => {
+    const m = deM.get(p.anio);
+    return m === undefined ? [] : [{ anio: p.anio, valor: (p.valor / 100) * m }];
+  });
+}
+
+/**
+ * Tasa de variación anual (fracción) entre años consecutivos: valor(t) ÷ valor(t − 1) − 1. El primer
+ * año no tiene tasa; los años sin el anterior inmediato se saltan. Un valor anterior de cero no da tasa.
+ */
+export function tasaDeVariacionAnual(puntos: readonly PuntoAnual[]): PuntoAnual[] {
+  const deAnio = new Map(puntos.map((p) => [p.anio, p.valor]));
+  return [...puntos].sort(porAnio).flatMap((p) => {
+    const previo = deAnio.get(p.anio - 1);
+    return previo === undefined || previo === 0
+      ? []
+      : [{ anio: p.anio, valor: p.valor / previo - 1 }];
+  });
+}
+
+/** Tasa real a partir de una tasa nominal y la inflación (fracciones): (1 + nominal) ÷ (1 + IPC) − 1. */
+export function tasaReal(nominal: number, ipc: number): number {
+  if (!(ipc > -1)) throw new RangeError(`IPC supuesto no válido: ${ipc}`);
+  return (1 + nominal) / (1 + ipc) - 1;
+}
