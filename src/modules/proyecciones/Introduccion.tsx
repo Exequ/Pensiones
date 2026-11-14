@@ -37,11 +37,11 @@ export function Introduccion() {
     <section className="seccion prosa" aria-labelledby="proy-que-es">
       <h2 id="proy-que-es">Qué es una proyección de esta página</h2>
       <p>
-        Las cifras proyectadas de esta página salen de tres modelos propios que calculan qué
-        ocurriría si se mantuvieran unos supuestos explícitos, con la legislación actual congelada:
-        se supone que no habrá reformas y que cada grupo de personas se comporta como en el último
-        año observado. Un modelo no observa el futuro: aplica sus supuestos a los datos de partida y
-        devuelve el resultado.
+        Las cifras proyectadas de esta página salen de modelos propios que calculan qué ocurriría si
+        se mantuvieran unos supuestos explícitos, con la legislación actual congelada: se supone que
+        no habrá reformas y que cada grupo de personas se comporta como en el último año observado.
+        Un modelo no observa el futuro: aplica sus supuestos a los datos de partida y devuelve el
+        resultado.
       </p>
       <p>
         No es una predicción ni un pronóstico oficial, y ninguna de las cifras es un dato observado.
