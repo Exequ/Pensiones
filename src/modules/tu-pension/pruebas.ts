@@ -25,6 +25,7 @@ export const FORMULARIO_BASE: FormularioTuPension = {
   origen: '',
   enAlta: true,
   trabaja: false,
+  baseReguladora: '',
   lecturas: {},
 };
 

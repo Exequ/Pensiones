@@ -133,6 +133,48 @@ describe('resultado de la incapacidad permanente', () => {
   });
 });
 
+describe('contingencias profesionales: la base reguladora es la introducida', () => {
+  const profesional = (
+    origen: FormularioTuPension['origen'],
+    grado: FormularioTuPension['grado'],
+  ) => resultado({ ...F, origen, grado, baseReguladora: '2500' });
+
+  it.each(['accidente-trabajo', 'enfermedad-profesional'] as const)(
+    '%s, total: la pensión sale de la base introducida y el resultado lo dice',
+    (origen) => {
+      const r = profesional(origen, 'total');
+      // Cálculo a mano: el 55 % de 2.500 euros = 1.375 euros (sin mínima: menor de 60 años y no enfermedad común).
+      expect(cifra(r, 'Pensión mensual bruta')).toBe('1.375,00\u00a0€');
+      expect(cifra(r, 'Base reguladora (la que has introducido)')).toBe('2.500,00\u00a0€ al mes');
+      const base = r.modelo.pasos.find((p) => p.id === 'base')!;
+      expect(base.parrafos.join(' ')).toMatch(/la que has introducido, 2\.500,00\u00a0€ al mes/);
+      expect(base.parrafos.join(' ')).toMatch(/no la calcula/);
+      expect(r.modelo.avisos.join(' ')).toMatch(/base reguladora la ha facilitado/);
+    },
+  );
+
+  it('parcial: la cantidad a tanto alzado se calcula con la base introducida', () => {
+    const r = profesional('accidente-trabajo', 'parcial');
+    expect(cifra(r, 'Cantidad a tanto alzado')).toBe('60.000,00\u00a0€');
+    expect(cifra(r, 'Base reguladora de la incapacidad temporal (la que has introducido)')).toBe(
+      '2.500,00\u00a0€ al mes',
+    );
+    const parcial = r.modelo.pasos.find((p) => p.id === 'parcial')!;
+    expect(parcial.parrafos.join(' ')).toMatch(/la base reguladora que has introducido/);
+  });
+
+  it('sin base reguladora el cálculo no se hace: errores del formulario', () => {
+    const r = calcularTuPension({ ...F, origen: 'accidente-trabajo', baseReguladora: '' }, deps);
+    expect(r.tipo).toBe('errores-formulario');
+  });
+
+  it('con origen común no aparece nada de la base introducida', () => {
+    const r = resultado({ ...F, baseReguladora: '2500' });
+    expect(cifra(r, 'Base reguladora (la que has introducido)')).toBeUndefined();
+    expect(cifra(r, 'Base reguladora')).toBeDefined();
+  });
+});
+
 describe('lecturas de la incapacidad', () => {
   it('ofrece las seis lecturas de incapacidad con estado y motivo, y no las de jubilación', () => {
     const r = resultado(F);

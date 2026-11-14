@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   esOrigenDisponible,
+  esOrigenProfesional,
   formularioAEntradaIncapacidad,
   GRADOS,
   ORIGENES,
@@ -20,15 +21,46 @@ describe('validación del formulario de incapacidad', () => {
     expect(e.origen).toMatch(/origen/);
   });
 
-  it('los orígenes profesionales no están disponibles y se explica', () => {
+  // Ajustes actuariales 1: los orígenes profesionales se activan pidiendo la base reguladora.
+  it('los cuatro orígenes están disponibles; los profesionales exigen la base reguladora', () => {
     for (const origen of ['accidente-trabajo', 'enfermedad-profesional'] as const) {
-      expect(esOrigenDisponible(origen)).toBe(false);
-      expect(validarFormularioIncapacidad({ ...F, origen }).origen).toMatch(/no está disponible/);
+      expect(esOrigenDisponible(origen)).toBe(true);
+      expect(esOrigenProfesional(origen)).toBe(true);
+      const sin = validarFormularioIncapacidad({ ...F, origen, baseReguladora: '' });
+      expect(sin.baseReguladora).toBe('Escribe la base reguladora mensual, en euros.');
+      expect(sin.origen).toBeUndefined();
+      for (const mala of ['abc', '0', '-5', '2000000'])
+        expect(
+          validarFormularioIncapacidad({ ...F, origen, baseReguladora: mala }).baseReguladora,
+          mala,
+        ).toMatch(/importe mensual positivo/);
+      expect(validarFormularioIncapacidad({ ...F, origen, baseReguladora: '2.500,50' })).toEqual(
+        {},
+      );
     }
     expect(ORIGENES.filter((o) => o.disponible).map((o) => o.valor)).toEqual([
       'enfermedad-comun',
       'accidente-no-laboral',
+      'accidente-trabajo',
+      'enfermedad-profesional',
     ]);
+    expect(esOrigenProfesional('enfermedad-comun')).toBe(false);
+    expect(esOrigenProfesional('accidente-no-laboral')).toBe(false);
+  });
+
+  it('con origen común o accidente no laboral el formulario sigue como antes: la base reguladora no se pide', () => {
+    for (const origen of ['enfermedad-comun', 'accidente-no-laboral'] as const)
+      expect(validarFormularioIncapacidad({ ...F, origen, baseReguladora: '' })).toEqual({});
+  });
+
+  it('con origen profesional solo se calcula en alta o situación asimilada', () => {
+    const e = validarFormularioIncapacidad({
+      ...F,
+      origen: 'accidente-trabajo',
+      baseReguladora: '2500',
+      enAlta: false,
+    });
+    expect(e.enAlta).toMatch(/en alta o situación asimilada/);
   });
 
   it('los mensajes de fecha hablan del hecho causante, no de la jubilación', () => {
@@ -108,6 +140,50 @@ describe('mapeo a la entrada del motor', () => {
       );
     },
   );
+
+  describe('contingencias profesionales: la base reguladora introducida pasa al motor', () => {
+    it.each(['accidente-trabajo', 'enfermedad-profesional'] as const)(
+      '%s, grado total: baseReguladoraProfesional (con coma decimal) y sin tocar el resto',
+      (origen) => {
+        const m = formularioAEntradaIncapacidad({
+          ...F,
+          origen,
+          baseReguladora: '2.286,22',
+        });
+        if (!m.ok) throw new Error(JSON.stringify(m.errores));
+        expect(m.entrada.origen).toBe(origen);
+        expect(m.entrada.opciones?.baseReguladoraProfesional).toBe(2286.22);
+        expect(m.entrada.opciones?.baseReguladoraIT).toBeUndefined();
+      },
+    );
+
+    it('en la incapacidad parcial la base introducida es la de la incapacidad temporal (baseReguladoraIT)', () => {
+      const m = formularioAEntradaIncapacidad({
+        ...F,
+        origen: 'accidente-trabajo',
+        grado: 'parcial',
+        baseReguladora: '2500',
+      });
+      if (!m.ok) throw new Error(JSON.stringify(m.errores));
+      expect(m.entrada.opciones?.baseReguladoraIT).toBe(2500);
+      expect(m.entrada.opciones?.baseReguladoraProfesional).toBeUndefined();
+    });
+
+    it('con origen común o accidente no laboral la base reguladora del formulario no llega al motor', () => {
+      for (const origen of ['enfermedad-comun', 'accidente-no-laboral'] as const) {
+        const m = formularioAEntradaIncapacidad({ ...F, origen, baseReguladora: '2500' });
+        if (!m.ok) throw new Error(JSON.stringify(m.errores));
+        expect(m.entrada.opciones?.baseReguladoraProfesional).toBeUndefined();
+        expect(m.entrada.opciones?.baseReguladoraIT).toBeUndefined();
+      }
+    });
+
+    it('sin base reguladora no se llama al motor y el error es del campo', () => {
+      const m = formularioAEntradaIncapacidad({ ...F, origen: 'enfermedad-profesional' });
+      expect(m.ok).toBe(false);
+      if (!m.ok) expect(m.errores.baseReguladora).toBeDefined();
+    });
+  });
 
   it('devuelve los errores del formulario sin llamar al motor', () => {
     const m = formularioAEntradaIncapacidad({ ...F, grado: '' });

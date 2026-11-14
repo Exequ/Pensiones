@@ -10,7 +10,7 @@ import { ReferenciasBase } from './ReferenciasBase';
 import { ResumenTramos } from './ResumenTramos';
 import { TablaTramos } from './TablaTramos';
 import type { GradoIncapacidad, OrigenIncapacidad } from '../../engine/incapacidad/tipos';
-import { GRADOS, ORIGENES } from './incapacidad-mapeador';
+import { esOrigenProfesional, GRADOS, ORIGENES } from './incapacidad-mapeador';
 import { MESES, TEXTOS, type TextosPrestacion } from './textos';
 import { TEXTOS_INCAPACIDAD_PROPIOS } from './textos-incapacidad';
 import type { ErroresFormulario, FormularioTuPension, Sexo, TipoCarrera } from './tipos';
@@ -267,7 +267,7 @@ export function Formulario({
                 onCambio({ origen: v });
               }}
             />
-            <p className="campo-ayuda">{TEXTOS_INCAPACIDAD_PROPIOS.origenNoDisponible}</p>
+            <p className="campo-ayuda">{TEXTOS_INCAPACIDAD_PROPIOS.origenAyuda}</p>
             {errores.origen ? (
               <p className="campo-error" aria-live="polite">
                 <span className="campo-error-prefijo">Error: </span>
@@ -275,6 +275,25 @@ export function Formulario({
               </p>
             ) : null}
           </div>
+          {valores.origen !== '' && esOrigenProfesional(valores.origen) ? (
+            <div className="tp-bloque">
+              <CampoTexto
+                etiqueta={TEXTOS_INCAPACIDAD_PROPIOS.baseReguladoraEtiqueta}
+                ayuda={
+                  valores.grado === 'parcial'
+                    ? `${TEXTOS_INCAPACIDAD_PROPIOS.baseReguladoraAyuda} ${TEXTOS_INCAPACIDAD_PROPIOS.baseReguladoraAyudaParcial}`
+                    : TEXTOS_INCAPACIDAD_PROPIOS.baseReguladoraAyuda
+                }
+                valor={valores.baseReguladora}
+                error={errores.baseReguladora}
+                modo="decimal"
+                onCambio={(v) => {
+                  onCambio({ baseReguladora: v });
+                }}
+              />
+              <p className="campo-ayuda">{TEXTOS_INCAPACIDAD_PROPIOS.baseReguladoraAviso}</p>
+            </div>
+          ) : null}
           <div className="tp-bloque">
             <SegmentedPills
               leyenda={TEXTOS_INCAPACIDAD_PROPIOS.enAltaLeyenda}
@@ -288,6 +307,12 @@ export function Formulario({
               }}
             />
             <p className="campo-ayuda">{TEXTOS_INCAPACIDAD_PROPIOS.enAltaAyuda}</p>
+            {errores.enAlta ? (
+              <p className="campo-error" aria-live="polite">
+                <span className="campo-error-prefijo">Error: </span>
+                {errores.enAlta}
+              </p>
+            ) : null}
           </div>
           <div className="tp-bloque">
             <SegmentedPills

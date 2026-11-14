@@ -90,6 +90,61 @@ describe('enlace de la incapacidad permanente (p=inc)', () => {
     });
   });
 
+  describe('contingencias profesionales (or=at / or=ep) y base reguladora (br)', () => {
+    const base = '?v=1&p=inc&nac=1981-03&hc=2026-03&gr=tot&sex=h&car=s&ini=2000-01&base=2000';
+
+    it.each([
+      ['accidente-trabajo', 'at'],
+      ['enfermedad-profesional', 'ep'],
+    ] as const)('ida y vuelta de %s con su base reguladora', (origen, codigo) => {
+      const f: FormularioTuPension = {
+        ...FORMULARIO_INCAPACIDAD,
+        origen,
+        baseReguladora: '2286,22',
+      };
+      const busqueda = escribirEnlace(f);
+      expect(busqueda).toContain(`or=${codigo}`);
+      expect(busqueda).toContain('br=2286,22');
+      const r = leer(busqueda);
+      expect(r.avisos).toEqual([]);
+      expect(r.formulario).toEqual({ ...f, tramos: [] });
+    });
+
+    it('la base reguladora solo se escribe con origen profesional y si es un importe válido', () => {
+      for (const origen of ['enfermedad-comun', 'accidente-no-laboral'] as const)
+        expect(
+          escribirEnlace({ ...FORMULARIO_INCAPACIDAD, origen, baseReguladora: '2500' }),
+        ).not.toContain('br=');
+      expect(
+        escribirEnlace({
+          ...FORMULARIO_INCAPACIDAD,
+          origen: 'accidente-trabajo',
+          baseReguladora: 'abc',
+        }),
+      ).not.toContain('br=');
+    });
+
+    it('un `br` mal formado se ignora con aviso y no rompe la lectura', () => {
+      const r = leer(`${base}&or=at&br=abc`);
+      expect(r.formulario.origen).toBe('accidente-trabajo');
+      expect(r.formulario.baseReguladora).toBe('');
+      expect(r.avisos.join(' ')).toMatch(/base reguladora/);
+    });
+
+    it('`br` y los orígenes profesionales no existen en un enlace de jubilación', () => {
+      const r = leer('?v=1&nac=1961-11&jub=2026-11&br=2500');
+      expect(r.avisos.join(' ')).toMatch(/«br»/);
+      expect(r.formulario.baseReguladora).toBe('');
+    });
+
+    it('los enlaces de incapacidad anteriores (sin `br`) se leen igual que antes', () => {
+      const r = leer(`${base}&or=ec`);
+      expect(r.avisos).toEqual([]);
+      expect(r.formulario.origen).toBe('enfermedad-comun');
+      expect(r.formulario.baseReguladora).toBe('');
+    });
+  });
+
   it('cada grado y origen disponible se conserva', () => {
     for (const grado of ['parcial', 'total', 'absoluta', 'gran-incapacidad'] as const) {
       for (const origen of ['enfermedad-comun', 'accidente-no-laboral'] as const) {
@@ -113,8 +168,9 @@ describe('enlace de la incapacidad permanente (p=inc)', () => {
     expect(r.avisos.join(' ')).toMatch(/no existe en el registro/);
   });
 
-  it('ignora con aviso un origen no disponible, un grado inválido y parámetros ajenos', () => {
-    const r = leer('?v=1&p=inc&or=at&gr=xx&jub=2026-03&alt=2');
+  it('ignora con aviso un origen desconocido, un grado inválido y parámetros ajenos', () => {
+    // `at` y `ep` (contingencias profesionales) son válidos desde los ajustes actuariales 1: aquí, un código que no existe.
+    const r = leer('?v=1&p=inc&or=zz&gr=xx&jub=2026-03&alt=2');
     expect(r.aplicado).toBe(true);
     expect(r.formulario.prestacion).toBe('incapacidad');
     expect(r.formulario.origen).toBe('');

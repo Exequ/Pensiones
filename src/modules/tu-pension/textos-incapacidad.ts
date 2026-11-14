@@ -37,8 +37,14 @@ export const TEXTOS_INCAPACIDAD_PROPIOS = {
     'El grado y el origen los fija el organismo competente tras una valoración médica; aquí son datos que eliges para ver cómo se calcularía la prestación.',
   gradoLeyenda: 'Grado de incapacidad',
   origenLeyenda: 'Origen de la incapacidad',
-  origenNoDisponible:
-    'Accidente de trabajo y enfermedad profesional no están disponibles: su base reguladora se calcula con el salario real, con conceptos que la carrera de cotización de este simulador no recoge. Aparecen desactivados y se explican entre las limitaciones del cálculo.',
+  origenAyuda:
+    'En el accidente de trabajo y en la enfermedad profesional la base reguladora se calcula con el salario real, con conceptos que la carrera de cotización de este simulador no recoge: por eso aquí la escribes tú.',
+  baseReguladoraEtiqueta: 'Base reguladora mensual (€)',
+  baseReguladoraAyuda: 'La que figura en tu resolución o la que hayas calculado por tu cuenta.',
+  baseReguladoraAyudaParcial:
+    'En la incapacidad parcial, la base reguladora mensual de la incapacidad temporal de la que deriva: con ella se calcula la cantidad a tanto alzado.',
+  baseReguladoraAviso:
+    'Esta web no calcula la base reguladora a partir del salario real: usa la que escribes aquí, sin comprobarla. El resultado depende de ese dato.',
   enAltaLeyenda: 'Situación en el hecho causante',
   enAltaSi: 'En alta o situación asimilada',
   enAltaNo: 'Sin alta',

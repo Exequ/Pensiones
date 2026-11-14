@@ -117,9 +117,8 @@ describe('selector de prestación', () => {
       .map((r) => (r as HTMLInputElement).name);
     expect(nombres.length).toBe(12);
     expect(nombres.every((n) => n.startsWith('incapacidad.'))).toBe(true);
-    expect(
-      screen.getByText(/Accidente de trabajo y enfermedad profesional no están disponibles/),
-    ).toBeVisible();
+    // Ajustes actuariales 1: los orígenes profesionales se activan y se explica por qué se pide la base reguladora.
+    expect(screen.getByText(TEXTOS_INCAPACIDAD_PROPIOS.origenAyuda)).toBeVisible();
     expect(screen.getByText(/tribunal médico/)).toBeVisible();
     // Limitaciones del motor de incapacidad (no las de la jubilación).
     const lim = screen
@@ -128,17 +127,18 @@ describe('selector de prestación', () => {
     expect(lim).toHaveTextContent(/contingencias profesionales/);
   });
 
-  it('los orígenes profesionales están desactivados con su explicación', async () => {
+  it('los cuatro orígenes están activados (los profesionales piden la base reguladora)', async () => {
     const usuario = userEvent.setup();
     render(<TuPension />);
     await elegirIncapacidad(usuario);
-    expect(
-      screen.getByRole('radio', { name: 'Accidente de trabajo (no disponible)' }),
-    ).toBeDisabled();
-    expect(
-      screen.getByRole('radio', { name: 'Enfermedad profesional (no disponible)' }),
-    ).toBeDisabled();
-    expect(screen.getByRole('radio', { name: 'Accidente no laboral' })).toBeEnabled();
+    for (const origen of [
+      'Enfermedad común',
+      'Accidente no laboral',
+      'Accidente de trabajo',
+      'Enfermedad profesional',
+    ])
+      expect(screen.getByRole('radio', { name: origen })).toBeEnabled();
+    expect(screen.queryByRole('radio', { name: /no disponible/ })).toBeNull();
   });
 
   it('volver a la jubilación recupera su formulario sin perder los datos personales', async () => {
@@ -270,6 +270,77 @@ describe('panel de lecturas de incapacidad', () => {
     expect(comparacion).toHaveTextContent(/Has cambiado una lectura/);
     expect(within(comparacion).getByRole('table')).toBeInTheDocument();
     expect(comparacion).toHaveTextContent('no una recomendación');
+  });
+});
+
+describe('incapacidad por accidente de trabajo y enfermedad profesional', () => {
+  const ETIQUETA_BASE = TEXTOS_INCAPACIDAD_PROPIOS.baseReguladoraEtiqueta;
+
+  it('el campo de la base reguladora solo aparece con origen profesional, con su aviso', async () => {
+    const usuario = userEvent.setup();
+    render(<TuPension />);
+    await elegirIncapacidad(usuario);
+    expect(screen.queryByLabelText(new RegExp(ETIQUETA_BASE.replace(/[()€]/g, '.')))).toBeNull();
+    for (const origen of ['Enfermedad común', 'Accidente no laboral'])
+      await usuario.click(screen.getByRole('radio', { name: origen }));
+    expect(screen.queryByText(TEXTOS_INCAPACIDAD_PROPIOS.baseReguladoraAviso)).toBeNull();
+    for (const origen of ['Accidente de trabajo', 'Enfermedad profesional']) {
+      await usuario.click(screen.getByRole('radio', { name: origen }));
+      expect(screen.getByRole('radio', { name: origen })).toBeEnabled();
+      expect(screen.getByLabelText(ETIQUETA_BASE)).toBeVisible();
+      expect(screen.getByText(TEXTOS_INCAPACIDAD_PROPIOS.baseReguladoraAviso)).toBeVisible();
+      expect(
+        screen.getByText(new RegExp(TEXTOS_INCAPACIDAD_PROPIOS.baseReguladoraAyuda)),
+      ).toBeVisible();
+    }
+  });
+
+  it('sin base reguladora no se calcula y el error está junto al campo', async () => {
+    const usuario = userEvent.setup();
+    render(<TuPension />);
+    await elegirIncapacidad(usuario);
+    await rellenarIncapacidad(usuario, 'Total', 'Accidente de trabajo');
+    await usuario.click(screen.getByRole('button', { name: 'Calcular mi pensión' }));
+    expect(screen.queryByRole('heading', { name: TEXTOS.resultadoTitulo })).toBeNull();
+    expect(
+      (await screen.findAllByText('Escribe la base reguladora mensual, en euros.')).length,
+    ).toBeGreaterThan(0);
+  });
+
+  it.each(['Accidente de trabajo', 'Enfermedad profesional'])(
+    '%s: con la base reguladora se calcula y el resultado dice que es la introducida',
+    async (origen) => {
+      const usuario = userEvent.setup();
+      render(<TuPension />);
+      await elegirIncapacidad(usuario);
+      await rellenarIncapacidad(usuario, 'Total', origen);
+      await usuario.type(screen.getByLabelText(ETIQUETA_BASE), '2500');
+      await usuario.click(screen.getByRole('button', { name: 'Calcular mi pensión' }));
+      expect(
+        await screen.findByRole('heading', { name: TEXTOS.resultadoTitulo }),
+      ).toBeInTheDocument();
+      // Cálculo a mano: el 55 % de 2.500 euros = 1.375 euros.
+      expect(screen.getAllByText(/1\.375,00\s€/).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(/la que has introducido/).length).toBeGreaterThan(0);
+      expect(
+        screen.getAllByText(/Esta web no calcula la base reguladora|no la calcula/).length,
+      ).toBeGreaterThan(0);
+    },
+  );
+
+  it('el enlace con or=at y br abre la página con el campo rellenado y calcula', async () => {
+    window.location.hash = `#/tu-pension${escribirEnlace({
+      ...FORMULARIO_INCAPACIDAD,
+      origen: 'accidente-trabajo',
+      baseReguladora: '2500',
+    })}`;
+    render(<TuPension />);
+    expect(screen.getByRole('radio', { name: 'Accidente de trabajo' })).toBeChecked();
+    expect(screen.getByLabelText(ETIQUETA_BASE)).toHaveValue('2500');
+    expect(
+      await screen.findByRole('heading', { name: TEXTOS.resultadoTitulo }),
+    ).toBeInTheDocument();
+    expect(screen.getAllByText(/1\.375,00\s€/).length).toBeGreaterThan(0);
   });
 });
 

@@ -127,6 +127,7 @@ export default function TuPension() {
       origen: '',
       enAlta: true,
       trabaja: false,
+      baseReguladora: '',
       nacimientoMes: '',
       nacimientoAnio: '',
       sexo: '',
