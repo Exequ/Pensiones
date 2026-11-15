@@ -64,7 +64,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
     expect(container.textContent).toMatch(
       /crecimiento real de los salarios del 1\s%\se IPC del 2\s%/,
     );
-    expect(container.textContent).toMatch(/único escenario económico/);
+    expect(container.textContent).toMatch(/otros cuatro escenarios de sensibilidad/);
   });
 
   it('cada gráfico lleva título, imagen con nombre, tabla con la naturaleza del dato, fuente, nota y «Cómo leerlo»', () => {

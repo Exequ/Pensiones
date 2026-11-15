@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { DataTable } from '../../components/DataTable';
 import { SourceLine } from '../../components/SourceLine';
-import { formatearPorcentaje } from '../../engine/formato';
+import { formatearNumero, formatearPorcentaje } from '../../engine/formato';
 import { valorEn } from '../../engine/series-historicas';
 import { decimal1 } from '../historico/formatos';
 import type { DatosFinanciero } from './datos-financiero';
@@ -12,9 +12,11 @@ import {
   filasLimite,
   maximoDe,
   rentabilidadImplicita,
+  rentabilidadReal,
   seriesFinanciacionAdicional,
   seriesFondoFlujos,
   seriesFondoValor,
+  tituloConEscenario,
 } from './series-financiero';
 
 const MIL = 1000;
@@ -29,6 +31,14 @@ export function FinancieroFondo({ d }: { d: DatosFinanciero }) {
   const ultimaDisposicion = ultimo === undefined ? undefined : valorEn(disposicion, ultimo.anio);
   const rentabilidad = rentabilidadImplicita(d);
   const rentabilidadConstante = Math.abs(rentabilidad.maxima - rentabilidad.minima) < 1e-6;
+  const igualEnTodos = d.escenarios.every((e) => {
+    const r = rentabilidadImplicita(d, e.id);
+    return (
+      Math.abs(r.minima - rentabilidad.minima) < 1e-6 &&
+      Math.abs(r.maxima - rentabilidad.maxima) < 1e-6
+    );
+  });
+  const valorInicial = d.filaObservada.valores[COL4.fondo];
   const filas = filasLimite(d);
   const conDisposicion = filas.filter((f) => f.disposicion > 0);
   const coincidentes = conDisposicion.filter(
@@ -50,20 +60,31 @@ export function FinancieroFondo({ d }: { d: DatosFinanciero }) {
       </p>
       <p>
         El Fondo se valora a precio de adquisición en el histórico. Según la descripción del modelo,
-        la proyección parte de un valor a precio de adquisición y lo hace crecer con una
-        rentabilidad nominal constante sobre el saldo del año anterior, más la dotación y menos la
-        disposición; no es valor de mercado. En la salida, la rentabilidad nominal anual implícita
-        es de{' '}
+        la proyección parte de un valor a precio de adquisición
+        {valorInicial === undefined
+          ? ''
+          : ` (${formatearNumero(valorInicial, { decimales: 0 })} millones de euros a fin de ${d.filaObservada.anio}, el de la fila observada de la salida)`}{' '}
+        y lo hace crecer con una rentabilidad nominal constante supuesta sobre el saldo del año
+        anterior, más la dotación y menos la disposición; no es valor de mercado. En la salida, la
+        rentabilidad nominal anual implícita es de{' '}
         {rentabilidadConstante
-          ? `${formatearPorcentaje(rentabilidad.minima, { decimales: 2 })} (la misma todos los años)`
+          ? `${formatearPorcentaje(rentabilidad.minima, { decimales: 2 })} (la misma todos los años${igualEnTodos ? ' y en todos los escenarios' : ''})`
           : `entre ${formatearPorcentaje(rentabilidad.minima, { decimales: 2 })} y ${formatearPorcentaje(rentabilidad.maxima, { decimales: 2 })}`}
-        , calculada a partir del valor, la dotación y la disposición de cada año, y coincide con la
-        constante que declara la descripción. La rentabilidad real puede ser distinta, y el valor a
-        precio de adquisición no equivale al valor de mercado.
+        , calculada a partir del valor, la dotación y la disposición de cada año. Con el IPC del
+        escenario mostrado ({formatearPorcentaje(d.escenario.ipc, { maxDecimales: 2 })}), la
+        rentabilidad real que resulta es de{' '}
+        {formatearPorcentaje(rentabilidadReal(rentabilidad.minima, d.escenario.ipc), {
+          decimales: 2,
+        })}
+        . El valor a precio de adquisición no equivale al valor de mercado, y la rentabilidad real
+        puede ser distinta de la que resulta de mezclar las dos valoraciones.
       </p>
 
       <GraficoProyeccion
-        titulo="Valor del Fondo de Reserva a fin de año: observado y proyección"
+        titulo={tituloConEscenario(
+          d,
+          'Valor del Fondo de Reserva a fin de año: observado y proyección',
+        )}
         descripcion="Valor del Fondo a fin de cada año. El histórico está a precio de adquisición; la proyección es el valor que calcula el modelo. Unidad: miles de millones de euros corrientes."
         series={seriesFondoValor(d)}
         unidadEje="Miles de millones de euros"
@@ -99,7 +120,10 @@ export function FinancieroFondo({ d }: { d: DatosFinanciero }) {
       )}
 
       <GraficoProyeccion
-        titulo="Dotaciones y disposiciones del Fondo de Reserva y límite legal de disposición: observado y proyección"
+        titulo={tituloConEscenario(
+          d,
+          'Dotaciones y disposiciones del Fondo de Reserva y límite legal de disposición: observado y proyección',
+        )}
         descripcion="Dotaciones anuales al Fondo procedentes del MEI, disposiciones anuales (en valor absoluto) y límite legal de disposición expresado en euros: el porcentaje del PIB que fija la norma por el PIB aproximado del modelo. Unidad: miles de millones de euros corrientes."
         series={seriesFondoFlujos(d)}
         unidadEje="Miles de millones de euros"
@@ -168,7 +192,10 @@ export function FinancieroFondo({ d }: { d: DatosFinanciero }) {
       </details>
 
       <GraficoProyeccion
-        titulo="Disposición del Fondo de Reserva y financiación adicional: proyección"
+        titulo={tituloConEscenario(
+          d,
+          'Disposición del Fondo de Reserva y financiación adicional: proyección',
+        )}
         descripcion="Disposición anual del Fondo para cubrir déficit y financiación adicional, que es lo que el Fondo no cubre. Solo hay proyección: no existe un histórico con esta definición. Unidad: miles de millones de euros corrientes."
         series={seriesFinanciacionAdicional(d)}
         unidadEje="Miles de millones de euros"

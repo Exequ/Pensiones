@@ -16,6 +16,7 @@ import {
   DEFINICION_PIB_PROYECTADO,
   seriesIngresosYGasto,
   seriesSaldos,
+  tituloConEscenario,
   type UnidadImporte,
 } from './series-financiero';
 import { NotaPib } from './FinancieroGasto';
@@ -44,7 +45,7 @@ const DEFINICIONES_SALDO = [
   {
     medida: 'Saldo no financiero',
     definicion:
-      'Ingresos (cotizaciones, transferencias del Estado y otros ingresos) menos el gasto en pensiones menos el resto de gastos: bajas por enfermedad, maternidad, pensiones no contributivas, Ingreso Mínimo Vital, personal y otros.',
+      'Ingresos (cotizaciones, transferencias del Estado y otros ingresos) menos el gasto en pensiones menos el resto de gastos: bajas por enfermedad, maternidad, complementos a mínimos, pensiones no contributivas, Ingreso Mínimo Vital, personal y otros.',
   },
 ] as const;
 
@@ -80,7 +81,10 @@ export function FinancieroSaldos({ d }: { d: DatosFinanciero }) {
         ver su peso. El gasto es el del gráfico anterior. Todo en euros corrientes.
       </p>
       <GraficoProyeccion
-        titulo="Cotizaciones, MEI y gasto en pensiones contributivas: euros corrientes, observado y proyección"
+        titulo={tituloConEscenario(
+          d,
+          'Cotizaciones, MEI y gasto en pensiones contributivas: euros corrientes, observado y proyección',
+        )}
         descripcion="Cotizaciones sociales (que incluyen el MEI), cotización del MEI y gasto en pensiones contributivas. El MEI solo existe desde su creación, por eso su histórico es más corto. Unidad: miles de millones de euros."
         series={seriesIngresosYGasto(d)}
         unidadEje="Miles de millones de euros"
@@ -128,7 +132,10 @@ export function FinancieroSaldos({ d }: { d: DatosFinanciero }) {
       </div>
       {enPib ? <NotaPib /> : null}
       <GraficoProyeccion
-        titulo={`Saldos del sistema: ${enPib ? 'porcentaje del PIB' : 'euros corrientes'}, observado y proyección`}
+        titulo={tituloConEscenario(
+          d,
+          `Saldos del sistema: ${enPib ? 'porcentaje del PIB' : 'euros corrientes'}, observado y proyección`,
+        )}
         descripcion={
           enPib
             ? 'Tres medidas de saldo del modelo y su equivalente observado, divididas por el PIB: el del INE en lo observado y el aproximado del modelo en lo proyectado. Se añade el balance del sistema de pensiones del Ageing Report, que es una proyección publicada. Unidad: porcentaje del PIB.'

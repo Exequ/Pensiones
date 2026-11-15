@@ -6,7 +6,7 @@ import type { DatosFinanciero } from './datos-financiero';
 import { GraficoProyeccion } from './GraficoProyeccion';
 import type { SerieProyectada } from './grafico-proyeccion';
 import { MODELO } from './ids-datos';
-import { contrasteAgeing, filasCandidatos } from './series-financiero';
+import { contrasteAgeing, filasCandidatos, tituloConEscenario } from './series-financiero';
 
 /** Gráfico f: gasto en pensiones sobre el PIB del modelo y del Ageing Report en índice, y candidatos a explicar la diferencia. */
 export function FinancieroContraste({ d }: { d: DatosFinanciero }) {
@@ -59,7 +59,10 @@ export function FinancieroContraste({ d }: { d: DatosFinanciero }) {
         Ageing Report que describe el modelo no se ha comprobado aquí con la fuente.
       </p>
       <GraficoProyeccion
-        titulo={`Gasto en pensiones sobre el PIB: ${MODELO.m4} y Ageing Report, índice ${c.anioBase} = ${BASE_INDICE}`}
+        titulo={tituloConEscenario(
+          d,
+          `Gasto en pensiones sobre el PIB: ${MODELO.m4} y Ageing Report, índice ${c.anioBase} = ${BASE_INDICE}`,
+        )}
         descripcion={`Gasto en pensiones en porcentaje del PIB de cada serie, dividido por su valor en ${c.anioBase} y multiplicado por cien. Unidad: índice.`}
         series={series}
         unidadEje={`Índice (${c.anioBase} = ${BASE_INDICE})`}

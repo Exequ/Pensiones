@@ -18,6 +18,7 @@ import {
   filasPibDeTramo,
   seriesGasto,
   seriesPensionMedia,
+  tituloConEscenario,
   type UnidadImporte,
   type UnidadPension,
 } from './series-financiero';
@@ -74,10 +75,10 @@ export function FinancieroGasto({ d }: { d: DatosFinanciero }) {
     <>
       <h3 id="proy-fin-gasto">Gasto en pensiones contributivas</h3>
       <p>
-        El modelo calcula el gasto como el número de pensiones de cada clase por la pensión media y
-        por catorce pagas. El histórico es el gasto en pensiones de la ejecución del presupuesto de
-        la Seguridad Social, que es la misma magnitud con la que el modelo se calibra en el último
-        año observado.
+        El modelo calcula el gasto como el número de pensiones de cada clase por la pensión media,
+        por catorce pagas y por un factor de calibración de cada clase (se calcula más abajo). El
+        histórico es el gasto en pensiones de la ejecución del presupuesto de la Seguridad Social,
+        que es la misma magnitud con la que el modelo se calibra en el último año observado.
       </p>
       <div className="proy-controles">
         <SegmentedPills
@@ -89,7 +90,10 @@ export function FinancieroGasto({ d }: { d: DatosFinanciero }) {
       </div>
       <NotaPib />
       <GraficoProyeccion
-        titulo={`Gasto en pensiones contributivas: ${enPib ? 'porcentaje del PIB' : 'euros corrientes'}, observado y proyección`}
+        titulo={tituloConEscenario(
+          d,
+          `Gasto en pensiones contributivas: ${enPib ? 'porcentaje del PIB' : 'euros corrientes'}, observado y proyección`,
+        )}
         descripcion={
           enPib
             ? 'Gasto anual en pensiones contributivas dividido por el PIB. Hasta el último año observado, el PIB es el corriente del INE; desde el primer año proyectado, el PIB aproximado del modelo. Unidad: porcentaje del PIB.'
@@ -179,7 +183,10 @@ export function FinancieroGasto({ d }: { d: DatosFinanciero }) {
         />
       </div>
       <GraficoProyeccion
-        titulo={`Pensión media mensual: ${constantes ? `euros constantes de ${base}` : 'euros corrientes'}, observado y proyección`}
+        titulo={tituloConEscenario(
+          d,
+          `Pensión media mensual: ${constantes ? `euros constantes de ${base}` : 'euros corrientes'}, observado y proyección`,
+        )}
         descripcion={
           constantes
             ? `Pensión media mensual de jubilación y de todas las clases, en euros constantes de ${base}. Lo observado se deflacta con el IPC medio anual del INE; lo proyectado, con el IPC supuesto del escenario (${ipc} anual). Unidad: euros al mes.`

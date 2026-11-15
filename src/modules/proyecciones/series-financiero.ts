@@ -24,9 +24,10 @@ import {
   valorEn,
   type PuntoAnual,
 } from '../../engine/series-historicas';
-import type { DatosFinanciero } from './datos-financiero';
+import { formatearPorcentaje } from '../../engine/formato';
+import type { DatosFinanciero, EscenarioM4 } from './datos-financiero';
 import type { SerieProyectada } from './grafico-proyeccion';
-import { COL4 } from './ids-financiero';
+import { COL4, ESCENARIO_BASE } from './ids-financiero';
 import { puntosDeColumna } from './series';
 
 /** Los importes se muestran en miles de millones de euros: el modelo y la ejecución van en millones. */
@@ -356,13 +357,19 @@ export function filasLimite(d: DatosFinanciero): FilaLimite[] {
 }
 
 /** Rentabilidad nominal anual implícita en la salida: (final − inicial − dotación + disposición) ÷ inicial. */
-export function rentabilidadImplicita(d: DatosFinanciero): {
+export function rentabilidadImplicita(
+  d: DatosFinanciero,
+  escenario: string = d.escenarioActivo.id,
+): {
   readonly minima: number;
   readonly maxima: number;
 } {
-  const valores = columnaM4(d, COL4.fondo);
-  const dotacion = new Map(columnaM4(d, COL4.dotacion).map((p) => [p.anio, p.valor]));
-  const disposicion = new Map(columnaM4(d, COL4.disposicion).map((p) => [p.anio, p.valor]));
+  const filas = d.filasPorEscenario[escenario] ?? [];
+  const valores = puntosDeColumna(filas, COL4.fondo);
+  const dotacion = new Map(puntosDeColumna(filas, COL4.dotacion).map((p) => [p.anio, p.valor]));
+  const disposicion = new Map(
+    puntosDeColumna(filas, COL4.disposicion).map((p) => [p.anio, p.valor]),
+  );
   const inicial = valorEn(d.observado.fondoValor.puntos, d.anioInicio - 1);
   if (inicial === undefined)
     throw new RangeError('Falta el valor del Fondo del último año observado');
@@ -441,4 +448,93 @@ export function filasCandidatos(d: DatosFinanciero): FilaCandidatos[] {
     crecimientoPibAgeing: pibAgeing.get(anio) ?? null,
     crecimientoPibModelo: pibM4.get(anio) ?? null,
   }));
+}
+
+// ---------------------------------------------------------------------------
+// Escenarios de sensibilidad (Ajustes de M4)
+// ---------------------------------------------------------------------------
+
+const porcentajeEscenario = (fraccion: number): string =>
+  formatearPorcentaje(fraccion, { maxDecimales: 2 });
+
+/** Qué hipótesis cambian respecto al escenario base, dicho con los valores de cada uno. */
+export function descripcionCambio(e: EscenarioM4, base: EscenarioM4): string {
+  const partes: string[] = [];
+  if (e.g !== base.g) {
+    partes.push(
+      `crecimiento real de los salarios: ${porcentajeEscenario(e.g)} en lugar de ${porcentajeEscenario(base.g)}`,
+    );
+  }
+  if (e.ipc !== base.ipc) {
+    partes.push(`IPC: ${porcentajeEscenario(e.ipc)} en lugar de ${porcentajeEscenario(base.ipc)}`);
+  }
+  return partes.length === 0
+    ? 'Es el escenario de referencia: el de los demás modelos'
+    : `Cambia solo el ${partes.join(' y el ')}`;
+}
+
+/** Fila de la tabla que compara los escenarios en el último año de la salida. */
+export type FilaComparacionEscenario = {
+  readonly id: string;
+  readonly escenario: string;
+  /** Gasto en pensiones, % del PIB aproximado del modelo. */
+  readonly gastoPib: number | null;
+  /** Diferencia con el escenario base, puntos de PIB. */
+  readonly gastoDiferencia: number | null;
+  readonly saldoPib: number | null;
+  readonly saldoDiferencia: number | null;
+  /** Valor del Fondo a fin de año, miles de millones de euros corrientes. */
+  readonly fondo: number | null;
+  /** Pensión media de todas las clases en euros constantes del último año observado (con el IPC del escenario). */
+  readonly pensionMediaConstante: number | null;
+};
+
+export interface ComparacionEscenarios {
+  /** Último año de la salida, en el que se comparan los escenarios. */
+  readonly anio: number;
+  readonly anioBase: number;
+  readonly filas: readonly FilaComparacionEscenario[];
+}
+
+/**
+ * Compara los escenarios en el último año de la salida: gasto y saldo en % del PIB aproximado de cada
+ * uno (con su diferencia respecto al base, en puntos), valor del Fondo y pensión media en euros
+ * constantes. Cada escenario usa su propio PIB aproximado y su propio IPC.
+ */
+export function comparacionEscenarios(d: DatosFinanciero): ComparacionEscenarios {
+  const anio = columnaM4(d, COL4.gasto).at(-1)?.anio;
+  if (anio === undefined) throw new Error('La salida del modelo no tiene filas');
+  const anioBase = anioBaseConstante(d);
+  const de = (id: string, columna: string): number | undefined =>
+    valorEn(puntosDeColumna(d.filasPorEscenario[id] ?? [], columna), anio);
+  const gastoBase = de(ESCENARIO_BASE, COL4.gastoPctPib);
+  const saldoBase = de(ESCENARIO_BASE, COL4.saldoNoFinancieroPctPib);
+  const filas = d.escenarios.map((e): FilaComparacionEscenario => {
+    const gasto = de(e.id, COL4.gastoPctPib);
+    const saldo = de(e.id, COL4.saldoNoFinancieroPctPib);
+    const fondo = de(e.id, COL4.fondo);
+    const media = puntosDeColumna(d.filasPorEscenario[e.id] ?? [], COL4.pensionMediaTotal);
+    const constante = valorEn(aEurosConstantesConIpcSupuesto(media, e.ipc, anioBase), anio);
+    return {
+      id: e.id,
+      escenario: e.etiqueta,
+      gastoPib: gasto ?? null,
+      gastoDiferencia: gasto === undefined || gastoBase === undefined ? null : gasto - gastoBase,
+      saldoPib: saldo ?? null,
+      saldoDiferencia: saldo === undefined || saldoBase === undefined ? null : saldo - saldoBase,
+      fondo: fondo === undefined ? null : fondo / MILLONES_A_MIL_MILLONES,
+      pensionMediaConstante: constante ?? null,
+    };
+  });
+  return { anio, anioBase, filas };
+}
+
+/** Rótulo de un gráfico con el escenario mostrado. */
+export const tituloConEscenario = (d: DatosFinanciero, titulo: string): string =>
+  `${titulo} · escenario ${d.escenarioActivo.etiqueta}`;
+
+/** Rentabilidad real a partir de la nominal y el IPC; un cero numérico (±1e-12) se devuelve como cero, sin signo. */
+export function rentabilidadReal(nominal: number, ipc: number): number {
+  const r = tasaReal(nominal, ipc);
+  return Math.abs(r) < 1e-12 ? 0 : r;
 }

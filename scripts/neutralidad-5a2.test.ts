@@ -92,6 +92,37 @@ describe('términos de juicio sobre proyecciones financieras (Fase 5-B2)', () =>
   });
 });
 
+describe('términos de juicio sobre escenarios de sensibilidad y sobre el Fondo (Ajustes de M4)', () => {
+  it.each([
+    ['En el peor escenario el Fondo sufre su agotamiento', ['peor escenario', 'agotamiento']],
+    [
+      'Es el mejor escenario, el más favorable: un escenario favorable',
+      ['mejor escenario', 'escenario favorable'],
+    ],
+    [
+      'Un escenario adverso, un escenario desfavorable, con presión financiera',
+      ['escenario adverso', 'escenario desfavorable', 'presion financiera'],
+    ],
+    ['Resulta más barato y más costoso a la vez', ['mas barato', 'mas costoso']],
+  ])('detecta «%s»', (texto, esperadas) => {
+    const halladas = valoracionesEn(texto);
+    for (const e of esperadas) expect(halladas).toContain(e);
+  });
+
+  it('no marca la descripción de un escenario por sus hipótesis ni las diferencias calculadas', () => {
+    expect(
+      valoracionesEn(
+        'Escenario g 0 %, IPC 2 %. Cambia solo el crecimiento real de los salarios: 0 % en lugar de 1 %. El gasto sobre el PIB es mayor que en el base en 2,27 puntos y el saldo es menor.',
+      ),
+    ).toEqual([]);
+    expect(
+      valoracionesEn(
+        'La rentabilidad nominal del Fondo es la misma, de modo que su rentabilidad real cambia con el IPC.',
+      ),
+    ).toEqual([]);
+  });
+});
+
 describe.each([
   'hucha',
   'financiacion-y-deficit',
