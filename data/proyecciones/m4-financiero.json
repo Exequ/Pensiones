@@ -57,31 +57,31 @@
     },
     {
       "id": "gasto_pensiones",
-      "descripcion": "Gasto en pensiones contributivas: número de pensiones de cada clase por pensión media por catorce pagas",
+      "descripcion": "Gasto en pensiones contributivas: número de pensiones de cada clase por pensión media por catorce pagas y por un factor de calibración (devengo) de cada clase",
       "tipo": "numero",
       "unidad": "millones de euros"
     },
     {
       "id": "cotizaciones",
-      "descripcion": "Cotizaciones: las del año de calibración escaladas con la masa de bases de M2, más el MEI, que está incluido en esta columna",
+      "descripcion": "Cotizaciones sociales, incluido el MEI: las del año de calibración sin el MEI escaladas con la masa de bases de M2, más el MEI calculado con su tipo legal",
       "tipo": "numero",
       "unidad": "millones de euros"
     },
     {
       "id": "mei",
-      "descripcion": "Cotización del Mecanismo de Equidad Intergeneracional (MEI), con el tipo legal creciente hasta su último año de vigencia en el modelo",
+      "descripcion": "Parte de las cotizaciones que corresponde al Mecanismo de Equidad Intergeneracional (MEI), con el tipo legal creciente hasta su último año de vigencia en el modelo; es un desglose de «cotizaciones», no un ingreso adicional",
       "tipo": "numero",
       "unidad": "millones de euros"
     },
     {
       "id": "otros_gastos",
-      "descripcion": "Resto de gastos: bajas por enfermedad, maternidad, pensiones no contributivas, Ingreso Mínimo Vital, personal y otros",
+      "descripcion": "Resto de gastos: bajas por enfermedad, maternidad, complementos a mínimos, pensiones no contributivas, Ingreso Mínimo Vital, personal y otros",
       "tipo": "numero",
       "unidad": "millones de euros"
     },
     {
       "id": "transferencias_y_otros",
-      "descripcion": "Transferencias del Estado y otros ingresos",
+      "descripcion": "Transferencias del Estado y otros ingresos que no son cotizaciones",
       "tipo": "numero",
       "unidad": "millones de euros"
     },
@@ -99,7 +99,7 @@
     },
     {
       "id": "saldo_no_financiero",
-      "descripcion": "Saldo no financiero: ingresos menos gasto en pensiones menos resto de gastos, con las transferencias del Estado y otros ingresos",
+      "descripcion": "Saldo no financiero: saldo sin transferencias más las transferencias del Estado y otros ingresos",
       "tipo": "numero",
       "unidad": "millones de euros"
     },
@@ -117,7 +117,7 @@
     },
     {
       "id": "fondo_reserva",
-      "descripcion": "Valor del Fondo de Reserva a fin de año",
+      "descripcion": "Valor del Fondo de Reserva a fin de año: parte de un valor a precio de adquisición y crece con una rentabilidad nominal constante; no es valor de mercado",
       "tipo": "numero",
       "unidad": "millones de euros"
     },
@@ -359,5 +359,5 @@
       1.387847320120111
     ]
   ],
-  "notes": "Importes en millones de euros corrientes (con inflación) salvo las pensiones medias (euros al mes). El PIB de M4 es un indicador aproximado (afiliados por salario nominal): no es una previsión macroeconómica ni coincide con el PIB del INE. La descripción de M4 enumera los ingresos como «cotizaciones de 2025 escaladas con la masa de bases de M2, más el MEI»; en esta salida el MEI está incluido en «cotizaciones» (las cotizaciones sin el MEI evolucionan como la base total de M2; se comprueba en scripts/proyecciones-5b2.test.ts, y consta en docs/DISCREPANCIAS.md). «saldo_sin_transferencias» no se define por su nombre en la descripción: es el saldo no financiero sin las transferencias del Estado y otros ingresos (cotizaciones menos gasto en pensiones menos resto de gastos); se comprueba en el mismo test. La descripción no da la rentabilidad del Fondo: la salida solo permite obtener la implícita."
+  "notes": "Importes en millones de euros corrientes (con inflación) salvo las pensiones medias (euros al mes). El PIB de M4 es un indicador aproximado (afiliados por salario nominal): no es una previsión macroeconómica ni coincide con el PIB del INE. Según la descripción de M4, las cotizaciones incluyen el MEI (en el presupuesto el MEI es una partida de las cotizaciones sociales): la columna «mei» es un desglose de «cotizaciones», no un ingreso adicional (se comprueba en scripts/proyecciones-5b2.test.ts). El gasto en pensiones es el número de pensiones de cada clase por la pensión media por catorce pagas y por un factor de calibración (devengo) de cada clase, que se obtiene con el cociente de 2025 y se mantiene constante; la descripción da los valores y su causa principal: los complementos a mínimos, que el presupuesto contabiliza aparte y que pasan al resto de gastos (falta confirmar que la pensión media estadística los incluye; consta en docs/PENDIENTE_DATOS.md). «saldo_sin_transferencias» es cotizaciones menos gasto en pensiones menos resto de gastos, es decir, sin las transferencias del Estado ni otros ingresos; «saldo_no_financiero» es ese saldo más «transferencias_y_otros» (se comprueba en el mismo test). El Fondo de Reserva parte de un valor a precio de adquisición a fin del último año observado y crece con una rentabilidad nominal constante (la descripción da el valor), más la dotación y menos la disposición: no es valor de mercado. La fiabilidad asignada a esta salida es media porque M4 hereda la incertidumbre de M2, que es baja."
 }

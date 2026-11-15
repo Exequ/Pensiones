@@ -197,7 +197,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
     const { container } = pintar();
     expect(screen.getByRole('link', { name: /Hucha/ })).toHaveAttribute('href', '/hucha');
     expect(container.textContent).toMatch(/precio de adquisición/);
-    expect(container.textContent).toMatch(/rentabilidad nominal anual implícita de 2,00\s%/);
+    expect(container.textContent).toMatch(/rentabilidad nominal anual implícita\s+es de 2,00\s%/);
     const flujos = figuraDe(container, 'Dotaciones y disposiciones del Fondo de Reserva');
     const cabeceras = [...flujos.querySelectorAll('thead th')].map((c) => c.textContent);
     expect(cabeceras).toContain('Límite legal de disposición');

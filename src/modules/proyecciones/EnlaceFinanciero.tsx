@@ -23,9 +23,9 @@ export function EnlaceFinanciero({ origen }: { origen: Origen }) {
           muestra, en el bloque «Sistema financiero», el Fondo de Reserva tal como lo calcula un
           modelo propio con la legislación actual congelada: valor a fin de año, dotaciones,
           disposiciones, límite legal de disposición y financiación adicional. El histórico de esta
-          página es el registrado por la fuente, con el Fondo a precio de adquisición; el modelo lo
-          hace evolucionar con supuestos propios, por lo que las dos partes no usan exactamente la
-          misma valoración.
+          página es el registrado por la fuente, con el Fondo a precio de adquisición; el modelo
+          parte de ese valor y lo hace crecer con una rentabilidad nominal constante, por lo que las
+          dos partes no usan exactamente la misma valoración.
         </p>
       ) : (
         <p>

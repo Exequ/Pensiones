@@ -20,27 +20,41 @@ export function FinancieroComoFunciona({ d }: { d: DatosFinanciero }) {
       <p>
         <strong>Cómo funciona.</strong> El gasto en pensiones es el número de pensiones de cada
         clase (jubilación, viudedad, incapacidad, orfandad y en favor de familiares) por la pensión
-        media y por catorce pagas. Cada año todas las pensiones se revalorizan con el IPC; salen las
-        bajas y entran las altas con una pensión algo mayor, porque quienes se jubilan han cotizado
-        más y mejor que quienes fallecen. Por eso, en el modelo, la pensión media crece algo más que
-        los precios. En la versión actual, la pensión de las altas de jubilación sigue además las
-        reglas de cálculo del modelo {MODELO.m5}: la opción de años de cotización de la etapa
-        transitoria, los topes de base y de pensión máxima y la actualización de las bases con los
-        precios.
+        media, por catorce pagas y por un factor de calibración (devengo) de cada clase, que se
+        obtiene con el cociente del último año observado y se mantiene constante. El factor corrige
+        sobre todo por los complementos a mínimos: el presupuesto los contabiliza aparte y la
+        pensión media de las estadísticas parece incluirlos (falta confirmarlo), de modo que el
+        modelo los lleva al resto de gastos, que evoluciona con el PIB y no con el número de
+        pensiones; el resto de la diferencia es el desfase entre contar las pensiones a una fecha
+        del año y su promedio anual. Cada año todas las pensiones se revalorizan con el IPC; salen
+        las bajas y entran las altas con una pensión algo mayor, porque quienes se jubilan han
+        cotizado más y mejor que quienes fallecen. Por eso, en el modelo, la pensión media crece
+        algo más que los precios. En la versión actual, la pensión de las altas de jubilación sigue
+        además las reglas de cálculo del modelo {MODELO.m5}: la opción de años de cotización de la
+        etapa transitoria, los topes de base y de pensión máxima y la actualización de las bases con
+        los precios.
       </p>
       <p>
-        Los ingresos son las cotizaciones del año base escaladas con la masa de bases de {MODELO.m2}
-        , más el MEI (una cotización adicional con un tipo que crece durante unos años y se mantiene
-        hasta el último año de su vigencia en el modelo), más las transferencias del Estado y otros
-        ingresos. El saldo es la diferencia entre los ingresos y los gastos: gasto en pensiones y
-        resto de gastos (bajas por enfermedad, maternidad, pensiones no contributivas, Ingreso
-        Mínimo Vital, personal y otros).
+        Los ingresos son las cotizaciones más las transferencias del Estado y otros ingresos. Las
+        cotizaciones incluyen el MEI, que en el presupuesto es una partida de las cotizaciones
+        sociales: las cotizaciones sin el MEI del año base se escalan con la masa de bases de{' '}
+        {MODELO.m2}, y el MEI se calcula aparte con su tipo legal (que crece durante unos años y se
+        mantiene hasta el último año de su vigencia en el modelo) sobre esa misma base. La columna
+        del MEI es un desglose de las cotizaciones, no un ingreso adicional. El saldo es la
+        diferencia entre los ingresos y los gastos: gasto en pensiones y resto de gastos (bajas por
+        enfermedad, maternidad, complementos a mínimos, pensiones no contributivas, Ingreso Mínimo
+        Vital, personal y otros). Se muestran tres medidas: cotizaciones menos pensiones, saldo sin
+        transferencias (cotizaciones menos gasto en pensiones menos resto de gastos, es decir, sin
+        las transferencias del Estado ni otros ingresos) y saldo no financiero (con todo).
       </p>
       <p>
-        El Fondo de Reserva se nutre del MEI. A partir del primer año en que la ley lo permite puede
-        cubrir déficit con un límite anual en porcentaje del PIB; lo que no cubre aparece como
-        financiación adicional. El modelo se calibra con la ejecución presupuestaria del último año
-        observado: reproduce el gasto en pensiones por clase y el saldo de ese año.
+        El Fondo de Reserva se nutre del MEI (la dotación es una proporción constante del MEI).
+        Parte de un valor a precio de adquisición al inicio y crece con una rentabilidad nominal
+        constante, más la dotación y menos la disposición; no es valor de mercado. A partir del
+        primer año en que la ley lo permite puede cubrir déficit con un límite anual en porcentaje
+        del PIB; lo que no cubre aparece como financiación adicional. El modelo se calibra con la
+        ejecución presupuestaria del último año observado: reproduce el gasto en pensiones por clase
+        y el saldo de ese año.
       </p>
       <p>
         <strong>Datos de entrada.</strong> La ejecución presupuestaria de la Seguridad Social, las
@@ -76,14 +90,22 @@ export function FinancieroComoFunciona({ d }: { d: DatosFinanciero }) {
         referencia ya calculado.
       </p>
       <p>
+        <strong>Fiabilidad.</strong> La fiabilidad de esta salida se considera media: el modelo
+        hereda la incertidumbre de {MODELO.m2} (cotizantes y bases, fiabilidad baja), de {MODELO.m1}{' '}
+        y de {MODELO.m3}. La calibración con el último año observado asegura el punto de partida, no
+        la trayectoria.
+      </p>
+      <p>
         <strong>Qué no hace.</strong> Mantiene la legislación congelada, sin reformas futuras. Los
         autónomos solo entran dentro de los totales. No incluye ciclo económico. El resto de gastos
         y las transferencias del Estado evolucionan con el PIB, sin depender de la demografía. La
         pensión de las altas sigue a {MODELO.m5} solo para dos perfiles de carrera (uno central y
         uno con salarios altos), no para la distribución real de salarios de quienes se jubilan, y{' '}
         {MODELO.m5} no reproduce la caída de la tasa de reposición que supone el Ageing Report. El
-        MEI se incluye solo hasta el último año de su vigencia en el modelo y el modelo no calcula
-        más allá del último año de la salida.
+        MEI se incluye solo hasta el último año de su vigencia en el modelo, el factor de
+        calibración de cada clase se mantiene constante, el Fondo parte de un valor a precio de
+        adquisición y crece con una rentabilidad constante, y el modelo no calcula más allá del
+        último año de la salida.
       </p>
       <p>
         <strong>Comprobaciones y pendientes.</strong> La descripción del modelo recoge un contraste
