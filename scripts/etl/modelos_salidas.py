@@ -9,6 +9,8 @@ Qué hace
   - Escribe `naturaleza: "proyeccion-de-modelo"`, el escenario, la fuente (URL del script del modelo en
     GitHub, en el commit indicado por el LEEME) y las columnas con su descripción y unidad. Las
     descripciones salen de docs/modelos/Mx_descripcion.md; no se añade nada que ahí no conste.
+  - M4 con escenarios (Ajustes de M4): `m4/m4_escenarios.csv` y `m4/LEEME_m4_escenarios.txt` dan `m4-escenarios.json`; la fila de
+    2025 (observada, no calculada) se guarda aparte en `filaObservada` y el escenario base debe reproducir `m4_financiero.csv`.
   - No modifica los CSV ni ejecuta los modelos.
 
 Ejecutar desde la raíz del repositorio con `python3 -I scripts/etl/modelos_salidas.py`. Después se
@@ -203,9 +205,9 @@ FICHEROS = [
             'de M4, las cotizaciones incluyen el MEI (en el presupuesto el MEI es una partida de las cotizaciones sociales): la columna «mei» es un '
             'desglose de «cotizaciones», no un ingreso adicional (se comprueba en scripts/proyecciones-5b2.test.ts). El gasto en pensiones es el '
             'número de pensiones de cada clase por la pensión media por catorce pagas y por un factor de calibración (devengo) de cada clase, '
-            'que se obtiene con el cociente de 2025 y se mantiene constante; la descripción da los valores y su causa principal: los '
-            'complementos a mínimos, que el presupuesto contabiliza aparte y que pasan al resto de gastos (falta confirmar que la pensión media '
-            'estadística los incluye; consta en docs/PENDIENTE_DATOS.md). «saldo_sin_transferencias» es cotizaciones menos gasto en pensiones '
+            'que se obtiene con el cociente de 2025 y se mantiene constante. La descripción de M4 atribuye la diferencia a los complementos a '
+            'mínimos, que el presupuesto contabiliza aparte: es una hipótesis de su autor, no verificada contra la metodología de la fuente '
+            '(consta en docs/PENDIENTE_DATOS.md). «saldo_sin_transferencias» es cotizaciones menos gasto en pensiones '
             'menos resto de gastos, es decir, sin las transferencias del Estado ni otros ingresos; «saldo_no_financiero» es ese saldo más '
             '«transferencias_y_otros» (se comprueba en el mismo test). El Fondo de Reserva parte de un valor a precio de adquisición a fin del '
             'último año observado y crece con una rentabilidad nominal constante (la descripción da el valor), más la dotación y menos la '
@@ -237,6 +239,32 @@ FICHEROS = [
         ],
     },
 ]
+
+# M4 con escenarios (Ajustes de M4): mismo CSV largo con la columna «escenario» delante y la fila de 2025.
+_M4 = next(f for f in FICHEROS if f['id'] == 'm4-financiero')
+FICHEROS.append({
+    **_M4,
+    'csv': 'm4/m4_escenarios.csv',
+    'id': 'm4-escenarios',
+    'leeme': 'm4/LEEME_m4_escenarios.txt',
+    'escenarios': True,
+    'title': 'M4 · Modelo financiero del sistema en cinco escenarios de sensibilidad (2026-2050, con la fila observada de 2025)',
+    'description': (
+        'Las mismas salidas de M4 que «m4-financiero» en cinco escenarios que cambian solo el crecimiento real de los salarios o el IPC '
+        'respecto al escenario base, con la legislación actual congelada. Cada fila es un escenario y un año. El año 2025 no lo calcula el '
+        'modelo: son datos observados, iguales en los cinco escenarios, que constan aparte en «filaObservada». Es un cálculo propio con '
+        'supuestos explícitos: no es una previsión.'
+    ),
+    'notes': (
+        'Las columnas son las de m4-financiero con la columna «escenario» delante; sus definiciones y limitaciones son las de ese fichero. '
+        'Cada escenario cambia solo g o el IPC respecto al base; las demás palancas del modelo son las de por defecto (véase «parametrosComunes»). '
+        'El escenario base de 2026 en adelante coincide con m4-financiero (lo comprueba el script y un test). La rentabilidad nominal del Fondo es la '
+        'misma en los cinco escenarios, de modo que su rentabilidad real cambia con el IPC. «pib_proxy» es un indicador aproximado (afiliados por '
+        'salario nominal), no el PIB del INE. Esta salida la ejecutó Claude en su entorno de trabajo con el código de modelos/m4/m4_escenarios.py, no '
+        'Sergio en local (véase el LEEME de los escenarios).'
+    ),
+    'columnas': [('escenario', 'texto', 'Escenario de sensibilidad (identificador del LEEME de los escenarios)', None)] + _M4['columnas'],
+})
 
 MODELOS = {
     'm1': ('M1 · Modelo demográfico', 'docs/modelos/M1_descripcion.md', 'modelos/m1/m1_demografia.py'),
@@ -270,6 +298,8 @@ def horizonte_m1():
 def convierte(valor, tipo):
     if tipo == 'texto':
         return valor
+    if valor == '':
+        return None
     return float(valor) if ('.' in valor or 'e' in valor.lower() or 'nan' in valor.lower()) else int(valor)
 
 
@@ -289,6 +319,42 @@ def lee_csv(ruta, columnas):
     return filas
 
 
+def leer_leeme_escenarios():
+    """LEEME de los escenarios de M4: fecha, commit previo, tabla de escenarios, palancas comunes y fila de 2025."""
+    texto = open(f'{SALIDAS}/m4/LEEME_m4_escenarios.txt', encoding='utf-8').read()
+    fecha = re.search(r'^Fecha: (\d{4}-\d{2}-\d{2})', texto, re.M)
+    previo = re.search(r'último commit que modifica modelos/ antes de esta ejecución es ([0-9a-f]{7,40})', texto)
+    if not (fecha and previo):
+        sys.exit('El LEEME de escenarios no tiene fecha o commit previo')
+    pct = lambda s: round(float(s.replace(',', '.')) / 100, 10)
+    escenarios = [
+        {'id': m.group(1), 'g': pct(m.group(2)), 'ipc': pct(m.group(3))}
+        for m in re.finditer(r'^(base|g\d|ipc\d)\s*\|\s*([\d,.]+) %\s*\|\s*([\d,.]+) %\s*$', texto, re.M)
+    ]
+    if len(escenarios) != 5:
+        sys.exit(f'Se esperaban cinco escenarios en el LEEME y hay {len(escenarios)}')
+
+    def bloque(inicio, fin):
+        a = texto.index(inicio)
+        b = texto.index(fin, a) if fin else len(texto)
+        return [re.sub(r'^- ', '', l).strip() for l in texto[a:b].splitlines()[1:] if l.strip()]
+
+    comunes = bloque('En los cinco, el resto de palancas', '\nLA FILA DE 2025')
+    fila = bloque('LA FILA DE 2025', '\nEJECUCIÓN')
+    # La primera línea del bloque de 2025 es la advertencia general; las demás describen cada magnitud.
+    completo = subprocess.run(
+        ['git', '-C', REPO, 'log', '-1', '--format=%H', '--', 'modelos/m4/m4_escenarios.py'],
+        capture_output=True, text=True, check=True,
+    ).stdout.strip()
+    if not completo:
+        sys.exit('No se encuentra en git el commit que añade modelos/m4/m4_escenarios.py')
+    anterior = subprocess.run(['git', '-C', REPO, 'rev-parse', previo.group(1)], capture_output=True, text=True, check=True).stdout.strip()
+    return {
+        'fecha': fecha.group(1), 'commit': completo, 'commitPrevio': anterior, 'escenarios': escenarios,
+        'comunes': comunes, 'fila2025': fila,
+    }
+
+
 def modelo_extra(f, modelo):
     if f['modelo'] == 'm1':
         modelo['horizontePresentacion'] = horizonte_m1()
@@ -297,6 +363,52 @@ def modelo_extra(f, modelo):
         if m:
             modelo['anioBaseReal'] = int(m.group(1))
     return modelo
+
+
+def separa_escenarios(f, filas, esc):
+    """Separa del CSV de escenarios la fila de 2025 (observada) de las filas calculadas por el modelo.
+
+    Comprueba que la fila observada es igual en los cinco escenarios, que el escenario base de 2026 en
+    adelante reproduce `m4_financiero.csv` celda a celda y que cada escenario tiene todos los años.
+    """
+    columnas = f['columnas']
+    ids = [c[0] for c in columnas]
+    i_esc, i_anio = ids.index('escenario'), ids.index('anio')
+    lista = [e['id'] for e in esc['escenarios']]
+    anio_obs = min(r[i_anio] for r in filas)
+    observadas = [r for r in filas if r[i_anio] == anio_obs]
+    calculadas = [r for r in filas if r[i_anio] != anio_obs]
+    if sorted(r[i_esc] for r in observadas) != sorted(lista):
+        sys.exit('La fila observada no está una vez en cada escenario del LEEME')
+    if len({tuple(r[:i_esc] + r[i_esc + 1:]) for r in observadas}) != 1:
+        sys.exit('La fila observada no es igual en los cinco escenarios')
+    anios = sorted({r[i_anio] for r in calculadas})
+    for e in lista:
+        if sorted(r[i_anio] for r in calculadas if r[i_esc] == e) != anios:
+            sys.exit(f'El escenario {e} no tiene todos los años')
+    base = [r[:i_esc] + r[i_esc + 1:] for r in calculadas if r[i_esc] == 'base']
+    ruta_base = f'{SALIDAS}/m4/m4_financiero.csv'
+    esperado = lee_csv(ruta_base, [c for c in columnas if c[0] != 'escenario'])
+    # Las celdas pueden diferir en el último bit de la coma flotante (≈ 1e-16 en términos relativos).
+    iguales = len(base) == len(esperado) and all(
+        len(a) == len(b) and all(
+            (x == y) or (isinstance(x, float) and isinstance(y, float) and abs(x - y) <= 1e-12 * max(abs(x), abs(y)))
+            for x, y in zip(a, b)
+        )
+        for a, b in zip(base, esperado)
+    )
+    if not iguales:
+        sys.exit('El escenario base no reproduce m4_financiero.csv')
+    # Orden de las filas: por escenario del LEEME y por año.
+    orden = {e: i for i, e in enumerate(lista)}
+    calculadas.sort(key=lambda r: (orden[r[i_esc]], r[i_anio]))
+    obs = observadas[0]
+    valores = {c[0]: v for c, v in zip(columnas, obs) if c[1] == 'numero' and v is not None and c[0] != 'anio'}
+    return calculadas, {
+        'escenarios': esc['escenarios'],
+        'parametrosComunes': esc['comunes'],
+        'filaObservada': {'anio': anio_obs, 'descripcion': esc['fila2025'], 'valores': valores},
+    }
 
 
 def main():
@@ -308,6 +420,13 @@ def main():
         sha = hashlib.sha256(open(ruta_csv, 'rb').read()).hexdigest()
         nombre, descripcion, script = MODELOS[f['modelo']]
         filas = lee_csv(ruta_csv, f['columnas'])
+        extra = {}
+        procedencia = leeme
+        if f.get('escenarios'):
+            esc = leer_leeme_escenarios()
+            filas, extra = separa_escenarios(f, filas, esc)
+            procedencia = {**leeme, 'fecha': esc['fecha'], 'commit': esc['commit']}
+            script = 'modelos/m4/m4_escenarios.py'
         # Los enteros del CSV («2026») se guardan como número; los valores con decimales, como están.
         obj = {
             'tipo': 'proyeccion',
@@ -317,29 +436,33 @@ def main():
             'naturaleza': 'proyeccion-de-modelo',
             'modelo': modelo_extra(f, {'id': f['modelo'], 'nombre': nombre, 'descripcion': descripcion}),
             'escenario': {
-                'g': leeme['g'],
-                'ipc': leeme['ipc'],
+                'g': procedencia['g'],
+                'ipc': procedencia['ipc'],
                 'legislacion': 'congelada',
-                'literal': leeme['literal'],
+                'literal': procedencia['literal'],
                 'aplicacion': ESCENARIO_APLICACION[f['modelo']],
             },
             'source': {
                 'title': f'{nombre}: código del modelo en el repositorio y salidas de su ejecución',
                 'publisher': PUBLICADOR,
-                'url': f'{URL_REPO}/{leeme["commit"]}/{script}',
+                'url': f'{URL_REPO}/{procedencia["commit"]}/{script}',
             },
-            'fetchedAt': leeme['fecha'],
+            'fetchedAt': procedencia['fecha'],
             'confidence': f['confidence'],
             'origen': {
                 'csv': f'data-raw/modelos-salidas/{f["csv"]}',
                 'sha256': sha,
-                'commitModelos': leeme['commit'],
-                'leeme': 'data-raw/modelos-salidas/LEEME.txt',
-                'ejecutadoEl': leeme['fecha'],
+                'commitModelos': procedencia['commit'],
+                'leeme': 'data-raw/modelos-salidas/' + f.get('leeme', 'LEEME.txt'),
+                'ejecutadoEl': procedencia['fecha'],
             },
             'columnas': [{'id': c[0], 'descripcion': c[2], 'tipo': c[1], 'unidad': c[3]} for c in f['columnas']],
             'filas': filas,
         }
+        # Campos propios de las salidas con varios escenarios (van antes de «columnas»).
+        for clave in ('escenarios', 'parametrosComunes', 'filaObservada'):
+            if clave in extra:
+                obj[clave] = extra[clave]
         if f.get('notes'):
             obj['notes'] = f['notes']
         destino = f'{DESTINO}/{f["id"]}.json'
