@@ -47,4 +47,7 @@ Sensibilidades de la descripción sin salida (revalorización, cotización adici
 
 ## CI y despliegue
 
-(Se completa al cerrar el PR.)
+- PR [Exequ/Pensiones#34](https://github.com/Exequ/Pensiones/pull/34): CI en verde en su último SHA (lint, tipos, tests, datos y compilación; Playwright; compilación para Pages); fusionado con squash como `5809ed1`. En local, antes del PR: `npm run lint` (con `validate:data`), `tsc -b --force`, `npm test` (104 ficheros, 2.166 tests), `npm run build` y Playwright completo (346 tests, escritorio y móvil) en verde.
+- Un test de axe en móvil falló una vez en local con dos procesos en paralelo (la página con las tablas abiertas tarda unos 28 s en analizarse, al borde de los 30 s por defecto); se amplió su margen a 120 s en los tres specs que recorren el bloque, sin quitar comprobaciones.
+- Despliegue en GitHub Pages del SHA fusionado: terminado con éxito; la URL pública responde 200.
+- **Ruta publicada comprobada** con Chromium contra `https://exequ.github.io/Pensiones/#/proyecciones` a 1360 y 390 px: carga el bloque financiero, el escenario base está seleccionado, elegir «g 2 %» cambia las curvas del gasto, sin desbordes horizontales y con cero errores de consola. Capturas locales revisadas a 1360 y 390 px de los apartados nuevos (escenarios y factor de calibración).
