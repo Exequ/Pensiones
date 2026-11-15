@@ -1,0 +1,37 @@
+M4 · Escenarios de sensibilidad (m4_escenarios.csv)
+
+QUÉ ES
+Un único CSV largo con las salidas de M4 (modelo financiero del sistema de pensiones) en cinco escenarios. Cada fila es un escenario y un año (2025 a 2050). Tiene las mismas columnas que m4_financiero.csv, con la columna «escenario» delante. Son resultados de un modelo propio con la legislación actual congelada, no datos de una fuente oficial ni una previsión. Las columnas están definidas en docs/modelos/M4_descripcion.md (sección 5).
+El fichero m4_financiero.csv (escenario base, de 2026 a 2050) no se ha modificado. La parte del escenario «base» de 2026 en adelante coincide con él (lo comprueba un test).
+
+ESCENARIOS
+escenario | crecimiento real de salarios (g) | inflación (IPC)
+base      | 1 %                              | 2 %
+g0        | 0 %                              | 2 %
+g2        | 2 %                              | 2 %
+ipc1      | 1 %                              | 1 %
+ipc3      | 1 %                              | 3 %
+
+Cada escenario cambia solo g o el IPC respecto al base. En los cinco, el resto de palancas es el de por defecto del modelo:
+- Revalorización de las pensiones: IPC (0 puntos adicionales).
+- Pensión de las altas: factor 1 (sin cambio); enlace con M5 activado (con el g y el IPC de cada escenario); ninguna alta con carrera de salarios altos (parte 0).
+- Cotización adicional: 0 puntos.
+- Fondo de Reserva: se usa desde 2033 con el límite legal; rentabilidad nominal del 2 % anual en todos los escenarios, también cuando el IPC es 1 % o 3 % (así, la rentabilidad real del Fondo es mayor con IPC 1 % y menor con IPC 3 %).
+- Transferencias del Estado y otros ingresos: el mismo porcentaje del PIB que en 2025.
+- Resto de gastos: constante en porcentaje del PIB.
+- Demografía (M1), empleo (M2) y pensiones (M3): sin cambios respecto a sus valores por defecto. MEI hasta 2050.
+- Horizonte: hasta 2050.
+
+LA FILA DE 2025
+La primera fila de cada escenario es 2025 y NO la calcula el modelo: son datos observados, iguales en los cinco escenarios.
+- Gasto en pensiones, cotizaciones, MEI, resto de gastos y otros ingresos: ejecución del presupuesto de la Seguridad Social de 2025 (obligaciones y derechos reconocidos; data/sistema/presupuesto-ss-ejecucion.csv). «Resto de gastos» = gasto total no financiero − pensiones; «transferencias_y_otros» = ingreso total no financiero − cotizaciones.
+- Número de pensiones y pensión media: pensiones contributivas en vigor a 1 de diciembre de 2025 (en 2026 y siguientes, la columna «pensiones_oct» es de octubre, según M3: los dos valores no son del mismo mes). Pensión media de todas las clases = media ponderada por número.
+- Fondo de Reserva: valor a 31 de diciembre de 2025, a precio de adquisición (14.070 M€); dotación del MEI de 2025 (4.356 M€); sin disposiciones.
+- PIB: PIB corriente de 2025 del INE (data/macro/pib-ine.json). En los años siguientes, «pib_proxy» es un indicador aproximado (afiliados × salario nominal), no el PIB del INE.
+- Afiliados por pensión: afiliados de M2 de 2025 entre pensiones en vigor de 1 de diciembre.
+- La columna «financiacion_adicional» está vacía en 2025: no tiene equivalente observado.
+
+EJECUCIÓN
+Fecha: 2026-11-15. Ejecutado por Claude en su entorno de trabajo (no en local), con Python 3.13, pandas 3.0.5 y numpy 2.5.3. El código es el del repositorio en main (commit f409a92 «Descripcion M4»; el último commit que modifica modelos/ antes de esta ejecución es 15651e8). Los ficheros nuevos son modelos/m4/m4_escenarios.py y modelos/m4/test_m4_escenarios.py; el commit que los añade, junto a este fichero y al CSV, es el que figura en Git y no se puede conocer antes de hacerlo.
+Tests: los 20 de modelos/m4 pasan (12 anteriores y 8 nuevos), entre ellos que el escenario base reproduce m4_financiero.csv y que la fila de 2025 es igual en los cinco escenarios.
+Para reproducirlo: cd modelos/m4 && python m4_escenarios.py ../../data-raw/modelos-salidas/m4 (el resultado es determinista).
