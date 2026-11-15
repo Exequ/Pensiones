@@ -42,7 +42,7 @@ test.describe('bloque «Sistema financiero (M4)» de «Proyecciones»', () => {
         'no es un dato observado ni una previsión',
       );
     }
-    await expect(seccion.locator('.como-leerlo')).toHaveCount(8);
+    await expect(seccion.locator('figure.grafico + .como-leerlo')).toHaveCount(8);
     await expect(seccion.locator('details.proy-funciona')).toHaveCount(1);
     await expect(seccion).toContainText('Cambio de definición del PIB');
     await expect(seccion).toContainText('no verificadas');
