@@ -204,10 +204,11 @@ export const datosTipos = memorizar((): DatosTipos => {
         porPaga: importePorPaga(anual),
       };
     });
+    const ficheroMinimas = config.minimas?.fichero;
     const datosCuantias =
-      config.minimas === null
+      ficheroMinimas === undefined
         ? []
-        : cuantiasDato.map((d) => datoDeArchivo(minimas[config.minimas!.fichero], d.id));
+        : cuantiasDato.map((d) => datoDeArchivo(minimas[ficheroMinimas], d.id));
 
     // Pensión máxima (común a las contributivas) o importe de la no contributiva.
     const maximaFicha: CuantiaMaxima | null =

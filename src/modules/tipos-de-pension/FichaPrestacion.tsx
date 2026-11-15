@@ -153,7 +153,7 @@ export function FichaPrestacion({ ficha }: { readonly ficha: DatosFicha }) {
 
       <h4>Cuántas hay y cuánto cobran de media</h4>
       <DataTable
-        titulo={`Pensiones de ${config.titulo.toLowerCase()} y pensión media, ${fechaEnTexto(ficha.fechaVigor, aPie)}`}
+        titulo={`Número y pensión media: ${config.titulo}, ${fechaEnTexto(ficha.fechaVigor, aPie)}`}
         columnas={[
           { clave: 'etiqueta', titulo: aPie ? 'Sexo' : 'Fuente del dato' },
           { clave: 'numero', titulo: 'Pensiones', tipo: 'numero', decimales: 0 },

@@ -7,6 +7,7 @@ import {
   diferenciasRespectoA,
   ordenarPorValor,
   separarEtiquetas,
+  ultimoPunto,
   type PuntoPais,
   type ValorPais,
 } from '../../engine/comparativa-internacional';
@@ -223,9 +224,9 @@ export function GraficoLineasPaises({
     const altoInterior = alto - MARGEN_SUPERIOR - MARGEN_INFERIOR;
     const aPixel = (v: number) => ((maximoY - v) / (maximoY - minimoY)) * altoInterior;
     const aValor = (px: number) => maximoY - (px / altoInterior) * (maximoY - minimoY);
-    const finales = conPuntos.map((s) => {
-      const ultimo = s.puntos.reduce((u, p) => (p.anio > u.anio ? p : u), s.puntos[0]!);
-      return { pais: s.pais, anio: ultimo.anio, valor: ultimo.valor };
+    const finales = conPuntos.flatMap((s) => {
+      const ultimo = ultimoPunto(s.puntos);
+      return ultimo === undefined ? [] : [{ pais: s.pais, anio: ultimo.anio, valor: ultimo.valor }];
     });
     const ajustados = separarEtiquetas(
       finales.map((f) => aPixel(f.valor)),
@@ -270,7 +271,7 @@ export function GraficoLineasPaises({
               y: 'valor',
               stroke: espana ? token('resaltado') : token('apagado'),
               strokeWidth: espana ? 3 : 1.5,
-              strokeDasharray: esAgregado(s.pais) ? (TRAZOS[1] ?? 'none') : 'none',
+              strokeDasharray: esAgregado(s.pais) ? TRAZOS[1] : 'none',
             });
           }),
           // Con pocos puntos (series de la OCDE por años sueltos) se marcan los puntos.

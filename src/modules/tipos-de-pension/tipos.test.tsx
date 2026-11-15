@@ -64,7 +64,7 @@ describe('página «Tipos de pensión»', () => {
       for (const fila of filas(requisitos)) {
         expect(fila[2], `norma de un requisito de ${c.titulo}`).toMatch(/art|DT|disposición/i);
       }
-      expect(filas(tabla(f, /Pensiones de .* y pensión media/)).length).toBeGreaterThan(0);
+      expect(filas(tabla(f, /Número y pensión media/)).length).toBeGreaterThan(0);
       const fuente = [...f.querySelectorAll('.linea-fuente')].map((x) => x.textContent).join(' ');
       expect(fuente).toMatch(/descargado el \d{4}-\d{2}-\d{2}/);
       expect(fuente).toMatch(/confianza: (alta|media|baja)/);
@@ -103,9 +103,7 @@ describe('página «Tipos de pensión»', () => {
     const vi = d.fichas.find((x) => x.config.ancla === 'viudedad');
     const ambos = vi?.enVigor[0];
     if (!ambos) throw new Error('sin datos');
-    const fila = filas(
-      tabla(ficha(container, 'viudedad'), /Pensiones de viudedad y pensión media/),
-    )[0];
+    const fila = filas(tabla(ficha(container, 'viudedad'), /Número y pensión media: Viudedad/))[0];
     expect(fila?.[0]).toBe('Ambos sexos');
     expect(fila?.[1]).toBe(entero(ambos.numero));
     expect(fila?.[2]).toBe(euros2(ambos.media ?? 0));

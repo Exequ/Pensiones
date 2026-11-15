@@ -2,6 +2,7 @@
 
 .tipos-ficha {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--espacio-4);
   padding-top: var(--espacio-5);
   border-top: var(--grosor-filete) solid var(--color-tinta);
@@ -28,6 +29,7 @@
 
 .tipos-citas {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--espacio-4);
   list-style: none;
   padding: 0;

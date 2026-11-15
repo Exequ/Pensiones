@@ -45,6 +45,7 @@
 
 .sistemas-selector {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--espacio-3);
   margin-top: var(--espacio-5);
 }
@@ -120,6 +121,7 @@
 
 .sistemas-pais {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--espacio-3);
   padding-top: var(--espacio-4);
   border-top: var(--grosor-filete) solid var(--color-tinta);
@@ -132,6 +134,7 @@
 
 .sistemas-rasgos {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--espacio-4);
   list-style: none;
   padding: 0;
@@ -139,6 +142,7 @@
 
 .sistemas-rasgo {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--espacio-1);
   font-family: var(--fuente-interfaz);
   font-size: var(--texto-etiqueta);
@@ -164,5 +168,6 @@
 
 .sistemas-definiciones {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--espacio-4);
 }

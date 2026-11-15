@@ -1,6 +1,6 @@
 /**
- * Palabras de valoración que no deben aparecer en los textos de las páginas «Hucha» y «Financiación y
- * déficit» (regla c de CLAUDE.md, neutralidad). Lista ampliable; se usa en los tests de neutralidad.
+ * Palabras de valoración que no deben aparecer en los textos de las páginas «Hucha», «Financiación y
+ * déficit», «Otros sistemas» y «Tipos de pensión» (regla c de CLAUDE.md, neutralidad). Lista ampliable; se usa en los tests de neutralidad.
  */
 
 /** Raíces de las palabras de valoración, sin tildes y en minúsculas. */
@@ -126,6 +126,49 @@ export const PALABRAS_DE_VALORACION = [
   'a la deriva',
   'fuera de control',
   'sostenibilidad en peligro',
+  // Fase 5-C: términos de ranking valorativo y de juicio sobre sistemas de otros países. Se ordena por
+  // la medida mostrada y se describen diferencias calculadas, sin decir qué sistema es mejor, ni
+  // cuál debe imitarse, ni quién «gana» o «pierde».
+  'mejor sistema',
+  'peor sistema',
+  'mejores sistemas',
+  'peores sistemas',
+  'mejor modelo',
+  'peor modelo',
+  'sistema modelo',
+  'modelo a seguir',
+  'modelo a imitar',
+  'ejemplo a seguir',
+  'ejemplo a imitar',
+  'referente mundial',
+  'referente europeo',
+  'a la cola',
+  'a la zaga',
+  'cola de europa',
+  'rezagad',
+  'atrasad',
+  'lider',
+  'campeon',
+  'ganador',
+  'perdedor',
+  'fracas',
+  'exitos',
+  'mas sostenible',
+  'menos sostenible',
+  'mas generos',
+  'menos generos',
+  'mas justo',
+  'menos justo',
+  'mas eficiente',
+  'menos eficiente',
+  'ineficien',
+  'deberia copiar',
+  'deberia imitar',
+  'deberia adoptar',
+  'deberia seguir',
+  'habria que',
+  'copiar',
+  'imitar',
 ] as const;
 
 const normalizar = (t: string): string =>
