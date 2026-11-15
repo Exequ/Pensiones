@@ -39,12 +39,13 @@ export const SECCIONES = [
     titulo: 'Tipos de pensión',
     tituloNav: 'Tipos de pensión',
     resumen:
-      'Qué prestaciones existen, quién puede cobrarlas y qué requisitos exige cada una, tanto en la modalidad contributiva como en la no contributiva.',
+      'Qué prestaciones existen, quién puede cobrarlas, qué requisitos exige cada una, cuáles son sus cuantías mínimas y máximas vigentes y cuántas pensiones hay de cada tipo, tanto en la modalidad contributiva como en la no contributiva.',
     previsto: [
-      'Pensiones contributivas: jubilación, incapacidad permanente, viudedad, orfandad y en favor de familiares.',
-      'Pensiones no contributivas y su relación con otras prestaciones asistenciales.',
-      'Requisitos de acceso y cuantías mínimas y máximas, con su fuente normativa.',
-      'Cuántas pensiones hay de cada tipo y cuál es su cuantía media.',
+      'Una ficha por prestación: jubilación, incapacidad permanente, viudedad, orfandad, en favor de familiares y las pensiones no contributivas de jubilación y de invalidez (disponible).',
+      'Requisitos principales de cada prestación, con su artículo y el enlace al texto del BOE (disponible).',
+      'Cuantías mínimas y máxima vigentes, con el importe mensual en catorce pagas como cálculo derivado (disponible).',
+      'Número de pensiones en vigor y pensión media de cada tipo (disponible).',
+      'Complementos a las pensiones, Clases Pasivas y número de pensiones por grado de incapacidad o por modalidad de jubilación: pendientes de datos.',
     ],
   },
   {
@@ -144,11 +145,13 @@ export const SECCIONES = [
     titulo: 'Otros sistemas',
     tituloNav: 'Otros sistemas',
     resumen:
-      'Cómo se organizan las pensiones en otros países: reparto, capitalización, cuentas nocionales y modelos mixtos.',
+      'Cómo se organizan y qué miden las pensiones en otros países: gasto público sobre el PIB, edad de jubilación, tasa de reposición teórica y estructura de los sistemas (reparto, capitalización, cuentas nocionales y pilares), con datos de la OCDE, Eurostat y la Comisión Europea y las definiciones de cada medida.',
     previsto: [
-      'Reparto y capitalización: en qué se diferencian.',
-      'Cuentas nocionales: cómo funcionan y dónde se aplican.',
-      'Comparación de indicadores con otros países europeos, con definiciones homogéneas.',
+      'Gasto público en pensiones sobre el PIB según la OCDE y según Eurostat, lado a lado, por país y en su evolución (disponible).',
+      'Edad normal de jubilación de la OCDE, actual y futura, y edad efectiva de salida del mercado laboral, con el contraste de la edad de la normativa española (disponible).',
+      'Tasa de reposición teórica bruta y neta de la OCDE por país, con los supuestos del cálculo, el escenario alternativo y el contraste de España con cocientes propios (disponible).',
+      'Estructura de los sistemas de los países de la muestra, con la cita literal de la fuente y un glosario de reparto, capitalización y cuentas nocionales (disponible).',
+      'Perímetro del gasto de cada fuente, impuestos y cotizaciones de los pensionistas y fichas detalladas de Reino Unido y Estados Unidos: pendientes de datos.',
     ],
   },
   {

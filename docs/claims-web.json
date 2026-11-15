@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1, 3-B2 y 5-A). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md).",
+  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1, 3-B2, 5-A y 5-C). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md).",
   "claims": [
     {
       "id": "web-tu-pension-base-sugerida",
@@ -1270,6 +1270,349 @@
       ],
       "fetchedAt": "2026-11-14",
       "estado": "verificada"
+    },
+    {
+      "id": "web-hucha-origen-finalidad",
+      "texto": "La ejecución del presupuesto de la Seguridad Social clasifica las transferencias del Estado por origen y el Tribunal de Cuentas las cifra por finalidad; las dos cifras no coinciden y con los datos descargados no se concilian partida a partida; la causa completa de la diferencia no está verificada.",
+      "ubicacion": "Página «Hucha»: De dónde procede el dinero (Fase 5-C, paso 0)",
+      "datos": [
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#transferencias-equilibrio-2018-2021",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#transferencias-costes-impropios-2021-2022"
+      ],
+      "fuentes": [
+        {
+          "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+          "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090",
+          "docId": "BOE-A-2025-25090"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Solo se afirma lo verificado (criterio de clasificación de cada fuente); la causa completa de la diferencia queda sin atribuir. Complementa web-hucha-clasificaciones."
+    },
+    {
+      "id": "web-sis-gasto-medidas",
+      "texto": "La OCDE (gasto público en pensiones) y Eurostat (prestaciones de vejez y de supervivencia) publican el gasto en pensiones sobre el PIB con delimitaciones distintas, y el perímetro de ninguna de las dos series está verificado en las fuentes descargadas; el cociente propio de las pensiones contributivas del Sistema es una tercera delimitación, y para España y un mismo año las tres cifras difieren sin que los datos descargados permitan reconciliarlas.",
+      "ubicacion": "Página «Otros sistemas» (Fase 5-C): gasto sobre el PIB",
+      "datos": [
+        "internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq",
+        "internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp",
+        "internacional/contraste-espana.json#gasto-pensiones-contributivas-sobre-pib"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        },
+        {
+          "title": "Eurostat: spr_exp_func, ilc_peps01n, lfsi_emp_a y lfsi_dwl_a",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+          "docId": "eurostat-int"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-sis-edad-ocde",
+      "texto": "La edad normal de jubilación de la OCDE es la de acceso a todos los componentes obligatorios del sistema para quien entra en el mercado laboral a los 22 años y trabaja sin interrupción, y la edad efectiva de salida es la edad media de salida de la población activa de los trabajadores de 40 o más años; para España la OCDE da 65 años en 2024 y la normativa propia, 66 años y 8 meses para quien no alcanza 459 meses cotizados: son definiciones distintas y no se contradicen, porque una carrera de los 22 a los 65 años son 516 meses.",
+      "ubicacion": "Página «Otros sistemas» (Fase 5-C): edad de jubilación",
+      "datos": [
+        "internacional/contraste-espana.json#edad-jubilacion-ocde-hombres-2024",
+        "internacional/contraste-espana.json#edad-ordinaria-propia-2025",
+        "internacional/contraste-espana.json#carrera-jubilacion-65-propia-2025",
+        "internacional/contraste-espana.json#meses-carrera-completa-desde-22-hasta-65",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-definicion-edad-normal-jubilacion",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-definicion-edad-efectiva-salida"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        },
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-sis-reposicion-supuestos",
+      "texto": "La tasa de reposición teórica de la OCDE modela a un trabajador soltero que entra en el mercado laboral a los 22 años en 2024 y se jubila tras una carrera completa con el mismo salario relativo; el escenario base supone inflación del 2 %, crecimiento real de los salarios del 1,25 %, tipo de descuento real del 1,5 % y rentabilidad real de los planes de capitalización del 2,5 %, y con el escenario alternativo la tasa bruta de España pasa de 80,4 % a 88,0 %.",
+      "ubicacion": "Página «Otros sistemas» (Fase 5-C): tasa de reposición",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-trabajador-que-entra-en-2024",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-inflacion-base",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-crecimiento-real-salarios-base",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tipo-descuento-real-base",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-rentabilidad-real-fdc-base",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tasa-bruta-reposicion-alternativo-esp",
+        "internacional/ocde-espana.json#gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        },
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-sis-reposicion-espana",
+      "texto": "La tasa de reposición bruta teórica de la OCDE para España (80,4 % al salario medio) y la neta (86,3 %) no equivalen a los cocientes entre la pensión media por catorce pagas y el salario medio calculados con datos propios, que según la definición de salario y de pensión van de 51,5 % a 83,1 %; los datos descargados no permiten descomponer la diferencia.",
+      "ubicacion": "Página «Otros sistemas» (Fase 5-C): España frente a cocientes propios",
+      "datos": [
+        "internacional/ocde-espana.json#gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024",
+        "internacional/ocde-espana.json#nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024",
+        "internacional/contraste-espana.json#pension-altas-sobre-salario-eaes",
+        "internacional/contraste-espana.json#pension-altas-sobre-salario-base-media-x12",
+        "internacional/contraste-espana.json#pension-vigor-sobre-salario-cn-puesto"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        },
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-sis-estructura",
+      "texto": "La página muestra, para cada país elegido, los rasgos de su sistema de pensiones con la cita literal en inglés de la ficha del Ageing Report 2024 o de «Pensions at a Glance 2025» y una etiqueta en español que la cita sustenta (confianza media); no son una descripción completa de cada sistema y se excluyen las dos citas que recogen una proyección publicada.",
+      "ubicacion": "Página «Otros sistemas» (Fase 5-C): estructura de los sistemas",
+      "datos": [
+        "internacional/paises-sistemas.json#sistema-esp-1",
+        "internacional/paises-sistemas.json#sistema-fra-1",
+        "internacional/paises-sistemas.json#sistema-fra-2",
+        "internacional/paises-sistemas.json#sistema-ita-1",
+        "internacional/paises-sistemas.json#sistema-swe-1",
+        "internacional/paises-sistemas.json#sistema-swe-2",
+        "internacional/paises-sistemas.json#sistema-pol-1",
+        "internacional/paises-sistemas.json#sistema-deu-1",
+        "internacional/paises-sistemas.json#sistema-deu-2",
+        "internacional/paises-sistemas.json#sistema-prt-1",
+        "internacional/paises-sistemas.json#sistema-prt-2",
+        "internacional/paises-sistemas.json#sistema-nld-1",
+        "internacional/paises-sistemas.json#sistema-nld-2",
+        "internacional/paises-sistemas.json#sistema-dnk-1",
+        "internacional/paises-sistemas.json#sistema-dnk-2",
+        "internacional/paises-sistemas.json#sistema-esp-2",
+        "internacional/paises-sistemas.json#sistema-esp-3",
+        "internacional/paises-sistemas.json#sistema-esp-4",
+        "internacional/paises-sistemas.json#sistema-esp-5",
+        "internacional/paises-sistemas.json#sistema-esp-6",
+        "internacional/paises-sistemas.json#sistema-esp-7",
+        "internacional/paises-sistemas.json#sistema-esp-8",
+        "internacional/paises-sistemas.json#sistema-gbr-1",
+        "internacional/paises-sistemas.json#sistema-gbr-2",
+        "internacional/paises-sistemas.json#sistema-gbr-3",
+        "internacional/paises-sistemas.json#sistema-gbr-4",
+        "internacional/paises-sistemas.json#sistema-gbr-5",
+        "internacional/paises-sistemas.json#sistema-usa-1",
+        "internacional/paises-sistemas.json#sistema-usa-2",
+        "internacional/paises-sistemas.json#sistema-usa-3",
+        "internacional/paises-sistemas.json#sistema-usa-4",
+        "internacional/paises-sistemas.json#sistema-usa-5",
+        "internacional/paises-sistemas.json#sistema-usa-6",
+        "internacional/paises-sistemas.json#sistema-usa-8"
+      ],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche (fichas por país)",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en"
+        },
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-sis-comparabilidad",
+      "texto": "Las medidas de la comparativa internacional (gasto sobre el PIB de la OCDE y de Eurostat, edad normal y efectiva de jubilación y tasas de reposición bruta y neta de la OCDE) se muestran con su definición, sus supuestos y las dos versiones de cada concepto, sin elegir ninguna; los países no son directamente comparables porque cada fuente delimita lo que mide, los sistemas combinan reparto, capitalización y cuentas nocionales con reglas distintas, y las poblaciones y economías difieren.",
+      "ubicacion": "Página «Otros sistemas» (Fase 5-C): comparabilidad y glosario",
+      "datos": [
+        "internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq",
+        "internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tasa-neta-definicion",
+        "internacional/paises-sistemas.json#sistema-esp-1",
+        "internacional/paises-sistemas.json#sistema-ita-1",
+        "internacional/paises-sistemas.json#sistema-swe-1"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        },
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        },
+        {
+          "title": "Eurostat: spr_exp_func, ilc_peps01n, lfsi_emp_a y lfsi_dwl_a",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+          "docId": "eurostat-int"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche (fichas por país)",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Cuatro cuestiones agrupadas: (1) ¿es correcta la descripción de las dos medidas de gasto (OCDE y Eurostat) como delimitaciones distintas del mismo concepto, dado que el perímetro de ninguna consta en las fuentes descargadas?; (2) ¿es adecuado presentar la tasa de reposición bruta y la neta de la OCDE lado a lado con sus supuestos y contrastarlas con cocientes empíricos propios sin considerarlas equivalentes?; (3) ¿es correcto el contraste entre la edad normal de jubilación de la OCDE (carrera completa desde los 22 años) y la edad ordinaria de la normativa española?; (4) ¿son correctas, y suficientes para un lector no especialista, las definiciones conceptuales de reparto, capitalización y cuentas nocionales del glosario, que no proceden de una fuente descargada (las citas de las fichas de país solo muestran cómo las usan las fuentes)? Comprobar con datos: la definición de cada medida en data/internacional/ocde-supuestos-reposicion y las citas de data/internacional/paises-sistemas.",
+      "notas": "Pregunta agrupada (Fase 5-C) para respetar el tope de afirmaciones pendientes sin esconder las cuatro cuestiones: ver docs/DECISIONES.md."
+    },
+    {
+      "id": "web-tipos-requisitos",
+      "texto": "Para cada prestación (jubilación, incapacidad permanente, viudedad, orfandad, en favor de familiares y pensiones no contributivas de jubilación y de invalidez), la página recoge a quién cubre y sus requisitos principales con el artículo del texto refundido de la Ley General de la Seguridad Social, tal como constan en el texto consolidado descargado; las modalidades de jubilación se nombran sin detallar sus requisitos y la jubilación parcial tiene confianza media.",
+      "ubicacion": "Página «Tipos de pensión» (Fase 5-C): requisitos",
+      "datos": [
+        "normativa/prestaciones.json#jubilacion-ordinaria",
+        "normativa/prestaciones.json#incapacidad-permanente",
+        "normativa/prestaciones.json#viudedad",
+        "normativa/prestaciones.json#orfandad",
+        "normativa/prestaciones.json#favor-de-familiares",
+        "normativa/prestaciones.json#pnc-jubilacion",
+        "normativa/prestaciones.json#pnc-incapacidad",
+        "normativa/prestaciones.json#jubilacion-parcial"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-tipos-cuantias",
+      "texto": "Las cuantías mínimas de 2026 son las filas literales del Anexo I del Real Decreto 241/2026, la cuantía máxima de las pensiones públicas es de 3.359,60 euros al mes en 14 pagas (Real Decreto-ley 3/2026) y la pensión no contributiva íntegra es de 8.803,20 euros al año, con una cuantía mínima del 25 % de esa cuantía; los importes por paga y el anual de la máxima son cálculos derivados.",
+      "ubicacion": "Página «Tipos de pensión» (Fase 5-C): cuantías",
+      "datos": [
+        "parametros/pension-minima-jubilacion.json#2026-jub65-unipersonal",
+        "parametros/pension-minima-incapacidad.json#2026-ip-absoluta-unipersonal",
+        "parametros/pension-minima-viudedad.json#2026-viud-65-o-discapacidad65-unipersonal",
+        "parametros/pension-minima-orfandad-familiares.json#2026-orf-unico",
+        "parametros/pension-maxima.json#2026",
+        "parametros/pnc-importe-anual.json#2026",
+        "parametros/pnc-reglas.json#cuantia-minima-pct"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        },
+        {
+          "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-2548",
+          "docId": "BOE-A-2026-2548"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-tipos-porcentajes",
+      "texto": "La pensión de viudedad es el 52 % de la base reguladora (60 % para pensionistas con 65 o más años que cumplen los requisitos del Real Decreto 900/2018 y 70 % con cargas familiares) y la de orfandad, el 20 % por huérfano, con un incremento del 52 % en la orfandad absoluta, según el reglamento citado en cada caso.",
+      "ubicacion": "Página «Tipos de pensión» (Fase 5-C): porcentajes de la base reguladora",
+      "datos": [
+        "parametros/supervivencia-reglas.json#viudedad-pct",
+        "parametros/supervivencia-reglas.json#viudedad-65-pct",
+        "parametros/supervivencia-reglas.json#viudedad-cargas-pct",
+        "parametros/supervivencia-reglas.json#orfandad-pct",
+        "parametros/supervivencia-reglas.json#orfandad-absoluta-incremento-pct"
+      ],
+      "fuentes": [
+        {
+          "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-tipos-numeros",
+      "texto": "A diciembre de 2025 había 6.646.331 pensiones de jubilación, 1.054.935 de incapacidad permanente, 2.349.623 de viudedad, 337.183 de orfandad y 46.784 en favor de familiares, con pensiones medias de 1.512,73, 1.212,07, 937,56, 526,93 y 784,95 euros al mes; el IMSERSO registra 296.498 pensiones no contributivas de jubilación y 166.070 de invalidez en la nómina de diciembre de 2025 (pensión media de la nómina de 558,66 y 619,09 euros) y 301.676 y 169.633 pensionistas en su perfil del pensionista, cifras que no coinciden entre sí.",
+      "ubicacion": "Página «Tipos de pensión» (Fase 5-C): cuántas hay y su cuantía media",
+      "datos": [
+        "sistema/pensiones-vigor-numero.json#jubilacion-ambos",
+        "sistema/pensiones-vigor-numero.json#viudedad-ambos",
+        "sistema/pensiones-vigor-pension-media.json#jubilacion-ambos",
+        "sistema/imserso-pnc-perfil-2025.json#jubilacion-total-2025",
+        "sistema/imserso-pnc-perfil-2025.json#invalidez-total-2025"
+      ],
+      "fuentes": [
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        },
+        {
+          "title": "Informe de evolución de las nóminas. PNC y PSPD. 2019-2025 (anexos 7 y 8, total España)",
+          "publisher": "Instituto de Mayores y Servicios Sociales (IMSERSO)",
+          "url": "https://imserso.es/el-imserso/documentacion/estadisticas/pensiones-no-contributivas-jubilacion-invalidez-pnc"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
     }
   ]
 }

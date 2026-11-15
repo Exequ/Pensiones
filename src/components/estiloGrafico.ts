@@ -10,6 +10,9 @@ export function token(nombre: string): string {
   return `var(--color-${nombre})`;
 }
 
+/** Tinta de texto secundario (para etiquetas directas sobre fondo de papel). */
+export const TINTA_SECUNDARIA = token('tinta-2');
+
 /** Colores categóricos en el orden de uso recomendado. */
 export const CATEGORICOS = [1, 2, 3, 4, 5].map((n) => token(`cat-${n}`));
 

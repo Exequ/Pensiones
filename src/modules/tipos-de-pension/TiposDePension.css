@@ -1,0 +1,58 @@
+/* Página «Tipos de pensión» (Fase 5-C): solo tokens de src/styles/tokens.css. */
+
+.tipos-ficha {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-4);
+  padding-top: var(--espacio-5);
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  margin-top: var(--espacio-7);
+}
+
+.tipos-ficha h4 {
+  margin-top: var(--espacio-3);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-tinta-2);
+}
+
+.tipos-etiquetas,
+.tipos-pie {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-tinta-2);
+}
+
+.tipos-citas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-4);
+  list-style: none;
+  padding: 0;
+}
+
+.tipos-citas li {
+  display: grid;
+  gap: var(--espacio-1);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+}
+
+.tipos-citas blockquote {
+  margin: 0;
+  color: var(--color-tinta-2);
+}
+
+.tipos-enlace {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+}
+
+.tipos-resumen {
+  margin-top: var(--espacio-5);
+}

@@ -1,9 +1,7 @@
 import { lazy, type ComponentType } from 'react';
 import type { SlugSeccion } from './secciones';
-import TiposDePension from './tipos-de-pension/Pagina';
 import ComoSeCalcula from './como-se-calcula/Pagina';
 import Reformas from './reformas/Pagina';
-import OtrosSistemas from './otros-sistemas/Pagina';
 import MitosYRealidades from './mitos-y-realidades/Pagina';
 import Metodologia from './metodologia/Pagina';
 
@@ -23,6 +21,13 @@ const Hucha = lazy(() => import('./hucha/Pagina'));
 
 /** «Proyecciones» (Fase 5-B1) también se carga solo al visitarla: arrastra las salidas de los modelos. */
 const Proyecciones = lazy(() => import('./proyecciones/Pagina'));
+
+/**
+ * «Otros sistemas» y «Tipos de pensión» (Fase 5-C) se cargan solo al visitarlas: arrastran las
+ * tablas de la OCDE y de Eurostat y los ficheros de normativa y de parámetros, respectivamente.
+ */
+const OtrosSistemas = lazy(() => import('./otros-sistemas/Pagina'));
+const TiposDePension = lazy(() => import('./tipos-de-pension/Pagina'));
 
 /** Componente de página de cada sección, indexado por su ruta. */
 export const PAGINAS: Record<SlugSeccion, ComponentType> = {

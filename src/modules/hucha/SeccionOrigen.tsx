@@ -168,8 +168,14 @@ export function SeccionOrigen() {
       <h3 id="origen-tabla">Cuánto cambia la cifra según la clasificación</h3>
       <p>
         La tabla pone, para el mismo periodo, las cifras de la ejecución del presupuesto y las del
-        Tribunal de Cuentas. No coinciden, porque cada fuente delimita las partidas de un modo. Con
-        los datos descargados no se puede conciliar una cifra con otra partida a partida.
+        Tribunal de Cuentas. No coinciden, y con los datos descargados no se puede conciliar una
+        cifra con otra partida a partida.
+      </p>
+      <p id="origen-clasificacion">
+        Lo que sí consta es que los dos criterios de clasificación no son el mismo: la ejecución del
+        presupuesto clasifica las transferencias por su origen y el Tribunal de Cuentas las cifra
+        por su finalidad. La causa completa de la diferencia entre las dos cifras no está verificada
+        con los datos descargados.
       </p>
       <div className="hist-definiciones">
         <DataTable
