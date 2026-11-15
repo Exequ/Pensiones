@@ -522,8 +522,28 @@ export const ModeloProyeccion = z.strictObject({
   anioBaseReal: z.number().int().optional(),
 });
 
+/** Un escenario de una salida con varios (columna `escenario`): sus dos hipótesis, como fracción (0,01 = 1 %). */
+export const EscenarioDeSalida = z.strictObject({
+  id: z.string().regex(/^[a-z0-9]+$/, { error: 'id de escenario con formato no válido' }),
+  g: z.number({ error: 'escenarios.g debe ser un número' }),
+  ipc: z.number({ error: 'escenarios.ipc debe ser un número' }),
+});
+
 /**
- * Salida de un modelo propio (M1, M2 o M3), una tabla por CSV. No es un dato observado: lleva
+ * Fila de un año observado que acompaña a las filas calculadas por el modelo (M4, escenarios): no la
+ * calcula el modelo, son datos de la ejecución del presupuesto y de las estadísticas, iguales en todos los
+ * escenarios. No lleva celdas vacías: las columnas sin equivalente observado no constan en `valores`.
+ */
+export const FilaObservadaProyeccion = z.strictObject({
+  anio: z.number().int(),
+  /** Cómo se obtiene cada magnitud, tal cual lo dice el LEEME de la salida. */
+  descripcion: z.array(textoObligatorio('filaObservada.descripcion')).min(1),
+  /** Valor de cada columna numérica (id de columna → valor). */
+  valores: z.record(z.string(), z.number()),
+});
+
+/**
+ * Salida de un modelo propio (M1, M2, M3 o M4), una tabla por CSV. No es un dato observado: lleva
  * `naturaleza: "proyeccion-de-modelo"`, el escenario, el commit del código y la huella del CSV.
  * `validate:data` exige este esquema a todo fichero de `data/proyecciones/`.
  */
@@ -542,11 +562,55 @@ export const ArchivoProyeccion = z
     fetchedAt: FechaDescarga,
     confidence: Confianza,
     origen: OrigenProyeccion,
+    /** Solo en las salidas con varios escenarios: lista de escenarios (la columna `escenario` los identifica). */
+    escenarios: z.array(EscenarioDeSalida).min(2).optional(),
+    /** Palancas que valen igual en todos los escenarios, tal cual las recoge el LEEME. */
+    parametrosComunes: z.array(textoObligatorio('parametrosComunes')).min(1).optional(),
+    /** Año observado que antecede a las filas calculadas (solo M4, escenarios). */
+    filaObservada: FilaObservadaProyeccion.optional(),
     columnas: z.array(ColumnaProyeccion).min(2),
     filas: z.array(z.array(z.union([z.number(), z.string()]))).min(1),
     notes: z.string().trim().min(1).optional(),
   })
   .superRefine((archivo, ctx) => {
+    if (archivo.escenarios) {
+      const iColumna = archivo.columnas.findIndex((c) => c.id === 'escenario');
+      const ids = new Set(archivo.escenarios.map((e) => e.id));
+      if (ids.size !== archivo.escenarios.length) {
+        ctx.addIssue({ code: 'custom', message: 'Hay escenarios repetidos', path: ['escenarios'] });
+      }
+      if (iColumna < 0) {
+        ctx.addIssue({
+          code: 'custom',
+          message: 'Un fichero con «escenarios» necesita una columna «escenario»',
+          path: ['columnas'],
+        });
+      } else {
+        archivo.filas.forEach((fila, i) => {
+          if (!ids.has(String(fila[iColumna]))) {
+            ctx.addIssue({
+              code: 'custom',
+              message: `La fila ${i} es de un escenario que no figura en «escenarios»`,
+              path: ['filas', i, iColumna],
+            });
+          }
+        });
+      }
+    }
+    if (archivo.filaObservada) {
+      const numericas = new Set(
+        archivo.columnas.filter((c) => c.tipo === 'numero').map((c) => c.id),
+      );
+      for (const [id, valor] of Object.entries(archivo.filaObservada.valores)) {
+        if (!numericas.has(id) || !Number.isFinite(valor)) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `«${id}» de la fila observada no es una columna numérica o no es finito`,
+            path: ['filaObservada', 'valores', id],
+          });
+        }
+      }
+    }
     archivo.filas.forEach((fila, i) => {
       if (fila.length !== archivo.columnas.length) {
         ctx.addIssue({
@@ -644,6 +708,7 @@ export type PersonaEjemplo = z.infer<typeof PersonaEjemplo>;
 
 export type ArchivoTabla = z.infer<typeof ArchivoTabla>;
 export type ArchivoProyeccion = z.infer<typeof ArchivoProyeccion>;
+export type FilaObservadaProyeccion = z.infer<typeof FilaObservadaProyeccion>;
 export type Naturaleza = z.infer<typeof Naturaleza>;
 export type Periodo = z.infer<typeof Periodo>;
 export type Fuente = z.infer<typeof Fuente>;

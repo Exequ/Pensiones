@@ -32,7 +32,8 @@ test.describe('página «Proyecciones»', () => {
       await expect(figura.locator('.linea-fuente')).toContainText('descargado el');
       await expect(figura.locator('.linea-fuente')).toContainText('naturaleza:');
     }
-    await expect(page.locator('.como-leerlo')).toHaveCount(await figuras.count());
+    // Cada gráfico tiene su «Cómo leerlo» justo después; el bloque financiero añade dos más (escenarios y calibración).
+    await expect(page.locator('figure.grafico + .como-leerlo')).toHaveCount(await figuras.count());
     await expect(page.locator('details.proy-funciona')).toHaveCount(4);
     expect(registro.errores, 'errores de consola').toEqual([]);
     expect(registro.externas, 'peticiones a dominios externos').toEqual([]);
@@ -164,6 +165,8 @@ test.describe('página «Proyecciones»', () => {
   test('cumple WCAG 2.1 AA (axe) con los plegables y las tablas abiertos y los selectores en uso', async ({
     page,
   }) => {
+    // axe recorre una página con muchas tablas abiertas: en un ejecutor lento supera los 30 s por defecto.
+    test.setTimeout(120_000);
     await page.goto(url(RUTA));
     await esperarPagina(page);
     await page.getByRole('heading', { name: /^Sistema financiero/ }).waitFor();

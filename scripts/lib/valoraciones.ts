@@ -126,6 +126,21 @@ export const PALABRAS_DE_VALORACION = [
   'a la deriva',
   'fuera de control',
   'sostenibilidad en peligro',
+  // Ajustes de M4: calificativos de los escenarios de sensibilidad y del desenlace del Fondo. Los
+  // escenarios se nombran por sus hipótesis (g e IPC) y se comparan con diferencias calculadas, sin
+  // llamarlos favorables o adversos ni anticipar cuándo se acaba el Fondo.
+  'agotamiento',
+  'mas barato',
+  'mas costoso',
+  'peor escenario',
+  'mejor escenario',
+  'escenario favorable',
+  'escenario desfavorable',
+  'escenario adverso',
+  'escenario negativo',
+  'escenario positivo',
+  'presion financiera',
+  'tension en las cuentas',
   // Fase 5-C: términos de ranking valorativo y de juicio sobre sistemas de otros países. Se ordena por
   // la medida mostrada y se describen diferencias calculadas, sin decir qué sistema es mejor, ni
   // cuál debe imitarse, ni quién «gana» o «pierde».

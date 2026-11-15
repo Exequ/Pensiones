@@ -1,6 +1,7 @@
 import type { DatosFinanciero } from './datos-financiero';
 import { ComoFunciona, ListaVariables } from './Comunes';
 import { MODELO } from './ids-datos';
+import { COL4 } from './ids-financiero';
 
 /**
  * «Cómo funciona este modelo» de M4, redactado a partir de `docs/modelos/M4_descripcion.md` sin
@@ -21,18 +22,20 @@ export function FinancieroComoFunciona({ d }: { d: DatosFinanciero }) {
         <strong>Cómo funciona.</strong> El gasto en pensiones es el número de pensiones de cada
         clase (jubilación, viudedad, incapacidad, orfandad y en favor de familiares) por la pensión
         media, por catorce pagas y por un factor de calibración (devengo) de cada clase, que se
-        obtiene con el cociente del último año observado y se mantiene constante. El factor corrige
-        sobre todo por los complementos a mínimos: el presupuesto los contabiliza aparte y la
-        pensión media de las estadísticas parece incluirlos (falta confirmarlo), de modo que el
-        modelo los lleva al resto de gastos, que evoluciona con el PIB y no con el número de
-        pensiones; el resto de la diferencia es el desfase entre contar las pensiones a una fecha
-        del año y su promedio anual. Cada año todas las pensiones se revalorizan con el IPC; salen
-        las bajas y entran las altas con una pensión algo mayor, porque quienes se jubilan han
-        cotizado más y mejor que quienes fallecen. Por eso, en el modelo, la pensión media crece
-        algo más que los precios. En la versión actual, la pensión de las altas de jubilación sigue
-        además las reglas de cálculo del modelo {MODELO.m5}: la opción de años de cotización de la
-        etapa transitoria, los topes de base y de pensión máxima y la actualización de las bases con
-        los precios.
+        obtiene con el cociente del último año observado y se mantiene constante; su valor,
+        calculado con los datos descargados, está en el apartado «Del número de pensiones al gasto».
+        La descripción atribuye la diferencia a los complementos a mínimos, que el presupuesto
+        contabiliza aparte, y al desfase entre contar las pensiones a una fecha del año y su
+        promedio anual; es una hipótesis de su autor, no verificada contra la metodología de la
+        fuente, y esta página no la afirma. Lo que sí consta en los datos es que los complementos a
+        mínimos no están en la suma de pensiones de la ejecución y sí en el resto de gastos del año
+        base, que en el modelo evoluciona con el PIB y no con el número de pensiones. Cada año todas
+        las pensiones se revalorizan con el IPC; salen las bajas y entran las altas con una pensión
+        algo mayor, porque quienes se jubilan han cotizado más y mejor que quienes fallecen. Por
+        eso, en el modelo, la pensión media crece algo más que los precios. En la versión actual, la
+        pensión de las altas de jubilación sigue además las reglas de cálculo del modelo {MODELO.m5}
+        : la opción de años de cotización de la etapa transitoria, los topes de base y de pensión
+        máxima y la actualización de las bases con los precios.
       </p>
       <p>
         Los ingresos son las cotizaciones más las transferencias del Estado y otros ingresos. Las
@@ -50,11 +53,11 @@ export function FinancieroComoFunciona({ d }: { d: DatosFinanciero }) {
       <p>
         El Fondo de Reserva se nutre del MEI (la dotación es una proporción constante del MEI).
         Parte de un valor a precio de adquisición al inicio y crece con una rentabilidad nominal
-        constante, más la dotación y menos la disposición; no es valor de mercado. A partir del
-        primer año en que la ley lo permite puede cubrir déficit con un límite anual en porcentaje
-        del PIB; lo que no cubre aparece como financiación adicional. El modelo se calibra con la
-        ejecución presupuestaria del último año observado: reproduce el gasto en pensiones por clase
-        y el saldo de ese año.
+        constante supuesta, más la dotación y menos la disposición; no es valor de mercado. A partir
+        del primer año en que la ley lo permite puede cubrir déficit con un límite anual en
+        porcentaje del PIB; lo que no cubre aparece como financiación adicional. El modelo se
+        calibra con la ejecución presupuestaria del último año observado: reproduce el gasto en
+        pensiones por clase y el saldo de ese año.
       </p>
       <p>
         <strong>Datos de entrada.</strong> La ejecución presupuestaria de la Seguridad Social, las
@@ -67,7 +70,7 @@ export function FinancieroComoFunciona({ d }: { d: DatosFinanciero }) {
         cotizaciones, el MEI, los saldos (en euros y en porcentaje del PIB), la dotación, la
         disposición y el valor del Fondo, la financiación adicional y los afiliados por pensión:
       </p>
-      <ListaVariables columnas={d.m4.archivo.columnas} />
+      <ListaVariables columnas={d.m4.archivo.columnas.filter((c) => c.id !== COL4.escenario)} />
       <p>
         <strong>Cómo leer los resultados.</strong> «Con legislación actual congelada» no es una
         predicción: describe qué resultaría si no hubiera reformas y la economía siguiera las
@@ -86,8 +89,8 @@ export function FinancieroComoFunciona({ d }: { d: DatosFinanciero }) {
         las palancas de demografía ({MODELO.m1}) y de empleo ({MODELO.m2}), como la migración, la
         fecundidad, la convergencia del empleo de las mujeres o el empleo en las edades altas; las
         transferencias del Estado como porcentaje del PIB, la rentabilidad del Fondo y si el Fondo
-        se usa o no. Están en el código del modelo; esta página muestra solo el escenario de
-        referencia ya calculado.
+        se usa o no. Están en el código del modelo; esta página muestra el escenario de referencia y
+        otros cuatro que cambian solo el crecimiento real de los salarios o el IPC, ya calculados.
       </p>
       <p>
         <strong>Fiabilidad.</strong> La fiabilidad de esta salida se considera media: el modelo
