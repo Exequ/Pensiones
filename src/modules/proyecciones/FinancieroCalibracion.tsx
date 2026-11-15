@@ -4,7 +4,6 @@ import { formatearNumero } from '../../engine/formato';
 import { ComoLeerlo } from '../historico/ComoLeerlo';
 import type { DatosFinanciero } from './datos-financiero';
 import { MODELO } from './ids-datos';
-import { PAGAS_POR_ANIO } from '../../engine/proyecciones';
 
 const factor = (v: number): string => formatearNumero(v, { decimales: 3 });
 
@@ -31,51 +30,51 @@ export function FinancieroCalibracion({ d }: { d: DatosFinanciero }) {
       <h3 id="proy-fin-calibracion">Del número de pensiones al gasto: el factor de calibración</h3>
       <p>
         La descripción de {MODELO.m4} dice que el gasto en pensiones es el número de pensiones de
-        cada clase por la pensión media, por {PAGAS_POR_ANIO} pagas y por un factor de calibración
-        de cada clase, que se obtiene con el último año observado y se mantiene constante. Este
-        factor existe porque el producto de pensiones por pensión media por pagas no coincide con el
-        gasto que declara la ejecución del presupuesto. La tabla calcula el cociente de {c.anio} con
-        los datos descargados.
+        cada clase por la pensión media, por catorce pagas y por un factor de calibración de cada
+        clase, que se obtiene con el último año observado y se mantiene constante. Este factor
+        existe porque el producto de pensiones por pensión media por pagas no coincide con el gasto
+        que declara la ejecución del presupuesto. La tabla calcula el cociente de {c.anio} con los
+        datos descargados.
       </p>
       <DataTable
-        titulo={`Gasto de la ejecución del presupuesto de ${c.anio} frente a pensiones por pensión media por ${PAGAS_POR_ANIO} pagas`}
+        titulo={`Gasto de la ejecución del presupuesto de ${c.anio} frente a pensiones por pensión media por catorce pagas`}
         columnas={[
           { clave: 'clase', titulo: 'Clase' },
           {
             clave: 'pensiones',
-            titulo: 'Pensiones en vigor (a primero de diciembre)',
+            titulo: 'Pensiones',
             tipo: 'numero',
             decimales: 0,
           },
-          { clave: 'media', titulo: 'Pensión media (euros al mes)', tipo: 'numero', decimales: 2 },
+          { clave: 'media', titulo: 'Media (€/mes)', tipo: 'numero', decimales: 2 },
           {
             clave: 'gasto',
-            titulo: 'Gasto de la ejecución (millones de euros)',
+            titulo: 'Gasto (M€)',
             tipo: 'numero',
             decimales: 1,
           },
           {
             clave: 'nominal',
-            titulo: 'Pensiones por pensión media por pagas (millones de euros)',
+            titulo: 'Producto (M€)',
             tipo: 'numero',
             decimales: 1,
           },
           {
             clave: 'factor',
-            titulo: 'Cociente (gasto de la ejecución entre el producto)',
+            titulo: 'Cociente',
             tipo: 'numero',
             decimales: 3,
           },
         ]}
         filas={filas}
         filaDestacada={filas.length - 1}
-        pie={`El producto de pensiones por pensión media por pagas supera al gasto de la ejecución en ${formatearNumero(exceso, { decimales: 1 })} % en el conjunto. La ejecución trae además ${formatearNumero(c.gastoSinClase, { decimales: 2 })} millones de euros de pensiones derivadas de la DANA que no pertenecen a ninguna de las cinco clases y solo figuran en el total.`}
+        pie={`Pensiones en vigor y pensión media mensual, a primero de diciembre. «Gasto» es el de la ejecución del presupuesto y «Producto», pensiones por pensión media por catorce pagas, ambos en millones de euros (M€); el cociente es el gasto entre el producto. El producto supera al gasto de la ejecución en ${formatearNumero(exceso, { decimales: 1 })} % en el conjunto. La ejecución trae además ${formatearNumero(c.gastoSinClase, { decimales: 2 })} millones de euros de pensiones derivadas de la DANA que no pertenecen a ninguna de las cinco clases y solo figuran en el total.`}
       />
       <SourceLine datos={c.fuentes} />
       <p>
         Los complementos a mínimos de las pensiones contributivas figuran en la ejecución como una
         partida aparte, fuera de la suma de pensiones:{' '}
-        {formatearNumero(c.complementos.importe, { decimales: 1 })} millones de euros en {c.anio}.
+        {formatearNumero(c.complementos.importe, { decimales: 2 })} millones de euros en {c.anio}.
         Si se sumaran al gasto en pensiones, el cociente del conjunto sería{' '}
         {factor(c.complementos.factorConComplementos)} en lugar de {factor(c.total.factor)}.
       </p>
