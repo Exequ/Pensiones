@@ -49,14 +49,17 @@ export function FinancieroFondo({ d }: { d: DatosFinanciero }) {
         disposiciones y las reglas de disposición; aquí se añade lo que resulta del modelo.
       </p>
       <p>
-        El Fondo se valora a precio de adquisición en el histórico. La descripción del modelo no
-        indica cómo se valora en la proyección: la salida lo hace crecer con una rentabilidad
-        nominal anual implícita de{' '}
+        El Fondo se valora a precio de adquisición en el histórico. Según la descripción del modelo,
+        la proyección parte de un valor a precio de adquisición y lo hace crecer con una
+        rentabilidad nominal constante sobre el saldo del año anterior, más la dotación y menos la
+        disposición; no es valor de mercado. En la salida, la rentabilidad nominal anual implícita
+        es de{' '}
         {rentabilidadConstante
           ? `${formatearPorcentaje(rentabilidad.minima, { decimales: 2 })} (la misma todos los años)`
           : `entre ${formatearPorcentaje(rentabilidad.minima, { decimales: 2 })} y ${formatearPorcentaje(rentabilidad.maxima, { decimales: 2 })}`}
-        , calculada a partir del valor, la dotación y la disposición de cada año. Esa cifra no
-        consta en la descripción del modelo. Las dos valoraciones no son equivalentes.
+        , calculada a partir del valor, la dotación y la disposición de cada año, y coincide con la
+        constante que declara la descripción. La rentabilidad real puede ser distinta, y el valor a
+        precio de adquisición no equivale al valor de mercado.
       </p>
 
       <GraficoProyeccion
@@ -68,7 +71,7 @@ export function FinancieroFondo({ d }: { d: DatosFinanciero }) {
         decimalesEje={0}
         incluirCero
         fuentes={[d.m4.dato, d.observado.fondoValor.dato]}
-        nota="El histórico está a precio de adquisición, no a valor de mercado. La proyección parte del valor del último año observado y no distingue entre las dos valoraciones."
+        nota="El histórico está a precio de adquisición, no a valor de mercado. La proyección parte del valor a precio de adquisición del último año observado y crece con una rentabilidad nominal constante: tampoco es valor de mercado."
         comoLeerlo={
           <>
             <p>

@@ -309,8 +309,8 @@ describe('lo que la salida cumple pero la descripción no declara (se describe, 
         (num(r, 'gasto_pensiones') * 1e6) /
         (num(r, 'pensiones_oct') * num(r, 'pension_media_total') * 14),
     );
-    // La descripción da la fórmula sin factor y dice que el modelo se calibra con 2025: el factor de
-    // devengo de cada clase (código del modelo) hace que el cociente sea menor que uno y casi constante.
+    // La descripción recoge el factor de calibración (devengo) de cada clase, obtenido con 2025 y constante:
+    // por eso el cociente es menor que uno y casi constante (causa principal: los complementos a mínimos).
     for (const c of cocientes) {
       expect(c).toBeLessThan(1);
       expect(c).toBeGreaterThan(0.9);

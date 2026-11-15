@@ -199,30 +199,34 @@ FICHEROS = [
         ),
         'notes': (
             'Importes en millones de euros corrientes (con inflación) salvo las pensiones medias (euros al mes). El PIB de M4 es un indicador '
-            'aproximado (afiliados por salario nominal): no es una previsión macroeconómica ni coincide con el PIB del INE. La descripción de M4 '
-            'enumera los ingresos como «cotizaciones de 2025 escaladas con la masa de bases de M2, más el MEI»; en esta salida el MEI está '
-            'incluido en «cotizaciones» (las cotizaciones sin el MEI evolucionan como la base total de M2; se comprueba en '
-            'scripts/proyecciones-5b2.test.ts, y consta en docs/DISCREPANCIAS.md). «saldo_sin_transferencias» no se define por su nombre en la '
-            'descripción: es el saldo no financiero sin las transferencias del Estado y otros ingresos (cotizaciones menos gasto en pensiones '
-            'menos resto de gastos); se comprueba en el mismo test. La descripción no da la rentabilidad del Fondo: la salida solo permite '
-            'obtener la implícita.'
+            'aproximado (afiliados por salario nominal): no es una previsión macroeconómica ni coincide con el PIB del INE. Según la descripción '
+            'de M4, las cotizaciones incluyen el MEI (en el presupuesto el MEI es una partida de las cotizaciones sociales): la columna «mei» es un '
+            'desglose de «cotizaciones», no un ingreso adicional (se comprueba en scripts/proyecciones-5b2.test.ts). El gasto en pensiones es el '
+            'número de pensiones de cada clase por la pensión media por catorce pagas y por un factor de calibración (devengo) de cada clase, '
+            'que se obtiene con el cociente de 2025 y se mantiene constante; la descripción da los valores y su causa principal: los '
+            'complementos a mínimos, que el presupuesto contabiliza aparte y que pasan al resto de gastos (falta confirmar que la pensión media '
+            'estadística los incluye; consta en docs/PENDIENTE_DATOS.md). «saldo_sin_transferencias» es cotizaciones menos gasto en pensiones '
+            'menos resto de gastos, es decir, sin las transferencias del Estado ni otros ingresos; «saldo_no_financiero» es ese saldo más '
+            '«transferencias_y_otros» (se comprueba en el mismo test). El Fondo de Reserva parte de un valor a precio de adquisición a fin del '
+            'último año observado y crece con una rentabilidad nominal constante (la descripción da el valor), más la dotación y menos la '
+            'disposición: no es valor de mercado. La fiabilidad asignada a esta salida es media porque M4 hereda la incertidumbre de M2, que es baja.'
         ),
         'columnas': [
             ('anio', 'numero', 'Año', None),
             ('pensiones_oct', 'numero', 'Pensiones contributivas en vigor en octubre, todas las clases (M3)', PENS),
             ('pension_media_jub', 'numero', 'Pensión media de jubilación, en euros corrientes de cada año', EUR_MES),
             ('pension_media_total', 'numero', 'Pensión media de todas las clases, en euros corrientes de cada año', EUR_MES),
-            ('gasto_pensiones', 'numero', 'Gasto en pensiones contributivas: número de pensiones de cada clase por pensión media por catorce pagas', MEUR),
-            ('cotizaciones', 'numero', 'Cotizaciones: las del año de calibración escaladas con la masa de bases de M2, más el MEI, que está incluido en esta columna', MEUR),
-            ('mei', 'numero', 'Cotización del Mecanismo de Equidad Intergeneracional (MEI), con el tipo legal creciente hasta su último año de vigencia en el modelo', MEUR),
-            ('otros_gastos', 'numero', 'Resto de gastos: bajas por enfermedad, maternidad, pensiones no contributivas, Ingreso Mínimo Vital, personal y otros', MEUR),
-            ('transferencias_y_otros', 'numero', 'Transferencias del Estado y otros ingresos', MEUR),
+            ('gasto_pensiones', 'numero', 'Gasto en pensiones contributivas: número de pensiones de cada clase por pensión media por catorce pagas y por un factor de calibración (devengo) de cada clase', MEUR),
+            ('cotizaciones', 'numero', 'Cotizaciones sociales, incluido el MEI: las del año de calibración sin el MEI escaladas con la masa de bases de M2, más el MEI calculado con su tipo legal', MEUR),
+            ('mei', 'numero', 'Parte de las cotizaciones que corresponde al Mecanismo de Equidad Intergeneracional (MEI), con el tipo legal creciente hasta su último año de vigencia en el modelo; es un desglose de «cotizaciones», no un ingreso adicional', MEUR),
+            ('otros_gastos', 'numero', 'Resto de gastos: bajas por enfermedad, maternidad, complementos a mínimos, pensiones no contributivas, Ingreso Mínimo Vital, personal y otros', MEUR),
+            ('transferencias_y_otros', 'numero', 'Transferencias del Estado y otros ingresos que no son cotizaciones', MEUR),
             ('saldo_cotizaciones_menos_pensiones', 'numero', 'Saldo de cotizaciones menos pensiones: cotizaciones menos gasto en pensiones contributivas', MEUR),
             ('saldo_sin_transferencias', 'numero', 'Saldo sin transferencias: cotizaciones menos gasto en pensiones menos resto de gastos, sin transferencias del Estado ni otros ingresos', MEUR),
-            ('saldo_no_financiero', 'numero', 'Saldo no financiero: ingresos menos gasto en pensiones menos resto de gastos, con las transferencias del Estado y otros ingresos', MEUR),
+            ('saldo_no_financiero', 'numero', 'Saldo no financiero: saldo sin transferencias más las transferencias del Estado y otros ingresos', MEUR),
             ('dotacion_fondo', 'numero', 'Dotación anual al Fondo de Reserva, que se nutre del MEI', MEUR),
             ('disposicion_fondo', 'numero', 'Disposición anual del Fondo de Reserva para cubrir déficit, con el límite legal anual en porcentaje del PIB', MEUR),
-            ('fondo_reserva', 'numero', 'Valor del Fondo de Reserva a fin de año', MEUR),
+            ('fondo_reserva', 'numero', 'Valor del Fondo de Reserva a fin de año: parte de un valor a precio de adquisición y crece con una rentabilidad nominal constante; no es valor de mercado', MEUR),
             ('financiacion_adicional', 'numero', 'Financiación adicional: lo que el Fondo de Reserva no cubre', MEUR),
             ('pib_proxy', 'numero', 'PIB aproximado de M4: afiliados por salario nominal; no es una previsión macroeconómica', MEUR),
             ('gasto_pensiones_pct_pib', 'numero', 'Gasto en pensiones contributivas', PCT_PIB),

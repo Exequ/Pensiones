@@ -28,7 +28,7 @@ const OPCIONES_UNIDAD = [
 /**
  * Definiciones de las tres medidas de saldo del modelo, tomadas de su descripción: «Saldo = ingresos −
  * gasto en pensiones − resto de gastos» (saldo no financiero), «cotizaciones − pensiones» y el saldo
- * sin transferencias, que la descripción no define por su nombre (consta en la nota del fichero).
+ * sin transferencias (cotizaciones − pensiones − resto de gastos), que la descripción define.
  */
 const DEFINICIONES_SALDO = [
   {
@@ -39,7 +39,7 @@ const DEFINICIONES_SALDO = [
   {
     medida: 'Saldo sin transferencias',
     definicion:
-      'Cotizaciones menos el gasto en pensiones menos el resto de gastos, sin contar las transferencias del Estado ni otros ingresos. La descripción del modelo no la define por su nombre: esta definición sale de las columnas de la salida y se comprueba aritméticamente.',
+      'Cotizaciones menos el gasto en pensiones menos el resto de gastos, sin contar las transferencias del Estado ni otros ingresos. Es la definición de la descripción del modelo, y se comprueba aritméticamente con las columnas de la salida.',
   },
   {
     medida: 'Saldo no financiero',
