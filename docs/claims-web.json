@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1, 3-B2, 5-A y 5-C). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md).",
+  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1, 3-B2, 5-A, 5-C y Ajustes de M4). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md).",
   "claims": [
     {
       "id": "web-tu-pension-base-sugerida",
@@ -1026,7 +1026,7 @@
       ],
       "fetchedAt": "2026-11-14",
       "estado": "pendiente",
-      "notas": "Sin verificar: se anota en docs/PENDIENTE_DATOS.md. Fase 5-B1: la advertencia «incluye los complementos a mínimos» se quita de las advertencias de la pensión media de «Cotizantes y pensionistas»; la afirmación sigue pendiente de una fuente. Indicio no concluyente: el texto refundido llama a los complementos «complementos por mínimos de las pensiones» (art. 109.3.b.4.ª)."
+      "notas": "Sin verificar: se anota en docs/PENDIENTE_DATOS.md. Fase 5-B1: la advertencia «incluye los complementos a mínimos» se quita de las advertencias de la pensión media de «Cotizantes y pensionistas»; la afirmación sigue pendiente de una fuente. Indicio no concluyente: el texto refundido llama a los complementos «complementos por mínimos de las pensiones» (art. 109.3.b.4.ª). Ajustes de M4: la página «Proyecciones» tampoco la afirma; presenta la atribución del factor de calibración a los complementos como una hipótesis del autor del modelo (web-fin-complementos-hipotesis)."
     },
     {
       "id": "web-proy-pensiones-observado-diciembre",
@@ -1174,7 +1174,7 @@
       ],
       "fetchedAt": "2026-11-14",
       "estado": "verificada",
-      "notas": "Comprobado en scripts/proyecciones-5b2.test.ts con las filas de la ejecución de 2025 (sistema/presupuesto-ss-ejecucion.csv, tabla ingresos-cap1-cap4)."
+      "notas": "Comprobado en scripts/proyecciones-5b2.test.ts con las filas de la ejecución de 2025 (sistema/presupuesto-ss-ejecucion.csv, tabla ingresos-cap1-cap4). Ajustes de M4: verificado también en la salida del modelo: las cotizaciones son mayores o iguales que el MEI en los 25 años, las cotizaciones sin MEI crecen como la base de M2 y el MEI es el tipo legal por esa base (scripts/verificacion-m4.ts; desviaciones del orden de 10⁻¹⁶)."
     },
     {
       "id": "web-fin-saldos-observados",
@@ -1229,7 +1229,7 @@
       ],
       "fetchedAt": "2026-11-14",
       "estado": "verificada",
-      "notas": "El IPC supuesto no es un dato observado: procede del LEEME de las salidas de los modelos (data-raw/modelos-salidas/LEEME.txt) y de los metadatos de data/proyecciones/m4-financiero.json."
+      "notas": "El IPC supuesto no es un dato observado: procede del LEEME de las salidas de los modelos (data-raw/modelos-salidas/LEEME.txt) y de los metadatos de data/proyecciones/m4-escenarios.json (el IPC supuesto es el del escenario elegido)."
     },
     {
       "id": "web-fin-fondo-flujos-observados",
@@ -1613,6 +1613,114 @@
       "fetchedAt": "2026-11-14",
       "estado": "verificada",
       "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-fin-factor-calibracion",
+      "texto": "El gasto en pensiones contributivas de la ejecución del presupuesto de 2025 es menor que el producto del número de pensiones en vigor a 1 de diciembre por la pensión media mensual por catorce pagas, tanto en el conjunto como en cada una de las cinco clases (cociente de 0,948 en el conjunto, de 0,858 en orfandad a 0,961 en las demás; los valores que muestra la página se calculan con los datos, no se copian). El modelo M4 corrige cada clase con ese cociente del último año observado y lo mantiene constante. Fuera de las cinco clases, la ejecución trae 1,36 millones de euros de pensiones derivadas de la DANA que solo figuran en el total.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Ajustes de M4)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#obligaciones-no-financieras",
+        "sistema/pensiones-vigor-numero.json#total-ambos",
+        "sistema/pensiones-vigor-pension-media.json#total-ambos"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        },
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-15",
+      "estado": "verificada",
+      "notas": "Verificado con scripts/verificacion-m4.ts (resultados en docs/DISCREPANCIAS.md, «Ajustes de M4»). La descripción de M4 da 0,961 para incapacidad y el cálculo da 0,9605 (0,960 redondeado) y dice que el producto supera al gasto en un 5,2 %; con sus propios cocientes sería un 5,5 %. El CSV de M4 reproduce el cociente del conjunto (2025 y años proyectados, entre 0,9482 y 0,9486); por clase no es comprobable con el CSV, que no trae la pensión media por clase."
+    },
+    {
+      "id": "web-fin-complementos-aparte",
+      "texto": "En la ejecución del presupuesto de la Seguridad Social de 2025, los complementos a mínimos de las pensiones contributivas figuran como una partida aparte («Compl. a mínimos pensiones contributivas», 8.706,91 millones de euros) en la tabla de pensiones no contributivas y complementos a mínimos, fuera de la suma de pensiones contributivas; las dos tablas de transferencias corrientes suman la partida de transferencias corrientes del gasto no financiero, de modo que los complementos están en el gasto total y, por tanto, en el resto de gastos de M4 en 2025 (gasto no financiero menos pensiones).",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Ajustes de M4)",
+      "datos": ["sistema/deficit-presupuestario-seguridad-social.json#obligaciones-no-financieras"],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-15",
+      "estado": "verificada",
+      "notas": "Verificado con scripts/verificacion-m4.ts. Con los complementos sumados al gasto en pensiones, el cociente del conjunto sube de 0,948 a 0,993: es una coincidencia aritmética que no prueba que la pensión media estadística los incluya (véase web-fin-complementos-hipotesis)."
+    },
+    {
+      "id": "web-fin-complementos-hipotesis",
+      "texto": "La descripción de M4 atribuye el factor de calibración a los complementos a mínimos (que el presupuesto contabiliza aparte) y supone que la pensión media estadística los incluye, y atribuye el resto de la diferencia al desfase entre contar las pensiones a una fecha del año y su promedio anual. Es una hipótesis del autor del modelo, no verificada contra la metodología de la fuente: la página la presenta como tal y no afirma que la pensión media incluya los complementos ni que la diferencia se deba a ellos.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Ajustes de M4)",
+      "datos": ["sistema/pensiones-vigor-pension-media.json#total-ambos"],
+      "fuentes": [
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-15",
+      "estado": "pendiente",
+      "notas": "Sin verificar: se anota en docs/PENDIENTE_DATOS.md. Relacionada con web-hist-complemento-pension (la pensión media incluye los complementos), que sigue pendiente. Falta la nota metodológica del importe medio de la estadística de pensiones en vigor."
+    },
+    {
+      "id": "web-fin-saldo-sin-transferencias",
+      "texto": "El saldo sin transferencias de M4 es cotizaciones menos gasto en pensiones menos resto de gastos, es decir, el saldo no financiero sin las transferencias del Estado ni otros ingresos; en cada fila de las salidas del modelo es igual al saldo no financiero menos la columna de transferencias y otros ingresos. Con la ejecución de 2025, cotizaciones menos obligaciones no financieras da el mismo valor que la fila observada de 2025.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Ajustes de M4)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#obligaciones-no-financieras",
+        "sistema/deficit-presupuestario-seguridad-social.json#derechos-no-financieros"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-15",
+      "estado": "verificada",
+      "notas": "Verificado con scripts/verificacion-m4.ts en las 155 filas de los dos CSV (desviación máxima de 3 × 10⁻¹¹ millones de euros) y con la ejecución de 2025."
+    },
+    {
+      "id": "web-fin-fondo-valoracion-inicial",
+      "texto": "El valor del Fondo de Reserva a 31 de diciembre de 2025 con el que parte M4 (14.070 millones de euros, el de la fila observada) es el valor a precio de adquisición que publica el informe a las Cortes Generales de 2025 (14.069,81 millones de euros; a valor de mercado, 14.030,07). El modelo lo hace crecer con una rentabilidad nominal constante supuesta (la misma en los cinco escenarios), más la dotación y menos la disposición; no es valor de mercado.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Ajustes de M4)",
+      "datos": ["sistema/fondo-reserva-series.json#valor-fin-ano"],
+      "fuentes": [
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        }
+      ],
+      "fetchedAt": "2026-11-15",
+      "estado": "verificada",
+      "notas": "Verificado con el informe a las Cortes de 2025 (PDF descargado en data-raw/seg-social-fin/fondo-reserva/2025.pdf, no versionado): tabla «FRSS comparison» (acquisition price 14,069.81; market value 14,030.07). El valor de mercado no se incorpora a /data ni se muestra; consta aquí. La rentabilidad nominal implícita de la salida es constante y coincide con la del LEEME de los escenarios."
+    },
+    {
+      "id": "web-fin-escenarios-m4",
+      "texto": "M4 se ha calculado en cinco escenarios que cambian solo el crecimiento real de los salarios o el IPC respecto al base (g 1 % e IPC 2 %): g 0 %, g 2 %, IPC 1 % e IPC 3 %. En los cinco, el resto de palancas es el de por defecto del modelo; la rentabilidad nominal del Fondo es la misma, de modo que su rentabilidad real cambia con el IPC. La fila de 2025 de la salida son datos observados, iguales en los cinco escenarios, no un cálculo del modelo.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Ajustes de M4)",
+      "datos": ["sistema/fondo-reserva-series.json#valor-fin-ano"],
+      "fuentes": [
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        }
+      ],
+      "fetchedAt": "2026-11-15",
+      "estado": "verificada",
+      "notas": "Procedencia: LEEME de los escenarios (data-raw/modelos-salidas/m4/LEEME_m4_escenarios.txt) y data/proyecciones/m4-escenarios.json. La salida la ejecutó Claude en su entorno de trabajo (2026-11-15), no Sergio en local; el escenario base de 2026 en adelante coincide con m4-financiero.json (diferencias de último bit de coma flotante) y la fila de 2025 coincide con la ejecución del presupuesto, el Fondo y el PIB del INE (tests de scripts/proyecciones-m4-escenarios.test.ts). Los resultados del modelo no son datos observados."
     }
   ]
 }
