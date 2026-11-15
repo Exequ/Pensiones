@@ -5,7 +5,7 @@
  * Lógica pura, sin React ni DOM. Nunca mezcla observado y proyectado en una misma serie: devuelve
  * siempre dos listas separadas, para que la interfaz las dibuje con trazos distintos y las rotule.
  */
-import { indiceBase100, type PuntoAnual } from './series-historicas';
+import { indiceBase100, type PuntoAnual } from './series-historicas.ts';
 
 /** Serie observada y proyección de la misma magnitud, separadas por el año de inicio. */
 export interface ObservadoYProyeccion {
@@ -191,4 +191,39 @@ export function tasaDeVariacionAnual(puntos: readonly PuntoAnual[]): PuntoAnual[
 export function tasaReal(nominal: number, ipc: number): number {
   if (!(ipc > -1)) throw new RangeError(`IPC supuesto no válido: ${ipc}`);
   return (1 + nominal) / (1 + ipc) - 1;
+}
+
+// ---------------------------------------------------------------------------
+// Factor de calibración del gasto en pensiones de M4 (Ajustes de M4)
+// ---------------------------------------------------------------------------
+
+/** Pagas al año de las pensiones contributivas: doce mensualidades y dos extraordinarias. */
+export const PAGAS_POR_ANIO = 14;
+
+/** Millones de euros que son un euro (los importes del presupuesto van en millones). */
+const EUROS_POR_MILLON = 1_000_000;
+
+/**
+ * Gasto anual que resulta de multiplicar el número de pensiones por la pensión media mensual y por las
+ * pagas: millones de euros. Es la fórmula «pensiones × pensión media × 14» de la descripción de M4,
+ * sin factor de calibración.
+ */
+export function gastoNominal(pensiones: number, pensionMediaMes: number): number {
+  return (pensiones * pensionMediaMes * PAGAS_POR_ANIO) / EUROS_POR_MILLON;
+}
+
+/**
+ * Cociente entre el gasto en pensiones de la ejecución del presupuesto (millones de euros) y el gasto
+ * nominal «pensiones × pensión media × 14». Es la magnitud que la descripción de M4 llama factor de
+ * calibración (devengo) cuando se calcula con el último año observado. Falla si el gasto nominal no es
+ * positivo.
+ */
+export function factorDeCalibracion(
+  gastoEjecucionMeur: number,
+  pensiones: number,
+  pensionMediaMes: number,
+): number {
+  const nominal = gastoNominal(pensiones, pensionMediaMes);
+  if (!(nominal > 0)) throw new RangeError('El gasto nominal debe ser positivo');
+  return gastoEjecucionMeur / nominal;
 }

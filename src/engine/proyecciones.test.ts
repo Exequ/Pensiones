@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
+  factorDeCalibracion,
+  gastoNominal,
   aEurosConstantesConIpcSupuesto,
   diferenciasPorAnio,
   esIlustrativo,
@@ -220,5 +222,23 @@ describe('Fase 5-B2: tasas anuales', () => {
     expect(tasaReal(0.0302, 0.02)).toBeCloseTo(0.01, 12);
     expect(tasaReal(0.02, 0.02)).toBeCloseTo(0, 12);
     expect(() => tasaReal(0.01, -1)).toThrow(RangeError);
+  });
+});
+
+describe('factor de calibración del gasto (pensiones × pensión media × 14)', () => {
+  it('gasto nominal: un millón de pensiones de 1.000 € al mes y catorce pagas son 14.000 millones', () => {
+    expect(gastoNominal(1_000_000, 1000)).toBeCloseTo(14_000, 9);
+    expect(gastoNominal(0, 1000)).toBe(0);
+  });
+
+  it('el factor es el cociente entre el gasto de la ejecución y el gasto nominal', () => {
+    // 14.000 millones de gasto nominal y 13.300 de ejecución: 13.300 / 14.000 = 0,95.
+    expect(factorDeCalibracion(13_300, 1_000_000, 1000)).toBeCloseTo(0.95, 12);
+    expect(factorDeCalibracion(14_000, 1_000_000, 1000)).toBeCloseTo(1, 12);
+  });
+
+  it('falla si el gasto nominal no es positivo', () => {
+    expect(() => factorDeCalibracion(100, 0, 1000)).toThrow(RangeError);
+    expect(() => factorDeCalibracion(100, 1000, 0)).toThrow(RangeError);
   });
 });

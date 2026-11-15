@@ -6,7 +6,7 @@
  * ficheros de /data. Los datos con fuente se rastrean con `datoDeSerie`, que construye el `Dato`
  * que espera `SourceLine`.
  */
-import { Dato, type ArchivoDatos, type Serie } from './esquema-datos';
+import { Dato, type ArchivoDatos, type Serie } from './esquema-datos.ts';
 
 /** Valor de una serie en un año natural. */
 export interface PuntoAnual {
