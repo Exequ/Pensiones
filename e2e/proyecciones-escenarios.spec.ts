@@ -147,6 +147,8 @@ test.describe('escenarios de sensibilidad de M4 en «Proyecciones»', () => {
   test('cumple WCAG 2.1 AA (axe) con el selector en uso y los plegables abiertos', async ({
     page,
   }) => {
+    // axe recorre una página con muchas tablas abiertas: en un ejecutor lento supera los 30 s por defecto.
+    test.setTimeout(120_000);
     await abrirBloque(page);
     await selector(page)
       .getByRole('radio', { name: /^g 0 %/ })

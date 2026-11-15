@@ -165,6 +165,8 @@ test.describe('página «Proyecciones»', () => {
   test('cumple WCAG 2.1 AA (axe) con los plegables y las tablas abiertos y los selectores en uso', async ({
     page,
   }) => {
+    // axe recorre una página con muchas tablas abiertas: en un ejecutor lento supera los 30 s por defecto.
+    test.setTimeout(120_000);
     await page.goto(url(RUTA));
     await esperarPagina(page);
     await page.getByRole('heading', { name: /^Sistema financiero/ }).waitFor();

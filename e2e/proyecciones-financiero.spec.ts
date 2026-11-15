@@ -213,6 +213,8 @@ test.describe('bloque «Sistema financiero (M4)» de «Proyecciones»', () => {
   test('cumple WCAG 2.1 AA (axe) con los plegables abiertos y los selectores en uso', async ({
     page,
   }) => {
+    // axe recorre una página con muchas tablas abiertas: en un ejecutor lento supera los 30 s por defecto.
+    test.setTimeout(120_000);
     await abrirBloque(page);
     await page
       .getByRole('group', { name: 'Unidad', exact: true })
