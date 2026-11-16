@@ -14,8 +14,12 @@ altas_topadas_20      | 20 % de las altas de jubilación con carrera de salarios
 sin_enlace_m5         | sin enlace con M5 (las altas crecen solo con salarios e IPC)
 sin_migracion         | M1: saldo migratorio multiplicado por 0
 fecundidad_mas_20     | M1: fecundidad multiplicada por 1,2
-mujeres_convergen     | M2: en 2050 las tasas de empleo de las mujeres de 25 a 64 años igualan a las de los hombres de su tramo
-empleo_55_64_mas_10   | M2: tasas de empleo de 55 a 64 años multiplicadas por 1,1 en 2050 (avance lineal)
+mujeres_convergen     | M2: en 2050 las tasas de afiliación y de cotización de las mujeres de 25 a 64 años igualan a las de los hombres de su tramo
+empleo_55_64_mas_10   | M2: tasas de afiliación y de cotización de 55 a 64 años multiplicadas por 1,1 en 2050
+
+NOTA SOBRE LOS DOS CASOS DE M2 (mujeres_convergen y empleo_55_64_mas_10)
+Los dos modifican las tasas de afiliación y de cotización de M2 (no una «tasa de empleo» aparte). El avance es lineal desde 2026: se aplica el factor k = (t − 2026)/24, que vale 0 en 2026 y 1 desde 2050. Con k = 1, en mujeres_convergen la tasa de cada mujer de 25 a 64 años pasa a ser la de los hombres de su tramo de edad; en empleo_55_64_mas_10 las tasas de 55 a 64 años quedan multiplicadas por 1,1.
+M3 no cambia en estos dos casos: el número de pensiones (pensiones_oct) es el mismo que en el escenario base, porque dependen de la población (M1) y no de M2. Lo que cambia son los afiliados, las cotizaciones y, con ellas, los ingresos y el saldo (también afiliados_por_pension).
 
 RESULTADOS EN 2050 (gasto en pensiones y saldo no financiero, % del PIB aproximado)
 base 16,13 y −5,62 (en m4_financiero.csv) | g1_5 15,15 y −4,64 | g1_8 14,61 y −4,10 | reval_menos_0_5 15,19 y −4,68 | cotizacion_mas_1 16,13 y −5,26 | altas_topadas_20 15,90 y −5,39 | sin_enlace_m5 16,18 y −5,67 | sin_migracion 21,39 y −10,92 | fecundidad_mas_20 16,00 y −5,52 | mujeres_convergen 15,48 y −5,16 | empleo_55_64_mas_10 15,83 y −5,32

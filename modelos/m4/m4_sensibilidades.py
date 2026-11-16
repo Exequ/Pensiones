@@ -27,8 +27,8 @@ CASOS = {
     "sin_enlace_m5": ("sin enlace con M5 (v0: las altas crecen con salarios e IPC)", dict(enlace_m5=False)),
     "sin_migracion": ("M1: sin migración (saldo migratorio × 0)", dict(kw_m1=dict(mult_migracion=0.0))),
     "fecundidad_mas_20": ("M1: fecundidad × 1,2", dict(kw_m1=dict(mult_fecundidad=1.2))),
-    "mujeres_convergen": ("M2: en 2050, las tasas de empleo de las mujeres de 25 a 64 años igualan a las de los hombres", dict(kw_m2=dict(convergencia_mujeres=1.0))),
-    "empleo_55_64_mas_10": ("M2: tasas de empleo de 55 a 64 años × 1,1 en 2050", dict(kw_m2=dict(mult_tasa_55_64=1.1))),
+    "mujeres_convergen": ("M2: en 2050, las tasas de afiliación y de cotización de las mujeres de 25 a 64 años igualan a las de los hombres de su tramo (avance lineal desde 2026)", dict(kw_m2=dict(convergencia_mujeres=1.0))),
+    "empleo_55_64_mas_10": ("M2: tasas de afiliación y de cotización de 55 a 64 años × 1,1 en 2050 (avance lineal desde 2026)", dict(kw_m2=dict(mult_tasa_55_64=1.1))),
 }
 
 
