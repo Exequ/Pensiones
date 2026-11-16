@@ -50,4 +50,4 @@ Efecto medido (`scripts/lecturas-abiertas.ts`, fila de `docs/INFORME_VERIFICACIO
 
 ## Batería y despliegue
 
-(Se completa al final de la fase.)
+En local, con `tsc -b --force` (sin caché incremental, con los ficheros de test): `npm run lint` (incluye `validate:data`), typecheck, `npm test` y `npm run build` pasan; `npm run test:e2e`: 402 pruebas pasadas (escritorio y móvil). CI, merge y despliegue: se anotan abajo al terminar.
