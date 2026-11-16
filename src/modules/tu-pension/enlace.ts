@@ -38,30 +38,25 @@
  */
 import { lecturasOfrecidas, normalizarEleccion } from '../../engine/comparar-lecturas.ts';
 import type { GradoIncapacidad, OrigenIncapacidad } from '../../engine/incapacidad/tipos.ts';
+import {
+  CLAVES_SUPERVIVENCIA,
+  escribirSupervivencia,
+  leerSupervivencia,
+} from './enlace-supervivencia.ts';
 import { esOrigenDisponible, esOrigenProfesional } from './incapacidad-mapeador.ts';
-import { leerEntero, leerNumero } from './lectura.ts';
+import {
+  enteroValido,
+  fechaATexto,
+  fechaValida,
+  importeValido,
+  LIMITES_ENLACE,
+  numeroValido,
+} from './enlace-validadores.ts';
 import type { FormularioTuPension, IdPrestacion } from './tipos.ts';
 import { nuevoIdTramo, type ReferenciaTramo, type TramoFormulario } from './tramos.ts';
 
+export { LIMITES_ENLACE };
 export const VERSION_ENLACE = '1';
-
-/**
- * Límites de sensatez para aceptar valores de un enlace. No son reglas de la norma (eso es del
- * motor): solo descartan valores absurdos o maliciosos antes de ponerlos en el formulario.
- */
-export const LIMITES_ENLACE = {
-  anioMinimo: 1900,
-  anioMaximo: 2100,
-  hijosMaximo: 30,
-  mesesMaximo: 1200,
-  importeMaximo: 1_000_000,
-  ipcMinimo: -20,
-  ipcMaximo: 50,
-  /** Tramos que admite el enlace; con más, la web avisa y el enlace los omite. */
-  tramosMaximo: 100,
-  /** Longitud máxima de la parte de búsqueda que se lee (protege de enlaces enormes). */
-  longitudMaxima: 12_000,
-} as const;
 
 /** Referencias que el enlace conoce (ids del catálogo y de las personas). */
 export interface ContextoEnlace {
@@ -106,6 +101,7 @@ const PARAMETROS = [
   'alt',
   'trb',
   'br',
+  ...CLAVES_SUPERVIVENCIA,
 ] as const;
 
 /** Parámetros que solo existen en el enlace de la incapacidad permanente. */
@@ -113,7 +109,14 @@ const SOLO_INCAPACIDAD = ['hc', 'gr', 'or', 'alt', 'trb', 'br'] as const;
 /** Código de cada prestación en `p` (la jubilación no lo escribe: es la ausencia de `p`). */
 const CODIGO_PRESTACION: Record<Exclude<IdPrestacion, 'jubilacion'>, string> = {
   incapacidad: 'inc',
+  viudedad: 'viu',
+  orfandad: 'orf',
 };
+const esSupervivencia = (p: IdPrestacion): boolean => p === 'viudedad' || p === 'orfandad';
+/** Parámetros de supervivencia que solo existen en los enlaces de orfandad. */
+const SOLO_ORFANDAD = ['hv', 'oa', 'hn', 'hi', 'hd', 'hrt', 'hre'] as const;
+/** Parámetros de la jubilación y de la incapacidad que no existen en viudedad y orfandad. */
+const NO_SUPERVIVENCIA = ['jub', 'nac', 'sex', 'hij', 'pe', 'gr', 'alt', 'trb'] as const;
 const CODIGO_GRADO: Record<GradoIncapacidad, string> = {
   parcial: 'par',
   total: 'tot',
@@ -136,55 +139,7 @@ const SEPARADOR_CAMPOS = ':';
 const REFERENCIAS_ENLACE = { min: 'minima', med: 'media', max: 'maxima' } as const;
 const CODIGO_REFERENCIA = { minima: 'min', media: 'med', maxima: 'max' } as const;
 
-const dos = (n: number): string => String(n).padStart(2, '0');
-
-// --- Validadores de un campo (devuelven el texto canónico o `undefined`) ---------------------------
-
-function anioValido(texto: string): number | undefined {
-  if (!/^\d{4}$/.test(texto)) return undefined;
-  const n = Number(texto);
-  return n >= LIMITES_ENLACE.anioMinimo && n <= LIMITES_ENLACE.anioMaximo ? n : undefined;
-}
-
-function mesValido(texto: string): number | undefined {
-  if (!/^\d{1,2}$/.test(texto)) return undefined;
-  const n = Number(texto);
-  return n >= 1 && n <= 12 ? n : undefined;
-}
-
-/** Texto numérico escrito por una persona, con solo cifras, puntos y comas (y signo opcional). */
-function numeroValido(texto: string, minimo: number, maximo: number): number | undefined {
-  if (!/^[-+]?[0-9.,]+$/.test(texto)) return undefined;
-  const n = leerNumero(texto);
-  return n !== undefined && n >= minimo && n <= maximo ? n : undefined;
-}
-
-function enteroValido(texto: string, maximo: number): number | undefined {
-  if (!/^\d+$/.test(texto)) return undefined;
-  const n = leerEntero(texto);
-  return n !== undefined && n >= 0 && n <= maximo ? n : undefined;
-}
-
-/** `AAAA-MM` → mes y año como los guardan los selectores (mes sin ceros a la izquierda). */
-function fechaValida(texto: string): { mes: string; anio: string } | undefined {
-  const m = /^(\d{4})-(\d{1,2})$/.exec(texto);
-  if (!m?.[1] || !m[2]) return undefined;
-  const anio = anioValido(m[1]);
-  const mes = mesValido(m[2]);
-  return anio === undefined || mes === undefined ? undefined : { mes: String(mes), anio: m[1] };
-}
-
-const importeValido = (texto: string): number | undefined =>
-  numeroValido(texto, Number.MIN_VALUE, LIMITES_ENLACE.importeMaximo);
-
 // --- Escritura ---------------------------------------------------------------------------------------
-
-const fechaATexto = (mes: string, anio: string): string | undefined => {
-  const m = mesValido(mes.trim());
-  return m !== undefined && anioValido(anio.trim()) !== undefined
-    ? `${anio.trim()}-${dos(m)}`
-    : undefined;
-};
 
 function tramoATexto(t: TramoFormulario): string | undefined {
   const desde = fechaATexto(t.desdeMes, t.desdeAnio);
@@ -227,10 +182,22 @@ export function escribirEnlace(f: FormularioTuPension, personaId?: string): stri
     if (valor !== undefined) partes.push([clave, valor]);
   };
   const incapacidad = f.prestacion === 'incapacidad';
-  if (incapacidad) poner('p', CODIGO_PRESTACION.incapacidad);
-  poner('nac', fechaATexto(f.nacimientoMes, f.nacimientoAnio));
+  const supervivencia = esSupervivencia(f.prestacion);
+  if (f.prestacion !== 'jubilacion') poner('p', CODIGO_PRESTACION[f.prestacion]);
+  // En la viudedad y la orfandad el nacimiento, el sexo y los hijos son los de cada beneficiario.
+  if (!supervivencia) poner('nac', fechaATexto(f.nacimientoMes, f.nacimientoAnio));
   // La fecha en que termina la carrera: jubilación (`jub`) o hecho causante (`hc`).
-  poner(incapacidad ? 'hc' : 'jub', fechaATexto(f.jubilacionMes, f.jubilacionAnio));
+  poner(
+    incapacidad || supervivencia ? 'hc' : 'jub',
+    fechaATexto(f.hechoCausanteMes, f.hechoCausanteAnio),
+  );
+  if (supervivencia) {
+    if (f.origen !== '') poner('or', CODIGO_ORIGEN[f.origen]);
+    if (f.baseReguladora.trim() !== '' && importeValido(f.baseReguladora.trim()) !== undefined) {
+      poner('br', f.baseReguladora.trim());
+    }
+    for (const [k, v] of escribirSupervivencia(f)) poner(k, v);
+  }
   if (incapacidad) {
     if (f.grado !== '') poner('gr', CODIGO_GRADO[f.grado]);
     if (f.origen !== '') poner('or', CODIGO_ORIGEN[f.origen]);
@@ -241,8 +208,9 @@ export function escribirEnlace(f: FormularioTuPension, personaId?: string): stri
       if (importeValido(br) !== undefined) poner('br', br);
     }
   }
-  if (f.sexo !== '') poner('sex', f.sexo === 'mujer' ? 'm' : 'h');
+  if (!supervivencia && f.sexo !== '') poner('sex', f.sexo === 'mujer' ? 'm' : 'h');
   if (
+    !supervivencia &&
     f.sexo === 'mujer' &&
     enteroValido(f.hijos.trim(), LIMITES_ENLACE.hijosMaximo) !== undefined
   ) {
@@ -258,7 +226,9 @@ export function escribirEnlace(f: FormularioTuPension, personaId?: string): stri
   const { escritos } = tramosParaEnlace(f.tramos);
   if (escritos.length > 0) poner('tr', escritos.join(SEPARADOR_TRAMOS));
   poner('med', codificar(f.definicionMedia));
-  if (personaId !== undefined && personaId !== '') poner('pe', codificar(personaId));
+  if (!supervivencia && personaId !== undefined && personaId !== '') {
+    poner('pe', codificar(personaId));
+  }
   poner('min', f.aplicarMinimos ? '1' : '0');
   poner('max', f.aplicarPensionMaxima ? '1' : '0');
   const ipc = f.ipcSupuesto.trim();
@@ -266,9 +236,7 @@ export function escribirEnlace(f: FormularioTuPension, personaId?: string): stri
   else if (numeroValido(ipc, LIMITES_ENLACE.ipcMinimo, LIMITES_ENLACE.ipcMaximo) !== undefined) {
     poner('ipc', ipc);
   }
-  const lecturas = Object.entries(
-    normalizarEleccion(f.lecturas, incapacidad ? 'incapacidad' : 'jubilacion'),
-  );
+  const lecturas = Object.entries(normalizarEleccion(f.lecturas, f.prestacion));
   if (lecturas.length > 0) {
     poner('lec', lecturas.map(([id, valor]) => `${id}${SEPARADOR_CAMPOS}${valor}`).join(','));
   }
@@ -328,6 +296,8 @@ export function leerEnlace(search: string, contexto: ContextoEnlace): ResultadoE
   const codigoPrestacion = parametros.get('p');
   if (codigoPrestacion !== null) {
     if (codigoPrestacion === CODIGO_PRESTACION.incapacidad) prestacion = 'incapacidad';
+    else if (codigoPrestacion === CODIGO_PRESTACION.viudedad) prestacion = 'viudedad';
+    else if (codigoPrestacion === CODIGO_PRESTACION.orfandad) prestacion = 'orfandad';
     else
       ignorar(
         'la prestación',
@@ -336,12 +306,29 @@ export function leerEnlace(search: string, contexto: ContextoEnlace): ResultadoE
   }
   cambios.prestacion = prestacion;
   const incapacidad = prestacion === 'incapacidad';
+  const supervivencia = esSupervivencia(prestacion);
   const repetidos = new Set<string>();
   for (const clave of parametros.keys()) {
     if (!(PARAMETROS as readonly string[]).includes(clave)) {
       ignorar(`el parámetro «${clave}»`, 'no existe en este formato');
-    } else if (!incapacidad && (SOLO_INCAPACIDAD as readonly string[]).includes(clave)) {
+    } else if (
+      !incapacidad &&
+      !supervivencia &&
+      (SOLO_INCAPACIDAD as readonly string[]).includes(clave)
+    ) {
       ignorar(`el parámetro «${clave}»`, 'solo existe en los enlaces de la incapacidad permanente');
+    } else if (!supervivencia && CLAVES_SUPERVIVENCIA.includes(clave)) {
+      ignorar(
+        `el parámetro «${clave}»`,
+        'solo existe en los enlaces de la viudedad y de la orfandad',
+      );
+    } else if (supervivencia && (NO_SUPERVIVENCIA as readonly string[]).includes(clave)) {
+      ignorar(
+        `el parámetro «${clave}»`,
+        'no existe en los enlaces de la viudedad y de la orfandad',
+      );
+    } else if (prestacion === 'viudedad' && (SOLO_ORFANDAD as readonly string[]).includes(clave)) {
+      ignorar(`el parámetro «${clave}»`, 'solo existe en los enlaces de la orfandad');
     } else if (incapacidad && clave === 'jub') {
       ignorar(
         'el parámetro «jub»',
@@ -365,14 +352,43 @@ export function leerEnlace(search: string, contexto: ContextoEnlace): ResultadoE
     if (f === undefined) ignorar(`la fecha de ${nombre}`, 'no es un mes y un año válidos');
     else poner(f);
   };
-  fecha('nac', 'nacimiento', (f) => {
-    cambios.nacimientoMes = f.mes;
-    cambios.nacimientoAnio = f.anio;
-  });
-  fecha(incapacidad ? 'hc' : 'jub', incapacidad ? 'hecho causante' : 'jubilación', (f) => {
-    cambios.jubilacionMes = f.mes;
-    cambios.jubilacionAnio = f.anio;
-  });
+  if (!supervivencia) {
+    fecha('nac', 'nacimiento', (f) => {
+      cambios.nacimientoMes = f.mes;
+      cambios.nacimientoAnio = f.anio;
+    });
+  }
+  const conHc = incapacidad || supervivencia;
+  fecha(
+    conHc ? 'hc' : 'jub',
+    supervivencia ? 'fallecimiento' : incapacidad ? 'hecho causante' : 'jubilación',
+    (f) => {
+      cambios.hechoCausanteMes = f.mes;
+      cambios.hechoCausanteAnio = f.anio;
+    },
+  );
+  if (supervivencia) {
+    const origen = dato('or');
+    if (origen !== undefined) {
+      const o = ORIGEN_DE_CODIGO.get(origen);
+      if (o === undefined || !esOrigenDisponible(o)) {
+        ignorar('la causa de la muerte', 'el valor no es válido o no está disponible');
+      } else cambios.origen = o;
+    }
+    const baseReguladora = dato('br');
+    if (baseReguladora !== undefined) {
+      if (importeValido(baseReguladora) === undefined) {
+        ignorar('la base reguladora', 'no es un importe válido dentro del rango admitido');
+      } else cambios.baseReguladora = baseReguladora;
+    }
+    cambios.supervivencia = leerSupervivencia(
+      dato,
+      (que, motivo) => {
+        ignorar(que, motivo);
+      },
+      contexto.defecto.supervivencia,
+    );
+  }
   if (incapacidad) {
     const grado = dato('gr');
     if (grado !== undefined) {
@@ -409,13 +425,13 @@ export function leerEnlace(search: string, contexto: ContextoEnlace): ResultadoE
     cambios.inicioAnio = f.anio;
   });
 
-  const sexo = dato('sex');
+  const sexo = supervivencia ? undefined : dato('sex');
   if (sexo !== undefined) {
     if (sexo === 'h') cambios.sexo = 'hombre';
     else if (sexo === 'm') cambios.sexo = 'mujer';
     else ignorar('el sexo', 'el valor no es válido');
   }
-  const hijos = dato('hij');
+  const hijos = supervivencia ? undefined : dato('hij');
   if (hijos !== undefined) {
     if (enteroValido(hijos, LIMITES_ENLACE.hijosMaximo) === undefined) {
       ignorar('el número de hijos', 'no es un entero en el rango admitido');
@@ -467,7 +483,7 @@ export function leerEnlace(search: string, contexto: ContextoEnlace): ResultadoE
     if (contexto.definicionesMedia.includes(media)) cambios.definicionMedia = media;
     else ignorar('la definición de la base media', `«${media}» no existe en el catálogo de datos`);
   }
-  const persona = dato('pe');
+  const persona = supervivencia ? undefined : dato('pe');
   let personaId: string | undefined;
   if (persona !== undefined) {
     if (contexto.personas.includes(persona)) personaId = persona;
@@ -496,9 +512,7 @@ export function leerEnlace(search: string, contexto: ContextoEnlace): ResultadoE
 
   const lecturas = dato('lec');
   if (lecturas !== undefined && lecturas !== '') {
-    const ofrecidas = new Map(
-      lecturasOfrecidas(incapacidad ? 'incapacidad' : 'jubilacion').map((l) => [l.id, l]),
-    );
+    const ofrecidas = new Map(lecturasOfrecidas(prestacion).map((l) => [l.id, l]));
     const elegidas: Record<string, string> = {};
     for (const par of lecturas.split(',')) {
       const corte = par.indexOf(SEPARADOR_CAMPOS);

@@ -62,7 +62,10 @@ test.describe('Tu pensión: incapacidad permanente', () => {
     await esperarPagina(page);
     const g = page.getByRole('group', { name: 'Prestación' });
     await expect(g.getByRole('radio', { name: 'Jubilación ordinaria' })).toBeChecked();
-    await expect(g.getByRole('radio', { name: 'Viudedad (próximamente)' })).toBeDisabled();
+    await expect(g.getByRole('radio', { name: 'Viudedad' })).toBeEnabled();
+    await expect(
+      g.getByRole('radio', { name: 'Prestación en favor de familiares (próximamente)' }),
+    ).toBeDisabled();
     await g.getByRole('radio', { name: 'Jubilación ordinaria' }).focus();
     await page.keyboard.press('ArrowRight');
     await expect(g.getByRole('radio', { name: 'Incapacidad permanente' })).toBeChecked();

@@ -39,6 +39,21 @@ export interface PasoVista {
   readonly articulo: string;
 }
 
+/** Una fila del reparto entre los beneficiarios del mismo causante (viudedad y orfandad). */
+export interface FilaReparto {
+  readonly beneficiario: string;
+  /** Porcentaje de la base reguladora que queda tras los límites, o «—» si no hay derecho. */
+  readonly porcentaje: string;
+  readonly pension: string;
+  readonly nota: string;
+}
+
+export interface RepartoVista {
+  readonly titulo: string;
+  readonly intro: string;
+  readonly filas: readonly FilaReparto[];
+}
+
 export interface ModeloResultado {
   readonly cumpleRequisitos: boolean;
   readonly estado: EstadoVista;
@@ -53,6 +68,8 @@ export interface ModeloResultado {
   readonly momentoNormativa: string;
   /** Título de la tabla de requisitos. */
   readonly tituloRequisitos: string;
+  /** Reparto entre los beneficiarios del mismo causante (solo viudedad y orfandad). */
+  readonly reparto?: RepartoVista;
 }
 
 /** Lectura de un dato numérico de /data por su referencia `parametros/fichero.json#id`. */

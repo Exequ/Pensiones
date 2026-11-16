@@ -16,8 +16,8 @@ const DEFECTO: FormularioTuPension = {
   ...FORMULARIO_BASE,
   nacimientoMes: '',
   nacimientoAnio: '',
-  jubilacionMes: '',
-  jubilacionAnio: '',
+  hechoCausanteMes: '',
+  hechoCausanteAnio: '',
   inicioMes: '',
   inicioAnio: '',
   sexo: '',
@@ -192,8 +192,8 @@ describe('enlaces no válidos: la página no falla y dice qué se ha ignorado', 
     );
     expect(r.aplicado).toBe(true);
     // Lo válido se carga.
-    expect(r.formulario.jubilacionMes).toBe('11');
-    expect(r.formulario.jubilacionAnio).toBe('2026');
+    expect(r.formulario.hechoCausanteMes).toBe('11');
+    expect(r.formulario.hechoCausanteAnio).toBe('2026');
     expect(r.formulario.sexo).toBe('mujer');
     // Lo no válido queda con el valor por defecto.
     expect(r.formulario.nacimientoMes).toBe(DEFECTO.nacimientoMes);
@@ -213,7 +213,7 @@ describe('enlaces no válidos: la página no falla y dice qué se ha ignorado', 
   it('años fuera del rango admitido', () => {
     const r = leer('?v=1&nac=1800-01&jub=3000-01&ini=19-01');
     expect(r.formulario.nacimientoAnio).toBe('');
-    expect(r.formulario.jubilacionAnio).toBe('');
+    expect(r.formulario.hechoCausanteAnio).toBe('');
     expect(r.avisos).toHaveLength(3);
   });
 

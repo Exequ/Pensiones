@@ -75,8 +75,8 @@ function leerMesAnio(
   mesTexto: string,
   anioTexto: string,
   errores: ErroresFormulario,
-  campoMes: 'nacimientoMes' | 'jubilacionMes' | 'inicioMes',
-  campoAnio: 'nacimientoAnio' | 'jubilacionAnio' | 'inicioAnio',
+  campoMes: 'nacimientoMes' | 'hechoCausanteMes' | 'inicioMes',
+  campoAnio: 'nacimientoAnio' | 'hechoCausanteAnio' | 'inicioAnio',
   nombre: string,
 ): MesAnio | undefined {
   const mes = leerEntero(mesTexto);
@@ -93,29 +93,40 @@ function leerMesAnio(
   return ok && mes !== undefined && anio !== undefined ? { anio, mes } : undefined;
 }
 
+/** Qué partes del formulario valida `validarFormulario` (por defecto, todas). */
+export interface PartesValidadas {
+  /** Nacimiento, sexo e hijos de la persona que pregunta (no existen en el causante de la viudedad). */
+  readonly personales?: boolean;
+  /** Inicio de la cotización, meses sin cotizar y base de la carrera simple (no existen si el causante es pensionista). */
+  readonly carrera?: boolean;
+}
+
 /** Valida el formulario. Un objeto vacío significa que se puede calcular. */
 export function validarFormulario(
   f: FormularioTuPension,
   nombres: NombresFecha = NOMBRES_JUBILACION,
+  { personales = true, carrera = true }: PartesValidadas = {},
 ): ErroresFormulario {
   const errores: ErroresFormulario = {};
-  const nac = leerMesAnio(
-    f.nacimientoMes,
-    f.nacimientoAnio,
-    errores,
-    'nacimientoMes',
-    'nacimientoAnio',
-    'de nacimiento',
-  );
+  const nac = personales
+    ? leerMesAnio(
+        f.nacimientoMes,
+        f.nacimientoAnio,
+        errores,
+        'nacimientoMes',
+        'nacimientoAnio',
+        'de nacimiento',
+      )
+    : undefined;
   const jub = leerMesAnio(
-    f.jubilacionMes,
-    f.jubilacionAnio,
+    f.hechoCausanteMes,
+    f.hechoCausanteAnio,
     errores,
-    'jubilacionMes',
-    'jubilacionAnio',
+    'hechoCausanteMes',
+    'hechoCausanteAnio',
     nombres.de,
   );
-  const simple = f.tipoCarrera === 'simple';
+  const simple = carrera && f.tipoCarrera === 'simple';
   // El inicio de la cotización, los meses sin cotizar y la base solo existen en la carrera simple.
   const ini = simple
     ? leerMesAnio(
@@ -127,11 +138,11 @@ export function validarFormulario(
         'de inicio de la cotización',
       )
     : undefined;
-  if (f.sexo === '')
+  if (personales && f.sexo === '')
     errores.sexo =
       'Indica el sexo: el cálculo lo usa para integrar lagunas y para el complemento por hijos.';
 
-  if (f.sexo === 'mujer') {
+  if (personales && f.sexo === 'mujer') {
     const h = leerEntero(f.hijos);
     if (h === undefined || h < 0)
       errores.hijos = 'Escribe el número de hijos como un entero (0 si no tienes).';
@@ -154,7 +165,7 @@ export function validarFormulario(
   }
 
   if (nac && jub && absoluto(jub.anio, jub.mes) <= absoluto(nac.anio, nac.mes)) {
-    errores.jubilacionAnio = `La fecha ${nombres.de} debe ser posterior a la de nacimiento.`;
+    errores.hechoCausanteAnio = `La fecha ${nombres.de} debe ser posterior a la de nacimiento.`;
   }
   if (ini && nac && absoluto(ini.anio, ini.mes) <= absoluto(nac.anio, nac.mes)) {
     errores.inicioAnio = 'El inicio de la cotización debe ser posterior al nacimiento.';
@@ -212,9 +223,13 @@ function fechasClave(f: FormularioTuPension): {
       ? mesAbsoluto(aa, mm)
       : undefined;
   };
-  const jub = mes(f.jubilacionMes, f.jubilacionAnio);
+  const jub = mes(f.hechoCausanteMes, f.hechoCausanteAnio);
   return {
-    nacimiento: mes(f.nacimientoMes, f.nacimientoAnio),
+    // En la viudedad y la orfandad el nacimiento del formulario no es el de la persona que cotizó.
+    nacimiento:
+      f.prestacion === 'viudedad' || f.prestacion === 'orfandad'
+        ? undefined
+        : mes(f.nacimientoMes, f.nacimientoAnio),
     mesPrevio: jub === undefined ? undefined : jub - 1,
   };
 }
@@ -226,8 +241,8 @@ function fechasClave(f: FormularioTuPension): {
 export function tramosDeCarreraSimple(f: FormularioTuPension): TramoFormulario[] | undefined {
   const errores = validarFormulario({ ...f, tipoCarrera: 'simple' });
   const campos = [
-    'jubilacionMes',
-    'jubilacionAnio',
+    'hechoCausanteMes',
+    'hechoCausanteAnio',
     'inicioMes',
     'inicioAnio',
     'mesesSinCotizar',
@@ -236,7 +251,7 @@ export function tramosDeCarreraSimple(f: FormularioTuPension): TramoFormulario[]
   if (campos.some((c) => errores[c] !== undefined)) return undefined;
   const periodos = carreraSimple(
     { anio: Number(f.inicioAnio), mes: Number(f.inicioMes) },
-    { anio: Number(f.jubilacionAnio), mes: Number(f.jubilacionMes) },
+    { anio: Number(f.hechoCausanteAnio), mes: Number(f.hechoCausanteMes) },
     leerNumero(f.baseMensual) ?? 0,
     leerEntero(f.mesesSinCotizar) ?? 0,
     f.ubicacionLagunas,
@@ -273,7 +288,7 @@ export function leerFechasFormulario(f: FormularioTuPension): {
   };
   return {
     nacimiento: leer(f.nacimientoMes, f.nacimientoAnio),
-    jubilacion: leer(f.jubilacionMes, f.jubilacionAnio),
+    jubilacion: leer(f.hechoCausanteMes, f.hechoCausanteAnio),
   };
 }
 
@@ -286,7 +301,7 @@ export function analizarTramos(
     catalogo,
     definicionMedia: f.definicionMedia,
     ...fechasClave(f),
-    ...(f.prestacion === 'incapacidad' ? { anteriorA: 'al hecho causante' } : {}),
+    ...(f.prestacion === 'jubilacion' ? {} : { anteriorA: 'al hecho causante' }),
   });
 }
 
@@ -304,7 +319,7 @@ export function formularioAEntrada(
     return { ok: false, errores, erroresTramos: tramos?.errores ?? [] };
   }
   const nac = { anio: Number(f.nacimientoAnio), mes: Number(f.nacimientoMes) };
-  const jub = { anio: Number(f.jubilacionAnio), mes: Number(f.jubilacionMes) };
+  const jub = { anio: Number(f.hechoCausanteAnio), mes: Number(f.hechoCausanteMes) };
   const sexo = f.sexo === 'mujer' ? 'mujer' : 'hombre';
   const opciones: OpcionesJubilacion = {
     sexo,

@@ -13,7 +13,7 @@ export interface MensajeError {
   readonly accion: string;
   /** Campo del formulario al que llevar el foco, si se sabe. */
   readonly campo?:
-    'jubilacionAnio' | 'ipcSupuesto' | 'inicioAnio' | 'baseMensual' | 'baseReguladora';
+    'hechoCausanteAnio' | 'ipcSupuesto' | 'inicioAnio' | 'baseMensual' | 'baseReguladora';
 }
 
 /** Cómo se llama en los mensajes la fecha en que termina la carrera de cada prestación. */
@@ -28,7 +28,39 @@ const FECHA: Record<IdPrestacion, { fecha: string; elegir: string; pensionDe: st
     elegir: 'otra fecha del hecho causante, más cercana al presente',
     pensionDe: 'un hecho causante en el año indicado',
   },
+  viudedad: {
+    fecha: 'La fecha del fallecimiento',
+    elegir: 'otra fecha de fallecimiento, más cercana al presente',
+    pensionDe: 'un fallecimiento en el año indicado',
+  },
+  orfandad: {
+    fecha: 'La fecha del fallecimiento',
+    elegir: 'otra fecha de fallecimiento, más cercana al presente',
+    pensionDe: 'un fallecimiento en el año indicado',
+  },
 };
+
+const esSupervivencia = (p: IdPrestacion): boolean => p === 'viudedad' || p === 'orfandad';
+
+/**
+ * Hecho causante anterior al primer año que cubre el motor de supervivencia: se dice la fecha y el
+ * motivo (la redacción aplicable era otra y exigía requisitos que el motor no tiene) y no se calcula.
+ */
+function mensajeHechoAnterior(error: ErrorMotor, texto: string): MensajeError | undefined {
+  const anio = /hecho causante en (\d{4})/.exec(texto)?.[1];
+  if (anio === undefined) return undefined;
+  const regla = error.regla ?? '';
+  const detalle =
+    regla === '' ? texto : texto.slice(texto.indexOf(regla) + regla.length).replace(/^\.\s*/, '');
+  return {
+    codigo: error.codigo,
+    titulo: 'Fallecimiento anterior al periodo que calcula el simulador',
+    mensaje: `La fecha del fallecimiento que has indicado (año ${anio}) es anterior al primer año que cubre el cálculo de viudedad y orfandad. Para fechas anteriores la ley aplicable era otra redacción, con requisitos propios que el simulador no recoge (el artículo sobre la viudedad de las parejas de hecho, por ejemplo, tuvo una redacción anterior distinta); el simulador no los sustituye por otros ni los estima. Detalle técnico: ${detalle}`,
+    accion:
+      'Elige una fecha de fallecimiento posterior; no se muestra ninguna cifra para la fecha indicada.',
+    campo: 'hechoCausanteAnio',
+  };
+}
 
 export function traducirError(
   error: ErrorMotor,
@@ -43,8 +75,8 @@ export function traducirError(
           codigo: error.codigo,
           titulo: 'Las fechas no son coherentes',
           mensaje: `${nombre.fecha} debe ser posterior a la de nacimiento.`,
-          accion: `Revisa el mes y el año de nacimiento y ${prestacion === 'jubilacion' ? 'de jubilación' : 'del hecho causante'}.`,
-          campo: 'jubilacionAnio',
+          accion: `Revisa el mes y el año de nacimiento y ${prestacion === 'jubilacion' ? 'de jubilación' : prestacion === 'incapacidad' ? 'del hecho causante' : 'del fallecimiento'}.`,
+          campo: 'hechoCausanteAnio',
         };
       }
       if (/Periodo .* (el fin es anterior|falta la base)|solap/i.test(texto)) {
@@ -71,7 +103,9 @@ export function traducirError(
           mensaje:
             prestacion === 'jubilacion'
               ? 'Para esa fecha de jubilación hay meses sin dato publicado de IPC y el cálculo necesita un supuesto.'
-              : 'Para esa fecha del hecho causante hay meses sin dato publicado de IPC y el cálculo necesita un supuesto.',
+              : prestacion === 'incapacidad'
+                ? 'Para esa fecha del hecho causante hay meses sin dato publicado de IPC y el cálculo necesita un supuesto.'
+                : 'Para esa fecha de fallecimiento hay meses sin dato publicado de IPC y el cálculo necesita un supuesto.',
           accion:
             'Escribe un IPC anual supuesto en el apartado «Escenario económico» y vuelve a calcular.',
           campo: 'ipcSupuesto',
@@ -83,18 +117,32 @@ export function traducirError(
           titulo: 'No hay reglas cargadas para esa fecha',
           mensaje: `El simulador no tiene las normas necesarias para ${nombre.pensionDe}.`,
           accion: `Elige ${nombre.elegir}.`,
-          campo: 'jubilacionAnio',
+          campo: 'hechoCausanteAnio',
         };
       }
       return {
         codigo: error.codigo,
         titulo: 'Falta un dato necesario',
         mensaje: `El cálculo necesita un dato que no está disponible. Detalle técnico: ${texto}`,
-        accion: `Prueba con ${prestacion === 'jubilacion' ? 'otra fecha de jubilación' : 'otra fecha del hecho causante'}. Si persiste, consulta «Metodología» para ver qué datos faltan.`,
+        accion: `Prueba con ${prestacion === 'jubilacion' ? 'otra fecha de jubilación' : prestacion === 'incapacidad' ? 'otra fecha del hecho causante' : 'otra fecha de fallecimiento'}. Si persiste, consulta «Metodología» para ver qué datos faltan.`,
       };
     }
     case 'NoImplementada': {
       const regla = error.regla ?? texto;
+      if (esSupervivencia(prestacion)) {
+        const anterior = mensajeHechoAnterior(error, texto);
+        if (anterior) return anterior;
+        if (/DT 13/i.test(`${regla} ${texto}`)) {
+          return {
+            codigo: error.codigo,
+            titulo: 'Separación o divorcio anteriores a la disposición transitoria decimotercera',
+            mensaje: `La ley regula este supuesto con una regla transitoria que el simulador todavía no calcula: ${regla}.`,
+            accion:
+              'Si la separación o el divorcio no son anteriores a esa fecha, cambia la respuesta; si lo son, el simulador no puede calcular este caso.',
+            campo: 'hechoCausanteAnio',
+          };
+        }
+      }
       if (/contingencias profesionales|accidente de trabajo/i.test(`${regla} ${texto}`)) {
         // Accidente de trabajo y enfermedad profesional: el motor necesita la base reguladora ya
         // calculada y no admite el caso sin alta.
@@ -114,8 +162,10 @@ export function traducirError(
         accion:
           prestacion === 'jubilacion'
             ? 'Elige otra fecha de jubilación; las limitaciones del cálculo se listan más abajo.'
-            : 'Cambia la fecha del hecho causante o las opciones del cálculo; las limitaciones del cálculo se listan más abajo.',
-        campo: 'jubilacionAnio',
+            : prestacion === 'incapacidad'
+              ? 'Cambia la fecha del hecho causante o las opciones del cálculo; las limitaciones del cálculo se listan más abajo.'
+              : 'Cambia la fecha del fallecimiento o los datos del caso; las limitaciones del cálculo se listan más abajo.',
+        campo: 'hechoCausanteAnio',
       };
     }
   }

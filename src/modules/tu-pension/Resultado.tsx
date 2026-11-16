@@ -69,6 +69,24 @@ export const Resultado = forwardRef<HTMLHeadingElement, ResultadoProps>(function
         {ipcUsado ? ` IPC anual supuesto para los meses sin dato: ${ipcUsado} %.` : ''}
       </p>
 
+      {modelo.reparto ? (
+        <section className="tp-subseccion" aria-labelledby="tp-reparto">
+          <h3 id="tp-reparto">{modelo.reparto.titulo}</h3>
+          <p>{modelo.reparto.intro}</p>
+          <DataTable
+            titulo={modelo.reparto.titulo}
+            ocultarTitulo
+            columnas={[
+              { clave: 'beneficiario', titulo: 'Beneficiario' },
+              { clave: 'porcentaje', titulo: 'Porcentaje de la base reguladora', tipo: 'texto' },
+              { clave: 'pension', titulo: 'Pensión inicial por paga', tipo: 'texto' },
+              { clave: 'nota', titulo: 'Nota' },
+            ]}
+            filas={modelo.reparto.filas.map((f) => ({ ...f }))}
+          />
+        </section>
+      ) : null}
+
       <section className="tp-subseccion" aria-labelledby="tp-requisitos">
         <h3 id="tp-requisitos">{modelo.tituloRequisitos}</h3>
         <DataTable

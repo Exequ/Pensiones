@@ -172,6 +172,35 @@ Se mantienen `nac`, `sex`, `hij`, `car`, `ini`, `lag`, `ubi`, `base`, `tr`, `med
 
 `incapacidad-mapeador.test.ts`, `incapacidad-presentador.test.ts`, `enlace-incapacidad.test.ts` (incluida la compatibilidad con los enlaces `v=1` de jubilación), `errores.test.ts`, `Incapacidad.test.tsx` (selector, formulario, panel de lecturas, enlaces), `scripts/tu-pension-incapacidad-equivalencia.test.ts` (ocho casos de oro de la incapacidad, también con carrera por tramos, ±0,01 € frente a la llamada directa al motor) y `e2e/incapacidad.spec.ts` (flujo completo, selector con teclado, lectura del accidente no laboral, comparación, enlace en pestaña nueva, enlace antiguo de jubilación, errores, parcial, móvil y axe).
 
+## Fase 3-C2: viudedad y orfandad
+
+La página calcula ahora cuatro prestaciones: jubilación ordinaria, incapacidad permanente, **viudedad** y **orfandad**. Favor de familiares y no contributivas (3-C3) aparecen como «próximamente». Decisiones: `docs/DECISIONES.md` (Fase 3-C2); inventario y flujo de preguntas: `docs/INVENTARIO_3C2.md`.
+
+### Piezas (`src/modules/tu-pension/`)
+
+| Fichero                                            | Qué hace                                                                                                                      |
+| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `supervivencia-tipos.ts`                           | Tipos y valores iniciales de la parte de supervivencia del formulario (causante, persona viuda, huérfanos).                   |
+| `supervivencia-mapeador.ts`                        | Validación en español y entrada del motor (`Causante`, `Beneficiarios`, opciones y lecturas).                                 |
+| `supervivencia-ejecutor.ts`                        | Llama a `motor.supervivencia` y deja a mano la prestación de la persona que pregunta (para la comparación de lecturas).       |
+| `supervivencia-presentador.ts`                     | Resultado → cifras, requisitos, receta y tabla de reparto, con los pasos y las referencias del motor.                         |
+| `FormularioSupervivencia.tsx`, `Campos.tsx`        | Bloques del formulario (la persona fallecida, la persona viuda, los huérfanos) con preguntas progresivas; campos compartidos. |
+| `LecturasQueIntervienenSupervivencia.tsx`          | Sección de las lecturas que cambian el resultado (todas las que influyen, de cualquier estado).                               |
+| `enlace-supervivencia.ts`, `enlace-validadores.ts` | Parámetros del enlace de viudedad y orfandad; validadores compartidos con `enlace.ts`.                                        |
+| `textos-supervivencia.ts`                          | Textos sin cifras.                                                                                                            |
+
+### Cálculo
+
+`calcularTuPension` elige la receta por `formulario.prestacion` (`prestaciones.ts`: `VIUDEDAD` y `ORFANDAD`). La viudedad y la orfandad llaman a `motor.supervivencia` con la persona viuda (si la hay) y los huérfanos, de modo que el límite conjunto del art. 229 se aplica al grupo. El gráfico de bases no se muestra (el motor no expone las bases del periodo). Las lecturas ofrecidas son las de `supervivencia.*` que cambian cada prestación (`comparar-lecturas.ts`); las `jubilacion.*` que rigen aquí (base máxima, pensión máxima y pensión máxima desde 2051) se muestran en una nota plegable y no se cambian.
+
+### Enlace
+
+`p=viu` y `p=orf`; el resto del formato `v=1` y los enlaces de jubilación y de incapacidad no cambian. La tabla de parámetros está en la cabecera de `enlace-supervivencia.ts`. Ejemplo (viudedad, cónyuge): `#/tu-pension?v=1&p=viu&hc=2026-03&or=ec&sit=alt&vin=con&vnc=1976-05&vsx=h&vhj=0&vmt=2005-06&vcp=0&vea=0&vhc=0&vop=0&vdi=0&vrt=0&vrc=0&vre=0&vho=0&vcg=0&car=s&ini=2010-01&lag=0&ubi=m&base=2000&med=media-cotizacion-rg&min=1&max=1&ipc=2`.
+
+### Pruebas
+
+`supervivencia.test.ts` (casos de viudedad y orfandad con el resultado calculado a mano en el propio test), `supervivencia-mapeador.test.ts` (validación, entrada del motor y mensajes de lo que no se calcula), `enlace-supervivencia.test.ts` (ida y vuelta y enlaces antiguos), `Supervivencia.test.tsx` (flujos de cada prestación), `neutralidad.test.ts`, `scripts/tu-pension-supervivencia-equivalencia.test.ts` (formulario frente al motor y frente a los casos de oro), `scripts/lecturas-jubilacion-supervivencia.test.ts` y `e2e/supervivencia.spec.ts` (flujos, enlace, móvil, axe).
+
 ## Ajustes actuariales 1 (2026-11-14)
 
 - **Lecturas**: el valor por defecto de `incapacidad.lagunasAccidenteNoLaboral` es `sin-integrar` (estado pendiente); el bloque «Lecturas abiertas que intervienen» muestra siempre, con accidente no laboral, su estado, su motivo y el efecto de la alternativa «integrar». Los estados de las demás lecturas cambian según `docs/DECISIONES_ACTUARIALES.md`. Los textos «qué cambia» están revisados (`docs/DECISIONES.md`).

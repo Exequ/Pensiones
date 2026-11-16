@@ -16,7 +16,7 @@ describe('traducirError', () => {
     expect(m.codigo).toBe('EntradaInvalida');
     expect(m.titulo).toMatch(/fechas/i);
     expect(m.accion).toMatch(/Revisa/);
-    expect(m.campo).toBe('jubilacionAnio');
+    expect(m.campo).toBe('hechoCausanteAnio');
   });
 
   it('EntradaInvalida: carrera mal formada', () => {
@@ -53,7 +53,7 @@ describe('traducirError', () => {
     );
     expect(m.titulo).toMatch(/reglas/);
     expect(m.accion).toMatch(/otra fecha/);
-    expect(m.campo).toBe('jubilacionAnio');
+    expect(m.campo).toBe('hechoCausanteAnio');
   });
 
   it('DatoNoDisponible: otro dato', () => {
@@ -93,7 +93,7 @@ describe('errores reales del motor con datos del formulario', () => {
 
   it('jubilación lejana sin IPC supuesto → DatoNoDisponible traducido a «Falta un IPC supuesto»', () => {
     const r = llamar(
-      { ...FORMULARIO_BASE, nacimientoAnio: '1965', jubilacionAnio: '2031', inicioAnio: '1990' },
+      { ...FORMULARIO_BASE, nacimientoAnio: '1965', hechoCausanteAnio: '2031', inicioAnio: '1990' },
       false,
     );
     expect(r.ok).toBe(false);
@@ -106,7 +106,7 @@ describe('errores reales del motor con datos del formulario', () => {
     const r = llamar({
       ...FORMULARIO_BASE,
       nacimientoAnio: '1930',
-      jubilacionAnio: '1995',
+      hechoCausanteAnio: '1995',
       inicioAnio: '1960',
     });
     expect(r.ok).toBe(false);

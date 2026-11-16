@@ -8,8 +8,8 @@ const DEFECTO: FormularioTuPension = {
   ...FORMULARIO_BASE,
   nacimientoMes: '',
   nacimientoAnio: '',
-  jubilacionMes: '',
-  jubilacionAnio: '',
+  hechoCausanteMes: '',
+  hechoCausanteAnio: '',
   inicioMes: '',
   inicioAnio: '',
   sexo: '',
@@ -184,7 +184,7 @@ describe('enlace de la incapacidad permanente (p=inc)', () => {
   it('una prestación desconocida se ignora y se trata como jubilación', () => {
     const r = leer('?v=1&p=viudedad&nac=1961-11&jub=2026-11');
     expect(r.formulario.prestacion).toBe('jubilacion');
-    expect(r.formulario.jubilacionAnio).toBe('2026');
+    expect(r.formulario.hechoCausanteAnio).toBe('2026');
     expect(r.avisos.join(' ')).toMatch(/prestación/);
   });
 });
@@ -201,8 +201,8 @@ describe('compatibilidad con los enlaces de la jubilación (v=1 sin p=)', () => 
       prestacion: 'jubilacion',
       nacimientoMes: '11',
       nacimientoAnio: '1961',
-      jubilacionMes: '11',
-      jubilacionAnio: '2026',
+      hechoCausanteMes: '11',
+      hechoCausanteAnio: '2026',
       inicioAnio: '1986',
       baseMensual: '2500',
       sexo: 'hombre',
@@ -225,7 +225,7 @@ describe('compatibilidad con los enlaces de la jubilación (v=1 sin p=)', () => 
     const r = leer('?v=1&nac=1961-11&jub=2026-11&gr=tot&hc=2026-03');
     expect(r.formulario.prestacion).toBe('jubilacion');
     expect(r.formulario.grado).toBe('');
-    expect(r.formulario.jubilacionMes).toBe('11');
+    expect(r.formulario.hechoCausanteMes).toBe('11');
     expect(r.avisos.join(' ')).toMatch(/solo existe en los enlaces de la incapacidad/);
   });
 

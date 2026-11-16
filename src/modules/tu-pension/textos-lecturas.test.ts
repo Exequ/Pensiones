@@ -4,7 +4,13 @@ import { TEXTOS_LECTURAS } from './textos-lecturas';
 
 describe('textos de las lecturas', () => {
   it('hay texto para cada lectura ofrecida y cada uno de sus valores, y no sobra ninguno', () => {
-    const ofrecidas = [...lecturasOfrecidas('jubilacion'), ...lecturasOfrecidas('incapacidad')];
+    const ofrecidas = [
+      ...new Map(
+        (['jubilacion', 'incapacidad', 'viudedad', 'orfandad'] as const)
+          .flatMap((p) => lecturasOfrecidas(p))
+          .map((l) => [l.id, l] as const),
+      ).values(),
+    ];
     expect(Object.keys(TEXTOS_LECTURAS).sort()).toEqual(ofrecidas.map((l) => l.id).sort());
     for (const l of ofrecidas) {
       const t = TEXTOS_LECTURAS[l.id]!;

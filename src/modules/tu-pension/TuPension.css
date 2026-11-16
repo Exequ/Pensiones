@@ -179,6 +179,7 @@
 
 .tp-subseccion {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--espacio-3);
 }
 
@@ -732,4 +733,23 @@
 .tp-selector-prestacion {
   display: grid;
   gap: var(--espacio-3);
+}
+
+/* Fase 3-C2: formulario de viudedad y orfandad. */
+.tp-subtitulo-grupo {
+  margin: 0;
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+}
+
+.tp-huerfano-otro {
+  display: grid;
+  gap: var(--espacio-3);
+  padding-top: var(--espacio-3);
+  border-top: var(--grosor-filete) solid var(--color-filete);
+}
+
+.tp-huerfano-otro > button {
+  justify-self: start;
 }

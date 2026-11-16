@@ -41,7 +41,7 @@ describe('validarFormulario', () => {
       nacimientoMes: '',
       nacimientoAnio: '19',
       sexo: '',
-      jubilacionMes: '13',
+      hechoCausanteMes: '13',
       inicioAnio: '',
       mesesSinCotizar: '-3',
       baseMensual: '0',
@@ -52,7 +52,7 @@ describe('validarFormulario', () => {
         'baseMensual',
         'inicioAnio',
         'ipcSupuesto',
-        'jubilacionMes',
+        'hechoCausanteMes',
         'mesesSinCotizar',
         'nacimientoAnio',
         'nacimientoMes',
@@ -71,7 +71,7 @@ describe('validarFormulario', () => {
 
   it('comprueba el orden de las fechas', () => {
     expect(
-      validarFormulario({ ...FORMULARIO_BASE, jubilacionAnio: '1961' }).jubilacionAnio,
+      validarFormulario({ ...FORMULARIO_BASE, hechoCausanteAnio: '1961' }).hechoCausanteAnio,
     ).toMatch(/posterior/);
     expect(validarFormulario({ ...FORMULARIO_BASE, inicioAnio: '2026' }).inicioAnio).toMatch(
       /anterior a la jubilación/,

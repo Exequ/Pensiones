@@ -1,5 +1,4 @@
 import type { SyntheticEvent } from 'react';
-import { Field } from '../../components/Field';
 import { SegmentedPills } from '../../components/SegmentedPills';
 import { SourceLine } from '../../components/SourceLine';
 import type { Dato } from '../../engine/esquema-datos';
@@ -11,7 +10,20 @@ import { ResumenTramos } from './ResumenTramos';
 import { TablaTramos } from './TablaTramos';
 import type { GradoIncapacidad, OrigenIncapacidad } from '../../engine/incapacidad/tipos';
 import { esOrigenProfesional, GRADOS, ORIGENES } from './incapacidad-mapeador';
-import { MESES, TEXTOS, type TextosPrestacion } from './textos';
+import { CampoTexto, PreguntaSiNo, SelectorMes } from './Campos';
+import {
+  CausanteSupervivencia,
+  DatosHuerfano,
+  DatosViudo,
+  OtrosHuerfanos,
+} from './FormularioSupervivencia';
+import { TEXTOS_SUPERVIVENCIA } from './textos-supervivencia';
+import type {
+  FormularioHuerfano,
+  FormularioSupervivencia,
+  FormularioViudo,
+} from './supervivencia-tipos';
+import { TEXTOS, type TextosPrestacion } from './textos';
 import { TEXTOS_INCAPACIDAD_PROPIOS } from './textos-incapacidad';
 import type { ErroresFormulario, FormularioTuPension, Sexo, TipoCarrera } from './tipos';
 import type { ErrorTramo, ResultadoTramos, TramoFormulario } from './tramos';
@@ -36,72 +48,10 @@ interface FormularioProps {
   onCargarPersona: (id: string) => void;
   /** Textos que cambian con la prestación (fecha final de la carrera, introducciones). */
   textos: TextosPrestacion;
-}
-
-function SelectorMes({
-  etiqueta,
-  valor,
-  error,
-  onCambio,
-}: {
-  etiqueta: string;
-  valor: string;
-  error: string | undefined;
-  onCambio: (valor: string) => void;
-}) {
-  return (
-    <Field etiqueta={etiqueta} error={error}>
-      {(atributos) => (
-        <select
-          {...atributos}
-          value={valor}
-          onChange={(e) => {
-            onCambio(e.target.value);
-          }}
-        >
-          <option value="">Elige un mes</option>
-          {MESES.map((nombre, i) => (
-            <option key={nombre} value={String(i + 1)}>
-              {nombre}
-            </option>
-          ))}
-        </select>
-      )}
-    </Field>
-  );
-}
-
-function CampoTexto({
-  etiqueta,
-  ayuda,
-  valor,
-  error,
-  modo = 'numeric',
-  onCambio,
-}: {
-  etiqueta: string;
-  ayuda?: string;
-  valor: string;
-  error: string | undefined;
-  modo?: 'numeric' | 'decimal';
-  onCambio: (valor: string) => void;
-}) {
-  return (
-    <Field etiqueta={etiqueta} ayuda={ayuda} error={error}>
-      {(atributos) => (
-        <input
-          {...atributos}
-          type="text"
-          inputMode={modo}
-          autoComplete="off"
-          value={valor}
-          onChange={(e) => {
-            onCambio(e.target.value);
-          }}
-        />
-      )}
-    </Field>
-  );
+  /** Viudedad y orfandad: cambios en la parte de supervivencia del formulario. */
+  onCambioSv: (cambios: Partial<FormularioSupervivencia>) => void;
+  /** Viudedad y orfandad: se avisa de la frontera del artículo de parejas de hecho. */
+  avisoParejaHijos: boolean;
 }
 
 const SI_NO = [
@@ -127,6 +77,8 @@ export function Formulario({
   mensajePersona,
   onCargarPersona,
   textos,
+  onCambioSv,
+  avisoParejaHijos,
 }: FormularioProps) {
   const enviar = (e: SyntheticEvent) => {
     e.preventDefault();
@@ -136,6 +88,16 @@ export function Formulario({
   const hayErrores = Object.keys(errores).length > 0 || erroresTramos.length > 0;
   const simple = valores.tipoCarrera === 'simple';
   const incapacidad = valores.prestacion === 'incapacidad';
+  const supervivencia = valores.prestacion === 'viudedad' || valores.prestacion === 'orfandad';
+  const sv = valores.supervivencia;
+  const pensionista = supervivencia && sv.situacion === 'pensionista';
+  const viudedad = valores.prestacion === 'viudedad';
+  const cambiarViudo = (c: Partial<FormularioViudo>) => {
+    onCambioSv({ viudo: { ...sv.viudo, ...c } });
+  };
+  const cambiarOtros = (otros: readonly FormularioHuerfano[]) => {
+    onCambioSv({ otrosHuerfanos: otros });
+  };
   return (
     <form
       className="tp-formulario"
@@ -157,78 +119,88 @@ export function Formulario({
         </div>
       ) : null}
 
-      <fieldset className="tp-grupo">
-        <legend>{TEXTOS.tituloDatos}</legend>
-        <div className="tp-fila">
-          <SelectorMes
-            etiqueta="Mes de nacimiento"
-            valor={valores.nacimientoMes}
-            error={errores.nacimientoMes}
-            onCambio={(v) => {
-              onCambio({ nacimientoMes: v });
-            }}
-          />
-          <CampoTexto
-            etiqueta="Año de nacimiento"
-            valor={valores.nacimientoAnio}
-            error={errores.nacimientoAnio}
-            onCambio={(v) => {
-              onCambio({ nacimientoAnio: v });
-            }}
-          />
-        </div>
-        <div className="tp-bloque">
-          <SegmentedPills<Sexo | ''>
-            leyenda="Sexo"
-            opciones={[
-              { valor: 'hombre', etiqueta: 'Hombre' },
-              { valor: 'mujer', etiqueta: 'Mujer' },
-            ]}
-            valor={valores.sexo}
-            onCambio={(v) => {
-              onCambio({ sexo: v });
-            }}
-          />
-          <p className="campo-ayuda">{TEXTOS.ayudaSexo}</p>
-          {errores.sexo ? (
-            <p className="campo-error" aria-live="polite">
-              <span className="campo-error-prefijo">Error: </span>
-              {errores.sexo}
-            </p>
+      {supervivencia ? (
+        <CausanteSupervivencia
+          valores={valores}
+          errores={errores}
+          textos={textos}
+          onCambio={onCambio}
+          onCambioSv={onCambioSv}
+        />
+      ) : (
+        <fieldset className="tp-grupo">
+          <legend>{TEXTOS.tituloDatos}</legend>
+          <div className="tp-fila">
+            <SelectorMes
+              etiqueta="Mes de nacimiento"
+              valor={valores.nacimientoMes}
+              error={errores.nacimientoMes}
+              onCambio={(v) => {
+                onCambio({ nacimientoMes: v });
+              }}
+            />
+            <CampoTexto
+              etiqueta="Año de nacimiento"
+              valor={valores.nacimientoAnio}
+              error={errores.nacimientoAnio}
+              onCambio={(v) => {
+                onCambio({ nacimientoAnio: v });
+              }}
+            />
+          </div>
+          <div className="tp-bloque">
+            <SegmentedPills<Sexo | ''>
+              leyenda="Sexo"
+              opciones={[
+                { valor: 'hombre', etiqueta: 'Hombre' },
+                { valor: 'mujer', etiqueta: 'Mujer' },
+              ]}
+              valor={valores.sexo}
+              onCambio={(v) => {
+                onCambio({ sexo: v });
+              }}
+            />
+            <p className="campo-ayuda">{TEXTOS.ayudaSexo}</p>
+            {errores.sexo ? (
+              <p className="campo-error" aria-live="polite">
+                <span className="campo-error-prefijo">Error: </span>
+                {errores.sexo}
+              </p>
+            ) : null}
+          </div>
+          {valores.sexo === 'mujer' ? (
+            <CampoTexto
+              etiqueta="Número de hijos"
+              ayuda={TEXTOS.ayudaHijos}
+              valor={valores.hijos}
+              error={errores.hijos}
+              onCambio={(v) => {
+                onCambio({ hijos: v });
+              }}
+            />
           ) : null}
-        </div>
-        {valores.sexo === 'mujer' ? (
-          <CampoTexto
-            etiqueta="Número de hijos"
-            ayuda={TEXTOS.ayudaHijos}
-            valor={valores.hijos}
-            error={errores.hijos}
-            onCambio={(v) => {
-              onCambio({ hijos: v });
-            }}
-          />
-        ) : null}
-        <div className="tp-fila">
-          <SelectorMes
-            etiqueta={textos.etiquetaMes}
-            valor={valores.jubilacionMes}
-            error={errores.jubilacionMes}
-            onCambio={(v) => {
-              onCambio({ jubilacionMes: v });
-            }}
-          />
-          <CampoTexto
-            etiqueta={textos.etiquetaAnio}
-            valor={valores.jubilacionAnio}
-            error={errores.jubilacionAnio}
-            onCambio={(v) => {
-              onCambio({ jubilacionAnio: v });
-            }}
-          />
-        </div>
-        <p className="campo-ayuda">{textos.ayudaFecha}</p>
-        {incapacidad ? null : <p className="tp-proximamente">{TEXTOS.proximamente}</p>}
-      </fieldset>
+          <div className="tp-fila">
+            <SelectorMes
+              etiqueta={textos.etiquetaMes}
+              valor={valores.hechoCausanteMes}
+              error={errores.hechoCausanteMes}
+              onCambio={(v) => {
+                onCambio({ hechoCausanteMes: v });
+              }}
+            />
+            <CampoTexto
+              etiqueta={textos.etiquetaAnio}
+              valor={valores.hechoCausanteAnio}
+              error={errores.hechoCausanteAnio}
+              onCambio={(v) => {
+                onCambio({ hechoCausanteAnio: v });
+              }}
+            />
+          </div>
+          <p className="campo-ayuda">{textos.ayudaFecha}</p>
+          {incapacidad ? null : <p className="tp-proximamente">{TEXTOS.proximamente}</p>}
+        </fieldset>
+      )}
 
       {incapacidad ? (
         <fieldset className="tp-grupo">
@@ -331,119 +303,181 @@ export function Formulario({
         </fieldset>
       ) : null}
 
-      <fieldset className="tp-grupo">
-        <legend>{TEXTOS.tituloCarrera}</legend>
-        <div className="tp-bloque">
-          <SegmentedPills<TipoCarrera>
-            leyenda={TEXTOS.tipoCarreraLeyenda}
-            opciones={[
-              { valor: 'simple', etiqueta: TEXTOS.carreraSimple },
-              { valor: 'tramos', etiqueta: TEXTOS.carreraTramos },
-            ]}
-            valor={valores.tipoCarrera}
-            onCambio={onCambioTipoCarrera}
-          />
-        </div>
-        {simple ? (
-          <>
-            <p className="campo-ayuda">{textos.introCarrera}</p>
-            <div className="tp-fila">
-              <SelectorMes
-                etiqueta="Mes de inicio de la cotización"
-                valor={valores.inicioMes}
-                error={errores.inicioMes}
-                onCambio={(v) => {
-                  onCambio({ inicioMes: v });
-                }}
-              />
-              <CampoTexto
-                etiqueta="Año de inicio de la cotización"
-                valor={valores.inicioAnio}
-                error={errores.inicioAnio}
-                onCambio={(v) => {
-                  onCambio({ inicioAnio: v });
-                }}
-              />
-            </div>
-            <CampoTexto
-              etiqueta="Meses sin cotizar (lagunas)"
-              ayuda={textos.ayudaLagunas}
-              valor={valores.mesesSinCotizar}
-              error={errores.mesesSinCotizar}
-              onCambio={(v) => {
-                onCambio({ mesesSinCotizar: v });
-              }}
+      {pensionista ? null : (
+        <fieldset className="tp-grupo">
+          <legend>
+            {supervivencia ? TEXTOS_SUPERVIVENCIA.carreraCausante : TEXTOS.tituloCarrera}
+          </legend>
+          {supervivencia ? (
+            <p className="campo-ayuda">{TEXTOS_SUPERVIVENCIA.carreraCausanteAyuda}</p>
+          ) : null}
+          <div className="tp-bloque">
+            <SegmentedPills<TipoCarrera>
+              leyenda={TEXTOS.tipoCarreraLeyenda}
+              opciones={[
+                { valor: 'simple', etiqueta: TEXTOS.carreraSimple },
+                { valor: 'tramos', etiqueta: TEXTOS.carreraTramos },
+              ]}
+              valor={valores.tipoCarrera}
+              onCambio={onCambioTipoCarrera}
             />
-            {lagunas > 0 ? (
-              <div className="tp-bloque">
-                <SegmentedPills
-                  leyenda="Dónde están los meses sin cotizar"
-                  opciones={[
-                    { valor: 'mitad', etiqueta: 'En mitad de la carrera' },
-                    { valor: 'final', etiqueta: textos.ubicacionFinal },
-                  ]}
-                  valor={valores.ubicacionLagunas}
+          </div>
+          {simple ? (
+            <>
+              <p className="campo-ayuda">{textos.introCarrera}</p>
+              <div className="tp-fila">
+                <SelectorMes
+                  etiqueta="Mes de inicio de la cotización"
+                  valor={valores.inicioMes}
+                  error={errores.inicioMes}
                   onCambio={(v) => {
-                    onCambio({ ubicacionLagunas: v });
+                    onCambio({ inicioMes: v });
                   }}
                 />
-                <p className="campo-ayuda">{TEXTOS.ayudaUbicacionLagunas}</p>
+                <CampoTexto
+                  etiqueta="Año de inicio de la cotización"
+                  valor={valores.inicioAnio}
+                  error={errores.inicioAnio}
+                  onCambio={(v) => {
+                    onCambio({ inicioAnio: v });
+                  }}
+                />
               </div>
-            ) : null}
-            <CampoTexto
-              etiqueta="Base mensual de cotización (euros)"
-              ayuda={TEXTOS.ayudaBase}
-              modo="decimal"
-              valor={valores.baseMensual}
-              error={errores.baseMensual}
-              onCambio={(v) => {
-                onCambio({ baseMensual: v });
-              }}
-            />
-            <SourceLine datos={fuenteBase} />
-          </>
-        ) : (
-          <>
-            <p className="campo-ayuda">{TEXTOS.introTramos}</p>
-            <PersonasEjemplo
-              personas={personas}
-              onCargar={onCargarPersona}
-              mensaje={mensajePersona}
-              cargada={personaCargada}
-              introduccion={textos.personasIntro}
-              notaMedia={notaSalarioMedioIlustrativo(catalogo, valores.definicionMedia)}
-            />
-            <section className="tp-tramos-seccion" aria-labelledby="tp-tramos-titulo">
-              <h3 id="tp-tramos-titulo">{TEXTOS.tramosTitulo}</h3>
-              <TablaTramos
-                tramos={valores.tramos}
-                errores={erroresTramos}
-                onCambio={onCambioTramos}
+              <CampoTexto
+                etiqueta="Meses sin cotizar (lagunas)"
+                ayuda={textos.ayudaLagunas}
+                valor={valores.mesesSinCotizar}
+                error={errores.mesesSinCotizar}
+                onCambio={(v) => {
+                  onCambio({ mesesSinCotizar: v });
+                }}
               />
-            </section>
-            <ResumenTramos
-              resumen={
-                analisis?.resumen ?? {
-                  mesesCotizados: 0,
-                  mesesSinCotizar: 0,
-                  huecos: [],
-                  primerMes: undefined,
-                  ultimoMes: undefined,
+              {lagunas > 0 ? (
+                <div className="tp-bloque">
+                  <SegmentedPills
+                    leyenda="Dónde están los meses sin cotizar"
+                    opciones={[
+                      { valor: 'mitad', etiqueta: 'En mitad de la carrera' },
+                      { valor: 'final', etiqueta: textos.ubicacionFinal },
+                    ]}
+                    valor={valores.ubicacionLagunas}
+                    onCambio={(v) => {
+                      onCambio({ ubicacionLagunas: v });
+                    }}
+                  />
+                  <p className="campo-ayuda">{TEXTOS.ayudaUbicacionLagunas}</p>
+                </div>
+              ) : null}
+              <CampoTexto
+                etiqueta="Base mensual de cotización (euros)"
+                ayuda={TEXTOS.ayudaBase}
+                modo="decimal"
+                valor={valores.baseMensual}
+                error={errores.baseMensual}
+                onCambio={(v) => {
+                  onCambio({ baseMensual: v });
+                }}
+              />
+              <SourceLine datos={fuenteBase} />
+            </>
+          ) : (
+            <>
+              <p className="campo-ayuda">{TEXTOS.introTramos}</p>
+              {supervivencia ? null : (
+                <PersonasEjemplo
+                  personas={personas}
+                  onCargar={onCargarPersona}
+                  mensaje={mensajePersona}
+                  cargada={personaCargada}
+                  introduccion={textos.personasIntro}
+                  notaMedia={notaSalarioMedioIlustrativo(catalogo, valores.definicionMedia)}
+                />
+              )}
+              <section className="tp-tramos-seccion" aria-labelledby="tp-tramos-titulo">
+                <h3 id="tp-tramos-titulo">{TEXTOS.tramosTitulo}</h3>
+                <TablaTramos
+                  tramos={valores.tramos}
+                  errores={erroresTramos}
+                  onCambio={onCambioTramos}
+                />
+              </section>
+              <ResumenTramos
+                resumen={
+                  analisis?.resumen ?? {
+                    mesesCotizados: 0,
+                    mesesSinCotizar: 0,
+                    huecos: [],
+                    primerMes: undefined,
+                    ultimoMes: undefined,
+                  }
                 }
-              }
-              avisos={analisis?.avisos ?? []}
-              textoSinHuecos={textos.resumenSinHuecos}
-            />
-            <ReferenciasBase
-              catalogo={catalogo}
-              definicionMedia={valores.definicionMedia}
-              onCambio={(id) => {
-                onCambio({ definicionMedia: id });
+                avisos={analisis?.avisos ?? []}
+                textoSinHuecos={textos.resumenSinHuecos}
+              />
+              <ReferenciasBase
+                catalogo={catalogo}
+                definicionMedia={valores.definicionMedia}
+                onCambio={(id) => {
+                  onCambio({ definicionMedia: id });
+                }}
+              />
+            </>
+          )}
+        </fieldset>
+      )}
+
+      {viudedad ? (
+        <>
+          <DatosViudo
+            viudo={sv.viudo}
+            errores={errores}
+            avisoParejaHijos={avisoParejaHijos}
+            titulo={TEXTOS_SUPERVIVENCIA.tituloViudedad}
+            intro={TEXTOS_SUPERVIVENCIA.introViudedad}
+            onCambio={cambiarViudo}
+          />
+          <OtrosHuerfanos
+            titulo={TEXTOS_SUPERVIVENCIA.otrosHuerfanosViudedad}
+            ayuda={TEXTOS_SUPERVIVENCIA.otrosHuerfanosViudedadAyuda}
+            otros={sv.otrosHuerfanos}
+            error={errores.otrosHuerfanos}
+            onCambio={cambiarOtros}
+          />
+        </>
+      ) : null}
+      {supervivencia && !viudedad ? (
+        <>
+          <DatosHuerfano sv={sv} errores={errores} onCambioSv={onCambioSv} />
+          <OtrosHuerfanos
+            titulo={TEXTOS_SUPERVIVENCIA.otrosHuerfanosOrfandad}
+            ayuda={TEXTOS_SUPERVIVENCIA.otrosHuerfanosOrfandadAyuda}
+            otros={sv.otrosHuerfanos}
+            error={errores.otrosHuerfanos}
+            onCambio={cambiarOtros}
+          />
+          <fieldset className="tp-grupo">
+            <legend>{TEXTOS_SUPERVIVENCIA.tituloViudoSuperviviente}</legend>
+            <PreguntaSiNo
+              leyenda={TEXTOS_SUPERVIVENCIA.hayViudoLeyenda}
+              ayuda={TEXTOS_SUPERVIVENCIA.hayViudoAyuda}
+              valor={sv.hayViudo}
+              onCambio={(x) => {
+                onCambioSv({ hayViudo: x });
               }}
             />
-          </>
-        )}
-      </fieldset>
+          </fieldset>
+          {sv.hayViudo ? (
+            <DatosViudo
+              viudo={sv.viudo}
+              errores={errores}
+              avisoParejaHijos={avisoParejaHijos}
+              titulo={TEXTOS_SUPERVIVENCIA.tituloViudoSuperviviente}
+              intro={TEXTOS_SUPERVIVENCIA.introViudoSuperviviente}
+              onCambio={cambiarViudo}
+            />
+          ) : null}
+        </>
+      ) : null}
 
       <fieldset className="tp-grupo">
         <legend>{TEXTOS.tituloOpciones}</legend>
