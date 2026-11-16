@@ -70,7 +70,7 @@ Una lectura abierta es una duda de interpretación que el motor no decide: es un
 | `incapacidad.edadFiccion`                            | `carrera-proyectada`       | `edad-general`                 | decidida    | `param-incapacidad-permanente-reglas`          |
 | `incapacidad.computoFiccion`                         | `meses`                    | `anios-completos`              | provisional | `param-incapacidad-permanente-reglas`          |
 | `incapacidad.divisorPeriodoCorto`                    | `coeficiente-rd-1799-1985` | `catorce-doceavos`             | decidida    | `param-incapacidad-permanente-reglas`          |
-| `incapacidad.lagunasAccidenteNoLaboral`              | `sin-integrar`             | `integrar`                     | pendiente   | `param-incapacidad-permanente-reglas`          |
+| `incapacidad.lagunasAccidenteNoLaboral`              | `sin-integrar`             | `integrar`                     | provisional | `param-incapacidad-permanente-reglas`          |
 | `incapacidad.redondeoEdadCarencia`                   | `sin-redondeo`             | `medio-anio`                   | provisional | `param-incapacidad-permanente-reglas-carencia` |
 | `incapacidad.diasCotizadosParcial`                   | `naturales`                | `treinta-por-mes`              | provisional | `param-incapacidad-permanente-reglas-carencia` |
 | `supervivencia.ventanaBaseReguladora`                | `anterior-al-mes-previo`   | `decreto-1646-1972`            | decidida    | `param-supervivencia-reglas`                   |
