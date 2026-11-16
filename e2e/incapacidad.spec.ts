@@ -69,7 +69,7 @@ test.describe('Tu pensión: incapacidad permanente', () => {
     await expect(page.getByLabel('Mes del hecho causante')).toBeVisible();
   });
 
-  test('accidente no laboral: junto al resultado, la lectura pendiente con su estado y motivo', async ({
+  test('accidente no laboral: junto al resultado, la lectura provisional con su estado y motivo', async ({
     page,
   }) => {
     await page.goto(url('/tu-pension'));
@@ -80,9 +80,10 @@ test.describe('Tu pensión: incapacidad permanente', () => {
     await page.getByRole('button', { name: 'Calcular mi pensión' }).click();
     const bloque = page.locator('.tp-intervienen');
     await expect(bloque).toBeVisible();
-    await expect(bloque).toContainText('Pendiente de decidir');
+    // Desde el 16-11-2026 (revisión actuarial, tanda 3) la lectura es provisional, no pendiente.
+    await expect(bloque).not.toContainText('Pendiente de decidir');
     await expect(bloque).toContainText('Motivo del registro');
-    await expect(bloque).toContainText('Decisión de Sergio del 14-11-2026');
+    await expect(bloque).toContainText('Revisión actuarial del 16-11-2026');
     await expect(bloque).toContainText('Efecto de la alternativa');
     await expect(bloque).toContainText(/sería/);
     // La alternativa es ahora «integrar» y el texto no recomienda ninguna lectura.
