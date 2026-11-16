@@ -1,0 +1,26 @@
+M4 · Sensibilidades de la descripción (m4_sensibilidades.csv)
+
+QUÉ ES
+Un CSV largo con las salidas de M4 en diez casos de sensibilidad, los de la sección 7 de docs/modelos/M4_descripcion.md. Cada fila es un caso y un año (2025 a 2050); tiene las mismas columnas que m4_financiero.csv, con la columna «escenario» delante. Son resultados de un modelo propio con la legislación actual congelada, no datos de una fuente oficial ni una previsión. Las columnas están definidas en la sección 5 de la descripción.
+La fila de 2025 es el dato observado (la misma que en m4_escenarios.csv; ver LEEME_m4_escenarios.txt) y es igual en los diez casos.
+
+CASOS
+Cada caso cambia UNA palanca respecto al escenario base (g = 1 %, IPC = 2 %, revalorización = IPC, enlace con M5, sin cotización adicional, Fondo con rentabilidad nominal del 2 %, transferencias y resto de gastos como en m4_escenarios.csv).
+g1_5                  | g = 1,5 %
+g1_8                  | g = 1,8 %
+reval_menos_0_5       | revalorización de las pensiones = IPC − 0,5 puntos
+cotizacion_mas_1      | +1 punto de cotización sobre la base, gradual de 2027 a 2030
+altas_topadas_20      | 20 % de las altas de jubilación con carrera de salarios altos que llega a la pensión máxima
+sin_enlace_m5         | sin enlace con M5 (las altas crecen solo con salarios e IPC)
+sin_migracion         | M1: saldo migratorio multiplicado por 0
+fecundidad_mas_20     | M1: fecundidad multiplicada por 1,2
+mujeres_convergen     | M2: en 2050 las tasas de empleo de las mujeres de 25 a 64 años igualan a las de los hombres de su tramo
+empleo_55_64_mas_10   | M2: tasas de empleo de 55 a 64 años multiplicadas por 1,1 en 2050 (avance lineal)
+
+RESULTADOS EN 2050 (gasto en pensiones y saldo no financiero, % del PIB aproximado)
+base 16,13 y −5,62 (en m4_financiero.csv) | g1_5 15,15 y −4,64 | g1_8 14,61 y −4,10 | reval_menos_0_5 15,19 y −4,68 | cotizacion_mas_1 16,13 y −5,26 | altas_topadas_20 15,90 y −5,39 | sin_enlace_m5 16,18 y −5,67 | sin_migracion 21,39 y −10,92 | fecundidad_mas_20 16,00 y −5,52 | mujeres_convergen 15,48 y −5,16 | empleo_55_64_mas_10 15,83 y −5,32
+
+EJECUCIÓN
+Fecha: 2026-11-16. Ejecutado por Claude en su entorno de trabajo (no en local), con Python 3.13, pandas 3.0.5 y numpy 2.5.3. Código de modelos/ del repositorio en main (commit 029ee06; el último commit que modifica modelos/ antes de esta ejecución es b0b7c31). Ficheros nuevos: modelos/m4/m4_sensibilidades.py, modelos/m4/test_m4_sensibilidades.py y modelos/m4/comparar_csv.py; el commit que los añade es el que figura en Git. No hay ningún elemento aleatorio: el resultado es determinista.
+Tests: los 26 de modelos/m4 pasan.
+Para reproducirlo: cd modelos/m4 && python m4_sensibilidades.py <carpeta> y, para compararlo con el publicado, python comparar_csv.py <carpeta>/m4_sensibilidades.csv ../../data-raw/modelos-salidas/m4/m4_sensibilidades.csv
