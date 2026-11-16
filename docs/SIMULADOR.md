@@ -195,7 +195,7 @@ La página calcula ahora cuatro prestaciones: jubilación ordinaria, incapacidad
 
 ### Enlace
 
-`p=viu` y `p=orf`; el resto del formato `v=1` y los enlaces de jubilación y de incapacidad no cambian. La tabla de parámetros está en la cabecera de `enlace-supervivencia.ts`. Ejemplo (viudedad, cónyuge): `#/tu-pension?v=1&p=viu&hc=2026-03&or=ec&sit=alt&vin=con&vnc=1976-05&vsx=h&vhj=0&vmt=2005-06&vcp=0&vea=0&vhc=0&vop=0&vdi=0&vrt=0&vrc=0&vre=0&vcg=0&car=s&ini=2010-01&lag=0&ubi=m&base=2000&med=media-cotizacion-rg&min=1&max=1&ipc=2`.
+`p=viu` y `p=orf`; el resto del formato `v=1` y los enlaces de jubilación y de incapacidad no cambian. La tabla de parámetros está en la cabecera de `enlace-supervivencia.ts`. Ejemplo (viudedad, cónyuge): `#/tu-pension?v=1&p=viu&hc=2026-03&or=ec&sit=alt&vin=con&vnc=1976-05&vsx=h&vhj=0&vmt=2005-06&vcp=0&vea=0&vhc=0&vop=0&vdi=0&vrt=0&vrc=0&vre=0&vho=0&vcg=0&car=s&ini=2010-01&lag=0&ubi=m&base=2000&med=media-cotizacion-rg&min=1&max=1&ipc=2`.
 
 ### Pruebas
 

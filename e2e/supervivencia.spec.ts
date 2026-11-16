@@ -304,6 +304,21 @@ test.describe('Tu pensión: accesibilidad y vista móvil de viudedad y orfandad'
     expect(problemas).toEqual([]);
   });
 
+  test('sin desbordes con el reparto de la orfandad (tabla de varias columnas) en cualquier ancho', async ({
+    page,
+  }) => {
+    await page.goto(url('/tu-pension'));
+    await esperarPagina(page);
+    await orfandadConFamilia(page);
+    await expect(
+      page.getByRole('heading', { name: 'Reparto entre los beneficiarios del mismo causante' }),
+    ).toBeVisible();
+    const desborde = await page.evaluate(
+      () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    );
+    expect(desborde).toBeLessThanOrEqual(0);
+  });
+
   test('axe sin violaciones: formulario de viudedad con preguntas abiertas, resultado y reparto', async ({
     page,
   }) => {
