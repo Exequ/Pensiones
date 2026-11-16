@@ -157,4 +157,8 @@ Descargas y criterio externo: `docs/PENDIENTE_DATOS.md` y `docs/DESCARGAS_MANUAL
 
 ## Estado de la integración
 
-(Se completa al cerrar la rama: CI, despliegue y comprobación de la ruta publicada.)
+- PR [Exequ/Pensiones#39](https://github.com/Exequ/Pensiones/pull/39), fusionada con squash en `main` (commit `12747710d00e7c2af7ea14516052722b6d8a9f3e`); la rama `feat/ajustes-actuariales-3` no se borra.
+- CI de la PR y de `main`: en verde (lint, tipos, tests, datos, compilación y Playwright). Local: `npm run lint`, `tsc -b --force`, 2327 pruebas de Vitest, `npm run build` y Playwright completo (396 pruebas; el único fallo, la expectativa del e2e de incapacidad sobre el estado «pendiente» de la lectura de lagunas, se corrigió y el spec pasa).
+- Despliegue en GitHub Pages terminado con éxito; `https://exequ.github.io/Pensiones/` responde 200.
+- **Ruta publicada comprobada** con Chromium contra `https://exequ.github.io/Pensiones/#/<ruta>` a 1360 y 390 px en las seis páginas tocadas (cotizantes y pensionistas, financiación y déficit, hucha, otros sistemas, proyecciones y mitos y realidades): estado 200, los textos nuevos presentes, sin desbordes y sin errores de consola.
+- La página «Mitos y realidades» sigue «en construcción»: los cambios del catálogo (`data/mitos`) no son visibles todavía.
