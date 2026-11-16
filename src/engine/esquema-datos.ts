@@ -530,6 +530,15 @@ export const EscenarioDeSalida = z.strictObject({
 });
 
 /**
+ * Un caso de sensibilidad de una salida (columna `escenario`): cambia una sola palanca respecto al
+ * escenario base. `parametro` es la descripción del cambio tal cual la da el LEEME de la salida.
+ */
+export const SensibilidadDeSalida = z.strictObject({
+  id: z.string().regex(/^[a-z0-9_]+$/, { error: 'id de sensibilidad con formato no válido' }),
+  parametro: textoObligatorio('sensibilidades.parametro'),
+});
+
+/**
  * Fila de un año observado que acompaña a las filas calculadas por el modelo (M4, escenarios): no la
  * calcula el modelo, son datos de la ejecución del presupuesto y de las estadísticas, iguales en todos los
  * escenarios. No lleva celdas vacías: las columnas sin equivalente observado no constan en `valores`.
@@ -564,6 +573,10 @@ export const ArchivoProyeccion = z
     origen: OrigenProyeccion,
     /** Solo en las salidas con varios escenarios: lista de escenarios (la columna `escenario` los identifica). */
     escenarios: z.array(EscenarioDeSalida).min(2).optional(),
+    /** Solo en las salidas de sensibilidades (M4): casos en el orden del LEEME, una palanca cada vez respecto al base. */
+    sensibilidades: z.array(SensibilidadDeSalida).min(2).optional(),
+    /** Si el autor ha reproducido en local la salida (las que ejecutó otra persona o Claude llevan `false`). */
+    reproduccionLocalPorAutor: z.boolean().optional(),
     /** Palancas que valen igual en todos los escenarios, tal cual las recoge el LEEME. */
     parametrosComunes: z.array(textoObligatorio('parametrosComunes')).min(1).optional(),
     /** Año observado que antecede a las filas calculadas (solo M4, escenarios). */
@@ -573,16 +586,29 @@ export const ArchivoProyeccion = z
     notes: z.string().trim().min(1).optional(),
   })
   .superRefine((archivo, ctx) => {
-    if (archivo.escenarios) {
+    const lista = archivo.escenarios ?? archivo.sensibilidades;
+    if (archivo.escenarios && archivo.sensibilidades) {
+      ctx.addIssue({
+        code: 'custom',
+        message: 'Un fichero no puede llevar «escenarios» y «sensibilidades» a la vez',
+        path: ['sensibilidades'],
+      });
+    }
+    if (lista) {
       const iColumna = archivo.columnas.findIndex((c) => c.id === 'escenario');
-      const ids = new Set(archivo.escenarios.map((e) => e.id));
-      if (ids.size !== archivo.escenarios.length) {
-        ctx.addIssue({ code: 'custom', message: 'Hay escenarios repetidos', path: ['escenarios'] });
+      const ids = new Set(lista.map((e) => e.id));
+      if (ids.size !== lista.length) {
+        ctx.addIssue({
+          code: 'custom',
+          message: 'Hay escenarios o sensibilidades repetidos',
+          path: ['escenarios'],
+        });
       }
       if (iColumna < 0) {
         ctx.addIssue({
           code: 'custom',
-          message: 'Un fichero con «escenarios» necesita una columna «escenario»',
+          message:
+            'Un fichero con «escenarios» o «sensibilidades» necesita una columna «escenario»',
           path: ['columnas'],
         });
       } else {
@@ -590,7 +616,7 @@ export const ArchivoProyeccion = z
           if (!ids.has(String(fila[iColumna]))) {
             ctx.addIssue({
               code: 'custom',
-              message: `La fila ${i} es de un escenario que no figura en «escenarios»`,
+              message: `La fila ${i} es de un escenario que no figura en «escenarios» ni en «sensibilidades»`,
               path: ['filas', i, iColumna],
             });
           }

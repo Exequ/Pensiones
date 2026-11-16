@@ -227,3 +227,37 @@ export function factorDeCalibracion(
   if (!(nominal > 0)) throw new RangeError('El gasto nominal debe ser positivo');
   return gastoEjecucionMeur / nominal;
 }
+
+// ---------------------------------------------------------------------------
+// Sensibilidades de M4: una palanca cada vez respecto al caso base
+// ---------------------------------------------------------------------------
+
+/** Gasto en pensiones y saldo no financiero de un caso en un año, en porcentaje del PIB aproximado. */
+export interface ResultadoDeCaso {
+  readonly id: string;
+  readonly gasto: number;
+  readonly saldo: number;
+}
+
+/** Resultado de un caso y su diferencia con el caso base (caso menos base, en puntos de PIB). */
+export interface ResultadoConDiferencia extends ResultadoDeCaso {
+  readonly gastoDiferencia: number;
+  readonly saldoDiferencia: number;
+}
+
+/**
+ * Diferencia de cada caso con el caso base: valor del caso menos valor del base, en la misma unidad
+ * (puntos de PIB). Conserva el orden de entrada (no ordena por tamaño). Una diferencia positiva del gasto
+ * es más gasto que en el base; una positiva del saldo es un saldo mayor (menos negativo) que el del base.
+ * El resultado de cada caso es independiente: no se combinan entre sí.
+ */
+export function diferenciasConBase(
+  base: Pick<ResultadoDeCaso, 'gasto' | 'saldo'>,
+  casos: readonly ResultadoDeCaso[],
+): ResultadoConDiferencia[] {
+  return casos.map((c) => ({
+    ...c,
+    gastoDiferencia: c.gasto - base.gasto,
+    saldoDiferencia: c.saldo - base.saldo,
+  }));
+}

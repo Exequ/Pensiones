@@ -170,7 +170,7 @@ Diferencias entre lo que declara `docs/modelos/M4_descripcion.md` y lo que muest
 - **Rentabilidad del Fondo y valoración** — **cerrada; valor inicial verificado, rentabilidad comprobada solo como constante** (Ajustes de M4, comprobación (e); antes, resuelta en la descripción en la Fase 5-B2 bis): el Fondo parte de un valor a precio de adquisición y crece con una rentabilidad nominal constante, sin ser valor de mercado; la web conserva el cálculo de la rentabilidad implícita como comprobación. Texto original: la descripción la citaba como palanca, sin valor. De la salida se obtiene la implícita, `(F_t − F_(t−1) − dotación + disposición) / F_(t−1)`, que es la misma todos los años (con el valor de 2025 de `sistema/fondo-reserva-series`). La web la muestra como «implícita» y avisa de que no consta en la descripción.
 - **Financiación adicional** (sigue abierta): la descripción dice «lo que no cubre el Fondo»; la salida cumple `financiación adicional = máx(0, dotación − saldo no financiero − disposición)`, que la descripción no declara (se comprueba en un test que lo describe, sin que la web lo use).
 - **Saldo no financiero de 2035**: la descripción da −2,4 % del PIB; la salida da −2,348 %, que redondea a −2,3. Es una diferencia de redondeo de la descripción (0,05 puntos); en los demás años y medidas, las cifras redondeadas de la descripción coinciden con la salida.
-- **Cifras de la descripción que la salida no permite comprobar** — **parcialmente resuelta** (Ajustes de M4: la salida de escenarios trae la fila de 2025; véase «Ajustes de M4»): los valores de 2025 (el saldo «cotizaciones − pensiones» de M4 de −0,3 % y el gasto de 10,8 % del PIB, frente a 13,7 % del Ageing Report), porque la salida empieza en 2026; las sensibilidades (g, revalorización, cotización adicional, altas topadas, demografía, empleo), porque exigen volver a ejecutar el modelo, que esta fase no hace. Ninguna de esas cifras se copia a la web.
+- **Cifras de la descripción que la salida no permite comprobar** — **parcialmente resuelta; las sensibilidades, comprobadas después** (véase «Ajustes de M4, sensibilidades») (Ajustes de M4: la salida de escenarios trae la fila de 2025; véase «Ajustes de M4»): los valores de 2025 (el saldo «cotizaciones − pensiones» de M4 de −0,3 % y el gasto de 10,8 % del PIB, frente a 13,7 % del Ageing Report), porque la salida empieza en 2026; las sensibilidades (g, revalorización, cotización adicional, altas topadas, demografía, empleo), porque exigen volver a ejecutar el modelo, que esta fase no hace. Ninguna de esas cifras se copia a la web.
 - **Cobertura del Ageing Report**: la descripción dice que el Ageing Report incluye clases pasivas y otros regímenes públicos; no se ha descargado el capítulo metodológico que lo respalde (`docs/PENDIENTE_DATOS.md`). La web lo atribuye a la descripción de M4.
 - **Coincidencias con la descripción** (sin discrepancia, comprobadas con los datos y en los tests): gasto en pensiones en % del PIB y saldos de 2026, 2035, 2040 y 2050; Fondo de Reserva y gasto en euros de esos años; pensión media de todas las clases de 2026 y de 2050; las pensiones crecen un 49 % hasta 2050; en 2050 el valor del Fondo es menor que la disposición de ese año; contraste con el Ageing Report en índice (2026 = 100) de 2040 y 2050 y nivel del Ageing Report de 2025 (13,7 % del PIB).
 - **Coherencias internas que se cumplen** (todas exactas): pensiones de M4 = total de M3; afiliados por pensión = M2/M3; porcentajes = importe / PIB aproximado; el PIB aproximado crece como los afiliados de M2 por (1 + g)(1 + IPC); `mei` = tipo legal (`parametros/mei-tipo-total`, mantenido hasta 2050) × base de M2; dotación = proporción constante del MEI, igual a la de 2025 (dotaciones del MEI al Fondo entre MEI ejecutado); disposición nula antes del primer año con límite legal y nunca superior al límite; en los años con disposición, es igual al límite.
@@ -203,6 +203,44 @@ Comprobaciones hechas con `scripts/verificacion-m4.ts` (`npx tsx scripts/verific
 - **Sensibilidades de la descripción**: de las que cita la sección 7 de la descripción solo son comparables las de g e IPC, y los escenarios (g = 0 %, 1 % y 2 %; IPC = 1 %, 2 % y 3 %) no incluyen los valores concretos de la descripción (g = 1,5 %, 1,8 %), así que **no se pueden comprobar**; las demás (revalorización, cotización adicional, altas topadas, demografía, empleo) siguen sin salida. Como plausibilidad, el gasto de 2050 con g = 1,5 % que da la descripción (15,2 % del PIB) queda entre los de g = 1 % y g = 2 % de la salida; no es una verificación.
 - **Quién ejecutó los escenarios**: el LEEME de `m4_escenarios.csv` dice que los ejecutó Claude en su entorno de trabajo (2026-11-15), no Sergio en local como las demás salidas; el código es `modelos/m4/m4_escenarios.py`. Conviene que Sergio los reproduzca en local (`docs/PENDIENTE_DATOS.md`).
 - **Textos de la descripción de M4 que la salida de escenarios deja desfasados** (no se editan: `docs/modelos/` es de Sergio): la sección 8 dice «la salida empieza en 2026 y tiene un solo escenario» y la 9 lista como pendiente «publicar la fila de 2025 y escenarios alternativos».
+
+## Ajustes de M4, sensibilidades (verificación reproducible, 2026-11-16)
+
+Comprobaciones hechas con `scripts/verificacion-m4-sensibilidades.ts` (`npx tsx scripts/verificacion-m4-sensibilidades.ts` imprime el resultado; `scripts/verificacion-m4-sensibilidades.test.ts` lo fija) sobre `data-raw/modelos-salidas/m4/` (`m4_sensibilidades.csv` y su LEEME, `m4_escenarios.csv`, `m4_financiero.csv`) y `docs/modelos/M4_descripcion.md` (versión corregida: la sección 7 remite al CSV de sensibilidades y las secciones 8 y 9 ya no dicen «un solo escenario»). No se ha ejecutado el modelo ni se ha tocado `docs/modelos/` ni `data-raw/`.
+
+### (a) El caso base
+
+- **El CSV de sensibilidades no trae filas del base** (260 filas = diez casos × 26 años, de 2025 a 2050). El caso base de referencia es el escenario `base` de `m4_escenarios.csv`, que **reproduce `m4_financiero.csv`** (la salida que Sergio ejecutó en local) con una diferencia relativa máxima de 6,3 × 10⁻¹⁶ en las 25 filas y todas las columnas (tolerancia declarada: 10⁻¹², la misma del ETL).
+- **La fila observada de 2025 es idéntica en los diez casos y a la del base** de `m4_escenarios.csv`.
+- **Los casos se atan al base por dentro**: el caso de +1 punto de cotización reproduce el gasto en pensiones del base en los 25 años (diferencia 0) y las cotizaciones del base en 2026 (la subida empieza en 2027), como corresponde a una palanca que no toca el gasto ni se aplica antes de 2027.
+- **Coherencia interna**: las columnas «_pct_pib» son importe entre `pib_proxy` por cien en las 415 filas de los tres CSV (desviación relativa máxima 2,8 × 10⁻¹⁶).
+- **Base de 2050**: gasto 16,13 % y saldo no financiero −5,62 % del PIB aproximado; coinciden con el LEEME (dos decimales) y con la sección 3 de la descripción (16,1 y −5,6).
+
+### (b) Los diez casos en 2050 frente al LEEME y a la sección 7
+
+Gasto en pensiones y saldo no financiero de 2050, % del PIB aproximado, calculados desde los importes y el PIB del CSV. La diferencia máxima con el LEEME es 0,0043 puntos (redondeo a dos decimales) y con la descripción, 0,0496 (redondeo a uno). **Ninguna supera el redondeo; no hay discrepancias que registrar.**
+
+| Caso                  | Gasto calculado | Saldo calculado | LEEME          | Sección 7 de la descripción |
+| --------------------- | --------------- | --------------- | -------------- | --------------------------- |
+| `g1_5`                | 15,15           | −4,64           | 15,15 y −4,64  | 15,2 y −4,6                 |
+| `g1_8`                | 14,61           | −4,10           | 14,61 y −4,10  | no cita cifras              |
+| `reval_menos_0_5`     | 15,19           | −4,68           | 15,19 y −4,68  | 15,2 y −4,7                 |
+| `cotizacion_mas_1`    | 16,13           | −5,26           | 16,13 y −5,26  | saldo −5,3                  |
+| `altas_topadas_20`    | 15,90           | −5,39           | 15,90 y −5,39  | gasto 15,9                  |
+| `sin_enlace_m5`       | 16,18           | −5,67           | 16,18 y −5,67  | no cita cifras (sección 3)  |
+| `sin_migracion`       | 21,39           | −10,92          | 21,39 y −10,92 | 21,4 y −10,9                |
+| `fecundidad_mas_20`   | 16,00           | −5,52           | 16,00 y −5,52  | 16,0 y −5,5                 |
+| `mujeres_convergen`   | 15,48           | −5,16           | 15,48 y −5,16  | 15,5 y −5,2                 |
+| `empleo_55_64_mas_10` | 15,83           | −5,32           | 15,83 y −5,32  | 15,8 y −5,3                 |
+
+- **Cifras de la sección 3 que dependen de las sensibilidades**: sin enlace con M5 el gasto de 2050 cambia 0,046 puntos del PIB (la descripción dice «menos de 0,1 puntos»); con g = 1,8 % el índice del gasto (2026 = 100) es 134,0 en 2050 (la descripción dice 134). Coinciden.
+- **Caso de empleo de 55 a 64 años**: usa el parámetro que fija el LEEME («tasas de empleo de 55 a 64 años multiplicadas por 1,1 en 2050 (avance lineal)»). La descripción antigua solo decía «un 10 % más de empleo de 55 a 64 años en 2050» sin especificar el parámetro; la corregida sigue sin precisar el avance lineal. Lo verificado es que el resultado de 2050 coincide con la descripción dentro del redondeo; **no se ha verificado** qué año de partida usa el avance lineal ni a qué magnitud se aplica el factor (`web-fin-sensibilidades-empleo-parametro`, pendiente).
+- **Casos que la descripción no cita con cifras**: g = 1,8 % (solo aparece su índice en la sección 3) y sin enlace con M5 (solo «menos de 0,1 puntos»); sus cifras de 2050 se toman del LEEME y se recalculan, sin contraste con la descripción.
+
+### Procedencia
+
+- **Quién ejecutó los casos**: el LEEME dice que los ejecutó Claude en su entorno de trabajo (2026-11-16), con el código de `modelos/m4/m4_sensibilidades.py` y sin elementos aleatorios; no los reprodujo Sergio en local. El fichero `data/proyecciones/m4-sensibilidades.json` lleva `reproduccionLocalPorAutor: false` y la web lo muestra. Pendiente en `docs/PENDIENTE_DATOS.md`.
+- Quedan sin comprobar con una referencia independiente las series completas de cada caso (más allá de 2050): los tests verifican su aritmética interna (saldos, porcentajes) pero no las contrasta con nada externo.
 
 ## Fase 5-A3 (liquidaciones de 2010 a 2016 y Declaración del Tribunal de Cuentas sobre la Cuenta General de 2023, 2026-11-16)
 

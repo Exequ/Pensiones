@@ -11,6 +11,9 @@ Qué hace
     descripciones salen de docs/modelos/Mx_descripcion.md; no se añade nada que ahí no conste.
   - M4 con escenarios (Ajustes de M4): `m4/m4_escenarios.csv` y `m4/LEEME_m4_escenarios.txt` dan `m4-escenarios.json`; la fila de
     2025 (observada, no calculada) se guarda aparte en `filaObservada` y el escenario base debe reproducir `m4_financiero.csv`.
+  - M4 con sensibilidades (Ajustes de M4, sensibilidades): `m4/m4_sensibilidades.csv` y `m4/LEEME_m4_sensibilidades.txt` dan
+    `m4-sensibilidades.json`: diez casos de una palanca cada vez, con el texto de cada parámetro tal cual lo da el LEEME, la fila de 2025
+    (observada) aparte y `reproduccionLocalPorAutor: false` (el autor aún no ha reproducido los casos en local).
   - No modifica los CSV ni ejecuta los modelos.
 
 Ejecutar desde la raíz del repositorio con `python3 -I scripts/etl/modelos_salidas.py`. Después se
@@ -266,6 +269,31 @@ FICHEROS.append({
     'columnas': [('escenario', 'texto', 'Escenario de sensibilidad (identificador del LEEME de los escenarios)', None)] + _M4['columnas'],
 })
 
+# M4 con sensibilidades (Ajustes de M4, sensibilidades): diez casos que cambian una palanca respecto al base.
+FICHEROS.append({
+    **_M4,
+    'csv': 'm4/m4_sensibilidades.csv',
+    'id': 'm4-sensibilidades',
+    'leeme': 'm4/LEEME_m4_sensibilidades.txt',
+    'sensibilidades': True,
+    'aplicacion': 'Es el escenario base del que parte cada caso de sensibilidad; cada caso cambia una sola palanca respecto a él (véase «sensibilidades»).',
+    'title': 'M4 · Modelo financiero del sistema en diez casos de sensibilidad, una palanca cada vez respecto al escenario base (2026-2050, con la fila observada de 2025)',
+    'description': (
+        'Las mismas salidas de M4 que «m4-financiero» en diez casos de sensibilidad. Cada caso cambia una sola palanca respecto al escenario '
+        'base y no se combina con las demás. Cada fila es un caso y un año. El año 2025 no lo calcula el modelo: son datos observados, iguales '
+        'en los diez casos, que constan aparte en «filaObservada». Es un cálculo propio con la legislación actual congelada: no es una previsión.'
+    ),
+    'notes': (
+        'Las columnas son las de m4-financiero con la columna «escenario» delante, que aquí identifica el caso de sensibilidad; sus definiciones y '
+        'limitaciones son las de ese fichero. «sensibilidades» da, en el orden del LEEME, el parámetro de cada caso tal cual lo escribe el LEEME. '
+        'El escenario base al que se refiere cada caso es el de m4-escenarios (g = 1 %, IPC = 2 %, el mismo que m4-financiero); este fichero no '
+        'trae filas del base. «pib_proxy» es un indicador aproximado (afiliados por salario nominal), no el PIB del INE. Esta salida la ejecutó '
+        'Claude en su entorno de trabajo con el código de modelos/m4/m4_sensibilidades.py, no Sergio en local, y el autor no la ha reproducido '
+        'todavía en local (reproduccionLocalPorAutor); véase el LEEME de las sensibilidades.'
+    ),
+    'columnas': [('escenario', 'texto', 'Caso de sensibilidad (identificador del LEEME de las sensibilidades)', None)] + _M4['columnas'],
+})
+
 MODELOS = {
     'm1': ('M1 · Modelo demográfico', 'docs/modelos/M1_descripcion.md', 'modelos/m1/m1_demografia.py'),
     'm2': ('M2 · Cotizantes y bases de cotización (v0)', 'docs/modelos/M2_descripcion.md', 'modelos/m2/m2_cotizantes.py'),
@@ -355,6 +383,40 @@ def leer_leeme_escenarios():
     }
 
 
+def leer_leeme_sensibilidades():
+    """LEEME de las sensibilidades de M4: fecha, commit previo, casos (en su orden, con su parámetro), base y fila de 2025."""
+    texto = open(f'{SALIDAS}/m4/LEEME_m4_sensibilidades.txt', encoding='utf-8').read()
+    fecha = re.search(r'^Fecha: (\d{4}-\d{2}-\d{2})', texto, re.M)
+    previo = re.search(r'último commit que modifica modelos/ antes de esta ejecución es ([0-9a-f]{7,40})', texto)
+    if not (fecha and previo):
+        sys.exit('El LEEME de sensibilidades no tiene fecha o commit previo')
+    a = texto.index('\nCASOS')
+    b = texto.index('\nRESULTADOS EN 2050')
+    lineas = texto[a:b].splitlines()
+    casos = []
+    for linea in lineas:
+        m = re.match(r'^([a-z0-9_]+)\s*\|\s*(.+?)\s*$', linea)
+        if m:
+            casos.append({'id': m.group(1), 'parametro': m.group(2)})
+    if len(casos) != 10:
+        sys.exit(f'Se esperaban diez casos en el LEEME y hay {len(casos)}')
+    base = next((l.strip() for l in lineas if l.startswith('Cada caso cambia UNA palanca')), None)
+    fila = re.search(r'^La fila de 2025 es el dato observado[^\n]*', texto, re.M)
+    if base is None or fila is None:
+        sys.exit('El LEEME de sensibilidades no describe el caso base o la fila de 2025')
+    completo = subprocess.run(
+        ['git', '-C', REPO, 'log', '-1', '--format=%H', '--', 'modelos/m4/m4_sensibilidades.py'],
+        capture_output=True, text=True, check=True,
+    ).stdout.strip()
+    if not completo:
+        sys.exit('No se encuentra en git el commit que añade modelos/m4/m4_sensibilidades.py')
+    anterior = subprocess.run(['git', '-C', REPO, 'rev-parse', previo.group(1)], capture_output=True, text=True, check=True).stdout.strip()
+    return {
+        'fecha': fecha.group(1), 'commit': completo, 'commitPrevio': anterior, 'casos': casos,
+        'base': base, 'fila2025': [fila.group(0).strip()],
+    }
+
+
 def modelo_extra(f, modelo):
     if f['modelo'] == 'm1':
         modelo['horizontePresentacion'] = horizonte_m1()
@@ -411,6 +473,45 @@ def separa_escenarios(f, filas, esc):
     }
 
 
+def separa_sensibilidades(f, filas, sens):
+    """Separa del CSV de sensibilidades la fila de 2025 (observada) de las filas calculadas por el modelo.
+
+    Comprueba que la fila observada está una vez en cada caso, que es igual en los diez casos y a la del
+    escenario base de `m4_escenarios.csv`, y que cada caso tiene todos los años. El CSV no trae filas del base.
+    """
+    columnas = f['columnas']
+    ids = [c[0] for c in columnas]
+    i_esc, i_anio = ids.index('escenario'), ids.index('anio')
+    lista = [c['id'] for c in sens['casos']]
+    if sorted({r[i_esc] for r in filas}) != sorted(lista):
+        sys.exit('Los casos del CSV no son los del LEEME')
+    anio_obs = min(r[i_anio] for r in filas)
+    observadas = [r for r in filas if r[i_anio] == anio_obs]
+    calculadas = [r for r in filas if r[i_anio] != anio_obs]
+    if sorted(r[i_esc] for r in observadas) != sorted(lista):
+        sys.exit('La fila observada no está una vez en cada caso del LEEME')
+    if len({tuple(r[:i_esc] + r[i_esc + 1:]) for r in observadas}) != 1:
+        sys.exit('La fila observada no es igual en los diez casos')
+    anios = sorted({r[i_anio] for r in calculadas})
+    for c in lista:
+        if sorted(r[i_anio] for r in calculadas if r[i_esc] == c) != anios:
+            sys.exit(f'El caso {c} no tiene todos los años')
+    # La fila observada debe ser la del escenario base de m4_escenarios.csv (misma fila de 2025).
+    base25 = [r[:i_esc] + r[i_esc + 1:] for r in lee_csv(f'{SALIDAS}/m4/m4_escenarios.csv', columnas)
+              if r[i_anio] == anio_obs and r[i_esc] == 'base']
+    if len(base25) != 1 or base25[0] != observadas[0][:i_esc] + observadas[0][i_esc + 1:]:
+        sys.exit('La fila observada no es la del escenario base de m4_escenarios.csv')
+    orden = {c: i for i, c in enumerate(lista)}
+    calculadas.sort(key=lambda r: (orden[r[i_esc]], r[i_anio]))
+    valores = {c[0]: v for c, v in zip(columnas, observadas[0]) if c[1] == 'numero' and v is not None and c[0] != 'anio'}
+    return calculadas, {
+        'sensibilidades': sens['casos'],
+        'reproduccionLocalPorAutor': False,
+        'parametrosComunes': [sens['base']],
+        'filaObservada': {'anio': anio_obs, 'descripcion': sens['fila2025'], 'valores': valores},
+    }
+
+
 def main():
     leeme = leer_leeme()
     os.makedirs(DESTINO, exist_ok=True)
@@ -427,6 +528,11 @@ def main():
             filas, extra = separa_escenarios(f, filas, esc)
             procedencia = {**leeme, 'fecha': esc['fecha'], 'commit': esc['commit']}
             script = 'modelos/m4/m4_escenarios.py'
+        elif f.get('sensibilidades'):
+            sens = leer_leeme_sensibilidades()
+            filas, extra = separa_sensibilidades(f, filas, sens)
+            procedencia = {**leeme, 'fecha': sens['fecha'], 'commit': sens['commit']}
+            script = 'modelos/m4/m4_sensibilidades.py'
         # Los enteros del CSV («2026») se guardan como número; los valores con decimales, como están.
         obj = {
             'tipo': 'proyeccion',
@@ -440,7 +546,7 @@ def main():
                 'ipc': procedencia['ipc'],
                 'legislacion': 'congelada',
                 'literal': procedencia['literal'],
-                'aplicacion': ESCENARIO_APLICACION[f['modelo']],
+                'aplicacion': f.get('aplicacion', ESCENARIO_APLICACION[f['modelo']]),
             },
             'source': {
                 'title': f'{nombre}: código del modelo en el repositorio y salidas de su ejecución',
@@ -460,7 +566,7 @@ def main():
             'filas': filas,
         }
         # Campos propios de las salidas con varios escenarios (van antes de «columnas»).
-        for clave in ('escenarios', 'parametrosComunes', 'filaObservada'):
+        for clave in ('escenarios', 'sensibilidades', 'reproduccionLocalPorAutor', 'parametrosComunes', 'filaObservada'):
             if clave in extra:
                 obj[clave] = extra[clave]
         if f.get('notes'):

@@ -41,3 +41,8 @@
   font-size: var(--texto-etiqueta);
   line-height: var(--interlineado-cuerpo);
 }
+
+/* Tabla de sensibilidades: la primera columna (palanca y valor) necesita ancho para no partirse en muchas líneas. */
+.proy-sensibilidades tbody th[scope='row'] {
+  min-width: 16rem;
+}

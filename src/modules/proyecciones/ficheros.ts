@@ -36,7 +36,10 @@ export const FICHEROS_PROYECCIONES = [...FICHEROS_MODELOS, ...FICHEROS_CONTRASTE
  * presupuestario llegan a través de `historico/datos-financiacion.ts` (lista `FICHEROS_FINANCIACION`,
  * ya comprobada por `historico-5a.test.ts`).
  */
-export const FICHEROS_FINANCIERO_MODELO = ['data/proyecciones/m4-escenarios.json'] as const;
+export const FICHEROS_FINANCIERO_MODELO = [
+  'data/proyecciones/m4-escenarios.json',
+  'data/proyecciones/m4-sensibilidades.json',
+] as const;
 
 export const FICHEROS_FINANCIERO_CONTRASTE = [
   'data/demografia/ageing-report-2024-espana.json',

@@ -10,6 +10,7 @@
  */
 import {
   aEurosConstantesConIpcSupuesto,
+  diferenciasConBase,
   diferenciasPorAnio,
   indiceDesdeBase,
   porcentajeAImporte,
@@ -26,9 +27,10 @@ import {
 } from '../../engine/series-historicas';
 import { formatearPorcentaje } from '../../engine/formato';
 import type { DatosFinanciero, EscenarioM4 } from './datos-financiero';
+import type { FilaModelo } from './datos-proyecciones';
 import type { SerieProyectada } from './grafico-proyeccion';
 import { COL4, ESCENARIO_BASE } from './ids-financiero';
-import { puntosDeColumna } from './series';
+import { aniosDe, puntosDeColumna } from './series';
 
 /** Los importes se muestran en miles de millones de euros: el modelo y la ejecución van en millones. */
 export const MILLONES_A_MIL_MILLONES = 1000;
@@ -537,4 +539,78 @@ export const tituloConEscenario = (d: DatosFinanciero, titulo: string): string =
 export function rentabilidadReal(nominal: number, ipc: number): number {
   const r = tasaReal(nominal, ipc);
   return Math.abs(r) < 1e-12 ? 0 : r;
+}
+
+// ---------------------------------------------------------------------------
+// Sensibilidades: una palanca cada vez respecto al escenario base
+// ---------------------------------------------------------------------------
+
+/** Años que tienen todos los casos de sensibilidad (los calculados por el modelo), en orden. */
+export function aniosSensibilidades(d: DatosFinanciero): number[] {
+  return aniosDe(d.sensibilidades.tabla.filas);
+}
+
+/** Fila de la tabla de sensibilidades: el caso base o uno de los casos, con su diferencia con el base. */
+export interface FilaSensibilidad {
+  readonly id: string;
+  /** Qué palanca cambia y su valor, tal cual el LEEME; `null` en el caso base. */
+  readonly parametro: string | null;
+  /** Gasto en pensiones, % del PIB aproximado del modelo. */
+  readonly gasto: number;
+  /** Diferencia con el caso base, puntos de PIB; `null` en el caso base. */
+  readonly gastoDiferencia: number | null;
+  /** Saldo no financiero, % del PIB aproximado del modelo. */
+  readonly saldo: number;
+  readonly saldoDiferencia: number | null;
+}
+
+export interface TablaSensibilidades {
+  readonly anio: number;
+  /** El caso base primero y después los casos en el orden del LEEME (sin ordenar por tamaño). */
+  readonly filas: readonly FilaSensibilidad[];
+}
+
+/**
+ * Tabla de las sensibilidades en un año: el escenario base de la salida de escenarios y los casos de la
+ * salida de sensibilidades, con el gasto en pensiones y el saldo no financiero en % del PIB aproximado y la
+ * diferencia de cada caso con el base (calculada con los valores sin redondear). Falla si falta el año en
+ * el base o en algún caso.
+ */
+export function tablaSensibilidades(d: DatosFinanciero, anio: number): TablaSensibilidades {
+  const valor = (filas: readonly FilaModelo[], columna: string, id: string): number => {
+    const v = valorEn(puntosDeColumna(filas, columna), anio);
+    if (v === undefined) throw new RangeError(`Falta ${anio} en ${id}`);
+    return v;
+  };
+  const resultado = (id: string, filas: readonly FilaModelo[]) => ({
+    id,
+    gasto: valor(filas, COL4.gastoPctPib, id),
+    saldo: valor(filas, COL4.saldoNoFinancieroPctPib, id),
+  });
+  const base = resultado(ESCENARIO_BASE, d.filasPorEscenario[ESCENARIO_BASE] ?? []);
+  const casos = diferenciasConBase(
+    base,
+    d.sensibilidades.casos.map((c) => resultado(c.id, d.sensibilidades.filasPorCaso[c.id] ?? [])),
+  );
+  return {
+    anio,
+    filas: [
+      {
+        id: base.id,
+        parametro: null,
+        gasto: base.gasto,
+        gastoDiferencia: null,
+        saldo: base.saldo,
+        saldoDiferencia: null,
+      },
+      ...casos.map((c, i) => ({
+        id: c.id,
+        parametro: d.sensibilidades.casos[i]?.parametro ?? null,
+        gasto: c.gasto,
+        gastoDiferencia: c.gastoDiferencia,
+        saldo: c.saldo,
+        saldoDiferencia: c.saldoDiferencia,
+      })),
+    ],
+  };
 }
