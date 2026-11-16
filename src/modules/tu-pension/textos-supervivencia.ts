@@ -193,7 +193,7 @@ export const TEXTOS_SUPERVIVENCIA = {
   // --- Resultado ---
   intervienenTitulo: 'Lecturas abiertas que intervienen en tu resultado',
   intervienenIntro:
-    'Estas son las lecturas del cálculo que, con tus datos, cambian el resultado si se elige su alternativa. Se muestran todas, con su estado (decidida, provisional o pendiente) y con el efecto de la alternativa, sin recomendar ninguna.',
+    'Estas son las lecturas del cálculo que, con tus datos, cambian el resultado si se elige su alternativa. Se muestran todas, con su estado (decidida, provisional o pendiente) y con el efecto de la alternativa, sin indicar cuál elegir.',
   intervienenNinguna:
     'Ninguna de las lecturas abiertas de esta prestación cambia el resultado con tus datos. El panel «Supuestos y lecturas» las lista todas con su estado.',
   intervienenEstado: 'Estado',

@@ -83,7 +83,7 @@ export function leerBasePensionista(
   p: Paso | undefined,
 ): { base: number; fecha: string; factor: number } | undefined {
   const m =
-    /^Base de la pensión ([\d.]+) euros\/mes \((\d{4}-\d{2}-\d{2})\) × revalorización acumulada ([\d.]+)\.?$/.exec(
+    /^Base de la pensión ([\d.]+) euros\/mes \((\d{4}-\d{2}-\d{2})\) × revalorización acumulada (\d+(?:\.\d+)?)\.?$/.exec(
       p?.detalle ?? '',
     );
   return m ? { base: Number(m[1]), fecha: m[2] ?? '', factor: Number(m[3]) } : undefined;
