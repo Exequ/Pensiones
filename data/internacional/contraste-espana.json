@@ -6,7 +6,7 @@
   "series": [
     {
       "id": "gasto-pensiones-contributivas-sobre-pib",
-      "title": "Obligaciones reconocidas por «suma de pensiones» (contributivas) del Sistema de la Seguridad Social sobre el PIB",
+      "title": "Obligaciones reconocidas por «suma de pensiones» (pensiones contributivas del Sistema de la Seguridad Social, sin complemento a mínimos, sin Clases Pasivas ni pensiones no contributivas) sobre el PIB",
       "unit": "% del PIB",
       "source": {
         "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
@@ -15,7 +15,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "media",
-      "notes": "Dato derivado, no publicado por la fuente: obligaciones reconocidas de la fila «SUMA DE PENSIONES» (capítulo 4, T4, data/sistema/presupuesto-ss-ejecucion) ÷ PIB corriente del INE (data/macro/pib-ine). Solo pensiones contributivas del Sistema de la Seguridad Social: excluye Clases Pasivas y pensiones no contributivas, que otras definiciones (OCDE, Eurostat, Ageing Report) sí pueden incluir.",
+      "notes": "Dato derivado, no publicado por la fuente: obligaciones reconocidas de la fila «SUMA DE PENSIONES» (capítulo 4, T4, data/sistema/presupuesto-ss-ejecucion) ÷ PIB corriente del INE (data/macro/pib-ine). Solo pensiones contributivas del Sistema de la Seguridad Social: excluye el complemento a mínimos (que la ejecución anota en otra fila), las Clases Pasivas y las pensiones no contributivas, que otras definiciones (OCDE, Eurostat, Ageing Report) sí pueden incluir; para compararla con ellas haría falta sumar esos conceptos. Sirve para comparaciones internas (Ajustes actuariales 3, tanda 3, parte C, n.º 6).",
       "points": [
         {
           "period": "2017",

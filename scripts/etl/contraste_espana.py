@@ -27,10 +27,10 @@ def main():
     s_ss = json.load(open(f'{D}/sistema/presupuesto-ss-ejecucion.json'))['source']
     out_series = []
     nd = 'Dato derivado, no publicado por la fuente: '
-    out_series.append({'id': 'gasto-pensiones-contributivas-sobre-pib', 'title': 'Obligaciones reconocidas por «suma de pensiones» (contributivas) del Sistema de la Seguridad Social sobre el PIB', 'unit': '% del PIB',
+    out_series.append({'id': 'gasto-pensiones-contributivas-sobre-pib', 'title': 'Obligaciones reconocidas por «suma de pensiones» (pensiones contributivas del Sistema de la Seguridad Social, sin complemento a mínimos, sin Clases Pasivas ni pensiones no contributivas) sobre el PIB', 'unit': '% del PIB',
                        'source': s_ss, 'fetchedAt': HOY, 'confidence': 'media',
                        'notes': nd + 'obligaciones reconocidas de la fila «SUMA DE PENSIONES» (capítulo 4, T4, data/sistema/presupuesto-ss-ejecucion) ÷ PIB corriente del INE (data/macro/pib-ine). '
-                                'Solo pensiones contributivas del Sistema de la Seguridad Social: excluye Clases Pasivas y pensiones no contributivas, que otras definiciones (OCDE, Eurostat, Ageing Report) sí pueden incluir.',
+                                'Solo pensiones contributivas del Sistema de la Seguridad Social: excluye el complemento a mínimos (que la ejecución anota en otra fila), las Clases Pasivas y las pensiones no contributivas, que otras definiciones (OCDE, Eurostat, Ageing Report) sí pueden incluir; para compararla con ellas haría falta sumar esos conceptos. Sirve para comparaciones internas (Ajustes actuariales 3, tanda 3, parte C, n.º 6).',
                        'points': [{'period': a, 'value': round(100 * g / pib[a], 3)} for a, g in sorted(gasto.items()) if a in pib]})
     # cociente pensión / salario
     alt = {r['anio']: float(r['pension_media_eur_mes']) for r in csv.DictReader(open(f'{D}/sistema/altas-bajas-anual-clase-sexo.csv'))

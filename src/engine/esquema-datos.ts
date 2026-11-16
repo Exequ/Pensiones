@@ -209,6 +209,10 @@ export const EstadoRevisionActuarial = z.enum([
   'no-requiere',
 ]);
 
+/** Referencia a la respuesta actuarial de una afirmación revisada (tanda, parte y número de pregunta). */
+export const PATRON_RESPUESTA_ACTUARIAL =
+  /^(?:Tanda [1-9], parte [A-C], n\.º [1-9]\d*|Revisión del 14-11-2026)(?:\. .+)?$/;
+
 /** Afirmación factual del texto de la web y sus fuentes (docs/claims.json). */
 export const Afirmacion = z.strictObject({
   id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
@@ -228,6 +232,18 @@ export const Afirmacion = z.strictObject({
   revisionActuarial: EstadoRevisionActuarial.optional(),
   /** Qué debe comprobar el actuario y con qué dato o fórmula (obligatoria si la revisión está pendiente). */
   preguntaActuarial: textoObligatorio('preguntaActuarial').optional(),
+  /**
+   * Referencia a la respuesta actuarial que respalda el estado «revisada» (obligatoria en ese caso):
+   * «Tanda 3, parte A, n.º 31» (docs/revision-actuarial/respuestas-tanda3-A.md) o, para las
+   * revisadas en rondas anteriores, «Revisión del 14-11-2026». Puede seguir un punto y el matiz.
+   */
+  respuestaActuarial: z
+    .string()
+    .regex(PATRON_RESPUESTA_ACTUARIAL, {
+      error:
+        'respuestaActuarial debe empezar por «Tanda N, parte X, n.º M» o «Revisión del 14-11-2026»',
+    })
+    .optional(),
   notas: z.string().trim().min(1).optional(),
 });
 
@@ -248,6 +264,20 @@ export const RegistroAfirmaciones = z
           code: 'custom',
           message: `La afirmación ${claim.id} está pendiente de revisión actuarial y no tiene preguntaActuarial`,
           path: ['claims', i, 'preguntaActuarial'],
+        });
+      }
+      if (estado === 'revisada' && claim.respuestaActuarial === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          message: `La afirmación ${claim.id} está revisada y no tiene respuestaActuarial (tanda, parte y número de la respuesta)`,
+          path: ['claims', i, 'respuestaActuarial'],
+        });
+      }
+      if (estado !== 'revisada' && claim.respuestaActuarial !== undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          message: `La afirmación ${claim.id} lleva respuestaActuarial pero su revisión no es «revisada»`,
+          path: ['claims', i, 'respuestaActuarial'],
         });
       }
     });
@@ -272,20 +302,33 @@ export const Definicion = z.strictObject({
   datos: z.array(ReferenciaFichero).optional(),
 });
 
-export const Mito = z.strictObject({
-  id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
-  /** Afirmación tal como circula, formulada de forma neutral. */
-  enunciado: textoObligatorio('enunciado'),
-  datos: z.array(ReferenciaFichero).min(1, { error: 'Cada afirmación necesita datos de /data' }),
-  definiciones: z
-    .array(Definicion)
-    .min(1, { error: 'Cada afirmación necesita definiciones alternativas' }),
-  noSePuedeConcluir: z.array(textoObligatorio('noSePuedeConcluir')).min(1),
-  /** Datos que harían falta y no están en /data (se anotan también en docs/PENDIENTE_DATOS.md). */
-  faltan: z.array(textoObligatorio('faltan')).optional(),
-  revisionActuarial: z.literal('pendiente'),
-  preguntaActuarial: textoObligatorio('preguntaActuarial'),
-});
+export const Mito = z
+  .strictObject({
+    id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
+    /** Afirmación tal como circula, formulada de forma neutral. */
+    enunciado: textoObligatorio('enunciado'),
+    datos: z.array(ReferenciaFichero).min(1, { error: 'Cada afirmación necesita datos de /data' }),
+    definiciones: z
+      .array(Definicion)
+      .min(1, { error: 'Cada afirmación necesita definiciones alternativas' }),
+    noSePuedeConcluir: z.array(textoObligatorio('noSePuedeConcluir')).min(1),
+    /** Datos que harían falta y no están en /data (se anotan también en docs/PENDIENTE_DATOS.md). */
+    faltan: z.array(textoObligatorio('faltan')).optional(),
+    /** `pendiente` o `revisada` (con `respuestaActuarial`); el resto de estados no se usan en el catálogo. */
+    revisionActuarial: z.enum(['pendiente', 'revisada']),
+    /** Pregunta que se hizo al actuario (se conserva aunque la afirmación pase a revisada). */
+    preguntaActuarial: textoObligatorio('preguntaActuarial'),
+    respuestaActuarial: z.string().regex(PATRON_RESPUESTA_ACTUARIAL).optional(),
+  })
+  .superRefine((m, ctx) => {
+    if ((m.revisionActuarial === 'revisada') !== (m.respuestaActuarial !== undefined)) {
+      ctx.addIssue({
+        code: 'custom',
+        message: `La afirmación ${m.id}: respuestaActuarial es obligatoria si y solo si está revisada`,
+        path: ['respuestaActuarial'],
+      });
+    }
+  });
 
 export const ArchivoMitos = z.strictObject({
   tipo: z.literal('mitos'),

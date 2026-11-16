@@ -235,6 +235,26 @@ mei = [
        'La distribución de los tipos de cotización por solidaridad entre empresario y trabajador mantendrá la misma proporción que la distribución del tipo general de cotización a la seguridad social por contingencias comunes.', DT42,
        'Proporción = tipo de contingencias comunes de empresa (tipo-cc-empresa) y trabajador (tipo-cc-trabajador) del año.'),
 ]
+# Ajustes actuariales 3 (n.º 24 y 47): criterio de sostenibilidad de la DA 2.ª del RDL 2/2023, con sus términos literales
+RDL2 = ('rdl-2-2023.txt', 'Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones', '2026-11-11')
+_i = next(k for k, l in enumerate(lineas(RDL2)) if norm(l).startswith('Disposición adicional segunda. Seguimiento de las proyecciones'))
+_j = next(k for k in range(_i + 1, len(lineas(RDL2))) if norm(lineas(RDL2)[k]).startswith('Disposición adicional tercera.'))
+DA2 = lineas(RDL2)[_i:_j]
+DA2_REF = 'DA 2.ª RDL 2/2023'
+mei += [
+    mk('da2-rdl-2023-tope-gasto-pct-pib', 2025, 15, '% del PIB', RDL2, DA2,
+       'la AIReF comprobará que el gasto medio bruto público en pensiones en el periodo 2022-2050 del último Informe de Envejecimiento no supere el 15 por ciento del PIB',
+       DA2_REF + ', apartado 1',
+       'Comprobación trienal de la AIReF desde marzo de 2025. Es el límite cuando el impacto anual medio de las medidas de ingresos es igual a la referencia de 1,7 puntos (dato da2-rdl-2023-impacto-medidas-referencia).'),
+    mk('da2-rdl-2023-impacto-medidas-referencia', 2025, 1.7, '% del PIB', RDL2, DA2,
+       'Si el impacto anual medio de las medidas de ingresos es igual al 1,7 por ciento del PIB',
+       DA2_REF + ', apartado 1',
+       'Si el impacto es superior (inferior) a esa referencia, el límite de 15 puntos se aumenta (reduce) en la diferencia entre el impacto medio anual estimado de las medidas y 1,7 puntos.'),
+    mk('da2-rdl-2023-aumento-mei-decimas-del-exceso', 2025, 0.2, 'fracción del exceso estimado por la AIReF (dos décimas partes) por año', RDL2, DA2,
+       'la cotización del Mecanismo de Equidad Intergeneracional aumentará para compensar dos décimas partes del exceso estimado por la AIReF a partir del 1 de enero del año siguiente a la publicación del Informe de la AIReF y otras dos décimas partes en cada uno de los años siguientes hasta que se adopten nuevas medidas del mismo impacto o el exceso de gasto neto sea corregido',
+       DA2_REF + ', apartado 3',
+       'Solo si la ley con las medidas correctoras del exceso no entra en vigor el 1 de enero del año siguiente (apartado 3). El motor no modela este aumento automático.'),
+]
 ids = [d['id'] for d in mei]
 assert len(ids) == len(set(ids)), 'ids repetidos (mei)'
 fusionar('parametros', 'mei-reglas', mei, 'Reglas del MEI y de la cotización adicional de solidaridad',

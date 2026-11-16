@@ -25,23 +25,23 @@ IP_CLAIMS = [
     ('-carencia', ['carencia-general-divisor', 'carencia-joven-divisor', 'carencia-reciente-divisor', 'carencia-redondeo-edad-medio-anio-meses', 'carencia-parcial-dias'],
      'Periodo mínimo de cotización de la incapacidad permanente por enfermedad común: un tercio del tiempo desde los 16 años (menores de 31) o un cuarto desde los 20 (mínimo cinco años, un quinto en los diez últimos); parcial, 1.800 días en diez años; sin alta, quince años (art. 195 TRLGSS y art. 4 RD 1799/1985).'),
     ('-cuantia', ['total-porcentaje', 'absoluta-porcentaje', 'gran-incapacidad-porcentaje', 'total-cualificada-pct', 'gran-incapacidad-complemento-pct-base-minima', 'total-ec-suelo-clase-minima', 'edad-ip-sin-jubilacion-meses', 'br-profesional-salario-real'],
-     'Cuantía de la incapacidad permanente: total 55 % (más 20 % la cualificada desde los 55 años), absoluta y gran incapacidad 100 % de la base reguladora; complemento de gran incapacidad del 45 % de la base mínima más el 30 % de la última base (mínimo, 45 % de la pensión); suelo de la total por enfermedad común; regla del art. 196.5 a partir de los 67 años.'),
+     'Cuantía de la incapacidad permanente: total 55 % (más 20 % la cualificada desde los 55 años), absoluta y gran incapacidad 100 % de la base reguladora; complemento de gran incapacidad del 45 % de la base mínima más el 30 % de la última base (mínimo, 45 % de la pensión); suelo de la total por enfermedad común (un mínimo de la pensión, art. 196.2, no un complemento a mínimos sujeto a límite de rentas); regla del art. 196.5 a partir de los 67 años. La base del complemento de gran incapacidad es solo la del art. 197.1.a (sin la escala), y mantenerlo es una lectura propia; el motor presume por la edad la dificultad de empleo del incremento de la total cualificada (simplificación: la norma exige además no trabajar).'),
 ]
 SV_CLAIMS = [
     ('', ['carencia-alta-dias', 'carencia-sin-alta-meses', 'br-meses', 'br-ventana-meses', 'br-divisor', 'br-pensionista-misma-base', 'orfandad-alta-o-pensionista', 'familiares-carencia-alta-dias'],
      'Causante y base reguladora de muerte y supervivencia: en alta, 500 días cotizados en los cinco años anteriores (sin periodo previo si la muerte se debe a un accidente o a una enfermedad profesional; la orfandad no lo exige); sin alta, quince años; base reguladora de 24 meses elegidos en los quince años anteriores entre 28, o la de la pensión del causante pensionista con sus revalorizaciones (arts. 219, 224 y 228 TRLGSS; art. 7 Decreto 1646/1972).'),
     ('-cuantia', ['viudedad-pct', 'viudedad-65-pct', 'viudedad-cargas-pct', 'viudedad-cargas-reduccion-limite', 'orfandad-pct', 'orfandad-absoluta-incremento-pct', 'familiares-cuantia-igual-orfandad', 'familiares-incremento-sin-viudo', 'divorcio-limite-compensatoria', 'concurrencia-garantia-pct'],
-     'Cuantía de la viudedad, la orfandad y el favor de familiares: viudedad 52 % de la base reguladora (60 % con 65 o más años sin otras rentas; 70 % con cargas familiares y rentas bajas), orfandad y familiares 20 % por beneficiario, incremento del 52 % repartido en la orfandad absoluta; separados y divorciados hasta la pensión compensatoria y, si concurren varios, en proporción al tiempo convivido con el 40 % garantizado al cónyuge o pareja superviviente.'),
+     'Cuantía de la viudedad, la orfandad y el favor de familiares: viudedad 52 % de la base reguladora (60 % con 65 o más años sin otras rentas; 70 % con cargas familiares y rentas bajas), orfandad y familiares 20 % por beneficiario, incremento del 52 % repartido en la orfandad absoluta; separados y divorciados hasta la pensión compensatoria y, si concurren varios, en proporción al tiempo convivido con el 40 % garantizado al cónyuge o pareja superviviente. Cuando el causante es pensionista, la pensión se incrementa con las mejoras o revalorizaciones de las prestaciones de igual naturaleza por muerte y supervivencia (art. 7.3 del Decreto 1646/1972): el motor usa la revalorización general, que difiere en los años de revalorización diferenciada (por ejemplo, 2013).'),
     ('-limites', ['limite-conjunto-pct-br', 'limite-excepcion-viudedad-umbral-pct', 'limite-orfandad-max-pct', 'limite-preferencia-orfandad', 'limite-viudedad-orfandad-orden-1967', 'pareja-convivencia-meses', 'prestacion-temporal-meses'],
-     'Límite conjunto de muerte y supervivencia: la suma de las pensiones no excede de la base reguladora (salvo viudedad de más del 52 % con varias orfandades, que pueden llegar al 48 %), con preferencia de la orfandad sobre los familiares y orden nietos y hermanos, padres, abuelos, hijos y hermanos de pensionistas (art. 229 TRLGSS); parejas de hecho y prestación temporal de dos años (arts. 221 y 222).'),
+     'Límite conjunto de muerte y supervivencia: la suma de las pensiones no excede de la base reguladora (salvo viudedad de más del 52 % con varias orfandades, que pueden llegar al 48 %), con preferencia de la orfandad sobre los familiares y orden nietos y hermanos, padres, abuelos, hijos y hermanos de pensionistas (art. 229 TRLGSS); parejas de hecho y prestación temporal de dos años (arts. 221 y 222). Requisitos de la pareja de hecho (art. 221.2) por periodos: del 2-1-2016 al 31-12-2021, con o sin hijos, convivencia de al menos cinco años más inscripción o documento público con dos años de antelación; del 1-1-2022 al 20-10-2026, con hijos en común basta acreditar la constitución de la pareja; desde el 21-10-2026, con hijos en común se exige una convivencia de al menos dos años ininterrumpidos.'),
 ]
 PNC_CLAIMS = [
     ('', ['incapacidad-edad-minima-meses', 'incapacidad-grado-minimo-pct', 'incapacidad-residencia-total-meses', 'jubilacion-residencia-total-meses', 'unidad-economica-limite-pct-convivientes', 'rentas-compatibles-pct', 'cuantia-minima-pct', 'complemento-tercera-persona-pct', 'compatibilidad-trabajo-limite-iprem', 'limite-acumulacion-con-tercera-persona'],
-     'Pensiones no contributivas: requisitos (mayor de 18 y menor de 65 años con discapacidad de al menos el 65 % y cinco años de residencia en incapacidad; 65 años y diez años de residencia en jubilación), cuantía íntegra anual, reducción de las rentas propias que superan el 35 %, mínimo del 25 %, límite de acumulación de recursos de la unidad económica (70 % por cada conviviente adicional), complemento del 50 % por tercera persona y compatibilidad con el trabajo (arts. 363 a 370 TRLGSS y guías del IMSERSO).'),
+     'Pensiones no contributivas: requisitos (mayor de 18 y menor de 65 años con discapacidad de al menos el 65 % y cinco años de residencia en incapacidad; 65 años y diez años de residencia en jubilación), cuantía íntegra anual, reducción de las rentas propias que superan el 35 %, mínimo del 25 %, límite de acumulación de recursos de la unidad económica (70 % por cada conviviente adicional), complemento del 50 % por tercera persona y compatibilidad con el trabajo (arts. 363 a 370 TRLGSS y guías del IMSERSO); el cálculo sobre la cuantía íntegra, el límite de compatibilidad con el trabajo y el límite con el complemento de tercera persona se apoyan en la guía del IMSERSO y no en el texto de la ley.'),
 ]
 MEI_CLAIMS = [
-    ('', ['tipo-total-2030-2050', 'tipo-empresa-2030-2050', 'ultimo-anio', 'aplicable-contingencia-jubilacion', 'solidaridad-tramo-1-limite-pct', 'solidaridad-tipo-final-tramo-a', 'solidaridad-primer-anio'],
-     'MEI y cotización adicional de solidaridad: el MEI se mantiene en 1,2 puntos de 2030 a 2050 (1,00 la empresa y 0,2 el trabajador), es una cotización finalista sin bonificaciones y no computa para prestaciones; la cuota de solidaridad se aplica por tramos a la retribución que supera la base máxima, con los tipos de la DT 42.ª de 2025 a 2045 (art. 127 bis, art. 19 bis, DT 42.ª y DT 43.ª TRLGSS).'),
+    ('', ['tipo-total-2030-2050', 'tipo-empresa-2030-2050', 'ultimo-anio', 'aplicable-contingencia-jubilacion', 'solidaridad-tramo-1-limite-pct', 'solidaridad-tipo-final-tramo-a', 'solidaridad-primer-anio', 'da2-rdl-2023-tope-gasto-pct-pib', 'da2-rdl-2023-impacto-medidas-referencia', 'da2-rdl-2023-aumento-mei-decimas-del-exceso'],
+     'MEI y cotización adicional de solidaridad: el MEI se mantiene en 1,2 puntos de 2030 a 2050 (1,00 la empresa y 0,2 el trabajador), es una cotización finalista sin bonificaciones y no computa para prestaciones; la cuota de solidaridad se aplica por tramos a la retribución que supera la base máxima, con los tipos de la DT 42.ª de 2025 a 2045 (art. 127 bis, art. 19 bis, DT 42.ª y DT 43.ª TRLGSS). La DT 43.ª da efectos al MEI hasta el 31 de diciembre de 2050 y la norma no fija el tipo después de esa fecha. La DA 2.ª del RDL 2/2023 dispone que, si el gasto medio bruto público en pensiones de 2022 a 2050 del último Informe de Envejecimiento supera el 15 % del PIB (ajustado en la diferencia entre el impacto medio anual de las medidas de ingresos y el 1,7 % del PIB) y no entra en vigor una ley correctora, la cotización del MEI aumenta dos décimas partes del exceso estimado por la AIReF en cada año; el motor no modela ese aumento.'),
 ]
 MITO_PREGUNTAS = {}
 CLAIMS_SERIES_NUEVAS = {
@@ -171,6 +171,12 @@ for ruta in sorted(glob.glob(f'{REPO}/data/*/*.json')):
             x = por[ids[0]]
             añade(f"param-{d['id']}{sufijo}", texto, 'Motor de muerte y supervivencia (docs/MOTOR_SUPERVIVENCIA.md)',
                   [f"{rel}#{i}" for i in ids], x['source'], x['confidence'])
+    elif carpeta == 'parametros' and d['id'] == 'mei-destino':
+        # Ajustes actuariales 3 (n.º 46): dos indicadores separados, cada uno con su unidad
+        por = {z['id']: z for z in d['data']}
+        a, b = por['destino-fondo-reserva'], por['no-computable-prestaciones']
+        añade('param-mei-destino', f"{d['title']}: dos indicadores separados en {a['period']}: {num(a['value'])} ({a['unit']}) y {num(b['value'])} ({b['unit']}).",
+              'Datos de parámetros (módulo «Cómo se calcula» y «Metodología»)', [f"{rel}#{a['id']}", f"{rel}#{b['id']}"], a['source'], a['confidence'])
     elif carpeta == 'parametros' and d.get('data'):
         # una afirmación por serie: el dato más reciente
         x = sorted(d['data'], key=lambda z: (z['period'], z['id']))[-1]
@@ -312,6 +318,16 @@ for tabla, per, url, sha in huellas:
 with open(f'{REPO}/docs/FUENTES.md', 'w', encoding='utf-8') as f:
     f.write('\n'.join(filas) + '\n')
 REVISION.update(MITO_PREGUNTAS)
+# Ajustes actuariales 3: estado de cada afirmación según docs/revision-actuarial/aplicacion-tanda3.json
+# (revisada → sale de REVISION y lleva respuestaActuarial; pendiente → pregunta reducida a lo que falta).
+APLICACION = {f['id']: f for f in json.load(open(f'{REPO}/docs/revision-actuarial/aplicacion-tanda3.json', encoding='utf-8'))['filas']}
+REVISADAS_T3 = {}
+for _id, _f in APLICACION.items():
+    if _f['estado'] == 'revisada':
+        REVISION.pop(_id, None)
+        REVISADAS_T3[_id] = _f['respuestaActuarial']
+    elif _id in REVISION:
+        REVISION[_id] = _f['preguntaReducida']
 # Afirmaciones de los textos de la web (Fase 3-A): se mantienen a mano en docs/claims-web.json
 _ruta_web = f'{REPO}/docs/claims-web.json'
 # Revisión actuarial declarada en claims-web.json (revisada, rechazada, pendiente o no-requiere): se respeta.
@@ -327,6 +343,10 @@ for c in claims:
     if c['id'] in REVISION:
         c['revisionActuarial'] = 'pendiente'
         c['preguntaActuarial'] = REVISION[c['id']]
+    elif c['id'] in REVISADAS_T3:
+        c['revisionActuarial'] = 'revisada'
+        c['respuestaActuarial'] = REVISADAS_T3[c['id']]
+        c.pop('preguntaActuarial', None)
     elif c['id'] in REVISION_WEB:
         c['revisionActuarial'] = REVISION_WEB[c['id']]   # la declarada a mano en claims-web.json
     else:
@@ -366,6 +386,14 @@ for tit, lista in grupos:
         md += [f'### {n}. `{i}`', '', f'**Afirmación**: {por_id[i]["texto"]}', '', f'**Qué debe comprobar el actuario**: {REVISION[i]}', '',
                f'**Datos**: {", ".join(por_id[i]["datos"])}', '']
 assert n == len(REVISION), (n, len(REVISION))
+# Ajustes actuariales 3: afirmaciones revisadas con la tercera tanda (respuestas en docs/revision-actuarial/)
+md += ['## Revisadas con la tercera tanda de la revisión actuarial', '',
+       'Afirmaciones que salieron de la lista de pendientes en los Ajustes actuariales 3. Cada una lleva en `docs/claims.json` el campo `respuestaActuarial` (tanda, parte y número de la respuesta en `docs/revision-actuarial/respuestas-tanda3-*.md`); '
+       'qué se comprobó y qué cambió consta en `docs/ESTADO_AJUSTES_ACTUARIALES_3.md` y en `docs/revision-actuarial/aplicacion-tanda3.json`.', '',
+       '| Afirmación | Respuesta actuarial |', '| ---------- | ------------------- |']
+for c in sorted((c for c in claims if c.get('revisionActuarial') == 'revisada' and c.get('respuestaActuarial', '').startswith('Tanda 3')), key=lambda c: c['id']):
+    md.append(f"| `{c['id']}` | {c['respuestaActuarial']} |")
+md.append('')
 with open(f'{REPO}/docs/REVISION_ACTUARIAL.md', 'w', encoding='utf-8') as f:
     f.write('\n'.join(md))
 print('fuentes', len(fuentes), 'claims', len(claims), 'a revisar', len(REVISION))

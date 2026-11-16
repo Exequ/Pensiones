@@ -1,0 +1,7 @@
+{
+  "orden-pcm-1353-2021-art3.txt": {
+    "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-A-2021-20075",
+    "sha256_original": "2c7afe6a0c5fba86985e0fe1c911b05e23288d29c9a222d2eb3780eb01d295e5",
+    "nota": "Artículo 3 (bases máximas y mínimas de cotización desde el 1 de septiembre de 2021) de la Orden PCM/1353/2021, extraído del XML del BOE con etiquetas retiradas. Descargado el 2026-11-16. Se guarda en docs/ y no en data-raw/ (esa carpeta no se toca en esta ronda)."
+  }
+}

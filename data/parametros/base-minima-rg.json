@@ -2,7 +2,7 @@
   "tipo": "datos",
   "id": "base-minima-rg",
   "title": "Base mínima de cotización del Régimen General (grupos 4 a 7)",
-  "description": "Base mínima mensual de cotización de los grupos de cotización 4 a 7 del Régimen General vigente desde el 1 de enero de cada año (los cambios a mitad de año se indican en notes).",
+  "description": "Base mínima mensual de cotización de los grupos de cotización 4 a 7 del Régimen General vigente desde el 1 de enero de cada año (los cambios a mitad de año se indican en notes; el de 2021, por tramos, en base-minima-rg-2021-tramos). Desde 2027 la base mínima evoluciona con el salario mínimo interprofesional incrementado en un sexto (art. 19.2 TRLGSS): la proyección con el IPC del escenario que usa el motor desde 2027 es un supuesto del modelo, no una regla legal.",
   "data": [
     {
       "id": "2000",

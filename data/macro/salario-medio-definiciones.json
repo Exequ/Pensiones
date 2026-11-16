@@ -15,7 +15,7 @@
         "docId": "INE-28189"
       },
       "confidence": "alta",
-      "notes": "Ganancia bruta anual por asalariado, total de edades (tabla 28189). Años 2008-2024. Ver el literal y la cobertura en eaes-salario-sexo-edad.",
+      "notes": "Ganancia bruta anual por asalariado, total de edades (tabla 28189). Años 2008-2024. Ver el literal y la cobertura en eaes-salario-sexo-edad. Cobertura: industria, construcción y servicios; no cubre agricultura, ganadería y pesca ni el personal doméstico (hogares). Es un corte transversal de un mes de referencia, no la carrera de una persona.",
       "points": [
         {
           "period": "2008",
@@ -99,7 +99,7 @@
         "docId": "INE-28189"
       },
       "confidence": "alta",
-      "notes": "Ganancia bruta anual por asalariado, total de edades (tabla 28189). Años 2008-2024. Ver el literal y la cobertura en eaes-salario-sexo-edad.",
+      "notes": "Ganancia bruta anual por asalariado, total de edades (tabla 28189). Años 2008-2024. Ver el literal y la cobertura en eaes-salario-sexo-edad. Cobertura: industria, construcción y servicios; no cubre agricultura, ganadería y pesca ni el personal doméstico (hogares). Es un corte transversal de un mes de referencia, no la carrera de una persona.",
       "points": [
         {
           "period": "2008",
@@ -183,7 +183,7 @@
         "docId": "INE-28189"
       },
       "confidence": "alta",
-      "notes": "Ganancia bruta anual por asalariado, total de edades (tabla 28189). Años 2008-2024. Ver el literal y la cobertura en eaes-salario-sexo-edad.",
+      "notes": "Ganancia bruta anual por asalariado, total de edades (tabla 28189). Años 2008-2024. Ver el literal y la cobertura en eaes-salario-sexo-edad. Cobertura: industria, construcción y servicios; no cubre agricultura, ganadería y pesca ni el personal doméstico (hogares). Es un corte transversal de un mes de referencia, no la carrera de una persona.",
       "points": [
         {
           "period": "2008",
@@ -355,7 +355,7 @@
         "docId": "INE-6038"
       },
       "confidence": "media",
-      "notes": "Dato derivado: 12 × la media anual del coste salarial total por trabajador y mes. Los pagos extraordinarios ya están en el total mensual del trimestre en que se pagan.",
+      "notes": "Dato derivado: 12 × la media anual del coste salarial total por trabajador y mes. Los pagos extraordinarios ya están en el total mensual del trimestre en que se pagan. Por eso 12 veces la media mensual da el año. La cobertura y el tratamiento de las jornadas difieren de los de la EAES, por lo que las dos series no coinciden.",
       "points": [
         {
           "period": "2008",
@@ -863,7 +863,7 @@
         "docId": "TGSS-bases-medias-RG"
       },
       "confidence": "media",
-      "notes": "Dato derivado: suma de las bases mensuales del año ÷ suma de los cotizantes mensuales (media ponderada por cotizantes de las doce bases medias mensuales). Solo años completos (2018-2025).",
+      "notes": "Dato derivado: suma de las bases mensuales del año ÷ suma de los cotizantes mensuales (media ponderada por cotizantes de las doce bases medias mensuales). Solo años completos (2018-2025). La base mensual ya incluye la parte proporcional de las pagas extraordinarias (las percepciones de vencimiento superior al mes se prorratean en los doce meses): el año es 12 veces la base mensual, no 14. Al no haber años completos antes de 2018, no sirve como salario de la carrera anterior a esa fecha.",
       "points": [
         {
           "period": "2018",
@@ -911,7 +911,7 @@
         "docId": "TGSS-bases-medias-RG"
       },
       "confidence": "media",
-      "notes": "Dato derivado: suma de las bases mensuales del año ÷ suma de los cotizantes mensuales (media ponderada por cotizantes de las doce bases medias mensuales). Solo años completos (2018-2025).",
+      "notes": "Dato derivado: suma de las bases mensuales del año ÷ suma de los cotizantes mensuales (media ponderada por cotizantes de las doce bases medias mensuales). Solo años completos (2018-2025). La base mensual ya incluye la parte proporcional de las pagas extraordinarias (las percepciones de vencimiento superior al mes se prorratean en los doce meses): el año es 12 veces la base mensual, no 14. Al no haber años completos antes de 2018, no sirve como salario de la carrera anterior a esa fecha.",
       "points": [
         {
           "period": "2018",
@@ -959,7 +959,7 @@
         "docId": "TGSS-bases-medias-RG"
       },
       "confidence": "media",
-      "notes": "Dato derivado: suma de las bases mensuales del año ÷ suma de los cotizantes mensuales (media ponderada por cotizantes de las doce bases medias mensuales). Solo años completos (2018-2025).",
+      "notes": "Dato derivado: suma de las bases mensuales del año ÷ suma de los cotizantes mensuales (media ponderada por cotizantes de las doce bases medias mensuales). Solo años completos (2018-2025). La base mensual ya incluye la parte proporcional de las pagas extraordinarias (las percepciones de vencimiento superior al mes se prorratean en los doce meses): el año es 12 veces la base mensual, no 14. Al no haber años completos antes de 2018, no sirve como salario de la carrera anterior a esa fecha.",
       "points": [
         {
           "period": "2018",
