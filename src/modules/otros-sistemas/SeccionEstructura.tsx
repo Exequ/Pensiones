@@ -36,11 +36,16 @@ export function SeccionEstructura({ seleccion }: { readonly seleccion: ReadonlyS
           persona y se convierte en renta con criterios actuariales; la financiación puede ser de
           reparto. En inglés, <span lang="en">notional defined contribution</span> (NDC).
         </Definition>
+        <Definition termino="Dos ejes de clasificación" etiqueta="Glosario">
+          Los sistemas se pueden clasificar con dos criterios distintos: cómo se financia el sistema
+          (reparto o capitalización) y cómo se fija la prestación (prestación definida o aportación
+          definida). Las cuentas nocionales son un sistema de reparto con aportación definida.
+        </Definition>
       </div>
       <p className="hist-aviso">
         El glosario es una explicación conceptual de los términos, no un dato: no procede de una
-        fuente descargada y está pendiente de revisión actuarial. Lo que sí procede de las fuentes
-        es cada rasgo de los países, con su cita.
+        fuente descargada y la ha revisado un actuario con confianza media. Lo que sí procede de las
+        fuentes es cada rasgo de los países, con su cita.
       </p>
 
       {agregadosElegidos ? (

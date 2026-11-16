@@ -435,7 +435,7 @@ describe('página «Hucha» (Fase 5-A3): finalidad, préstamos y Fondo según el
     );
   });
 
-  it('el Anexo 10 se muestra línea a línea con subtotales y total, y dice que el año de concesión es inferido', () => {
+  it('el Anexo 10 se muestra línea a línea con subtotales y total, y dice que el año se deduce del plazo de cancelación y no es una fecha publicada', () => {
     const { container } = pintar();
     const d = datosHucha();
     const tabla = within(container).getByRole('table', {
@@ -447,7 +447,8 @@ describe('página «Hucha» (Fase 5-A3): finalidad, préstamos y Fondo según el
     expect(filas.filter((t) => /Subtotal del bloque/.test(t)).length).toBe(4);
     expect(filas.filter((t) => /Total del anexo/.test(t)).length).toBe(1);
     const seccion = container.querySelector('#prestamos')?.closest('section')?.textContent ?? '';
-    expect(seccion).toMatch(/año inferido, no una fecha publicada/);
+    expect(seccion).toMatch(/registra el préstamo como pasivo financiero de ingresos/);
+    expect(seccion).toMatch(/no es una fecha publicada en el anexo/);
     expect(seccion).toMatch(/no dice si un préstamo se ha devuelto, prorrogado o cancelado/);
   });
 

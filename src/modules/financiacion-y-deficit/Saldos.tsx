@@ -138,12 +138,21 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
               {millonesEuros(ultimoTotal?.valor ?? 0)} y el de contabilidad nacional de{' '}
               {millonesEuros(ultimoSec?.valor ?? 0)}.
             </p>
+            {ultimoNoFin !== undefined &&
+              ultimoSec !== undefined &&
+              ultimoNoFin.anio === ultimoSec.anio && (
+                <p>
+                  En {ultimoNoFin.anio}, el saldo no financiero y el de contabilidad nacional se
+                  diferencian en {millonesEuros(Math.abs(ultimoNoFin.valor - ultimoSec.valor))}. Con
+                  las fuentes descargadas no se puede conciliar esa diferencia.
+                </p>
+              )}
             <p>
               Las tres cifras difieren porque no miden lo mismo: el saldo total incluye las
-              operaciones financieras (entre ellas los préstamos del Estado), el no financiero no, y
-              el SEC aplica criterios de contabilidad nacional a un perímetro propio. Ninguna es una
-              estimación mejor o peor de las otras. El gráfico no dice cómo se financia la
-              diferencia.
+              operaciones financieras (entre ellas los préstamos del Estado, que cuentan como
+              ingreso), el no financiero no, y el SEC aplica criterios de contabilidad nacional a un
+              perímetro propio. Ninguna es una estimación mejor o peor de las otras. El gráfico no
+              dice cómo se financia la diferencia.
             </p>
           </>
         }

@@ -188,8 +188,9 @@ describe('lecturas de la incapacidad', () => {
     ]);
     for (const l of r.lecturas) expect(l.opciones.length).toBeGreaterThanOrEqual(2);
     const anl = r.lecturas.find((l) => l.id === 'incapacidad.lagunasAccidenteNoLaboral')!;
-    // Decisión de Sergio del 14-11-2026: vuelve a «sin-integrar» y queda pendiente, con su motivo.
-    expect(anl.estado).toBe('pendiente');
+    // Vuelve a «sin-integrar» el 14-11-2026 (decisión de Sergio) y pasa de pendiente a provisional el
+    // 16-11-2026 (revisión actuarial, tanda 3), con su motivo.
+    expect(anl.estado).toBe('provisional');
     expect(anl.valorPorDefecto).toBe('sin-integrar');
     expect(anl.motivo).toBeTruthy();
   });

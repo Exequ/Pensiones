@@ -100,9 +100,9 @@
     {
       "id": "incapacidad.lagunasAccidenteNoLaboral",
       "valor": "sin-integrar",
-      "estado": "pendiente",
-      "fecha": "2026-11-14",
-      "motivo": "Decisión de Sergio del 14-11-2026: el valor por defecto pasa a «sin-integrar» y la lectura queda pendiente, porque la revisión actuarial da solo una confianza del 55 al 60 % a «integrar». El art. 197.3 extiende el 197.1.a al accidente no laboral solo para la absoluta y la gran incapacidad del art. 195.4, y el art. 7.1 del Decreto 1646/1972 no menciona lagunas.",
+      "estado": "provisional",
+      "fecha": "2026-11-16",
+      "motivo": "Revisión actuarial del 16-11-2026, con confianza del 60 %. El reglamento de 1985 deja la base reguladora de la total, la absoluta y la gran invalidez por accidente no laboral en alta en las normas anteriores a la Ley 26/1985 (art. 5.4, párrafo 2.º, del RD 1799/1985), y el art. 7.1 del Decreto 1646/1972 no menciona lagunas. El art. 5.5 del mismo reglamento integra las lagunas en otras pensiones, y esa lectura queda como alternativa.",
       "pregunta": "param-incapacidad-permanente-reglas"
     },
     {

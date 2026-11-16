@@ -80,10 +80,11 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
     <section className="seccion prosa sistemas-seccion ancho-completo" aria-labelledby="gasto">
       <h2 id="gasto">Gasto público en pensiones sobre el PIB</h2>
       <p>
-        El mismo concepto —cuánto gasta el sector público en pensiones, en proporción a lo que
-        produce la economía— lo miden la OCDE y Eurostat con definiciones distintas. Aquí se
-        muestran las dos, cada una ordenada por sus propios valores, y no se elige ninguna como la
-        correcta. España, en el color de resaltado; las medias, con contorno.
+        Cuánto gasta el sector público en pensiones, en proporción a lo que produce la economía, lo
+        miden la OCDE y Eurostat con delimitaciones propias, y el perímetro de cada una no consta en
+        las fuentes descargadas. Aquí se muestran las dos, cada una ordenada por sus propios
+        valores, y no se elige ninguna como la correcta. España, en el color de resaltado; las
+        medias, con contorno.
       </p>
       <div className="sistemas-controles">
         <SegmentedPills
@@ -151,9 +152,9 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
                 medida, que puede ser distinto del de la OCDE.
               </p>
               <p>
-                No es lo mismo que el gasto en pensiones de la OCDE: las delimitaciones difieren y
-                los datos descargados no permiten reconciliarlas. Un país sin dato en un año aparece
-                en la tabla con «—».
+                No es lo mismo que el gasto en pensiones de la OCDE: cada fuente delimita lo que
+                mide y los datos descargados no permiten reconciliarlas. Un país sin dato en un año
+                aparece en la tabla con «—».
               </p>
             </>
           }

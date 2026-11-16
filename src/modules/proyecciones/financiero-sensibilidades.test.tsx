@@ -11,7 +11,7 @@ import { valoracionesEn } from '../../../scripts/lib/valoraciones.ts';
 import { formatearNumero } from '../../engine/formato';
 import { datosFinanciero } from './datos-financiero';
 import Financiero from './Financiero';
-import { aniosSensibilidades, tablaSensibilidades } from './series-financiero';
+import { aniosSensibilidades, rotuloPalanca, tablaSensibilidades } from './series-financiero';
 
 const d = datosFinanciero();
 const s = d.sensibilidades;
@@ -90,8 +90,15 @@ describe('tabla «Sensibilidades» del bloque financiero', () => {
     expect(filas).toHaveLength(s.casos.length + 1);
     expect(celdas(filas[0]!)[0]).toMatch(/^Ninguna: es el caso base/);
     s.casos.forEach((c, i) => {
-      // La palanca y su valor son el texto del LEEME, sin retocar.
-      expect(celdas(filas[i + 1]!)[0]).toBe(c.parametro);
+      // La palanca y su valor son el texto del LEEME, sin retocar, salvo la corrección verificada de
+      // «tasas de empleo» por «tasas de afiliación y de cotización» (Ajustes actuariales 3, n.º 69).
+      expect(celdas(filas[i + 1]!)[0]).toBe(rotuloPalanca(c.parametro));
+      if (!/tasas de empleo de 55 a 64 años/.test(c.parametro))
+        expect(celdas(filas[i + 1]!)[0]).toBe(c.parametro);
+      else
+        expect(celdas(filas[i + 1]!)[0]).toMatch(
+          /^M2: tasas de afiliación y de cotización de 55 a 64 años multiplicadas por .* \(avance lineal desde el primer año proyectado; el número de pensiones de M3 no cambia\)$/,
+        );
     });
   });
 

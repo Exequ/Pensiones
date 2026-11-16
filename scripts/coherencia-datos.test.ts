@@ -56,6 +56,7 @@ const FICHEROS_REGLAS_2B3 = ['pnc-reglas', 'mei-reglas'];
 
 /** Series con varias cuantías por año (clase de pensión, situación familiar, tramo). */
 const MULTIPLES_POR_ANIO = [
+  'base-minima-rg-2021-tramos', // dos tramos dentro de 2021 (1-1 a 31-8 y desde el 1-9)
   'pension-minima-',
   'cuota-solidaridad-',
   'actualizacion-bases',

@@ -23,7 +23,12 @@ import { LECTURAS_SUPERVIVENCIA_POR_DEFECTO } from '../src/engine/supervivencia/
 const RAIZ = path.resolve(import.meta.dirname, '..');
 const informe = readFileSync(path.join(RAIZ, 'docs/INFORME_VERIFICACION.md'), 'utf8');
 const claims = JSON.parse(readFileSync(path.join(RAIZ, 'docs/claims.json'), 'utf8')) as {
-  claims: { id: string; revisionActuarial?: string; preguntaActuarial?: string }[];
+  claims: {
+    id: string;
+    revisionActuarial?: string;
+    preguntaActuarial?: string;
+    respuestaActuarial?: string;
+  }[];
 };
 const revision = readFileSync(path.join(RAIZ, 'docs/REVISION_ACTUARIAL.md'), 'utf8');
 const motorMd = readFileSync(path.join(RAIZ, 'docs/MOTOR.md'), 'utf8');
@@ -79,12 +84,16 @@ describe('registro único de lecturas abiertas', () => {
     }
   });
 
-  it('la pregunta actuarial existe en docs/claims.json (pendiente, con pregunta) y en REVISION_ACTUARIAL.md', () => {
+  it('la pregunta actuarial existe en docs/claims.json (pendiente con pregunta, o revisada con respuesta) y en REVISION_ACTUARIAL.md', () => {
     for (const l of LECTURAS_ABIERTAS) {
       const c = claims.claims.find((x) => x.id === l.preguntaActuarial);
       expect(c, `${l.id}: ${l.preguntaActuarial}`).toBeDefined();
-      expect(c?.revisionActuarial).toBe('pendiente');
-      expect(c?.preguntaActuarial?.length).toBeGreaterThan(40);
+      // Pendiente (con pregunta) o, desde los Ajustes actuariales 3, revisada (con su respuesta actuarial);
+      // en los dos casos figura en REVISION_ACTUARIAL.md.
+      expect(['pendiente', 'revisada']).toContain(c?.revisionActuarial);
+      if (c?.revisionActuarial === 'pendiente')
+        expect(c.preguntaActuarial?.length).toBeGreaterThan(40);
+      else expect(c?.respuestaActuarial).toMatch(/^Tanda \d, parte [A-C]/);
       expect(revision).toContain(`\`${l.preguntaActuarial}\``);
     }
   });

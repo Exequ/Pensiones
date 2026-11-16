@@ -111,12 +111,14 @@ export function SeccionPrestamos() {
         El anexo no indica la fecha de concesión de cada préstamo. Para los de los últimos años se
         asigna a cada uno el año anterior al de inicio de su plazo de cancelación, porque el
         Tribunal indica que el plazo máximo de diez años empieza el año siguiente al de la
-        concesión: es un año inferido, no una fecha publicada. Para los préstamos de los años
-        noventa no se asigna año.
+        concesión. Ese año es el año en que la ejecución del presupuesto registra el préstamo como
+        pasivo financiero de ingresos (la serie de pasivos financieros de la ejecución figura en el
+        gráfico y en la tabla), pero no es una fecha publicada en el anexo. Para los préstamos de
+        los años noventa no se asigna año.
       </p>
       <GraficoSeries
         titulo="Préstamos concedidos por el Estado y pasivos financieros de ingresos, por año"
-        descripcion={`Préstamos por año de concesión inferido (${anexo} del Tribunal de Cuentas) y pasivos financieros de ingresos de la liquidación y de la ejecución. Unidad: miles de millones de euros.`}
+        descripcion={`Préstamos por año de registro como pasivo financiero (${anexo} del Tribunal de Cuentas, año deducido del plazo de cancelación) y pasivos financieros de ingresos de la liquidación y de la ejecución. Unidad: miles de millones de euros.`}
         tipo="barras-agrupadas"
         series={[
           {
@@ -141,7 +143,7 @@ export function SeccionPrestamos() {
         decimalesEje={0}
         alto={380}
         fuentes={datosPrestamos}
-        nota="Los préstamos por año son una serie derivada (confianza alta en el anexo, año de concesión inferido). Los pasivos financieros de ingresos proceden de dos documentos distintos (liquidación y ejecución del presupuesto), con ruptura de serie entre ellos; no son sinónimo de préstamos del Estado, porque ese capítulo recoge toda operación de pasivos financieros. Los años sin barra tienen un importe nulo."
+        nota="Los préstamos por año son una serie derivada (confianza alta en el anexo, año deducido del inicio del plazo de cancelación y coherente con el año de registro en la ejecución). Los pasivos financieros de ingresos proceden de dos documentos distintos (liquidación y ejecución del presupuesto), con ruptura de serie entre ellos; no son sinónimo de préstamos del Estado, porque ese capítulo recoge toda operación de pasivos financieros. Los años sin barra tienen un importe nulo."
         comoLeerlo={
           <>
             <p>
@@ -178,7 +180,7 @@ export function SeccionPrestamos() {
               decimales: 1,
             },
             { clave: 'vencimiento', titulo: 'Vencimiento, según el anexo' },
-            { clave: 'concesion', titulo: 'Año de concesión inferido' },
+            { clave: 'concesion', titulo: 'Año de registro como pasivo financiero (deducido)' },
           ]}
           filas={filasAnexo}
         />
