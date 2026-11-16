@@ -547,6 +547,11 @@ export const OrigenProyeccion = z.strictObject({
     .string()
     .regex(/^[0-9a-f]{40}$/, { error: 'commitModelos debe ser el hash completo' }),
   leeme: textoObligatorio('origen.leeme'),
+  /** Huella SHA-256 del LEEME (solo en las salidas que la registran). */
+  leemeSha256: z
+    .string()
+    .regex(/^[0-9a-f]{64}$/, { error: 'leemeSha256 no válido' })
+    .optional(),
   /** Fecha de ejecución de los modelos, según el LEEME (AAAA-MM-DD). */
   ejecutadoEl: z.iso.date({ error: 'ejecutadoEl debe ser una fecha AAAA-MM-DD' }),
 });

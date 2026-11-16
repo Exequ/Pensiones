@@ -74,3 +74,9 @@ Con `tsc -b --force` (sin caché incremental, con los ficheros de test): `npm ru
 - **CI del PR** (`Exequ/Pensiones#42`): el flujo `CI` sobre `9129013` terminó en verde: «Lint, tipos, tests, datos y compilación» (2 min 30 s) e «Interfaz (Playwright)» (unos 12 min 40 s, escritorio y móvil, axe incluido). Sin reintentos ni cancelaciones. El flujo «Despliegue en GitHub Pages» del PR solo compila (el despliegue real ocurre con el push a `main`).
 - **Merge**: squash a `main`, sin borrar la rama.
 - **Despliegue y ruta publicada**: el push a `main` ejecuta el flujo de despliegue; la comprobación de que termina, de que `https://exequ.github.io/Pensiones/` responde con 200 y de que `#/tu-pension` abre contra la URL publicada a 1360 y 390 px (un caso por prestación) solo puede hacerse después del merge. Su resultado consta en el informe final de la sesión y no en este fichero, para no abrir un PR solo de documentación.
+
+### CI de `main` tras la fusión (comprobado el 2026-11-16, cierre de M1 y estados)
+
+- **SHA de la fusión (#42)**: `9eff52f144ad480a0af08f32a7fa8785be377051`.
+- **Despliegue en GitHub Pages** sobre ese SHA: terminó con éxito (compilar y desplegar).
+- **CI sobre ese SHA**: resultado «cancelled». El trabajo «Lint, tipos, tests, datos y compilación» terminó con éxito y «Interfaz (Playwright)» quedó cancelado, no fallido. El flujo `CI` tiene `cancel-in-progress: true` por rama (`.github/workflows/ci.yml`) y el siguiente push a `main` (`09f6e066253cb65052d2754229797811980a0bd9`) lo sustituyó. La interfaz de esa fase sí se verificó en verde en el CI del PR (ver arriba). No se ha relanzado ni arreglado nada aquí.

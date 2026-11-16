@@ -50,4 +50,4 @@ Efecto medido (`scripts/lecturas-abiertas.ts`, fila de `docs/INFORME_VERIFICACIO
 
 ## Batería y despliegue
 
-En local, con `tsc -b --force` (sin caché incremental, con los ficheros de test): `npm run lint` (incluye `validate:data`), typecheck, `npm test` y `npm run build` pasan; `npm run test:e2e`: 402 pruebas pasadas (escritorio y móvil). CI, merge y despliegue: se anotan abajo al terminar.
+En local, con `tsc -b --force` (sin caché incremental, con los ficheros de test): `npm run lint` (incluye `validate:data`), typecheck, `npm test` y `npm run build` pasan; `npm run test:e2e`: 402 pruebas pasadas (escritorio y móvil). CI, merge y despliegue: el PR #41 se fusionó (squash) en `main` con el SHA `565df58c0e0e9be0c3e1e4e6f5214e185699cb04`. El CI de `main` sobre ese SHA terminó en verde (2026-11-16, unos 12 min): «Lint, tipos, tests, datos y compilación» e «Interfaz (Playwright)» con éxito. El flujo «Despliegue en GitHub Pages» sobre el mismo SHA terminó con éxito (compilar y desplegar, en torno a 1 min). Comprobado con `gh run view` el 2026-11-16 (cierre de M1 y estados).

@@ -5863,7 +5863,7 @@
     },
     {
       "id": "web-fin-sensibilidades-empleo-parametro",
-      "texto": "En los casos de sensibilidad de 55 a 64 años y de convergencia de las mujeres, el LEEME habla de «tasas de empleo»; el código de M2 aplica el factor de 55 a 64 años y la convergencia de las mujeres de 25 a 64 años a las tasas de afiliación y de cotización (afiliados y cotizantes entre población por tramo) y no a las tasas de empleo de la EPA, con avance lineal desde el primer año proyectado hasta 2050. La web rotula las dos palancas como «tasas de afiliación y de cotización» y dice que el número de pensiones de M3 no cambia.",
+      "texto": "En los casos de sensibilidad de 55 a 64 años y de convergencia de las mujeres, el LEEME del modelo habla de tasas de afiliación y de cotización, y el código de M2 aplica el factor de 55 a 64 años y la convergencia de las mujeres de 25 a 64 años a esas tasas (afiliados y cotizantes entre población por tramo), con avance lineal desde el primer año proyectado hasta 2050. La web añade a esos rótulos que el número de pensiones de M3 no cambia.",
       "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Ajustes de M4, sensibilidades)",
       "datos": ["sistema/fondo-reserva-series.json#valor-fin-ano"],
       "fuentes": [
@@ -5876,7 +5876,7 @@
       "fetchedAt": "2026-11-16",
       "estado": "verificada",
       "revisionActuarial": "revisada",
-      "notas": "Verificado en modelos/m2/m2_cotizantes.py (k = min(1, (t − 2026)/24), factor 1 + (mult − 1)·k sobre las tasas ra y rb de 55 a 60; solo M2 lo usa). La salida del modelo y su LEEME no se tocan; la discrepancia consta en docs/DISCREPANCIAS.md para el chat de modelos. Revisión 3 del motor (16-11-2026): la misma comprobación en `convergencia_mujeres` (ra y rb de los tramos de 25 a 60, k = min(1, (t − 2026)/24)); el rótulo de `mujeres_convergen` se corrige en la web (`rotuloPalanca`). La salida del modelo y su LEEME siguen sin tocarse.",
+      "notas": "Verificado en modelos/m2/m2_cotizantes.py (k = min(1, (t − 2026)/24), factor 1 + (mult − 1)·k sobre las tasas ra y rb de 55 a 60; en `convergencia_mujeres`, ra y rb de los tramos de 25 a 60). El LEEME de las sensibilidades de M4 (commit 09f6e06) ya está corregido en origen: nombra las tasas de afiliación y de cotización y recoge en una nota el avance lineal desde 2026 (k = (t − 2026)/24) y que M3 no cambia. `rotuloPalanca` solo añade el aviso del avance y de M3 al texto del LEEME. Confirmado el 2026-11-16 (cierre de CI de M4).",
       "respuestaActuarial": "Tanda 3, parte C, n.º 69"
     },
     {

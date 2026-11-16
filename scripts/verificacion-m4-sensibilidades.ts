@@ -137,6 +137,8 @@ export interface ResultadoSensibilidades {
     readonly indiceGasto2050ConG1_8: number;
   };
   readonly parametroEmpleo: string;
+  /** Nota del LEEME sobre los dos casos de M2 (avance lineal desde 2026). */
+  readonly notaM2: string;
 }
 
 const pctGasto = (f: Registro): number => (num(f, 'gasto_pensiones') / num(f, 'pib_proxy')) * 100;
@@ -271,6 +273,7 @@ export function verificarSensibilidades(): ResultadoSensibilidades {
   const sinEnlace = gastoCaso(CASO_SIN_ENLACE, ANIO) - baseGasto;
   const indiceG = (gastoCaso(CASO_G_ALTA, ANIO) / gastoCaso(CASO_G_ALTA, ANIO_INICIO)) * 100;
 
+  const notaM2 = /NOTA SOBRE LOS DOS CASOS DE M2[^\n]*\n([^\n]*)/.exec(leemeTexto)?.[1] ?? '';
   const parametroEmpleo = casos.find((c) => c.id === 'empleo_55_64_mas_10')?.parametro ?? '';
 
   return {
@@ -299,6 +302,7 @@ export function verificarSensibilidades(): ResultadoSensibilidades {
     diferenciaPctPib: difPct,
     seccion3: { cambioSinEnlace: sinEnlace, indiceGasto2050ConG1_8: indiceG },
     parametroEmpleo,
+    notaM2,
   };
 }
 
