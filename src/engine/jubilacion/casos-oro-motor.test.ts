@@ -167,3 +167,27 @@ describe('caso de oro 6 · pensión mínima', () => {
     expect(PARAMS.pensionMaxima.valores.get(2026)).toBe(3359.6);
   });
 });
+
+describe('caso de oro 7 · anticipada voluntaria topada con la salvaguarda de la DT 34.ª.1 (lectura A y B)', () => {
+  // Nacida el 1-1-1963, se jubila el 1-1-2027 (cumple 65 el 1-1-2028: 12 meses = 4 trimestres) con 42 años cotizados
+  // a 20.000 €/mes (la base máxima los limita): el 100 % de la base reguladora supera con mucho la pensión máxima.
+  const carrera = [continua('1985-01', '2026-12', 20000)];
+  const con = (l: 'A' | 'B') =>
+    calc(carrera, '1963-01-01', '2027-01-01', 'anticipada-voluntaria', {
+      ...BASE,
+      actualizarBases: true, // con las bases actualizadas, la pensión supera con mucho la máxima
+      lecturas: { salvaguardaDT34: l },
+    });
+  it('B: pensión máxima de 2027 × (1 − 3,20 %) (DT 34.ª, 2027, 12 meses, tramo 3)', () => {
+    // Máxima de 2027: 3.359,60 × (1 + 0,02 + 0,00115) = 3.359,60 × 1,02115 = 3.430,66; × 0,968 = 3.320,87.
+    expect(con('B').pensionMensual).toBeCloseTo(3359.6 * 1.02115 * (1 - 0.032), 6);
+    expect(con('B').pensionMensual).toBeCloseTo(3320.87, 2);
+  });
+  it('A: máxima solo con el IPC (3.175,04 × 1,028 × 1,027 × 1,02) × (1 − 0,50 % × 4 trimestres)', () => {
+    // Máxima de 2024 (3.175,04) con la revalorización de 2025 (2,8 %), 2026 (2,7 %) y 2027 (2 %), sin el
+    // incremento de la DT 39.ª: 3.175,04 × 1,028 × 1,027 × 1,02 = 3.419,11; × 0,98 = 3.350,73.
+    const maximaSoloIPC = 3175.04 * 1.028 * 1.027 * 1.02;
+    expect(con('A').pensionMensual).toBeCloseTo(maximaSoloIPC * 0.98, 6);
+    expect(con('A').pensionMensual).toBeGreaterThan(con('B').pensionMensual);
+  });
+});

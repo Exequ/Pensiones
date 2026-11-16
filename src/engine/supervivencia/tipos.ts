@@ -58,7 +58,11 @@ export interface Causante {
 
 /** Rentas y situación económica de un beneficiario (euros/año del ejercicio que corresponda). */
 export interface EconomiaBeneficiario {
-  /** Rendimientos anuales por todos los conceptos, sin la propia pensión de supervivencia. */
+  /**
+   * Rendimientos anuales por todos los conceptos, sin la propia pensión de supervivencia. En la
+   * viudedad del 70 % no se usa este campo si se facilita `rendimientosEjercicioAnteriorAnuales`
+   * (el art. 31.2 del Decreto 3158/1966 mide los rendimientos del ejercicio anterior).
+   */
   readonly rendimientosAnuales?: number;
   /** Parte de los rendimientos que procede del trabajo (por cuenta propia o ajena). */
   readonly rentasTrabajoAnuales?: number;
@@ -99,11 +103,25 @@ export interface BeneficiarioViudedad extends EconomiaBeneficiario {
   readonly otraPensionPublica?: boolean;
   /** Rendimientos del capital, actividades económicas o ganancias patrimoniales (RD 900/2018, art. 2.d). */
   readonly rentasCapitalAnuales?: number;
+  /**
+   * Rendimientos anuales del beneficiario para el porcentaje del 70 % (art. 31.2 del Decreto
+   * 3158/1966): «el valor percibido en el ejercicio anterior» a aquel en que deba aplicarse el
+   * porcentaje (en el reconocimiento inicial, el ejercicio anterior al del hecho causante), por
+   * todos los conceptos, derivados del trabajo, del capital o de naturaleza prestacional, sin la
+   * propia pensión de supervivencia y «excluyendo los dejados de percibir, en su caso, como
+   * consecuencia del hecho causante» (y los que se pruebe que no se percibirán en el ejercicio
+   * corriente). Si falta, el motor usa `rendimientosAnuales`.
+   */
+  readonly rendimientosEjercicioAnteriorAnuales?: number;
   /** Cargas familiares (art. 31.2 Decreto 3158/1966): convive con hijos menores de 26 años o incapacitados, o menores acogidos. */
   readonly cargasFamiliares?: {
     readonly miembrosUnidadFamiliar: number;
-    /** Rendimientos de toda la unidad familiar, incluido el beneficiario (euros/año). */
-    readonly rendimientosUnidadFamiliar: number;
+    /**
+     * Rendimientos de toda la unidad familiar, incluido el beneficiario (euros/año), medidos como
+     * los del beneficiario: valor percibido en el ejercicio anterior, excluyendo lo que se deja
+     * de percibir por el hecho causante (art. 31.2 del Decreto 3158/1966).
+     */
+    readonly rendimientosEjercicioAnteriorUnidadFamiliar: number;
   };
   /** Discapacidad igual o superior al 65 % (clase de la mínima). */
   readonly discapacidad65?: boolean;

@@ -300,7 +300,10 @@ export function medir(): { medidas: Medida[]; evidencias: Evidencia[] } {
           ...CONYUGE,
           nacimiento: '1981-01-01',
           rendimientosAnuales: rend,
-          cargasFamiliares: { miembrosUnidadFamiliar: 3, rendimientosUnidadFamiliar: unidad },
+          cargasFamiliares: {
+            miembrosUnidadFamiliar: 3,
+            rendimientosEjercicioAnteriorUnidadFamiliar: unidad,
+          },
         },
       ],
     }) satisfies Beneficiarios;

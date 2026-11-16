@@ -2444,7 +2444,7 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comparar, para un hecho causante de noviembre de 2026, el factor de actualización de los meses de 2001 que calcula el motor (índice de 2001 obtenido de las variaciones anuales de 2002 del INE, confianza media) con el de los informes del autocálculo de la Seguridad Social: si coinciden a siete decimales, el enlace de 2001 queda confirmado. El suelo de uno (lectura actualizacionFactorMinimo, provisional) es una decisión de gestión derivada de esos informes, no del art. 209."
+      "preguntaActuarial": "El enlace de 2001 (índice obtenido de las variaciones anuales de 2002 del INE, confianza media) no coincide a siete decimales con los factores de 2001 de los informes del autocálculo de la Seguridad Social (desviación de hasta 0,04 %, efecto de céntimos); desde 2002 sí coinciden. ¿Se sustituyen los meses de 2001 por los índices implícitos de los informes (solo cubren de junio a diciembre) o se mantiene el enlace? El suelo de uno (lectura actualizacionFactorMinimo, provisional) es una decisión de gestión derivada de esos informes, no del art. 209."
     },
     {
       "id": "param-base-maxima-incremento-futuro",
@@ -2731,7 +2731,7 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "(b) «los años que le resten» de la edad ordinaria: ¿meses completos (por defecto) o años completos? (d) Accidente no laboral en alta: el RD 1799/1985, art. 5.4, párr. 2.º, remite a las normas anteriores a la Ley 26/1985 (Decreto 1646/1972, art. 7.1, sin integración de lagunas); confianza actuarial del 60 % en sin-integrar: ¿es firme la lectura frente al art. 5.5 del mismo RD? (c) Comprobar en el motor que el periodo corto del art. 197.2 se aplica también por debajo de los 31 años (fase de motor)."
+      "preguntaActuarial": "(b) «los años que le resten» de la edad ordinaria: ¿meses completos (por defecto) o años completos? (d) Accidente no laboral en alta: el RD 1799/1985, art. 5.4, párr. 2.º, remite a las normas anteriores a la Ley 26/1985 (Decreto 1646/1972, art. 7.1, sin integración de lagunas); confianza actuarial del 60 % en sin-integrar: ¿es firme la lectura frente al art. 5.5 del mismo RD?"
     },
     {
       "id": "param-incapacidad-permanente-reglas-carencia",
@@ -2941,7 +2941,7 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Decidir qué lectura del apartado 1 de la DT 34.ª es la correcta: (A) comparar con la pensión máxima que solo sube con el IPC (sin el incremento adicional de 0,115 puntos), reducida un 0,50 % por trimestre; (B) comparar con la pensión máxima nominal de 2021. Falta la exposición de motivos de la Ley 21/2021 o un criterio del INSS. El motor no aplica la salvaguarda y no calcula 2022-2023 (rige la redacción original del art. 210.3)."
+      "preguntaActuarial": "Decidir qué lectura del apartado 1 de la DT 34.ª es la correcta: (A, por defecto en el motor) comparar con la pensión que habría correspondido con las normas de 2021, calculada con la pensión máxima que solo sube con el IPC (sin el incremento adicional de 0,115 puntos) y reducida un 0,50 % por trimestre; (B) no comparar (equivale a comparar con la pensión máxima nominal de 2021, que nunca actúa). La norma dice que la pensión no ha de resultar «en ningún caso inferior a la que habría correspondido con la aplicación de las normas vigentes en 2021», pero no dice con qué pensión máxima se compara; la exposición de motivos de la Ley 21/2021 (ya en el repo) no lo aclara: falta un criterio del INSS. El motor no calcula 2022-2023 (rige la redacción original del art. 210.3)."
     },
     {
       "id": "param-jubilacion-coeficientes-voluntaria",
@@ -5863,7 +5863,7 @@
     },
     {
       "id": "web-fin-sensibilidades-empleo-parametro",
-      "texto": "En el caso de sensibilidad de 55 a 64 años, el LEEME fija multiplicar las tasas de ese tramo por un factor en 2050, con avance lineal desde el primer año proyectado. El código de M2 aplica el factor a las tasas de afiliación y de cotización (afiliados y cotizantes entre población por tramo) y no a las tasas de empleo de la EPA; la web rotula la palanca como «tasas de afiliación y de cotización de 55 a 64 años» y dice que el número de pensiones de M3 no cambia.",
+      "texto": "En los casos de sensibilidad de 55 a 64 años y de convergencia de las mujeres, el LEEME habla de «tasas de empleo»; el código de M2 aplica el factor de 55 a 64 años y la convergencia de las mujeres de 25 a 64 años a las tasas de afiliación y de cotización (afiliados y cotizantes entre población por tramo) y no a las tasas de empleo de la EPA, con avance lineal desde el primer año proyectado hasta 2050. La web rotula las dos palancas como «tasas de afiliación y de cotización» y dice que el número de pensiones de M3 no cambia.",
       "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Ajustes de M4, sensibilidades)",
       "datos": ["sistema/fondo-reserva-series.json#valor-fin-ano"],
       "fuentes": [
@@ -5876,7 +5876,7 @@
       "fetchedAt": "2026-11-16",
       "estado": "verificada",
       "revisionActuarial": "revisada",
-      "notas": "Verificado en modelos/m2/m2_cotizantes.py (k = min(1, (t − 2026)/24), factor 1 + (mult − 1)·k sobre las tasas ra y rb de 55 a 60; solo M2 lo usa). La salida del modelo y su LEEME no se tocan; la discrepancia consta en docs/DISCREPANCIAS.md para el chat de modelos.",
+      "notas": "Verificado en modelos/m2/m2_cotizantes.py (k = min(1, (t − 2026)/24), factor 1 + (mult − 1)·k sobre las tasas ra y rb de 55 a 60; solo M2 lo usa). La salida del modelo y su LEEME no se tocan; la discrepancia consta en docs/DISCREPANCIAS.md para el chat de modelos. Revisión 3 del motor (16-11-2026): la misma comprobación en `convergencia_mujeres` (ra y rb de los tramos de 25 a 60, k = min(1, (t − 2026)/24)); el rótulo de `mujeres_convergen` se corrige en la web (`rotuloPalanca`). La salida del modelo y su LEEME siguen sin tocarse.",
       "respuestaActuarial": "Tanda 3, parte C, n.º 69"
     },
     {

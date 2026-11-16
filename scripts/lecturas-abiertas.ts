@@ -20,7 +20,7 @@ function por(
   carrera: PeriodoCarrera[],
   nacimiento: string,
   fecha: string,
-  modalidad: 'ordinaria' | 'demorada',
+  modalidad: 'ordinaria' | 'demorada' | 'anticipada-voluntaria',
   lecturas: Partial<LecturasAbiertas>,
   extra: OpcionesJubilacion = {},
 ): ResultadoJubilacion {
@@ -161,6 +161,19 @@ fila(
   'incremento anual literal',
   tg({}),
   tg({ maximaDesde2051: 'incremento-anual-literal' }),
+  'pensionMensual',
+);
+
+// (a) DT 34.ª.1: anticipada voluntaria con la pensión limitada por la máxima, 2030, 12 meses de anticipo
+const alta2030 = [{ desde: '1988-01', hasta: '2029-12', baseMensual: 20000 }];
+const th = (l: Partial<LecturasAbiertas>) =>
+  por(alta2030, '1966-01-01', '2030-01-01', 'anticipada-voluntaria', l);
+fila(
+  '(a) DT 34.ª, salvaguarda',
+  'anticipada voluntaria topada, 12 meses de anticipo, 2030',
+  'sin salvaguarda (B)',
+  th({}),
+  th({ salvaguardaDT34: 'B' }),
   'pensionMensual',
 );
 

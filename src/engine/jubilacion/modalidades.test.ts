@@ -68,14 +68,101 @@ describe('jubilación anticipada voluntaria (art. 208)', () => {
   });
   it('con pensión por encima del límite los coeficientes se aplican sobre el límite, de forma gradual (DT 34.ª)', () => {
     const alta = [continua('1988-01', '2029-12', 20000)];
+    // Lectura `salvaguardaDT34` = B (sin salvaguarda): el cálculo del párrafo 2.º del art. 210.3 con los
+    // cuadros de la DT 34.ª. Con la lectura A el resultado es el de los tests de más abajo.
     const r = calc(alta, '1966-01-01', '2030-01-01', 'anticipada-voluntaria', {
       escenario: ESC,
       usarOpcion25Anos: false,
+      lecturas: { salvaguardaDT34: 'B' },
     });
     const maxima = contexto({ escenario: ESC }).pensionMaxima(2030).valor;
     const coef = paso(r, 'coeficiente-sobre-limite').valor as number;
     expect(coef).toBe(4.1); // 2030, 12 meses, tramo 3 (504 meses): tabla de la DT 34.ª
     expect(r.pensionMensual).toBeCloseTo(maxima * (1 - coef / 100), 6);
+  });
+  describe('salvaguarda de la DT 34.ª.1 (lectura salvaguardaDT34)', () => {
+    // Datos de /data: pensión máxima de 2024 = 3.175,04 €/mes (14 pagas, sin el incremento adicional
+    // de la DT 39.ª, que empieza en 2025); revalorización de 2025 = 2,8 % y de 2026 = 2,7 %; escenario
+    // del test: IPC del 2 %, de modo que la revalorización de 2027 en adelante es del 2 %; incremento
+    // adicional de la DT 39.ª = 0,115 puntos al año; pensión máxima de 2026 = 3.359,60 €/mes.
+    const maxima2024 = 3175.04;
+    const soloIPC2026 = maxima2024 * 1.028 * 1.027;
+    const alta = [continua('1985-01', '2026-12', 20000)];
+    const opciones = (lectura: 'A' | 'B') => ({
+      escenario: ESC,
+      usarOpcion25Anos: false,
+      lecturas: { salvaguardaDT34: lectura },
+    });
+
+    it('2030, 12 meses de anticipo (4 trimestres), tramo 3: A compara con la máxima solo con IPC reducida un 0,50 % por trimestre', () => {
+      const carrera2030 = [continua('1988-01', '2029-12', 20000)];
+      // Máxima solo con el IPC de 2030: 3.175,04 × 1,028 × 1,027 × 1,02^4.
+      // A = 3.175,04 × 1,028 × 1,027 × 1,02^4 × (1 − 0,005 × 4).
+      const esperadoA = soloIPC2026 * 1.02 ** 4 * (1 - 0.005 * 4);
+      // B = máxima de 2030 × (1 − 4,10 %): 3.359,60 × (1,02115)^4 × (1 − 0,041)
+      // (cada año de 2027 a 2030: IPC del 2 % + 0,115 puntos).
+      const esperadoB = 3359.6 * 1.02115 ** 4 * (1 - 0.041);
+      const a = calc(
+        carrera2030,
+        '1966-01-01',
+        '2030-01-01',
+        'anticipada-voluntaria',
+        opciones('A'),
+      );
+      const b = calc(
+        carrera2030,
+        '1966-01-01',
+        '2030-01-01',
+        'anticipada-voluntaria',
+        opciones('B'),
+      );
+      expect(b.pensionMensual).toBeCloseTo(esperadoB, 4);
+      expect(a.pensionMensual).toBeCloseTo(esperadoA, 4);
+      expect(a.pensionMensual).toBeGreaterThan(b.pensionMensual);
+      expect(paso(a, 'salvaguarda-dt34').articulo).toBe('DT 34.ª.1 TRLGSS');
+      expect(() => paso(b, 'salvaguarda-dt34')).toThrow();
+    });
+
+    it('2027, 12 meses de anticipo (4 trimestres), tramo 3: A queda por encima de B', () => {
+      // Hecho causante 2027-01-01, nacido el 1963-01-01: cumple 65 el 2028-01-01, 12 meses de anticipo.
+      // A = 3.175,04 × 1,028 × 1,027 × 1,02 × (1 − 0,005 × 4).
+      const esperadoA = soloIPC2026 * 1.02 * (1 - 0.005 * 4);
+      // B = 3.359,60 × 1,02115 × (1 − 3,20 %) (DT 34.ª, 2027, 12 meses, tramo 3).
+      const esperadoB = 3359.6 * 1.02115 * (1 - 0.032);
+      const a = calc(alta, '1963-01-01', '2027-01-01', 'anticipada-voluntaria', opciones('A'));
+      const b = calc(alta, '1963-01-01', '2027-01-01', 'anticipada-voluntaria', opciones('B'));
+      expect(b.pensionMensual).toBeCloseTo(esperadoB, 4);
+      expect(a.pensionMensual).toBeCloseTo(esperadoA, 4);
+    });
+
+    it('si la pensión no llega al límite, A y B coinciden y no hay paso de salvaguarda', () => {
+      const modesta = [continua('1988-01', '2029-12', 2500)];
+      const a = calc(modesta, '1966-01-01', '2030-01-01', 'anticipada-voluntaria', opciones('A'));
+      const b = calc(modesta, '1966-01-01', '2030-01-01', 'anticipada-voluntaria', opciones('B'));
+      expect(a.pensionMensual).toBe(b.pensionMensual);
+      expect(a.estado).not.toBe('maxima');
+      expect(() => paso(a, 'salvaguarda-dt34')).toThrow();
+    });
+
+    it('fuera de 2024-2033 no se aplica (la aplicación gradual de la DT 34.ª ya ha terminado)', () => {
+      // 2034: el coeficiente es el del art. 208.2 y A y B coinciden.
+      const carrera2034 = [continua('1992-01', '2033-12', 20000)];
+      const a = calc(
+        carrera2034,
+        '1970-01-01',
+        '2034-01-01',
+        'anticipada-voluntaria',
+        opciones('A'),
+      );
+      const b = calc(
+        carrera2034,
+        '1970-01-01',
+        '2034-01-01',
+        'anticipada-voluntaria',
+        opciones('B'),
+      );
+      expect(a.pensionMensual).toBe(b.pensionMensual);
+    });
   });
   it('antes de 2022 no está implementada', () => {
     expect(() =>

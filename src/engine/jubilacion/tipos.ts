@@ -87,6 +87,14 @@ export interface LecturasAbiertas {
   readonly fraccionDemora: 'desde-segundo-anio' | 'desde-primer-anio';
   /** DT 39.ª.4 (pensión máxima desde 2051): tabla como incremento acumulado total o anual literal. */
   readonly maximaDesde2051: 'incremento-acumulado' | 'incremento-anual-literal';
+  /**
+   * DT 34.ª.1 (jubilación anticipada voluntaria cuya pensión supera el límite, de 2024 a 2033): la
+   * pensión no es inferior a la que habría correspondido con las normas vigentes en 2021. `A`:
+   * se compara con esa pensión calculada con la pensión máxima actualizada solo con el art. 58.2
+   * (sin el incremento adicional de la DT 39.ª) y reducida por trimestre de anticipación; `B`: no se
+   * aplica comparación (el cálculo es el del párrafo 2.º del art. 210.3 con los cuadros de la DT 34.ª).
+   */
+  readonly salvaguardaDT34: 'A' | 'B';
 }
 
 export const LECTURAS_POR_DEFECTO: LecturasAbiertas =

@@ -59,7 +59,10 @@ const alta = (
 const conyuge = (nacimiento = '1976-05-01') =>
   ({ vinculo: 'conyuge', nacimiento, fechaMatrimonio: '2005-06-01' }) as const;
 const CARGAS = {
-  cargasFamiliares: { miembrosUnidadFamiliar: 3, rendimientosUnidadFamiliar: 10000 },
+  cargasFamiliares: {
+    miembrosUnidadFamiliar: 3,
+    rendimientosEjercicioAnteriorUnidadFamiliar: 10000,
+  },
 };
 
 const CASOS: readonly CasoOro[] = [

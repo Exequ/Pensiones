@@ -5,6 +5,86 @@
   "description": "Meses máximos de anticipación, cotización efectiva exigida, demanda de empleo, tope de pensión por trimestre y condiciones de la jubilación parcial. Anticipadas: redacción de la Ley 21/2021 (desde 2022). Parcial: redacción vigente desde 01/04/2025.",
   "data": [
     {
+      "id": "salvaguarda-dt34-coeficiente-2021-t1",
+      "value": 2,
+      "unit": "% de reducción de la pensión por trimestre o fracción de anticipación (redacción del art. 208.2 vigente hasta el 31/12/2021)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo 1 de cotización (menos de 38 años y 6 meses).",
+      "quote": "Coeficiente del 2 por ciento por trimestre cuando se acredite un período de cotización inferior a treinta y ocho años y seis meses",
+      "location": "art. 208.2 TRLGSS (redacción del RDLeg 8/2015, vigente del 02/01/2016 al 31/12/2021), letra a)"
+    },
+    {
+      "id": "salvaguarda-dt34-coeficiente-2021-t2",
+      "value": 1.875,
+      "unit": "% de reducción de la pensión por trimestre o fracción de anticipación (redacción del art. 208.2 vigente hasta el 31/12/2021)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo 2 de cotización (de 38 años y 6 meses a menos de 41 años y 6 meses).",
+      "quote": "Coeficiente del 1,875 por ciento por trimestre cuando se acredite un período de cotización igual o superior a treinta y ocho años y seis meses e inferior a cuarenta y un años y seis meses",
+      "location": "art. 208.2 TRLGSS (redacción del RDLeg 8/2015, vigente del 02/01/2016 al 31/12/2021), letra b)"
+    },
+    {
+      "id": "salvaguarda-dt34-coeficiente-2021-t3",
+      "value": 1.75,
+      "unit": "% de reducción de la pensión por trimestre o fracción de anticipación (redacción del art. 208.2 vigente hasta el 31/12/2021)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo 3 de cotización (de 41 años y 6 meses a menos de 44 años y 6 meses).",
+      "quote": "Coeficiente del 1,750 por ciento por trimestre cuando se acredite un período de cotización igual o superior a cuarenta y un años y seis meses e inferior a cuarenta y cuatro años y seis meses",
+      "location": "art. 208.2 TRLGSS (redacción del RDLeg 8/2015, vigente del 02/01/2016 al 31/12/2021), letra c)"
+    },
+    {
+      "id": "salvaguarda-dt34-coeficiente-2021-t4",
+      "value": 1.625,
+      "unit": "% de reducción de la pensión por trimestre o fracción de anticipación (redacción del art. 208.2 vigente hasta el 31/12/2021)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Tramo 4 de cotización (44 años y 6 meses o más).",
+      "quote": "Coeficiente del 1,625 por ciento por trimestre cuando se acredite un período de cotización igual o superior a cuarenta y cuatro años y seis meses",
+      "location": "art. 208.2 TRLGSS (redacción del RDLeg 8/2015, vigente del 02/01/2016 al 31/12/2021), letra d)"
+    },
+    {
+      "id": "salvaguarda-dt34-tope-pct-trimestre-2021",
+      "value": 0.5,
+      "unit": "% de reducción del tope máximo de pensión por trimestre o fracción de anticipación (redacción del art. 210.3 vigente hasta el 31/12/2021)",
+      "period": "2016",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "alta",
+      "notes": "Es la misma cifra que el art. 210.4 vigente (`involuntaria-tope-pension-pct-trimestre`), aquí en la regla de la jubilación voluntaria anterior a la Ley 21/2021.",
+      "quote": "el importe resultante de la pensión no podrá ser superior a la cuantía que resulte de reducir el tope máximo de pensión en un 0,50 por ciento por cada trimestre o fracción de trimestre de anticipación",
+      "location": "art. 210.3, párrafo 2.º, TRLGSS (redacción del RDLeg 8/2015, vigente del 02/01/2016 al 31/12/2021)"
+    },
+    {
       "id": "involuntaria-anticipo-maximo-meses",
       "value": 48,
       "unit": "meses de anticipación como máximo respecto de la edad ordinaria",
@@ -144,6 +224,22 @@
       "confidence": "alta",
       "quote": "el trabajador esté percibiendo el subsidio por desempleo del artículo 274, y lo haya hecho durante al menos tres meses",
       "location": "art. 208 TRLGSS.3"
+    },
+    {
+      "id": "salvaguarda-dt34-pension-no-inferior-2021",
+      "value": 1,
+      "unit": "indicador (1 = se aplica la regla citada)",
+      "period": "2024",
+      "source": {
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+        "publisher": "Boletín Oficial del Estado (BOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+      },
+      "fetchedAt": "2026-11-11",
+      "confidence": "media",
+      "notes": "Fundamento de la lectura `jubilacion.salvaguardaDT34`; la norma no dice con qué pensión máxima se compara (lectura abierta).",
+      "quote": "de manera que la pensión reconocida no resulte en ningún caso inferior a la que habría correspondido con la aplicación de las normas vigentes en 2021",
+      "location": "DT 34.ª.1 TRLGSS"
     },
     {
       "id": "parcial-reduccion-jornada-minima-pct",

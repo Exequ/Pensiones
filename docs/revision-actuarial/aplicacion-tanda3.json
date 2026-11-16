@@ -334,9 +334,9 @@
       "confianza": "media",
       "comprobado": "Art. 209.1.c-d TRLGSS (data-raw/boe/trlgss-2015-consolidado.txt): 24 meses «en su valor nominal» y el resto con la evolución del IPC; el artículo no menciona suelo del factor.",
       "estado": "pendiente",
-      "cambio": "Texto: el suelo de uno es una decisión de gestión que sale de los informes del autocálculo, no de la ley (queda en el motivo de la lectura). No se confirma el enlace de 2001: falta comparar los factores de esos meses con el motor (fase de motor).",
+      "cambio": "Texto: el suelo de uno es una decisión de gestión que sale de los informes del autocálculo, no de la ley (queda en el motivo de la lectura). No se confirma el enlace de 2001: falta comparar los factores de esos meses con el motor (fase de motor). Revisión 3 del motor (16-11-2026): comparados los 36 factores de los cuatro informes con el motor: desde 2002 coinciden los 23 a siete decimales; los 13 de 2001 no (desviación de 0,0009 % a 0,0377 %, efecto de céntimos). El enlace de 2001 no queda confirmado (test `ipc-informes.test.ts`).",
       "respuestaActuarial": "Tanda 3, parte A, n.º 30",
-      "preguntaReducida": "Comparar, para un hecho causante de noviembre de 2026, el factor de actualización de los meses de 2001 que calcula el motor (índice de 2001 obtenido de las variaciones anuales de 2002 del INE, confianza media) con el de los informes del autocálculo de la Seguridad Social: si coinciden a siete decimales, el enlace de 2001 queda confirmado. El suelo de uno (lectura actualizacionFactorMinimo, provisional) es una decisión de gestión derivada de esos informes, no del art. 209."
+      "preguntaReducida": "El enlace de 2001 (índice obtenido de las variaciones anuales de 2002 del INE, confianza media) no coincide a siete decimales con los factores de 2001 de los informes del autocálculo de la Seguridad Social (desviación de hasta 0,04 %, efecto de céntimos); desde 2002 sí coinciden. ¿Se sustituyen los meses de 2001 por los índices implícitos de los informes (solo cubren de junio a diciembre) o se mantiene el enlace? El suelo de uno (lectura actualizacionFactorMinimo, provisional) es una decisión de gestión derivada de esos informes, no del art. 209."
     },
     {
       "n": 31,
@@ -412,9 +412,9 @@
       "confianza": "(a) media; (b) media-baja; (c) alta; (d) media-baja",
       "comprobado": "RD 1799/1985 (data-raw/boe/rd-1799-1985.txt): art. 5.2.3.ª («multiplicándolo por el coeficiente 1,1666»); art. 5.4, párrafo 2.º: la base reguladora de la total, absoluta y gran invalidez por accidente no laboral en alta «continuarán rigiéndose por las normas ya en vigor con anterioridad a la Ley 26/1985»; Decreto 1646/1972, art. 7.1 (24 meses entre los siete años anteriores, divisor 28, sin mención de lagunas).",
       "estado": "pendiente",
-      "cambio": "Lectura incapacidad.lagunasAccidenteNoLaboral: de pendiente a provisional (el valor sin-integrar no cambia) y texto actualizado. (b) y (d) siguen con confianza media-baja.",
+      "cambio": "Lectura incapacidad.lagunasAccidenteNoLaboral: de pendiente a provisional (el valor sin-integrar no cambia) y texto actualizado. (b) y (d) siguen con confianza media-baja. Revisión 3 del motor (16-11-2026): (c) comprobado: el periodo corto del art. 197.2 se aplica siempre que el periodo exigido es inferior a 96 meses, también por debajo de 31 años (un tercio del tiempo desde los 16, sin fracciones de mes); no cambia el motor.",
       "respuestaActuarial": "Tanda 3, parte B, n.º 37",
-      "preguntaReducida": "(b) «los años que le resten» de la edad ordinaria: ¿meses completos (por defecto) o años completos? (d) Accidente no laboral en alta: el RD 1799/1985, art. 5.4, párr. 2.º, remite a las normas anteriores a la Ley 26/1985 (Decreto 1646/1972, art. 7.1, sin integración de lagunas); confianza actuarial del 60 % en sin-integrar: ¿es firme la lectura frente al art. 5.5 del mismo RD? (c) Comprobar en el motor que el periodo corto del art. 197.2 se aplica también por debajo de los 31 años (fase de motor)."
+      "preguntaReducida": "(b) «los años que le resten» de la edad ordinaria: ¿meses completos (por defecto) o años completos? (d) Accidente no laboral en alta: el RD 1799/1985, art. 5.4, párr. 2.º, remite a las normas anteriores a la Ley 26/1985 (Decreto 1646/1972, art. 7.1, sin integración de lagunas); confianza actuarial del 60 % en sin-integrar: ¿es firme la lectura frente al art. 5.5 del mismo RD?"
     },
     {
       "n": 38,
@@ -424,7 +424,7 @@
       "confianza": "(a) media-baja; (b) media; (c) media; (d) alta",
       "comprobado": "Art. 195 TRLGSS y art. 4 RD 1799/1985 (redondeo a medios años escrito para las reglas del propio RD, que el art. 195 sustituyó): el valor sin-redondeo se mantiene como provisional.",
       "estado": "pendiente",
-      "cambio": "Ninguno. Pendiente de la fase de motor: comprobar que se desprecian las fracciones de mes del periodo resultante.",
+      "cambio": "Ninguno. Revisión 3 del motor (16-11-2026): comprobado que el motor desprecia las fracciones de mes del periodo exigido (art. 4.1 RD 1799/1985; art. 195.3 TRLGSS), también por debajo de 31 años; no cambia el motor.",
       "respuestaActuarial": "Tanda 3, parte B, n.º 38",
       "preguntaReducida": "(a) ¿Sigue aplicándose el redondeo de la edad a medios años del art. 4.1 del RD 1799/1985 con la regla del art. 195 TRLGSS? (por defecto, no: meses cumplidos). (c) El motor toma el hecho causante como fecha de extinción de la incapacidad temporal: es una simplificación que debe quedar escrita."
     },
@@ -458,9 +458,9 @@
       "confianza": "baja (qué lectura del apartado 1)",
       "comprobado": "DT 34.ª.1 TRLGSS: la aplicación sobre el límite solo rige «en la medida en que la evolución de la pensión máxima absorba completamente el efecto», «de manera que la pensión reconocida no resulte en ningún caso inferior a la que habría correspondido con la aplicación de las normas vigentes en 2021». La exposición de motivos de la Ley 21/2021 (data-raw/boe/ley-21-2021.txt) dice que los coeficientes se aplicarán sobre la cuantía «respetando la limitación máxima a la que se refiere el artículo 57» y de forma progresiva a lo largo de diez años, pero no aclara qué lectura del apartado 1 de la DT 34.ª es la buena. Las magnitudes del revisor (5,4 %, 13,4 %, 20,3 %) no se copian ni se recalculan: dependen de la lectura.",
       "estado": "pendiente",
-      "cambio": "Aviso: el motor ya declara que no aplica la salvaguarda del apartado 1 ni calcula 2022-2023 (LIMITACIONES de src/engine/jubilacion/errores.ts); se añade a la pregunta. Pendiente de la fase de motor (lectura abierta).",
+      "cambio": "Aviso: el motor no calcula 2022-2023 (rige la redacción original del art. 210.3). Revisión 3 del motor (16-11-2026): nueva lectura jubilacion.salvaguardaDT34 (A o B), pendiente, con A por defecto, que aplica la salvaguarda de la DT 34.ª.1 de 2024 a 2033; la pregunta sigue abierta.",
       "respuestaActuarial": "Tanda 3, parte A, n.º 41",
-      "preguntaReducida": "Decidir qué lectura del apartado 1 de la DT 34.ª es la correcta: (A) comparar con la pensión máxima que solo sube con el IPC (sin el incremento adicional de 0,115 puntos), reducida un 0,50 % por trimestre; (B) comparar con la pensión máxima nominal de 2021. La exposición de motivos de la Ley 21/2021 (ya en el repo) no lo aclara: falta un criterio del INSS. El motor no aplica la salvaguarda y no calcula 2022-2023 (rige la redacción original del art. 210.3)."
+      "preguntaReducida": "Decidir qué lectura del apartado 1 de la DT 34.ª es la correcta: (A, por defecto en el motor) comparar con la pensión que habría correspondido con las normas de 2021, calculada con la pensión máxima que solo sube con el IPC (sin el incremento adicional de 0,115 puntos) y reducida un 0,50 % por trimestre; (B) no comparar (equivale a comparar con la pensión máxima nominal de 2021, que nunca actúa). La norma dice que la pensión no ha de resultar «en ningún caso inferior a la que habría correspondido con la aplicación de las normas vigentes en 2021», pero no dice con qué pensión máxima se compara; la exposición de motivos de la Ley 21/2021 (ya en el repo) no lo aclara: falta un criterio del INSS. El motor no calcula 2022-2023 (rige la redacción original del art. 210.3)."
     },
     {
       "n": 42,
@@ -650,7 +650,7 @@
       "confianza": "(a) media; (b) baja; (c) media-alta; (d) alta; (e) media; (f) media-alta",
       "comprobado": "Decreto 3158/1966, art. 31.2 (data-raw/boe/decreto-3158-1966.txt): los rendimientos «se tomarán en el valor percibido en el ejercicio anterior» al de aplicación del 70 %, excluidos los dejados de percibir por el hecho causante. El motor las mide en el hecho causante.",
       "estado": "pendiente",
-      "cambio": "Ninguno en el motor (fase de motor). (b) sigue sin criterio del INSS.",
+      "cambio": "Motor corregido en la Revisión 3 (16-11-2026): las rentas del 70 % se miden con lo percibido en el ejercicio anterior, excluyendo lo que se deja de percibir por el hecho causante (art. 31.2 del Decreto 3158/1966); campo `rendimientosEjercicioAnteriorAnuales` y `cargasFamiliares.rendimientosEjercicioAnteriorUnidadFamiliar`. (b) sigue sin criterio del INSS.",
       "respuestaActuarial": "Tanda 3, parte B, n.º 58",
       "preguntaReducida": "(b) La pensión de un excónyuge limitada por la compensatoria, ¿recibe el complemento a mínimos? Falta un criterio del INSS. (c) Confirmar que el apoyo del incremento de familiares es el art. 23.2 de la Orden de 1967 (remite al 17.2, vigente) y no el art. 39 del Decreto 3158/1966."
     },
@@ -662,7 +662,7 @@
       "confianza": "(a) baja; (b) media; (c) alta; (d) alta; (e) media",
       "comprobado": "Art. 221.2 TRLGSS en sus tres versiones (data-raw/boe/trlgss-2015-versiones.txt): 2-1-2016: convivencia de cinco años más inscripción con dos años de antelación; 1-1-2022 (Ley 21/2021): con hijos en común «solo deberán acreditar la constitución» de la pareja; 21-10-2026 (RDL 31/2026): con hijos en común, convivencia de al menos dos años.",
       "estado": "pendiente",
-      "cambio": "Texto (d): los tres periodos de la pareja de hecho.",
+      "cambio": "Texto (d): los tres periodos de la pareja de hecho. Revisión 3 del motor (16-11-2026): comprobadas las tres redacciones del art. 221.2 en el repo; el motor aplica las de 2022 y de 2026 y deja fuera de su dominio las de 2016-2021 (`NoImplementada`); el porcentaje no asignado incrementa solo la orfandad absoluta (art. 38.1.2.º del Decreto 3158/1966).",
       "respuestaActuarial": "Tanda 3, parte B, n.º 59",
       "preguntaReducida": "(a) La norma no dice qué pensión se reduce cuando viudedad y orfandad superan la base reguladora: el motor mantiene la viudedad y reduce las orfandades (alternativa proporcional); falta un criterio. (e) El desarrollo reglamentario del art. 226.2 (hijos y hermanos de pensionistas mayores de 45 años) no se ha localizado."
     },

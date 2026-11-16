@@ -12,7 +12,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Afirmación**: Actualización de las bases de cotización en el cálculo de la base reguladora de jubilación (por versión): 24 (meses más recientes (anteriores al mes previo al del hecho causante) que se computan sin actualizar) en 2026.
 
-**Qué debe comprobar el actuario**: Comparar, para un hecho causante de noviembre de 2026, el factor de actualización de los meses de 2001 que calcula el motor (índice de 2001 obtenido de las variaciones anuales de 2002 del INE, confianza media) con el de los informes del autocálculo de la Seguridad Social: si coinciden a siete decimales, el enlace de 2001 queda confirmado. El suelo de uno (lectura actualizacionFactorMinimo, provisional) es una decisión de gestión derivada de esos informes, no del art. 209.
+**Qué debe comprobar el actuario**: El enlace de 2001 (índice obtenido de las variaciones anuales de 2002 del INE, confianza media) no coincide a siete decimales con los factores de 2001 de los informes del autocálculo de la Seguridad Social (desviación de hasta 0,04 %, efecto de céntimos); desde 2002 sí coinciden. ¿Se sustituyen los meses de 2001 por los índices implícitos de los informes (solo cubren de junio a diciembre) o se mantiene el enlace? El suelo de uno (lectura actualizacionFactorMinimo, provisional) es una decisión de gestión derivada de esos informes, no del art. 209.
 
 **Datos**: parametros/actualizacion-bases.json#2026-meses-nominales
 
@@ -20,7 +20,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Afirmación**: Aplicación gradual de los coeficientes reductores sobre el límite de pensión (DT 34.ª TRLGSS, 2024-2033): 4,0 (% de reducción aplicado sobre el límite de pensión (art. 210.3, párr. 2.º)) en 2033.
 
-**Qué debe comprobar el actuario**: Decidir qué lectura del apartado 1 de la DT 34.ª es la correcta: (A) comparar con la pensión máxima que solo sube con el IPC (sin el incremento adicional de 0,115 puntos), reducida un 0,50 % por trimestre; (B) comparar con la pensión máxima nominal de 2021. Falta la exposición de motivos de la Ley 21/2021 o un criterio del INSS. El motor no aplica la salvaguarda y no calcula 2022-2023 (rige la redacción original del art. 210.3).
+**Qué debe comprobar el actuario**: Decidir qué lectura del apartado 1 de la DT 34.ª es la correcta: (A, por defecto en el motor) comparar con la pensión que habría correspondido con las normas de 2021, calculada con la pensión máxima que solo sube con el IPC (sin el incremento adicional de 0,115 puntos) y reducida un 0,50 % por trimestre; (B) no comparar (equivale a comparar con la pensión máxima nominal de 2021, que nunca actúa). La norma dice que la pensión no ha de resultar «en ningún caso inferior a la que habría correspondido con la aplicación de las normas vigentes en 2021», pero no dice con qué pensión máxima se compara; la exposición de motivos de la Ley 21/2021 (ya en el repo) no lo aclara: falta un criterio del INSS. El motor no calcula 2022-2023 (rige la redacción original del art. 210.3).
 
 **Datos**: parametros/jubilacion-coeficientes-voluntaria-limite.json#2033-t4-9
 
@@ -56,7 +56,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Afirmación**: Base reguladora de la incapacidad permanente: por enfermedad común, bases de 96 meses entre 112 (con menos de ocho años exigidos, tantas bases como meses exigidos y divisor × 1,1666) por el porcentaje de la escala con los años que faltan hasta la edad ordinaria; por accidente no laboral en alta, 24 meses elegidos en siete años entre 28 (arts. 197 TRLGSS, 5 RD 1799/1985 y 7 Decreto 1646/1972).
 
-**Qué debe comprobar el actuario**: (b) «los años que le resten» de la edad ordinaria: ¿meses completos (por defecto) o años completos? (d) Accidente no laboral en alta: el RD 1799/1985, art. 5.4, párr. 2.º, remite a las normas anteriores a la Ley 26/1985 (Decreto 1646/1972, art. 7.1, sin integración de lagunas); confianza actuarial del 60 % en sin-integrar: ¿es firme la lectura frente al art. 5.5 del mismo RD? (c) Comprobar en el motor que el periodo corto del art. 197.2 se aplica también por debajo de los 31 años (fase de motor).
+**Qué debe comprobar el actuario**: (b) «los años que le resten» de la edad ordinaria: ¿meses completos (por defecto) o años completos? (d) Accidente no laboral en alta: el RD 1799/1985, art. 5.4, párr. 2.º, remite a las normas anteriores a la Ley 26/1985 (Decreto 1646/1972, art. 7.1, sin integración de lagunas); confianza actuarial del 60 % en sin-integrar: ¿es firme la lectura frente al art. 5.5 del mismo RD?
 
 **Datos**: parametros/incapacidad-permanente-reglas.json#br-ec-escala-con-anios-hasta-edad, parametros/incapacidad-permanente-reglas.json#br-ec-meses, parametros/incapacidad-permanente-reglas.json#br-ec-divisor, parametros/incapacidad-permanente-reglas.json#br-periodo-corto-coeficiente-divisor, parametros/incapacidad-permanente-reglas.json#br-anl-meses, parametros/incapacidad-permanente-reglas.json#br-anl-divisor
 

@@ -23,6 +23,7 @@ describe('valores por defecto = lecturas ya reflejadas en /data', () => {
       actualizacionFactorMinimo: 'suelo-1',
       fraccionDemora: 'desde-segundo-anio',
       maximaDesde2051: 'incremento-acumulado',
+      salvaguardaDT34: 'A',
     });
   });
 

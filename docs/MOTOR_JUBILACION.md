@@ -107,6 +107,17 @@ El motor nunca inventa un dato de `/data`. Donde `/data` termina (IPC en 2025, b
 | `actualizacionFactorMinimo`     | `sin-suelo`            | `suelo-1`                      | (d) suelo del factor de actualización               |
 | `fraccionDemora`                | `desde-segundo-anio`   | `desde-primer-anio`            | (d) «a partir del segundo año completo»             |
 | `maximaDesde2051`               | `incremento-acumulado` | `incremento-anual-literal`     | (d) tabla de la DT 39.ª.4                           |
+| `salvaguardaDT34`               | `A`                    | `B`                            | (a) DT 34.ª.1, salvaguarda en la voluntaria topada  |
+
+## Salvaguarda de la DT 34.ª.1 (lectura `salvaguardaDT34`)
+
+Añadida en la Revisión 3 del motor (respuesta A-41 de la revisión actuarial del 16-11-2026). Solo actúa en la jubilación anticipada voluntaria (con los coeficientes del art. 208.2) cuando la pensión calculada supera el límite del art. 57, con hecho causante de 2024 a 2033 (los años del cuadro de la DT 34.ª.2).
+
+- **Texto de la norma** (`data-raw/boe/trlgss-2015-versiones.txt`, DT 34.ª.1): la aplicación sobre el límite solo rige «en la medida en que la evolución de la pensión máxima del sistema absorba completamente el efecto del aumento de coeficientes respecto a los vigentes en 2021 para aquellos trabajadores con base reguladora superior a la pensión máxima, de manera que la pensión reconocida no resulte en ningún caso inferior a la que habría correspondido con la aplicación de las normas vigentes en 2021».
+- **Lectura A (por defecto, pendiente)**: la pensión es la mayor de dos: (1) la del cuadro de la DT 34.ª.2 sobre la pensión máxima del año; (2) la que habría correspondido con las normas de 2021, que es la menor de: la pensión sin tope con el coeficiente del art. 208.2 de entonces (2 %, 1,875 %, 1,75 % o 1,625 % por trimestre según el periodo cotizado) y la pensión máxima reducida un 0,50 % por trimestre o fracción (art. 210.3, párrafo 2.º, de entonces). La pensión máxima de esa comparación es la actualizada solo con el art. 58.2 (sin el incremento adicional de la DT 39.ª, que empieza en el primer año de su tabla): lo fija el motor con `pensionMaximaSoloIPC` del contexto. Los coeficientes y el 0,50 % de 2021 están en `data/parametros/jubilacion-anticipada-reglas.json` (`salvaguarda-dt34-*`), con su cita del texto de 2016-2021.
+- **Lectura B**: sin comparación; el cálculo es el del párrafo 2.º del art. 210.3 con los cuadros de la DT 34.ª.2 (el de antes de añadir la lectura).
+- **Por qué A por defecto**: con B (pensión máxima nominal de 2021) la frase «en ningún caso inferior» no tendría efecto nunca, y con A el inciso sobre la evolución de la pensión máxima y esa frase se leen juntos. La norma no dice con qué pensión máxima se compara: lo de «solo con el IPC» es lectura nuestra. Confianza baja (revisión actuarial). Cambiar el valor por defecto es cambiar una línea de `src/engine/config/lecturas-por-defecto.json`.
+- **Fuera de alcance**: hechos causantes de 2022 y 2023 (rige la redacción original del art. 210.3; `NoImplementada`) y desde 2034 (la DT 34.ª ya no rige).
 
 ## Decisiones de modelado
 

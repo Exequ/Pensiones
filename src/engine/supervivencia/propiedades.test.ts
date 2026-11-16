@@ -18,7 +18,10 @@ const VIUDAS: readonly (BeneficiarioViudedad | undefined)[] = [
     vinculo: 'conyuge',
     nacimiento: '1982-01-01',
     fechaMatrimonio: '2006-01-01',
-    cargasFamiliares: { miembrosUnidadFamiliar: 4, rendimientosUnidadFamiliar: 8000 },
+    cargasFamiliares: {
+      miembrosUnidadFamiliar: 4,
+      rendimientosEjercicioAnteriorUnidadFamiliar: 8000,
+    },
   },
 ];
 const TOL = 1e-6;

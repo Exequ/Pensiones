@@ -77,7 +77,10 @@ const LLAMADAS: [string, Llamada][] = [
             vinculo: 'conyuge',
             nacimiento: `${a - 50}-05-01`,
             fechaMatrimonio: `${a - 20}-06-01`,
-            cargasFamiliares: { miembrosUnidadFamiliar: 2, rendimientosUnidadFamiliar: 9000 },
+            cargasFamiliares: {
+              miembrosUnidadFamiliar: 2,
+              rendimientosEjercicioAnteriorUnidadFamiliar: 9000,
+            },
           },
         ],
         opciones: esc(e),

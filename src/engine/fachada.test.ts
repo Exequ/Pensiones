@@ -175,6 +175,46 @@ describe('Errores unificados', () => {
   });
 });
 
+describe('Salvaguarda de la DT 34.ª.1 (lectura jubilacion.salvaguardaDT34) por la fachada', () => {
+  // Datos de /data: máxima de 2024 = 3.175,04; revalorizaciones de 2025 (2,8 %) y 2026 (2,7 %); IPC del
+  // escenario del 2 % (revalorización de 2027); incremento adicional de la DT 39.ª de 0,115 puntos; máxima
+  // de 2026 = 3.359,60. Anticipada voluntaria el 1-1-2027 de quien nace el 1-1-1963 (cumple 65 el
+  // 1-1-2028: 12 meses, 4 trimestres), 42 años cotizados (tramo 3), con la pensión por encima del límite.
+  const alta = [{ desde: '1985-01', hasta: '2026-12', baseMensual: 20000 }];
+  const entrada = {
+    carrera: alta,
+    nacimiento: '1963-01-01',
+    fechaJubilacion: '2027-01-01',
+    modalidad: 'anticipada-voluntaria',
+    opciones: { ...OPC, aplicarMinimos: false, usarOpcion25Anos: false },
+  } as const;
+  const pension = (lectura?: 'A' | 'B') =>
+    desenvolver(
+      motorDelRepositorio(
+        lectura === undefined ? {} : { lecturas: { 'jubilacion.salvaguardaDT34': lectura } },
+      ).jubilacion(entrada),
+    ).pensionMensualTotal;
+
+  it('A: máxima solo con el IPC × (1 − 0,50 % × 4 trimestres); B: máxima × (1 − 3,20 %); sin configurar, A', () => {
+    // A = 3.175,04 × 1,028 × 1,027 × 1,02 × 0,98; B = 3.359,60 × 1,02115 × 0,968.
+    expect(pension('A')).toBeCloseTo(3175.04 * 1.028 * 1.027 * 1.02 * 0.98, 4);
+    expect(pension('B')).toBeCloseTo(3359.6 * 1.02115 * 0.968, 4);
+    expect(pension()).toBe(pension('A'));
+  });
+
+  it('con la pensión por debajo del límite A y B coinciden', () => {
+    const modesta = {
+      ...entrada,
+      carrera: [{ desde: '1985-01', hasta: '2026-12', baseMensual: 2000 }],
+    };
+    const con = (l: 'A' | 'B') =>
+      desenvolver(
+        motorDelRepositorio({ lecturas: { 'jubilacion.salvaguardaDT34': l } }).jubilacion(modesta),
+      ).pensionMensualTotal;
+    expect(con('A')).toBe(con('B'));
+  });
+});
+
 describe('Configuración de lecturas', () => {
   it('expone el valor efectivo de todas las lecturas y no cambia ningún valor por defecto', () => {
     expect(Object.keys(motor.lecturas).sort()).toEqual(LECTURAS_ABIERTAS.map((l) => l.id).sort());

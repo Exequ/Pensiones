@@ -65,6 +65,28 @@ Referencias `id` = `data/parametros/supervivencia-reglas.json#id` salvo que se i
 | Brecha de género                 | Viudedad: mujeres con hijos; hombres si algún hijo común tiene orfandad; uno por hijo (no si ya se cobra con otra pensión)                                                                                                                                                                                                                                                                                                         | `brecha-*`; `complemento-brecha-genero*`                                                                                                      | art. 60 TRLGSS                                                          |
 | Revalorización                   | La general, sobre la cuantía inicial (el límite conjunto no afecta a las revalorizaciones)                                                                                                                                                                                                                                                                                                                                         | `revalorizacion-general`, `limite-solo-inicial`                                                                                               | arts. 58.2 y 229.1 TRLGSS                                               |
 
+## Rentas del 70 % y parejas de hecho por periodos (Revisión 3 del motor)
+
+**Rentas del 70 % de la viudedad** (respuesta B-58 d de la revisión actuarial del 16-11-2026). El art. 31.2 del Decreto 3158/1966 (`data-raw/boe/decreto-3158-1966.txt`, redacción del RD 1464/2001) dice: «Los rendimientos indicados se tomarán en el valor percibido en el ejercicio anterior a aquél en que deba aplicarse o mantenerse el porcentaje del 70 por 100, debiendo excluirse los dejados de percibir, en su caso, como consecuencia del hecho causante de las prestaciones, así como aquéllos que se pruebe que no han de ser percibidos en el ejercicio corriente». En el reconocimiento inicial es el ejercicio anterior al del hecho causante. En la entrada del motor:
+
+- `BeneficiarioViudedad.rendimientosEjercicioAnteriorAnuales` (nuevo): rendimientos del beneficiario del ejercicio anterior, sin la propia pensión y sin los dejados de percibir por el hecho causante. Los usa el requisito de rentas del 70 %, su límite y la regla de la pensión como principal fuente de ingresos. Si falta, el motor usa `rendimientosAnuales` (compatibilidad con la entrada anterior).
+- `cargasFamiliares.rendimientosUnidadFamiliar` pasa a llamarse `cargasFamiliares.rendimientosEjercicioAnteriorUnidadFamiliar` y se mide igual: la norma aplica el mismo criterio a los rendimientos de la unidad familiar.
+- `rendimientosAnuales` sigue siendo la renta del beneficiario para el complemento a mínimos (art. 59 TRLGSS), otra regla.
+
+La interfaz no usa aún estos campos (la viudedad llega en la fase 3-C2); el enlace compartible no cambia.
+
+**Parejas de hecho por periodos** (B-59 d). El art. 221.2 del TRLGSS está en sus tres redacciones en `data-raw/boe/trlgss-2015-versiones.txt` y el motor las aplica así según el hecho causante:
+
+| Hecho causante        | Con hijos comunes                                                  | Sin hijos comunes                                    | Motor                                                                                            |
+| --------------------- | ------------------------------------------------------------------ | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| 2-1-2016 a 31-12-2021 | Cinco años de convivencia e inscripción con dos años de antelación | Igual                                                | **Fuera del dominio** (`NoImplementada`: el motor cubre desde 2022); no se aplica otra redacción |
+| 1-1-2022 a 20-10-2026 | Solo la constitución (inscripción con dos años de antelación)      | Cinco años de convivencia e inscripción con dos años | Aplicado (casos de oro `pareja-hijos-redaccion-2022`, `pareja-hecho`)                            |
+| Desde 21-10-2026      | Dos años de convivencia, sin exigir inscripción                    | Cinco años de convivencia e inscripción con dos años | Aplicado (caso de oro `pareja-hijos-redaccion-2026`)                                             |
+
+La redacción de 2016 exigía además, en el apartado 1, que los ingresos del sobreviviente no alcanzaran el 50 % de la suma de los dos (25 % sin hijos con derecho a orfandad) o no llegaran a 1,5 veces el SMI; ese requisito no está en el motor porque el periodo queda fuera de su dominio. En 2016-2021 el art. 222 solo cubría al cónyuge: la prestación temporal de la pareja de hecho es de 2022 en adelante (el motor la aplica desde 2022).
+
+**Orfandad absoluta (B-59 c)**. El porcentaje de viudedad no asignado (art. 38.1.2.º del Decreto 3158/1966: «el porcentaje de pensión de viudedad que no hubiera sido asignado») incrementa solo la orfandad absoluta, repartido a partes iguales entre los huérfanos con derecho (art. 38.1.4.º). El motor lo hace solo con `orfandadAbsoluta: true`; sin esa opción la orfandad es el 20 % de la base reguladora (test `el porcentaje de incremento solo se suma en la orfandad absoluta`).
+
 ## Lecturas abiertas (opciones del motor, `lecturasSupervivencia`)
 
 | Opción                                 | Por defecto              | Alternativa         | Pregunta                                 |
