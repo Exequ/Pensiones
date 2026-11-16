@@ -36,7 +36,7 @@ Apartado «Sensibilidades: una palanca cada vez» (`FinancieroSensibilidades.tsx
 
 | Trozo                                               | Antes          | Ahora          |
 | --------------------------------------------------- | -------------- | -------------- |
-| Bloque financiero (`Financiero-*.js`, bajo demanda) | 116,57 / 44,06 | 233,53 / 87,64 |
+| Bloque financiero (`Financiero-*.js`, bajo demanda) | 116,57 / 44,06 | 233,53 / 87,65 |
 
 El trozo se duplica porque lleva la salida de los diez casos (250 filas de 23 columnas) además de la de los escenarios; sigue cargándose solo al visitar «Proyecciones». Se anota como posible mejora cargar las sensibilidades de forma diferida.
 
@@ -46,4 +46,7 @@ Tres afirmaciones nuevas en `docs/claims-web.json` (dos verificadas y una pendie
 
 ## CI y despliegue
 
-(Se completa tras el merge.)
+- PR [Exequ/Pensiones#37](https://github.com/Exequ/Pensiones/pull/37): CI en verde en su último SHA (`8c5b958`): lint, tipos, tests, datos y compilación; Playwright; compilación para Pages. Fusionado con squash como `4962ec7`; la rama no se borra.
+- En local, antes del PR: `npm run lint` (con `validate:data`), `tsc -b --force` (con ficheros de test), `npm test` (109 ficheros, 2.286 tests), `npm run build` y Playwright completo en escritorio y móvil. La primera pasada completa dio seis fallos en specs existentes, todos por localizadores que encontraban dos elementos con mis controles nuevos (el aviso del año y la etiqueta «Año de las sensibilidades»); se corrigieron (clase propia para el aviso y nombre exacto en el localizador de M3, sin quitar comprobaciones) y los cuatro specs de «Proyecciones» pasaron de nuevo (66 pruebas).
+- Despliegue en GitHub Pages del SHA fusionado (`4962ec7`): terminado con éxito; la URL pública responde 200.
+- **Ruta publicada comprobada** con Chromium contra `https://exequ.github.io/Pensiones/#/proyecciones` a 1360 y 390 px: carga el apartado «Sensibilidades», la tabla tiene once filas (base y diez casos), el año por defecto es el último de la salida, elegir otro año cambia las cifras, sin desbordes horizontales y con cero errores de consola. Capturas locales revisadas a 1360 y 390 px (se ajustó el ancho de la primera columna tras verlas).
