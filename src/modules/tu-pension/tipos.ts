@@ -1,9 +1,13 @@
 /** Tipos de la capa de entrada y presentación del simulador «Tu pensión» (Fases 3-A a 3-C1). */
 import type { GradoIncapacidad, OrigenIncapacidad } from '../../engine/incapacidad/tipos.ts';
+import type { FormularioSupervivencia } from './supervivencia-tipos.ts';
 import type { TramoFormulario } from './tramos.ts';
 
-/** Prestación que se simula. Desde la Fase 3-C1 hay dos; las demás son de la 3-C2 y la 3-C3. */
-export type IdPrestacion = 'jubilacion' | 'incapacidad';
+/**
+ * Prestación que se simula: jubilación, incapacidad permanente (Fase 3-C1), viudedad y orfandad
+ * (Fase 3-C2). El favor de familiares y las no contributivas son de la 3-C3.
+ */
+export type IdPrestacion = 'jubilacion' | 'incapacidad' | 'viudedad' | 'orfandad';
 
 export type Sexo = 'hombre' | 'mujer';
 export type UbicacionLagunas = 'mitad' | 'final';
@@ -21,11 +25,13 @@ export interface FormularioTuPension {
   readonly sexo: Sexo | '';
   readonly hijos: string;
   /**
-   * Fecha en que termina la carrera: la de jubilación (jubilación) o la del hecho causante
-   * (incapacidad permanente). Los nombres son los de la 3-A; véase `docs/DECISIONES.md` (3-C1).
+   * Fecha del hecho causante, en la que termina la carrera: la de jubilación (jubilación), la del
+   * reconocimiento (incapacidad permanente) o la del fallecimiento (viudedad y orfandad). Desde la
+   * Fase 3-C2 los campos se llaman `hechoCausante*` en todas las prestaciones (antes `jubilacion*`);
+   * el enlace compartible conserva sus parámetros (`jub` y `hc`). Véase `docs/DECISIONES.md` (3-C2).
    */
-  readonly jubilacionMes: string;
-  readonly jubilacionAnio: string;
+  readonly hechoCausanteMes: string;
+  readonly hechoCausanteAnio: string;
   readonly inicioMes: string;
   readonly inicioAnio: string;
   readonly mesesSinCotizar: string;
@@ -60,7 +66,45 @@ export interface FormularioTuPension {
    * difieren del valor por defecto del registro. Vacío: todas las lecturas por defecto.
    */
   readonly lecturas: Readonly<Record<string, string>>;
+  /**
+   * Viudedad y orfandad (Fase 3-C2): datos del causante (situación, pensión), de la persona viuda y
+   * de los huérfanos. La causa de la muerte usa `origen` y la base reguladora escrita `baseReguladora`.
+   */
+  readonly supervivencia: FormularioSupervivencia;
 }
 
-export type CampoFormulario = keyof FormularioTuPension;
+/**
+ * Campos de la parte de supervivencia que pueden llevar un error de validación. Los de la persona
+ * viuda empiezan por `viudo`, los de la persona huérfana por `huerfano` y `otrosHuerfanos` agrupa los
+ * errores de la lista de otros huérfanos.
+ */
+export type CampoSupervivencia =
+  | 'situacion'
+  | 'pensionMes'
+  | 'pensionAnio'
+  | 'viudoVinculo'
+  | 'viudoNacimientoMes'
+  | 'viudoNacimientoAnio'
+  | 'viudoSexo'
+  | 'viudoHijos'
+  | 'viudoMatrimonioMes'
+  | 'viudoMatrimonioAnio'
+  | 'viudoConvivenciaPrevia'
+  | 'viudoConvivencia'
+  | 'viudoRegistroMes'
+  | 'viudoRegistroAnio'
+  | 'viudoCompensatoria'
+  | 'viudoRentasTrabajo'
+  | 'viudoRentasCapital'
+  | 'viudoRendimientos'
+  | 'viudoRendimientosAnterior'
+  | 'viudoMiembros'
+  | 'viudoRendimientosUnidad'
+  | 'huerfanoNacimientoMes'
+  | 'huerfanoNacimientoAnio'
+  | 'huerfanoRentasTrabajo'
+  | 'huerfanoRendimientos'
+  | 'otrosHuerfanos';
+
+export type CampoFormulario = keyof FormularioTuPension | CampoSupervivencia;
 export type ErroresFormulario = Partial<Record<CampoFormulario, string>>;

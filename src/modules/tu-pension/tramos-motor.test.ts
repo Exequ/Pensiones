@@ -32,8 +32,8 @@ function bases(importe: string, hastaMes = '12') {
     tramos: [tramo, critico],
     nacimientoMes: '1',
     nacimientoAnio: '1960',
-    jubilacionMes: '1',
-    jubilacionAnio: '2026',
+    hechoCausanteMes: '1',
+    hechoCausanteAnio: '2026',
   };
   const mapeo = formularioAEntrada(f, catalogoPorDefecto());
   if (!mapeo.ok) throw new Error(JSON.stringify([mapeo.errores, mapeo.erroresTramos]));

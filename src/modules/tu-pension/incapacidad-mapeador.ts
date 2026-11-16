@@ -3,7 +3,7 @@
  * (Fase 3-C1). Como el de la jubilación, solo traduce y valida; no calcula nada de la pensión.
  *
  * Convenciones (docs/SIMULADOR.md y docs/DECISIONES.md):
- * - El hecho causante se guarda en los campos `jubilacionMes` y `jubilacionAnio` del formulario
+ * - El hecho causante se guarda en los campos `hechoCausanteMes` y `hechoCausanteAnio` del formulario
  *   (fecha en que termina la carrera) y se usa el día 1 del mes, como en la jubilación.
  * - La carrera es la misma que la de la jubilación (simple o por tramos) y termina el mes anterior
  *   al hecho causante.
@@ -138,7 +138,7 @@ export function formularioAEntradaIncapacidad(
     return { ok: false, errores, erroresTramos: tramos?.errores ?? [] };
   }
   const nac = { anio: Number(f.nacimientoAnio), mes: Number(f.nacimientoMes) };
-  const hc = { anio: Number(f.jubilacionAnio), mes: Number(f.jubilacionMes) };
+  const hc = { anio: Number(f.hechoCausanteAnio), mes: Number(f.hechoCausanteMes) };
   const sexo = f.sexo === 'mujer' ? 'mujer' : 'hombre';
   const opciones: OpcionesIncapacidad = {
     sexo,

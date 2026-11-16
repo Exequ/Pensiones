@@ -30,9 +30,24 @@ export interface FilaLecturaJubilacion {
   readonly estado: EstadoLectura;
 }
 
+/**
+ * Lecturas de jubilación que también rigen en la viudedad y la orfandad (Fase 3-C2). El motor de
+ * supervivencia comparte con la jubilación el contexto (límites de la base y de la pensión máxima),
+ * pero no actualiza las bases con el IPC ni integra los meses sin cotizar (las bases van por su valor
+ * nominal y esos meses cuentan como cero): solo rigen las lecturas que fijan los límites. La lista la
+ * comprueba `scripts/lecturas-jubilacion-supervivencia.test.ts` con el motor.
+ */
+export const LECTURAS_JUBILACION_EN_SUPERVIVENCIA: readonly string[] = [
+  'jubilacion.baseMaxima',
+  'jubilacion.pensionMaxima',
+  'jubilacion.maximaDesde2051',
+];
+
 /** Filas de la nota: título, valor aplicado y estado de cada lectura, leídos del registro. */
-export function filasLecturasJubilacionEnIncapacidad(): readonly FilaLecturaJubilacion[] {
-  return LECTURAS_JUBILACION_EN_INCAPACIDAD.flatMap((id) => {
+export function filasLecturasJubilacionEnIncapacidad(
+  ids: readonly string[] = LECTURAS_JUBILACION_EN_INCAPACIDAD,
+): readonly FilaLecturaJubilacion[] {
+  return ids.flatMap((id) => {
     const l = lecturaPorId(id);
     if (l === undefined) return [];
     const textos = TEXTOS_LECTURAS[id];

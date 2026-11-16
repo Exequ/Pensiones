@@ -160,7 +160,7 @@ describe('presentarResultado', () => {
     const r = modeloDe({
       ...FORMULARIO_BASE,
       inicioAnio: '2024',
-      jubilacionAnio: '2026',
+      hechoCausanteAnio: '2026',
       nacimientoAnio: '1955',
     });
     expect(r.modelo.cumpleRequisitos).toBe(false);

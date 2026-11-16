@@ -64,11 +64,11 @@ describe('validación del formulario de incapacidad', () => {
   });
 
   it('los mensajes de fecha hablan del hecho causante, no de la jubilación', () => {
-    const e = validarFormularioIncapacidad({ ...F, jubilacionMes: '', jubilacionAnio: '' });
-    expect(e.jubilacionMes).toBe('Elige el mes del hecho causante.');
-    expect(e.jubilacionAnio).toBe('Escribe el año del hecho causante con cuatro cifras.');
-    const antes = validarFormularioIncapacidad({ ...F, jubilacionAnio: '1970' });
-    expect(antes.jubilacionAnio).toBe(
+    const e = validarFormularioIncapacidad({ ...F, hechoCausanteMes: '', hechoCausanteAnio: '' });
+    expect(e.hechoCausanteMes).toBe('Elige el mes del hecho causante.');
+    expect(e.hechoCausanteAnio).toBe('Escribe el año del hecho causante con cuatro cifras.');
+    const antes = validarFormularioIncapacidad({ ...F, hechoCausanteAnio: '1970' });
+    expect(antes.hechoCausanteAnio).toBe(
       'La fecha del hecho causante debe ser posterior a la de nacimiento.',
     );
     const lagunas = validarFormularioIncapacidad({ ...F, mesesSinCotizar: '400' });

@@ -118,7 +118,7 @@ describe('resultado de la incapacidad permanente', () => {
   });
 
   it('un hecho causante anterior a la cobertura del motor se traduce a un mensaje claro', () => {
-    const r = calcularTuPension({ ...F, jubilacionAnio: '2019', nacimientoAnio: '1970' }, deps);
+    const r = calcularTuPension({ ...F, hechoCausanteAnio: '2019', nacimientoAnio: '1970' }, deps);
     expect(r.tipo).toBe('error-motor');
     if (r.tipo === 'error-motor') {
       expect(r.prestacion).toBe('incapacidad');
@@ -128,7 +128,7 @@ describe('resultado de la incapacidad permanente', () => {
   });
 
   it('con el hecho causante antes del nacimiento, la validación del formulario lo detecta', () => {
-    const r = calcularTuPension({ ...F, jubilacionAnio: '1975' }, deps);
+    const r = calcularTuPension({ ...F, hechoCausanteAnio: '1975' }, deps);
     expect(r.tipo).toBe('errores-formulario');
   });
 });

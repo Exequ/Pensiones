@@ -1,6 +1,10 @@
-import { filasLecturasJubilacionEnIncapacidad } from './lecturas-jubilacion-en-incapacidad';
+import {
+  filasLecturasJubilacionEnIncapacidad,
+  LECTURAS_JUBILACION_EN_SUPERVIVENCIA,
+} from './lecturas-jubilacion-en-incapacidad';
 import { ETIQUETA_ESTADO } from './supuestos';
-import { TEXTOS_INCAPACIDAD_PROPIOS as T } from './textos-incapacidad';
+import { TEXTOS_INCAPACIDAD_PROPIOS } from './textos-incapacidad';
+import { TEXTOS_SUPERVIVENCIA } from './textos-supervivencia';
 
 /**
  * Nota plegable de la pantalla de incapacidad: qué lecturas de jubilación se aplican y con qué
@@ -9,10 +13,17 @@ import { TEXTOS_INCAPACIDAD_PROPIOS as T } from './textos-incapacidad';
  */
 export function LecturasJubilacionEnIncapacidad({
   onIrAJubilacion,
+  prestacion = 'incapacidad',
 }: {
   onIrAJubilacion: () => void;
+  /** `supervivencia`: la nota de la viudedad y la orfandad (Fase 3-C2). */
+  prestacion?: 'incapacidad' | 'supervivencia';
 }) {
-  const filas = filasLecturasJubilacionEnIncapacidad();
+  const supervivencia = prestacion === 'supervivencia';
+  const T = supervivencia ? TEXTOS_SUPERVIVENCIA : TEXTOS_INCAPACIDAD_PROPIOS;
+  const filas = filasLecturasJubilacionEnIncapacidad(
+    supervivencia ? LECTURAS_JUBILACION_EN_SUPERVIVENCIA : undefined,
+  );
   return (
     <details className="tp-jubilacion-aplicada">
       <summary>{T.jubilacionAplicadaTitulo}</summary>

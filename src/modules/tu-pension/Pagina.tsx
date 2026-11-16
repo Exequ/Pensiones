@@ -10,9 +10,12 @@ import { calcularTuPension, type RespuestaCalculo } from './calcular';
 import { ComparacionLecturas } from './ComparacionLecturas';
 import { LecturasJubilacionEnIncapacidad } from './LecturasJubilacionEnIncapacidad';
 import { LecturasQueIntervienen } from './LecturasQueIntervienen';
+import { LecturasQueIntervienenSupervivencia } from './LecturasQueIntervienenSupervivencia';
 import { prestacionDe } from './prestaciones';
 import { SelectorPrestacion } from './SelectorPrestacion';
 import { TEXTOS_INCAPACIDAD, TEXTOS_INCAPACIDAD_PROPIOS } from './textos-incapacidad';
+import { TEXTOS_ORFANDAD, TEXTOS_SUPERVIVENCIA, TEXTOS_VIUDEDAD } from './textos-supervivencia';
+import { SUPERVIVENCIA_VACIA, type FormularioSupervivencia } from './supervivencia-tipos';
 import { EnlaceCompartible } from './EnlaceCompartible';
 import { escribirEnlace, leerEnlace, tramosParaEnlace, type ResultadoEnlace } from './enlace';
 import { sugerenciaBase, supuestoIpcPorDefecto } from './datos';
@@ -51,8 +54,31 @@ function enlaceCompleto(busqueda: string): string {
   return `${window.location.href.split('#')[0] ?? ''}#/${seccion.slug}${busqueda}`;
 }
 
-const textosDe = (p: IdPrestacion): TextosPrestacion =>
-  p === 'incapacidad' ? TEXTOS_INCAPACIDAD : TEXTOS_JUBILACION;
+const textosDe = (p: IdPrestacion): TextosPrestacion => {
+  switch (p) {
+    case 'incapacidad':
+      return TEXTOS_INCAPACIDAD;
+    case 'viudedad':
+      return TEXTOS_VIUDEDAD;
+    case 'orfandad':
+      return TEXTOS_ORFANDAD;
+    case 'jubilacion':
+      return TEXTOS_JUBILACION;
+  }
+};
+
+/** Campos de la parte de supervivencia que se limpian de errores al cambiar cada grupo de datos. */
+const ERRORES_DE_GRUPO: Readonly<Record<keyof FormularioSupervivencia, RegExp>> = {
+  situacion: /^situacion$/,
+  clasePension: /^pension/,
+  pensionMes: /^pension/,
+  pensionAnio: /^pension/,
+  viudo: /^viudo/,
+  hayViudo: /^viudo/,
+  huerfano: /^huerfano/,
+  otrosHuerfanos: /^otrosHuerfanos$/,
+  orfandadAbsoluta: /^$/,
+};
 
 interface OpcionesCalculo {
   /** No muestra errores de formulario ni mueve el foco (carga desde un enlace, cambio de lectura). */
@@ -74,7 +100,9 @@ interface EstadoDeEnlace {
 const contextoFecha = (p: IdPrestacion): { anteriorA: string; deFin: string } =>
   p === 'incapacidad'
     ? { anteriorA: 'al hecho causante', deFin: 'del hecho causante' }
-    : { anteriorA: 'a la jubilación', deFin: 'de jubilación' };
+    : p === 'jubilacion'
+      ? { anteriorA: 'a la jubilación', deFin: 'de jubilación' }
+      : { anteriorA: 'al fallecimiento', deFin: 'del fallecimiento' };
 
 function estadoDeEnlace(
   enlace: ResultadoEnlace,
@@ -114,7 +142,27 @@ function estadoDeEnlace(
   };
 }
 
-/** Módulo «tu-pension»: jubilación ordinaria e incapacidad permanente, con carrera simple o por tramos, lecturas y enlace. */
+/**
+ * Parte de la fecha de entrada en vigor de la redacción de 2026 del artículo de las parejas de hecho
+ * (dato de /data): con pareja de hecho e hijos en común y fallecimiento en ese mes, el día importa.
+ */
+function avisarFronteraPareja(
+  f: FormularioTuPension,
+  leer: (referencia: string) => number | undefined,
+): boolean {
+  if (f.prestacion !== 'viudedad' && f.prestacion !== 'orfandad') return false;
+  const v = f.supervivencia.viudo;
+  if (v.vinculo !== 'pareja-hecho' || !v.hijosComunes) return false;
+  if (f.prestacion === 'orfandad' && !f.supervivencia.hayViudo) return false;
+  const desde = leer('parametros/supervivencia-reglas.json#pareja-redaccion-2026-desde');
+  if (desde === undefined) return false;
+  return (
+    Number(f.hechoCausanteAnio) === Math.floor(desde / 10000) &&
+    Number(f.hechoCausanteMes) === Math.floor(desde / 100) % 100
+  );
+}
+
+/** Módulo «tu-pension»: jubilación, incapacidad permanente, viudedad y orfandad, con carrera simple o por tramos, lecturas y enlace. */
 export default function TuPension() {
   useTituloPagina(seccion.titulo);
   const base = useMemo(() => sugerenciaBase(), []);
@@ -133,8 +181,8 @@ export default function TuPension() {
       nacimientoAnio: '',
       sexo: '',
       hijos: '0',
-      jubilacionMes: '',
-      jubilacionAnio: '',
+      hechoCausanteMes: '',
+      hechoCausanteAnio: '',
       inicioMes: '',
       inicioAnio: '',
       mesesSinCotizar: '0',
@@ -147,6 +195,7 @@ export default function TuPension() {
       aplicarPensionMaxima: true,
       ipcSupuesto: numeroATexto(ipc.porcentaje),
       lecturas: {},
+      supervivencia: SUPERVIVENCIA_VACIA,
     }),
     [base, ipc, catalogo],
   );
@@ -188,6 +237,7 @@ export default function TuPension() {
   const prestacion = prestacionDe(valores.prestacion);
   const textos = textosDe(valores.prestacion);
   const incapacidad = valores.prestacion === 'incapacidad';
+  const supervivencia = valores.prestacion === 'viudedad' || valores.prestacion === 'orfandad';
 
   const calcular = (
     aCalcular: FormularioTuPension = valores,
@@ -279,6 +329,19 @@ export default function TuPension() {
     ultimoCalculado.current = undefined;
   };
 
+  /** Cambia datos de la parte de supervivencia y retira los errores de ese grupo. */
+  const cambiarSupervivencia = (cambios: Partial<FormularioSupervivencia>) => {
+    setValores((v) => ({ ...v, supervivencia: { ...v.supervivencia, ...cambios } }));
+    const patrones = (Object.keys(cambios) as (keyof FormularioSupervivencia)[]).map(
+      (k) => ERRORES_DE_GRUPO[k],
+    );
+    setErroresVista((e) =>
+      Object.fromEntries(
+        Object.entries(e).filter(([campo]) => !patrones.some((p) => p.test(campo))),
+      ),
+    );
+  };
+
   const cambiarTipoCarrera = (tipo: TipoCarrera) => {
     setErroresVista({});
     setErroresTramos([]);
@@ -346,6 +409,10 @@ export default function TuPension() {
     [valores, personaCargada],
   );
   const tramosOmitidos = tramosParaEnlace(valores.tramos).omitidosPorLimite;
+  const avisoParejaHijos = useMemo(
+    () => avisarFronteraPareja(valores, leerReferenciaDeRepositorio),
+    [valores],
+  );
   const limitaciones = LIMITACIONES_MOTOR.filter((l) => l.motor === prestacion.motorLimitaciones);
   const calculado = respuesta?.tipo === 'resultado' ? respuesta.formulario : valores;
 
@@ -406,6 +473,8 @@ export default function TuPension() {
             mensajePersona={mensajePersona}
             onCargarPersona={cargarPersonaEjemplo}
             textos={textos}
+            onCambioSv={cambiarSupervivencia}
+            avisoParejaHijos={avisoParejaHijos}
           />
         </section>
 
@@ -422,7 +491,13 @@ export default function TuPension() {
               modelo={respuesta.modelo}
               ipcUsado={respuesta.ipcUsado}
               bases={respuesta.bases}
-              notaSinBases={incapacidad ? TEXTOS_INCAPACIDAD_PROPIOS.sinGrafico : undefined}
+              notaSinBases={
+                incapacidad
+                  ? TEXTOS_INCAPACIDAD_PROPIOS.sinGrafico
+                  : supervivencia
+                    ? TEXTOS_SUPERVIVENCIA.sinGrafico
+                    : undefined
+              }
               comparacion={
                 <ComparacionLecturas
                   comparacion={respuesta.comparacion}
@@ -433,6 +508,8 @@ export default function TuPension() {
               aviso={
                 incapacidad ? (
                   <LecturasQueIntervienen lecturas={respuesta.lecturas} origen={calculado.origen} />
+                ) : supervivencia ? (
+                  <LecturasQueIntervienenSupervivencia lecturas={respuesta.lecturas} />
                 ) : undefined
               }
               ref={encabezadoResultado}
@@ -445,8 +522,9 @@ export default function TuPension() {
           conEfecto={respuesta?.tipo === 'resultado'}
           introduccion={textos.supuestosIntro}
           pie={
-            incapacidad ? (
+            incapacidad || supervivencia ? (
               <LecturasJubilacionEnIncapacidad
+                prestacion={supervivencia ? 'supervivencia' : 'incapacidad'}
                 onIrAJubilacion={() => {
                   cambiarPrestacion('jubilacion');
                 }}

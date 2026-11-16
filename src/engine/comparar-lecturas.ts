@@ -19,8 +19,40 @@ import type {
 } from './fachada.ts';
 import { LECTURAS_ABIERTAS, type LecturaAbierta, type MotorLectura } from './lecturas.ts';
 
-/** Prestaciones con lecturas que el simulador ofrece cambiar (Fase 3-C1: jubilación e incapacidad). */
-export type MotorOfrecido = Extract<MotorLectura, 'jubilacion' | 'incapacidad'>;
+/**
+ * Prestaciones con lecturas que el simulador ofrece cambiar (jubilación e incapacidad en la 3-C1;
+ * viudedad y orfandad en la 3-C2, que comparten el motor `supervivencia` pero no todas sus lecturas).
+ */
+export type MotorOfrecido = 'jubilacion' | 'incapacidad' | 'viudedad' | 'orfandad';
+
+/** Motor del registro de lecturas al que pertenecen las de cada prestación. */
+const MOTOR_DEL_REGISTRO: Record<MotorOfrecido, MotorLectura> = {
+  jubilacion: 'jubilacion',
+  incapacidad: 'incapacidad',
+  viudedad: 'supervivencia',
+  orfandad: 'supervivencia',
+};
+
+/**
+ * Lecturas del motor de supervivencia que cambian el cálculo de cada prestación (las de favor de
+ * familiares no cambian ni la viudedad ni la orfandad: se ofrecerán en la Fase 3-C3). Las demás
+ * prestaciones ofrecen todas las lecturas de su motor.
+ */
+const SOLO_ESTAS: Partial<Record<MotorOfrecido, readonly string[]>> = {
+  viudedad: [
+    'supervivencia.ventanaBaseReguladora',
+    'supervivencia.diasCotizados',
+    'supervivencia.reduccionViudedad70',
+    'supervivencia.comparacionCompensatoria',
+    'supervivencia.reduccionLimiteConjunto',
+  ],
+  orfandad: [
+    'supervivencia.ventanaBaseReguladora',
+    'supervivencia.diasCotizados',
+    'supervivencia.carenciaOrfandad',
+    'supervivencia.reduccionLimiteConjunto',
+  ],
+};
 
 /** Lo mínimo que la comparación necesita de un resultado de cualquier prestación. */
 export interface ResultadoComparable {
@@ -64,7 +96,13 @@ export type EleccionLecturas = Readonly<Record<string, string>>;
  * al menos dos valores en el registro.
  */
 export function lecturasOfrecidas(motor: MotorOfrecido = 'jubilacion'): readonly LecturaAbierta[] {
-  return LECTURAS_ABIERTAS.filter((l) => l.motor === motor && l.alternativas.length >= 2);
+  const soloEstas = SOLO_ESTAS[motor];
+  return LECTURAS_ABIERTAS.filter(
+    (l) =>
+      l.motor === MOTOR_DEL_REGISTRO[motor] &&
+      l.alternativas.length >= 2 &&
+      (soloEstas === undefined || soloEstas.includes(l.id)),
+  );
 }
 
 /** Valor efectivo de cada lectura ofrecida: el elegido si es válido y, si no, el del registro. */

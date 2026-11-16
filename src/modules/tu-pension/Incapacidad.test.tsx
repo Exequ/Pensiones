@@ -89,12 +89,17 @@ describe('textos de la incapacidad', () => {
 });
 
 describe('selector de prestación', () => {
-  it('abre en jubilación ordinaria, con incapacidad permanente y las demás como «próximamente»', () => {
+  it('abre en jubilación ordinaria, con incapacidad, viudedad y orfandad disponibles y las demás como «próximamente»', () => {
     render(<TuPension />);
     const grupo = screen.getByRole('group', { name: 'Prestación' });
     expect(within(grupo).getByRole('radio', { name: 'Jubilación ordinaria' })).toBeChecked();
     expect(within(grupo).getByRole('radio', { name: 'Incapacidad permanente' })).not.toBeChecked();
-    for (const p of ['Viudedad', 'Orfandad', 'Prestación en favor de familiares']) {
+    for (const p of ['Viudedad', 'Orfandad']) {
+      const r = within(grupo).getByRole('radio', { name: p });
+      expect(r).toBeEnabled();
+      expect(r).not.toBeChecked();
+    }
+    for (const p of ['Prestación en favor de familiares', 'Pensiones no contributivas']) {
       const r = within(grupo).getByRole('radio', { name: `${p} (próximamente)` });
       expect(r).toBeDisabled();
     }

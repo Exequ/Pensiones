@@ -1,5 +1,5 @@
 /**
- * Prestaciones del simulador «Tu pensión» (Fase 3-C1).
+ * Prestaciones del simulador «Tu pensión» (Fases 3-C1 y 3-C2).
  *
  * Cada prestación es una `Prestacion`: su identificador, sus textos, las lecturas que ofrece, las
  * limitaciones del motor que se muestran y su receta de cálculo (mapeador del formulario a la
@@ -23,6 +23,13 @@ import { formularioAEntradaIncapacidad } from './incapacidad-mapeador';
 import { presentarIncapacidad } from './incapacidad-presentador';
 import { formularioAEntrada } from './mapeador';
 import { presentarResultado } from './presentador';
+import { ejecutarSupervivencia, type ResultadoTuSupervivencia } from './supervivencia-ejecutor';
+import {
+  formularioAEntradaSupervivencia,
+  type EntradaTuSupervivencia,
+} from './supervivencia-mapeador';
+import { presentarSupervivencia } from './supervivencia-presentador';
+import type { QuienSupervivencia } from './supervivencia-tipos';
 import type { FormularioTuPension, IdPrestacion } from './tipos';
 
 export interface Prestacion {
@@ -30,7 +37,7 @@ export interface Prestacion {
   /** Etiqueta del selector de prestación. */
   readonly etiqueta: string;
   /** Motor de las limitaciones (`LIMITACIONES_MOTOR`) que se muestran en la página. */
-  readonly motorLimitaciones: 'jubilacion' | 'incapacidad';
+  readonly motorLimitaciones: 'jubilacion' | 'incapacidad' | 'supervivencia';
   /** Palabras de la comparación con las lecturas por defecto. */
   etiquetasComparacion(f: FormularioTuPension): EtiquetasComparacion;
   /** Calcula con el motor y presenta el resultado (o devuelve los errores). */
@@ -74,6 +81,24 @@ const recetaIncapacidad: Receta<EntradaIncapacidad, ResultadoOk<'incapacidad-per
   bases: () => undefined,
 };
 
+const recetaSupervivencia = (
+  quien: QuienSupervivencia,
+): Receta<EntradaTuSupervivencia, ResultadoTuSupervivencia> => ({
+  id: quien,
+  motorLecturas: quien,
+  importeEfecto: () => 'la pensión mensual',
+  mapear: (f, catalogo) => formularioAEntradaSupervivencia(f, quien, catalogo),
+  ejecutar: ejecutarSupervivencia,
+  presentar: (r, f, deps) =>
+    presentarSupervivencia(r, f, {
+      aplicarMinimos: f.aplicarMinimos,
+      aplicarPensionMaxima: f.aplicarPensionMaxima,
+      leerReferencia: deps.leerReferencia,
+    }),
+  // El motor de supervivencia no expone las bases del periodo: no hay gráfico (docs/DECISIONES.md, 3-C2).
+  bases: () => undefined,
+});
+
 function ejecutarIncapacidad(motor: Motor, e: EntradaIncapacidad) {
   return motor.incapacidadPermanente(e);
 }
@@ -101,19 +126,50 @@ export const INCAPACIDAD: Prestacion = {
   calcular: (f, deps) => calcularConReceta(recetaIncapacidad, f, deps),
 };
 
-export const PRESTACIONES: readonly Prestacion[] = [JUBILACION, INCAPACIDAD];
+const etiquetasSupervivencia = (nombre: string): EtiquetasComparacion => ({
+  requisitos: `de ${nombre}`,
+  importe: 'la pensión mensual bruta',
+  filaImporte: 'Pensión mensual bruta (por paga)',
+  sinImporte: 'pensión',
+  unidadDiferencia: ' al mes',
+});
+
+export const VIUDEDAD: Prestacion = {
+  id: 'viudedad',
+  etiqueta: 'Viudedad',
+  motorLimitaciones: 'supervivencia',
+  etiquetasComparacion: () => etiquetasSupervivencia('la viudedad'),
+  calcular: (f, deps) => calcularConReceta(recetaSupervivencia('viudedad'), f, deps),
+};
+
+export const ORFANDAD: Prestacion = {
+  id: 'orfandad',
+  etiqueta: 'Orfandad',
+  motorLimitaciones: 'supervivencia',
+  etiquetasComparacion: () => etiquetasSupervivencia('la orfandad'),
+  calcular: (f, deps) => calcularConReceta(recetaSupervivencia('orfandad'), f, deps),
+};
+
+export const PRESTACIONES: readonly Prestacion[] = [JUBILACION, INCAPACIDAD, VIUDEDAD, ORFANDAD];
 
 /** Prestaciones que aún no están: se muestran como «próximamente», sin cifras. */
 export const PRESTACIONES_PROXIMAS: readonly { readonly id: string; readonly etiqueta: string }[] =
   [
-    { id: 'viudedad', etiqueta: 'Viudedad' },
-    { id: 'orfandad', etiqueta: 'Orfandad' },
     { id: 'favor-familiares', etiqueta: 'Prestación en favor de familiares' },
     { id: 'no-contributivas', etiqueta: 'Pensiones no contributivas' },
   ];
 
 export function prestacionDe(id: IdPrestacion): Prestacion {
-  return id === 'incapacidad' ? INCAPACIDAD : JUBILACION;
+  switch (id) {
+    case 'incapacidad':
+      return INCAPACIDAD;
+    case 'viudedad':
+      return VIUDEDAD;
+    case 'orfandad':
+      return ORFANDAD;
+    case 'jubilacion':
+      return JUBILACION;
+  }
 }
 
 /** Calcula la prestación del formulario. */

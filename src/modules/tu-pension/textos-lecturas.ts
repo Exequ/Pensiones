@@ -268,4 +268,94 @@ export const TEXTOS_LECTURAS: Readonly<Record<string, TextoLectura>> = {
       },
     },
   },
+  'supervivencia.ventanaBaseReguladora': {
+    titulo: 'Hasta qué mes llega el periodo para elegir la base reguladora',
+    valores: {
+      'anterior-al-mes-previo': {
+        etiqueta: 'Hasta el mes anterior al mes previo al fallecimiento',
+        queCambia:
+          'La base reguladora se elige entre los meses que acaban en el mes anterior al mes previo al fallecimiento, como dice la norma vigente para estas prestaciones. El mes previo al fallecimiento no entra en el periodo.',
+      },
+      'decreto-1646-1972': {
+        etiqueta: 'Hasta el mes anterior al fallecimiento',
+        queCambia:
+          'La base reguladora se elige entre los meses que acaban en el mes anterior al fallecimiento, como decía el decreto de desarrollo anterior de la Seguridad Social. Entra un mes más reciente en el periodo, lo que puede cambiar los meses elegidos.',
+      },
+    },
+  },
+  'supervivencia.diasCotizados': {
+    titulo: 'Días cotizados de cada mes para el periodo previo de la persona fallecida',
+    valores: {
+      naturales: {
+        etiqueta: 'Días naturales de cada mes',
+        queCambia:
+          'Cada mes con base cuenta con los días naturales que tiene, para comprobar los días cotizados que se exigen a la persona fallecida. Solo puede cambiar si se cumple o no ese requisito.',
+      },
+      'treinta-por-mes': {
+        etiqueta: 'Treinta días por mes',
+        queCambia:
+          'Cada mes con base cuenta como treinta días, para comprobar los días cotizados que se exigen a la persona fallecida. Solo puede cambiar si se cumple o no ese requisito.',
+      },
+    },
+  },
+  'supervivencia.carenciaOrfandad': {
+    titulo: 'Periodo previo de cotización en la orfandad',
+    valores: {
+      'sin-carencia': {
+        etiqueta: 'No se exige periodo previo',
+        queCambia:
+          'Si la persona fallecida estaba en alta, no se le exige un periodo previo de cotización para la orfandad, como dice la ley vigente.',
+      },
+      'rd-1647-1997': {
+        etiqueta: 'Se exigen los días del reglamento anterior',
+        queCambia:
+          'Si la persona fallecida estaba en alta, se le exigen los días de cotización que pedía un reglamento anterior. Solo cambia el resultado si no los alcanzaba.',
+      },
+    },
+  },
+  'supervivencia.reduccionViudedad70': {
+    titulo: 'Reducción de la viudedad con cargas familiares por superar el límite de rentas',
+    valores: {
+      'no-inferior-52': {
+        etiqueta: 'Sin bajar del porcentaje general',
+        queCambia:
+          'Si la pensión con cargas familiares se reduce por superar el límite de rentas, no baja del porcentaje general de la viudedad.',
+      },
+      'sin-suelo': {
+        etiqueta: 'Sin suelo',
+        queCambia:
+          'Si la pensión con cargas familiares se reduce por superar el límite de rentas, puede quedar por debajo del porcentaje general de la viudedad. Solo cambia el resultado cuando se aplica esa reducción.',
+      },
+    },
+  },
+  'supervivencia.comparacionCompensatoria': {
+    titulo: 'Comparación de la viudedad con la pensión compensatoria',
+    valores: {
+      anual: {
+        etiqueta: 'En importes anuales',
+        queCambia:
+          'La viudedad anual, con todas sus pagas, no puede superar la pensión compensatoria anual. Solo cambia el resultado en personas separadas o divorciadas.',
+      },
+      mensual: {
+        etiqueta: 'En importes mensuales',
+        queCambia:
+          'Cada paga de viudedad no puede superar la pensión compensatoria dividida entre los meses del año. Solo cambia el resultado en personas separadas o divorciadas.',
+      },
+    },
+  },
+  'supervivencia.reduccionLimiteConjunto': {
+    titulo: 'Qué pensiones se reducen por el límite conjunto',
+    valores: {
+      orfandad: {
+        etiqueta: 'Se reducen las de orfandad',
+        queCambia:
+          'Cuando la suma de las pensiones de viudedad y de orfandad supera la base reguladora, la viudedad se mantiene y se reducen las orfandades.',
+      },
+      proporcional: {
+        etiqueta: 'Se reducen todas en proporción',
+        queCambia:
+          'Cuando la suma de las pensiones de viudedad y de orfandad supera la base reguladora, todas se reducen en la misma proporción. Solo cambia el resultado si se supera el límite.',
+      },
+    },
+  },
 };
