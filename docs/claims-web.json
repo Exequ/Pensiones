@@ -499,7 +499,8 @@
       "estado": "verificada",
       "revisionActuarial": "revisada",
       "preguntaActuarial": "¿Es adecuado expresar la pensión media en euros constantes con el IPC medio anual (base del último año), o debe usarse otro deflactor (IPC de diciembre, deflactor del consumo de los hogares)? ¿Debe advertirse algo más sobre la composición de la media?",
-      "notas": "Revisión actuarial del 14-11-2026 incorporada en Ajustes actuariales 2; ver docs/ESTADO_AJUSTES_ACTUARIALES_2.md. Las comparaciones de altas y bajas y de regímenes salen de las tablas sistema/altas-bajas-anual-clase-sexo y sistema/pensiones-vigor-regimen-clase-sexo (sin identificadores de elemento, por lo que no se referencian con «fichero#id»). La advertencia «incluye los complementos a mínimos» no está en esta afirmación: va en web-hist-complemento-pension (pendiente, sin frase de la fuente que la confirme). La revisión proponía que la diferencia entre deflactores es apreciable «sobre todo en años de inflación alta»: no se verifica (la mayor diferencia entre el IPC de diciembre y el medio anual se da en 2021 y no en 2022, el otro año de inflación alta), por lo que la página solo dice que depende de la evolución de los precios dentro del año."
+      "notas": "Revisión actuarial del 14-11-2026 incorporada en Ajustes actuariales 2; ver docs/ESTADO_AJUSTES_ACTUARIALES_2.md. Las comparaciones de altas y bajas y de regímenes salen de las tablas sistema/altas-bajas-anual-clase-sexo y sistema/pensiones-vigor-regimen-clase-sexo (sin identificadores de elemento, por lo que no se referencian con «fichero#id»). La advertencia «incluye los complementos a mínimos» no está en esta afirmación: va en web-hist-complemento-pension (pendiente, sin frase de la fuente que la confirme). La revisión proponía que la diferencia entre deflactores es apreciable «sobre todo en años de inflación alta»: no se verifica (la mayor diferencia entre el IPC de diciembre y el medio anual se da en 2021 y no en 2022, el otro año de inflación alta), por lo que la página solo dice que depende de la evolución de los precios dentro del año.",
+      "respuestaActuarial": "Revisión del 14-11-2026"
     },
     {
       "id": "web-hist-relacion-afiliados-pensiones",
@@ -531,7 +532,8 @@
       "estado": "verificada",
       "revisionActuarial": "revisada",
       "preguntaActuarial": "¿Están bien descritos el numerador y el denominador de cada una de las seis definiciones y es correcto presentarlas sin jerarquizar? ¿Falta alguna definición relevante (cotizantes efectivos, ocupados sin sistemas especiales) que no se ha podido descargar?",
-      "notas": "Revisión actuarial del 14-11-2026 incorporada en Ajustes actuariales 2; ver docs/ESTADO_AJUSTES_ACTUARIALES_2.md. La revisión daba como ejemplo de «misma fecha» los afiliados del último día de diciembre frente a las pensiones a 1 de diciembre; los datos descargados dan la pareja del último día de diciembre con las pensiones a 1 de enero siguiente (fechas contiguas), que es la que se marca (docs/DISCREPANCIAS.md). Verificado en parte el aviso de perímetro: la metodología de la estadística de pensionistas dice que incluye «todas las pensiones del Sistema de Seguridad Social gestionadas por el INSS y por el ISM»; la lista de regímenes de la serie de afiliación no incluye Clases Pasivas; los ficheros de afiliación no dicen qué colectivos de funcionarios cuentan en cada régimen. Ninguna definición con cotizantes efectivos: dato pendiente en docs/PENDIENTE_DATOS.md."
+      "notas": "Revisión actuarial del 14-11-2026 incorporada en Ajustes actuariales 2; ver docs/ESTADO_AJUSTES_ACTUARIALES_2.md. La revisión daba como ejemplo de «misma fecha» los afiliados del último día de diciembre frente a las pensiones a 1 de diciembre; los datos descargados dan la pareja del último día de diciembre con las pensiones a 1 de enero siguiente (fechas contiguas), que es la que se marca (docs/DISCREPANCIAS.md). Verificado en parte el aviso de perímetro: la metodología de la estadística de pensionistas dice que incluye «todas las pensiones del Sistema de Seguridad Social gestionadas por el INSS y por el ISM»; la lista de regímenes de la serie de afiliación no incluye Clases Pasivas; los ficheros de afiliación no dicen qué colectivos de funcionarios cuentan en cada régimen. Ninguna definición con cotizantes efectivos: dato pendiente en docs/PENDIENTE_DATOS.md.",
+      "respuestaActuarial": "Revisión del 14-11-2026"
     },
     {
       "id": "web-hist-edad-media-altas",
@@ -602,7 +604,8 @@
       "estado": "verificada",
       "revisionActuarial": "revisada",
       "preguntaActuarial": "¿Es correcto presentar el resto como diferencia (otras transferencias, tasas, ingresos patrimoniales y de capital) y atribuir a la clasificación económica de la fuente la composición de los ingresos? ¿Debe indicarse el criterio de las transferencias entre entidades del propio sistema?",
-      "notas": "Revisión actuarial del 14-11-2026 incorporada en Ajustes actuariales 2; ver docs/ESTADO_AJUSTES_ACTUARIALES_2.md. No se verifica que la diferencia entre las cifras del Tribunal y la ejecución se deba solo a las aportaciones no contributivas (para 2018-2022 la ejecución suma 138.741 millones y el Tribunal cifra 61.941,3; solo cifra las no contributivas de 2022); la página no atribuye la causa completa."
+      "notas": "Revisión actuarial del 14-11-2026 incorporada en Ajustes actuariales 2; ver docs/ESTADO_AJUSTES_ACTUARIALES_2.md. No se verifica que la diferencia entre las cifras del Tribunal y la ejecución se deba solo a las aportaciones no contributivas (para 2018-2022 la ejecución suma 138.741 millones y el Tribunal cifra 61.941,3; solo cifra las no contributivas de 2022); la página no atribuye la causa completa.",
+      "respuestaActuarial": "Revisión del 14-11-2026"
     },
     {
       "id": "web-hist-definiciones-saldo",
@@ -639,7 +642,8 @@
       "estado": "verificada",
       "revisionActuarial": "revisada",
       "preguntaActuarial": "¿Es correcta la explicación de qué incluye cada definición de saldo y de en qué se diferencian (operaciones financieras, perímetro, criterios SEC)? ¿Falta la definición de la IGAE o de la AIReF, no descargadas? ¿Es aceptable mostrar el saldo sin las transferencias del Estado y la lectura ilustrativa que suma los gastos impropios previstos? ¿Qué nombre o advertencia debe llevar para no confundirse con el «saldo contributivo ajustado»? ¿La descripción de «gastos impropios» recogida de la fuente secundaria es fiel? ¿Debe contrastarse con la fuente primaria (AIReF, Ministerio), no descargada, antes de mostrarla?",
-      "notas": "Revisión actuarial del 14-11-2026 incorporada en Ajustes actuariales 2; ver docs/ESTADO_AJUSTES_ACTUARIALES_2.md. Retirada la lectura que sumaba los gastos impropios al saldo y las demás cifras de la fuente secundaria (déficit estimado, transferencia del proyecto de presupuestos y aportación del Estado en 2016). No verificable con las fuentes descargadas, y por tanto no escrito: que el SEC sea base devengo y que su perímetro incluya el SEPE y el FOGASA. La frase sobre partidas que no son pensiones contributivas se apoya en que el texto refundido clasifica los complementos por mínimos, las prestaciones familiares y el ingreso mínimo vital como prestaciones de naturaleza no contributiva (web-hucha-aportaciones-estado)."
+      "notas": "Revisión actuarial del 14-11-2026 incorporada en Ajustes actuariales 2; ver docs/ESTADO_AJUSTES_ACTUARIALES_2.md. Retirada la lectura que sumaba los gastos impropios al saldo y las demás cifras de la fuente secundaria (déficit estimado, transferencia del proyecto de presupuestos y aportación del Estado en 2016). No verificable con las fuentes descargadas, y por tanto no escrito: que el SEC sea base devengo y que su perímetro incluya el SEPE y el FOGASA. La frase sobre partidas que no son pensiones contributivas se apoya en que el texto refundido clasifica los complementos por mínimos, las prestaciones familiares y el ingreso mínimo vital como prestaciones de naturaleza no contributiva (web-hucha-aportaciones-estado).",
+      "respuestaActuarial": "Revisión del 14-11-2026"
     },
     {
       "id": "web-hist-saldos-series",
@@ -720,7 +724,8 @@
       "estado": "verificada",
       "revisionActuarial": "revisada",
       "preguntaActuarial": "¿Es correcto sumar vejez y supervivencia de Eurostat como medida comparable al gasto propio? ¿Qué perímetro (Clases Pasivas, no contributivas) debe atribuirse a cada medida? ¿Debe el complemento a mínimos contarse como gasto en pensiones contributivas cuando se divide el gasto entre el PIB? ¿Es correcta la descripción de dónde lo anota la ejecución? ¿Es adecuada la comparación del valor del Fondo con el gasto anual en meses y la aproximación con catorce pagas? ¿Qué definición de gasto prefieres como referencia? Fase 5-A2: ¿es adecuado expresar el valor del Fondo en meses de transferencias del Estado con las dos definiciones de periodo (año completo y cuarto trimestre) y el trimestre como tres meses? ¿Es aceptable presentar como «construcción ilustrativa» la suma de dos saldos (Fondo a precio de adquisición y deuda PDE de la Seguridad Social) con un flujo acumulado (transferencias del Estado desde un año de inicio), con las advertencias que lleva la página, o debe evitarse esa suma? ¿Qué debe decirse de la relación entre los préstamos, las transferencias y el Fondo para no dar a entender que las partidas son aditivas?",
-      "notas": "Revisión actuarial del 14-11-2026 incorporada en Ajustes actuariales 2; ver docs/ESTADO_AJUSTES_ACTUARIALES_2.md. Eurostat nombra el sistema «ESSPROS»; la revisión escribía «ESSPROSS». No verificable con los metadatos descargados, y por tanto no escrito: que la serie abarque todas las administraciones, contributivas y no contributivas, Clases Pasivas incluidas, y que excluya la incapacidad más allá de que las series descargadas sean las funciones vejez y supervivientes. Que el complemento se abone como parte de la pensión (razón de la referencia por defecto) consta como pendiente en web-hist-complemento-pension."
+      "notas": "Revisión actuarial del 14-11-2026 incorporada en Ajustes actuariales 2; ver docs/ESTADO_AJUSTES_ACTUARIALES_2.md. Eurostat nombra el sistema «ESSPROS»; la revisión escribía «ESSPROSS». No verificable con los metadatos descargados, y por tanto no escrito: que la serie abarque todas las administraciones, contributivas y no contributivas, Clases Pasivas incluidas, y que excluya la incapacidad más allá de que las series descargadas sean las funciones vejez y supervivientes. Que el complemento se abone como parte de la pensión (razón de la referencia por defecto) consta como pendiente en web-hist-complemento-pension.",
+      "respuestaActuarial": "Revisión del 14-11-2026"
     },
     {
       "id": "web-hist-fondo-valor",
@@ -1340,7 +1345,7 @@
     },
     {
       "id": "web-hucha-complemento-minimos-clasificacion",
-      "texto": "En las liquidaciones, el complemento a mínimos figura dentro de las cinco clases de pensión contributiva hasta el PDF de 2014 y aparte, entre las prestaciones no contributivas, desde el de 2015, que ya lo recoge para 2014; por eso la serie de pensiones contributivas con complemento a mínimos suma el complemento desde 2015 y no antes.",
+      "texto": "En las liquidaciones, el complemento a mínimos figura dentro de las cinco clases de pensión contributiva hasta el PDF de 2014 y aparte, entre las prestaciones no contributivas, desde el de 2015, que ya lo recoge para 2014; por eso la serie de pensiones contributivas con complemento a mínimos suma el complemento desde 2015 y no antes. Que las clases incluyan el complemento en los ejercicios anteriores a 2014 es una deducción (los PDF no reclasifican esos años), no consta en una nota de la fuente.",
       "ubicacion": "Página «Hucha»: El Fondo en meses de gasto en pensiones (Fase 5-A3)",
       "datos": [
         "sistema/liquidacion-ss-series.json#gastos-suma-pensiones-contributivas",
@@ -1356,9 +1361,9 @@
       ],
       "fetchedAt": "2026-11-14",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "¿Es válida, para compararla con la referencia de la ejecución, la serie «pensiones contributivas con complemento a mínimos» de 2010 a 2016 (suma de las cinco clases hasta 2014 y suma de las clases y del complemento desde 2015)? Que las clases incluyan el complemento en 2010 a 2013 se deduce de que los PDF repiten sin diferencias la cifra del año anterior hasta el de 2014, y solo en 2014 se ve la reclasificación; ¿basta esa deducción o hace falta una fuente que lo diga?",
-      "notas": "Lo verificado: en 2014 la suma de pensiones del PDF de 2014 es igual a la del PDF de 2015 más el complemento de 2014 que ese PDF muestra aparte. Lo no verificado: la inclusión del complemento en las clases de 2010 a 2013."
+      "revisionActuarial": "revisada",
+      "notas": "Verificado: en 2014 la suma de pensiones del PDF de 2014 es igual a la del PDF de 2015 más el complemento de 2014 que ese PDF muestra aparte. Deducido, no verificado en una nota de la fuente: la inclusión del complemento en las clases de 2010 a 2013 (respuesta actuarial: la serie vale para comparar, diciendo que es una deducción). Pendiente: buscar la nota en el informe económico-financiero de los presupuestos de la Seguridad Social de 2015 (docs/DESCARGAS_MANUALES.md).",
+      "respuestaActuarial": "Tanda 3, parte C, n.º 66"
     },
     {
       "id": "web-hucha-prestamos-anexo",
@@ -1384,7 +1389,7 @@
     },
     {
       "id": "web-hucha-prestamos-por-anio",
-      "texto": "Los préstamos del Estado por año de concesión de 2017 a 2024 son una serie derivada del Anexo 10 del Tribunal de Cuentas: el anexo no da la fecha de concesión y el año se infiere del inicio del plazo de cancelación, que el Tribunal indica que empieza el año siguiente al de la concesión.",
+      "texto": "Los préstamos del Estado por año de 2017 a 2024 son una serie derivada del Anexo 10 del Tribunal de Cuentas: el anexo no da la fecha de concesión y el año asignado es el anterior al inicio del plazo de cancelación (que el Tribunal indica que empieza el año siguiente al de la concesión). Ese año es el año en que la ejecución del presupuesto registra el préstamo como pasivo financiero de ingresos.",
       "ubicacion": "Página «Hucha»: Préstamos del Estado y Fondo de Reserva según el Tribunal de Cuentas (Fase 5-A3)",
       "datos": [
         "sistema/tribunal-cuentas-cge2023-ss.json#prestamos-concedidos-por-anio",
@@ -1399,9 +1404,9 @@
       ],
       "fetchedAt": "2026-11-14",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "¿Es razonable asignar cada préstamo del Anexo 10 al año anterior al de inicio de su plazo de cancelación? Comprueba que la suma de los asignados hasta 2022 y hasta 2023 coincide con las cifras del Tribunal de Cuentas (88.994,0 y 98.997,8 millones) y con los pasivos financieros de la ejecución de 2017 a 2024, pero la fecha de concesión no figura en el anexo.",
-      "notas": "Lo verificado: coincidencia con los acumulados del Tribunal y con la ejecución (salvo 2,57 millones en 2017). Lo inferido: el año de cada línea."
+      "revisionActuarial": "revisada",
+      "notas": "Verificado: la suma de los préstamos asignados hasta 2022 (88.994,0 millones, con 10.192,0 de 2017) y hasta 2023 (98.997,8) coincide con las cifras del Tribunal de Cuentas; los pasivos financieros de ingresos de la ejecución de 2018 a 2023 coinciden con la serie por año (salvo 2,57 millones en 2017); test scripts/verificacion-ajustes-3.test.ts. Sigue siendo una asignación deducida del plazo de cancelación; la fecha de concesión no figura en el anexo.",
+      "respuestaActuarial": "Tanda 3, parte C, n.º 67"
     },
     {
       "id": "web-hucha-finalidad-tribunal-2023",
@@ -1629,7 +1634,7 @@
     },
     {
       "id": "web-sis-comparabilidad",
-      "texto": "Las medidas de la comparativa internacional (gasto sobre el PIB de la OCDE y de Eurostat, edad normal y efectiva de jubilación y tasas de reposición bruta y neta de la OCDE) se muestran con su definición, sus supuestos y las dos versiones de cada concepto, sin elegir ninguna; los países no son directamente comparables porque cada fuente delimita lo que mide, los sistemas combinan reparto, capitalización y cuentas nocionales con reglas distintas, y las poblaciones y economías difieren.",
+      "texto": "Las medidas de la comparativa internacional (gasto sobre el PIB de la OCDE y de Eurostat, edad normal y efectiva de jubilación y tasas de reposición bruta y neta de la OCDE) se muestran con su definición, sus supuestos y las dos versiones de cada concepto, sin elegir ninguna; los países no son directamente comparables porque cada fuente delimita lo que mide, los sistemas combinan reparto, capitalización y cuentas nocionales con reglas distintas y las poblaciones y economías difieren. Los sistemas se pueden clasificar con dos ejes distintos: cómo se financia (reparto o capitalización) y cómo se fija la prestación (definida o de aportación definida); las cuentas nocionales son reparto con aportación definida.",
       "ubicacion": "Página «Otros sistemas» (Fase 5-C): comparabilidad y glosario",
       "datos": [
         "internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq",
@@ -1666,9 +1671,9 @@
       ],
       "fetchedAt": "2026-11-14",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Cuatro cuestiones agrupadas: (1) ¿es correcta la descripción de las dos medidas de gasto (OCDE y Eurostat) como delimitaciones distintas del mismo concepto, dado que el perímetro de ninguna consta en las fuentes descargadas?; (2) ¿es adecuado presentar la tasa de reposición bruta y la neta de la OCDE lado a lado con sus supuestos y contrastarlas con cocientes empíricos propios sin considerarlas equivalentes?; (3) ¿es correcto el contraste entre la edad normal de jubilación de la OCDE (carrera completa desde los 22 años) y la edad ordinaria de la normativa española?; (4) ¿son correctas, y suficientes para un lector no especialista, las definiciones conceptuales de reparto, capitalización y cuentas nocionales del glosario, que no proceden de una fuente descargada (las citas de las fichas de país solo muestran cómo las usan las fuentes)? Comprobar con datos: la definición de cada medida en data/internacional/ocde-supuestos-reposicion y las citas de data/internacional/paises-sistemas.",
-      "notas": "Pregunta agrupada (Fase 5-C) para respetar el tope de afirmaciones pendientes sin esconder las cuatro cuestiones: ver docs/DECISIONES.md."
+      "revisionActuarial": "revisada",
+      "notas": "Respuesta actuarial: puntos 2, 3 y 4 revisados (4 con confianza media: las definiciones del glosario no proceden de una fuente descargada). El punto 1 (perímetro del gasto de la OCDE y de Eurostat) pasa a la afirmación web-sis-perimetro-gasto, pendiente. Lo verificado del punto 3: los 65 años de la OCDE corresponden a la rama de 38 años y 6 meses cotizados (data/internacional/contraste-espana.json).",
+      "respuestaActuarial": "Tanda 3, parte C, n.º 68"
     },
     {
       "id": "web-tipos-requisitos",
@@ -1918,21 +1923,100 @@
     },
     {
       "id": "web-fin-sensibilidades-empleo-parametro",
-      "texto": "En el caso de sensibilidad del empleo de 55 a 64 años, el parámetro que fija el LEEME es multiplicar las tasas de empleo de ese tramo por un factor en 2050, con avance lineal desde el primer año proyectado; la descripción anterior de M4 solo decía «un 10 % más de empleo de 55 a 64 años en 2050» sin precisar el parámetro. La web muestra el texto del LEEME.",
+      "texto": "En el caso de sensibilidad de 55 a 64 años, el LEEME fija multiplicar las tasas de ese tramo por un factor en 2050, con avance lineal desde el primer año proyectado. El código de M2 aplica el factor a las tasas de afiliación y de cotización (afiliados y cotizantes entre población por tramo) y no a las tasas de empleo de la EPA; la web rotula la palanca como «tasas de afiliación y de cotización de 55 a 64 años» y dice que el número de pensiones de M3 no cambia.",
       "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Ajustes de M4, sensibilidades)",
       "datos": ["sistema/fondo-reserva-series.json#valor-fin-ano"],
       "fuentes": [
         {
-          "title": "M4 · Modelo financiero del sistema (v1): código del modelo en el repositorio y salidas de su ejecución",
+          "title": "M2 · Cotizantes y bases de cotización: código del modelo en el repositorio",
           "publisher": "Elaboración propia: modelo de proyección",
-          "url": "https://github.com/Exequ/Pensiones/blob/2c4e79bf71ea31fe2fbd997a9024a27cc5131d32/modelos/m4/m4_sensibilidades.py"
+          "url": "https://github.com/Exequ/Pensiones/blob/9342436c6bfbab3cf3eea0dc62d1ecc164662e4b/modelos/m2/m2_cotizantes.py"
+        }
+      ],
+      "fetchedAt": "2026-11-16",
+      "estado": "verificada",
+      "revisionActuarial": "revisada",
+      "notas": "Verificado en modelos/m2/m2_cotizantes.py (k = min(1, (t − 2026)/24), factor 1 + (mult − 1)·k sobre las tasas ra y rb de 55 a 60; solo M2 lo usa). La salida del modelo y su LEEME no se tocan; la discrepancia consta en docs/DISCREPANCIAS.md para el chat de modelos.",
+      "respuestaActuarial": "Tanda 3, parte C, n.º 69"
+    },
+    {
+      "id": "web-sis-perimetro-gasto",
+      "texto": "La OCDE y Eurostat miden el gasto público en pensiones sobre el PIB con delimitaciones propias, y el perímetro de cada una (prestaciones monetarias o también en especie, Clases Pasivas, no contributivas) no consta en las fuentes descargadas; por eso la web muestra las dos medidas sin elegir ninguna ni afirmar que midan el mismo concepto.",
+      "ubicacion": "Página «Otros sistemas» (Fase 5-C): gasto sobre el PIB",
+      "datos": [
+        "internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq",
+        "internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        },
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en",
+          "docId": "OECD-PAG-2025"
+        },
+        {
+          "title": "Eurostat: spr_exp_func, ilc_peps01n, lfsi_emp_a y lfsi_dwl_a",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+          "docId": "eurostat-int"
         }
       ],
       "fetchedAt": "2026-11-16",
       "estado": "pendiente",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Confirmar que la lectura «tasas de empleo de 55 a 64 años multiplicadas por 1,1 en 2050, con avance lineal» es la que se quiere presentar bajo la etiqueta de la descripción («un 10 % más de empleo de 55 a 64 años en 2050»): no se ha comprobado que el avance lineal parta de 2026 ni que el factor se aplique a la tasa de empleo y no al número de empleados.",
-      "notas": "Lo verificado: el LEEME dice «multiplicadas por 1,1 en 2050 (avance lineal)» y los resultados de 2050 del caso coinciden con la sección 7 de la descripción dentro del redondeo. Lo no verificado es qué año de partida usa el avance lineal y a qué magnitud se aplica el factor; no se ejecuta el modelo aquí."
+      "preguntaActuarial": "¿Qué prestaciones incluye cada medida de gasto sobre el PIB (Eurostat: vejez y supervivencia de ESSPROS; OCDE: prestaciones monetarias)? Descargar los metadatos de las dos antes de afirmar el perímetro de cada una (docs/DESCARGAS_MANUALES.md).",
+      "notas": "Separada de web-sis-comparabilidad en los Ajustes actuariales 3 (tanda 3, parte C, n.º 68, punto 1; confianza baja del revisor). Antes iba agrupada en una sola pregunta (docs/DECISIONES.md)."
+    },
+    {
+      "id": "web-fin-saldos-diferencia",
+      "texto": "En el último año con las tres medidas, el saldo presupuestario no financiero y la capacidad o necesidad de financiación SEC se diferencian en la cantidad que muestra la página (diferencia calculada de las dos series), y con las fuentes descargadas no se puede conciliar; el saldo total cuenta como ingreso los pasivos financieros, entre ellos los préstamos del Estado.",
+      "ubicacion": "Página «Financiación y déficit»: saldo según tres definiciones (Ajustes actuariales 3)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-no-financiero",
+        "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-total",
+        "sistema/deficit-sec-fondos-seguridad-social.json#b9-mio-eur"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        },
+        {
+          "title": "Government revenue, expenditure and main aggregates (gov_10a_main), sector S.1314 Social security funds, España",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table"
+        }
+      ],
+      "fetchedAt": "2026-11-16",
+      "estado": "verificada",
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 22",
+      "notas": "Cálculo desde /data (2025): 232.882,47 − 240.070,36 = −7.187,89; saldo total −1.797,69; SEC 262.691 − 268.303 = −5.612; diferencia 1.576 millones (n.º 60 y 61). No se escribe «devengo» ni se describe el perímetro del S.1314: no consta en las fuentes descargadas (Ajustes actuariales 2, 1.a)."
+    },
+    {
+      "id": "web-cot-afiliado-definicion",
+      "texto": "Un afiliado es una situación de alta en la Seguridad Social (la fuente cuenta relaciones laborales en alta, con pluriempleo), no una persona: quien tiene más de un alta cuenta más de una vez, y la razón no es el número de cotizantes por pensionista.",
+      "ubicacion": "Página «Cotizantes y pensionistas»: relación entre afiliados y pensiones (Ajustes actuariales 3)",
+      "datos": ["sistema/relacion-afiliados-pensiones.json#afiliados-diciembre-por-pensionista"],
+      "fuentes": [
+        {
+          "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271"
+        }
+      ],
+      "fetchedAt": "2026-11-16",
+      "estado": "verificada",
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 20",
+      "notas": "Texto de la respuesta actuarial n.º 20 y 65, limitado a lo que consta en /data («afiliados medios en alta», «relaciones laborales en alta, con pluriempleo»). No se afirma nada sobre perceptores de desempleo."
     }
   ]
 }

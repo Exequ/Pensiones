@@ -8,3 +8,7 @@ package-lock.json
 data-raw
 modelos
 docs/modelos
+
+# Preguntas y respuestas de la revisión actuarial (texto recibido tal cual; no se reformatea)
+docs/revision-actuarial/preguntas-*.md
+docs/revision-actuarial/respuestas-*.md

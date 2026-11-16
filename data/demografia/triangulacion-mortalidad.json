@@ -17,7 +17,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "media",
-      "notes": "Dato derivado: supervivencia publicada a 10 años de los hombres de 85 años en 2010 dividida por Π(1 − qx) (tablas del INE); un valor inferior a 1 significa que la población publicada pierde más efectivos que los que implica qx aplicado a la población a 1 de enero."
+      "notes": "Dato derivado: supervivencia publicada a 10 años de los hombres de 85 años en 2010 dividida por Π(1 − qx) (tablas del INE); un valor inferior a 1 significa que la población publicada pierde más efectivos que los que implica qx aplicado a la población a 1 de enero. Ese valor inferior a 1 se debe sobre todo a la convención de edades, no a un error de los datos: la población con x años cumplidos a 1 de enero vive el año entre las edades exactas x + 0,5 y x + 1,5, por lo que la probabilidad de esa cohorte es (qx + qx+1)/2 (convención de Lexis, dato siguiente) y no qx sin desplazar."
     },
     {
       "id": "supervivencia-publicada-sobre-qx-mujeres-85-2010-2020",
@@ -107,7 +107,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "media",
-      "notes": "Dato derivado: ídem para mujeres."
+      "notes": "Dato derivado: ídem para mujeres. El factor no es constante: varía con la edad (data/demografia/triangulacion-factor-qx) y el factor de Lexis, (qx + qx+1)/2 ÷ qx, lo reproduce edad a edad; por eso un factor constante desde los 75 años no se sostiene. Respuesta actuarial: tanda 3, parte C, n.º 3."
     },
     {
       "id": "muertes-implicitas-pensiones-jubilacion-qx",

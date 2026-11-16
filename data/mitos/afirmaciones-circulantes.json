@@ -2,7 +2,7 @@
   "tipo": "mitos",
   "id": "afirmaciones-circulantes",
   "title": "Catálogo de afirmaciones frecuentes sobre las pensiones en España: datos y definiciones, sin veredicto",
-  "description": "Doce afirmaciones que circulan sobre las pensiones, formuladas de forma neutral. Para cada una: los datos de /data que permiten contrastarla, las definiciones alternativas que condicionan el resultado y lo que NO se puede concluir con los datos disponibles. El catálogo no emite veredictos (verdadero o falso). Todas están pendientes de revisión actuarial, con una pregunta concreta.",
+  "description": "Doce afirmaciones que circulan sobre las pensiones, formuladas de forma neutral. Para cada una: los datos de /data que permiten contrastarla, las definiciones alternativas que condicionan el resultado y lo que NO se puede concluir con los datos disponibles. El catálogo no emite veredictos (verdadero o falso). Cada afirmación indica si su revisión actuarial está pendiente (con una pregunta concreta) o revisada (con la referencia a la respuesta).",
   "mitos": [
     {
       "id": "hucha-vaciada",
@@ -35,8 +35,9 @@
         "El valor a precio de mercado, que puede diferir del valor de adquisición.",
         "Qué parte de la evolución se debe a disposiciones y cuál a otros motivos más allá de las series publicadas."
       ],
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar el criterio de valoración (precio de adquisición) y la secuencia dotaciones, rendimientos y disposiciones del Fondo de Reserva; decidir con qué referencia (valor máximo, saldo actual, años de gasto cubiertos) se formula «vaciado» y calcular los meses de gasto en pensiones que cubre el valor de cada año."
+      "revisionActuarial": "revisada",
+      "preguntaActuarial": "Comprobar el criterio de valoración (precio de adquisición) y la secuencia dotaciones, rendimientos y disposiciones del Fondo de Reserva; decidir con qué referencia (valor máximo, saldo actual, años de gasto cubiertos) se formula «vaciado» y calcular los meses de gasto en pensiones que cubre el valor de cada año.",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 18"
     },
     {
       "id": "pensiones-con-impuestos",
@@ -78,8 +79,9 @@
       "faltan": [
         "Desglose de las transferencias del Estado por finalidad (ver docs/PENDIENTE_DATOS.md)."
       ],
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar la separación de fuentes de financiación (contributivas frente a no contributivas) y el desglose de las transferencias por finalidad; decidir cómo se atribuyen los complementos a mínimos y las reducciones de cuotas al calcular la proporción financiada con cotizaciones."
+      "revisionActuarial": "revisada",
+      "preguntaActuarial": "Comprobar la separación de fuentes de financiación (contributivas frente a no contributivas) y el desglose de las transferencias por finalidad; decidir cómo se atribuyen los complementos a mínimos y las reducciones de cuotas al calcular la proporción financiada con cotizaciones.",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 19"
     },
     {
       "id": "menos-cotizantes-por-pensionista",
@@ -118,6 +120,11 @@
           "nombre": "Tasa de dependencia de mayores",
           "literal": "Población de 65 o más años entre población de 20 a 64 años (proyección).",
           "datos": ["demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-59"]
+        },
+        {
+          "nombre": "Qué es un afiliado",
+          "literal": "Una situación de alta en la Seguridad Social (la fuente cuenta relaciones laborales en alta, con pluriempleo), no una persona: quien tiene más de un alta cuenta más de una vez.",
+          "datos": ["sistema/afiliacion-anual.json#media-anual-total-sistema"]
         }
       ],
       "noSePuedeConcluir": [
@@ -127,8 +134,9 @@
       "faltan": [
         "Relación cotizantes/pensionistas sin doble cómputo (ver docs/PENDIENTE_DATOS.md)."
       ],
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar qué es un «cotizante» frente a un afiliado (pluriempleo, regímenes especiales, situaciones sin cotización) y un «pensionista» frente a una pensión; elegir la definición coherente con el uso en el modelo y valorar el efecto del doble cómputo sobre el nivel y la tendencia."
+      "revisionActuarial": "revisada",
+      "preguntaActuarial": "Comprobar qué es un «cotizante» frente a un afiliado (pluriempleo, regímenes especiales, situaciones sin cotización) y un «pensionista» frente a una pensión; elegir la definición coherente con el uso en el modelo y valorar el efecto del doble cómputo sobre el nivel y la tendencia.",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 20"
     },
     {
       "id": "jubilados-cobran-mas-de-lo-cotizado",
@@ -206,8 +214,9 @@
       "faltan": [
         "Saldo contributivo ajustado (AIReF) y capacidad de financiación según la IGAE (ver docs/PENDIENTE_DATOS.md)."
       ],
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar las definiciones de déficit (presupuestario no financiero, total, SEC 2010 y saldo contributivo ajustado de la AIReF) y su reconciliación (criterio de caja o devengo, sectorización, tratamiento de transferencias y préstamos); decidir cuál se usa en cada magnitud del modelo."
+      "revisionActuarial": "revisada",
+      "preguntaActuarial": "Comprobar las definiciones de déficit (presupuestario no financiero, total, SEC 2010 y saldo contributivo ajustado de la AIReF) y su reconciliación (criterio de caja o devengo, sectorización, tratamiento de transferencias y préstamos); decidir cuál se usa en cada magnitud del modelo.",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 22"
     },
     {
       "id": "edad-real-de-jubilacion-65",
@@ -251,8 +260,9 @@
         "No hay una única edad «real»: las cinco medidas responden a preguntas distintas y dan cifras distintas.",
         "No hay en /data la distribución de edades de alta ni el peso de las distintas modalidades de jubilación."
       ],
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar qué mide cada edad (legal, de alta, efectiva de salida del mercado laboral, de la OCDE para carrera completa), con la dependencia de la carrera cotizada y las modalidades anticipadas, y decidir cuál debe alimentar la edad de jubilación del modelo."
+      "revisionActuarial": "revisada",
+      "preguntaActuarial": "Comprobar qué mide cada edad (legal, de alta, efectiva de salida del mercado laboral, de la OCDE para carrera completa), con la dependencia de la carrera cotizada y las modalidades anticipadas, y decidir cuál debe alimentar la edad de jubilación del modelo.",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 23"
     },
     {
       "id": "pensiones-publicas-insostenibles",
@@ -263,7 +273,10 @@
         "internacional/ocde-espana.json#ppep-no-aplica-z-z-pt-b1gq",
         "demografia/proyecciones-hipotesis.json#tasa-dependencia-proyectada",
         "parametros/mei-tipo-total.json",
-        "internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp"
+        "internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp",
+        "parametros/mei-reglas.json#da2-rdl-2023-tope-gasto-pct-pib",
+        "parametros/mei-reglas.json#da2-rdl-2023-impacto-medidas-referencia",
+        "parametros/mei-reglas.json#da2-rdl-2023-aumento-mei-decimas-del-exceso"
       ],
       "definiciones": [
         {
@@ -282,14 +295,24 @@
         {
           "nombre": "Sostenibilidad",
           "literal": "No hay una definición única: puede referirse al gasto sobre PIB, al saldo financiero, a la adecuación de las prestaciones o a la capacidad de financiación con las reglas vigentes."
+        },
+        {
+          "nombre": "Criterio legal de la disposición adicional segunda del Real Decreto-ley 2/2023",
+          "literal": "Cada tres años, desde marzo de 2025, la AIReF comprueba que el gasto medio bruto público en pensiones en el periodo 2022-2050 del último Informe de Envejecimiento no supere el 15 por ciento del PIB, más o menos la diferencia entre el impacto medio anual de las medidas de ingresos y el 1,7 por ciento del PIB. Si hay exceso y la ley con las medidas correctoras no entra en vigor el 1 de enero del año siguiente, la cotización del Mecanismo de Equidad Intergeneracional aumenta para compensar dos décimas partes del exceso estimado por la AIReF a partir del 1 de enero del año siguiente a la publicación de su informe y otras dos décimas partes en cada uno de los años siguientes, hasta que se adopten nuevas medidas del mismo impacto o el exceso de gasto neto sea corregido.",
+          "datos": [
+            "parametros/mei-reglas.json#da2-rdl-2023-tope-gasto-pct-pib",
+            "parametros/mei-reglas.json#da2-rdl-2023-impacto-medidas-referencia",
+            "parametros/mei-reglas.json#da2-rdl-2023-aumento-mei-decimas-del-exceso"
+          ]
         }
       ],
       "noSePuedeConcluir": [
         "Que el sistema sea o no sostenible: depende de la definición, de las hipótesis demográficas y económicas y de las reformas futuras.",
         "Las proyecciones no son predicciones: son escenarios con hipótesis explícitas."
       ],
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar los criterios de sostenibilidad aplicables (gasto/PIB, saldo, ratio de dependencia, mecanismos automáticos como el MEI), la sensibilidad a las hipótesis de fecundidad, mortalidad y migración (INE, EUROPOP2025, Ageing Report) y las reglas vigentes de revalorización y base máxima."
+      "revisionActuarial": "revisada",
+      "preguntaActuarial": "Comprobar los criterios de sostenibilidad aplicables (gasto/PIB, saldo, ratio de dependencia, mecanismos automáticos como el MEI), la sensibilidad a las hipótesis de fecundidad, mortalidad y migración (INE, EUROPOP2025, Ageing Report) y las reglas vigentes de revalorización y base máxima.",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 24"
     },
     {
       "id": "mayores-en-pobreza",
@@ -359,8 +382,9 @@
         "Que los pensionistas reales perciban esa proporción: la tasa de la OCDE es teórica, para una carrera completa y un nivel de renta dado.",
         "Las diferencias entre la tasa teórica y el cociente empírico no se pueden descomponer con los datos: las carreras reales son más cortas, hay mínimos y topes y la media de salarios no es la renta de quien se jubila."
       ],
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar la comparabilidad de la tasa de reposición teórica de la OCDE (carrera completa desde los 22, indexación de ingresos y supuestos de crecimiento) con una tasa calculada a partir de las reglas propias (escala de porcentajes, base reguladora, actualización de bases) y con los cocientes empíricos; reproducir el 100 % del salario medio con la fórmula vigente."
+      "revisionActuarial": "revisada",
+      "preguntaActuarial": "Comprobar la comparabilidad de la tasa de reposición teórica de la OCDE (carrera completa desde los 22, indexación de ingresos y supuestos de crecimiento) con una tasa calculada a partir de las reglas propias (escala de porcentajes, base reguladora, actualización de bases) y con los cocientes empíricos; reproducir el 100 % del salario medio con la fórmula vigente.",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 26"
     },
     {
       "id": "espana-gasta-mas-que-europa",
@@ -429,10 +453,15 @@
       ],
       "noSePuedeConcluir": [
         "Si la revalorización igualó al IPC en cada año: depende de qué IPC y de qué periodo se compare y de las reglas de cada año (en algunos años la revalorización publicada es distinta de las variaciones del IPC de data/parametros).",
-        "El poder adquisitivo de una persona concreta depende de su cesta de consumo y de los complementos que perciba."
+        "El poder adquisitivo de una persona concreta depende de su cesta de consumo y de los complementos que perciba.",
+        "El acumulado de la revalorización frente al IPC: no se calcula ni se muestra porque la serie de revalorización de /data no tiene los años 2011 ni 2012."
       ],
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar año a año la diferencia entre el porcentaje de revalorización de data/parametros/revalorizacion-general y las distintas medidas de IPC (media anual, diciembre, media de 12 meses hasta noviembre), identificar los años con regla distinta y calcular el efecto acumulado sobre el poder adquisitivo con cada medida."
+      "revisionActuarial": "revisada",
+      "preguntaActuarial": "Comprobar año a año la diferencia entre el porcentaje de revalorización de data/parametros/revalorizacion-general y las distintas medidas de IPC (media anual, diciembre, media de 12 meses hasta noviembre), identificar los años con regla distinta y calcular el efecto acumulado sobre el poder adquisitivo con cada medida.",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 28",
+      "faltan": [
+        "Los porcentajes de revalorización de 2011 y 2012 (y, según el revisor, la paga por desviación de 2001 a 2010), sin los cuales no se puede publicar un acumulado frente al IPC."
+      ]
     },
     {
       "id": "sin-nacimientos-no-hay-pensiones",
@@ -471,8 +500,9 @@
         "Que los nacimientos determinen por sí solos la sostenibilidad: el gasto depende también de la mortalidad, la migración, el empleo, la productividad y las reglas de cálculo.",
         "El efecto de una variación de la fecundidad en el PIB no se puede estimar con los datos de /data sin un modelo."
       ],
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar la contribución relativa de fecundidad, mortalidad, migración y empleo a la tasa de dependencia y al gasto en pensiones (análisis de sensibilidad del Ageing Report y variantes de EUROPOP2025) y qué hipótesis de empleo y productividad hacen falta para pasar de la dependencia demográfica a la económica."
+      "revisionActuarial": "revisada",
+      "preguntaActuarial": "Comprobar la contribución relativa de fecundidad, mortalidad, migración y empleo a la tasa de dependencia y al gasto en pensiones (análisis de sensibilidad del Ageing Report y variantes de EUROPOP2025) y qué hipótesis de empleo y productividad hacen falta para pasar de la dependencia demográfica a la económica.",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 29"
     }
   ]
 }

@@ -58,6 +58,11 @@ export function Relacion() {
         Una razón de {decimal2(pD?.valor ?? 0)}, por ejemplo, significa que hay esa cantidad de
         afiliados por cada pensión en vigor.
       </Definition>
+      <Definition termino="Afiliado">
+        Una situación de alta en la Seguridad Social (la fuente cuenta relaciones laborales en alta,
+        con pluriempleo), no una persona: quien tiene más de un alta cuenta más de una vez. Por eso
+        la razón no es el número de cotizantes por pensionista.
+      </Definition>
       <MarginNote etiqueta="Fechas de referencia">
         <p>
           La marca «{MARCA_MISMA_FECHA}» describe las parejas cuyo numerador y denominador se miden

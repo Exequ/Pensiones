@@ -67,7 +67,7 @@ describe('página «Otros sistemas»', () => {
     }
   });
 
-  it('las dos medidas de un mismo concepto se muestran lado a lado', () => {
+  it('las dos medidas de cada magnitud se muestran lado a lado', () => {
     const { container } = pintar();
     const paneles = [...container.querySelectorAll('.paneles-dos')];
     // Gasto (barras y líneas), edad (barras) y tasa de reposición (bruta y neta).

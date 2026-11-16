@@ -126,4 +126,49 @@ d2021['crossCheck'] = {
 }
 for d in (d2020, d2021):
     d['fetchedAt'] = HOY
-fusionar('parametros', 'base-minima-rg', [d2020, d2021])
+# ---- Ajustes actuariales 3 (n.º 32): 2021 por meses (1-1 a 31-8 y desde el 1-9) con el artículo 3 de la Orden
+art3 = leer(f'{REPO}/docs/revision-actuarial/fuentes/orden-pcm-1353-2021-art3.txt')
+assert art3.startswith('Artículo 3. Bases máximas y mínimas de cotización.')
+filas3 = {}
+for g in (1, 2, 3, 4, 5, 6, 7):
+    m = re.search(rf'^{g}\n[^\n]+\n([\d.]+,\d\d)\n([\d.]+,\d\d)$', art3, re.M)
+    assert m, g
+    filas3[g] = (num(m.group(1)), num(m.group(2)))
+assert {filas3[g] for g in (4, 5, 6, 7)} == {(1125.9, 4070.1)}, filas3
+min_sep21, max_sep21 = filas3[7]
+assert max_sep21 == max2020 == 4070.1  # la base máxima de 2021 no cambió en septiembre (4.070,10)
+assert abs(round(32.17 * 7 / 6 * 30, 2) - min_sep21) < 0.2  # SMI diario 32,17 × 7/6 × 30 (art. 19.2 TRLGSS)
+fuente_orden_art3 = dict(fuente_orden)
+fuente_orden_art3['title'] = fuente_orden['title']
+tramo_ene_ago = dato(
+    '2021', min2020, 'euros/mes', fuente_ley,
+    d2021['quote'], d2021['location'],
+    'Vigente del 1 de enero al 31 de agosto de 2021. Valor DEDUCIDO, no publicado (confianza media): la ley incrementa la base de '
+    '31-12-2020 en el porcentaje de aumento del SMI y el SMI no aumentó hasta el 1-9-2021. Es el valor de data/parametros/base-minima-rg para 2021.',
+    confidence='media',
+)
+tramo_ene_ago['id'] = '2021-enero-agosto'
+tramo_ene_ago['fetchedAt'] = HOY  # mismas fuentes que base-minima-rg (2026-11-13)
+tramo_sep_dic = dato(
+    '2021', min_sep21, 'euros/mes', fuente_orden_art3,
+    'Orden PCM/1353/2021, art. 3: «Desde el 1 de septiembre de 2021, la cotización al Régimen General por contingencias comunes estará '
+    'limitada para cada grupo de categorías profesionales por las bases mínimas y máximas siguientes:» (grupos 4 a 7: 1.125,90 euros/mes)',
+    'Orden PCM/1353/2021, artículo 3 (extracto en docs/revision-actuarial/fuentes/orden-pcm-1353-2021-art3.txt)',
+    'Vigente del 1 de septiembre al 31 de diciembre de 2021. Grupos 4 a 7 (idénticos). Lo publica la Orden; el SMI diario de 32,17 euros '
+    '(RD 817/2021) × 7/6 × 30 da la misma cuantía dentro del redondeo diario (art. 19.2 TRLGSS). Respuesta actuarial: tanda 3, parte A, n.º 32.',
+    confidence='alta',
+)
+tramo_sep_dic['id'] = '2021-septiembre-diciembre'
+tramo_sep_dic['fetchedAt'] = '2026-11-16'  # descarga del artículo 3 de la Orden PCM/1353/2021
+fusionar(
+    'parametros', 'base-minima-rg-2021-tramos', [tramo_ene_ago, tramo_sep_dic],
+    title='Base mínima de cotización del Régimen General (grupos 4 a 7) en 2021, por tramos del año',
+    description='La base mínima cambió a mitad de 2021: 1.108,50 euros/mes del 1 de enero al 31 de agosto (valor deducido) y 1.125,90 euros/mes desde el 1 de septiembre '
+                '(Orden PCM/1353/2021). data/parametros/base-minima-rg guarda un valor por año (el vigente el 1 de enero), por lo que 2021 figura allí con el primer tramo.',
+)
+fusionar(
+    'parametros', 'base-minima-rg', [d2020, d2021],
+    description='Base mínima mensual de cotización de los grupos de cotización 4 a 7 del Régimen General vigente desde el 1 de enero de cada año (los cambios a mitad de año se indican en notes; '
+                'el de 2021, por tramos, en base-minima-rg-2021-tramos). Desde 2027 la base mínima evoluciona con el salario mínimo interprofesional incrementado en un sexto (art. 19.2 TRLGSS): '
+                'la proyección con el IPC del escenario que usa el motor desde 2027 es un supuesto del modelo, no una regla legal.',
+)

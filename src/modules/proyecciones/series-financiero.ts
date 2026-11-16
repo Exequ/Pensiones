@@ -29,6 +29,7 @@ import { formatearPorcentaje } from '../../engine/formato';
 import type { DatosFinanciero, EscenarioM4 } from './datos-financiero';
 import type { FilaModelo } from './datos-proyecciones';
 import type { SerieProyectada } from './grafico-proyeccion';
+import { MODELO } from './ids-datos';
 import { COL4, ESCENARIO_BASE } from './ids-financiero';
 import { aniosDe, puntosDeColumna } from './series';
 
@@ -550,6 +551,27 @@ export function aniosSensibilidades(d: DatosFinanciero): number[] {
   return aniosDe(d.sensibilidades.tabla.filas);
 }
 
+/**
+ * Rótulo de la palanca de una sensibilidad: el texto del LEEME de la salida, salvo una corrección
+ * verificada en el código del modelo (Ajustes actuariales 3, n.º 69): el factor de la palanca de
+ * edades próximas a la jubilación multiplica las tasas de afiliación y de cotización de M2
+ * (afiliados y cotizantes entre población por tramo), no las tasas de empleo de la EPA, y avanza
+ * linealmente desde el primer año proyectado. La salida del modelo no se toca; el texto no lleva
+ * cifras (salen del LEEME).
+ */
+export function rotuloPalanca(parametro: string | null): string | null {
+  if (parametro === null) return null;
+  return parametro
+    .replace(
+      /tasas de empleo(?= de \d+ a \d+ años multiplicadas)/,
+      'tasas de afiliación y de cotización',
+    )
+    .replace(
+      '(avance lineal)',
+      `(avance lineal desde el primer año proyectado; el número de pensiones de ${MODELO.m3} no cambia)`,
+    );
+}
+
 /** Fila de la tabla de sensibilidades: el caso base o uno de los casos, con su diferencia con el base. */
 export interface FilaSensibilidad {
   readonly id: string;
@@ -605,7 +627,7 @@ export function tablaSensibilidades(d: DatosFinanciero, anio: number): TablaSens
       },
       ...casos.map((c, i) => ({
         id: c.id,
-        parametro: d.sensibilidades.casos[i]?.parametro ?? null,
+        parametro: rotuloPalanca(d.sensibilidades.casos[i]?.parametro ?? null),
         gasto: c.gasto,
         gastoDiferencia: c.gastoDiferencia,
         saldo: c.saldo,

@@ -570,11 +570,12 @@ describe('estructura de los sistemas de pensiones (A3)', () => {
 
 describe('catálogo de afirmaciones circulantes (B)', () => {
   const c = ArchivoMitos.parse(leeJson('mitos', 'afirmaciones-circulantes'));
-  it('tiene entre 10 y 12 afirmaciones con identificadores únicos, todas pendientes de revisión actuarial y con pregunta concreta', () => {
+  it('tiene entre 10 y 12 afirmaciones con identificadores únicos, pendientes o revisadas (con respuesta actuarial) y con la pregunta que se hizo', () => {
     expect(c.mitos.length).toBe(12);
     expect(new Set(c.mitos.map((m) => m.id)).size).toBe(12);
     for (const m of c.mitos) {
-      expect(m.revisionActuarial).toBe('pendiente');
+      expect(['pendiente', 'revisada']).toContain(m.revisionActuarial);
+      expect(m.respuestaActuarial !== undefined).toBe(m.revisionActuarial === 'revisada');
       expect(m.preguntaActuarial.length).toBeGreaterThan(80);
       expect(m.definiciones.length).toBeGreaterThanOrEqual(2);
       expect(m.noSePuedeConcluir.length).toBeGreaterThanOrEqual(1);

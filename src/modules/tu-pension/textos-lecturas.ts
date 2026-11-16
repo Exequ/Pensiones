@@ -214,7 +214,7 @@ export const TEXTOS_LECTURAS: Readonly<Record<string, TextoLectura>> = {
       'sin-integrar': {
         etiqueta: 'Contarlos como cero',
         queCambia:
-          'Los meses sin cotizar dentro del periodo elegido aportan una base nula a la suma, lo que reduce la base reguladora.',
+          'Los meses sin cotizar dentro del periodo elegido aportan una base nula a la suma, lo que reduce la base reguladora. Es lo que resulta de las normas anteriores a la reforma de aquella época, que el reglamento de desarrollo mantiene para este caso y que no mencionan la integración de lagunas.',
       },
       integrar: {
         etiqueta: 'Rellenarlos con la base mínima',

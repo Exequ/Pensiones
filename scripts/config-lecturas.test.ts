@@ -21,7 +21,7 @@ import {
 
 const RAIZ = path.resolve(import.meta.dirname, '..');
 const claims = JSON.parse(readFileSync(path.join(RAIZ, 'docs/claims.json'), 'utf8')) as {
-  claims: { id: string; revisionActuarial?: string }[];
+  claims: { id: string; revisionActuarial?: string; respuestaActuarial?: string }[];
 };
 const registro = readFileSync(path.join(RAIZ, 'docs/DECISIONES_ACTUARIALES.md'), 'utf8');
 
@@ -54,29 +54,37 @@ describe('configuración única de las lecturas abiertas', () => {
     expect(LECTURAS_MEI_POR_DEFECTO).toEqual(porDefectoDelMotor('mei'));
   });
 
-  it('cada entrada enlaza con una pregunta actuarial pendiente de docs/claims.json', () => {
-    const preguntas = new Set(
-      claims.claims.filter((c) => c.revisionActuarial === 'pendiente').map((c) => c.id),
-    );
-    for (const e of CONFIG_LECTURAS)
-      expect(preguntas.has(e.pregunta), `${e.id}: ${e.pregunta}`).toBe(true);
+  it('cada entrada enlaza con una afirmación de docs/claims.json: pendiente o revisada con su respuesta actuarial (una lectura pendiente exige afirmación pendiente)', () => {
+    // Desde los Ajustes actuariales 3 una afirmación puede estar revisada y seguir enlazada a una lectura
+    // (la lectura conserva su estado, decidida o provisional); solo se relaja «pendiente» → «pendiente o revisada».
+    const porId = new Map(claims.claims.map((c) => [c.id, c]));
+    for (const e of CONFIG_LECTURAS) {
+      const c = porId.get(e.pregunta);
+      expect(c, `${e.id}: ${e.pregunta}`).toBeDefined();
+      expect(['pendiente', 'revisada'], `${e.id}: ${e.pregunta}`).toContain(c?.revisionActuarial);
+      if (e.estado === 'pendiente') expect(c?.revisionActuarial, e.id).toBe('pendiente');
+      if (c?.revisionActuarial === 'revisada')
+        expect(c.respuestaActuarial, `${e.id}: ${e.pregunta}`).toMatch(/^Tanda \d, parte [A-C]/);
+    }
   });
 
   it('las lecturas no pendientes llevan motivo, expuesto por el registro; las pendientes, no (salvo la que documenta una decisión de Sergio)', () => {
     // Una lectura pendiente puede llevar motivo si hay una decisión que documentar: hoy, solo esta.
-    const pendientesConMotivo = ['incapacidad.lagunasAccidenteNoLaboral'];
+    // Desde el 16-11-2026 no queda ninguna lectura pendiente (las lagunas del accidente no laboral pasaron a provisional).
+    const pendientesConMotivo: string[] = [];
     for (const l of LECTURAS_ABIERTAS) {
       if (l.estado === 'pendiente' && !pendientesConMotivo.includes(l.id))
         expect(l.motivo, l.id).toBeNull();
       else expect(l.motivo, l.id).toMatch(/\S/);
     }
     const estados = LECTURAS_ABIERTAS.map((l) => l.estado);
-    // Revisión actuarial del 14-11-2026 (Ajustes actuariales 1).
+    // Revisión actuarial del 14-11-2026 (Ajustes actuariales 1) y del 16-11-2026 (tanda 3: las lagunas del
+    // accidente no laboral pasan de pendiente a provisional).
     expect(estados.filter((e) => e === 'decidida')).toHaveLength(17);
-    expect(estados.filter((e) => e === 'provisional')).toHaveLength(10);
-    expect(estados.filter((e) => e === 'pendiente')).toHaveLength(1);
+    expect(estados.filter((e) => e === 'provisional')).toHaveLength(11);
+    expect(estados.filter((e) => e === 'pendiente')).toHaveLength(0);
     expect(lecturaPorId('jubilacion.interpolacionIPC')?.estado).toBe('decidida');
-    expect(lecturaPorId('incapacidad.lagunasAccidenteNoLaboral')?.estado).toBe('pendiente');
+    expect(lecturaPorId('incapacidad.lagunasAccidenteNoLaboral')?.estado).toBe('provisional');
   });
 
   it('la confianza actuarial del motivo va en palabras o como porcentaje de la revisión del 14-11-2026, nunca con otra cifra', () => {
@@ -96,10 +104,10 @@ describe('configuración única de las lecturas abiertas', () => {
     }
   });
 
-  it('los valores por defecto que cambiaron: el suelo del factor (Fase 2-E, provisional) y las lagunas del accidente no laboral (14-11-2026, vuelve a sin-integrar y queda pendiente)', () => {
+  it('los valores por defecto que cambiaron: el suelo del factor (Fase 2-E, provisional) y las lagunas del accidente no laboral (14-11-2026, vuelve a sin-integrar; el 16-11-2026 pasa de pendiente a provisional sin cambiar el valor)', () => {
     expect(lecturaPorId('jubilacion.actualizacionFactorMinimo')?.estado).toBe('provisional');
     expect(entradaDeLectura('jubilacion.actualizacionFactorMinimo').valor).toBe('suelo-1');
-    expect(lecturaPorId('incapacidad.lagunasAccidenteNoLaboral')?.estado).toBe('pendiente');
+    expect(lecturaPorId('incapacidad.lagunasAccidenteNoLaboral')?.estado).toBe('provisional');
     expect(entradaDeLectura('incapacidad.lagunasAccidenteNoLaboral').valor).toBe('sin-integrar');
   });
 
@@ -146,7 +154,8 @@ describe('configuración única de las lecturas abiertas', () => {
 
   it('el registro de decisiones (docs/DECISIONES_ACTUARIALES.md) lista todas las lecturas y su estado', () => {
     for (const e of CONFIG_LECTURAS) {
-      const fila = registro.split('\n').find((l) => l.includes(`\`${e.id}\``));
+      // La fila de la tabla (no el primer párrafo que cite la lectura).
+      const fila = registro.split('\n').find((l) => l.startsWith(`| \`${e.id}\``));
       expect(fila, `${e.id} sin fila en docs/DECISIONES_ACTUARIALES.md`).toBeDefined();
       expect(fila, e.id).toContain(e.estado);
       expect(fila, e.id).toContain(e.fecha);

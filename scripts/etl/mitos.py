@@ -121,11 +121,46 @@ MITOS = [
 ]
 
 
+def aplica_revision():
+    """Ajustes actuariales 3: estado de revisión de cada afirmación (docs/revision-actuarial/aplicacion-tanda3.json) y
+    los textos que la revisión verificada añade a las definiciones."""
+    filas = {f['id']: f for f in json.load(open(f'{REPO}/docs/revision-actuarial/aplicacion-tanda3.json', encoding='utf-8'))['filas']}
+    for m in MITOS:
+        f = filas.get(f"mito-{m['id']}")
+        if f and f['estado'] == 'revisada':
+            m['revisionActuarial'] = 'revisada'
+            m['respuestaActuarial'] = f['respuestaActuarial']
+        else:
+            m['revisionActuarial'] = 'pendiente'
+    por = {m['id']: m for m in MITOS}
+    # n.º 20: qué es un afiliado (consta en data/sistema/afiliacion-anual: «afiliados medios en alta»)
+    por['menos-cotizantes-por-pensionista']['definiciones'].append({
+        'nombre': 'Qué es un afiliado',
+        'literal': 'Una situación de alta en la Seguridad Social (la fuente cuenta relaciones laborales en alta, con pluriempleo), no una persona: quien tiene más de un alta cuenta más de una vez.',
+        'datos': ['sistema/afiliacion-anual.json#media-anual-total-sistema']})
+    # n.º 24: criterio legal de la DA 2.ª del RDL 2/2023, con sus términos literales
+    por['pensiones-publicas-insostenibles']['datos'] += [
+        'parametros/mei-reglas.json#da2-rdl-2023-tope-gasto-pct-pib',
+        'parametros/mei-reglas.json#da2-rdl-2023-impacto-medidas-referencia',
+        'parametros/mei-reglas.json#da2-rdl-2023-aumento-mei-decimas-del-exceso']
+    por['pensiones-publicas-insostenibles']['definiciones'].append({
+        'nombre': 'Criterio legal de la disposición adicional segunda del Real Decreto-ley 2/2023',
+        'literal': 'Cada tres años, desde marzo de 2025, la AIReF comprueba que el gasto medio bruto público en pensiones en el periodo 2022-2050 del último Informe de Envejecimiento no supere el 15 por ciento del PIB, más o menos la diferencia entre el impacto medio anual de las medidas de ingresos y el 1,7 por ciento del PIB. Si hay exceso y la ley con las medidas correctoras no entra en vigor el 1 de enero del año siguiente, la cotización del Mecanismo de Equidad Intergeneracional aumenta para compensar dos décimas partes del exceso estimado por la AIReF a partir del 1 de enero del año siguiente a la publicación de su informe y otras dos décimas partes en cada uno de los años siguientes, hasta que se adopten nuevas medidas del mismo impacto o el exceso de gasto neto sea corregido.',
+        'datos': ['parametros/mei-reglas.json#da2-rdl-2023-tope-gasto-pct-pib', 'parametros/mei-reglas.json#da2-rdl-2023-impacto-medidas-referencia',
+                  'parametros/mei-reglas.json#da2-rdl-2023-aumento-mei-decimas-del-exceso']})
+    # n.º 28: el acumulado no se publica mientras la serie tenga huecos
+    por['pensiones-siempre-con-el-ipc']['noSePuedeConcluir'].append(
+        'El acumulado de la revalorización frente al IPC: no se calcula ni se muestra porque la serie de revalorización de /data no tiene los años 2011 ni 2012.')
+    por['pensiones-siempre-con-el-ipc']['faltan'] = por['pensiones-siempre-con-el-ipc'].get('faltan', []) + [
+        'Los porcentajes de revalorización de 2011 y 2012 (y, según el revisor, la paga por desviación de 2001 a 2010), sin los cuales no se puede publicar un acumulado frente al IPC.']
+
+
 def main():
+    aplica_revision()
     os.makedirs(OUT, exist_ok=True)
     out = {'tipo': 'mitos', 'id': 'afirmaciones-circulantes', 'title': 'Catálogo de afirmaciones frecuentes sobre las pensiones en España: datos y definiciones, sin veredicto',
            'description': 'Doce afirmaciones que circulan sobre las pensiones, formuladas de forma neutral. Para cada una: los datos de /data que permiten contrastarla, las definiciones alternativas que condicionan el resultado y lo que NO se puede concluir con los datos disponibles. '
-                          'El catálogo no emite veredictos (verdadero o falso). Todas están pendientes de revisión actuarial, con una pregunta concreta.',
+                          'El catálogo no emite veredictos (verdadero o falso). Cada afirmación indica si su revisión actuarial está pendiente (con una pregunta concreta) o revisada (con la referencia a la respuesta).',
            'mitos': MITOS}
     json.dump(out, open(f'{OUT}/afirmaciones-circulantes.json', 'w'), ensure_ascii=False, indent=2)
     open(f'{OUT}/afirmaciones-circulantes.json', 'a').write('\n')

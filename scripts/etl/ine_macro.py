@@ -338,13 +338,13 @@ def main():
                        'points': rp})
     for sx in ('ambos', 'hombres', 'mujeres'):
         add(f'eaes-{sx}', f'EAES: salario medio bruto anual por trabajador, {sx}', 'euros/año', S_EAES, 'alta',
-            'Ganancia bruta anual por asalariado, total de edades (tabla 28189). Años 2008-2024. Ver el literal y la cobertura en eaes-salario-sexo-edad.',
+            'Ganancia bruta anual por asalariado, total de edades (tabla 28189). Años 2008-2024. Ver el literal y la cobertura en eaes-salario-sexo-edad. Cobertura: industria, construcción y servicios; no cubre agricultura, ganadería y pesca ni el personal doméstico (hogares). Es un corte transversal de un mes de referencia, no la carrera de una persona.',
             {a: v for (a, s, g), v in ea.items() if s == sx and g == 'total'})
     add('etcl-coste-salarial-total', 'ETCL: coste salarial total por trabajador y mes, media de los cuatro trimestres, ambas jornadas', 'euros/mes', S_ETCL, 'media',
         'Dato derivado: media aritmética de los cuatro trimestres del coste salarial total por trabajador y mes (euros/mes, ambas jornadas, industria, construcción y servicios). 2008-2025.',
         {int(a): v for (a, j, cc), v in et.items() if j == 'ambas' and cc == 'total'}, mensual=True)
     add('etcl-coste-salarial-total-x12', 'ETCL: coste salarial total por trabajador y año (12 × la media mensual), ambas jornadas', 'euros/año', S_ETCL, 'media',
-        'Dato derivado: 12 × la media anual del coste salarial total por trabajador y mes. Los pagos extraordinarios ya están en el total mensual del trimestre en que se pagan.',
+        'Dato derivado: 12 × la media anual del coste salarial total por trabajador y mes. Los pagos extraordinarios ya están en el total mensual del trimestre en que se pagan. Por eso 12 veces la media mensual da el año. La cobertura y el tratamiento de las jornadas difieren de los de la EAES, por lo que las dos series no coinciden.',
         {int(a): 12 * v for (a, j, cc), v in et.items() if j == 'ambas' and cc == 'total'})
     rem, puestos, etc, pers = c['rem'], c['puestos'], c['etc'], c['personas']
     add('cn-remuneracion-por-asalariado-puesto', 'Contabilidad Nacional: remuneración de asalariados / asalariados (puestos de trabajo)', 'euros/año', S_CN, 'media',
@@ -358,7 +358,7 @@ def main():
         {a: rem[a][0] * 1e6 / (pers[a][0] * 1e3) for a in rem if a in pers})
     for sx in ('ambos', 'hombres', 'mujeres'):
         add(f'base-media-cotizacion-rg-{sx}', f'TGSS: base media de cotización por contingencias comunes del Régimen General, media anual ponderada, {sx}', 'euros/mes', S_BC, 'media',
-            'Dato derivado: suma de las bases mensuales del año ÷ suma de los cotizantes mensuales (media ponderada por cotizantes de las doce bases medias mensuales). Solo años completos (2018-2025).',
+            'Dato derivado: suma de las bases mensuales del año ÷ suma de los cotizantes mensuales (media ponderada por cotizantes de las doce bases medias mensuales). Solo años completos (2018-2025). La base mensual ya incluye la parte proporcional de las pagas extraordinarias (las percepciones de vencimiento superior al mes se prorratean en los doce meses): el año es 12 veces la base mensual, no 14. Al no haber años completos antes de 2018, no sirve como salario de la carrera anterior a esa fecha.',
             {a: v for (a, s), v in bm.items() if s == sx}, mensual=True)
     escribe_series('macro', 'salario-medio-definiciones',
         'Salario medio anual: cuatro definiciones, lado a lado (sin elegir ninguna)',
