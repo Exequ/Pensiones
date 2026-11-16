@@ -26,7 +26,7 @@ test.describe('Tu pensión', () => {
     await expect(page.locator('.tp-paso')).toHaveCount(7);
     await expect(page.getByRole('heading', { name: 'Supuestos y lecturas' })).toBeVisible();
     await expect(page.getByText('Estado: Provisional').first()).toBeVisible();
-    // Desde el 14-11-2026 ninguna lectura de jubilación queda pendiente (la única pendiente es la de incapacidad).
+    // Desde el 14-11-2026 casi ninguna lectura de jubilación queda pendiente; la única, la salvaguarda de la DT 34.ª (Revisión 3 del motor).
     await expect(page.getByText('Estado: Decidida').first()).toBeVisible();
     await expect(
       page.getByRole('heading', { name: 'Qué no tiene en cuenta el cálculo' }),

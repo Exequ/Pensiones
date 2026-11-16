@@ -34,6 +34,7 @@ import {
   coeficienteReductor,
   coeficienteSobreLimite,
   porcentajeEscala,
+  rangoGradualDT34,
   tramoCotizacion,
   versionEscala,
 } from './porcentajes.ts';
@@ -593,8 +594,49 @@ export function calcularJubilacionConParametros(
           'art. 210.3, párrafo 2.º, y DT 34.ª TRLGSS',
           `${anticipo} meses de anticipación, tramo de cotización ${sobreLimite.tramo}.`,
         );
+        const pensionSinCoeficiente = pension;
         pension = limiteMensual * (1 - sobreLimite.pct / 100);
         estado = 'maxima';
+        // DT 34.ª.1: «la pensión reconocida no [ha de resultar] en ningún caso inferior a la que
+        // habría correspondido con la aplicación de las normas vigentes en 2021» (art. 208.2 y
+        // art. 210.3, párrafo 2.º, en la redacción del RDLeg 8/2015). Lectura `salvaguardaDT34` = A:
+        // esa pensión se calcula con la máxima actualizada solo con el art. 58.2.
+        const gradual = rangoGradualDT34(params);
+        if (
+          ctx.lecturas.salvaguardaDT34 === 'A' &&
+          anio >= gradual.primero &&
+          anio <= gradual.ultimo
+        ) {
+          const trimestres = Math.ceil(anticipo / 3);
+          const tramo = tramoCotizacion(params.coeficientesVoluntaria, mesesCot);
+          const idCoef = `salvaguarda-dt34-coeficiente-2021-t${tramo}`;
+          const idTope = 'salvaguarda-dt34-tope-pct-trimestre-2021';
+          const coef2021 = parametro(reglasAn, idCoef, FAN);
+          const tope2021 = parametro(reglasAn, idTope, FAN);
+          const maximaIPC = ctx.pensionMaximaSoloIPC(anio);
+          // Normas de 2021: coeficiente por trimestre sobre la pensión y tope reducido por trimestre.
+          const pension2021 = Math.min(
+            pensionSinCoeficiente * (1 - (coef2021 * trimestres) / 100),
+            maximaIPC.valor * (1 - (tope2021 * trimestres) / 100),
+          );
+          if (pension2021 > pension) {
+            paso(
+              'salvaguarda-dt34',
+              'Salvaguarda de la DT 34.ª: no inferior a la pensión con las normas de 2021',
+              pension2021,
+              'euros/mes',
+              [
+                ref(FAN, idCoef),
+                ref(FAN, idTope),
+                ref(FAN, 'salvaguarda-dt34-pension-no-inferior-2021'),
+                ...maximaIPC.refs,
+              ],
+              'DT 34.ª.1 TRLGSS',
+              `Lectura A: ${trimestres} trimestres o fracción; se compara con la pensión máxima actualizada solo con el art. 58.2, sin el incremento adicional de la DT 39.ª.`,
+            );
+            pension = pension2021;
+          }
+        }
       } else {
         paso(
           'coeficiente-reductor',

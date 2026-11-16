@@ -69,8 +69,9 @@ describe('configuración única de las lecturas abiertas', () => {
   });
 
   it('las lecturas no pendientes llevan motivo, expuesto por el registro; las pendientes, no (salvo la que documenta una decisión de Sergio)', () => {
-    // Una lectura pendiente puede llevar motivo si hay una decisión que documentar: hoy, solo esta.
-    // Desde el 16-11-2026 no queda ninguna lectura pendiente (las lagunas del accidente no laboral pasaron a provisional).
+    // Una lectura pendiente puede llevar motivo si hay una decisión que documentar: hoy, ninguna.
+    // Desde el 16-11-2026 solo queda pendiente la salvaguarda de la DT 34.ª (jubilacion.salvaguardaDT34, nueva
+    // en la Revisión 3 del motor); las lagunas del accidente no laboral pasaron a provisional.
     const pendientesConMotivo: string[] = [];
     for (const l of LECTURAS_ABIERTAS) {
       if (l.estado === 'pendiente' && !pendientesConMotivo.includes(l.id))
@@ -82,7 +83,8 @@ describe('configuración única de las lecturas abiertas', () => {
     // accidente no laboral pasan de pendiente a provisional).
     expect(estados.filter((e) => e === 'decidida')).toHaveLength(17);
     expect(estados.filter((e) => e === 'provisional')).toHaveLength(11);
-    expect(estados.filter((e) => e === 'pendiente')).toHaveLength(0);
+    expect(estados.filter((e) => e === 'pendiente')).toHaveLength(1);
+    expect(lecturaPorId('jubilacion.salvaguardaDT34')?.estado).toBe('pendiente');
     expect(lecturaPorId('jubilacion.interpolacionIPC')?.estado).toBe('decidida');
     expect(lecturaPorId('incapacidad.lagunasAccidenteNoLaboral')?.estado).toBe('provisional');
   });

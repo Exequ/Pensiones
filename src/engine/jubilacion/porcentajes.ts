@@ -87,3 +87,9 @@ export function coeficienteSobreLimite(
     throw new DatoNoDisponible(`jubilacion-coeficientes-voluntaria-limite#${id}`);
   return { pct, tramo, ref: ref('jubilacion-coeficientes-voluntaria-limite', id) };
 }
+
+/** Años (primero y último) de la aplicación gradual de la DT 34.ª.2 sobre el límite de pensión. */
+export function rangoGradualDT34(p: ParametrosJubilacion): { primero: number; ultimo: number } {
+  const anios = [...p.coeficientesVoluntariaLimite.keys()].map((k) => Number(k.slice(0, 4)));
+  return { primero: Math.min(...anios), ultimo: Math.max(...anios) };
+}

@@ -381,7 +381,9 @@ export function calcularSupervivenciaConParametros(
     // Porcentaje: 52 %; 60 % (65 años sin otras rentas, RD 900/2018); 70 % (cargas familiares).
     const pct52 = r('viudedad-pct');
     let pct = pct52;
-    const rend = v.rendimientosAnuales ?? 0;
+    // Rentas del 70 %: lo percibido en el ejercicio anterior, sin lo que se deja de percibir por el
+    // hecho causante (art. 31.2 del Decreto 3158/1966).
+    const rend = v.rendimientosEjercicioAnteriorAnuales ?? v.rendimientosAnuales ?? 0;
     const lim = ctx.limiteIngresosMinimos(anio);
     const refs: string[] = [refSV('viudedad-pct')];
     const cumple60 =
@@ -395,7 +397,8 @@ export function calcularSupervivenciaConParametros(
     if (v.cargasFamiliares !== undefined && v.cargasFamiliares.miembrosUnidadFamiliar > 0) {
       const smi = smiSinPagasExtra(params, anio);
       const porMiembro =
-        v.cargasFamiliares.rendimientosUnidadFamiliar / v.cargasFamiliares.miembrosUnidadFamiliar;
+        v.cargasFamiliares.rendimientosEjercicioAnteriorUnidadFamiliar /
+        v.cargasFamiliares.miembrosUnidadFamiliar;
       const cargas = porMiembro <= (r('viudedad-cargas-smi-pct') / 100) * smi.valor;
       const minEdad = ctx.pensionMinimaAnual(
         anio,
@@ -487,7 +490,8 @@ export function calcularSupervivenciaConParametros(
         'art. 222 TRLGSS',
       );
     }
-    b.rentas = rend;
+    // Complemento a mínimos: rentas del beneficiario (regla distinta de la del 70 %).
+    b.rentas = v.rendimientosAnuales ?? rend;
     b.claseMinima =
       v.cargasFamiliares !== undefined && pension70 > 0
         ? 'viud-cargas-familiares'

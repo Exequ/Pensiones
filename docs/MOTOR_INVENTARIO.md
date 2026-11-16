@@ -38,7 +38,7 @@ El motor lanza `NoImplementada` o lo declara en `LIMITACIONES` (`src/engine/jubi
 - Jubilación flexible y jubilación activa; pensiones concurrentes, totalización internacional y prorrata temporis.
 - Límite de ingresos de los mínimos con cónyuge a cargo (con rentas, el motor avisa y no aplica el complemento).
 - Reducción de la brecha de las mínimas con el umbral de pobreza (DA 53.ª, 2027): desde 2027 las mínimas se revalorizan con el IPC del escenario.
-- Salvaguarda de la DT 34.ª.1 y coeficientes sobre el límite en 2022-2023.
+- Coeficientes sobre el límite en 2022-2023 (la salvaguarda de la DT 34.ª.1 se implementa desde la Revisión 3 del motor como lectura `jubilacion.salvaguardaDT34`, de 2024 a 2033).
 - Opción mixta de la demora con hechos causantes anteriores al 28/08/2026 (redacción original del RD 371/2023 no transcrita).
 - Límite de los incrementos salariales de los dos últimos años (art. 209.2-4) y regímenes especiales/RETA.
 

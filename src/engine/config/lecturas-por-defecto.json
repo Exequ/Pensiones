@@ -74,6 +74,13 @@
       "pregunta": "param-pension-maxima-incremento-2051-2065"
     },
     {
+      "id": "jubilacion.salvaguardaDT34",
+      "valor": "A",
+      "estado": "pendiente",
+      "fecha": "2026-11-16",
+      "pregunta": "param-jubilacion-coeficientes-voluntaria-limite"
+    },
+    {
       "id": "incapacidad.edadFiccion",
       "valor": "carrera-proyectada",
       "estado": "decidida",

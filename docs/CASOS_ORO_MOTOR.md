@@ -65,6 +65,16 @@ Bases de 900 €/mes de 1-1988 a 12-2029 (sin actualizar), 100 %: base regulador
 
 - **Mínima de 2030** (jubilación a los 65 años, sin cónyuge a cargo): `13.106,80 × 1,02⁴ = 14.187,22 € al año`, es decir, **1.013,37 € por paga** (÷ 14). Estado «mínima»; el complemento es la diferencia.
 
+## 7 · Anticipada voluntaria topada: salvaguarda de la DT 34.ª.1 (lecturas A y B)
+
+Añadido en la Revisión 3 del motor. Nacida el 1-1-1963, se jubila el 1-1-2027 (cumple 65 el 1-1-2028: 12 meses de anticipación, 4 trimestres) con 42 años cotizados (504 meses, tramo 3) a 20.000 €/mes, limitados por la base máxima: el 100 % de la base reguladora supera con mucho la pensión máxima. Escenario de IPC del 2 %.
+
+- **B (sin comparación)**: `3.359,60 × 1,02115 × (1 − 0,032) = 3.430,66 × 0,968 =` **3.320,87 €** por paga (coeficiente de la DT 34.ª para 2027, 12 meses, tramo 3: 3,20 %, `jubilacion-coeficientes-voluntaria-limite#2027-t3-12`).
+- **A (salvaguarda)**: la pensión que habría correspondido con las normas de antes de la reforma es la mínima de dos: el 100 % de la base reguladora con el coeficiente de 2021 (1,75 % × 4 trimestres = 7 %), y la pensión máxima reducida un 0,50 % por trimestre. Con la máxima actualizada solo con la revalorización general (`3.175,04 × 1,028 × 1,027 × 1,02 = 3.419,11`) la segunda es `3.419,11 × (1 − 0,02) =` **3.350,73 €** por paga, que es la menor de las dos y mayor que B.
+- Si la pensión no llega al límite, A y B coinciden (casos 1 a 6, que no cambian).
+
+Efecto en el valor por defecto: el caso de `src/engine/jubilacion/modalidades.test.ts` («coeficientes sobre el límite, de forma gradual») se fija ahora en la lectura B para seguir comprobando el cálculo de la DT 34.ª; los casos de oro 1 a 6 no cambian.
+
 ## Verificación independiente
 
-Las cifras de los casos 1 a 6 se recalcularon aparte con un cálculo directo en Python a partir de los JSON de `data/parametros` (no con el motor); los valores coinciden con los del motor hasta el céntimo. Los tests comparan el motor con esas cifras (`toBeCloseTo`) y con las fórmulas escritas de forma independiente en el propio test.
+Las cifras de los casos 1 a 6 se recalcularon (el caso 7 se calculó a mano con las operaciones escritas arriba) aparte con un cálculo directo en Python a partir de los JSON de `data/parametros` (no con el motor); los valores coinciden con los del motor hasta el céntimo. Los tests comparan el motor con esas cifras (`toBeCloseTo`) y con las fórmulas escritas de forma independiente en el propio test.

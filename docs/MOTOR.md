@@ -56,36 +56,37 @@ Una lectura abierta es una duda de interpretación que el motor no decide: es un
 
 **Configuración única (Fase 2-C)**: los valores por defecto están en `src/engine/config/lecturas-por-defecto.json` (id, valor, estado `pendiente`, `provisional` o `decidida`, fecha, motivo y pregunta de `docs/REVISION_ACTUARIAL.md`). Las constantes de cada motor (`LECTURAS_POR_DEFECTO`…) y el registro leen de ese fichero; un test comprueba que cubre exactamente las lecturas del registro y que `docs/DECISIONES_ACTUARIALES.md` lo refleja. Adoptar una decisión es cambiar una línea del JSON (y la fila del registro de decisiones). Clasificación de las lecturas por impacto y fichas del grupo A: `docs/REVISION_PRIORIZADA.md`.
 
-| Identificador                                        | Por defecto                | Alternativas                   | Estado      | Pregunta actuarial                             |
-| ---------------------------------------------------- | -------------------------- | ------------------------------ | ----------- | ---------------------------------------------- |
-| `jubilacion.baseMaxima`                              | `compuesto`                | `sobre-cifra-inicial`          | decidida    | `param-base-maxima-incremento-futuro`          |
-| `jubilacion.pensionMaxima`                           | `compuesto`                | `incremento-creciente`         | decidida    | `param-pension-maxima-incremento-futuro`       |
-| `jubilacion.referenciaBaseMinimaLagunas`             | `mes-de-la-laguna`         | `hecho-causante`               | decidida    | `param-lagunas-integracion`                    |
-| `jubilacion.opcion25EnUltimoDia2040`                 | `incluida`                 | `excluida`                     | decidida    | `param-opcion-25-anos-ventana`                 |
-| `jubilacion.lagunasAnterioresAlPrimerAlta`           | `integrar`                 | `ignorar`                      | provisional | `param-lagunas-integracion`                    |
-| `jubilacion.interpolacionIPC`                        | `mensual-ine`              | `interpolada`, `escalon-anual` | decidida    | `param-actualizacion-bases`                    |
-| `jubilacion.actualizacionFactorMinimo`               | `suelo-1`                  | `sin-suelo`                    | provisional | `param-actualizacion-bases`                    |
-| `jubilacion.fraccionDemora`                          | `desde-segundo-anio`       | `desde-primer-anio`            | decidida    | `param-jubilacion-demora-reglas`               |
-| `jubilacion.maximaDesde2051`                         | `incremento-acumulado`     | `incremento-anual-literal`     | decidida    | `param-pension-maxima-incremento-2051-2065`    |
-| `incapacidad.edadFiccion`                            | `carrera-proyectada`       | `edad-general`                 | decidida    | `param-incapacidad-permanente-reglas`          |
-| `incapacidad.computoFiccion`                         | `meses`                    | `anios-completos`              | provisional | `param-incapacidad-permanente-reglas`          |
-| `incapacidad.divisorPeriodoCorto`                    | `coeficiente-rd-1799-1985` | `catorce-doceavos`             | decidida    | `param-incapacidad-permanente-reglas`          |
-| `incapacidad.lagunasAccidenteNoLaboral`              | `sin-integrar`             | `integrar`                     | provisional | `param-incapacidad-permanente-reglas`          |
-| `incapacidad.redondeoEdadCarencia`                   | `sin-redondeo`             | `medio-anio`                   | provisional | `param-incapacidad-permanente-reglas-carencia` |
-| `incapacidad.diasCotizadosParcial`                   | `naturales`                | `treinta-por-mes`              | provisional | `param-incapacidad-permanente-reglas-carencia` |
-| `supervivencia.ventanaBaseReguladora`                | `anterior-al-mes-previo`   | `decreto-1646-1972`            | decidida    | `param-supervivencia-reglas`                   |
-| `supervivencia.diasCotizados`                        | `naturales`                | `treinta-por-mes`              | provisional | `param-supervivencia-reglas`                   |
-| `supervivencia.carenciaOrfandad`                     | `sin-carencia`             | `rd-1647-1997`                 | decidida    | `param-supervivencia-reglas`                   |
-| `supervivencia.carenciaFamiliaresAccidenteNoLaboral` | `exigir`                   | `exenta`                       | provisional | `param-supervivencia-reglas`                   |
-| `supervivencia.reduccionViudedad70`                  | `no-inferior-52`           | `sin-suelo`                    | decidida    | `param-supervivencia-reglas-cuantia`           |
-| `supervivencia.comparacionCompensatoria`             | `anual`                    | `mensual`                      | provisional | `param-supervivencia-reglas-cuantia`           |
-| `supervivencia.incrementoFamiliares`                 | `porcentaje-viudedad`      | `sin-incremento`               | decidida    | `param-supervivencia-reglas-cuantia`           |
-| `supervivencia.reduccionLimiteConjunto`              | `orfandad`                 | `proporcional`                 | provisional | `param-supervivencia-reglas-limites`           |
-| `no-contributivas.baseRentasCompatibles`             | `cuantia-integra`          | `cuantia-por-beneficiario`     | decidida    | `param-pnc-reglas`                             |
-| `no-contributivas.limiteTrabajo`                     | `cuantia-integra`          | `pension-reconocida`           | decidida    | `param-pnc-reglas`                             |
-| `no-contributivas.rentasConTrabajoEnCuatroAnios`     | `sustituye-364-2`          | `se-suman`                     | decidida    | `param-pnc-reglas`                             |
-| `no-contributivas.limiteConTerceraPersona`           | `con-complemento`          | `sin-complemento`              | provisional | `param-pnc-reglas`                             |
-| `mei.baseMEI`                                        | `base-cotizacion`          | `retribucion-completa`         | decidida    | `param-mei-reglas`                             |
+| Identificador                                        | Por defecto                | Alternativas                   | Estado      | Pregunta actuarial                                |
+| ---------------------------------------------------- | -------------------------- | ------------------------------ | ----------- | ------------------------------------------------- |
+| `jubilacion.baseMaxima`                              | `compuesto`                | `sobre-cifra-inicial`          | decidida    | `param-base-maxima-incremento-futuro`             |
+| `jubilacion.pensionMaxima`                           | `compuesto`                | `incremento-creciente`         | decidida    | `param-pension-maxima-incremento-futuro`          |
+| `jubilacion.referenciaBaseMinimaLagunas`             | `mes-de-la-laguna`         | `hecho-causante`               | decidida    | `param-lagunas-integracion`                       |
+| `jubilacion.opcion25EnUltimoDia2040`                 | `incluida`                 | `excluida`                     | decidida    | `param-opcion-25-anos-ventana`                    |
+| `jubilacion.lagunasAnterioresAlPrimerAlta`           | `integrar`                 | `ignorar`                      | provisional | `param-lagunas-integracion`                       |
+| `jubilacion.interpolacionIPC`                        | `mensual-ine`              | `interpolada`, `escalon-anual` | decidida    | `param-actualizacion-bases`                       |
+| `jubilacion.actualizacionFactorMinimo`               | `suelo-1`                  | `sin-suelo`                    | provisional | `param-actualizacion-bases`                       |
+| `jubilacion.fraccionDemora`                          | `desde-segundo-anio`       | `desde-primer-anio`            | decidida    | `param-jubilacion-demora-reglas`                  |
+| `jubilacion.maximaDesde2051`                         | `incremento-acumulado`     | `incremento-anual-literal`     | decidida    | `param-pension-maxima-incremento-2051-2065`       |
+| `jubilacion.salvaguardaDT34`                         | `A`                        | `B`                            | pendiente   | `param-jubilacion-coeficientes-voluntaria-limite` |
+| `incapacidad.edadFiccion`                            | `carrera-proyectada`       | `edad-general`                 | decidida    | `param-incapacidad-permanente-reglas`             |
+| `incapacidad.computoFiccion`                         | `meses`                    | `anios-completos`              | provisional | `param-incapacidad-permanente-reglas`             |
+| `incapacidad.divisorPeriodoCorto`                    | `coeficiente-rd-1799-1985` | `catorce-doceavos`             | decidida    | `param-incapacidad-permanente-reglas`             |
+| `incapacidad.lagunasAccidenteNoLaboral`              | `sin-integrar`             | `integrar`                     | provisional | `param-incapacidad-permanente-reglas`             |
+| `incapacidad.redondeoEdadCarencia`                   | `sin-redondeo`             | `medio-anio`                   | provisional | `param-incapacidad-permanente-reglas-carencia`    |
+| `incapacidad.diasCotizadosParcial`                   | `naturales`                | `treinta-por-mes`              | provisional | `param-incapacidad-permanente-reglas-carencia`    |
+| `supervivencia.ventanaBaseReguladora`                | `anterior-al-mes-previo`   | `decreto-1646-1972`            | decidida    | `param-supervivencia-reglas`                      |
+| `supervivencia.diasCotizados`                        | `naturales`                | `treinta-por-mes`              | provisional | `param-supervivencia-reglas`                      |
+| `supervivencia.carenciaOrfandad`                     | `sin-carencia`             | `rd-1647-1997`                 | decidida    | `param-supervivencia-reglas`                      |
+| `supervivencia.carenciaFamiliaresAccidenteNoLaboral` | `exigir`                   | `exenta`                       | provisional | `param-supervivencia-reglas`                      |
+| `supervivencia.reduccionViudedad70`                  | `no-inferior-52`           | `sin-suelo`                    | decidida    | `param-supervivencia-reglas-cuantia`              |
+| `supervivencia.comparacionCompensatoria`             | `anual`                    | `mensual`                      | provisional | `param-supervivencia-reglas-cuantia`              |
+| `supervivencia.incrementoFamiliares`                 | `porcentaje-viudedad`      | `sin-incremento`               | decidida    | `param-supervivencia-reglas-cuantia`              |
+| `supervivencia.reduccionLimiteConjunto`              | `orfandad`                 | `proporcional`                 | provisional | `param-supervivencia-reglas-limites`              |
+| `no-contributivas.baseRentasCompatibles`             | `cuantia-integra`          | `cuantia-por-beneficiario`     | decidida    | `param-pnc-reglas`                                |
+| `no-contributivas.limiteTrabajo`                     | `cuantia-integra`          | `pension-reconocida`           | decidida    | `param-pnc-reglas`                                |
+| `no-contributivas.rentasConTrabajoEnCuatroAnios`     | `sustituye-364-2`          | `se-suman`                     | decidida    | `param-pnc-reglas`                                |
+| `no-contributivas.limiteConTerceraPersona`           | `con-complemento`          | `sin-complemento`              | provisional | `param-pnc-reglas`                                |
+| `mei.baseMEI`                                        | `base-cotizacion`          | `retribucion-completa`         | decidida    | `param-mei-reglas`                                |
 
 ## IPC mensual (Fase 2-D)
 

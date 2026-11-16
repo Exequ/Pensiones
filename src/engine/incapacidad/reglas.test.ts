@@ -105,6 +105,14 @@ describe('periodo mínimo de cotización (art. 195)', () => {
     // 45 años y 2 meses: (542 − 240) / 4 = 75,5 → 75
     expect(carencia('1981-01-10')?.exigido).toBe(75);
   });
+  it('menores de 31 años: se desprecian también las fracciones de mes de la tercera parte (art. 195.3.a TRLGSS; art. 4.1 RD 1799/1985)', () => {
+    // Hecho causante 15-3-2026. Nacida el 20-9-1996: 29 años y 5 meses cumplidos = 353 meses;
+    // (353 − 192) / 3 = 161 / 3 = 53,67 → 53 meses.
+    expect(carencia('1996-09-20')?.exigido).toBe(53);
+    // Nacida el 20-4-1995: 30 años y 10 meses cumplidos = 370 meses (menos de 31 años);
+    // (370 − 192) / 3 = 178 / 3 = 59,33 → 59 meses (por debajo de 60: no rige el mínimo de cinco años).
+    expect(carencia('1995-04-20')?.exigido).toBe(59);
+  });
   it('lectura alternativa: edad redondeada a medios años (RD 1799/1985)', () => {
     // 45 años y 8 meses: sin redondeo (548 − 240) / 4 = 77; con medio año (546 − 240) / 4 = 76
     expect(carencia('1980-07-10')?.exigido).toBe(77);
@@ -238,6 +246,38 @@ describe('periodo mínimo de cotización (art. 195)', () => {
 });
 
 describe('base reguladora (art. 197 y art. 7 del Decreto 1646/1972)', () => {
+  it('periodo corto por debajo de 31 años: tantas bases como meses exigidos, sin fracciones (art. 197.2 TRLGSS)', () => {
+    // Hecho causante 15-3-2026; nacida el 20-9-1996 (353 meses): exigidos (353 − 192) / 3 = 53,67 → 53 < 96.
+    // Bases de 1.000 hasta 2021-08 y de 2.000 de 2021-09 a 2026-02: las 53 bases anteriores al mes previo
+    // (2026-02) van de 2021-09 a 2026-01 y valen todas 2.000. Sin actualizar:
+    // BR = 53 × 2.000 / (53 × 1,1666) = 2.000 / 1,1666 = 1.714,3837 (con 54 bases saldría 1.698,5).
+    const carrera = [
+      { desde: '2012-09', hasta: '2021-08', baseMensual: 1000 },
+      { desde: '2021-09', hasta: '2026-02', baseMensual: 2000 },
+    ];
+    const r = calcularIncapacidadPermanente(
+      carrera,
+      '1996-09-20',
+      '2026-03-15',
+      'absoluta',
+      'enfermedad-comun',
+      SIN_IPC,
+    );
+    expect(requisito(r, 'carencia')?.exigido).toBe(53);
+    expect(r.baseReguladora).toBeCloseTo(2000 / 1.1666, 4);
+    // Con 31 años y más de 96 meses exigidos: no rige el periodo corto (96 bases entre 112).
+    // Nacida el 10-3-1970 (56 años = 672 meses): (672 − 240) / 4 = 108 ≥ 96.
+    const larga = calcularIncapacidadPermanente(
+      [{ desde: '1990-01', hasta: '2026-02', baseMensual: 2000 }],
+      '1970-03-10',
+      '2026-03-15',
+      'absoluta',
+      'enfermedad-comun',
+      SIN_IPC,
+    );
+    // BR = 96 × 2.000 / 112 = 1.714,2857
+    expect(larga.baseReguladora).toBeCloseTo((96 * 2000) / 112, 4);
+  });
   it('periodo corto: con la alternativa 14/12 el divisor cambia muy poco', () => {
     const a = calcularIncapacidadPermanente(
       LARGA,

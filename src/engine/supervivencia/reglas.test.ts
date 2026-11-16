@@ -169,6 +169,61 @@ describe('Viudedad', () => {
     expect(v0(r).cumpleRequisitos).toBe(false);
   });
 
+  describe('pareja de hecho por periodos del art. 221.2 TRLGSS', () => {
+    // Base reguladora 24 × 2.000 / 28 = 1.714,29 €/mes; el 52 % son 891,43 €/mes.
+    const alta = (fecha: string): Causante => ({
+      fechaFallecimiento: fecha,
+      causa: 'enfermedad-comun',
+      situacion: 'alta',
+      carrera: [c('2010-01', '2026-09')],
+    });
+    const conHijos: BeneficiarioViudedad = {
+      vinculo: 'pareja-hecho',
+      nacimiento: '1976-01-01',
+      convivenciaMeses: 10,
+      fechaRegistroPareja: '2023-06-01',
+      hijosComunes: true,
+    };
+
+    it('hecho causante del 20-10-2026 (redacción de la Ley 21/2021): con hijos basta la inscripción', () => {
+      // Inscripción 2023-06-01: 40 meses ≥ 24; convivencia de 10 meses no se exige. 0,52 × 1.714,29.
+      const r = v0(calcularViudedad(alta('2026-10-20'), [conHijos]));
+      expect(r.cumpleRequisitos).toBe(true);
+      expect(r.pensionMensual).toBeCloseTo(0.52 * BR, 6);
+    });
+
+    it('hecho causante del 21-10-2026 (RDL 31/2026): con hijos se exigen dos años de convivencia', () => {
+      // 10 meses de convivencia < 24: sin derecho, aunque la inscripción cumpla.
+      expect(v0(calcularViudedad(alta('2026-10-21'), [conHijos])).cumpleRequisitos).toBe(false);
+      // 24 meses de convivencia ≥ 24, sin que se exija inscripción: 0,52 × 1.714,29.
+      const sinRegistro = v0(
+        calcularViudedad(alta('2026-10-21'), [
+          { ...conHijos, convivenciaMeses: 24, fechaRegistroPareja: '2026-09-01' },
+        ]),
+      );
+      expect(sinRegistro.cumpleRequisitos).toBe(true);
+      expect(sinRegistro.pensionMensual).toBeCloseTo(0.52 * BR, 6);
+    });
+
+    it('sin hijos comunes, en las dos redacciones: cinco años de convivencia e inscripción de dos', () => {
+      for (const fecha of ['2026-10-20', '2026-10-21']) {
+        // 59 meses < 60: sin derecho; 60 meses y registro de 40 meses: derecho al 52 %.
+        const corta = { ...conHijos, hijosComunes: false, convivenciaMeses: 59 };
+        expect(v0(calcularViudedad(alta(fecha), [corta])).cumpleRequisitos).toBe(false);
+        const larga = { ...corta, convivenciaMeses: 60 };
+        expect(v0(calcularViudedad(alta(fecha), [larga])).pensionMensual).toBeCloseTo(0.52 * BR, 6);
+      }
+    });
+
+    it('hecho causante de 2021 (redacción de 2016: cinco años y dos de inscripción, con o sin hijos): fuera del dominio del motor', () => {
+      // El motor cubre hechos causantes desde 2022: no aplica la redacción anterior (art. 221.1-2
+      // en vigor del 02-01-2016 al 31-12-2021) y lo dice, en vez de aplicar la de 2022.
+      expect(() =>
+        calcularViudedad({ ...alta('2021-12-31'), carrera: [c('2010-01', '2021-11')] }, [conHijos]),
+      ).toThrow(NoImplementada);
+    });
+  });
+
   it('excónyuge: sin compensatoria no; víctima de violencia de género sí; con nuevo matrimonio no', () => {
     const ex: BeneficiarioViudedad = { vinculo: 'excónyuge', nacimiento: '1976-01-01' };
     expect(v0(calcularViudedad(ALTA, [ex])).cumpleRequisitos).toBe(false);
@@ -199,7 +254,10 @@ describe('Viudedad', () => {
     const r = calcularViudedad(ALTA, [
       {
         ...CONYUGE,
-        cargasFamiliares: { miembrosUnidadFamiliar: 2, rendimientosUnidadFamiliar: 22000 },
+        cargasFamiliares: {
+          miembrosUnidadFamiliar: 2,
+          rendimientosEjercicioAnteriorUnidadFamiliar: 22000,
+        },
       },
     ]);
     expect(v0(r).porcentaje).toBe(52);
@@ -210,7 +268,10 @@ describe('Viudedad', () => {
       {
         ...CONYUGE,
         nacimiento: '1956-01-01',
-        cargasFamiliares: { miembrosUnidadFamiliar: 3, rendimientosUnidadFamiliar: 6000 },
+        cargasFamiliares: {
+          miembrosUnidadFamiliar: 3,
+          rendimientosEjercicioAnteriorUnidadFamiliar: 6000,
+        },
       },
     ]);
     expect(v0(r).porcentaje).toBe(70);
@@ -261,6 +322,21 @@ describe('Orfandad y familiares', () => {
     );
     // Cuotas 20 % y 80 %: 52 % repartido entero; no queda porcentaje sin asignar.
     expect(r.orfandad[0]?.porcentaje).toBeCloseTo(20, 6);
+  });
+
+  it('el porcentaje de incremento solo se suma en la orfandad absoluta (art. 38.1 Decreto 3158/1966)', () => {
+    const huerfano = [{ nacimiento: '2012-01-01' }];
+    const o = { aplicarMinimos: false } as const;
+    // Sin viudedad y sin orfandad absoluta: solo el 20 % × 1.714,29 = 342,86.
+    expect(calcularOrfandad(ALTA, huerfano, o).orfandad[0]?.pensionMensual).toBeCloseTo(
+      0.2 * BR,
+      6,
+    );
+    // Con orfandad absoluta y sin beneficiario de viudedad: (20 % + 52 %) × 1.714,29 = 1.234,29.
+    expect(
+      calcularOrfandad(ALTA, huerfano, { ...o, orfandadAbsoluta: true }).orfandad[0]
+        ?.pensionMensual,
+    ).toBeCloseTo(0.72 * BR, 6);
   });
 
   it('huérfano incapacitado de 30 años: derecho', () => {
@@ -432,7 +508,10 @@ describe('Lecturas abiertas (una prueba por opción)', () => {
       ...CONYUGE,
       nacimiento: '1981-01-01',
       rendimientosAnuales: 9000,
-      cargasFamiliares: { miembrosUnidadFamiliar: 3, rendimientosUnidadFamiliar: 12000 },
+      cargasFamiliares: {
+        miembrosUnidadFamiliar: 3,
+        rendimientosEjercicioAnteriorUnidadFamiliar: 12000,
+      },
     };
     const o = { aplicarMinimos: false } as const;
     const a = v0(calcularViudedad(ALTA, [v], o)).pensionMensual;
@@ -444,6 +523,69 @@ describe('Lecturas abiertas (una prueba por opción)', () => {
     ).pensionMensual;
     expect(a).toBeCloseTo(0.52 * BR, 6);
     expect(b).toBeCloseTo((9442 + 9931.6 - 9000) / 14, 6);
+  });
+
+  describe('rentas del 70 %: ejercicio anterior (art. 31.2 Decreto 3158/1966)', () => {
+    // Datos de 2026 (hecho causante en 2026-03): límite de complementos 9.442 €, mínima de viudedad
+    // con cargas 9.931,60 €, límite del 70 % = 9.442 + 9.931,60 = 19.373,60 €. Base reguladora
+    // 24 × 2.000 / 28 = 1.714,29 €/mes; el 70 % son 1.200 €/mes × 14 = 16.800 €/año.
+    const o = { aplicarMinimos: false } as const;
+    const CARGAS = {
+      miembrosUnidadFamiliar: 3,
+      rendimientosEjercicioAnteriorUnidadFamiliar: 10000,
+    };
+
+    it('lo percibido en el ejercicio anterior manda sobre otras rentas del año del hecho causante', () => {
+      // Ejercicio anterior: 2.000 €; en el año del hecho causante constan 30.000 € (no cuentan para
+      // el 70 %). 2.000 + 16.800 = 18.800 ≤ 19.373,60: sin reducción; pensión = 0,70 × 1.714,29.
+      const v: BeneficiarioViudedad = {
+        ...CONYUGE,
+        nacimiento: '1981-01-01',
+        rendimientosEjercicioAnteriorAnuales: 2000,
+        rendimientosAnuales: 30000,
+        cargasFamiliares: CARGAS,
+      };
+      const p = v0(calcularViudedad(ALTA, [v], o));
+      expect(p.porcentaje).toBeCloseTo(70, 9);
+      expect(p.pensionMensual).toBeCloseTo(1200, 6);
+    });
+
+    it('rentas del ejercicio anterior por encima del límite reducen el 70 % (sin-suelo)', () => {
+      // 12.000 + 16.800 = 28.800 > 19.373,60: pensión = (9.442 + 9.931,60 − 12.000) / 14 = 526,69.
+      const v: BeneficiarioViudedad = {
+        ...CONYUGE,
+        nacimiento: '1981-01-01',
+        rendimientosEjercicioAnteriorAnuales: 12000,
+        rendimientosAnuales: 0,
+        cargasFamiliares: CARGAS,
+      };
+      const sinSuelo = v0(
+        calcularViudedad(ALTA, [v], {
+          ...o,
+          lecturasSupervivencia: { reduccionViudedad70: 'sin-suelo' },
+        }),
+      ).pensionMensual;
+      expect(sinSuelo).toBeCloseTo((9442 + 9931.6 - 12000) / 14, 6);
+      // Con el suelo del 52 % (por defecto): 0,52 × 1.714,29 = 891,43 > 526,69.
+      expect(v0(calcularViudedad(ALTA, [v], o)).pensionMensual).toBeCloseTo(0.52 * BR, 6);
+    });
+
+    it('sin el campo del ejercicio anterior se usa rendimientosAnuales (compatibilidad)', () => {
+      // Mismo caso que el segundo con rendimientosAnuales = 12.000: 526,69 en sin-suelo.
+      const v: BeneficiarioViudedad = {
+        ...CONYUGE,
+        nacimiento: '1981-01-01',
+        rendimientosAnuales: 12000,
+        cargasFamiliares: CARGAS,
+      };
+      const r = v0(
+        calcularViudedad(ALTA, [v], {
+          ...o,
+          lecturasSupervivencia: { reduccionViudedad70: 'sin-suelo' },
+        }),
+      );
+      expect(r.pensionMensual).toBeCloseTo((9442 + 9931.6 - 12000) / 14, 6);
+    });
   });
 
   it('incrementoFamiliares: sin incremento el nieto queda en el 20 %', () => {

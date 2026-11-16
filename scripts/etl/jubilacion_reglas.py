@@ -244,6 +244,32 @@ datos = [
     mk('parcial-relevo-antiguedad-empresa-meses', 2025, 72, 'meses de antigüedad en la empresa exigidos (con relevo)', TRLGSS, art215,
        'Acreditar un período de antigüedad en la empresa de, al menos, seis años inmediatamente anteriores', L215 + '.2.b)', 'Seis años = 72 meses.'),
 ]
+# Salvaguarda de la DT 34.ª.1 (lectura `salvaguardaDT34`): la pensión «no inferior a la que habría
+# correspondido con la aplicación de las normas vigentes en 2021». Esas normas son el art. 208.2 y el
+# párrafo 2.º del art. 210.3 en la redacción del RDLeg 8/2015 (vigente del 02/01/2016 al 31/12/2021),
+# que están en el texto con todas las versiones (trlgss-2015-versiones.txt).
+TRV = ('trlgss-2015-versiones.txt', 'Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)')
+a208_2016 = bloque(TRV, '[Bloque a208 · vigente desde 20160102', '[Bloque a208 · vigente desde 20220101')
+a210_2016 = bloque(TRV, '[Bloque a210 · vigente desde 20160102', '[Bloque a210 · vigente desde 20220101')
+dt34 = bloque(TRLGSS, 'Disposición transitoria trigésima cuarta. ', 'Disposición transitoria trigésima quinta. ')
+U2021 = '% de reducción de la pensión por trimestre o fracción de anticipación (redacción del art. 208.2 vigente hasta el 31/12/2021)'
+L2021 = 'art. 208.2 TRLGSS (redacción del RDLeg 8/2015, vigente del 02/01/2016 al 31/12/2021)'
+datos += [
+    mk('salvaguarda-dt34-coeficiente-2021-t1', 2016, 2, U2021, TRV, a208_2016,
+       'Coeficiente del 2 por ciento por trimestre cuando se acredite un período de cotización inferior a treinta y ocho años y seis meses', L2021 + ', letra a)', 'Tramo 1 de cotización (menos de 38 años y 6 meses).'),
+    mk('salvaguarda-dt34-coeficiente-2021-t2', 2016, 1.875, U2021, TRV, a208_2016,
+       'Coeficiente del 1,875 por ciento por trimestre cuando se acredite un período de cotización igual o superior a treinta y ocho años y seis meses e inferior a cuarenta y un años y seis meses', L2021 + ', letra b)', 'Tramo 2 de cotización (de 38 años y 6 meses a menos de 41 años y 6 meses).'),
+    mk('salvaguarda-dt34-coeficiente-2021-t3', 2016, 1.75, U2021, TRV, a208_2016,
+       'Coeficiente del 1,750 por ciento por trimestre cuando se acredite un período de cotización igual o superior a cuarenta y un años y seis meses e inferior a cuarenta y cuatro años y seis meses', L2021 + ', letra c)', 'Tramo 3 de cotización (de 41 años y 6 meses a menos de 44 años y 6 meses).'),
+    mk('salvaguarda-dt34-coeficiente-2021-t4', 2016, 1.625, U2021, TRV, a208_2016,
+       'Coeficiente del 1,625 por ciento por trimestre cuando se acredite un período de cotización igual o superior a cuarenta y cuatro años y seis meses', L2021 + ', letra d)', 'Tramo 4 de cotización (44 años y 6 meses o más).'),
+    mk('salvaguarda-dt34-tope-pct-trimestre-2021', 2016, 0.5, '% de reducción del tope máximo de pensión por trimestre o fracción de anticipación (redacción del art. 210.3 vigente hasta el 31/12/2021)', TRV, a210_2016,
+       'el importe resultante de la pensión no podrá ser superior a la cuantía que resulte de reducir el tope máximo de pensión en un 0,50 por ciento por cada trimestre o fracción de trimestre de anticipación',
+       'art. 210.3, párrafo 2.º, TRLGSS (redacción del RDLeg 8/2015, vigente del 02/01/2016 al 31/12/2021)', 'Es la misma cifra que el art. 210.4 vigente (`involuntaria-tope-pension-pct-trimestre`), aquí en la regla de la jubilación voluntaria anterior a la Ley 21/2021.'),
+    mk('salvaguarda-dt34-pension-no-inferior-2021', 2024, 1, 'indicador (1 = se aplica la regla citada)', TRLGSS, dt34,
+       'de manera que la pensión reconocida no resulte en ningún caso inferior a la que habría correspondido con la aplicación de las normas vigentes en 2021',
+       'DT 34.ª.1 TRLGSS', 'Fundamento de la lectura `jubilacion.salvaguardaDT34`; la norma no dice con qué pensión máxima se compara (lectura abierta).', 'media'),
+]
 fusionar('parametros', 'jubilacion-anticipada-reglas', datos,
          'Requisitos numéricos de las jubilaciones anticipadas y de la jubilación parcial (arts. 207, 208, 210.4 y 215 TRLGSS)',
          'Meses máximos de anticipación, cotización efectiva exigida, demanda de empleo, tope de pensión por trimestre y condiciones de la jubilación parcial. Anticipadas: redacción de la Ley 21/2021 (desde 2022). Parcial: redacción vigente desde 01/04/2025.')

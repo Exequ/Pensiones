@@ -36,6 +36,11 @@ export interface Contexto {
   baseMinima(anio: number): ImporteConReferencia;
   /** Pensión máxima mensual (14 pagas). */
   pensionMaxima(anio: number): ImporteConReferencia;
+  /**
+   * Pensión máxima mensual si desde el primer año del incremento adicional de la DT 39.ª solo se
+   * hubiera revalorizado con el art. 58.2 (sin ese incremento). La usa la lectura `salvaguardaDT34`.
+   */
+  pensionMaximaSoloIPC(anio: number): ImporteConReferencia;
   /** Cuantía mínima anual de una clase y situación familiar (p. ej. `jub65-unipersonal`). */
   pensionMinimaAnual(anio: number, claseSituacion: string): ImporteConReferencia;
   limiteIngresosMinimos(anio: number): ImporteConReferencia;
@@ -282,6 +287,14 @@ export function crearContexto(
     });
   }
 
+  function pensionMaximaSoloIPC(anio: number): ImporteConReferencia {
+    return memoizar(`pmipc-${anio}`, () => {
+      if (anio < params.incrementoPensionMaxima.primero) return pensionMaxima(anio);
+      const previa = pensionMaximaSoloIPC(anio - 1);
+      return { valor: previa.valor * (1 + revalorizacionPct(anio) / 100), refs: previa.refs };
+    });
+  }
+
   // --- Mínimas, límite de ingresos y complemento de brecha ---------------------------------------
   function revalorizar(base: number, desde: number, hasta: number): number {
     let v = base;
@@ -336,6 +349,7 @@ export function crearContexto(
     baseMaxima,
     baseMinima,
     pensionMaxima,
+    pensionMaximaSoloIPC,
     pensionMinimaAnual,
     limiteIngresosMinimos,
     importeBrechaPorHijo,

@@ -107,6 +107,19 @@ describe(`factor de actualización mensual frente a los informes (${FUENTE})`, (
     });
   }
 
+  it('desde 2002-01 los 23 factores coinciden con los informes a siete decimales (Revisión 3 del motor, A-30)', () => {
+    let comparados = 0;
+    for (const c of CASOS) {
+      for (const [mes, factor] of Object.entries(c.factores)) {
+        if (mes < '2002-01') continue;
+        const motor = ctx.ipc(parsearMes(c.referencia)) / ctx.ipc(parsearMes(mes));
+        expect(motor.toFixed(7), `${c.caso} ${mes}`).toBe(factor.toFixed(7));
+        comparados++;
+      }
+    }
+    expect(comparados).toBe(23);
+  });
+
   it('cubre los cuatro casos y todos los meses de los informes', () => {
     expect(CASOS.map((c) => c.caso)).toEqual([
       'jub-ord-2026-plana-40a',

@@ -162,6 +162,22 @@ export const TEXTOS_LECTURAS: Readonly<Record<string, TextoLectura>> = {
       },
     },
   },
+  'jubilacion.salvaguardaDT34': {
+    titulo:
+      'Salvaguarda de la disposición transitoria en la anticipada voluntaria con pensión máxima',
+    valores: {
+      A: {
+        etiqueta: 'Se compara con el resultado de las normas anteriores',
+        queCambia:
+          'Además del cálculo con los cuadros de la disposición transitoria, se calcula la pensión que habría correspondido con las normas anteriores a la última reforma: la reducción por trimestre de anticipación sobre la pensión máxima, tomando una pensión máxima actualizada solo con la revalorización general, sin el incremento adicional de la disposición transitoria sobre la pensión máxima. Se aplica la mayor de las dos. Solo cambia el resultado en la jubilación anticipada voluntaria cuya pensión supera el límite, con hecho causante dentro de los años de aplicación gradual de la disposición transitoria.',
+      },
+      B: {
+        etiqueta: 'Sin comparación adicional',
+        queCambia:
+          'Se aplica solo el cálculo con los cuadros de la disposición transitoria, sin comparar con la pensión de las normas anteriores. Esta lectura entiende que la salvaguarda no actúa con la pensión máxima vigente en cada año, y el resultado es el que daría el cálculo sin ella.',
+      },
+    },
+  },
   // --- Incapacidad permanente (Fase 3-C1) ---
   'incapacidad.edadFiccion': {
     titulo: 'Edad ordinaria con la que se añaden los años que faltan hasta la jubilación',

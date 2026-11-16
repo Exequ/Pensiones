@@ -292,18 +292,19 @@ Verificación del motor (`src/engine/jubilacion/`, descrito en `docs/MOTOR_JUBIL
 
 Cada lectura abierta es una opción del motor (por defecto, la que reflejan los ficheros de `/data`). Para cada una, un caso típico (importes en euros nominales; base reguladora o pensión mensual por paga según el caso; escenario de IPC del 2 %; opción de 25 años apagada salvo en el caso (c); generado con `npx tsx scripts/lecturas-abiertas.ts`):
 
-| Lectura                                  | Caso                                 | Alternativa                                             | Por defecto | Alternativa (€) | Variación |
-| ---------------------------------------- | ------------------------------------ | ------------------------------------------------------- | ----------: | --------------: | --------: |
-| (a) DT 38.ª, base máxima                 | topado por la base máxima, 2040      | «sobre la cifra inicial»                                |     5627,47 |         5601,00 |   -0,47 % |
-| (a) DT 39.ª, pensión máxima              | topado, 2040                         | «incremento creciente»                                  |     4503,41 |         5145,23 |   14,25 % |
-| (b) lagunas, base mínima                 | 40 meses de laguna finales, 2040     | base mínima del hecho causante                          |     2351,23 |         2353,27 |    0,09 % |
-| (c) opción de 25 años el 31/12/2040      | salarios con +2 % real, 31/12/2040   | excluida                                                |     4033,62 |         3967,71 |   -1,63 % |
-| (d) lagunas anteriores a la primera alta | 15 años cotizados, 2030              | ignorar                                                 |     1729,67 |         1475,58 |  -14,69 % |
-| (d) IPC mensual                          | 31 años a 2.000 €, 2026              | escalón anual                                           |     2185,32 |         2166,53 |   -0,86 % |
-| (d) IPC mensual interpolado              | 31 años a 2.000 €, 2026              | medias anuales interpoladas                             |     2185,32 |         2187,29 |    0,09 % |
-| (d) suelo del factor de actualización    | 31 años a 2.000 €, noviembre de 2026 | sin suelo (por defecto desde la Fase 2-E: suelo de uno) |     2177,12 |         2177,03 |   -0,00 % |
-| (d) fracción de la demora                | 1 año y 9 meses de demora            | desde el primer año                                     |     2983,16 |         3040,52 |    1,92 % |
-| (d) pensión máxima desde 2051            | topado, 2055                         | incremento anual literal                                |     6279,06 |         7512,96 |   19,65 % |
+| Lectura                                  | Caso                                         | Alternativa                                             | Por defecto | Alternativa (€) | Variación |
+| ---------------------------------------- | -------------------------------------------- | ------------------------------------------------------- | ----------: | --------------: | --------: |
+| (a) DT 38.ª, base máxima                 | topado por la base máxima, 2040              | «sobre la cifra inicial»                                |     5627,47 |         5601,00 |   -0,47 % |
+| (a) DT 39.ª, pensión máxima              | topado, 2040                                 | «incremento creciente»                                  |     4503,41 |         5145,23 |   14,25 % |
+| (b) lagunas, base mínima                 | 40 meses de laguna finales, 2040             | base mínima del hecho causante                          |     2351,23 |         2353,27 |    0,09 % |
+| (c) opción de 25 años el 31/12/2040      | salarios con +2 % real, 31/12/2040           | excluida                                                |     4033,62 |         3967,71 |   -1,63 % |
+| (d) lagunas anteriores a la primera alta | 15 años cotizados, 2030                      | ignorar                                                 |     1729,67 |         1475,58 |  -14,69 % |
+| (d) IPC mensual                          | 31 años a 2.000 €, 2026                      | escalón anual                                           |     2185,32 |         2166,53 |   -0,86 % |
+| (d) IPC mensual interpolado              | 31 años a 2.000 €, 2026                      | medias anuales interpoladas                             |     2185,32 |         2187,29 |    0,09 % |
+| (d) suelo del factor de actualización    | 31 años a 2.000 €, noviembre de 2026         | sin suelo (por defecto desde la Fase 2-E: suelo de uno) |     2177,12 |         2177,03 |   -0,00 % |
+| (d) fracción de la demora                | 1 año y 9 meses de demora                    | desde el primer año                                     |     2983,16 |         3040,52 |    1,92 % |
+| (d) pensión máxima desde 2051            | topado, 2055                                 | incremento anual literal                                |     6279,06 |         7512,96 |   19,65 % |
+| (a) DT 34.ª, salvaguarda                 | anticipada voluntaria topada, 12 meses, 2030 | sin salvaguarda (B)                                     |     3555,82 |         3503,20 |   -1,48 % |
 
 Lectura de la tabla:
 

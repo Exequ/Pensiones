@@ -51,8 +51,10 @@ export const LIMITACIONES: readonly { readonly regla: string; readonly motivo: s
       'Exige el umbral de pobreza de la ECV, no descargado. Desde 2027 las mínimas se revalorizan con el IPC del escenario.',
   },
   {
-    regla: 'Salvaguarda de la DT 34.ª.1 (no inferior a la pensión con las normas de 2021)',
-    motivo: 'Exige calcular la pensión con la normativa de 2021, no transcrita.',
+    regla:
+      'Salvaguarda de la DT 34.ª.1 (no inferior a la pensión con las normas de 2021): solo con la lectura A y de 2024 a 2033',
+    motivo:
+      'La norma no dice con qué pensión máxima se compara: la lectura A usa la máxima actualizada solo con el art. 58.2 y la B no aplica la comparación (lectura jubilacion.salvaguardaDT34, pendiente). No se calculan los hechos causantes de 2022 y 2023.',
   },
   {
     regla: 'Límite de los incrementos salariales de los dos últimos años (art. 209.2-4)',

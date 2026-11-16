@@ -175,6 +175,15 @@ export const LECTURAS_ABIERTAS: readonly LecturaAbierta[] = [
     '(d) pensión máxima desde 2051',
     'param-pension-maxima-incremento-2051-2065',
   ),
+  lectura(
+    'jubilacion',
+    'salvaguardaDT34',
+    'Si en la jubilación anticipada voluntaria cuya pensión supera el límite se compara además el resultado con el de las normas anteriores a la última reforma de las pensiones (salvaguarda del apartado primero de la disposición transitoria trigésima cuarta), calculado con la pensión máxima actualizada solo con la revalorización general, o si no se compara.',
+    ['A', 'B'],
+    S_2A,
+    '(a) DT 34.ª, salvaguarda',
+    'param-jubilacion-coeficientes-voluntaria-limite',
+  ),
   // Incapacidad permanente (Fase 2-B-1)
   lectura(
     'incapacidad',

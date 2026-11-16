@@ -134,7 +134,10 @@ fila(
         ...CONYUGE,
         nacimiento: '1981-01-01',
         rendimientosAnuales: 9000,
-        cargasFamiliares: { miembrosUnidadFamiliar: 3, rendimientosUnidadFamiliar: 12000 },
+        cargasFamiliares: {
+          miembrosUnidadFamiliar: 3,
+          rendimientosEjercicioAnteriorUnidadFamiliar: 12000,
+        },
       },
     ],
   },
