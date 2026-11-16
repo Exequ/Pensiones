@@ -84,6 +84,13 @@ describe('(c) y (d) coherencias', () => {
     expect(Math.round(r.seccion3.indiceGasto2050ConG1_8)).toBe(134);
   });
   it('el LEEME fija el parámetro del caso de empleo de 55 a 64 años', () => {
-    expect(r.parametroEmpleo).toContain('avance lineal');
+    // El LEEME actual da el factor en el parámetro y el avance lineal en su nota sobre los casos de M2.
+    expect(r.parametroEmpleo).toContain('tasas de afiliación y de cotización de 55 a 64 años');
+    expect(r.parametroEmpleo).toMatch(/multiplicadas por 1,1 en 2050$/);
+    expect(r.notaM2).toContain('El avance es lineal desde 2026');
+    expect(r.notaM2).toContain('k = (t − 2026)/24');
+    expect(r.notaM2).toContain(
+      'empleo_55_64_mas_10 las tasas de 55 a 64 años quedan multiplicadas por 1,1',
+    );
   });
 });

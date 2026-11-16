@@ -68,6 +68,14 @@ describe('procedencia de data/proyecciones/m4-sensibilidades.json', () => {
     );
   });
 
+  it('la huella SHA-256 del LEEME es la del fichero', () => {
+    expect(sens.origen.leemeSha256).toBe(
+      createHash('sha256')
+        .update(readFileSync(path.join(RAIZ, LEEME)))
+        .digest('hex'),
+    );
+  });
+
   it('la reproducción local por el autor consta como falsa', () => {
     expect(sens.reproduccionLocalPorAutor).toBe(false);
   });

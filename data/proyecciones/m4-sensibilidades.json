@@ -19,16 +19,17 @@
   "source": {
     "title": "M4 · Modelo financiero del sistema (v1): código del modelo en el repositorio y salidas de su ejecución",
     "publisher": "Elaboración propia: modelo de proyección",
-    "url": "https://github.com/Exequ/Pensiones/blob/2c4e79bf71ea31fe2fbd997a9024a27cc5131d32/modelos/m4/m4_sensibilidades.py"
+    "url": "https://github.com/Exequ/Pensiones/blob/09f6e066253cb65052d2754229797811980a0bd9/modelos/m4/m4_sensibilidades.py"
   },
   "fetchedAt": "2026-11-16",
   "confidence": "media",
   "origen": {
     "csv": "data-raw/modelos-salidas/m4/m4_sensibilidades.csv",
     "sha256": "2263a0d2f09c3d92987ddbc4f9c0681fe2da88ad2b8d706f78b9fe2a89a87385",
-    "commitModelos": "2c4e79bf71ea31fe2fbd997a9024a27cc5131d32",
+    "commitModelos": "09f6e066253cb65052d2754229797811980a0bd9",
     "leeme": "data-raw/modelos-salidas/m4/LEEME_m4_sensibilidades.txt",
-    "ejecutadoEl": "2026-11-16"
+    "ejecutadoEl": "2026-11-16",
+    "leemeSha256": "e6d9eee06c5621b5165b1840123db337a4a08a1255e4bec95742a9b7c00e5ede"
   },
   "columnas": [
     {
@@ -6457,11 +6458,11 @@
     },
     {
       "id": "mujeres_convergen",
-      "parametro": "M2: en 2050 las tasas de empleo de las mujeres de 25 a 64 años igualan a las de los hombres de su tramo"
+      "parametro": "M2: en 2050 las tasas de afiliación y de cotización de las mujeres de 25 a 64 años igualan a las de los hombres de su tramo"
     },
     {
       "id": "empleo_55_64_mas_10",
-      "parametro": "M2: tasas de empleo de 55 a 64 años multiplicadas por 1,1 en 2050 (avance lineal)"
+      "parametro": "M2: tasas de afiliación y de cotización de 55 a 64 años multiplicadas por 1,1 en 2050"
     }
   ],
   "reproduccionLocalPorAutor": false,

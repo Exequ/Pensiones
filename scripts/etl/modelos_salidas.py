@@ -565,6 +565,8 @@ def main():
             'columnas': [{'id': c[0], 'descripcion': c[2], 'tipo': c[1], 'unidad': c[3]} for c in f['columnas']],
             'filas': filas,
         }
+        if f.get('sensibilidades'):
+            obj['origen']['leemeSha256'] = hashlib.sha256(open(f'{SALIDAS}/{f["leeme"]}', 'rb').read()).hexdigest()
         # Campos propios de las salidas con varios escenarios (van antes de «columnas»).
         for clave in ('escenarios', 'sensibilidades', 'reproduccionLocalPorAutor', 'parametrosComunes', 'filaObservada'):
             if clave in extra:

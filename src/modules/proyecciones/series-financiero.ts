@@ -552,33 +552,27 @@ export function aniosSensibilidades(d: DatosFinanciero): number[] {
 }
 
 /**
- * Rótulo de la palanca de una sensibilidad: el texto del LEEME de la salida, salvo dos correcciones
- * verificadas en el código del modelo (modelos/m2/m2_cotizantes.py; Ajustes actuariales 3, n.º 69, y
+ * Rótulo de la palanca de una sensibilidad: el texto del LEEME de la salida, con una única adición
+ * verificada en el código del modelo (modelos/m2/m2_cotizantes.py; Ajustes actuariales 3, n.º 69, y
  * Motor: cambios de la revisión actuarial 3):
  *
- * - la palanca de las edades próximas a la jubilación multiplica las tasas de afiliación y de
- *   cotización de M2 (afiliados y cotizantes entre población por tramo: `ra` y `rb`), no las tasas de
- *   empleo de la EPA, y avanza linealmente desde el primer año proyectado;
- * - la convergencia de las mujeres (`convergencia_mujeres`) acerca a las de los hombres de su tramo
- *   esas mismas tasas de afiliación y de cotización (`ra` y `rb`, tramos de 25 a 64 años), con el mismo
- *   avance lineal desde el primer año proyectado hasta 2050; no son tasas de empleo.
+ * - los dos casos de M2 (las edades próximas a la jubilación y la convergencia de las mujeres)
+ *   modifican las tasas de afiliación y de cotización (`ra` y `rb`; el LEEME ya las nombra así) con un
+ *   avance lineal desde el primer año proyectado, y el número de pensiones de M3 no cambia: se añade
+ *   ese aviso al final del texto del LEEME.
  *
  * La salida del modelo no se toca; el texto no lleva cifras (salen del LEEME).
  */
 export function rotuloPalanca(parametro: string | null): string | null {
   if (parametro === null) return null;
   const AVANCE = `avance lineal desde el primer año proyectado; el número de pensiones de ${MODELO.m3} no cambia`;
-  return parametro
-    .replace(
-      /tasas de empleo(?= de \d+ a \d+ años multiplicadas)/,
-      'tasas de afiliación y de cotización',
+  if (
+    /tasas de afiliación y de cotización .*(multiplicadas por .* en \d+|igualan a las de los hombres de su tramo)$/.test(
+      parametro,
     )
-    .replace('(avance lineal)', `(${AVANCE})`)
-    .replace(
-      /tasas de empleo(?= de las mujeres de \d+ a \d+ años igualan)/,
-      'tasas de afiliación y de cotización',
-    )
-    .replace(/(igualan a las de los hombres de su tramo)$/, `$1 (${AVANCE})`);
+  )
+    return `${parametro} (${AVANCE})`;
+  return parametro;
 }
 
 /** Fila de la tabla de sensibilidades: el caso base o uno de los casos, con su diferencia con el base. */

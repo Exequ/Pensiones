@@ -90,14 +90,18 @@ describe('tabla «Sensibilidades» del bloque financiero', () => {
     expect(filas).toHaveLength(s.casos.length + 1);
     expect(celdas(filas[0]!)[0]).toMatch(/^Ninguna: es el caso base/);
     s.casos.forEach((c, i) => {
-      // La palanca y su valor son el texto del LEEME, sin retocar, salvo la corrección verificada de
-      // «tasas de empleo» por «tasas de afiliación y de cotización» (Ajustes actuariales 3, n.º 69).
+      // La palanca y su valor son el texto del LEEME (que ya habla de tasas de afiliación y de
+      // cotización, Ajustes actuariales 3, n.º 69), con el aviso del avance lineal en los dos casos de M2.
       expect(celdas(filas[i + 1]!)[0]).toBe(rotuloPalanca(c.parametro));
-      if (/tasas de empleo de 55 a 64 años/.test(c.parametro))
+      if (/^M2: tasas de afiliación y de cotización de 55 a 64 años/.test(c.parametro))
         expect(celdas(filas[i + 1]!)[0]).toMatch(
           /^M2: tasas de afiliación y de cotización de 55 a 64 años multiplicadas por .* \(avance lineal desde el primer año proyectado; el número de pensiones de M3 no cambia\)$/,
         );
-      else if (/tasas de empleo de las mujeres de 25 a 64 años/.test(c.parametro))
+      else if (
+        /^M2: en .* las tasas de afiliación y de cotización de las mujeres de 25 a 64 años/.test(
+          c.parametro,
+        )
+      )
         expect(celdas(filas[i + 1]!)[0]).toMatch(
           /^M2: en .* las tasas de afiliación y de cotización de las mujeres de 25 a 64 años igualan a las de los hombres de su tramo \(avance lineal desde el primer año proyectado; el número de pensiones de M3 no cambia\)$/,
         );
