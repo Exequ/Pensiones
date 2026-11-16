@@ -30,14 +30,8 @@ export function SeccionFondoTransferencias() {
   const anioPorTramo = useMemo(() => partirPorTramos(serieAnio, empalme), [serieAnio, empalme]);
   const tramoLiquidacion = anioPorTramo.get('liquidacion') ?? [];
   const tramoEjecucion = anioPorTramo.get('ejecucion') ?? [];
-  const etiquetaLiquidacion = etiquetaTramo(
-    'Principal, transferencias del año, liquidación',
-    tramoLiquidacion,
-  );
-  const etiquetaEjecucion = etiquetaTramo(
-    'Principal, transferencias del año, ejecución',
-    tramoEjecucion,
-  );
+  const etiquetaLiquidacion = etiquetaTramo('Principal, liquidación', tramoLiquidacion);
+  const etiquetaEjecucion = etiquetaTramo('Principal, ejecución', tramoEjecucion);
   const anioRuptura = tramoEjecucion[0]?.anio ?? 0;
   const serieTrimestre = useMemo(() => escalar(porTrimestre, factor), [porTrimestre, factor]);
 

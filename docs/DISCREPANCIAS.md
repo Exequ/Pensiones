@@ -218,17 +218,17 @@ Contrastes hechos por `scripts/etl/ssf_liquidacion_pdf.py`, `scripts/etl/tc_cge2
 
 Se contrastaron las cifras del ejercicio anterior que trae cada PDF con la liquidación del PDF de ese ejercicio. **Todas coinciden salvo diez cifras, todas de 2014** (PDF de 2014 frente a la comparativa del PDF de 2015):
 
-| Partida (capítulo 4 de gastos y capítulos 1 y 4 de ingresos)  | PDF de 2014 | Comparativa de 2014 en el PDF de 2015 | Diferencia |
-| ------------------------------------------------------------- | ----------: | ------------------------------------: | ---------: |
-| Invalidez (obligaciones reconocidas, millones de euros)       |   11.958,25 |                             11.717,20 |    −241,05 |
-| Jubilación                                                    |   77.767,05 |                             73.555,00 |  −4.212,05 |
-| Viudedad                                                      |   20.483,52 |                             17.751,17 |  −2.732,35 |
-| Orfandad                                                      |    1.687,49 |                              1.422,89 |    −264,60 |
-| En favor de familiares                                        |      274,09 |                               242,10 |     −31,99 |
-| Suma de pensiones                                             |  112.170,40 |                            104.688,36 |  −7.482,04 |
-| Suma de prestaciones no contributivas                         |    4.069,73 |                             11.551,77 |  +7.482,04 |
-| Ingresos «De la Seguridad Social»                             |    2.544,18 |                              2.639,75 |     +95,57 |
-| Ingresos «De Comunidades Autónomas»                           |       96,45 |                                  0,88 |     −95,57 |
+| Partida (capítulo 4 de gastos y capítulos 1 y 4 de ingresos) | PDF de 2014 | Comparativa de 2014 en el PDF de 2015 | Diferencia |
+| ------------------------------------------------------------ | ----------: | ------------------------------------: | ---------: |
+| Invalidez (obligaciones reconocidas, millones de euros)      |   11.958,25 |                             11.717,20 |    −241,05 |
+| Jubilación                                                   |   77.767,05 |                             73.555,00 |  −4.212,05 |
+| Viudedad                                                     |   20.483,52 |                             17.751,17 |  −2.732,35 |
+| Orfandad                                                     |    1.687,49 |                              1.422,89 |    −264,60 |
+| En favor de familiares                                       |      274,09 |                                242,10 |     −31,99 |
+| Suma de pensiones                                            |  112.170,40 |                            104.688,36 |  −7.482,04 |
+| Suma de prestaciones no contributivas                        |    4.069,73 |                             11.551,77 |  +7.482,04 |
+| Ingresos «De la Seguridad Social»                            |    2.544,18 |                              2.639,75 |     +95,57 |
+| Ingresos «De Comunidades Autónomas»                          |       96,45 |                                  0,88 |     −95,57 |
 
 - **Reclasificación del complemento a mínimos.** El PDF de 2015 muestra, por primera vez, el complemento a mínimos como partida aparte dentro de las prestaciones no contributivas y recoge ya el de 2014 (7.482,04 millones). La suma de pensiones de 2014 del PDF de 2014 es igual a la suma de pensiones de 2014 del PDF de 2015 más ese complemento (diferencia 0,00), y la suma de las diferencias de pensiones y de prestaciones no contributivas es cero: cambia la **clasificación**, no el total. Como consecuencia, la serie «pensiones contributivas con el complemento a mínimos» de la web suma el complemento desde 2015 y no lo suma antes (porque ya está dentro de las clases). Para 2010 a 2013 no hay una cifra separada del complemento en las liquidaciones: que las clases lo incluyan en esos años se deduce de que los PDF de 2011, 2012, 2013 y 2014 repiten sin diferencias la cifra del año anterior con la misma clasificación; no se ha verificado de otra forma.
 - **Transferencias entre «De la Seguridad Social» y «De Comunidades Autónomas»**: el PDF de 2015 reclasifica 95,57 millones de 2014 entre esos dos orígenes; el total de transferencias corrientes de ingresos no cambia. No afecta a «Del Estado», que es la cifra que usa la web. Causa no verificada.

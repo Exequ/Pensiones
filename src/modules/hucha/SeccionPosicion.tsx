@@ -135,7 +135,7 @@ export function SeccionPosicion() {
     () =>
       empalme.rupturas.map((anio) => ({
         anio,
-        etiqueta: 'Ruptura de serie en las transferencias',
+        etiqueta: 'Ruptura de serie',
       })),
     [empalme.rupturas],
   );

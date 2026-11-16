@@ -25,6 +25,12 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # `pdftotext` (poppler) lo necesita la prueba de idempotencia de los ETL de PDF (Fase 5-A3). Si no se
+      # puede instalar, esa prueba se omite (no falla el CI) y el resto de comprobaciones de los datos siguen.
+      - name: Instalar poppler-utils (si falta)
+        timeout-minutes: 2
+        continue-on-error: true
+        run: command -v pdftotext || sudo apt-get install -y --no-install-recommends poppler-utils
       - name: Lint (ESLint, Prettier, estilos y contraste)
         run: npm run lint
       - name: Tipos

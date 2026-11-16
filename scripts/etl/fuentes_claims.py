@@ -96,6 +96,11 @@ for ruta in sorted(glob.glob(f'{REPO}/data/*/*.json')):
         for o in d.get('origenes', []):
             anota({'title': f"{d['source']['title']} (fichero del periodo {o['period']})", 'publisher': d['source']['publisher'], 'url': o['url']}, rel, d.get('fetchedAt', HOY))
             huellas.append((d['id'], o['period'], o['url'], o['sha256']))
+    if d.get('tipo') == 'extraccion-pdf':
+        # Fase 5-A3: extracción de PDF; la huella de cada PDF y el fichero local van a la tabla de huellas.
+        anota(d['source'], rel, d.get('fetchedAt', HOY))
+        for o in d.get('origenes', []):
+            huellas.append((d['id'], f"{o['ejercicio']} ({o['fichero']})", d['source']['url'], o['sha256']))
     for n in d.get('normas', []):
         anota(n['source'], rel)
     for pe in d.get('personas', []):

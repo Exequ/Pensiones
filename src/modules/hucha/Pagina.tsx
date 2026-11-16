@@ -217,16 +217,13 @@ export default function Hucha() {
             series={[
               {
                 clave: 'liquidacion',
-                etiqueta: etiquetaTramo(
-                  'Referencia, con complemento a mínimos, liquidación',
-                  mesesLiquidacion,
-                ),
+                etiqueta: etiquetaTramo('Referencia, liquidación', mesesLiquidacion),
                 puntos: mesesLiquidacion,
                 color: 0,
               },
               {
                 clave: 'ejecucion',
-                etiqueta: etiquetaTramo('Referencia, con complemento a mínimos, ejecución', mesesA),
+                etiqueta: etiquetaTramo('Referencia, ejecución', mesesA),
                 puntos: mesesA,
                 color: 0,
               },
@@ -239,7 +236,7 @@ export default function Hucha() {
             rupturas={[
               {
                 anio: anioRupturaGasto,
-                etiqueta: 'Ruptura de serie: cambia el documento de origen',
+                etiqueta: 'Ruptura de serie',
               },
             ]}
             unidadEje="Meses de gasto"

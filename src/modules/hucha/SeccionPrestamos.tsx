@@ -23,6 +23,10 @@ export function SeccionPrestamos() {
     if (typeof v !== 'number') throw new Error(`Falta la cifra «${id}» del Tribunal de Cuentas`);
     return v;
   };
+  /** Un dato por documento de origen: varios datos de una misma fuente repetirían su línea de fuente. */
+  const unicos = (datos: Dato[]): Dato[] => [
+    ...new Map(datos.map((x) => [`${x.source.url}|${x.fetchedAt}`, x])).values(),
+  ];
   const prestamos = d.prestamosPorAnio.puntos;
   const pasivosLiquidacion = d.liquidacion.pasivosFinancieros.puntos;
   const pasivosEjecucion = d.transferencias.pasivosFinancieros.puntos;
@@ -69,13 +73,13 @@ export function SeccionPrestamos() {
       importe: cifra(ID23.meiOctubreNoviembre),
     },
   ];
-  const datosFondo: Dato[] = [
+  const datosFondo: Dato[] = unicos([
     d.valor.dato,
     ...[ID23.reservaFondo, ID23.tesoreriaFondo, ID23.meiOctubreNoviembre].flatMap((id) =>
       d.tribunal2023[id] === undefined ? [] : [d.tribunal2023[id].dato],
     ),
-  ];
-  const datosPrestamos: Dato[] = [
+  ]);
+  const datosPrestamos: Dato[] = unicos([
     d.prestamosPorAnio.dato,
     d.liquidacion.pasivosFinancieros.dato,
     d.transferencias.pasivosFinancieros.dato,
@@ -86,7 +90,7 @@ export function SeccionPrestamos() {
       ID23.prestamosRecientes,
       ID23.condicionesPrestamos,
     ].flatMap((id) => (d.tribunal2023[id] === undefined ? [] : [d.tribunal2023[id].dato])),
-  ];
+  ]);
 
   return (
     <section className="seccion prosa" aria-labelledby="prestamos">
@@ -117,17 +121,17 @@ export function SeccionPrestamos() {
         series={[
           {
             clave: 'prestamos',
-            etiqueta: etiquetaTramo('Préstamos concedidos, Tribunal de Cuentas', prestamos),
+            etiqueta: etiquetaTramo('Préstamos, Tribunal', prestamos),
             puntos: prestamos,
           },
           {
             clave: 'pasivos-liquidacion',
-            etiqueta: etiquetaTramo('Pasivos financieros, liquidación', pasivosLiquidacion),
+            etiqueta: etiquetaTramo('Pasivos, liquidación', pasivosLiquidacion),
             puntos: pasivosLiquidacion,
           },
           {
             clave: 'pasivos-ejecucion',
-            etiqueta: etiquetaTramo('Pasivos financieros, ejecución', pasivosEjecucion),
+            etiqueta: etiquetaTramo('Pasivos, ejecución', pasivosEjecucion),
             puntos: pasivosEjecucion,
           },
         ]}

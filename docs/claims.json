@@ -5208,6 +5208,168 @@
       "notas": "Solo se afirma lo verificado (criterio de clasificación de cada fuente); la causa completa de la diferencia queda sin atribuir. Complementa web-hucha-clasificaciones."
     },
     {
+      "id": "web-hucha-liquidaciones-transferencias",
+      "texto": "Las liquidaciones del presupuesto de la Seguridad Social de los ejercicios 2010 a 2016 recogen los derechos reconocidos netos por transferencias corrientes «Del Estado» y «De Organismos Autónomos administrativos»; las cifras se extraen de los PDF con su página, tabla y fila, y todas las sumas de las tablas de los PDF cuadran dentro del redondeo.",
+      "ubicacion": "Página «Hucha»: Las transferencias del Estado a la Seguridad Social en el tiempo (Fase 5-A3)",
+      "datos": [
+        "sistema/liquidacion-ss-series.json#ingresos-transferencias-corrientes-del-estado",
+        "sistema/liquidacion-ss-series.json#ingresos-transferencias-corrientes-organismos-autonomos",
+        "sistema/liquidacion-ss-series.json#ingresos-transferencias-corrientes-total"
+      ],
+      "fuentes": [
+        {
+          "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+          "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción de cifras publicadas, con validación de sumas (docs/INVENTARIO_5A3.md y data/sistema/liquidacion-ss-extraccion.json). La URL exacta de cada PDF y su fecha de descarga no constan en ningún LEEME: fetchedAt es la fecha del commit que los incorpora."
+    },
+    {
+      "id": "web-hucha-ruptura-liquidacion-ejecucion",
+      "texto": "La liquidación de 2010 a 2016 y la ejecución del presupuesto desde 2017 rotulan de forma distinta la partida de transferencias del Estado y no comparten ningún ejercicio, por lo que no se ha podido contrastar que midan lo mismo; la web las muestra como dos tramos con ruptura de serie y no como una sola línea.",
+      "ubicacion": "Página «Hucha»: transferencias, meses de transferencias, construcciones ilustrativas y préstamos (Fase 5-A3)",
+      "datos": [
+        "sistema/liquidacion-ss-series.json#ingresos-transferencias-corrientes-del-estado",
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+      ],
+      "fuentes": [
+        {
+          "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+          "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+        },
+        {
+          "title": "Ejecución del presupuesto de la Seguridad Social (liquidación y ejecución, ficheros Excel)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Afirma solo la falta de ejercicio común y la diferencia de rótulos; no afirma que las dos cifras sean o no equivalentes (docs/DISCREPANCIAS.md, «Liquidación y ejecución: sin ejercicio común»)."
+    },
+    {
+      "id": "web-hucha-complemento-minimos-clasificacion",
+      "texto": "En las liquidaciones, el complemento a mínimos figura dentro de las cinco clases de pensión contributiva hasta el PDF de 2014 y aparte, entre las prestaciones no contributivas, desde el de 2015, que ya lo recoge para 2014; por eso la serie de pensiones contributivas con complemento a mínimos suma el complemento desde 2015 y no antes.",
+      "ubicacion": "Página «Hucha»: El Fondo en meses de gasto en pensiones (Fase 5-A3)",
+      "datos": [
+        "sistema/liquidacion-ss-series.json#gastos-suma-pensiones-contributivas",
+        "sistema/liquidacion-ss-series.json#gastos-complemento-a-minimos",
+        "sistema/liquidacion-ss-series.json#gastos-pensiones-con-complemento-a-minimos"
+      ],
+      "fuentes": [
+        {
+          "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+          "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "¿Es válida, para compararla con la referencia de la ejecución, la serie «pensiones contributivas con complemento a mínimos» de 2010 a 2016 (suma de las cinco clases hasta 2014 y suma de las clases y del complemento desde 2015)? Que las clases incluyan el complemento en 2010 a 2013 se deduce de que los PDF repiten sin diferencias la cifra del año anterior hasta el de 2014, y solo en 2014 se ve la reclasificación; ¿basta esa deducción o hace falta una fuente que lo diga?",
+      "notas": "Lo verificado: en 2014 la suma de pensiones del PDF de 2014 es igual a la del PDF de 2015 más el complemento de 2014 que ese PDF muestra aparte. Lo no verificado: la inclusión del complemento en las clases de 2010 a 2013."
+    },
+    {
+      "id": "web-hucha-prestamos-anexo",
+      "texto": "El Anexo 10 de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2023 lista veinte préstamos del Estado a la Seguridad Social; el saldo de 116.166,4 millones a fin de 2023 es el total del anexo menos el préstamo de 2024, que figura como desembolsado en 2024, y los préstamos concedidos de 2017 a 2023 suman 98.997,8 millones.",
+      "ubicacion": "Página «Hucha»: Préstamos del Estado y Fondo de Reserva según el Tribunal de Cuentas (Fase 5-A3)",
+      "datos": [
+        "sistema/tribunal-cuentas-cge2023-ss.json#deuda-ss-con-estado-2023",
+        "sistema/tribunal-cuentas-cge2023-ss.json#prestamos-concedidos-2017-2023",
+        "sistema/tribunal-cuentas-cge2023-ss.json#prestamos-1992-1999",
+        "sistema/tribunal-cuentas-cge2023-ss.json#prestamo-concedido-2024"
+      ],
+      "fuentes": [
+        {
+          "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+          "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+          "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Extracto de 42 páginas del original; las sumas del anexo y su relación con las cifras del texto se comprueban en scripts/etl/tc_cge2023_seguridad_social.py y en scripts/extraccion-pdf-5a3.test.ts."
+    },
+    {
+      "id": "web-hucha-prestamos-por-anio",
+      "texto": "Los préstamos del Estado por año de concesión de 2017 a 2024 son una serie derivada del Anexo 10 del Tribunal de Cuentas: el anexo no da la fecha de concesión y el año se infiere del inicio del plazo de cancelación, que el Tribunal indica que empieza el año siguiente al de la concesión.",
+      "ubicacion": "Página «Hucha»: Préstamos del Estado y Fondo de Reserva según el Tribunal de Cuentas (Fase 5-A3)",
+      "datos": [
+        "sistema/tribunal-cuentas-cge2023-ss.json#prestamos-concedidos-por-anio",
+        "sistema/tribunal-cuentas-cge2023-ss.json#condiciones-prestamos-tc2023"
+      ],
+      "fuentes": [
+        {
+          "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+          "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+          "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "¿Es razonable asignar cada préstamo del Anexo 10 al año anterior al de inicio de su plazo de cancelación? Comprueba que la suma de los asignados hasta 2022 y hasta 2023 coincide con las cifras del Tribunal de Cuentas (88.994,0 y 98.997,8 millones) y con los pasivos financieros de la ejecución de 2017 a 2024, pero la fecha de concesión no figura en el anexo.",
+      "notas": "Lo verificado: coincidencia con los acumulados del Tribunal y con la ejecución (salvo 2,57 millones en 2017). Lo inferido: el año de cada línea."
+    },
+    {
+      "id": "web-hucha-finalidad-tribunal-2023",
+      "texto": "Según la Declaración del Tribunal de Cuentas sobre la Cuenta General de 2023, las transferencias corrientes del Estado de 2018 a 2023 suman 81.829,3 millones: 29.616,3 con finalidad de apoyar el equilibrio presupuestario (25.014,6 de ellos para la covid en 2020 y 2021) y 52.213 basadas en la modificación del texto refundido (2021 a 2023); en 2024 se recibieron 19.888 con idéntica finalidad, y las aportaciones de naturaleza no contributiva de 2023 (19.090,2) se citan aparte.",
+      "ubicacion": "Página «Hucha»: Lo que se conoce por finalidad (Fase 5-A3)",
+      "datos": [
+        "sistema/tribunal-cuentas-cge2023-ss.json#transferencias-corrientes-2018-2023",
+        "sistema/tribunal-cuentas-cge2023-ss.json#transferencias-equilibrio-2018-2021",
+        "sistema/tribunal-cuentas-cge2023-ss.json#transferencias-covid-2020-2021",
+        "sistema/tribunal-cuentas-cge2023-ss.json#transferencias-base-normativa-2021-2023",
+        "sistema/tribunal-cuentas-cge2023-ss.json#transferencias-misma-finalidad-2024",
+        "sistema/tribunal-cuentas-cge2023-ss.json#aportaciones-no-contributivas-2023"
+      ],
+      "fuentes": [
+        {
+          "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+          "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+          "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "El total es la suma de sus dos partes (verificado). No se afirma la periodicidad de las transferencias (no verificada). La ejecución clasifica por origen y el Tribunal por finalidad; la causa completa de la diferencia entre ambas cifras no está verificada."
+    },
+    {
+      "id": "web-hucha-fondo-tribunal-2023",
+      "texto": "El Tribunal de Cuentas cifra en 6.126,4 millones la reserva patrimonial del Fondo de Reserva en el balance de la Tesorería General a 31 de diciembre de 2023 y en 2.711,7 millones el saldo de la cuenta específica del Fondo en el Banco de España, e indica que 510,9 millones de ingresos del MEI de octubre y noviembre están en la reserva y no en esa cuenta; el valor del Fondo a precio de adquisición de la serie de la Seguridad Social es 5.578 millones y las dos cifras no se concilian con los datos descargados.",
+      "ubicacion": "Página «Hucha»: El Fondo de Reserva, dos formas de medirlo (Fase 5-A3)",
+      "datos": [
+        "sistema/tribunal-cuentas-cge2023-ss.json#frss-reserva-patrimonial-2023",
+        "sistema/tribunal-cuentas-cge2023-ss.json#frss-tesoreria-cuenta-especifica-2023",
+        "sistema/tribunal-cuentas-cge2023-ss.json#frss-mei-octubre-noviembre-2023",
+        "sistema/fondo-reserva-series.json#valor-fin-ano"
+      ],
+      "fuentes": [
+        {
+          "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+          "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+          "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+        },
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Solo se afirman las cifras y lo que el Tribunal dice de ellas; no se atribuye la diferencia con la serie a ninguna causa (docs/DISCREPANCIAS.md, Fase 5-A3)."
+    },
+    {
       "id": "web-sis-gasto-medidas",
       "texto": "La OCDE (gasto público en pensiones) y Eurostat (prestaciones de vejez y de supervivencia) publican el gasto en pensiones sobre el PIB con delimitaciones distintas, y el perímetro de ninguna de las dos series está verificado en las fuentes descargadas; el cociente propio de las pensiones contributivas del Sistema es una tercera delimitación, y para España y un mismo año las tres cifras difieren sin que los datos descargados permitan reconciliarlas.",
       "ubicacion": "Página «Otros sistemas» (Fase 5-C): gasto sobre el PIB",

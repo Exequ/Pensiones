@@ -31,7 +31,10 @@ for (const { ruta, titulo, graficos } of PAGINAS) {
         await expect(figura.locator('table')).toHaveCount(1);
         await expect(figura.locator('.linea-fuente')).toContainText('descargado el');
       }
-      await expect(page.locator('.como-leerlo')).toHaveCount(await figuras.count());
+      // Cada gráfico lleva su «Cómo leerlo» justo después; las tablas sueltas pueden llevar el suyo aparte.
+      await expect(page.locator('figure.grafico + .como-leerlo')).toHaveCount(
+        await figuras.count(),
+      );
 
       expect(registro.errores, 'errores de consola').toEqual([]);
       expect(registro.externas, 'peticiones a dominios externos').toEqual([]);
