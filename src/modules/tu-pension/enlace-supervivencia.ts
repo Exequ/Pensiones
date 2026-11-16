@@ -339,9 +339,7 @@ export function leerSupervivencia(
   ignorar: (que: string, motivo: string) => void,
   defecto: FormularioSupervivencia,
 ): FormularioSupervivencia {
-  const ignorarParam = (nombre: string, motivo: string): void => {
-    ignorar(`${nombre}`, motivo);
-  };
+  const ignorarParam = ignorar;
   let sv = leerCampos(CAMPOS_RAIZ, dato, ignorarParam, defecto);
   sv = leerCampos(CAMPOS_ORFANDAD, dato, ignorarParam, sv);
   sv = { ...sv, huerfano: leerCampos(CAMPOS_HUERFANO, dato, ignorarParam, sv.huerfano) };

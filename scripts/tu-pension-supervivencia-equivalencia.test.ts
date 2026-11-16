@@ -20,7 +20,6 @@ import { ejecutarSupervivencia } from '../src/modules/tu-pension/supervivencia-e
 import { formularioAEntradaSupervivencia } from '../src/modules/tu-pension/supervivencia-mapeador.ts';
 import {
   HUERFANO_VACIO,
-  VIUDO_VACIO,
   nuevoHuerfano,
   type FormularioViudo,
 } from '../src/modules/tu-pension/supervivencia-tipos.ts';

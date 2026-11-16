@@ -31,7 +31,8 @@ const deps: Dependencias = {
 };
 
 const euros = (v: number): string => formatearEuros(v, { decimales: 2 });
-const porcentaje = (v: number): string => `${v.toFixed(2).replace('.', ',')} %`;
+const NBSP = '\u00a0';
+const porcentaje = (v: number): string => `${v.toFixed(2).replace('.', ',')}${NBSP}%`;
 
 function resultado(f: FormularioTuPension) {
   const r = calcularTuPension(f, deps);

@@ -127,7 +127,7 @@ export const TEXTOS_SUPERVIVENCIA = {
   separacionLeyenda:
     '¿La separación o el divorcio es anterior a la fecha que fija la disposición transitoria decimotercera del texto refundido?',
   separacionAyuda:
-    'Esas separaciones y divorcios tienen una regla transitoria que el simulador no calcula (véase «Qué no tiene en cuenta el cálculo»).',
+    'El simulador no calcula las separaciones y los divorcios anteriores a esa fecha (véase «Qué no tiene en cuenta el cálculo»).',
   rentasTitulo: 'Pensiones y rentas',
   rentasIntro:
     'Las rentas se escriben en euros al año. Cada una se usa para una regla distinta; si no sabes cuál te afecta, deja la respuesta con su valor inicial.',

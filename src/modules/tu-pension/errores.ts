@@ -55,7 +55,7 @@ function mensajeHechoAnterior(error: ErrorMotor, texto: string): MensajeError | 
   return {
     codigo: error.codigo,
     titulo: 'Fallecimiento anterior al periodo que calcula el simulador',
-    mensaje: `La fecha del fallecimiento que has indicado (año ${anio}) es anterior al primer año que cubre el cálculo de viudedad y orfandad. Para fechas anteriores la ley aplicable era otra redacción, con requisitos distintos (en la pareja de hecho, además, un requisito de ingresos de la persona superviviente que el simulador no recoge); el simulador no los sustituye por otros ni los estima. Detalle técnico: ${detalle}`,
+    mensaje: `La fecha del fallecimiento que has indicado (año ${anio}) es anterior al primer año que cubre el cálculo de viudedad y orfandad. Para fechas anteriores la ley aplicable era otra redacción, con requisitos propios que el simulador no recoge (el artículo sobre la viudedad de las parejas de hecho, por ejemplo, tuvo una redacción anterior distinta); el simulador no los sustituye por otros ni los estima. Detalle técnico: ${detalle}`,
     accion:
       'Elige una fecha de fallecimiento posterior; no se muestra ninguna cifra para la fecha indicada.',
     campo: 'hechoCausanteAnio',

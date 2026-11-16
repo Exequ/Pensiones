@@ -246,7 +246,7 @@ describe('casos que el simulador no calcula: mensaje con la fecha y el motivo', 
     // La fecha que has indicado y el primer año que cubre el cálculo (leído del motor) aparecen en el texto.
     expect(r.error.mensaje).toContain('2018');
     expect(r.error.mensaje).toContain('2022');
-    expect(r.error.mensaje).toMatch(/pareja de hecho/);
+    expect(r.error.mensaje).toMatch(/parejas de hecho/);
     expect(r.error.mensaje).toMatch(/no los sustituye por otros ni los estima/);
     expect(r.error.accion).toMatch(/posterior/);
   });

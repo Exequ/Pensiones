@@ -184,6 +184,22 @@ export const PALABRAS_DE_VALORACION = [
   'habria que',
   'copiar',
   'imitar',
+  // Fase 3-C2: viudedad y orfandad. La persona viuda o huérfana y las pensiones de supervivencia se
+  // describen con sus requisitos y sus cifras calculadas, sin presentarlas como un privilegio, una
+  // carga o un abuso, ni sugerir merecimiento o necesidad moral.
+  'chollo',
+  'prebenda',
+  'parasit',
+  'aprovechad',
+  'vividor',
+  'desamparad',
+  'indefens',
+  'inmerecid',
+  'merecid',
+  'generosa pension',
+  'pension generosa',
+  'pension miserable',
+  'irrisori',
 ] as const;
 
 const normalizar = (t: string): string =>

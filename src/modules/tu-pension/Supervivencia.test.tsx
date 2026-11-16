@@ -86,13 +86,10 @@ describe('textos de la viudedad y la orfandad', () => {
   });
 
   it('no usan lenguaje de consejo ni de lectura correcta', () => {
-    const todo = [
-      ...Object.values(TEXTOS_SUPERVIVENCIA).filter((v): v is string => typeof v === 'string'),
-      TEXTOS_VIUDEDAD.supuestosIntro,
-      TEXTOS_ORFANDAD.supuestosIntro,
-    ]
-      .join(' ')
-      .toLowerCase();
+    const textos: string[] = [];
+    for (const v of Object.values(TEXTOS_SUPERVIVENCIA)) if (typeof v === 'string') textos.push(v);
+    textos.push(TEXTOS_VIUDEDAD.supuestosIntro, TEXTOS_ORFANDAD.supuestosIntro);
+    const todo = textos.join(' ').toLowerCase();
     expect(todo).not.toMatch(/\b(mejor|peor|conviene|debes|debería)\b|recomend|aconsej/);
   });
 });
@@ -383,7 +380,7 @@ describe('enlace compartible de viudedad y orfandad', () => {
     expect(screen.getByRole('radio', { name: 'Viudedad' })).toBeChecked();
     expect(screen.getByLabelText('Año del fallecimiento')).toHaveValue('2026');
     expect(screen.getAllByText(euros(891.43)).length).toBeGreaterThan(0);
-    const campo = screen.getByLabelText('Enlace a esta simulación') as HTMLInputElement;
+    const campo = screen.getByLabelText<HTMLInputElement>('Enlace a esta simulación');
     expect(campo.value).toContain('#/tu-pension?v=1&p=viu&hc=2026-03');
   });
 
@@ -395,7 +392,7 @@ describe('enlace compartible de viudedad y orfandad', () => {
     ).toBeInTheDocument();
     expect(screen.getByRole('radio', { name: 'Orfandad' })).toBeChecked();
     expect(screen.getAllByText(euros(342.86)).length).toBeGreaterThan(0);
-    const campo = screen.getByLabelText('Enlace a esta simulación') as HTMLInputElement;
+    const campo = screen.getByLabelText<HTMLInputElement>('Enlace a esta simulación');
     expect(campo.value).toContain('p=orf');
   });
 

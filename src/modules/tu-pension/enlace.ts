@@ -317,7 +317,7 @@ export function leerEnlace(search: string, contexto: ContextoEnlace): ResultadoE
       (SOLO_INCAPACIDAD as readonly string[]).includes(clave)
     ) {
       ignorar(`el parámetro «${clave}»`, 'solo existe en los enlaces de la incapacidad permanente');
-    } else if (!supervivencia && (CLAVES_SUPERVIVENCIA as readonly string[]).includes(clave)) {
+    } else if (!supervivencia && CLAVES_SUPERVIVENCIA.includes(clave)) {
       ignorar(
         `el parámetro «${clave}»`,
         'solo existe en los enlaces de la viudedad y de la orfandad',

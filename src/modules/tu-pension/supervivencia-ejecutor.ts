@@ -4,10 +4,13 @@
  * mano la prestación de la persona que pregunta con los campos que la comparación de lecturas
  * necesita (`cumpleRequisitos`, `pensionMensual`, `baseReguladora`). No calcula nada.
  */
-import type { EjecutorPrestacion } from '../../engine/comparar-lecturas';
-import type { Motor, ResultadoOk } from '../../engine/fachada';
-import type { ResultadoPrestacion, ResultadoSupervivencia } from '../../engine/supervivencia/tipos';
-import type { EntradaTuSupervivencia } from './supervivencia-mapeador';
+import type { EjecutorPrestacion } from '../../engine/comparar-lecturas.ts';
+import type { Motor, ResultadoOk } from '../../engine/fachada.ts';
+import type {
+  ResultadoPrestacion,
+  ResultadoSupervivencia,
+} from '../../engine/supervivencia/tipos.ts';
+import type { EntradaTuSupervivencia } from './supervivencia-mapeador.ts';
 
 export interface DetalleTuSupervivencia extends ResultadoSupervivencia {
   readonly quien: EntradaTuSupervivencia['quien'];
