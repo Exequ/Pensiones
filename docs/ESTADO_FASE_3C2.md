@@ -71,4 +71,6 @@ Con `tsc -b --force` (sin caché incremental, con los ficheros de test): `npm ru
 
 ## CI y despliegue
 
-(Se completa al terminar el PR: CI, merge, despliegue y comprobación de la ruta publicada.)
+- **CI del PR** (`Exequ/Pensiones#42`): el flujo `CI` sobre `9129013` terminó en verde: «Lint, tipos, tests, datos y compilación» (2 min 30 s) e «Interfaz (Playwright)» (unos 12 min 40 s, escritorio y móvil, axe incluido). Sin reintentos ni cancelaciones. El flujo «Despliegue en GitHub Pages» del PR solo compila (el despliegue real ocurre con el push a `main`).
+- **Merge**: squash a `main`, sin borrar la rama.
+- **Despliegue y ruta publicada**: el push a `main` ejecuta el flujo de despliegue; la comprobación de que termina, de que `https://exequ.github.io/Pensiones/` responde con 200 y de que `#/tu-pension` abre contra la URL publicada a 1360 y 390 px (un caso por prestación) solo puede hacerse después del merge. Su resultado consta en el informe final de la sesión y no en este fichero, para no abrir un PR solo de documentación.
