@@ -8,14 +8,14 @@ Presentes `m4_sensibilidades.csv` (260 filas: diez casos × 2025-2050), `LEEME_m
 
 ## Paso 1: verificación (`scripts/verificacion-m4-sensibilidades.ts`)
 
-| Comprobación                                                                                                | Resultado                                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| (a) Caso base: el CSV no trae filas del base; el `base` de `m4_escenarios.csv` frente a `m4_financiero.csv` | Coincide: diferencia relativa máxima 6,3 × 10⁻¹⁶ (tolerancia declarada 10⁻¹²)                                                                     |
-| (a) Fila de 2025                                                                                            | Igual en los diez casos y a la del base                                                                                                           |
-| (a) Caso de +1 punto de cotización                                                                          | Reproduce el gasto del base en 25 años y las cotizaciones de 2026                                                                                 |
-| (b) Gasto y saldo de 2050 de cada caso frente al LEEME y a la sección 7                                     | Sin diferencias mayores que el redondeo (máximas 0,0043 con el LEEME y 0,0496 con la descripción); nada que registrar como discrepancia           |
-| (c) Columnas «\_pct_pib»                                                                                    | Importe entre PIB por cien (2,8 × 10⁻¹⁶)                                                                                                          |
-| (d) Cifras de la sección 3 que dependen de las sensibilidades                                               | Sin enlace con M5: 0,046 puntos (< 0,1); índice del gasto con g = 1,8 %: 134,0 en 2050 (la descripción dice 134)                                  |
+| Comprobación                                                                                                | Resultado                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| (a) Caso base: el CSV no trae filas del base; el `base` de `m4_escenarios.csv` frente a `m4_financiero.csv` | Coincide: diferencia relativa máxima 6,3 × 10⁻¹⁶ (tolerancia declarada 10⁻¹²)                                                           |
+| (a) Fila de 2025                                                                                            | Igual en los diez casos y a la del base                                                                                                 |
+| (a) Caso de +1 punto de cotización                                                                          | Reproduce el gasto del base en 25 años y las cotizaciones de 2026                                                                       |
+| (b) Gasto y saldo de 2050 de cada caso frente al LEEME y a la sección 7                                     | Sin diferencias mayores que el redondeo (máximas 0,0043 con el LEEME y 0,0496 con la descripción); nada que registrar como discrepancia |
+| (c) Columnas «\_pct_pib»                                                                                    | Importe entre PIB por cien (2,8 × 10⁻¹⁶)                                                                                                |
+| (d) Cifras de la sección 3 que dependen de las sensibilidades                                               | Sin enlace con M5: 0,046 puntos (< 0,1); índice del gasto con g = 1,8 %: 134,0 en 2050 (la descripción dice 134)                        |
 
 El caso de empleo de 55 a 64 años usa el parámetro del LEEME (×1,1 en 2050, avance lineal); la descripción antigua no lo especificaba. No se ha verificado el año de partida del avance ni la magnitud a la que se aplica el factor (pendiente).
 
@@ -30,7 +30,7 @@ Apartado «Sensibilidades: una palanca cada vez» (`FinancieroSensibilidades.tsx
 
 ## Pruebas
 
-`scripts/verificacion-m4-sensibilidades.test.ts`, `scripts/proyecciones-m4-sensibilidades.test.ts`, `src/modules/proyecciones/financiero-sensibilidades.test.tsx`, casos de `diferenciasConBase` en `src/engine/proyecciones.test.ts` y `e2e/proyecciones-sensibilidades.spec.ts`. Único cambio en un test existente: `scripts/proyecciones-5b1.test.ts` lista también `m4-sensibilidades`.
+`scripts/verificacion-m4-sensibilidades.test.ts`, `scripts/proyecciones-m4-sensibilidades.test.ts`, `src/modules/proyecciones/financiero-sensibilidades.test.tsx`, casos de `diferenciasConBase` en `src/engine/proyecciones.test.ts` y `e2e/proyecciones-sensibilidades.spec.ts`. Cambios en tests existentes, sin quitar comprobaciones: `scripts/proyecciones-5b1.test.ts` lista también `m4-sensibilidades`, y en `e2e/proyecciones.spec.ts` el selector «Año» de M3 se localiza por nombre exacto (la etiqueta nueva también contiene «Año»).
 
 ## Tamaños (`npm run build`, kB sin comprimir / gzip)
 

@@ -48,7 +48,7 @@ export function FinancieroSensibilidades({ d }: { d: DatosFinanciero }) {
           onCambio={setAnio}
         />
       </div>
-      <p aria-live="polite" className="proy-escenario-activo">
+      <p aria-live="polite" className="proy-sensibilidades-aviso">
         <strong>Año mostrado:</strong> {tabla.anio}. Los casos están en el orden del LEEME de la
         salida, no por tamaño.
       </p>

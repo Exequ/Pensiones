@@ -113,7 +113,7 @@ test.describe('página «Proyecciones»', () => {
     await expect(titulo).toContainText('viudedad');
     const claseCambiada = await trazos(page, 'Pensiones por grupo de edad y sexo');
     expect(claseCambiada).not.toBe(antes);
-    const anio = page.getByRole('combobox', { name: 'Año' });
+    const anio = page.getByRole('combobox', { name: 'Año', exact: true });
     const opciones = await anio.locator('option').allTextContents();
     await anio.selectOption(opciones.at(-1) ?? '');
     await expect(titulo).toContainText(opciones.at(-1) ?? '');
