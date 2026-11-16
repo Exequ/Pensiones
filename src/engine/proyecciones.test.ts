@@ -3,6 +3,7 @@ import {
   factorDeCalibracion,
   gastoNominal,
   aEurosConstantesConIpcSupuesto,
+  diferenciasConBase,
   diferenciasPorAnio,
   esIlustrativo,
   indiceDesdeBase,
@@ -240,5 +241,35 @@ describe('factor de calibración del gasto (pensiones × pensión media × 14)',
   it('falla si el gasto nominal no es positivo', () => {
     expect(() => factorDeCalibracion(100, 0, 1000)).toThrow(RangeError);
     expect(() => factorDeCalibracion(100, 1000, 0)).toThrow(RangeError);
+  });
+});
+
+describe('diferencias de las sensibilidades respecto al caso base', () => {
+  // Caso a mano: base con gasto 16 y saldo −5 (% del PIB).
+  const base = { gasto: 16, saldo: -5 };
+
+  it('cada diferencia es el valor del caso menos el del base, en el orden de entrada', () => {
+    const r = diferenciasConBase(base, [
+      { id: 'a', gasto: 15, saldo: -4 },
+      { id: 'b', gasto: 21.5, saldo: -10.5 },
+      { id: 'c', gasto: 16, saldo: -5 },
+    ]);
+    expect(r.map((x) => x.id)).toEqual(['a', 'b', 'c']);
+    expect(r[0]).toMatchObject({ gastoDiferencia: -1, saldoDiferencia: 1 });
+    expect(r[1]).toMatchObject({ gastoDiferencia: 5.5, saldoDiferencia: -5.5 });
+    // Un caso igual al base no cambia nada.
+    expect(r[2]).toMatchObject({ gastoDiferencia: 0, saldoDiferencia: 0 });
+  });
+
+  it('conserva los valores originales del caso', () => {
+    const [r] = diferenciasConBase(base, [{ id: 'a', gasto: 15, saldo: -4 }]);
+    expect(r).toMatchObject({ id: 'a', gasto: 15, saldo: -4 });
+  });
+
+  it('sin casos devuelve una lista vacía y no modifica la entrada', () => {
+    expect(diferenciasConBase(base, [])).toEqual([]);
+    const entrada = [{ id: 'a', gasto: 15, saldo: -4 }];
+    diferenciasConBase(base, entrada);
+    expect(entrada).toEqual([{ id: 'a', gasto: 15, saldo: -4 }]);
   });
 });

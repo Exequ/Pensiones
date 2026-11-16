@@ -9,6 +9,7 @@ import { FinancieroEscenarios } from './FinancieroEscenarios';
 import { FinancieroFondo } from './FinancieroFondo';
 import { FinancieroGasto } from './FinancieroGasto';
 import { FinancieroSaldos } from './FinancieroSaldos';
+import { FinancieroSensibilidades } from './FinancieroSensibilidades';
 import { MODELO } from './ids-datos';
 import { ANCLA_FINANCIERO, ESCENARIO_BASE } from './ids-financiero';
 
@@ -52,6 +53,7 @@ export default function Financiero() {
         Un cálculo propio no es una previsión: describe qué resultaría con esos supuestos.
       </p>
       <FinancieroEscenarios d={d} escenario={escenario} onCambio={setEscenario} />
+      <FinancieroSensibilidades d={d} />
       <FinancieroGasto d={d} />
       <FinancieroCalibracion d={d} />
       <FinancieroSaldos d={d} />

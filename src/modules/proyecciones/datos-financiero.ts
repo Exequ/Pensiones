@@ -12,6 +12,7 @@ import ageingJson from '../../../data/demografia/ageing-report-2024-espana.json'
 import limiteJson from '../../../data/parametros/fondo-reserva-desembolso-maximo.json';
 import ipcJson from '../../../data/parametros/ipc-indice-medio-anual.json';
 import m4Json from '../../../data/proyecciones/m4-escenarios.json';
+import sensibilidadesJson from '../../../data/proyecciones/m4-sensibilidades.json';
 import fondoSeriesJson from '../../../data/sistema/fondo-reserva-series.json';
 import numeroPensionesJson from '../../../data/sistema/pensiones-vigor-numero.json';
 import pensionMediaJson from '../../../data/sistema/pensiones-vigor-pension-media.json';
@@ -93,6 +94,27 @@ export interface Calibracion {
   readonly fuentes: readonly Dato[];
 }
 
+/** Un caso de sensibilidad de M4: identificador y parámetro tal cual lo escribe el LEEME de la salida. */
+export interface CasoSensibilidad {
+  readonly id: string;
+  readonly parametro: string;
+}
+
+/** Salida de M4 con los casos de sensibilidad (una palanca cada vez respecto al escenario base). */
+export interface DatosSensibilidades {
+  readonly tabla: TablaModelo;
+  /** Casos en el orden del LEEME. */
+  readonly casos: readonly CasoSensibilidad[];
+  /** Filas calculadas de cada caso, por identificador. */
+  readonly filasPorCaso: Readonly<Record<string, readonly FilaModelo[]>>;
+  /** Si el autor ha reproducido los casos en local (campo del fichero). */
+  readonly reproduccionLocalPorAutor: boolean;
+  /** Qué vale igual en todos los casos: el escenario base, tal cual lo describe el LEEME. */
+  readonly descripcionBase: string;
+  /** Fecha de ejecución de la salida (AAAA-MM-DD). */
+  readonly ejecutadoEl: string;
+}
+
 export interface DatosFinanciero {
   /** Salida de M4 del escenario activo: las filas calculadas (no incluye la fila observada del último año). */
   readonly m4: TablaModelo;
@@ -104,6 +126,8 @@ export interface DatosFinanciero {
   readonly parametrosComunes: readonly string[];
   /** Fila del último año observado que acompaña a la salida (datos, no cálculo del modelo). */
   readonly filaObservada: FilaObservadaProyeccion;
+  /** Sensibilidades: diez casos de una palanca cada vez respecto al escenario base. */
+  readonly sensibilidades: DatosSensibilidades;
   readonly calibracion: Calibracion;
   /** Primer año proyectado por M4 (el último observado es el anterior). */
   readonly anioInicio: number;
@@ -181,6 +205,30 @@ function tablaDeEscenario(
       value: filas.length,
       notes: `Salida del modelo M4, ejecutada el ${completa.archivo.origen.ejecutadoEl}; escenario de sensibilidad ${e.etiqueta}; legislación congelada. Las filas del año observado no las calcula el modelo.`,
     },
+  };
+}
+
+function datosDeSensibilidades(): DatosSensibilidades {
+  const tabla = cargarProyeccion(sensibilidadesJson);
+  const { sensibilidades, parametrosComunes, reproduccionLocalPorAutor } = tabla.archivo;
+  if (
+    sensibilidades === undefined ||
+    parametrosComunes?.[0] === undefined ||
+    reproduccionLocalPorAutor === undefined
+  ) {
+    throw new Error(
+      'El fichero de sensibilidades de M4 no tiene casos, escenario base o estado de la reproducción local',
+    );
+  }
+  return {
+    tabla,
+    casos: sensibilidades,
+    filasPorCaso: Object.fromEntries(
+      sensibilidades.map((c) => [c.id, tabla.filas.filter((f) => f[COL4.escenario] === c.id)]),
+    ),
+    reproduccionLocalPorAutor,
+    descripcionBase: parametrosComunes[0],
+    ejecutadoEl: tabla.archivo.origen.ejecutadoEl,
   };
 }
 
@@ -322,6 +370,7 @@ const datosBase = memorizar((): DatosFinanciero => {
     filasPorEscenario,
     parametrosComunes: archivoM4.parametrosComunes,
     filaObservada,
+    sensibilidades: datosDeSensibilidades(),
     calibracion,
     anioInicio,
     escenario: { g: escenarioBase.g, ipc: escenarioBase.ipc },

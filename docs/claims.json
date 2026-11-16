@@ -5798,6 +5798,56 @@
       "fetchedAt": "2026-11-15",
       "estado": "verificada",
       "notas": "Procedencia: LEEME de los escenarios (data-raw/modelos-salidas/m4/LEEME_m4_escenarios.txt) y data/proyecciones/m4-escenarios.json. La salida la ejecutó Claude en su entorno de trabajo (2026-11-15), no Sergio en local; el escenario base de 2026 en adelante coincide con m4-financiero.json (diferencias de último bit de coma flotante) y la fila de 2025 coincide con la ejecución del presupuesto, el Fondo y el PIB del INE (tests de scripts/proyecciones-m4-escenarios.test.ts). Los resultados del modelo no son datos observados."
+    },
+    {
+      "id": "web-fin-sensibilidades-m4",
+      "texto": "M4 se ha calculado en diez casos de sensibilidad que cambian cada uno una sola palanca respecto al escenario base (g 1 %, IPC 2 %): crecimiento real de los salarios, revalorización de las pensiones, cotización, pensión máxima de las altas, enlace con M5, migración, fecundidad y empleo. Los casos no se combinan, no son una predicción y sus diferencias se refieren a ese escenario base. La web muestra, para el año elegido, el gasto en pensiones y el saldo no financiero en porcentaje del PIB aproximado de cada caso y la diferencia con el base, calculada con los valores sin redondear, con los parámetros tal cual los escribe el LEEME de la salida.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Ajustes de M4, sensibilidades)",
+      "datos": ["sistema/fondo-reserva-series.json#valor-fin-ano"],
+      "fuentes": [
+        {
+          "title": "M4 · Modelo financiero del sistema (v1): código del modelo en el repositorio y salidas de su ejecución",
+          "publisher": "Elaboración propia: modelo de proyección",
+          "url": "https://github.com/Exequ/Pensiones/blob/2c4e79bf71ea31fe2fbd997a9024a27cc5131d32/modelos/m4/m4_sensibilidades.py"
+        }
+      ],
+      "fetchedAt": "2026-11-16",
+      "estado": "verificada",
+      "notas": "Verificado con scripts/verificacion-m4-sensibilidades.ts (docs/DISCREPANCIAS.md, «Ajustes de M4, sensibilidades»): el gasto y el saldo de 2050 de los diez casos, recalculados desde los importes y el PIB aproximado del CSV, coinciden con los del LEEME (dos decimales) y con los de la sección 7 de la descripción (un decimal) salvo redondeo; las columnas «_pct_pib» son importe entre PIB por cien. El texto no afirma nada sobre el efecto de combinar palancas ni sobre otros escenarios base: no se han calculado."
+    },
+    {
+      "id": "web-fin-sensibilidades-procedencia",
+      "texto": "Los diez casos de sensibilidad los ejecutó Claude, un asistente de inteligencia artificial, en su entorno de trabajo (no en local por el autor) el 2026-11-16 con el código de modelos/m4 del repositorio. El caso base es el escenario base de la salida de escenarios, que reproduce la salida que el autor ejecutó en local (diferencia relativa máxima de 6 × 10⁻¹⁶, último bit de la coma flotante). El autor no ha reproducido todavía los diez casos en local: el campo reproduccionLocalPorAutor del fichero es falso y la página lo muestra.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Ajustes de M4, sensibilidades)",
+      "datos": ["sistema/fondo-reserva-series.json#valor-fin-ano"],
+      "fuentes": [
+        {
+          "title": "M4 · Modelo financiero del sistema (v1): código del modelo en el repositorio y salidas de su ejecución",
+          "publisher": "Elaboración propia: modelo de proyección",
+          "url": "https://github.com/Exequ/Pensiones/blob/2c4e79bf71ea31fe2fbd997a9024a27cc5131d32/modelos/m4/m4_sensibilidades.py"
+        }
+      ],
+      "fetchedAt": "2026-11-16",
+      "estado": "verificada",
+      "notas": "Procedencia: LEEME de las sensibilidades (data-raw/modelos-salidas/m4/LEEME_m4_sensibilidades.txt), data/proyecciones/m4-sensibilidades.json y scripts/verificacion-m4-sensibilidades.ts. El CSV no trae filas del base: el base se toma de m4_escenarios.csv, que reproduce m4_financiero.csv (ejecución local del autor del 2026-11-14); la fila de 2025 es igual en los diez casos y en el base; el caso de +1 punto de cotización reproduce el gasto del base en todos los años y las cotizaciones de 2026. Pendiente: reproducción local por el autor (docs/PENDIENTE_DATOS.md)."
+    },
+    {
+      "id": "web-fin-sensibilidades-empleo-parametro",
+      "texto": "En el caso de sensibilidad del empleo de 55 a 64 años, el parámetro que fija el LEEME es multiplicar las tasas de empleo de ese tramo por un factor en 2050, con avance lineal desde el primer año proyectado; la descripción anterior de M4 solo decía «un 10 % más de empleo de 55 a 64 años en 2050» sin precisar el parámetro. La web muestra el texto del LEEME.",
+      "ubicacion": "Página «Proyecciones»: bloque «Sistema financiero» (Ajustes de M4, sensibilidades)",
+      "datos": ["sistema/fondo-reserva-series.json#valor-fin-ano"],
+      "fuentes": [
+        {
+          "title": "M4 · Modelo financiero del sistema (v1): código del modelo en el repositorio y salidas de su ejecución",
+          "publisher": "Elaboración propia: modelo de proyección",
+          "url": "https://github.com/Exequ/Pensiones/blob/2c4e79bf71ea31fe2fbd997a9024a27cc5131d32/modelos/m4/m4_sensibilidades.py"
+        }
+      ],
+      "fetchedAt": "2026-11-16",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Confirmar que la lectura «tasas de empleo de 55 a 64 años multiplicadas por 1,1 en 2050, con avance lineal» es la que se quiere presentar bajo la etiqueta de la descripción («un 10 % más de empleo de 55 a 64 años en 2050»): no se ha comprobado que el avance lineal parta de 2026 ni que el factor se aplique a la tasa de empleo y no al número de empleados.",
+      "notas": "Lo verificado: el LEEME dice «multiplicadas por 1,1 en 2050 (avance lineal)» y los resultados de 2050 del caso coinciden con la sección 7 de la descripción dentro del redondeo. Lo no verificado es qué año de partida usa el avance lineal y a qué magnitud se aplica el factor; no se ejecuta el modelo aquí."
     }
   ]
 }

@@ -889,3 +889,44 @@ Extrae de forma reproducible las liquidaciones de 2010 a 2016 y el extracto del 
 
 - **Afirmaciones** (`docs/claims-web.json`, prefijo `web-hucha-`): siete nuevas. Cinco son transcripciones verificadas («no requiere revisión actuarial») y dos quedan **pendientes de criterio actuarial con su pregunta** (la clasificación del complemento a mínimos en 2010 a 2013 y el año de concesión inferido de los préstamos). El número de pendientes sube en dos y queda por debajo del tope del test.
 - **Huecos** en `docs/PENDIENTE_DATOS.md` («Fase 5-A3») y descargas en `docs/DESCARGAS_MANUALES.md`.
+
+## Ajustes de M4, sensibilidades (rama `feat/ajustes-m4-sensibilidades`)
+
+Muestra en el bloque financiero de «Proyecciones» los diez casos de sensibilidad de M4 (una palanca cada vez respecto al escenario base) a partir de `m4_sensibilidades.csv` y alinea los documentos con la descripción corregida. No se toca el motor de prestaciones, «Tu pensión» ni otras secciones; no se ejecutan modelos ni se editan `docs/modelos/` ni `data-raw/`. Sin decisiones consultadas: se resolvió con la opción más sencilla. Estado en `docs/ESTADO_AJUSTES_M4B.md`.
+
+### Paso 0 y rama
+
+- **Todo estaba**: `m4_sensibilidades.csv`, `LEEME_m4_sensibilidades.txt` y la descripción corregida (sección 7 con referencia al CSV; secciones 8 y 9 sin «un solo escenario»). No hubo que parar.
+- **Rama**: el encargo fija `feat/ajustes-m4-sensibilidades` y autoriza explícitamente rama, PR, CI y merge; se usa esa y no la rama de desarrollo por defecto de la sesión.
+
+### Verificación (paso 1)
+
+- **`scripts/verificacion-m4-sensibilidades.ts`** (con su test): el CSV no trae filas del base, así que el caso base de referencia es el `base` de `m4_escenarios.csv`, comprobado contra `m4_financiero.csv` con tolerancia relativa declarada de 10⁻¹² (resultado: 6,3 × 10⁻¹⁶). Además, la fila de 2025 igual en los diez casos y en el base, el caso de +1 punto de cotización reproduce el gasto del base (ata los casos al base por dentro), las columnas «_pct_pib» y las dos cifras de la sección 3 que dependen de las sensibilidades. Los valores que cita la sección 7 están transcritos en el script con el fragmento literal de la descripción, que el test exige que conste (si la descripción cambia, el test avisa).
+- **Resultado: ninguna diferencia mayor que el redondeo** (máximas 0,0043 con el LEEME y 0,0496 con la descripción). Se registra igualmente en `docs/DISCREPANCIAS.md`, con la nota del caso de empleo de 55 a 64 años (usa el parámetro del LEEME; la descripción no lo especificaba) y lo que no se pudo comprobar.
+
+### ETL y esquema (paso 2)
+
+- **`m4-sensibilidades.json`** con `naturaleza: "proyeccion-de-modelo"`, huella SHA-256 del CSV, `commitModelos` y URL de la fuente = commit que añade `modelos/m4/m4_sensibilidades.py` (`git log` en el ETL, como en los escenarios; el LEEME dice «commit 029ee06» para el código en `main` y «b0b7c31» como último previo, pero ese script no existía entonces) y `fetchedAt` = fecha del LEEME de las sensibilidades (2026-11-16). Confianza `media`, como el resto de M4.
+- **Esquema**: dos campos opcionales nuevos en `ArchivoProyeccion`: `sensibilidades` (casos en el orden del LEEME, `id` y `parametro`) y `reproduccionLocalPorAutor` (booleano). La columna `escenario` del CSV identifica el caso; el esquema exige que cada fila sea de un caso listado y que un fichero no lleve `escenarios` y `sensibilidades` a la vez.
+- **`reproduccionLocalPorAutor: false`** lo escribe el ETL como constante (el autor aún no ha reproducido los casos); cuando lo haga habrá que cambiar esa línea del ETL y regenerar (anotado en `docs/PENDIENTE_DATOS.md`). La web lee el campo y lo muestra («no, todavía no»).
+- **El parámetro de cada caso es el texto del LEEME, literal** (no se separa en «palanca» y «valor»: el LEEME es prosa y no siempre tiene la forma «palanca = valor»; trocearlo exigiría escribir a mano una interpretación). El escenario base común es la línea del LEEME «Cada caso cambia UNA palanca respecto al escenario base (…)»; la fila de 2025 es la línea del LEEME que la describe. El ETL falla si los casos del CSV no son los del LEEME, si falta algún año o si la fila de 2025 no es la del base.
+
+### Interfaz (paso 3)
+
+- **Solo tabla, sin gráfico de barras**: unas barras de diferencias dibujan el tamaño del cambio y harían destacar visualmente el caso mayor (la migración), contra «sin resaltar ninguno»; la tabla ya lleva las diferencias. Más sencillo y neutral.
+- **Qué muestra**: caso base primero y los diez casos en el orden del LEEME (sin ordenar por tamaño ni resaltar ninguna fila), con palanca y valor (LEEME), gasto en pensiones y saldo no financiero en % del PIB aproximado y diferencia con el base (puntos de PIB). Las diferencias se calculan con los valores sin redondear (`diferenciasConBase`, en `src/engine/proyecciones.ts`, con tests hechos a mano) y se avisa en la nota de la tabla; esto puede hacer que una diferencia difiera en una centésima de la resta de las cifras redondeadas que se ven.
+- **Selector de año**: lista desplegable nativa con los años que calcula el modelo (2026 a 2050; el observado de 2025 no es de ningún caso); por defecto, el último año de la salida (calculado, no escrito). Es independiente del selector de escenario: la tabla siempre usa como base el escenario base.
+- **Texto «Cómo leerlo»** con las cinco advertencias del encargo (una palanca por fila y sin combinar, no es predicción, depende del escenario base, orden del LEEME sin resaltar, denominador) y la **nota de procedencia**: ejecutado por Claude con el código de los modelos del repositorio, no en local por el autor; el caso base coincide con la ejecución local del autor; reproducción local por el autor de todos los casos según el campo. Sobre «depende del escenario base», el texto dice que el efecto «puede depender» y que no se han calculado otros escenarios base (no está verificado que dependa).
+- **Se mantienen** el rótulo «Proyección (otro PIB) →» y la nota del cambio de definición del PIB de los demás gráficos; la tabla nueva dice en su título y su nota que es proyección de modelo y que el PIB es el aproximado del modelo.
+- **Ancho de la primera columna**: clase `proy-sensibilidades` (16 rem mínimo) para que el texto de la palanca no se parta en muchas líneas; la tabla se desplaza horizontalmente en pantallas estrechas, como las demás del bloque.
+- **Tamaño**: los datos de las sensibilidades se importan de forma estática en el trozo del bloque financiero (sigue cargándose solo al visitar «Proyecciones»); cargarlos de forma diferida habría exigido estados de carga y es más complejo. Tamaños en `docs/ESTADO_AJUSTES_M4B.md`.
+
+### Textos y afirmaciones (paso 4)
+
+- Tres afirmaciones nuevas en `docs/claims-web.json` (`web-fin-sensibilidades-m4` y `web-fin-sensibilidades-procedencia`, verificadas; `web-fin-sensibilidades-empleo-parametro`, **pendiente** con su pregunta actuarial). Pendientes: 69, dentro del tope de 70 del test, que no se toca; la cuestión del parámetro de empleo no se esconde. La fuente nueva queda en `docs/FUENTES.md` (regenerado con `scripts/etl/fuentes_claims.py`).
+- **Neutralidad**: el detector de valoraciones marcó «habría que» en un primer borrador («cuál habría que aplicar»); se reescribió («si alguno llegará a aplicarse») en lugar de tocar la lista. Los textos de la tabla no llevan dígitos (lo comprueba el test de cifras escritas a mano: los recuentos salen de los datos).
+
+### Pruebas (paso 5)
+
+- Nuevos: `scripts/verificacion-m4-sensibilidades.test.ts`, `scripts/proyecciones-m4-sensibilidades.test.ts` (procedencia, huella, CSV reproducido, casos del LEEME, fila de 2025, esquema y neutralidad de los metadatos), `src/modules/proyecciones/financiero-sensibilidades.test.tsx` (tabla con fuente, «Cómo leerlo» y procedencia; el selector de año cambia las filas; neutralidad de los textos en todos los años), casos de `diferenciasConBase` en `src/engine/proyecciones.test.ts` y `e2e/proyecciones-sensibilidades.spec.ts` (consola y peticiones externas, selector de año, sin desbordes con todo abierto, axe). Sin clic forzado ni plazos ajustados (axe con 120 s de margen, como los demás).
+- Cambio mínimo en un test existente, sin quitar comprobaciones: `scripts/proyecciones-5b1.test.ts` lista también `m4-sensibilidades` entre los ficheros de `data/proyecciones`. En `e2e/proyecciones.spec.ts` el localizador del selector «Año» de M3 pasa a nombre exacto (`exact: true`): Playwright compara por subcadena y la etiqueta nueva «Año de las sensibilidades» también lo contiene; no se quita ninguna comprobación. El aviso del año mostrado usa su propia clase (`proy-sensibilidades-aviso`) y no la de los escenarios, que cuentan los specs existentes.

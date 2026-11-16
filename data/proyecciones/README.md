@@ -11,17 +11,18 @@ Formato: `tipo: "proyeccion"` (esquema `ArchivoProyeccion` de [`src/engine/esque
 - `origen`: ruta del CSV de `data-raw/modelos-salidas/`, su SHA-256, el hash completo del último commit que modifica `modelos/`, el LEEME y la fecha de ejecución.
 - `columnas` (id, descripción, tipo, unidad) y `filas` (una lista de celdas por fila, en el orden de las columnas).
 
-| Fichero                 | CSV de origen                  | Contenido                                                                                                | Periodo                |
-| ----------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------- | ---------------------- |
-| `m1-contraste-ine`      | `m1/m1_contraste_ine.csv`      | Población por grandes grupos de edad del modelo y de la proyección del INE, con los errores              | 2026-2076              |
-| `m1-backtest`           | `m1/m1_backtest.csv`           | Prueba hacia atrás: población del modelo y observada, con los errores                                    | 2011-2025              |
-| `m1-escenarios`         | `m1/m1_escenarios.csv`         | Seis escenarios demográficos (INE base, fecundidad, migración, mortalidad) en cuatro años                | 2026, 2035, 2050, 2076 |
-| `m2-cotizantes`         | `m2/m2_cotizantes.csv`         | Afiliados de diciembre, cotizantes y base del Régimen General (corrientes y reales), recaudación         | 2026-2050              |
-| `m2-relacion-pensiones` | `m2/m2_relacion_pensiones.csv` | Afiliados de diciembre entre pensiones de octubre (M3)                                                   | 2026-2050              |
-| `m3-pensiones`          | `m3/m3_pensiones.csv`          | Pensiones por clase, sexo y grupo de edad de cinco años (octubre)                                        | 2026-2050              |
-| `m3-resumen`            | `m3/m3_resumen.csv`            | Pensiones por clase, total y pensionistas aproximados (octubre)                                          | 2026-2050              |
-| `m4-financiero`         | `m4/m4_financiero.csv`         | Gasto en pensiones, cotizaciones, MEI, saldos, Fondo de Reserva, financiación adicional y PIB aproximado | 2026-2050              |
-| `m4-escenarios`         | `m4/m4_escenarios.csv`         | Las mismas columnas de M4 en cinco escenarios (g e IPC) y la fila observada de 2025                      | 2026-2050 (y 2025)     |
+| Fichero                 | CSV de origen                  | Contenido                                                                                                     | Periodo                |
+| ----------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| `m1-contraste-ine`      | `m1/m1_contraste_ine.csv`      | Población por grandes grupos de edad del modelo y de la proyección del INE, con los errores                   | 2026-2076              |
+| `m1-backtest`           | `m1/m1_backtest.csv`           | Prueba hacia atrás: población del modelo y observada, con los errores                                         | 2011-2025              |
+| `m1-escenarios`         | `m1/m1_escenarios.csv`         | Seis escenarios demográficos (INE base, fecundidad, migración, mortalidad) en cuatro años                     | 2026, 2035, 2050, 2076 |
+| `m2-cotizantes`         | `m2/m2_cotizantes.csv`         | Afiliados de diciembre, cotizantes y base del Régimen General (corrientes y reales), recaudación              | 2026-2050              |
+| `m2-relacion-pensiones` | `m2/m2_relacion_pensiones.csv` | Afiliados de diciembre entre pensiones de octubre (M3)                                                        | 2026-2050              |
+| `m3-pensiones`          | `m3/m3_pensiones.csv`          | Pensiones por clase, sexo y grupo de edad de cinco años (octubre)                                             | 2026-2050              |
+| `m3-resumen`            | `m3/m3_resumen.csv`            | Pensiones por clase, total y pensionistas aproximados (octubre)                                               | 2026-2050              |
+| `m4-financiero`         | `m4/m4_financiero.csv`         | Gasto en pensiones, cotizaciones, MEI, saldos, Fondo de Reserva, financiación adicional y PIB aproximado      | 2026-2050              |
+| `m4-escenarios`         | `m4/m4_escenarios.csv`         | Las mismas columnas de M4 en cinco escenarios (g e IPC) y la fila observada de 2025                           | 2026-2050 (y 2025)     |
+| `m4-sensibilidades`     | `m4/m4_sensibilidades.csv`     | Las mismas columnas de M4 en diez casos que cambian una palanca respecto al base, y la fila observada de 2025 | 2026-2050 (y 2025)     |
 
 Las columnas «_ine» de M1 son las de la proyección del INE (`data/demografia/proyecciones-poblacion`); el escenario «INE (base)» de `m1-escenarios` es el modelo con las hipótesis base del INE, no la proyección publicada.
 
@@ -33,9 +34,16 @@ Las columnas «_ine» de M1 son las de la proyección del INE (`data/demografia/
 - **Procedencia**: la salida la ejecutó Claude el 2026-11-15 con `modelos/m4/m4_escenarios.py` (el commit que lo añade consta como `commitModelos` y en la URL de la fuente); las demás salidas las ejecutó Sergio el 2026-11-14. El escenario base de 2026 en adelante coincide con `m4-financiero` (el ETL y un test lo comprueban salvo el último bit de la coma flotante).
 - La web (`#/proyecciones`) lee este fichero, no `m4-financiero`, que se conserva como salida de referencia del escenario base.
 
+## `m4-sensibilidades`: diez casos de una palanca cada vez
+
+- **Casos** (`sensibilidades`, del LEEME `m4/LEEME_m4_sensibilidades.txt`): identificador y parámetro tal cual lo escribe el LEEME, en su orden. Cada caso cambia **una** palanca respecto al escenario base y no se combina con las demás. El texto del LEEME que describe el escenario base común consta en `parametrosComunes`.
+- **No hay filas del base**: el CSV solo trae los diez casos. El caso base de referencia es el escenario `base` de `m4-escenarios`, que reproduce `m4-financiero`. La fila observada de 2025 (`filaObservada`) es igual en los diez casos y a la de `m4-escenarios`; el ETL lo comprueba.
+- **Procedencia**: la salida la ejecutó Claude el 2026-11-16 con `modelos/m4/m4_sensibilidades.py` (no Sergio en local). **`reproduccionLocalPorAutor`** es `false` mientras el autor no la haya reproducido; la web lo muestra. Verificación contra el LEEME y la descripción: `scripts/verificacion-m4-sensibilidades.ts` y `docs/DISCREPANCIAS.md`.
+- La web (`#/proyecciones`, bloque financiero) calcula las diferencias con el base a partir de las columnas `gasto_pensiones_pct_pib` y `saldo_no_financiero_pct_pib`.
+
 ## Cómo regenerarlos
 
-1. Colocar las salidas de los modelos en `data-raw/modelos-salidas/` (`m1/`, `m2/`, `m3/`, `m4/`) con su `LEEME.txt` (fecha de ejecución, commit de `modelos/` y escenario); los escenarios de M4 llevan su propio `m4/LEEME_m4_escenarios.txt` (fecha, tabla de escenarios, palancas comunes y descripción de la fila de 2025). No se modifican a mano.
+1. Colocar las salidas de los modelos en `data-raw/modelos-salidas/` (`m1/`, `m2/`, `m3/`, `m4/`) con su `LEEME.txt` (fecha de ejecución, commit de `modelos/` y escenario); los escenarios de M4 llevan su propio `m4/LEEME_m4_escenarios.txt` (fecha, tabla de escenarios, palancas comunes y descripción de la fila de 2025) y las sensibilidades, `m4/LEEME_m4_sensibilidades.txt` (fecha, casos con su parámetro, resultados de 2050 y ejecución). No se modifican a mano.
 2. Desde la raíz del repositorio: `python3 -I scripts/etl/modelos_salidas.py` (lee el LEEME, calcula las huellas y escribe estos JSON; después ejecuta Prettier).
 3. `npm run validate:data` y `npx vitest run scripts/proyecciones-5b1.test.ts scripts/proyecciones-5b2.test.ts` (procedencia, huellas, coherencias internas y comprobación de que el JSON reproduce el CSV).
 
