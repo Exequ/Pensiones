@@ -354,7 +354,7 @@ export const TEXTOS_LECTURAS: Readonly<Record<string, TextoLectura>> = {
       proporcional: {
         etiqueta: 'Se reducen todas en proporción',
         queCambia:
-          'Cuando la suma de las pensiones de viudedad y de orfandad supera la base reguladora, todas se reducen en la misma proporción. Solo cambia el resultado si se supera el límite.',
+          'Cuando la suma de las pensiones de viudedad y de orfandad supera la base reguladora, todas se reducen en la misma proporción. Solo cambia el resultado si se supera el límite y no rige la excepción de la norma para las orfandades, en la que esta lectura no actúa.',
       },
     },
   },

@@ -1,28 +1,20 @@
-// @vitest-environment node
 /**
  * Fase 3-C2: neutralidad (regla c de CLAUDE.md) de los textos nuevos de viudedad y orfandad en «Tu
  * pensión»: preguntas, avisos, textos de las lecturas, mensajes de error y los textos que genera el
  * presentador para varios casos. Ninguno contiene palabras de valoración.
  */
 import { describe, expect, it } from 'vitest';
-import { errorDe } from '../src/engine/fachada.ts';
-import { NoImplementada } from '../src/engine/jubilacion/errores.ts';
-import { calcularTuPension, type Dependencias } from '../src/modules/tu-pension/calcular.ts';
-import { traducirError } from '../src/modules/tu-pension/errores.ts';
-import {
-  crearMotorDelRepositorio,
-  leerReferenciaDeRepositorio,
-} from '../src/modules/tu-pension/motor.ts';
-import { FORMULARIO_ORFANDAD, FORMULARIO_VIUDEDAD } from '../src/modules/tu-pension/pruebas.ts';
-import { catalogoPorDefecto } from '../src/modules/tu-pension/referencias-datos.ts';
-import {
-  TEXTOS_ORFANDAD,
-  TEXTOS_SUPERVIVENCIA,
-  TEXTOS_VIUDEDAD,
-} from '../src/modules/tu-pension/textos-supervivencia.ts';
-import { TEXTOS_LECTURAS } from '../src/modules/tu-pension/textos-lecturas.ts';
-import type { FormularioTuPension } from '../src/modules/tu-pension/tipos.ts';
-import { valoracionesEn } from './lib/valoraciones.ts';
+import { errorDe } from '../../engine/fachada';
+import { NoImplementada } from '../../engine/jubilacion/errores';
+import { calcularTuPension, type Dependencias } from './calcular';
+import { traducirError } from './errores';
+import { crearMotorDelRepositorio, leerReferenciaDeRepositorio } from './motor';
+import { FORMULARIO_ORFANDAD, FORMULARIO_VIUDEDAD } from './pruebas';
+import { catalogoPorDefecto } from './referencias-datos';
+import { TEXTOS_ORFANDAD, TEXTOS_SUPERVIVENCIA, TEXTOS_VIUDEDAD } from './textos-supervivencia';
+import { TEXTOS_LECTURAS } from './textos-lecturas';
+import type { FormularioTuPension } from './tipos';
+import { valoracionesEn } from '../../../scripts/lib/valoraciones.ts';
 
 const deps: Dependencias = {
   fabricaMotor: crearMotorDelRepositorio,

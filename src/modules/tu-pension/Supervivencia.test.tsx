@@ -66,10 +66,11 @@ afterEach(() => {
 
 describe('textos de la viudedad y la orfandad', () => {
   it('no contienen cifras escritas a mano (regla a de CLAUDE.md)', () => {
-    const valores = (o: object): string[] =>
-      Object.values<unknown>(o).flatMap((v) =>
-        typeof v === 'string' ? [v] : typeof v === 'object' && v !== null ? valores(v) : [],
-      );
+    const valores = (o: unknown): string[] => {
+      if (typeof o === 'string') return [o];
+      if (typeof o === 'object' && o !== null) return Object.values(o).flatMap(valores);
+      return [];
+    };
     const todo = [
       ...valores(TEXTOS_SUPERVIVENCIA),
       ...valores(TEXTOS_VIUDEDAD),
@@ -295,7 +296,7 @@ describe('flujo de la viudedad', () => {
     const aviso = await screen.findByRole('alert');
     expect(aviso).toHaveTextContent('Fallecimiento anterior al periodo que calcula el simulador');
     expect(aviso).toHaveTextContent('2018');
-    expect(aviso).toHaveTextContent(/pareja de hecho/);
+    expect(aviso).toHaveTextContent(/parejas de hecho/);
     expect(aviso).toHaveTextContent(/no los sustituye por otros ni los estima/);
     expect(screen.queryByRole('heading', { name: 'Cómo se ha calculado' })).toBeNull();
   });
