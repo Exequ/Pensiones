@@ -22,6 +22,7 @@ import { GraficoPosicion, type FilaGrafico } from './GraficoPosicion';
 import { ID } from './ids-datos';
 import { anioDeId, rangoDeId } from './rango';
 import { SelectorAnioInicio } from './SelectorAnioInicio';
+import { etiquetaTramo } from './tramos';
 
 interface Anotacion {
   readonly anio: number;
@@ -30,6 +31,7 @@ interface Anotacion {
   readonly dato: Dato;
 }
 
+const SIN_RUPTURAS: readonly { anio: number; etiqueta: string }[] = [];
 const TODOS: SeleccionPosicion = { fondo: true, deuda: true, transferencias: true };
 
 /** Importe numérico de un dato cargado; falla si el dato no es una cifra. */
@@ -109,12 +111,35 @@ export function SeccionPosicion() {
   const d = datosHucha();
   const idCasillas = useId();
   const idSumaConjunta = useId();
-  const [anioInicio, setAnioInicio] = useState(d.transferencias.delEstado.puntos[0]?.anio ?? 0);
+  const [anioInicio, setAnioInicio] = useState(d.transferenciasAnuales.puntos[0]?.anio ?? 0);
   const [sumaConjunta, setSumaConjunta] = useState(false);
   const [seleccion, setSeleccion] = useState<SeleccionPosicion>(TODOS);
 
-  const anuales = d.transferencias.delEstado.puntos;
+  // Transferencias anuales empalmadas con ruptura de serie (liquidación y ejecución).
+  const empalme = d.transferenciasAnuales;
+  const anuales = empalme.puntos;
   const aniosInicio = anuales.map((p) => p.anio);
+  const origenPorAnio = useMemo(() => {
+    const etiquetas = new Map(
+      empalme.tramos.map((t) => [t.clave, etiquetaTramo(t.etiqueta, t.puntos)]),
+    );
+    return new Map(
+      anuales.map((p) => [p.anio, etiquetas.get(empalme.tramoDelAnio.get(p.anio) ?? '') ?? '']),
+    );
+  }, [empalme, anuales]);
+  const columnaOrigen = {
+    titulo: 'Documento de origen de las transferencias del año',
+    porAnio: origenPorAnio,
+  };
+  const rupturas = useMemo(
+    () =>
+      empalme.rupturas.map((anio) => ({
+        anio,
+        etiqueta: 'Ruptura de serie en las transferencias',
+      })),
+    [empalme.rupturas],
+  );
+  const anioRuptura = empalme.rupturas[0] ?? 0;
 
   // Lectura 1: Fondo menos deuda.
   const filasNeta = useMemo(
@@ -203,8 +228,17 @@ export function SeccionPosicion() {
   const ultimoTrimestralDeuda = d.deuda.trimestral.puntos.at(-1);
 
   const fuentesFondoDeuda: Dato[] = [d.valor.dato, d.deuda.finAno.dato];
-  const fuentesApoyo: Dato[] = [d.deuda.finAno.dato, d.transferencias.delEstado.dato];
-  const fuentesSuma: Dato[] = [d.valor.dato, d.deuda.finAno.dato, d.transferencias.delEstado.dato];
+  const fuentesApoyo: Dato[] = [
+    d.deuda.finAno.dato,
+    d.liquidacion.delEstado.dato,
+    d.transferencias.delEstado.dato,
+  ];
+  const fuentesSuma: Dato[] = [
+    d.valor.dato,
+    d.deuda.finAno.dato,
+    d.liquidacion.delEstado.dato,
+    d.transferencias.delEstado.dato,
+  ];
 
   return (
     <section className="seccion prosa" aria-labelledby="posicion">
@@ -287,12 +321,18 @@ export function SeccionPosicion() {
           etiquetaResultado="Deuda más transferencias acumuladas"
           columnaResultado="Deuda más transferencias acumuladas (millones de euros)"
           fuentes={fuentesApoyo}
+          rupturas={anioInicio < anioRuptura ? rupturas : SIN_RUPTURAS}
+          columnaOrigen={columnaOrigen}
           nota={
             <>
               Construcción propia (confianza media), sin equivalente oficial. Suma un saldo (deuda
               PDE de la Seguridad Social, que incluye préstamos anteriores al año de inicio) y un
               flujo acumulado (transferencias corrientes del Estado y organismos autónomos desde{' '}
-              {anioInicio}). La tabla recoge las dos partidas y su suma.
+              {anioInicio}). La tabla recoge las dos partidas y su suma. Ruptura de serie: las
+              transferencias de los años anteriores a {anioRuptura} proceden de las liquidaciones
+              del presupuesto y las de {anioRuptura} en adelante, de la ejecución; la suma acumulada
+              que cruza esa ruptura mezcla cifras de dos documentos que no se han podido contrastar
+              entre sí. La columna de origen de la tabla indica el documento de cada año.
             </>
           }
         />
@@ -308,7 +348,8 @@ export function SeccionPosicion() {
             devolver y las segundas son un flujo que no se devuelve. Qué no es: no es la cantidad
             que el Estado haya desembolsado en total (la deuda incluye préstamos anteriores al año
             de inicio y las transferencias empiezan en él), no es una cifra oficial y la suma cambia
-            con el año de inicio.
+            con el año de inicio. Si el inicio es anterior a {anioRuptura}, las transferencias
+            acumuladas cruzan la ruptura de serie y suman cifras de dos documentos distintos.
           </p>
         </ComoLeerlo>
       </div>
@@ -370,13 +411,17 @@ export function SeccionPosicion() {
               etiquetaResultado="Suma de los seleccionados"
               columnaResultado="Suma de los componentes seleccionados (millones de euros)"
               fuentes={fuentesSuma}
+              rupturas={anioInicio < anioRuptura ? rupturas : SIN_RUPTURAS}
+              columnaOrigen={columnaOrigen}
               nota={
                 <>
                   Construcción propia (confianza media), sin equivalente oficial. Combina dos saldos
                   de fin de año (Fondo a precio de adquisición y deuda PDE de la Seguridad Social)
                   con un flujo acumulado (transferencias corrientes del Estado y organismos
                   autónomos desde {anioInicio}); las partidas no son aditivas. La tabla de datos
-                  recoge los tres componentes siempre; la suma, solo los marcados.
+                  recoge los tres componentes siempre; la suma, solo los marcados. Ruptura de serie
+                  en las transferencias a partir de {anioRuptura}: cambia el documento de origen
+                  (liquidación y ejecución), indicado en la última columna de la tabla.
                 </>
               }
             />

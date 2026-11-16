@@ -26,6 +26,15 @@ export interface AnotacionGrafico {
   readonly letra: string;
 }
 
+/**
+ * Ruptura de serie: año desde el que cambia el documento de origen. Se dibuja una regla vertical
+ * entre el año anterior y este, con su rótulo (solo en gráficos de líneas con eje de años).
+ */
+export interface RupturaGrafico {
+  readonly anio: number;
+  readonly etiqueta: string;
+}
+
 export type TipoGrafico = 'lineas' | 'barras-apiladas' | 'barras-agrupadas';
 
 const ALTO_ETIQUETA = 18;
@@ -61,6 +70,8 @@ interface GraficoSeriesProps {
   tituloX?: string;
   /** Anotaciones sobre el eje de años; solo para líneas con eje de años. */
   anotaciones?: readonly AnotacionGrafico[];
+  /** Rupturas de serie por cambio de fuente; solo para líneas con eje de años. */
+  rupturas?: readonly RupturaGrafico[];
 }
 
 type FilaTabla = Record<string, string | number | null>;
@@ -87,6 +98,7 @@ export function GraficoSeries({
   etiquetasX,
   tituloX = 'Año',
   anotaciones,
+  rupturas,
 }: GraficoSeriesProps) {
   const cero = incluirCero ?? tipo !== 'lineas';
 
@@ -204,6 +216,27 @@ export function GraficoSeries({
                     fontWeight: 600,
                   }),
                 ]),
+            ...(rupturas === undefined || rupturas.length === 0
+              ? []
+              : [
+                  Plot.ruleX(
+                    rupturas.map((r) => r.anio - 0.5),
+                    { stroke: token('acento'), strokeDasharray: TRAZO_ANOTACION },
+                  ),
+                  Plot.text(
+                    rupturas.map((r) => ({ x: r.anio - 0.5, texto: r.etiqueta })),
+                    {
+                      x: 'x',
+                      text: 'texto',
+                      frameAnchor: 'bottom',
+                      dy: -6,
+                      dx: 6,
+                      textAnchor: 'start',
+                      fill: token('acento'),
+                      fontWeight: 600,
+                    },
+                  ),
+                ]),
             ...etiquetas,
           ],
         };
@@ -270,7 +303,18 @@ export function GraficoSeries({
         ],
       };
     };
-  }, [series, tipo, cero, alto, unidadEje, divisorEje, decimalesEje, etiquetasX, anotaciones]);
+  }, [
+    series,
+    tipo,
+    cero,
+    alto,
+    unidadEje,
+    divisorEje,
+    decimalesEje,
+    etiquetasX,
+    anotaciones,
+    rupturas,
+  ]);
 
   return (
     <div className="bloque-grafico">

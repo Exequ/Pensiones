@@ -9,11 +9,13 @@ import {
   ArchivoCronologia,
   ArchivoMitos,
   ArchivoDatos,
+  ArchivoExtraccionPdf,
   ArchivoPersonas,
   ArchivoPrestaciones,
   ArchivoProyeccion,
   ArchivoTabla,
   RegistroAfirmaciones,
+  type ArchivoExtraccionPdf as TipoExtraccionPdf,
 } from '../../src/engine/esquema-datos.ts';
 
 export interface ErrorValidacion {
@@ -97,13 +99,15 @@ export function validarContenido(json: unknown, fichero: string): ErrorValidacio
         ? ArchivoPrestaciones
         : tipo === 'tabla'
           ? ArchivoTabla
-          : tipo === 'mitos'
-            ? ArchivoMitos
-            : tipo === 'personas'
-              ? ArchivoPersonas
-              : tipo === 'proyeccion'
-                ? ArchivoProyeccion
-                : ArchivoDatos;
+          : tipo === 'extraccion-pdf'
+            ? ArchivoExtraccionPdf
+            : tipo === 'mitos'
+              ? ArchivoMitos
+              : tipo === 'personas'
+                ? ArchivoPersonas
+                : tipo === 'proyeccion'
+                  ? ArchivoProyeccion
+                  : ArchivoDatos;
   const resultado = esquema.safeParse(json);
   if (!resultado.success) {
     for (const problema of resultado.error.issues) {
@@ -178,6 +182,113 @@ export function celdasCsv(linea: string): string[] {
 }
 
 /**
+ * Comprueba el CSV de una extracción de PDF (Fase 5-A3): además de la cabecera y del número de
+ * filas, cada fila cita un PDF de `origenes` con su huella, una página dentro del documento, cifras
+ * numéricas en las columnas con unidad y un identificador único; y las filas marcadas como no
+ * verificadas coinciden con las tablas cuyas validaciones fallan.
+ */
+export function validarCsvExtraccion(
+  archivo: TipoExtraccionPdf,
+  lineas: readonly string[],
+  relativo: string,
+): ErrorValidacion[] {
+  const errores: ErrorValidacion[] = [];
+  const error = (ruta: string, mensaje: string) =>
+    errores.push({ fichero: relativo, ruta, mensaje });
+  const columnas = archivo.columnas.map((c) => c.id);
+  const cabecera = celdasCsv(lineas[0] ?? '');
+  if (cabecera.join(',') !== columnas.join(',')) {
+    return [
+      {
+        fichero: relativo,
+        ruta: '(csv)',
+        mensaje: `La cabecera del CSV no coincide con «columnas»`,
+      },
+    ];
+  }
+  if (lineas.length - 1 !== archivo.filas) {
+    return [
+      {
+        fichero: relativo,
+        ruta: '(csv)',
+        mensaje: `«filas» indica ${archivo.filas} y el CSV tiene ${lineas.length - 1}`,
+      },
+    ];
+  }
+  const origenes = new Map(archivo.origenes.map((o) => [o.fichero, o]));
+  const indice = (columna: string) => columnas.indexOf(columna);
+  const columnasNumericas = archivo.columnas.filter((c) => c.unidad !== null).map((c) => c.id);
+  const vistos = new Set<string>();
+  const sinVerificar = new Set<string>();
+  lineas.slice(1).forEach((linea, k) => {
+    const n = k + 2;
+    const celdas = celdasCsv(linea);
+    if (celdas.length !== columnas.length) {
+      error(`(csv) línea ${n}`, `La fila no tiene ${columnas.length} columnas`);
+      return;
+    }
+    const celda = (columna: string) => celdas[indice(columna)] ?? '';
+    const origen = origenes.get(celda('fichero'));
+    if (origen === undefined) {
+      error(`(csv) línea ${n}`, `El fichero «${celda('fichero')}» no figura en «origenes»`);
+    } else if (celda('sha256') !== origen.sha256) {
+      error(`(csv) línea ${n}`, 'La huella SHA-256 de la fila no coincide con la de «origenes»');
+    }
+    const pagina = Number(celda('pagina'));
+    const paginaEnDocumento =
+      indice('pagina_extracto') >= 0 ? Number(celda('pagina_extracto')) : pagina;
+    if (!Number.isInteger(pagina) || pagina < 1) error(`(csv) línea ${n}`, 'Página no válida');
+    else if (
+      origen !== undefined &&
+      (!Number.isInteger(paginaEnDocumento) ||
+        paginaEnDocumento < 1 ||
+        paginaEnDocumento > origen.paginas)
+    ) {
+      error(`(csv) línea ${n}`, 'La página queda fuera del documento');
+    }
+    for (const columna of columnasNumericas) {
+      if (celda(columna) !== '' && !Number.isFinite(Number(celda(columna)))) {
+        error(`(csv) línea ${n}`, `«${columna}» no es numérico`);
+      }
+    }
+    if (indice('id') >= 0) {
+      if (vistos.has(celda('id')))
+        error(`(csv) línea ${n}`, `Identificador repetido: ${celda('id')}`);
+      vistos.add(celda('id'));
+    }
+    if (indice('verificado') >= 0) {
+      const v = celda('verificado');
+      if (v !== 'si' && v !== 'no') error(`(csv) línea ${n}`, '«verificado» debe ser «si» o «no»');
+      if (v === 'no') sinVerificar.add(`${celda('ejercicio_pdf')}|${celda('tabla')}`);
+    }
+  });
+  if (indice('verificado') >= 0) {
+    const fallan = new Set(
+      archivo.validacionesPorTabla
+        .filter((v) => v.incorrectas > 0)
+        .map((v) => `${v.ejercicio_pdf}|${v.tabla}`),
+    );
+    for (const clave of fallan) {
+      if (!sinVerificar.has(clave)) {
+        error(
+          '(csv)',
+          `La tabla ${clave} tiene validaciones fallidas y sus cifras no están marcadas «no»`,
+        );
+      }
+    }
+    for (const clave of sinVerificar) {
+      if (!fallan.has(clave)) {
+        error(
+          '(csv)',
+          `La tabla ${clave} está marcada «no» sin una validación fallida que lo explique`,
+        );
+      }
+    }
+  }
+  return errores;
+}
+
+/**
  * Comprueba el CSV hermano de una tabla: existe, su cabecera coincide con `columnas`, el número
  * de filas coincide con `filas` y cada fila tiene tantas celdas como columnas.
  */
@@ -186,14 +297,17 @@ export async function validarCsvHermano(
   ficheroJson: string,
   relativo: string,
 ): Promise<ErrorValidacion[]> {
+  const extraccion = ArchivoExtraccionPdf.safeParse(json);
   const resultado = ArchivoTabla.safeParse(json);
-  if (!resultado.success) return [];
+  if (!resultado.success && !extraccion.success) return [];
   const csv = ficheroJson.replace(/\.json$/, '.csv');
   const error = (mensaje: string): ErrorValidacion[] => [
     { fichero: relativo, ruta: '(csv)', mensaje },
   ];
   if (!existsSync(csv)) return error(`Falta el CSV hermano ${path.basename(csv)}`);
   const lineas = (await readFile(csv, 'utf8')).split('\n').filter((l) => l.trim() !== '');
+  if (extraccion.success) return validarCsvExtraccion(extraccion.data, lineas, relativo);
+  if (!resultado.success) return [];
   const cabecera = celdasCsv(lineas[0] ?? '');
   const esperada = resultado.data.columnas.map((c) => c.id);
   if (cabecera.join(',') !== esperada.join(',')) {

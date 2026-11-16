@@ -4,7 +4,7 @@ import type { Dato } from '../../engine/esquema-datos';
 import { datosFinanciacion } from '../historico/datos-financiacion';
 import { datosHucha } from '../historico/datos-hucha';
 import { millonesEuros } from '../historico/formatos';
-import { ID } from './ids-datos';
+import { ID, ID23 } from './ids-datos';
 import { rangoDeId } from './rango';
 
 type FilaClasificacion = {
@@ -41,6 +41,11 @@ export function SeccionOrigen() {
     return v;
   };
   const cita = (id: string): string => texto(tc[id]?.valor ?? '');
+  const cifra23 = (id: string): number => {
+    const v = d.tribunal2023[id]?.valor;
+    if (typeof v !== 'number') throw new Error(`Falta la cifra «${id}» del Tribunal de Cuentas`);
+    return v;
+  };
   const impropiosPrevistos = f.previsiones.find((p) => p.id === ID.gastosImpropiosPrevistos);
   const enumeracionImpropios =
     /«Gastos impropios» es la expresión de la fuente: (.*?)\. Fuente secundaria/.exec(
@@ -52,6 +57,47 @@ export function SeccionOrigen() {
     const [desdePrestamos, hastaPrestamos] = rangoDeId(ID.tcPrestamosConcedidos);
     const periodo = `${desde}-${hasta}`;
     const periodoPrestamos = `${desdePrestamos}-${hastaPrestamos}`;
+    const [desde23, hasta23] = rangoDeId(ID23.transferenciasTotal);
+    const [desdePrestamos23, hastaPrestamos23] = rangoDeId(ID23.prestamosRecientes);
+    const periodo23 = `${desde23}-${hasta23}`;
+    const periodoPrestamos23 = `${desdePrestamos23}-${hastaPrestamos23}`;
+    const filasNuevas: FilaClasificacion[] = [
+      {
+        clasificacion: 'Transferencias corrientes del Estado y organismos autónomos (ejecución)',
+        periodo: periodo23,
+        importe: sumaEntre(d.transferencias.delEstado.puntos, desde23, hasta23),
+        fuente:
+          'Seguridad Social, ejecución del presupuesto: mismo concepto que la primera fila, con el periodo de la declaración más reciente del Tribunal',
+      },
+      {
+        clasificacion:
+          'Transferencias corrientes aportadas por el Estado (Tribunal de Cuentas, declaración más reciente)',
+        periodo: periodo23,
+        importe: cifra23(ID23.transferenciasTotal),
+        fuente:
+          'Tribunal de Cuentas, Declaración sobre la Cuenta General del Estado: mismo concepto que la tercera fila, ampliado a un año más',
+      },
+      {
+        clasificacion:
+          'Pasivos financieros de ingresos, que incluyen los préstamos del Estado (ejecución)',
+        periodo: periodoPrestamos23,
+        importe: sumaEntre(
+          d.transferencias.pasivosFinancieros.puntos,
+          desdePrestamos23,
+          hastaPrestamos23,
+        ),
+        fuente:
+          'Seguridad Social, ejecución del presupuesto: operaciones financieras, no transferencias',
+      },
+      {
+        clasificacion:
+          'Préstamos concedidos por el Estado a la Tesorería (Tribunal de Cuentas, declaración más reciente)',
+        periodo: periodoPrestamos23,
+        importe: cifra23(ID23.prestamosRecientes),
+        fuente:
+          'Tribunal de Cuentas, Declaración sobre la Cuenta General del Estado: suma de las líneas de préstamos concedidos entre esos años (anexo de préstamos)',
+      },
+    ];
     return [
       {
         clasificacion: 'Transferencias corrientes del Estado y organismos autónomos (ejecución)',
@@ -94,12 +140,15 @@ export function SeccionOrigen() {
         fuente:
           'Tribunal de Cuentas, Declaración sobre la Cuenta General del Estado: préstamos a largo plazo del Estado a la Tesorería',
       },
+      ...filasNuevas,
     ];
   })();
 
   const datosFuente: Dato[] = [
     d.transferencias.delEstado.dato,
     d.tribunal[ID.tcTransferenciasTotal]?.dato,
+    d.tribunal2023[ID23.transferenciasTotal]?.dato,
+    d.tribunal2023[ID23.prestamosRecientes]?.dato,
     trlgss['aportaciones-estado-presupuestos']?.dato,
     trlgss['no-contributiva-aportaciones-estado']?.dato,
     trlgss['naturaleza-no-contributiva-minimos']?.dato,
@@ -168,8 +217,9 @@ export function SeccionOrigen() {
       <h3 id="origen-tabla">Cuánto cambia la cifra según la clasificación</h3>
       <p>
         La tabla pone, para el mismo periodo, las cifras de la ejecución del presupuesto y las del
-        Tribunal de Cuentas. No coinciden, y con los datos descargados no se puede conciliar una
-        cifra con otra partida a partida.
+        Tribunal de Cuentas, con el periodo de su declaración anterior y con el de la más reciente.
+        No coinciden, y con los datos descargados no se puede conciliar una cifra con otra partida a
+        partida.
       </p>
       <p id="origen-clasificacion">
         Lo que sí consta es que los dos criterios de clasificación no son el mismo: la ejecución del

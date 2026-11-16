@@ -706,6 +706,99 @@ export const ArchivoPersonas = z.strictObject({
 export type ArchivoPersonas = z.infer<typeof ArchivoPersonas>;
 export type PersonaEjemplo = z.infer<typeof PersonaEjemplo>;
 
+// ---------------------------------------------------------------------------
+// Extracciones de PDF (Fase 5-A3): cada cifra con su referencia y la huella del documento
+// ---------------------------------------------------------------------------
+
+/** PDF de origen de una extracción: ruta, huella SHA-256, número de páginas y ejercicio. */
+export const OrigenPdf = z.strictObject({
+  fichero: textoObligatorio('origen.fichero'),
+  sha256: z.string().regex(/^[0-9a-f]{64}$/, { error: 'sha256 no válido' }),
+  paginas: z.number().int().positive(),
+  ejercicio: z.number().int().min(1900).max(2100),
+});
+
+/** Resultado de las validaciones de una tabla de un PDF (sumas y coherencia). */
+export const ValidacionTablaPdf = z.strictObject({
+  ejercicio_pdf: z.number().int(),
+  tabla: textoObligatorio('validacion.tabla'),
+  tipo_pagina: textoObligatorio('validacion.tipo_pagina'),
+  comprobaciones: z.number().int().nonnegative(),
+  incorrectas: z.number().int().nonnegative(),
+});
+
+/** Diferencia entre dos PDF para la misma cifra (el PDF de un ejercicio y la comparativa del siguiente). */
+export const DiferenciaEntrePdf = z.strictObject({
+  ejercicio: z.number().int(),
+  tabla: textoObligatorio('diferencia.tabla'),
+  partida: textoObligatorio('diferencia.partida'),
+  valor_pdf_propio: z.number(),
+  valor_pdf_siguiente: z.number(),
+  diferencia: z.number(),
+  pdf_propio: z.number().int(),
+  paginas_propias: z.array(z.number().int().positive()).min(1),
+  pdf_siguiente: z.number().int(),
+  paginas_siguiente: z.array(z.number().int().positive()).min(1),
+});
+
+/** Comprobación específica de una extracción (reclasificaciones, relaciones entre cifras de tablas distintas). */
+export const ComprobacionEspecificaPdf = z.strictObject({
+  id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
+  descripcion: textoObligatorio('comprobacion.descripcion'),
+  esperado: z.number(),
+  obtenido: z.number(),
+  diferencia: z.number(),
+  tolerancia: z.number().nonnegative(),
+  ok: z.boolean(),
+});
+
+/** Columnas que toda extracción de PDF lleva en su CSV para que cada valor sea rastreable. */
+export const COLUMNAS_EXTRACCION_PDF = ['fichero', 'sha256', 'pagina'] as const;
+
+/**
+ * Extracción de las tablas de un PDF (liquidaciones, declaraciones): un CSV con una fila por cifra
+ * (con fichero, huella, página y localización) y este JSON hermano con la fuente, la fecha de
+ * descarga, la confianza, la naturaleza, la tolerancia de redondeo, los PDF de origen con su huella y
+ * el resultado de las validaciones. Las cifras de una extracción son siempre observadas.
+ */
+export const ArchivoExtraccionPdf = z
+  .strictObject({
+    tipo: z.literal('extraccion-pdf'),
+    id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
+    title: textoObligatorio('title'),
+    description: textoObligatorio('description'),
+    columnas: z.array(ColumnaTabla).min(2),
+    filas: z.number().int().positive(),
+    source: Fuente,
+    fetchedAt: FechaDescarga,
+    confidence: Confianza,
+    naturaleza: z.literal('observado', {
+      error: 'Una extracción de PDF contiene cifras observadas: naturaleza debe ser «observado»',
+    }),
+    unidad: textoObligatorio('unidad'),
+    notes: z.string().trim().min(1).optional(),
+    tolerancia: textoObligatorio('tolerancia'),
+    origenes: z.array(OrigenPdf).min(1, { error: 'Falta al menos un PDF de origen con su huella' }),
+    resumenValidaciones: z.record(z.string(), z.number()),
+    validacionesPorTabla: z.array(ValidacionTablaPdf).min(1),
+    comprobacionesEspecificas: z.array(ComprobacionEspecificaPdf).optional(),
+    resumenContrasteEntrePdf: z.record(z.string(), z.number()).optional(),
+    diferenciasEntrePdf: z.array(DiferenciaEntrePdf).optional(),
+  })
+  .superRefine((archivo, ctx) => {
+    const ids = new Set(archivo.columnas.map((c) => c.id));
+    for (const requerida of COLUMNAS_EXTRACCION_PDF) {
+      if (!ids.has(requerida)) {
+        ctx.addIssue({
+          code: 'custom',
+          message: `Falta la columna «${requerida}»: cada cifra debe llevar su referencia al PDF`,
+          path: ['columnas'],
+        });
+      }
+    }
+  });
+
+export type ArchivoExtraccionPdf = z.infer<typeof ArchivoExtraccionPdf>;
 export type ArchivoTabla = z.infer<typeof ArchivoTabla>;
 export type ArchivoProyeccion = z.infer<typeof ArchivoProyeccion>;
 export type FilaObservadaProyeccion = z.infer<typeof FilaObservadaProyeccion>;

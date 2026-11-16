@@ -35,3 +35,23 @@ export const ID = {
   plazoApartado2: 'apartado-2-importe',
   plazoApartado3: 'apartado-3-importe',
 } as const;
+
+/** Identificadores de la Declaración del Tribunal de Cuentas sobre la CGE de 2023 (Fase 5-A3). */
+export const ID23 = {
+  transferenciasTotal: 'transferencias-corrientes-2018-2023',
+  equilibrio: 'transferencias-equilibrio-2018-2021',
+  covid: 'transferencias-covid-2020-2021',
+  baseNormativa: 'transferencias-base-normativa-2021-2023',
+  transferenciasPosteriores: 'transferencias-misma-finalidad-2024',
+  aportacionesNoContributivas: 'aportaciones-no-contributivas-2023',
+  paraFinanciarOtrosConceptos: 'lpge-2023-para-financiar-otros-conceptos',
+  saldoDeuda: 'deuda-ss-con-estado-2023',
+  prestamosAntiguos: 'prestamos-1992-1999',
+  prestamosRecientes: 'prestamos-concedidos-2017-2023',
+  prestamoPosterior: 'prestamo-concedido-2024',
+  reservaFondo: 'frss-reserva-patrimonial-2023',
+  tesoreriaFondo: 'frss-tesoreria-cuenta-especifica-2023',
+  meiOctubreNoviembre: 'frss-mei-octubre-noviembre-2023',
+  condicionesPrestamos: 'condiciones-prestamos-tc2023',
+  pibSegunTribunal: 'pib-2023-segun-tribunal',
+} as const;

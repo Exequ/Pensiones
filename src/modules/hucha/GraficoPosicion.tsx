@@ -5,9 +5,10 @@ import type { Columna } from '../../components/DataTable';
 import { CATEGORICOS, CATEGORICOS_TEXTO, token } from '../../components/estiloGrafico';
 import type { Dato } from '../../engine/esquema-datos';
 import { formatearNumero } from '../../engine/formato';
-import { tramoDelEje } from '../historico/grafico-series';
+import { TRAZO_ANOTACION, tramoDelEje } from '../historico/grafico-series';
 
 const ALTO_ETIQUETA = 18;
+const SIN_RUPTURAS: readonly RupturaPosicion[] = [];
 /** Anchura del grupo de barras de un año, en años (el resto es hueco entre grupos). */
 const ANCHO_GRUPO = 0.84;
 
@@ -47,6 +48,21 @@ interface GraficoPosicionProps {
   readonly fuentes: readonly Dato[];
   readonly nota: ReactNode;
   readonly alto?: number;
+  /**
+   * Rupturas de serie por cambio de documento de origen de uno de los componentes: años desde los
+   * que cambia la fuente. Se dibuja una regla vertical con su rótulo.
+   */
+  readonly rupturas?: readonly RupturaPosicion[];
+  /** Columna extra de la tabla con el documento de origen de las transferencias de cada año. */
+  readonly columnaOrigen?: {
+    readonly titulo: string;
+    readonly porAnio: ReadonlyMap<number, string>;
+  };
+}
+
+export interface RupturaPosicion {
+  readonly anio: number;
+  readonly etiqueta: string;
 }
 
 /**
@@ -66,6 +82,8 @@ export function GraficoPosicion({
   fuentes,
   nota,
   alto = 380,
+  rupturas = SIN_RUPTURAS,
+  columnaOrigen,
 }: GraficoPosicionProps) {
   const tabla = useMemo(() => {
     const columnas: Columna<FilaTabla>[] = [
@@ -77,14 +95,16 @@ export function GraficoPosicion({
         decimales: 0,
       })),
       { clave: 'resultado', titulo: columnaResultado, tipo: 'numero' as const, decimales: 0 },
+      ...(columnaOrigen === undefined ? [] : [{ clave: 'origen', titulo: columnaOrigen.titulo }]),
     ];
     const datos: FilaTabla[] = filas.map((f) => ({
       anio: String(f.anio),
       ...Object.fromEntries(componentes.map((c) => [c.clave, f.valores[c.clave] ?? null])),
       resultado: f.resultado,
+      ...(columnaOrigen === undefined ? {} : { origen: columnaOrigen.porAnio.get(f.anio) ?? null }),
     }));
     return { columnas, filas: datos };
-  }, [filas, componentes, columnaResultado]);
+  }, [filas, componentes, columnaResultado, columnaOrigen]);
 
   const opciones = useMemo(
     () =>
@@ -179,11 +199,32 @@ export function GraficoPosicion({
               fill: token('papel'),
               r: 4,
             }),
+            ...(rupturas.length === 0
+              ? []
+              : [
+                  Plot.ruleX(
+                    rupturas.map((r) => r.anio - 0.5),
+                    { stroke: token('acento'), strokeDasharray: TRAZO_ANOTACION },
+                  ),
+                  Plot.text(
+                    rupturas.map((r) => ({ x: r.anio - 0.5, texto: r.etiqueta })),
+                    {
+                      x: 'x',
+                      text: 'texto',
+                      frameAnchor: 'bottom',
+                      dy: -6,
+                      dx: 6,
+                      textAnchor: 'start',
+                      fill: token('acento'),
+                      fontWeight: 600,
+                    },
+                  ),
+                ]),
             ...etiquetas,
           ],
         };
       },
-    [filas, componentes, activos, etiquetaResultado, etiquetaSinResultado, alto],
+    [filas, componentes, activos, etiquetaResultado, etiquetaSinResultado, alto, rupturas],
   );
 
   return (

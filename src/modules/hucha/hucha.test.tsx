@@ -114,9 +114,9 @@ describe('página «Hucha»: secciones de transferencias', () => {
         {
           fondo: d.valor.puntos,
           deuda: d.deuda.finAno.puntos,
-          transferenciasAnuales: d.transferencias.delEstado.puntos,
+          transferenciasAnuales: d.transferenciasAnuales.puntos,
         },
-        d.transferencias.delEstado.puntos[0]?.anio ?? 0,
+        d.transferenciasAnuales.puntos[0]?.anio ?? 0,
         seleccion,
       );
       return filas.at(-1)?.suma ?? null;
@@ -124,7 +124,9 @@ describe('página «Hucha»: secciones de transferencias', () => {
 
     const casillaDeuda = screen.getByRole('checkbox', { name: /Deuda con el Estado/ });
     expect(casillaDeuda).toBeChecked();
-    expect(ultimaFila(grafico()).at(-1)).toBe(
+    // La última columna de la tabla es el documento de origen de las transferencias; el resultado es la anterior.
+    const resultado = () => ultimaFila(grafico()).at(-2);
+    expect(resultado()).toBe(
       entero(esperada({ fondo: true, deuda: true, transferencias: true }) ?? 0),
     );
 
@@ -132,13 +134,13 @@ describe('página «Hucha»: secciones de transferencias', () => {
     casillaDeuda.focus();
     await usuario.keyboard(' ');
     expect(casillaDeuda).not.toBeChecked();
-    expect(ultimaFila(grafico()).at(-1)).toBe(
+    expect(resultado()).toBe(
       entero(esperada({ fondo: true, deuda: false, transferencias: true }) ?? 0),
     );
 
     await usuario.click(screen.getByRole('checkbox', { name: /Fondo de Reserva/ }));
     await usuario.click(screen.getByRole('checkbox', { name: /Transferencias acumuladas/ }));
-    expect(ultimaFila(grafico()).at(-1)).toBe('—');
+    expect(resultado()).toBe('—');
     expect(grafico().querySelector('svg')?.textContent).toMatch(/Ningún componente seleccionado/);
   });
 
@@ -166,12 +168,12 @@ describe('página «Hucha»: secciones de transferencias', () => {
     const usuario = userEvent.setup();
     const { container } = pintar();
     const d = datosHucha();
-    const anios = d.transferencias.delEstado.puntos.map((p) => p.anio);
+    const anios = d.transferenciasAnuales.puntos.map((p) => p.anio);
     const calcular = (inicio: number) =>
       apoyoFinancieroDelEstado(
         {
           deuda: d.deuda.finAno.puntos,
-          transferenciasAnuales: d.transferencias.delEstado.puntos,
+          transferenciasAnuales: d.transferenciasAnuales.puntos,
         },
         inicio,
       ).at(-1);
@@ -202,7 +204,9 @@ describe('página «Hucha»: secciones de transferencias', () => {
     const { container } = pintar();
     const f = figura(container, 'Meses de gasto en pensiones que equivale el valor del Fondo');
     const cabecera = f.querySelector('thead')?.textContent ?? '';
-    expect(cabecera).toMatch(/Referencia: con complemento a mínimos/);
+    // La referencia tiene dos tramos (liquidación y ejecución) con la misma definición.
+    expect(cabecera).toMatch(/Referencia, con complemento a mínimos, liquidación/);
+    expect(cabecera).toMatch(/Referencia, con complemento a mínimos, ejecución/);
     expect(cabecera).toMatch(/Contraste: catorce pagas/);
     expect(container.textContent).toMatch(/El Fondo se valora a precio de adquisición/);
   });
@@ -211,7 +215,8 @@ describe('página «Hucha»: secciones de transferencias', () => {
     const { container } = pintar();
     const f = figura(container, 'en meses de transferencias');
     const cabecera = f.querySelector('thead')?.textContent ?? '';
-    expect(cabecera).toMatch(/Principal: transferencias del año/);
+    expect(cabecera).toMatch(/Principal, transferencias del año, liquidación/);
+    expect(cabecera).toMatch(/Principal, transferencias del año, ejecución/);
     expect(cabecera).toMatch(/Secundaria: cuarto trimestre/);
     const seccion =
       container.querySelector('#fondo-transferencias')?.closest('section')?.textContent ?? '';
@@ -225,10 +230,13 @@ describe('página «Hucha»: secciones de transferencias', () => {
     const meses = ultimaFila(figura(container, 'en meses de transferencias'));
     await usuario.click(screen.getByRole('radio', { name: 'Trimestres de transferencias' }));
     const trimestres = ultimaFila(figura(container, 'en trimestres de transferencias'));
+    // La última fila es de un año de la ejecución: la columna de la liquidación está vacía.
+    expect(meses[1]).toBe('—');
+    expect(trimestres[1]).toBe('—');
     // Un trimestre son tres meses: el valor en trimestres es un tercio del valor en meses.
     const aNumero = (t: string | undefined) =>
       Number((t ?? '').replace(/\./g, '').replace(',', '.'));
-    expect(aNumero(trimestres[1])).toBeCloseTo(aNumero(meses[1]) / 3, 1);
+    expect(aNumero(trimestres[2])).toBeCloseTo(aNumero(meses[2]) / 3, 1);
   });
 
   it('el desglose por finalidad aparece y lo no disponible se marca como pendiente de datos', () => {

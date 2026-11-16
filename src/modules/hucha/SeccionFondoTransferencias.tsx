@@ -1,10 +1,12 @@
 import { useMemo, useState } from 'react';
 import { SegmentedPills } from '../../components/SegmentedPills';
+import { partirPorTramos } from '../../engine/series-empalme';
 import { escalar, extremos } from '../../engine/series-historicas';
 import { mesesDeFlujo } from '../../engine/transferencias';
 import { datosHucha } from '../historico/datos-hucha';
 import { GraficoSeries } from '../historico/GraficoSeries';
 import { decimal2, millonesEuros } from '../historico/formatos';
+import { etiquetaTramo } from './tramos';
 
 type Unidad = 'meses' | 'trimestres';
 
@@ -14,9 +16,10 @@ export function SeccionFondoTransferencias() {
   const [unidad, setUnidad] = useState<Unidad>('meses');
   const t = d.transferencias;
 
+  const empalme = d.transferenciasAnuales;
   const porAnio = useMemo(
-    () => mesesDeFlujo(d.valor.puntos, t.delEstado.puntos, 12),
-    [d.valor.puntos, t.delEstado.puntos],
+    () => mesesDeFlujo(d.valor.puntos, empalme.puntos, 12),
+    [d.valor.puntos, empalme.puntos],
   );
   const porTrimestre = useMemo(
     () => mesesDeFlujo(d.valor.puntos, t.cuartoTrimestre, 3),
@@ -24,6 +27,18 @@ export function SeccionFondoTransferencias() {
   );
   const factor = unidad === 'meses' ? 1 : 1 / 3;
   const serieAnio = useMemo(() => escalar(porAnio, factor), [porAnio, factor]);
+  const anioPorTramo = useMemo(() => partirPorTramos(serieAnio, empalme), [serieAnio, empalme]);
+  const tramoLiquidacion = anioPorTramo.get('liquidacion') ?? [];
+  const tramoEjecucion = anioPorTramo.get('ejecucion') ?? [];
+  const etiquetaLiquidacion = etiquetaTramo(
+    'Principal, transferencias del año, liquidación',
+    tramoLiquidacion,
+  );
+  const etiquetaEjecucion = etiquetaTramo(
+    'Principal, transferencias del año, ejecución',
+    tramoEjecucion,
+  );
+  const anioRuptura = tramoEjecucion[0]?.anio ?? 0;
   const serieTrimestre = useMemo(() => escalar(porTrimestre, factor), [porTrimestre, factor]);
 
   const { primero: primeroA, ultimo: ultimoA } = extremos(porAnio);
@@ -63,35 +78,34 @@ export function SeccionFondoTransferencias() {
         titulo={`El valor del Fondo de Reserva, en ${etiquetaUnidad} de transferencias del Estado`}
         descripcion={`Valor del Fondo al cierre del año dividido entre las transferencias de cada periodo, expresado en ${etiquetaUnidad} de transferencias. Unidad: ${etiquetaUnidad}.`}
         series={[
-          {
-            clave: 'anual',
-            etiqueta: 'Principal: transferencias del año',
-            puntos: serieAnio,
-          },
+          { clave: 'anual-liquidacion', etiqueta: etiquetaLiquidacion, puntos: tramoLiquidacion },
+          { clave: 'anual-ejecucion', etiqueta: etiquetaEjecucion, puntos: tramoEjecucion },
           {
             clave: 'trimestral',
-            etiqueta: 'Secundaria: cuarto trimestre',
+            etiqueta: 'Secundaria: cuarto trimestre (ejecución)',
             puntos: serieTrimestre,
           },
-        ]}
+        ].filter((serie) => serie.puntos.length > 0)}
         unidadEje={unidad === 'meses' ? 'Meses de transferencias' : 'Trimestres de transferencias'}
         incluirCero
         decimales={2}
         decimalesEje={1}
-        fuentes={[d.valor.dato, t.delEstado.dato, t.datoTrimestral]}
-        nota="Cálculos propios (confianza media). Medida principal (año completo): valor del Fondo a fin de año ÷ (transferencias del año ÷ doce). Medida secundaria (cuarto trimestre): valor del Fondo a fin de año ÷ (transferencias del cuarto trimestre del mismo año ÷ tres). Un trimestre equivale a tres meses. Los flujos trimestrales son diferencias entre acumulados. Las transferencias son las corrientes del Estado y organismos autónomos de la ejecución del presupuesto; el Fondo está a precio de adquisición."
+        fuentes={[d.valor.dato, d.liquidacion.delEstado.dato, t.delEstado.dato, t.datoTrimestral]}
+        nota="Cálculos propios (confianza media). Medida principal (año completo): valor del Fondo a fin de año ÷ (transferencias del año ÷ doce). Medida secundaria (cuarto trimestre): valor del Fondo a fin de año ÷ (transferencias del cuarto trimestre del mismo año ÷ tres). Un trimestre equivale a tres meses. Los flujos trimestrales son diferencias entre acumulados. Las transferencias son las corrientes del Estado y organismos autónomos de la liquidación del presupuesto (hasta el último año de ese tramo) y de la ejecución (desde el año de la ruptura de serie); el Fondo está a precio de adquisición. La medida secundaria solo existe para la ejecución: las liquidaciones no dan acumulados trimestrales."
         comoLeerlo={
           <>
             <p>
               En {ultimoA.anio} el valor del Fondo ({millonesEuros(valorUltimo?.valor ?? 0)})
               equivale a {decimal2(ultimoA.valor)} meses de las transferencias del año (medida
-              principal)
+              principal, tramo de la ejecución)
               {ultimoT === undefined
                 ? ''
                 : ` y a ${decimal2(ultimoT.valor)} meses de las del cuarto trimestre (medida secundaria)`}
-              . En {primeroA.anio} equivalía a {decimal2(primeroA.valor)} meses de las del año. En
-              trimestres, el valor de {ultimoA.anio} es de {decimal2(ultimoA.valor / 3)} trimestres
-              de las transferencias del año.
+              . En {primeroA.anio} equivalía a {decimal2(primeroA.valor)} meses de las del año
+              (tramo de la liquidación; la serie cambia de documento de origen en {anioRuptura}, y
+              las dos cifras no se han podido contrastar entre sí). En trimestres, el valor de{' '}
+              {ultimoA.anio} es de {decimal2(ultimoA.valor / 3)} trimestres de las transferencias
+              del año.
             </p>
             <p>
               Es una comparación de tamaños en un año concreto: los derechos reconocidos por

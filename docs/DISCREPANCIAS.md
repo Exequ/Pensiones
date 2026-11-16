@@ -203,3 +203,68 @@ Comprobaciones hechas con `scripts/verificacion-m4.ts` (`npx tsx scripts/verific
 - **Sensibilidades de la descripción**: de las que cita la sección 7 de la descripción solo son comparables las de g e IPC, y los escenarios (g = 0 %, 1 % y 2 %; IPC = 1 %, 2 % y 3 %) no incluyen los valores concretos de la descripción (g = 1,5 %, 1,8 %), así que **no se pueden comprobar**; las demás (revalorización, cotización adicional, altas topadas, demografía, empleo) siguen sin salida. Como plausibilidad, el gasto de 2050 con g = 1,5 % que da la descripción (15,2 % del PIB) queda entre los de g = 1 % y g = 2 % de la salida; no es una verificación.
 - **Quién ejecutó los escenarios**: el LEEME de `m4_escenarios.csv` dice que los ejecutó Claude en su entorno de trabajo (2026-11-15), no Sergio en local como las demás salidas; el código es `modelos/m4/m4_escenarios.py`. Conviene que Sergio los reproduzca en local (`docs/PENDIENTE_DATOS.md`).
 - **Textos de la descripción de M4 que la salida de escenarios deja desfasados** (no se editan: `docs/modelos/` es de Sergio): la sección 8 dice «la salida empieza en 2026 y tiene un solo escenario» y la 9 lista como pendiente «publicar la fila de 2025 y escenarios alternativos».
+
+## Fase 5-A3 (liquidaciones de 2010 a 2016 y Declaración del Tribunal de Cuentas sobre la Cuenta General de 2023, 2026-11-16)
+
+Contrastes hechos por `scripts/etl/ssf_liquidacion_pdf.py`, `scripts/etl/tc_cge2023_seguridad_social.py` y `scripts/extraccion-pdf-5a3.test.ts`. Ninguna cifra se ha modificado: donde las fuentes difieren, se publica la del propio documento y se registra aquí la diferencia. El detalle de las diferencias entre PDF está en `data/sistema/liquidacion-ss-extraccion.json` (`diferenciasEntrePdf`).
+
+### Dentro de las liquidaciones (validaciones a y b)
+
+- **Sumas de cada tabla**: todas las sumas (partidas contra subtotales y totales, presupuesto inicial más modificaciones contra presupuesto total, capítulo 4 de gastos entre sus dos tablas) cuadran dentro de la tolerancia de redondeo declarada (0,005 millones por cada cifra de la suma, con mínimo de 0,01). **Ninguna cifra quedó marcada como no verificada.** El recuento exacto de comprobaciones está en el JSON de la extracción.
+- **Página de liquidación frente a página de comparación del mismo PDF**: la cifra del ejercicio coincide en las dos páginas en todas las partidas que se pueden emparejar por rótulo (diferencia máxima de 0,01). Las partidas cuyo rótulo difiere entre las dos páginas («A la Administración del Estado» frente a «Al Estado») no se emparejan por esta vía y siguen validadas por las sumas de su tabla.
+- **El rótulo de la última página del PDF de 2015 dice «ejercicio 2014»** aunque sus columnas son 2014 y 2015: error de rotulado del documento; se usa la cabecera de columnas.
+
+### Entre un PDF y el siguiente (validación c)
+
+Se contrastaron las cifras del ejercicio anterior que trae cada PDF con la liquidación del PDF de ese ejercicio. **Todas coinciden salvo diez cifras, todas de 2014** (PDF de 2014 frente a la comparativa del PDF de 2015):
+
+| Partida (capítulo 4 de gastos y capítulos 1 y 4 de ingresos)  | PDF de 2014 | Comparativa de 2014 en el PDF de 2015 | Diferencia |
+| ------------------------------------------------------------- | ----------: | ------------------------------------: | ---------: |
+| Invalidez (obligaciones reconocidas, millones de euros)       |   11.958,25 |                             11.717,20 |    −241,05 |
+| Jubilación                                                    |   77.767,05 |                             73.555,00 |  −4.212,05 |
+| Viudedad                                                      |   20.483,52 |                             17.751,17 |  −2.732,35 |
+| Orfandad                                                      |    1.687,49 |                              1.422,89 |    −264,60 |
+| En favor de familiares                                        |      274,09 |                               242,10 |     −31,99 |
+| Suma de pensiones                                             |  112.170,40 |                            104.688,36 |  −7.482,04 |
+| Suma de prestaciones no contributivas                         |    4.069,73 |                             11.551,77 |  +7.482,04 |
+| Ingresos «De la Seguridad Social»                             |    2.544,18 |                              2.639,75 |     +95,57 |
+| Ingresos «De Comunidades Autónomas»                           |       96,45 |                                  0,88 |     −95,57 |
+
+- **Reclasificación del complemento a mínimos.** El PDF de 2015 muestra, por primera vez, el complemento a mínimos como partida aparte dentro de las prestaciones no contributivas y recoge ya el de 2014 (7.482,04 millones). La suma de pensiones de 2014 del PDF de 2014 es igual a la suma de pensiones de 2014 del PDF de 2015 más ese complemento (diferencia 0,00), y la suma de las diferencias de pensiones y de prestaciones no contributivas es cero: cambia la **clasificación**, no el total. Como consecuencia, la serie «pensiones contributivas con el complemento a mínimos» de la web suma el complemento desde 2015 y no lo suma antes (porque ya está dentro de las clases). Para 2010 a 2013 no hay una cifra separada del complemento en las liquidaciones: que las clases lo incluyan en esos años se deduce de que los PDF de 2011, 2012, 2013 y 2014 repiten sin diferencias la cifra del año anterior con la misma clasificación; no se ha verificado de otra forma.
+- **Transferencias entre «De la Seguridad Social» y «De Comunidades Autónomas»**: el PDF de 2015 reclasifica 95,57 millones de 2014 entre esos dos orígenes; el total de transferencias corrientes de ingresos no cambia. No afecta a «Del Estado», que es la cifra que usa la web. Causa no verificada.
+- La cifra publicada de cada año es la de su propio PDF, no la revisada de la comparativa.
+
+### Liquidación y ejecución: sin ejercicio común
+
+Las liquidaciones llegan hasta 2016 y la ejecución descargada empieza en 2017 (como comparativa de la de 2018). **No hay ejercicio común**, de modo que no se puede contrastar que «Del Estado» más «De Organismos Autónomos administrativos» (liquidación) y «Del Estado y Org. Autónomos» (ejecución) midan lo mismo. La web las muestra como dos tramos con **ruptura de serie** rotulada, y lo mismo con los pasivos financieros de ingresos y con el gasto en pensiones con complemento a mínimos. Para el gasto, la definición es la misma (suma de pensiones más complemento a mínimos), pero los documentos y los rótulos son distintos.
+
+### Liquidaciones frente al Fondo de Reserva (valores de `sistema/fondo-reserva-anual`)
+
+No hay una relación aritmética entre los activos financieros de la liquidación y los movimientos del Fondo; las cifras se registran sin atribuir una causa (el capítulo de activos financieros recoge también otras operaciones, lo que **no se ha verificado** con estos datos):
+
+| Año  | Ingresos por activos financieros (liquidación) | Disposiciones anuales del Fondo (derivadas) | Gastos en activos financieros (liquidación) | Dotaciones anuales del Fondo |
+| ---- | ---------------------------------------------: | ------------------------------------------: | ------------------------------------------: | ---------------------------: |
+| 2010 |                                       2.934,18 |                                           0 |                                   11.428,62 |                        1.809 |
+| 2011 |                                       2.515,34 |                                           0 |                                    4.732,88 |                          223 |
+| 2012 |                                       6.939,57 |                                       7.003 |                                    1.366,93 |                          226 |
+| 2013 |                                       8.824,20 |                                      11.648 |                                    1.146,14 |                          197 |
+| 2014 |                                      13.149,43 |                                      15.300 |                                      757,99 |                          279 |
+| 2015 |                                      14.186,95 |                                      13.250 |                                      230,24 |                          103 |
+| 2016 |                                      19.286,26 |                                      20.136 |                                      172,73 |                           11 |
+
+### Pasivos financieros de ingresos y préstamos del Estado
+
+- **2012 y 2013**: la liquidación registra pasivos financieros de ingresos (1.134,70 y 498,02 millones) y el Anexo 10 del Tribunal de Cuentas no incluye ningún préstamo autorizado por una norma de esos años. Los pasivos financieros no son sinónimo de préstamos del Estado; la naturaleza de esos importes no consta en las fuentes descargadas.
+- **2017 a 2024**: los pasivos financieros de ingresos de la ejecución y los préstamos por año inferidos del Anexo 10 coinciden salvo el redondeo (hasta 0,01) en todos los años menos 2017, donde la ejecución trae 2,57 millones más (10.194,57 frente a 10.192,0): pasivos financieros distintos de los préstamos.
+
+### Declaración del Tribunal de Cuentas de 2023 frente a la de 2022 (BOE-A-2025-25090)
+
+- **Coinciden** las cifras repetidas: préstamos de 1992 a 1999 (17.168,6), tres préstamos del INSALUD (3.372,4), préstamos de equilibrio presupuestario (9.589,2), transferencias de equilibrio de 2018 a 2021 (29.616,3) y las de la covid de 2020 y 2021 (20.002,6 y 5.012,0, que suman los 25.014,6 de la declaración de 2023).
+- **Diferencia de redondeo de 0,1 millones**: los préstamos de desfases de tesorería son 4.207,1 en la declaración de 2022 y 4.207,0 en el Anexo 10 de la de 2023 (los tres bloques de 1992 a 1999 suman 17.168,6 con 4.207,0, y 17.168,7 con 4.207,1).
+- **El saldo sube en el préstamo de 2023**: 116.166,4 (2023) menos 106.162,6 (2022) es 10.003,8, igual a la línea 19 del anexo.
+- **Los préstamos de 2017 a 2022** de la declaración de 2022 (88.994,0) coinciden con la suma de las líneas del anexo concedidas hasta 2022; los de 2017 a 2023 (98.997,8), con las concedidas hasta 2023.
+- **Transferencias**: lo que la suma de 2018 a 2023 (81.829,3) añade a la de 2018 a 2022 (61.941,3) es 19.888,0, igual a la previsión de la ley de presupuestos de 2023 que citaba la declaración de 2022, y a la diferencia entre las transferencias basadas en la modificación del texto refundido de las dos declaraciones (52.213 menos 32.325,0).
+- **Saldo del Tribunal frente a la deuda PDE del Banco de España**: 2022, 106.162,6 frente a 106.178 (diferencia 15,4; 0,015 %); 2023, 116.166,4 frente a 116.173 (6,6; 0,006 %). Conceptos próximos, no idénticos (el Banco de España mide la deuda PDE de las Administraciones de Seguridad Social a valor nominal).
+- **PIB de 2023**: el Tribunal cita 1.498.324 millones (nota de prensa del INE de 18 de septiembre de 2024); la serie del INE descargada (`macro/pib-ine`) da 1.496.277 (2.047 millones menos, 0,14 %). Los dos son del INE y de fechas distintas; no se ha descargado la serie anterior para verificar que sea una revisión. La web usa la serie del INE descargada y no usa el PIB del Tribunal.
+- **Transferencias del Tribunal frente a la ejecución**: la suma de 2018 a 2023 de «Del Estado y Org. Autónomos» (derechos reconocidos de cierre de año) es 178.040,0 millones frente a 81.829,3 del Tribunal (y 138.741,2 frente a 61.941,3 para 2018 a 2022). Conceptos distintos: la ejecución clasifica por origen y el Tribunal por finalidad; la causa completa de la diferencia **no está verificada**.
+- **Fondo de Reserva de 2023**: el Tribunal da una reserva patrimonial en el balance de 6.126,4 millones; el valor del Fondo a precio de adquisición de la serie es 5.578, 548,4 millones menos. El Tribunal indica que 510,9 millones de ingresos del MEI de octubre y noviembre están en la reserva y no en la cuenta específica del Banco de España (2.711,7 millones); no afirma que expliquen la diferencia con la serie y no se ha verificado.

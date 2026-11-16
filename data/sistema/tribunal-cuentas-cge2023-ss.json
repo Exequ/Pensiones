@@ -1,0 +1,457 @@
+{
+  "tipo": "datos",
+  "id": "tribunal-cuentas-cge2023-ss",
+  "title": "Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2023: Seguridad Social (préstamos, transferencias por finalidad y Fondo de Reserva)",
+  "description": "Cifras y citas literales del extracto de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2023 (apartados 4.16, 4.17, 4.55 y 5.34 y Anexo 10), con su localización en el original, y la serie derivada de préstamos concedidos por año. Las validaciones de las sumas están en el script scripts/etl/tc_cge2023_seguridad_social.py. El detalle de cada préstamo está en tribunal-cuentas-cge2023-prestamos.csv.",
+  "data": [
+    {
+      "id": "deuda-ss-con-estado-2023",
+      "value": 116166.4,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Saldo a 31 de diciembre de 2023 del endeudamiento de la Seguridad Social frente al Estado por los préstamos concedidos, según el Tribunal de Cuentas. Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "endeudamiento frente al Estado, a 31 de diciembre de 2023, de 116.166,4 millones",
+      "location": "Declaración CGE 2023, p. 44 del original (página del extracto 14)"
+    },
+    {
+      "id": "deuda-ss-con-estado-2023-pib",
+      "value": 7.75,
+      "unit": "% del PIB",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Porcentaje del PIB de 2023 con que el Tribunal expresa el saldo anterior (cifra del texto, no calculada aquí). Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "millones (un 7,75 % del PIB de 2023",
+      "location": "Declaración CGE 2023, p. 44 del original (página del extracto 14)"
+    },
+    {
+      "id": "pib-2023-segun-tribunal",
+      "value": 1498324.0,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "PIB de 2023 a precios corrientes que cita el Tribunal (nota de prensa del INE de 18 de septiembre de 2024). Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "el PIB a precios corrientes se sitúa en 1.498.324 millones de euros",
+      "location": "Declaración CGE 2023, p. 44 del original (página del extracto 14)"
+    },
+    {
+      "id": "prestamos-1992-1999",
+      "value": 17168.6,
+      "unit": "millones de euros",
+      "period": "1999",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Importe de los once préstamos concedidos entre 1992 y 1999 (apartado 5.34). Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "se concedieron once préstamos por 17.168,6 millones",
+      "location": "Declaración CGE 2023, p. 74 del original (página del extracto 24)"
+    },
+    {
+      "id": "prestamos-concedidos-2017-2023",
+      "value": 98997.8,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Suma de los préstamos concedidos por el Estado a la Seguridad Social entre 2017 y 2023 (acumulado, no un dato anual). Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "entre 2017 y 2023, se han concedido nuevos préstamos por importe de 98.997,8 millones",
+      "location": "Declaración CGE 2023, p. 74 del original (página del extracto 24)"
+    },
+    {
+      "id": "prestamo-concedido-2024",
+      "value": 10003.8,
+      "unit": "millones de euros",
+      "period": "2024",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Préstamo de 2024 en virtud de la prórroga de la LPGE de 2023, reconocido y recaudado durante 2024. Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "para 2024, la LPGE para 2023 prorrogada otorga un nuevo préstamo con las mismas condiciones por 10.003,8 millones",
+      "location": "Declaración CGE 2023, p. 44 del original (página del extracto 14)"
+    },
+    {
+      "id": "prestamos-insalud",
+      "value": 3372.4,
+      "unit": "millones de euros",
+      "period": "1991",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Tres préstamos para cancelar obligaciones pendientes del extinto INSALUD a 31 de diciembre de 1991 sobre los que existe una recomendación de asunción por el Estado. Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "tres de estos préstamos concedidos a la Seguridad Social, por 3.372,4 millones",
+      "location": "Declaración CGE 2023, p. 44 del original (página del extracto 14)"
+    },
+    {
+      "id": "prestamos-resto-1992-1999",
+      "value": 13796.2,
+      "unit": "millones de euros",
+      "period": "1999",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Ocho préstamos de 1992 a 1999 distintos de los del INSALUD (apartado 5.34). Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "Respecto a los ocho préstamos restantes, por 13.796,2 millones",
+      "location": "Declaración CGE 2023, p. 74 del original (página del extracto 24)"
+    },
+    {
+      "id": "transferencias-corrientes-2018-2023",
+      "value": 81829.3,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Transferencias corrientes del Estado a la Seguridad Social, acumulado 2018-2023, en el concepto del Tribunal de Cuentas. Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "entre 2018 y 2023, el Estado ha aportado a la Seguridad Social transferencias corrientes por 81.829,3 millones",
+      "location": "Declaración CGE 2023, p. 44 del original (página del extracto 14)"
+    },
+    {
+      "id": "transferencias-equilibrio-2018-2021",
+      "value": 29616.3,
+      "unit": "millones de euros",
+      "period": "2021",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Parte de las transferencias de 2018 a 2021 con finalidad de apoyar el equilibrio presupuestario (nota 64). Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "29.616,3 millones de las transferencias recibidas entre 2018 y 2021 han tenido por finalidad apoyar su equilibrio presupuestario",
+      "location": "Declaración CGE 2023, p. 44 del original (página del extracto 14)"
+    },
+    {
+      "id": "transferencias-covid-2020-2021",
+      "value": 25014.6,
+      "unit": "millones de euros",
+      "period": "2021",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Parte de la finalidad de equilibrio presupuestario destinada a equilibrar el impacto de la COVID-19 en 2020 y 2021 (nota 64). Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "(25.014,6 millones para equilibrar el impacto derivado del COVID-19)",
+      "location": "Declaración CGE 2023, p. 44 del original (página del extracto 14)"
+    },
+    {
+      "id": "transferencias-base-normativa-2021-2023",
+      "value": 52213.0,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Transferencias de 2021 a 2023 basadas en la modificación del TRLGSS por la LPGE de 2021 (nota 64). Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "otorgadas entre 2021 y 2023 por 52.213 millones, se fundamentan en la modificación normativa",
+      "location": "Declaración CGE 2023, p. 44 del original (página del extracto 14)"
+    },
+    {
+      "id": "transferencias-misma-finalidad-2024",
+      "value": 19888.0,
+      "unit": "millones de euros",
+      "period": "2024",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Transferencias recibidas en 2024 con idéntica finalidad, en virtud de la prórroga de la LPGE de 2023. Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "En el ejercicio 2024 la Seguridad Social, con base en la prórroga de la LPGE para 2023, también ha recibido transferencias con idéntica finalidad, por 19.888 millones",
+      "location": "Declaración CGE 2023, p. 44 del original (página del extracto 14)"
+    },
+    {
+      "id": "aportaciones-no-contributivas-2023",
+      "value": 19090.2,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Aportaciones del Estado en 2023 para la financiación de conceptos de naturaleza no contributiva, según el Tribunal (cifra que cita el texto aparte de las transferencias anteriores). Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "conceptos de naturaleza no contributiva, que para 2023, ascienden a 19.090,2 millones",
+      "location": "Declaración CGE 2023, p. 45 del original (página del extracto 15)"
+    },
+    {
+      "id": "lpge-2023-para-financiar-otros-conceptos",
+      "value": 5559.6,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Importe previsto en el artículo 12.Cuatro de la LPGE de 2023 bajo la rúbrica «Para financiar otros conceptos» (previsión de la ley, no ejecución). Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "transferencias a favor de la Seguridad Social por 5.559,6 millones de euros bajo la rúbrica Para financiar otros conceptos",
+      "location": "Declaración CGE 2023, p. 60 del original (página del extracto 19)"
+    },
+    {
+      "id": "frss-reserva-patrimonial-2023",
+      "value": 6126.4,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Saldo a 31 de diciembre de 2023 de la reserva patrimonial del Fondo de Reserva en el balance de la Tesorería General, según el Tribunal (criterio contable de balance, no el precio de adquisición de la serie del Fondo). Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "el saldo de esta reserva asciende a 6.126,4 millones de euros",
+      "location": "Declaración CGE 2023, p. 45 del original (página del extracto 15)"
+    },
+    {
+      "id": "frss-dotacion-mei-2023",
+      "value": 2728.6,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Dotación de 2023 procedente de la cotización del MEI, según el Tribunal. Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "cotización finalista del Mecanismo de Equidad Intergeneracional (MEI) fijada en el artículo 127 bis. 1 del TRLGSS, por 2.728,6 millones",
+      "location": "Declaración CGE 2023, p. 45 del original (página del extracto 15)"
+    },
+    {
+      "id": "frss-dotacion-excedentes-2023",
+      "value": 1167.6,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Dotación de 2023 procedente del 80 % del exceso de los excedentes de las mutuas por contingencias profesionales, según el Tribunal. Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "contingencias profesionales66, por 1.167,6 millones, que se integran en este Fondo",
+      "location": "Declaración CGE 2023, p. 45 del original (página del extracto 15)"
+    },
+    {
+      "id": "frss-tesoreria-cuenta-especifica-2023",
+      "value": 2711.7,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Saldo de tesorería a 31 de diciembre de 2023 en la cuenta específica del Fondo en el Banco de España, según el Tribunal. Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "el saldo de tesorería, a 31 de diciembre de 2023, existente en la cuenta específica del FRSS abierta en el Banco de España, por 2.711,7 millones",
+      "location": "Declaración CGE 2023, p. 45 del original (página del extracto 15)"
+    },
+    {
+      "id": "frss-mei-octubre-noviembre-2023",
+      "value": 510.9,
+      "unit": "millones de euros",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Ingresos del MEI de octubre y noviembre de 2023 que, según el Tribunal, no están en la cuenta específica pero sí en la reserva del balance. Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46; del original (LEEME): c32a639cd9f39539bdc752b70fae18f0b64535b19d6c400ec27159e1548648cb.",
+      "quote": "no recoge los ingresos del MEI correspondientes a los meses de octubre y noviembre de 2023 que ascienden a 510,9 millones",
+      "location": "Declaración CGE 2023, p. 45 del original (página del extracto 15)"
+    },
+    {
+      "id": "condiciones-prestamos-tc2023",
+      "value": "Todos estos préstamos se han concedido sin devengo de intereses y con cancelación en un plazo máximo de 10 años, a partir del año siguiente al de su concesión",
+      "unit": "cita literal",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Condiciones de los préstamos de 2017 a 2023 según el Tribunal de Cuentas (nota 61); fija que el plazo de cancelación empieza el año siguiente al de la concesión. Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46.",
+      "quote": "Todos estos préstamos se han concedido sin devengo de intereses y con cancelación en un plazo máximo de 10 años, a partir del año siguiente al de su concesión",
+      "location": "Declaración CGE 2023, p. 44 del original (página del extracto 14)"
+    },
+    {
+      "id": "objetivo-transferencias-tc2023",
+      "value": "La realización anual de estas transferencias a la Seguridad Social tiene por objeto, según consta en el mencionado Informe del Pacto de Toledo, la asunción progresiva por el Estado de estos costes impropios",
+      "unit": "cita literal",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Objeto de las transferencias anuales según el Tribunal de Cuentas, que cita el Informe del Pacto de Toledo. Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46.",
+      "quote": "La realización anual de estas transferencias a la Seguridad Social tiene por objeto, según consta en el mencionado Informe del Pacto de Toledo, la asunción progresiva por el Estado de estos costes impropios",
+      "location": "Declaración CGE 2023, p. 44 del original (página del extracto 14)"
+    },
+    {
+      "id": "clasificacion-transferencias-alegacion-lpge",
+      "value": "estas transferencias se otorgan para financiar gastos impropios del sistema vinculados a políticas estatales con entidad propia",
+      "unit": "cita literal",
+      "period": "2023",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Descripción del Tribunal de las transferencias del artículo 12.Cuatro de la LPGE de 2023. Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14. SHA-256 del extracto: 793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46.",
+      "quote": "estas transferencias se otorgan para financiar gastos impropios del sistema vinculados a políticas estatales con entidad propia",
+      "location": "Declaración CGE 2023, p. 61 del original (página del extracto 20)"
+    }
+  ],
+  "series": [
+    {
+      "id": "prestamos-concedidos-por-anio",
+      "title": "Préstamos del Estado a la Seguridad Social por año de concesión, 2017 a 2024 (derivado del Anexo 10)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+        "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "derivado",
+      "notes": "Derivada del Anexo 10 de la Declaración del Tribunal de Cuentas sobre la CGE de 2023: cada línea del bloque IV (préstamos de 2017 en adelante) se asigna al año anterior al de inicio de su plazo de cancelación, porque el Tribunal indica (nota 61) que el plazo máximo de diez años empieza el año siguiente al de la concesión. El Anexo 10 no da la fecha de concesión de cada línea; el año es, por tanto, inferido. El préstamo de 2024 figura como desembolsado en su totalidad en 2024 según el propio anexo. Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14.",
+      "points": [
+        {
+          "period": "2017",
+          "value": 10192.0,
+          "notes": "Líneas del Anexo 10: n.º 12; año de concesión = año de inicio del plazo de cancelación menos uno."
+        },
+        {
+          "period": "2018",
+          "value": 13830.1,
+          "notes": "Líneas del Anexo 10: n.º 13; año de concesión = año de inicio del plazo de cancelación menos uno."
+        },
+        {
+          "period": "2019",
+          "value": 13830.1,
+          "notes": "Líneas del Anexo 10: n.º 14; año de concesión = año de inicio del plazo de cancelación menos uno."
+        },
+        {
+          "period": "2020",
+          "value": 30330.1,
+          "notes": "Líneas del Anexo 10: n.º 15, n.º 16; año de concesión = año de inicio del plazo de cancelación menos uno."
+        },
+        {
+          "period": "2021",
+          "value": 13830.1,
+          "notes": "Líneas del Anexo 10: n.º 17; año de concesión = año de inicio del plazo de cancelación menos uno."
+        },
+        {
+          "period": "2022",
+          "value": 6981.6,
+          "notes": "Líneas del Anexo 10: n.º 18; año de concesión = año de inicio del plazo de cancelación menos uno."
+        },
+        {
+          "period": "2023",
+          "value": 10003.8,
+          "notes": "Líneas del Anexo 10: n.º 19; año de concesión = año de inicio del plazo de cancelación menos uno."
+        },
+        {
+          "period": "2024",
+          "value": 10003.8,
+          "notes": "Líneas del Anexo 10: n.º 20; año de concesión = año de inicio del plazo de cancelación menos uno."
+        }
+      ]
+    }
+  ]
+}

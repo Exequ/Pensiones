@@ -1,0 +1,679 @@
+{
+  "tipo": "extraccion-pdf",
+  "id": "liquidacion-ss-extraccion",
+  "title": "Liquidaciones del presupuesto de la Seguridad Social, ejercicios 2010 a 2016: extracción de los PDF con su referencia",
+  "description": "Cada cifra de las cuatro tablas de cada PDF (presupuesto de gastos, capítulo 4 de gastos, presupuesto de ingresos, capítulos 1 y 4 de ingresos), en millones de euros, con fichero, huella SHA-256, página, fila y columna. Las páginas de comparación con el ejercicio anterior se conservan porque sirven de validación. Generado por scripts/etl/ssf_liquidacion_pdf.py.",
+  "columnas": [
+    {
+      "id": "id",
+      "descripcion": "Identificador del valor: ejercicio del PDF, página, fila y columna",
+      "unidad": null
+    },
+    {
+      "id": "ejercicio_pdf",
+      "descripcion": "Ejercicio del PDF del que se extrae",
+      "unidad": null
+    },
+    {
+      "id": "periodo",
+      "descripcion": "Ejercicio al que se refiere la cifra (en las columnas «ejercicio_anterior», el anterior al del PDF)",
+      "unidad": null
+    },
+    {
+      "id": "tabla",
+      "descripcion": "gastos, gastos-cap4, ingresos o ingresos-cap1-cap4",
+      "unidad": null
+    },
+    {
+      "id": "tipo_pagina",
+      "descripcion": "liquidacion (presupuesto y ejecución del ejercicio) o comparacion (con el ejercicio anterior)",
+      "unidad": null
+    },
+    {
+      "id": "seccion",
+      "descripcion": "Epígrafe de la tabla bajo el que figura la partida",
+      "unidad": null
+    },
+    {
+      "id": "partida",
+      "descripcion": "Etiqueta literal de la partida en el PDF",
+      "unidad": null
+    },
+    {
+      "id": "columna",
+      "descripcion": "Columna del PDF",
+      "unidad": null
+    },
+    {
+      "id": "valor",
+      "descripcion": "Cifra del PDF",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "fichero",
+      "descripcion": "PDF de origen, ruta relativa al repositorio",
+      "unidad": null
+    },
+    {
+      "id": "sha256",
+      "descripcion": "Huella SHA-256 del PDF de origen",
+      "unidad": null
+    },
+    {
+      "id": "pagina",
+      "descripcion": "Página del PDF (numeración física, desde 1)",
+      "unidad": null
+    },
+    {
+      "id": "fila",
+      "descripcion": "Fila con cifras dentro de la página (desde 1)",
+      "unidad": null
+    },
+    {
+      "id": "linea",
+      "descripcion": "Línea de texto extraída del PDF, sin los espacios sobrantes",
+      "unidad": null
+    },
+    {
+      "id": "verificado",
+      "descripcion": "si: todas las sumas de la tabla de ese PDF cuadran dentro de la tolerancia; no: alguna no cuadra y la cifra no se publica",
+      "unidad": null
+    }
+  ],
+  "filas": 3574,
+  "source": {
+    "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+    "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+    "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+  },
+  "fetchedAt": "2026-11-14",
+  "confidence": "alta",
+  "naturaleza": "observado",
+  "unidad": "millones de euros",
+  "notes": "PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+  "tolerancia": "Redondeo: 0,005 millones por cada cifra que interviene en una suma, con mínimo de 0,01; las cifras de la fuente tienen dos decimales.",
+  "origenes": [
+    {
+      "fichero": "data-raw/seg-social-fin/liquidacion/2010_SISTEMA.pdf",
+      "sha256": "3e2b555d1fd1b695ab3a99c6b1dcfb7cef799aad5083f30998bb6d4db24a2da5",
+      "paginas": 10,
+      "ejercicio": 2010
+    },
+    {
+      "fichero": "data-raw/seg-social-fin/liquidacion/2011_SISTEMA.pdf",
+      "sha256": "63eb27abf638a5ba75462d32ede4125ecb798ca4d42f724f7317fcd2ea08f5d7",
+      "paginas": 10,
+      "ejercicio": 2011
+    },
+    {
+      "fichero": "data-raw/seg-social-fin/liquidacion/2012_SISTEMA.pdf",
+      "sha256": "0089c7e19fe759fac79cad63018a33099d75be95787909596395b3ac6d13a0b1",
+      "paginas": 10,
+      "ejercicio": 2012
+    },
+    {
+      "fichero": "data-raw/seg-social-fin/liquidacion/2013_SISTEMA.pdf",
+      "sha256": "cace66470eec619cd0f7c522b010030b9a6eb89a7c353b53fda5c665446358c6",
+      "paginas": 10,
+      "ejercicio": 2013
+    },
+    {
+      "fichero": "data-raw/seg-social-fin/liquidacion/2014_SISTEMA.pdf",
+      "sha256": "90789758ca810a18953409991b6457b79c21b4345522e209e901651e72e94f8f",
+      "paginas": 10,
+      "ejercicio": 2014
+    },
+    {
+      "fichero": "data-raw/seg-social-fin/liquidacion/2015_SISTEMA.pdf",
+      "sha256": "43766b9895692f9e3fc34d79c476ff15812ee2cfc4baed8d82ba45716e545277",
+      "paginas": 10,
+      "ejercicio": 2015
+    },
+    {
+      "fichero": "data-raw/seg-social-fin/liquidacion/2016_SISTEMA.pdf",
+      "sha256": "5703af87d8453ee9e565bb489fda664223b9422d1cb99d04a43858729f1a0e75",
+      "paginas": 10,
+      "ejercicio": 2016
+    }
+  ],
+  "resumenValidaciones": {
+    "comprobaciones_de_suma": 1011,
+    "sumas_incorrectas": 0,
+    "coherencia_liquidacion_comparacion": 540,
+    "coherencia_incorrecta": 0,
+    "partidas_sin_equivalente_en_la_comparacion": 30
+  },
+  "validacionesPorTabla": [
+    {
+      "ejercicio_pdf": 2010,
+      "tabla": "gastos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 33,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2010,
+      "tabla": "gastos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2010,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 62,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2010,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 12,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2010,
+      "tabla": "ingresos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2010,
+      "tabla": "ingresos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2010,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2010,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2011,
+      "tabla": "gastos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 33,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2011,
+      "tabla": "gastos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2011,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 61,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2011,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 12,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2011,
+      "tabla": "ingresos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2011,
+      "tabla": "ingresos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2011,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2011,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2012,
+      "tabla": "gastos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 33,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2012,
+      "tabla": "gastos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2012,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 61,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2012,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 12,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2012,
+      "tabla": "ingresos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2012,
+      "tabla": "ingresos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2012,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2012,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2013,
+      "tabla": "gastos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 33,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2013,
+      "tabla": "gastos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2013,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 61,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2013,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 12,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2013,
+      "tabla": "ingresos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2013,
+      "tabla": "ingresos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2013,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2013,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2014,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2014,
+      "tabla": "gastos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 33,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2014,
+      "tabla": "gastos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2014,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 61,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2014,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 12,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2014,
+      "tabla": "ingresos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2014,
+      "tabla": "ingresos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2014,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2015,
+      "tabla": "gastos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 33,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2015,
+      "tabla": "gastos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2015,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 62,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2015,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 12,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2015,
+      "tabla": "ingresos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2015,
+      "tabla": "ingresos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2015,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2015,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2016,
+      "tabla": "gastos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 33,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2016,
+      "tabla": "gastos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2016,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 62,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2016,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 12,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2016,
+      "tabla": "ingresos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2016,
+      "tabla": "ingresos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2016,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2016,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    }
+  ],
+  "comprobacionesEspecificas": [
+    {
+      "id": "reclasificacion-complemento-a-minimos-2014",
+      "descripcion": "Suma de pensiones de 2014 en el PDF de 2014 = suma de pensiones de 2014 en el PDF de 2015 + complemento a mínimos de 2014 en el PDF de 2015",
+      "esperado": 112170.4,
+      "obtenido": 112170.4,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    }
+  ],
+  "resumenContrasteEntrePdf": {
+    "cifras_contrastadas": 461,
+    "coinciden": 451,
+    "difieren": 10,
+    "sin_equivalente": 33
+  },
+  "diferenciasEntrePdf": [
+    {
+      "ejercicio": 2014,
+      "tabla": "gastos-cap4",
+      "partida": "Invalidez",
+      "valor_pdf_propio": 11958.25,
+      "valor_pdf_siguiente": 11717.2,
+      "diferencia": -241.05,
+      "pdf_propio": 2014,
+      "paginas_propias": [4, 5],
+      "pdf_siguiente": 2015,
+      "paginas_siguiente": [5, 6]
+    },
+    {
+      "ejercicio": 2014,
+      "tabla": "gastos-cap4",
+      "partida": "Jubilación",
+      "valor_pdf_propio": 77767.05,
+      "valor_pdf_siguiente": 73555.0,
+      "diferencia": -4212.05,
+      "pdf_propio": 2014,
+      "paginas_propias": [4, 5],
+      "pdf_siguiente": 2015,
+      "paginas_siguiente": [5, 6]
+    },
+    {
+      "ejercicio": 2014,
+      "tabla": "gastos-cap4",
+      "partida": "Viudedad",
+      "valor_pdf_propio": 20483.52,
+      "valor_pdf_siguiente": 17751.17,
+      "diferencia": -2732.35,
+      "pdf_propio": 2014,
+      "paginas_propias": [4, 5],
+      "pdf_siguiente": 2015,
+      "paginas_siguiente": [5, 6]
+    },
+    {
+      "ejercicio": 2014,
+      "tabla": "gastos-cap4",
+      "partida": "Orfandad",
+      "valor_pdf_propio": 1687.49,
+      "valor_pdf_siguiente": 1422.89,
+      "diferencia": -264.6,
+      "pdf_propio": 2014,
+      "paginas_propias": [4, 5],
+      "pdf_siguiente": 2015,
+      "paginas_siguiente": [5, 6]
+    },
+    {
+      "ejercicio": 2014,
+      "tabla": "gastos-cap4",
+      "partida": "En favor de familiares",
+      "valor_pdf_propio": 274.09,
+      "valor_pdf_siguiente": 242.1,
+      "diferencia": -31.99,
+      "pdf_propio": 2014,
+      "paginas_propias": [4, 5],
+      "pdf_siguiente": 2015,
+      "paginas_siguiente": [5, 6]
+    },
+    {
+      "ejercicio": 2014,
+      "tabla": "gastos-cap4",
+      "partida": "SUMA PENSIONES",
+      "valor_pdf_propio": 112170.4,
+      "valor_pdf_siguiente": 104688.36,
+      "diferencia": -7482.04,
+      "pdf_propio": 2014,
+      "paginas_propias": [4, 5],
+      "pdf_siguiente": 2015,
+      "paginas_siguiente": [5, 6]
+    },
+    {
+      "ejercicio": 2014,
+      "tabla": "gastos-cap4",
+      "partida": "TOTAL PRESTACIONES CONTRIBUTIVAS",
+      "valor_pdf_propio": 120237.88,
+      "valor_pdf_siguiente": 112755.84,
+      "diferencia": -7482.04,
+      "pdf_propio": 2014,
+      "paginas_propias": [4, 5],
+      "pdf_siguiente": 2015,
+      "paginas_siguiente": [5, 6]
+    },
+    {
+      "ejercicio": 2014,
+      "tabla": "gastos-cap4",
+      "partida": "SUMA PREST. NO CONTRIBUTIVAS",
+      "valor_pdf_propio": 4069.73,
+      "valor_pdf_siguiente": 11551.77,
+      "diferencia": 7482.04,
+      "pdf_propio": 2014,
+      "paginas_propias": [4, 5],
+      "pdf_siguiente": 2015,
+      "paginas_siguiente": [5, 6]
+    },
+    {
+      "ejercicio": 2014,
+      "tabla": "ingresos-cap1-cap4",
+      "partida": "De la Seguridad Social",
+      "valor_pdf_propio": 2544.18,
+      "valor_pdf_siguiente": 2639.75,
+      "diferencia": 95.57,
+      "pdf_propio": 2014,
+      "paginas_propias": [10],
+      "pdf_siguiente": 2015,
+      "paginas_siguiente": [10]
+    },
+    {
+      "ejercicio": 2014,
+      "tabla": "ingresos-cap1-cap4",
+      "partida": "De Comunidades Autónomas",
+      "valor_pdf_propio": 96.45,
+      "valor_pdf_siguiente": 0.88,
+      "diferencia": -95.57,
+      "pdf_propio": 2014,
+      "paginas_propias": [10],
+      "pdf_siguiente": 2015,
+      "paginas_siguiente": [10]
+    }
+  ]
+}
