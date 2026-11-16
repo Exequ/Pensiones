@@ -1016,3 +1016,10 @@ Inventario y flujos de preguntas: `docs/INVENTARIO_3C2.md`. Estado: `docs/ESTADO
 ### Tamaño
 
 - Chunk del simulador (`npm run build`): 2.046,08 kB (201,25 kB comprimido) frente a 1.978,19 kB (187,22 kB) en `main` (`565df58`): +67,89 kB (+14,03 kB). El fichero de datos `supervivencia-reglas` (698,54 kB, 42,33 kB comprimido) ya era un chunk aparte. Reducirlo es la 3-D.
+
+## Cierre de M1 y estados de fase
+
+- **M1 sin cambios en la mortalidad**: la sección 7 de `docs/modelos/M1_descripcion.md` recoge que M1 usa como probabilidad de cada edad la media de qx y qx+1 (convención de edades, «Lexis») desde la corrección de la fase 1B-4. La propuesta de la tanda 3, parte C (n.º 1, 3 y 4), pedía sustituir por esa media un factor constante de 1,07 a 1,10 que el modelo no usa: no hay nada que cambiar en el código ni en la web. Se actualizan las notas de `docs/DISCREPANCIAS.md` (convención de edades en la mortalidad de M1) y la formulación de `docs/ESTADO_AJUSTES_ACTUARIALES_3.md` para que no queden como pendientes ni den a entender que el modelo usa ese factor.
+- **Factor de 1,04 a 1,08 de la triangulación**: es un hallazgo sobre las defunciones registradas frente a población × qx, y consta en `data/demografia/triangulacion-factor-qx.json` y en el apartado «Fase 1B-4» de este documento; no es un parámetro de M1. Que el chat de modelos lo indicara así no se ha tomado de él: se ha comprobado en esos datos.
+- **Variantes de mortalidad**: el chat de modelos comunicó una comparación de variantes, pero no consta en `docs/modelos/M1_descripcion.md`; no se cita aquí. Queda anotado en `docs/PENDIENTE_DATOS.md` hasta que Sergio la incorpore a ese documento.
+- **Textos de la web y `docs/claims-web.json`**: se revisaron `src/`, `docs/` y `data/`: ningún texto de la web afirma que M1 use un factor constante ni qx sin la media, y `claims-web.json` no contiene afirmaciones sobre la mortalidad de M1, así que no se modifica.
