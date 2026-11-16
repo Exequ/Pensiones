@@ -1,0 +1,850 @@
+{
+  "tipo": "datos",
+  "id": "liquidacion-ss-series",
+  "title": "Liquidaciones del presupuesto de la Seguridad Social 2010-2016: series anuales verificadas",
+  "description": "Series anuales (millones de euros, derechos u obligaciones reconocidos) de las partidas de las liquidaciones de 2010 a 2016 que superan las validaciones de suma y de coherencia entre páginas. La referencia de cada punto (PDF, página, tabla, fila) está en su nota y la huella SHA-256 de cada PDF, en liquidacion-ss-extraccion.json. Son series de la liquidación, no de la ejecución trimestral de 2017 en adelante: no se unen en una sola línea.",
+  "series": [
+    {
+      "id": "ingresos-transferencias-corrientes-del-estado",
+      "title": "Ingresos por transferencias corrientes «Del Estado» (derechos reconocidos netos)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 8623.35,
+          "notes": "2010_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 11 («Del Estado»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2011",
+          "value": 8294.68,
+          "notes": "2011_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 11 («Del Estado»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2012",
+          "value": 9142.69,
+          "notes": "2012_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 11 («Del Estado»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2013",
+          "value": 15691.92,
+          "notes": "2013_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 11 («Del Estado»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2014",
+          "value": 13094.13,
+          "notes": "2014_SISTEMA.pdf, p. 10, tabla «ingresos-cap1-cap4», fila 11 («Del Estado»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2015",
+          "value": 13089.1,
+          "notes": "2015_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 11 («Del Estado»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2016",
+          "value": 12934.69,
+          "notes": "2016_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 11 («Del Estado»), columna «derechos_reconocidos_netos»"
+        }
+      ]
+    },
+    {
+      "id": "ingresos-transferencias-corrientes-organismos-autonomos",
+      "title": "Ingresos por transferencias corrientes «De Organismos Autónomos administrativos» (derechos reconocidos netos)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 2.3,
+          "notes": "2010_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 12 («De Organismos Autónomos admivos.»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2011",
+          "value": 2.04,
+          "notes": "2011_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 12 («De Organismos Autónomos admivos.»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2012",
+          "value": 1.6,
+          "notes": "2012_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 12 («De Organismos Autónomos admivos.»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2013",
+          "value": 1.62,
+          "notes": "2013_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 12 («De Organismos Autónomos admivos.»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2014",
+          "value": 0.49,
+          "notes": "2014_SISTEMA.pdf, p. 10, tabla «ingresos-cap1-cap4», fila 12 («De Organismos Autónomos admivos.»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2015",
+          "value": 1.55,
+          "notes": "2015_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 12 («De Organismos Autónomos admivos.»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2016",
+          "value": 1.14,
+          "notes": "2016_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 12 («De Organismos Autónomos admivos.»), columna «derechos_reconocidos_netos»"
+        }
+      ]
+    },
+    {
+      "id": "ingresos-transferencias-corrientes-de-la-seguridad-social",
+      "title": "Ingresos por transferencias corrientes «De la Seguridad Social» (derechos reconocidos netos)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 3334.3,
+          "notes": "2010_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 13 («De la Seguridad Social»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2011",
+          "value": 3165.8,
+          "notes": "2011_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 13 («De la Seguridad Social»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2012",
+          "value": 2843.17,
+          "notes": "2012_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 13 («De la Seguridad Social»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2013",
+          "value": 2644.74,
+          "notes": "2013_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 13 («De la Seguridad Social»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2014",
+          "value": 2544.18,
+          "notes": "2014_SISTEMA.pdf, p. 10, tabla «ingresos-cap1-cap4», fila 13 («De la Seguridad Social»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2015",
+          "value": 2850.95,
+          "notes": "2015_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 13 («De la Seguridad Social»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2016",
+          "value": 3079.78,
+          "notes": "2016_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 13 («De la Seguridad Social»), columna «derechos_reconocidos_netos»"
+        }
+      ]
+    },
+    {
+      "id": "ingresos-transferencias-corrientes-total",
+      "title": "Total de ingresos por transferencias corrientes, de cualquier origen (derechos reconocidos netos)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 11999.29,
+          "notes": "2010_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 18 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2011",
+          "value": 11503.45,
+          "notes": "2011_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 18 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2012",
+          "value": 12061.56,
+          "notes": "2012_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 18 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2013",
+          "value": 18436.83,
+          "notes": "2013_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 18 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2014",
+          "value": 15769.79,
+          "notes": "2014_SISTEMA.pdf, p. 10, tabla «ingresos-cap1-cap4», fila 18 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2015",
+          "value": 15985.78,
+          "notes": "2015_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 18 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2016",
+          "value": 16056.48,
+          "notes": "2016_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 18 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «derechos_reconocidos_netos»"
+        }
+      ]
+    },
+    {
+      "id": "ingresos-cotizaciones-sociales",
+      "title": "Cotizaciones sociales (derechos reconocidos netos)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 105491.02,
+          "notes": "2010_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 10 («TOTAL COTIZACIONES SOCIALES»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2011",
+          "value": 105311.66,
+          "notes": "2011_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 10 («TOTAL COTIZACIONES SOCIALES»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2012",
+          "value": 101059.18,
+          "notes": "2012_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 10 («TOTAL COTIZACIONES SOCIALES»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2013",
+          "value": 98210.29,
+          "notes": "2013_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 10 («TOTAL COTIZACIONES SOCIALES»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2014",
+          "value": 99198.47,
+          "notes": "2014_SISTEMA.pdf, p. 10, tabla «ingresos-cap1-cap4», fila 10 («TOTAL COTIZACIONES SOCIALES»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2015",
+          "value": 100568.79,
+          "notes": "2015_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 10 («TOTAL COTIZACIONES SOCIALES»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2016",
+          "value": 103639.78,
+          "notes": "2016_SISTEMA.pdf, p. 9, tabla «ingresos-cap1-cap4», fila 10 («TOTAL COTIZACIONES SOCIALES»), columna «derechos_reconocidos_netos»"
+        }
+      ]
+    },
+    {
+      "id": "ingresos-transferencias-capital",
+      "title": "Ingresos por transferencias de capital, de cualquier origen (derechos reconocidos netos)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 756.55,
+          "notes": "2010_SISTEMA.pdf, p. 7, tabla «ingresos», fila 7 («7. Transferencias de capital»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2011",
+          "value": 508.74,
+          "notes": "2011_SISTEMA.pdf, p. 7, tabla «ingresos», fila 7 («7. Transferencias de capital»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2012",
+          "value": 545.01,
+          "notes": "2012_SISTEMA.pdf, p. 7, tabla «ingresos», fila 7 («7. Transferencias de capital»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2013",
+          "value": 566.51,
+          "notes": "2013_SISTEMA.pdf, p. 7, tabla «ingresos», fila 7 («7. Transferencias de capital»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2014",
+          "value": 644.54,
+          "notes": "2014_SISTEMA.pdf, p. 8, tabla «ingresos», fila 7 («7. Transferencias de capital»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2015",
+          "value": 3884.21,
+          "notes": "2015_SISTEMA.pdf, p. 7, tabla «ingresos», fila 7 («7. Transferencias de capital»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2016",
+          "value": 923.0,
+          "notes": "2016_SISTEMA.pdf, p. 7, tabla «ingresos», fila 7 («7. Transferencias de capital»), columna «derechos_reconocidos_netos»"
+        }
+      ]
+    },
+    {
+      "id": "ingresos-activos-financieros",
+      "title": "Ingresos por activos financieros, capítulo 8 (derechos reconocidos netos)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 2934.18,
+          "notes": "2010_SISTEMA.pdf, p. 7, tabla «ingresos», fila 10 («8. Activos financieros»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2011",
+          "value": 2515.34,
+          "notes": "2011_SISTEMA.pdf, p. 7, tabla «ingresos», fila 10 («8. Activos financieros»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2012",
+          "value": 6939.57,
+          "notes": "2012_SISTEMA.pdf, p. 7, tabla «ingresos», fila 10 («8. Activos financieros»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2013",
+          "value": 8824.2,
+          "notes": "2013_SISTEMA.pdf, p. 7, tabla «ingresos», fila 10 («8. Activos financieros»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2014",
+          "value": 13149.43,
+          "notes": "2014_SISTEMA.pdf, p. 8, tabla «ingresos», fila 10 («8. Activos financieros»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2015",
+          "value": 14186.95,
+          "notes": "2015_SISTEMA.pdf, p. 7, tabla «ingresos», fila 10 («8. Activos financieros»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2016",
+          "value": 19286.26,
+          "notes": "2016_SISTEMA.pdf, p. 7, tabla «ingresos», fila 10 («8. Activos financieros»), columna «derechos_reconocidos_netos»"
+        }
+      ]
+    },
+    {
+      "id": "ingresos-pasivos-financieros",
+      "title": "Ingresos por pasivos financieros, capítulo 9 (derechos reconocidos netos)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 0.0,
+          "notes": "2010_SISTEMA.pdf, p. 7, tabla «ingresos», fila 11 («9. Pasivos financieros»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2011",
+          "value": 0.0,
+          "notes": "2011_SISTEMA.pdf, p. 7, tabla «ingresos», fila 11 («9. Pasivos financieros»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2012",
+          "value": 1134.7,
+          "notes": "2012_SISTEMA.pdf, p. 7, tabla «ingresos», fila 11 («9. Pasivos financieros»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2013",
+          "value": 498.02,
+          "notes": "2013_SISTEMA.pdf, p. 7, tabla «ingresos», fila 11 («9. Pasivos financieros»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2014",
+          "value": 0.0,
+          "notes": "2014_SISTEMA.pdf, p. 8, tabla «ingresos», fila 11 («9. Pasivos financieros»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2015",
+          "value": 0.0,
+          "notes": "2015_SISTEMA.pdf, p. 7, tabla «ingresos», fila 11 («9. Pasivos financieros»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2016",
+          "value": 0.0,
+          "notes": "2016_SISTEMA.pdf, p. 7, tabla «ingresos», fila 11 («9. Pasivos financieros»), columna «derechos_reconocidos_netos»"
+        }
+      ]
+    },
+    {
+      "id": "ingresos-total",
+      "title": "Total de ingresos del sistema (derechos reconocidos netos)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 125276.37,
+          "notes": "2010_SISTEMA.pdf, p. 7, tabla «ingresos», fila 13 («TOTAL INGRESOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2011",
+          "value": 124173.56,
+          "notes": "2011_SISTEMA.pdf, p. 7, tabla «ingresos», fila 13 («TOTAL INGRESOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2012",
+          "value": 126572.65,
+          "notes": "2012_SISTEMA.pdf, p. 7, tabla «ingresos», fila 13 («TOTAL INGRESOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2013",
+          "value": 130752.88,
+          "notes": "2013_SISTEMA.pdf, p. 7, tabla «ingresos», fila 13 («TOTAL INGRESOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2014",
+          "value": 132645.65,
+          "notes": "2014_SISTEMA.pdf, p. 8, tabla «ingresos», fila 13 («TOTAL INGRESOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2015",
+          "value": 138085.94,
+          "notes": "2015_SISTEMA.pdf, p. 7, tabla «ingresos», fila 13 («TOTAL INGRESOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «derechos_reconocidos_netos»"
+        },
+        {
+          "period": "2016",
+          "value": 142682.73,
+          "notes": "2016_SISTEMA.pdf, p. 7, tabla «ingresos», fila 13 («TOTAL INGRESOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «derechos_reconocidos_netos»"
+        }
+      ]
+    },
+    {
+      "id": "gastos-activos-financieros",
+      "title": "Gastos en activos financieros, capítulo 8 (obligaciones reconocidas)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 11428.62,
+          "notes": "2010_SISTEMA.pdf, p. 1, tabla «gastos», fila 10 («8. Activos financieros»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2011",
+          "value": 4732.88,
+          "notes": "2011_SISTEMA.pdf, p. 1, tabla «gastos», fila 10 («8. Activos financieros»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2012",
+          "value": 1366.93,
+          "notes": "2012_SISTEMA.pdf, p. 1, tabla «gastos», fila 10 («8. Activos financieros»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2013",
+          "value": 1146.14,
+          "notes": "2013_SISTEMA.pdf, p. 1, tabla «gastos», fila 10 («8. Activos financieros»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2014",
+          "value": 757.99,
+          "notes": "2014_SISTEMA.pdf, p. 2, tabla «gastos», fila 10 («8. Activos financieros»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2015",
+          "value": 230.24,
+          "notes": "2015_SISTEMA.pdf, p. 1, tabla «gastos», fila 10 («8. Activos financieros»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2016",
+          "value": 172.73,
+          "notes": "2016_SISTEMA.pdf, p. 1, tabla «gastos», fila 10 («8. Activos financieros»), columna «obligaciones_reconocidas»"
+        }
+      ]
+    },
+    {
+      "id": "gastos-pasivos-financieros",
+      "title": "Gastos en pasivos financieros, capítulo 9 (obligaciones reconocidas)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 0.02,
+          "notes": "2010_SISTEMA.pdf, p. 1, tabla «gastos», fila 11 («9. Pasivos financieros»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2011",
+          "value": 0.02,
+          "notes": "2011_SISTEMA.pdf, p. 1, tabla «gastos», fila 11 («9. Pasivos financieros»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2012",
+          "value": 0.03,
+          "notes": "2012_SISTEMA.pdf, p. 1, tabla «gastos», fila 11 («9. Pasivos financieros»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2013",
+          "value": 0.03,
+          "notes": "2013_SISTEMA.pdf, p. 1, tabla «gastos», fila 11 («9. Pasivos financieros»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2014",
+          "value": 0.02,
+          "notes": "2014_SISTEMA.pdf, p. 2, tabla «gastos», fila 11 («9. Pasivos financieros»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2015",
+          "value": 0.26,
+          "notes": "2015_SISTEMA.pdf, p. 1, tabla «gastos», fila 11 («9. Pasivos financieros»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2016",
+          "value": 0.39,
+          "notes": "2016_SISTEMA.pdf, p. 1, tabla «gastos», fila 11 («9. Pasivos financieros»), columna «obligaciones_reconocidas»"
+        }
+      ]
+    },
+    {
+      "id": "gastos-total",
+      "title": "Total de gastos del sistema (obligaciones reconocidas)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 131327.36,
+          "notes": "2010_SISTEMA.pdf, p. 1, tabla «gastos», fila 13 («TOTAL GASTOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2011",
+          "value": 126878.39,
+          "notes": "2011_SISTEMA.pdf, p. 1, tabla «gastos», fila 13 («TOTAL GASTOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2012",
+          "value": 125678.13,
+          "notes": "2012_SISTEMA.pdf, p. 1, tabla «gastos», fila 13 («TOTAL GASTOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2013",
+          "value": 131302.19,
+          "notes": "2013_SISTEMA.pdf, p. 1, tabla «gastos», fila 13 («TOTAL GASTOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2014",
+          "value": 134016.54,
+          "notes": "2014_SISTEMA.pdf, p. 2, tabla «gastos», fila 13 («TOTAL GASTOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2015",
+          "value": 140659.64,
+          "notes": "2015_SISTEMA.pdf, p. 1, tabla «gastos», fila 13 («TOTAL GASTOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2016",
+          "value": 142105.56,
+          "notes": "2016_SISTEMA.pdf, p. 1, tabla «gastos», fila 13 («TOTAL GASTOS SISTEMA DE LA SEGURIDAD SOCIAL»), columna «obligaciones_reconocidas»"
+        }
+      ]
+    },
+    {
+      "id": "gastos-suma-pensiones-contributivas",
+      "title": "Pensiones contributivas, suma de las cinco clases (obligaciones reconocidas)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 95701.79,
+          "notes": "2010_SISTEMA.pdf, p. 3, tabla «gastos-cap4», fila 6 («SUMA PENSIONES»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2011",
+          "value": 99533.71,
+          "notes": "2011_SISTEMA.pdf, p. 3, tabla «gastos-cap4», fila 6 («SUMA PENSIONES»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2012",
+          "value": 103503.79,
+          "notes": "2012_SISTEMA.pdf, p. 3, tabla «gastos-cap4», fila 6 («SUMA PENSIONES»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2013",
+          "value": 108564.3,
+          "notes": "2013_SISTEMA.pdf, p. 3, tabla «gastos-cap4», fila 6 («SUMA PENSIONES»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2014",
+          "value": 112170.4,
+          "notes": "2014_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 6 («SUMA PENSIONES»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2015",
+          "value": 108213.94,
+          "notes": "2015_SISTEMA.pdf, p. 3, tabla «gastos-cap4», fila 6 («SUMA PENSIONES»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2016",
+          "value": 111915.85,
+          "notes": "2016_SISTEMA.pdf, p. 3, tabla «gastos-cap4», fila 6 («SUMA PENSIONES»), columna «obligaciones_reconocidas»"
+        }
+      ]
+    },
+    {
+      "id": "gastos-complemento-a-minimos",
+      "title": "Complemento a mínimos, dentro de las prestaciones no contributivas (obligaciones reconocidas)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2015",
+          "value": 7301.56,
+          "notes": "2015_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 3 («Complemento a mínimos»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2016",
+          "value": 7154.0,
+          "notes": "2016_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 3 («Complemento a mínimos»), columna «obligaciones_reconocidas»"
+        }
+      ]
+    },
+    {
+      "id": "gastos-prestaciones-no-contributivas",
+      "title": "Prestaciones no contributivas, suma (obligaciones reconocidas)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 3640.91,
+          "notes": "2010_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 12 («SUMA PREST. NO CONTRIBUTIVAS»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2011",
+          "value": 3439.9,
+          "notes": "2011_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 12 («SUMA PREST. NO CONTRIBUTIVAS»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2012",
+          "value": 3188.3,
+          "notes": "2012_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 12 («SUMA PREST. NO CONTRIBUTIVAS»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2013",
+          "value": 4995.55,
+          "notes": "2013_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 12 («SUMA PREST. NO CONTRIBUTIVAS»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2014",
+          "value": 4069.73,
+          "notes": "2014_SISTEMA.pdf, p. 5, tabla «gastos-cap4», fila 12 («SUMA PREST. NO CONTRIBUTIVAS»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2015",
+          "value": 11103.81,
+          "notes": "2015_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 13 («SUMA PREST. NO CONTRIBUTIVAS»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2016",
+          "value": 11010.74,
+          "notes": "2016_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 13 («SUMA PREST. NO CONTRIBUTIVAS»), columna «obligaciones_reconocidas»"
+        }
+      ]
+    },
+    {
+      "id": "gastos-transferencias-corrientes-total",
+      "title": "Total de gastos en transferencias corrientes, capítulo 4 (obligaciones reconocidas)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "alta",
+      "naturaleza": "observado",
+      "notes": "Cifra de la liquidación del propio ejercicio (columna de ejecución), no la que reaparece como comparativa en el PDF siguiente. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 114752.58,
+          "notes": "2010_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 21 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2011",
+          "value": 117480.29,
+          "notes": "2011_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 21 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2012",
+          "value": 119769.82,
+          "notes": "2012_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 21 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2013",
+          "value": 125734.61,
+          "notes": "2013_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 21 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2014",
+          "value": 128807.82,
+          "notes": "2014_SISTEMA.pdf, p. 5, tabla «gastos-cap4», fila 21 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2015",
+          "value": 132772.56,
+          "notes": "2015_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 22 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «obligaciones_reconocidas»"
+        },
+        {
+          "period": "2016",
+          "value": 137259.36,
+          "notes": "2016_SISTEMA.pdf, p. 4, tabla «gastos-cap4», fila 22 («TOTAL TRANSFERENCIAS CORRIENTES»), columna «obligaciones_reconocidas»"
+        }
+      ]
+    },
+    {
+      "id": "gastos-pensiones-con-complemento-a-minimos",
+      "title": "Pensiones contributivas con el complemento a mínimos, obligaciones reconocidas (derivado)",
+      "unit": "millones de euros",
+      "source": {
+        "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+        "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+      },
+      "fetchedAt": "2026-11-14",
+      "confidence": "media",
+      "naturaleza": "derivado",
+      "notes": "Misma definición que la referencia de «meses de gasto» de la ejecución (suma de pensiones más complemento a mínimos). Hasta 2014 el complemento está dentro de las cinco clases de cada PDF; desde 2015 figura aparte y se suma. PDF aportado por el autor el 2026-11-14 (commit c7320a9); no consta en ningún LEEME la URL exacta del fichero ni su fecha de descarga, por lo que fetchedAt es la fecha de incorporación al repositorio y la URL es la de la página de listado de liquidaciones.",
+      "points": [
+        {
+          "period": "2010",
+          "value": 95701.79,
+          "notes": "Suma de las cinco clases de pensión de ese PDF, que incluyen el complemento a mínimos (comprobado por la reclasificación de 2014)."
+        },
+        {
+          "period": "2011",
+          "value": 99533.71,
+          "notes": "Suma de las cinco clases de pensión de ese PDF, que incluyen el complemento a mínimos (comprobado por la reclasificación de 2014)."
+        },
+        {
+          "period": "2012",
+          "value": 103503.79,
+          "notes": "Suma de las cinco clases de pensión de ese PDF, que incluyen el complemento a mínimos (comprobado por la reclasificación de 2014)."
+        },
+        {
+          "period": "2013",
+          "value": 108564.3,
+          "notes": "Suma de las cinco clases de pensión de ese PDF, que incluyen el complemento a mínimos (comprobado por la reclasificación de 2014)."
+        },
+        {
+          "period": "2014",
+          "value": 112170.4,
+          "notes": "Suma de las cinco clases de pensión de ese PDF, que incluyen el complemento a mínimos (comprobado por la reclasificación de 2014)."
+        },
+        {
+          "period": "2015",
+          "value": 115515.5,
+          "notes": "Suma de las cinco clases de pensión más el complemento a mínimos, que desde este PDF figura aparte en las prestaciones no contributivas."
+        },
+        {
+          "period": "2016",
+          "value": 119069.85,
+          "notes": "Suma de las cinco clases de pensión más el complemento a mínimos, que desde este PDF figura aparte en las prestaciones no contributivas."
+        }
+      ]
+    }
+  ]
+}

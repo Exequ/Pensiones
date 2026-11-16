@@ -9,7 +9,12 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import ts from 'typescript';
 import { describe, expect, it } from 'vitest';
-import { ArchivoDatos, ArchivoTabla, ArchivoCronologia } from '../src/engine/esquema-datos.ts';
+import {
+  ArchivoCronologia,
+  ArchivoDatos,
+  ArchivoExtraccionPdf,
+  ArchivoTabla,
+} from '../src/engine/esquema-datos.ts';
 import {
   FICHEROS_COTIZANTES,
   FICHEROS_FINANCIACION,
@@ -33,6 +38,13 @@ describe('procedencia de los ficheros que usan las páginas', () => {
       expect(t.fetchedAt).toBeTruthy();
       expect(confianzas).toContain(t.confidence);
       // La tabla va acompañada de su CSV hermano.
+      expect(existsSync(path.join(RAIZ, ruta.replace(/\.json$/, '.csv')))).toBe(true);
+    } else if (tipo === 'extraccion-pdf') {
+      const t = ArchivoExtraccionPdf.parse(json);
+      expect(t.source.url).toMatch(/^https?:\/\//);
+      expect(t.fetchedAt).toBeTruthy();
+      expect(confianzas).toContain(t.confidence);
+      expect(t.naturaleza).toBe('observado');
       expect(existsSync(path.join(RAIZ, ruta.replace(/\.json$/, '.csv')))).toBe(true);
     } else if (tipo === 'cronologia') {
       const c = ArchivoCronologia.parse(json);

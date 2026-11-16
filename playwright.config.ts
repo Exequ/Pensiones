@@ -4,6 +4,9 @@ const PUERTO = 4173;
 
 export default defineConfig({
   testDir: 'e2e',
+  // Las pruebas de axe con las tablas abiertas tardan 15-35 s con dos procesos en paralelo: margen amplio
+  // (el límite por defecto era de 30 s) para que no dependan de plazos ajustados.
+  timeout: 90_000,
   fullyParallel: true,
   forbidOnly: Boolean(process.env.CI),
   retries: process.env.CI ? 1 : 0,

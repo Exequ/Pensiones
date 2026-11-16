@@ -11,7 +11,11 @@ import meiDestinoJson from '../../../data/parametros/mei-destino.json';
 import prestamosLeyesJson from '../../../data/parametros/prestamos-estado-seguridad-social.json';
 import prestamosPlazoJson from '../../../data/parametros/prestamos-plazo-ampliado-2026.json';
 import deudaJson from '../../../data/sistema/deuda-pde-seguridad-social.json';
+import liquidacionJson from '../../../data/sistema/liquidacion-ss-series.json';
 import tribunalJson from '../../../data/sistema/prestamos-transferencias-tribunal-cuentas.json';
+import anexoPrestamosCsv from '../../../data/sistema/tribunal-cuentas-cge2023-prestamos.csv?raw';
+import anexoPrestamosJson from '../../../data/sistema/tribunal-cuentas-cge2023-prestamos.json';
+import tribunal2023Json from '../../../data/sistema/tribunal-cuentas-cge2023-ss.json';
 import fondoCsv from '../../../data/sistema/fondo-reserva-anual.csv?raw';
 import fondoTablaJson from '../../../data/sistema/fondo-reserva-anual.json';
 import fondoSeriesJson from '../../../data/sistema/fondo-reserva-series.json';
@@ -19,8 +23,9 @@ import pensionMediaJson from '../../../data/sistema/pensiones-vigor-pension-medi
 import numeroPensionesJson from '../../../data/sistema/pensiones-vigor-numero.json';
 import {
   ArchivoCronologia,
+  ArchivoExtraccionPdf,
+  Dato,
   type ArchivoDatos,
-  type Dato,
   type DatoConId,
   type Norma,
 } from '../../engine/esquema-datos';
@@ -28,9 +33,11 @@ import {
   datoDeArchivo,
   datoDeSerie,
   encontrarSerie,
+  extremos,
   filasCsv,
   numeroCsv,
   puntosDeDatos,
+  suma,
   type PuntoAnual,
 } from '../../engine/series-historicas';
 import {
@@ -39,6 +46,7 @@ import {
   type ClasePension,
   type TablaEjecucion,
 } from '../../engine/sistema-historico';
+import { empalmarConRuptura, type SerieEmpalmada } from '../../engine/series-empalme';
 import {
   acumuladoTrimestral,
   flujoDelTrimestre,
@@ -96,6 +104,31 @@ export interface DatosTransferencias {
   readonly datoTrimestral: Dato;
 }
 
+/** Series de las liquidaciones del presupuesto de la Seguridad Social (PDF de 2010 a 2016). */
+export interface DatosLiquidacion {
+  /** Transferencias corrientes «Del Estado» más «De Organismos Autónomos administrativos», M€. */
+  readonly delEstado: SerieDeEjecucion;
+  /** Total de transferencias corrientes recibidas, de cualquier origen, M€. */
+  readonly totalCorrientes: SerieCargada;
+  /** Pasivos financieros (capítulo 9 de ingresos), M€. */
+  readonly pasivosFinancieros: SerieCargada;
+  /** Pensiones contributivas con el complemento a mínimos (obligaciones reconocidas, derivado), M€. */
+  readonly gastoPensiones: SerieCargada;
+  /** Primer ejercicio en que el complemento a mínimos figura aparte de las cinco clases de pensión. */
+  readonly primerAnioComplementoAparte: number;
+}
+
+/** Fila del Anexo 10 de la Declaración del Tribunal de Cuentas sobre la CGE de 2023. */
+export interface FilaPrestamo {
+  readonly id: string;
+  readonly tipo: 'prestamo' | 'subtotal' | 'total';
+  readonly bloque: string;
+  readonly norma: string;
+  readonly importe: number;
+  readonly vencimiento: string;
+  readonly anioConcesion: number | null;
+}
+
 export interface DatosDeuda {
   readonly finAno: SerieCargada;
   readonly trimestral: {
@@ -131,9 +164,29 @@ export interface DatosHucha {
   /** Complemento a mínimos de las pensiones contributivas (fila propia de la ejecución). */
   readonly complementoMinimos: { readonly puntos: readonly PuntoAnual[]; readonly dato: Dato };
   readonly transferencias: DatosTransferencias;
+  /** Liquidaciones de 2010 a 2016 (PDF de la Seguridad Social). */
+  readonly liquidacion: DatosLiquidacion;
+  /**
+   * Transferencias anuales del Estado empalmadas con ruptura de serie: liquidación (2010 a 2016) y
+   * ejecución (desde 2017). Son dos documentos con rótulos distintos y no se unen en una sola línea.
+   */
+  readonly transferenciasAnuales: SerieEmpalmada;
+  /** Pasivos financieros de ingresos empalmados con ruptura de serie (liquidación y ejecución). */
+  readonly pasivosFinancierosAnuales: SerieEmpalmada;
   readonly deuda: DatosDeuda;
   /** Cifras y citas del Tribunal de Cuentas (BOE-A-2025-25090), por identificador. */
   readonly tribunal: Readonly<Record<string, DatoCargado>>;
+  /** Cifras y citas de la Declaración del Tribunal de Cuentas sobre la CGE de 2023, por identificador. */
+  readonly tribunal2023: Readonly<Record<string, DatoCargado>>;
+  /** Préstamos concedidos por el Estado por año de concesión (derivado del Anexo 10), M€. */
+  readonly prestamosPorAnio: SerieCargada;
+  /** Anexo 10 del Tribunal de Cuentas, línea a línea, con el dato de su fuente. */
+  readonly anexoPrestamos: {
+    readonly filas: readonly FilaPrestamo[];
+    readonly dato: Dato;
+    /** Rótulo del anexo tal como consta en la fuente («Anexo 10»). */
+    readonly nombre: string;
+  };
   /** Artículo 109 del TRLGSS, por identificador. */
   readonly trlgss: Readonly<Record<string, DatoCargado>>;
   /** Importe máximo autorizado y plazo de los préstamos del Estado en las leyes de presupuestos. */
@@ -206,6 +259,41 @@ export const datosHucha = memorizar((): DatosHucha => {
   const deuda = validarArchivo(deudaJson);
   const deudaTrimestral = encontrarSerie(deuda, 'deuda-pde-trimestral');
 
+  const liq = validarArchivo(liquidacionJson);
+  const liqEstado = cargarSerie(liq, 'ingresos-transferencias-corrientes-del-estado');
+  const liqOrganismos = cargarSerie(liq, 'ingresos-transferencias-corrientes-organismos-autonomos');
+  const liquidacion: DatosLiquidacion = {
+    delEstado: {
+      puntos: suma(liqEstado.puntos, liqOrganismos.puntos),
+      dato: liqEstado.dato,
+    },
+    totalCorrientes: cargarSerie(liq, 'ingresos-transferencias-corrientes-total'),
+    pasivosFinancieros: cargarSerie(liq, 'ingresos-pasivos-financieros'),
+    gastoPensiones: cargarSerie(liq, 'gastos-pensiones-con-complemento-a-minimos'),
+    primerAnioComplementoAparte: extremos(cargarSerie(liq, 'gastos-complemento-a-minimos').puntos)
+      .primero.anio,
+  };
+  const ejecucionEstado = deDeEjecucion('ingresos-cap1-cap4', 'DEL ESTADO Y ORG.AUTÓNOMOS');
+  const ejecucionPasivos = deDeEjecucion('ingresos', '9. PASIVOS FINANCIEROS');
+  const tribunal2023 = validarArchivo(tribunal2023Json);
+  const anexo = ArchivoExtraccionPdf.parse(anexoPrestamosJson);
+  const filasAnexo: FilaPrestamo[] = filasCsv(anexoPrestamosCsv).map((f) => {
+    const tipo = f['tipo_linea'];
+    if (tipo !== 'prestamo' && tipo !== 'subtotal' && tipo !== 'total') {
+      throw new Error(`Anexo 10: tipo de línea «${tipo ?? ''}» desconocido`);
+    }
+    const anio = numeroCsv(f['anio_concesion']);
+    return {
+      id: f['id'] ?? '',
+      tipo,
+      bloque: f['bloque'] ?? '',
+      norma: f['norma'] ?? '',
+      importe: numeroCsv(f['importe']) ?? Number.NaN,
+      vencimiento: f['vencimiento'] ?? '',
+      anioConcesion: anio,
+    };
+  });
+
   return {
     valor: cargarSerie(series, 'valor-fin-ano'),
     flujos: {
@@ -231,11 +319,24 @@ export const datosHucha = memorizar((): DatosHucha => {
       puntos: financiacion.ejecucion.complementoMinimos.puntos,
       dato: financiacion.ejecucion.complementoMinimos.dato,
     },
+    liquidacion,
+    transferenciasAnuales: empalmarConRuptura([
+      { clave: 'liquidacion', etiqueta: 'Liquidación', puntos: liquidacion.delEstado.puntos },
+      { clave: 'ejecucion', etiqueta: 'Ejecución', puntos: ejecucionEstado.puntos },
+    ]),
+    pasivosFinancierosAnuales: empalmarConRuptura([
+      {
+        clave: 'liquidacion',
+        etiqueta: 'Liquidación',
+        puntos: liquidacion.pasivosFinancieros.puntos,
+      },
+      { clave: 'ejecucion', etiqueta: 'Ejecución', puntos: ejecucionPasivos.puntos },
+    ]),
     transferencias: {
-      delEstado: deDeEjecucion('ingresos-cap1-cap4', 'DEL ESTADO Y ORG.AUTÓNOMOS'),
+      delEstado: ejecucionEstado,
       totalCorrientes: deDeEjecucion('ingresos-cap1-cap4', 'TOTAL TRANSFERENCIAS CORRIENTES'),
       capital: deDeEjecucion('ingresos', '7. TRANSFERENCIAS DE CAPITAL'),
-      pasivosFinancieros: deDeEjecucion('ingresos', '9. PASIVOS FINANCIEROS'),
+      pasivosFinancieros: ejecucionPasivos,
       flujosTrimestrales: flujos,
       cuartoTrimestre: flujoDelTrimestre(flujos, 4),
       datoTrimestral: datoEjecucion,
@@ -248,6 +349,21 @@ export const datosHucha = memorizar((): DatosHucha => {
       },
     },
     tribunal: datosPorId(validarArchivo(tribunalJson)),
+    tribunal2023: datosPorId(tribunal2023),
+    prestamosPorAnio: cargarSerie(tribunal2023, 'prestamos-concedidos-por-anio'),
+    anexoPrestamos: {
+      filas: filasAnexo,
+      nombre: filasCsv(anexoPrestamosCsv)[0]?.['tabla'] ?? '',
+      dato: Dato.parse({
+        value: anexo.filas,
+        unit: 'líneas del Anexo 10',
+        period: String(anexo.origenes[0]?.ejercicio ?? 2023),
+        source: anexo.source,
+        fetchedAt: anexo.fetchedAt,
+        confidence: anexo.confidence,
+        ...(anexo.notes === undefined ? {} : { notes: anexo.notes }),
+      }),
+    },
     trlgss: datosPorId(validarArchivo(trlgssJson)),
     prestamosLeyes: datosPorId(validarArchivo(prestamosLeyesJson)),
     prestamosPlazo: datosPorId(validarArchivo(prestamosPlazoJson)),

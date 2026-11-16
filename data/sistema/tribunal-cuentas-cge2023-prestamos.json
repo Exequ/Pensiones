@@ -1,0 +1,111 @@
+{
+  "tipo": "extraccion-pdf",
+  "id": "tribunal-cuentas-cge2023-prestamos",
+  "title": "Anexo 10 de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2023: préstamos otorgados por el Estado a la Seguridad Social",
+  "description": "Las veinte líneas del Anexo 10 con su importe y vencimiento, los cuatro subtotales y el total, en millones de euros, con huella SHA-256 y página. El año de concesión del bloque IV es inferido del plazo de cancelación (véase notes).",
+  "columnas": [
+    {
+      "id": "id",
+      "descripcion": "Identificador de la línea",
+      "unidad": null
+    },
+    {
+      "id": "tipo_linea",
+      "descripcion": "prestamo, subtotal o total",
+      "unidad": null
+    },
+    {
+      "id": "bloque",
+      "descripcion": "Bloque del anexo (I a IV)",
+      "unidad": null
+    },
+    {
+      "id": "numero",
+      "descripcion": "Número de línea del anexo (vacío en subtotales y total)",
+      "unidad": null
+    },
+    {
+      "id": "norma",
+      "descripcion": "Norma que autoriza el préstamo, literal",
+      "unidad": null
+    },
+    {
+      "id": "importe",
+      "descripcion": "Importe",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "vencimiento",
+      "descripcion": "Vencimiento, literal",
+      "unidad": null
+    },
+    {
+      "id": "anio_concesion",
+      "descripcion": "Año de concesión inferido (solo bloque IV; ver notas)",
+      "unidad": null
+    },
+    {
+      "id": "fichero",
+      "descripcion": "Fichero de origen, ruta relativa al repositorio",
+      "unidad": null
+    },
+    {
+      "id": "sha256",
+      "descripcion": "Huella SHA-256 del fichero de origen",
+      "unidad": null
+    },
+    {
+      "id": "pagina",
+      "descripcion": "Página del original (numeración física)",
+      "unidad": null
+    },
+    {
+      "id": "pagina_extracto",
+      "descripcion": "Página del extracto (desde 1)",
+      "unidad": null
+    },
+    {
+      "id": "tabla",
+      "descripcion": "Tabla del PDF",
+      "unidad": null
+    },
+    {
+      "id": "linea",
+      "descripcion": "Línea de texto extraída del PDF",
+      "unidad": null
+    }
+  ],
+  "filas": 25,
+  "source": {
+    "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+    "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+    "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+  },
+  "fetchedAt": "2026-11-14",
+  "confidence": "alta",
+  "naturaleza": "observado",
+  "unidad": "millones de euros",
+  "notes": "Año de concesión del bloque IV = año de inicio del plazo de cancelación menos uno (nota 61 de la Declaración). Extracto de 42 páginas del original de 572; el original no se incluye en el repositorio. Descargado a mano por el autor el 2026-11-14.",
+  "tolerancia": "Las cifras del anexo tienen un decimal; tolerancia de redondeo de 0,1 millones en las sumas.",
+  "origenes": [
+    {
+      "fichero": "data-raw/tribunal-cuentas/declaracion-cge-2023-extracto.pdf",
+      "sha256": "793065449ff86c237cff8a844d04ec02415ffb182e79934c3a9719dbcd385e46",
+      "paginas": 42,
+      "ejercicio": 2023
+    }
+  ],
+  "resumenValidaciones": {
+    "comprobaciones": 13,
+    "incorrectas": 0
+  },
+  "validacionesPorTabla": [
+    {
+      "ejercicio_pdf": 2023,
+      "tabla": "Anexo 10",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 13,
+      "incorrectas": 0
+    }
+  ]
+}

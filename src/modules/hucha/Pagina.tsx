@@ -15,6 +15,7 @@ import {
   type PuntoAnual,
 } from '../../engine/series-historicas';
 import { gastoAproximadoPensiones, mesesDeGasto } from '../../engine/sistema-historico';
+import { etiquetaTramo } from './tramos';
 import { datosHucha } from '../historico/datos-hucha';
 import { ContenidoPagina } from '../historico/ContenidoPagina';
 import { EnlaceFinanciero } from '../proyecciones/EnlaceFinanciero';
@@ -26,6 +27,7 @@ import './Hucha.css';
 import { SeccionFondoTransferencias } from './SeccionFondoTransferencias';
 import { SeccionOrigen } from './SeccionOrigen';
 import { SeccionPosicion } from './SeccionPosicion';
+import { SeccionPrestamos } from './SeccionPrestamos';
 import { SeccionTransferencias } from './SeccionTransferencias';
 
 const seccion = buscarSeccion('hucha');
@@ -72,8 +74,14 @@ export default function Hucha() {
   );
   // Referencia: obligaciones reconocidas con el complemento a mínimos. Contraste: catorce pagas.
   const gastoConComplemento = suma(d.gastoEjecucion.puntos, d.complementoMinimos.puntos);
+  // Referencia ampliada hacia atrás con las liquidaciones (misma definición: pensiones contributivas
+  // con complemento a mínimos); dos tramos por cambio de documento de origen.
+  const gastoLiquidacion = d.liquidacion.gastoPensiones.puntos;
+  const mesesLiquidacion = mesesDeGasto(valor, gastoLiquidacion);
   const mesesA = mesesDeGasto(valor, gastoConComplemento);
   const mesesB = mesesDeGasto(valor, gastoAproximado);
+  const anioRupturaGasto = mesesA[0]?.anio ?? 0;
+  const primeroLiquidacion = mesesLiquidacion[0];
   const ultimoA = mesesA.at(-1);
   const ultimoB = mesesB.at(-1);
   const maxB = maximo(mesesB);
@@ -208,14 +216,27 @@ export default function Hucha() {
             descripcion="Valor del Fondo al cierre del año dividido entre el gasto anual en pensiones contributivas y multiplicado por doce. Unidad: meses de gasto."
             series={[
               {
+                clave: 'liquidacion',
+                etiqueta: etiquetaTramo('Referencia, liquidación', mesesLiquidacion),
+                puntos: mesesLiquidacion,
+                color: 0,
+              },
+              {
                 clave: 'ejecucion',
-                etiqueta: 'Referencia: con complemento a mínimos',
+                etiqueta: etiquetaTramo('Referencia, ejecución', mesesA),
                 puntos: mesesA,
+                color: 0,
               },
               {
                 clave: 'aprox',
                 etiqueta: 'Contraste: catorce pagas',
                 puntos: mesesB,
+              },
+            ]}
+            rupturas={[
+              {
+                anio: anioRupturaGasto,
+                etiqueta: 'Ruptura de serie',
               },
             ]}
             unidadEje="Meses de gasto"
@@ -224,15 +245,19 @@ export default function Hucha() {
             decimalesEje={0}
             fuentes={[
               d.valor.dato,
+              d.liquidacion.gastoPensiones.dato,
               d.gastoEjecucion.dato,
               d.complementoMinimos.dato,
               d.numeroPorClase.jubilacion.dato,
               d.pensionMediaPorClase.jubilacion.dato,
             ]}
-            nota="Cálculos propios (confianza media). Referencia: valor del Fondo ÷ ((obligaciones reconocidas de «suma de pensiones» + complemento a mínimos de pensiones contributivas) ÷ doce). Contraste: valor del Fondo ÷ (suma de las cinco clases de número de pensiones × pensión media mensual × catorce pagas ÷ doce); no incluye atrasos ni efectos de calendario y no coincide con la referencia. El Fondo está a precio de adquisición."
+            nota={`Cálculos propios (confianza media). Referencia: valor del Fondo ÷ ((obligaciones reconocidas de «suma de pensiones» + complemento a mínimos de pensiones contributivas) ÷ doce). La referencia tiene dos tramos con la misma definición pero distinto documento de origen: las liquidaciones del presupuesto y la ejecución del presupuesto; no se han podido contrastar entre sí porque no comparten ningún ejercicio. En las liquidaciones, el complemento a mínimos está incluido en las cinco clases de pensión hasta ${d.liquidacion.primerAnioComplementoAparte - 1} y figura aparte desde ${d.liquidacion.primerAnioComplementoAparte}, de modo que desde ese año se suma (la reclasificación se comprueba con la cifra de ${d.liquidacion.primerAnioComplementoAparte - 1} que reaparece en el PDF siguiente). Contraste: valor del Fondo ÷ (suma de las cinco clases de número de pensiones × pensión media mensual × catorce pagas ÷ doce); no incluye atrasos ni efectos de calendario y no coincide con la referencia. El Fondo está a precio de adquisición.`}
             comoLeerlo={
               <>
                 <p>
+                  {primeroLiquidacion === undefined
+                    ? ''
+                    : `En ${primeroLiquidacion.anio}, con la liquidación del presupuesto (primer tramo de la referencia), el valor del Fondo equivalía a ${decimal2(primeroLiquidacion.valor)} meses de gasto. `}
                   En {ultimoA?.anio ?? ''} el valor del Fondo equivale a{' '}
                   {decimal2(ultimoA?.valor ?? 0)} meses del gasto medido con la ejecución y el
                   complemento a mínimos (referencia) y a {decimal2(ultimoB?.valor ?? 0)} meses con
@@ -309,6 +334,7 @@ export default function Hucha() {
         <SeccionTransferencias />
         <SeccionFondoTransferencias />
         <SeccionPosicion />
+        <SeccionPrestamos />
         <EnlaceFinanciero origen="hucha" />
         <ContenidoPagina contenidos={seccion.previsto} />
       </div>

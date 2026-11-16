@@ -142,3 +142,100 @@ test.describe('página «Hucha»: transferencias', () => {
     ).toEqual([]);
   });
 });
+
+/** Fase 5-A3: series ampliadas con ruptura de serie, préstamos y Fondo según el Tribunal de Cuentas. */
+const TITULO_TRANSFERENCIAS =
+  'figure.grafico:has(.grafico-titulo:text("a la Seguridad Social, por año"))';
+const TITULO_MESES_GASTO =
+  'figure.grafico:has(.grafico-titulo:text("Meses de gasto en pensiones que equivale"))';
+const TITULO_PRESTAMOS =
+  'figure.grafico:has(.grafico-titulo:text("Préstamos concedidos por el Estado y pasivos"))';
+
+/** Abre las tablas de datos alternativas (elementos `details`) para medirlas y revisarlas. */
+async function abrirTablasHucha(page: import('@playwright/test').Page): Promise<void> {
+  await page.evaluate(() => {
+    for (const d of document.querySelectorAll('details')) d.open = true;
+  });
+}
+
+test.describe('página «Hucha»: liquidaciones, ruptura de serie y Tribunal de Cuentas', () => {
+  test('carga sin errores ni peticiones externas y rotula los dos tramos y la ruptura', async ({
+    page,
+  }) => {
+    const registro = vigilar(page);
+    await page.goto(url('/hucha'));
+    await esperarPagina(page);
+    await page.waitForLoadState('networkidle');
+    await expect(
+      page.getByRole('heading', { level: 2, name: /Préstamos del Estado y Fondo de Reserva/ }),
+    ).toBeVisible();
+    // Gráfico de barras: dos tramos con etiquetas directas.
+    await expect(page.locator(`${TITULO_TRANSFERENCIAS} svg`)).toContainText('Liquidación');
+    await expect(page.locator(`${TITULO_TRANSFERENCIAS} svg`)).toContainText('Ejecución');
+    // Gráfico de líneas: regla vertical rotulada.
+    await expect(page.locator(`${TITULO_MESES_GASTO} svg`)).toContainText('Ruptura de serie');
+    // Tabla accesible con una columna por tramo.
+    await abrirTablasHucha(page);
+    await expect(page.locator(`${TITULO_TRANSFERENCIAS} thead`)).toContainText('Liquidación (');
+    await expect(page.locator(`${TITULO_TRANSFERENCIAS} thead`)).toContainText('Ejecución (');
+    await expect(page.locator(`${TITULO_PRESTAMOS} table`)).toHaveCount(1);
+    await expect(page.locator('#finalidad-definicion')).toContainText(
+      'clasifica las transferencias por su origen',
+    );
+    expect(registro.errores, 'errores de consola').toEqual([]);
+    expect(registro.externas, 'peticiones a dominios externos').toEqual([]);
+  });
+
+  test('el selector del año de inicio incluye ahora los años de la liquidación y avisa de la ruptura', async ({
+    page,
+  }) => {
+    await page.goto(url('/hucha'));
+    await esperarPagina(page);
+    const selector = page.getByLabel('Año de inicio de la suma acumulada', { exact: true });
+    const opciones = await selector.locator('option').allTextContents();
+    expect(opciones.length).toBeGreaterThan(9);
+    await selector.selectOption(opciones[0] ?? '');
+    await expect(page.getByText(/cruza la ruptura de serie/).first()).toBeVisible();
+    await selector.selectOption(opciones.at(-1) ?? '');
+    await expect(
+      page.locator(
+        'figure.grafico:has(.grafico-titulo:text-matches("^Transferencias acumuladas desde")) thead',
+      ),
+    ).toContainText('años de la ejecución');
+  });
+
+  test('en móvil no desborda con las tablas abiertas', async ({ browser }) => {
+    const contexto = await browser.newContext({ viewport: { width: 390, height: 800 } });
+    const page = await contexto.newPage();
+    await page.goto(url('/hucha'));
+    await esperarPagina(page);
+    await page.waitForLoadState('networkidle');
+    await abrirTablasHucha(page);
+    const medidas = await page.evaluate(() => {
+      const raiz = document.documentElement;
+      const fuera = [...document.querySelectorAll('figure.grafico svg')].filter(
+        (s) => s.getBoundingClientRect().right > raiz.clientWidth + 1,
+      ).length;
+      return { desborda: raiz.scrollWidth > raiz.clientWidth, fuera };
+    });
+    expect(medidas).toEqual({ desborda: false, fuera: 0 });
+    await contexto.close();
+  });
+
+  // Los dos proyectos de Playwright (escritorio, 1360 px, y móvil, 390 px) ejecutan esta prueba con su ventana.
+  test('axe sin violaciones con las tablas abiertas', async ({ page }) => {
+    test.setTimeout(90_000);
+    await page.goto(url('/hucha'));
+    await esperarPagina(page);
+    await page.waitForLoadState('networkidle');
+    await abrirTablasHucha(page);
+    const resultado = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+      .analyze();
+    expect(
+      resultado.violations.map(
+        (v) => `${v.id}: ${v.help} → ${v.nodes.map((n) => n.target.join(' ')).join(', ')}`,
+      ),
+    ).toEqual([]);
+  });
+});
