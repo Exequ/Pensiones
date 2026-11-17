@@ -1,0 +1,3646 @@
+{
+  "tipo": "extraccion-pdf",
+  "id": "complementos-genero-territorio",
+  "title": "Pensiones en vigor a 1 de octubre de 2026 con complemento por brecha de género y por maternidad, por comunidad autónoma, provincia y sexo",
+  "description": "Número de pensiones contributivas en vigor con el complemento, importe medio mensual y desglose por número de hijos, para cada comunidad, ciudad autónoma y provincia, por sexo y por tipo de complemento (seis tablas de 62 territorios más el total). Es un recuento de complementos a una fecha: no es la brecha de género de las pensiones de jubilación causadas cada año. Generado por scripts/etl/ss_complementos_genero.py.",
+  "columnas": [
+    {
+      "id": "id",
+      "descripcion": "Identificador: complemento, sexo, página y fila",
+      "unidad": null
+    },
+    {
+      "id": "complemento",
+      "descripcion": "brecha (complemento para la reducción de la brecha de género) o maternidad (complemento por maternidad)",
+      "unidad": null
+    },
+    {
+      "id": "sexo",
+      "descripcion": "ambos, hombres o mujeres",
+      "unidad": null
+    },
+    {
+      "id": "nivel",
+      "descripcion": "total, comunidad o provincia (las ciudades autónomas figuran como comunidad)",
+      "unidad": null
+    },
+    {
+      "id": "territorio",
+      "descripcion": "Rótulo del territorio tal como figura en el PDF",
+      "unidad": null
+    },
+    {
+      "id": "comunidad",
+      "descripcion": "Comunidad o ciudad autónoma a la que pertenece (vacío en el total)",
+      "unidad": null
+    },
+    {
+      "id": "numero",
+      "descripcion": "Número de pensiones en vigor con el complemento",
+      "unidad": "pensiones"
+    },
+    {
+      "id": "importe_medio",
+      "descripcion": "Importe medio mensual del complemento",
+      "unidad": "euros al mes"
+    },
+    {
+      "id": "hijos_1",
+      "descripcion": "Pensiones con el importe de un hijo (solo brecha de género)",
+      "unidad": "pensiones"
+    },
+    {
+      "id": "hijos_2",
+      "descripcion": "Pensiones con el importe de dos hijos",
+      "unidad": "pensiones"
+    },
+    {
+      "id": "hijos_3",
+      "descripcion": "Pensiones con el importe de tres hijos",
+      "unidad": "pensiones"
+    },
+    {
+      "id": "hijos_4_o_mas",
+      "descripcion": "Pensiones con el importe de cuatro o más hijos",
+      "unidad": "pensiones"
+    },
+    {
+      "id": "fichero",
+      "descripcion": "PDF de origen, ruta relativa al repositorio",
+      "unidad": null
+    },
+    {
+      "id": "sha256",
+      "descripcion": "Huella SHA-256 del PDF de origen",
+      "unidad": null
+    },
+    {
+      "id": "pagina",
+      "descripcion": "Página del PDF (numeración física, desde 1)",
+      "unidad": null
+    },
+    {
+      "id": "fila",
+      "descripcion": "Fila con cifras dentro de la tabla (desde 1, la fila «Total» es la 1)",
+      "unidad": null
+    },
+    {
+      "id": "linea",
+      "descripcion": "Línea de texto extraída del PDF, sin los espacios sobrantes",
+      "unidad": null
+    },
+    {
+      "id": "verificado",
+      "descripcion": "si: el territorio supera las sumas (provincias, comunidades, sexos y desglose); no: alguna falla y la cifra no se publica",
+      "unidad": null
+    }
+  ],
+  "filas": 378,
+  "source": {
+    "title": "Pensiones contributivas del Sistema de la Seguridad Social en vigor a 1 de octubre de 2026: complementos por brecha de género y por maternidad según comunidad autónoma y provincia",
+    "publisher": "Instituto Nacional de la Seguridad Social, Subdirección General de Gestión Económico-Presupuestaria y Estudios Económicos (Seguridad Social)",
+    "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+  },
+  "fetchedAt": "2026-11-16",
+  "confidence": "alta",
+  "naturaleza": "observado",
+  "unidad": "Número de pensiones en vigor e importe medio en euros al mes",
+  "notes": "PDF aportado por el autor, descargado el 2026-11-16 según su indicación; no consta LEEME con la URL exacta del fichero, por lo que la URL es la de la página de estadísticas de la Seguridad Social donde se publican estos datos (sin comprobar que sea la de descarga) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla. Las pensiones sin número de hijos determinado figuran en las notas del PDF y no están en el desglose.",
+  "tolerancia": "Sin tolerancia en los recuentos (enteros); 0,005 euros en los importes del encabezado frente al importe por hijo de los datos.",
+  "origenes": [
+    {
+      "fichero": "data-raw/seg-social-fin/Brecha de género.pdf",
+      "sha256": "499b1f7ebcb8a6a6e8c6f1b0ca4b83c2a7e414b4b8f7e8335556ca03d207eda3",
+      "paginas": 14,
+      "ejercicio": 2026
+    }
+  ],
+  "resumenValidaciones": {
+    "comprobaciones": 386,
+    "incorrectas": 0,
+    "tablas": 6,
+    "filas": 378,
+    "comunidades_y_ciudades": 19,
+    "provincias": 43
+  },
+  "validacionesPorTabla": [
+    {
+      "ejercicio_pdf": 2026,
+      "tabla": "brecha-ambos",
+      "tipo_pagina": "territorio",
+      "comprobaciones": 65,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2026,
+      "tabla": "brecha-hombres",
+      "tipo_pagina": "territorio",
+      "comprobaciones": 65,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2026,
+      "tabla": "brecha-mujeres",
+      "tipo_pagina": "territorio",
+      "comprobaciones": 65,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2026,
+      "tabla": "maternidad-ambos",
+      "tipo_pagina": "territorio",
+      "comprobaciones": 53,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2026,
+      "tabla": "maternidad-hombres",
+      "tipo_pagina": "territorio",
+      "comprobaciones": 53,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2026,
+      "tabla": "maternidad-mujeres",
+      "tipo_pagina": "territorio",
+      "comprobaciones": 53,
+      "incorrectas": 0
+    }
+  ],
+  "comprobacionesEspecificas": [
+    {
+      "id": "comunidades-suman-total-brecha-ambos-numero",
+      "descripcion": "Tabla brecha-ambos, columna «numero»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 1736331,
+      "obtenido": 1736331,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-ambos-hijos_1",
+      "descripcion": "Tabla brecha-ambos, columna «hijos_1»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 409534,
+      "obtenido": 409534,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-ambos-hijos_2",
+      "descripcion": "Tabla brecha-ambos, columna «hijos_2»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 885787,
+      "obtenido": 885787,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-ambos-hijos_3",
+      "descripcion": "Tabla brecha-ambos, columna «hijos_3»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 302895,
+      "obtenido": 302895,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-ambos-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-ambos, columna «hijos_4_o_mas»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 138113,
+      "obtenido": 138113,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-andaluca-numero",
+      "descripcion": "Tabla brecha-ambos, Andalucía, columna «numero»: las provincias suman la comunidad",
+      "esperado": 314554,
+      "obtenido": 314554,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-andaluca-hijos_1",
+      "descripcion": "Tabla brecha-ambos, Andalucía, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 52230,
+      "obtenido": 52230,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-andaluca-hijos_2",
+      "descripcion": "Tabla brecha-ambos, Andalucía, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 156132,
+      "obtenido": 156132,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-andaluca-hijos_3",
+      "descripcion": "Tabla brecha-ambos, Andalucía, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 70668,
+      "obtenido": 70668,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-andaluca-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-ambos, Andalucía, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 35522,
+      "obtenido": 35522,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-aragn-numero",
+      "descripcion": "Tabla brecha-ambos, Aragón, columna «numero»: las provincias suman la comunidad",
+      "esperado": 53771,
+      "obtenido": 53771,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-aragn-hijos_1",
+      "descripcion": "Tabla brecha-ambos, Aragón, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 14564,
+      "obtenido": 14564,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-aragn-hijos_2",
+      "descripcion": "Tabla brecha-ambos, Aragón, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 29182,
+      "obtenido": 29182,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-aragn-hijos_3",
+      "descripcion": "Tabla brecha-ambos, Aragón, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 7270,
+      "obtenido": 7270,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-aragn-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-ambos, Aragón, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 2755,
+      "obtenido": 2755,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-canarias-numero",
+      "descripcion": "Tabla brecha-ambos, Canarias, columna «numero»: las provincias suman la comunidad",
+      "esperado": 66253,
+      "obtenido": 66253,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-canarias-hijos_1",
+      "descripcion": "Tabla brecha-ambos, Canarias, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 16999,
+      "obtenido": 16999,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-canarias-hijos_2",
+      "descripcion": "Tabla brecha-ambos, Canarias, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 29364,
+      "obtenido": 29364,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-canarias-hijos_3",
+      "descripcion": "Tabla brecha-ambos, Canarias, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 12615,
+      "obtenido": 12615,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-canarias-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-ambos, Canarias, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 7275,
+      "obtenido": 7275,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-castillalamancha-numero",
+      "descripcion": "Tabla brecha-ambos, Castilla-La Mancha, columna «numero»: las provincias suman la comunidad",
+      "esperado": 77413,
+      "obtenido": 77413,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-castillalamancha-hijos_1",
+      "descripcion": "Tabla brecha-ambos, Castilla-La Mancha, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 13281,
+      "obtenido": 13281,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-castillalamancha-hijos_2",
+      "descripcion": "Tabla brecha-ambos, Castilla-La Mancha, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 40564,
+      "obtenido": 40564,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-castillalamancha-hijos_3",
+      "descripcion": "Tabla brecha-ambos, Castilla-La Mancha, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 16243,
+      "obtenido": 16243,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-castillalamancha-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-ambos, Castilla-La Mancha, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 7325,
+      "obtenido": 7325,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-castillaylen-numero",
+      "descripcion": "Tabla brecha-ambos, Castilla y León, columna «numero»: las provincias suman la comunidad",
+      "esperado": 106670,
+      "obtenido": 106670,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-castillaylen-hijos_1",
+      "descripcion": "Tabla brecha-ambos, Castilla y León, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 26421,
+      "obtenido": 26421,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-castillaylen-hijos_2",
+      "descripcion": "Tabla brecha-ambos, Castilla y León, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 54931,
+      "obtenido": 54931,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-castillaylen-hijos_3",
+      "descripcion": "Tabla brecha-ambos, Castilla y León, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 16928,
+      "obtenido": 16928,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-castillaylen-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-ambos, Castilla y León, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 8390,
+      "obtenido": 8390,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-catalua-numero",
+      "descripcion": "Tabla brecha-ambos, Cataluña, columna «numero»: las provincias suman la comunidad",
+      "esperado": 264974,
+      "obtenido": 264974,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-catalua-hijos_1",
+      "descripcion": "Tabla brecha-ambos, Cataluña, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 68047,
+      "obtenido": 68047,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-catalua-hijos_2",
+      "descripcion": "Tabla brecha-ambos, Cataluña, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 141216,
+      "obtenido": 141216,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-catalua-hijos_3",
+      "descripcion": "Tabla brecha-ambos, Cataluña, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 40192,
+      "obtenido": 40192,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-catalua-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-ambos, Cataluña, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 15519,
+      "obtenido": 15519,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-comunitatvalenciana-numero",
+      "descripcion": "Tabla brecha-ambos, Comunitat Valenciana, columna «numero»: las provincias suman la comunidad",
+      "esperado": 184780,
+      "obtenido": 184780,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-comunitatvalenciana-hijos_1",
+      "descripcion": "Tabla brecha-ambos, Comunitat Valenciana, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 42532,
+      "obtenido": 42532,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-comunitatvalenciana-hijos_2",
+      "descripcion": "Tabla brecha-ambos, Comunitat Valenciana, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 99467,
+      "obtenido": 99467,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-comunitatvalenciana-hijos_3",
+      "descripcion": "Tabla brecha-ambos, Comunitat Valenciana, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 30379,
+      "obtenido": 30379,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-comunitatvalenciana-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-ambos, Comunitat Valenciana, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 12402,
+      "obtenido": 12402,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-extremadura-numero",
+      "descripcion": "Tabla brecha-ambos, Extremadura, columna «numero»: las provincias suman la comunidad",
+      "esperado": 46776,
+      "obtenido": 46776,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-extremadura-hijos_1",
+      "descripcion": "Tabla brecha-ambos, Extremadura, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 8335,
+      "obtenido": 8335,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-extremadura-hijos_2",
+      "descripcion": "Tabla brecha-ambos, Extremadura, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 23620,
+      "obtenido": 23620,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-extremadura-hijos_3",
+      "descripcion": "Tabla brecha-ambos, Extremadura, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 9925,
+      "obtenido": 9925,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-extremadura-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-ambos, Extremadura, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 4896,
+      "obtenido": 4896,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-galicia-numero",
+      "descripcion": "Tabla brecha-ambos, GALICIA, columna «numero»: las provincias suman la comunidad",
+      "esperado": 125671,
+      "obtenido": 125671,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-galicia-hijos_1",
+      "descripcion": "Tabla brecha-ambos, GALICIA, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 38755,
+      "obtenido": 38755,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-galicia-hijos_2",
+      "descripcion": "Tabla brecha-ambos, GALICIA, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 60178,
+      "obtenido": 60178,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-galicia-hijos_3",
+      "descripcion": "Tabla brecha-ambos, GALICIA, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 18657,
+      "obtenido": 18657,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-galicia-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-ambos, GALICIA, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 8081,
+      "obtenido": 8081,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-pasvasco-numero",
+      "descripcion": "Tabla brecha-ambos, País Vasco, columna «numero»: las provincias suman la comunidad",
+      "esperado": 92658,
+      "obtenido": 92658,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-pasvasco-hijos_1",
+      "descripcion": "Tabla brecha-ambos, País Vasco, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 26687,
+      "obtenido": 26687,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-pasvasco-hijos_2",
+      "descripcion": "Tabla brecha-ambos, País Vasco, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 48900,
+      "obtenido": 48900,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-pasvasco-hijos_3",
+      "descripcion": "Tabla brecha-ambos, País Vasco, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 12098,
+      "obtenido": 12098,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-ambos-pasvasco-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-ambos, País Vasco, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 4973,
+      "obtenido": 4973,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "desglose-mas-sin-hijos-brecha-ambos",
+      "descripcion": "Tabla brecha-ambos: el total es la suma de los tramos de hijos más las pensiones sin número de hijos que declaran las notas (2)",
+      "esperado": 1736331,
+      "obtenido": 1736331,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "sin-hijos-por-territorio-brecha-ambos",
+      "descripcion": "Tabla brecha-ambos: la suma, por comunidad, de la diferencia entre el número y su desglose coincide con lo que declaran las notas",
+      "esperado": 2,
+      "obtenido": 2,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-hombres-numero",
+      "descripcion": "Tabla brecha-hombres, columna «numero»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 535674,
+      "obtenido": 535674,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-hombres-hijos_1",
+      "descripcion": "Tabla brecha-hombres, columna «hijos_1»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 154077,
+      "obtenido": 154077,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-hombres-hijos_2",
+      "descripcion": "Tabla brecha-hombres, columna «hijos_2»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 291029,
+      "obtenido": 291029,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-hombres-hijos_3",
+      "descripcion": "Tabla brecha-hombres, columna «hijos_3»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 70619,
+      "obtenido": 70619,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-hombres-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-hombres, columna «hijos_4_o_mas»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 19949,
+      "obtenido": 19949,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-andaluca-numero",
+      "descripcion": "Tabla brecha-hombres, Andalucía, columna «numero»: las provincias suman la comunidad",
+      "esperado": 111205,
+      "obtenido": 111205,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-andaluca-hijos_1",
+      "descripcion": "Tabla brecha-hombres, Andalucía, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 24774,
+      "obtenido": 24774,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-andaluca-hijos_2",
+      "descripcion": "Tabla brecha-hombres, Andalucía, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 60706,
+      "obtenido": 60706,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-andaluca-hijos_3",
+      "descripcion": "Tabla brecha-hombres, Andalucía, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 20017,
+      "obtenido": 20017,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-andaluca-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-hombres, Andalucía, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 5708,
+      "obtenido": 5708,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-aragn-numero",
+      "descripcion": "Tabla brecha-hombres, Aragón, columna «numero»: las provincias suman la comunidad",
+      "esperado": 15998,
+      "obtenido": 15998,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-aragn-hijos_1",
+      "descripcion": "Tabla brecha-hombres, Aragón, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 4927,
+      "obtenido": 4927,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-aragn-hijos_2",
+      "descripcion": "Tabla brecha-hombres, Aragón, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 9273,
+      "obtenido": 9273,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-aragn-hijos_3",
+      "descripcion": "Tabla brecha-hombres, Aragón, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 1455,
+      "obtenido": 1455,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-aragn-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-hombres, Aragón, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 343,
+      "obtenido": 343,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-canarias-numero",
+      "descripcion": "Tabla brecha-hombres, Canarias, columna «numero»: las provincias suman la comunidad",
+      "esperado": 21808,
+      "obtenido": 21808,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-canarias-hijos_1",
+      "descripcion": "Tabla brecha-hombres, Canarias, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 7497,
+      "obtenido": 7497,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-canarias-hijos_2",
+      "descripcion": "Tabla brecha-hombres, Canarias, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 10144,
+      "obtenido": 10144,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-canarias-hijos_3",
+      "descripcion": "Tabla brecha-hombres, Canarias, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 3213,
+      "obtenido": 3213,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-canarias-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-hombres, Canarias, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 954,
+      "obtenido": 954,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-castillalamancha-numero",
+      "descripcion": "Tabla brecha-hombres, Castilla-La Mancha, columna «numero»: las provincias suman la comunidad",
+      "esperado": 30514,
+      "obtenido": 30514,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-castillalamancha-hijos_1",
+      "descripcion": "Tabla brecha-hombres, Castilla-La Mancha, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 6641,
+      "obtenido": 6641,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-castillalamancha-hijos_2",
+      "descripcion": "Tabla brecha-hombres, Castilla-La Mancha, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 17615,
+      "obtenido": 17615,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-castillalamancha-hijos_3",
+      "descripcion": "Tabla brecha-hombres, Castilla-La Mancha, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 5077,
+      "obtenido": 5077,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-castillalamancha-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-hombres, Castilla-La Mancha, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 1181,
+      "obtenido": 1181,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-castillaylen-numero",
+      "descripcion": "Tabla brecha-hombres, Castilla y León, columna «numero»: las provincias suman la comunidad",
+      "esperado": 35751,
+      "obtenido": 35751,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-castillaylen-hijos_1",
+      "descripcion": "Tabla brecha-hombres, Castilla y León, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 11089,
+      "obtenido": 11089,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-castillaylen-hijos_2",
+      "descripcion": "Tabla brecha-hombres, Castilla y León, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 19980,
+      "obtenido": 19980,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-castillaylen-hijos_3",
+      "descripcion": "Tabla brecha-hombres, Castilla y León, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 3821,
+      "obtenido": 3821,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-castillaylen-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-hombres, Castilla y León, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 861,
+      "obtenido": 861,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-catalua-numero",
+      "descripcion": "Tabla brecha-hombres, Cataluña, columna «numero»: las provincias suman la comunidad",
+      "esperado": 61844,
+      "obtenido": 61844,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-catalua-hijos_1",
+      "descripcion": "Tabla brecha-hombres, Cataluña, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 18686,
+      "obtenido": 18686,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-catalua-hijos_2",
+      "descripcion": "Tabla brecha-hombres, Cataluña, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 34364,
+      "obtenido": 34364,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-catalua-hijos_3",
+      "descripcion": "Tabla brecha-hombres, Cataluña, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 6654,
+      "obtenido": 6654,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-catalua-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-hombres, Cataluña, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 2140,
+      "obtenido": 2140,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-comunitatvalenciana-numero",
+      "descripcion": "Tabla brecha-hombres, Comunitat Valenciana, columna «numero»: las provincias suman la comunidad",
+      "esperado": 57481,
+      "obtenido": 57481,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-comunitatvalenciana-hijos_1",
+      "descripcion": "Tabla brecha-hombres, Comunitat Valenciana, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 16633,
+      "obtenido": 16633,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-comunitatvalenciana-hijos_2",
+      "descripcion": "Tabla brecha-hombres, Comunitat Valenciana, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 32688,
+      "obtenido": 32688,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-comunitatvalenciana-hijos_3",
+      "descripcion": "Tabla brecha-hombres, Comunitat Valenciana, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 6458,
+      "obtenido": 6458,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-comunitatvalenciana-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-hombres, Comunitat Valenciana, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 1702,
+      "obtenido": 1702,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-extremadura-numero",
+      "descripcion": "Tabla brecha-hombres, Extremadura, columna «numero»: las provincias suman la comunidad",
+      "esperado": 17931,
+      "obtenido": 17931,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-extremadura-hijos_1",
+      "descripcion": "Tabla brecha-hombres, Extremadura, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 4288,
+      "obtenido": 4288,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-extremadura-hijos_2",
+      "descripcion": "Tabla brecha-hombres, Extremadura, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 9800,
+      "obtenido": 9800,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-extremadura-hijos_3",
+      "descripcion": "Tabla brecha-hombres, Extremadura, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 3029,
+      "obtenido": 3029,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-extremadura-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-hombres, Extremadura, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 814,
+      "obtenido": 814,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-galicia-numero",
+      "descripcion": "Tabla brecha-hombres, GALICIA, columna «numero»: las provincias suman la comunidad",
+      "esperado": 37513,
+      "obtenido": 37513,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-galicia-hijos_1",
+      "descripcion": "Tabla brecha-hombres, GALICIA, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 14256,
+      "obtenido": 14256,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-galicia-hijos_2",
+      "descripcion": "Tabla brecha-hombres, GALICIA, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 18427,
+      "obtenido": 18427,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-galicia-hijos_3",
+      "descripcion": "Tabla brecha-hombres, GALICIA, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 3805,
+      "obtenido": 3805,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-galicia-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-hombres, GALICIA, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 1025,
+      "obtenido": 1025,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-pasvasco-numero",
+      "descripcion": "Tabla brecha-hombres, País Vasco, columna «numero»: las provincias suman la comunidad",
+      "esperado": 26033,
+      "obtenido": 26033,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-pasvasco-hijos_1",
+      "descripcion": "Tabla brecha-hombres, País Vasco, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 9312,
+      "obtenido": 9312,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-pasvasco-hijos_2",
+      "descripcion": "Tabla brecha-hombres, País Vasco, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 14360,
+      "obtenido": 14360,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-pasvasco-hijos_3",
+      "descripcion": "Tabla brecha-hombres, País Vasco, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 1961,
+      "obtenido": 1961,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-hombres-pasvasco-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-hombres, País Vasco, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 400,
+      "obtenido": 400,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "desglose-mas-sin-hijos-brecha-hombres",
+      "descripcion": "Tabla brecha-hombres: el total es la suma de los tramos de hijos más las pensiones sin número de hijos que declaran las notas (0)",
+      "esperado": 535674,
+      "obtenido": 535674,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "sin-hijos-por-territorio-brecha-hombres",
+      "descripcion": "Tabla brecha-hombres: la suma, por comunidad, de la diferencia entre el número y su desglose coincide con lo que declaran las notas",
+      "esperado": 0,
+      "obtenido": 0,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-mujeres-numero",
+      "descripcion": "Tabla brecha-mujeres, columna «numero»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 1200657,
+      "obtenido": 1200657,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-mujeres-hijos_1",
+      "descripcion": "Tabla brecha-mujeres, columna «hijos_1»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 255457,
+      "obtenido": 255457,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-mujeres-hijos_2",
+      "descripcion": "Tabla brecha-mujeres, columna «hijos_2»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 594758,
+      "obtenido": 594758,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-mujeres-hijos_3",
+      "descripcion": "Tabla brecha-mujeres, columna «hijos_3»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 232276,
+      "obtenido": 232276,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-brecha-mujeres-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-mujeres, columna «hijos_4_o_mas»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 118164,
+      "obtenido": 118164,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-andaluca-numero",
+      "descripcion": "Tabla brecha-mujeres, Andalucía, columna «numero»: las provincias suman la comunidad",
+      "esperado": 203349,
+      "obtenido": 203349,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-andaluca-hijos_1",
+      "descripcion": "Tabla brecha-mujeres, Andalucía, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 27456,
+      "obtenido": 27456,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-andaluca-hijos_2",
+      "descripcion": "Tabla brecha-mujeres, Andalucía, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 95426,
+      "obtenido": 95426,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-andaluca-hijos_3",
+      "descripcion": "Tabla brecha-mujeres, Andalucía, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 50651,
+      "obtenido": 50651,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-andaluca-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-mujeres, Andalucía, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 29814,
+      "obtenido": 29814,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-aragn-numero",
+      "descripcion": "Tabla brecha-mujeres, Aragón, columna «numero»: las provincias suman la comunidad",
+      "esperado": 37773,
+      "obtenido": 37773,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-aragn-hijos_1",
+      "descripcion": "Tabla brecha-mujeres, Aragón, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 9637,
+      "obtenido": 9637,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-aragn-hijos_2",
+      "descripcion": "Tabla brecha-mujeres, Aragón, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 19909,
+      "obtenido": 19909,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-aragn-hijos_3",
+      "descripcion": "Tabla brecha-mujeres, Aragón, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 5815,
+      "obtenido": 5815,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-aragn-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-mujeres, Aragón, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 2412,
+      "obtenido": 2412,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-canarias-numero",
+      "descripcion": "Tabla brecha-mujeres, Canarias, columna «numero»: las provincias suman la comunidad",
+      "esperado": 44445,
+      "obtenido": 44445,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-canarias-hijos_1",
+      "descripcion": "Tabla brecha-mujeres, Canarias, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 9502,
+      "obtenido": 9502,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-canarias-hijos_2",
+      "descripcion": "Tabla brecha-mujeres, Canarias, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 19220,
+      "obtenido": 19220,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-canarias-hijos_3",
+      "descripcion": "Tabla brecha-mujeres, Canarias, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 9402,
+      "obtenido": 9402,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-canarias-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-mujeres, Canarias, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 6321,
+      "obtenido": 6321,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-castillalamancha-numero",
+      "descripcion": "Tabla brecha-mujeres, Castilla-La Mancha, columna «numero»: las provincias suman la comunidad",
+      "esperado": 46899,
+      "obtenido": 46899,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-castillalamancha-hijos_1",
+      "descripcion": "Tabla brecha-mujeres, Castilla-La Mancha, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 6640,
+      "obtenido": 6640,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-castillalamancha-hijos_2",
+      "descripcion": "Tabla brecha-mujeres, Castilla-La Mancha, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 22949,
+      "obtenido": 22949,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-castillalamancha-hijos_3",
+      "descripcion": "Tabla brecha-mujeres, Castilla-La Mancha, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 11166,
+      "obtenido": 11166,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-castillalamancha-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-mujeres, Castilla-La Mancha, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 6144,
+      "obtenido": 6144,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-castillaylen-numero",
+      "descripcion": "Tabla brecha-mujeres, Castilla y León, columna «numero»: las provincias suman la comunidad",
+      "esperado": 70919,
+      "obtenido": 70919,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-castillaylen-hijos_1",
+      "descripcion": "Tabla brecha-mujeres, Castilla y León, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 15332,
+      "obtenido": 15332,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-castillaylen-hijos_2",
+      "descripcion": "Tabla brecha-mujeres, Castilla y León, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 34951,
+      "obtenido": 34951,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-castillaylen-hijos_3",
+      "descripcion": "Tabla brecha-mujeres, Castilla y León, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 13107,
+      "obtenido": 13107,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-castillaylen-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-mujeres, Castilla y León, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 7529,
+      "obtenido": 7529,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-catalua-numero",
+      "descripcion": "Tabla brecha-mujeres, Cataluña, columna «numero»: las provincias suman la comunidad",
+      "esperado": 203130,
+      "obtenido": 203130,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-catalua-hijos_1",
+      "descripcion": "Tabla brecha-mujeres, Cataluña, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 49361,
+      "obtenido": 49361,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-catalua-hijos_2",
+      "descripcion": "Tabla brecha-mujeres, Cataluña, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 106852,
+      "obtenido": 106852,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-catalua-hijos_3",
+      "descripcion": "Tabla brecha-mujeres, Cataluña, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 33538,
+      "obtenido": 33538,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-catalua-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-mujeres, Cataluña, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 13379,
+      "obtenido": 13379,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-comunitatvalenciana-numero",
+      "descripcion": "Tabla brecha-mujeres, Comunitat Valenciana, columna «numero»: las provincias suman la comunidad",
+      "esperado": 127299,
+      "obtenido": 127299,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-comunitatvalenciana-hijos_1",
+      "descripcion": "Tabla brecha-mujeres, Comunitat Valenciana, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 25899,
+      "obtenido": 25899,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-comunitatvalenciana-hijos_2",
+      "descripcion": "Tabla brecha-mujeres, Comunitat Valenciana, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 66779,
+      "obtenido": 66779,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-comunitatvalenciana-hijos_3",
+      "descripcion": "Tabla brecha-mujeres, Comunitat Valenciana, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 23921,
+      "obtenido": 23921,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-comunitatvalenciana-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-mujeres, Comunitat Valenciana, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 10700,
+      "obtenido": 10700,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-extremadura-numero",
+      "descripcion": "Tabla brecha-mujeres, Extremadura, columna «numero»: las provincias suman la comunidad",
+      "esperado": 28845,
+      "obtenido": 28845,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-extremadura-hijos_1",
+      "descripcion": "Tabla brecha-mujeres, Extremadura, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 4047,
+      "obtenido": 4047,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-extremadura-hijos_2",
+      "descripcion": "Tabla brecha-mujeres, Extremadura, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 13820,
+      "obtenido": 13820,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-extremadura-hijos_3",
+      "descripcion": "Tabla brecha-mujeres, Extremadura, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 6896,
+      "obtenido": 6896,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-extremadura-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-mujeres, Extremadura, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 4082,
+      "obtenido": 4082,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-galicia-numero",
+      "descripcion": "Tabla brecha-mujeres, GALICIA, columna «numero»: las provincias suman la comunidad",
+      "esperado": 88158,
+      "obtenido": 88158,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-galicia-hijos_1",
+      "descripcion": "Tabla brecha-mujeres, GALICIA, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 24499,
+      "obtenido": 24499,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-galicia-hijos_2",
+      "descripcion": "Tabla brecha-mujeres, GALICIA, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 41751,
+      "obtenido": 41751,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-galicia-hijos_3",
+      "descripcion": "Tabla brecha-mujeres, GALICIA, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 14852,
+      "obtenido": 14852,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-galicia-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-mujeres, GALICIA, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 7056,
+      "obtenido": 7056,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-pasvasco-numero",
+      "descripcion": "Tabla brecha-mujeres, País Vasco, columna «numero»: las provincias suman la comunidad",
+      "esperado": 66625,
+      "obtenido": 66625,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-pasvasco-hijos_1",
+      "descripcion": "Tabla brecha-mujeres, País Vasco, columna «hijos_1»: las provincias suman la comunidad",
+      "esperado": 17375,
+      "obtenido": 17375,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-pasvasco-hijos_2",
+      "descripcion": "Tabla brecha-mujeres, País Vasco, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 34540,
+      "obtenido": 34540,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-pasvasco-hijos_3",
+      "descripcion": "Tabla brecha-mujeres, País Vasco, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 10137,
+      "obtenido": 10137,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-brecha-mujeres-pasvasco-hijos_4_o_mas",
+      "descripcion": "Tabla brecha-mujeres, País Vasco, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 4573,
+      "obtenido": 4573,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "desglose-mas-sin-hijos-brecha-mujeres",
+      "descripcion": "Tabla brecha-mujeres: el total es la suma de los tramos de hijos más las pensiones sin número de hijos que declaran las notas (2)",
+      "esperado": 1200657,
+      "obtenido": 1200657,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "sin-hijos-por-territorio-brecha-mujeres",
+      "descripcion": "Tabla brecha-mujeres: la suma, por comunidad, de la diferencia entre el número y su desglose coincide con lo que declaran las notas",
+      "esperado": 2,
+      "obtenido": 2,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-maternidad-ambos-numero",
+      "descripcion": "Tabla maternidad-ambos, columna «numero»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 1005202,
+      "obtenido": 1005202,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-maternidad-ambos-hijos_2",
+      "descripcion": "Tabla maternidad-ambos, columna «hijos_2»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 601562,
+      "obtenido": 601562,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-maternidad-ambos-hijos_3",
+      "descripcion": "Tabla maternidad-ambos, columna «hijos_3»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 264972,
+      "obtenido": 264972,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-maternidad-ambos-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-ambos, columna «hijos_4_o_mas»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 138620,
+      "obtenido": 138620,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-andaluca-numero",
+      "descripcion": "Tabla maternidad-ambos, Andalucía, columna «numero»: las provincias suman la comunidad",
+      "esperado": 190337,
+      "obtenido": 190337,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-andaluca-hijos_2",
+      "descripcion": "Tabla maternidad-ambos, Andalucía, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 94897,
+      "obtenido": 94897,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-andaluca-hijos_3",
+      "descripcion": "Tabla maternidad-ambos, Andalucía, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 58492,
+      "obtenido": 58492,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-andaluca-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-ambos, Andalucía, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 36933,
+      "obtenido": 36933,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-aragn-numero",
+      "descripcion": "Tabla maternidad-ambos, Aragón, columna «numero»: las provincias suman la comunidad",
+      "esperado": 29073,
+      "obtenido": 29073,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-aragn-hijos_2",
+      "descripcion": "Tabla maternidad-ambos, Aragón, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 20008,
+      "obtenido": 20008,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-aragn-hijos_3",
+      "descripcion": "Tabla maternidad-ambos, Aragón, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 6462,
+      "obtenido": 6462,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-aragn-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-ambos, Aragón, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 2602,
+      "obtenido": 2602,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-canarias-numero",
+      "descripcion": "Tabla maternidad-ambos, Canarias, columna «numero»: las provincias suman la comunidad",
+      "esperado": 37517,
+      "obtenido": 37517,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-canarias-hijos_2",
+      "descripcion": "Tabla maternidad-ambos, Canarias, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 19382,
+      "obtenido": 19382,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-canarias-hijos_3",
+      "descripcion": "Tabla maternidad-ambos, Canarias, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 10633,
+      "obtenido": 10633,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-canarias-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-ambos, Canarias, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 7501,
+      "obtenido": 7501,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-castillalamancha-numero",
+      "descripcion": "Tabla maternidad-ambos, Castilla-La Mancha, columna «numero»: las provincias suman la comunidad",
+      "esperado": 45586,
+      "obtenido": 45586,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-castillalamancha-hijos_2",
+      "descripcion": "Tabla maternidad-ambos, Castilla-La Mancha, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 24742,
+      "obtenido": 24742,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-castillalamancha-hijos_3",
+      "descripcion": "Tabla maternidad-ambos, Castilla-La Mancha, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 13563,
+      "obtenido": 13563,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-castillalamancha-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-ambos, Castilla-La Mancha, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 7280,
+      "obtenido": 7280,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-castillaylen-numero",
+      "descripcion": "Tabla maternidad-ambos, Castilla y León, columna «numero»: las provincias suman la comunidad",
+      "esperado": 61894,
+      "obtenido": 61894,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-castillaylen-hijos_2",
+      "descripcion": "Tabla maternidad-ambos, Castilla y León, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 38118,
+      "obtenido": 38118,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-castillaylen-hijos_3",
+      "descripcion": "Tabla maternidad-ambos, Castilla y León, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 15395,
+      "obtenido": 15395,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-castillaylen-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-ambos, Castilla y León, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 8380,
+      "obtenido": 8380,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-catalua-numero",
+      "descripcion": "Tabla maternidad-ambos, Cataluña, columna «numero»: las provincias suman la comunidad",
+      "esperado": 153074,
+      "obtenido": 153074,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-catalua-hijos_2",
+      "descripcion": "Tabla maternidad-ambos, Cataluña, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 101529,
+      "obtenido": 101529,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-catalua-hijos_3",
+      "descripcion": "Tabla maternidad-ambos, Cataluña, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 36296,
+      "obtenido": 36296,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-catalua-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-ambos, Cataluña, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 15241,
+      "obtenido": 15241,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-comunitatvalenciana-numero",
+      "descripcion": "Tabla maternidad-ambos, Comunitat Valenciana, columna «numero»: las provincias suman la comunidad",
+      "esperado": 102025,
+      "obtenido": 102025,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-comunitatvalenciana-hijos_2",
+      "descripcion": "Tabla maternidad-ambos, Comunitat Valenciana, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 63454,
+      "obtenido": 63454,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-comunitatvalenciana-hijos_3",
+      "descripcion": "Tabla maternidad-ambos, Comunitat Valenciana, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 26508,
+      "obtenido": 26508,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-comunitatvalenciana-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-ambos, Comunitat Valenciana, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 12058,
+      "obtenido": 12058,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-extremadura-numero",
+      "descripcion": "Tabla maternidad-ambos, Extremadura, columna «numero»: las provincias suman la comunidad",
+      "esperado": 28987,
+      "obtenido": 28987,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-extremadura-hijos_2",
+      "descripcion": "Tabla maternidad-ambos, Extremadura, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 14926,
+      "obtenido": 14926,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-extremadura-hijos_3",
+      "descripcion": "Tabla maternidad-ambos, Extremadura, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 8791,
+      "obtenido": 8791,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-extremadura-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-ambos, Extremadura, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 5270,
+      "obtenido": 5270,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-galicia-numero",
+      "descripcion": "Tabla maternidad-ambos, GALICIA, columna «numero»: las provincias suman la comunidad",
+      "esperado": 70330,
+      "obtenido": 70330,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-galicia-hijos_2",
+      "descripcion": "Tabla maternidad-ambos, GALICIA, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 44177,
+      "obtenido": 44177,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-galicia-hijos_3",
+      "descripcion": "Tabla maternidad-ambos, GALICIA, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 17653,
+      "obtenido": 17653,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-galicia-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-ambos, GALICIA, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 8496,
+      "obtenido": 8496,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-pasvasco-numero",
+      "descripcion": "Tabla maternidad-ambos, País Vasco, columna «numero»: las provincias suman la comunidad",
+      "esperado": 52732,
+      "obtenido": 52732,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-pasvasco-hijos_2",
+      "descripcion": "Tabla maternidad-ambos, País Vasco, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 36732,
+      "obtenido": 36732,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-pasvasco-hijos_3",
+      "descripcion": "Tabla maternidad-ambos, País Vasco, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 11171,
+      "obtenido": 11171,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-ambos-pasvasco-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-ambos, País Vasco, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 4828,
+      "obtenido": 4828,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "desglose-mas-sin-hijos-maternidad-ambos",
+      "descripcion": "Tabla maternidad-ambos: el total es la suma de los tramos de hijos más las pensiones sin número de hijos que declaran las notas (48)",
+      "esperado": 1005202,
+      "obtenido": 1005202,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "sin-hijos-por-territorio-maternidad-ambos",
+      "descripcion": "Tabla maternidad-ambos: la suma, por comunidad, de la diferencia entre el número y su desglose coincide con lo que declaran las notas",
+      "esperado": 48,
+      "obtenido": 48,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-maternidad-hombres-numero",
+      "descripcion": "Tabla maternidad-hombres, columna «numero»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 292850,
+      "obtenido": 292850,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-maternidad-hombres-hijos_2",
+      "descripcion": "Tabla maternidad-hombres, columna «hijos_2»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 196142,
+      "obtenido": 196142,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-maternidad-hombres-hijos_3",
+      "descripcion": "Tabla maternidad-hombres, columna «hijos_3»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 71878,
+      "obtenido": 71878,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-maternidad-hombres-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-hombres, columna «hijos_4_o_mas»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 24793,
+      "obtenido": 24793,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-andaluca-numero",
+      "descripcion": "Tabla maternidad-hombres, Andalucía, columna «numero»: las provincias suman la comunidad",
+      "esperado": 63731,
+      "obtenido": 63731,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-andaluca-hijos_2",
+      "descripcion": "Tabla maternidad-hombres, Andalucía, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 36109,
+      "obtenido": 36109,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-andaluca-hijos_3",
+      "descripcion": "Tabla maternidad-hombres, Andalucía, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 19459,
+      "obtenido": 19459,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-andaluca-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-hombres, Andalucía, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 8152,
+      "obtenido": 8152,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-aragn-numero",
+      "descripcion": "Tabla maternidad-hombres, Aragón, columna «numero»: las provincias suman la comunidad",
+      "esperado": 8558,
+      "obtenido": 8558,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-aragn-hijos_2",
+      "descripcion": "Tabla maternidad-hombres, Aragón, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 6703,
+      "obtenido": 6703,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-aragn-hijos_3",
+      "descripcion": "Tabla maternidad-hombres, Aragón, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 1496,
+      "obtenido": 1496,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-aragn-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-hombres, Aragón, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 358,
+      "obtenido": 358,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-canarias-numero",
+      "descripcion": "Tabla maternidad-hombres, Canarias, columna «numero»: las provincias suman la comunidad",
+      "esperado": 9781,
+      "obtenido": 9781,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-canarias-hijos_2",
+      "descripcion": "Tabla maternidad-hombres, Canarias, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 5724,
+      "obtenido": 5724,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-canarias-hijos_3",
+      "descripcion": "Tabla maternidad-hombres, Canarias, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 2779,
+      "obtenido": 2779,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-canarias-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-hombres, Canarias, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 1278,
+      "obtenido": 1278,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-castillalamancha-numero",
+      "descripcion": "Tabla maternidad-hombres, Castilla-La Mancha, columna «numero»: las provincias suman la comunidad",
+      "esperado": 17077,
+      "obtenido": 17077,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-castillalamancha-hijos_2",
+      "descripcion": "Tabla maternidad-hombres, Castilla-La Mancha, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 10538,
+      "obtenido": 10538,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-castillalamancha-hijos_3",
+      "descripcion": "Tabla maternidad-hombres, Castilla-La Mancha, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 4875,
+      "obtenido": 4875,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-castillalamancha-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-hombres, Castilla-La Mancha, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 1663,
+      "obtenido": 1663,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-castillaylen-numero",
+      "descripcion": "Tabla maternidad-hombres, Castilla y León, columna «numero»: las provincias suman la comunidad",
+      "esperado": 21014,
+      "obtenido": 21014,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-castillaylen-hijos_2",
+      "descripcion": "Tabla maternidad-hombres, Castilla y León, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 15206,
+      "obtenido": 15206,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-castillaylen-hijos_3",
+      "descripcion": "Tabla maternidad-hombres, Castilla y León, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 4578,
+      "obtenido": 4578,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-castillaylen-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-hombres, Castilla y León, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 1229,
+      "obtenido": 1229,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-catalua-numero",
+      "descripcion": "Tabla maternidad-hombres, Cataluña, columna «numero»: las provincias suman la comunidad",
+      "esperado": 30643,
+      "obtenido": 30643,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-catalua-hijos_2",
+      "descripcion": "Tabla maternidad-hombres, Cataluña, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 22456,
+      "obtenido": 22456,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-catalua-hijos_3",
+      "descripcion": "Tabla maternidad-hombres, Cataluña, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 6409,
+      "obtenido": 6409,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-catalua-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-hombres, Cataluña, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 1772,
+      "obtenido": 1772,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-comunitatvalenciana-numero",
+      "descripcion": "Tabla maternidad-hombres, Comunitat Valenciana, columna «numero»: las provincias suman la comunidad",
+      "esperado": 27730,
+      "obtenido": 27730,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-comunitatvalenciana-hijos_2",
+      "descripcion": "Tabla maternidad-hombres, Comunitat Valenciana, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 19271,
+      "obtenido": 19271,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-comunitatvalenciana-hijos_3",
+      "descripcion": "Tabla maternidad-hombres, Comunitat Valenciana, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 6554,
+      "obtenido": 6554,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-comunitatvalenciana-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-hombres, Comunitat Valenciana, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 1901,
+      "obtenido": 1901,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-extremadura-numero",
+      "descripcion": "Tabla maternidad-hombres, Extremadura, columna «numero»: las provincias suman la comunidad",
+      "esperado": 11066,
+      "obtenido": 11066,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-extremadura-hijos_2",
+      "descripcion": "Tabla maternidad-hombres, Extremadura, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 6345,
+      "obtenido": 6345,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-extremadura-hijos_3",
+      "descripcion": "Tabla maternidad-hombres, Extremadura, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 3342,
+      "obtenido": 3342,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-extremadura-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-hombres, Extremadura, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 1379,
+      "obtenido": 1379,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-galicia-numero",
+      "descripcion": "Tabla maternidad-hombres, GALICIA, columna «numero»: las provincias suman la comunidad",
+      "esperado": 20511,
+      "obtenido": 20511,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-galicia-hijos_2",
+      "descripcion": "Tabla maternidad-hombres, GALICIA, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 14307,
+      "obtenido": 14307,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-galicia-hijos_3",
+      "descripcion": "Tabla maternidad-hombres, GALICIA, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 4773,
+      "obtenido": 4773,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-galicia-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-hombres, GALICIA, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 1427,
+      "obtenido": 1427,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-pasvasco-numero",
+      "descripcion": "Tabla maternidad-hombres, País Vasco, columna «numero»: las provincias suman la comunidad",
+      "esperado": 15554,
+      "obtenido": 15554,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-pasvasco-hijos_2",
+      "descripcion": "Tabla maternidad-hombres, País Vasco, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 12776,
+      "obtenido": 12776,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-pasvasco-hijos_3",
+      "descripcion": "Tabla maternidad-hombres, País Vasco, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 2366,
+      "obtenido": 2366,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-hombres-pasvasco-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-hombres, País Vasco, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 412,
+      "obtenido": 412,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "desglose-mas-sin-hijos-maternidad-hombres",
+      "descripcion": "Tabla maternidad-hombres: el total es la suma de los tramos de hijos más las pensiones sin número de hijos que declaran las notas (37)",
+      "esperado": 292850,
+      "obtenido": 292850,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "sin-hijos-por-territorio-maternidad-hombres",
+      "descripcion": "Tabla maternidad-hombres: la suma, por comunidad, de la diferencia entre el número y su desglose coincide con lo que declaran las notas",
+      "esperado": 37,
+      "obtenido": 37,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-maternidad-mujeres-numero",
+      "descripcion": "Tabla maternidad-mujeres, columna «numero»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 712352,
+      "obtenido": 712352,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-maternidad-mujeres-hijos_2",
+      "descripcion": "Tabla maternidad-mujeres, columna «hijos_2»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 405420,
+      "obtenido": 405420,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-maternidad-mujeres-hijos_3",
+      "descripcion": "Tabla maternidad-mujeres, columna «hijos_3»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 193094,
+      "obtenido": 193094,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "comunidades-suman-total-maternidad-mujeres-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-mujeres, columna «hijos_4_o_mas»: la suma de las comunidades y ciudades autónomas es el total",
+      "esperado": 113827,
+      "obtenido": 113827,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-andaluca-numero",
+      "descripcion": "Tabla maternidad-mujeres, Andalucía, columna «numero»: las provincias suman la comunidad",
+      "esperado": 126606,
+      "obtenido": 126606,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-andaluca-hijos_2",
+      "descripcion": "Tabla maternidad-mujeres, Andalucía, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 58788,
+      "obtenido": 58788,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-andaluca-hijos_3",
+      "descripcion": "Tabla maternidad-mujeres, Andalucía, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 39033,
+      "obtenido": 39033,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-andaluca-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-mujeres, Andalucía, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 28781,
+      "obtenido": 28781,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-aragn-numero",
+      "descripcion": "Tabla maternidad-mujeres, Aragón, columna «numero»: las provincias suman la comunidad",
+      "esperado": 20515,
+      "obtenido": 20515,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-aragn-hijos_2",
+      "descripcion": "Tabla maternidad-mujeres, Aragón, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 13305,
+      "obtenido": 13305,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-aragn-hijos_3",
+      "descripcion": "Tabla maternidad-mujeres, Aragón, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 4966,
+      "obtenido": 4966,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-aragn-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-mujeres, Aragón, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 2244,
+      "obtenido": 2244,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-canarias-numero",
+      "descripcion": "Tabla maternidad-mujeres, Canarias, columna «numero»: las provincias suman la comunidad",
+      "esperado": 27736,
+      "obtenido": 27736,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-canarias-hijos_2",
+      "descripcion": "Tabla maternidad-mujeres, Canarias, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 13658,
+      "obtenido": 13658,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-canarias-hijos_3",
+      "descripcion": "Tabla maternidad-mujeres, Canarias, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 7854,
+      "obtenido": 7854,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-canarias-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-mujeres, Canarias, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 6223,
+      "obtenido": 6223,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-castillalamancha-numero",
+      "descripcion": "Tabla maternidad-mujeres, Castilla-La Mancha, columna «numero»: las provincias suman la comunidad",
+      "esperado": 28509,
+      "obtenido": 28509,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-castillalamancha-hijos_2",
+      "descripcion": "Tabla maternidad-mujeres, Castilla-La Mancha, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 14204,
+      "obtenido": 14204,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-castillalamancha-hijos_3",
+      "descripcion": "Tabla maternidad-mujeres, Castilla-La Mancha, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 8688,
+      "obtenido": 8688,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-castillalamancha-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-mujeres, Castilla-La Mancha, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 5617,
+      "obtenido": 5617,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-castillaylen-numero",
+      "descripcion": "Tabla maternidad-mujeres, Castilla y León, columna «numero»: las provincias suman la comunidad",
+      "esperado": 40880,
+      "obtenido": 40880,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-castillaylen-hijos_2",
+      "descripcion": "Tabla maternidad-mujeres, Castilla y León, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 22912,
+      "obtenido": 22912,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-castillaylen-hijos_3",
+      "descripcion": "Tabla maternidad-mujeres, Castilla y León, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 10817,
+      "obtenido": 10817,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-castillaylen-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-mujeres, Castilla y León, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 7151,
+      "obtenido": 7151,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-catalua-numero",
+      "descripcion": "Tabla maternidad-mujeres, Cataluña, columna «numero»: las provincias suman la comunidad",
+      "esperado": 122431,
+      "obtenido": 122431,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-catalua-hijos_2",
+      "descripcion": "Tabla maternidad-mujeres, Cataluña, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 79073,
+      "obtenido": 79073,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-catalua-hijos_3",
+      "descripcion": "Tabla maternidad-mujeres, Cataluña, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 29887,
+      "obtenido": 29887,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-catalua-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-mujeres, Cataluña, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 13469,
+      "obtenido": 13469,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-comunitatvalenciana-numero",
+      "descripcion": "Tabla maternidad-mujeres, Comunitat Valenciana, columna «numero»: las provincias suman la comunidad",
+      "esperado": 74295,
+      "obtenido": 74295,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-comunitatvalenciana-hijos_2",
+      "descripcion": "Tabla maternidad-mujeres, Comunitat Valenciana, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 44183,
+      "obtenido": 44183,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-comunitatvalenciana-hijos_3",
+      "descripcion": "Tabla maternidad-mujeres, Comunitat Valenciana, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 19954,
+      "obtenido": 19954,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-comunitatvalenciana-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-mujeres, Comunitat Valenciana, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 10157,
+      "obtenido": 10157,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-extremadura-numero",
+      "descripcion": "Tabla maternidad-mujeres, Extremadura, columna «numero»: las provincias suman la comunidad",
+      "esperado": 17921,
+      "obtenido": 17921,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-extremadura-hijos_2",
+      "descripcion": "Tabla maternidad-mujeres, Extremadura, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 8581,
+      "obtenido": 8581,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-extremadura-hijos_3",
+      "descripcion": "Tabla maternidad-mujeres, Extremadura, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 5449,
+      "obtenido": 5449,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-extremadura-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-mujeres, Extremadura, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 3891,
+      "obtenido": 3891,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-galicia-numero",
+      "descripcion": "Tabla maternidad-mujeres, GALICIA, columna «numero»: las provincias suman la comunidad",
+      "esperado": 49819,
+      "obtenido": 49819,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-galicia-hijos_2",
+      "descripcion": "Tabla maternidad-mujeres, GALICIA, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 29870,
+      "obtenido": 29870,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-galicia-hijos_3",
+      "descripcion": "Tabla maternidad-mujeres, GALICIA, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 12880,
+      "obtenido": 12880,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-galicia-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-mujeres, GALICIA, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 7069,
+      "obtenido": 7069,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-pasvasco-numero",
+      "descripcion": "Tabla maternidad-mujeres, País Vasco, columna «numero»: las provincias suman la comunidad",
+      "esperado": 37178,
+      "obtenido": 37178,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-pasvasco-hijos_2",
+      "descripcion": "Tabla maternidad-mujeres, País Vasco, columna «hijos_2»: las provincias suman la comunidad",
+      "esperado": 23956,
+      "obtenido": 23956,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-pasvasco-hijos_3",
+      "descripcion": "Tabla maternidad-mujeres, País Vasco, columna «hijos_3»: las provincias suman la comunidad",
+      "esperado": 8805,
+      "obtenido": 8805,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "provincias-suman-comunidad-maternidad-mujeres-pasvasco-hijos_4_o_mas",
+      "descripcion": "Tabla maternidad-mujeres, País Vasco, columna «hijos_4_o_mas»: las provincias suman la comunidad",
+      "esperado": 4416,
+      "obtenido": 4416,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "desglose-mas-sin-hijos-maternidad-mujeres",
+      "descripcion": "Tabla maternidad-mujeres: el total es la suma de los tramos de hijos más las pensiones sin número de hijos que declaran las notas (11)",
+      "esperado": 712352,
+      "obtenido": 712352,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "sin-hijos-por-territorio-maternidad-mujeres",
+      "descripcion": "Tabla maternidad-mujeres: la suma, por comunidad, de la diferencia entre el número y su desglose coincide con lo que declaran las notas",
+      "esperado": 11,
+      "obtenido": 11,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "ambos-igual-hombres-mas-mujeres-brecha-total-numero",
+      "descripcion": "Complemento «brecha», total, «numero»: ambos sexos = hombres + mujeres",
+      "esperado": 1736331,
+      "obtenido": 1736331,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "ambos-igual-hombres-mas-mujeres-brecha-total-hijos_1",
+      "descripcion": "Complemento «brecha», total, «hijos_1»: ambos sexos = hombres + mujeres",
+      "esperado": 409534,
+      "obtenido": 409534,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "ambos-igual-hombres-mas-mujeres-brecha-total-hijos_2",
+      "descripcion": "Complemento «brecha», total, «hijos_2»: ambos sexos = hombres + mujeres",
+      "esperado": 885787,
+      "obtenido": 885787,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "ambos-igual-hombres-mas-mujeres-brecha-total-hijos_3",
+      "descripcion": "Complemento «brecha», total, «hijos_3»: ambos sexos = hombres + mujeres",
+      "esperado": 302895,
+      "obtenido": 302895,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "ambos-igual-hombres-mas-mujeres-brecha-total-hijos_4_o_mas",
+      "descripcion": "Complemento «brecha», total, «hijos_4_o_mas»: ambos sexos = hombres + mujeres",
+      "esperado": 138113,
+      "obtenido": 138113,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "ambos-igual-hombres-mas-mujeres-brecha-territorios",
+      "descripcion": "Complemento «brecha»: territorios y columnas en los que ambos sexos no es hombres + mujeres",
+      "esperado": 0,
+      "obtenido": 0,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "mismos-territorios-brecha",
+      "descripcion": "Complemento «brecha»: las tres tablas listan los mismos territorios en el mismo orden",
+      "esperado": 1,
+      "obtenido": 1,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "numero-de-comunidades-brecha",
+      "descripcion": "Complemento «brecha»: 17 comunidades y 2 ciudades autónomas",
+      "esperado": 19,
+      "obtenido": 19,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "numero-de-provincias-brecha",
+      "descripcion": "Complemento «brecha»: 43 provincias en las diez comunidades con más de una (las provincias de las comunidades uniprovinciales figuran como comunidad)",
+      "esperado": 43,
+      "obtenido": 43,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "ambos-igual-hombres-mas-mujeres-maternidad-total-numero",
+      "descripcion": "Complemento «maternidad», total, «numero»: ambos sexos = hombres + mujeres",
+      "esperado": 1005202,
+      "obtenido": 1005202,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "ambos-igual-hombres-mas-mujeres-maternidad-total-hijos_2",
+      "descripcion": "Complemento «maternidad», total, «hijos_2»: ambos sexos = hombres + mujeres",
+      "esperado": 601562,
+      "obtenido": 601562,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "ambos-igual-hombres-mas-mujeres-maternidad-total-hijos_3",
+      "descripcion": "Complemento «maternidad», total, «hijos_3»: ambos sexos = hombres + mujeres",
+      "esperado": 264972,
+      "obtenido": 264972,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "ambos-igual-hombres-mas-mujeres-maternidad-total-hijos_4_o_mas",
+      "descripcion": "Complemento «maternidad», total, «hijos_4_o_mas»: ambos sexos = hombres + mujeres",
+      "esperado": 138620,
+      "obtenido": 138620,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "ambos-igual-hombres-mas-mujeres-maternidad-territorios",
+      "descripcion": "Complemento «maternidad»: territorios y columnas en los que ambos sexos no es hombres + mujeres",
+      "esperado": 0,
+      "obtenido": 0,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "mismos-territorios-maternidad",
+      "descripcion": "Complemento «maternidad»: las tres tablas listan los mismos territorios en el mismo orden",
+      "esperado": 1,
+      "obtenido": 1,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "numero-de-comunidades-maternidad",
+      "descripcion": "Complemento «maternidad»: 17 comunidades y 2 ciudades autónomas",
+      "esperado": 19,
+      "obtenido": 19,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "numero-de-provincias-maternidad",
+      "descripcion": "Complemento «maternidad»: 43 provincias en las diez comunidades con más de una (las provincias de las comunidades uniprovinciales figuran como comunidad)",
+      "esperado": 43,
+      "obtenido": 43,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "importe-por-hijos-ambos-1",
+      "descripcion": "Encabezado del desglose de la tabla brecha/ambos: el importe de 1 hijo(s) es 1 veces el importe de 2026 de los datos ya cargados",
+      "esperado": 36.9,
+      "obtenido": 36.9,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "importe-por-hijos-ambos-2",
+      "descripcion": "Encabezado del desglose de la tabla brecha/ambos: el importe de 2 hijo(s) es 2 veces el importe de 2026 de los datos ya cargados",
+      "esperado": 73.8,
+      "obtenido": 73.8,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "importe-por-hijos-ambos-3",
+      "descripcion": "Encabezado del desglose de la tabla brecha/ambos: el importe de 3 hijo(s) es 3 veces el importe de 2026 de los datos ya cargados",
+      "esperado": 110.7,
+      "obtenido": 110.7,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "importe-por-hijos-ambos-4",
+      "descripcion": "Encabezado del desglose de la tabla brecha/ambos: el importe de 4 hijo(s) es 4 veces el importe de 2026 de los datos ya cargados",
+      "esperado": 147.6,
+      "obtenido": 147.6,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "importe-por-hijos-hombres-1",
+      "descripcion": "Encabezado del desglose de la tabla brecha/hombres: el importe de 1 hijo(s) es 1 veces el importe de 2026 de los datos ya cargados",
+      "esperado": 36.9,
+      "obtenido": 36.9,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "importe-por-hijos-hombres-2",
+      "descripcion": "Encabezado del desglose de la tabla brecha/hombres: el importe de 2 hijo(s) es 2 veces el importe de 2026 de los datos ya cargados",
+      "esperado": 73.8,
+      "obtenido": 73.8,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "importe-por-hijos-hombres-3",
+      "descripcion": "Encabezado del desglose de la tabla brecha/hombres: el importe de 3 hijo(s) es 3 veces el importe de 2026 de los datos ya cargados",
+      "esperado": 110.7,
+      "obtenido": 110.7,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "importe-por-hijos-hombres-4",
+      "descripcion": "Encabezado del desglose de la tabla brecha/hombres: el importe de 4 hijo(s) es 4 veces el importe de 2026 de los datos ya cargados",
+      "esperado": 147.6,
+      "obtenido": 147.6,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "importe-por-hijos-mujeres-1",
+      "descripcion": "Encabezado del desglose de la tabla brecha/mujeres: el importe de 1 hijo(s) es 1 veces el importe de 2026 de los datos ya cargados",
+      "esperado": 36.9,
+      "obtenido": 36.9,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "importe-por-hijos-mujeres-2",
+      "descripcion": "Encabezado del desglose de la tabla brecha/mujeres: el importe de 2 hijo(s) es 2 veces el importe de 2026 de los datos ya cargados",
+      "esperado": 73.8,
+      "obtenido": 73.8,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "importe-por-hijos-mujeres-3",
+      "descripcion": "Encabezado del desglose de la tabla brecha/mujeres: el importe de 3 hijo(s) es 3 veces el importe de 2026 de los datos ya cargados",
+      "esperado": 110.7,
+      "obtenido": 110.7,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "importe-por-hijos-mujeres-4",
+      "descripcion": "Encabezado del desglose de la tabla brecha/mujeres: el importe de 4 hijo(s) es 4 veces el importe de 2026 de los datos ya cargados",
+      "esperado": 147.6,
+      "obtenido": 147.6,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "porcentajes-ambos",
+      "descripcion": "Encabezado del desglose de la tabla maternidad/ambos: tres porcentajes (2, 3 y 4 o más hijos)",
+      "esperado": 3,
+      "obtenido": 3,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "porcentajes-hombres",
+      "descripcion": "Encabezado del desglose de la tabla maternidad/hombres: tres porcentajes (2, 3 y 4 o más hijos)",
+      "esperado": 3,
+      "obtenido": 3,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "porcentajes-mujeres",
+      "descripcion": "Encabezado del desglose de la tabla maternidad/mujeres: tres porcentajes (2, 3 y 4 o más hijos)",
+      "esperado": 3,
+      "obtenido": 3,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-ambos-0",
+      "descripcion": "Indicadores: «Por brecha de género» (brecha, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 1736331,
+      "obtenido": 1736331,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-ambos-1",
+      "descripcion": "Indicadores: «Por 1 hijo» (brecha, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 409534,
+      "obtenido": 409534,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-ambos-2",
+      "descripcion": "Indicadores: «Por 2 hijos» (brecha, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 885787,
+      "obtenido": 885787,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-ambos-3",
+      "descripcion": "Indicadores: «Por 3 hijos» (brecha, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 302895,
+      "obtenido": 302895,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-ambos-4",
+      "descripcion": "Indicadores: «Por 4 ó más hijos» (brecha, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 138113,
+      "obtenido": 138113,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-importe-brecha-ambos",
+      "descripcion": "Indicadores: importe medio (brecha, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 76.68,
+      "obtenido": 76.68,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-hombres-0",
+      "descripcion": "Indicadores: «Por brecha de género» (brecha, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 535674,
+      "obtenido": 535674,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-hombres-1",
+      "descripcion": "Indicadores: «Por 1 hijo» (brecha, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 154077,
+      "obtenido": 154077,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-hombres-2",
+      "descripcion": "Indicadores: «Por 2 hijos» (brecha, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 291029,
+      "obtenido": 291029,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-hombres-3",
+      "descripcion": "Indicadores: «Por 3 hijos» (brecha, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 70619,
+      "obtenido": 70619,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-hombres-4",
+      "descripcion": "Indicadores: «Por 4 ó más hijos» (brecha, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 19949,
+      "obtenido": 19949,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-importe-brecha-hombres",
+      "descripcion": "Indicadores: importe medio (brecha, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 70.14,
+      "obtenido": 70.14,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-mujeres-0",
+      "descripcion": "Indicadores: «Por brecha de género» (brecha, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 1200657,
+      "obtenido": 1200657,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-mujeres-1",
+      "descripcion": "Indicadores: «Por 1 hijo» (brecha, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 255457,
+      "obtenido": 255457,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-mujeres-2",
+      "descripcion": "Indicadores: «Por 2 hijos» (brecha, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 594758,
+      "obtenido": 594758,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-mujeres-3",
+      "descripcion": "Indicadores: «Por 3 hijos» (brecha, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 232276,
+      "obtenido": 232276,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-mujeres-4",
+      "descripcion": "Indicadores: «Por 4 ó más hijos» (brecha, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 118164,
+      "obtenido": 118164,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-importe-brecha-mujeres",
+      "descripcion": "Indicadores: importe medio (brecha, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 79.6,
+      "obtenido": 79.6,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-ambos-0",
+      "descripcion": "Indicadores: «Por maternidad» (maternidad, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 1005202,
+      "obtenido": 1005202,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-ambos-1",
+      "descripcion": "Indicadores: «Por 2 hijos» (maternidad, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 601562,
+      "obtenido": 601562,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-ambos-2",
+      "descripcion": "Indicadores: «Por 3 hijos» (maternidad, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 264972,
+      "obtenido": 264972,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-ambos-3",
+      "descripcion": "Indicadores: «Por 4 ó más hijos» (maternidad, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 138620,
+      "obtenido": 138620,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-importe-maternidad-ambos",
+      "descripcion": "Indicadores: importe medio (maternidad, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 85.19,
+      "obtenido": 85.19,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-hombres-0",
+      "descripcion": "Indicadores: «Por maternidad» (maternidad, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 292850,
+      "obtenido": 292850,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-hombres-1",
+      "descripcion": "Indicadores: «Por 2 hijos» (maternidad, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 196142,
+      "obtenido": 196142,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-hombres-2",
+      "descripcion": "Indicadores: «Por 3 hijos» (maternidad, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 71878,
+      "obtenido": 71878,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-hombres-3",
+      "descripcion": "Indicadores: «Por 4 ó más hijos» (maternidad, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 24793,
+      "obtenido": 24793,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-importe-maternidad-hombres",
+      "descripcion": "Indicadores: importe medio (maternidad, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 105.52,
+      "obtenido": 105.52,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-mujeres-0",
+      "descripcion": "Indicadores: «Por maternidad» (maternidad, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 712352,
+      "obtenido": 712352,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-mujeres-1",
+      "descripcion": "Indicadores: «Por 2 hijos» (maternidad, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 405420,
+      "obtenido": 405420,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-mujeres-2",
+      "descripcion": "Indicadores: «Por 3 hijos» (maternidad, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 193094,
+      "obtenido": 193094,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-mujeres-3",
+      "descripcion": "Indicadores: «Por 4 ó más hijos» (maternidad, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 113827,
+      "obtenido": 113827,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-importe-maternidad-mujeres",
+      "descripcion": "Indicadores: importe medio (maternidad, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 76.83,
+      "obtenido": 76.83,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "variacion-mes-brecha-ambos",
+      "descripcion": "Variación en el último mes (brecha, ambos): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 2.52,
+      "obtenido": 2.52,
+      "diferencia": 0.0,
+      "tolerancia": 0.0051,
+      "ok": true
+    },
+    {
+      "id": "variacion-mes-brecha-hombres",
+      "descripcion": "Variación en el último mes (brecha, hombres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 4.6,
+      "obtenido": 4.6,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-mes-brecha-mujeres",
+      "descripcion": "Variación en el último mes (brecha, mujeres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 1.6,
+      "obtenido": 1.6,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-mes-maternidad-ambos",
+      "descripcion": "Variación en el último mes (maternidad, ambos): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": -0.34,
+      "obtenido": -0.34,
+      "diferencia": 0.0,
+      "tolerancia": 0.0051,
+      "ok": true
+    },
+    {
+      "id": "variacion-mes-maternidad-hombres",
+      "descripcion": "Variación en el último mes (maternidad, hombres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": -0.1,
+      "obtenido": -0.1,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-mes-maternidad-mujeres",
+      "descripcion": "Variación en el último mes (maternidad, mujeres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": -0.4,
+      "obtenido": -0.4,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-anio-brecha-ambos",
+      "descripcion": "Variación en el último año (brecha, ambos): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 46.42,
+      "obtenido": 46.42,
+      "diferencia": 0.0,
+      "tolerancia": 0.0051,
+      "ok": true
+    },
+    {
+      "id": "variacion-anio-brecha-hombres",
+      "descripcion": "Variación en el último año (brecha, hombres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 175.2,
+      "obtenido": 175.2,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-anio-brecha-mujeres",
+      "descripcion": "Variación en el último año (brecha, mujeres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 21.1,
+      "obtenido": 21.1,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-anio-maternidad-ambos",
+      "descripcion": "Variación en el último año (maternidad, ambos): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": -0.37,
+      "obtenido": -0.37,
+      "diferencia": 0.0,
+      "tolerancia": 0.0051,
+      "ok": true
+    },
+    {
+      "id": "variacion-anio-maternidad-hombres",
+      "descripcion": "Variación en el último año (maternidad, hombres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 9.4,
+      "obtenido": 9.4,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-anio-maternidad-mujeres",
+      "descripcion": "Variación en el último año (maternidad, mujeres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": -3.9,
+      "obtenido": -3.9,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    }
+  ]
+}

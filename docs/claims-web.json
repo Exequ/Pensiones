@@ -2642,11 +2642,12 @@
     },
     {
       "id": "web-mitos-ipc-sin-acumulado",
-      "texto": "La página no muestra ningún acumulado de la revalorización frente al IPC porque la serie de revalorización de los datos no tiene los años de 2011 a 2012 (calculados en la página como los años del intervalo sin dato) y, según la revisión actuarial, en los primeros años de la serie solo recoge la revalorización inicial, sin la paga por desviación; este último extremo no se ha comprobado en las fuentes descargadas.",
+      "texto": "La página no muestra ningún acumulado de la revalorización frente al IPC porque la serie de revalorización de los datos no tiene porcentaje general de los años de 2011 a 2012 (calculados en la página como los años del intervalo sin dato; de 2011 hay una regla en los BOE descargados, sin porcentaje general, y de 2012 no hay norma descargada) y, según la revisión actuarial, en los primeros años de la serie solo recoge la revalorización inicial, sin la paga por desviación; este último extremo no se ha comprobado en las fuentes descargadas, salvo un pago único ligado a 2010 en el real decreto de 2011.",
       "ubicacion": "Página «Mitos y realidades»: afirmación 11 (revalorización e IPC)",
       "datos": [
         "parametros/revalorizacion-general.json#2010",
-        "parametros/revalorizacion-general.json#2013"
+        "parametros/revalorizacion-general.json#2013",
+        "normativa/revalorizacion-2011-regla.json#pago-unico-referencia-2010"
       ],
       "fuentes": [
         {
@@ -2660,6 +2661,12 @@
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
           "docId": "BOE-A-2012-15764"
+        },
+        {
+          "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+          "docId": "BOE-A-2010-20149"
         }
       ],
       "fetchedAt": "2026-11-11",
@@ -2724,6 +2731,118 @@
       "revisionActuarial": "revisada",
       "respuestaActuarial": "Tanda 3, parte B, n.º 29",
       "notas": "La frase del revisor sobre el efecto de la fecundidad en veinte años es una inferencia propia y no se añade."
+    },
+    {
+      "id": "web-mitos-ipc-regla-2011",
+      "texto": "Para 2011, el Real Decreto-ley 8/2010 suspende la revalorización de las pensiones contributivas, salvo las pensiones mínimas, las del SOVI no concurrentes y las no contributivas, y el Real Decreto 1794/2010 establece una revalorización del 1 por ciento de los complementos por mínimos, las pensiones no contributivas y las pensiones no concurrentes del SOVI; las demás pensiones mantienen la cuantía de 31 de diciembre de 2010. Los textos no enuncian un porcentaje general para las pensiones no excluidas.",
+      "ubicacion": "Página «Mitos y realidades»: tarjeta de la revalorización y el IPC, regla de 2011",
+      "datos": [
+        "normativa/revalorizacion-2011-regla.json#suspension-contributivas-2011",
+        "normativa/revalorizacion-2011-regla.json#porcentaje-excluidas-2011",
+        "normativa/revalorizacion-2011-regla.json#resto-mantienen-cuantia-2011"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 8/2010, de 20 de mayo, por el que se adoptan medidas extraordinarias para la reducción del déficit público.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-8228",
+          "docId": "BOE-A-2010-8228"
+        },
+        {
+          "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+          "docId": "BOE-A-2010-20149"
+        }
+      ],
+      "fetchedAt": "2026-11-16",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Cada dato lleva su cita literal, artículo y página del BOE (ETL scripts/etl/boe_revalorizacion_2011.py). El porcentaje de las excluidas figura en la exposición de motivos del real decreto. El valor «0 %» de las no excluidas es derivado del texto («mantendrán la cuantía»), con confianza media."
+    },
+    {
+      "id": "web-mitos-ipc-pago-unico-2010",
+      "texto": "El Real Decreto 1794/2010 (disposición adicional primera) recoge un pago único antes del 1 de abril de 2011 por la diferencia entre la pensión percibida en 2010 y la que habría correspondido con una revalorización del 2,3 por ciento en 2010, para los colectivos que enumera; el texto no lo llama paga por desviación y la serie de la página no lo incluye.",
+      "ubicacion": "Página «Mitos y realidades»: tarjeta de la revalorización y el IPC, regla de 2011",
+      "datos": ["normativa/revalorizacion-2011-regla.json#pago-unico-referencia-2010"],
+      "fuentes": [
+        {
+          "title": "Real Decreto 1794/2010, de 30 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2011.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2010-20149",
+          "docId": "BOE-A-2010-20149"
+        }
+      ],
+      "fetchedAt": "2026-11-16",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-tipos-complementos-recuento",
+      "texto": "La Seguridad Social publica, a 1 de octubre de 2026, el número de pensiones contributivas en vigor con complemento por brecha de género y con complemento por maternidad, su importe medio mensual y su desglose por número de hijos, por comunidad autónoma, provincia y sexo; el fichero es un recuento a esa fecha y no contiene la brecha de género de las pensiones de jubilación publicada por año (disposición adicional 37.ª del texto refundido de la Ley General de la Seguridad Social).",
+      "ubicacion": "Página «Tipos de pensión»: Complementos por hijos (Fase 5-A4)",
+      "datos": ["parametros/complemento-brecha-genero.json#2026"],
+      "fuentes": [
+        {
+          "title": "Pensiones contributivas del Sistema de la Seguridad Social en vigor a 1 de octubre de 2026: complementos por brecha de género y por maternidad según comunidad autónoma y provincia",
+          "publisher": "Instituto Nacional de la Seguridad Social, Subdirección General de Gestión Económico-Presupuestaria y Estudios Económicos (Seguridad Social)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        },
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-16",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Los importes del desglose por hijos que figuran en el encabezado de las tablas del fichero (de uno a cuatro veces el importe por hijo) coinciden con el importe de 2026 de los datos ya cargados; lo comprueba el ETL scripts/etl/ss_complementos_genero.py. Las provincias suman cada comunidad y las comunidades suman el total en todas las tablas."
+    },
+    {
+      "id": "web-hucha-liquidacion-2025-contraste",
+      "texto": "La liquidación de 2025 del Sistema de la Seguridad Social da, en todas las partidas contrastadas, las mismas cifras de 2025 que la ejecución del presupuesto al cierre de 2025 (presupuesto, obligaciones y derechos reconocidos); por eso no se une a las liquidaciones de 2010 a 2016, y entre ambas no hay ejercicio común. En la comparativa de 2024 del mismo documento difieren cinco cifras del capítulo de transferencias corrientes de gastos respecto a la ejecución, sin causa atribuida.",
+      "ubicacion": "Página «Hucha»: Un ejercicio con las dos fuentes (Fase 5-A4)",
+      "datos": ["sistema/liquidacion-ss-series.json#gastos-total"],
+      "fuentes": [
+        {
+          "title": "Liquidación del presupuesto del Sistema de la Seguridad Social, ejercicio 2025 (PDF «SISTEMA DE LA S.S.»)",
+          "publisher": "Intervención General de la Seguridad Social, Ministerio de Inclusión, Seguridad Social y Migraciones (Seguridad Social)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+        },
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-16",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Contraste reproducible en scripts/etl/ssf_liquidacion_2025.py (datos en data/sistema/liquidacion-ss-2025-contraste); diferencias en docs/DISCREPANCIAS.md."
+    },
+    {
+      "id": "web-hucha-mei-derechos-dotaciones",
+      "texto": "Los derechos reconocidos del Mecanismo de Equidad Intergeneracional de 2024 y 2025 que da la liquidación de 2025 coinciden con los de la ejecución del presupuesto y son mayores que las dotaciones anuales al Fondo de Reserva con cargo a ese mecanismo que publican los informes a las Cortes Generales; la diferencia no se atribuye a ninguna causa.",
+      "ubicacion": "Página «Hucha»: Un ejercicio con las dos fuentes, tabla del Mecanismo de Equidad Intergeneracional (Fase 5-A4)",
+      "datos": ["sistema/fondo-reserva-series.json#dotaciones-mei-anuales"],
+      "fuentes": [
+        {
+          "title": "Liquidación del presupuesto del Sistema de la Seguridad Social, ejercicio 2025 (PDF «SISTEMA DE LA S.S.»)",
+          "publisher": "Intervención General de la Seguridad Social, Ministerio de Inclusión, Seguridad Social y Migraciones (Seguridad Social)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+        },
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        }
+      ],
+      "fetchedAt": "2026-11-16",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción de dos cifras contrastadas con dos documentos; no atribuye causa a la diferencia. La conciliación sigue pendiente en la afirmación param-mei-destino (n.º 46 de la tanda 3), con su pregunta reducida: falta la recaudación de caja por mes del MEI, que la liquidación no da."
     }
   ]
 }

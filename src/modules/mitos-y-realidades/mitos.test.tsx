@@ -131,6 +131,34 @@ describe('cálculos que muestra la página', () => {
     expect(t?.textContent).not.toMatch(/acumulado de \w+ por ciento/);
   });
 
+  it('la tarjeta del IPC resume la regla de 2011 de los BOE: suspensión, porcentaje de las excluidas y huecos que quedan (Fase 5-A4)', () => {
+    const { container } = pintar();
+    const t = container.querySelector('#pensiones-siempre-con-el-ipc');
+    const r = datosMitos().ipc.regla2011;
+    const tabla = [...(t?.querySelectorAll('table') ?? [])].find((x) =>
+      /sin porcentaje general/.test(x.querySelector('caption')?.textContent ?? ''),
+    );
+    if (!tabla) throw new Error('Sin la tabla de la regla de 2011');
+    const filas = [...tabla.querySelectorAll('tbody tr')].map((tr) =>
+      [...tr.querySelectorAll('th, td')].map((c) => c.textContent),
+    );
+    expect(filas).toHaveLength(3);
+    expect(filas[0]?.[1]).toBe('Suspendida');
+    expect(r.excluidas.valor).toBe(1);
+    expect(filas[1]?.[1]).toBe('1,0\u00a0%');
+    expect(filas[2]?.[1]).toBe('2,3\u00a0%');
+    // cita el artículo y la norma de cada fila
+    expect(filas[0]?.[2]).toMatch(/Artículo 4\.Uno/);
+    expect(filas[1]?.[2]).toMatch(/Exposición de motivos/);
+    // el año de la regla no es un hueco «sin norma» y sí lo sigue siendo el siguiente
+    const texto = t?.textContent ?? '';
+    expect(texto).toMatch(/De \d{4} sí hay norma descargada/);
+    expect(texto).toMatch(/de \d{4} no hay norma descargada/);
+    expect(texto).toMatch(/no muestra ningún acumulado/);
+    // el porcentaje de 2011 de la regla no entra en la serie general (la usa el motor)
+    expect(datosMitos().ipc.filas.find((f) => f.anio === r.anio)?.revalorizacion).toBeNull();
+  });
+
   it('la tarjeta de «cobran más de lo cotizado» no contiene cifras de lo cotizado ni de lo cobrado', () => {
     const { container } = pintar();
     const t = container.querySelector('#jubilados-cobran-mas-de-lo-cotizado');

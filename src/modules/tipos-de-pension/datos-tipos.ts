@@ -11,6 +11,10 @@ import minimaViudedadJson from '../../../data/parametros/pension-minima-viudedad
 import pncImporteJson from '../../../data/parametros/pnc-importe-anual.json';
 import pncReglasJson from '../../../data/parametros/pnc-reglas.json';
 import supervivenciaJson from '../../../data/parametros/supervivencia-reglas.json';
+import complementosIndicadoresCsv from '../../../data/sistema/complementos-genero-indicadores.csv?raw';
+import complementosIndicadoresJson from '../../../data/sistema/complementos-genero-indicadores.json';
+import complementosTerritorioCsv from '../../../data/sistema/complementos-genero-territorio.csv?raw';
+import complementosTerritorioJson from '../../../data/sistema/complementos-genero-territorio.json';
 import imserso from '../../../data/sistema/imserso-pnc-evolucion.csv?raw';
 import imsersoJson from '../../../data/sistema/imserso-pnc-evolucion.json';
 import perfilJson from '../../../data/sistema/imserso-pnc-perfil-2025.json';
@@ -45,6 +49,7 @@ import {
   porcentajeDeImporte,
   situacionDeCuantia,
 } from './cuantias';
+import { construirComplementos, type DatosComplementos } from './complementos';
 import { FICHEROS_TIPOS_DE_PENSION } from './ficheros';
 import {
   FICHAS,
@@ -125,6 +130,8 @@ export interface DatosTipos {
   readonly vigenteA: string;
   readonly anioCuantias: number;
   readonly fichas: readonly DatosFicha[];
+  /** Complementos por brecha de género y por maternidad en vigor (Fase 5-A4). */
+  readonly complementos: DatosComplementos;
 }
 
 /** Los datos de cuantía son numéricos; los de regla de texto se descartan. */
@@ -327,5 +334,12 @@ export const datosTipos = memorizar((): DatosTipos => {
     };
   });
 
-  return { vigenteA: archivoPrestaciones.vigenteA, anioCuantias, fichas };
+  const complementos = construirComplementos(
+    complementosTerritorioCsv,
+    complementosTerritorioJson,
+    complementosIndicadoresCsv,
+    complementosIndicadoresJson,
+  );
+
+  return { vigenteA: archivoPrestaciones.vigenteA, anioCuantias, fichas, complementos };
 });

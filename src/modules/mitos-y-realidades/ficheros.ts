@@ -20,6 +20,7 @@ export const FICHEROS_MITOS = [
   'data/parametros/mei-reglas.json',
   'data/parametros/pension-minima-jubilacion.json',
   'data/parametros/pnc-importe-anual.json',
+  'data/normativa/revalorizacion-2011-regla.json',
   'data/parametros/revalorizacion-general.json',
   'data/parametros/revalorizacion-regla.json',
 ] as const;

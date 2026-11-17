@@ -148,3 +148,9 @@ export const ETIQUETA_REQUISITO = {
   residencia: 'Residencia',
   otros: 'Otro requisito',
 } as const;
+
+/** Columnas de tramos de hijos del CSV de complementos (Fase 5-A4), de menos a más hijos. */
+export const COLUMNAS_TRAMOS_HIJOS = {
+  brecha: ['hijos_1', 'hijos_2', 'hijos_3', 'hijos_4_o_mas'],
+  maternidad: ['hijos_2', 'hijos_3', 'hijos_4_o_mas'],
+} as const;

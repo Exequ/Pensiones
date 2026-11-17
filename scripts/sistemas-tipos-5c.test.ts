@@ -9,7 +9,12 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { ArchivoDatos, ArchivoPrestaciones, ArchivoTabla } from '../src/engine/esquema-datos.ts';
+import {
+  ArchivoDatos,
+  ArchivoExtraccionPdf,
+  ArchivoPrestaciones,
+  ArchivoTabla,
+} from '../src/engine/esquema-datos.ts';
 import { FICHEROS_OTROS_SISTEMAS } from '../src/modules/otros-sistemas/ficheros.ts';
 import { buscarSeccion } from '../src/modules/secciones.ts';
 import { FICHEROS_TIPOS_DE_PENSION } from '../src/modules/tipos-de-pension/ficheros.ts';
@@ -46,6 +51,13 @@ describe('procedencia de los ficheros que usan las páginas de la Fase 5-C', () 
       expect(t.source.url).toMatch(/^https?:\/\//);
       expect(t.fetchedAt).toBeTruthy();
       expect(confianzas).toContain(t.confidence);
+      expect(existsSync(path.join(RAIZ, ruta.replace(/\.json$/, '.csv')))).toBe(true);
+    } else if (tipo === 'extraccion-pdf') {
+      const x = ArchivoExtraccionPdf.parse(json);
+      expect(x.source.url).toMatch(/^https?:\/\//);
+      expect(x.fetchedAt).toBeTruthy();
+      expect(confianzas).toContain(x.confidence);
+      expect(x.naturaleza).toBe('observado');
       expect(existsSync(path.join(RAIZ, ruta.replace(/\.json$/, '.csv')))).toBe(true);
     } else if (tipo === 'prestaciones') {
       const a = ArchivoPrestaciones.parse(json);

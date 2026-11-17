@@ -1,0 +1,888 @@
+{
+  "tipo": "extraccion-pdf",
+  "id": "liquidacion-ss-2025-extraccion",
+  "title": "Liquidación del presupuesto de la Seguridad Social, ejercicio 2025: extracción del PDF con su referencia",
+  "description": "Cada cifra de las cuatro tablas del PDF (presupuesto de gastos, capítulo 4 de gastos, presupuesto de ingresos, capítulos 1 y 4 de ingresos), en millones de euros, con fichero, huella SHA-256, página, fila y columna. Este PDF no trae la página de liquidación del presupuesto de gastos, solo su comparación con 2024. Generado por scripts/etl/ssf_liquidacion_2025.py.",
+  "columnas": [
+    {
+      "id": "id",
+      "descripcion": "Identificador del valor: ejercicio del PDF, página, fila y columna",
+      "unidad": null
+    },
+    {
+      "id": "ejercicio_pdf",
+      "descripcion": "Ejercicio del PDF del que se extrae",
+      "unidad": null
+    },
+    {
+      "id": "periodo",
+      "descripcion": "Ejercicio al que se refiere la cifra (en las columnas «ejercicio_anterior», el anterior al del PDF)",
+      "unidad": null
+    },
+    {
+      "id": "tabla",
+      "descripcion": "gastos, gastos-cap4, ingresos o ingresos-cap1-cap4",
+      "unidad": null
+    },
+    {
+      "id": "tipo_pagina",
+      "descripcion": "liquidacion (presupuesto y ejecución del ejercicio) o comparacion (con el ejercicio anterior)",
+      "unidad": null
+    },
+    {
+      "id": "seccion",
+      "descripcion": "Epígrafe de la tabla bajo el que figura la partida",
+      "unidad": null
+    },
+    {
+      "id": "partida",
+      "descripcion": "Etiqueta literal de la partida en el PDF",
+      "unidad": null
+    },
+    {
+      "id": "columna",
+      "descripcion": "Columna del PDF",
+      "unidad": null
+    },
+    {
+      "id": "valor",
+      "descripcion": "Cifra del PDF",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "fichero",
+      "descripcion": "PDF de origen, ruta relativa al repositorio",
+      "unidad": null
+    },
+    {
+      "id": "sha256",
+      "descripcion": "Huella SHA-256 del PDF de origen",
+      "unidad": null
+    },
+    {
+      "id": "pagina",
+      "descripcion": "Página del PDF (numeración física, desde 1)",
+      "unidad": null
+    },
+    {
+      "id": "fila",
+      "descripcion": "Fila con cifras dentro de la página (desde 1)",
+      "unidad": null
+    },
+    {
+      "id": "linea",
+      "descripcion": "Línea de texto extraída del PDF, sin los espacios sobrantes",
+      "unidad": null
+    },
+    {
+      "id": "verificado",
+      "descripcion": "si: todas las sumas de la tabla de ese PDF cuadran dentro de la tolerancia; no: alguna no cuadra y la cifra no se publica",
+      "unidad": null
+    }
+  ],
+  "filas": 336,
+  "source": {
+    "title": "Liquidación del presupuesto del Sistema de la Seguridad Social, ejercicio 2025 (PDF «SISTEMA DE LA S.S.»)",
+    "publisher": "Intervención General de la Seguridad Social, Ministerio de Inclusión, Seguridad Social y Migraciones (Seguridad Social)",
+    "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+  },
+  "fetchedAt": "2026-11-16",
+  "confidence": "alta",
+  "naturaleza": "observado",
+  "unidad": "millones de euros",
+  "notes": "PDF aportado por el autor, descargado el 2026-11-16 según su indicación; no consta LEEME con la URL exacta del fichero, por lo que la URL es la de la página de listado de liquidaciones y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla.",
+  "tolerancia": "Redondeo: 0,005 millones por cada cifra que interviene en una suma, con mínimo de 0,01; las cifras de la fuente tienen dos decimales.",
+  "origenes": [
+    {
+      "fichero": "data-raw/seg-social-fin/liquidacion/2025_SISTEMA.pdf",
+      "sha256": "ee831fa59e4112329d78fd2745c03296f17627cb8515a3d606dcaa0248896034",
+      "paginas": 9,
+      "ejercicio": 2025
+    }
+  ],
+  "resumenValidaciones": {
+    "comprobaciones_de_suma": 107,
+    "sumas_incorrectas": 0,
+    "coherencia_liquidacion_comparacion": 59,
+    "coherencia_incorrecta": 0,
+    "comprobaciones_entre_tablas": 80,
+    "comprobaciones_entre_tablas_incorrectas": 3,
+    "cifras_contrastadas_con_la_ejecucion": 208,
+    "cifras_que_coinciden_con_la_ejecucion": 203,
+    "cifras_que_difieren_de_la_ejecucion": 5,
+    "partidas_sin_equivalente_en_la_ejecucion": 0
+  },
+  "validacionesPorTabla": [
+    {
+      "ejercicio_pdf": 2025,
+      "tabla": "gastos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2025,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 57,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2025,
+      "tabla": "gastos-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 12,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2025,
+      "tabla": "ingresos",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2025,
+      "tabla": "ingresos",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 10,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2025,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "liquidacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    },
+    {
+      "ejercicio_pdf": 2025,
+      "tabla": "ingresos-cap1-cap4",
+      "tipo_pagina": "comparacion",
+      "comprobaciones": 4,
+      "incorrectas": 0
+    }
+  ],
+  "comprobacionesEspecificas": [
+    {
+      "id": "gastos-cap4-total-2025",
+      "descripcion": "Capítulo 4 de gastos de 2025: prestaciones contributivas + no contributivas y otras transferencias = partida «4. Transferencias corrientes» de la tabla de gastos",
+      "esperado": 234968.37,
+      "obtenido": 234968.37,
+      "diferencia": 0.0,
+      "tolerancia": 0.015,
+      "ok": true
+    },
+    {
+      "id": "ingresos-cotizaciones-2025",
+      "descripcion": "Cotizaciones sociales de 2025: total de los capítulos 1 y 4 de ingresos = partida «1. Cotizaciones sociales» de la tabla de ingresos",
+      "esperado": 176794.08,
+      "obtenido": 176794.08,
+      "diferencia": 0.0,
+      "tolerancia": 0.01,
+      "ok": true
+    },
+    {
+      "id": "ingresos-transferencias-2025",
+      "descripcion": "Transferencias corrientes de 2025: total de los capítulos 1 y 4 de ingresos = partida «4. Transferencias corrientes» de la tabla de ingresos",
+      "esperado": 52773.22,
+      "obtenido": 52773.22,
+      "diferencia": 0.0,
+      "tolerancia": 0.01,
+      "ok": true
+    },
+    {
+      "id": "gastos-cap4-total-2024",
+      "descripcion": "Capítulo 4 de gastos de 2024: prestaciones contributivas + no contributivas y otras transferencias = partida «4. Transferencias corrientes» de la tabla de gastos",
+      "esperado": 220480.34,
+      "obtenido": 220479.8,
+      "diferencia": -0.54,
+      "tolerancia": 0.015,
+      "ok": false
+    },
+    {
+      "id": "ingresos-cotizaciones-2024",
+      "descripcion": "Cotizaciones sociales de 2024: total de los capítulos 1 y 4 de ingresos = partida «1. Cotizaciones sociales» de la tabla de ingresos",
+      "esperado": 165577.07,
+      "obtenido": 165577.07,
+      "diferencia": 0.0,
+      "tolerancia": 0.01,
+      "ok": true
+    },
+    {
+      "id": "ingresos-transferencias-2024",
+      "descripcion": "Transferencias corrientes de 2024: total de los capítulos 1 y 4 de ingresos = partida «4. Transferencias corrientes» de la tabla de ingresos",
+      "esperado": 48120.85,
+      "obtenido": 48120.85,
+      "diferencia": 0.0,
+      "tolerancia": 0.01,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-p1-f1",
+      "descripcion": "«1. Gastos de personal»: ejercicio 2025 menos 2024 = incremento absoluto (gastos, p. 1)",
+      "esperado": 2.32,
+      "obtenido": 2.32,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-p1-f2",
+      "descripcion": "«2. Gastos corrientes en bienes y servicios»: ejercicio 2025 menos 2024 = incremento absoluto (gastos, p. 1)",
+      "esperado": 95.59,
+      "obtenido": 95.59,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-p1-f3",
+      "descripcion": "«3. Gastos financieros»: ejercicio 2025 menos 2024 = incremento absoluto (gastos, p. 1)",
+      "esperado": 0.58,
+      "obtenido": 0.58,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-p1-f4",
+      "descripcion": "«4. Transferencias corrientes»: ejercicio 2025 menos 2024 = incremento absoluto (gastos, p. 1)",
+      "esperado": 14488.03,
+      "obtenido": 14488.03,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-p1-f5",
+      "descripcion": "«SUMA OPERACIONES CORRIENTES»: ejercicio 2025 menos 2024 = incremento absoluto (gastos, p. 1)",
+      "esperado": 14586.52,
+      "obtenido": 14586.52,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-p1-f6",
+      "descripcion": "«6. Inversiones reales»: ejercicio 2025 menos 2024 = incremento absoluto (gastos, p. 1)",
+      "esperado": 19.24,
+      "obtenido": 19.24,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-p1-f7",
+      "descripcion": "«7. Transferencias de capital»: ejercicio 2025 menos 2024 = incremento absoluto (gastos, p. 1)",
+      "esperado": -122.55,
+      "obtenido": -122.55,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-p1-f8",
+      "descripcion": "«SUMA OPERACIONES DE CAPITAL»: ejercicio 2025 menos 2024 = incremento absoluto (gastos, p. 1)",
+      "esperado": -103.31,
+      "obtenido": -103.31,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-p1-f9",
+      "descripcion": "«SUMA OPERACIONES NO FINANCIERAS»: ejercicio 2025 menos 2024 = incremento absoluto (gastos, p. 1)",
+      "esperado": 14483.21,
+      "obtenido": 14483.21,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-p1-f10",
+      "descripcion": "«8. Activos financieros»: ejercicio 2025 menos 2024 = incremento absoluto (gastos, p. 1)",
+      "esperado": -1533.13,
+      "obtenido": -1533.13,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-p1-f11",
+      "descripcion": "«9. Pasivos financieros»: ejercicio 2025 menos 2024 = incremento absoluto (gastos, p. 1)",
+      "esperado": 0.0,
+      "obtenido": 0.0,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-p1-f12",
+      "descripcion": "«SUMA OPERACIONES FINANCIERAS»: ejercicio 2025 menos 2024 = incremento absoluto (gastos, p. 1)",
+      "esperado": -1533.13,
+      "obtenido": -1533.13,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-p1-f13",
+      "descripcion": "«TOTAL GASTOS»: ejercicio 2025 menos 2024 = incremento absoluto (gastos, p. 1)",
+      "esperado": 12950.08,
+      "obtenido": 12950.08,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f1",
+      "descripcion": "«Incapacidad Permanente»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 1538.39,
+      "obtenido": 1538.39,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f2",
+      "descripcion": "«Jubilación»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 7189.25,
+      "obtenido": 7189.25,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f3",
+      "descripcion": "«Viudedad»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 1046.61,
+      "obtenido": 1046.61,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f4",
+      "descripcion": "«Orfandad»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 59.9,
+      "obtenido": 59.9,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f5",
+      "descripcion": "«En favor de familiares»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 24.96,
+      "obtenido": 24.96,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f6",
+      "descripcion": "«Pensiones derivadas DANA»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 1.36,
+      "obtenido": 1.36,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f7",
+      "descripcion": "«SUMA PENSIONES»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 9859.11,
+      "obtenido": 9860.47,
+      "diferencia": 1.36,
+      "tolerancia": 0.02,
+      "ok": false
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f8",
+      "descripcion": "«Incapacidad temporal»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 1921.59,
+      "obtenido": 1921.59,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f9",
+      "descripcion": "«Recargos falta medidas seguridad e higiene»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 6.66,
+      "obtenido": 6.66,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f10",
+      "descripcion": "«Nacimiento, Cuidad, Menor, Correspo; Riesgo Emb, Lact.»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 348.43,
+      "obtenido": 348.43,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f11",
+      "descripcion": "«Prestac.y entreg. únicas»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": -6.78,
+      "obtenido": -6.78,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f12",
+      "descripcion": "«Prestaciones sociales»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": -0.32,
+      "obtenido": -0.32,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f13",
+      "descripcion": "«Otras prestc e indemnizaciones»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 7.84,
+      "obtenido": 7.84,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f14",
+      "descripcion": "«Farmacia»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 1.95,
+      "obtenido": 1.95,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f15",
+      "descripcion": "«Ayudas genéricas a familia e ISFL»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 0.0,
+      "obtenido": 0.0,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f16",
+      "descripcion": "«SUMA SUBSIDIOS Y OTRAS PRESTACIONES»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 2279.37,
+      "obtenido": 2279.37,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p4-f17",
+      "descripcion": "«TOTAL PRESTACIONES CONTRIBUTIVAS»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 4)",
+      "esperado": 12138.48,
+      "obtenido": 12139.84,
+      "diferencia": 1.36,
+      "tolerancia": 0.02,
+      "ok": false
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f1",
+      "descripcion": "«Pensiones»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 326.9,
+      "obtenido": 326.9,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f2",
+      "descripcion": "«Complemento a mínimos»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 850.92,
+      "obtenido": 850.92,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f3",
+      "descripcion": "«Ingreso Minimo Vital y Protección Familiar»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 689.49,
+      "obtenido": 689.49,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f4",
+      "descripcion": "«Prestaciones Sociales»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 44.08,
+      "obtenido": 44.08,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f5",
+      "descripcion": "«Otras prestac e indemnizaciones»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 0.57,
+      "obtenido": 0.57,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f6",
+      "descripcion": "«Farmacia»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 2.06,
+      "obtenido": 2.06,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f7",
+      "descripcion": "«Ayudas genéricas a familia e ISFL»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 0.0,
+      "obtenido": 0.0,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f8",
+      "descripcion": "«Nacim.,Cuidado Menor,Corresp.,Riesgo Emb.,Lact.»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 0.15,
+      "obtenido": 0.15,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f9",
+      "descripcion": "«SUMA PREST. NO CONTRIBUTIVAS»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 1914.17,
+      "obtenido": 1914.17,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f10",
+      "descripcion": "«A la Administración del Estado y Organismos Autónomos»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 46.48,
+      "obtenido": 46.48,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f11",
+      "descripcion": "«A la Seguridad Social»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 112.37,
+      "obtenido": 112.37,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f12",
+      "descripcion": "«A Comunidades Autónomas»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 275.86,
+      "obtenido": 275.86,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f13",
+      "descripcion": "«A empresas privadas y Otras»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": -0.69,
+      "obtenido": -0.69,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f14",
+      "descripcion": "«Al Exterior»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 0.54,
+      "obtenido": 0.54,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f15",
+      "descripcion": "«SUMA OTRAS TRANSF. CORRIENTES»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 434.56,
+      "obtenido": 434.56,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-gastos-cap4-p5-f16",
+      "descripcion": "«TOTAL PREST NO CONTRIBUTIVAS+OTRAS TRANSF»: ejercicio 2025 menos 2024 = incremento absoluto (gastos-cap4, p. 5)",
+      "esperado": 2348.73,
+      "obtenido": 2348.73,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-p7-f1",
+      "descripcion": "«1. Cotizaciones sociales»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos, p. 7)",
+      "esperado": 11217.01,
+      "obtenido": 11217.01,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-p7-f2",
+      "descripcion": "«3. Tasas y otros ingresos»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos, p. 7)",
+      "esperado": 1114.44,
+      "obtenido": 1114.44,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-p7-f3",
+      "descripcion": "«4. Transferencias corrientes»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos, p. 7)",
+      "esperado": 4652.37,
+      "obtenido": 4652.37,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-p7-f4",
+      "descripcion": "«5. Ingresos patrimoniales»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos, p. 7)",
+      "esperado": 45.59,
+      "obtenido": 45.59,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-p7-f5",
+      "descripcion": "«SUMA OPERACIONES CORRIENTES»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos, p. 7)",
+      "esperado": 17029.41,
+      "obtenido": 17029.41,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-p7-f6",
+      "descripcion": "«6. Enajenación de inversiones reales.»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos, p. 7)",
+      "esperado": 14.86,
+      "obtenido": 14.86,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-p7-f7",
+      "descripcion": "«7. Transferencias de capital»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos, p. 7)",
+      "esperado": -153.68,
+      "obtenido": -153.68,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-p7-f8",
+      "descripcion": "«SUMA OPERACIONES DE CAPITAL»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos, p. 7)",
+      "esperado": -138.82,
+      "obtenido": -138.82,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-p7-f9",
+      "descripcion": "«SUMA OPERACIONES NO FINANCIERAS»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos, p. 7)",
+      "esperado": 16890.59,
+      "obtenido": 16890.59,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-p7-f10",
+      "descripcion": "«8. Activos financieros»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos, p. 7)",
+      "esperado": -2345.26,
+      "obtenido": -2345.26,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-p7-f11",
+      "descripcion": "«9. Pasivos financieros»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos, p. 7)",
+      "esperado": 0.0,
+      "obtenido": 0.0,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-p7-f12",
+      "descripcion": "«SUMA OPERACIONES FINANCIERAS»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos, p. 7)",
+      "esperado": -2345.26,
+      "obtenido": -2345.26,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-p7-f13",
+      "descripcion": "«TOTAL INGRESOS SISTEMA DE LA SEGURIDAD SOCIAL»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos, p. 7)",
+      "esperado": 14545.33,
+      "obtenido": 14545.33,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f1",
+      "descripcion": "«Mecanismo de Equidad Intergeneracional»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": 1223.83,
+      "obtenido": 1223.83,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f2",
+      "descripcion": "«Régimen general»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": 8642.85,
+      "obtenido": 8642.85,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f3",
+      "descripcion": "«R.E. Trabajadores autónomos»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": -5.24,
+      "obtenido": -5.24,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f4",
+      "descripcion": "«R.E. Agrario»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": -0.18,
+      "obtenido": -0.18,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f5",
+      "descripcion": "«R.E. Trabajadores del Mar»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": 16.73,
+      "obtenido": 16.73,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f6",
+      "descripcion": "«R.E. Minería del carbón»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": -10.63,
+      "obtenido": -10.63,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f7",
+      "descripcion": "«R.E. Empleados de hogar»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": -0.06,
+      "obtenido": -0.06,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f8",
+      "descripcion": "«Accidentes de trabajo y E.P.»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": 808.54,
+      "obtenido": 808.54,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f9",
+      "descripcion": "«Desempleados y Benef. Prest. Erte, Mec, Red, Cese Activ y Bonif. Fomento Empleo»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": 541.17,
+      "obtenido": 541.17,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f10",
+      "descripcion": "«TOTAL COTIZACIONES SOCIALES»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": 11217.01,
+      "obtenido": 11217.01,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f11",
+      "descripcion": "«Del Estado y Organismos Autónomos»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": 4731.06,
+      "obtenido": 4731.06,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f12",
+      "descripcion": "«De la Seguridad Social»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": -71.76,
+      "obtenido": -71.76,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f13",
+      "descripcion": "«De Comunidades autónomas»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": -0.03,
+      "obtenido": -0.03,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f14",
+      "descripcion": "«De Empresas privadas y otros»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": -6.89,
+      "obtenido": -6.89,
+      "diferencia": -0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    },
+    {
+      "id": "incremento-ingresos-cap1-cap4-p9-f15",
+      "descripcion": "«TOTAL TRANSFERENCIAS CTES.»: ejercicio 2025 menos 2024 = incremento absoluto (ingresos-cap1-cap4, p. 9)",
+      "esperado": 4652.37,
+      "obtenido": 4652.37,
+      "diferencia": 0.0,
+      "tolerancia": 0.02,
+      "ok": true
+    }
+  ]
+}

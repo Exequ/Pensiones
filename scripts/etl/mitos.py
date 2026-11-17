@@ -150,9 +150,9 @@ def aplica_revision():
                   'parametros/mei-reglas.json#da2-rdl-2023-aumento-mei-decimas-del-exceso']})
     # n.º 28: el acumulado no se publica mientras la serie tenga huecos
     por['pensiones-siempre-con-el-ipc']['noSePuedeConcluir'].append(
-        'El acumulado de la revalorización frente al IPC: no se calcula ni se muestra porque la serie de revalorización de /data no tiene los años 2011 ni 2012.')
+        'El acumulado de la revalorización frente al IPC: no se calcula ni se muestra porque la serie de revalorización de /data no tiene porcentaje general de 2011 (los BOE de 2011 suspenden la revalorización de las pensiones contributivas, con excepciones, sin enunciar un porcentaje general) ni de 2012 (no hay norma descargada).')
     por['pensiones-siempre-con-el-ipc']['faltan'] = por['pensiones-siempre-con-el-ipc'].get('faltan', []) + [
-        'Los porcentajes de revalorización de 2011 y 2012 (y, según el revisor, la paga por desviación de 2001 a 2010), sin los cuales no se puede publicar un acumulado frente al IPC.']
+        'La norma que fija la revalorización de 2012 y, según el revisor, la paga por desviación de 2001 a 2010 (el real decreto de 2011 recoge un pago único ligado a 2010, sin llamarlo paga por desviación), sin las cuales no se puede publicar un acumulado frente al IPC.']
 
 
 def main():

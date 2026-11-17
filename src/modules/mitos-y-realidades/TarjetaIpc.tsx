@@ -6,6 +6,7 @@
 import type { Columna } from '../../components/DataTable';
 import { SourceLine } from '../../components/SourceLine';
 import { ComoLeerlo } from '../historico/ComoLeerlo';
+import { tramosDeAnios } from '../../engine/mitos';
 import { puntosAPorcentaje } from '../historico/formatos';
 import { GraficoSeries } from '../historico/GraficoSeries';
 import { Afirmacion, type Mito } from './Afirmacion';
@@ -28,6 +29,35 @@ export function TarjetaIpc({ mito, indice, total }: TarjetaProps) {
   const d = datosMitos().ipc;
   const huecos = d.aniosSinRevalorizacion;
   const textoHuecos = huecos.map(textoTramo).join(' y ');
+  const r = d.regla2011;
+  /** «Real Decreto-ley 8/2010»: el rango y el número de la norma salen del título del dato. */
+  const normaCorta = (c: { readonly dato: { readonly source: { readonly title: string } } }) =>
+    c.dato.source.title.split(',')[0] ?? '';
+  const aniosSinNorma = tramosDeAnios(
+    huecos
+      .flatMap(([desde, hasta]) => Array.from({ length: hasta - desde + 1 }, (_, i) => desde + i))
+      .filter((a) => a !== r.anio),
+  );
+  const textoSinNorma = aniosSinNorma.map(textoTramo).join(' y ');
+  const fraccion = (v: number | string) => (typeof v === 'number' ? v / 100 : null);
+  const sitio = (c: { readonly ubicacion: string }) => c.ubicacion.split(';')[0] ?? '';
+  const filasRegla: FilaTexto[] = [
+    {
+      concepto: 'Pensiones contributivas no excluidas',
+      valor: 'Suspendida',
+      norma: `${normaCorta(r.suspension)}, ${sitio(r.suspension)}; ${normaCorta(r.resto)}, ${sitio(r.resto)}`,
+    },
+    {
+      concepto: 'Complementos por mínimos, no contributivas y SOVI no concurrentes',
+      valor: fraccion(r.excluidas.valor),
+      norma: `${normaCorta(r.excluidas)}, ${sitio(r.excluidas)}`,
+    },
+    {
+      concepto: 'Referencia del pago único ligado al ejercicio anterior',
+      valor: fraccion(r.pagoUnico.valor),
+      norma: `${normaCorta(r.pagoUnico)}, ${sitio(r.pagoUnico)}`,
+    },
+  ];
 
   const filas: FilaTexto[] = d.filas.map((f) => ({
     anio: String(f.anio),
@@ -79,11 +109,14 @@ export function TarjetaIpc({ mito, indice, total }: TarjetaProps) {
           </p>
           <p>
             Esta tarjeta no muestra ningún acumulado de la revalorización frente al IPC: la serie de
-            revalorización de los datos no tiene {textoHuecos === '' ? 'algunos años' : textoHuecos}
-            . Además, según la revisión actuarial, en los primeros años de la serie solo figura la
-            revalorización inicial y no la paga por desviación del IPC; este último extremo no se ha
-            comprobado en las fuentes descargadas. Un acumulado calculado con esos huecos no sería
-            comparable.
+            revalorización de los datos no tiene porcentaje general de{' '}
+            {textoHuecos === '' ? 'algunos años' : textoHuecos}. De {r.anio} sí hay norma descargada
+            y se resume más abajo, pero no fija un único porcentaje general; de {textoSinNorma} no
+            hay norma descargada. Además, según la revisión actuarial, en los primeros años de la
+            serie solo figura la revalorización inicial y no la paga por desviación del IPC; este
+            último extremo no se ha comprobado en las fuentes descargadas, salvo que el real decreto
+            de {r.anio} recoge un pago único ligado al ejercicio anterior, que la serie tampoco
+            incluye. Un acumulado calculado con esos huecos no sería comparable.
           </p>
         </>
       }
@@ -100,6 +133,19 @@ export function TarjetaIpc({ mito, indice, total }: TarjetaProps) {
       <FuentesDesplegables
         datos={d.revalorizacion.datos}
         resumen={`Ver las normas de cada año de la revalorización (${d.revalorizacion.datos.length} datos)`}
+      />
+
+      <h4>{`La regla de ${String(r.anio)} en las normas descargadas`}</h4>
+      <TablaConFuente
+        titulo={`Revalorización de las pensiones en ${String(r.anio)} según el texto de las normas, sin porcentaje general`}
+        columnas={[
+          { clave: 'concepto', titulo: 'Concepto' },
+          { clave: 'valor', titulo: 'Revalorización', tipo: 'porcentaje', decimales: 1 },
+          { clave: 'norma', titulo: 'Norma y artículo' },
+        ]}
+        filas={filasRegla}
+        fuentes={[r.suspension.dato, r.excluidas.dato, r.pagoUnico.dato]}
+        pie="El texto no enuncia un porcentaje para las pensiones no excluidas: «suspensión» y «mantendrán la cuantía» equivalen a un incremento nulo. El porcentaje de las excluidas figura en la exposición de motivos del real decreto y sus artículos lo desarrollan en importes «a cuenta» del IPC real."
       />
 
       <GraficoSeries

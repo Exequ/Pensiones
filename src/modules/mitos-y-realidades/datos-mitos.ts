@@ -21,6 +21,7 @@ import meiReglasJson from '../../../data/parametros/mei-reglas.json';
 import minimaJson from '../../../data/parametros/pension-minima-jubilacion.json';
 import pncJson from '../../../data/parametros/pnc-importe-anual.json';
 import revalorizacionJson from '../../../data/parametros/revalorizacion-general.json';
+import regla2011Json from '../../../data/normativa/revalorizacion-2011-regla.json';
 import reglaJson from '../../../data/parametros/revalorizacion-regla.json';
 import { ArchivoMitos, type ArchivoDatos, type Dato } from '../../engine/esquema-datos';
 import {
@@ -88,6 +89,8 @@ export interface CifraSuelta {
   readonly periodo: string;
   readonly notas: string;
   readonly cita: string;
+  /** Artículo o apartado de la norma (campo `location` del dato). */
+  readonly ubicacion: string;
   readonly dato: Dato;
 }
 
@@ -101,6 +104,7 @@ function cifra(archivo: ArchivoDatos, id: string): CifraSuelta {
     periodo: d.period,
     notas: d.notes ?? '',
     cita: d.quote ?? '',
+    ubicacion: d.location ?? '',
     dato: datoDeArchivo(archivo, id),
   };
 }
@@ -215,6 +219,17 @@ export const datosMitos = memorizar(() => {
     Math.max(ultimoAnioIpc, ultimoAnioRevalorizacion),
   );
   const regla = validarArchivo(reglaJson);
+  const regla2011Archivo = validarArchivo(regla2011Json);
+  const excluidas2011 = cifra(regla2011Archivo, 'porcentaje-excluidas-2011');
+  const regla2011 = {
+    anio: Number(excluidas2011.periodo),
+    suspension: cifra(regla2011Archivo, 'suspension-contributivas-2011'),
+    actualizacion: cifra(regla2011Archivo, 'suspension-actualizacion-ipc-2011'),
+    excluidas: excluidas2011,
+    aCuenta: cifra(regla2011Archivo, 'a-cuenta-del-ipc-2011'),
+    resto: cifra(regla2011Archivo, 'resto-mantienen-cuantia-2011'),
+    pagoUnico: cifra(regla2011Archivo, 'pago-unico-referencia-2010'),
+  };
 
   // 8. Pensión mínima y PNC (euros al año).
   const minimaJubilacion = serieDeDatos(validarArchivo(minimaJson), (id) =>
@@ -351,6 +366,7 @@ export const datosMitos = memorizar(() => {
       ),
       diferenciaMedia: diferencia(revalorizacion.puntos, ipcMedia.puntos),
       diferenciaDiciembre: diferencia(revalorizacion.puntos, ipcDiciembre.puntos),
+      regla2011,
       ultimoMes: cifra(regla, REGLA_REVALORIZACION.ultimoMes),
       meses: cifra(regla, REGLA_REVALORIZACION.meses),
       suelo: cifra(regla, REGLA_REVALORIZACION.suelo),

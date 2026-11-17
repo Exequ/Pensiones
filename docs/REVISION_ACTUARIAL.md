@@ -36,7 +36,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Afirmación**: Integración de lagunas con porcentajes adicionales de las mensualidades 49.ª a 84.ª (DT 41.ª TRLGSS): 5 (% de brecha de género de las pensiones de jubilación por encima del cual rige la medida) en 2026.
 
-**Qué debe comprobar el actuario**: (2) ¿Se aplica la DT 41.ª también a la opción de 25 años de la DT 4.ª.7 (que aplica la redacción de 2023 del art. 209) aunque salga menos favorable? (3) ¿Sigue la brecha de la DA 37.ª por encima del 5 % en cada año? Falta descargar la brecha de género publicada por la Seguridad Social.
+**Qué debe comprobar el actuario**: (2) ¿Se aplica la DT 41.ª también a la opción de 25 años de la DT 4.ª.7 (que aplica la redacción de 2023 del art. 209) aunque salga menos favorable? (3) ¿Sigue la brecha de la DA 37.ª por encima del 5 % en cada año? El fichero descargado el 2026-11-16 («Brecha de género.pdf») es el recuento de complementos por brecha de género y por maternidad a 1 de octubre de 2026, no la brecha de la DA 37.ª; sigue faltando la brecha publicada por año (DESCARGAS_MANUALES.md).
 
 **Datos**: parametros/lagunas-integracion-brecha-genero.json#2026-umbral-brecha-pct
 
@@ -46,7 +46,7 @@ Para marcar una revisión: poner `revisionActuarial: "revisada"` (o `"rechazada"
 
 **Afirmación**: Destino de la cotización finalista del MEI (art. 127 bis TRLGSS): dos indicadores separados en 2023: 1 (indicador (1 = la recaudación del MEI nutre el Fondo de Reserva)) y 1 (indicador (1 = no computa para prestaciones)).
 
-**Qué debe comprobar el actuario**: Conciliar los derechos reconocidos del MEI en la ejecución del presupuesto con las dotaciones anuales al Fondo con cargo al MEI (data/sistema/fondo-reserva-series): explicar la diferencia (hipótesis a comprobar: se dota lo recaudado y no los derechos, con desfase de un mes). Falta la columna de recaudación (caja) del MEI en la ejecución.
+**Qué debe comprobar el actuario**: Explicar la diferencia entre los derechos reconocidos del MEI y las dotaciones anuales al Fondo con cargo al MEI (data/sistema/fondo-reserva-series): hipótesis a comprobar: se dota lo recaudado y no los derechos, con desfase de un mes. Los derechos reconocidos de 2024 y 2025 se han contrastado con la liquidación de 2025 y coinciden con la ejecución; sigue faltando la recaudación de caja por mes del MEI, que la liquidación no da.
 
 **Datos**: parametros/mei-destino.json#destino-fondo-reserva, parametros/mei-destino.json#no-computable-prestaciones
 

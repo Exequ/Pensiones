@@ -478,3 +478,71 @@ describe('página «Hucha» (Fase 5-A3): finalidad, préstamos y Fondo según el
     expect(texto.length).toBeGreaterThanOrEqual(9);
   });
 });
+
+describe('página «Hucha»: liquidación frente a ejecución (Fase 5-A4)', () => {
+  const seccion = (c: HTMLElement): HTMLElement => {
+    const s = c.querySelector('section[aria-labelledby="contraste-liquidacion"]');
+    if (!(s instanceof HTMLElement)) throw new Error('Sin la sección de contraste');
+    return s;
+  };
+
+  it('tiene su encabezado, su fuente y un «Cómo leerlo» que no une las series', () => {
+    const { container } = pintar();
+    const s = seccion(container);
+    expect(within(s).getByRole('heading', { level: 2 })).toHaveTextContent(
+      /la liquidación frente a la ejecución/,
+    );
+    expect(s.querySelector('.linea-fuente')?.textContent).toMatch(/descargado el 2026-11-16/);
+    const total = datosHucha().contraste2025.filas.find(
+      (f) => !f.coincide && /^TOTAL PRESTACIONES CONTRIBUTIVAS/.test(f.partida),
+    );
+    expect(s.textContent).toContain(
+      `difiere en ${formatearNumero(total?.diferencia ?? Number.NaN, { decimales: 2 })} millones de euros`,
+    );
+    expect(s.querySelector('.como-leerlo')?.textContent).toMatch(
+      /no une la liquidación a las de los ejercicios anteriores/,
+    );
+    expect(s.querySelector('.como-leerlo')?.textContent).toMatch(/ruptura de serie sigue rotulada/);
+  });
+
+  it('la tabla del último ejercicio tiene diferencia cero en todas las partidas', () => {
+    const { container } = pintar();
+    const s = seccion(container);
+    const t = s.querySelector('table');
+    const filasT = [...(t?.querySelectorAll('tbody tr') ?? [])].map((tr) =>
+      [...tr.querySelectorAll('th, td')].map((c) => c.textContent),
+    );
+    expect(filasT.length).toBeGreaterThanOrEqual(8);
+    for (const f of filasT) expect(f[3]).toBe('0,00');
+    expect(filasT.map((f) => f[0])).toContain('Total de gastos');
+  });
+
+  it('el selector pasa al ejercicio anterior, donde hay diferencias en el capítulo 4', async () => {
+    const user = userEvent.setup();
+    const { container } = pintar();
+    const s = seccion(container);
+    const c = datosHucha().contraste2025;
+    const anios = [...new Set(c.filas.map((f) => f.ejercicio))].sort();
+    await user.click(within(s).getByRole('radio', { name: String(anios[0]) }));
+    expect(s.querySelector('caption')?.textContent).toContain(String(anios[0]));
+    expect(c.filas.filter((f) => f.ejercicio === anios[0] && !f.coincide)).toHaveLength(5);
+    expect(c.filas.filter((f) => f.ejercicio === anios[1] && !f.coincide)).toHaveLength(0);
+  });
+
+  it('el Mecanismo de Equidad Intergeneracional enfrenta derechos reconocidos y dotaciones sin atribuir causa', () => {
+    const { container } = pintar();
+    const s = seccion(container);
+    const mei = datosHucha().contraste2025.mei;
+    expect(mei).toHaveLength(2);
+    const t = [...s.querySelectorAll('table')].find((x) =>
+      /Mecanismo de Equidad Intergeneracional/.test(x.querySelector('caption')?.textContent ?? ''),
+    );
+    const f = [...(t?.querySelectorAll('tbody tr') ?? [])].map((tr) =>
+      [...tr.querySelectorAll('th, td')].map((c) => c.textContent),
+    );
+    expect(f).toHaveLength(2);
+    expect(f[1]?.[1]).toBe(formatearNumero(mei[1]?.derechos ?? Number.NaN, { decimales: 2 }));
+    expect(t?.closest('section')?.textContent).toMatch(/no atribuye la diferencia a ninguna causa/);
+    expect(s.textContent).toMatch(/no muestra la recaudación de caja de cada mes/);
+  });
+});

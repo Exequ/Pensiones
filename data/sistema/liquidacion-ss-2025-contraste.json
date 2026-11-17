@@ -1,0 +1,79 @@
+{
+  "tipo": "tabla",
+  "id": "liquidacion-ss-2025-contraste",
+  "title": "Liquidación de 2025 del Sistema de la Seguridad Social frente a la ejecución del presupuesto al cierre del cuarto trimestre (2025 y 2024), en millones de euros",
+  "description": "Cada partida de las tablas del PDF de la liquidación de 2025 (ejercicio 2025, comparativa de 2024 y presupuesto o previsión de 2025) que se puede casar con la ejecución del presupuesto al cierre del cuarto trimestre, con la cifra de cada fuente, su diferencia y la referencia de ambas. Cuando el rótulo de la liquidación agrupa varias partidas de la ejecución, la cifra de la ejecución es la suma de ellas (la referencia las lista). Es un contraste de definición: no es una serie y no se une a las liquidaciones de 2010 a 2016.",
+  "columnas": [
+    {
+      "id": "id",
+      "descripcion": "Identificador: ejercicio, tabla, página, fila y columna del PDF",
+      "unidad": null
+    },
+    {
+      "id": "ejercicio",
+      "descripcion": "Ejercicio de la cifra",
+      "unidad": null
+    },
+    {
+      "id": "tabla",
+      "descripcion": "gastos, gastos-cap4, ingresos o ingresos-cap1-cap4",
+      "unidad": null
+    },
+    {
+      "id": "partida",
+      "descripcion": "Etiqueta de la partida en el PDF",
+      "unidad": null
+    },
+    {
+      "id": "columna",
+      "descripcion": "Columna del PDF: ejercicio_actual o ejercicio_anterior (ejecutado: obligaciones o derechos reconocidos), presupuesto_total o previsiones (presupuesto o previsión de 2025)",
+      "unidad": null
+    },
+    {
+      "id": "liquidacion_meur",
+      "descripcion": "Cifra de la liquidación (PDF)",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "ejecucion_meur",
+      "descripcion": "Suma de las cifras de la ejecución con las que se contrasta (cierre del cuarto trimestre)",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "diferencia_meur",
+      "descripcion": "Ejecución menos liquidación",
+      "unidad": "millones de euros"
+    },
+    {
+      "id": "estado",
+      "descripcion": "coincide si la diferencia no supera la tolerancia de redondeo; difiere en otro caso",
+      "unidad": null
+    },
+    {
+      "id": "referencia_liquidacion",
+      "descripcion": "PDF, página, tabla, fila y columna de la cifra de la liquidación",
+      "unidad": null
+    },
+    {
+      "id": "referencia_ejecucion",
+      "descripcion": "Partida o partidas de la ejecución sumadas y periodo",
+      "unidad": null
+    }
+  ],
+  "filas": 208,
+  "source": {
+    "title": "Liquidación del presupuesto del Sistema de la Seguridad Social, ejercicio 2025 (PDF «SISTEMA DE LA S.S.»)",
+    "publisher": "Intervención General de la Seguridad Social, Ministerio de Inclusión, Seguridad Social y Migraciones (Seguridad Social)",
+    "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+  },
+  "origenes": [
+    {
+      "period": "2025",
+      "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396",
+      "sha256": "ee831fa59e4112329d78fd2745c03296f17627cb8515a3d606dcaa0248896034"
+    }
+  ],
+  "fetchedAt": "2026-11-16",
+  "confidence": "alta",
+  "notes": "PDF aportado por el autor, descargado el 2026-11-16 según su indicación; no consta LEEME con la URL exacta del fichero, por lo que la URL es la de la página de listado de liquidaciones y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla. La ejecución es la tabla «presupuesto-ss-ejecucion» de este mismo conjunto de datos (ficheros «ResSISTEMA» de la Seguridad Social, cierre de diciembre, versión definitiva)."
+}
