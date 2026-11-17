@@ -14,6 +14,8 @@ export const FICHEROS_TIPOS_DE_PENSION = [
   'data/parametros/pnc-importe-anual.json',
   'data/parametros/pnc-reglas.json',
   'data/parametros/supervivencia-reglas.json',
+  'data/sistema/complementos-genero-indicadores.json',
+  'data/sistema/complementos-genero-territorio.json',
   'data/sistema/imserso-pnc-evolucion.json',
   'data/sistema/imserso-pnc-perfil-2025.json',
   'data/sistema/pensiones-vigor-numero.json',

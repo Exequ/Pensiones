@@ -11,6 +11,8 @@ import meiDestinoJson from '../../../data/parametros/mei-destino.json';
 import prestamosLeyesJson from '../../../data/parametros/prestamos-estado-seguridad-social.json';
 import prestamosPlazoJson from '../../../data/parametros/prestamos-plazo-ampliado-2026.json';
 import deudaJson from '../../../data/sistema/deuda-pde-seguridad-social.json';
+import contraste2025Csv from '../../../data/sistema/liquidacion-ss-2025-contraste.csv?raw';
+import contraste2025Json from '../../../data/sistema/liquidacion-ss-2025-contraste.json';
 import liquidacionJson from '../../../data/sistema/liquidacion-ss-series.json';
 import tribunalJson from '../../../data/sistema/prestamos-transferencias-tribunal-cuentas.json';
 import anexoPrestamosCsv from '../../../data/sistema/tribunal-cuentas-cge2023-prestamos.csv?raw';
@@ -38,6 +40,7 @@ import {
   numeroCsv,
   puntosDeDatos,
   suma,
+  valorEn,
   type PuntoAnual,
 } from '../../engine/series-historicas';
 import {
@@ -145,7 +148,29 @@ export interface FlujoAnualFondo {
   readonly disposiciones: number | null;
 }
 
+/** Una partida de la liquidación de 2025 frente a la ejecución del mismo ejercicio (Fase 5-A4). */
+export interface FilaContraste2025 {
+  readonly ejercicio: number;
+  readonly tabla: string;
+  readonly partida: string;
+  readonly liquidacion: number;
+  readonly ejecucion: number;
+  readonly diferencia: number;
+  readonly coincide: boolean;
+}
+
 export interface DatosHucha {
+  /** Contraste de definición: la liquidación de 2025 frente a la ejecución al cierre de 2025 y de 2024. */
+  readonly contraste2025: {
+    readonly filas: readonly FilaContraste2025[];
+    readonly dato: Dato;
+    readonly mei: readonly {
+      readonly anio: number;
+      readonly derechos: number;
+      readonly dotacion: number;
+    }[];
+    readonly datoDotaciones: Dato;
+  };
   readonly valor: SerieCargada;
   readonly flujos: { readonly filas: readonly FlujoAnualFondo[]; readonly dato: Dato };
   readonly limiteDesembolso: {
@@ -273,6 +298,27 @@ export const datosHucha = memorizar((): DatosHucha => {
     primerAnioComplementoAparte: extremos(cargarSerie(liq, 'gastos-complemento-a-minimos').puntos)
       .primero.anio,
   };
+  const tablaContraste = validarTabla(contraste2025Json);
+  const filasContraste: FilaContraste2025[] = filasCsv(contraste2025Csv)
+    .filter((f) => f['columna'] === 'ejercicio_actual' || f['columna'] === 'ejercicio_anterior')
+    .map((f) => ({
+      ejercicio: Number(f['ejercicio']),
+      tabla: f['tabla'] ?? '',
+      partida: f['partida'] ?? '',
+      liquidacion: numeroCsv(f['liquidacion_meur']) ?? Number.NaN,
+      ejecucion: numeroCsv(f['ejecucion_meur']) ?? Number.NaN,
+      diferencia: numeroCsv(f['diferencia_meur']) ?? Number.NaN,
+      coincide: f['estado'] === 'coincide',
+    }));
+  const dotacionesMeiSerie = cargarSerie(series, 'dotaciones-mei-anuales');
+  const meiContraste = filasContraste
+    .filter((f) => f.tabla === 'ingresos-cap1-cap4' && /^Mecanismo de Equidad/.test(f.partida))
+    .map((f) => ({
+      anio: f.ejercicio,
+      derechos: f.liquidacion,
+      dotacion: valorEn(dotacionesMeiSerie.puntos, f.ejercicio) ?? Number.NaN,
+    }))
+    .sort((a, b) => a.anio - b.anio);
   const ejecucionEstado = deDeEjecucion('ingresos-cap1-cap4', 'DEL ESTADO Y ORG.AUTÓNOMOS');
   const ejecucionPasivos = deDeEjecucion('ingresos', '9. PASIVOS FINANCIEROS');
   const tribunal2023 = validarArchivo(tribunal2023Json);
@@ -295,6 +341,12 @@ export const datosHucha = memorizar((): DatosHucha => {
   });
 
   return {
+    contraste2025: {
+      filas: filasContraste,
+      dato: datoDeTabla(tablaContraste, '2025'),
+      mei: meiContraste,
+      datoDotaciones: dotacionesMeiSerie.dato,
+    },
     valor: cargarSerie(series, 'valor-fin-ano'),
     flujos: {
       filas,

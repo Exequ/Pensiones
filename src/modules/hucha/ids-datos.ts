@@ -55,3 +55,11 @@ export const ID23 = {
   condicionesPrestamos: 'condiciones-prestamos-tc2023',
   pibSegunTribunal: 'pib-2023-segun-tribunal',
 } as const;
+
+/** Tablas del contraste de la liquidación de 2025 con la ejecución (columna `tabla` del CSV). */
+export const TABLA_CONTRASTE = {
+  ingresos: 'ingresos',
+  ingresosCapitulos: 'ingresos-cap1-cap4',
+  gastos: 'gastos',
+  gastosCapitulo: 'gastos-cap4',
+} as const;

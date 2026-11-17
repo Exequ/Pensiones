@@ -24,6 +24,7 @@ import { decimal1, decimal2, millonesEuros, puntosAPorcentaje } from '../histori
 import '../historico/Historico.css';
 import { antetituloSeccion, buscarSeccion } from '../secciones';
 import './Hucha.css';
+import { SeccionContraste } from './SeccionContraste';
 import { SeccionFondoTransferencias } from './SeccionFondoTransferencias';
 import { SeccionOrigen } from './SeccionOrigen';
 import { SeccionPosicion } from './SeccionPosicion';
@@ -335,6 +336,7 @@ export default function Hucha() {
         <SeccionFondoTransferencias />
         <SeccionPosicion />
         <SeccionPrestamos />
+        <SeccionContraste />
         <EnlaceFinanciero origen="hucha" />
         <ContenidoPagina contenidos={seccion.previsto} />
       </div>

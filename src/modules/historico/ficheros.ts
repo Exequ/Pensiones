@@ -40,6 +40,7 @@ export const FICHEROS_HUCHA = [
   'data/parametros/prestamos-estado-seguridad-social.json',
   'data/parametros/prestamos-plazo-ampliado-2026.json',
   'data/sistema/deuda-pde-seguridad-social.json',
+  'data/sistema/liquidacion-ss-2025-contraste.json',
   'data/sistema/liquidacion-ss-series.json',
   'data/sistema/prestamos-transferencias-tribunal-cuentas.json',
   'data/sistema/tribunal-cuentas-cge2023-prestamos.json',

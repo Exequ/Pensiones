@@ -454,13 +454,13 @@
       "noSePuedeConcluir": [
         "Si la revalorización igualó al IPC en cada año: depende de qué IPC y de qué periodo se compare y de las reglas de cada año (en algunos años la revalorización publicada es distinta de las variaciones del IPC de data/parametros).",
         "El poder adquisitivo de una persona concreta depende de su cesta de consumo y de los complementos que perciba.",
-        "El acumulado de la revalorización frente al IPC: no se calcula ni se muestra porque la serie de revalorización de /data no tiene los años 2011 ni 2012."
+        "El acumulado de la revalorización frente al IPC: no se calcula ni se muestra porque la serie de revalorización de /data no tiene porcentaje general de 2011 (los BOE de 2011 suspenden la revalorización de las pensiones contributivas, con excepciones, sin enunciar un porcentaje general) ni de 2012 (no hay norma descargada)."
       ],
       "revisionActuarial": "revisada",
       "preguntaActuarial": "Comprobar año a año la diferencia entre el porcentaje de revalorización de data/parametros/revalorizacion-general y las distintas medidas de IPC (media anual, diciembre, media de 12 meses hasta noviembre), identificar los años con regla distinta y calcular el efecto acumulado sobre el poder adquisitivo con cada medida.",
       "respuestaActuarial": "Tanda 3, parte B, n.º 28",
       "faltan": [
-        "Los porcentajes de revalorización de 2011 y 2012 (y, según el revisor, la paga por desviación de 2001 a 2010), sin los cuales no se puede publicar un acumulado frente al IPC."
+        "La norma que fija la revalorización de 2012 y, según el revisor, la paga por desviación de 2001 a 2010 (el real decreto de 2011 recoge un pago único ligado a 2010, sin llamarlo paga por desviación), sin las cuales no se puede publicar un acumulado frente al IPC."
       ]
     },
     {

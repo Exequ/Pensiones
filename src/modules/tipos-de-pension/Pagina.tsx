@@ -10,6 +10,7 @@ import { antetituloSeccion, buscarSeccion } from '../secciones';
 import { fechaEnTexto } from './cuantias';
 import { datosTipos } from './datos-tipos';
 import { FichaPrestacion } from './FichaPrestacion';
+import { SeccionComplementos } from './SeccionComplementos';
 import './TiposDePension.css';
 
 const seccion = buscarSeccion('tipos-de-pension');
@@ -90,6 +91,8 @@ export default function TiposDePension() {
             <FichaPrestacion key={f.config.id} ficha={f} />
           ))}
         </section>
+
+        <SeccionComplementos />
 
         <ContenidoPagina contenidos={seccion.previsto} />
       </div>

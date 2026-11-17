@@ -173,3 +173,112 @@ describe('página «Tipos de pensión»', () => {
     }
   });
 });
+
+describe('«Tipos de pensión»: complementos por brecha de género y por maternidad (Fase 5-A4)', () => {
+  const seccion = (c: HTMLElement): HTMLElement => {
+    const s = c.querySelector('section[aria-labelledby="complementos"]');
+    if (!(s instanceof HTMLElement)) throw new Error('Sin la sección de complementos');
+    return s;
+  };
+
+  it('tiene su encabezado, fuente con fecha y confianza, y «Cómo leerlo» que dice qué no mide', () => {
+    const { container } = pintar();
+    const s = seccion(container);
+    expect(within(s).getByRole('heading', { level: 2 })).toHaveTextContent(
+      /Complementos por hijos/,
+    );
+    const fuente = s.querySelector('.linea-fuente')?.textContent ?? '';
+    expect(fuente).toMatch(/descargado el 2026-11-16/);
+    expect(fuente).toMatch(/confianza: alta/);
+    expect(fuente).toMatch(/naturaleza: observado/);
+    const como = s.querySelector('.como-leerlo')?.textContent ?? '';
+    expect(como).toMatch(/No miden la brecha de género de las pensiones de jubilación/);
+    expect(como).toMatch(/Tampoco dividen por la población/);
+  });
+
+  it('la tabla por comunidad empieza por el total nacional y suma las comunidades', () => {
+    const { container } = pintar();
+    const d = datosTipos().complementos;
+    const t = within(seccion(container))
+      .getAllByRole('table', { hidden: true })
+      .find((x) =>
+        /número de pensiones en vigor con el complemento por comunidad/.test(
+          x.querySelector('caption')?.textContent ?? '',
+        ),
+      );
+    if (!t) throw new Error('Sin tabla de número por comunidad');
+    const f = filas(t);
+    const total = d.filas.brecha[0];
+    expect(f[0]?.[0]).toBe('Total');
+    expect(f[0]?.[1]).toBe(entero(total?.porSexo.ambos.numero ?? Number.NaN));
+    // diecinueve comunidades y ciudades autónomas más el total
+    expect(f).toHaveLength(d.filas.brecha.filter((x) => x.nivel === 'comunidad').length + 1);
+    const suma = d.filas.brecha
+      .filter((x) => x.nivel === 'comunidad')
+      .reduce((a, x) => a + x.porSexo.ambos.numero, 0);
+    expect(suma).toBe(total?.porSexo.ambos.numero);
+  });
+
+  it('el importe medio sale con dos decimales y euro', () => {
+    const { container } = pintar();
+    const d = datosTipos().complementos;
+    const t = within(seccion(container))
+      .getAllByRole('table', { hidden: true })
+      .find((x) =>
+        /importe medio mensual del complemento por comunidad/.test(
+          x.querySelector('caption')?.textContent ?? '',
+        ),
+      );
+    if (!t) throw new Error('Sin tabla de importe por comunidad');
+    expect(filas(t)[0]?.[1]).toBe(
+      euros2(d.filas.brecha[0]?.porSexo.ambos.importeMedio ?? Number.NaN),
+    );
+  });
+
+  it('el selector pasa de la brecha de género a la maternidad y cambia las tablas', async () => {
+    const { default: userEvent } = await import('@testing-library/user-event');
+    const { container } = pintar();
+    const s = seccion(container);
+    expect(s.querySelector('caption')?.textContent).toMatch(/brecha de género/);
+    await userEvent.click(within(s).getByRole('radio', { name: 'Maternidad' }));
+    expect(s.querySelector('caption')?.textContent).toMatch(/Complemento por maternidad/);
+    const d = datosTipos().complementos;
+    const tramos = [...s.querySelectorAll('table')].find((x) =>
+      /por número de hijos/.test(x.querySelector('caption')?.textContent ?? ''),
+    );
+    expect(tramos?.querySelectorAll('tbody tr')).toHaveLength(d.etiquetasTramos.maternidad.length);
+  });
+
+  it('el desglose por hijos declara las pensiones sin número de hijos (total menos tramos)', () => {
+    const d = datosTipos().complementos;
+    expect(d.sinHijos.brecha.ambos).toBe(d.sinHijos.brecha.hombres + d.sinHijos.brecha.mujeres);
+    expect(d.sinHijos.maternidad.ambos).toBe(
+      d.sinHijos.maternidad.hombres + d.sinHijos.maternidad.mujeres,
+    );
+    const { container } = pintar();
+    expect(seccion(container).textContent).toContain(
+      `en ${entero(d.sinHijos.brecha.ambos)} pensiones de ambos sexos`,
+    );
+  });
+
+  it('la variación publicada va con su aviso de que no se le atribuye causa', () => {
+    const { container } = pintar();
+    expect(seccion(container).textContent).toMatch(/no les atribuye una causa/);
+  });
+
+  it('las provincias están en un desplegable con las provincias de las comunidades pluriprovinciales', () => {
+    const { container } = pintar();
+    const d = seccion(container).querySelector('details');
+    expect(d).not.toBeNull();
+    expect(d?.querySelector('summary')?.textContent).toMatch(/provincias/);
+    expect(d?.querySelector('table tbody')?.querySelectorAll('tr')).toHaveLength(
+      datosTipos().complementos.filas.brecha.filter((x) => x.nivel === 'provincia').length,
+    );
+  });
+
+  it('lo previsto de la sección dice que la brecha anual sigue pendiente de datos', () => {
+    expect(buscarSeccion('tipos-de-pension').previsto.join(' ')).toMatch(
+      /brecha de género de las pensiones de jubilación publicada por año \(pendiente de datos\)/,
+    );
+  });
+});
