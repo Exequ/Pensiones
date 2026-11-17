@@ -13,7 +13,13 @@
       "boeId": "BOE-A-1985-16119",
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "resumen": "Primera gran reforma de las pensiones contributivas en democracia: eleva la carencia de jubilación a quince años, amplía el periodo de cálculo de la base reguladora a los últimos ocho años (96 meses entre 112) y establece la revalorización anual según el IPC previsto.",
+      "resumen": "Eleva la carencia de jubilación a quince años, amplía el periodo de cálculo de la base reguladora a los últimos ocho años (96 meses entre 112) y establece la revalorización anual según el IPC previsto.",
+      "entradaEnVigor": {
+        "fecha": null,
+        "base": "sin-texto",
+        "cita": null,
+        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+      },
       "cambios": [
         {
           "parametro": "carencia",
@@ -34,7 +40,7 @@
         {
           "parametro": "revalorizacion",
           "antes": null,
-          "despues": "Las pensiones causadas conforme a la Ley se revalorizan al comienzo de cada año según el IPC previsto para ese año; las desviaciones se tienen en cuenta al año siguiente para mejorar las pensiones inferiores al SMI.",
+          "despues": "Las pensiones causadas conforme a la Ley se revalorizan al comienzo de cada año según el IPC previsto para ese año.",
           "transicion": "aplicación inmediata",
           "articulos": "Artículo cuarto; disposición adicional quinta",
           "evidencia": "Las pensiones que se causen con aplicación de las modificaciones introducidas en la presente Ley, serán revalorizadas al comienzo de cada año, de acuerdo con el Índice de Precios al Consumo previsto para dicho año."
@@ -68,6 +74,12 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "resumen": "Texto refundido de la LGSS que integró la Ley 26/1985 y el resto de la legislación vigente; fue el marco sobre el que actuaron las reformas de 1997 a 2013 hasta su sustitución por el texto refundido de 2015.",
+      "entradaEnVigor": {
+        "fecha": "1994-09-01",
+        "base": "metadatos-boe",
+        "cita": "Metadatos BOE: vigencia 1994-09-01",
+        "ubicacion": "data/normativa/cronologia.json, notas de la norma (metadatos del BOE descargados el 2026-11-11)."
+      },
       "cambios": [
         {
           "parametro": "edad-ordinaria",
@@ -104,7 +116,7 @@
         {
           "parametro": "revalorizacion",
           "antes": null,
-          "despues": "Pensiones de jubilación e invalidez calculadas con los arts. 162.1 y 140 se revalorizan al comienzo de cada año según el IPC previsto; las desviaciones se usan al año siguiente para mejorar las pensiones inferiores al SMI.",
+          "despues": "Pensiones de jubilación e invalidez calculadas con los arts. 162.1 y 140 se revalorizan al comienzo de cada año según el IPC previsto.",
           "transicion": "Vigencia desde 1994-09-01.",
           "articulos": "Artículo 48 (redacción original)",
           "evidencia": "serán revalorizadas al comienzo de cada año, de acuerdo con el Indice de Precios al Consumo previsto para dicho año."
@@ -129,7 +141,13 @@
       "boeId": "BOE-A-1997-15810",
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "resumen": "Primera reforma derivada del Pacto de Toledo: separa las fuentes de financiación, prevé un Fondo de Reserva, amplía el periodo de cálculo a 15 años, fija por ley la escala de porcentajes (50 % a los 15 años, 100 % a los 35) y establece la revalorización automática según IPC previsto con cláusula de desviación.",
+      "resumen": "Separa las fuentes de financiación, prevé un Fondo de Reserva, amplía el periodo de cálculo a 15 años, fija por ley la escala de porcentajes (50 % a los 15 años, 100 % a los 35) y establece la revalorización según el IPC previsto con cláusula de desviación.",
+      "entradaEnVigor": {
+        "fecha": null,
+        "base": "sin-texto",
+        "cita": null,
+        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+      },
       "cambios": [
         {
           "parametro": "periodo-calculo",
@@ -224,6 +242,12 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "resumen": "Ley de acompañamiento de los PGE 2002 que constituye formalmente el Fondo de Reserva de la Seguridad Social en la Tesorería General y amplía la jubilación parcial (hasta cinco años antes de la edad ordinaria, y desde la edad ordinaria sin contrato de relevo).",
+      "entradaEnVigor": {
+        "fecha": "2002-01-01",
+        "base": "cronologia",
+        "cita": "Vigencia 1-1-2002",
+        "ubicacion": "data/normativa/cronologia.json, transición de los cambios de la norma (fecha de los artículos que recoge la cronología)."
+      },
       "cambios": [
         {
           "parametro": "fondo-reserva",
@@ -270,6 +294,12 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "resumen": "Desarrolla el Acuerdo de 2001: abre la jubilación anticipada a los 61 años a los no mutualistas con coeficientes reductores según años cotizados, introduce un incentivo del 2 % anual por demorar la jubilación más allá de los 65 y permite compatibilizar pensión y trabajo a tiempo parcial (jubilación flexible).",
+      "entradaEnVigor": {
+        "fecha": "2002-07-14",
+        "base": "metadatos-boe",
+        "cita": "vigencia 2002-07-14",
+        "ubicacion": "data/normativa/cronologia.json, notas de la norma (metadatos del BOE descargados el 2026-11-11)."
+      },
       "cambios": [
         {
           "parametro": "coeficientes-reductores",
@@ -314,7 +344,7 @@
         {
           "parametro": "edad-ordinaria",
           "antes": null,
-          "despues": "Se habilita a rebajar por Real Decreto la edad de jubilación de personas con discapacidad igual o superior al 65 %.",
+          "despues": "Se habilita a reducir por Real Decreto la edad mínima de jubilación de personas con discapacidad igual o superior al 65 %.",
           "transicion": "Según el Real Decreto que se dicte.",
           "articulos": "Disposición adicional primera (art. 161.2 LGSS 1994)",
           "evidencia": "la edad mínima a que se refiere el párrafo a) del apartado anterior podrá ser reducida en el caso de personas minusválidas en un grado de minusvalía igual o superior al 65 por 100"
@@ -340,6 +370,12 @@
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "resumen": "Ley específica del Fondo de Reserva: los excedentes contributivos se destinan prioritaria y mayoritariamente al Fondo, que solo puede usarse para pagar pensiones contributivas en situaciones estructurales de déficit y con un límite anual del 3 %.",
+      "entradaEnVigor": {
+        "fecha": "2003-10-01",
+        "base": "regla-sobre-publicacion",
+        "cita": "Entrada en vigor al día siguiente de su publicación",
+        "ubicacion": "data/normativa/cronologia.json, transición del cambio de la norma; la fecha es el día siguiente a la publicación (2003-09-30)."
+      },
       "cambios": [
         {
           "parametro": "fondo-reserva",
@@ -369,7 +405,13 @@
       "boeId": "BOE-A-2007-20910",
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "resumen": "Desarrolla el Acuerdo de 13 de julio de 2006: exige que los 15 años de carencia sean días efectivos (sin pagas extra), eleva el incentivo por demora (2 % o 3 % anual), endurece la jubilación parcial (61 años, 6 de antigüedad, 30 cotizados), suaviza los coeficientes reductores para 30-34 años cotizados y reconoce la viudedad a parejas de hecho.",
+      "resumen": "Desarrolla el Acuerdo de 13 de julio de 2006: exige que los 15 años de carencia sean días efectivos (sin pagas extra), fija el incentivo por demora en el 2 % o el 3 % anual, modifica los requisitos de la jubilación parcial (61 años, 6 de antigüedad, 30 cotizados), fija el coeficiente reductor del 7,5 % para 30-34 años cotizados y reconoce la viudedad a parejas de hecho.",
+      "entradaEnVigor": {
+        "fecha": "2008-01-01",
+        "base": "metadatos-boe",
+        "cita": "metadatos BOE: vigencia 2008-01-01",
+        "ubicacion": "data/normativa/cronologia.json, notas de la norma (metadatos del BOE descargados el 2026-11-11); la cronología señala una excepción (disposición adicional cuarta)."
+      },
       "cambios": [
         {
           "parametro": "carencia",
@@ -439,7 +481,13 @@
       "boeId": "BOE-A-2011-13242",
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "resumen": "Gran reforma paramétrica de 2011: retrasa gradualmente la edad ordinaria de 65 a 67 años (65 con 38 años y 6 meses cotizados), amplía el periodo de cálculo de 15 a 25 años, exige 37 años para el 100 %, rediseña la jubilación anticipada y prevé un factor de sostenibilidad a partir de 2027.",
+      "resumen": "Eleva gradualmente la edad ordinaria de 65 a 67 años (65 con 38 años y 6 meses cotizados), amplía el periodo de cálculo de 15 a 25 años, fija en 37 los años para el 100 %, modifica la jubilación anticipada y prevé un factor de sostenibilidad a partir de 2027.",
+      "entradaEnVigor": {
+        "fecha": "2013-01-01",
+        "base": "cronologia",
+        "cita": "Entrada en vigor general el 1-1-2013 (disp. final 12ª), con excepciones.",
+        "ubicacion": "data/normativa/cronologia.json, notas de la norma; la cronología señala excepciones y la transición de cada cambio indica su fecha."
+      },
       "cambios": [
         {
           "parametro": "edad-ordinaria",
@@ -539,8 +587,15 @@
       "fecha": "2012-11-30",
       "fechaPublicacion": "2012-12-01",
       "boeId": "BOE-A-2012-14695",
+      "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "resumen": "Suspende para 2013 la revalorización por IPC previsto y fija un incremento general del 1 % (con un punto adicional para las pensiones más bajas).",
+      "entradaEnVigor": {
+        "fecha": null,
+        "base": "sin-texto",
+        "cita": null,
+        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+      },
       "cambios": [
         {
           "parametro": "revalorizacion",
@@ -558,8 +613,7 @@
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-14695",
         "docId": "BOE-A-2012-14695"
-      },
-      "fetchedAt": "2026-11-11"
+      }
     },
     {
       "id": "rdl-5-2013",
@@ -568,8 +622,15 @@
       "fecha": "2013-03-15",
       "fechaPublicacion": "2013-03-16",
       "boeId": "BOE-A-2013-2874",
+      "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "resumen": "Regula la compatibilidad entre pensión de jubilación y trabajo, endurece la jubilación anticipada y modifica la jubilación parcial.",
+      "resumen": "Regula la compatibilidad entre pensión de jubilación y trabajo, modifica los requisitos de la jubilación anticipada y modifica la jubilación parcial.",
+      "entradaEnVigor": {
+        "fecha": null,
+        "base": "sin-texto",
+        "cita": null,
+        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+      },
       "cambios": [
         {
           "parametro": "jubilacion-activa",
@@ -603,8 +664,7 @@
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-2874",
         "docId": "BOE-A-2013-2874"
-      },
-      "fetchedAt": "2026-11-11"
+      }
     },
     {
       "id": "ley-23-2013",
@@ -613,8 +673,15 @@
       "fecha": "2013-12-23",
       "fechaPublicacion": "2013-12-26",
       "boeId": "BOE-A-2013-13617",
+      "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "resumen": "Crea el factor de sostenibilidad y el índice de revalorización de las pensiones (IRP).",
+      "entradaEnVigor": {
+        "fecha": null,
+        "base": "sin-texto",
+        "cita": null,
+        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+      },
       "cambios": [
         {
           "parametro": "revalorizacion",
@@ -641,8 +708,7 @@
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2013-13617",
         "docId": "BOE-A-2013-13617"
-      },
-      "fetchedAt": "2026-11-11"
+      }
     },
     {
       "id": "rdleg-8-2015",
@@ -651,8 +717,16 @@
       "fecha": "2015-10-30",
       "fechaPublicacion": "2015-10-31",
       "boeId": "BOE-A-2015-11724",
+      "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "resumen": "Aprueba el texto refundido de la Ley General de la Seguridad Social, que renumera los artículos de la LGSS de 1994.",
+      "entradaEnVigor": {
+        "fecha": "2016-01-02",
+        "base": "disposicion-final",
+        "cita": "El presente real decreto legislativo y el Texto Refundido que aprueba entrarán en vigor el 2 de enero de 2016.",
+        "ubicacion": "data-raw/boe/trlgss-2015-consolidado.txt, disposición final única (texto original)."
+      },
+      "textoDescargado": "data-raw/boe/trlgss-2015-consolidado.txt",
       "cambios": [
         {
           "parametro": "otros",
@@ -670,8 +744,7 @@
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-11724",
         "docId": "BOE-A-2015-11724"
-      },
-      "fetchedAt": "2026-11-11"
+      }
     },
     {
       "id": "rdl-28-2018",
@@ -680,8 +753,15 @@
       "fecha": "2018-12-28",
       "fechaPublicacion": "2018-12-29",
       "boeId": "BOE-A-2018-17992",
+      "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "resumen": "Revaloriza las pensiones un 1,6 % en 2019 y eleva el tope máximo y las bases mínimas de cotización.",
+      "entradaEnVigor": {
+        "fecha": null,
+        "base": "sin-texto",
+        "cita": null,
+        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+      },
       "cambios": [
         {
           "parametro": "revalorizacion",
@@ -707,8 +787,7 @@
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-17992",
         "docId": "BOE-A-2018-17992"
-      },
-      "fetchedAt": "2026-11-11"
+      }
     },
     {
       "id": "rdl-3-2021",
@@ -717,8 +796,15 @@
       "fecha": "2021-02-02",
       "fechaPublicacion": "2021-02-03",
       "boeId": "BOE-A-2021-1529",
+      "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "resumen": "Sustituye el complemento de maternidad por aportación demográfica por un complemento para la reducción de la brecha de género.",
+      "entradaEnVigor": {
+        "fecha": null,
+        "base": "sin-texto",
+        "cita": null,
+        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+      },
       "cambios": [
         {
           "parametro": "complemento-brecha-genero",
@@ -736,8 +822,7 @@
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-1529",
         "docId": "BOE-A-2021-1529"
-      },
-      "fetchedAt": "2026-11-11"
+      }
     },
     {
       "id": "ley-21-2021",
@@ -746,8 +831,16 @@
       "fecha": "2021-12-28",
       "fechaPublicacion": "2021-12-29",
       "boeId": "BOE-A-2021-21652",
+      "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "resumen": "Revalorización por IPC medio, derogación del factor de sostenibilidad, nuevos incentivos a la demora y revisión de los coeficientes de la jubilación anticipada voluntaria.",
+      "entradaEnVigor": {
+        "fecha": "2022-01-01",
+        "base": "disposicion-final",
+        "cita": "La presente ley entrará en vigor el 1 de enero de 2022.",
+        "ubicacion": "data-raw/boe/ley-21-2021.txt, disposición final octava."
+      },
+      "textoDescargado": "data-raw/boe/ley-21-2021.txt",
       "cambios": [
         {
           "parametro": "revalorizacion",
@@ -776,7 +869,7 @@
         {
           "parametro": "coeficientes-reductores",
           "antes": null,
-          "despues": "Se revisan los coeficientes reductores de la jubilación anticipada voluntaria para acercarla a la edad legal y favorecer carreras largas.",
+          "despues": "Se revisan los coeficientes reductores aplicables a la jubilación anticipada voluntaria.",
           "transicion": "Aplicación gradual según la disposición transitoria correspondiente.",
           "articulos": "Artículos 208 y 210 TRLGSS",
           "evidencia": "en materia de jubilación anticipada voluntaria, se revisan los coeficientes reductores aplicables"
@@ -789,8 +882,7 @@
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-21652",
         "docId": "BOE-A-2021-21652"
-      },
-      "fetchedAt": "2026-11-11"
+      }
     },
     {
       "id": "rdl-2-2023",
@@ -799,8 +891,16 @@
       "fecha": "2023-03-16",
       "fechaPublicacion": "2023-03-17",
       "boeId": "BOE-A-2023-6967",
+      "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "resumen": "Crea el Mecanismo de Equidad Intergeneracional, la cotización adicional de solidaridad y amplía el periodo de cálculo de la base reguladora (régimen transitorio).",
+      "entradaEnVigor": {
+        "fecha": "2023-04-01",
+        "base": "disposicion-final",
+        "cita": "Este real decreto-ley entrará en vigor el día primero del mes siguiente al de su publicación en el «Boletín Oficial del Estado», excepto los siguientes preceptos:",
+        "ubicacion": "data-raw/boe/rdl-2-2023.txt, disposición final décima (con excepciones); la fecha es la de vigencia de los metadatos del BOE de ese fichero."
+      },
+      "textoDescargado": "data-raw/boe/rdl-2-2023.txt",
       "cambios": [
         {
           "parametro": "mei",
@@ -834,8 +934,7 @@
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967",
         "docId": "BOE-A-2023-6967"
-      },
-      "fetchedAt": "2026-11-11"
+      }
     },
     {
       "id": "rdl-11-2024",
@@ -844,8 +943,15 @@
       "fecha": "2024-12-23",
       "fechaPublicacion": "2024-12-24",
       "boeId": "BOE-A-2024-26917",
+      "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "resumen": "Mejora la compatibilidad de la pensión de jubilación con el trabajo (jubilación activa) y el complemento por demora.",
+      "resumen": "Modifica la compatibilidad de la pensión de jubilación con el trabajo (jubilación activa) y el complemento por demora.",
+      "entradaEnVigor": {
+        "fecha": null,
+        "base": "sin-texto",
+        "cita": null,
+        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+      },
       "cambios": [
         {
           "parametro": "jubilacion-activa",
@@ -871,8 +977,7 @@
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-26917",
         "docId": "BOE-A-2024-26917"
-      },
-      "fetchedAt": "2026-11-11"
+      }
     },
     {
       "id": "rd-316-2025",
@@ -881,8 +986,16 @@
       "fecha": "2025-04-15",
       "fechaPublicacion": "2025-04-16",
       "boeId": "BOE-A-2025-7660",
+      "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "resumen": "Revalorización general de las pensiones del 2,8 % en 2025.",
+      "entradaEnVigor": {
+        "fecha": "2025-04-16",
+        "base": "disposicion-final",
+        "cita": "El presente real decreto entrará en vigor el día de su publicación en el «Boletín Oficial del Estado», con efectos económicos desde el día 1 de enero de 2025.",
+        "ubicacion": "data-raw/boe/BOE-A-2025-7660.txt, disposición final tercera; la fecha es la de publicación."
+      },
+      "textoDescargado": "data-raw/boe/BOE-A-2025-7660.txt",
       "cambios": [
         {
           "parametro": "revalorizacion",
@@ -900,8 +1013,7 @@
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
         "docId": "BOE-A-2025-7660"
-      },
-      "fetchedAt": "2026-11-11"
+      }
     },
     {
       "id": "rd-241-2026",
@@ -910,8 +1022,16 @@
       "fecha": "2026-03-25",
       "fechaPublicacion": "2026-03-26",
       "boeId": "BOE-A-2026-6977",
+      "fetchedAt": "2026-11-11",
       "confidence": "alta",
       "resumen": "Revalorización general de las pensiones del 2,7 % en 2026.",
+      "entradaEnVigor": {
+        "fecha": "2026-03-26",
+        "base": "disposicion-final",
+        "cita": "El presente real decreto entrará en vigor el día de su publicación en el «Boletín Oficial del Estado», con efectos económicos desde el día 1 de enero de 2026.",
+        "ubicacion": "data-raw/boe/BOE-A-2026-6977.txt, disposición final tercera; la fecha es la de publicación."
+      },
+      "textoDescargado": "data-raw/boe/BOE-A-2026-6977.txt",
       "cambios": [
         {
           "parametro": "revalorizacion",
@@ -929,8 +1049,7 @@
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
         "docId": "BOE-A-2026-6977"
-      },
-      "fetchedAt": "2026-11-11"
+      }
     }
   ]
 }
