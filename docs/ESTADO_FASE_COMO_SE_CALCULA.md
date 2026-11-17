@@ -24,7 +24,7 @@ Los catorce ejemplos están en `data/ejemplos/como-se-calcula.json` (supuestos i
 - Unitarios: `ejemplos.test.ts` (19), `graficos.test.ts`, `formato-pasos.test.ts`, `datos-como.test.ts`, `scripts/como-se-calcula-fase.test.ts` (procedencia, sin cifras escritas a mano, normas contra el texto descargado, casos de oro, afirmaciones e inventario).
 - Componentes: `pagina.test.tsx` (estructura de cada sección con fuente, ejemplo, lecturas y «Qué no calcula»; navegación del índice; números del motor; efecto de las lecturas; neutralidad con la lista de valoraciones y la de veredictos).
 - Playwright: `e2e/como-se-calcula.spec.ts` (carga sin errores de consola ni peticiones externas, teclado, enlace a «Tu pensión», gráficos con tabla, móvil sin desbordes con todo abierto y axe WCAG AA de la página y de cada sección).
-- Todo el resto de pruebas, sin tocar: 124 ficheros y 2.586 pruebas de Vitest antes de la fase; 129 ficheros y 2.813 pruebas después (todas en verde), más `scripts/verificacion-ajustes-3.test.ts`, que gana un id en la lista de pendientes esperadas.
+- Todo el resto de pruebas, sin tocar: 124 ficheros y 2.586 pruebas de Vitest antes de la fase; 129 ficheros y 2.814 pruebas después (todas en verde), más `scripts/verificacion-ajustes-3.test.ts`, que gana un id en la lista de pendientes esperadas.
 
 ## Tamaño del chunk de la página
 
@@ -35,3 +35,10 @@ Los catorce ejemplos están en `data/ejemplos/como-se-calcula.json` (supuestos i
 - Decisiones: `docs/DECISIONES.md`, sección «Fase “Cómo se calcula”».
 - Discrepancias del motor y de sus textos (no corregidas): `docs/DISCREPANCIAS.md` (descripción «periodo más largo» de la opción de la DT 4.ª.7, que los datos contradicen; limitaciones que dicen «no descargado» sobre el Reglamento de 1956 aunque el OCR está en el repositorio; orden del límite conjunto y los mínimos solo en el código; «confirmada» en los motivos de las lecturas; pasos duplicados de la base reguladora).
 - Pendientes: `docs/PENDIENTE_DATOS.md`. Ninguna regla de la página carece de texto normativo descargado. Afirmaciones: doce nuevas, once transcripciones y una pendiente con pregunta reducida (`web-como-sv-orden-limites`); pendientes de afirmaciones de 19 a 20 (tope 70), sin agrupar.
+
+## Batería local y CI
+
+- **Local (con la compilación final)**: `npm run lint` (ESLint, Prettier, estilos, contraste y `validate:data`) en verde; `npx tsc -b --force` (sin caché incremental, con los ficheros de test) sin errores; `npm test` en verde (129 ficheros, 2.814 pruebas); `npm run build` correcto; **Playwright completo, 514 pruebas en verde** (escritorio y móvil, 16,9 minutos).
+- **Un fallo del primer recorrido completo, corregido**: la prueba de desbordes de `e2e/sitio.spec.ts` en móvil encontró las etiquetas directas de los gráficos de coeficientes (el texto del tramo de cotización era más ancho que la pantalla). Las etiquetas pasaron a «Tramo 1…4» y el tiempo de cada tramo va en la nota del gráfico; después se volvió a ejecutar **el recorrido completo** y no solo esa prueba.
+- **CI del PR [#46](https://github.com/Exequ/Pensiones/pull/46)**: la ejecución 114 de «CI» (commit `ad474f6af4966e2a39a5f393a5b56bdcb92dcbb1`) falló por esa misma prueba de desbordes; la ejecución 115 (commit `fd1d7b1ee769458c062280cedacaabc1b18aa33a`, con la corrección) terminó en verde: lint, tipos, tests, validación de datos, compilación y Playwright. El flujo «Despliegue en GitHub Pages» del PR (ejecución 115) también terminó en verde. Los commits posteriores solo añaden este fichero.
+- **Despliegue de `main`**: se produce al fusionar el PR (squash). Su resultado y la comprobación de la ruta publicada a 1360 y 390 px constan en el informe final de la sesión y no en este fichero, para no abrir un PR solo de documentación (misma práctica que las fases anteriores).
