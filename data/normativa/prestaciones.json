@@ -580,7 +580,7 @@
       ],
       "calculo": {
         "baseReguladora": "La del causante (según su situación: alta, pensionista).",
-        "formula": "Porcentaje de la base reguladora fijado en el desarrollo reglamentario; en los supuestos de separación o divorcio, la pensión se reduce hasta la cuantía de la pensión compensatoria si esta es menor (art. 220.1). El porcentaje no consta en el texto del TRLGSS descargado.",
+        "formula": "Porcentaje de la base reguladora fijado en el desarrollo reglamentario; en los supuestos de separación o divorcio, la pensión se reduce hasta la cuantía de la pensión compensatoria si esta es menor (art. 220.1). El porcentaje no consta en el texto consultado del TRLGSS.",
         "articulos": "arts. 219 a 222 TRLGSS"
       },
       "limites": "Existe un auxilio por defunción y, en su caso, una prestación temporal de viudedad (art. 216.1). Mínimos anuales en la Ley de PGE o norma de revalorización (ver series de pensiones mínimas).",
@@ -627,7 +627,7 @@
         }
       ],
       "calculo": {
-        "formula": "Porcentaje de la base reguladora fijado reglamentariamente (no consta en el texto descargado). La suma de las pensiones de orfandad no puede superar el 48 % de la base reguladora cuando concurren con una pensión de viudedad de porcentaje superior al 52 %. Prestación de orfandad (víctimas de violencia contra la mujer sin derecho a pensión): doble del SMI mensual, repartido entre los beneficiarios.",
+        "formula": "Porcentaje de la base reguladora fijado reglamentariamente (no consta en el texto consultado). La suma de las pensiones de orfandad no puede superar el 48 % de la base reguladora cuando concurren con una pensión de viudedad de porcentaje superior al 52 %. Prestación de orfandad (víctimas de violencia contra la mujer sin derecho a pensión): doble del SMI mensual, repartido entre los beneficiarios.",
         "articulos": "arts. 224 y 225 TRLGSS"
       },
       "limites": "En violencia contra la mujer, el importe mínimo mensual de la pensión de orfandad es el doble del SMI mensual vigente, con tope conjunto si hay varios beneficiarios (art. 224.1).",

@@ -22,16 +22,18 @@ export class DatoNoDisponible extends Error {
 export const LIMITACIONES: readonly { readonly regla: string; readonly motivo: string }[] = [
   {
     regla: 'Hechos causantes anteriores a 2013 (escala de porcentajes por años)',
-    motivo: 'La escala anterior a 2013 no se ha estructurado en /data (PENDIENTE_DATOS.md).',
+    motivo: 'La escala anterior a 2013 no se ha incorporado a los datos de la web.',
   },
   {
     regla: 'Jubilaciones anticipadas y demora con hechos causantes anteriores a 2022',
-    motivo: 'Los cuadros de coeficientes de /data son los de la Ley 21/2021 (en vigor desde 2022).',
+    motivo:
+      'Los cuadros de coeficientes de la web son los de la Ley 21/2021 (en vigor desde 2022).',
   },
   {
     regla:
       'Jubilación anticipada por actividades penosas, discapacidad o mutualistas (arts. 206, 206 bis; DT 4.ª.2)',
-    motivo: 'Coeficientes reductores de la edad por actividad: no recogidos en /data.',
+    motivo:
+      'Coeficientes reductores de la edad por actividad: no recogidos en los datos de la web.',
   },
   {
     regla: 'Jubilación flexible y jubilación activa (art. 213.1, art. 214)',
@@ -43,12 +45,12 @@ export const LIMITACIONES: readonly { readonly regla: string; readonly motivo: s
   },
   {
     regla: 'Límite de ingresos de los mínimos con cónyuge a cargo',
-    motivo: 'El límite con cónyuge a cargo no está en /data (PENDIENTE_DATOS.md).',
+    motivo: 'El límite con cónyuge a cargo no consta en los datos de la web.',
   },
   {
     regla: 'Reducción de la brecha de las mínimas con el umbral de pobreza (DA 53.ª, 2027)',
     motivo:
-      'Exige el umbral de pobreza de la ECV, no descargado. Desde 2027 las mínimas se revalorizan con el IPC del escenario.',
+      'Exige el umbral de pobreza de la ECV, que no figura en las fuentes consultadas. Desde 2027 las mínimas se revalorizan con el IPC del escenario.',
   },
   {
     regla:

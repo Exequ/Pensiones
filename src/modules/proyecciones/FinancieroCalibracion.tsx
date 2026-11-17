@@ -34,7 +34,7 @@ export function FinancieroCalibracion({ d }: { d: DatosFinanciero }) {
         clase, que se obtiene con el último año observado y se mantiene constante. Este factor
         existe porque el producto de pensiones por pensión media por pagas no coincide con el gasto
         que declara la ejecución del presupuesto. La tabla calcula el cociente de {c.anio} con los
-        datos descargados.
+        datos consultados.
       </p>
       <DataTable
         titulo={`Gasto de la ejecución del presupuesto de ${c.anio} frente a pensiones por pensión media por catorce pagas`}

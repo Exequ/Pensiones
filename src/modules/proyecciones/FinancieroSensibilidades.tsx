@@ -128,11 +128,11 @@ export function FinancieroSensibilidades({ d }: { d: DatosFinanciero }) {
           </li>
           <li>
             <strong>Procedencia.</strong> Los {s.casos.length} casos se ejecutaron el{' '}
-            <time dateTime={s.ejecutadoEl}>{s.ejecutadoEl}</time> con el código de los modelos del
-            repositorio, por Claude (un asistente de inteligencia artificial) en su entorno de
-            trabajo, no en local por el autor. El caso base es el escenario base de la salida de
-            escenarios, que coincide con la ejecución local del autor. Reproducción local por el
-            autor de todos los casos: {s.reproduccionLocalPorAutor ? 'sí.' : 'no, todavía no.'}
+            <time dateTime={s.ejecutadoEl}>{s.ejecutadoEl}</time> con el código de los modelos, en
+            un entorno de ejecución automatizado, no en local por el autor. El caso base es el
+            escenario base de la salida de escenarios, que coincide con la ejecución local del
+            autor. Reproducción local por el autor de todos los casos:{' '}
+            {s.reproduccionLocalPorAutor ? 'sí.' : 'no, todavía no.'}
           </li>
         </ul>
       </ComoLeerlo>

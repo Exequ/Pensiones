@@ -116,7 +116,9 @@ describe('entrada en vigor: cada fecha tiene su base', () => {
     if (n.textoDescargado !== undefined) {
       expect(existsSync(path.join(RAIZ, n.textoDescargado)), n.textoDescargado).toBe(true);
       expect(normaEspacios(leer(n.textoDescargado))).toContain(cita);
-      expect(v.ubicacion).toContain(path.basename(n.textoDescargado));
+      // La ubicación cita la disposición de la norma, no la ruta del fichero (voz de la web, fase R1).
+      expect(v.ubicacion).toMatch(/^Disposición (final|adicional|transitoria)/);
+      expect(v.ubicacion).not.toMatch(/data-raw|\.txt/);
     } else {
       const fuente = normaEspacios(
         [n.notas ?? '', ...n.cambios.map((c) => c.transicion)].join(' '),

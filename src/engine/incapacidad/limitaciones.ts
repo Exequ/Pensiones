@@ -6,22 +6,23 @@ export const LIMITACIONES_INCAPACIDAD: readonly {
   {
     regla: 'Hechos causantes anteriores a 2022',
     motivo:
-      'Las reglas de /data se han verificado para la normativa vigente desde 2022 (lanza NoImplementada).',
+      'Las reglas de la web se han verificado para la normativa vigente desde 2022 (lanza NoImplementada).',
   },
   {
     regla:
       'Base reguladora de las contingencias profesionales (accidente de trabajo y enfermedad profesional)',
     motivo:
-      'Se calcula con el salario real del capítulo V (arts. 58 a 63) del Reglamento de accidentes del trabajo de 1956 (Decreto de 22/06/1956, BOE núm. 197, de 15/07/1956). Su texto consta en el repositorio por OCR, con confianza media (data-raw/boe/reglamento-at-1956-cap5.txt), pero no se ha convertido en datos del motor: lanza NoImplementada salvo que se pase calculada (opciones.baseReguladoraProfesional).',
+      'Se calcula con el salario real del capítulo V (arts. 58 a 63) del Reglamento de accidentes del trabajo de 1956 (Decreto de 22/06/1956, BOE núm. 197, de 15/07/1956). Su texto consta por OCR, con confianza media, pero no se ha convertido en datos del motor: lanza NoImplementada salvo que se pase calculada (opciones.baseReguladoraProfesional).',
   },
   {
     regla: 'Lesiones permanentes no incapacitantes (art. 201 TRLGSS)',
-    motivo: 'Indemnizaciones por baremo: no son pensión y el baremo no está en /data.',
+    motivo:
+      'Indemnizaciones por baremo: no son pensión y el baremo no consta en los datos de la web.',
   },
   {
     regla:
       'Indemnización a tanto alzado sustitutiva de la total para menores de 60 años (art. 196.2)',
-    motivo: 'La regula la Orden de 31/07/1972; no se ha estructurado en /data.',
+    motivo: 'La regula la Orden de 31/07/1972; no se ha incorporado a los datos de la web.',
   },
   {
     regla: 'Recargo de prestaciones por falta de medidas de seguridad (art. 164 TRLGSS)',
@@ -45,7 +46,8 @@ export const LIMITACIONES_INCAPACIDAD: readonly {
   {
     regla:
       'Límite de ingresos de los mínimos con cónyuge a cargo y tope de los complementos por mínimos',
-    motivo: 'El límite con cónyuge a cargo no está en /data (como en la jubilación).',
+    motivo:
+      'El límite con cónyuge a cargo no consta en los datos de la web (como en la jubilación).',
   },
   {
     regla:

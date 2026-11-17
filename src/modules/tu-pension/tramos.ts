@@ -373,7 +373,7 @@ export function procesarTramos(
     if (sinLimites > 0) {
       avisos.push({
         tramoId: t.id,
-        mensaje: `${nombre}: en ${formatearNumero(sinLimites)} ${sinLimites === 1 ? 'mes' : 'meses'} no hay límites de base en los datos (la base mínima y la máxima de /data cubren ${minima ? descripcionCobertura(minima) : 'ningún año'}); no se comprueban.`,
+        mensaje: `${nombre}: en ${formatearNumero(sinLimites)} ${sinLimites === 1 ? 'mes' : 'meses'} no hay límites de base en los datos (la base mínima y la máxima de los datos de la web cubren ${minima ? descripcionCobertura(minima) : 'ningún año'}); no se comprueban.`,
       });
     }
   }

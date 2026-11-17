@@ -144,7 +144,7 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
               La gráfica muestra de dónde procede cada euro de ingreso reconocido, no por qué cambia
               su composición. Un cambio en la composición puede deberse a cambios de criterio de
               clasificación o de financiación entre años; el desglose de las transferencias por
-              finalidad no está disponible en los datos descargados.
+              finalidad no está disponible en los datos consultados.
             </p>
             <p>
               «Transferencias corrientes del Estado y organismos autónomos» es la fila de ingresos
@@ -153,7 +153,7 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
               finalidad las transferencias corrientes (apoyo al equilibrio presupuestario y costes
               que el Informe del Pacto de Toledo considera ajenos a la Seguridad Social) y cita
               aparte las aportaciones de naturaleza no contributiva. Las dos cifras no coinciden y
-              con los datos descargados no se pueden conciliar una a una.
+              con los datos consultados no se pueden conciliar una a una.
             </p>
           </>
         }

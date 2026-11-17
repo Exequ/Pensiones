@@ -70,7 +70,7 @@ export function crearContexto(
   const tasaIPC = (anio: number): number => {
     if (escenario === undefined) {
       throw new DatoNoDisponible(
-        `el IPC de ${anio} no está en /data y no se ha indicado un escenario (opciones.escenario.ipc)`,
+        `el IPC de ${anio} no consta en los datos de la web y no se ha indicado un escenario (opciones.escenario.ipc)`,
       );
     }
     return typeof escenario.ipc === 'function' ? escenario.ipc(anio) : escenario.ipc;
@@ -141,7 +141,7 @@ export function crearContexto(
     if (publicado !== undefined) return publicado;
     if (mes < mensual.primero) {
       avisos.add(
-        `IPC anterior a ${formatearMes(mensual.primero)}: sin índice mensual en /data; se interpolan las medias anuales.`,
+        `IPC anterior a ${formatearMes(mensual.primero)}: sin índice mensual en los datos de la web; se interpolan las medias anuales.`,
       );
       return ipcInterpolado(mes);
     }
@@ -172,7 +172,7 @@ export function crearContexto(
     const dato = valorExacto(params.revalorizacion, anio);
     if (dato !== undefined) return dato;
     if (anio <= params.revalorizacion.ultimo) {
-      throw new DatoNoDisponible(`revalorización de ${anio}: consta en docs/PENDIENTE_DATOS.md`);
+      throw new DatoNoDisponible(`revalorización de ${anio}: sin dato en los datos de la web`);
     }
     avisos.add(
       `Revalorización posterior a ${params.revalorizacion.ultimo}: IPC del escenario (art. 58.2, suelo del 0 %).`,
@@ -227,14 +227,14 @@ export function crearContexto(
         if (anio < s.primero) throw new DatoNoDisponible(`${s.fichero}: sin dato para ${anio}`);
         if (huecoBaseMinima === 'error') {
           throw new DatoNoDisponible(
-            `base mínima de ${anio} (sin dato en /data); use opciones.huecoBaseMinima = 'anterior' para usar el último valor conocido`,
+            `base mínima de ${anio} (sin dato en los datos de la web); use opciones.huecoBaseMinima = 'anterior' para usar el último valor conocido`,
           );
         }
         avisos.add(`Base mínima de ${anio} sin dato: se usa la del último año anterior con dato.`);
         return baseMinima(anio - 1);
       }
       avisos.add(
-        `Base mínima posterior a ${s.ultimo}: crece con el IPC del escenario (la regla legal no está en /data).`,
+        `Base mínima posterior a ${s.ultimo}: crece con el IPC del escenario (la regla legal no consta en los datos de la web).`,
       );
       const previa = baseMinima(anio - 1);
       return { valor: previa.valor * (1 + tasaIPC(anio - 1)), refs: previa.refs };
@@ -367,7 +367,7 @@ export function aEurosConstantesDelContexto(
   const anios = [anioNominal, anioBase];
   const serie: SerieIPC = {
     id: 'ipc-contexto',
-    descripcion: 'Media anual del IPC (data/parametros/ipc-indice-medio-anual y escenario)',
+    descripcion: 'Media anual del IPC (índice medio anual y escenario)',
     puntos: [...new Set(anios)].map((anio) => ({ anio, indice: ctx.indiceAnual(anio) })),
   };
   return aEurosConstantes(importe, anioNominal, anioBase, serie);

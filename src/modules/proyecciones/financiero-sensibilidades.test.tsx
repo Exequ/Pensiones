@@ -161,7 +161,9 @@ describe('tabla «Sensibilidades» del bloque financiero', () => {
     expect(texto).toMatch(/puede depender del escenario del que se parte/);
     expect(texto).toMatch(/orden del LEEME/);
     expect(texto).toMatch(/Procedencia/);
-    expect(texto).toMatch(/con el código de los modelos del\s+repositorio/);
+    expect(texto).toMatch(
+      /con el código de los modelos, en un\s+entorno de ejecución automatizado/,
+    );
     expect(texto).toMatch(/no en local por el autor/);
     expect(texto).toMatch(/coincide con la ejecución local del autor/);
   });

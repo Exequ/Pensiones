@@ -38,13 +38,13 @@ export default function Reformas() {
         <MarginNote>
           <p>
             Cada ficha cita el artículo o la disposición de la norma, con su texto literal, y cada
-            valor procede de /data con su fuente, la fecha de descarga y un nivel de confianza.
+            valor lleva su fuente, la fecha de descarga y un nivel de confianza.
           </p>
         </MarginNote>
         <p className="hist-aviso">
           Esta página describe qué cambió cada norma, cuándo y sobre qué parámetro. No valora
           ninguna norma ni atribuye intenciones o efectos que no consten en la norma o en un dato
-          descargado.
+          consultado.
         </p>
 
         <section className="seccion prosa ref-alcance" aria-labelledby="ref-alcance-titulo">
@@ -52,12 +52,12 @@ export default function Reformas() {
             Qué recoge la cronología
           </h2>
           <p>
-            La cronología reúne las normas de las que hay texto o cita literal en los datos del
-            repositorio: {formatearNumero(fichas.length)} normas, de las que{' '}
-            {formatearNumero(conTexto)} tienen su texto completo descargado y{' '}
-            {formatearNumero(conVigor)} tienen una fecha de entrada en vigor respaldada por un texto
-            o un dato. No es un listado exhaustivo: puede haber otras normas que modificaran estos
-            parámetros y que no figuran porque su texto no está descargado.
+            La cronología reúne las normas de las que hay texto o cita literal en las fuentes
+            consultadas: {formatearNumero(fichas.length)} normas, de las que{' '}
+            {formatearNumero(conTexto)} tienen su texto completo y {formatearNumero(conVigor)}{' '}
+            tienen una fecha de entrada en vigor respaldada por un texto o un dato. No es un listado
+            exhaustivo: puede haber otras normas que modificaran estos parámetros y que no figuran
+            porque su texto no consta en las fuentes consultadas.
           </p>
           <p>
             El orden es cronológico, por fecha de aprobación, y no indica importancia. Todas las
@@ -70,7 +70,7 @@ export default function Reformas() {
             </Definition>
             <Definition termino="Entrada en vigor">
               Día desde el que la norma es aplicable, según su disposición final o los metadatos del
-              BOE. Si no consta en los textos descargados, la ficha lo dice y no se calcula.
+              BOE. Si no consta en las fuentes consultadas, la ficha lo dice y no se calcula.
             </Definition>
             <Definition termino="Parámetro">
               Cifra o regla que fija una norma y que usa el cálculo de una pensión, como el periodo
@@ -78,7 +78,7 @@ export default function Reformas() {
             </Definition>
             <Definition termino="Calendario de aplicación">
               Cuando una norma no aplica el cambio de golpe, la sucesión de valores por año que
-              fija. La tabla recoge los años con dato en /data.
+              fija. La tabla recoge los años con dato.
             </Definition>
           </div>
         </section>

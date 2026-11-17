@@ -44,7 +44,7 @@ export function TarjetaPobreza({ mito, indice, total }: TarjetaProps) {
           la pensión mínima de jubilación y de la pensión no contributiva. El resultado depende del
           indicador, del umbral, de la edad que se considere y de lo que se compute como renta.
           Umbral, contenido exacto del indicador y tratamiento del alquiler de la vivienda en
-          propiedad: perímetro no verificado en las fuentes descargadas.
+          propiedad: perímetro no verificado en las fuentes consultadas.
         </p>
       }
     >
@@ -65,7 +65,7 @@ export function TarjetaPobreza({ mito, indice, total }: TarjetaProps) {
         incluirCero
         alto={360}
         fuentes={[d.arope.dato, d.oaip.dato]}
-        nota="Los dos indicadores no son comparables entre sí: usan edades de referencia, umbrales y definiciones de renta distintos. Perímetro no verificado en las fuentes descargadas."
+        nota="Los dos indicadores no son comparables entre sí: usan edades de referencia, umbrales y definiciones de renta distintos. Perímetro no verificado en las fuentes consultadas."
         comoLeerlo={
           <>
             <p>
@@ -76,11 +76,11 @@ export function TarjetaPobreza({ mito, indice, total }: TarjetaProps) {
             </p>
             <p>
               El primero es un indicador de «pobreza o exclusión social» cuyo contenido exacto no se
-              ha verificado en las fuentes descargadas; el segundo mide la renta por debajo de un
-              umbral relativo a la mediana (el literal de la fuente consta en los datos) y, por ser
-              relativo, cambia cuando cambia la renta mediana, no solo la de los pensionistas. No
-              hay en los datos la distribución de las pensiones por cuantía, y ninguna de las dos
-              mide la situación de «los pensionistas» como grupo, sino la de las personas mayores.
+              ha verificado en las fuentes consultadas; el segundo mide la renta por debajo de un
+              umbral relativo a la mediana y, por ser relativo, cambia cuando cambia la renta
+              mediana, no solo la de los pensionistas. No hay en los datos la distribución de las
+              pensiones por cuantía, y ninguna de las dos mide la situación de «los pensionistas»
+              como grupo, sino la de las personas mayores.
             </p>
           </>
         }
@@ -296,7 +296,7 @@ export function TarjetaGasto({ mito, indice, total }: TarjetaProps) {
         incluirCero
         alto={400}
         fuentes={[d.espana.dato, d.union.dato, d.ocde.dato, d.contributivas.dato]}
-        nota="Perímetro no verificado en las fuentes descargadas para las medidas de Eurostat y de la OCDE: no se sabe si incluyen prestaciones en especie, Clases Pasivas o pensiones no contributivas. La del Sistema es un cálculo propio (obligaciones de «suma de pensiones» entre PIB) sin Clases Pasivas ni pensiones no contributivas."
+        nota="Perímetro no verificado en las fuentes consultadas para las medidas de Eurostat y de la OCDE: no se sabe si incluyen prestaciones en especie, Clases Pasivas o pensiones no contributivas. La del Sistema es un cálculo propio (obligaciones de «suma de pensiones» entre PIB) sin Clases Pasivas ni pensiones no contributivas."
         comoLeerlo={
           <>
             <p>

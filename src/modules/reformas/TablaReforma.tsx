@@ -41,8 +41,8 @@ export function TablaReforma({ tabla }: { readonly tabla: TablaVista }) {
           </p>
         ) : (
           <p>
-            La tabla recoge el valor que consta en /data para el año indicado y el lugar de la norma
-            donde figura. No lo compara con otros años ni con otras normas, ni dice cómo afecta a la
+            La tabla recoge el valor que consta para el año indicado y el lugar de la norma donde
+            figura. No lo compara con otros años ni con otras normas, ni dice cómo afecta a la
             pensión de una persona.
           </p>
         )}

@@ -87,7 +87,7 @@ export function TarjetaSostenibilidad({ mito, indice, total }: TarjetaProps) {
         decimalesEje={0}
         alto={360}
         fuentes={[gasto.dato, d.gastoOcde.dato]}
-        nota="Proyecciones publicadas por las fuentes, no datos observados. El perímetro del gasto de la OCDE no está verificado en las fuentes descargadas."
+        nota="Proyecciones publicadas por las fuentes, no datos observados. El perímetro del gasto de la OCDE no está verificado en las fuentes consultadas."
         comoLeerlo={
           <>
             <p>

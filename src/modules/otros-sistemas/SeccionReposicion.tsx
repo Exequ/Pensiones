@@ -244,7 +244,7 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
               <p>
                 La tasa neta puede ser mayor o menor que la bruta según la fiscalidad de cada país:
                 los impuestos y cotizaciones concretos que se aplican a los pensionistas de cada
-                país no están en los datos descargados. Por eso la diferencia entre la tasa bruta y
+                país no están en los datos consultados. Por eso la diferencia entre la tasa bruta y
                 la neta no se puede atribuir a una causa con estos datos.
               </p>
             </>
@@ -344,7 +344,7 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
             { clave: 'valor', titulo: '%', tipo: 'numero', decimales: 1 },
           ]}
           filas={filasEspana}
-          pie="Los valores de la OCDE son los del sexo, el nivel de salario y los planes elegidos arriba; los cocientes propios son de ambos sexos. Los datos descargados no permiten descomponer la diferencia entre ellos."
+          pie="Los valores de la OCDE son los del sexo, el nivel de salario y los planes elegidos arriba; los cocientes propios son de ambos sexos. Los datos consultados no permiten descomponer la diferencia entre ellos."
         />
         <SourceLine datos={[datoOcde, ...cocientes.map((c) => c.dato)]} />
       </div>

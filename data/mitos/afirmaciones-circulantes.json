@@ -27,11 +27,11 @@
         },
         {
           "nombre": "Reservas de la Seguridad Social en sentido amplio",
-          "literal": "La afirmación puede referirse al Fondo de Reserva o a otros activos de la Seguridad Social; en /data solo está el Fondo de Reserva."
+          "literal": "La afirmación puede referirse al Fondo de Reserva o a otros activos de la Seguridad Social; en los datos de la web solo está el Fondo de Reserva."
         }
       ],
       "noSePuedeConcluir": [
-        "Si el nivel actual del Fondo es o no suficiente: no hay en /data un criterio de suficiencia ni los pagos futuros previstos.",
+        "Si el nivel actual del Fondo es o no suficiente: no hay en los datos de la web un criterio de suficiencia ni los pagos futuros previstos.",
         "El valor a precio de mercado, que puede diferir del valor de adquisición.",
         "Qué parte de la evolución se debe a disposiciones y cuál a otros motivos más allá de las series publicadas."
       ],
@@ -76,9 +76,7 @@
         "Qué parte exacta de las pensiones contributivas se paga con impuestos: la ejecución no desglosa las transferencias por finalidad (pendiente).",
         "Si las transferencias financian pensiones contributivas o prestaciones de otro tipo."
       ],
-      "faltan": [
-        "Desglose de las transferencias del Estado por finalidad (ver docs/PENDIENTE_DATOS.md)."
-      ],
+      "faltan": ["Desglose de las transferencias del Estado por finalidad."],
       "revisionActuarial": "revisada",
       "preguntaActuarial": "Comprobar la separación de fuentes de financiación (contributivas frente a no contributivas) y el desglose de las transferencias por finalidad; decidir cómo se atribuyen los complementos a mínimos y las reducciones de cuotas al calcular la proporción financiada con cotizaciones.",
       "respuestaActuarial": "Tanda 3, parte B, n.º 19"
@@ -129,11 +127,9 @@
       ],
       "noSePuedeConcluir": [
         "El signo de la tendencia depende de la definición y del periodo elegido: las cinco medidas no están definidas igual.",
-        "Las definiciones sin doble cómputo (ocupados más desempleados con prestación, convenios especiales, pensionistas sin doble cómputo) no están en /data."
+        "Las definiciones sin doble cómputo (ocupados más desempleados con prestación, convenios especiales, pensionistas sin doble cómputo) no están en los datos de la web."
       ],
-      "faltan": [
-        "Relación cotizantes/pensionistas sin doble cómputo (ver docs/PENDIENTE_DATOS.md)."
-      ],
+      "faltan": ["Relación cotizantes/pensionistas sin doble cómputo."],
       "revisionActuarial": "revisada",
       "preguntaActuarial": "Comprobar qué es un «cotizante» frente a un afiliado (pluriempleo, regímenes especiales, situaciones sin cotización) y un «pensionista» frente a una pensión; elegir la definición coherente con el uso en el modelo y valorar el efecto del doble cómputo sobre el nivel y la tendencia.",
       "respuestaActuarial": "Tanda 3, parte B, n.º 20"
@@ -156,7 +152,7 @@
         },
         {
           "nombre": "Cotizaciones pagadas por el trabajador",
-          "literal": "Solo la parte del trabajador, o también la de la empresa (en el tipo de cotización de contingencias comunes de data/parametros).",
+          "literal": "Solo la parte del trabajador, o también la de la empresa (en el tipo de cotización de contingencias comunes).",
           "datos": ["parametros/tipo-cc-empresa.json"]
         },
         {
@@ -169,9 +165,7 @@
         "No hay datos de historiales de cotización individuales ni de valor actual de las cotizaciones por cohorte, por lo que no se puede comparar lo cotizado con lo cobrado.",
         "La respuesta depende del descuento, de la inclusión de la cotización de la empresa y de qué prestaciones se cuentan (viudedad, mínimos)."
       ],
-      "faltan": [
-        "Historiales de cotización por cohorte (Muestra Continua de Vidas Laborales), ver docs/PENDIENTE_DATOS.md."
-      ],
+      "faltan": ["Historiales de cotización por cohorte (Muestra Continua de Vidas Laborales)."],
       "revisionActuarial": "pendiente",
       "preguntaActuarial": "Definir el cociente valor actual de prestaciones / valor actual de cotizaciones por cohorte (tipo de descuento, mortalidad de data/demografia, cotización de trabajador y de empresa) y decidir qué datos de historiales de cotización harían falta; comparar con la riqueza de pensiones de la OCDE."
     },
@@ -204,16 +198,14 @@
         },
         {
           "nombre": "Saldo del sistema contributivo sin transferencias",
-          "literal": "Cotizaciones menos prestaciones contributivas sin transferencias del Estado (definición que usan algunos informes; no está en /data)."
+          "literal": "Cotizaciones menos prestaciones contributivas sin transferencias del Estado (definición que usan algunos informes; no está en los datos de la web)."
         }
       ],
       "noSePuedeConcluir": [
         "Que haya o no déficit: el signo y la cuantía cambian con la definición y con el año.",
-        "El saldo sin transferencias del Estado y el «saldo contributivo ajustado» no se pueden calcular con los datos descargados."
+        "El saldo sin transferencias del Estado y el «saldo contributivo ajustado» no se pueden calcular con los datos consultados."
       ],
-      "faltan": [
-        "Saldo contributivo ajustado (AIReF) y capacidad de financiación según la IGAE (ver docs/PENDIENTE_DATOS.md)."
-      ],
+      "faltan": ["Saldo contributivo ajustado (AIReF) y capacidad de financiación según la IGAE."],
       "revisionActuarial": "revisada",
       "preguntaActuarial": "Comprobar las definiciones de déficit (presupuestario no financiero, total, SEC 2010 y saldo contributivo ajustado de la AIReF) y su reconciliación (criterio de caja o devengo, sectorización, tratamiento de transferencias y préstamos); decidir cuál se usa en cada magnitud del modelo.",
       "respuestaActuarial": "Tanda 3, parte B, n.º 22"
@@ -232,7 +224,7 @@
       "definiciones": [
         {
           "nombre": "Edad ordinaria legal",
-          "literal": "Edad a partir de la cual se accede a la pensión de jubilación sin reducción cuando no se alcanza el periodo cotizado de la jubilación a los 65 años (data/parametros).",
+          "literal": "Edad a partir de la cual se accede a la pensión de jubilación sin reducción cuando no se alcanza el periodo cotizado de la jubilación a los 65 años.",
           "datos": ["parametros/edad-ordinaria-jubilacion.json#2025"]
         },
         {
@@ -242,12 +234,12 @@
         },
         {
           "nombre": "Edad media de las altas de jubilación",
-          "literal": "Edad media de las altas iniciales de pensión de jubilación del año, según la estadística de altas de la Seguridad Social (data/sistema).",
+          "literal": "Edad media de las altas iniciales de pensión de jubilación del año, según la estadística de altas de la Seguridad Social.",
           "datos": ["sistema/edad-media-altas-jubilacion.json#edad-media-altas-jubilacion"]
         },
         {
           "nombre": "Edad efectiva de salida del mercado laboral (OCDE)",
-          "literal": "Medida ELMEA de la OCDE; literal de la fuente: «Effective labour market exit age». El método de estimación es el de la OCDE y no se ha descargado.",
+          "literal": "Medida ELMEA de la OCDE. El método de estimación es el de la OCDE y no consta en las fuentes consultadas.",
           "datos": ["internacional/ocde-espana.json#elmea-hombres-z-z-y"]
         },
         {
@@ -258,7 +250,7 @@
       ],
       "noSePuedeConcluir": [
         "No hay una única edad «real»: las cinco medidas responden a preguntas distintas y dan cifras distintas.",
-        "No hay en /data la distribución de edades de alta ni el peso de las distintas modalidades de jubilación."
+        "No hay en los datos de la web la distribución de edades de alta ni el peso de las distintas modalidades de jubilación."
       ],
       "revisionActuarial": "revisada",
       "preguntaActuarial": "Comprobar qué mide cada edad (legal, de alta, efectiva de salida del mercado laboral, de la OCDE para carrera completa), con la dependencia de la carrera cotizada y las modalidades anticipadas, y decidir cuál debe alimentar la edad de jubilación del modelo.",
@@ -326,12 +318,12 @@
       "definiciones": [
         {
           "nombre": "Riesgo de pobreza o exclusión social (AROPE) de los mayores de 65",
-          "literal": "Personas de 65 o más años en riesgo de pobreza o exclusión social según el indicador de Eurostat (ilc_peps01n); la definición detallada del indicador es la de Eurostat y no se ha descargado en esta fase.",
+          "literal": "Personas de 65 o más años en riesgo de pobreza o exclusión social según el indicador de Eurostat (ilc_peps01n); la definición detallada del indicador es la de Eurostat y no consta en las fuentes consultadas.",
           "datos": ["internacional/eurostat-espana.json#pobreza-o-exclusion-total-y-ge65-pc"]
         },
         {
           "nombre": "Pobreza de renta de los mayores (OCDE)",
-          "literal": "Medida OAIP de la OCDE; literal de la fuente: «Old age income poverty rate below 50% of median income», referida a personas de 66 o más años.",
+          "literal": "Medida OAIP de la OCDE, referida a personas de 66 o más años.",
           "datos": ["internacional/ocde-espana.json#oaip-total-y-ge66-z-pt-pop-sex-age"]
         },
         {
@@ -342,7 +334,7 @@
       ],
       "noSePuedeConcluir": [
         "Que la población pensionista sea pobre o no: el resultado depende del indicador (renta relativa o AROPE), del umbral, de la edad (65 o 66) y de lo que se compute como renta.",
-        "La distribución de las pensiones por cuantía no está en /data."
+        "La distribución de las pensiones por cuantía no está en los datos de la web."
       ],
       "revisionActuarial": "pendiente",
       "preguntaActuarial": "Comprobar la sensibilidad de las tasas de pobreza al umbral y a la escala de equivalencia, el tratamiento de la vivienda en propiedad y otro patrimonio, y la comparabilidad del indicador AROPE de Eurostat con el OAIP de la OCDE."
@@ -415,7 +407,7 @@
       ],
       "noSePuedeConcluir": [
         "Que el gasto sea alto o bajo «para España»: depende de la definición, del PIB y de la estructura de edades; los datos no ajustan por envejecimiento ni por tasa de reposición.",
-        "La media europea depende de qué países entran (UE-27, OCDE, los once de data/internacional)."
+        "La media europea depende de qué países entran (UE-27, OCDE, los once de la muestra)."
       ],
       "revisionActuarial": "pendiente",
       "preguntaActuarial": "Comprobar la comparabilidad de las definiciones de gasto (ESSPROS vejez y supervivencia, gasto público en pensiones de la OCDE, pensiones contributivas del Sistema) y plantear una comparación ajustada por estructura de edades (por ejemplo, gasto por mayor de 65 años o relativo al PIB por trabajador)."
@@ -442,7 +434,7 @@
         },
         {
           "nombre": "Regla vigente del artículo 58",
-          "literal": "Media de los IPC interanuales de los meses que fija la regla hasta un último mes de medición, con las reglas de suelo e indicadores de data/parametros.",
+          "literal": "Media de los IPC interanuales de los meses que fija la regla hasta un último mes de medición, con las reglas de suelo e indicadores.",
           "datos": ["parametros/revalorizacion-regla.json#2024-ultimo-mes-medicion"]
         },
         {
@@ -452,15 +444,15 @@
         }
       ],
       "noSePuedeConcluir": [
-        "Si la revalorización igualó al IPC en cada año: depende de qué IPC y de qué periodo se compare y de las reglas de cada año (en algunos años la revalorización publicada es distinta de las variaciones del IPC de data/parametros).",
+        "Si la revalorización igualó al IPC en cada año: depende de qué IPC y de qué periodo se compare y de las reglas de cada año (en algunos años la revalorización publicada es distinta de las variaciones del IPC).",
         "El poder adquisitivo de una persona concreta depende de su cesta de consumo y de los complementos que perciba.",
-        "El acumulado de la revalorización frente al IPC: no se calcula ni se muestra porque la serie de revalorización de /data no tiene porcentaje general de 2011 (los BOE de 2011 suspenden la revalorización de las pensiones contributivas, con excepciones, sin enunciar un porcentaje general) ni de 2012 (no hay norma descargada)."
+        "El acumulado de la revalorización frente al IPC: no se calcula ni se muestra porque la serie de revalorización no tiene porcentaje general de 2011 (los BOE de 2011 suspenden la revalorización de las pensiones contributivas, con excepciones, sin enunciar un porcentaje general) ni de 2012 (no consta la norma en las fuentes consultadas)."
       ],
       "revisionActuarial": "revisada",
       "preguntaActuarial": "Comprobar año a año la diferencia entre el porcentaje de revalorización de data/parametros/revalorizacion-general y las distintas medidas de IPC (media anual, diciembre, media de 12 meses hasta noviembre), identificar los años con regla distinta y calcular el efecto acumulado sobre el poder adquisitivo con cada medida.",
       "respuestaActuarial": "Tanda 3, parte B, n.º 28",
       "faltan": [
-        "La norma que fija la revalorización de 2012 y, según el revisor, la paga por desviación de 2001 a 2010 (el real decreto de 2011 recoge un pago único ligado a 2010, sin llamarlo paga por desviación), sin las cuales no se puede publicar un acumulado frente al IPC."
+        "La norma que fija la revalorización de 2012 y la regulación de la paga por desviación de 2001 a 2010, no comprobada en las fuentes consultadas (el real decreto de 2011 recoge un pago único ligado a 2010, sin llamarlo paga por desviación), sin las cuales no se puede publicar un acumulado frente al IPC."
       ]
     },
     {
@@ -498,7 +490,7 @@
       ],
       "noSePuedeConcluir": [
         "Que los nacimientos determinen por sí solos la sostenibilidad: el gasto depende también de la mortalidad, la migración, el empleo, la productividad y las reglas de cálculo.",
-        "El efecto de una variación de la fecundidad en el PIB no se puede estimar con los datos de /data sin un modelo."
+        "El efecto de una variación de la fecundidad en el PIB no se puede estimar con los datos de la web sin un modelo."
       ],
       "revisionActuarial": "revisada",
       "preguntaActuarial": "Comprobar la contribución relativa de fecundidad, mortalidad, migración y empleo a la tasa de dependencia y al gasto en pensiones (análisis de sensibilidad del Ageing Report y variantes de EUROPOP2025) y qué hipótesis de empleo y productividad hacen falta para pasar de la dependencia demográfica a la económica.",

@@ -179,9 +179,7 @@ export function valorEn(serie: SerieAnual, anio: number): ValorConReferencia {
   const usado = Math.min(anio, serie.ultimo);
   const v = serie.valores.get(usado);
   if (v === undefined) {
-    throw new DatoNoDisponible(
-      `${serie.fichero}: sin dato para ${anio}; consta en docs/PENDIENTE_DATOS.md`,
-    );
+    throw new DatoNoDisponible(`${serie.fichero}: sin dato para ${anio}`);
   }
   return { valor: v, ref: ref(serie.fichero, usado), extendido: anio > serie.ultimo };
 }

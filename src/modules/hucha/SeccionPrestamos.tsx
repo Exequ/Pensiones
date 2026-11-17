@@ -205,7 +205,7 @@ export function SeccionPrestamos() {
         El Tribunal de Cuentas cifra el saldo de la reserva patrimonial del Fondo en el balance de
         la Tesorería General con un criterio contable distinto del precio de adquisición con el que
         se registra el valor del Fondo en la serie de la Seguridad Social. Las dos cifras no
-        coinciden y con los datos descargados no se puede conciliarlas partida a partida.
+        coinciden y con los datos consultados no se puede conciliarlas partida a partida.
       </p>
       <div className="hist-definiciones">
         <DataTable

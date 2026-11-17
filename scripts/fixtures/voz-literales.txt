@@ -1,0 +1,11 @@
+/** Muestra para la prueba de voz de la web: no es código de la aplicación. */
+export function Muestra() {
+  const a = 'Consta en el repositorio.';
+  const b = `Está en el fichero de datos ${a}`;
+  const c = new Error('error de desarrollo con data/x.json');
+  return (
+    <p>
+      texto JSX con data/x.json {b} {String(c)}
+    </p>
+  );
+}

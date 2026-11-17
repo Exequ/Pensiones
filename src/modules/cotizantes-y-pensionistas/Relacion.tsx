@@ -49,9 +49,9 @@ export function Relacion() {
         una de pensiones o de pensionistas. El resultado depende de tres elecciones: si el
         denominador cuenta pensiones o personas, si los afiliados son los de un mes concreto o la
         media del año, y en qué fecha se toma cada cifra. La Seguridad Social no publica esta razón
-        como tal en los ficheros descargados: son cocientes calculados a partir de datos publicados.
-        Aquí se muestran las seis definiciones disponibles, con la fecha de referencia de cada
-        serie, sin escoger ninguna como la correcta.
+        como tal en sus ficheros: son cocientes calculados a partir de datos publicados. Aquí se
+        muestran las seis definiciones disponibles, con la fecha de referencia de cada serie, sin
+        escoger ninguna como la correcta.
       </p>
       <Definition termino="Razón entre afiliados y pensiones">
         Número de afiliados (numerador) dividido entre el de pensiones o pensionistas (denominador).
@@ -110,8 +110,8 @@ export function Relacion() {
       </p>
       <p>
         No se muestra la definición con cotizantes efectivos (sin suspendidos ni convenio especial):
-        los ficheros de afiliación descargados no separan esas situaciones, por lo que queda como
-        dato pendiente. Tampoco se muestra ninguna definición que excluya sistemas especiales.
+        los datos de afiliación consultados no separan esas situaciones, por lo que queda como dato
+        pendiente. Tampoco se muestra ninguna definición que excluya sistemas especiales.
       </p>
 
       <GraficoSeries

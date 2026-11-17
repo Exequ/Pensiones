@@ -268,14 +268,14 @@ describe('neutralidad de la página', () => {
     let texto = container.textContent;
     expect(texto.length).toBeGreaterThan(20000);
     // Los motivos de las lecturas se muestran tal como están en el registro (no son texto de esta
-    // página): se comprueban aparte, porque describen el proceso de revisión («confirmada»).
+    // página): se comprueban aparte, porque describen la decisión sobre la lectura («confirmada»).
     for (const l of LECTURAS_ABIERTAS)
       if (l.motivo !== null) texto = texto.replaceAll(l.motivo, '');
     expect(veredictosEn(texto)).toEqual([]);
     expect(valoracionesEn(texto)).toEqual([]);
   });
 
-  it('los motivos de las lecturas solo usan «confirmada» para la revisión actuarial y no valoran', () => {
+  it('los motivos de las lecturas solo usan «confirmada» para una decisión con fecha y no valoran', () => {
     for (const l of LECTURAS_ABIERTAS) {
       if (l.motivo === null) continue;
       expect(
@@ -283,7 +283,7 @@ describe('neutralidad de la página', () => {
         l.id,
       ).toEqual([]);
       if (veredictosEn(l.motivo).includes('confirmad'))
-        expect(l.motivo, l.id).toMatch(/revisión actuarial/);
+        expect(l.motivo, l.id).toMatch(/Confirmada el \d{1,2}-\d{2}-\d{4}/);
       expect(
         valoracionesEn(l.motivo).filter((v) => v !== 'confirmad'),
         l.id,

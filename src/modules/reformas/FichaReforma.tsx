@@ -5,11 +5,11 @@ import { ETIQUETA_DESTINO, RUTA_DESTINO } from './ids-datos';
 import { TablaReforma } from './TablaReforma';
 
 const BASE_VIGOR = {
-  'metadatos-boe': 'según los metadatos del BOE descargados',
-  'disposicion-final': 'según la disposición final del texto descargado',
-  cronologia: 'según la cronología de /data, que recoge el texto de la norma',
+  'metadatos-boe': 'según los metadatos del BOE',
+  'disposicion-final': 'según la disposición final de la norma',
+  cronologia: 'según la cronología de esta página, que recoge el texto de la norma',
   'regla-sobre-publicacion': 'calculada con la regla sobre la publicación que recoge la cronología',
-  'sin-texto': 'no consta en los textos ni en los datos descargados',
+  'sin-texto': 'no consta en las fuentes consultadas',
 } as const;
 
 export const ID_FICHA = (id: string): string => `ref-${id}`;
@@ -50,7 +50,7 @@ export function FichaReforma({ reforma }: { readonly reforma: ReformaVista }) {
           <dt>Entrada en vigor</dt>
           <dd>
             {reforma.entradaEnVigor === null ? (
-              <>No consta en los textos descargados</>
+              <>No consta en las fuentes consultadas</>
             ) : (
               <time dateTime={vigor.fecha ?? undefined}>{reforma.entradaEnVigor}</time>
             )}{' '}
@@ -67,8 +67,12 @@ export function FichaReforma({ reforma }: { readonly reforma: ReformaVista }) {
           </dd>
         </div>
         <div>
-          <dt>Texto completo en el repositorio</dt>
-          <dd>{norma.textoDescargado ?? 'No; solo constan las citas de la cronología'}</dd>
+          <dt>Texto completo de la norma consultado</dt>
+          <dd>
+            {norma.textoDescargado === undefined
+              ? 'No; solo figuran las citas de los artículos'
+              : 'Sí'}
+          </dd>
         </div>
       </dl>
 
@@ -95,7 +99,7 @@ export function FichaReforma({ reforma }: { readonly reforma: ReformaVista }) {
         ))}
       </ul>
 
-      <h3 id={`${id}-parametros`}>Parámetros afectados: valor antes y valor después en /data</h3>
+      <h3 id={`${id}-parametros`}>Parámetros afectados: valor antes y valor después</h3>
       <p className="ref-aviso">
         El cambio de un parámetro no equivale a un efecto sobre la pensión de una persona: el
         importe depende de la carrera de cotización y de las demás reglas aplicables.
@@ -107,7 +111,7 @@ export function FichaReforma({ reforma }: { readonly reforma: ReformaVista }) {
             <li key={c.parametro}>
               <h4>{c.rotulo}</h4>
               {tablas.length === 0 ? (
-                <p>No hay valores de este parámetro en /data para esta norma.</p>
+                <p>No hay valores de este parámetro para esta norma.</p>
               ) : (
                 tablas.map((t) => (
                   <div key={t.clave}>
@@ -115,7 +119,7 @@ export function FichaReforma({ reforma }: { readonly reforma: ReformaVista }) {
                       <ul className="ref-antes-despues">
                         <li>
                           <span className="ref-etiqueta">Antes:</span>{' '}
-                          {t.antes === '' ? 'no consta en /data para el año anterior.' : t.antes}
+                          {t.antes === '' ? 'no consta para el año anterior.' : t.antes}
                         </li>
                         <li>
                           <span className="ref-etiqueta">Después:</span> {t.despues}
@@ -125,8 +129,8 @@ export function FichaReforma({ reforma }: { readonly reforma: ReformaVista }) {
                       <>
                         <ul className="ref-antes-despues">
                           <li>
-                            <span className="ref-etiqueta">Antes:</span> el valor anterior no consta
-                            en /data.
+                            <span className="ref-etiqueta">Antes:</span> el valor anterior no
+                            consta.
                           </li>
                           <li>
                             <span className="ref-etiqueta">Después:</span> {t.despues}
@@ -152,7 +156,7 @@ export function FichaReforma({ reforma }: { readonly reforma: ReformaVista }) {
         ))}
       </ul>
       {reforma.tablas.filter((t) => t.tipo === 'calendario').length === 0 ? (
-        <p>No hay un calendario de esta norma con valores en /data.</p>
+        <p>No hay un calendario de esta norma con valores.</p>
       ) : (
         reforma.tablas
           .filter((t) => t.tipo === 'calendario')

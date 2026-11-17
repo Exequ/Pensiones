@@ -30,9 +30,9 @@ export default function ComoSeCalcula() {
         </header>
         <MarginNote>
           <p>
-            Cada paso cita el artículo de la norma cuyo texto está descargado, y cada parámetro
-            procede de /data con su fuente, la fecha de descarga y un nivel de confianza. Los
-            ejemplos son supuestos ilustrativos y sus resultados los calcula el motor de la web.
+            Cada paso cita el artículo de la norma, y cada parámetro lleva su fuente, la fecha de
+            descarga y un nivel de confianza. Los ejemplos son supuestos ilustrativos y sus
+            resultados los calcula el motor de la web.
           </p>
         </MarginNote>
         <p className="hist-aviso">

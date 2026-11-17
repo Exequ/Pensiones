@@ -56,7 +56,7 @@ export const CALENDARIOS: readonly CalendarioConfig[] = [
   {
     norma: 'ley-24-1997',
     parametro: 'periodo-calculo',
-    titulo: 'Periodo de cálculo de la base reguladora, años con dato en /data',
+    titulo: 'Periodo de cálculo de la base reguladora, años con dato',
     desde: '2000',
     hasta: '2002',
     columnas: MESES_Y_DURACION('periodo-calculo-base-reguladora', 'Periodo de cálculo'),
@@ -137,7 +137,7 @@ export const VALORES: readonly ValorConfig[] = [
   {
     norma: 'rdleg-1-1994',
     parametro: 'edad-ordinaria',
-    titulo: 'Edad ordinaria de jubilación en el primer año con dato en /data',
+    titulo: 'Edad ordinaria de jubilación en el primer año con dato',
     filas: [
       {
         rotulo: 'Edad ordinaria',
@@ -150,7 +150,7 @@ export const VALORES: readonly ValorConfig[] = [
   {
     norma: 'rdleg-1-1994',
     parametro: 'carencia',
-    titulo: 'Periodo mínimo de cotización en el primer año con dato en /data',
+    titulo: 'Periodo mínimo de cotización en el primer año con dato',
     filas: [
       { rotulo: 'Carencia', fichero: 'carencia-jubilacion', id: '2000', formato: 'duracion' },
     ],
@@ -158,8 +158,7 @@ export const VALORES: readonly ValorConfig[] = [
   {
     norma: 'ley-24-1997',
     parametro: 'escala-porcentajes',
-    titulo:
-      'Cotización con la que se alcanza el porcentaje máximo en el primer año con dato en /data',
+    titulo: 'Cotización con la que se alcanza el porcentaje máximo en el primer año con dato',
     filas: [
       {
         rotulo: 'Cotización para el máximo de la escala',
@@ -245,7 +244,7 @@ export const VALORES: readonly ValorConfig[] = [
 /** Nota con la que se muestra un dato cuyo documento de origen no es la norma de la ficha. */
 export const NOTAS_DE_ORIGEN: Readonly<Record<string, string>> = {
   'rdl-28-2012:revalorizacion':
-    'El dato de /data cita el Real Decreto-ley 29/2012 (artículo 5.1), cuyo texto remite al Real Decreto-ley 28/2012 y recoge el mismo incremento.',
+    'El dato cita el Real Decreto-ley 29/2012 (artículo 5.1), cuyo texto remite al Real Decreto-ley 28/2012 y recoge el mismo incremento.',
 };
 
 /** Rótulo de cada parámetro normativo de la cronología. */

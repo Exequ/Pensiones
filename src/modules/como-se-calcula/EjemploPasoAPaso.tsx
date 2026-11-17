@@ -96,7 +96,7 @@ export function EjemploPasoAPaso({
         />
 
         <details className="como-parametros-paso">
-          <summary>Parámetros de /data que sostienen cada paso</summary>
+          <summary>Parámetros que sostienen cada paso</summary>
           <ul className="como-lista-parametros">
             {referencias.map(({ paso, ref }) => (
               <li key={`${paso.id}-${ref.referencia}`}>
@@ -125,8 +125,8 @@ export function EjemploPasoAPaso({
           </>
         ) : null}
         <p className="como-pie-ejemplo">
-          Este ejemplo reproduce el caso de oro «{ejemplo.casoOro.id}» del motor (
-          {ejemplo.casoOro.fichero}), cuyas cuentas están hechas a mano.
+          Este ejemplo reproduce el caso de oro «{ejemplo.casoOro.id}» del motor, cuyas cuentas
+          están hechas a mano.
         </p>
       </div>
     </details>

@@ -16,7 +16,7 @@
       },
       "fetchedAt": "2026-11-11",
       "confidence": "alta",
-      "notes": "El MEI es una cotización finalista, no computable a efectos de prestaciones, cuya recaudación nutre el Fondo de Reserva. Las dotaciones efectivas al Fondo con cargo al MEI están en data/sistema/fondo-reserva-anual.json y la recaudación en data/sistema/presupuesto-ss-ejecucion.json (concepto «MECANISMO DE EQUIDAD INTERGENERACIONAL»).",
+      "notes": "El MEI es una cotización finalista, no computable a efectos de prestaciones, cuya recaudación nutre el Fondo de Reserva. Las dotaciones efectivas al Fondo con cargo al MEI constan en la serie anual del Fondo de Reserva y la recaudación en la ejecución del presupuesto de la Seguridad Social (concepto «MECANISMO DE EQUIDAD INTERGENERACIONAL»).",
       "quote": "una cotización finalista aplicable en todos los regímenes y en todos los supuestos en los que se cotice por la contingencia de jubilación, que no será computable a efectos de prestaciones y que nutrirá el Fondo de Reserva de la Seguridad Social",
       "location": "art. 127 bis.1 TRLGSS (art. único.16 RDL 2/2023); DT 43.ª: efectos del 01/01/2023 al 31/12/2050",
       "crossCheck": {

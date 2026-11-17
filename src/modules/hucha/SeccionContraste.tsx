@@ -153,7 +153,7 @@ export function SeccionContraste() {
           Fondo son una cifra de otra publicación y de otro concepto. Por eso la tabla del Mecanismo
           de Equidad Intergeneracional enfrenta dos magnitudes distintas: no es un error de una de
           ellas, y esta página no muestra la recaudación de caja de cada mes porque no figura en las
-          fuentes descargadas.
+          fuentes consultadas.
         </p>
       </ComoLeerlo>
     </section>

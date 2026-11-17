@@ -45,6 +45,12 @@ export function SeccionNeutralidad() {
         esas listas. Esta página las cumple igual que las demás: su prueba las aplica a su propio
         texto y a los textos de sus datos.
       </p>
+      <p>
+        Los textos de la web siguen una guía de voz: dicen qué fuente respalda cada dato y, cuando
+        una fuente no precisa algo, lo dicen sin recurrir al lenguaje del trabajo interno. Esas
+        expresiones solo aparecen en esta página, y una prueba automática recorre todas las rutas y
+        falla si encuentra alguna fuera de ella.
+      </p>
       <Definition termino="La verificación manda">
         Cuando una indicación externa choca con lo que consta en una fuente descargada o con un
         recálculo desde /data, manda la verificación. Un revisor expresa una opinión experta, no una

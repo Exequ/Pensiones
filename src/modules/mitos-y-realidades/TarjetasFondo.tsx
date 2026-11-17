@@ -306,7 +306,7 @@ export function TarjetaImpuestos({ mito, indice, total }: TarjetaProps) {
             : `El último año con las tres series es ${aniosComunes.at(-1)}. `}
           Qué parte de las pensiones contributivas se paga con impuestos depende de cómo se
           atribuyan los complementos a mínimos y las reducciones de cuotas; esa atribución no se
-          puede hacer con los datos descargados.
+          puede hacer con los datos consultados.
         </p>
       </ComoLeerlo>
 
@@ -395,7 +395,7 @@ export function TarjetaSaldo({ mito, indice, total }: TarjetaProps) {
               financieras, qué resulta al añadir las financieras y cómo queda el subsector en
               contabilidad nacional. Ninguna de las tres es el «saldo contributivo» (cotizaciones
               menos prestaciones contributivas sin transferencias), que no se puede calcular con los
-              datos descargados.
+              datos consultados.
             </p>
           </>
         }

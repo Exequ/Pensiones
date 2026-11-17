@@ -136,7 +136,7 @@ describe('configuración única de las lecturas abiertas', () => {
       const e = entradaDeLectura(id);
       expect([e.estado, e.valor, e.fecha], id).toEqual(['provisional', valor, '2026-11-14']);
     }
-    // Siguen provisionales y la revisión se añade al motivo.
+    // Siguen provisionales y la confirmación se añade al motivo.
     for (const id of [
       'jubilacion.lagunasAnterioresAlPrimerAlta',
       'jubilacion.actualizacionFactorMinimo',
@@ -147,7 +147,7 @@ describe('configuración única de las lecturas abiertas', () => {
     ]) {
       const e = entradaDeLectura(id);
       expect(e.estado, id).toBe('provisional');
-      expect(e.motivo, id).toContain('revisión actuarial del 14-11-2026');
+      expect(e.motivo, id).toContain('Confirmada el 14-11-2026');
     }
     expect(entradaDeLectura('no-contributivas.limiteConTerceraPersona').motivo).toContain(
       'real decreto de revalorización de 2026',

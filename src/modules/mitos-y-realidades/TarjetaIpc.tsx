@@ -110,13 +110,13 @@ export function TarjetaIpc({ mito, indice, total }: TarjetaProps) {
           <p>
             Esta tarjeta no muestra ningún acumulado de la revalorización frente al IPC: la serie de
             revalorización de los datos no tiene porcentaje general de{' '}
-            {textoHuecos === '' ? 'algunos años' : textoHuecos}. De {r.anio} sí hay norma descargada
-            y se resume más abajo, pero no fija un único porcentaje general; de {textoSinNorma} no
-            hay norma descargada. Además, según la revisión actuarial, en los primeros años de la
-            serie solo figura la revalorización inicial y no la paga por desviación del IPC; este
-            último extremo no se ha comprobado en las fuentes descargadas, salvo que el real decreto
-            de {r.anio} recoge un pago único ligado al ejercicio anterior, que la serie tampoco
-            incluye. Un acumulado calculado con esos huecos no sería comparable.
+            {textoHuecos === '' ? 'algunos años' : textoHuecos}. De {r.anio} consta la norma en las
+            fuentes consultadas y se resume más abajo, pero no fija un único porcentaje general; de{' '}
+            {textoSinNorma} no consta la norma. Además, en los primeros años de la serie solo figura
+            la revalorización inicial y no la paga por desviación del IPC; este último extremo no se
+            ha comprobado en las fuentes consultadas, salvo que el real decreto de {r.anio} recoge
+            un pago único ligado al ejercicio anterior, que la serie tampoco incluye. Un acumulado
+            calculado con esos huecos no sería comparable.
           </p>
         </>
       }
@@ -128,14 +128,14 @@ export function TarjetaIpc({ mito, indice, total }: TarjetaProps) {
         fuentes={[d.ipcMedia.datos[0], d.ipcDiciembre.datos[0]].flatMap((x) =>
           x === undefined ? [] : [x],
         )}
-        pie="Las celdas con raya son años sin dato en los ficheros de datos. Las diferencias están en puntos porcentuales y solo se calculan en los años con las dos cifras."
+        pie="Las celdas con raya son años sin dato en los datos. Las diferencias están en puntos porcentuales y solo se calculan en los años con las dos cifras."
       />
       <FuentesDesplegables
         datos={d.revalorizacion.datos}
         resumen={`Ver las normas de cada año de la revalorización (${d.revalorizacion.datos.length} datos)`}
       />
 
-      <h4>{`La regla de ${String(r.anio)} en las normas descargadas`}</h4>
+      <h4>{`La regla de ${String(r.anio)} según el texto de la norma`}</h4>
       <TablaConFuente
         titulo={`Revalorización de las pensiones en ${String(r.anio)} según el texto de las normas, sin porcentaje general`}
         columnas={[

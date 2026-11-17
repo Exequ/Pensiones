@@ -23,7 +23,7 @@ export function FinancieroComoFunciona({ d }: { d: DatosFinanciero }) {
         clase (jubilación, viudedad, incapacidad, orfandad y en favor de familiares) por la pensión
         media, por catorce pagas y por un factor de calibración (devengo) de cada clase, que se
         obtiene con el cociente del último año observado y se mantiene constante; su valor,
-        calculado con los datos descargados, está en el apartado «Del número de pensiones al gasto».
+        calculado con los datos consultados, está en el apartado «Del número de pensiones al gasto».
         La descripción atribuye la diferencia a los complementos a mínimos, que el presupuesto
         contabiliza aparte, y al desfase entre contar las pensiones a una fecha del año y su
         promedio anual; es una hipótesis de su autor, no verificada contra la metodología de la

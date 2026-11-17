@@ -270,6 +270,16 @@ export const RESPALDO: Readonly<Record<IdApartado, readonly Respaldo[]>> = {
       para: 'Principio «la verificación manda»: la opinión experta no es una fuente.',
       contiene: 'La verificación manda',
     },
+    {
+      fichero: 'docs/GUIA_DE_VOZ.md',
+      para: 'Guía de voz de los textos de la web: expresiones que no aparecen fuera de esta página y cómo se sustituyen.',
+      contiene: 'Expresiones prohibidas',
+    },
+    {
+      fichero: 'src/app/voz-rutas.test.tsx',
+      para: 'Prueba que recorre todas las rutas y falla si aparece una expresión prohibida fuera de la zona permitida.',
+      contiene: 'ZONA_PERMITIDA',
+    },
   ],
   limites: [],
   reproducir: [

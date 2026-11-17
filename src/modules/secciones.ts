@@ -68,13 +68,13 @@ export const SECCIONES = [
     titulo: 'Reformas',
     tituloNav: 'Reformas',
     resumen:
-      'Cronología de las normas que han modificado los parámetros de las pensiones contributivas, de las que hay texto o cita literal en los datos del repositorio: qué cambió cada una, cuándo y sobre qué parámetro, con el texto normativo enlazado y sin valorarlas.',
+      'Cronología de las normas que han modificado los parámetros de las pensiones contributivas, de las que hay texto o cita literal en las fuentes consultadas: qué cambió cada una, cuándo y sobre qué parámetro, con el texto normativo enlazado y sin valorarlas.',
     previsto: [
-      'Una ficha por norma, en orden cronológico y con la misma estructura: fecha de aprobación, de publicación y de entrada en vigor, qué cambia con la cita del artículo, parámetros afectados con el valor anterior y el posterior de /data, y calendario de aplicación con su tabla (disponible).',
+      'Una ficha por norma, en orden cronológico y con la misma estructura: fecha de aprobación, de publicación y de entrada en vigor, qué cambia con la cita del artículo, parámetros afectados con el valor anterior y el posterior, y calendario de aplicación con su tabla (disponible).',
       'Gráficos de los parámetros que cambian con el calendario: edad ordinaria de jubilación, periodo de cálculo de la base reguladora y cotización con la que se alcanza el cien por cien de la base reguladora, con su tabla de datos (disponible).',
       'Enlaces a «Cómo se calcula», a «Tipos de pensión» y a la página de la hucha donde se explica cada parámetro (disponible).',
-      'Normas que modificaron estos parámetros y cuyo texto no está descargado: no figuran como fichas y su descarga está anotada como pendiente.',
-      'Fecha de entrada en vigor de las normas cuyo texto o metadatos no están descargados: la ficha dice que no consta y no la calcula (pendiente de datos).',
+      'Normas que modificaron estos parámetros y cuyo texto no consta en las fuentes consultadas: no figuran como fichas.',
+      'Fecha de entrada en vigor de las normas cuyo texto o metadatos no constan en las fuentes consultadas: la ficha dice que no consta y no la calcula (pendiente de datos).',
       'Efectos estimados de cada norma según evaluaciones publicadas: fuera de esta página, que no los atribuye.',
     ],
   },
@@ -91,7 +91,7 @@ export const SECCIONES = [
       'Distintas definiciones de déficit y qué incluye cada una, lado a lado (disponible).',
       'Saldo no financiero menos las transferencias corrientes del Estado (cálculo propio) y la estimación de gastos impropios de la fuente, sin sumarla a series de ejecución (disponible).',
       'Gasto en pensiones sobre el PIB según varias medidas, con el gasto contributivo con complemento a mínimos como referencia y la variante sin complemento (disponible).',
-      'Desglose de las transferencias del Estado por finalidad y gasto de Clases Pasivas: sin datos descargados todavía.',
+      'Desglose de las transferencias del Estado por finalidad y gasto de Clases Pasivas: sin datos todavía.',
     ],
   },
   {
@@ -155,7 +155,7 @@ export const SECCIONES = [
       'Gasto público en pensiones sobre el PIB según la OCDE y según Eurostat, lado a lado, por país y en su evolución (disponible).',
       'Edad normal de jubilación de la OCDE, actual y futura, y edad efectiva de salida del mercado laboral, con el contraste de la edad de la normativa española (disponible).',
       'Tasa de reposición teórica bruta y neta de la OCDE por país, con los supuestos del cálculo, el escenario alternativo y el contraste de España con cocientes propios (disponible).',
-      'Estructura de los sistemas de los países de la muestra, con la cita literal de la fuente y un glosario de reparto, capitalización y cuentas nocionales (disponible).',
+      'Estructura de los sistemas de los países de la muestra, con la cita de la fuente y un glosario de reparto, capitalización y cuentas nocionales (disponible).',
       'Perímetro del gasto de cada fuente, impuestos y cotizaciones de los pensionistas y fichas detalladas de Reino Unido y Estados Unidos: pendientes de datos.',
     ],
   },
@@ -169,7 +169,7 @@ export const SECCIONES = [
       'Las doce afirmaciones del catálogo, en su orden y sin valorarlas, cada una con qué se puede medir, sus datos con su fuente y un texto «Cómo leerlo» (disponible).',
       'Definiciones alternativas lado a lado, sin elegir una, y lo que los datos no permiten concluir (disponible).',
       'Enlaces a las páginas donde ya está cada dato: la hucha, la financiación, los cotizantes, otros sistemas y las proyecciones (disponible).',
-      'Revalorización frente al IPC año a año, con la regla del primer año sin porcentaje general que recogen los BOE descargados y sin acumulado mientras la serie de revalorización tenga huecos (disponible); el acumulado queda pendiente de datos.',
+      'Revalorización frente al IPC año a año, con la regla del primer año sin porcentaje general que recogen los textos del BOE consultados y sin acumulado mientras la serie de revalorización tenga huecos (disponible); el acumulado queda pendiente de datos.',
       'Lo cotizado frente a lo cobrado: solo el marco del cálculo, sin cifras, porque faltan los historiales de cotización (pendiente de datos).',
       'Umbrales de pobreza, perímetros del gasto de Eurostat y de la OCDE y comparación ajustada por estructura de edades: pendientes de datos.',
     ],
@@ -179,7 +179,7 @@ export const SECCIONES = [
     titulo: 'Metodología',
     tituloNav: 'Metodología',
     resumen:
-      'Cómo se hace esta web: de dónde salen los datos, cómo se comprueban, qué significan la confianza y la revisión actuarial, qué son las lecturas del motor, qué modelos de proyección hay y qué límites tienen, y cómo reproducir el trabajo.',
+      'Cómo se hace esta web: de dónde salen los datos, cómo se comprueban, qué significan la confianza y la revisión de los datos, qué son las lecturas del motor, qué modelos de proyección hay y qué límites tienen, y cómo reproducir el trabajo.',
     previsto: [
       'De dónde salen los datos: fuentes, descarga, huella, fecha de descarga y confianza de cada dato, con el recuento actual (disponible).',
       'Cómo se comprueban: validaciones, pruebas de coherencia, contraste con una segunda fuente, discrepancias documentadas y casos de oro (disponible).',

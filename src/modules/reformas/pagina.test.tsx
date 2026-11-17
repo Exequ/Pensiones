@@ -29,7 +29,7 @@ const pintar = () =>
 const TITULOS_FICHA = [
   'La norma',
   'Qué cambia',
-  'Parámetros afectados: valor antes y valor después en /data',
+  'Parámetros afectados: valor antes y valor después',
   'Calendario de aplicación',
   'Dónde se explica en esta web',
 ];
@@ -80,13 +80,13 @@ describe('estructura de la página', () => {
         'Aprobación',
         'Publicación en el BOE',
         'Entrada en vigor',
-        'Texto completo en el repositorio',
+        'Texto completo de la norma consultado',
       ]);
       const tiempos = [...f.querySelectorAll('.ref-datos time')].map((t) => t.textContent);
       expect(tiempos.slice(0, 2), f.id).toEqual([r.aprobacion, r.publicacion]);
       const vigor = f.querySelectorAll('.ref-datos div')[3]?.textContent ?? '';
       if (r.entradaEnVigor === null)
-        expect(vigor, f.id).toMatch(/No consta en los textos descargados/);
+        expect(vigor, f.id).toMatch(/No consta en las fuentes consultadas/);
       else expect(tiempos[2], f.id).toBe(r.entradaEnVigor);
       expect(vigor, f.id).toContain(r.norma.entradaEnVigor.ubicacion);
       expect(f.querySelectorAll('.ref-cambio').length, f.id).toBe(r.cambios.length);
@@ -136,9 +136,7 @@ describe('estructura de la página', () => {
       const tablas = f?.querySelectorAll('.ref-tabla table').length ?? 0;
       expect(tablas, r.id).toBe(r.tablas.length);
       if (calendarios === 0)
-        expect(f?.textContent, r.id).toMatch(
-          /No hay un calendario de esta norma con valores en \/data/,
-        );
+        expect(f?.textContent, r.id).toMatch(/No hay un calendario de esta norma con valores\./);
     }
   });
 
