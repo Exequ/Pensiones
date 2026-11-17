@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import type { MotorOfrecido } from '../../engine/comparar-lecturas';
 import { EjemploPasoAPaso } from './EjemploPasoAPaso';
@@ -32,7 +33,7 @@ const MOTOR: Record<Esquema['id'], MotorOfrecido> = {
 /** Una prestación: quién la cobra, esquema, parámetros, ejemplos, lecturas y límites. */
 export function SeccionPrestacion({ esquema }: { readonly esquema: Esquema }) {
   const id = `como-${esquema.ancla}`;
-  const ejemplos = ejemplosDe(esquema.id);
+  const ejemplos = useMemo(() => ejemplosDe(esquema.id), [esquema.id]);
   return (
     <section className="seccion prosa como-seccion" id={id} aria-labelledby={`${id}-titulo`}>
       <h2 id={`${id}-titulo`} tabIndex={-1}>

@@ -105,6 +105,9 @@ for ruta in sorted(glob.glob(f'{REPO}/data/*/*.json')):
         anota(n['source'], rel)
     for pe in d.get('personas', []):
         anota(pe['source'], rel, pe.get('fetchedAt', HOY))
+    for ej in d.get('ejemplos', []):
+        # Fase «Cómo se calcula»: ejemplos ilustrativos (elaboración propia).
+        anota(ej['source'], rel, ej.get('fetchedAt', HOY))
     for p in d.get('prestaciones', []):
         anota(p['source'], rel)
         for a in p.get('fuentesAdicionales', []):

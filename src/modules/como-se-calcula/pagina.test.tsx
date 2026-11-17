@@ -3,7 +3,7 @@
  * mostrados con los del motor (por una entrada distinta de la fachada que usa la página),
  * neutralidad (lista de valoraciones y de veredictos) y cobertura del esquema.
  */
-import { render, within } from '@testing-library/react';
+import { render, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { beforeAll, describe, expect, it, vi } from 'vitest';
@@ -123,6 +123,29 @@ describe('estructura de la página', () => {
   });
 });
 
+describe('efecto de las lecturas', () => {
+  it('se mide con el motor después de pintar la sección y se muestra en cada lectura', async () => {
+    const { container } = pintar();
+    expect(container.textContent).toContain('Calculando el efecto');
+    await waitFor(() => {
+      expect(container.textContent).not.toContain('Calculando el efecto');
+    });
+    const textos = [...container.querySelectorAll('#como-jubilacion .como-lectura')].map(
+      (n) => n.textContent,
+    );
+    expect(textos).toHaveLength(lecturasOfrecidas('jubilacion').length);
+    // Alguna lectura cambia algún ejemplo y otra no cambia ninguno.
+    expect(
+      textos.some((t) =>
+        /con «[^»]+» (la pensión mensual sería|la base reguladora cambiaría)/.test(t),
+      ),
+    ).toBe(true);
+    expect(
+      textos.some((t) => t.includes('No cambia el resultado de ninguno de los ejemplos')),
+    ).toBe(true);
+  });
+});
+
 describe('navegación', () => {
   it('el índice lleva el foco al encabezado de cada sección', async () => {
     const { container } = pintar();
@@ -237,8 +260,11 @@ describe('los números mostrados son los del motor', () => {
 });
 
 describe('neutralidad de la página', () => {
-  it('el texto renderizado no contiene términos de veredicto ni palabras de valoración', () => {
+  it('el texto renderizado no contiene términos de veredicto ni palabras de valoración', async () => {
     const { container } = pintar();
+    await waitFor(() => {
+      expect(container.textContent).not.toContain('Calculando el efecto');
+    });
     let texto = container.textContent;
     expect(texto.length).toBeGreaterThan(20000);
     // Los motivos de las lecturas se muestran tal como están en el registro (no son texto de esta
@@ -278,8 +304,11 @@ describe('neutralidad de la página', () => {
     expect(valoracionesEn(textos)).toEqual([]);
   });
 
-  it('las lecturas y los gráficos no se presentan como mejores, peores ni aconsejables', () => {
+  it('las lecturas y los gráficos no se presentan como mejores, peores ni aconsejables', async () => {
     const { container } = pintar();
+    await waitFor(() => {
+      expect(container.textContent).not.toContain('Calculando el efecto');
+    });
     const zonas = [
       ...container.querySelectorAll('.como-lecturas, figure.grafico, .como-leerlo'),
     ].map((n) => n.textContent.toLowerCase());

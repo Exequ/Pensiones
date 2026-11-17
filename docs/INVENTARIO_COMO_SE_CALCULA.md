@@ -109,7 +109,7 @@ Supuestos de los ejemplos de jubilación (heredados de los casos de oro): bases 
 
 ## Reglas sin texto normativo descargado y datos que faltan
 
-Ninguna regla que la página afirma carece de texto descargado: las 45 referencias de la tabla siguiente están comprobadas. Quedan fuera de la explicación (y se declaran en «Qué no calcula esta web») las que el motor no calcula; los datos que faltan para calcularlas ya constan en `docs/PENDIENTE_DATOS.md`:
+Ninguna regla que la página afirma carece de texto descargado: las 44 referencias de la tabla siguiente están comprobadas. Quedan fuera de la explicación (y se declaran en «Qué no calcula esta web») las que el motor no calcula; los datos que faltan para calcularlas ya constan en `docs/PENDIENTE_DATOS.md`:
 
 - Límite de ingresos de los complementos a mínimos con cónyuge a cargo (art. 59 y normas de revalorización): fila existente de `PENDIENTE_DATOS.md`.
 - Reducción de la brecha de las mínimas con el umbral de pobreza (DA 53.ª): fila existente.

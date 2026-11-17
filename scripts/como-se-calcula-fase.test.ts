@@ -147,23 +147,51 @@ describe('los ejemplos corresponden a casos de oro del motor', () => {
 });
 
 describe('afirmaciones, fuentes e inventario', () => {
+  interface ClaimWeb {
+    id: string;
+    datos: string[];
+    fuentes: { url: string }[];
+    revisionActuarial?: string;
+    preguntaActuarial?: string;
+  }
   it('claims-web.json registra las afirmaciones de la página, con revisión actuarial y sin agrupar', () => {
-    const registro = RegistroAfirmaciones.parse(JSON.parse(leer('docs/claims-web.json')));
-    const propias = registro.claims.filter((c) => c.id.startsWith('web-como-'));
+    const propias = (
+      JSON.parse(leer('docs/claims-web.json')) as { claims: ClaimWeb[] }
+    ).claims.filter((c) => c.id.startsWith('web-como-'));
     expect(propias.length).toBeGreaterThanOrEqual(6);
     for (const c of propias) {
       expect(c.datos.length, c.id).toBeGreaterThan(0);
       expect(c.fuentes.length, c.id).toBeGreaterThan(0);
-      const rev = c.revisionActuarial ?? registro.revisionActuarialPorDefecto;
-      expect(['no-requiere', 'revisada', 'pendiente'], c.id).toContain(rev);
-      if (rev === 'pendiente') expect(c.preguntaActuarial?.length ?? 0, c.id).toBeGreaterThan(80);
+      expect(['no-requiere', 'revisada', 'pendiente'], c.id).toContain(c.revisionActuarial);
+      if (c.revisionActuarial === 'pendiente') {
+        expect(c.preguntaActuarial?.length ?? 0, c.id).toBeGreaterThan(80);
+      }
+    }
+  });
+  it('las referencias de los claims existen en /data', () => {
+    const propias = (
+      JSON.parse(leer('docs/claims-web.json')) as { claims: ClaimWeb[] }
+    ).claims.filter((c) => c.id.startsWith('web-como-'));
+    for (const c of propias) {
+      for (const ref of c.datos) {
+        const [fichero, id] = ref.split('#') as [string, string];
+        const json = JSON.parse(leer(`data/${fichero}`)) as {
+          series?: { id: string }[];
+          data?: { id: string }[];
+          ejemplos?: { id: string }[];
+        };
+        const ids = [...(json.series ?? []), ...(json.data ?? []), ...(json.ejemplos ?? [])].map(
+          (e) => e.id,
+        );
+        expect(ids, `${c.id}: ${ref}`).toContain(id);
+      }
     }
   });
   it('docs/claims.json recoge las mismas afirmaciones que claims-web.json', () => {
-    const web = RegistroAfirmaciones.parse(JSON.parse(leer('docs/claims-web.json')));
+    const web = (JSON.parse(leer('docs/claims-web.json')) as { claims: ClaimWeb[] }).claims;
     const todas = RegistroAfirmaciones.parse(JSON.parse(leer('docs/claims.json')));
     const ids = new Set(todas.claims.map((c) => c.id));
-    for (const c of web.claims.filter((x) => x.id.startsWith('web-como-')))
+    for (const c of web.filter((x) => x.id.startsWith('web-como-')))
       expect(ids.has(c.id), c.id).toBe(true);
   });
   it('el inventario documenta todos los ejemplos y todas las normas usadas', () => {

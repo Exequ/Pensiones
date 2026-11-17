@@ -6783,6 +6783,311 @@
       "estado": "verificada",
       "revisionActuarial": "no-requiere",
       "notas": "Transcripción de dos cifras contrastadas con dos documentos; no atribuye causa a la diferencia. La conciliación sigue pendiente en la afirmación param-mei-destino (n.º 46 de la tanda 3), con su pregunta reducida: falta la recaudación de caja por mes del MEI, que la liquidación no da."
+    },
+    {
+      "id": "web-como-jub-base-reguladora",
+      "texto": "La base reguladora de la jubilación se obtiene sumando las bases de cotización de mayor importe de un periodo de meses anteriores al mes previo al hecho causante y dividiendo la suma entre un divisor; los meses del periodo y el divisor cambian cada año durante el periodo transitorio. Las bases más recientes se toman por su valor nominal, las anteriores se actualizan con el IPC y los meses sin cotizar se completan con una parte de la base mínima.",
+      "ubicacion": "Página «Cómo se calcula»: jubilación, pasos 2 a 5 del esquema (Fase «Cómo se calcula»)",
+      "datos": [
+        "parametros/periodo-calculo-base-reguladora.json#2030",
+        "parametros/divisor-base-reguladora.json#2030",
+        "parametros/actualizacion-bases.json#2026-meses-nominales",
+        "parametros/lagunas-integracion.json#2026-tramo1-meses"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción del art. 209.1 TRLGSS y de las DT 8.ª y 40.ª (texto en data-raw/boe/trlgss-2015-consolidado.txt). El suelo del factor de actualización y la interpolación del IPC son lecturas abiertas con su estado en docs/DECISIONES_ACTUARIALES.md."
+    },
+    {
+      "id": "web-como-jub-porcentaje",
+      "texto": "El porcentaje de la base reguladora de la jubilación parte de un valor por el periodo mínimo de cotización y crece por cada mes adicional en dos tramos, hasta un máximo; los tramos y los incrementos cambian por versiones de la norma, que se aplican según el año del hecho causante.",
+      "ubicacion": "Página «Cómo se calcula»: jubilación, paso 6 del esquema y gráfico de la escala (Fase «Cómo se calcula»)",
+      "datos": [
+        "parametros/escala-jubilacion-tramos.json#2013-base-pct",
+        "parametros/escala-jubilacion-tramos.json#2023-tramo1-meses",
+        "parametros/escala-jubilacion-tramos.json#2027-tramo1-pct"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción del art. 210.1 TRLGSS y de la DT 9.ª."
+    },
+    {
+      "id": "web-como-jub-modalidades",
+      "texto": "En la jubilación anticipada se aplica un coeficiente reductor a la pensión resultante, que depende del tiempo de anticipación y de la cotización acumulada, con un cuadro para la modalidad voluntaria y otro para la anticipada por causa no imputable a la persona trabajadora; en la jubilación demorada se reconoce un porcentaje adicional por cada año completo de demora, una cantidad a tanto alzado o una combinación de ambas.",
+      "ubicacion": "Página «Cómo se calcula»: jubilación, paso 7 del esquema y gráficos de coeficientes y de demora (Fase «Cómo se calcula»)",
+      "datos": [
+        "parametros/jubilacion-coeficientes-voluntaria.json#t3-12",
+        "parametros/jubilacion-coeficientes-involuntaria.json#t2-24",
+        "parametros/jubilacion-demora-reglas.json#porcentaje-adicional-anual"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción de los arts. 207.2, 208.2 y 210.2 TRLGSS y del RD 371/2023 (art. 2). La salvaguarda de la DT 34.ª.1 en la anticipada voluntaria topada es una lectura pendiente (jubilacion.salvaguardaDT34) y la página no la explica más allá de nombrarla."
+    },
+    {
+      "id": "web-como-jub-limites",
+      "texto": "La cuantía inicial de la pensión de jubilación no puede superar la pensión máxima del año; si queda por debajo de la cuantía mínima que corresponde a la situación de la persona y se cumple el límite de rentas, se completa hasta ella; las pensiones contributivas pueden llevar un complemento por hijo o hija con un tope de hijos o hijas.",
+      "ubicacion": "Página «Cómo se calcula»: jubilación, paso 8 del esquema (Fase «Cómo se calcula»)",
+      "datos": [
+        "parametros/pension-maxima.json#2026",
+        "parametros/pension-minima-jubilacion.json#2026-jub65-unipersonal",
+        "parametros/complemento-brecha-genero.json#2026",
+        "parametros/complemento-brecha-genero-reglas.json#hijos-maximo-multiplo"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-2548",
+          "docId": "BOE-A-2026-2548"
+        },
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2026.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977",
+          "docId": "BOE-A-2026-6977"
+        },
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción de los arts. 57, 59 y 60 TRLGSS. El límite de ingresos con cónyuge a cargo y la reducción de la brecha de las mínimas con el umbral de pobreza no se calculan (docs/PENDIENTE_DATOS.md)."
+    },
+    {
+      "id": "web-como-jub-opcion-dt4",
+      "texto": "La disposición transitoria cuarta, apartado 7, manda aplicar «en su integridad» la redacción del artículo 209.1 vigente el 1 de enero de 2023 para los hechos causantes que describe, cuando resulte más favorable; con los datos de /data esa redacción toma una ventana de cálculo más corta que la regla general desde 2026.",
+      "ubicacion": "Página «Cómo se calcula»: jubilación, paso 5 del esquema y lecturas que influyen (Fase «Cómo se calcula»)",
+      "datos": [
+        "parametros/opcion-25-anos-ventana.json#2026",
+        "parametros/opcion-25-anos-divisor.json#2026",
+        "parametros/periodo-calculo-base-reguladora.json#2026"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Contraste de la descripción de la lectura jubilacion.opcion25EnUltimoDia2040 de src/engine/lecturas.ts y de textos-lecturas.ts («un periodo más largo»): con la ventana de la opción (el valor de opcion-25-anos-ventana) y la de la regla general de 2026 (el valor de periodo-calculo-base-reguladora#2026), la opción usa menos meses. La página muestra un texto propio; la discrepancia consta en docs/DISCREPANCIAS.md."
+    },
+    {
+      "id": "web-como-ip-calculo",
+      "texto": "La base reguladora de la incapacidad permanente por enfermedad común es la suma de las bases de cotización de un número de meses anteriores al mes previo al hecho causante dividida entre un divisor; se aplica a esa base el porcentaje de la escala de la jubilación contando como cotizados los meses que faltan hasta la edad ordinaria, y después el porcentaje del grado: la incapacidad total lleva un porcentaje menor que la absoluta y la gran incapacidad.",
+      "ubicacion": "Página «Cómo se calcula»: incapacidad permanente, pasos 2 a 4 del esquema (Fase «Cómo se calcula»)",
+      "datos": [
+        "parametros/incapacidad-permanente-reglas.json#br-ec-meses",
+        "parametros/incapacidad-permanente-reglas.json#br-ec-divisor",
+        "parametros/incapacidad-permanente-reglas.json#total-porcentaje",
+        "parametros/incapacidad-permanente-reglas.json#absoluta-porcentaje",
+        "parametros/incapacidad-permanente-reglas.json#gran-incapacidad-porcentaje"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        },
+        {
+          "title": "Orden de 15 de abril de 1969 por la que se establecen normas para la aplicación y desarrollo de las prestaciones por invalidez en el Régimen General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1969-575"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción del art. 197 TRLGSS, del art. 5 del RD 1799/1985 y de los arts. 15, 17 y 18 de la Orden de 15/04/1969. Las lecturas incapacidad.computoFiccion y ...divisorPeriodoCorto tienen su estado en docs/DECISIONES_ACTUARIALES.md."
+    },
+    {
+      "id": "web-como-ip-complementos",
+      "texto": "A la pensión de la incapacidad permanente total se suma, si se presume dificultad para encontrar empleo por la edad, un incremento sobre la base reguladora que se suspende mientras se trabaja; a la de la gran incapacidad se suma un complemento calculado con un porcentaje de la base mínima y otro de la última base de cotización, con un mínimo sobre la pensión; en el grado parcial se paga una cantidad a tanto alzado de mensualidades de la base de la incapacidad temporal.",
+      "ubicacion": "Página «Cómo se calcula»: incapacidad permanente, pasos 5, 6 y 8 del esquema (Fase «Cómo se calcula»)",
+      "datos": [
+        "parametros/incapacidad-permanente-reglas.json#total-cualificada-pct",
+        "parametros/incapacidad-permanente-reglas.json#gran-incapacidad-complemento-pct-base-minima",
+        "parametros/incapacidad-permanente-reglas.json#gran-incapacidad-complemento-pct-ultima-base",
+        "parametros/incapacidad-permanente-reglas.json#parcial-mensualidades"
+      ],
+      "fuentes": [
+        {
+          "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+        },
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción del art. 196 TRLGSS y de los arts. 6 y 9 del Decreto 1646/1972. El motor presume la dificultad de empleo por la edad (simplificación declarada en el aviso del motor)."
+    },
+    {
+      "id": "web-como-sv-viudedad",
+      "texto": "La pensión de viudedad se calcula aplicando a la base reguladora de la persona fallecida un porcentaje general, uno mayor para quien tiene edad avanzada y no tiene otras pensiones ni rentas del trabajo, y otro mayor para quien tiene cargas familiares y rentas bajas; si hay varias personas beneficiarias se reparte en proporción al tiempo de convivencia con una parte garantizada al cónyuge o pareja superviviente, y en algunos casos se reconoce una prestación temporal.",
+      "ubicacion": "Página «Cómo se calcula»: viudedad, pasos 1 y 3 del esquema (Fase «Cómo se calcula»)",
+      "datos": [
+        "parametros/supervivencia-reglas.json#viudedad-pct",
+        "parametros/supervivencia-reglas.json#viudedad-65-pct",
+        "parametros/supervivencia-reglas.json#viudedad-cargas-pct",
+        "parametros/supervivencia-reglas.json#concurrencia-garantia-pct",
+        "parametros/supervivencia-reglas.json#prestacion-temporal-meses"
+      ],
+      "fuentes": [
+        {
+          "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+        },
+        {
+          "title": "Real Decreto 900/2018, de 20 de julio, de desarrollo de la disposición adicional trigésima de la Ley 27/2011 en materia de porcentaje aplicable a la base reguladora de la pensión de viudedad para pensionistas con 65 o más años que no perciban otra pensión pública (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-10397"
+        },
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción del art. 31 del Decreto 3158/1966, del art. 3 del RD 900/2018 y de los arts. 219 a 222 TRLGSS. Las lecturas supervivencia.reduccionViudedad70, comparacionCompensatoria y reduccionLimiteConjunto tienen su estado en docs/DECISIONES_ACTUARIALES.md."
+    },
+    {
+      "id": "web-como-sv-orfandad",
+      "texto": "Cada huérfano o huérfana recibe un porcentaje de la base reguladora de la persona fallecida; la edad de cobro se amplía si no trabaja o sus ingresos del trabajo son bajos y no tiene límite si hay incapacidad; en la orfandad absoluta se prevé un incremento que se reparte a partes iguales entre los huérfanos con derecho.",
+      "ubicacion": "Página «Cómo se calcula»: orfandad, pasos 1 y 3 del esquema (Fase «Cómo se calcula»)",
+      "datos": [
+        "parametros/supervivencia-reglas.json#orfandad-pct",
+        "parametros/supervivencia-reglas.json#orfandad-edad-limite-meses",
+        "parametros/supervivencia-reglas.json#orfandad-absoluta-incremento-pct"
+      ],
+      "fuentes": [
+        {
+          "title": "Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1966-21116"
+        },
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción del art. 224 TRLGSS y de los arts. 36 y 38 del Decreto 3158/1966. El motor aplica el incremento de la orfandad absoluta solo si se le indica ese supuesto."
+    },
+    {
+      "id": "web-como-sv-base-limite",
+      "texto": "La base reguladora de la viudedad y de la orfandad se obtiene de un periodo ininterrumpido de meses, el más favorable, dentro de una ventana de años anteriores al mes previo al fallecimiento, dividido entre un divisor, y la suma de las pensiones derivadas de una misma persona fallecida no puede superar su base reguladora, con una excepción cuando la viudedad es mayor que el porcentaje general y hay varias orfandades.",
+      "ubicacion": "Página «Cómo se calcula»: viudedad y orfandad, pasos de base reguladora y de límite conjunto (Fase «Cómo se calcula»)",
+      "datos": [
+        "parametros/supervivencia-reglas.json#br-meses",
+        "parametros/supervivencia-reglas.json#br-ventana-meses",
+        "parametros/supervivencia-reglas.json#br-divisor",
+        "parametros/supervivencia-reglas.json#limite-conjunto-pct-br",
+        "parametros/supervivencia-reglas.json#limite-excepcion-viudedad-umbral-pct"
+      ],
+      "fuentes": [
+        {
+          "title": "Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1972-944"
+        },
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción de los arts. 228 y 229 TRLGSS y del art. 7 del Decreto 1646/1972."
+    },
+    {
+      "id": "web-como-ejemplos",
+      "texto": "Los catorce ejemplos de la página son supuestos ilustrativos que reproducen casos de oro del motor; sus entradas están en /data y sus resultados los calcula el motor al abrir la página, de modo que no son datos observados ni estadísticas de personas reales.",
+      "ubicacion": "Página «Cómo se calcula»: ejemplos calculados con el motor, las cuatro secciones (Fase «Cómo se calcula»)",
+      "datos": [
+        "ejemplos/como-se-calcula.json#jub-ordinaria",
+        "ejemplos/como-se-calcula.json#ip-total",
+        "ejemplos/como-se-calcula.json#viudedad-basica",
+        "ejemplos/como-se-calcula.json#orfandad-basica"
+      ],
+      "fuentes": [
+        {
+          "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+          "publisher": "Proyecto «Pensiones» (elaboración propia)",
+          "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Cada ejemplo coincide con un caso de oro («derivado de la norma», no independiente) y con una cuenta hecha a mano en src/modules/como-se-calcula/ejemplos.test.ts."
+    },
+    {
+      "id": "web-como-sv-orden-limites",
+      "texto": "En la viudedad y la orfandad, la página presenta la pensión máxima, el límite conjunto del art. 229 y el complemento a mínimos del art. 59 en ese orden, que es el que sigue el motor; los textos descargados no fijan expresamente el orden entre el límite conjunto y el complemento a mínimos.",
+      "ubicacion": "Página «Cómo se calcula»: viudedad y orfandad, orden de los pasos del cálculo (Fase «Cómo se calcula»)",
+      "datos": [
+        "parametros/supervivencia-reglas.json#limite-conjunto-pct-br",
+        "parametros/supervivencia-reglas.json#limite-solo-inicial"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "¿Se aplica el límite conjunto del art. 229 TRLGSS (la suma de las pensiones derivadas de una persona fallecida no supera su base reguladora) antes de completar cada pensión con el complemento a mínimos del art. 59, como hace el motor, o el complemento a mínimos se calcula antes de comprobar el límite? Comprobar el orden con el texto de los dos artículos y con la práctica de la Seguridad Social, y medir si cambia el resultado en los casos con varias orfandades.",
+      "notas": "Orden verificado en el código del motor (src/engine/supervivencia/calculo.ts: el límite conjunto se resuelve antes del complemento a mínimos), no en un texto normativo. Pendiente con pregunta reducida."
     }
   ]
 }

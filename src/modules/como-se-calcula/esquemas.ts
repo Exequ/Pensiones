@@ -40,7 +40,7 @@ const COMUNES_LIMITES: PasoEsquema = {
   texto: [
     'La cuantía inicial de una pensión no puede superar un límite que se fija cada año: la pensión máxima. Si la pensión calculada queda por debajo de la cuantía mínima que corresponde a la situación de la persona y sus rentas no superan el límite fijado, se añade un complemento hasta alcanzar esa cuantía mínima. Además, las pensiones contributivas pueden llevar un complemento por cada hijo o hija, con un tope de hijos o hijas y un importe que se fija cada año.',
   ],
-  normas: [N.a57, N.a59, N.a60],
+  normas: [N.a57, N.a59, N.a60, N.dt39],
   pasosMotor: ['limite-maximo', 'complemento-minimos', 'complemento-brecha'],
 };
 

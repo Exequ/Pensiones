@@ -1,11 +1,11 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { MotorOfrecido } from '../../engine/comparar-lecturas';
 import { filasDelPanel, type LecturaVista } from '../tu-pension/supuestos';
 import {
   filasLecturasJubilacionEnIncapacidad,
   LECTURAS_JUBILACION_EN_SUPERVIVENCIA,
 } from '../tu-pension/lecturas-jubilacion-en-incapacidad';
-import type { EjemploCalculado } from './ejemplos';
+import type { EfectosLectura, EjemploCalculado } from './ejemplos';
 
 /**
  * Texto propio de una lectura cuyo texto del registro (`textos-lecturas.ts`) no coincide con la norma
@@ -49,13 +49,26 @@ export function LecturasQueInfluyen({
   readonly motor: MotorOfrecido;
   readonly ejemplos: readonly EjemploCalculado[];
 }) {
+  // El efecto de cada lectura se mide volviendo a llamar al motor; se calcula después de pintar la
+  // sección para que la página no espere a esas llamadas.
+  const [medidos, setMedidos] = useState<
+    readonly { titulo: string; efectos: EfectosLectura }[] | undefined
+  >();
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setMedidos(ejemplos.map((e) => ({ titulo: e.titulo, efectos: e.efectoLecturas() })));
+    }, 0);
+    return () => {
+      clearTimeout(id);
+    };
+  }, [ejemplos]);
+
   const filas = useMemo((): readonly FilaLectura[] => {
     const lecturas = filasDelPanel(undefined, undefined, motor);
-    const porEjemplo = ejemplos.map((e) => ({ titulo: e.titulo, efectos: e.efectoLecturas() }));
     return lecturas
       .map((lectura) => ({
         lectura,
-        efectos: porEjemplo.flatMap((e) => {
+        efectos: (medidos ?? []).flatMap((e) => {
           const ef = e.efectos.get(lectura.id);
           return ef?.afecta === true ? [{ ejemplo: e.titulo, texto: ef.texto }] : [];
         }),
@@ -65,7 +78,7 @@ export function LecturasQueInfluyen({
           Number(b.efectos.length > 0) - Number(a.efectos.length > 0) ||
           ORDEN_ESTADO[a.lectura.estado] - ORDEN_ESTADO[b.lectura.estado],
       );
-  }, [motor, ejemplos]);
+  }, [motor, medidos]);
 
   const aplicadasDeJubilacion = useMemo(() => {
     if (motor === 'incapacidad') return filasLecturasJubilacionEnIncapacidad();
@@ -123,7 +136,9 @@ export function LecturasQueInfluyen({
               <div>
                 <dt>Efecto en los ejemplos</dt>
                 <dd>
-                  {efectos.length === 0 ? (
+                  {medidos === undefined ? (
+                    'Calculando el efecto en los ejemplos…'
+                  ) : efectos.length === 0 ? (
                     'No cambia el resultado de ninguno de los ejemplos de esta sección.'
                   ) : (
                     <ul className="como-opciones">
