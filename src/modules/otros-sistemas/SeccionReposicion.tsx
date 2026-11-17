@@ -333,7 +333,7 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
         reales de España (pensión media por catorce pagas entre salario medio): estos mezclan
         colectivos con carreras de distinta duración, pensiones mínimas y topes, y varían según la
         definición de salario medio. Se ponen juntos para ver el orden de magnitud, no para decidir
-        cuál es la «verdadera» tasa de reposición.
+        cuál de ellas es la tasa de reposición.
       </p>
       <div className="sistemas-tabla">
         <DataTable

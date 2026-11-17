@@ -2235,6 +2235,495 @@
       ],
       "fetchedAt": "2026-11-12",
       "estado": "verificada"
+    },
+    {
+      "id": "web-mitos-hucha",
+      "texto": "Se muestran el valor del Fondo de Reserva al cierre de cada año (a precio de adquisición), el importe retirado cada año (diferencia entre acumulados publicados) y los meses de gasto en pensiones contributivas que equivale su valor, con las mismas referencias de gasto que la página «La hucha»; el valor máximo, el último valor y la mayor retirada anual son cálculos sobre esas series. No se da ningún criterio de suficiencia.",
+      "ubicacion": "Página «Mitos y realidades»: afirmación 1 (la hucha)",
+      "datos": [
+        "sistema/fondo-reserva-series.json#valor-fin-ano",
+        "sistema/fondo-reserva-series.json#disposiciones-anuales",
+        "sistema/liquidacion-ss-series.json#gastos-pensiones-con-complemento-a-minimos",
+        "sistema/pensiones-vigor-pension-media.json#jubilacion-ambos"
+      ],
+      "fuentes": [
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        },
+        {
+          "title": "Liquidación del presupuesto del Sistema de la Seguridad Social (PDF «SISTEMA DE LA S.S.»)",
+          "publisher": "Intervención General de la Seguridad Social, Ministerio de Empleo y Seguridad Social (Seguridad Social)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/396"
+        },
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 18",
+      "notas": "Las cifras del revisor (0,93 meses, 0,88 con mínimos) no se copian: los meses de gasto se recalculan en la página con las referencias de «La hucha»."
+    },
+    {
+      "id": "web-mitos-impuestos",
+      "texto": "Se comparan, año a año, las cotizaciones sociales y las transferencias corrientes del Estado en la ejecución del presupuesto del Sistema de la Seguridad Social, con el peso de cada una sobre los derechos reconocidos por operaciones no financieras (cálculo propio), y se citan sin sumarlas una transferencia prevista para gastos «impropios» y un préstamo del Estado (operación financiera). La ejecución no desglosa las transferencias por finalidad y la página no calcula qué parte de las pensiones se paga con impuestos.",
+      "ubicacion": "Página «Mitos y realidades»: afirmación 2 (las pensiones y los impuestos)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes",
+        "sistema/deficit-presupuestario-seguridad-social.json#derechos-no-financieros",
+        "sistema/gastos-impropios.json#transferencia-prevista-pge-2021",
+        "parametros/prestamos-estado-seguridad-social.json#2021-importe-maximo"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        },
+        {
+          "title": "¿Qué gastos no contributivos financia la Seguridad Social? (Revista Seguridad Social, 29/10/2020; antes «¿Qué son los gastos impropios de la Seguridad Social?»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://revista.seg-social.es/2020/10/29/que-son-los-gastos-impropios-de-la-seguridad-social/"
+        },
+        {
+          "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 19"
+    },
+    {
+      "id": "web-mitos-cotizantes",
+      "texto": "Se muestran tres cocientes entre afiliados y pensionistas o pensiones (afiliados de diciembre por pensionista, afiliados medios anuales por pensión y afiliados de último día de diciembre por pensiones a 1 de enero) y dos proyecciones del Ageing Report (ratio de apoyo y dependencia de los mayores). Un afiliado es una situación de alta, no una persona; las definiciones sin doble cómputo no están en los datos.",
+      "ubicacion": "Página «Mitos y realidades»: afirmación 3 (cotizantes por pensionista)",
+      "datos": [
+        "sistema/relacion-afiliados-pensiones.json#afiliados-diciembre-por-pensionista",
+        "sistema/relacion-afiliados-pensiones.json#afiliados-media-anual-por-pension",
+        "sistema/relacion-afiliados-pensiones-alternativa-1.json#afiliados-por-pension-alternativa-1",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-84",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-59"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensionistas: serie histórica de pensionistas y pensiones (hoja «Pnes y ptas»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/26bce586-014b-4c4e-9484-009cee21e271"
+        },
+        {
+          "title": "Afiliados último día: serie de afiliados a último día por regímenes 1985-septiembre 2026 (fila de diciembre, columna TOTAL SISTEMA)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST305/EST306",
+          "docId": "SS-afiliados-ultimo-dia"
+        },
+        {
+          "title": "The 2024 Ageing Report: Economic and Budgetary Projections for the EU Member States (2022-2070), Statistical annex: cross-country tables",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en",
+          "docId": "ip279"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 20"
+    },
+    {
+      "id": "web-mitos-jubilados-marco",
+      "texto": "La página no contiene ninguna cifra de lo cotizado frente a lo cobrado. Describe el cálculo que habría que hacer (valor actual de las prestaciones entre valor actual de las cotizaciones, por cohorte) y qué piezas hay en los datos (tipos de cotización, reglas de cálculo de la pensión, esperanza de vida del INE, medida de riqueza de pensiones de la OCDE para una carrera teórica) y cuáles faltan (historiales de cotización individuales).",
+      "ubicacion": "Página «Mitos y realidades»: afirmación 4 (lo cotizado frente a lo cobrado)",
+      "datos": [
+        "internacional/ocde-espana.json#gpw100-hombres-z-z-fctr-wg-sal-g-i-inc-2024",
+        "parametros/tipo-cc-empresa.json#2025",
+        "parametros/escala-porcentajes-jubilacion.json#2025",
+        "demografia/esperanza-vida-anual.json#esperanza-vida-65-hombres"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        },
+        {
+          "title": "Orden PJC/178/2025, de 25 de febrero, por la que se desarrollan las normas legales de cotización a la Seguridad Social, desempleo, protección por cese de actividad, Fondo de Garantía Salarial y formación profesional para el ejercicio 2025.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-3780",
+          "docId": "BOE-A-2025-3780"
+        },
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        },
+        {
+          "title": "Tablas de mortalidad por año, sexo, edad y funciones (tablas 27153 y 27150)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=27153",
+          "docId": "INE-27153"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Definir el cociente valor actual de prestaciones / valor actual de cotizaciones por cohorte (mortalidad del INE por sexo; tipo de descuento: crecimiento de la masa salarial, con el bono a diez años como sensibilidad; solo la parte del tipo de contingencias comunes que financia la jubilación) y decidir qué historiales de cotización harían falta (Muestra Continua de Vidas Laborales). La riqueza de pensiones de la OCDE es valor actual entre salario, no entre cotizaciones: no es directamente comparable.",
+      "notas": "Solo el marco, sin cifras: faltan los historiales de cotización (Muestra Continua de Vidas Laborales). Revisión del revisor: confirma el marco, método sin datos, confianza baja."
+    },
+    {
+      "id": "web-mitos-saldo",
+      "texto": "Se muestran tres medidas del saldo del sistema (presupuestario no financiero, presupuestario total y capacidad o necesidad de financiación SEC) en millones de euros, sus diferencias año a año (cálculo propio, sin conciliar) y una previsión institucional de déficit de gastos impropios; no se elige ninguna medida como «el déficit» ni se calcula el saldo contributivo ajustado.",
+      "ubicacion": "Página «Mitos y realidades»: afirmación 5 (déficit)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-no-financiero",
+        "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-total",
+        "sistema/deficit-sec-fondos-seguridad-social.json#b9-mio-eur",
+        "sistema/deficit-sec-fondos-seguridad-social.json#b9-pc-gdp",
+        "sistema/gastos-impropios.json#deficit-estimado-2023"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social), a diciembre",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        },
+        {
+          "title": "Government revenue, expenditure and main aggregates (gov_10a_main), sector S.1314 Social security funds, España",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table"
+        },
+        {
+          "title": "¿Qué gastos no contributivos financia la Seguridad Social? (Revista Seguridad Social, 29/10/2020; antes «¿Qué son los gastos impropios de la Seguridad Social?»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://revista.seg-social.es/2020/10/29/que-son-los-gastos-impropios-de-la-seguridad-social/"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 22"
+    },
+    {
+      "id": "web-mitos-edad",
+      "texto": "Se muestran cuatro medidas de la edad de jubilación con definiciones distintas (edad ordinaria legal de cada año, edad media de las altas de jubilación, edad efectiva de salida del mercado laboral de la OCDE para hombres y mujeres), más la edad de jubilación actual de la OCDE y el periodo cotizado que permite jubilarse a la edad de referencia sin reducción; no se afirma que ninguna sea la edad «real».",
+      "ubicacion": "Página «Mitos y realidades»: afirmación 6 (edad de jubilación)",
+      "datos": [
+        "parametros/edad-ordinaria-jubilacion.json#2025",
+        "parametros/carrera-jubilacion-65.json#2025",
+        "sistema/edad-media-altas-jubilacion.json#edad-media-altas-jubilacion",
+        "internacional/ocde-espana.json#elmea-hombres-z-z-y",
+        "internacional/ocde-espana.json#elmea-mujeres-z-z-y",
+        "internacional/ocde-espana.json#crplf22-hombres-z-z-y-2024",
+        "internacional/contraste-espana.json#meses-carrera-completa-desde-22-hasta-65"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        },
+        {
+          "title": "Altas y bajas de pensiones contributivas: evolución 2022-2026 (fichero EVO), hoja EVO_acumula_altas_jub_edad",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44"
+        },
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 23"
+    },
+    {
+      "id": "web-mitos-sostenibilidad",
+      "texto": "Se muestran el gasto en pensiones públicas sobre el PIB proyectado por el Ageing Report y por la OCDE y el balance del sistema del Ageing Report (proyecciones publicadas, no datos observados), junto con el criterio de la disposición adicional segunda del Real Decreto-ley 2/2023 (límite de gasto medio, referencia del impacto de las medidas de ingresos y fracción del exceso que aumenta el MEI) y la media aritmética del gasto del Ageing Report en el periodo que cita la norma, calculada sin el ajuste por medidas de ingresos y presentada como cálculo propio, no como la comprobación de la AIReF.",
+      "ubicacion": "Página «Mitos y realidades»: afirmación 7 (sostenibilidad)",
+      "datos": [
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-64",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-74",
+        "internacional/ocde-espana.json#ppep-no-aplica-z-z-pt-b1gq",
+        "parametros/mei-reglas.json#da2-rdl-2023-tope-gasto-pct-pib",
+        "parametros/mei-reglas.json#da2-rdl-2023-impacto-medidas-referencia",
+        "parametros/mei-reglas.json#da2-rdl-2023-aumento-mei-decimas-del-exceso"
+      ],
+      "fuentes": [
+        {
+          "title": "The 2024 Ageing Report: Economic and Budgetary Projections for the EU Member States (2022-2070), Statistical annex: cross-country tables",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en",
+          "docId": "ip279"
+        },
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        },
+        {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 24",
+      "notas": "El periodo de la media (2022 a 2050) se lee de la cita literal de la norma en los datos. La media es una lectura propia de «gasto medio» (media aritmética de los valores anuales)."
+    },
+    {
+      "id": "web-mitos-pobreza",
+      "texto": "Se muestran dos indicadores de riesgo de pobreza de las personas mayores (pobreza o exclusión social de Eurostat y pobreza de renta de la OCDE, que no son comparables entre sí) y las cuantías de la pensión mínima de jubilación y de la pensión no contributiva en euros al año, sin compararlas con ningún umbral. El umbral, el contenido exacto del indicador y el tratamiento del alquiler imputado figuran como perímetro no verificado en las fuentes descargadas.",
+      "ubicacion": "Página «Mitos y realidades»: afirmación 8 (pobreza de los mayores)",
+      "datos": [
+        "internacional/eurostat-espana.json#pobreza-o-exclusion-total-y-ge65-pc",
+        "internacional/ocde-espana.json#oaip-total-y-ge66-z-pt-pop-sex-age",
+        "parametros/pension-minima-jubilacion.json#2025-jub65-unipersonal",
+        "parametros/pnc-importe-anual.json#2025"
+      ],
+      "fuentes": [
+        {
+          "title": "Persons at risk of poverty or social exclusion by age and sex (ilc_peps01n)",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en",
+          "docId": "eurostat-ilc_peps01n"
+        },
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        },
+        {
+          "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+          "docId": "BOE-A-2025-7660"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar en los metadatos de Eurostat (AROPE) y de la OCDE el umbral de pobreza (60 % y 50 % de la mediana según el revisor), si AROPE incluye más que la pobreza monetaria y si alguna de las dos imputa el alquiler de la vivienda propia; mostrar las dos variantes del umbral si ambas están en /data.",
+      "notas": "El revisor propone mostrar las dos variantes del umbral (60 % y 50 % de la mediana) y el alquiler imputado: no está en las fuentes descargadas (metadatos de Eurostat y de la OCDE, descarga manual anotada)."
+    },
+    {
+      "id": "web-mitos-reposicion",
+      "texto": "Se muestran las tasas de reposición teóricas de la OCDE para España (bruta y neta, carrera completa) y cocientes empíricos entre la pensión media de jubilación (en vigor y de las altas, en catorce pagas) y cuatro salarios medios distintos; son medidas con definiciones distintas (la teórica es para una carrera completa y el cociente compara colectivos) y sus diferencias no se descomponen.",
+      "ubicacion": "Página «Mitos y realidades»: afirmación 9 (sustitución del salario)",
+      "datos": [
+        "internacional/ocde-espana.json#gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024",
+        "internacional/ocde-espana.json#nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024",
+        "internacional/ocde-espana.json#gprr200-hombres-z-m-pt-earn-g-pre-ret-inc-2024",
+        "internacional/contraste-espana.json#pension-altas-sobre-salario-eaes",
+        "internacional/contraste-espana.json#pension-vigor-sobre-salario-eaes",
+        "internacional/contraste-espana.json#pension-vigor-sobre-salario-base-media-x12"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        },
+        {
+          "title": "Altas y bajas de pensiones contributivas: evolución 2022-2026 (fichero EVO)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44"
+        },
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 26",
+      "notas": "Las cifras de verificación del revisor (96 %, 84 %, 82 %) no se publican: se recalculan solo en el test de verificación del motor."
+    },
+    {
+      "id": "web-mitos-gasto-europa",
+      "texto": "Se muestran cuatro medidas de gasto sobre el PIB con perímetros distintos (prestaciones de vejez y supervivencia de Eurostat para España y para la Unión Europea, gasto público en pensiones de la OCDE y pensiones contributivas del Sistema) y se indica que el perímetro de las de Eurostat y la OCDE no está verificado en las fuentes descargadas y que los datos no ajustan por estructura de edades.",
+      "ubicacion": "Página «Mitos y realidades»: afirmación 10 (gasto y media europea)",
+      "datos": [
+        "internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp",
+        "internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq",
+        "internacional/contraste-espana.json#gasto-pensiones-contributivas-sobre-pib"
+      ],
+      "fuentes": [
+        {
+          "title": "Expenditure on social benefits by function (spr_exp_func)",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+          "docId": "eurostat-spr_exp_func"
+        },
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        },
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "Comprobar en los metadatos de Eurostat y de la OCDE qué incluye cada medida de gasto (prestaciones en especie, Clases Pasivas, no contributivas) y si existe un agregado de gasto en pensiones de Eurostat más adecuado que vejez más supervivencia; ajuste por estructura de edades.",
+      "notas": "La serie de la Unión Europea procede de la tabla eurostat-indicadores (indicador gasto-old-srv, unidad PC_GDP, área EU27). El ajuste por estructura de edades exigiría la población de 65 o más años de cada área (descarga no realizada)."
+    },
+    {
+      "id": "web-mitos-ipc",
+      "texto": "Se muestran, año a año, la revalorización aplicada y la variación del IPC (media anual y diciembre) con la diferencia en puntos porcentuales solo en los años con las dos cifras, y los datos de la regla vigente (meses, último mes de medición y suelo); la cronología de reformas de la revalorización está en la página «Reformas».",
+      "ubicacion": "Página «Mitos y realidades»: afirmación 11 (revalorización e IPC)",
+      "datos": [
+        "parametros/revalorizacion-general.json#2013",
+        "parametros/revalorizacion-general.json#2025",
+        "parametros/ipc-variacion-media-anual.json#2025",
+        "parametros/ipc-variacion-diciembre.json#2025",
+        "parametros/revalorizacion-regla.json#2024-ultimo-mes-medicion",
+        "parametros/revalorizacion-regla.json#2024-meses-medicion",
+        "parametros/revalorizacion-regla.json#2024-suelo"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+          "docId": "BOE-A-2012-15764"
+        },
+        {
+          "title": "Real Decreto 316/2025, de 15 de abril, sobre limitación de la cuantía inicial de las pensiones públicas y revalorización de las pensiones del sistema de la Seguridad Social, de las pensiones de Clases Pasivas del Estado y de otras prestaciones sociales públicas para el ejercicio 2025.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660",
+          "docId": "BOE-A-2025-7660"
+        },
+        {
+          "title": "Índice de Precios de Consumo (IPC). Nacional, índice general (serie IPC290751, base 2025)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290751?nult=800",
+          "docId": "IPC290751"
+        },
+        {
+          "title": "Índice de Precios de Consumo (IPC). Nacional, índice general, variación anual (serie IPC290750)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC290750?nult=800",
+          "docId": "IPC290750"
+        },
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 28"
+    },
+    {
+      "id": "web-mitos-ipc-sin-acumulado",
+      "texto": "La página no muestra ningún acumulado de la revalorización frente al IPC porque la serie de revalorización de los datos no tiene los años de 2011 a 2012 (calculados en la página como los años del intervalo sin dato) y, según la revisión actuarial, en los primeros años de la serie solo recoge la revalorización inicial, sin la paga por desviación; este último extremo no se ha comprobado en las fuentes descargadas.",
+      "ubicacion": "Página «Mitos y realidades»: afirmación 11 (revalorización e IPC)",
+      "datos": [
+        "parametros/revalorizacion-general.json#2010",
+        "parametros/revalorizacion-general.json#2013"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto 2007/2009, 23 de diciembre, sobre revalorización de las pensiones del sistema de la Seguridad Social y de otras prestaciones sociales públicas para el ejercicio 2010.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-21052",
+          "docId": "BOE-A-2009-21052"
+        },
+        {
+          "title": "Real Decreto-ley 29/2012, de 28 de diciembre, de mejora de gestión y protección social en el Sistema Especial para Empleados de Hogar y otras medidas de carácter económico y social.",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764",
+          "docId": "BOE-A-2012-15764"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 28",
+      "notas": "Huecos anotados en docs/PENDIENTE_DATOS.md y docs/DESCARGAS_MANUALES.md (BOE de 2011 y 2012 y paga por desviación)."
+    },
+    {
+      "id": "web-mitos-natalidad",
+      "texto": "Se muestran el indicador coyuntural de fecundidad observado y proyectado por el INE, cuatro tasas de dependencia proyectadas con definiciones distintas (INE, EUROPOP y dos del Ageing Report, una de ellas económica) y el saldo migratorio exterior publicado; no se estima el efecto de la fecundidad sobre el PIB o el gasto ni se descompone la contribución de fecundidad, mortalidad, migración y empleo.",
+      "ubicacion": "Página «Mitos y realidades»: afirmación 12 (nacimientos y pensiones)",
+      "datos": [
+        "demografia/fecundidad-indicadores.json#icf-ambas",
+        "demografia/proyecciones-hipotesis.json#icf-proyectado",
+        "demografia/proyecciones-hipotesis.json#tasa-dependencia-proyectada",
+        "demografia/europop2025-indicadores.json#europop2025-olddep1",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-59",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-62",
+        "demografia/migraciones-exterior-anual.json#saldo-exterior-ambos-publicado-emcr"
+      ],
+      "fuentes": [
+        {
+          "title": "Indicador Coyuntural de Fecundidad según orden del nacimiento y nacionalidad de la madre (tabla 1407)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=1407",
+          "docId": "INE-1407"
+        },
+        {
+          "title": "Proyecciones de Población: indicador coyuntural de fecundidad por año (tabla 36655)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36655",
+          "docId": "INE-36655"
+        },
+        {
+          "title": "Proyecciones de Población: tasa de dependencia por año (tabla 36668)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=36668",
+          "docId": "INE-36668"
+        },
+        {
+          "title": "Demographic balances and indicators by type of projection (proj_25ndbi)",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_25ndbi/default/table?lang=en",
+          "docId": "eurostat-proj_25ndbi"
+        },
+        {
+          "title": "The 2024 Ageing Report: Economic and Budgetary Projections for the EU Member States (2022-2070), Statistical annex: cross-country tables",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en",
+          "docId": "ip279"
+        },
+        {
+          "title": "Estadística de Migraciones y Cambios de Residencia: saldos (tabla 69758)",
+          "publisher": "Instituto Nacional de Estadística (INE)",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=69758",
+          "docId": "INE-69758"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 3, parte B, n.º 29",
+      "notas": "La frase del revisor sobre el efecto de la fecundidad en veinte años es una inferencia propia y no se añade."
     }
   ]
 }

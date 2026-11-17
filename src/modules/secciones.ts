@@ -159,11 +159,14 @@ export const SECCIONES = [
     titulo: 'Mitos y realidades',
     tituloNav: 'Mitos y realidades',
     resumen:
-      'Afirmaciones frecuentes sobre las pensiones, contrastadas con los datos y con sus matices.',
+      'Afirmaciones que circulan sobre las pensiones, tal como se formulan, con los datos y las definiciones que permiten contrastarlas. La página no valora las afirmaciones ni toma partido: muestra qué dicen los datos, con qué definición y qué cambia si se cambia la definición.',
     previsto: [
-      'Cada afirmación, con los datos que la apoyan o la contradicen.',
-      'Definiciones alternativas cuando el resultado depende de cómo se mida.',
-      'Enlace a las fuentes originales de cada dato.',
+      'Las doce afirmaciones del catálogo, en su orden y sin valorarlas, cada una con qué se puede medir, sus datos con su fuente y un texto «Cómo leerlo» (disponible).',
+      'Definiciones alternativas lado a lado, sin elegir una, y lo que los datos no permiten concluir (disponible).',
+      'Enlaces a las páginas donde ya está cada dato: la hucha, la financiación, los cotizantes, otros sistemas y las proyecciones (disponible).',
+      'Revalorización frente al IPC año a año, sin acumulado mientras la serie de revalorización tenga huecos (disponible); el acumulado queda pendiente de datos.',
+      'Lo cotizado frente a lo cobrado: solo el marco del cálculo, sin cifras, porque faltan los historiales de cotización (pendiente de datos).',
+      'Umbrales de pobreza, perímetros del gasto de Eurostat y de la OCDE y comparación ajustada por estructura de edades: pendientes de datos.',
     ],
   },
   {
