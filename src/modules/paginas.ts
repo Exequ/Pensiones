@@ -1,6 +1,5 @@
 import { lazy, type ComponentType } from 'react';
 import type { SlugSeccion } from './secciones';
-import Reformas from './reformas/Pagina';
 import Metodologia from './metodologia/Pagina';
 
 /**
@@ -32,6 +31,12 @@ const TiposDePension = lazy(() => import('./tipos-de-pension/Pagina'));
  * Observable Plot.
  */
 const ComoSeCalcula = lazy(() => import('./como-se-calcula/Pagina'));
+
+/**
+ * «Reformas» se carga solo al visitarla: arrastra la cronología de normas, algunos ficheros de
+ * parámetros y Observable Plot.
+ */
+const Reformas = lazy(() => import('./reformas/Pagina'));
 
 /** «Mitos y realidades» se carga solo al visitarla: arrastra los cargadores de las páginas históricas. */
 const MitosYRealidades = lazy(() => import('./mitos-y-realidades/Pagina'));

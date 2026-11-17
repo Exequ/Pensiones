@@ -68,11 +68,14 @@ export const SECCIONES = [
     titulo: 'Reformas',
     tituloNav: 'Reformas',
     resumen:
-      'Cronología de las reformas del sistema y de lo que cambió cada una, con el texto normativo enlazado.',
+      'Cronología de las normas que han modificado los parámetros de las pensiones contributivas, de las que hay texto o cita literal en los datos del repositorio: qué cambió cada una, cuándo y sobre qué parámetro, con el texto normativo enlazado y sin valorarlas.',
     previsto: [
-      'Línea temporal de las reformas, desde el Pacto de Toledo hasta las más recientes.',
-      'Qué parámetros cambió cada reforma y con qué calendario de aplicación.',
-      'Efectos estimados según las evaluaciones publicadas, con sus distintas metodologías.',
+      'Una ficha por norma, en orden cronológico y con la misma estructura: fecha de aprobación, de publicación y de entrada en vigor, qué cambia con la cita del artículo, parámetros afectados con el valor anterior y el posterior de /data, y calendario de aplicación con su tabla (disponible).',
+      'Gráficos de los parámetros que cambian con el calendario: edad ordinaria de jubilación, periodo de cálculo de la base reguladora y cotización con la que se alcanza el cien por cien de la base reguladora, con su tabla de datos (disponible).',
+      'Enlaces a «Cómo se calcula», a «Tipos de pensión» y a la página de la hucha donde se explica cada parámetro (disponible).',
+      'Normas que modificaron estos parámetros y cuyo texto no está descargado: no figuran como fichas y su descarga está anotada como pendiente.',
+      'Fecha de entrada en vigor de las normas cuyo texto o metadatos no están descargados: la ficha dice que no consta y no la calcula (pendiente de datos).',
+      'Efectos estimados de cada norma según evaluaciones publicadas: fuera de esta página, que no los atribuye.',
     ],
   },
   {
