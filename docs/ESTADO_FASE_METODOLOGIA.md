@@ -29,6 +29,22 @@ Ocho apartados con índice accesible (el enlace mueve el foco al encabezado): «
 - `e2e/metodologia.spec.ts`: sin errores de consola ni peticiones externas, teclado, enlaces, tablas, axe (página y cada apartado) y sin desbordes.
 - `scripts/verificacion-ajustes-3.test.ts`: la lista esperada de afirmaciones pendientes incluye la nueva (`web-metodologia-confianza-modelos`); no se debilita ningún test.
 
-## Batería local, CI y despliegue
+## Tamaño del chunk de la página
 
-Constan en el informe final de la sesión y no en este fichero, para no abrir un PR solo de documentación (misma práctica que las fases anteriores).
+`dist/assets/Pagina-BMTMDESq.js`: 63.593 bytes (18.840 comprimidos con gzip), propio de la página y cargado solo al visitarla (`lazy` en `src/modules/paginas.ts`; antes la página se importaba de forma estática). Arrastra trozos compartidos: `schemas-DEixrdbl.js` (94.256 bytes; 26.649 comprimidos), `supuestos-CB1O5__x.js` (39.794 bytes; 10.335 comprimidos; etiquetas de estado de las lecturas y registro del motor) y `Historico`/`Definition` (menos de 1 kB cada uno). Los recuentos van como datos ya calculados dentro del trozo (no se empaqueta `docs/claims.json` ni `docs/FUENTES.md`). El trozo principal (`index-*.js`) pasa de 275.991 a 277.401 bytes por los textos de la entrada de la sección. La CSS de la página ocupa 2.964 bytes.
+
+## Revisión de capturas
+
+A 1360 y 390 px se revisaron la cabecera con el índice, «Qué significa la confianza y la revisión actuarial» y «Los modelos de proyección»: sin desbordes ni errores de consola. En móvil la tabla de salidas de los modelos se desplaza dentro de su región.
+
+## Batería local
+
+- `npm run lint` (ESLint, Prettier, estilos, contraste y `validate:data`) en verde.
+- `npx tsc -b --force` (sin caché incremental, con los ficheros de test) sin errores.
+- `npm test`: 136 ficheros y 2.986 pruebas en verde (antes de la fase, 132 y 2.904).
+- `npm run build` correcto.
+- Playwright completo: 570 pruebas en verde (escritorio y móvil, 16,9 minutos), de ellas 32 de `e2e/metodologia.spec.ts`; las 538 anteriores siguen pasando.
+
+## CI y despliegue
+
+El resultado del CI del PR y del despliegue de `main`, y la comprobación de la ruta publicada a 1360 y 390 px, constan en el informe final de la sesión y no en este fichero, para no abrir un PR solo de documentación (misma práctica que las fases anteriores).
