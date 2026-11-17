@@ -22,7 +22,7 @@ const carpetas: string[] = [];
 function genera(): string {
   const salida = mkdtempSync(path.join(tmpdir(), 'claims-'));
   carpetas.push(salida);
-  const env = { ...process.env, SALIDA_DOCS: salida };
+  const env: NodeJS.ProcessEnv = { ...process.env, SALIDA_DOCS: salida };
   delete env['FECHA_DESCARGA'];
   const r = spawnSync('python3', ['-I', path.join(RAIZ, 'scripts/etl/fuentes_claims.py')], {
     cwd: RAIZ,

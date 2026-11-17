@@ -311,6 +311,9 @@ if os.path.exists(_ruta_aud):
         for _s in _r['segundaFuente']:
             _dom = next((v for k, v in _ORG.items() if k in _s['url']), 'Otros')
             anota({'title': _s['title'], 'publisher': _dom, 'url': _s['url']}, 'auditoría independiente (docs/AUDITORIA_DATOS.md)', _s['fetchedAt'])
+# Fase «Metodología»: los recuentos de la página se calculan de los ficheros del repositorio, no de /data (elaboración propia).
+anota({'title': 'Recuentos de la página «Metodología» (calculados al compilar desde los ficheros del repositorio)', 'publisher': 'Proyecto «Pensiones» (elaboración propia)',
+       'url': 'https://github.com/Exequ/Pensiones/blob/main/src/engine/metodologia.ts'}, 'src/engine/metodologia.ts', '2026-11-17')
 filas = ['# Fuentes', '',
          'Registro de las fuentes consultadas. Cada fila corresponde a un documento descargado en una sesión de trabajo; nunca a datos recordados. La fecha es la de descarga (`fetchedAt`). Generado por `scripts/etl/fuentes_claims.py` a partir de `/data`.', '',
          '| Organismo | Documento | URL | Descargado | Ficheros de `/data` que lo usan |', '| --------- | --------- | --- | ---------- | ------------------------------- |']

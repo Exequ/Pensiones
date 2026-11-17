@@ -368,6 +368,8 @@ export function idsDeArchivo(json: unknown): Set<string> {
       if (esObjeto(elemento) && typeof elemento['id'] === 'string') ids.add(elemento['id']);
     }
   }
+  // Las salidas de los modelos (`tipo: proyeccion`) son un solo elemento: se referencian por el id del fichero.
+  if (json['tipo'] === 'proyeccion' && typeof json['id'] === 'string') ids.add(json['id']);
   return ids;
 }
 

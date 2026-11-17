@@ -5,7 +5,7 @@ pensión, cálculo, requisitos, reformas, financiación, demografía y comparaci
 sistemas. Cada cifra enlaza a su fuente.
 
 - Web: <https://exequ.github.io/Pensiones/>
-- Estado: **Fase 0 · cimientos** (infraestructura, sistema de diseño y esqueleto; sin datos reales).
+- Estado: en desarrollo por fases; las decisiones y el estado de cada una están en [docs/](docs/).
 
 ## Desarrollo
 

@@ -7328,6 +7328,99 @@
       "estado": "verificada",
       "revisionActuarial": "no-requiere",
       "notas": "Transcripción del texto consolidado; el cálculo completo (también el pago único y la opción mixta) se explica en «Cómo se calcula»."
+    },
+    {
+      "id": "web-metodologia-procedencia",
+      "texto": "Cada dato de /data lleva una fuente con su dirección, una fecha de descarga y un nivel de confianza (alta, media o baja), y el formato de los datos rechaza el que no los tenga.",
+      "ubicacion": "Página «Metodología»: apartado «De dónde salen los datos» (Fase «Metodología»)",
+      "datos": ["parametros/periodo-calculo-base-reguladora.json#2037"],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Descripción del formato de /data (data/README.md, «Formato») y de su validación (src/engine/esquema-datos.ts); el dato citado es un ejemplo de dato con fuente, fecha y confianza. No requiere revisión actuarial: no es una regla de cálculo."
+    },
+    {
+      "id": "web-metodologia-modelos-congelada",
+      "texto": "Las salidas publicadas de los modelos de proyección (M1 a M4) son proyecciones de modelo con la legislación congelada, y cada fichero indica su escenario, la fecha de ejecución y su confianza.",
+      "ubicacion": "Página «Metodología»: apartado «Los modelos de proyección» (Fase «Metodología»)",
+      "datos": [
+        "proyecciones/m1-backtest.json#m1-backtest",
+        "proyecciones/m2-cotizantes.json#m2-cotizantes",
+        "proyecciones/m3-resumen.json#m3-resumen",
+        "proyecciones/m4-financiero.json#m4-financiero"
+      ],
+      "fuentes": [
+        {
+          "title": "M1 · Modelo demográfico: código del modelo en el repositorio y salidas de su ejecución",
+          "publisher": "Elaboración propia: modelo de proyección",
+          "url": "https://github.com/Exequ/Pensiones/blob/15651e83ec29111cffee572346a9c746ee1e57e0/modelos/m1/m1_demografia.py"
+        },
+        {
+          "title": "M2 · Cotizantes y bases de cotización (v0): código del modelo en el repositorio y salidas de su ejecución",
+          "publisher": "Elaboración propia: modelo de proyección",
+          "url": "https://github.com/Exequ/Pensiones/blob/15651e83ec29111cffee572346a9c746ee1e57e0/modelos/m2/m2_cotizantes.py"
+        },
+        {
+          "title": "M3 · Pensiones contributivas en vigor: código del modelo en el repositorio y salidas de su ejecución",
+          "publisher": "Elaboración propia: modelo de proyección",
+          "url": "https://github.com/Exequ/Pensiones/blob/15651e83ec29111cffee572346a9c746ee1e57e0/modelos/m3/m3_pensiones.py"
+        },
+        {
+          "title": "M4 · Modelo financiero del sistema (v1): código del modelo en el repositorio y salidas de su ejecución",
+          "publisher": "Elaboración propia: modelo de proyección",
+          "url": "https://github.com/Exequ/Pensiones/blob/15651e83ec29111cffee572346a9c746ee1e57e0/modelos/m4/m4_financiero.py"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Metadatos de los ficheros de data/proyecciones (campos naturaleza, escenario.legislacion, fetchedAt y confidence), comprobados por scripts/metodologia-fase.test.ts. No requiere revisión actuarial: describe el estado de los ficheros, no una regla de cálculo."
+    },
+    {
+      "id": "web-metodologia-confianza-modelos",
+      "texto": "Las salidas de los modelos M1, M3 y M4 llevan confianza media y las de M2, confianza baja; el criterio es del autor (media si el modelo documenta un contraste externo y pruebas; baja si es una versión preliminar) y está pendiente de confirmación por el actuario.",
+      "ubicacion": "Página «Metodología»: apartados «Qué significa la confianza y la revisión actuarial» y «Los modelos de proyección» (Fase «Metodología»)",
+      "datos": [
+        "proyecciones/m1-backtest.json#m1-backtest",
+        "proyecciones/m2-cotizantes.json#m2-cotizantes",
+        "proyecciones/m3-resumen.json#m3-resumen",
+        "proyecciones/m4-financiero.json#m4-financiero"
+      ],
+      "fuentes": [
+        {
+          "title": "M1 · Modelo demográfico: código del modelo en el repositorio y salidas de su ejecución",
+          "publisher": "Elaboración propia: modelo de proyección",
+          "url": "https://github.com/Exequ/Pensiones/blob/15651e83ec29111cffee572346a9c746ee1e57e0/modelos/m1/m1_demografia.py"
+        },
+        {
+          "title": "M2 · Cotizantes y bases de cotización (v0): código del modelo en el repositorio y salidas de su ejecución",
+          "publisher": "Elaboración propia: modelo de proyección",
+          "url": "https://github.com/Exequ/Pensiones/blob/15651e83ec29111cffee572346a9c746ee1e57e0/modelos/m2/m2_cotizantes.py"
+        },
+        {
+          "title": "M3 · Pensiones contributivas en vigor: código del modelo en el repositorio y salidas de su ejecución",
+          "publisher": "Elaboración propia: modelo de proyección",
+          "url": "https://github.com/Exequ/Pensiones/blob/15651e83ec29111cffee572346a9c746ee1e57e0/modelos/m3/m3_pensiones.py"
+        },
+        {
+          "title": "M4 · Modelo financiero del sistema (v1): código del modelo en el repositorio y salidas de su ejecución",
+          "publisher": "Elaboración propia: modelo de proyección",
+          "url": "https://github.com/Exequ/Pensiones/blob/15651e83ec29111cffee572346a9c746ee1e57e0/modelos/m4/m4_financiero.py"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "¿Confirma el criterio con el que se asigna la confianza a las salidas de los modelos (media si el modelo documenta un contraste externo y pruebas; baja si es una versión preliminar) y su aplicación a M1, M2, M3 y M4?",
+      "notas": "Criterio registrado en docs/DECISIONES.md (fases 5-B1 y 5-B2) y en docs/PENDIENTE_DATOS.md como decisión del autor pendiente del actuario. La página lo dice y no lo presenta como definición general."
     }
   ]
 }

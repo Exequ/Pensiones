@@ -14,7 +14,7 @@ export interface Seccion {
   readonly tituloNav: string;
   /** Resumen de una frase para el índice y la entradilla. */
   readonly resumen: string;
-  /** Contenidos previstos (se muestran mientras la sección está en construcción). */
+  /** Qué cubre la sección y qué queda fuera o pendiente (se muestra al final de cada página). */
   readonly previsto: readonly string[];
 }
 
@@ -179,12 +179,18 @@ export const SECCIONES = [
     titulo: 'Metodología',
     tituloNav: 'Metodología',
     resumen:
-      'Cómo se obtienen, revisan y presentan los datos de esta web: fuentes, criterios, definiciones y niveles de confianza.',
+      'Cómo se hace esta web: de dónde salen los datos, cómo se comprueban, qué significan la confianza y la revisión actuarial, qué son las lecturas del motor, qué modelos de proyección hay y qué límites tienen, y cómo reproducir el trabajo.',
     previsto: [
-      'Criterios de selección de fuentes y fecha de descarga de cada dato.',
-      'Conversión a euros constantes y otras transformaciones.',
-      'Qué significa cada nivel de confianza (alta, media, baja).',
-      'Proceso de revisión actuarial.',
+      'De dónde salen los datos: fuentes, descarga, huella, fecha de descarga y confianza de cada dato, con el recuento actual (disponible).',
+      'Cómo se comprueban: validaciones, pruebas de coherencia, contraste con una segunda fuente, discrepancias documentadas y casos de oro (disponible).',
+      'Qué significan la confianza y la revisión actuarial, con el recuento actual, el calendario de las tandas y todas las afirmaciones pendientes (disponible).',
+      'Lecturas del motor: qué son, sus tres estados, el recuento y la lista completa, con enlaces a «Tu pensión» y a «Cómo se calcula» (disponible).',
+      'Los modelos de proyección: qué responde cada uno, qué hipótesis usa, qué fiabilidad indica y qué límites declara, sin cifras de resultados (disponible).',
+      'Neutralidad y verificación: la política y las pruebas que la comprueban (disponible).',
+      'Qué no hace la web y cómo reproducir el trabajo: repositorio, comandos y extracción de datos (disponible).',
+      'Una definición general y escrita de cada nivel de confianza: no consta en el repositorio (pendiente).',
+      'Qué fueron la primera y la segunda tanda de la revisión actuarial: los documentos solo numeran la tercera (pendiente).',
+      'Nivel de confianza de los modelos que no tienen salidas en los datos: sin metadatos (pendiente).',
     ],
   },
 ] as const satisfies readonly Seccion[];

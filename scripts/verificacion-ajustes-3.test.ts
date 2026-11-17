@@ -104,12 +104,14 @@ describe('tabla de aplicación (docs/revision-actuarial/aplicacion-tanda3.json)'
     // Las pendientes son las de la tabla de la tanda 3 más las tres de la página «Mitos y realidades»
     // (afirmaciones 21, 25 y 27 del catálogo, que siguen pendientes): cada una con su pregunta reducida
     // y sin agrupar con otras.
-    // Más la de la página «Cómo se calcula» (orden del límite conjunto y del complemento a mínimos).
+    // Más la de la página «Cómo se calcula» (orden del límite conjunto y del complemento a mínimos)
+    // y la de «Metodología» (criterio de confianza de las salidas de los modelos, por confirmar).
     const web = [
       'web-mitos-jubilados-marco',
       'web-mitos-pobreza',
       'web-mitos-gasto-europa',
       'web-como-sv-orden-limites',
+      'web-metodologia-confianza-modelos',
     ];
     expect(pendientes.map((c) => c.id).sort()).toEqual(
       [...tabla.filter((f) => f.estado === 'pendiente').map((f) => f.id), ...web].sort(),

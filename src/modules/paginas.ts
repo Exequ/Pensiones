@@ -1,6 +1,5 @@
 import { lazy, type ComponentType } from 'react';
 import type { SlugSeccion } from './secciones';
-import Metodologia from './metodologia/Pagina';
 
 /**
  * «Tu pensión» se carga solo al visitarla: arrastra el motor y los ficheros de /data/parametros
@@ -40,6 +39,12 @@ const Reformas = lazy(() => import('./reformas/Pagina'));
 
 /** «Mitos y realidades» se carga solo al visitarla: arrastra los cargadores de las páginas históricas. */
 const MitosYRealidades = lazy(() => import('./mitos-y-realidades/Pagina'));
+
+/**
+ * «Metodología» se carga solo al visitarla: arrastra los recuentos calculados al compilar, el
+ * registro de lecturas del motor y las tablas de datos.
+ */
+const Metodologia = lazy(() => import('./metodologia/Pagina'));
 
 /** Componente de página de cada sección, indexado por su ruta. */
 export const PAGINAS: Record<SlugSeccion, ComponentType> = {
