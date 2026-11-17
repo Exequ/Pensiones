@@ -3,10 +3,15 @@
 import glob
 import json
 import os
+import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from comun import HOY, REPO  # noqa: E402
+
+# Carpeta de salida. Por defecto, docs/ del repositorio; el test de reproducibilidad
+# (scripts/generador-claims.test.ts) la cambia con SALIDA_DOCS para no tocar el repositorio.
+SALIDA = os.environ.get('SALIDA_DOCS', f'{REPO}/docs')
 
 fuentes = {}
 
@@ -306,6 +311,9 @@ if os.path.exists(_ruta_aud):
         for _s in _r['segundaFuente']:
             _dom = next((v for k, v in _ORG.items() if k in _s['url']), 'Otros')
             anota({'title': _s['title'], 'publisher': _dom, 'url': _s['url']}, 'auditoría independiente (docs/AUDITORIA_DATOS.md)', _s['fetchedAt'])
+# Fase «Metodología»: los recuentos de la página se calculan de los ficheros del repositorio, no de /data (elaboración propia).
+anota({'title': 'Recuentos de la página «Metodología» (calculados al compilar desde los ficheros del repositorio)', 'publisher': 'Proyecto «Pensiones» (elaboración propia)',
+       'url': 'https://github.com/Exequ/Pensiones/blob/main/src/engine/metodologia.ts'}, 'src/engine/metodologia.ts', '2026-11-17')
 filas = ['# Fuentes', '',
          'Registro de las fuentes consultadas. Cada fila corresponde a un documento descargado en una sesión de trabajo; nunca a datos recordados. La fecha es la de descarga (`fetchedAt`). Generado por `scripts/etl/fuentes_claims.py` a partir de `/data`.', '',
          '| Organismo | Documento | URL | Descargado | Ficheros de `/data` que lo usan |', '| --------- | --------- | --- | ---------- | ------------------------------- |']
@@ -318,7 +326,7 @@ filas += ['', '## Huellas de los ficheros brutos (tablas)', '',
           '| Tabla | Periodo | URL | SHA-256 |', '| ----- | ------- | --- | ------- |']
 for tabla, per, url, sha in huellas:
     filas.append(f'| {tabla} | {per} | <{url}> | `{sha}` |')
-with open(f'{REPO}/docs/FUENTES.md', 'w', encoding='utf-8') as f:
+with open(f'{SALIDA}/FUENTES.md', 'w', encoding='utf-8') as f:
     f.write('\n'.join(filas) + '\n')
 REVISION.update(MITO_PREGUNTAS)
 # Ajustes actuariales 3: estado de cada afirmación según docs/revision-actuarial/aplicacion-tanda3.json
@@ -354,7 +362,7 @@ for c in claims:
         c['revisionActuarial'] = REVISION_WEB[c['id']]   # la declarada a mano en claims-web.json
     else:
         c.pop('revisionActuarial', None)   # hereda revisionActuarialPorDefecto
-with open(f'{REPO}/docs/claims.json', 'w', encoding='utf-8') as f:
+with open(f'{SALIDA}/claims.json', 'w', encoding='utf-8') as f:
     json.dump({'version': 1,
                'descripcion': 'Registro de afirmaciones factuales con sus fuentes. Lo valida npm run validate:data. Generado por scripts/etl/fuentes_claims.py a partir de /data. '
                               'Las afirmaciones con revisionActuarial «pendiente» llevan preguntaActuarial (lista en docs/REVISION_ACTUARIAL.md); el resto hereda revisionActuarialPorDefecto: '
@@ -397,6 +405,22 @@ md += ['## Revisadas con la tercera tanda de la revisión actuarial', '',
 for c in sorted((c for c in claims if c.get('revisionActuarial') == 'revisada' and c.get('respuestaActuarial', '').startswith('Tanda 3')), key=lambda c: c['id']):
     md.append(f"| `{c['id']}` | {c['respuestaActuarial']} |")
 md.append('')
-with open(f'{REPO}/docs/REVISION_ACTUARIAL.md', 'w', encoding='utf-8') as f:
+with open(f'{SALIDA}/REVISION_ACTUARIAL.md', 'w', encoding='utf-8') as f:
     f.write('\n'.join(md))
 print('fuentes', len(fuentes), 'claims', len(claims), 'a revisar', len(REVISION))
+
+
+def formatea(*ficheros):
+    """Da a las salidas el formato de Prettier del repositorio (`npm run lint` lo exige).
+
+    Sin este paso, `json.dump` y las tablas en bruto difieren de lo versionado en unas mil líneas
+    que no son de contenido. La versión de Prettier es la fijada en package-lock.json.
+    """
+    prettier = f'{REPO}/node_modules/.bin/prettier'
+    if not os.path.exists(prettier):
+        raise SystemExit('Falta node_modules (npm ci): Prettier da el formato final de las salidas.')
+    subprocess.run([prettier, '--config', f'{REPO}/.prettierrc.json', '--ignore-path', os.devnull, '--log-level', 'warn',
+                    '--write', *ficheros], check=True, cwd=REPO)
+
+
+formatea(f'{SALIDA}/FUENTES.md', f'{SALIDA}/claims.json', f'{SALIDA}/REVISION_ACTUARIAL.md')
