@@ -1,0 +1,296 @@
+/* Página «Cómo se calcula»: solo tokens de src/styles/tokens.css. */
+
+.como-indice {
+  display: grid;
+  gap: var(--espacio-3);
+  margin-top: var(--espacio-6);
+  padding-top: var(--espacio-4);
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+}
+
+.como-indice-titulo {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  font-weight: var(--peso-semi);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-tinta-2);
+}
+
+.como-indice-lista {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: como-seccion;
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+}
+
+.como-indice-lista li {
+  counter-increment: como-seccion;
+  border-top: var(--grosor-filete) solid var(--color-filete);
+}
+
+.como-indice-lista li::before {
+  content: counter(como-seccion) '.';
+  display: inline-block;
+  min-width: 2.25rem;
+  color: var(--color-apagado);
+  font-variant-numeric: tabular-nums;
+}
+
+.como-indice-lista a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--objetivo-tactil);
+  padding-block: var(--espacio-1);
+  color: var(--color-acento);
+}
+
+.como-indice-lista a:hover {
+  color: var(--color-acento-oscuro);
+}
+
+.como-indice-resumen {
+  color: var(--color-tinta-2);
+}
+
+.como-seccion,
+.como-terminos {
+  margin-top: var(--espacio-7);
+  padding-top: var(--espacio-5);
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+}
+
+.como-seccion h3 {
+  margin-top: var(--espacio-6);
+}
+
+.como-seccion h4,
+.como-seccion h5 {
+  margin-top: var(--espacio-4);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  line-height: var(--interlineado-etiqueta);
+}
+
+.como-seccion h5 {
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-tinta-2);
+}
+
+.como-definiciones {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-5);
+  margin-top: var(--espacio-4);
+}
+
+@media (min-width: 640px) {
+  .como-definiciones {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+}
+
+.como-pasos {
+  display: grid;
+  gap: var(--espacio-4);
+  padding: 0;
+  margin: var(--espacio-3) 0 0;
+  list-style: none;
+  counter-reset: como-paso;
+}
+
+.como-paso {
+  counter-increment: como-paso;
+  padding-top: var(--espacio-3);
+  border-top: var(--grosor-filete) solid var(--color-filete);
+}
+
+.como-paso h4 {
+  margin-top: 0;
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-h3);
+}
+
+.como-paso h4::before {
+  content: counter(como-paso) '. ';
+  color: var(--color-acento);
+  font-variant-numeric: tabular-nums;
+}
+
+.como-normas,
+.como-pie-ejemplo,
+.como-ilustrativo,
+.como-avisos,
+.como-lista-parametros,
+.como-no-calcula {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-tinta-2);
+}
+
+.como-etiqueta {
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta);
+}
+
+.como-ilustrativo {
+  padding-block: var(--espacio-2);
+  border-top: var(--grosor-filete) solid var(--color-filete);
+  border-bottom: var(--grosor-filete) solid var(--color-filete);
+}
+
+.como-parametros {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-3);
+  margin-top: var(--espacio-3);
+}
+
+.como-graficos {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-7);
+  margin-top: var(--espacio-4);
+}
+
+.como-ejemplo {
+  margin-top: var(--espacio-4);
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  font-family: var(--fuente-interfaz);
+}
+
+.como-ejemplo > summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: var(--objetivo-tactil);
+  padding-block: var(--espacio-2);
+  cursor: pointer;
+  font-size: var(--texto-etiqueta);
+  color: var(--color-acento);
+}
+
+.como-ejemplo-titulo {
+  font-weight: var(--peso-semi);
+}
+
+.como-ejemplo-cuerpo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-3);
+  padding-bottom: var(--espacio-4);
+}
+
+.como-ejemplo-cuerpo > * {
+  min-width: 0;
+}
+
+.como-parametros-paso > summary {
+  display: flex;
+  align-items: center;
+  min-height: var(--objetivo-tactil);
+  cursor: pointer;
+  font-size: var(--texto-etiqueta);
+  color: var(--color-acento);
+}
+
+.como-lista-parametros {
+  padding-left: 1.25em;
+}
+
+.como-lista-parametros li + li,
+.como-avisos li + li,
+.como-no-calcula li + li {
+  margin-top: var(--espacio-2);
+}
+
+.como-resultado {
+  padding-top: var(--espacio-3);
+  border-top: var(--grosor-filete) solid var(--color-filete);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+}
+
+.como-importe {
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--peso-semi);
+}
+
+.como-lecturas {
+  display: grid;
+  gap: var(--espacio-4);
+}
+
+.como-lecturas-lista {
+  display: grid;
+  gap: var(--espacio-4);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.como-lectura {
+  padding-top: var(--espacio-3);
+  border-top: var(--grosor-filete) solid var(--color-filete);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+}
+
+.como-lectura h4 {
+  margin-top: 0;
+}
+
+.como-lectura-datos {
+  display: grid;
+  gap: var(--espacio-2);
+  margin: var(--espacio-2) 0 0;
+}
+
+.como-lectura-datos dt {
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta);
+}
+
+.como-lectura-datos dd {
+  margin: 0;
+  color: var(--color-tinta-2);
+}
+
+.como-etiqueta-estado {
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta);
+}
+
+.como-opciones {
+  padding-left: 1.25em;
+  margin: 0;
+}
+
+.como-opciones li + li {
+  margin-top: var(--espacio-2);
+}
+
+.como-no-calcula {
+  padding-left: 1.25em;
+}
+
+.como-enlace-simulador {
+  margin-top: var(--espacio-5);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+}
+
+.como-enlace-simulador a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--objetivo-tactil);
+}

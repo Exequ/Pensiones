@@ -11,6 +11,7 @@ import {
   ArchivoDatos,
   ArchivoExtraccionPdf,
   ArchivoPersonas,
+  ArchivoEjemplosCalculo,
   ArchivoPrestaciones,
   ArchivoProyeccion,
   ArchivoTabla,
@@ -105,9 +106,11 @@ export function validarContenido(json: unknown, fichero: string): ErrorValidacio
               ? ArchivoMitos
               : tipo === 'personas'
                 ? ArchivoPersonas
-                : tipo === 'proyeccion'
-                  ? ArchivoProyeccion
-                  : ArchivoDatos;
+                : tipo === 'ejemplos-calculo'
+                  ? ArchivoEjemplosCalculo
+                  : tipo === 'proyeccion'
+                    ? ArchivoProyeccion
+                    : ArchivoDatos;
   const resultado = esquema.safeParse(json);
   if (!resultado.success) {
     for (const problema of resultado.error.issues) {
@@ -358,7 +361,7 @@ export async function validarDirectorio(
 export function idsDeArchivo(json: unknown): Set<string> {
   const ids = new Set<string>();
   if (!esObjeto(json)) return ids;
-  for (const coleccion of ['data', 'series', 'normas', 'prestaciones', 'personas']) {
+  for (const coleccion of ['data', 'series', 'normas', 'prestaciones', 'personas', 'ejemplos']) {
     const elementos = json[coleccion];
     if (!Array.isArray(elementos)) continue;
     for (const elemento of elementos) {

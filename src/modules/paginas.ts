@@ -1,6 +1,5 @@
 import { lazy, type ComponentType } from 'react';
 import type { SlugSeccion } from './secciones';
-import ComoSeCalcula from './como-se-calcula/Pagina';
 import Reformas from './reformas/Pagina';
 import Metodologia from './metodologia/Pagina';
 
@@ -27,6 +26,12 @@ const Proyecciones = lazy(() => import('./proyecciones/Pagina'));
  */
 const OtrosSistemas = lazy(() => import('./otros-sistemas/Pagina'));
 const TiposDePension = lazy(() => import('./tipos-de-pension/Pagina'));
+
+/**
+ * «Cómo se calcula» se carga solo al visitarla: arrastra el motor, los ficheros de parámetros y
+ * Observable Plot.
+ */
+const ComoSeCalcula = lazy(() => import('./como-se-calcula/Pagina'));
 
 /** «Mitos y realidades» se carga solo al visitarla: arrastra los cargadores de las páginas históricas. */
 const MitosYRealidades = lazy(() => import('./mitos-y-realidades/Pagina'));
