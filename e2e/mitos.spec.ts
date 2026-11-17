@@ -123,8 +123,7 @@ test.describe('página «Mitos y realidades»', () => {
     });
   }
 
-  test('en móvil no desborda con las tablas abiertas', async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name !== 'movil', 'solo en la ventana de móvil');
+  test('no desborda con las tablas abiertas (en móvil y en escritorio)', async ({ page }) => {
     await abrirPagina(page);
     await abrirTablas(page);
     const desborda = await page.evaluate(

@@ -34,8 +34,7 @@ async function axe(page: Page, incluir: string): Promise<string[]> {
   );
 }
 
-async function sinDesbordes(page: Page, testInfo: { project: { name: string } }): Promise<void> {
-  if (testInfo.project.name !== 'movil') return;
+async function sinDesbordes(page: Page): Promise<void> {
   const desborda = await page.evaluate(
     () => document.documentElement.scrollWidth > document.documentElement.clientWidth,
   );
@@ -73,10 +72,10 @@ test.describe('«Tipos de pensión»: complementos por brecha de género y por m
     await expect(s.locator('table').first().locator('tbody tr').first()).toContainText('Total');
   });
 
-  test('móvil: sin desbordes con las tablas abiertas', async ({ page }, testInfo) => {
+  test('sin desbordes con las tablas abiertas (en móvil y en escritorio)', async ({ page }) => {
     await abrir(page, '/tipos-de-pension');
     await abrirTablas(page);
-    await sinDesbordes(page, testInfo);
+    await sinDesbordes(page);
   });
 
   test('axe de la sección con las tablas abiertas, sin infracciones de WCAG AA', async ({
@@ -120,10 +119,10 @@ test.describe('«Hucha»: la liquidación frente a la ejecución', () => {
     await expect(s.locator('caption').first()).not.toHaveText(antes ?? '');
   });
 
-  test('móvil: sin desbordes con las tablas abiertas', async ({ page }, testInfo) => {
+  test('sin desbordes con las tablas abiertas (en móvil y en escritorio)', async ({ page }) => {
     await abrir(page, '/hucha');
     await abrirTablas(page);
-    await sinDesbordes(page, testInfo);
+    await sinDesbordes(page);
   });
 
   test('axe de la sección, sin infracciones de WCAG AA', async ({ page }) => {
@@ -152,10 +151,10 @@ test.describe('«Mitos y realidades»: la regla de 2011 en la tarjeta del IPC', 
     expect(registro.externas, 'peticiones a dominios externos').toEqual([]);
   });
 
-  test('móvil: sin desbordes con las tablas abiertas', async ({ page }, testInfo) => {
+  test('sin desbordes con las tablas abiertas (en móvil y en escritorio)', async ({ page }) => {
     await abrir(page, '/mitos-y-realidades');
     await abrirTablas(page);
-    await sinDesbordes(page, testInfo);
+    await sinDesbordes(page);
   });
 
   test('axe de la tarjeta con las tablas abiertas, sin infracciones de WCAG AA', async ({
