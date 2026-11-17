@@ -1,6 +1,17 @@
 import { useMemo } from 'react';
+import { formatearNumero } from '../../engine/formato';
 import { GraficoSeries } from '../historico/GraficoSeries';
 import { datosAnticipo, datosDemora, datosEscala } from './graficos';
+
+/** Qué tiempo cotizado corresponde a cada tramo del gráfico (las etiquetas directas son cortas). */
+function TramosDelCuadro({ textos }: { readonly textos: readonly string[] }) {
+  return (
+    <>
+      Tramos de cotización acumulada:{' '}
+      {textos.map((t, i) => `tramo ${formatearNumero(i + 1)}, ${t}`).join('; ')}.
+    </>
+  );
+}
 
 /**
  * Tres gráficos que explican la jubilación: la escala de porcentajes frente a los meses cotizados,
@@ -55,7 +66,13 @@ export function GraficosJubilacion() {
         unidadEje="% de reducción de la pensión"
         decimales={2}
         fuentes={voluntaria.fuentes}
-        nota="Definición: el coeficiente se aplica sobre la pensión resultante de aplicar el porcentaje por meses cotizados. Hay una serie por tramo de cotización acumulada."
+        nota={
+          <>
+            Definición: el coeficiente se aplica sobre la pensión resultante de aplicar el
+            porcentaje por meses cotizados. Hay una serie por tramo de cotización acumulada.{' '}
+            <TramosDelCuadro textos={voluntaria.descripcionSeries ?? []} />
+          </>
+        }
         comoLeerlo={
           <>
             <p>
@@ -79,7 +96,13 @@ export function GraficosJubilacion() {
         unidadEje="% de reducción de la pensión"
         decimales={2}
         fuentes={involuntaria.fuentes}
-        nota="Definición: es el cuadro que se aplica cuando el cese en el trabajo no se debe a la voluntad de la persona trabajadora y se cumplen los demás requisitos de la modalidad."
+        nota={
+          <>
+            Definición: es el cuadro que se aplica cuando el cese en el trabajo no se debe a la
+            voluntad de la persona trabajadora y se cumplen los demás requisitos de la modalidad.{' '}
+            <TramosDelCuadro textos={involuntaria.descripcionSeries ?? []} />
+          </>
+        }
         comoLeerlo={
           <>
             <p>

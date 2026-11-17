@@ -18,6 +18,8 @@ export interface DatosGrafico {
   /** Etiqueta de cada posición del eje horizontal. */
   readonly etiquetasX: readonly string[];
   readonly fuentes: readonly Dato[];
+  /** Qué significa cada serie, si la etiqueta directa es demasiado corta para decirlo (móvil). */
+  readonly descripcionSeries?: readonly string[];
 }
 
 const unDato = (fichero: string): Dato[] => {
@@ -55,22 +57,23 @@ export function datosAnticipo(cuadro: CuadroAnticipo): DatosGrafico {
   const meses = Array.from({ length: maximo }, (_, i) => i + 1);
   const [u2, u3, u4] = tabla.umbralesMeses;
   const dur = (m: number) => formatearDuracion(m);
-  const etiquetas = [
-    `Menos de ${dur(u2)} cotizados`,
-    `De ${dur(u2)} a menos de ${dur(u3)}`,
-    `De ${dur(u3)} a menos de ${dur(u4)}`,
+  const descripcionSeries = [
+    `menos de ${dur(u2)} cotizados`,
+    `de ${dur(u2)} a menos de ${dur(u3)}`,
+    `de ${dur(u3)} a menos de ${dur(u4)}`,
     `${dur(u4)} o más`,
   ];
   return {
-    series: etiquetas.map((etiqueta, i) => ({
+    series: descripcionSeries.map((_, i) => ({
       clave: `tramo-${String(i + 1)}`,
-      etiqueta,
+      etiqueta: `Tramo ${String(i + 1)}`,
       puntos: meses.flatMap((m, j) => {
         const valor = tabla.coeficientes.get(`t${String(i + 1)}-${String(m)}`);
         return valor === undefined ? [] : [{ anio: j, valor }];
       }),
     })),
     etiquetasX: meses.map((m) => dur(m)),
+    descripcionSeries,
     fuentes: unDato(
       cuadro === 'voluntaria'
         ? 'jubilacion-coeficientes-voluntaria'

@@ -1,0 +1,37 @@
+# Estado de la fase «Cómo se calcula»
+
+Rama `feat/fase-como-se-calcula`, creada desde `origin/main` (`d8a9a854a9bfc4ee694a9ad0513700d048c5f85f`, el PR #45; antes de empezar, el CI y el despliegue de ese commit estaban en verde: ejecuciones 113 de «CI» y de «Despliegue en GitHub Pages»). Sustituye el marcador en construcción de la sección «Cómo se calcula» por una página que explica, prestación a prestación (jubilación, incapacidad permanente, viudedad y orfandad), cómo se obtiene la cuantía. **No se ha cambiado el motor, las lecturas, «Tu pensión» ni los datos de parámetros.**
+
+Antes de empezar se comprobó (regla 12) que los últimos cambios en `data-raw/` y `modelos/` (cuatro PDF y liquidaciones del 16 y 17-11-2026) están reflejados en `main` y en sus tests; la página no lee `data-raw/` ni `modelos/` (solo los tests de normas leen el texto descargado de `data-raw/boe/`).
+
+## Qué explica cada sección y de dónde sale
+
+| Sección                | Esquema (pasos)                                                                                                                                                                                                   | Normas                                                                                                                              | Ejemplos (casos de oro)                                                                                                                              |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Jubilación             | Requisitos; ventana y divisor; actualización con el IPC; lagunas; base reguladora (con la opción transitoria); porcentaje por meses; modalidad (anticipada o demora); pensión máxima, mínimos y brecha; resultado | arts. 205, 207, 208, 209, 210, 57, 59, 60 y 58 TRLGSS; DT 4.ª, 7.ª, 8.ª, 9.ª, 34.ª, 38.ª, 39.ª, 40.ª y 41.ª; art. 2 RD 371/2023     | cinco: ordinaria, anticipada voluntaria, demorada, mínima y máxima (casos de oro 1, 2, 4, 6 y 5)                                                     |
+| Incapacidad permanente | Grado y periodo mínimo; base reguladora; años hasta la edad ordinaria y escala; porcentaje del grado; total cualificada; complemento de la gran incapacidad; máxima, mínimos y brecha; parcial; resultado         | arts. 194 a 197 TRLGSS y DT 26.ª; arts. 4 y 5 RD 1799/1985; arts. 6, 7 y 9 Decreto 1646/1972; arts. 15, 17 y 18 Orden de 15/04/1969 | cuatro: total, total cualificada, absoluta y gran incapacidad (`total-ec-45`, `total-cualificada-ec-58`, `absoluta-ec-45`, `gran-incapacidad-ec-45`) |
+| Viudedad               | Requisitos; base reguladora; porcentaje (general, edad avanzada, cargas); límite conjunto; máxima, mínimos y brecha; resultado                                                                                    | arts. 217, 219 a 222, 228 y 229 TRLGSS; art. 31 Decreto 3158/1966; art. 3 RD 900/2018; art. 7 Decreto 1646/1972                     | tres: general, edad avanzada y cargas con complemento a mínimos (`viudedad-52`, `viudedad-60-mayor-65`, `viudedad-70-cargas`)                        |
+| Orfandad               | Requisitos; base reguladora; porcentaje por huérfano y orfandad absoluta; límite conjunto; máxima, mínimos y brecha; resultado                                                                                    | arts. 217, 224, 228 y 229 TRLGSS; arts. 36 y 38 Decreto 3158/1966                                                                   | dos: un huérfano y orfandad absoluta con dos (`orfandad-un-huerfano`, `orfandad-absoluta-dos`)                                                       |
+
+Cada sección lleva «Quién la cobra» (remite a «Tipos de pensión»), parámetros vigentes de `data/parametros` con valor, versión, ubicación en la norma y fuente, ejemplos con sus tablas (qué entra, requisitos, pasos con norma y parámetros), «Lecturas que influyen» con estado y efecto medido, «Qué no calcula esta web» y enlace a «Tu pensión». La jubilación añade tres gráficos (escala de porcentajes, coeficientes de anticipo voluntaria e involuntaria y porcentaje de la demora). Detalle por paso, artículo y fichero: `docs/INVENTARIO_COMO_SE_CALCULA.md`.
+
+## Ejemplos y su comprobación
+
+Los catorce ejemplos están en `data/ejemplos/como-se-calcula.json` (supuestos ilustrativos, no datos observados). Cada uno coincide con un caso de oro del motor y con una cuenta a mano escrita en `src/modules/como-se-calcula/ejemplos.test.ts` (la operación va en un comentario); `pagina.test.tsx` comprueba que la página muestra la pensión y cada paso en euros que devuelve el motor, comparándola con la función directa de cada motor. Ninguno es un caso «independiente».
+
+## Pruebas
+
+- Unitarios: `ejemplos.test.ts` (19), `graficos.test.ts`, `formato-pasos.test.ts`, `datos-como.test.ts`, `scripts/como-se-calcula-fase.test.ts` (procedencia, sin cifras escritas a mano, normas contra el texto descargado, casos de oro, afirmaciones e inventario).
+- Componentes: `pagina.test.tsx` (estructura de cada sección con fuente, ejemplo, lecturas y «Qué no calcula»; navegación del índice; números del motor; efecto de las lecturas; neutralidad con la lista de valoraciones y la de veredictos).
+- Playwright: `e2e/como-se-calcula.spec.ts` (carga sin errores de consola ni peticiones externas, teclado, enlace a «Tu pensión», gráficos con tabla, móvil sin desbordes con todo abierto y axe WCAG AA de la página y de cada sección).
+- Todo el resto de pruebas, sin tocar: 124 ficheros y 2.586 pruebas de Vitest antes de la fase; 129 ficheros y 2.813 pruebas después (todas en verde), más `scripts/verificacion-ajustes-3.test.ts`, que gana un id en la lista de pendientes esperadas.
+
+## Tamaño del chunk de la página
+
+`dist/assets/Pagina-ti-V2r7h.js`: 71.294 bytes (18.016 bytes comprimidos con gzip), propio de la página y cargado solo al visitarla (`lazy` en `src/modules/paginas.ts`). Comparte con «Tu pensión» los chunks del motor y de los parámetros (`limitaciones-CNhXWX9S.js`, 1,75 MB y 143 kB comprimidos, y los de cada fichero de parámetros) y con las páginas históricas `Chart` (274 kB, 93 kB comprimidos); no se descarga nada nuevo del motor.
+
+## Decisiones, discrepancias y pendientes
+
+- Decisiones: `docs/DECISIONES.md`, sección «Fase “Cómo se calcula”».
+- Discrepancias del motor y de sus textos (no corregidas): `docs/DISCREPANCIAS.md` (descripción «periodo más largo» de la opción de la DT 4.ª.7, que los datos contradicen; limitaciones que dicen «no descargado» sobre el Reglamento de 1956 aunque el OCR está en el repositorio; orden del límite conjunto y los mínimos solo en el código; «confirmada» en los motivos de las lecturas; pasos duplicados de la base reguladora).
+- Pendientes: `docs/PENDIENTE_DATOS.md`. Ninguna regla de la página carece de texto normativo descargado. Afirmaciones: doce nuevas, once transcripciones y una pendiente con pregunta reducida (`web-como-sv-orden-limites`); pendientes de afirmaciones de 19 a 20 (tope 70), sin agrupar.

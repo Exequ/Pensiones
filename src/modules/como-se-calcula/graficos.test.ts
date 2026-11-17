@@ -65,6 +65,15 @@ describe('coeficientes de anticipación', () => {
     expect(valor(d.series[0]!.puntos, 47)).toBe(30);
     expect(d.etiquetasX).toHaveLength(48);
   });
+  it('las etiquetas directas son cortas y el tiempo de cada tramo va en la descripción', () => {
+    for (const cuadro of ['voluntaria', 'involuntaria'] as const) {
+      const d = datosAnticipo(cuadro);
+      expect(d.series.map((s) => s.etiqueta)).toEqual(['Tramo 1', 'Tramo 2', 'Tramo 3', 'Tramo 4']);
+      expect(d.descripcionSeries).toHaveLength(4);
+      expect(d.descripcionSeries![0]).toMatch(/^menos de 38 años y 6 meses cotizados$/);
+      expect(d.descripcionSeries![3]).toMatch(/ o más$/);
+    }
+  });
   it('a más anticipación, más reducción, en todos los tramos', () => {
     for (const cuadro of ['voluntaria', 'involuntaria'] as const) {
       for (const s of datosAnticipo(cuadro).series) {
