@@ -1,0 +1,513 @@
+{
+  "tipo": "extraccion-pdf",
+  "id": "complementos-genero-indicadores",
+  "title": "Indicadores básicos de los complementos por brecha de género y por maternidad a 1 de octubre de 2026",
+  "description": "Página de indicadores básicos del PDF: número de complementos en vigor, importe medio y variación en el último mes y en el último año, por tipo de complemento y sexo. Generado por scripts/etl/ss_complementos_genero.py.",
+  "columnas": [
+    {
+      "id": "id",
+      "descripcion": "Identificador: bloque, complemento y concepto",
+      "unidad": null
+    },
+    {
+      "id": "bloque",
+      "descripcion": "Bloque de la tabla de indicadores del PDF",
+      "unidad": null
+    },
+    {
+      "id": "complemento",
+      "descripcion": "brecha o maternidad",
+      "unidad": null
+    },
+    {
+      "id": "concepto",
+      "descripcion": "Concepto tal como figura en el PDF",
+      "unidad": null
+    },
+    {
+      "id": "ambos",
+      "descripcion": "Cifra para ambos sexos (número de pensiones, euros al mes o porcentaje según el bloque y el concepto)",
+      "unidad": null
+    },
+    {
+      "id": "hombres",
+      "descripcion": "Cifra para hombres",
+      "unidad": null
+    },
+    {
+      "id": "mujeres",
+      "descripcion": "Cifra para mujeres",
+      "unidad": null
+    },
+    {
+      "id": "unidad_cifra",
+      "descripcion": "pensiones, euros al mes o porcentaje",
+      "unidad": null
+    },
+    {
+      "id": "fichero",
+      "descripcion": "PDF de origen, ruta relativa al repositorio",
+      "unidad": null
+    },
+    {
+      "id": "sha256",
+      "descripcion": "Huella SHA-256 del PDF de origen",
+      "unidad": null
+    },
+    {
+      "id": "pagina",
+      "descripcion": "Página del PDF (numeración física, desde 1)",
+      "unidad": null
+    },
+    {
+      "id": "fila",
+      "descripcion": "Fila de la página de indicadores (desde 1)",
+      "unidad": null
+    },
+    {
+      "id": "linea",
+      "descripcion": "Línea de texto extraída del PDF, sin los espacios sobrantes",
+      "unidad": null
+    }
+  ],
+  "filas": 26,
+  "source": {
+    "title": "Pensiones contributivas del Sistema de la Seguridad Social en vigor a 1 de octubre de 2026: complementos por brecha de género y por maternidad según comunidad autónoma y provincia",
+    "publisher": "Instituto Nacional de la Seguridad Social, Subdirección General de Gestión Económico-Presupuestaria y Estudios Económicos (Seguridad Social)",
+    "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+  },
+  "fetchedAt": "2026-11-16",
+  "confidence": "alta",
+  "naturaleza": "observado",
+  "unidad": "Número de pensiones, euros al mes o porcentaje según el concepto",
+  "notes": "PDF aportado por el autor, descargado el 2026-11-16 según su indicación; no consta LEEME con la URL exacta del fichero, por lo que la URL es la de la página de estadísticas de la Seguridad Social donde se publican estos datos (sin comprobar que sea la de descarga) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla.",
+  "tolerancia": "Sin tolerancia en los recuentos; las variaciones porcentuales se comprueban con el redondeo con el que las publica la fuente (dos decimales en ambos sexos, uno en hombres y mujeres).",
+  "origenes": [
+    {
+      "fichero": "data-raw/seg-social-fin/Brecha de género.pdf",
+      "sha256": "499b1f7ebcb8a6a6e8c6f1b0ca4b83c2a7e414b4b8f7e8335556ca03d207eda3",
+      "paginas": 14,
+      "ejercicio": 2026
+    }
+  ],
+  "resumenValidaciones": {
+    "comprobaciones": 45,
+    "incorrectas": 0
+  },
+  "validacionesPorTabla": [
+    {
+      "ejercicio_pdf": 2026,
+      "tabla": "indicadores",
+      "tipo_pagina": "indicadores",
+      "comprobaciones": 45,
+      "incorrectas": 0
+    }
+  ],
+  "comprobacionesEspecificas": [
+    {
+      "id": "indicador-numero-brecha-ambos-0",
+      "descripcion": "Indicadores: «Por brecha de género» (brecha, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 1736331,
+      "obtenido": 1736331,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-ambos-1",
+      "descripcion": "Indicadores: «Por 1 hijo» (brecha, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 409534,
+      "obtenido": 409534,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-ambos-2",
+      "descripcion": "Indicadores: «Por 2 hijos» (brecha, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 885787,
+      "obtenido": 885787,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-ambos-3",
+      "descripcion": "Indicadores: «Por 3 hijos» (brecha, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 302895,
+      "obtenido": 302895,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-ambos-4",
+      "descripcion": "Indicadores: «Por 4 ó más hijos» (brecha, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 138113,
+      "obtenido": 138113,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-importe-brecha-ambos",
+      "descripcion": "Indicadores: importe medio (brecha, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 76.68,
+      "obtenido": 76.68,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-hombres-0",
+      "descripcion": "Indicadores: «Por brecha de género» (brecha, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 535674,
+      "obtenido": 535674,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-hombres-1",
+      "descripcion": "Indicadores: «Por 1 hijo» (brecha, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 154077,
+      "obtenido": 154077,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-hombres-2",
+      "descripcion": "Indicadores: «Por 2 hijos» (brecha, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 291029,
+      "obtenido": 291029,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-hombres-3",
+      "descripcion": "Indicadores: «Por 3 hijos» (brecha, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 70619,
+      "obtenido": 70619,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-hombres-4",
+      "descripcion": "Indicadores: «Por 4 ó más hijos» (brecha, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 19949,
+      "obtenido": 19949,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-importe-brecha-hombres",
+      "descripcion": "Indicadores: importe medio (brecha, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 70.14,
+      "obtenido": 70.14,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-mujeres-0",
+      "descripcion": "Indicadores: «Por brecha de género» (brecha, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 1200657,
+      "obtenido": 1200657,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-mujeres-1",
+      "descripcion": "Indicadores: «Por 1 hijo» (brecha, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 255457,
+      "obtenido": 255457,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-mujeres-2",
+      "descripcion": "Indicadores: «Por 2 hijos» (brecha, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 594758,
+      "obtenido": 594758,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-mujeres-3",
+      "descripcion": "Indicadores: «Por 3 hijos» (brecha, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 232276,
+      "obtenido": 232276,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-brecha-mujeres-4",
+      "descripcion": "Indicadores: «Por 4 ó más hijos» (brecha, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 118164,
+      "obtenido": 118164,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-importe-brecha-mujeres",
+      "descripcion": "Indicadores: importe medio (brecha, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 79.6,
+      "obtenido": 79.6,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-ambos-0",
+      "descripcion": "Indicadores: «Por maternidad» (maternidad, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 1005202,
+      "obtenido": 1005202,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-ambos-1",
+      "descripcion": "Indicadores: «Por 2 hijos» (maternidad, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 601562,
+      "obtenido": 601562,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-ambos-2",
+      "descripcion": "Indicadores: «Por 3 hijos» (maternidad, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 264972,
+      "obtenido": 264972,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-ambos-3",
+      "descripcion": "Indicadores: «Por 4 ó más hijos» (maternidad, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 138620,
+      "obtenido": 138620,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-importe-maternidad-ambos",
+      "descripcion": "Indicadores: importe medio (maternidad, ambos) coincide con el total de la tabla de territorio",
+      "esperado": 85.19,
+      "obtenido": 85.19,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-hombres-0",
+      "descripcion": "Indicadores: «Por maternidad» (maternidad, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 292850,
+      "obtenido": 292850,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-hombres-1",
+      "descripcion": "Indicadores: «Por 2 hijos» (maternidad, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 196142,
+      "obtenido": 196142,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-hombres-2",
+      "descripcion": "Indicadores: «Por 3 hijos» (maternidad, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 71878,
+      "obtenido": 71878,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-hombres-3",
+      "descripcion": "Indicadores: «Por 4 ó más hijos» (maternidad, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 24793,
+      "obtenido": 24793,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-importe-maternidad-hombres",
+      "descripcion": "Indicadores: importe medio (maternidad, hombres) coincide con el total de la tabla de territorio",
+      "esperado": 105.52,
+      "obtenido": 105.52,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-mujeres-0",
+      "descripcion": "Indicadores: «Por maternidad» (maternidad, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 712352,
+      "obtenido": 712352,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-mujeres-1",
+      "descripcion": "Indicadores: «Por 2 hijos» (maternidad, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 405420,
+      "obtenido": 405420,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-mujeres-2",
+      "descripcion": "Indicadores: «Por 3 hijos» (maternidad, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 193094,
+      "obtenido": 193094,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-numero-maternidad-mujeres-3",
+      "descripcion": "Indicadores: «Por 4 ó más hijos» (maternidad, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 113827,
+      "obtenido": 113827,
+      "diferencia": 0,
+      "tolerancia": 0,
+      "ok": true
+    },
+    {
+      "id": "indicador-importe-maternidad-mujeres",
+      "descripcion": "Indicadores: importe medio (maternidad, mujeres) coincide con el total de la tabla de territorio",
+      "esperado": 76.83,
+      "obtenido": 76.83,
+      "diferencia": 0.0,
+      "tolerancia": 0.005,
+      "ok": true
+    },
+    {
+      "id": "variacion-mes-brecha-ambos",
+      "descripcion": "Variación en el último mes (brecha, ambos): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 2.52,
+      "obtenido": 2.52,
+      "diferencia": 0.0,
+      "tolerancia": 0.0051,
+      "ok": true
+    },
+    {
+      "id": "variacion-mes-brecha-hombres",
+      "descripcion": "Variación en el último mes (brecha, hombres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 4.6,
+      "obtenido": 4.6,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-mes-brecha-mujeres",
+      "descripcion": "Variación en el último mes (brecha, mujeres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 1.6,
+      "obtenido": 1.6,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-mes-maternidad-ambos",
+      "descripcion": "Variación en el último mes (maternidad, ambos): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": -0.34,
+      "obtenido": -0.34,
+      "diferencia": 0.0,
+      "tolerancia": 0.0051,
+      "ok": true
+    },
+    {
+      "id": "variacion-mes-maternidad-hombres",
+      "descripcion": "Variación en el último mes (maternidad, hombres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": -0.1,
+      "obtenido": -0.1,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-mes-maternidad-mujeres",
+      "descripcion": "Variación en el último mes (maternidad, mujeres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": -0.4,
+      "obtenido": -0.4,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-anio-brecha-ambos",
+      "descripcion": "Variación en el último año (brecha, ambos): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 46.42,
+      "obtenido": 46.42,
+      "diferencia": 0.0,
+      "tolerancia": 0.0051,
+      "ok": true
+    },
+    {
+      "id": "variacion-anio-brecha-hombres",
+      "descripcion": "Variación en el último año (brecha, hombres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 175.2,
+      "obtenido": 175.2,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-anio-brecha-mujeres",
+      "descripcion": "Variación en el último año (brecha, mujeres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 21.1,
+      "obtenido": 21.1,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-anio-maternidad-ambos",
+      "descripcion": "Variación en el último año (maternidad, ambos): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": -0.37,
+      "obtenido": -0.37,
+      "diferencia": 0.0,
+      "tolerancia": 0.0051,
+      "ok": true
+    },
+    {
+      "id": "variacion-anio-maternidad-hombres",
+      "descripcion": "Variación en el último año (maternidad, hombres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": 9.4,
+      "obtenido": 9.4,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    },
+    {
+      "id": "variacion-anio-maternidad-mujeres",
+      "descripcion": "Variación en el último año (maternidad, mujeres): el porcentaje es la variación absoluta sobre el número del periodo anterior (número actual menos la variación)",
+      "esperado": -3.9,
+      "obtenido": -3.9,
+      "diferencia": 0.0,
+      "tolerancia": 0.051,
+      "ok": true
+    }
+  ]
+}
