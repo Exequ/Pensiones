@@ -781,6 +781,128 @@ export type ArchivoPersonas = z.infer<typeof ArchivoPersonas>;
 export type PersonaEjemplo = z.infer<typeof PersonaEjemplo>;
 
 // ---------------------------------------------------------------------------
+// Ejemplos de cálculo de «Cómo se calcula» (ilustrativos, elaboración propia)
+// ---------------------------------------------------------------------------
+
+const MesCarrera = z
+  .string()
+  .regex(/^\d{4}-(0[1-9]|1[0-2])$/, { error: 'Mes con formato AAAA-MM' });
+const FechaCompleta = z.string().regex(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/, {
+  error: 'Fecha con formato AAAA-MM-DD',
+});
+
+const TramoEjemplo = z.strictObject({
+  desde: MesCarrera,
+  hasta: MesCarrera,
+  baseMensual: z.number().positive(),
+});
+const CarreraEjemplo = z.array(TramoEjemplo).min(1);
+
+const CausanteEjemplo = z.strictObject({
+  fechaFallecimiento: FechaCompleta,
+  causa: z.enum(['enfermedad-comun', 'accidente-no-laboral']),
+  situacion: z.literal('alta'),
+  carrera: CarreraEjemplo,
+});
+
+const camposComunesEjemplo = {
+  id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
+  titulo: textoObligatorio('titulo'),
+  descripcion: textoObligatorio('descripcion'),
+  ilustrativo: z.literal(true, { error: 'Todo ejemplo debe llevar ilustrativo: true' }),
+  /** Caso de oro del que procede (fichero de tests del motor e identificador del caso). */
+  casoOro: z.strictObject({
+    fichero: textoObligatorio('casoOro.fichero'),
+    id: textoObligatorio('casoOro.id'),
+  }),
+  /** Variación del IPC supuesta para los años sin dato (fracción anual), si el cálculo la necesita. */
+  escenarioIpc: z.number().min(0).max(0.2).optional(),
+  source: Fuente,
+  fetchedAt: FechaDescarga,
+  confidence: Confianza,
+};
+
+export const EjemploJubilacion = z.strictObject({
+  ...camposComunesEjemplo,
+  prestacion: z.literal('jubilacion'),
+  entrada: z.strictObject({
+    carrera: CarreraEjemplo,
+    nacimiento: FechaCompleta,
+    fechaJubilacion: FechaCompleta,
+    modalidad: z.enum([
+      'ordinaria',
+      'anticipada-voluntaria',
+      'anticipada-involuntaria',
+      'demorada',
+    ]),
+    opciones: z
+      .strictObject({
+        actualizarBases: z.boolean().optional(),
+        usarOpcion25Anos: z.boolean().optional(),
+      })
+      .optional(),
+  }),
+});
+export const EjemploIncapacidad = z.strictObject({
+  ...camposComunesEjemplo,
+  prestacion: z.literal('incapacidad'),
+  entrada: z.strictObject({
+    carrera: CarreraEjemplo,
+    nacimiento: FechaCompleta,
+    fechaHechoCausante: FechaCompleta,
+    grado: z.enum(['parcial', 'total', 'absoluta', 'gran-incapacidad']),
+    origen: z.enum(['enfermedad-comun', 'accidente-no-laboral']),
+    opciones: z.strictObject({ actualizarBases: z.boolean().optional() }).optional(),
+  }),
+});
+export const EjemploViudedad = z.strictObject({
+  ...camposComunesEjemplo,
+  prestacion: z.literal('viudedad'),
+  entrada: z.strictObject({
+    causante: CausanteEjemplo,
+    viudo: z.strictObject({
+      vinculo: z.literal('conyuge'),
+      nacimiento: FechaCompleta,
+      fechaMatrimonio: FechaCompleta,
+      cargasFamiliares: z
+        .strictObject({
+          miembrosUnidadFamiliar: z.number().int().positive(),
+          rendimientosEjercicioAnteriorUnidadFamiliar: z.number().nonnegative(),
+        })
+        .optional(),
+    }),
+  }),
+});
+export const EjemploOrfandad = z.strictObject({
+  ...camposComunesEjemplo,
+  prestacion: z.literal('orfandad'),
+  entrada: z.strictObject({
+    causante: CausanteEjemplo,
+    huerfanos: z.array(z.strictObject({ nacimiento: FechaCompleta })).min(1),
+    opciones: z.strictObject({ orfandadAbsoluta: z.boolean().optional() }).optional(),
+  }),
+});
+
+export const EjemploCalculo = z.discriminatedUnion('prestacion', [
+  EjemploJubilacion,
+  EjemploIncapacidad,
+  EjemploViudedad,
+  EjemploOrfandad,
+]);
+
+export const ArchivoEjemplosCalculo = z.strictObject({
+  tipo: z.literal('ejemplos-calculo'),
+  id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
+  title: textoObligatorio('title'),
+  description: textoObligatorio('description'),
+  /** Nota visible en la página: los ejemplos son supuestos, no datos observados. */
+  nota: textoObligatorio('nota'),
+  ejemplos: z.array(EjemploCalculo).min(8).max(20),
+});
+export type ArchivoEjemplosCalculo = z.infer<typeof ArchivoEjemplosCalculo>;
+export type EjemploCalculo = z.infer<typeof EjemploCalculo>;
+
+// ---------------------------------------------------------------------------
 // Extracciones de PDF (Fase 5-A3): cada cifra con su referencia y la huella del documento
 // ---------------------------------------------------------------------------
 

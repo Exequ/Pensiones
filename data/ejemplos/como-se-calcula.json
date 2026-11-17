@@ -1,0 +1,514 @@
+{
+  "tipo": "ejemplos-calculo",
+  "id": "como-se-calcula-ejemplos",
+  "title": "Ejemplos de cálculo de «Cómo se calcula» (ilustrativos)",
+  "description": "Entradas de los ejemplos de la página «Cómo se calcula»: supuestos ilustrativos de elaboración propia, que reproducen casos de oro del motor. No son datos observados ni estadísticas de personas reales. Los resultados no están aquí: la página los calcula con el motor al abrirse.",
+  "nota": "Supuestos ilustrativos, no son datos observados: las carreras, las fechas y las bases de estos ejemplos son convenciones elegidas para que cada cuenta se pueda repetir a mano. Los resultados los calcula el motor de la web al abrir la página.",
+  "ejemplos": [
+    {
+      "id": "jub-ordinaria",
+      "prestacion": "jubilacion",
+      "titulo": "Jubilación ordinaria con carrera completa",
+      "descripcion": "Cotiza todos los meses desde el inicio de la carrera hasta el mes anterior a la jubilación con una base constante.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/jubilacion/casos-oro-motor.test.ts",
+        "id": "caso de oro 1"
+      },
+      "escenarioIpc": 0.02,
+      "entrada": {
+        "carrera": [
+          {
+            "desde": "1987-01",
+            "hasta": "2029-12",
+            "baseMensual": 2500
+          }
+        ],
+        "nacimiento": "1965-01-01",
+        "fechaJubilacion": "2030-01-01",
+        "modalidad": "ordinaria",
+        "opciones": {
+          "actualizarBases": false,
+          "usarOpcion25Anos": false
+        }
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    },
+    {
+      "id": "jub-anticipada-voluntaria",
+      "prestacion": "jubilacion",
+      "titulo": "Jubilación anticipada voluntaria",
+      "descripcion": "Se jubila antes de la edad ordinaria por decisión propia; el cálculo añade un coeficiente reductor.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/jubilacion/casos-oro-motor.test.ts",
+        "id": "caso de oro 2"
+      },
+      "escenarioIpc": 0.02,
+      "entrada": {
+        "carrera": [
+          {
+            "desde": "1988-01",
+            "hasta": "2029-12",
+            "baseMensual": 2500
+          }
+        ],
+        "nacimiento": "1966-01-01",
+        "fechaJubilacion": "2030-01-01",
+        "modalidad": "anticipada-voluntaria",
+        "opciones": {
+          "actualizarBases": false,
+          "usarOpcion25Anos": false
+        }
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    },
+    {
+      "id": "jub-demorada",
+      "prestacion": "jubilacion",
+      "titulo": "Jubilación demorada",
+      "descripcion": "Sigue cotizando después de la edad ordinaria; el cálculo añade un porcentaje adicional por cada año completo de demora.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/jubilacion/casos-oro-motor.test.ts",
+        "id": "caso de oro 4"
+      },
+      "escenarioIpc": 0.02,
+      "entrada": {
+        "carrera": [
+          {
+            "desde": "1986-01",
+            "hasta": "2030-12",
+            "baseMensual": 2500
+          }
+        ],
+        "nacimiento": "1964-01-01",
+        "fechaJubilacion": "2031-01-01",
+        "modalidad": "demorada",
+        "opciones": {
+          "actualizarBases": false,
+          "usarOpcion25Anos": false
+        }
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    },
+    {
+      "id": "jub-minima",
+      "prestacion": "jubilacion",
+      "titulo": "Jubilación con complemento a mínimos",
+      "descripcion": "Bases bajas: la pensión calculada queda por debajo de la cuantía mínima y se completa hasta ella.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/jubilacion/casos-oro-motor.test.ts",
+        "id": "caso de oro 6"
+      },
+      "escenarioIpc": 0.02,
+      "entrada": {
+        "carrera": [
+          {
+            "desde": "1988-01",
+            "hasta": "2029-12",
+            "baseMensual": 900
+          }
+        ],
+        "nacimiento": "1965-01-01",
+        "fechaJubilacion": "2030-01-01",
+        "modalidad": "ordinaria",
+        "opciones": {
+          "actualizarBases": false,
+          "usarOpcion25Anos": false
+        }
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    },
+    {
+      "id": "jub-maxima",
+      "prestacion": "jubilacion",
+      "titulo": "Jubilación limitada por la pensión máxima",
+      "descripcion": "Bases muy altas, con actualización con el IPC: la pensión calculada supera la pensión máxima y se limita a ella.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/jubilacion/casos-oro-motor.test.ts",
+        "id": "caso de oro 5"
+      },
+      "escenarioIpc": 0.02,
+      "entrada": {
+        "carrera": [
+          {
+            "desde": "1988-01",
+            "hasta": "2029-12",
+            "baseMensual": 9000
+          }
+        ],
+        "nacimiento": "1965-01-01",
+        "fechaJubilacion": "2030-01-01",
+        "modalidad": "ordinaria",
+        "opciones": {
+          "usarOpcion25Anos": false
+        }
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    },
+    {
+      "id": "ip-total",
+      "prestacion": "incapacidad",
+      "titulo": "Incapacidad permanente total por enfermedad común",
+      "descripcion": "Persona de edad intermedia con una carrera larga y base constante; el motor aplica el porcentaje del grado.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/incapacidad/casos-oro-incapacidad.test.ts",
+        "id": "total-ec-45"
+      },
+      "entrada": {
+        "carrera": [
+          {
+            "desde": "2000-01",
+            "hasta": "2026-02",
+            "baseMensual": 2000
+          }
+        ],
+        "nacimiento": "1981-03-10",
+        "fechaHechoCausante": "2026-03-15",
+        "grado": "total",
+        "origen": "enfermedad-comun",
+        "opciones": {
+          "actualizarBases": false
+        }
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    },
+    {
+      "id": "ip-total-cualificada",
+      "prestacion": "incapacidad",
+      "titulo": "Incapacidad permanente total cualificada",
+      "descripcion": "Persona de edad avanzada: se añaden los años que faltan hasta la edad ordinaria y el incremento de la total cualificada.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/incapacidad/casos-oro-incapacidad.test.ts",
+        "id": "total-cualificada-ec-58"
+      },
+      "entrada": {
+        "carrera": [
+          {
+            "desde": "2000-01",
+            "hasta": "2026-02",
+            "baseMensual": 2000
+          }
+        ],
+        "nacimiento": "1968-01-20",
+        "fechaHechoCausante": "2026-03-15",
+        "grado": "total",
+        "origen": "enfermedad-comun",
+        "opciones": {
+          "actualizarBases": false
+        }
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    },
+    {
+      "id": "ip-absoluta",
+      "prestacion": "incapacidad",
+      "titulo": "Incapacidad permanente absoluta por enfermedad común",
+      "descripcion": "Misma carrera y mismo hecho causante que el primer ejemplo de incapacidad, con el grado absoluto.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/incapacidad/casos-oro-incapacidad.test.ts",
+        "id": "absoluta-ec-45"
+      },
+      "entrada": {
+        "carrera": [
+          {
+            "desde": "2000-01",
+            "hasta": "2026-02",
+            "baseMensual": 2000
+          }
+        ],
+        "nacimiento": "1981-03-10",
+        "fechaHechoCausante": "2026-03-15",
+        "grado": "absoluta",
+        "origen": "enfermedad-comun",
+        "opciones": {
+          "actualizarBases": false
+        }
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    },
+    {
+      "id": "ip-gran-incapacidad",
+      "prestacion": "incapacidad",
+      "titulo": "Gran incapacidad por enfermedad común",
+      "descripcion": "Misma carrera y mismo hecho causante, con el grado de gran incapacidad: se añade el complemento por necesitar ayuda de otra persona.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/incapacidad/casos-oro-incapacidad.test.ts",
+        "id": "gran-incapacidad-ec-45"
+      },
+      "entrada": {
+        "carrera": [
+          {
+            "desde": "2000-01",
+            "hasta": "2026-02",
+            "baseMensual": 2000
+          }
+        ],
+        "nacimiento": "1981-03-10",
+        "fechaHechoCausante": "2026-03-15",
+        "grado": "gran-incapacidad",
+        "origen": "enfermedad-comun",
+        "opciones": {
+          "actualizarBases": false
+        }
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    },
+    {
+      "id": "viudedad-basica",
+      "prestacion": "viudedad",
+      "titulo": "Viudedad del cónyuge superviviente",
+      "descripcion": "Fallece una persona en alta con una carrera de base constante; su cónyuge tiene derecho al porcentaje general.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/supervivencia/casos-oro-supervivencia.test.ts",
+        "id": "viudedad-52"
+      },
+      "entrada": {
+        "causante": {
+          "fechaFallecimiento": "2026-03-15",
+          "causa": "enfermedad-comun",
+          "situacion": "alta",
+          "carrera": [
+            {
+              "desde": "2010-01",
+              "hasta": "2026-02",
+              "baseMensual": 2000
+            }
+          ]
+        },
+        "viudo": {
+          "vinculo": "conyuge",
+          "nacimiento": "1976-05-01",
+          "fechaMatrimonio": "2005-06-01"
+        }
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    },
+    {
+      "id": "viudedad-65",
+      "prestacion": "viudedad",
+      "titulo": "Viudedad con edad avanzada y sin otras rentas",
+      "descripcion": "El cónyuge superviviente tiene edad avanzada y no cobra otra pensión ni tiene rentas: se aplica un porcentaje mayor.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/supervivencia/casos-oro-supervivencia.test.ts",
+        "id": "viudedad-60-mayor-65"
+      },
+      "entrada": {
+        "causante": {
+          "fechaFallecimiento": "2026-03-15",
+          "causa": "enfermedad-comun",
+          "situacion": "alta",
+          "carrera": [
+            {
+              "desde": "2010-01",
+              "hasta": "2026-02",
+              "baseMensual": 2000
+            }
+          ]
+        },
+        "viudo": {
+          "vinculo": "conyuge",
+          "nacimiento": "1956-01-01",
+          "fechaMatrimonio": "2005-06-01"
+        }
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    },
+    {
+      "id": "viudedad-cargas",
+      "prestacion": "viudedad",
+      "titulo": "Viudedad con cargas familiares y complemento a mínimos",
+      "descripcion": "El cónyuge superviviente tiene cargas familiares y rentas bajas: se aplica el porcentaje mayor y la pensión se completa hasta la mínima.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/supervivencia/casos-oro-supervivencia.test.ts",
+        "id": "viudedad-70-cargas"
+      },
+      "entrada": {
+        "causante": {
+          "fechaFallecimiento": "2026-03-15",
+          "causa": "enfermedad-comun",
+          "situacion": "alta",
+          "carrera": [
+            {
+              "desde": "2010-01",
+              "hasta": "2026-02",
+              "baseMensual": 2000
+            }
+          ]
+        },
+        "viudo": {
+          "vinculo": "conyuge",
+          "nacimiento": "1981-01-01",
+          "fechaMatrimonio": "2005-06-01",
+          "cargasFamiliares": {
+            "miembrosUnidadFamiliar": 3,
+            "rendimientosEjercicioAnteriorUnidadFamiliar": 10000
+          }
+        }
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    },
+    {
+      "id": "orfandad-basica",
+      "prestacion": "orfandad",
+      "titulo": "Orfandad de una persona huérfana",
+      "descripcion": "Fallece una persona en alta con una carrera de base constante y deja una hija menor de edad.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/supervivencia/casos-oro-supervivencia.test.ts",
+        "id": "orfandad-un-huerfano"
+      },
+      "entrada": {
+        "causante": {
+          "fechaFallecimiento": "2026-03-15",
+          "causa": "enfermedad-comun",
+          "situacion": "alta",
+          "carrera": [
+            {
+              "desde": "2010-01",
+              "hasta": "2026-02",
+              "baseMensual": 2000
+            }
+          ]
+        },
+        "huerfanos": [
+          {
+            "nacimiento": "2016-01-01"
+          }
+        ]
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    },
+    {
+      "id": "orfandad-absoluta",
+      "prestacion": "orfandad",
+      "titulo": "Orfandad absoluta con dos huérfanos",
+      "descripcion": "Quedan dos huérfanos y no hay cónyuge superviviente con derecho a viudedad: se añade el incremento de la orfandad absoluta.",
+      "ilustrativo": true,
+      "casoOro": {
+        "fichero": "src/engine/supervivencia/casos-oro-supervivencia.test.ts",
+        "id": "orfandad-absoluta-dos"
+      },
+      "entrada": {
+        "causante": {
+          "fechaFallecimiento": "2026-03-15",
+          "causa": "enfermedad-comun",
+          "situacion": "alta",
+          "carrera": [
+            {
+              "desde": "2010-01",
+              "hasta": "2026-02",
+              "baseMensual": 2000
+            }
+          ]
+        },
+        "huerfanos": [
+          {
+            "nacimiento": "2016-01-01"
+          },
+          {
+            "nacimiento": "2012-01-01"
+          }
+        ],
+        "opciones": {
+          "orfandadAbsoluta": true
+        }
+      },
+      "source": {
+        "title": "Ejemplos de cálculo de la página «Cómo se calcula» (supuestos ilustrativos, elaboración propia)",
+        "publisher": "Proyecto «Pensiones» (elaboración propia)",
+        "url": "https://exequ.github.io/Pensiones/como-se-calcula"
+      },
+      "fetchedAt": "2026-11-17",
+      "confidence": "baja"
+    }
+  ]
+}

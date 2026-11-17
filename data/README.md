@@ -5,17 +5,17 @@ Cada fichero JSON de esta carpeta sigue el esquema `ArchivoDatos` de
 `npm run validate:data`, que falla si algún valor numérico no tiene una fuente con URL y
 fecha de descarga (`fetchedAt`).
 
-| Carpeta          | Contenido                                                            |
-| ---------------- | -------------------------------------------------------------------- |
-| `normativa/`     | Parámetros fijados por ley o reglamento (con referencia al BOE).     |
-| `parametros/`    | Parámetros anuales del sistema: bases, topes, revalorización…        |
-| `sistema/`       | Estadísticas del sistema: pensiones, gasto, ingresos, afiliación.    |
-| `demografia/`    | Población, mortalidad, fecundidad, migraciones y proyecciones.       |
-| `macro/`         | PIB, mercado de trabajo, salarios y tipos de interés.                |
-| `internacional/` | Comparativa internacional (OCDE y Eurostat) y contraste de España.   |
-| `mitos/`         | Catálogo de afirmaciones circulantes, con datos y definiciones.      |
-| `ejemplos/`      | Personas-ejemplo ilustrativas del simulador (elaboración propia).    |
-| `proyecciones/`  | Salidas de los modelos propios M1, M2 y M3 (proyecciones de modelo). |
+| Carpeta          | Contenido                                                                                                     |
+| ---------------- | ------------------------------------------------------------------------------------------------------------- |
+| `normativa/`     | Parámetros fijados por ley o reglamento (con referencia al BOE).                                              |
+| `parametros/`    | Parámetros anuales del sistema: bases, topes, revalorización…                                                 |
+| `sistema/`       | Estadísticas del sistema: pensiones, gasto, ingresos, afiliación.                                             |
+| `demografia/`    | Población, mortalidad, fecundidad, migraciones y proyecciones.                                                |
+| `macro/`         | PIB, mercado de trabajo, salarios y tipos de interés.                                                         |
+| `internacional/` | Comparativa internacional (OCDE y Eurostat) y contraste de España.                                            |
+| `mitos/`         | Catálogo de afirmaciones circulantes, con datos y definiciones.                                               |
+| `ejemplos/`      | Personas-ejemplo del simulador y ejemplos de cálculo de «Cómo se calcula» (ilustrativos, elaboración propia). |
+| `proyecciones/`  | Salidas de los modelos propios M1, M2 y M3 (proyecciones de modelo).                                          |
 
 Los ejemplos de los tests están en `scripts/fixtures/` y **no** deben copiarse aquí.
 

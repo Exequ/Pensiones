@@ -54,13 +54,13 @@ export const SECCIONES = [
     titulo: 'Cómo se calcula',
     tituloNav: 'Cómo se calcula',
     resumen:
-      'Paso a paso, de la base reguladora a la pensión inicial: años cotizados, edad de jubilación, coeficientes y complementos, y cómo se revaloriza después.',
+      'Prestación a prestación (jubilación, incapacidad permanente, viudedad y orfandad), cómo se obtiene la cuantía: qué entra, qué reglas se aplican y en qué orden, con qué parámetros y con qué lecturas dudosas, con ejemplos que calcula el motor de la web.',
     previsto: [
-      'La base reguladora: qué bases entran y cómo se actualizan.',
-      'El porcentaje según los años cotizados.',
-      'Edad de jubilación, coeficientes reductores por anticipo e incentivos por demora.',
-      'Complementos, pensión mínima y pensión máxima.',
-      'La revalorización anual de las pensiones en curso.',
+      'Una sección por prestación: quién la cobra, el esquema de cálculo por pasos con su norma, los parámetros vigentes con su fuente, ejemplos calculados paso a paso, las lecturas que influyen y lo que la web no calcula (disponible).',
+      'Gráficos de la jubilación: escala de porcentajes por meses cotizados, coeficientes reductores de la jubilación anticipada y porcentaje adicional de la demora, con su tabla de datos (disponible).',
+      'Definición de los términos que se repiten: hecho causante, base reguladora, carencia, coeficientes, pensión máxima y complemento a mínimos (disponible).',
+      'La revalorización anual de las pensiones en curso: no se explica en esta página (pendiente).',
+      'La prestación en favor de familiares y las pensiones no contributivas: no calculadas aquí todavía.',
     ],
   },
   {
