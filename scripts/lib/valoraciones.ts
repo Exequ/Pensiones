@@ -1,7 +1,50 @@
 /**
  * Palabras de valoración que no deben aparecer en los textos de las páginas «Hucha», «Financiación y
  * déficit», «Otros sistemas» y «Tipos de pensión» (regla c de CLAUDE.md, neutralidad). Lista ampliable; se usa en los tests de neutralidad.
+ * Desde la fase «Mitos y realidades» incluye también los términos de veredicto (`PALABRAS_DE_VEREDICTO`).
  */
+
+/**
+ * Términos de veredicto: calificar una afirmación como cierta o falsa, o dar la razón a una postura.
+ * La página «Mitos y realidades» no emite veredictos (regla c de CLAUDE.md): muestra qué dicen los
+ * datos, con qué definición y qué cambia según la definición. Sin tildes, en minúsculas y como inicio
+ * de palabra. Solo se admiten el título y el nombre de la sección («Mitos y realidades»), que
+ * `valoracionesEn` y `veredictosEn` descartan antes de buscar.
+ */
+export const PALABRAS_DE_VEREDICTO = [
+  'mito',
+  'falso',
+  'falsa',
+  'falsedad',
+  'verdader',
+  'desmentid',
+  'desmient',
+  'desmont',
+  'desmitific',
+  'confirmad',
+  'se confirma',
+  'refut',
+  'bulo',
+  'fake',
+  'leyenda urbana',
+  'falacia',
+  'mentira',
+  'embuste',
+  'tiene razon',
+  'no tiene razon',
+  'da la razon',
+  'da razon',
+  'es cierto',
+  'es cierta',
+  'no es cierto',
+  'no es cierta',
+  'son ciertos',
+  'son ciertas',
+  'es verdad',
+  'no es verdad',
+  'queda demostrad',
+  'la realidad es',
+] as const;
 
 /** Raíces de las palabras de valoración, sin tildes y en minúsculas. */
 export const PALABRAS_DE_VALORACION = [
@@ -200,6 +243,8 @@ export const PALABRAS_DE_VALORACION = [
   'pension generosa',
   'pension miserable',
   'irrisori',
+  // Fase «Mitos y realidades»: términos de veredicto.
+  ...PALABRAS_DE_VEREDICTO,
 ] as const;
 
 const normalizar = (t: string): string =>
@@ -213,8 +258,23 @@ export function valoracionesEn(texto: string): string[] {
   // «Protocolo de Déficit Excesivo» es el nombre de un procedimiento y «pensiones contributivas en déficit
   // estructural» es la condición literal que fija la norma para disponer del Fondo de Reserva (cita de
   // la cronología de /data), no valoraciones. Fuera de esas expresiones, «déficit estructural» se marca.
+  // «Mitos y realidades» es el nombre de la sección y el título de su página: no es un veredicto.
   const t = normalizar(texto)
     .replaceAll('deficit excesivo', '')
-    .replaceAll('contributivas en deficit estructural', '');
+    .replaceAll('contributivas en deficit estructural', '')
+    .replaceAll(NOMBRE_SECCION_MITOS, '');
   return PALABRAS_DE_VALORACION.filter((p) => new RegExp(`(^|[^a-z])${p}`).test(t));
+}
+
+/** Nombre de la sección, normalizado: se descarta antes de buscar términos de veredicto. */
+const NOMBRE_SECCION_MITOS = 'mitos y realidades';
+
+/**
+ * Términos de veredicto presentes en un texto. Sirve para las afirmaciones tal como circulan
+ * (entrecomilladas), que pueden contener palabras de valoración propias de la afirmación (p. ej.,
+ * «insostenibles») pero no términos de veredicto.
+ */
+export function veredictosEn(texto: string): string[] {
+  const t = normalizar(texto).replaceAll(NOMBRE_SECCION_MITOS, '');
+  return PALABRAS_DE_VEREDICTO.filter((p) => new RegExp(`(^|[^a-z])${p}`).test(t));
 }

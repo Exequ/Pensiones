@@ -2,7 +2,6 @@ import { lazy, type ComponentType } from 'react';
 import type { SlugSeccion } from './secciones';
 import ComoSeCalcula from './como-se-calcula/Pagina';
 import Reformas from './reformas/Pagina';
-import MitosYRealidades from './mitos-y-realidades/Pagina';
 import Metodologia from './metodologia/Pagina';
 
 /**
@@ -28,6 +27,9 @@ const Proyecciones = lazy(() => import('./proyecciones/Pagina'));
  */
 const OtrosSistemas = lazy(() => import('./otros-sistemas/Pagina'));
 const TiposDePension = lazy(() => import('./tipos-de-pension/Pagina'));
+
+/** «Mitos y realidades» se carga solo al visitarla: arrastra los cargadores de las páginas históricas. */
+const MitosYRealidades = lazy(() => import('./mitos-y-realidades/Pagina'));
 
 /** Componente de página de cada sección, indexado por su ruta. */
 export const PAGINAS: Record<SlugSeccion, ComponentType> = {
