@@ -1871,7 +1871,7 @@
     },
     {
       "id": "norma-ley-26-1985",
-      "texto": "Primera gran reforma de las pensiones contributivas en democracia: eleva la carencia de jubilación a quince años, amplía el periodo de cálculo de la base reguladora a los últimos ocho años (96 meses entre 112) y establece la revalorización anual según el IPC previsto.",
+      "texto": "Eleva la carencia de jubilación a quince años, amplía el periodo de cálculo de la base reguladora a los últimos ocho años (96 meses entre 112) y establece la revalorización anual según el IPC previsto.",
       "ubicacion": "Módulo «Reformas» (cronología)",
       "datos": ["normativa/cronologia.json#ley-26-1985"],
       "fuentes": [
@@ -1903,7 +1903,7 @@
     },
     {
       "id": "norma-ley-24-1997",
-      "texto": "Primera reforma derivada del Pacto de Toledo: separa las fuentes de financiación, prevé un Fondo de Reserva, amplía el periodo de cálculo a 15 años, fija por ley la escala de porcentajes (50 % a los 15 años, 100 % a los 35) y establece la revalorización automática según IPC previsto con cláusula de desviación.",
+      "texto": "Separa las fuentes de financiación, prevé un Fondo de Reserva, amplía el periodo de cálculo a 15 años, fija por ley la escala de porcentajes (50 % a los 15 años, 100 % a los 35) y establece la revalorización según el IPC previsto con cláusula de desviación.",
       "ubicacion": "Módulo «Reformas» (cronología)",
       "datos": ["normativa/cronologia.json#ley-24-1997"],
       "fuentes": [
@@ -1967,7 +1967,7 @@
     },
     {
       "id": "norma-ley-40-2007",
-      "texto": "Desarrolla el Acuerdo de 13 de julio de 2006: exige que los 15 años de carencia sean días efectivos (sin pagas extra), eleva el incentivo por demora (2 % o 3 % anual), endurece la jubilación parcial (61 años, 6 de antigüedad, 30 cotizados), suaviza los coeficientes reductores para 30-34 años cotizados y reconoce la viudedad a parejas de hecho.",
+      "texto": "Desarrolla el Acuerdo de 13 de julio de 2006: exige que los 15 años de carencia sean días efectivos (sin pagas extra), fija el incentivo por demora en el 2 % o el 3 % anual, modifica los requisitos de la jubilación parcial (61 años, 6 de antigüedad, 30 cotizados), fija el coeficiente reductor del 7,5 % para 30-34 años cotizados y reconoce la viudedad a parejas de hecho.",
       "ubicacion": "Módulo «Reformas» (cronología)",
       "datos": ["normativa/cronologia.json#ley-40-2007"],
       "fuentes": [
@@ -1983,7 +1983,7 @@
     },
     {
       "id": "norma-ley-27-2011",
-      "texto": "Gran reforma paramétrica de 2011: retrasa gradualmente la edad ordinaria de 65 a 67 años (65 con 38 años y 6 meses cotizados), amplía el periodo de cálculo de 15 a 25 años, exige 37 años para el 100 %, rediseña la jubilación anticipada y prevé un factor de sostenibilidad a partir de 2027.",
+      "texto": "Eleva gradualmente la edad ordinaria de 65 a 67 años (65 con 38 años y 6 meses cotizados), amplía el periodo de cálculo de 15 a 25 años, fija en 37 los años para el 100 %, modifica la jubilación anticipada y prevé un factor de sostenibilidad a partir de 2027.",
       "ubicacion": "Módulo «Reformas» (cronología)",
       "datos": ["normativa/cronologia.json#ley-27-2011"],
       "fuentes": [
@@ -2015,7 +2015,7 @@
     },
     {
       "id": "norma-rdl-5-2013",
-      "texto": "Regula la compatibilidad entre pensión de jubilación y trabajo, endurece la jubilación anticipada y modifica la jubilación parcial.",
+      "texto": "Regula la compatibilidad entre pensión de jubilación y trabajo, modifica los requisitos de la jubilación anticipada y modifica la jubilación parcial.",
       "ubicacion": "Módulo «Reformas» (cronología)",
       "datos": ["normativa/cronologia.json#rdl-5-2013"],
       "fuentes": [
@@ -2127,7 +2127,7 @@
     },
     {
       "id": "norma-rdl-11-2024",
-      "texto": "Mejora la compatibilidad de la pensión de jubilación con el trabajo (jubilación activa) y el complemento por demora.",
+      "texto": "Modifica la compatibilidad de la pensión de jubilación con el trabajo (jubilación activa) y el complemento por demora.",
       "ubicacion": "Módulo «Reformas» (cronología)",
       "datos": ["normativa/cronologia.json#rdl-11-2024"],
       "fuentes": [

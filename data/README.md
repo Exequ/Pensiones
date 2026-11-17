@@ -141,6 +141,21 @@ Generados por `scripts/etl/jubilacion_reglas.py` (cita literal comprobada por c�
 
 Salidas de los modelos propios M1, M2 y M3, **proyecciones de modelo y no datos observados** (`tipo: "proyeccion"`, `naturaleza: "proyeccion-de-modelo"`). Detalle, escenario, procedencia y cómo regenerarlas en [proyecciones/README.md](proyecciones/README.md).
 
+## Regenerar `docs/FUENTES.md`, `docs/claims.json` y `docs/REVISION_ACTUARIAL.md`
+
+Los tres ficheros los genera `scripts/etl/fuentes_claims.py` a partir de `/data`, de `docs/claims-web.json` (afirmaciones de los textos de la web, que se mantienen a mano), de `docs/revision-actuarial/aplicacion-tanda3.json` y de `docs/auditoria-independiente.json`. No se editan a mano: un cambio en una afirmación se hace en su origen y se regenera.
+
+```bash
+npm ci                                  # el generador da el formato final con el Prettier del repositorio
+python3 -I scripts/etl/fuentes_claims.py
+git diff --stat docs/                   # solo deben cambiar las afirmaciones cuyo origen ha cambiado
+```
+
+- Salida determinista: regenerado dos veces da los mismos bytes, y coincide con los ficheros versionados. `scripts/generador-claims.test.ts` lo comprueba (escribe en una carpeta temporal con `SALIDA_DOCS`, sin tocar `docs/`) y comprueba además que ninguna afirmación de `claims-web.json` se pierde ni cambia de texto o de estado.
+- La fecha de descarga de las afirmaciones generadas es `FECHA_DESCARGA` (por defecto, la fijada en `scripts/etl/comun.py`); no se cambia salvo que se descargue de nuevo la fuente.
+- El formato lo da Prettier con `.prettierrc.json`; el generador lo ejecuta al terminar. Sin ese paso, `json.dump` y las tablas en bruto difieren de lo versionado en unas mil líneas que no son de contenido (causa de la diferencia detectada en la fase «Metodología»).
+- Las afirmaciones `norma-*` salen de `data/normativa/cronologia.json`: si se cambia un resumen de esa cronología, hay que regenerar. Las afirmaciones propias de la web (`web-*`) se añaden o editan en `docs/claims-web.json`.
+
 ## Formato
 
 ```jsonc
