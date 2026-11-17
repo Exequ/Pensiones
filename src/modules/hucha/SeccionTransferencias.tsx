@@ -169,7 +169,7 @@ export function SeccionTransferencias() {
         presupuesto, de la que se toma la cifra de cierre de cada año. Los datos de la ejecución son
         anuales y, dentro de cada año, acumulados a la fecha de cierre de cada trimestre; los flujos
         trimestrales de esta página son la diferencia entre dos acumulados consecutivos. En las
-        fuentes descargadas no consta la pauta con que el Estado efectúa las transferencias
+        fuentes consultadas no consta la pauta con que el Estado efectúa las transferencias
         (mensual, trimestral u otra), por lo que esta página no la afirma.
       </p>
       <p className="hist-aviso">
@@ -356,7 +356,7 @@ export function SeccionTransferencias() {
             Cada declaración cubre un periodo distinto y no se pueden sumar entre sí. La tabla no
             dice cuánto de cada año corresponde a cada finalidad, ni explica la diferencia con las
             cifras de la ejecución: la causa completa de esa diferencia no está verificada con los
-            datos descargados.
+            datos consultados.
           </p>
         </ComoLeerlo>
         <p className="hucha-pendiente">

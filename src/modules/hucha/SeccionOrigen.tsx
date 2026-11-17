@@ -203,7 +203,7 @@ export function SeccionOrigen() {
           <dt>Gastos impropios</dt>
           <dd>
             <p>
-              No hay una definición única en las fuentes descargadas. El Tribunal de Cuentas recoge,
+              No hay una definición única en las fuentes consultadas. El Tribunal de Cuentas recoge,
               del Informe de Evaluación y Reforma del Pacto de Toledo, la constatación de que «
               {cita('definicion-costes-impropios-pacto-toledo')}».
               {enumeracionImpropios === undefined
@@ -218,14 +218,14 @@ export function SeccionOrigen() {
       <p>
         La tabla pone, para el mismo periodo, las cifras de la ejecución del presupuesto y las del
         Tribunal de Cuentas, con el periodo de su declaración anterior y con el de la más reciente.
-        No coinciden, y con los datos descargados no se puede conciliar una cifra con otra partida a
+        No coinciden, y con los datos consultados no se puede conciliar una cifra con otra partida a
         partida.
       </p>
       <p id="origen-clasificacion">
         Lo que sí consta es que los dos criterios de clasificación no son el mismo: la ejecución del
         presupuesto clasifica las transferencias por su origen y el Tribunal de Cuentas las cifra
         por su finalidad. La causa completa de la diferencia entre las dos cifras no está verificada
-        con los datos descargados.
+        con los datos consultados.
       </p>
       <div className="hist-definiciones">
         <DataTable

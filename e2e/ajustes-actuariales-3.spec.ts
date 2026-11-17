@@ -74,7 +74,7 @@ test.describe('Ajustes actuariales 3: páginas tocadas', () => {
     await esperarPagina(page);
     const seccion = page.locator('#saldos').locator('xpath=ancestor::section[1]');
     await expect(seccion).toContainText(
-      'Con las fuentes descargadas no se puede conciliar esa diferencia',
+      'Con las fuentes consultadas no se puede conciliar esa diferencia',
     );
     await expect(seccion).toContainText('que cuentan como ingreso');
     await expect(seccion).not.toContainText(/devengo/i);

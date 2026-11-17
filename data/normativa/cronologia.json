@@ -18,7 +18,7 @@
         "fecha": null,
         "base": "sin-texto",
         "cita": null,
-        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+        "ubicacion": "Sin texto de la norma ni metadatos de vigencia."
       },
       "cambios": [
         {
@@ -78,7 +78,7 @@
         "fecha": "1994-09-01",
         "base": "metadatos-boe",
         "cita": "Metadatos BOE: vigencia 1994-09-01",
-        "ubicacion": "data/normativa/cronologia.json, notas de la norma (metadatos del BOE descargados el 2026-11-11)."
+        "ubicacion": "Notas de la norma (metadatos del BOE consultados el 2026-11-11)."
       },
       "cambios": [
         {
@@ -146,7 +146,7 @@
         "fecha": null,
         "base": "sin-texto",
         "cita": null,
-        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+        "ubicacion": "Sin texto de la norma ni metadatos de vigencia."
       },
       "cambios": [
         {
@@ -167,7 +167,7 @@
         },
         {
           "parametro": "escala-porcentajes",
-          "antes": "La LGSS 1994 remitía a la escala de los reglamentos generales (no descargados). La exposición de motivos indica que ya se percibía el 100 % con 35 años de cotización.",
+          "antes": "La LGSS 1994 remitía a la escala de los reglamentos generales (no consultados). La exposición de motivos indica que ya se percibía el 100 % con 35 años de cotización.",
           "despues": "50 % por los primeros 15 años; 3 % por cada año entre el 16º y el 25º; 2 % por cada año desde el 26º; máximo 100 % (35 años).",
           "transicion": "aplicación inmediata",
           "articulos": "Artículo 6 (nueva redacción art. 163 LGSS)",
@@ -246,7 +246,7 @@
         "fecha": "2002-01-01",
         "base": "cronologia",
         "cita": "Vigencia 1-1-2002",
-        "ubicacion": "data/normativa/cronologia.json, transición de los cambios de la norma (fecha de los artículos que recoge la cronología)."
+        "ubicacion": "Transición de los cambios de la norma (fecha de los artículos que recoge la cronología)."
       },
       "cambios": [
         {
@@ -298,7 +298,7 @@
         "fecha": "2002-07-14",
         "base": "metadatos-boe",
         "cita": "vigencia 2002-07-14",
-        "ubicacion": "data/normativa/cronologia.json, notas de la norma (metadatos del BOE descargados el 2026-11-11)."
+        "ubicacion": "Notas de la norma (metadatos del BOE consultados el 2026-11-11)."
       },
       "cambios": [
         {
@@ -374,7 +374,7 @@
         "fecha": "2003-10-01",
         "base": "regla-sobre-publicacion",
         "cita": "Entrada en vigor al día siguiente de su publicación",
-        "ubicacion": "data/normativa/cronologia.json, transición del cambio de la norma; la fecha es el día siguiente a la publicación (2003-09-30)."
+        "ubicacion": "Transición del cambio de la norma; la fecha es el día siguiente a la publicación (2003-09-30)."
       },
       "cambios": [
         {
@@ -410,7 +410,7 @@
         "fecha": "2008-01-01",
         "base": "metadatos-boe",
         "cita": "metadatos BOE: vigencia 2008-01-01",
-        "ubicacion": "data/normativa/cronologia.json, notas de la norma (metadatos del BOE descargados el 2026-11-11); la cronología señala una excepción (disposición adicional cuarta)."
+        "ubicacion": "Notas de la norma (metadatos del BOE consultados el 2026-11-11); la cronología señala una excepción (disposición adicional cuarta)."
       },
       "cambios": [
         {
@@ -486,7 +486,7 @@
         "fecha": "2013-01-01",
         "base": "cronologia",
         "cita": "Entrada en vigor general el 1-1-2013 (disp. final 12ª), con excepciones.",
-        "ubicacion": "data/normativa/cronologia.json, notas de la norma; la cronología señala excepciones y la transición de cada cambio indica su fecha."
+        "ubicacion": "Notas de la norma; la cronología señala excepciones y la transición de cada cambio indica su fecha."
       },
       "cambios": [
         {
@@ -594,7 +594,7 @@
         "fecha": null,
         "base": "sin-texto",
         "cita": null,
-        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+        "ubicacion": "Sin texto de la norma ni metadatos de vigencia."
       },
       "cambios": [
         {
@@ -629,7 +629,7 @@
         "fecha": null,
         "base": "sin-texto",
         "cita": null,
-        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+        "ubicacion": "Sin texto de la norma ni metadatos de vigencia."
       },
       "cambios": [
         {
@@ -680,7 +680,7 @@
         "fecha": null,
         "base": "sin-texto",
         "cita": null,
-        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+        "ubicacion": "Sin texto de la norma ni metadatos de vigencia."
       },
       "cambios": [
         {
@@ -724,7 +724,7 @@
         "fecha": "2016-01-02",
         "base": "disposicion-final",
         "cita": "El presente real decreto legislativo y el Texto Refundido que aprueba entrarán en vigor el 2 de enero de 2016.",
-        "ubicacion": "data-raw/boe/trlgss-2015-consolidado.txt, disposición final única (texto original)."
+        "ubicacion": "Disposición final única (texto original)."
       },
       "textoDescargado": "data-raw/boe/trlgss-2015-consolidado.txt",
       "cambios": [
@@ -760,7 +760,7 @@
         "fecha": null,
         "base": "sin-texto",
         "cita": null,
-        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+        "ubicacion": "Sin texto de la norma ni metadatos de vigencia."
       },
       "cambios": [
         {
@@ -803,7 +803,7 @@
         "fecha": null,
         "base": "sin-texto",
         "cita": null,
-        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+        "ubicacion": "Sin texto de la norma ni metadatos de vigencia."
       },
       "cambios": [
         {
@@ -838,7 +838,7 @@
         "fecha": "2022-01-01",
         "base": "disposicion-final",
         "cita": "La presente ley entrará en vigor el 1 de enero de 2022.",
-        "ubicacion": "data-raw/boe/ley-21-2021.txt, disposición final octava."
+        "ubicacion": "Disposición final octava."
       },
       "textoDescargado": "data-raw/boe/ley-21-2021.txt",
       "cambios": [
@@ -898,7 +898,7 @@
         "fecha": "2023-04-01",
         "base": "disposicion-final",
         "cita": "Este real decreto-ley entrará en vigor el día primero del mes siguiente al de su publicación en el «Boletín Oficial del Estado», excepto los siguientes preceptos:",
-        "ubicacion": "data-raw/boe/rdl-2-2023.txt, disposición final décima (con excepciones); la fecha es la de vigencia de los metadatos del BOE de ese fichero."
+        "ubicacion": "Disposición final décima (con excepciones); la fecha es la de vigencia de los metadatos del BOE de la norma."
       },
       "textoDescargado": "data-raw/boe/rdl-2-2023.txt",
       "cambios": [
@@ -950,7 +950,7 @@
         "fecha": null,
         "base": "sin-texto",
         "cita": null,
-        "ubicacion": "No consta en los textos ni en los datos descargados del repositorio; la descarga está anotada en docs/PENDIENTE_DATOS.md."
+        "ubicacion": "Sin texto de la norma ni metadatos de vigencia."
       },
       "cambios": [
         {
@@ -993,7 +993,7 @@
         "fecha": "2025-04-16",
         "base": "disposicion-final",
         "cita": "El presente real decreto entrará en vigor el día de su publicación en el «Boletín Oficial del Estado», con efectos económicos desde el día 1 de enero de 2025.",
-        "ubicacion": "data-raw/boe/BOE-A-2025-7660.txt, disposición final tercera; la fecha es la de publicación."
+        "ubicacion": "Disposición final tercera; la fecha es la de publicación."
       },
       "textoDescargado": "data-raw/boe/BOE-A-2025-7660.txt",
       "cambios": [
@@ -1029,7 +1029,7 @@
         "fecha": "2026-03-26",
         "base": "disposicion-final",
         "cita": "El presente real decreto entrará en vigor el día de su publicación en el «Boletín Oficial del Estado», con efectos económicos desde el día 1 de enero de 2026.",
-        "ubicacion": "data-raw/boe/BOE-A-2026-6977.txt, disposición final tercera; la fecha es la de publicación."
+        "ubicacion": "Disposición final tercera; la fecha es la de publicación."
       },
       "textoDescargado": "data-raw/boe/BOE-A-2026-6977.txt",
       "cambios": [

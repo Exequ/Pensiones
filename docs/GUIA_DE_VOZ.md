@@ -1,0 +1,51 @@
+# Guía de voz de la web
+
+Fase R1. Define cómo se escribe todo texto visible de la web. La protegen `src/app/voz-rutas.test.tsx` (todas las rutas) y
+`scripts/voz-web.test.ts` (detector y cadenas de código), con la lista de `scripts/lib/voz.ts` (la lista de esta guía es la de ese módulo).
+
+## Principios
+
+1. **Voz objetiva de publicación.** Los textos informan de qué dice cada fuente y de qué se calcula
+   a partir de ella. No narran cómo se hizo el trabajo.
+2. **El lector no conoce el proyecto.** Un texto debe entenderse sin saber qué es un fichero de
+   datos, un repositorio, una tanda de revisión o una fase.
+3. **La web nombra la fuente oficial, no el fichero del proyecto.** Un dato procede de «el INE», «el
+   BOE» o «la Seguridad Social», no de «data/…json». Lo que describe cómo se obtuvo y se comprueba el
+   trabajo está solo en la página «Metodología».
+4. **No se añaden afirmaciones al reescribir.** Quitar una expresión no puede perder un hecho: el
+   hecho sigue con su fuente oficial. Si un texto solo describía trabajo interno, se quita.
+5. **Neutralidad** (regla c de `CLAUDE.md`): sin valoraciones ni veredictos.
+
+## Expresiones prohibidas fuera de la zona permitida
+
+Con y sin tilde, en singular y en plural:
+
+| Familia     | Expresiones                                                                                         |
+| ----------- | --------------------------------------------------------------------------------------------------- |
+| Descarga    | «descargado/a(s)» referido a ficheros, textos, normas o datos; «la descarga está…»                  |
+| Repositorio | «repositorio», «repo», «GitHub», «commit», «claims», «Claude», «fichero(s) de datos»                |
+| Rutas       | `data/…`, `data-raw/…`, `/data`, `docs/…`, `modelos/…`, `src/…`, `scripts/…`, `.json`, `.md`, `.ts` |
+| Revisión    | «revisor», «revisión actuarial», «revisión interna»                                                 |
+| Literal     | «Literal de la fuente»                                                                              |
+
+Única tolerancia, hasta la fase R2: la línea de fuente actual («· descargado el AAAA-MM-DD ·»), el
+título de fuente «versión descargada el AAAA-MM-DD» y el título de las salidas de los modelos
+(«código del modelo en el repositorio y salidas de su ejecución»). Son de la línea de fuente, que
+cambia la fase R2.
+
+**Zona permitida** (`ZONA_PERMITIDA` en `scripts/lib/voz.ts`): la página «Metodología» completa, que
+explica la revisión actuarial y los medios de verificación («Dónde consta») y, en «Cómo
+reproducirlo», el repositorio, las rutas y los comandos. Ninguna otra.
+
+## Expresiones estándar
+
+| En lugar de…                                     | Escribir…                                                                          |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| «no consta en los textos / ficheros descargados» | «no consta en las fuentes consultadas»                                             |
+| «con los datos descargados no se puede…»         | «con los datos consultados no se puede…»                                           |
+| «no está en /data», «no estructurado en /data»   | «no consta en los datos de la web», «no se ha incorporado a los datos de la web»   |
+| «el literal de la fuente es…»                    | la explicación con fuente; el literal queda en el desplegable de fuentes (fase R2) |
+| «según el revisor…» (opinión sin comprobar)      | el hecho comprobado, o «no comprobado en las fuentes consultadas»                  |
+| «la revisión actuarial ha cerrado la lectura»    | «la duda de interpretación está cerrada»                                           |
+| «el dato no está descargado»                     | «la fuente no precisa…», «no hay dato publicado para…»                             |
+| nombre de un fichero del proyecto                | «según [organismo], …»                                                             |

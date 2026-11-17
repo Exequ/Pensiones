@@ -82,7 +82,7 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
       <p>
         Cuánto gasta el sector público en pensiones, en proporción a lo que produce la economía, lo
         miden la OCDE y Eurostat con delimitaciones propias, y el perímetro de cada una no consta en
-        las fuentes descargadas. Aquí se muestran las dos, cada una ordenada por sus propios
+        las fuentes consultadas. Aquí se muestran las dos, cada una ordenada por sus propios
         valores, y no se elige ninguna como la correcta. España, en el color de resaltado; las
         medias, con contorno.
       </p>
@@ -108,7 +108,7 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
           nota={
             <>
               Literal de la medida en la fuente: «{d.ocde.literalMedida(MEDIDA.gasto)}». Perímetro:
-              no verificado en las fuentes descargadas (no consta qué regímenes y prestaciones
+              no verificado en las fuentes consultadas (no consta qué regímenes y prestaciones
               incluye).
             </>
           }
@@ -138,7 +138,7 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
           fuentes={datoEurostat}
           nota={
             <>
-              Perímetro de la serie de Eurostat: no verificado en las fuentes descargadas (los
+              Perímetro de la serie de Eurostat: no verificado en las fuentes consultadas (los
               metadatos solo dicen que es gasto en prestaciones de protección social por función).
               Eurostat no publica Estados Unidos; publica la Unión Europea desde {primeraUE} y el
               Reino Unido hasta {ultimaGBR}.
@@ -153,7 +153,7 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
               </p>
               <p>
                 No es lo mismo que el gasto en pensiones de la OCDE: cada fuente delimita lo que
-                mide y los datos descargados no permiten reconciliarlas. Un país sin dato en un año
+                mide y los datos consultados no permiten reconciliarlas. Un país sin dato en un año
                 aparece en la tabla con «—».
               </p>
             </>
@@ -184,7 +184,7 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
               valor: espanaPropio,
             },
           ]}
-          pie="Los datos descargados no permiten reconciliar las tres cifras partida a partida; la nota de definición de cada gráfico recoge lo que consta de cada delimitación."
+          pie="Los datos consultados no permiten reconciliar las tres cifras partida a partida; la nota de definición de cada gráfico recoge lo que consta de cada delimitación."
         />
         <SourceLine datos={[datoOcde, datoEurostat, propio.dato]} />
       </div>

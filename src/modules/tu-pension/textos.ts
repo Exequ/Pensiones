@@ -64,7 +64,7 @@ export const TEXTOS = {
   supuestosIntro:
     'Una lectura abierta es una duda de interpretación de la norma que el cálculo no resuelve por sí solo: se aplica una opción por defecto y se deja constancia. Aquí aparecen las que afectan a la jubilación, con su estado. Puedes elegir otra opción en cualquiera de ellas para ver cuánto cambia tu resultado; ninguna opción se presenta como la correcta.',
   supuestosEstadoNota:
-    'El estado indica en qué punto está la revisión actuarial de cada lectura: es información sobre el proyecto, no una indicación de cuál elegir. Las lecturas provisionales y las pendientes se muestran igual que las decididas.',
+    'El estado indica en qué punto está cada lectura: es información sobre la lectura, no una indicación de cuál elegir. Las lecturas provisionales y las pendientes se muestran igual que las decididas.',
   supuestosEfecto: 'Efecto en tu resultado',
   supuestosEfectoNota:
     'El efecto de cada alternativa se mide frente a tu elección actual, cambiando solo esa lectura.',

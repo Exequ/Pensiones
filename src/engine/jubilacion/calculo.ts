@@ -161,7 +161,7 @@ export function calcularJubilacionConParametros(
   if (modalidad !== 'ordinaria' && anio < params.coeficientesInvoluntaria.desde) {
     throw new NoImplementada(
       `Jubilación ${modalidad} con hecho causante en ${anio}`,
-      `Los cuadros de /data rigen desde ${params.coeficientesInvoluntaria.desde}.`,
+      `Los cuadros de la web rigen desde ${params.coeficientesInvoluntaria.desde}.`,
     );
   }
 
@@ -810,7 +810,7 @@ export function calcularJubilacionConParametros(
       if (fecha < desde) {
         throw new NoImplementada(
           'Opción mixta de la demora con hecho causante anterior a 2026-08-28',
-          'Rige la redacción original del RD 371/2023, no transcrita en /data.',
+          'Rige la redacción original del RD 371/2023, no incorporada a los datos de la web.',
         );
       }
       const reparto = repartoMixto(params.reglasDemora, t.meses);
@@ -928,7 +928,7 @@ export function calcularJubilacionConParametros(
     const minimaMensual = (minima.valor / pagas) * factor;
     if (opciones.situacionFamiliar === 'conyuge-a-cargo' && rentas > 0) {
       ctx.avisos.add(
-        'Complemento a mínimos con cónyuge a cargo y rentas: el límite de ingresos con cónyuge a cargo no está en /data; no se aplica el complemento (no implementada).',
+        'Complemento a mínimos con cónyuge a cargo y rentas: el límite de ingresos con cónyuge a cargo no consta en los datos de la web; no se aplica el complemento (no implementada).',
       );
     } else if (rentas > limite.valor) {
       paso(

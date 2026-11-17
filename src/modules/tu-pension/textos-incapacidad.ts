@@ -69,7 +69,7 @@ export const TEXTOS_INCAPACIDAD_PROPIOS = {
   intervienenEfecto: 'Efecto de la alternativa',
   intervienenSinEfecto: 'Con tus datos no se ha podido medir el efecto de la alternativa.',
   intervienenNota:
-    'Un estado provisional o pendiente significa que la revisión actuarial no ha cerrado la lectura; no indica cuál es la correcta. Puedes cambiarla en «Supuestos y lecturas».',
+    'Un estado provisional o pendiente significa que la lectura no está cerrada; no indica cuál es la correcta. Puedes cambiarla en «Supuestos y lecturas».',
   // Nota plegable de las lecturas de jubilación que rigen en la incapacidad
   jubilacionAplicadaTitulo: 'Qué lecturas de jubilación se aplican aquí',
   jubilacionAplicadaIntro:

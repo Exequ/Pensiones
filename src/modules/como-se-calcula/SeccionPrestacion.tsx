@@ -51,8 +51,8 @@ export function SeccionPrestacion({ esquema }: { readonly esquema: Esquema }) {
 
       <h3 id={`${id}-parametros`}>Parámetros vigentes</h3>
       <p>
-        Estos son los valores de /data que intervienen en el cálculo de{' '}
-        {esquema.titulo.toLowerCase()}. Cada uno lleva su ubicación en la norma y su fuente.
+        Estos son los valores que intervienen en el cálculo de {esquema.titulo.toLowerCase()}. Cada
+        uno lleva su ubicación en la norma y su fuente.
       </p>
       <TablaParametros
         titulo={`Parámetros vigentes: ${esquema.titulo}`}

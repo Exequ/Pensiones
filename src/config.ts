@@ -9,7 +9,7 @@
 export const MOSTRAR_BANNER_DESARROLLO = true;
 
 export const TEXTO_BANNER_DESARROLLO =
-  'Versión en desarrollo · Datos de muestra, pendientes de revisión actuarial';
+  'Versión en desarrollo · Datos de muestra, pendientes de revisión';
 
 export const NOMBRE_SITIO = 'Pensiones, con datos';
 

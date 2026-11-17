@@ -60,7 +60,7 @@ export function procesarCarrera(
     const anio = anioDeMes(m);
     if (topeBases && anio < ctx.params.baseMaxima.primero) {
       ctx.avisos.add(
-        `Bases anteriores a ${ctx.params.baseMaxima.primero}: no hay base máxima en /data, no se topan.`,
+        `Bases anteriores a ${ctx.params.baseMaxima.primero}: no hay base máxima en los datos de la web, no se topan.`,
       );
     } else if (topeBases) {
       let maximo = maximos.get(anio);

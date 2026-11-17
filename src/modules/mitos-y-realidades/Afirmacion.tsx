@@ -50,9 +50,6 @@ export function Afirmacion({ mito, indice, total, medible, children, enlaces }: 
         {mito.definiciones.map((d) => (
           <Definition key={d.nombre} termino={d.nombre}>
             {d.literal}
-            {d.datos && d.datos.length > 0 ? (
-              <span className="mito-datos">Datos: {d.datos.join('; ')}</span>
-            ) : null}
           </Definition>
         ))}
       </div>
@@ -87,13 +84,6 @@ export function Afirmacion({ mito, indice, total, medible, children, enlaces }: 
           </ul>
         </>
       ) : null}
-
-      <p className="mito-estado texto-interfaz">
-        Revisión actuarial de esta afirmación:{' '}
-        {mito.revisionActuarial === 'revisada'
-          ? `revisada (${mito.respuestaActuarial ?? ''}).`
-          : 'pendiente.'}
-      </p>
     </section>
   );
 }

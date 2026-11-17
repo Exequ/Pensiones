@@ -67,7 +67,7 @@ test.describe('página «Reformas»', () => {
       await expect(f.locator('h3')).toHaveText([
         'La norma',
         'Qué cambia',
-        'Parámetros afectados: valor antes y valor después en /data',
+        'Parámetros afectados: valor antes y valor después',
         'Calendario de aplicación',
         'Dónde se explica en esta web',
       ]);

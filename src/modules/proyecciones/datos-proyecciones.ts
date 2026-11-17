@@ -242,7 +242,7 @@ function cotizantesObservados(anioBaseReal: number) {
       dato: datoDerivado(
         tabla,
         ultimo,
-        `${nota} Base total en euros constantes del año base del modelo, con el IPC medio anual del INE (serie de /data/parametros).`,
+        `${nota} Base total en euros constantes del año base del modelo, con el IPC medio anual del INE.`,
       ),
     },
   };

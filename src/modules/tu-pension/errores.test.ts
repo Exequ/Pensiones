@@ -37,7 +37,7 @@ describe('traducirError', () => {
     const m = traducirError(
       desde(
         new DatoNoDisponible(
-          'el IPC de 2026 no está en /data y no se ha indicado un escenario (opciones.escenario.ipc)',
+          'el IPC de 2026 no consta en los datos de la web y no se ha indicado un escenario (opciones.escenario.ipc)',
         ),
       ),
     );
@@ -142,7 +142,9 @@ describe('traducirError en la incapacidad permanente', () => {
   it('DatoNoDisponible: falta el IPC supuesto, con el hecho causante', () => {
     const m = traducirError(
       desde(
-        new DatoNoDisponible('el IPC de 2027 no está en /data y no se ha indicado un escenario'),
+        new DatoNoDisponible(
+          'el IPC de 2027 no consta en los datos de la web y no se ha indicado un escenario',
+        ),
       ),
       'incapacidad',
     );

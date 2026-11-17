@@ -26,7 +26,7 @@ export function mesesPara100(v: VersionEscala): number {
   const tope = v.baseMeses + v.tramo1Meses + v.tramo2Meses + 12;
   for (let m = v.baseMeses; m <= tope; m++)
     if (porcentajeEscala(v, m) >= v.maximoPct - 1e-9) return m;
-  throw new DatoNoDisponible('la escala no llega al máximo con los tramos de /data');
+  throw new DatoNoDisponible('la escala no llega al máximo con los tramos de los datos de la web');
 }
 
 /** Tramo de periodo cotizado (1-4) de las tablas de coeficientes. */
@@ -76,7 +76,7 @@ export function coeficienteSobreLimite(
   if (anio < primero) {
     throw new NoImplementada(
       'Coeficientes sobre el límite de pensión en 2022-2023',
-      'Rige la redacción original del art. 210.3 (RDLeg 8/2015), no transcrita en /data.',
+      'Rige la redacción original del art. 210.3 (RDLeg 8/2015), no incorporada a los datos de la web.',
     );
   }
   if (anio > ultimo)

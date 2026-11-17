@@ -289,8 +289,8 @@ export function Demografia() {
       <h3 id="proy-escenarios">Escenarios demográficos</h3>
       <p>
         Cada escenario cambia una sola hipótesis de las proyecciones del INE. El rótulo «{base}» es
-        el modelo ejecutado con las hipótesis base del INE. Los rótulos son los del fichero de
-        salida del modelo.
+        el modelo ejecutado con las hipótesis base del INE. Los rótulos son los de la salida del
+        modelo.
       </p>
       <div className="hist-selector">
         <SegmentedPills
@@ -334,7 +334,7 @@ export function Demografia() {
         fuentes={[escenarios.dato, d.observado.poblacion.dependencia.dato]}
         horizonte={horizonte}
         puntos
-        nota="El fichero de salida redondea esta razón a tres decimales."
+        nota="La salida del modelo redondea esta razón a tres decimales."
         comoLeerlo={
           <>
             <p>
@@ -420,7 +420,7 @@ export function Demografia() {
         </p>
         <p>
           <strong>Variables principales.</strong> Para cada año, la población por sexo y edad y
-          estos resúmenes (definiciones tomadas de los ficheros de datos):
+          estos resúmenes (definiciones tomadas de los datos del modelo):
         </p>
         <ListaVariables
           columnas={contraste.archivo.columnas.filter((c) =>
@@ -441,9 +441,8 @@ export function Demografia() {
           tasas de fecundidad del INE; una mejora anual adicional de la mortalidad; un factor sobre
           el saldo migratorio del INE (cero equivale a no tener migración neta); un factor sobre las
           probabilidades de morir a partir de las edades altas; el año de partida y de fin, y la
-          proporción de niños que nacen varones. Estas palancas están en el código del modelo, en la
-          carpeta de modelos del repositorio; esta página muestra los escenarios ya calculados y no
-          permite modificarlos.
+          proporción de niños que nacen varones. Estas palancas están en el código del modelo; esta
+          página muestra los escenarios ya calculados y no permite modificarlos.
         </p>
         <p>
           <strong>Qué no hace.</strong> No modela la economía ni el empleo. Las hipótesis de

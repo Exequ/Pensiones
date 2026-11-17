@@ -198,8 +198,8 @@ export function TarjetaJubilados({ mito, indice, total }: TarjetaProps) {
           tarjeta no contiene ninguna cifra de uno ni de otro. Para hacerlo sería necesario
           calcular, por cohorte, el cociente entre el valor actual de las prestaciones esperadas y
           el valor actual de las cotizaciones, y eso exige historiales de cotización individuales
-          que no están descargados. Se describe el cálculo, las decisiones que contiene y qué piezas
-          hay y cuáles faltan.
+          que no constan en las fuentes consultadas. Se describe el cálculo, las decisiones que
+          contiene y qué piezas hay y cuáles faltan.
         </p>
       }
     >
@@ -294,7 +294,7 @@ export function TarjetaEdad({ mito, indice, total }: TarjetaProps) {
           d.salidaHombres.dato,
           d.salidaMujeres.dato,
         ]}
-        nota="La edad legal es la edad ordinaria cuando no se alcanza el periodo cotizado de la carrera larga, expresada en años y fracción de año. La edad efectiva de salida es una estimación de la OCDE cuyo método no se ha descargado."
+        nota="La edad legal es la edad ordinaria cuando no se alcanza el periodo cotizado de la carrera larga, expresada en años y fracción de año. La edad efectiva de salida es una estimación de la OCDE cuyo método no se ha consultado."
         comoLeerlo={
           <>
             <p>

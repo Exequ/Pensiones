@@ -44,8 +44,8 @@ export function SeccionEstructura({ seleccion }: { readonly seleccion: ReadonlyS
       </div>
       <p className="hist-aviso">
         El glosario es una explicación conceptual de los términos, no un dato: no procede de una
-        fuente descargada y la ha revisado un actuario con confianza media. Lo que sí procede de las
-        fuentes es cada rasgo de los países, con su cita.
+        fuente consultada y tiene confianza media. Lo que sí procede de las fuentes es cada rasgo de
+        los países, con su cita.
       </p>
 
       {agregadosElegidos ? (

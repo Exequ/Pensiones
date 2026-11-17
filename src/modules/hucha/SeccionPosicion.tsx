@@ -77,7 +77,7 @@ function construirAnotaciones(d: DatosHucha): Anotacion[] {
     },
     {
       anio: anioTribunal,
-      hecho: `El Tribunal de Cuentas recuerda su recomendación de que el Estado asuma la amortización de tres préstamos antiguos, por ${millonesEuros(importe(tc[ID.tcPrestamosInsalud], ID.tcPrestamosInsalud))} («bien por condonación o por la concesión de transferencias»). Es una recomendación: en las fuentes descargadas no consta que se haya aplicado.`,
+      hecho: `El Tribunal de Cuentas recuerda su recomendación de que el Estado asuma la amortización de tres préstamos antiguos, por ${millonesEuros(importe(tc[ID.tcPrestamosInsalud], ID.tcPrestamosInsalud))} («bien por condonación o por la concesión de transferencias»). Es una recomendación: en las fuentes consultadas no consta que se haya aplicado.`,
       fuente: 'Tribunal de Cuentas',
       dato: dato(tc[ID.tcRecomendacionInsalud]),
     },
@@ -481,7 +481,7 @@ export function SeccionPosicion() {
             </p>
             <p>
               La serie no distingue si una variación se debe a nuevos préstamos, a amortizaciones, a
-              cancelaciones o a conversiones en transferencia. En las fuentes descargadas no consta
+              cancelaciones o a conversiones en transferencia. En las fuentes consultadas no consta
               ninguna cancelación ni conversión de los préstamos recientes; constan una
               recomendación del Tribunal de Cuentas y la ampliación de plazo de préstamos antiguos
               (véanse las anotaciones).

@@ -96,18 +96,20 @@ describe('página «Mitos y realidades»', () => {
     for (const r of rutas) expect(r).toMatch(/^\/[a-z-]+$/);
   });
 
-  it('muestra el estado de la revisión actuarial del catálogo', () => {
+  it('no muestra el estado de la revisión interna del catálogo (voz de la web, fase R1); el catálogo lo conserva', () => {
     const { container } = pintar();
     const mitos = catalogo().mitos;
+    expect(tarjetas(container)).toHaveLength(mitos.length);
     tarjetas(container).forEach((t, i) => {
-      const estado = t.querySelector('.mito-estado')?.textContent ?? '';
-      const mito = mitos[i]!;
-      if (mito.revisionActuarial === 'revisada') {
-        expect(estado).toContain(mito.respuestaActuarial ?? 'sin respuesta');
-      } else {
-        expect(estado).toContain('pendiente');
-      }
+      expect(t.querySelector('.mito-estado'), mitos[i]?.id).toBeNull();
+      expect(t.textContent, mitos[i]?.id).not.toMatch(/revisi[oó]n actuarial/i);
     });
+    // El estado sigue en los datos (y en «Metodología», que lista las afirmaciones pendientes).
+    for (const mito of mitos) {
+      expect(['pendiente', 'revisada'], mito.id).toContain(mito.revisionActuarial);
+      if (mito.revisionActuarial === 'revisada')
+        expect(mito.respuestaActuarial, mito.id).toMatch(/\S/);
+    }
   });
 });
 
@@ -152,8 +154,8 @@ describe('cálculos que muestra la página', () => {
     expect(filas[1]?.[2]).toMatch(/Exposición de motivos/);
     // el año de la regla no es un hueco «sin norma» y sí lo sigue siendo el siguiente
     const texto = t?.textContent ?? '';
-    expect(texto).toMatch(/De \d{4} sí hay norma descargada/);
-    expect(texto).toMatch(/de \d{4} no hay norma descargada/);
+    expect(texto).toMatch(/De \d{4} consta la norma/);
+    expect(texto).toMatch(/de\s+\d{4} no consta la norma/);
     expect(texto).toMatch(/no muestra ningún acumulado/);
     // el porcentaje de 2011 de la regla no entra en la serie general (la usa el motor)
     expect(datosMitos().ipc.filas.find((f) => f.anio === r.anio)?.revalorizacion).toBeNull();

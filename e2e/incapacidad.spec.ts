@@ -86,7 +86,7 @@ test.describe('Tu pensión: incapacidad permanente', () => {
     // Desde el 16-11-2026 (revisión actuarial, tanda 3) la lectura es provisional, no pendiente.
     await expect(bloque).not.toContainText('Pendiente de decidir');
     await expect(bloque).toContainText('Motivo del registro');
-    await expect(bloque).toContainText('Revisión actuarial del 16-11-2026');
+    await expect(bloque).toContainText('Decisión del 16-11-2026');
     await expect(bloque).toContainText('Efecto de la alternativa');
     await expect(bloque).toContainText(/sería/);
     // La alternativa es ahora «integrar» y el texto no recomienda ninguna lectura.

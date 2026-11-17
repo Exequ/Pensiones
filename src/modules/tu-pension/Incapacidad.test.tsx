@@ -230,7 +230,7 @@ describe('formulario de incapacidad', () => {
     expect(bloque).toHaveTextContent(TEXTOS_INCAPACIDAD_PROPIOS.intervienenAnlTitulo);
     // Valor por defecto «sin-integrar»; la lectura pasa de pendiente a provisional el 16-11-2026 (tanda 3), con su motivo.
     expect(bloque).not.toHaveTextContent('Pendiente de decidir');
-    expect(bloque).toHaveTextContent(/Revisión actuarial del 16-11-2026/);
+    expect(bloque).toHaveTextContent(/Decisión del 16-11-2026/);
     expect(bloque).toHaveTextContent(/confianza del 60\s%/);
     // La alternativa que se mide ahora es «integrar» y el texto no dice cuál es la correcta.
     expect(bloque).toHaveTextContent(/Rellenarlos con la base mínima/);

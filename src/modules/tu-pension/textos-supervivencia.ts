@@ -201,7 +201,7 @@ export const TEXTOS_SUPERVIVENCIA = {
   intervienenEfecto: 'Efecto de la alternativa',
   intervienenSinEfecto: 'Con tus datos no se ha podido medir el efecto de la alternativa.',
   intervienenNota:
-    'Un estado provisional o pendiente significa que la revisión actuarial no ha cerrado la lectura; no indica cuál es la correcta. Puedes cambiarla en «Supuestos y lecturas».',
+    'Un estado provisional o pendiente significa que la lectura no está cerrada; no indica cuál es la correcta. Puedes cambiarla en «Supuestos y lecturas».',
   jubilacionAplicadaTitulo: 'Qué lecturas de jubilación se aplican aquí',
   jubilacionAplicadaIntro:
     'El cálculo de las prestaciones de muerte y supervivencia comparte con el de la jubilación la parte que fija los límites: la base máxima de cotización y la pensión máxima. Por eso le afectan estas lecturas de jubilación. Aquí se aplican con el valor de por defecto del registro y no se pueden cambiar: las que se cambian en la pantalla de jubilación no pasan a esta prestación. Las demás lecturas de la jubilación (actualización de las bases con el IPC, relleno de los meses sin cotizar) no se usan aquí: las bases van por su valor nominal y los meses sin cotizar cuentan como cero.',

@@ -29,8 +29,8 @@ export const ETIQUETA_ESTADO: Record<EstadoLecturaVista, string> = {
 };
 
 export const EXPLICACION_ESTADO: Record<EstadoLecturaVista, string> = {
-  decidida: 'Lectura firme: la revisión actuarial la ha cerrado.',
-  provisional: 'Lectura adoptada con confianza actuarial baja o media; sigue abierta a revisión.',
+  decidida: 'Lectura firme: la duda de interpretación está cerrada.',
+  provisional: 'Lectura adoptada con confianza baja o media; sigue abierta a revisión.',
   pendiente: 'Lectura sin decidir: el cálculo usa la opción más sencilla mientras no se revise.',
 };
 

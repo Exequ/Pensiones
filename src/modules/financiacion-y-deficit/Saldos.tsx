@@ -12,7 +12,6 @@ import { GraficoSeries } from '../historico/GraficoSeries';
 import { millonesEuros } from '../historico/formatos';
 import {
   datosFinanciacion,
-  ID_DEFINICION_SEC,
   ID_ESTIMACION_GASTOS_IMPROPIOS,
   ID_NOTA_SANIDAD,
 } from '../historico/datos-financiacion';
@@ -35,7 +34,7 @@ const EXPLICACION_DEFINICION: Readonly<Record<string, string>> = {
   'saldo-presupuestario-total':
     'Total de ingresos menos total de gastos de la ejecución, incluidas las operaciones financieras: entre ellas, los préstamos que la Tesorería recibe del Estado figuran como ingreso (pasivos financieros).',
   'necesidad-financiacion-sec-s1314':
-    'Diferencia entre ingresos y gastos totales del subsector «fondos de la Seguridad Social» según el sistema europeo de cuentas (SEC), publicada por Eurostat a partir de la transmisión de cada país; Eurostat indica que las convenciones contables son las del sistema europeo de cuentas. Los metadatos descargados no detallan las entidades que componen el subsector, por lo que esta página no afirma que su perímetro coincida con el del presupuesto ni describe en qué se diferencia.',
+    'Diferencia entre ingresos y gastos totales del subsector «fondos de la Seguridad Social» según el sistema europeo de cuentas (SEC), publicada por Eurostat a partir de la transmisión de cada país; Eurostat indica que las convenciones contables son las del sistema europeo de cuentas. Los metadatos consultados no detallan las entidades que componen el subsector, por lo que esta página no afirma que su perímetro coincida con el del presupuesto ni describe en qué se diferencia.',
 };
 
 /** Definiciones de saldo, gastos impropios y lectura del saldo con y sin transferencias. */
@@ -75,7 +74,7 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
       <h2 id="saldos">Déficit y saldo: definiciones disponibles</h2>
       <p>
         «Déficit de la Seguridad Social» puede referirse a magnitudes distintas según qué ingresos y
-        gastos se cuenten. Las fuentes descargadas ofrecen tres definiciones; se muestran lado a
+        gastos se cuenten. Las fuentes consultadas ofrecen tres definiciones; se muestran lado a
         lado, con su literal, sin elegir ninguna como la correcta. Un saldo negativo significa que
         los gastos superan a los ingresos de esa definición (necesidad de financiación).
       </p>
@@ -86,10 +85,7 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
           if (!def) return null;
           return (
             <Definition key={id} termino={ROTULO_DEFINICION[id] ?? id}>
-              <span className="hist-literal">
-                {EXPLICACION_DEFINICION[id] ?? ''} Literal de la fuente:{' '}
-                <q lang={id === ID_DEFINICION_SEC ? 'en' : 'es'}>{def.literal}</q>.
-              </span>
+              <span className="hist-literal">{EXPLICACION_DEFINICION[id] ?? ''}</span>
             </Definition>
           );
         })}
@@ -144,7 +140,7 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
                 <p>
                   En {ultimoNoFin.anio}, el saldo no financiero y el de contabilidad nacional se
                   diferencian en {millonesEuros(Math.abs(ultimoNoFin.valor - ultimoSec.valor))}. Con
-                  las fuentes descargadas no se puede conciliar esa diferencia.
+                  las fuentes consultadas no se puede conciliar esa diferencia.
                 </p>
               )}
             <p>
@@ -240,7 +236,7 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
               {presupuesto.transferenciasEstado.puntos.at(-1)?.anio ?? ''}.
             </p>
             <p>
-              Esa transferencia financia partidas de distinta naturaleza y con los datos descargados
+              Esa transferencia financia partidas de distinta naturaleza y con los datos consultados
               no se puede separar qué parte corresponde a cada una. La gráfica no atribuye la
               transferencia a ningún gasto concreto; por eso la resta no mide el saldo de las
               pensiones contributivas.
@@ -251,8 +247,8 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
 
       <h3 id="gastos-impropios">Gastos impropios: una estimación de {anioEstimacion ?? ''}</h3>
       <p>
-        La expresión «gastos impropios» no tiene una definición única en los ficheros descargados.
-        La fuente que la usa la describe así: {enumeracionImpropios ?? ''}. Qué gastos deben
+        La expresión «gastos impropios» no tiene una definición única en las fuentes consultadas. La
+        fuente que la usa la describe así: {enumeracionImpropios ?? ''}. Qué gastos deben
         financiarse con cotizaciones y cuáles con impuestos es una cuestión sobre la que existen
         planteamientos distintos; aquí solo se recoge la cifra de la fuente.
       </p>

@@ -141,7 +141,7 @@ export function calcularIncapacidadPermanenteConParametros(
   if (anio < primerAnio) {
     throw new NoImplementada(
       `Incapacidad permanente con hecho causante en ${anio}`,
-      `El motor cubre hechos causantes desde ${primerAnio} (reglas de /data verificadas para esas fechas).`,
+      `El motor cubre hechos causantes desde ${primerAnio} (reglas de la web verificadas para esas fechas).`,
     );
   }
   const lecturas: LecturasIncapacidad = {
@@ -177,7 +177,7 @@ export function calcularIncapacidadPermanenteConParametros(
   if (profesional && grado !== 'parcial' && opciones.baseReguladoraProfesional === undefined) {
     throw new NoImplementada(
       'Base reguladora de las pensiones por accidente de trabajo o enfermedad profesional',
-      'Se calcula con el salario real del Reglamento de accidentes de trabajo de 1956 (art. 15.2.b de la Orden de 15/04/1969); su capítulo V consta en el repositorio por OCR (data-raw/boe/reglamento-at-1956-cap5.txt, confianza media) pero no está convertido en datos del motor. Puede pasarse calculada fuera en opciones.baseReguladoraProfesional.',
+      'Se calcula con el salario real del Reglamento de accidentes de trabajo de 1956 (art. 15.2.b de la Orden de 15/04/1969); su capítulo V consta por OCR, con confianza media, pero no está convertido en datos del motor. Puede pasarse calculada fuera en opciones.baseReguladoraProfesional.',
     );
   }
   if (profesional && grado === 'parcial' && opciones.baseReguladoraIT === undefined) {
@@ -201,7 +201,7 @@ export function calcularIncapacidadPermanenteConParametros(
   ) {
     throw new NoImplementada(
       'Trabajo de un pensionista de absoluta o gran incapacidad antes del 22/12/2024',
-      'La redacción del art. 198.2 anterior a la Ley 7/2024 no se ha transcrito en /data.',
+      'La redacción del art. 198.2 anterior a la Ley 7/2024 no se ha incorporado a los datos de la web.',
     );
   }
 
@@ -637,7 +637,7 @@ export function calcularIncapacidadPermanenteConParametros(
       '%',
       [refIP('edad-ip-sin-jubilacion-meses'), carencia.ref],
       'art. 196.5 TRLGSS',
-      'Sustituye al porcentaje del grado (lectura literal: véase REVISION_ACTUARIAL.md).',
+      'Sustituye al porcentaje del grado (lectura literal).',
     );
   } else {
     pension = (br * pctGrado) / 100;
@@ -814,7 +814,7 @@ export function calcularIncapacidadPermanenteConParametros(
           : [];
       if (opciones.situacionFamiliar === 'conyuge-a-cargo' && rentas > 0) {
         ctx.avisos.add(
-          'Complemento a mínimos con cónyuge a cargo y rentas: el límite de ingresos con cónyuge a cargo no está en /data; no se aplica el complemento (no implementada).',
+          'Complemento a mínimos con cónyuge a cargo y rentas: el límite de ingresos con cónyuge a cargo no consta en los datos de la web; no se aplica el complemento (no implementada).',
         );
       } else if (rentas > limite.valor) {
         paso(

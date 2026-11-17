@@ -98,7 +98,7 @@ const indicador = (
 function smiAnual(p: ParametrosSupervivencia, anio: number): { valor: number; ref: string } {
   if (anio > p.smiAnual.ultimo) {
     throw new DatoNoDisponible(
-      `parametros/smi-anual.json#${anio}: el SMI anual posterior a ${p.smiAnual.ultimo} no está en /data`,
+      `SMI anual de ${anio}: el SMI anual posterior a ${p.smiAnual.ultimo} no consta en los datos de la web`,
     );
   }
   const v = valorEn(p.smiAnual, anio);
@@ -139,7 +139,7 @@ export function calcularSupervivenciaConParametros(
   if (anio < primer) {
     throw new NoImplementada(
       `Prestaciones de muerte y supervivencia con hecho causante en ${anio}`,
-      `El motor cubre hechos causantes desde ${primer} (redacciones de /data comprobadas desde esa fecha).`,
+      `El motor cubre hechos causantes desde ${primer} (redacciones de la web comprobadas desde esa fecha).`,
     );
   }
   const r = (id: string): number => reglaSV(params, id);
@@ -154,7 +154,7 @@ export function calcularSupervivenciaConParametros(
     if (v.separacionAnteriorA2008 === true) {
       throw new NoImplementada(
         'Viudedad de personas separadas o divorciadas antes del 01/01/2008 (DT 13.ª TRLGSS)',
-        'La regla transitoria (y su redacción del RDL 31/2026) no se ha estructurado en /data.',
+        'La regla transitoria (y su redacción del RDL 31/2026) no se ha incorporado a los datos de la web.',
       );
     }
   }

@@ -70,8 +70,8 @@ export function GastoPib() {
         La serie de Eurostat es de ESSPROS (siglas de la fuente, en inglés): gasto registrado en
         prestaciones de protección social, clasificado por función. Aquí se usan las funciones
         «vejez» y «supervivientes». No es comparable con el gasto contributivo propio: este incluye
-        la clase «incapacidad permanente», que no está entre las series de Eurostat descargadas, y
-        los metadatos descargados no delimitan qué administraciones o regímenes entran en la serie,
+        la clase «incapacidad permanente», que no está entre las series de Eurostat consultadas, y
+        los metadatos consultados no delimitan qué administraciones o regímenes entran en la serie,
         por lo que esta página no lo afirma.
       </p>
       <div className="hist-selector">
@@ -127,7 +127,7 @@ export function GastoPib() {
               Las líneas difieren por el perímetro: qué prestaciones y qué regímenes entran en cada
               una. El gasto contributivo propio incluye incapacidad permanente y no incluye Clases
               Pasivas ni pensiones no contributivas; de las demás medidas no se conoce el detalle
-              con los metadatos descargados. Con los datos descargados no se pueden reconciliar una
+              con los metadatos consultados. Con los datos consultados no se pueden reconciliar una
               a una. Una cifra más alta no significa un sistema más caro en términos absolutos:
               depende también de la evolución del PIB ({decimal1(en(pib.puntos) / 1000)} miles de
               millones de euros ese año).

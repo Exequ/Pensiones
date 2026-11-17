@@ -18,13 +18,13 @@ export function Inicio() {
           <Lead>
             Qué pensiones existen, cómo se calcula cada una, cómo se financia el sistema y qué dicen
             las estadísticas oficiales sobre su evolución. Cada cifra enlaza a su fuente e indica
-            cuándo se descargó.
+            cuándo se consultó.
           </Lead>
         </header>
         <MarginNote etiqueta="Sobre esta web">
           <p>
             Proyecto divulgativo independiente, en desarrollo. Las secciones se publicarán por fases
-            y los datos pasarán una revisión actuarial antes de darse por definitivos.
+            y los datos se revisarán antes de darse por definitivos.
           </p>
         </MarginNote>
       </div>

@@ -80,7 +80,7 @@ describe('página «Otros sistemas»', () => {
   it('el perímetro no verificado consta en las notas del gasto', () => {
     const { container } = pintar();
     const gasto = container.querySelector('#gasto')?.closest('section')?.textContent ?? '';
-    expect(gasto).toMatch(/no verificado en las fuentes descargadas/);
+    expect(gasto).toMatch(/no verificado en las fuentes consultadas/);
     expect(gasto).toMatch(/Public expenditure on pensions/);
   });
 
@@ -213,7 +213,7 @@ describe('página «Otros sistemas»', () => {
 
   it('el glosario se declara como explicación conceptual y no como dato', () => {
     const { container } = pintar();
-    expect(container.textContent).toMatch(/no procede de una\s+fuente descargada/);
+    expect(container.textContent).toMatch(/no procede de una\s+fuente consultada/);
   });
 
   it('no muestra valores vacíos ni no numéricos', () => {

@@ -82,7 +82,7 @@ export function Introduccion() {
         </li>
         <li>
           Las tablas de datos indican en cada fila si el año es observado o proyectado, y los
-          indicadores de confianza de las fuentes son los de cada fichero de datos.
+          indicadores de confianza de las fuentes son los de cada dato.
         </li>
       </ul>
       <SourceLine datos={[d.m1.contraste.dato, d.m2.cotizantes.dato, d.m3.resumen.dato]} />

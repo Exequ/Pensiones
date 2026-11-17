@@ -167,7 +167,7 @@ export function FichaPrestacion({ ficha }: { readonly ficha: DatosFicha }) {
         pie={
           aPie
             ? 'El número es de pensiones, no de personas: una persona puede cobrar más de una. La pensión media es la que publica la Seguridad Social.'
-            : 'La pensión media de la nómina es el importe bruto de la nómina entre el número de pensiones del mes, no el importe reconocido. El perfil del pensionista es otro fichero del IMSERSO y su cifra no coincide con la de la nómina; los datos descargados no explican la diferencia.'
+            : 'La pensión media de la nómina es el importe bruto de la nómina entre el número de pensiones del mes, no el importe reconocido. El perfil del pensionista es otro fichero del IMSERSO y su cifra no coincide con la de la nómina; los datos consultados no explican la diferencia.'
         }
       />
       <SourceLine datos={ficha.enVigor.map((f) => f.dato)} />
