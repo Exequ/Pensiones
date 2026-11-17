@@ -45,7 +45,9 @@ jobs:
   interfaz:
     name: Interfaz (Playwright)
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # El recorrido completo de Playwright (escritorio y móvil) ya tardaba cerca de 19 minutos con el
+    # límite anterior de 20; se amplía para que no dependa de un plazo ajustado.
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5

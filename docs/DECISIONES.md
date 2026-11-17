@@ -1153,3 +1153,5 @@ Sustituye el marcador en construcción de la sección «Metodología» por una p
 - **Enlaces a ficheros del repositorio**: «Dónde consta» enlaza a `https://github.com/Exequ/Pensiones/blob/main/...`. Son enlaces, no recursos cargados: el Playwright de peticiones externas no los sigue. Cada fragmento citado se busca en el fichero (`scripts/metodologia-fase.test.ts`).
 - **«Fuentes» sigue en construcción**: la página «Fuentes» y el «Registro de cambios» no son de esta sección y siguen con el marcador; la página lo dice sin más.
 - **`README.md`**: el estado «Fase 0 · cimientos» estaba desfasado y se sustituye por una frase sin fase.
+- **Plazo del job de Playwright en el CI**: la primera ejecución del PR terminó con el job «Interfaz (Playwright)» cancelado por su propio `timeout-minutes: 20` (todos los pasos anteriores, también lint, tipos, pruebas, datos y compilación, en verde). El recorrido completo de «Reformas» ya había tardado cerca de 19,5 minutos; las pruebas nuevas de esta fase lo superaron. Se amplía a 35 minutos en `.github/workflows/ci.yml` (sin tocar ninguna prueba) y se relanza el CI con el nuevo commit, una sola vez.
+
