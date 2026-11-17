@@ -113,7 +113,7 @@ El efecto de cada una está en `docs/INFORME_VERIFICACION.md` (Fase 2-B-2), gene
 ## Limitaciones (`LIMITACIONES_SUPERVIVENCIA`, `limitaciones.ts`)
 
 - Hechos causantes anteriores a 2022 → `NoImplementada`.
-- Base reguladora de las contingencias profesionales (salario real del Reglamento de 1956, no descargado) → `NoImplementada` salvo base facilitada; indemnizaciones a tanto alzado por accidente de trabajo y auxilio por defunción.
+- Base reguladora de las contingencias profesionales (salario real del Reglamento de 1956: capítulo V por OCR en `data-raw/boe/reglamento-at-1956-cap5.txt`, confianza media, sin convertir en datos) → `NoImplementada` salvo base facilitada; indemnizaciones a tanto alzado por accidente de trabajo y auxilio por defunción.
 - Separaciones y divorcios anteriores al 01/01/2008 (DT 13.ª) → `NoImplementada`; nulidad matrimonial.
 - Orfandad por violencia contra la mujer (prestación y pensión con régimen propio) y supuestos de los arts. 231 a 234.
 - Subsidio temporal en favor de familiares.

@@ -12,7 +12,7 @@ export const LIMITACIONES_SUPERVIVENCIA: readonly {
     regla:
       'Base reguladora de las contingencias profesionales (accidente de trabajo y enfermedad profesional)',
     motivo:
-      'Salario real del Reglamento de accidentes de trabajo de 1956, no descargado (DESCARGAS_MANUALES.md). Lanza NoImplementada salvo base calculada fuera (causante.baseReguladoraProfesional).',
+      'Salario real del capítulo V (arts. 58 a 63) del Reglamento de accidentes del trabajo de 1956 (Decreto de 22/06/1956, BOE núm. 197, de 15/07/1956). Su texto consta en el repositorio por OCR, con confianza media (data-raw/boe/reglamento-at-1956-cap5.txt), pero no se ha convertido en datos del motor: lanza NoImplementada salvo base calculada fuera (causante.baseReguladoraProfesional).',
   },
   {
     regla:

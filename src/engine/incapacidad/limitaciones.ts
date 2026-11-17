@@ -12,7 +12,7 @@ export const LIMITACIONES_INCAPACIDAD: readonly {
     regla:
       'Base reguladora de las contingencias profesionales (accidente de trabajo y enfermedad profesional)',
     motivo:
-      'Se calcula con el salario real del Reglamento de accidentes de trabajo de 1956, que no está en la legislación consolidada del BOE (DESCARGAS_MANUALES.md). Lanza NoImplementada salvo que se pase calculada (opciones.baseReguladoraProfesional).',
+      'Se calcula con el salario real del capítulo V (arts. 58 a 63) del Reglamento de accidentes del trabajo de 1956 (Decreto de 22/06/1956, BOE núm. 197, de 15/07/1956). Su texto consta en el repositorio por OCR, con confianza media (data-raw/boe/reglamento-at-1956-cap5.txt), pero no se ha convertido en datos del motor: lanza NoImplementada salvo que se pase calculada (opciones.baseReguladoraProfesional).',
   },
   {
     regla: 'Lesiones permanentes no incapacitantes (art. 201 TRLGSS)',

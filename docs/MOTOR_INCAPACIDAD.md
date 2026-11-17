@@ -86,7 +86,7 @@ El efecto de cada una está en `docs/INFORME_VERIFICACION.md` (Fase 2-B-1). Las 
 ## Limitaciones (`LIMITACIONES_INCAPACIDAD`, `limitaciones.ts`)
 
 - Hechos causantes anteriores a 2022 → `NoImplementada`.
-- Base reguladora de las contingencias profesionales (salario real, Reglamento de accidentes de trabajo de 1956, no descargado) → `NoImplementada` salvo base facilitada; la parcial profesional exige la base de la IT.
+- Base reguladora de las contingencias profesionales (salario real, Reglamento de accidentes de trabajo de 1956: capítulo V por OCR en `data-raw/boe/reglamento-at-1956-cap5.txt`, confianza media, sin convertir en datos) → `NoImplementada` salvo base facilitada; la parcial profesional exige la base de la IT.
 - Lesiones permanentes no incapacitantes (art. 201), indemnización sustitutiva de la total (Orden de 31/07/1972), recargo de prestaciones (art. 164), actividades penosas, regímenes especiales, RETA, pluriactividad y pensiones concurrentes.
 - Trabajo de pensionistas de absoluta o gran incapacidad antes del 22/12/2024 (redacción anterior del art. 198.2 no transcrita) → `NoImplementada`.
 - La clase de la mínima es la de la edad en el hecho causante (no cambia en la revalorización); no se modela la revisión del grado ni el paso a jubilación a los 67 años (art. 200), que no cambia la cuantía.

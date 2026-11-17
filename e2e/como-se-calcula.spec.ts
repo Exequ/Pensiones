@@ -117,12 +117,12 @@ test.describe('página «Cómo se calcula»', () => {
     await expect(page.getByRole('heading', { level: 1, name: 'Tu pensión' })).toBeVisible();
   });
 
-  test('los tres gráficos de la jubilación tienen tabla, fuente y «Cómo leerlo»', async ({
+  test('las cuatro figuras de la jubilación tienen tabla, fuente y «Cómo leerlo»', async ({
     page,
   }) => {
     await abrirPagina(page);
     const figuras = page.locator('#como-jubilacion figure.grafico');
-    expect(await figuras.count()).toBeGreaterThanOrEqual(3);
+    expect(await figuras.count()).toBe(4);
     for (let i = 0; i < (await figuras.count()); i++) {
       const f = figuras.nth(i);
       await expect(f.locator('figcaption')).toBeVisible();

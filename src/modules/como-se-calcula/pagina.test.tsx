@@ -96,7 +96,7 @@ describe('estructura de la página', () => {
   it('el gráfico y sus tablas están solo en la sección de jubilación, con fuente y «Cómo leerlo»', () => {
     const { container } = pintar();
     const figuras = container.querySelectorAll('figure.grafico');
-    expect(figuras.length).toBeGreaterThanOrEqual(3);
+    expect(figuras.length).toBe(4);
     for (const f of figuras) {
       expect(f.closest('#como-jubilacion')).not.toBeNull();
       expect(f.querySelector('figcaption')).not.toBeNull();

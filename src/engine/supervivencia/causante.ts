@@ -154,7 +154,7 @@ export function prepararCausante(
     if (causante.baseReguladoraProfesional === undefined) {
       throw new NoImplementada(
         'Base reguladora de las prestaciones de muerte y supervivencia por accidente de trabajo o enfermedad profesional',
-        'Se calcula con el salario real del Reglamento de accidentes de trabajo de 1956 (art. 9.d de la Orden de 13/02/1967), no descargado (docs/DESCARGAS_MANUALES.md). Puede pasarse calculada fuera en causante.baseReguladoraProfesional.',
+        'Se calcula con el salario real del Reglamento de accidentes de trabajo de 1956 (art. 9.d de la Orden de 13/02/1967); su capítulo V consta en el repositorio por OCR (data-raw/boe/reglamento-at-1956-cap5.txt, confianza media) pero no está convertido en datos del motor. Puede pasarse calculada fuera en causante.baseReguladoraProfesional.',
       );
     }
     pasos.push({
