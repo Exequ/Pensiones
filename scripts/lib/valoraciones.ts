@@ -247,6 +247,101 @@ export const PALABRAS_DE_VALORACION = [
   ...PALABRAS_DE_VEREDICTO,
 ] as const;
 
+/**
+ * Fase «Reformas»: términos de valoración política o de juicio sobre una norma. La página describe qué
+ * cambió cada norma, cuándo y sobre qué parámetro, sin llamarla buena, mala, necesaria, justa o
+ * suficiente, sin atribuirle intenciones y sin ordenar las normas por importancia. Sin tildes, en
+ * minúsculas y como inicio de palabra. No forman parte de `PALABRAS_DE_VALORACION` (las otras páginas
+ * pueden usar, p. ej., «histórica» para una serie de datos); se aplican con `valoracionesReformasEn`.
+ * Los títulos oficiales de las normas y las citas literales del BOE no se someten a esta lista porque
+ * son el texto de la norma, no el de la página (véase `scripts/reformas-fase.test.ts`).
+ */
+export const PALABRAS_DE_VALORACION_REFORMAS = [
+  'recort',
+  'blindaj',
+  'blindar',
+  'contrarreform',
+  'contra-reform',
+  'historica',
+  'historico',
+  'necesaria',
+  'necesario',
+  'imprescindible',
+  'injust',
+  'insuficien',
+  'suficiente',
+  'justa',
+  'justo',
+  'justicia',
+  'drastic',
+  'duro golpe',
+  'dura reforma',
+  'severa',
+  'severo',
+  'draconian',
+  'regresiv',
+  'progresiv',
+  'ambiciosa',
+  'ambicioso',
+  'timida',
+  'timido',
+  'valiente',
+  'audaz',
+  'tijeretazo',
+  'congelacion',
+  'congelar',
+  'congelad',
+  'gran reforma',
+  'reforma estructural',
+  'reforma profunda',
+  'reforma clave',
+  'reforma fallida',
+  'reforma exitosa',
+  'primera gran',
+  'hito',
+  'avance',
+  'retroceso',
+  'conquista',
+  'sacrific',
+  'penaliza',
+  'castig',
+  'premia',
+  'perjudic',
+  'beneficia\\b',
+  'beneficiosa',
+  'favorece',
+  'favorable',
+  'desfavorable',
+  'mejora',
+  'empeora',
+  'endurece',
+  'endurecimiento',
+  'suaviza',
+  'rebaja',
+  'recorta',
+  'agrava',
+  'alivia',
+  'pretende',
+  'pretendia',
+  'persigue',
+  'con el fin de',
+  'busca reducir',
+  'busca aumentar',
+  'con la intencion',
+  'intencion de',
+  'intencionad',
+  'objetivo politico',
+  'electoral',
+  'partidista',
+  'ideolog',
+  'mas generosa',
+  'menos generosa',
+  'mas restrictiva',
+  'menos restrictiva',
+  'restrictiva',
+  'generosa',
+] as const;
+
 const normalizar = (t: string): string =>
   t
     .normalize('NFD')
@@ -264,6 +359,18 @@ export function valoracionesEn(texto: string): string[] {
     .replaceAll('contributivas en deficit estructural', '')
     .replaceAll(NOMBRE_SECCION_MITOS, '');
   return PALABRAS_DE_VALORACION.filter((p) => new RegExp(`(^|[^a-z])${p}`).test(t));
+}
+
+/**
+ * Palabras de valoración de la lista general y de la de reformas presentes en un texto (coincidencia
+ * al inicio de palabra). Para los textos de la página «Reformas» y de sus datos propios.
+ */
+export function valoracionesReformasEn(texto: string): string[] {
+  const t = normalizar(texto);
+  const propias = PALABRAS_DE_VALORACION_REFORMAS.filter((p) =>
+    new RegExp(`(^|[^a-z])${p}`).test(t),
+  );
+  return [...valoracionesEn(texto), ...propias];
 }
 
 /** Nombre de la sección, normalizado: se descarta antes de buscar términos de veredicto. */

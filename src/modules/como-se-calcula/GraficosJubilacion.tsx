@@ -14,8 +14,9 @@ function TramosDelCuadro({ textos }: { readonly textos: readonly string[] }) {
 }
 
 /**
- * Tres gráficos que explican la jubilación: la escala de porcentajes frente a los meses cotizados,
- * los coeficientes reductores de la jubilación anticipada y el porcentaje adicional de la demora.
+ * Cuatro gráficos que explican la jubilación: la escala de porcentajes frente a los meses cotizados,
+ * los coeficientes reductores de la jubilación anticipada (modalidad voluntaria e involuntaria) y el
+ * porcentaje adicional de la demora.
  * Los datos salen de /data a través de las funciones del motor; nada se escribe a mano. Ningún
  * gráfico señala una opción como mejor: describen cómo funciona la norma.
  */

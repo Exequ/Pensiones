@@ -87,7 +87,7 @@ export interface OpcionesIncapacidad extends OpcionesComunes {
   readonly periodoElegidoDesde?: string;
   /**
    * Contingencias profesionales: base reguladora mensual calculada fuera del motor con el salario
-   * real (Reglamento de 1956, no descargado). Sin ella, el motor lanza `NoImplementada`.
+   * real (Reglamento de 1956: su capítulo V consta por OCR en `data-raw/boe/reglamento-at-1956-cap5.txt`, sin convertir en datos). Sin ella, el motor lanza `NoImplementada`.
    */
   readonly baseReguladoraProfesional?: number;
   /** Gran incapacidad: última base de cotización de la contingencia; por defecto, la última de la carrera. */

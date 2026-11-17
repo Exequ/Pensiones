@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1, 3-B2, 5-A, 5-C, 3-C2 y Ajustes de M4 y «Cómo se calcula»). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md).",
+  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1, 3-B2, 5-A, 5-C, 3-C2 y Ajustes de M4, «Cómo se calcula» y «Reformas»). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md).",
   "claims": [
     {
       "id": "web-tu-pension-base-sugerida",
@@ -3148,6 +3148,246 @@
       "revisionActuarial": "pendiente",
       "preguntaActuarial": "¿Se aplica el límite conjunto del art. 229 TRLGSS (la suma de las pensiones derivadas de una persona fallecida no supera su base reguladora) antes de completar cada pensión con el complemento a mínimos del art. 59, como hace el motor, o el complemento a mínimos se calcula antes de comprobar el límite? Comprobar el orden con el texto de los dos artículos y con la práctica de la Seguridad Social, y medir si cambia el resultado en los casos con varias orfandades.",
       "notas": "Orden verificado en el código del motor (src/engine/supervivencia/calculo.ts: el límite conjunto se resuelve antes del complemento a mínimos), no en un texto normativo. Pendiente con pregunta reducida."
+    },
+    {
+      "id": "web-reformas-alcance",
+      "texto": "La cronología de la página «Reformas» recoge las normas de las que hay texto o cita literal en los datos del repositorio; no es un listado exhaustivo de las normas que han modificado los parámetros de las pensiones, y la fecha de entrada en vigor consta solo en las normas en las que un texto descargado, los metadatos del BOE o la cronología la recogen.",
+      "ubicacion": "Página «Reformas»: texto «Qué recoge la cronología» y apartado «Entrada en vigor» de cada ficha (Fase «Reformas»)",
+      "datos": [
+        "normativa/cronologia.json#ley-26-1985",
+        "normativa/cronologia.json#ley-27-2011",
+        "normativa/cronologia.json#rdl-2-2023",
+        "normativa/cronologia.json#rd-241-2026"
+      ],
+      "fuentes": [
+        {
+          "title": "Ley 27/2011, de 1 de agosto, sobre actualización, adecuación y modernización del sistema de Seguridad Social",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-13242"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción del contenido de data/normativa/cronologia.json (campo entradaEnVigor). Las normas sin fecha constan en docs/PENDIENTE_DATOS.md y docs/DESCARGAS_MANUALES.md. No requiere revisión actuarial: no es una regla de cálculo."
+    },
+    {
+      "id": "web-reformas-vigor-texto",
+      "texto": "La Ley 21/2021 entra en vigor el 1 de enero de 2022 y el Real Decreto 316/2025 y el Real Decreto 241/2026 el día de su publicación en el BOE, con efectos económicos desde el 1 de enero de 2025 y de 2026; el Real Decreto Legislativo 8/2015 entra en vigor el 2 de enero de 2016 y el Real Decreto-ley 2/2023 el día primero del mes siguiente al de su publicación (salvo preceptos concretos).",
+      "ubicacion": "Página «Reformas»: apartado «Entrada en vigor» de las fichas de las normas con texto descargado (Fase «Reformas»)",
+      "datos": [
+        "normativa/cronologia.json#ley-21-2021",
+        "normativa/cronologia.json#rdl-2-2023",
+        "normativa/cronologia.json#rd-316-2025",
+        "normativa/cronologia.json#rd-241-2026",
+        "normativa/cronologia.json#rdleg-8-2015"
+      ],
+      "fuentes": [
+        {
+          "title": "Ley 21/2021, de 28 de diciembre, de garantía del poder adquisitivo de las pensiones",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-21652"
+        },
+        {
+          "title": "Real Decreto 316/2025, de 15 de abril",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660"
+        },
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977"
+        },
+        {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        },
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción de la disposición final de cada texto descargado (data-raw/boe/); la cita se comprueba contra el fichero en scripts/reformas-fase.test.ts. Las fechas del RDL 2/2023, del RD 316/2025 y del RD 241/2026 se obtienen de los metadatos o de la fecha de publicación del propio fichero."
+    },
+    {
+      "id": "web-reformas-edad-ordinaria",
+      "texto": "En /data, la edad ordinaria de jubilación en el Régimen General pasa de 780 meses (65 años) en 2012 a 804 meses (67 años) en 2027, con un calendario anual intermedio que fija la disposición transitoria 7.ª del TRLGSS, que procede de la Ley 27/2011.",
+      "ubicacion": "Página «Reformas»: ficha de la Ley 27/2011, tabla y gráfico de la edad ordinaria (Fase «Reformas»)",
+      "datos": [
+        "parametros/edad-ordinaria-jubilacion.json#2012",
+        "parametros/edad-ordinaria-jubilacion.json#2013",
+        "parametros/edad-ordinaria-jubilacion.json#2027"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        },
+        {
+          "title": "Ley 27/2011, de 1 de agosto, sobre actualización, adecuación y modernización del sistema de Seguridad Social",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2011-13242"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Valores leídos de data/parametros/edad-ordinaria-jubilacion.json por scripts/ y src/modules/reformas/datos-reformas.test.ts. Es un parámetro de una norma, no un efecto sobre la pensión de una persona; la edad de 65 años con carrera larga se explica en «Cómo se calcula»."
+    },
+    {
+      "id": "web-reformas-periodo-calculo",
+      "texto": "En /data, el periodo de cálculo de la base reguladora de la jubilación pasa de 180 meses en 2012 a 300 en 2022 por la disposición transitoria 8.ª del TRLGSS (Ley 27/2011) y, desde 2026, de 304 a 348 meses en 2037 por la redacción del artículo 209.1 y la disposición transitoria 40.ª que introdujo el RDL 2/2023.",
+      "ubicacion": "Página «Reformas»: fichas de la Ley 27/2011 y del RDL 2/2023, tablas y gráfico del periodo de cálculo (Fase «Reformas»)",
+      "datos": [
+        "parametros/periodo-calculo-base-reguladora.json#2012",
+        "parametros/periodo-calculo-base-reguladora.json#2022",
+        "parametros/periodo-calculo-base-reguladora.json#2025",
+        "parametros/periodo-calculo-base-reguladora.json#2037"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        },
+        {
+          "title": "Real Decreto-ley 2/2023, de 16 de marzo",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Valores leídos de data/parametros/periodo-calculo-base-reguladora.json. Desde 2026 se computan las bases de mayor importe (véase la descripción del fichero); la ficha cita esa nota en su definición."
+    },
+    {
+      "id": "web-reformas-cotizacion-100",
+      "texto": "En /data, los meses cotizados con los que la escala de porcentajes alcanza el 100 % de la base reguladora pasan de 420 en 2012 a 444 en 2027, con el calendario de la disposición transitoria 9.ª del TRLGSS (Ley 27/2011).",
+      "ubicacion": "Página «Reformas»: ficha de la Ley 27/2011, tabla y gráfico de la cotización para el 100 % (Fase «Reformas»)",
+      "datos": [
+        "parametros/cotizacion-para-100.json#2012",
+        "parametros/cotizacion-para-100.json#2013",
+        "parametros/cotizacion-para-100.json#2027"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Valores derivados aritméticamente de la escala legal (véase notes del fichero), tal como constan en /data."
+    },
+    {
+      "id": "web-reformas-ley-24-1997",
+      "texto": "En /data, el periodo de cálculo de la base reguladora es de 144 meses en 2000, de 156 en 2001 y de 180 en 2002 y los meses cotizados para el 100 % son 420 en 2000; la Ley 24/1997 fija los calendarios de esos valores.",
+      "ubicacion": "Página «Reformas»: ficha de la Ley 24/1997, tabla del periodo de cálculo y valor de la escala (Fase «Reformas»)",
+      "datos": [
+        "parametros/periodo-calculo-base-reguladora.json#2000",
+        "parametros/periodo-calculo-base-reguladora.json#2001",
+        "parametros/periodo-calculo-base-reguladora.json#2002",
+        "parametros/cotizacion-para-100.json#2000"
+      ],
+      "fuentes": [
+        {
+          "title": "Ley 24/1997, de 15 de julio, de Consolidación y Racionalización del Sistema de Seguridad Social",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1997-15810"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Los años anteriores a 2000 del calendario constan en la transición de la cronología (cita del BOE) y no en una serie de /data; la ficha lo declara."
+    },
+    {
+      "id": "web-reformas-mei-solidaridad",
+      "texto": "En /data, el tipo del Mecanismo de Equidad Intergeneracional es de 0,6 puntos porcentuales en 2023 y de 1,2 en 2029, y la cotización adicional de solidaridad tiene un calendario de 2025 a 2045 con tres tramos, que fijan la disposición transitoria 43.ª y la 42.ª del TRLGSS añadidas por el RDL 2/2023.",
+      "ubicacion": "Página «Reformas»: ficha del RDL 2/2023, tablas del MEI y de la cotización adicional de solidaridad (Fase «Reformas»)",
+      "datos": [
+        "parametros/mei-tipo-total.json#2023",
+        "parametros/mei-tipo-total.json#2029",
+        "parametros/cuota-solidaridad-calendario.json#2025-tramo-a",
+        "parametros/cuota-solidaridad-calendario.json#2045-tramo-c"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Valores leídos de los ficheros de /data, que los contrastan con la orden anual de cotización donde existe."
+    },
+    {
+      "id": "web-reformas-revalorizacion",
+      "texto": "En /data, el incremento general de las pensiones es del 1 % en 2013 (RDL 28/2012; el dato cita el RDL 29/2012, art. 5.1, que remite a aquel), del 1,6 % en 2019 (RDL 28/2018), del 2,8 % en 2025 (RD 316/2025) y del 2,7 % en 2026 (RD 241/2026).",
+      "ubicacion": "Página «Reformas»: fichas del RDL 28/2012, del RDL 28/2018, del RD 316/2025 y del RD 241/2026 (Fase «Reformas»)",
+      "datos": [
+        "parametros/revalorizacion-general.json#2013",
+        "parametros/revalorizacion-general.json#2019",
+        "parametros/revalorizacion-general.json#2025",
+        "parametros/revalorizacion-general.json#2026"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto-ley 29/2012, de 28 de diciembre",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2012-15764"
+        },
+        {
+          "title": "Real Decreto 316/2025, de 15 de abril",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-7660"
+        },
+        {
+          "title": "Real Decreto 241/2026, de 25 de marzo",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-6977"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "La ficha no compara los porcentajes de distintos años ni con el IPC: muestra el valor que fija cada norma para su año."
+    },
+    {
+      "id": "web-reformas-demora",
+      "texto": "En /data, el complemento por jubilación demorada es del 4 % de la base reguladora por cada año completo y del 2 % por un periodo de más de seis meses y menos de un año, según el artículo 210.2 del TRLGSS en la redacción de la Ley 21/2021.",
+      "ubicacion": "Página «Reformas»: ficha de la Ley 21/2021, valores del complemento por demora (Fase «Reformas»)",
+      "datos": [
+        "parametros/jubilacion-demora-reglas.json#porcentaje-adicional-anual",
+        "parametros/jubilacion-demora-reglas.json#porcentaje-adicional-semestre"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado con todas las versiones de cada precepto, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        },
+        {
+          "title": "Ley 21/2021, de 28 de diciembre",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-21652"
+        }
+      ],
+      "fetchedAt": "2026-11-17",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción del texto consolidado; el cálculo completo (también el pago único y la opción mixta) se explica en «Cómo se calcula»."
     }
   ]
 }

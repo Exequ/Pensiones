@@ -403,6 +403,33 @@ export const CambioNormativo = z.strictObject({
   evidencia: textoObligatorio('evidencia'),
 });
 
+/**
+ * De dónde procede la fecha de entrada en vigor de una norma de la cronología: los metadatos del BOE
+ * descargados, una disposición final del texto descargado, la cronología de /data (que a su vez recoge
+ * los metadatos o la disposición), una regla sobre la fecha de publicación («al día siguiente de su
+ * publicación») o ninguna (`sin-texto`: no consta en los textos ni en los datos del repositorio).
+ */
+export const BASES_ENTRADA_EN_VIGOR = [
+  'metadatos-boe',
+  'disposicion-final',
+  'cronologia',
+  'regla-sobre-publicacion',
+  'sin-texto',
+] as const;
+
+export const EntradaEnVigor = z
+  .strictObject({
+    fecha: fechaIso.nullable(),
+    base: z.enum(BASES_ENTRADA_EN_VIGOR, { error: 'Base de la entrada en vigor desconocida' }),
+    /** Cita literal (o el texto de la cronología) en que consta la fecha o la regla. */
+    cita: z.string().trim().min(1).nullable(),
+    /** Dónde consta (fichero y apartado) o por qué no consta. */
+    ubicacion: textoObligatorio('entradaEnVigor.ubicacion'),
+  })
+  .refine((v) => (v.base === 'sin-texto') === (v.fecha === null && v.cita === null), {
+    error: 'Sin texto implica sin fecha y sin cita; con fecha, la base y la cita son obligatorias',
+  });
+
 export const Norma = z.strictObject({
   id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
   titulo: textoObligatorio('titulo'),
@@ -414,6 +441,9 @@ export const Norma = z.strictObject({
   fetchedAt: FechaDescarga,
   confidence: Confianza,
   resumen: textoObligatorio('resumen'),
+  entradaEnVigor: EntradaEnVigor,
+  /** Texto completo descargado de la norma en el repositorio (`data-raw/boe/…`), si lo hay. */
+  textoDescargado: z.string().trim().min(1).optional(),
   cambios: z.array(CambioNormativo).min(1, { error: 'Cada norma debe documentar algún cambio' }),
   modulos: z.array(Modulo).min(1),
   estado: z.enum(['vigente', 'derogada', 'modificada', 'suspendida']),

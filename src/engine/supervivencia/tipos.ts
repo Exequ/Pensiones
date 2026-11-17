@@ -51,7 +51,7 @@ export interface Causante {
   readonly pension?: PensionDelCausante;
   /**
    * Accidente de trabajo o enfermedad profesional: base reguladora mensual calculada fuera del
-   * motor con el salario real (Reglamento de 1956, no descargado). Sin ella, `NoImplementada`.
+   * motor con el salario real (Reglamento de 1956: su capítulo V consta por OCR en `data-raw/boe/reglamento-at-1956-cap5.txt`, sin convertir en datos). Sin ella, `NoImplementada`.
    */
   readonly baseReguladoraProfesional?: number;
 }
