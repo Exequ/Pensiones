@@ -60,7 +60,9 @@ Ver `docs/PENDIENTE_DATOS.md`, «Fase “Mitos y realidades”», y `docs/DESCAR
 
 ## CI y despliegue
 
-@@CI@@
+- **CI del PR**: en verde en el commit `2ff2f2179c1f333abb7fc8f8a072bd2751fe3772` (workflow «CI», ejecución número 107: lint, tipos, tests, validación de datos, compilación y Playwright; unos 10 minutos). El commit siguiente solo añade esta sección y el CI se vuelve a ejecutar sobre él antes de fusionar.
+- **Compilación para GitHub Pages en el PR**: el workflow «Despliegue en GitHub Pages» termina correctamente sobre el mismo commit (ejecución número 107).
+- **Despliegue de `main`**: se produce al fusionar el PR (squash) y su resultado, junto con la comprobación de la ruta publicada, consta en el informe final de la sesión y no en este fichero, para no abrir un PR solo de documentación.
 
 ## Pendientes para Sergio
 
