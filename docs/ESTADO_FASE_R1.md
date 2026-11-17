@@ -54,3 +54,9 @@ En «Otros sistemas» el literal por país («cita literal de la fuente» de la 
 - `npm test`: 138 ficheros y 3.012 pruebas en verde (antes de la fase, 136 y 2.986).
 - `npm run build` correcto. Trozo principal `index-*.js`: 277.345 bytes (87.467 comprimidos con gzip; antes 277.401). El trozo de la página «Metodología» pasa a 64.300 bytes (antes 63.593) por el párrafo nuevo y las dos entradas de respaldo; los trozos de las demás páginas cambian solo por los textos.
 - Playwright completo en local: 562 pruebas en verde y 8 en rojo, todas de `e2e/sitio.spec.ts` («sin sombras, degradados, radios > 2 px…» en `/diseno`, `/cotizantes-y-pensionistas`, `/financiacion-y-deficit` y `/hucha`, escritorio y móvil): `INPUT border-radius 50%` en los botones de radio de `SegmentedPills`. Se reproducen igual en un árbol de `origin/main` sin cambios (`0d3fd98`) en este entorno de ejecución (la versión local de Chromium pinta el radio por defecto con `border-radius` del 50 %), así que no los causa la fase; en el CI de `main` pasan. No se ha tocado la prueba ni el componente. Lo que decide es el CI del PR.
+
+## CI y despliegue
+
+- **CI del PR** ([Exequ/Pensiones#49](https://github.com/Exequ/Pensiones/pull/49)) sobre el commit de código `4a2e5ca370b753e58175754c2ebe4ba80c7745c0`: run 124 en verde, con lint, tipos, pruebas, validación de datos, compilación y Playwright completo (incluidas las ocho pruebas de `e2e/sitio.spec.ts` que fallan en este entorno local). El commit siguiente solo añade este fichero y su CI se comprueba antes de fusionar.
+- **Despliegue de la compilación del PR** (run 124 de «Despliegue en GitHub Pages», evento `pull_request`): en verde.
+- **Despliegue de `main` tras la fusión y comprobación de la URL publicada** (códigos HTTP y rutas a 1360 y 390 px): constan en el informe final de la sesión, porque solo existen después de fusionar y un cambio posterior en este fichero abriría un PR solo de documentación.
