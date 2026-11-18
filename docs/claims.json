@@ -1834,7 +1834,7 @@
       "datos": ["parametros/revalorizacion-regla.json#2024-ultimo-mes-medicion"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -2436,7 +2436,7 @@
       "datos": ["parametros/actualizacion-bases.json#2026-meses-nominales"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -2453,7 +2453,7 @@
       "datos": ["parametros/base-maxima-incremento-futuro.json#2050"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -2554,7 +2554,7 @@
       "datos": ["parametros/complemento-brecha-genero-reglas.json#se-suma-a-la-minima"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -2666,7 +2666,7 @@
       "datos": ["parametros/escala-jubilacion-tramos.json#2027-tramo2-pct"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -2701,7 +2701,7 @@
       "datos": ["parametros/fondo-reserva-desembolso-maximo.json#2053"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -2723,7 +2723,7 @@
       ],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -2746,7 +2746,7 @@
       ],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -2901,7 +2901,7 @@
       "datos": ["parametros/jubilacion-anticipada-reglas.json#parcial-relevo-cotizacion-meses"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -2916,7 +2916,7 @@
       "datos": ["parametros/jubilacion-coeficientes-involuntaria.json#umbral-t4"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -2933,7 +2933,7 @@
       "datos": ["parametros/jubilacion-coeficientes-voluntaria-limite.json#2033-t4-9"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -2950,7 +2950,7 @@
       "datos": ["parametros/jubilacion-coeficientes-voluntaria.json#umbral-t4"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -2967,7 +2967,7 @@
       "datos": ["parametros/jubilacion-demora-reglas.json#mixta-vigencia-desde"],
       "fuentes": [
         {
-          "title": "Real Decreto 371/2023, de 16 de mayo, por el que se desarrolla el régimen jurídico del complemento económico establecido en el artículo 210.2 del texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 28/05/2026; descargado el 2026-11-12)",
+          "title": "Real Decreto 371/2023, de 16 de mayo, por el que se desarrolla el régimen jurídico del complemento económico establecido en el artículo 210.2 del texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 28/05/2026)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-11645"
         }
@@ -2984,7 +2984,7 @@
       "datos": ["parametros/jubilacion-edad-65.json#2013-referencia-minimas-meses"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -2999,7 +2999,7 @@
       "datos": ["parametros/jubilacion-periodo-previo.json#2013-ventana-meses"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -3014,7 +3014,7 @@
       "datos": ["parametros/lagunas-integracion-brecha-genero.json#2026-umbral-brecha-pct"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -3031,7 +3031,7 @@
       "datos": ["parametros/lagunas-integracion.json#2026-tramo2-pct-base-minima"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -3067,7 +3067,7 @@
       ],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -3162,7 +3162,7 @@
       "datos": ["parametros/opcion-25-anos-aplicable.json#2044"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -3177,7 +3177,7 @@
       "datos": ["parametros/opcion-25-anos-divisor.json#2043"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -3194,7 +3194,7 @@
       "datos": ["parametros/opcion-25-anos-ventana.json#2043"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -3211,7 +3211,7 @@
       "datos": ["parametros/pension-maxima-incremento-2051-2065.json#2065-convergencia-total"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -3228,7 +3228,7 @@
       "datos": ["parametros/pension-maxima-incremento-futuro.json#2050"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -3311,7 +3311,7 @@
       "datos": ["parametros/pension-minima-regla.json#2027-brecha-reducida"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }
@@ -3484,7 +3484,7 @@
       "datos": ["parametros/revalorizacion-regla.json#2024-ultimo-mes-medicion"],
       "fuentes": [
         {
-          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
           "publisher": "Boletín Oficial del Estado (BOE)",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
         }

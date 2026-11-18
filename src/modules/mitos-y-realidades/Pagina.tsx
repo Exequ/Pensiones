@@ -31,9 +31,8 @@ export default function MitosYRealidades() {
         </header>
         <MarginNote>
           <p>
-            Cada gráfico y cada tabla lleva su fuente, la fecha de descarga y un nivel de confianza.
-            Los cálculos propios se señalan como tales y se pueden reproducir con los datos de la
-            web.
+            Cada gráfico y cada tabla lleva su fuente. Los cálculos propios se señalan como tales y
+            se pueden reproducir con los datos de la web.
           </p>
         </MarginNote>
         <p className="hist-aviso">

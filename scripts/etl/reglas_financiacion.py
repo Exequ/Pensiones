@@ -48,7 +48,7 @@ def da_previa(doc, lit):
 
 
 RDL2 = ('rdl-2-2023.txt', src('', 'Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones', 'https://www.boe.es/buscar/doc.php?id=BOE-A-2023-6967'), 'RDL 2/2023, art. único')
-TRLGSS = src('', 'Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)', 'https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724')
+TRLGSS = src('', 'Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)', 'https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724')
 datos = []
 for a, pct in zip(range(2033, 2054), ['0,10', '0,12', '0,15', '0,17', '0,19', '0,22', '0,25', '0,28', '0,46', '0,50', '0,54', '0,77', '0,82', '0,87', '0,91', '0,86', '0,84', '0,82', '0,53', '0,51', '0,50']):
     datos.append(mk(str(a), a, float(pct.replace(',', '.')), '% del PIB (límite máximo del desembolso anual)', TRLGSS, 'trlgss-2015-consolidado.txt', f'| {a} | {pct}% |', 'art. 121.2 TRLGSS (art. único.15 RDL 2/2023)',

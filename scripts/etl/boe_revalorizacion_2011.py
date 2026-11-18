@@ -144,8 +144,8 @@ def construye(docs):
             ('id', id_), ('value', valor), ('unit', unidad), ('period', '2011'),
             ('source', OrderedDict([('title', d['title']), ('publisher', BOE), ('url', f'https://www.boe.es/buscar/doc.php?id={d["docId"]}'), ('docId', d['docId'])])),
             ('fetchedAt', FECHA), ('confidence', 'alta' if id_ != 'resto-mantienen-cuantia-2011' else 'media'),
-            ('notes', f'{titulo}. {notas} {NOTA_PROCEDENCIA}'),
-            ('quote', cita), ('location', f'{ubicacion}; PDF {d["fichero"]}, página {p} (BOE, pág. {b}); huella SHA-256 {docs[doc]["sha256"]}'),
+            ('notes', f'{titulo}. {notas} {NOTA_PROCEDENCIA} Huella SHA-256 del PDF: {docs[doc]["sha256"]}.'),
+            ('quote', cita), ('location', f'{ubicacion}; página {p} del PDF (BOE, pág. {b})'),
         ]))
     return data
 

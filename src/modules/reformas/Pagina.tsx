@@ -38,7 +38,7 @@ export default function Reformas() {
         <MarginNote>
           <p>
             Cada ficha cita el artículo o la disposición de la norma, con su texto literal, y cada
-            valor lleva su fuente, la fecha de descarga y un nivel de confianza.
+            valor lleva su fuente.
           </p>
         </MarginNote>
         <p className="hist-aviso">

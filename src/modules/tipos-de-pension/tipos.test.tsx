@@ -2,6 +2,7 @@ import { render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import { formatearEuros, formatearNumero } from '../../engine/formato';
+import { leerFuentes, textoDeFuentes } from '../../test/fuentes';
 import { buscarSeccion } from '../secciones';
 import { datosTipos } from './datos-tipos';
 import { FICHAS } from './ids-datos';
@@ -65,10 +66,11 @@ describe('página «Tipos de pensión»', () => {
         expect(fila[2], `norma de un requisito de ${c.titulo}`).toMatch(/art|DT|disposición/i);
       }
       expect(filas(tabla(f, /Número y pensión media/)).length).toBeGreaterThan(0);
-      const fuente = [...f.querySelectorAll('.linea-fuente')].map((x) => x.textContent).join(' ');
-      expect(fuente).toMatch(/descargado el \d{4}-\d{2}-\d{2}/);
-      expect(fuente).toMatch(/confianza: (alta|media|baja)/);
-      expect(f.querySelector('.linea-fuente a[href^="https://www.boe.es/"]')).not.toBeNull();
+      // La fuente se abre con «Fuente(s)»: título con enlace y organismo; ni fecha ni confianza.
+      const { texto, enlaces } = leerFuentes(f);
+      expect(texto).toMatch(/Organismo/);
+      expect(texto).not.toMatch(/descargad|confianza/i);
+      expect(enlaces.some((e) => e.startsWith('https://www.boe.es/'))).toBe(true);
     }
   });
 
@@ -132,7 +134,7 @@ describe('página «Tipos de pensión»', () => {
       const citas = f.querySelectorAll('.tipos-citas blockquote');
       expect(citas.length).toBeGreaterThan(0);
       expect(f.textContent).toMatch(/% de la base reguladora/);
-      expect(f.querySelector('.linea-fuente a[href*="BOE-A-1966"]')).not.toBeNull();
+      expect(leerFuentes(f).enlaces.some((e) => e.includes('BOE-A-1966'))).toBe(true);
     }
   });
 
@@ -145,11 +147,12 @@ describe('página «Tipos de pensión»', () => {
     }
   });
 
-  it('la ficha de jubilación nombra las demás modalidades y la confianza de cada una', () => {
+  it('la ficha de jubilación nombra las demás modalidades, sin mostrar su confianza', () => {
     const { container } = pintar();
     const f = ficha(container, 'jubilacion');
     expect(f.querySelectorAll('li').length).toBeGreaterThanOrEqual(6);
-    expect(f.textContent).toMatch(/Jubilación parcial[\s\S]*confianza: media/);
+    expect(f.textContent).toMatch(/Jubilación parcial/);
+    expect(f.textContent).not.toMatch(/confianza/i);
   });
 
   it('el cuadro resumen lista todas las prestaciones con su número y su pensión media', () => {
@@ -181,16 +184,17 @@ describe('«Tipos de pensión»: complementos por brecha de género y por matern
     return s;
   };
 
-  it('tiene su encabezado, fuente con fecha y confianza, y «Cómo leerlo» que dice qué no mide', () => {
+  it('tiene su encabezado, fuente con su naturaleza (sin fecha ni confianza), y «Cómo leerlo» que dice qué no mide', () => {
     const { container } = pintar();
     const s = seccion(container);
     expect(within(s).getByRole('heading', { level: 2 })).toHaveTextContent(
       /Complementos por hijos/,
     );
-    const fuente = s.querySelector('.linea-fuente')?.textContent ?? '';
-    expect(fuente).toMatch(/descargado el 2026-11-16/);
-    expect(fuente).toMatch(/confianza: alta/);
-    expect(fuente).toMatch(/naturaleza: observado/);
+    const linea = s.querySelector('.linea-fuente');
+    expect(linea?.textContent).toMatch(/naturaleza: observado/);
+    const fuente = textoDeFuentes(s);
+    expect(fuente).toMatch(/Organismo/);
+    expect(fuente).not.toMatch(/descargad|2026-11-16|confianza/i);
     const como = s.querySelector('.como-leerlo')?.textContent ?? '';
     expect(como).toMatch(/No miden la brecha de género de las pensiones de jubilación/);
     expect(como).toMatch(/Tampoco dividen por la población/);

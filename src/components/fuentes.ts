@@ -1,5 +1,10 @@
 import type { Dato } from '../engine/esquema-datos';
-import { formatearFechaIso } from '../engine/formato';
+
+/** Cita del documento y ubicación en él, tal como constan en el dato (`quote`, `location`). */
+export interface CitaFuente {
+  readonly cita: string | undefined;
+  readonly ubicacion: string | undefined;
+}
 
 export interface ReferenciaFuente {
   readonly clave: string;
@@ -7,10 +12,10 @@ export interface ReferenciaFuente {
   readonly organismo: string;
   readonly url: string;
   readonly docId: string | undefined;
-  readonly fecha: string;
-  readonly confianza: Dato['confidence'];
   /** Naturaleza del dato, si se indica (observado, derivado o proyección de modelo). */
   readonly naturaleza: Dato['naturaleza'];
+  /** Citas y ubicaciones de los datos de esta fuente, sin repetir; vacío si ninguno las lleva. */
+  readonly citas: readonly CitaFuente[];
 }
 
 /** Texto con el que se rotula cada naturaleza junto a la fuente. */
@@ -21,30 +26,51 @@ export const ETIQUETA_NATURALEZA = {
   'proyeccion-de-modelo': 'proyección de modelo propio',
 } as const;
 
-/** Agrupa las fuentes distintas, conservando el orden de aparición. */
+/**
+ * Agrupa las fuentes distintas, conservando el orden de aparición. La fecha de descarga y la
+ * confianza (`fetchedAt`, `confidence`) siguen en los datos, pero no forman parte de la referencia
+ * que muestra la interfaz.
+ */
 export function fuentesUnicas(datos: readonly Dato[]): ReferenciaFuente[] {
-  const vistas = new Map<string, ReferenciaFuente>();
+  const vistas = new Map<string, Omit<ReferenciaFuente, 'citas'> & { citas: CitaFuente[] }>();
   for (const dato of datos) {
-    const fecha = formatearFechaIso(dato.fetchedAt);
     const clave = [
       dato.source.url,
       dato.source.docId ?? '',
-      fecha,
-      dato.confidence,
+      dato.source.title,
+      dato.source.publisher,
       dato.naturaleza ?? '',
     ].join('|');
-    if (!vistas.has(clave)) {
-      vistas.set(clave, {
+    let fuente = vistas.get(clave);
+    if (!fuente) {
+      fuente = {
         clave,
         titulo: dato.source.title,
         organismo: dato.source.publisher,
         url: dato.source.url,
         docId: dato.source.docId,
-        fecha,
-        confianza: dato.confidence,
         naturaleza: dato.naturaleza,
-      });
+        citas: [],
+      };
+      vistas.set(clave, fuente);
+    }
+    if (dato.quote !== undefined || dato.location !== undefined) {
+      const repetida = fuente.citas.some(
+        (c) => c.cita === dato.quote && c.ubicacion === dato.location,
+      );
+      if (!repetida) fuente.citas.push({ cita: dato.quote, ubicacion: dato.location });
     }
   }
   return [...vistas.values()];
+}
+
+/** Naturalezas distintas de una lista de fuentes, rotuladas y en orden de aparición. */
+export function etiquetasNaturaleza(fuentes: readonly ReferenciaFuente[]): string[] {
+  const etiquetas: string[] = [];
+  for (const { naturaleza } of fuentes) {
+    if (naturaleza === undefined) continue;
+    const etiqueta = ETIQUETA_NATURALEZA[naturaleza];
+    if (!etiquetas.includes(etiqueta)) etiquetas.push(etiqueta);
+  }
+  return etiquetas;
 }

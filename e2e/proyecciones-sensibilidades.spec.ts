@@ -36,7 +36,7 @@ test.describe('sensibilidades de M4 en «Proyecciones»', () => {
     const contenedor = tabla(page).locator(
       'xpath=ancestor::div[contains(@class,"proy-sensibilidades")][1]',
     );
-    await expect(contenedor.locator('xpath=following-sibling::p[1]')).toContainText(
+    await expect(contenedor.locator('xpath=following-sibling::*[1]')).toContainText(
       'naturaleza: proyección de modelo',
     );
     const comoLeerlo = bloque(page).locator('.como-leerlo', {

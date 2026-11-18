@@ -17,7 +17,7 @@
     "aplicacion": "g e IPC intervienen en la pensión de las altas, en las bases de cotización y en el PIB aproximado (afiliados por salario nominal); las pensiones en vigor se revalorizan con el IPC."
   },
   "source": {
-    "title": "M4 · Modelo financiero del sistema (v1): código del modelo en el repositorio y salidas de su ejecución",
+    "title": "M4 · Modelo financiero del sistema (v1): código del modelo y salidas de su ejecución",
     "publisher": "Elaboración propia: modelo de proyección",
     "url": "https://github.com/Exequ/Pensiones/blob/b0b7c31d8443bceb34ff5e4761f0697df8c19de2/modelos/m4/m4_escenarios.py"
   },

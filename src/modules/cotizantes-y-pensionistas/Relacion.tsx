@@ -143,7 +143,7 @@ export function Relacion() {
           relacion.porPensionMediaAnual.dato,
           relacion.porPensionUltimoDia.dato,
         ]}
-        nota="Datos derivados (cociente de dos series publicadas), con confianza media. Las tres definiciones se muestran sin elegir una."
+        nota="Datos derivados (cociente de dos series publicadas). Las tres definiciones se muestran sin elegir una."
         comoLeerlo={
           <>
             <p>
@@ -191,7 +191,7 @@ export function Relacion() {
           relacion.porPensionistaMediaAnual.dato,
           relacion.porPensionistaUltimoDia.dato,
         ]}
-        nota="Datos derivados (cociente de dos series publicadas), con confianza media. La tercera definición solo tiene un año."
+        nota="Datos derivados (cociente de dos series publicadas). La tercera definición solo tiene un año."
         comoLeerlo={
           <>
             <p>

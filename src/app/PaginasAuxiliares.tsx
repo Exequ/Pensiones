@@ -9,10 +9,10 @@ export function Fuentes() {
     <UnderConstruction
       kicker="Sobre esta web"
       titulo="Fuentes"
-      resumen="Relación de todas las fuentes utilizadas en la web, con el organismo que las publica, el enlace y la fecha de descarga."
+      resumen="Relación de todas las fuentes utilizadas en la web, con el organismo que las publica y el enlace."
       previsto={[
         'Listado de fuentes agrupado por organismo.',
-        'Para cada dato: documento, enlace, fecha de descarga y nivel de confianza.',
+        'Para cada dato: documento y enlace.',
         'Fuentes que no han podido consultarse y están pendientes.',
       ]}
     />

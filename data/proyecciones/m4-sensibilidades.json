@@ -17,7 +17,7 @@
     "aplicacion": "Es el escenario base del que parte cada caso de sensibilidad; cada caso cambia una sola palanca respecto a él (véase «sensibilidades»)."
   },
   "source": {
-    "title": "M4 · Modelo financiero del sistema (v1): código del modelo en el repositorio y salidas de su ejecución",
+    "title": "M4 · Modelo financiero del sistema (v1): código del modelo y salidas de su ejecución",
     "publisher": "Elaboración propia: modelo de proyección",
     "url": "https://github.com/Exequ/Pensiones/blob/09f6e066253cb65052d2754229797811980a0bd9/modelos/m4/m4_sensibilidades.py"
   },

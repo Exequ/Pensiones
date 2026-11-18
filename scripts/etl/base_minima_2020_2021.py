@@ -153,7 +153,7 @@ tramo_sep_dic = dato(
     '2021', min_sep21, 'euros/mes', fuente_orden_art3,
     'Orden PCM/1353/2021, art. 3: «Desde el 1 de septiembre de 2021, la cotización al Régimen General por contingencias comunes estará '
     'limitada para cada grupo de categorías profesionales por las bases mínimas y máximas siguientes:» (grupos 4 a 7: 1.125,90 euros/mes)',
-    'Orden PCM/1353/2021, artículo 3 (extracto en docs/revision-actuarial/fuentes/orden-pcm-1353-2021-art3.txt)',
+    'Orden PCM/1353/2021, artículo 3',
     'Vigente del 1 de septiembre al 31 de diciembre de 2021. Grupos 4 a 7 (idénticos). Lo publica la Orden; el SMI diario de 32,17 euros '
     '(RD 817/2021) × 7/6 × 30 da la misma cuantía dentro del redondeo diario (art. 19.2 TRLGSS). Respuesta actuarial: tanda 3, parte A, n.º 32.',
     confidence='alta',

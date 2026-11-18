@@ -32,10 +32,7 @@ export function UnderConstruction({
           <span className="estado-seccion-etiqueta">Estado</span> En construcción
         </p>
         <MarginNote>
-          <p>
-            Cada cifra que se publique aquí irá acompañada de su fuente, la fecha en que se descargó
-            y un nivel de confianza.
-          </p>
+          <p>Cada cifra que se publique aquí irá acompañada de su fuente.</p>
         </MarginNote>
         {previsto.length > 0 ? (
           <section className="seccion prosa" aria-labelledby="previsto">

@@ -5,7 +5,7 @@
  * Recorre las rutas del HashRouter con la aplicación completa (cabecera, pie y banner incluidos). La
  * prueba del detector, de la lista y de las cadenas de código está en `scripts/voz-web.test.ts`.
  */
-import { cleanup, render, waitFor } from '@testing-library/react';
+import { cleanup, fireEvent, render, waitFor } from '@testing-library/react';
 import { createElement } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
 import { ZONA_PERMITIDA, familiasExentasEn, vozEn } from '../../scripts/lib/voz.ts';
@@ -55,7 +55,23 @@ async function textoDeRuta(ruta: string): Promise<string> {
   );
   // Las páginas con tablas y gráficos terminan de pintar tras la carga perezosa.
   await new Promise((r) => setTimeout(r, 150));
-  return textosVisibles(container);
+  return [textosVisibles(container), ...textosDeDesplegables(container)].join('\n');
+}
+
+/**
+ * Texto de cada desplegable de fuentes (fase R2): se abre uno a uno, se lee y se cierra. Así la voz
+ * se comprueba también en lo que solo aparece al abrir «Fuentes».
+ */
+function textosDeDesplegables(container: HTMLElement): string[] {
+  const textos: string[] = [];
+  for (const boton of container.querySelectorAll<HTMLButtonElement>('.linea-fuente-boton')) {
+    fireEvent.click(boton);
+    const dialogo = container.querySelector('dialog');
+    if (dialogo) textos.push(textosVisibles(dialogo));
+    const cerrar = container.querySelector<HTMLButtonElement>('.fuentes-dialogo-cerrar');
+    if (cerrar) fireEvent.click(cerrar);
+  }
+  return textos;
 }
 
 describe('voz de la web en todas las rutas', () => {

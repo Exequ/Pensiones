@@ -549,7 +549,7 @@ def main():
                 'aplicacion': f.get('aplicacion', ESCENARIO_APLICACION[f['modelo']]),
             },
             'source': {
-                'title': f'{nombre}: código del modelo en el repositorio y salidas de su ejecución',
+                'title': f'{nombre}: código del modelo y salidas de su ejecución',
                 'publisher': PUBLICADOR,
                 'url': f'{URL_REPO}/{procedencia["commit"]}/{script}',
             },

@@ -25,9 +25,9 @@ from comun import REPO, HOY, BOE, fusionar
 RAW = f'{REPO}/data-raw/boe'
 ORIGEN = json.load(open(f'{RAW}/origen.json'))
 
-TRLGSS = ('trlgss-2015-consolidado.txt', 'Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)')
+TRLGSS = ('trlgss-2015-consolidado.txt', 'Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)')
 LEY21 = ('ley-21-2021.txt', 'Ley 21/2021, de 28 de diciembre, de garantía del poder adquisitivo de las pensiones y de otras medidas de refuerzo de la sostenibilidad financiera y social del sistema público de pensiones (PDF oficial del BOE)')
-RD371 = ('rd-371-2023.txt', 'Real Decreto 371/2023, de 16 de mayo, por el que se desarrolla el régimen jurídico del complemento económico establecido en el artículo 210.2 del texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 28/05/2026; descargado el 2026-11-12)')
+RD371 = ('rd-371-2023.txt', 'Real Decreto 371/2023, de 16 de mayo, por el que se desarrolla el régimen jurídico del complemento económico establecido en el artículo 210.2 del texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 28/05/2026)')
 
 _lineas = {}
 

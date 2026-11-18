@@ -4,6 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import { valoracionesEn } from '../../../scripts/lib/valoraciones.ts';
 import { datosFinanciero } from './datos-financiero';
+import { expectFuente, textoDeFuentes } from '../../test/fuentes';
 import Financiero from './Financiero';
 import Pagina from './Pagina';
 import { COL4 } from './ids-financiero';
@@ -83,10 +84,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
       expect(tabla, `tabla de «${titulo}»`).not.toBeNull();
       expect(tabla?.querySelector('thead')?.textContent).toMatch(/Naturaleza del dato/);
       expect(tabla?.querySelectorAll('tbody tr').length).toBeGreaterThan(0);
-      const fuente = figura.querySelector('.linea-fuente')?.textContent ?? '';
-      expect(fuente, `fuente de «${titulo}»`).toMatch(
-        /Fuentes?:.*descargado el \d{4}-\d{2}-\d{2}.*confianza: (alta|media|baja)/s,
-      );
+      const fuente = expectFuente(figura, `fuente de «${titulo}»`);
       expect(fuente).toMatch(/naturaleza: proyección (de modelo propio|publicada por la fuente)/);
       expect(figura.querySelector('.grafico-nota')?.textContent).toMatch(
         /no es un dato observado ni una previsión/,
@@ -152,9 +150,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
     expect(constantes.querySelector('.grafico-descripcion')?.textContent).toMatch(
       /IPC supuesto del escenario \(2\s%/,
     );
-    expect(constantes.querySelector('.linea-fuente')?.textContent).toMatch(
-      /Índice de Precios de Consumo/,
-    );
+    expect(textoDeFuentes(constantes)).toMatch(/Índice de Precios de Consumo/);
     expect(proyectado(constantes)).not.toEqual(antes);
   });
 
@@ -187,9 +183,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
     expect([...pib.querySelectorAll('thead th')].map((c) => c.textContent)).toContain(
       'Ageing Report: balance de pensiones',
     );
-    expect(pib.querySelector('.linea-fuente')?.textContent).toMatch(
-      /proyección publicada por la fuente/,
-    );
+    expect(textoDeFuentes(pib)).toMatch(/proyección publicada por la fuente/);
     expect(container.textContent.match(/Cambio de definición del PIB/g)).toHaveLength(2);
   });
 
@@ -201,7 +195,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
     const flujos = figuraDe(container, 'Dotaciones y disposiciones del Fondo de Reserva');
     const cabeceras = [...flujos.querySelectorAll('thead th')].map((c) => c.textContent);
     expect(cabeceras).toContain('Límite legal de disposición');
-    expect(flujos.querySelector('.linea-fuente')?.textContent).toMatch(/Seguridad Social/);
+    expect(textoDeFuentes(flujos)).toMatch(/Seguridad Social/);
     const adicional = figuraDe(
       container,
       'Disposición del Fondo de Reserva y financiación adicional',
@@ -230,7 +224,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
     const filas = filasDeTabla(figura);
     expect(filas).toHaveLength(25);
     expect(filas[0]?.celdas.slice(1)).toEqual(['100,0', '100,0']);
-    expect(figura.querySelector('.linea-fuente')?.textContent).toMatch(/Ageing Report/);
+    expect(textoDeFuentes(figura)).toMatch(/Ageing Report/);
     expect(container.textContent).toMatch(/modelo menos Ageing Report/);
     expect(container.textContent).toMatch(/Los niveles no son comparables/);
     expect(container.textContent).toMatch(/candidatos no verificados/);

@@ -128,7 +128,7 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
           presupuesto.transferenciasEstado.dato,
           presupuesto.derechosNoFinancieros.dato,
         ]}
-        nota="Importes en derechos reconocidos netos, no en caja. «Resto (por diferencia)» es un cálculo propio (dato derivado, confianza media): ingresos no financieros menos cotizaciones menos transferencias corrientes del Estado y organismos autónomos; incluye las demás transferencias, tasas, ingresos patrimoniales y de capital."
+        nota="Importes en derechos reconocidos netos, no en caja. «Resto (por diferencia)» es un cálculo propio (dato derivado): ingresos no financieros menos cotizaciones menos transferencias corrientes del Estado y organismos autónomos; incluye las demás transferencias, tasas, ingresos patrimoniales y de capital."
         comoLeerlo={
           <>
             <p>

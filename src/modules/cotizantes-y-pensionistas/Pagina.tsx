@@ -25,8 +25,8 @@ export default function CotizantesYPensionistas() {
         </header>
         <MarginNote>
           <p>
-            Cada gráfico lleva su tabla de datos, su fuente, la fecha de descarga y un nivel de
-            confianza. Los datos derivados (cocientes, índices) se señalan como tales.
+            Cada gráfico lleva su tabla de datos y su fuente. Los datos derivados (cocientes,
+            índices) se señalan como tales.
           </p>
         </MarginNote>
         <p className="hist-aviso">

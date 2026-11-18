@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
 import { describe, expect, it } from 'vitest';
 import TuPension from './Pagina';
+import { leerFuentes } from '../../test/fuentes';
 import { TablaTramos } from './TablaTramos';
 import { tramoVacio, type ErrorTramo, type TramoFormulario } from './tramos';
 
@@ -197,8 +198,11 @@ describe('página con carrera por tramos', () => {
     const selector = screen.getByLabelText(/Definición de la «base media»/);
     expect((selector as HTMLSelectElement).options.length).toBe(4);
     expect(screen.getByText(/no son intercambiables/)).toBeInTheDocument();
-    expect(screen.getAllByText(/descargado el/).length).toBeGreaterThan(0);
+    expect(screen.getAllByRole('button', { name: /^Fuentes?$/ }).length).toBeGreaterThan(0);
+    expect(screen.queryByText(/descargado el/)).toBeNull();
     await usuario.selectOptions(selector, 'media-cn');
-    expect(screen.getByText(/Contabilidad Nacional/, { selector: 'a' })).toBeInTheDocument();
+    // La fuente de la definición elegida está en el desplegable de «Fuente(s)».
+    const { texto } = leerFuentes(document.body);
+    expect(texto).toMatch(/Contabilidad Nacional/);
   });
 });

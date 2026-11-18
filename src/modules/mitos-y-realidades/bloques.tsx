@@ -37,7 +37,7 @@ export function TablaConFuente<F extends Record<string, ValorCelda>>({
   return (
     <div className="mito-tabla">
       <DataTable titulo={titulo} columnas={columnas} filas={filas} {...(pie ? { pie } : {})} />
-      <SourceLine datos={fuentes} />
+      <SourceLine datos={fuentes} titulo={titulo} />
     </div>
   );
 }

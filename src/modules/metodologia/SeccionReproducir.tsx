@@ -22,6 +22,11 @@ export function SeccionReproducir() {
         </a>
         .{reproduccion.node !== null ? ` Requiere Node.js ${reproduccion.node} o posterior.` : ''}
       </p>
+      <p>
+        La web se ha desarrollado con ayuda de un asistente de inteligencia artificial (Claude Code,
+        de Anthropic). Ese asistente ejecutó las sensibilidades del modelo financiero del sistema
+        con el código de los modelos del repositorio, no el autor en local.
+      </p>
       <h3>Comprobar el repositorio</h3>
       <p>Estos son los comandos de las reglas del proyecto, con su descripción:</p>
       <ul className="met-comandos">

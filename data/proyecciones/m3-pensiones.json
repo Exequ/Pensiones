@@ -17,7 +17,7 @@
     "aplicacion": "g e IPC no intervienen: el modelo cuenta pensiones, no importes."
   },
   "source": {
-    "title": "M3 · Pensiones contributivas en vigor: código del modelo en el repositorio y salidas de su ejecución",
+    "title": "M3 · Pensiones contributivas en vigor: código del modelo y salidas de su ejecución",
     "publisher": "Elaboración propia: modelo de proyección",
     "url": "https://github.com/Exequ/Pensiones/blob/15651e83ec29111cffee572346a9c746ee1e57e0/modelos/m3/m3_pensiones.py"
   },

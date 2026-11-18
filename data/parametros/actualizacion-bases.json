@@ -106,7 +106,7 @@
       "unit": "meses más recientes (anteriores al mes previo al del hecho causante) que se computan sin actualizar",
       "period": "2026",
       "source": {
-        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
       },
@@ -132,7 +132,7 @@
       "unit": "mes anterior al previo al hecho causante cuyo IPC es el índice de referencia (I25)",
       "period": "2026",
       "source": {
-        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
       },

@@ -20,18 +20,24 @@ Fase R1. Define cómo se escribe todo texto visible de la web. La protegen `src/
 
 Con y sin tilde, en singular y en plural:
 
-| Familia     | Expresiones                                                                                         |
-| ----------- | --------------------------------------------------------------------------------------------------- |
-| Descarga    | «descargado/a(s)» referido a ficheros, textos, normas o datos; «la descarga está…»                  |
-| Repositorio | «repositorio», «repo», «GitHub», «commit», «claims», «Claude», «fichero(s) de datos»                |
-| Rutas       | `data/…`, `data-raw/…`, `/data`, `docs/…`, `modelos/…`, `src/…`, `scripts/…`, `.json`, `.md`, `.ts` |
-| Revisión    | «revisor», «revisión actuarial», «revisión interna»                                                 |
-| Literal     | «Literal de la fuente»                                                                              |
+| Familia     | Expresiones                                                                                                    |
+| ----------- | -------------------------------------------------------------------------------------------------------------- |
+| Descarga    | «descargado/a(s)» referido a ficheros, textos, normas o datos; «la descarga está…»                             |
+| Repositorio | «repositorio», «repo», «GitHub», «commit», «claims», «Claude», «fichero(s) de datos»                           |
+| Rutas       | `data/…`, `data-raw/…`, `/data`, `docs/…`, `modelos/…`, `src/…`, `scripts/…`, `.json`, `.md`, `.ts`            |
+| Revisión    | «revisor», «revisión actuarial», «revisión interna»                                                            |
+| Literal     | «Literal de la fuente»                                                                                         |
+| Registro    | «descargado el AAAA-MM-DD», «versión descargada», «confianza: alta», «fecha de descarga», «nivel de confianza» |
 
-Única tolerancia, hasta la fase R2: la línea de fuente actual («· descargado el AAAA-MM-DD ·»), el
-título de fuente «versión descargada el AAAA-MM-DD» y el título de las salidas de los modelos
-(«código del modelo en el repositorio y salidas de su ejecución»). Son de la línea de fuente, que
-cambia la fase R2.
+**Fecha de descarga y confianza** (fase R2): se registran en los datos (`fetchedAt`, `confidence`), pero
+no se muestran en ningún texto visible, `aria-label`, `title` ni tooltip fuera de «Metodología». La línea
+de fuente es el botón «Fuente» o «Fuentes», que abre un desplegable con el título (enlace), el organismo
+y, si el dato los lleva, el identificador del documento, la naturaleza y la cita. Junto al botón consta
+siempre la naturaleza del dato cuando la tiene. Ya no hay formas toleradas: la familia `registro` de
+`scripts/lib/voz.ts` prohíbe «descargado el AAAA-MM-DD», «versión descargada», «confianza:
+alta|media|baja», la confianza de un dato entre paréntesis o con «con confianza …», «fecha de
+descarga» y «nivel de confianza». La confianza de una lectura de interpretación («con confianza baja o
+media») es otra cosa y no está prohibida.
 
 **Zona permitida** (`ZONA_PERMITIDA` en `scripts/lib/voz.ts`): la página «Metodología» completa, que
 explica la revisión actuarial y los medios de verificación («Dónde consta») y, en «Cómo
@@ -39,13 +45,13 @@ reproducirlo», el repositorio, las rutas y los comandos. Ninguna otra.
 
 ## Expresiones estándar
 
-| En lugar de…                                     | Escribir…                                                                          |
-| ------------------------------------------------ | ---------------------------------------------------------------------------------- |
-| «no consta en los textos / ficheros descargados» | «no consta en las fuentes consultadas»                                             |
-| «con los datos descargados no se puede…»         | «con los datos consultados no se puede…»                                           |
-| «no está en /data», «no estructurado en /data»   | «no consta en los datos de la web», «no se ha incorporado a los datos de la web»   |
-| «el literal de la fuente es…»                    | la explicación con fuente; el literal queda en el desplegable de fuentes (fase R2) |
-| «según el revisor…» (opinión sin comprobar)      | el hecho comprobado, o «no comprobado en las fuentes consultadas»                  |
-| «la revisión actuarial ha cerrado la lectura»    | «la duda de interpretación está cerrada»                                           |
-| «el dato no está descargado»                     | «la fuente no precisa…», «no hay dato publicado para…»                             |
-| nombre de un fichero del proyecto                | «según [organismo], …»                                                             |
+| En lugar de…                                     | Escribir…                                                                        |
+| ------------------------------------------------ | -------------------------------------------------------------------------------- |
+| «no consta en los textos / ficheros descargados» | «no consta en las fuentes consultadas»                                           |
+| «con los datos descargados no se puede…»         | «con los datos consultados no se puede…»                                         |
+| «no está en /data», «no estructurado en /data»   | «no consta en los datos de la web», «no se ha incorporado a los datos de la web» |
+| «el literal de la fuente es…»                    | la explicación con fuente; la cita del dato queda en el desplegable de fuentes   |
+| «según el revisor…» (opinión sin comprobar)      | el hecho comprobado, o «no comprobado en las fuentes consultadas»                |
+| «la revisión actuarial ha cerrado la lectura»    | «la duda de interpretación está cerrada»                                         |
+| «el dato no está descargado»                     | «la fuente no precisa…», «no hay dato publicado para…»                           |
+| nombre de un fichero del proyecto                | «según [organismo], …»                                                           |

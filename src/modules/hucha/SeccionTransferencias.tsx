@@ -244,7 +244,7 @@ export function SeccionTransferencias() {
         decimalesEje={0}
         incluirCero
         fuentes={t.datoTrimestral}
-        nota="Dato derivado (confianza media): diferencia entre acumulados de la ejecución del presupuesto. El primer trimestre de cada año es su propio acumulado. Los acumulados de los trimestres anteriores a un año completo proceden de la columna comparativa del fichero del año siguiente."
+        nota="Dato derivado: diferencia entre acumulados de la ejecución del presupuesto. El primer trimestre de cada año es su propio acumulado. Los acumulados de los trimestres anteriores a un año completo proceden de la columna comparativa del fichero del año siguiente."
         comoLeerlo={
           <>
             <p>
@@ -289,7 +289,7 @@ export function SeccionTransferencias() {
         decimalesEje={0}
         incluirCero
         fuentes={[d.liquidacion.delEstado.dato, t.delEstado.dato]}
-        nota={`Dato derivado (confianza media): suma de las transferencias anuales del gráfico anterior. Año de inicio por defecto: ${primero.anio}, el primero con datos. Ruptura de serie: si el año de inicio es anterior a ${anioRuptura}, la suma incorpora importes de dos documentos distintos (liquidación y ejecución); el color indica el documento del que procede el último año sumado.`}
+        nota={`Dato derivado: suma de las transferencias anuales del gráfico anterior. Año de inicio por defecto: ${primero.anio}, el primero con datos. Ruptura de serie: si el año de inicio es anterior a ${anioRuptura}, la suma incorpora importes de dos documentos distintos (liquidación y ejecución); el color indica el documento del que procede el último año sumado.`}
         comoLeerlo={
           <>
             <p>

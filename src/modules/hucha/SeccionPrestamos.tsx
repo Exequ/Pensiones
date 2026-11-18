@@ -143,7 +143,7 @@ export function SeccionPrestamos() {
         decimalesEje={0}
         alto={380}
         fuentes={datosPrestamos}
-        nota="Los préstamos por año son una serie derivada (confianza alta en el anexo, año deducido del inicio del plazo de cancelación y coherente con el año de registro en la ejecución). Los pasivos financieros de ingresos proceden de dos documentos distintos (liquidación y ejecución del presupuesto), con ruptura de serie entre ellos; no son sinónimo de préstamos del Estado, porque ese capítulo recoge toda operación de pasivos financieros. Los años sin barra tienen un importe nulo."
+        nota="Los préstamos por año son una serie derivada (año deducido del inicio del plazo de cancelación y coherente con el año de registro en la ejecución). Los pasivos financieros de ingresos proceden de dos documentos distintos (liquidación y ejecución del presupuesto), con ruptura de serie entre ellos; no son sinónimo de préstamos del Estado, porque ese capítulo recoge toda operación de pasivos financieros. Los años sin barra tienen un importe nulo."
         comoLeerlo={
           <>
             <p>

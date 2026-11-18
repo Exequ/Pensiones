@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
-import { esperarPagina, url, vigilar } from './utilidades.ts';
+import { comprobarFuente, esperarPagina, url, vigilar } from './utilidades.ts';
 
 const RUTA = '/proyecciones';
 
@@ -29,7 +29,7 @@ test.describe('página «Proyecciones»', () => {
       await expect(figura.locator('figcaption')).not.toBeEmpty();
       await expect(figura.locator('svg[role="img"]')).toHaveCount(1);
       await expect(figura.locator('table')).toHaveCount(1);
-      await expect(figura.locator('.linea-fuente')).toContainText('descargado el');
+      await comprobarFuente(figura);
       await expect(figura.locator('.linea-fuente')).toContainText('naturaleza:');
     }
     // Cada gráfico tiene su «Cómo leerlo» justo después; el bloque financiero añade dos más (escenarios y calibración).

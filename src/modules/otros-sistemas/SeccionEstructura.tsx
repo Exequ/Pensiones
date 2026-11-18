@@ -44,8 +44,8 @@ export function SeccionEstructura({ seleccion }: { readonly seleccion: ReadonlyS
       </div>
       <p className="hist-aviso">
         El glosario es una explicación conceptual de los términos, no un dato: no procede de una
-        fuente consultada y tiene confianza media. Lo que sí procede de las fuentes es cada rasgo de
-        los países, con su cita.
+        fuente consultada. Lo que sí procede de las fuentes es cada rasgo de los países, con su
+        cita.
       </p>
 
       {agregadosElegidos ? (
@@ -67,9 +67,7 @@ export function SeccionEstructura({ seleccion }: { readonly seleccion: ReadonlyS
                 <li key={r.id} className="sistemas-rasgo">
                   <span className="sistemas-rasgo-etiqueta">{r.etiqueta}</span>
                   <blockquote lang="en">{r.cita}</blockquote>
-                  <span className="sistemas-rasgo-pie">
-                    {r.ubicacion} · confianza: {r.confianza}
-                  </span>
+                  <span className="sistemas-rasgo-pie">{r.ubicacion}</span>
                 </li>
               ))}
             </ul>

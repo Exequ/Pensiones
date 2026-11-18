@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import { formatearNumero } from '../../engine/formato';
+import { expectFuente } from '../../test/fuentes';
 import { buscarSeccion } from '../secciones';
 import { serieEurostat, serieOcde } from './consultas';
 import { datosSistemas } from './datos-sistemas';
@@ -57,9 +58,7 @@ describe('página «Otros sistemas»', () => {
       expect(svg?.getAttribute('aria-label')).toBe(titulo);
       expect(f.querySelectorAll('table th[scope="col"]').length).toBeGreaterThan(1);
       expect(f.querySelectorAll('tbody tr').length).toBeGreaterThan(0);
-      expect(f.querySelector('.linea-fuente')?.textContent, `fuente de «${titulo}»`).toMatch(
-        /Fuentes?:.*descargado el \d{4}-\d{2}-\d{2}.*confianza: (alta|media|baja)/s,
-      );
+      expectFuente(f, `fuente de «${titulo}»`);
       expect(
         f.closest('.bloque-grafico')?.querySelector('.como-leerlo-texto')?.textContent.length,
         `«Cómo leerlo» de «${titulo}»`,
@@ -196,7 +195,7 @@ describe('página «Otros sistemas»', () => {
     });
   });
 
-  it('la estructura de cada país lleva la cita literal, la localización y la confianza', () => {
+  it('la estructura de cada país lleva la cita literal y la localización, sin la confianza', () => {
     const { container } = pintar();
     const espana = [...container.querySelectorAll('.sistemas-pais')].find(
       (a) => a.getAttribute('aria-label') === 'España',
@@ -206,7 +205,7 @@ describe('página «Otros sistemas»', () => {
     expect(rasgos.length).toBeGreaterThan(0);
     for (const r of rasgos) {
       expect(r.querySelector('blockquote')?.getAttribute('lang')).toBe('en');
-      expect(r.textContent).toMatch(/confianza: (alta|media|baja)/);
+      expect(r.textContent).not.toMatch(/confianza/i);
     }
     expect(espana?.querySelector('.linea-fuente')).not.toBeNull();
   });
