@@ -6,6 +6,7 @@ import Cotizantes from '../cotizantes-y-pensionistas/Pagina';
 import Financiacion from '../financiacion-y-deficit/Pagina';
 import Hucha from '../hucha/Pagina';
 import { buscarSeccion } from '../secciones';
+import { expectFuente, textoDeFuentes } from '../../test/fuentes';
 
 function pintar(Pagina: () => React.JSX.Element) {
   return render(
@@ -53,10 +54,7 @@ describe.each(PAGINAS)('página «$nombre»', ({ slug, Pagina, minimo }) => {
       expect(tabla, `tabla de «${titulo}»`).not.toBeNull();
       expect(tabla?.querySelectorAll('th[scope="col"]').length).toBeGreaterThan(1);
       expect(tabla?.querySelectorAll('tbody tr').length).toBeGreaterThan(0);
-      const fuente = figura.querySelector('.linea-fuente');
-      expect(fuente?.textContent, `fuente de «${titulo}»`).toMatch(
-        /Fuentes?:.*descargado el \d{4}-\d{2}-\d{2}.*confianza: (alta|media|baja)/s,
-      );
+      expectFuente(figura, `fuente de «${titulo}»`);
       const bloque = figura.closest('.bloque-grafico');
       expect(
         bloque?.querySelector('.como-leerlo-texto')?.textContent.length,
@@ -108,6 +106,6 @@ describe('interacciones', () => {
     );
     expect(descripciones.some((t) => t.includes('porcentaje del PIB corriente'))).toBe(true);
     // La fuente del PIB aparece entonces entre las fuentes del gráfico.
-    expect(container.textContent).toMatch(/Contabilidad Nacional/);
+    expect(textoDeFuentes(container)).toMatch(/Contabilidad Nacional/);
   });
 });

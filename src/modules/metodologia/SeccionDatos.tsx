@@ -47,11 +47,12 @@ export function SeccionDatos() {
         </Definition>
         <Definition termino="Fecha de descarga">
           Día en que se descargó el documento. Es la fecha de consulta, no la de publicación de la
-          cifra.
+          cifra. Se registra en los datos de cada fuente, pero la web no la muestra junto a ella.
         </Definition>
         <Definition termino="Confianza">
           Nivel «alta», «media» o «baja» que acompaña a cada dato y mide la fiabilidad de su fuente.
-          El apartado «Qué significa la confianza y la revisión actuarial» lo explica.
+          Se registra en los datos, pero la web no lo muestra junto a cada fuente. El apartado «Qué
+          significa la confianza y la revisión actuarial» lo explica.
         </Definition>
         <Definition termino="Huella">
           Código, obtenido con una función criptográfica de resumen, que identifica un fichero
@@ -68,6 +69,16 @@ export function SeccionDatos() {
         registro de datos pendientes con la dirección exacta, la fecha y el motivo. Cuando una
         página convierte euros corrientes en euros constantes, lo dice y nombra el índice de precios
         que usa.
+      </p>
+      <p>
+        En cada gráfico, tabla o bloque, el botón «Fuente» o «Fuentes» abre el título de la fuente
+        con su enlace, el organismo que la publica y, si constan en el dato, el identificador del
+        documento, la naturaleza y la cita. Junto al botón se ve siempre la naturaleza del dato
+        cuando el dato la declara, para que una proyección de modelo no se lea como un dato
+        observado.
+      </p>
+      <p>
+        Puede haber datos más recientes que los mostrados; se intenta mantener la web actualizada.
       </p>
       <p>
         La relación completa de fuentes está en el registro de fuentes del repositorio; la página

@@ -8,7 +8,7 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import path from 'node:path';
 import ts from 'typescript';
 import { describe, expect, it } from 'vitest';
-import { EXPRESIONES_PROHIBIDAS, ZONA_PERMITIDA, vozEn } from './lib/voz.ts';
+import { EXPRESIONES_PROHIBIDAS, ZONA_PERMITIDA, familiasExentasEn, vozEn } from './lib/voz.ts';
 
 describe('detector de expresiones de proyecto interno', () => {
   it('detecta cada expresión prohibida de la lista (prueba de sensibilidad)', () => {
@@ -31,6 +31,12 @@ describe('detector de expresiones de proyecto interno', () => {
       'revisión actuarial': 'Pendiente de revisión actuarial.',
       'revisión interna': 'Tras la revisión interna.',
       'Literal de la fuente': 'Literal de la fuente: «…»',
+      'descargado el AAAA-MM-DD': 'Fuente: título (organismo) · descargado el 2026-11-11',
+      'versión descargada': 'Título, versión descargada del texto.',
+      'confianza: alta|media|baja': 'Fuente: título · confianza: alta',
+      'confianza alta|media|baja de un dato': 'Cálculo propio (confianza media).',
+      'fecha de descarga': 'Cada ficha lleva su fecha de descarga.',
+      'nivel de confianza': 'Cada dato lleva un nivel de confianza.',
     };
     expect(Object.keys(muestras).sort()).toEqual(
       EXPRESIONES_PROHIBIDAS.map((e) => e.nombre).sort(),
@@ -48,9 +54,26 @@ describe('detector de expresiones de proyecto interno', () => {
 
   it('no marca el lenguaje que sí es de publicación', () => {
     expect(vozEn('Según el INE, no consta en las fuentes consultadas.')).toEqual([]);
-    expect(
-      vozEn('Fuente: título (organismo) · descargado el 2026-11-11 · confianza: alta'),
-    ).toEqual([]);
+  });
+
+  it('ya no tolera la línea de fuente antigua (fase R2): fecha de descarga y confianza visibles se marcan', () => {
+    const antigua = vozEn(
+      'Fuente: título (organismo) · descargado el 2026-11-11 · confianza: alta',
+    );
+    expect(antigua.map((h) => h.familia)).toContain('registro');
+    expect(antigua.map((h) => h.nombre)).toEqual(
+      expect.arrayContaining(['descargado el AAAA-MM-DD', 'confianza: alta|media|baja']),
+    );
+    expect(vozEn('versión descargada el 2026-11-11').map((h) => h.nombre)).toContain(
+      'versión descargada',
+    );
+    expect(vozEn('Fuente: título (organismo) · naturaleza: observado')).toEqual([]);
+  });
+
+  it('la zona permitida exime la familia «registro» solo en «Metodología»', () => {
+    const texto = 'Cada dato lleva fecha de descarga y confianza: media.';
+    expect(vozEn(texto, familiasExentasEn('/metodologia'))).toEqual([]);
+    expect(vozEn(texto, familiasExentasEn('/hucha')).length).toBeGreaterThan(0);
   });
 
   it('la lista prohibida y la zona permitida viven en scripts/lib/voz.ts', () => {

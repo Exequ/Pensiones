@@ -46,6 +46,16 @@ export const RESPALDO: Readonly<Record<IdApartado, readonly Respaldo[]>> = {
       contiene: 'Huellas de los ficheros brutos',
     },
     {
+      fichero: 'docs/DECISIONES.md',
+      para: 'Decisiones de la fase «Fuentes desplegables»: cada fuente en un desplegable, sin fecha de descarga ni confianza a la vista.',
+      contiene: 'Fase R2 «Fuentes desplegables»',
+    },
+    {
+      fichero: 'src/components/SourceLine.tsx',
+      para: 'Componente que muestra la fuente de cada gráfico, tabla y bloque en un desplegable: sin fecha de descarga ni confianza, que constan en los datos.',
+      contiene: 'pero la interfaz no las muestra',
+    },
+    {
       fichero: 'CLAUDE.md',
       para: 'Regla de procedencia: cada dato sale de una fuente descargada durante el trabajo.',
       contiene: 'descargada en la sesión de trabajo',
@@ -283,6 +293,11 @@ export const RESPALDO: Readonly<Record<IdApartado, readonly Respaldo[]>> = {
   ],
   limites: [],
   reproducir: [
+    {
+      fichero: 'docs/DECISIONES.md',
+      para: 'Registro de que las sensibilidades del modelo financiero las ejecutó el asistente de inteligencia artificial con el código de los modelos, no el autor en local.',
+      contiene: 'ejecutado por Claude con el código de los modelos del repositorio',
+    },
     {
       fichero: 'README.md',
       para: 'Requisitos y comandos de comprobación.',

@@ -46,8 +46,7 @@ export default function TiposDePension() {
         <MarginNote>
           <p>
             Los requisitos, los artículos y las cuantías son los que figuran en las normas
-            consultadas; cada ficha lleva su fuente, la fecha de descarga y un nivel de confianza.
-            Los importes por paga son un cálculo derivado.
+            consultadas; cada ficha lleva su fuente. Los importes por paga son un cálculo derivado.
           </p>
         </MarginNote>
         <p className="hist-aviso">

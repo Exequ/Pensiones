@@ -29,8 +29,8 @@ export default function FinanciacionYDeficit() {
         </header>
         <MarginNote>
           <p>
-            Cada gráfico lleva su tabla de datos, su fuente, la fecha de descarga y un nivel de
-            confianza. Los cálculos propios se señalan como tales y se explican bajo el gráfico.
+            Cada gráfico lleva su tabla de datos y su fuente. Los cálculos propios se señalan como
+            tales y se explican bajo el gráfico.
           </p>
         </MarginNote>
         <p className="hist-aviso">

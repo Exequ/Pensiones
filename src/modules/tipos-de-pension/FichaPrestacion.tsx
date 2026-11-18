@@ -50,7 +50,7 @@ export function FichaPrestacion({ ficha }: { readonly ficha: DatosFicha }) {
           <ul>
             {ficha.modalidades.map((m) => (
               <li key={m.id}>
-                {m.nombre} ({m.articulos.join(', ')}) · confianza: {m.confidence}
+                {m.nombre} ({m.articulos.join(', ')})
               </li>
             ))}
           </ul>

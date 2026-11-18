@@ -125,7 +125,7 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
           saldoSec.millones.dato,
           ...fuentesPib,
         ]}
-        nota="Los dos saldos presupuestarios son diferencias calculadas a partir de la ejecución (dato derivado, confianza media); el saldo SEC es el publicado por Eurostat. Son definiciones distintas, no estimaciones de la misma cifra."
+        nota="Los dos saldos presupuestarios son diferencias calculadas a partir de la ejecución (dato derivado); el saldo SEC es el publicado por Eurostat. Son definiciones distintas, no estimaciones de la misma cifra."
         comoLeerlo={
           <>
             <p>
@@ -226,7 +226,7 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
           presupuesto.transferenciasEstado.dato,
           ...fuentesPib,
         ]}
-        nota={`«Saldo menos transferencias (cálculo propio)» es: ${ROTULO_SALDO_SIN_TRANSFERENCIAS}. Diferencia de dos series publicadas (confianza media). No equivale a ninguna definición publicada ni al saldo de un subconjunto de prestaciones.`}
+        nota={`«Saldo menos transferencias (cálculo propio)» es: ${ROTULO_SALDO_SIN_TRANSFERENCIAS}. Diferencia de dos series publicadas. No equivale a ninguna definición publicada ni al saldo de un subconjunto de prestaciones.`}
         comoLeerlo={
           <>
             <p>
@@ -260,14 +260,12 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
               { clave: 'concepto', titulo: 'Concepto' },
               { clave: 'periodo', titulo: 'Año al que se refiere' },
               { clave: 'valor', titulo: 'Valor (millones de euros)', tipo: 'numero', decimales: 0 },
-              { clave: 'confianza', titulo: 'Confianza' },
             ]}
             filas={[
               {
                 concepto: `Gastos impropios (estimación de ${anioEstimacion ?? ''}, no dato observado)`,
                 periodo: estimacion.periodo,
                 valor: estimacion.valor,
-                confianza: estimacion.dato.confidence,
               },
             ]}
           />

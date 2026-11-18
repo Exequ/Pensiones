@@ -276,7 +276,7 @@ export function SeccionPosicion() {
           etiquetaResultado="Fondo menos deuda"
           columnaResultado="Fondo menos deuda (millones de euros; negativo si la deuda supera al Fondo)"
           fuentes={fuentesFondoDeuda}
-          nota="Construcción propia (confianza media), sin equivalente oficial. Resta dos saldos de fin de año: el Fondo a precio de adquisición y la deuda PDE de la Seguridad Social. La tabla recoge los dos saldos y su diferencia con el signo."
+          nota="Construcción propia, sin equivalente oficial. Resta dos saldos de fin de año: el Fondo a precio de adquisición y la deuda PDE de la Seguridad Social. La tabla recoge los dos saldos y su diferencia con el signo."
         />
         <ComoLeerlo>
           <p>
@@ -325,14 +325,14 @@ export function SeccionPosicion() {
           columnaOrigen={columnaOrigen}
           nota={
             <>
-              Construcción propia (confianza media), sin equivalente oficial. Suma un saldo (deuda
-              PDE de la Seguridad Social, que incluye préstamos anteriores al año de inicio) y un
-              flujo acumulado (transferencias corrientes del Estado y organismos autónomos desde{' '}
-              {anioInicio}). La tabla recoge las dos partidas y su suma. Ruptura de serie: las
-              transferencias de los años anteriores a {anioRuptura} proceden de las liquidaciones
-              del presupuesto y las de {anioRuptura} en adelante, de la ejecución; la suma acumulada
-              que cruza esa ruptura mezcla cifras de dos documentos que no se han podido contrastar
-              entre sí. La columna de origen de la tabla indica el documento de cada año.
+              Construcción propia, sin equivalente oficial. Suma un saldo (deuda PDE de la Seguridad
+              Social, que incluye préstamos anteriores al año de inicio) y un flujo acumulado
+              (transferencias corrientes del Estado y organismos autónomos desde {anioInicio}). La
+              tabla recoge las dos partidas y su suma. Ruptura de serie: las transferencias de los
+              años anteriores a {anioRuptura} proceden de las liquidaciones del presupuesto y las de{' '}
+              {anioRuptura} en adelante, de la ejecución; la suma acumulada que cruza esa ruptura
+              mezcla cifras de dos documentos que no se han podido contrastar entre sí. La columna
+              de origen de la tabla indica el documento de cada año.
             </>
           }
         />
@@ -415,12 +415,12 @@ export function SeccionPosicion() {
               columnaOrigen={columnaOrigen}
               nota={
                 <>
-                  Construcción propia (confianza media), sin equivalente oficial. Combina dos saldos
-                  de fin de año (Fondo a precio de adquisición y deuda PDE de la Seguridad Social)
-                  con un flujo acumulado (transferencias corrientes del Estado y organismos
-                  autónomos desde {anioInicio}); las partidas no son aditivas. La tabla de datos
-                  recoge los tres componentes siempre; la suma, solo los marcados. Ruptura de serie
-                  en las transferencias a partir de {anioRuptura}: cambia el documento de origen
+                  Construcción propia, sin equivalente oficial. Combina dos saldos de fin de año
+                  (Fondo a precio de adquisición y deuda PDE de la Seguridad Social) con un flujo
+                  acumulado (transferencias corrientes del Estado y organismos autónomos desde{' '}
+                  {anioInicio}); las partidas no son aditivas. La tabla de datos recoge los tres
+                  componentes siempre; la suma, solo los marcados. Ruptura de serie en las
+                  transferencias a partir de {anioRuptura}: cambia el documento de origen
                   (liquidación y ejecución), indicado en la última columna de la tabla.
                 </>
               }

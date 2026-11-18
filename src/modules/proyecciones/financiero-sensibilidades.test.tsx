@@ -9,6 +9,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import { valoracionesEn } from '../../../scripts/lib/valoraciones.ts';
 import { formatearNumero } from '../../engine/formato';
+import { textoDeFuentes } from '../../test/fuentes';
 import { datosFinanciero } from './datos-financiero';
 import Financiero from './Financiero';
 import { aniosSensibilidades, rotuloPalanca, tablaSensibilidades } from './series-financiero';
@@ -142,7 +143,10 @@ describe('tabla «Sensibilidades» del bloque financiero', () => {
     const fuente = bloque.closest('.proy-sensibilidades')!.nextElementSibling!;
     expect(fuente).toHaveClass('linea-fuente');
     expect(fuente.textContent).toMatch(/naturaleza: proyección de modelo/);
-    expect(fuente.textContent).toContain(s.tabla.archivo.origen.ejecutadoEl);
+    // La fecha de descarga de los datos no se muestra junto a la fuente.
+    const abierta = textoDeFuentes(fuente.parentElement, ':scope > .linea-fuente');
+    expect(abierta).toMatch(/Organismo/);
+    expect(abierta).not.toMatch(/descargad|confianza/i);
     // Definición de las magnitudes y del PIB aproximado en la nota de la tabla.
     expect(bloque.textContent).toMatch(/Saldo no financiero: ingresos/);
     expect(bloque.textContent).toMatch(/PIB aproximado de cada caso/);

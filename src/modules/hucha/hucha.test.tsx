@@ -8,6 +8,7 @@ import {
   posicionIlustrativa,
   posicionNeta,
 } from '../../engine/transferencias';
+import { expectFuente } from '../../test/fuentes';
 import { datosHucha } from '../historico/datos-hucha';
 import Hucha from './Pagina';
 
@@ -79,7 +80,7 @@ describe('página «Hucha»: secciones de transferencias', () => {
     ]) {
       const f = figura(container, titulo);
       expect(f.querySelector('table'), titulo).not.toBeNull();
-      expect(f.querySelector('.linea-fuente')?.textContent, titulo).toMatch(/descargado el/);
+      expectFuente(f, titulo);
       expect(f.closest('.bloque-grafico')?.querySelector('.como-leerlo'), titulo).not.toBeNull();
     }
   });
@@ -408,7 +409,7 @@ describe('página «Hucha» (Fase 5-A3): finalidad, préstamos y Fondo según el
     expect(bloque?.textContent).toMatch(/clasifica las transferencias por su origen/);
     expect(bloque?.textContent).toMatch(/Tribunal de Cuentas las cifra por su finalidad/);
     expect(bloque?.querySelector('.como-leerlo')).not.toBeNull();
-    expect(bloque?.querySelector('.linea-fuente')?.textContent).toMatch(/descargado el/);
+    expectFuente(bloque ?? null);
     // No se afirma la periodicidad de las transferencias.
     expect(container.textContent).toMatch(/no la\s+afirma/);
     expect(container.textContent).not.toMatch(
@@ -423,7 +424,7 @@ describe('página «Hucha» (Fase 5-A3): finalidad, préstamos y Fondo según el
     ).toBeInTheDocument();
     const f = figura(container, 'Préstamos concedidos por el Estado y pasivos financieros');
     expect(f.querySelector('table')).not.toBeNull();
-    expect(f.querySelector('.linea-fuente')?.textContent).toMatch(/descargado el/);
+    expectFuente(f);
     expect(f.closest('.bloque-grafico')?.querySelector('.como-leerlo')).not.toBeNull();
     const cabecera = f.querySelector('thead')?.textContent ?? '';
     expect(cabecera).toMatch(/Préstamos, Tribunal \(\d{4}-\d{4}\)/);
@@ -460,7 +461,7 @@ describe('página «Hucha» (Fase 5-A3): finalidad, préstamos y Fondo según el
     });
     expect(tabla.querySelectorAll('tbody tr').length).toBe(4);
     const bloque = tabla.closest('.hist-definiciones');
-    expect(bloque?.querySelector('.linea-fuente')?.textContent).toMatch(/descargado el/);
+    expectFuente(bloque ?? null);
     expect(bloque?.querySelector('.como-leerlo')).not.toBeNull();
     expect(bloque?.textContent).toMatch(/no afirma que esa partida explique toda\s+la diferencia/);
   });
@@ -492,7 +493,7 @@ describe('página «Hucha»: liquidación frente a ejecución (Fase 5-A4)', () =
     expect(within(s).getByRole('heading', { level: 2 })).toHaveTextContent(
       /la liquidación frente a la ejecución/,
     );
-    expect(s.querySelector('.linea-fuente')?.textContent).toMatch(/descargado el 2026-11-16/);
+    expectFuente(s);
     const total = datosHucha().contraste2025.filas.find(
       (f) => !f.coincide && /^TOTAL PRESTACIONES CONTRIBUTIVAS/.test(f.partida),
     );

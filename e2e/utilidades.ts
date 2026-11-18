@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
-import type { Page } from '@playwright/test';
+import { expect, type Locator, type Page } from '@playwright/test';
 import { SECCIONES } from '../src/modules/secciones.ts';
 
 /** Todas las rutas de la web (HashRouter: van tras «#»). */
@@ -50,4 +50,24 @@ export async function esperarPagina(page: Page): Promise<void> {
   await page.evaluate(async () => {
     await document.fonts.ready;
   });
+}
+
+/**
+ * Abre la primera línea de fuente de un contenedor con un clic normal, comprueba que el desplegable
+ * enseña título con enlace y organismo, que no enseña fecha de descarga ni confianza, y lo cierra con
+ * «Cerrar» (el foco debe volver al botón).
+ */
+export async function comprobarFuente(contenedor: Locator): Promise<void> {
+  const linea = contenedor.locator('.linea-fuente').first();
+  const boton = linea.getByRole('button', { name: /^Fuentes?\b/ });
+  await boton.scrollIntoViewIfNeeded();
+  await boton.click();
+  const dialogo = linea.getByRole('dialog');
+  await expect(dialogo).toBeVisible();
+  await expect(dialogo.getByRole('link').first()).toBeVisible();
+  await expect(dialogo).toContainText('Organismo');
+  await expect(dialogo).not.toContainText(/descargad|confianza/i);
+  await dialogo.getByRole('button', { name: 'Cerrar' }).click();
+  await expect(dialogo).toHaveCount(0);
+  await expect(boton).toBeFocused();
 }

@@ -85,7 +85,7 @@ export function SeccionFondoTransferencias() {
         decimales={2}
         decimalesEje={1}
         fuentes={[d.valor.dato, d.liquidacion.delEstado.dato, t.delEstado.dato, t.datoTrimestral]}
-        nota="Cálculos propios (confianza media). Medida principal (año completo): valor del Fondo a fin de año ÷ (transferencias del año ÷ doce). Medida secundaria (cuarto trimestre): valor del Fondo a fin de año ÷ (transferencias del cuarto trimestre del mismo año ÷ tres). Un trimestre equivale a tres meses. Los flujos trimestrales son diferencias entre acumulados. Las transferencias son las corrientes del Estado y organismos autónomos de la liquidación del presupuesto (hasta el último año de ese tramo) y de la ejecución (desde el año de la ruptura de serie); el Fondo está a precio de adquisición. La medida secundaria solo existe para la ejecución: las liquidaciones no dan acumulados trimestrales."
+        nota="Cálculos propios. Medida principal (año completo): valor del Fondo a fin de año ÷ (transferencias del año ÷ doce). Medida secundaria (cuarto trimestre): valor del Fondo a fin de año ÷ (transferencias del cuarto trimestre del mismo año ÷ tres). Un trimestre equivale a tres meses. Los flujos trimestrales son diferencias entre acumulados. Las transferencias son las corrientes del Estado y organismos autónomos de la liquidación del presupuesto (hasta el último año de ese tramo) y de la ejecución (desde el año de la ruptura de serie); el Fondo está a precio de adquisición. La medida secundaria solo existe para la ejecución: las liquidaciones no dan acumulados trimestrales."
         comoLeerlo={
           <>
             <p>

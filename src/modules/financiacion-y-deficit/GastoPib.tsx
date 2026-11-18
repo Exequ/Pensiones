@@ -112,7 +112,7 @@ export function GastoPib() {
           gastoSobrePib.eurostatSupervivencia.dato,
           gastoSobrePib.ocde.dato,
         ]}
-        nota="Las líneas del gasto contributivo propio son cálculos propios (obligaciones reconocidas ÷ PIB corriente del INE; confianza media); ESSPROS vejez y supervivientes es la suma de las dos series de Eurostat. Las medidas no coinciden porque abarcan prestaciones distintas y no son comparables entre sí sin conciliar su perímetro."
+        nota="Las líneas del gasto contributivo propio son cálculos propios (obligaciones reconocidas ÷ PIB corriente del INE); ESSPROS vejez y supervivientes es la suma de las dos series de Eurostat. Las medidas no coinciden porque abarcan prestaciones distintas y no son comparables entre sí sin conciliar su perímetro."
         comoLeerlo={
           <>
             <p>

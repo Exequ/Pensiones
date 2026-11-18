@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
-import { esperarPagina, url, vigilar } from './utilidades.ts';
+import { comprobarFuente, esperarPagina, url, vigilar } from './utilidades.ts';
 
 /** Fase 5-C: páginas «Otros sistemas» y «Tipos de pensión». */
 
@@ -42,7 +42,7 @@ test.describe('página «Otros sistemas»', () => {
       await page.locator('figure.grafico').count(),
     );
     for (const f of await page.locator('figure.grafico').all()) {
-      await expect(f.locator('.linea-fuente')).toContainText(/descargado el \d{4}-\d{2}-\d{2}/);
+      await comprobarFuente(f);
       await expect(f.locator('table')).toHaveCount(1);
     }
     expect(registro.errores, 'errores de consola').toEqual([]);
@@ -160,7 +160,7 @@ test.describe('página «Tipos de pensión»', () => {
     await expect(page.locator('article.tipos-ficha')).toHaveCount(7, { timeout: TIEMPO });
     for (const f of await page.locator('article.tipos-ficha').all()) {
       await expect(f.locator('table').first()).toBeVisible();
-      await expect(f.locator('.linea-fuente a[href^="https://"]').first()).toBeVisible();
+      await comprobarFuente(f);
     }
     // Solo la jubilación y la incapacidad permanente enlazan a «Tu pensión».
     await expect(page.locator('.tipos-ficha a[href$="#/tu-pension"]')).toHaveCount(2);

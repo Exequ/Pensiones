@@ -177,7 +177,7 @@ export function calcularIncapacidadPermanenteConParametros(
   if (profesional && grado !== 'parcial' && opciones.baseReguladoraProfesional === undefined) {
     throw new NoImplementada(
       'Base reguladora de las pensiones por accidente de trabajo o enfermedad profesional',
-      'Se calcula con el salario real del Reglamento de accidentes de trabajo de 1956 (art. 15.2.b de la Orden de 15/04/1969); su capítulo V consta por OCR, con confianza media, pero no está convertido en datos del motor. Puede pasarse calculada fuera en opciones.baseReguladoraProfesional.',
+      'Se calcula con el salario real del Reglamento de accidentes de trabajo de 1956 (art. 15.2.b de la Orden de 15/04/1969); su capítulo V consta por OCR, pero no está convertido en datos del motor. Puede pasarse calculada fuera en opciones.baseReguladoraProfesional.',
     );
   }
   if (profesional && grado === 'parcial' && opciones.baseReguladoraIT === undefined) {

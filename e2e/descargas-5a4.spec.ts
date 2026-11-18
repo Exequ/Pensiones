@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
-import { esperarPagina, url, vigilar } from './utilidades.ts';
+import { comprobarFuente, esperarPagina, url, vigilar } from './utilidades.ts';
 
 /**
  * Fase 5-A4: las tres páginas que cambian con los cuatro PDF nuevos: «Tipos de pensión»
@@ -49,9 +49,8 @@ test.describe('«Tipos de pensión»: complementos por brecha de género y por m
     await abrir(page, '/tipos-de-pension');
     const s = page.locator(COMPLEMENTOS);
     await expect(s.getByRole('heading', { level: 2 })).toBeVisible();
-    await expect(s.locator('.linea-fuente').first()).toContainText(
-      /descargado el 2026-11-16 · confianza: alta/,
-    );
+    await expect(s.locator('.linea-fuente').first()).toContainText(/naturaleza: observado/);
+    await comprobarFuente(s);
     await expect(s.locator('.como-leerlo')).toContainText(/No miden la brecha de género/);
     expect(await s.locator('table').count()).toBeGreaterThanOrEqual(6);
     expect(registro.errores, 'errores de consola').toEqual([]);
@@ -95,7 +94,7 @@ test.describe('«Hucha»: la liquidación frente a la ejecución', () => {
     await abrir(page, '/hucha');
     const s = page.locator(CONTRASTE);
     await expect(s.getByRole('heading', { level: 2 })).toBeVisible();
-    await expect(s.locator('.linea-fuente').first()).toContainText(/descargado el 2026-11-16/);
+    await comprobarFuente(s);
     await expect(s.locator('.como-leerlo')).toContainText(/ruptura de serie sigue rotulada/);
     expect(await s.locator('table').count()).toBe(2);
     // el último ejercicio coincide con la ejecución en todas las partidas

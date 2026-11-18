@@ -7,7 +7,7 @@
  */
 
 /** Familias de expresiones prohibidas. Las exenciones se declaran por familia. */
-export type FamiliaVoz = 'descarga' | 'repositorio' | 'rutas' | 'revision' | 'literal';
+export type FamiliaVoz = 'descarga' | 'repositorio' | 'rutas' | 'revision' | 'literal' | 'registro';
 
 export interface ExpresionProhibida {
   readonly familia: FamiliaVoz;
@@ -19,9 +19,8 @@ export interface ExpresionProhibida {
 
 /**
  * Lista prohibida. Con y sin tilde, en singular y plural (el texto se normaliza antes de buscar).
- * «descargado el AAAA-MM-DD» de la línea de fuente (`SourceLine`) y «versión descargada el AAAA-MM-DD»
- * de algún título de fuente son las únicas formas de «descargado» toleradas fuera de la zona permitida, y solo hasta la fase R2, que la sustituye (véase
- * `FORMA_TOLERADA_HASTA_R2`).
+ * Desde la fase R2 no hay formas toleradas: la fecha de descarga y la confianza siguen en los datos,
+ * pero ningún texto visible las muestra fuera de «Metodología» (familia `registro`).
  */
 export const EXPRESIONES_PROHIBIDAS: readonly ExpresionProhibida[] = [
   { familia: 'descarga', nombre: 'descargado/a(s)', patron: /descargad[oa]s?/ },
@@ -50,14 +49,24 @@ export const EXPRESIONES_PROHIBIDAS: readonly ExpresionProhibida[] = [
   { familia: 'revision', nombre: 'revisión actuarial', patron: /revision(es)? actuarial(es)?/ },
   { familia: 'revision', nombre: 'revisión interna', patron: /revision(es)? interna/ },
   { familia: 'literal', nombre: 'Literal de la fuente', patron: /literal de la fuente/ },
+  { familia: 'registro', nombre: 'descargado el AAAA-MM-DD', patron: /descargad[oa]s? el \d/ },
+  { familia: 'registro', nombre: 'versión descargada', patron: /version descargada/ },
+  {
+    familia: 'registro',
+    nombre: 'confianza: alta|media|baja',
+    patron: /confianza:\s*(alta|media|baja)\b/,
+  },
+  {
+    // La confianza de la fuente de un dato («(confianza media)», «con confianza media»). No marca la
+    // de una lectura de interpretación («adoptada con confianza baja o media»), que es otra cosa.
+    familia: 'registro',
+    nombre: 'confianza alta|media|baja de un dato',
+    patron:
+      /\([^)]*\bconfianza (alta|media|baja)\b(?! o )|\b(con|tiene) confianza (alta|media|baja)\b(?! o )/,
+  },
+  { familia: 'registro', nombre: 'fecha de descarga', patron: /fechas? de descarga/ },
+  { familia: 'registro', nombre: 'nivel de confianza', patron: /nivel(es)? de confianza/ },
 ];
-
-/**
- * Única forma de «descargado» tolerada fuera de la zona permitida: la fecha de la línea de fuente
- * («… · descargado el 2026-11-11 · …»). La retira la fase R2 junto con la línea de fuente actual.
- */
-export const FORMA_TOLERADA_HASTA_R2 =
-  /(descargado|version descargada) el \d{4}-\d{2}-\d{2}|codigo del modelo en el repositorio y salidas de su ejecucion/g;
 
 /** Minúsculas, sin tildes y con los espacios colapsados. */
 export function normalizarVoz(texto: string): string {
@@ -77,7 +86,7 @@ export function vozEn(
   familiasExentas: readonly FamiliaVoz[] = [],
   contextoCaracteres = 60,
 ): HallazgoVoz[] {
-  const limpio = normalizarVoz(texto).replace(FORMA_TOLERADA_HASTA_R2, 'fecha de fuente (r2)');
+  const limpio = normalizarVoz(texto);
   const hallazgos: HallazgoVoz[] = [];
   for (const { familia, nombre, patron } of EXPRESIONES_PROHIBIDAS) {
     if (familiasExentas.includes(familia)) continue;
@@ -114,7 +123,7 @@ export const ZONA_PERMITIDA: readonly ExencionVoz[] = [
   {
     ruta: '/metodologia',
     seccion: 'toda la página',
-    familias: ['revision', 'descarga', 'repositorio', 'rutas'],
+    familias: ['revision', 'descarga', 'repositorio', 'rutas', 'registro'],
     motivo:
       'La página «Metodología» explica la revisión actuarial y los medios de verificación (cada apartado termina con «Dónde consta», con ficheros y rutas) y, en «Cómo reproducirlo», el repositorio, las rutas y los comandos. No se reescribe en la fase R1.',
   },

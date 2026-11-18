@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import { TEXTO_BANNER_DESARROLLO } from '../config';
-import type { Dato } from '../engine/esquema-datos';
 import { SECCIONES } from '../modules/secciones';
 import { DataTable } from './DataTable';
 import { Definition } from './Definition';
@@ -16,18 +15,8 @@ import { Kicker } from './Kicker';
 import { Lead } from './Lead';
 import { MarginNote } from './MarginNote';
 import { SegmentedPills } from './SegmentedPills';
-import { SourceLine } from './SourceLine';
 
 const NBSP = ' ';
-
-const DATO: Dato = {
-  value: 1,
-  unit: 'u',
-  period: '2024',
-  source: { title: 'Documento A', publisher: 'Organismo A', url: 'https://example.org/a' },
-  fetchedAt: '2024-05-01T10:00:00Z',
-  confidence: 'alta',
-};
 
 describe('DevBanner', () => {
   it('muestra el aviso de desarrollo y se puede ocultar', () => {
@@ -158,35 +147,6 @@ describe('InteractiveSentence', () => {
     expect(screen.getByRole('status')).toHaveTextContent('10');
     await userEvent.selectOptions(screen.getByRole('combobox', { name: 'Cantidad' }), '2');
     expect(screen.getByRole('status')).toHaveTextContent('20');
-  });
-});
-
-describe('SourceLine', () => {
-  it('pinta título, organismo, fecha y confianza con enlace', () => {
-    render(<SourceLine datos={DATO} />);
-    const linea = screen.getByText(/Fuente:/).closest('p');
-    expect(linea).toHaveTextContent(
-      'Fuente: Documento A (Organismo A) · descargado el 2024-05-01 · confianza: alta',
-    );
-    expect(screen.getByRole('link', { name: 'Documento A' })).toHaveAttribute(
-      'href',
-      'https://example.org/a',
-    );
-  });
-
-  it('agrupa fuentes repetidas y usa plural con varias', () => {
-    const otro: Dato = {
-      ...DATO,
-      source: { title: 'Documento B', publisher: 'Organismo B', url: 'https://example.org/b' },
-      fetchedAt: '2024-06-02',
-      confidence: 'media',
-    };
-    render(<SourceLine datos={[DATO, DATO, otro]} />);
-    const linea = screen.getByText(/Fuentes:/).closest('p');
-    expect(linea).toHaveTextContent(
-      'Fuentes: Documento A (Organismo A) · descargado el 2024-05-01 · confianza: alta; Documento B (Organismo B) · descargado el 2024-06-02 · confianza: media',
-    );
-    expect(screen.getAllByRole('link')).toHaveLength(2);
   });
 });
 

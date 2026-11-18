@@ -9,6 +9,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { beforeAll, describe, expect, it, vi } from 'vitest';
 import { valoracionesReformasEn, veredictosEn } from '../../../scripts/lib/valoraciones.ts';
 import { formatearNumero } from '../../engine/formato';
+import { expectFuente } from '../../test/fuentes';
 import { buscarSeccion } from '../secciones';
 import { cronologia, graficosParametros, reformas } from './datos-reformas';
 import Reformas from './Pagina';
@@ -96,10 +97,8 @@ describe('estructura de la página', () => {
         expect(cambio.textContent, f.id).toMatch(/Antes:/);
         expect(cambio.textContent, f.id).toMatch(/Después:/);
       }
-      const fuente = f.querySelector(':scope > .linea-fuente');
-      expect(fuente?.textContent, f.id).toMatch(
-        /Fuente: .*· descargado el \d{4}-\d{2}-\d{2} · confianza: (alta|media|baja)/,
-      );
+      expect(f.querySelector(':scope > .linea-fuente'), f.id).not.toBeNull();
+      expectFuente(f, f.id);
       expect(
         within(f).getAllByRole('link', { name: new RegExp(r.norma.titulo.slice(0, 20)) }).length,
       ).toBeGreaterThan(0);
@@ -122,7 +121,7 @@ describe('estructura de la página', () => {
       expect(t.querySelector('table caption')?.textContent.length).toBeGreaterThan(5);
       expect(t.querySelectorAll('thead th[scope="col"]').length).toBeGreaterThan(1);
       expect(t.querySelectorAll('tbody th[scope="row"]').length).toBeGreaterThan(0);
-      expect(t.querySelector('.linea-fuente')?.textContent).toMatch(/descargado el/);
+      expectFuente(t, t.id);
       expect(t.querySelector('details summary')?.textContent).toBe('Cómo leerlo');
       expect(t.textContent).toMatch(/Definición:/);
     }

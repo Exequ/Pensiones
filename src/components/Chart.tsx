@@ -108,7 +108,7 @@ export function Chart<F extends Record<string, ValorCelda>>({
         />
       </details>
       {nota ? <p className="grafico-nota">{nota}</p> : null}
-      {fuentes ? <SourceLine datos={fuentes} /> : null}
+      {fuentes ? <SourceLine datos={fuentes} titulo={titulo} /> : null}
     </figure>
   );
 }

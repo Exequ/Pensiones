@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import { valoracionesEn } from '../../../scripts/lib/valoraciones.ts';
+import { expectFuente, textoDeFuentes } from '../../test/fuentes';
 import { buscarSeccion } from '../secciones';
 import { datosProyecciones } from './datos-proyecciones';
 import Pagina from './Pagina';
@@ -64,12 +65,10 @@ describe('página «Proyecciones»', () => {
       const tabla = figura.querySelector('table');
       expect(tabla, `tabla de «${titulo}»`).not.toBeNull();
       expect(tabla?.querySelectorAll('tbody tr').length).toBeGreaterThan(0);
-      const fuente = figura.querySelector('.linea-fuente');
-      expect(fuente?.textContent, `fuente de «${titulo}»`).toMatch(
-        /Fuentes?:.*descargado el \d{4}-\d{2}-\d{2}.*confianza: (alta|media|baja)/s,
-      );
-      // Siempre se ve de qué naturaleza es cada fuente: nunca una proyección sin rotular.
-      expect(fuente?.textContent).toMatch(/naturaleza: /);
+      expectFuente(figura, `fuente de «${titulo}»`);
+      // Siempre se ve de qué naturaleza es cada fuente, sin abrir el desplegable: nunca una
+      // proyección sin rotular.
+      expect(figura.querySelector('.linea-fuente')?.textContent).toMatch(/naturaleza: /);
       // La prueba hacia atrás compara el modelo con datos ya observados: no es una proyección.
       if (!titulo.startsWith('Error del modelo')) {
         expect(figura.querySelector('.grafico-nota')?.textContent).toMatch(
@@ -85,11 +84,14 @@ describe('página «Proyecciones»', () => {
 
   it('las fuentes de las salidas de los modelos se rotulan «proyección de modelo propio»', () => {
     const { container } = pintar();
-    const fuente = figuraDe(container, 'Pensiones contributivas en vigor: total').querySelector(
+    const linea = figuraDe(container, 'Pensiones contributivas en vigor: total').querySelector(
       '.linea-fuente',
-    )?.textContent;
+    );
+    // La naturaleza se ve sin abrir «Fuentes»; el organismo, al abrir.
+    expect(linea?.textContent).toMatch(/naturaleza: proyección de modelo propio/);
+    const fuente = textoDeFuentes(linea?.parentElement ?? null);
     expect(fuente).toMatch(/Elaboración propia: modelo de proyección/);
-    expect(fuente).toMatch(/naturaleza: proyección de modelo propio/);
+    expect(fuente).toMatch(/Naturaleza[\s\S]*proyección de modelo propio/);
     // Y el dato observado de la misma figura no se presenta como proyección.
     expect(fuente).toMatch(/Seguridad Social/);
   });
@@ -216,9 +218,10 @@ describe('página «Proyecciones»', () => {
       // El primer año vale cien en las dos series.
       const primera = [...(filas[0]?.querySelectorAll('td') ?? [])].map((c) => c.textContent);
       expect(primera.slice(1)).toEqual(['100,0', '100,0']);
-      expect(figura.querySelector('.linea-fuente')?.textContent).toMatch(/Ageing Report/);
+      expect(textoDeFuentes(figura)).toMatch(/Ageing Report/);
+      // Con varias naturalezas, todas se ven junto al botón: «naturaleza: a; b».
       expect(figura.querySelector('.linea-fuente')?.textContent).toMatch(
-        /naturaleza: proyección publicada por la fuente/,
+        /naturaleza: .*proyección publicada por la fuente/,
       );
     }
     expect(container.textContent).toMatch(/modelo menos Ageing Report/);

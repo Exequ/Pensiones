@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
-import { esperarPagina, url, vigilar } from './utilidades.ts';
+import { comprobarFuente, esperarPagina, url, vigilar } from './utilidades.ts';
 
 /** Páginas históricas de la Fase 5-A y el mínimo de gráficos que debe tener cada una. */
 const PAGINAS = [
@@ -29,7 +29,7 @@ for (const { ruta, titulo, graficos } of PAGINAS) {
         await expect(figura.locator('svg[role="img"]')).toHaveCount(1);
         // La tabla de datos está dentro de un <details>: existe y se puede abrir.
         await expect(figura.locator('table')).toHaveCount(1);
-        await expect(figura.locator('.linea-fuente')).toContainText('descargado el');
+        await comprobarFuente(figura);
       }
       // Cada gráfico lleva su «Cómo leerlo» justo después; las tablas sueltas pueden llevar el suyo aparte.
       await expect(page.locator('figure.grafico + .como-leerlo')).toHaveCount(

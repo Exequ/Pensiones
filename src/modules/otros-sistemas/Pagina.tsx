@@ -35,8 +35,8 @@ export default function OtrosSistemas() {
         </header>
         <MarginNote>
           <p>
-            Cada gráfico lleva su tabla de datos, su fuente, la fecha de descarga y un nivel de
-            confianza. Las dos medidas de cada magnitud se muestran lado a lado.
+            Cada gráfico lleva su tabla de datos y su fuente. Las dos medidas de cada magnitud se
+            muestran lado a lado.
           </p>
         </MarginNote>
         <p className="hist-aviso">

@@ -1,19 +1,141 @@
 .linea-fuente {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--espacio-3);
   font-family: var(--fuente-interfaz);
   font-size: var(--texto-etiqueta-s);
   line-height: var(--interlineado-etiqueta);
   color: var(--color-apagado);
 }
 
-.linea-fuente-etiqueta {
+.linea-fuente-boton {
+  display: inline-flex;
+  align-items: center;
+  min-width: var(--objetivo-tactil);
+  min-height: var(--objetivo-tactil);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radio);
+  background: none;
+  font: inherit;
   font-weight: var(--peso-semi);
   color: var(--color-tinta-2);
+  text-decoration: underline;
+  text-decoration-thickness: var(--grosor-filete);
+  text-underline-offset: 0.18em;
+  cursor: pointer;
 }
 
-.linea-fuente a {
+.linea-fuente-boton:hover {
+  color: var(--color-acento);
+}
+
+.fuentes-dialogo {
+  box-sizing: border-box;
+  width: min(40rem, calc(100vw - 2 * var(--espacio-4)));
+  max-width: none;
+  max-height: calc(100dvh - 2 * var(--espacio-4));
+  padding: 0;
+  overflow: auto;
+  border: var(--grosor-filete) solid var(--color-tinta);
+  border-radius: var(--radio);
+  background: var(--color-papel);
+  color: var(--color-tinta);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+}
+
+.fuentes-dialogo::backdrop {
+  /* Velo de tinta sobre el papel, sin desenfoque ni degradado. */
+  background: var(--color-tinta);
+  opacity: 0.5;
+}
+
+.fuentes-dialogo-contenido {
+  padding: var(--espacio-4);
+}
+
+.fuentes-dialogo-cabecera {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--espacio-4);
+  padding-bottom: var(--espacio-3);
+  border-bottom: var(--grosor-filete) solid var(--color-tinta);
+}
+
+.fuentes-dialogo-titulo {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  padding-top: var(--espacio-3);
+  font-weight: var(--peso-semi);
+  overflow-wrap: anywhere;
+}
+
+.fuentes-dialogo-cerrar {
+  flex: none;
+  min-width: var(--objetivo-tactil);
+  min-height: var(--objetivo-tactil);
+  padding: 0 var(--espacio-4);
+  border: var(--grosor-filete) solid var(--color-tinta);
+  border-radius: var(--radio);
+  background: var(--color-papel);
+  font: inherit;
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta);
+  cursor: pointer;
+}
+
+.fuentes-dialogo-cerrar:hover {
+  color: var(--color-acento);
+  border-color: var(--color-acento);
+}
+
+.fuentes-dialogo-lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fuentes-dialogo-fuente {
+  padding-block: var(--espacio-4);
+  border-bottom: var(--grosor-filete) solid var(--color-filete);
+  overflow-wrap: anywhere;
+}
+
+.fuentes-dialogo-fuente:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.fuentes-dialogo-enlace {
+  font-weight: var(--peso-semi);
+  color: var(--color-acento);
+}
+
+.fuentes-dialogo-enlace:hover {
+  color: var(--color-acento-oscuro);
+}
+
+.fuentes-dialogo-datos {
+  display: grid;
+  gap: var(--espacio-2);
+  margin: var(--espacio-3) 0 0;
+}
+
+.fuentes-dialogo-datos dt {
+  font-size: var(--texto-etiqueta-s);
+  color: var(--color-apagado);
+}
+
+.fuentes-dialogo-datos dd {
+  margin: 0;
   color: var(--color-tinta-2);
 }
 
-.linea-fuente a:hover {
-  color: var(--color-acento);
+.fuentes-dialogo-cita {
+  font-family: var(--fuente-lectura);
 }

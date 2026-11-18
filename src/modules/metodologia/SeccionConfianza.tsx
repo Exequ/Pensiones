@@ -27,9 +27,10 @@ export function SeccionConfianza() {
 
       <h3>Confianza de la fuente</h3>
       <Definition termino="Confianza (alta, media o baja)">
-        Nivel que acompaña a cada dato y mide la fiabilidad de su fuente. No hay una definición
-        general escrita de cada nivel: el criterio aplicado consta junto a cada decisión, y la falta
-        de una definición única queda anotada como pendiente.
+        Nivel que acompaña a cada dato y mide la fiabilidad de su fuente. Se registra en los datos;
+        la web no lo muestra junto a cada fuente. No hay una definición general escrita de cada
+        nivel: el criterio aplicado consta junto a cada decisión, y la falta de una definición única
+        queda anotada como pendiente.
       </Definition>
       <p>Los criterios que constan en la documentación del proyecto son estos:</p>
       <ul>

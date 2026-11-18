@@ -208,7 +208,7 @@ export function SeccionOrigen() {
               {cita('definicion-costes-impropios-pacto-toledo')}».
               {enumeracionImpropios === undefined
                 ? ''
-                : ` La Revista de la Seguridad Social (fuente secundaria, confianza media) emplea la expresión para: ${enumeracionImpropios}.`}
+                : ` La Revista de la Seguridad Social (fuente secundaria) emplea la expresión para: ${enumeracionImpropios}.`}
             </p>
           </dd>
         </div>
