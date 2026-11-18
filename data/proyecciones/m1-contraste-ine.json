@@ -18,7 +18,7 @@
     "aplicacion": "g e IPC no intervienen en la demografía; las variantes de fecundidad, mortalidad y migración se indican en cada escenario."
   },
   "source": {
-    "title": "M1 · Modelo demográfico: código del modelo en el repositorio y salidas de su ejecución",
+    "title": "M1 · Modelo demográfico: código del modelo y salidas de su ejecución",
     "publisher": "Elaboración propia: modelo de proyección",
     "url": "https://github.com/Exequ/Pensiones/blob/15651e83ec29111cffee572346a9c746ee1e57e0/modelos/m1/m1_demografia.py"
   },

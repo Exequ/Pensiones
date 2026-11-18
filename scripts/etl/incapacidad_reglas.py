@@ -34,7 +34,7 @@ ORIGEN = json.load(open(f'{RAW}/origen.json', encoding='utf-8'))
 HOY = os.environ.get('FECHA_DESCARGA', '2026-11-12')
 DESDE = 20220101  # hechos causantes cubiertos por el motor
 
-TRLGSS = ('trlgss-2015-consolidado.txt', 'Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026; descargado el 2026-11-11)', '2026-11-11')
+TRLGSS = ('trlgss-2015-consolidado.txt', 'Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)', '2026-11-11')
 O1969 = ('orden-15-04-1969.txt', 'Orden de 15 de abril de 1969 por la que se establecen normas para la aplicación y desarrollo de las prestaciones por invalidez en el Régimen General de la Seguridad Social (texto consolidado)', HOY)
 D1646 = ('decreto-1646-1972.txt', 'Decreto 1646/1972, de 23 de junio, para la aplicación de la Ley 24/1972, de 21 de junio, en materia de prestaciones del Régimen General de la Seguridad Social (texto consolidado)', HOY)
 D3158 = ('decreto-3158-1966.txt', 'Decreto 3158/1966, de 23 de diciembre, Reglamento General que determina la cuantía de las prestaciones económicas del Régimen General de la Seguridad Social (texto consolidado)', HOY)

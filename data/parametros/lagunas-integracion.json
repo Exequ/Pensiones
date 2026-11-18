@@ -198,7 +198,7 @@
       "unit": "meses (los primeros con laguna, contados desde el hecho causante hacia atrás)",
       "period": "2026",
       "source": {
-        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
       },
@@ -224,7 +224,7 @@
       "unit": "% de la base mínima",
       "period": "2026",
       "source": {
-        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
       },
@@ -250,7 +250,7 @@
       "unit": "% de la base mínima (el resto de los meses con laguna)",
       "period": "2026",
       "source": {
-        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)",
+        "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
         "publisher": "Boletín Oficial del Estado (BOE)",
         "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
       },

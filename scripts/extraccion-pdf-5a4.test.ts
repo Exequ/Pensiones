@@ -472,8 +472,9 @@ describe('revalorización de 2011 (RDL 8/2010 y RD 1794/2010)', () => {
     expect(archivo.data).toHaveLength(6);
     for (const d of archivo.data ?? []) {
       expect(d.quote).toBeTruthy();
-      expect(d.location).toMatch(/página \d+ \(BOE, pág\. \d+\)/);
-      expect(d.location).toMatch(/[0-9a-f]{64}/);
+      expect(d.location).toMatch(/página \d+ del PDF \(BOE, pág\. \d+\)/);
+      // La huella consta en las notas del dato; la ubicación (que se muestra) no lleva rutas ni huellas.
+      expect(d.notes).toMatch(/Huella SHA-256 del PDF: [0-9a-f]{64}/);
       expect(d.fetchedAt).toBe('2026-11-16');
       expect(d.period).toBe('2011');
     }
@@ -488,10 +489,10 @@ describe('revalorización de 2011 (RDL 8/2010 y RD 1794/2010)', () => {
     expect(dato('pago-unico-referencia-2010').value).toBe(2.3);
   });
 
-  it('las huellas de las ubicaciones son las de los PDF', () => {
+  it('las huellas citadas en las notas son las de los PDF', () => {
     for (const d of archivo.data ?? []) {
       const esRdl = d.source.docId === 'BOE-A-2010-8228';
-      expect(d.location).toContain(HUELLAS[esRdl ? PDF_RDL : PDF_RD]);
+      expect(d.notes).toContain(HUELLAS[esRdl ? PDF_RDL : PDF_RD]);
     }
   });
 

@@ -32,7 +32,7 @@ def exige(nombre, literal):
         raise SystemExit(f'CITA NO ENCONTRADA en {nombre}: {literal[:90]}')
 
 
-TRLGSS = ('trlgss-2015-consolidado.txt', 'Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, versión descargada el 2026-11-11)')
+TRLGSS = ('trlgss-2015-consolidado.txt', 'Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado)')
 RDL = ('rdl-2-2023.txt', 'Real Decreto-ley 2/2023, de 16 de marzo, de medidas urgentes para la ampliación de derechos de los pensionistas, la reducción de la brecha de género y el establecimiento de un nuevo marco de sostenibilidad del sistema público de pensiones')
 ART209_2016 = ('trlgss-2015-art209-v20151031.txt', 'Real Decreto Legislativo 8/2015, TRLGSS: artículo 209, texto original (en vigor del 02/01/2016 al 31/12/2025)')
 ART162_2010 = ('trlgss-1994-art162-v20101231.txt', 'Real Decreto Legislativo 1/1994, TRLGSS: artículo 162, versión en vigor el 31/12/2010')

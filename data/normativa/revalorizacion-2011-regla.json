@@ -17,9 +17,9 @@
       },
       "fetchedAt": "2026-11-16",
       "confidence": "alta",
-      "notes": "Suspensión de la revalorización de las pensiones contributivas en 2011, salvo mínimos, SOVI no concurrentes y no contributivas. El apartado 1.1 del artículo 48 del texto refundido de la LGSS entonces vigente es el de la revalorización general. El mismo artículo 4.Uno suspende también el apartado 1.2 del artículo 48, con las mismas excepciones (dato siguiente). PDF aportado por el autor, descargado el 2026-11-16 según su indicación; la URL es la de la ficha del BOE de la norma (comprobada) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla.",
+      "notes": "Suspensión de la revalorización de las pensiones contributivas en 2011, salvo mínimos, SOVI no concurrentes y no contributivas. El apartado 1.1 del artículo 48 del texto refundido de la LGSS entonces vigente es el de la revalorización general. El mismo artículo 4.Uno suspende también el apartado 1.2 del artículo 48, con las mismas excepciones (dato siguiente). PDF aportado por el autor, descargado el 2026-11-16 según su indicación; la URL es la de la ficha del BOE de la norma (comprobada) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla. Huella SHA-256 del PDF: 25b8e0e9141f2bad41d2de6b0c80026761ed8f39c2c3e2fd5af9226901bed2de.",
       "quote": "Se suspende para el ejercicio de 2011 la aplicación de lo previsto en el apartado 1.1 del artículo 48 de la ley General de la Seguridad Social, excepto para las pensiones mínimas del Sistema de la Seguridad Social, las pensiones del extinguido SOVI no concurrentes y las pensiones no contributivas.",
-      "location": "Artículo 4.Uno, primer párrafo; PDF data-raw/boe/RDL-8-2010.pdf, página 47 (BOE, pág. 45116); huella SHA-256 25b8e0e9141f2bad41d2de6b0c80026761ed8f39c2c3e2fd5af9226901bed2de"
+      "location": "Artículo 4.Uno, primer párrafo; página 47 del PDF (BOE, pág. 45116)"
     },
     {
       "id": "suspension-actualizacion-ipc-2011",
@@ -34,9 +34,9 @@
       },
       "fetchedAt": "2026-11-16",
       "confidence": "alta",
-      "notes": "Suspensión de la actualización del apartado 1.2 del artículo 48 de la LGSS en 2011, con las mismas excepciones. Los textos descargados de 2010 no dicen qué contiene el apartado 1.2; el texto del RDL 29/2012 ya descargado (BOE-A-2012-15764) lo cita como «la actualización de las pensiones en los términos previstos en el apartado 1.2 del artículo 48». PDF aportado por el autor, descargado el 2026-11-16 según su indicación; la URL es la de la ficha del BOE de la norma (comprobada) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla.",
+      "notes": "Suspensión de la actualización del apartado 1.2 del artículo 48 de la LGSS en 2011, con las mismas excepciones. Los textos descargados de 2010 no dicen qué contiene el apartado 1.2; el texto del RDL 29/2012 ya descargado (BOE-A-2012-15764) lo cita como «la actualización de las pensiones en los términos previstos en el apartado 1.2 del artículo 48». PDF aportado por el autor, descargado el 2026-11-16 según su indicación; la URL es la de la ficha del BOE de la norma (comprobada) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla. Huella SHA-256 del PDF: 25b8e0e9141f2bad41d2de6b0c80026761ed8f39c2c3e2fd5af9226901bed2de.",
       "quote": "Igualmente para el ejercicio de 2011 se suspende la aplicación de lo dispuesto en el apartado 1.2 del artículo 48 de la Ley General de la Seguridad Social, excepto para las pensiones mínimas del Sistema de la Seguridad Social, las pensiones del extinguido SOVI no concurrentes y las pensiones no contributivas.",
-      "location": "Artículo 4.Uno, segundo párrafo; PDF data-raw/boe/RDL-8-2010.pdf, página 47 (BOE, pág. 45116); huella SHA-256 25b8e0e9141f2bad41d2de6b0c80026761ed8f39c2c3e2fd5af9226901bed2de"
+      "location": "Artículo 4.Uno, segundo párrafo; página 47 del PDF (BOE, pág. 45116)"
     },
     {
       "id": "porcentaje-excluidas-2011",
@@ -51,9 +51,9 @@
       },
       "fetchedAt": "2026-11-16",
       "confidence": "alta",
-      "notes": "Revalorización de 2011 de los complementos por mínimos, las pensiones no contributivas y las pensiones no concurrentes del SOVI. El porcentaje consta en la exposición de motivos, no en el articulado; los artículos fijan importes (anexo I, artículo 6, artículo 12) y dicen que la diferencia con los importes de diciembre de 2010 «tendrá carácter de a cuenta de la evolución del IPC real en el período noviembre 2010-noviembre 2011». PDF aportado por el autor, descargado el 2026-11-16 según su indicación; la URL es la de la ficha del BOE de la norma (comprobada) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla.",
+      "notes": "Revalorización de 2011 de los complementos por mínimos, las pensiones no contributivas y las pensiones no concurrentes del SOVI. El porcentaje consta en la exposición de motivos, no en el articulado; los artículos fijan importes (anexo I, artículo 6, artículo 12) y dicen que la diferencia con los importes de diciembre de 2010 «tendrá carácter de a cuenta de la evolución del IPC real en el período noviembre 2010-noviembre 2011». PDF aportado por el autor, descargado el 2026-11-16 según su indicación; la URL es la de la ficha del BOE de la norma (comprobada) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla. Huella SHA-256 del PDF: 205019a5783deb7b7c0b2fc699d43d6985193a3b9ebebe694f393ffd8128d12e.",
       "quote": "este real decreto establece una revalorización del 1 por ciento de los complementos por mínimos de las pensiones del sistema de la Seguridad Social en su modalidad contributiva, de las pensiones no contributivas de dicho sistema, así como de las pensiones no concurrentes del extinguido seguro obligatorio de vejez e invalidez.",
-      "location": "Exposición de motivos, párrafo cuarto; PDF data-raw/boe/RD-1794-2010.pdf, página 1 (BOE, pág. 109387); huella SHA-256 205019a5783deb7b7c0b2fc699d43d6985193a3b9ebebe694f393ffd8128d12e"
+      "location": "Exposición de motivos, párrafo cuarto; página 1 del PDF (BOE, pág. 109387)"
     },
     {
       "id": "a-cuenta-del-ipc-2011",
@@ -68,9 +68,9 @@
       },
       "fetchedAt": "2026-11-16",
       "confidence": "alta",
-      "notes": "Carácter «a cuenta» del IPC real de la diferencia de los complementos por mínimos. El texto no dice cómo se liquida esa cuenta; no se descargó la norma que lo haga. PDF aportado por el autor, descargado el 2026-11-16 según su indicación; la URL es la de la ficha del BOE de la norma (comprobada) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla.",
+      "notes": "Carácter «a cuenta» del IPC real de la diferencia de los complementos por mínimos. El texto no dice cómo se liquida esa cuenta; no se descargó la norma que lo haga. PDF aportado por el autor, descargado el 2026-11-16 según su indicación; la URL es la de la ficha del BOE de la norma (comprobada) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla. Huella SHA-256 del PDF: 205019a5783deb7b7c0b2fc699d43d6985193a3b9ebebe694f393ffd8128d12e.",
       "quote": "tendrán carácter de a cuenta de la evolución del IPC real en el período noviembre 2010-noviembre 2011.",
-      "location": "Artículo 3.2 (complementos por mínimos); análogo en los artículos 6.1 y 12.2; PDF data-raw/boe/RD-1794-2010.pdf, página 2 (BOE, pág. 109388); huella SHA-256 205019a5783deb7b7c0b2fc699d43d6985193a3b9ebebe694f393ffd8128d12e"
+      "location": "Artículo 3.2 (complementos por mínimos); análogo en los artículos 6.1 y 12.2; página 2 del PDF (BOE, pág. 109388)"
     },
     {
       "id": "resto-mantienen-cuantia-2011",
@@ -85,9 +85,9 @@
       },
       "fetchedAt": "2026-11-16",
       "confidence": "media",
-      "notes": "Pensiones no afectadas por la revalorización del real decreto: se mantiene la cuantía de 31 de diciembre de 2010. El texto no enuncia un porcentaje: «mantendrán la cuantía» equivale a un incremento nulo (valor derivado del texto). El artículo remite a la disposición adicional primera para el pago único. PDF aportado por el autor, descargado el 2026-11-16 según su indicación; la URL es la de la ficha del BOE de la norma (comprobada) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla.",
+      "notes": "Pensiones no afectadas por la revalorización del real decreto: se mantiene la cuantía de 31 de diciembre de 2010. El texto no enuncia un porcentaje: «mantendrán la cuantía» equivale a un incremento nulo (valor derivado del texto). El artículo remite a la disposición adicional primera para el pago único. PDF aportado por el autor, descargado el 2026-11-16 según su indicación; la URL es la de la ficha del BOE de la norma (comprobada) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla. Huella SHA-256 del PDF: 205019a5783deb7b7c0b2fc699d43d6985193a3b9ebebe694f393ffd8128d12e.",
       "quote": "mantendrán la cuantía que tuvieran reconocida al 31 de diciembre de 2010",
-      "location": "Artículo 2.3; PDF data-raw/boe/RD-1794-2010.pdf, página 2 (BOE, pág. 109388); huella SHA-256 205019a5783deb7b7c0b2fc699d43d6985193a3b9ebebe694f393ffd8128d12e"
+      "location": "Artículo 2.3; página 2 del PDF (BOE, pág. 109388)"
     },
     {
       "id": "pago-unico-referencia-2010",
@@ -102,9 +102,9 @@
       },
       "fetchedAt": "2026-11-16",
       "confidence": "alta",
-      "notes": "Pago único de 2011 por la diferencia con un 2,3 % de revalorización en 2010 (colectivos del apartado 1). Es un pago único antes del 1 de abril de 2011 ligado al ejercicio 2010; el apartado 3 de la misma disposición lo calcula, para pensiones mínimas y SOVI, con «el incremento real experimentado por el IPC en el período noviembre de 2009-noviembre de 2010, una vez deducido de la misma un 1 por ciento». El texto no lo llama «paga por desviación». PDF aportado por el autor, descargado el 2026-11-16 según su indicación; la URL es la de la ficha del BOE de la norma (comprobada) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla.",
+      "notes": "Pago único de 2011 por la diferencia con un 2,3 % de revalorización en 2010 (colectivos del apartado 1). Es un pago único antes del 1 de abril de 2011 ligado al ejercicio 2010; el apartado 3 de la misma disposición lo calcula, para pensiones mínimas y SOVI, con «el incremento real experimentado por el IPC en el período noviembre de 2009-noviembre de 2010, una vez deducido de la misma un 1 por ciento». El texto no lo llama «paga por desviación». PDF aportado por el autor, descargado el 2026-11-16 según su indicación; la URL es la de la ficha del BOE de la norma (comprobada) y la huella SHA-256 es la calculada el día de la extracción, sin referencia con la que compararla. Huella SHA-256 del PDF: 205019a5783deb7b7c0b2fc699d43d6985193a3b9ebebe694f393ffd8128d12e.",
       "quote": "una cantidad equivalente a la diferencia entre el importe de la pensión percibida durante el ejercicio 2010 y el que hubiese correspondido de haberse revalorizado la pensión en dicho ejercicio en el 2,3 por ciento",
-      "location": "Disposición adicional primera, apartado 1; PDF data-raw/boe/RD-1794-2010.pdf, página 8 (BOE, pág. 109394); huella SHA-256 205019a5783deb7b7c0b2fc699d43d6985193a3b9ebebe694f393ffd8128d12e"
+      "location": "Disposición adicional primera, apartado 1; página 8 del PDF (BOE, pág. 109394)"
     }
   ]
 }
