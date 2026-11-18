@@ -39,4 +39,6 @@ Rama `feat/r2-fuentes-desplegables`, creada desde `origin/main` (`ce2536582df6ae
 
 ## CI y despliegue
 
-CI del PR en curso al escribir esta línea; el resultado se anota aquí antes de fusionar.
+- **CI del PR** ([Exequ/Pensiones#50](https://github.com/Exequ/Pensiones/pull/50)): run 129 en verde sobre el commit `9b62d009c6e53b598322d7429f984916e066549d` (mismo código que `48a4278`; solo cambia que se añade este fichero): lint, tipos, pruebas unitarias, validación de datos, compilación y Playwright completo (incluidas las ocho de `e2e/sitio.spec.ts` que fallan en el Chromium local). El run 128 sobre `48a4278` lo canceló la propia subida de este fichero (concurrencia del flujo), no un fallo. El commit que añade esta sección solo cambia este fichero; su CI se comprueba antes de fusionar.
+- **Despliegue de la compilación del PR** («Despliegue en GitHub Pages», run 129, evento `pull_request`): «Compilar para Pages» en verde; «Desplegar» se omite en los PR por diseño.
+- **Despliegue de `main` tras la fusión y comprobación de la URL publicada** (códigos HTTP, rutas a 1360 y 390 px y «Fuentes» abierto en dos rutas): constan en el informe final de la sesión, porque solo existen después de fusionar y un cambio posterior en este fichero abriría un PR solo de documentación.
