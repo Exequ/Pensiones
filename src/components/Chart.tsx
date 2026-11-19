@@ -41,8 +41,7 @@ interface ChartProps<F extends Record<string, ValorCelda>> {
 }
 
 const ANCHO_INICIAL = 640;
-/** Desde este ancho, el gráfico ampliado gana alto en proporción (en pantallas estrechas, no). */
-const ANCHO_AMPLIO = 960;
+/** El gráfico ampliado gana alto en proporción al normal (el ancho lo da el diálogo). */
 const FACTOR_ALTO_AMPLIADO = 1.5;
 
 /** Gráficos ampliados: solo uno abierto a la vez. */
@@ -82,8 +81,7 @@ interface LienzoProps {
 function LienzoGrafico({ titulo, opciones, alto, ampliado = false }: LienzoProps) {
   const lienzo = useRef<HTMLDivElement>(null);
   const ancho = useAncho(lienzo);
-  const altoEfectivo =
-    ampliado && ancho >= ANCHO_AMPLIO ? Math.round(alto * FACTOR_ALTO_AMPLIADO) : alto;
+  const altoEfectivo = ampliado ? Math.round(alto * FACTOR_ALTO_AMPLIADO) : alto;
 
   useEffect(() => {
     const nodo = lienzo.current;

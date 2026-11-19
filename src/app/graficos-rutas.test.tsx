@@ -59,7 +59,8 @@ async function pintarRuta(ruta: string): Promise<HTMLElement> {
 
 function idsRepetidos(): string[] {
   const vistos = new Map<string, number>();
-  for (const el of document.querySelectorAll('[id]')) vistos.set(el.id, (vistos.get(el.id) ?? 0) + 1);
+  for (const el of document.querySelectorAll('[id]'))
+    vistos.set(el.id, (vistos.get(el.id) ?? 0) + 1);
   return [...vistos].filter(([, n]) => n > 1).map(([id]) => id);
 }
 

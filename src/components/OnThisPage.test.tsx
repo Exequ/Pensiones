@@ -56,6 +56,22 @@ describe('OnThisPage', () => {
     expect(nav).toHaveTextContent('Qué cuenta el primero.');
   });
 
+  it('el «·» del resumen es un elemento propio, para quitarlo cuando el resumen va en su línea (fase R4)', () => {
+    pintar();
+    const resumen = document.querySelector('.indice-pagina-resumen');
+    expect(resumen).toHaveTextContent('Qué cuenta el primero.');
+    const separador = resumen?.querySelector('.indice-pagina-separador');
+    expect(separador?.textContent).toBe(' · ');
+    // El texto del resumen, sin el separador, no empieza por «·».
+    const sinSeparador = [...(resumen?.childNodes ?? [])]
+      .filter((n) => n !== separador)
+      .map((n) => n.textContent)
+      .join('');
+    expect(sinSeparador).toBe('Qué cuenta el primero.');
+    // Las entradas sin resumen no llevan separador.
+    expect(document.querySelectorAll('.indice-pagina-separador')).toHaveLength(1);
+  });
+
   it('el clic mueve el foco y el desplazamiento al encabezado sin cambiar la ruta ni el query', async () => {
     const usuario = userEvent.setup();
     const desplazar = vi.fn();

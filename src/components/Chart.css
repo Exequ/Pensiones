@@ -187,8 +187,9 @@
   overflow-x: auto;
 }
 
+/* Suelo de ancho del gráfico ampliado: en pantallas aún más estrechas, se desplaza en su marco. */
 .grafico-lienzo--ampliado {
-  min-width: 40rem;
+  min-width: 20rem;
 }
 
 @media (width < 960px) {
