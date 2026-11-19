@@ -151,6 +151,11 @@
     grid-column: 2;
     font-size: var(--texto-etiqueta-s);
   }
+
+  /* El resumen va en su propia línea, bajo el título: sin el «·» de la variante en línea. */
+  .indice-pagina-marco--fijo .indice-pagina-separador {
+    display: none;
+  }
 }
 
 @media (width < 960px) {

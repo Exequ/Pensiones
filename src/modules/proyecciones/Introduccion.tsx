@@ -88,7 +88,10 @@ export function Introduccion() {
           indicadores de confianza de las fuentes son los de cada dato.
         </li>
       </ul>
-      <SourceLine datos={[d.m1.contraste.dato, d.m2.cotizantes.dato, d.m3.resumen.dato]} />
+      <SourceLine
+        datos={[d.m1.contraste.dato, d.m2.cotizantes.dato, d.m3.resumen.dato]}
+        titulo="Escenario de referencia de las salidas de los modelos"
+      />
     </section>
   );
 }

@@ -94,7 +94,10 @@ export function FinancieroEscenarios({ d, escenario, onCambio }: Props) {
         filas={filasEscenarios}
         filaDestacada={d.escenarios.findIndex((e) => e.id === escenario)}
       />
-      <SourceLine datos={[d.m4.dato]} />
+      <SourceLine
+        datos={[d.m4.dato]}
+        titulo={`Los escenarios de ${MODELO.m4} y lo que cambia en cada uno respecto al base`}
+      />
 
       <DataTable
         titulo={`Resultado de cada escenario en ${comparacion.anio}, último año de la salida`}
@@ -141,7 +144,10 @@ export function FinancieroEscenarios({ d, escenario, onCambio }: Props) {
         filaDestacada={indiceActivo}
         pie="Cada escenario se divide por su propio PIB aproximado (afiliados por salario nominal). Las diferencias con el base mezclan, por tanto, el cambio del gasto y el del denominador. Los euros constantes usan el IPC de cada escenario."
       />
-      <SourceLine datos={[d.m4.dato]} />
+      <SourceLine
+        datos={[d.m4.dato]}
+        titulo={`Resultado de cada escenario en ${comparacion.anio}, último año de la salida`}
+      />
 
       <details className="grafico-datos">
         <summary>Ver el punto de partida: datos observados de {d.filaObservada.anio}</summary>
@@ -164,7 +170,10 @@ export function FinancieroEscenarios({ d, escenario, onCambio }: Props) {
           ]}
           filas={filasObservadas}
         />
-        <SourceLine datos={[d.m4.dato]} />
+        <SourceLine
+          datos={[d.m4.dato]}
+          titulo={`Magnitudes observadas de ${d.filaObservada.anio} que acompañan a la salida`}
+        />
       </details>
 
       <details className="grafico-datos">

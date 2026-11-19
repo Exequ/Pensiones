@@ -8,7 +8,14 @@ type Fila = Record<string, string>;
  * Tabla de una ficha: tabla real con su título, nota de definición (la descripción del dato en /data),
  * línea de fuente generada de los datos y «Cómo leerlo». No resalta ninguna fila.
  */
-export function TablaReforma({ tabla }: { readonly tabla: TablaVista }) {
+export function TablaReforma({
+  tabla,
+  norma,
+}: {
+  readonly tabla: TablaVista;
+  /** Nombre de la norma de la ficha: la misma tabla puede estar en varias fichas. */
+  readonly norma: string;
+}) {
   const columnas: Columna<Fila>[] = tabla.columnas.map((titulo, i) => ({
     clave: `c${String(i)}`,
     titulo,
@@ -29,7 +36,7 @@ export function TablaReforma({ tabla }: { readonly tabla: TablaVista }) {
           </>
         }
       />
-      <SourceLine datos={tabla.datos} />
+      <SourceLine datos={tabla.datos} titulo={`${tabla.titulo} (${norma})`} />
       <details className="ref-lectura">
         <summary>Cómo leerlo</summary>
         {tabla.tipo === 'calendario' ? (

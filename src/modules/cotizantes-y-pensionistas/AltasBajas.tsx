@@ -106,7 +106,10 @@ export function AltasBajas() {
           ]}
           filas={tablaMedia}
         />
-        <SourceLine datos={d.altasBajas.dato} />
+        <SourceLine
+          datos={d.altasBajas.dato}
+          titulo={`Pensión media de las altas y de las bajas: ${etiquetaClase}`}
+        />
         <DataTable
           titulo="Edad media de las altas iniciales de jubilación"
           columnas={[
@@ -115,7 +118,10 @@ export function AltasBajas() {
           ]}
           filas={edadMedia}
         />
-        <SourceLine datos={d.edadMediaAltas.dato} />
+        <SourceLine
+          datos={d.edadMediaAltas.dato}
+          titulo="Edad media de las altas iniciales de jubilación"
+        />
         <p className="como-leerlo-texto">
           La edad media de las altas de jubilación en {d.edadMediaAltas.puntos.at(-1)?.anio ?? ''}{' '}
           es de {decimal1(d.edadMediaAltas.puntos.at(-1)?.valor ?? 0)} años. Es la edad a la que se

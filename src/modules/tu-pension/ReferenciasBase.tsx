@@ -53,7 +53,7 @@ export function ReferenciasBase({ catalogo, definicionMedia, onCambio }: Referen
         <div className="tp-referencia-elegida">
           <Cobertura r={elegida} />
           {elegida.nota ? <p className="campo-ayuda">{elegida.nota}</p> : null}
-          <SourceLine datos={elegida.datosFuente} />
+          <SourceLine datos={elegida.datosFuente} titulo={elegida.etiqueta} />
         </div>
       ) : null}
       <details className="tp-referencias-otras">
@@ -63,7 +63,7 @@ export function ReferenciasBase({ catalogo, definicionMedia, onCambio }: Referen
           <div key={r.id} className="tp-referencia-elegida">
             <p className="campo-etiqueta">{r.etiqueta}</p>
             <Cobertura r={r} />
-            <SourceLine datos={r.datosFuente} />
+            <SourceLine datos={r.datosFuente} titulo={r.etiqueta} />
           </div>
         ))}
       </details>

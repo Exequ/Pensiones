@@ -337,7 +337,10 @@ export function SeccionTransferencias() {
           ]}
           filas={filasFinalidad}
         />
-        <SourceLine datos={datosFinalidad} />
+        <SourceLine
+          datos={datosFinalidad}
+          titulo="Transferencias corrientes del Estado por finalidad, según el Tribunal de Cuentas"
+        />
         <p className="hucha-pie" id="finalidad-definicion">
           Definición: la ejecución del presupuesto clasifica las transferencias por su origen (el
           Estado y sus organismos autónomos) y el Tribunal de Cuentas las cifra por su finalidad.

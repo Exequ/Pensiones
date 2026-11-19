@@ -507,7 +507,10 @@ export function SeccionPosicion() {
           ]}
           filas={filasAnotaciones}
         />
-        <SourceLine datos={anotaciones.map((a) => a.dato)} />
+        <SourceLine
+          datos={anotaciones.map((a) => a.dato)}
+          titulo="Anotaciones de la serie de deuda"
+        />
       </div>
     </section>
   );

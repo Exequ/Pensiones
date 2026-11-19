@@ -288,7 +288,10 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
             alternativo,
           }))}
         />
-        <SourceLine datos={datosSupuestos} />
+        <SourceLine
+          datos={datosSupuestos}
+          titulo="Supuestos económicos del escenario base y del escenario alternativo de la OCDE"
+        />
       </div>
 
       <h3 id="reposicion-sensibilidad">Cuánto cambia la tasa bruta con el escenario alternativo</h3>
@@ -328,7 +331,10 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
             diferencia,
           }))}
         />
-        <SourceLine datos={[datoOcde, ...filasEscenario.map((f) => f.dato)]} />
+        <SourceLine
+          datos={[datoOcde, ...filasEscenario.map((f) => f.dato)]}
+          titulo="Tasa bruta de reposición del escenario base y del alternativo, hombres, carrera completa al salario medio"
+        />
       </div>
 
       <h3 id="reposicion-espana">
@@ -352,7 +358,10 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
           filas={filasEspana}
           pie="Los valores de la OCDE son los del sexo, el nivel de salario y los planes elegidos arriba; los cocientes propios son de ambos sexos. Los datos consultados no permiten descomponer la diferencia entre ellos."
         />
-        <SourceLine datos={[datoOcde, ...cocientes.map((c) => c.dato)]} />
+        <SourceLine
+          datos={[datoOcde, ...cocientes.map((c) => c.dato)]}
+          titulo="Tasa de reposición de la OCDE para España y cocientes entre pensión media y salario medio de datos propios"
+        />
       </div>
     </section>
   );

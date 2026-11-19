@@ -303,7 +303,10 @@ export default function Hucha() {
               ]}
               filas={filasNormas}
             />
-            <SourceLine datos={d.normas.map(datoNorma)} />
+            <SourceLine
+              datos={d.normas.map(datoNorma)}
+              titulo="Normas que regulan el Fondo de Reserva"
+            />
           </div>
 
           <p>
@@ -338,7 +341,10 @@ export default function Hucha() {
               </>
             }
           />
-          <SourceLine datos={[d.limiteDesembolso.dato, d.destinoMei.dato]} />
+          <SourceLine
+            datos={[d.limiteDesembolso.dato, d.destinoMei.dato]}
+            titulo={APARTADOS.reglas.titulo}
+          />
         </section>
         <SeccionOrigen />
         <SeccionTransferencias />

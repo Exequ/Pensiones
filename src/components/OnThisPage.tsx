@@ -86,7 +86,13 @@ export function OnThisPage({ entradas, titulo = 'En esta página', fijo = true }
               >
                 {e.titulo}
               </InternalLink>
-              {e.resumen ? <span className="indice-pagina-resumen"> · {e.resumen}</span> : null}
+              {e.resumen ? (
+                <span className="indice-pagina-resumen">
+                  {/* El separador solo tiene sentido con el resumen en la misma línea del título. */}
+                  <span className="indice-pagina-separador"> · </span>
+                  {e.resumen}
+                </span>
+              ) : null}
             </li>
           ))}
         </ol>

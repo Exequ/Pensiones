@@ -232,6 +232,7 @@ export function Situacion() {
             d.numeroPorClaseSexo.jubilacion.ambos.dato,
             d.pensionMediaPorClaseSexo.jubilacion.ambos.dato,
           ]}
+          titulo={`Pensiones contributivas en vigor por clase y sexo, a principios de diciembre de ${anioCuadro}`}
         />
         <p className="como-leerlo-texto">
           «Ambos sexos» puede ser algo mayor que la suma de hombres y mujeres porque incluye las

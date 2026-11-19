@@ -106,7 +106,10 @@ export function EjemploPasoAPaso({
               </li>
             ))}
           </ul>
-          <SourceLine datos={datosFuente} />
+          <SourceLine
+            datos={datosFuente}
+            titulo={`Parámetros que sostienen cada paso: ${ejemplo.titulo}`}
+          />
         </details>
 
         <p className="como-resultado">

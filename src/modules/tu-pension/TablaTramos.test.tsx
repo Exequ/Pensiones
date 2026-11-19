@@ -198,7 +198,7 @@ describe('página con carrera por tramos', () => {
     const selector = screen.getByLabelText(/Definición de la «base media»/);
     expect((selector as HTMLSelectElement).options.length).toBe(4);
     expect(screen.getByText(/no son intercambiables/)).toBeInTheDocument();
-    expect(screen.getAllByRole('button', { name: /^Fuentes?$/ }).length).toBeGreaterThan(0);
+    expect(screen.getAllByRole('button', { name: /^Fuentes?(: .+)?$/ }).length).toBeGreaterThan(0);
     expect(screen.queryByText(/descargado el/)).toBeNull();
     await usuario.selectOptions(selector, 'media-cn');
     // La fuente de la definición elegida está en el desplegable de «Fuente(s)».

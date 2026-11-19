@@ -246,7 +246,10 @@ export function SeccionOrigen() {
           ]}
           filas={filas}
         />
-        <SourceLine datos={datosFuente} />
+        <SourceLine
+          datos={datosFuente}
+          titulo="Importes del mismo periodo según la clasificación de cada fuente"
+        />
       </div>
       <p className="hucha-pie">
         Cifras del Tribunal de Cuentas para el último año de su periodo: aportaciones del Estado de

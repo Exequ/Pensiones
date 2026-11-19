@@ -122,7 +122,10 @@ export function FinancieroContraste({ d }: { d: DatosFinanciero }) {
           filas={filas}
           pie="Los niveles no son comparables entre sí: según la descripción del modelo, el Ageing Report incluye clases pasivas y otros regímenes públicos, y el PIB de cada serie es distinto."
         />
-        <SourceLine datos={fuentes} />
+        <SourceLine
+          datos={fuentes}
+          titulo="Diferencia entre el índice de gasto sobre el PIB del modelo y el del Ageing Report, con los niveles de cada serie"
+        />
       </details>
 
       <h4 id="proy-fin-candidatos">Posibles causas de la diferencia (no verificadas)</h4>
@@ -163,7 +166,10 @@ export function FinancieroContraste({ d }: { d: DatosFinanciero }) {
           filas={candidatos}
           pie="El crecimiento real del PIB aproximado del modelo es el crecimiento nominal de su PIB aproximado descontado con el IPC supuesto del escenario; el primer año no tiene tasa. Son magnitudes con definiciones distintas: no se pueden restar entre sí ni se han verificado como causa."
         />
-        <SourceLine datos={fuentesCandidatos} />
+        <SourceLine
+          datos={fuentesCandidatos}
+          titulo="Magnitudes relacionadas con los candidatos a explicar la diferencia con el Ageing Report (no verificados)"
+        />
       </details>
     </>
   );

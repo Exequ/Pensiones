@@ -81,7 +81,10 @@ export default function TiposDePension() {
             filas={filasResumen}
             pie="Cuántas pensiones hay no dice cuántas personas las cobran ni cuál es la cuantía de una pensión nueva: la media incluye pensiones de todas las fechas de alta."
           />
-          <SourceLine datos={d.fichas.flatMap((f) => (f.enVigor[0] ? [f.enVigor[0].dato] : []))} />
+          <SourceLine
+            datos={d.fichas.flatMap((f) => (f.enVigor[0] ? [f.enVigor[0].dato] : []))}
+            titulo="Pensiones en vigor y pensión media de cada prestación"
+          />
         </section>
 
         <section className="seccion prosa" aria-labelledby={APARTADOS.fichas.destino}>

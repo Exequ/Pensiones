@@ -77,7 +77,10 @@ export function SeccionEstructura({ seleccion }: { readonly seleccion: ReadonlyS
                 </li>
               ))}
             </ul>
-            <SourceLine datos={rasgos.map((r) => r.dato)} />
+            <SourceLine
+              datos={rasgos.map((r) => r.dato)}
+              titulo={`Rasgos del sistema: ${nombrePais(codigo)}`}
+            />
           </article>
         );
       })}

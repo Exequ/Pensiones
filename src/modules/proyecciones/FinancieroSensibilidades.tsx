@@ -90,7 +90,10 @@ export function FinancieroSensibilidades({ d }: { d: DatosFinanciero }) {
           pie="Gasto en pensiones: gasto en pensiones contributivas del modelo. Saldo no financiero: ingresos (cotizaciones, transferencias del Estado y otros ingresos) menos gasto en pensiones y menos el resto de gastos. Los dos se expresan en porcentaje del PIB aproximado de cada caso (afiliados por salario nominal), que no es el PIB del INE ni una previsión macroeconómica. La diferencia es el valor del caso menos el del base, calculada con los valores sin redondear: en el gasto, un signo positivo es más gasto que en el base; en el saldo, un signo positivo es un saldo mayor, es decir, menos negativo."
         />
       </div>
-      <SourceLine datos={[s.tabla.dato, d.m4.dato]} />
+      <SourceLine
+        datos={[s.tabla.dato, d.m4.dato]}
+        titulo={`Sensibilidades de ${MODELO.m4} en ${tabla.anio}: proyección de modelo, una palanca cada vez respecto al caso base`}
+      />
 
       <details className="grafico-datos">
         <summary>Ver lo que es igual en todos los casos</summary>

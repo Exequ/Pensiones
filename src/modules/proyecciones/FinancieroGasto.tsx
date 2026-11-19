@@ -164,7 +164,10 @@ export function FinancieroGasto({ d }: { d: DatosFinanciero }) {
           ]}
           filas={filasPib}
         />
-        <SourceLine datos={[d.observado.pibIne.dato, d.m4.dato]} />
+        <SourceLine
+          datos={[d.observado.pibIne.dato, d.m4.dato]}
+          titulo="PIB de cada año y su definición: PIB del INE en lo observado y PIB aproximado del modelo en lo proyectado"
+        />
       </details>
 
       <h3 id="proy-fin-pension">Pensión media</h3>

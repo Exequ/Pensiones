@@ -188,7 +188,10 @@ export function FinancieroFondo({ d }: { d: DatosFinanciero }) {
           ]}
           filas={filas}
         />
-        <SourceLine datos={[d.limiteDisposicion.dato, d.m4.dato]} />
+        <SourceLine
+          datos={[d.limiteDisposicion.dato, d.m4.dato]}
+          titulo="Límite legal de disposición del Fondo y disposición del modelo, por año"
+        />
       </details>
 
       <GraficoProyeccion

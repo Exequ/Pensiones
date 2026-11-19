@@ -378,7 +378,7 @@ export function Formulario({
                   onCambio({ baseMensual: v });
                 }}
               />
-              <SourceLine datos={fuenteBase} />
+              <SourceLine datos={fuenteBase} titulo="Base mensual de cotización" />
             </>
           ) : (
             <>
@@ -520,7 +520,7 @@ export function Formulario({
             onCambio({ ipcSupuesto: v });
           }}
         />
-        <SourceLine datos={fuenteIpc} />
+        <SourceLine datos={fuenteIpc} titulo="IPC anual supuesto" />
       </fieldset>
 
       <button type="submit" className="tp-boton">
