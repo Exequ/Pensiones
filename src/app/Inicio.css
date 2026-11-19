@@ -2,13 +2,29 @@
   margin-bottom: var(--espacio-5);
 }
 
+/* Un único contador para todos los grupos: la numeración sigue de un grupo al siguiente. */
+.indice-grupos {
+  display: grid;
+  gap: var(--espacio-6);
+  counter-reset: indice;
+}
+
+.indice-grupo-titulo {
+  padding-bottom: var(--espacio-2);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  font-weight: var(--peso-semi);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-acento);
+}
+
 .indice {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: var(--separacion-columnas);
   list-style: none;
   padding: 0;
-  counter-reset: indice;
 }
 
 .indice-elemento {
