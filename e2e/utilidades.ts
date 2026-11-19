@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { expect, type Locator, type Page } from '@playwright/test';
+import { GRUPOS_NAVEGACION } from '../src/modules/navegacion.ts';
 import { SECCIONES } from '../src/modules/secciones.ts';
 
 /** Todas las rutas de la web (HashRouter: van tras «#»). */
@@ -70,4 +71,86 @@ export async function comprobarFuente(contenedor: Locator): Promise<void> {
   await dialogo.getByRole('button', { name: 'Cerrar' }).click();
   await expect(dialogo).toHaveCount(0);
   await expect(boton).toBeFocused();
+}
+
+/** Navegación principal («Secciones»). */
+export const menu = (page: Page): Locator => page.getByRole('navigation', { name: 'Secciones' });
+
+/** Grupo del menú que contiene un enlace (por su texto). */
+function grupoDe(titulo: string) {
+  const grupo = GRUPOS_NAVEGACION.find((g) => g.enlaces.some((e) => e.titulo === titulo));
+  if (!grupo) throw new Error(`El menú no tiene el enlace «${titulo}»`);
+  return grupo;
+}
+
+/** En móvil (< 960 px) abre el menú tras el botón «Menú», si está plegado. */
+export async function abrirMenuMovil(page: Page): Promise<void> {
+  const boton = page.getByRole('button', { name: 'Menú' });
+  if (await boton.isVisible()) {
+    await boton.click();
+    await expect(page.getByRole('button', { name: 'Cerrar' })).toHaveAttribute(
+      'aria-expanded',
+      'true',
+    );
+  }
+}
+
+/**
+ * Llega a una página desde el menú, como un usuario con ratón: abre el menú en móvil, despliega el
+ * grupo del enlace (si no es un enlace directo) y pulsa el enlace. Único sitio de las pruebas que
+ * sabe en qué grupo está cada enlace (lo dice `GRUPOS_NAVEGACION`). Cuando lo que se prueba no es el
+ * menú, basta con `page.goto(url(ruta))`.
+ */
+export async function irPorMenu(page: Page, titulo: string): Promise<void> {
+  await abrirMenuMovil(page);
+  const grupo = grupoDe(titulo);
+  if (!grupo.directo) {
+    const boton = menu(page).getByRole('button', { name: grupo.titulo });
+    if ((await boton.getAttribute('aria-expanded')) !== 'true') await boton.click();
+    await expect(boton).toHaveAttribute('aria-expanded', 'true');
+  }
+  const enlace = menu(page).getByRole('link', { name: titulo, exact: true });
+  await expect(enlace).toBeVisible();
+  await enlace.click();
+}
+
+/** Lo mismo que `irPorMenu`, solo con el teclado (foco, Intro y Tab). */
+export async function irPorMenuConTeclado(page: Page, titulo: string): Promise<void> {
+  const botonMenu = page.getByRole('button', { name: 'Menú' });
+  if (await botonMenu.isVisible()) {
+    await botonMenu.focus();
+    await page.keyboard.press('Enter');
+  }
+  const grupo = grupoDe(titulo);
+  if (grupo.directo) {
+    const enlace = menu(page).getByRole('link', { name: titulo, exact: true });
+    await enlace.focus();
+    await expect(enlace).toBeFocused();
+  } else {
+    const boton = menu(page).getByRole('button', { name: grupo.titulo });
+    await boton.focus();
+    await page.keyboard.press('Enter');
+    await expect(boton).toHaveAttribute('aria-expanded', 'true');
+    for (const e of grupo.enlaces) {
+      await page.keyboard.press('Tab');
+      await expect(menu(page).getByRole('link', { name: e.titulo, exact: true })).toBeFocused();
+      if (e.titulo === titulo) break;
+    }
+  }
+  await page.keyboard.press('Enter');
+}
+
+/**
+ * Devuelve el índice de la página («En esta página» o el nombre que tenga) y, si está plegado (en
+ * móvil), lo abre con su botón.
+ */
+export async function abrirIndice(page: Page, nombre = 'En esta página'): Promise<Locator> {
+  const indice = page.getByRole('navigation', { name: nombre });
+  const boton = indice.getByRole('button', { name: nombre });
+  if (await boton.isVisible()) {
+    if ((await boton.getAttribute('aria-expanded')) !== 'true') await boton.click();
+    await expect(boton).toHaveAttribute('aria-expanded', 'true');
+  }
+  await expect(indice.getByRole('link').first()).toBeVisible();
+  return indice;
 }

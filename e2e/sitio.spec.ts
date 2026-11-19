@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
-import { esperarPagina, RUTAS, tokensColor, url, vigilar } from './utilidades.ts';
+import { esperarPagina, irPorMenu, RUTAS, tokensColor, url, vigilar } from './utilidades.ts';
 
 test.describe('todas las rutas', () => {
   for (const ruta of RUTAS) {
@@ -255,10 +255,7 @@ test.describe('navegación', () => {
       await page.getByRole('button', { name: 'Menú' }).click();
       await expect(nav).toBeVisible();
     }
-    await page
-      .getByRole('navigation', { name: 'Secciones' })
-      .getByRole('link', { name: 'Reformas' })
-      .click();
+    await irPorMenu(page, 'Reformas');
     await expect(page.getByRole('heading', { level: 1 })).toHaveText('Reformas');
     await expect(page).toHaveURL(/#\/reformas$/);
     if (info.project.name === 'movil') {

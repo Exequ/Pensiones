@@ -2,7 +2,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
-import { esperarPagina, url, vigilar } from './utilidades.ts';
+import { abrirIndice, esperarPagina, url, vigilar } from './utilidades.ts';
 
 /**
  * Fase «Mitos y realidades»: la página carga sin errores, se recorre con el teclado, no desborda en
@@ -65,7 +65,7 @@ test.describe('página «Mitos y realidades»', () => {
     page,
   }) => {
     await abrirPagina(page);
-    const indice = page.getByRole('navigation', { name: 'Afirmaciones' });
+    const indice = await abrirIndice(page, 'Afirmaciones');
     const enlaces = indice.getByRole('link');
     await expect(enlaces).toHaveCount(MITOS.length);
     // Se llega con Tab al primer enlace del índice y se recorre en el orden del catálogo.
