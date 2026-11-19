@@ -27,8 +27,44 @@
   color: var(--color-tinta-2);
 }
 
+/* El botón solo se muestra en móvil; el estilo es siempre el mismo (también oculto). */
 .indice-pagina-boton {
   display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: var(--objetivo-tactil);
+  padding-inline: var(--espacio-4);
+  border: var(--grosor-filete) solid var(--color-tinta);
+  border-radius: var(--radio);
+  background: var(--color-papel);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Indicador de estado (plegado o desplegado): no es decorativo. */
+.indice-pagina-boton::after {
+  content: '';
+  width: 0.45em;
+  height: 0.45em;
+  margin-top: -0.25em;
+  border-right: var(--grosor-filete) solid currentcolor;
+  border-bottom: var(--grosor-filete) solid currentcolor;
+  transform: rotate(45deg);
+}
+
+.indice-pagina-boton:hover,
+.indice-pagina-boton[aria-expanded='true'] {
+  background: var(--color-tinta);
+  color: var(--color-papel);
+}
+
+.indice-pagina-boton[aria-expanded='true']::after {
+  margin-top: 0.25em;
+  transform: rotate(-135deg);
 }
 
 .indice-pagina-lista {
@@ -130,41 +166,6 @@
 
   .indice-pagina-boton {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    min-height: var(--objetivo-tactil);
-    padding-inline: var(--espacio-4);
-    border: var(--grosor-filete) solid var(--color-tinta);
-    border-radius: var(--radio);
-    background: var(--color-papel);
-    font-family: var(--fuente-interfaz);
-    font-size: var(--texto-etiqueta);
-    font-weight: var(--peso-semi);
-    text-align: left;
-    cursor: pointer;
-  }
-
-  /* Indicador de estado (plegado o desplegado): no es decorativo. */
-  .indice-pagina-boton::after {
-    content: '';
-    width: 0.45em;
-    height: 0.45em;
-    margin-top: -0.25em;
-    border-right: var(--grosor-filete) solid currentcolor;
-    border-bottom: var(--grosor-filete) solid currentcolor;
-    transform: rotate(45deg);
-  }
-
-  .indice-pagina-boton:hover,
-  .indice-pagina-boton[aria-expanded='true'] {
-    background: var(--color-tinta);
-    color: var(--color-papel);
-  }
-
-  .indice-pagina-boton[aria-expanded='true']::after {
-    margin-top: 0.25em;
-    transform: rotate(-135deg);
   }
 
   .indice-pagina[data-abierto='no'] .indice-pagina-lista {
