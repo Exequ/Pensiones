@@ -1,0 +1,65 @@
+/* Detalle técnico plegable: filetes de 1 px, sin radios, sombras ni transiciones. */
+
+.detalle-tecnico {
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  border-bottom: var(--grosor-filete) solid var(--color-filete);
+}
+
+.detalle-tecnico-encabezado {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+.detalle-tecnico-boton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-4);
+  width: 100%;
+  min-height: var(--objetivo-tactil);
+  padding: var(--espacio-2) 0;
+  border: 0;
+  border-radius: var(--radio);
+  background: transparent;
+  color: var(--color-tinta);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  line-height: var(--interlineado-etiqueta);
+  text-align: left;
+  cursor: pointer;
+}
+
+.detalle-tecnico-boton:hover {
+  color: var(--color-acento);
+}
+
+/* Indicador de estado (plegado o desplegado): no es decorativo. */
+.detalle-tecnico-boton::after {
+  content: '';
+  flex-shrink: 0;
+  width: 0.45em;
+  height: 0.45em;
+  margin-top: -0.25em;
+  margin-right: var(--espacio-2);
+  border-right: var(--grosor-filete) solid currentcolor;
+  border-bottom: var(--grosor-filete) solid currentcolor;
+  transform: rotate(45deg);
+}
+
+.detalle-tecnico-boton[aria-expanded='true']::after {
+  margin-top: 0.25em;
+  transform: rotate(-135deg);
+}
+
+.detalle-tecnico-contenido {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-4);
+  padding-bottom: var(--espacio-5);
+}
+
+.detalle-tecnico-contenido[hidden] {
+  display: none;
+}

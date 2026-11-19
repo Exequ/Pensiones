@@ -2,6 +2,7 @@ import * as Plot from '@observablehq/plot';
 import { useState } from 'react';
 import { useTituloPagina } from '../app/useTituloPagina';
 import { Chart, type ContextoGrafico } from '../components/Chart';
+import { TechnicalDetail } from '../components/TechnicalDetail';
 import { DataTable } from '../components/DataTable';
 import { Definition } from '../components/Definition';
 import { DevBanner } from '../components/DevBanner';
@@ -283,6 +284,31 @@ export default function DesignLab() {
             <h3 id="cat-fuente">Línea de fuente</h3>
             <SourceLine datos={MUESTRA.fuentes[1] ?? MUESTRA.fuentes} />
             <SourceLine datos={MUESTRA.fuentes} />
+          </section>
+
+          <section className="catalogo-bloque" aria-labelledby="cat-detalle">
+            <h3 id="cat-detalle">Detalle técnico plegable</h3>
+            <TechnicalDetail titulo="Cómo se ha calculado este ejemplo ficticio" nivel={4}>
+              <p>
+                El bloque está plegado por defecto. Al desplegarlo, el gráfico conserva su tabla de
+                datos, su nota y su fuente.
+              </p>
+              <Chart
+                titulo="Cinco series ficticias dentro de un detalle técnico"
+                descripcion="Mismas series que el gráfico de líneas, dentro del bloque plegable."
+                opciones={opcionesLineas}
+                tabla={{
+                  columnas: [
+                    { clave: 'serie', titulo: 'Serie' },
+                    { clave: 'primero', titulo: 'Primer periodo', tipo: 'numero' },
+                    { clave: 'ultimo', titulo: 'Último periodo', tipo: 'numero' },
+                  ],
+                  filas: FILAS_SERIES,
+                }}
+                nota="Datos ficticios."
+                fuentes={MUESTRA.fuentes.slice(0, 1)}
+              />
+            </TechnicalDetail>
           </section>
 
           <section className="catalogo-bloque" aria-labelledby="cat-banner">
