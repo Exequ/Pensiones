@@ -4,6 +4,7 @@ import { formatearNumero } from '../../engine/formato';
 import { EnlaceFichero, Respaldo } from './Respaldo';
 import { TEXTOS_MODELOS } from './modelos';
 import { recuentos } from './recuentos';
+import { tituloApartado } from './apartados';
 
 /** Apartado «Los modelos de proyección». */
 export function SeccionModelos() {
@@ -16,7 +17,7 @@ export function SeccionModelos() {
       aria-labelledby="met-modelos-titulo"
     >
       <h2 id="met-modelos-titulo" tabIndex={-1}>
-        Los modelos de proyección
+        {tituloApartado('met-modelos')}
       </h2>
       <p>
         Los modelos son programas propios, escritos en Python, que ejecuta el autor en local: no

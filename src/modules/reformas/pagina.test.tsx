@@ -49,7 +49,10 @@ describe('estructura de la página', () => {
     const fichas = [...container.querySelectorAll<HTMLElement>('article.ref-ficha')];
     expect(fichas.map((f) => f.id)).toEqual(reformas().map((r) => `ref-${r.id}`));
     const enlaces = [...container.querySelectorAll<HTMLAnchorElement>('.ref-linea-lista a')];
-    expect(enlaces.map((a) => a.getAttribute('href'))).toEqual(fichas.map((f) => `#${f.id}`));
+    // Cada enlace lleva al encabezado de su ficha sin cambiar de ruta (`InternalLink`).
+    expect(enlaces.map((a) => a.dataset.destino)).toEqual(fichas.map((f) => `${f.id}-titulo`));
+    // El `href` es la propia página (la ruta del `MemoryRouter` de la prueba), no un «#id».
+    for (const a of enlaces) expect(a.getAttribute('href')).toBe('/');
     expect(enlaces.map((a) => a.textContent)).toEqual(
       fichas.map((f) => f.querySelector('h2')?.textContent),
     );
@@ -160,7 +163,7 @@ describe('navegación', () => {
     const { container } = pintar();
     const usuario = userEvent.setup();
     const enlace = container.querySelector<HTMLAnchorElement>(
-      '.ref-linea-lista a[href="#ref-ley-27-2011"]',
+      '.ref-linea-lista a[data-destino="ref-ley-27-2011-titulo"]',
     );
     expect(enlace).not.toBeNull();
     if (enlace === null) return;

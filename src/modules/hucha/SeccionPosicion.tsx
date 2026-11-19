@@ -23,6 +23,7 @@ import { ID } from './ids-datos';
 import { anioDeId, rangoDeId } from './rango';
 import { SelectorAnioInicio } from './SelectorAnioInicio';
 import { etiquetaTramo } from './tramos';
+import { APARTADOS } from './apartados';
 
 interface Anotacion {
   readonly anio: number;
@@ -241,9 +242,9 @@ export function SeccionPosicion() {
   ];
 
   return (
-    <section className="seccion prosa" aria-labelledby="posicion">
-      <h2 id="posicion">
-        El Fondo, la deuda con el Estado y las transferencias: dos lecturas separadas
+    <section className="seccion prosa" aria-labelledby={APARTADOS.posicion.destino}>
+      <h2 id={APARTADOS.posicion.destino} tabIndex={-1}>
+        {APARTADOS.posicion.titulo}
       </h2>
       <p className="hist-aviso">
         Construcciones ilustrativas, no cifras oficiales. Ninguna es el déficit de la Seguridad

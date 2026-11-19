@@ -13,6 +13,7 @@ import { ID, ID23 } from './ids-datos';
 import { anioDeId, periodoDeId } from './rango';
 import { SelectorAnioInicio } from './SelectorAnioInicio';
 import { etiquetaTramo } from './tramos';
+import { APARTADOS } from './apartados';
 
 /** «a. Transferencias del Estado a la Seguridad Social»: flujo anual, trimestral y acumulado. */
 export function SeccionTransferencias() {
@@ -159,8 +160,10 @@ export function SeccionTransferencias() {
   const ultimaCapital = t.capital.puntos.at(-1);
 
   return (
-    <section className="seccion prosa" aria-labelledby="transferencias">
-      <h2 id="transferencias">Las transferencias del Estado a la Seguridad Social en el tiempo</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.transferencias.destino}>
+      <h2 id={APARTADOS.transferencias.destino} tabIndex={-1}>
+        {APARTADOS.transferencias.titulo}
+      </h2>
       <p>
         Las transferencias son aportaciones del presupuesto del Estado al de la Seguridad Social. La
         cifra que se usa aquí son los derechos reconocidos netos de transferencias corrientes cuyo

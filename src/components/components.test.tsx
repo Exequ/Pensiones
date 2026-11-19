@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import { TEXTO_BANNER_DESARROLLO } from '../config';
-import { SECCIONES } from '../modules/secciones';
 import { DataTable } from './DataTable';
 import { Definition } from './Definition';
 import { DevBanner } from './DevBanner';
@@ -28,14 +27,14 @@ describe('DevBanner', () => {
 });
 
 describe('Header', () => {
-  it('enlaza todas las secciones y abre el menú móvil', async () => {
+  it('marca la sección actual y abre y cierra el menú móvil (el detalle del menú, en Header.test.tsx)', async () => {
     render(
       <MemoryRouter initialEntries={['/reformas']}>
         <Header />
       </MemoryRouter>,
     );
     const nav = screen.getByRole('navigation', { name: 'Secciones' });
-    expect(within(nav).getAllByRole('link')).toHaveLength(SECCIONES.length);
+    await userEvent.click(within(nav).getByRole('button', { name: 'Cómo funciona' }));
     expect(within(nav).getByRole('link', { name: 'Reformas' })).toHaveAttribute(
       'aria-current',
       'page',

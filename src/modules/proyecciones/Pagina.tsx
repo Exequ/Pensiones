@@ -11,6 +11,8 @@ import { Demografia } from './Demografia';
 import { Introduccion } from './Introduccion';
 import { Pensiones } from './Pensiones';
 import './Proyecciones.css';
+import { OnThisPage } from '../../components/OnThisPage';
+import { INDICE } from './apartados';
 
 const seccion = buscarSeccion('proyecciones');
 
@@ -42,6 +44,7 @@ export default function Proyecciones() {
           cada supuesto y compara los resultados con lo observado y con otras proyecciones, sin
           valorar las cifras.
         </p>
+        <OnThisPage entradas={INDICE} />
         <Introduccion />
         <Demografia />
         <Pensiones />

@@ -9,6 +9,8 @@ import { AltasBajas } from './AltasBajas';
 import { Evolucion } from './Evolucion';
 import { Relacion } from './Relacion';
 import { Situacion } from './Situacion';
+import { OnThisPage } from '../../components/OnThisPage';
+import { INDICE } from './apartados';
 
 const seccion = buscarSeccion('cotizantes-y-pensionistas');
 
@@ -33,6 +35,7 @@ export default function CotizantesYPensionistas() {
           Esta página describe datos publicados: qué se mide, cómo ha evolucionado y qué
           definiciones existen. No contiene proyecciones ni valora las cifras.
         </p>
+        <OnThisPage entradas={INDICE} />
         <Evolucion />
         <Relacion />
         <Situacion />

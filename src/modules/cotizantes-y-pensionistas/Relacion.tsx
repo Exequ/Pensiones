@@ -11,6 +11,7 @@ import {
   MARCA_FECHAS_DISTINTAS,
   MARCA_MISMA_FECHA,
 } from './definiciones-relacion';
+import { APARTADOS } from './apartados';
 
 /** Relación entre afiliados y pensiones o pensionistas con las definiciones disponibles. */
 export function Relacion() {
@@ -42,8 +43,10 @@ export function Relacion() {
   const sM = ultimoPension(relacion.porPensionistaMediaAnual);
 
   return (
-    <section className="seccion prosa" aria-labelledby="relacion">
-      <h2 id="relacion">Afiliados por pensión y por pensionista: varias formas de medirlo</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.relacion.destino}>
+      <h2 id={APARTADOS.relacion.destino} tabIndex={-1}>
+        {APARTADOS.relacion.titulo}
+      </h2>
       <p>
         La relación entre afiliados y pensiones se calcula dividiendo una cifra de afiliados entre
         una de pensiones o de pensionistas. El resultado depende de tres elecciones: si el

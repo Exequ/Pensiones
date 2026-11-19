@@ -4,7 +4,7 @@ import path from 'node:path';
 import { calcularRecuentos } from '../src/engine/metodologia.ts';
 import { APARTADOS_INDICE } from '../src/modules/metodologia/apartados.ts';
 import { leerEntradasMetodologia } from '../scripts/lib/entradas-metodologia.ts';
-import { esperarPagina, url, vigilar } from './utilidades.ts';
+import { abrirIndice, esperarPagina, url, vigilar } from './utilidades.ts';
 
 /**
  * Fase «Metodología»: la página carga sin errores, se recorre con el teclado, no desborda en móvil
@@ -57,7 +57,7 @@ test.describe('página «Metodología»', () => {
     page,
   }) => {
     await abrirPagina(page);
-    const enlaces = page.getByRole('navigation', { name: 'En esta página' }).getByRole('link');
+    const enlaces = (await abrirIndice(page)).getByRole('link');
     await expect(enlaces).toHaveCount(APARTADOS_INDICE.length);
     await enlaces.first().focus();
     await expect(enlaces.first()).toBeFocused();
@@ -149,7 +149,7 @@ test.describe('página «Metodología»', () => {
     );
     expect(desborda).toBe(false);
     const anchos = await page.evaluate(() =>
-      [...document.querySelectorAll('section.met-seccion, article.met-modelo, .met-indice')].map(
+      [...document.querySelectorAll('section.met-seccion, article.met-modelo, .indice-pagina')].map(
         (s) => ({ id: s.id || s.className, desborda: s.scrollWidth > s.clientWidth }),
       ),
     );

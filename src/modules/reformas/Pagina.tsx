@@ -13,6 +13,8 @@ import { FichaReforma } from './FichaReforma';
 import { GraficosParametros } from './GraficosParametros';
 import { LineaDelTiempo } from './LineaDelTiempo';
 import './Reformas.css';
+import { OnThisPage } from '../../components/OnThisPage';
+import { APARTADOS, INDICE } from './apartados';
 
 const seccion = buscarSeccion('reformas');
 
@@ -46,10 +48,11 @@ export default function Reformas() {
           ninguna norma ni atribuye intenciones o efectos que no consten en la norma o en un dato
           consultado.
         </p>
+        <OnThisPage entradas={INDICE} fijo={false} />
 
-        <section className="seccion prosa ref-alcance" aria-labelledby="ref-alcance-titulo">
-          <h2 id="ref-alcance-titulo" tabIndex={-1}>
-            Qué recoge la cronología
+        <section className="seccion prosa ref-alcance" aria-labelledby={APARTADOS.alcance.destino}>
+          <h2 id={APARTADOS.alcance.destino} tabIndex={-1}>
+            {APARTADOS.alcance.titulo}
           </h2>
           <p>
             La cronología reúne las normas de las que hay texto o cita literal en las fuentes
@@ -91,10 +94,10 @@ export default function Reformas() {
 
         <section
           className="seccion prosa ref-graficos-seccion"
-          aria-labelledby="ref-graficos-titulo"
+          aria-labelledby={APARTADOS.graficos.destino}
         >
-          <h2 id="ref-graficos-titulo" tabIndex={-1}>
-            Parámetros a lo largo del tiempo
+          <h2 id={APARTADOS.graficos.destino} tabIndex={-1}>
+            {APARTADOS.graficos.titulo}
           </h2>
           <p>
             Parámetros cuyo valor cambia con el calendario de las normas de las fichas, con los

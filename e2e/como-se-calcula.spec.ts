@@ -1,7 +1,7 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
 import { ESQUEMAS } from '../src/modules/como-se-calcula/esquemas.ts';
-import { esperarPagina, url, vigilar } from './utilidades.ts';
+import { abrirIndice, esperarPagina, url, vigilar } from './utilidades.ts';
 
 /**
  * Fase «Cómo se calcula»: la página carga sin errores, se recorre con el teclado, no desborda en
@@ -81,7 +81,7 @@ test.describe('página «Cómo se calcula»', () => {
     page,
   }) => {
     await abrirPagina(page);
-    const indice = page.getByRole('navigation', { name: 'En esta página' });
+    const indice = await abrirIndice(page);
     const enlaces = indice.getByRole('link');
     await expect(enlaces).toHaveCount(ESQUEMAS.length + 1);
     await enlaces.first().focus();

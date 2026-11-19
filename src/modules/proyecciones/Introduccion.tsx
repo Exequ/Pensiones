@@ -2,6 +2,7 @@ import { DataTable } from '../../components/DataTable';
 import { SourceLine } from '../../components/SourceLine';
 import { formatearFechaIso, formatearPorcentaje } from '../../engine/formato';
 import { datosProyecciones } from './datos-proyecciones';
+import { APARTADOS } from './apartados';
 
 /** Escenario de referencia, leído de los metadatos de las salidas de los modelos. */
 function escenarioDeReferencia() {
@@ -34,8 +35,10 @@ export function Introduccion() {
     { parametro: 'Versión del código de los modelos', valor: esc.commit.slice(0, 7) },
   ];
   return (
-    <section className="seccion prosa" aria-labelledby="proy-que-es">
-      <h2 id="proy-que-es">Qué es una proyección de esta página</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.queEs.destino}>
+      <h2 id={APARTADOS.queEs.destino} tabIndex={-1}>
+        {APARTADOS.queEs.titulo}
+      </h2>
       <p>
         Las cifras proyectadas de esta página salen de modelos propios que calculan qué ocurriría si
         se mantuvieran unos supuestos explícitos, con la legislación actual congelada: se supone que

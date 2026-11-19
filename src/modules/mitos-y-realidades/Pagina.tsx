@@ -6,11 +6,23 @@ import { ContenidoPagina } from '../historico/ContenidoPagina';
 import '../historico/Historico.css';
 import { antetituloSeccion, buscarSeccion } from '../secciones';
 import { catalogo } from './datos-mitos';
-import { IndiceAfirmaciones } from './IndiceAfirmaciones';
 import { TARJETAS } from './tarjetas';
 import './Mitos.css';
+import { OnThisPage } from '../../components/OnThisPage';
+import type { EntradaIndice } from '../../components/anclas';
 
 const seccion = buscarSeccion('mitos-y-realidades');
+
+/**
+ * Índice de las afirmaciones, en el orden del catálogo: cada entrada lleva al encabezado de su
+ * afirmación, con el mismo texto (el enunciado). Comparte componente, estilo y foco con el índice
+ * «En esta página» de las demás páginas; solo cambia el nombre, porque sus entradas son las
+ * afirmaciones.
+ */
+const INDICE_AFIRMACIONES: readonly EntradaIndice[] = catalogo().mitos.map((m) => ({
+  destino: `${m.id}-titulo`,
+  titulo: m.enunciado,
+}));
 
 /**
  * Módulo «mitos-y-realidades»: para cada afirmación que circula sobre las pensiones, los datos y las
@@ -42,7 +54,7 @@ export default function MitosYRealidades() {
           sin ordenarlas por importancia.
         </p>
 
-        <IndiceAfirmaciones mitos={mitos} />
+        <OnThisPage entradas={INDICE_AFIRMACIONES} titulo="Afirmaciones" />
 
         {mitos.map((mito, i) => {
           const Tarjeta = TARJETAS[mito.id];

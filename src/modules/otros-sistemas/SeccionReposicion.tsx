@@ -23,6 +23,7 @@ import {
   type CodigoNivel,
 } from './ids-datos';
 import { CODIGOS_PAISES, CODIGO_ESPANA, nombrePais } from './paises';
+import { APARTADOS } from './apartados';
 
 type Sexo = 'hombres' | 'mujeres';
 type Obligatoriedad = 'M' | 'MV';
@@ -148,8 +149,13 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
   ];
 
   return (
-    <section className="seccion prosa sistemas-seccion ancho-completo" aria-labelledby="reposicion">
-      <h2 id="reposicion">Tasa de reposición teórica</h2>
+    <section
+      className="seccion prosa sistemas-seccion ancho-completo"
+      aria-labelledby={APARTADOS.reposicion.destino}
+    >
+      <h2 id={APARTADOS.reposicion.destino} tabIndex={-1}>
+        {APARTADOS.reposicion.titulo}
+      </h2>
       <p>
         La tasa de reposición compara la primera pensión con el salario previo a la jubilación. La
         OCDE la calcula de forma teórica para una persona modelo y publica dos versiones del mismo

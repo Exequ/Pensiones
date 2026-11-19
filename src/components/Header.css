@@ -64,7 +64,7 @@
 .navegacion-lista {
   display: flex;
   flex-wrap: wrap;
-  column-gap: var(--espacio-4);
+  column-gap: var(--espacio-6);
   list-style: none;
   font-family: var(--fuente-interfaz);
   font-size: var(--texto-etiqueta-s);
@@ -75,7 +75,12 @@
   margin-left: auto;
 }
 
-.navegacion-enlace {
+.navegacion-grupo {
+  position: relative;
+}
+
+.navegacion-enlace,
+.navegacion-boton-grupo {
   display: inline-flex;
   align-items: center;
   min-height: var(--objetivo-tactil);
@@ -85,14 +90,88 @@
   border-top: var(--grosor-filete-cabecera) solid transparent;
 }
 
-.navegacion-enlace:hover {
+.navegacion-boton-grupo {
+  gap: var(--espacio-2);
+  padding-inline: var(--espacio-2);
+  margin-inline: calc(-1 * var(--espacio-2));
+  border-left: 0;
+  border-right: 0;
+  border-radius: var(--radio);
+  background: transparent;
+  font-family: var(--fuente-interfaz);
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+/* Indicador de estado del grupo (plegado o desplegado): no es decorativo. */
+.navegacion-boton-grupo::after {
+  content: '';
+  width: 0.4em;
+  height: 0.4em;
+  margin-top: -0.25em;
+  border-right: var(--grosor-filete) solid currentcolor;
+  border-bottom: var(--grosor-filete) solid currentcolor;
+  transform: rotate(45deg);
+}
+
+.navegacion-boton-grupo[aria-expanded='true']::after {
+  margin-top: 0.25em;
+  transform: rotate(-135deg);
+}
+
+.navegacion-enlace:hover,
+.navegacion-boton-grupo:hover {
   color: var(--color-acento);
   border-bottom-color: var(--color-acento);
 }
 
-.navegacion-enlace[aria-current='page'] {
+.navegacion-boton-grupo[aria-expanded='true'] {
+  background: var(--color-tinta);
+  color: var(--color-papel);
+  border-bottom-color: var(--color-tinta);
+}
+
+.navegacion-enlace[aria-current='page'],
+.navegacion-elemento[data-actual='si'] > .navegacion-boton-grupo {
   font-weight: var(--peso-semi);
   border-bottom-color: var(--color-tinta);
+}
+
+.navegacion-elemento[data-actual='si'] > .navegacion-boton-grupo[aria-expanded='true'] {
+  border-bottom-color: var(--color-tinta);
+}
+
+/* Panel del grupo: debajo de su botón, sobre el contenido, con fondo y filete (sin sombra). */
+.navegacion-panel {
+  position: absolute;
+  top: 100%;
+  left: calc(-1 * var(--espacio-2));
+  z-index: 20;
+  min-width: 16rem;
+  margin: 0;
+  padding: var(--espacio-1) var(--espacio-4);
+  list-style: none;
+  background: var(--color-papel);
+  border: var(--grosor-filete) solid var(--color-tinta);
+}
+
+.navegacion-panel[hidden] {
+  display: none;
+}
+
+.navegacion-elemento:last-child > .navegacion-panel {
+  left: auto;
+  right: calc(-1 * var(--espacio-2));
+}
+
+.navegacion-panel li + li {
+  border-top: var(--grosor-filete) solid var(--color-filete);
+}
+
+.navegacion-enlace-panel {
+  display: flex;
+  width: 100%;
 }
 
 @media (width < 960px) {
@@ -125,8 +204,29 @@
     margin-left: 0;
   }
 
-  .navegacion-enlace {
+  .navegacion-enlace,
+  .navegacion-boton-grupo {
     display: flex;
     width: 100%;
+  }
+
+  .navegacion-boton-grupo {
+    justify-content: space-between;
+    margin-inline: 0;
+    padding-inline: 0;
+    text-align: left;
+  }
+
+  .navegacion-boton-grupo[aria-expanded='true'] {
+    padding-inline: var(--espacio-2);
+  }
+
+  /* En móvil los grupos se despliegan en acordeón, dentro del flujo. */
+  .navegacion-panel,
+  .navegacion-elemento:last-child > .navegacion-panel {
+    position: static;
+    min-width: 0;
+    padding: 0 0 var(--espacio-2) var(--espacio-4);
+    border: 0;
   }
 }

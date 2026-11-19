@@ -1,11 +1,14 @@
-export interface EntradaIndice {
+import type { EntradaIndice } from '../../components/anclas.ts';
+
+/** Apartado de la página: `id` de su `<section>`; el encabezado es `${id}-titulo`. */
+export interface ApartadoMetodologia {
   readonly id: string;
   readonly titulo: string;
   readonly resumen: string;
 }
 
 /** Apartados de la página, en orden: el índice y las secciones comparten los identificadores. */
-export const APARTADOS_INDICE: readonly EntradaIndice[] = [
+export const APARTADOS_INDICE: readonly ApartadoMetodologia[] = [
   {
     id: 'met-datos',
     titulo: 'De dónde salen los datos',
@@ -47,3 +50,17 @@ export const APARTADOS_INDICE: readonly EntradaIndice[] = [
     resumen: 'Repositorio, comandos y extracción de datos.',
   },
 ];
+
+/** Título de un apartado: el mismo texto pinta su `<h2>` y su entrada en el índice. */
+export function tituloApartado(id: string): string {
+  const apartado = APARTADOS_INDICE.find((a) => a.id === id);
+  if (!apartado) throw new Error(`Apartado desconocido: ${id}`);
+  return apartado.titulo;
+}
+
+/** Entradas del índice «En esta página»: cada una lleva al encabezado de su apartado. */
+export const INDICE: readonly EntradaIndice[] = APARTADOS_INDICE.map((a) => ({
+  destino: `${a.id}-titulo`,
+  titulo: a.titulo,
+  resumen: a.resumen,
+}));

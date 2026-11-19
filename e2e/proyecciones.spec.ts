@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
-import { comprobarFuente, esperarPagina, url, vigilar } from './utilidades.ts';
+import { comprobarFuente, esperarPagina, irPorMenu, url, vigilar } from './utilidades.ts';
 
 const RUTA = '/proyecciones';
 
@@ -42,14 +42,8 @@ test.describe('página «Proyecciones»', () => {
   test('aparece en la navegación y se llega a ella desde el menú', async ({ page }) => {
     await page.goto(url('/'));
     await esperarPagina(page);
-    // En móvil el menú está plegado tras el botón «Menú».
-    const menu = page.getByRole('button', { name: 'Menú' });
-    if (await menu.isVisible()) await menu.click();
-    const enlace = page.getByRole('navigation', { name: 'Secciones' }).getByRole('link', {
-      name: 'Proyecciones',
-    });
-    await expect(enlace).toBeVisible();
-    await enlace.click();
+    // En móvil el menú está plegado tras el botón «Menú»; «Proyecciones» va en su grupo.
+    await irPorMenu(page, 'Proyecciones');
     await expect(page.getByRole('heading', { level: 1 })).toHaveText('Proyecciones');
   });
 

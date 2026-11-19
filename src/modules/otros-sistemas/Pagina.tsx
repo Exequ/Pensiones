@@ -13,6 +13,8 @@ import { SeccionEstructura } from './SeccionEstructura';
 import { SeccionGasto } from './SeccionGasto';
 import { SeccionReposicion } from './SeccionReposicion';
 import { SelectorPaises } from './SelectorPaises';
+import { APARTADOS, INDICE } from './apartados';
+import { OnThisPage } from '../../components/OnThisPage';
 
 const seccion = buscarSeccion('otros-sistemas');
 
@@ -44,9 +46,15 @@ export default function OtrosSistemas() {
           los países por la medida que se muestra, sin valorar qué sistema es mejor o peor, y no
           contiene proyecciones propias.
         </p>
+        <OnThisPage entradas={INDICE} fijo={false} />
 
-        <section className="seccion prosa sistemas-seccion" aria-labelledby="comparar">
-          <h2 id="comparar">Qué países se comparan y por qué no son directamente comparables</h2>
+        <section
+          className="seccion prosa sistemas-seccion"
+          aria-labelledby={APARTADOS.comparar.destino}
+        >
+          <h2 id={APARTADOS.comparar.destino} tabIndex={-1}>
+            {APARTADOS.comparar.titulo}
+          </h2>
           <p>
             Elige los países que quieres ver; la selección se aplica a todos los gráficos de la
             página. España va siempre en el color de resaltado. Las medias de la OCDE y de la Unión

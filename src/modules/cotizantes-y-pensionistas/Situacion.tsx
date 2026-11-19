@@ -15,6 +15,7 @@ import {
   SEXOS,
 } from '../historico/formatos';
 import { datosCotizantes, type Sexo } from '../historico/datos-cotizantes';
+import { APARTADOS } from './apartados';
 
 const OPCIONES_CLASE = ['total', ...CLASES_PENSION] as const;
 type ClaseOTotal = (typeof OPCIONES_CLASE)[number];
@@ -102,8 +103,10 @@ export function Situacion() {
     hombres?.numero && mujeres?.numero ? mujeres.numero / (hombres.numero + mujeres.numero) : null;
 
   return (
-    <section className="seccion prosa" aria-labelledby="situacion">
-      <h2 id="situacion">Situación actual: clase, sexo y edad</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.situacion.destino}>
+      <h2 id={APARTADOS.situacion.destino} tabIndex={-1}>
+        {APARTADOS.situacion.titulo}
+      </h2>
       <p>
         El portal de la Seguridad Social publica la distribución por edades solo del mes más
         reciente, por lo que estos gráficos son una fotografía de {mesTexto}, no una evolución. Los

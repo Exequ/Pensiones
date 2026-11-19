@@ -30,6 +30,8 @@ import { SeccionOrigen } from './SeccionOrigen';
 import { SeccionPosicion } from './SeccionPosicion';
 import { SeccionPrestamos } from './SeccionPrestamos';
 import { SeccionTransferencias } from './SeccionTransferencias';
+import { APARTADOS, INDICE } from './apartados';
+import { OnThisPage } from '../../components/OnThisPage';
 
 const seccion = buscarSeccion('hucha');
 
@@ -124,9 +126,12 @@ export default function Hucha() {
           Esta página describe cómo ha evolucionado el Fondo de Reserva y qué reglas lo rigen. No
           contiene proyecciones ni valora si su nivel es suficiente.
         </p>
+        <OnThisPage entradas={INDICE} />
 
-        <section className="seccion prosa" aria-labelledby="valor">
-          <h2 id="valor">Cuánto vale el Fondo y cómo se mueve</h2>
+        <section className="seccion prosa" aria-labelledby={APARTADOS.valor.destino}>
+          <h2 id={APARTADOS.valor.destino} tabIndex={-1}>
+            {APARTADOS.valor.titulo}
+          </h2>
           <p>
             El Fondo de Reserva de la Seguridad Social se nutre de dotaciones (excedentes de
             cotizaciones y, desde que existe, la cotización del Mecanismo de Equidad
@@ -198,8 +203,10 @@ export default function Hucha() {
           />
         </section>
 
-        <section className="seccion prosa" aria-labelledby="meses">
-          <h2 id="meses">El Fondo en meses de gasto en pensiones</h2>
+        <section className="seccion prosa" aria-labelledby={APARTADOS.meses.destino}>
+          <h2 id={APARTADOS.meses.destino} tabIndex={-1}>
+            {APARTADOS.meses.titulo}
+          </h2>
           <p>
             Una forma de medir el tamaño del Fondo es compararlo con el gasto: cuántos meses de
             gasto en pensiones contributivas equivale su valor. El resultado depende de cómo se mida
@@ -276,8 +283,10 @@ export default function Hucha() {
           />
         </section>
 
-        <section className="seccion prosa" aria-labelledby="reglas">
-          <h2 id="reglas">Reglas de dotación y de disposición</h2>
+        <section className="seccion prosa" aria-labelledby={APARTADOS.reglas.destino}>
+          <h2 id={APARTADOS.reglas.destino} tabIndex={-1}>
+            {APARTADOS.reglas.titulo}
+          </h2>
           <p>
             La norma ha cambiado con el tiempo. Estas son las leyes que, según la cronología
             normativa del proyecto, establecen o modifican el régimen del Fondo, con el texto de la

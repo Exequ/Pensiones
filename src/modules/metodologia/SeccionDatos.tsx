@@ -3,6 +3,7 @@ import { Definition } from '../../components/Definition';
 import { formatearNumero } from '../../engine/formato';
 import { recuentos } from './recuentos';
 import { Respaldo } from './Respaldo';
+import { tituloApartado } from './apartados';
 
 const ORGANISMOS_MOSTRADOS = 6;
 
@@ -30,7 +31,7 @@ export function SeccionDatos() {
       aria-labelledby="met-datos-titulo"
     >
       <h2 id="met-datos-titulo" tabIndex={-1}>
-        De dónde salen los datos
+        {tituloApartado('met-datos')}
       </h2>
       <p>
         Las cifras de la web salen de ficheros de la carpeta de datos del repositorio (/data), no de

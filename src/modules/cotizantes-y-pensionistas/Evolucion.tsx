@@ -22,6 +22,7 @@ import {
   variacionRelativa,
 } from '../historico/formatos';
 import { datosCotizantes } from '../historico/datos-cotizantes';
+import { APARTADOS } from './apartados';
 
 type Deflactor = 'diciembre' | 'media-anual';
 
@@ -121,8 +122,10 @@ export function Evolucion() {
 
   return (
     <>
-      <section className="seccion prosa" aria-labelledby="evolucion">
-        <h2 id="evolucion">Afiliados, pensiones y pensionistas a lo largo del tiempo</h2>
+      <section className="seccion prosa" aria-labelledby={APARTADOS.evolucion.destino}>
+        <h2 id={APARTADOS.evolucion.destino} tabIndex={-1}>
+          {APARTADOS.evolucion.titulo}
+        </h2>
         <p>
           Los dos extremos de la relación son, por un lado, las personas afiliadas en alta a la
           Seguridad Social y, por otro, las pensiones contributivas en vigor y las personas que las
@@ -242,8 +245,10 @@ export function Evolucion() {
         />
       </section>
 
-      <section className="seccion prosa" aria-labelledby="pension-media">
-        <h2 id="pension-media">Pensión media por clase</h2>
+      <section className="seccion prosa" aria-labelledby={APARTADOS.pensionMedia.destino}>
+        <h2 id={APARTADOS.pensionMedia.destino} tabIndex={-1}>
+          {APARTADOS.pensionMedia.titulo}
+        </h2>
         <p>
           La pensión media es el importe mensual medio de las pensiones en vigor de cada clase a
           principios de diciembre. Se puede ver en euros de cada año (corrientes) o en euros de un

@@ -55,3 +55,20 @@ reproducirlo», el repositorio, las rutas y los comandos. Ninguna otra.
 | «la revisión actuarial ha cerrado la lectura»    | «la duda de interpretación está cerrada»                                         |
 | «el dato no está descargado»                     | «la fuente no precisa…», «no hay dato publicado para…»                           |
 | nombre de un fichero del proyecto                | «según [organismo], …»                                                           |
+
+## Nombres de la navegación (fase R3)
+
+Los grupos del menú y su contenido están en `src/modules/navegacion.ts` (única fuente). Sus nombres
+describen qué hay dentro, sin cifras ni valoraciones:
+
+| Grupo                   | Contiene                                                                  |
+| ----------------------- | ------------------------------------------------------------------------- |
+| «Tu pensión»            | Enlace directo al simulador (sin desplegable)                             |
+| «Cómo funciona»         | Tipos de pensión, Cómo se calcula, Reformas                               |
+| «El sistema por dentro» | Financiación y déficit, La «hucha», Cotizantes/pensionistas, Proyecciones |
+| «Comparar y contrastar» | Otros sistemas, Mitos y realidades                                        |
+| «Sobre la web»          | Metodología, Fuentes, Registro de cambios                                 |
+
+Los enlaces del menú usan el título corto de cada sección (`tituloNav`). El índice de cada página se
+llama «En esta página» (en «Mitos y realidades», «Afirmaciones») y sus entradas repiten exactamente el
+texto de cada encabezado.

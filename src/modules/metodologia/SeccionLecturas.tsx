@@ -6,6 +6,7 @@ import { LECTURAS_ABIERTAS } from '../../engine/lecturas';
 import { ETIQUETA_ESTADO, EXPLICACION_ESTADO } from '../tu-pension/supuestos';
 import { recuentos } from './recuentos';
 import { Respaldo } from './Respaldo';
+import { tituloApartado } from './apartados';
 
 const ETIQUETA_MOTOR: Readonly<Record<string, string>> = {
   jubilacion: 'Jubilación',
@@ -27,7 +28,7 @@ export function SeccionLecturas() {
       aria-labelledby="met-lecturas-titulo"
     >
       <h2 id="met-lecturas-titulo" tabIndex={-1}>
-        Lecturas del motor
+        {tituloApartado('met-lecturas')}
       </h2>
       <p>
         El motor de cálculo es el programa del proyecto que calcula una pensión a partir de las

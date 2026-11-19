@@ -150,7 +150,7 @@ describe('navegación', () => {
   it('el índice lleva el foco al encabezado de cada sección', async () => {
     const { container } = pintar();
     const usuario = userEvent.setup();
-    const indice = within(container.querySelector<HTMLElement>('nav.como-indice')!);
+    const indice = within(within(container).getByRole('navigation', { name: 'En esta página' }));
     const enlaces = indice.getAllByRole('link');
     expect(enlaces).toHaveLength(IDS.length + 1);
     for (const e of ESQUEMAS) {
@@ -163,7 +163,7 @@ describe('navegación', () => {
 
   it('el índice es una navegación con nombre accesible y lista ordenada', () => {
     const { container } = pintar();
-    const nav = container.querySelector('nav.como-indice')!;
+    const nav = within(container).getByRole('navigation', { name: 'En esta página' });
     expect(nav.getAttribute('aria-labelledby')).toBeTruthy();
     expect(nav.querySelector('ol')).not.toBeNull();
   });

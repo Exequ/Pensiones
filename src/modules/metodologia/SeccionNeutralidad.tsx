@@ -2,6 +2,7 @@ import { Definition } from '../../components/Definition';
 import { formatearNumero } from '../../engine/formato';
 import { recuentos } from './recuentos';
 import { Respaldo } from './Respaldo';
+import { tituloApartado } from './apartados';
 
 /** Apartado «Neutralidad y verificación». */
 export function SeccionNeutralidad() {
@@ -13,7 +14,7 @@ export function SeccionNeutralidad() {
       aria-labelledby="met-neutralidad-titulo"
     >
       <h2 id="met-neutralidad-titulo" tabIndex={-1}>
-        Neutralidad y verificación
+        {tituloApartado('met-neutralidad')}
       </h2>
       <p>
         Esta página describe cómo se hace la web. No defiende sus resultados ni los de ningún

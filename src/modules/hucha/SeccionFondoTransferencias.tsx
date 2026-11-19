@@ -7,6 +7,7 @@ import { datosHucha } from '../historico/datos-hucha';
 import { GraficoSeries } from '../historico/GraficoSeries';
 import { decimal2, millonesEuros } from '../historico/formatos';
 import { etiquetaTramo } from './tramos';
+import { APARTADOS } from './apartados';
 
 type Unidad = 'meses' | 'trimestres';
 
@@ -41,8 +42,10 @@ export function SeccionFondoTransferencias() {
   const etiquetaUnidad = unidad === 'meses' ? 'meses' : 'trimestres';
 
   return (
-    <section className="seccion prosa" aria-labelledby="fondo-transferencias">
-      <h2 id="fondo-transferencias">El Fondo de Reserva frente a las transferencias</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.fondoTransferencias.destino}>
+      <h2 id={APARTADOS.fondoTransferencias.destino} tabIndex={-1}>
+        {APARTADOS.fondoTransferencias.titulo}
+      </h2>
       <p>
         Otra forma de situar el tamaño del Fondo es compararlo con las transferencias que el Estado
         envía a la Seguridad Social: cuántos meses o trimestres de transferencias equivale su valor.

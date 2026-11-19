@@ -6,6 +6,7 @@ import { ComoLeerlo } from '../historico/ComoLeerlo';
 import { datosHucha, type FilaContraste2025 } from '../historico/datos-hucha';
 import { decimal2, entero } from '../historico/formatos';
 import { TABLA_CONTRASTE } from './ids-datos';
+import { APARTADOS } from './apartados';
 
 /** Partidas que se muestran, con su rótulo: (tabla, patrón de la partida de la liquidación, rótulo). */
 const PARTIDAS: readonly (readonly [string, RegExp, string])[] = [
@@ -78,9 +79,9 @@ export function SeccionContraste() {
   }));
 
   return (
-    <section className="seccion prosa" aria-labelledby="contraste-liquidacion">
-      <h2 id="contraste-liquidacion">
-        Un ejercicio con las dos fuentes: la liquidación frente a la ejecución
+    <section className="seccion prosa" aria-labelledby={APARTADOS.contraste.destino}>
+      <h2 id={APARTADOS.contraste.destino} tabIndex={-1}>
+        {APARTADOS.contraste.titulo}
       </h2>
       <p>
         Para el último ejercicio, la Seguridad Social publica la liquidación del presupuesto del
