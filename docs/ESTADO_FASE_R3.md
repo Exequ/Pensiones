@@ -40,4 +40,6 @@ Rama `feat/r3-navegacion`, creada desde `origin/main` (`9bc997ec24f03a5dab9f6a91
 
 ## CI y despliegue
 
-PENDIENTE
+- **CI del PR** ([Exequ/Pensiones#51](https://github.com/Exequ/Pensiones/pull/51)): run 132 en verde sobre `afb476e679a925575f56fc457cbf6ab1e1cb3e75` (todo el código de la fase): «Lint, tipos, tests, datos y compilación» y «Interfaz (Playwright)» completo, incluidas las ocho pruebas de `e2e/sitio.spec.ts` que fallan en el Chromium local. Playwright tardó 12 min 12 s en el CI, dentro de su límite de 35 min. El commit siguiente solo añade esta sección; su CI se comprueba antes de fusionar.
+- **Despliegue de la compilación del PR** («Despliegue en GitHub Pages», run 132, evento `pull_request`): en verde («Desplegar» se omite en los PR por diseño).
+- **Despliegue de `main` tras la fusión** y comprobación de la URL publicada (código HTTP, rutas tocadas a 1360 y 390 px, un grupo del menú y el índice abiertos en dos rutas publicadas): solo existen después de fusionar. Para respetar «una rama y un PR por fase» (regla g de `CLAUDE.md`) no se abre un PR solo de documentación: el resultado consta en el informe final de la sesión (decisión en `DECISIONES.md`).
