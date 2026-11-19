@@ -70,7 +70,10 @@ export function FinancieroCalibracion({ d }: { d: DatosFinanciero }) {
         filaDestacada={filas.length - 1}
         pie={`Pensiones en vigor y pensión media mensual, a primero de diciembre. «Gasto» es el de la ejecución del presupuesto y «Producto», pensiones por pensión media por catorce pagas, ambos en millones de euros (M€); el cociente es el gasto entre el producto. El producto supera al gasto de la ejecución en ${formatearNumero(exceso, { decimales: 1 })} % en el conjunto. La ejecución trae además ${formatearNumero(c.gastoSinClase, { decimales: 2 })} millones de euros de pensiones derivadas de la DANA que no pertenecen a ninguna de las cinco clases y solo figuran en el total.`}
       />
-      <SourceLine datos={c.fuentes} />
+      <SourceLine
+        datos={c.fuentes}
+        titulo={`Gasto de la ejecución del presupuesto de ${c.anio} frente a pensiones por pensión media por catorce pagas`}
+      />
       <p>
         Los complementos a mínimos de las pensiones contributivas figuran en la ejecución como una
         partida aparte, fuera de la suma de pensiones:{' '}
@@ -78,7 +81,7 @@ export function FinancieroCalibracion({ d }: { d: DatosFinanciero }) {
         Si se sumaran al gasto en pensiones, el cociente del conjunto sería{' '}
         {factor(c.complementos.factorConComplementos)} en lugar de {factor(c.total.factor)}.
       </p>
-      <SourceLine datos={[c.complementos.dato]} />
+      <SourceLine datos={[c.complementos.dato]} titulo="Complementos a mínimos en la ejecución" />
       <ComoLeerlo>
         <p>
           Un cociente menor que uno quiere decir que el gasto que declara la ejecución es menor que

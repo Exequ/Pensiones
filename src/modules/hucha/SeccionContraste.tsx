@@ -117,7 +117,10 @@ export function SeccionContraste() {
         filas={filas}
         pie="Diferencia: ejecución menos liquidación. Una diferencia de cero indica que las dos publicaciones dan la misma cifra con dos decimales."
       />
-      <SourceLine datos={c.dato} />
+      <SourceLine
+        datos={c.dato}
+        titulo={`Liquidación y ejecución al cierre del ejercicio ${anio}, en millones de euros`}
+      />
       <h3>El Mecanismo de Equidad Intergeneracional: derechos reconocidos y dotaciones al Fondo</h3>
       <DataTable
         titulo="Derechos reconocidos del Mecanismo de Equidad Intergeneracional en la liquidación y dotaciones anuales al Fondo de Reserva con cargo a ese mecanismo, en millones de euros"
@@ -140,7 +143,10 @@ export function SeccionContraste() {
         filas={filasMei}
         pie="Diferencia: derechos reconocidos menos dotación. La fuente no concilia las dos cifras y esta página no atribuye la diferencia a ninguna causa."
       />
-      <SourceLine datos={[c.dato, c.datoDotaciones]} />
+      <SourceLine
+        datos={[c.dato, c.datoDotaciones]}
+        titulo="Derechos reconocidos del Mecanismo de Equidad Intergeneracional en la liquidación y dotaciones anuales al Fondo de Reserva con cargo a ese mecanismo, en millones de euros"
+      />
       <ComoLeerlo>
         <p>
           Una liquidación y una ejecución que dan las mismas cifras comparten definición: ambas

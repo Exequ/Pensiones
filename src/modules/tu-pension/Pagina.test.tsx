@@ -55,8 +55,8 @@ describe('página «Tu pensión»', () => {
     // Valores iniciales que salen de /data (coma decimal, sin cifras escritas en el código).
     expect(screen.getByLabelText('IPC anual supuesto (%)')).toHaveValue('2');
     expect(screen.getByLabelText('Base mensual de cotización (euros)')).toHaveValue('2286,22');
-    // Dos líneas de fuente («Fuente» o «Fuentes») y ninguna fecha de descarga a la vista.
-    expect(screen.getAllByRole('button', { name: /^Fuentes?$/ }).length).toBe(2);
+    // Dos líneas de fuente («Fuente(s): título del campo») y ninguna fecha de descarga a la vista.
+    expect(screen.getAllByRole('button', { name: /^Fuentes?(: .+)?$/ }).length).toBe(2);
     expect(screen.queryByText(/descargado el/)).toBeNull();
     expect(
       screen.getByText(/Próximamente: jubilación anticipada, demorada y parcial/),

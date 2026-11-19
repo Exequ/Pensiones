@@ -187,7 +187,10 @@ export function SeccionPrestamos() {
           ]}
           filas={filasAnexo}
         />
-        <SourceLine datos={datosPrestamos} />
+        <SourceLine
+          datos={datosPrestamos}
+          titulo={`Préstamos otorgados por el Estado a la Seguridad Social (${anexo} de la declaración del Tribunal de Cuentas)`}
+        />
         <ComoLeerlo>
           <p>
             Los bloques agrupan los préstamos por su finalidad según el propio anexo. La suma de las
@@ -224,7 +227,10 @@ export function SeccionPrestamos() {
           ]}
           filas={filasFondo}
         />
-        <SourceLine datos={datosFondo} />
+        <SourceLine
+          datos={datosFondo}
+          titulo="El Fondo de Reserva a fin de año según la serie de la Seguridad Social y según el Tribunal de Cuentas"
+        />
         <ComoLeerlo>
           <p>
             {valorFondo === undefined

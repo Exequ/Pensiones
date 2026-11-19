@@ -120,7 +120,7 @@ export function SeccionComplementos() {
         filas={filasComunidades}
         pie="El importe medio es el del complemento, no el de la pensión."
       />
-      <SourceLine datos={d.dato} />
+      <SourceLine datos={d.dato} titulo={`${NOMBRE[complemento]}: por comunidad autónoma`} />
       <details className="mito-fuentes">
         <summary>{`Ver las provincias de las comunidades con más de una (${entero(provincias.length)} filas)`}</summary>
         <DataTable
@@ -134,7 +134,7 @@ export function SeccionComplementos() {
           columnas={COLUMNAS_IMPORTE}
           filas={filasProvincias}
         />
-        <SourceLine datos={d.dato} />
+        <SourceLine datos={d.dato} titulo={`${NOMBRE[complemento]}: por provincia`} />
       </details>
       <h3>{NOMBRE[complemento]}: por número de hijos</h3>
       <DataTable
@@ -154,7 +154,10 @@ export function SeccionComplementos() {
           </>
         }
       />
-      <SourceLine datos={d.dato} />
+      <SourceLine
+        datos={d.dato}
+        titulo={`${NOMBRE[complemento]}: pensiones en vigor por número de hijos, total nacional`}
+      />
       <h3>{NOMBRE[complemento]}: variación publicada por la fuente</h3>
       <DataTable
         titulo={`${NOMBRE[complemento]}: variación del número de pensiones con el complemento en el último mes y en el último año`}
@@ -168,7 +171,10 @@ export function SeccionComplementos() {
         filas={filasVariacion}
         pie="La fuente publica estas variaciones sin explicarlas y esta página no les atribuye una causa. Los porcentajes están redondeados como en la fuente."
       />
-      <SourceLine datos={d.datoIndicadores} />
+      <SourceLine
+        datos={d.datoIndicadores}
+        titulo={`${NOMBRE[complemento]}: variación del número de pensiones con el complemento en el último mes y en el último año`}
+      />
       <ComoLeerlo>
         <p>
           Las tablas dicen cuántas pensiones en vigor llevan cada complemento en la fecha de la

@@ -256,7 +256,10 @@ export function Pensiones() {
           ]}
           filas={filasDif}
         />
-        <SourceLine datos={fuentesContraste} />
+        <SourceLine
+          datos={fuentesContraste}
+          titulo="Diferencia entre el índice de pensiones del modelo y el de pensionistas del Ageing Report"
+        />
       </details>
 
       <ComoFunciona>

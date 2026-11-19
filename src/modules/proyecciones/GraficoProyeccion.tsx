@@ -6,7 +6,6 @@ import { CATEGORICOS, CATEGORICOS_TEXTO, token } from '../../components/estiloGr
 import type { Dato } from '../../engine/esquema-datos';
 import { formatearNumero } from '../../engine/formato';
 import { partirIlustrativo } from '../../engine/proyecciones';
-import { ComoLeerlo } from '../historico/ComoLeerlo';
 import { ticksAnuales, tramoDelEje } from '../historico/grafico-series';
 import {
   anioFinDe,
@@ -305,8 +304,8 @@ export function GraficoProyeccion({
             observado ni una previsión. {nota}
           </>
         }
+        comoLeerlo={comoLeerlo}
       />
-      <ComoLeerlo>{comoLeerlo}</ComoLeerlo>
     </div>
   );
 }

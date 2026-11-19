@@ -16,7 +16,6 @@ import {
 import { datosHucha, type DatoCargado, type DatosHucha } from '../historico/datos-hucha';
 import { GraficoSeries, type AnotacionGrafico } from '../historico/GraficoSeries';
 import { millonesEuros } from '../historico/formatos';
-import { ComoLeerlo } from '../historico/ComoLeerlo';
 import { COMPONENTE, componenteGrafico } from './componentes';
 import { GraficoPosicion, type FilaGrafico } from './GraficoPosicion';
 import { ID } from './ids-datos';
@@ -278,21 +277,23 @@ export function SeccionPosicion() {
           columnaResultado="Fondo menos deuda (millones de euros; negativo si la deuda supera al Fondo)"
           fuentes={fuentesFondoDeuda}
           nota="Construcción propia, sin equivalente oficial. Resta dos saldos de fin de año: el Fondo a precio de adquisición y la deuda PDE de la Seguridad Social. La tabla recoge los dos saldos y su diferencia con el signo."
+          comoLeerlo={
+            <>
+              <p>
+                {ultimaNeta === undefined
+                  ? ''
+                  : `En ${ultimaNeta.anio}, el Fondo (${millonesEuros(ultimaNeta.fondo)}) menos la deuda (${millonesEuros(ultimaNeta.deuda)}) da ${millonesEuros(ultimaNeta.neta)}; un resultado negativo significa que la deuda es mayor que el Fondo.`}
+              </p>
+              <p>
+                Qué es: la diferencia entre un activo y un pasivo, año a año. Qué no es: no es una
+                cifra oficial, no es el déficit ni el patrimonio neto de la Seguridad Social, y no
+                dice que el Fondo pueda o deba destinarse a devolver la deuda. El Fondo y la deuda
+                se miden en criterios distintos (precio de adquisición y valor nominal) y proceden
+                de fuentes distintas.
+              </p>
+            </>
+          }
         />
-        <ComoLeerlo>
-          <p>
-            {ultimaNeta === undefined
-              ? ''
-              : `En ${ultimaNeta.anio}, el Fondo (${millonesEuros(ultimaNeta.fondo)}) menos la deuda (${millonesEuros(ultimaNeta.deuda)}) da ${millonesEuros(ultimaNeta.neta)}; un resultado negativo significa que la deuda es mayor que el Fondo.`}
-          </p>
-          <p>
-            Qué es: la diferencia entre un activo y un pasivo, año a año. Qué no es: no es una cifra
-            oficial, no es el déficit ni el patrimonio neto de la Seguridad Social, y no dice que el
-            Fondo pueda o deba destinarse a devolver la deuda. El Fondo y la deuda se miden en
-            criterios distintos (precio de adquisición y valor nominal) y proceden de fuentes
-            distintas.
-          </p>
-        </ComoLeerlo>
       </div>
 
       <h3 id="apoyo-financiero">
@@ -336,23 +337,26 @@ export function SeccionPosicion() {
               de origen de la tabla indica el documento de cada año.
             </>
           }
+          comoLeerlo={
+            <>
+              <p>
+                {ultimoApoyo === undefined
+                  ? ''
+                  : `Con el inicio en ${anioInicio}, en ${ultimoApoyo.anio} la deuda es de ${millonesEuros(ultimoApoyo.deuda)} y las transferencias acumuladas, de ${millonesEuros(ultimoApoyo.transferencias)}; juntas suman ${millonesEuros(ultimoApoyo.apoyo)}.`}
+              </p>
+              <p>
+                Qué es: la deuda con el Estado y las transferencias recibidas desde el año de
+                inicio, mostradas juntas pero identificadas por separado: la primera es un pasivo
+                que hay que devolver y las segundas son un flujo que no se devuelve. Qué no es: no
+                es la cantidad que el Estado haya desembolsado en total (la deuda incluye préstamos
+                anteriores al año de inicio y las transferencias empiezan en él), no es una cifra
+                oficial y la suma cambia con el año de inicio. Si el inicio es anterior a{' '}
+                {anioRuptura}, las transferencias acumuladas cruzan la ruptura de serie y suman
+                cifras de dos documentos distintos.
+              </p>
+            </>
+          }
         />
-        <ComoLeerlo>
-          <p>
-            {ultimoApoyo === undefined
-              ? ''
-              : `Con el inicio en ${anioInicio}, en ${ultimoApoyo.anio} la deuda es de ${millonesEuros(ultimoApoyo.deuda)} y las transferencias acumuladas, de ${millonesEuros(ultimoApoyo.transferencias)}; juntas suman ${millonesEuros(ultimoApoyo.apoyo)}.`}
-          </p>
-          <p>
-            Qué es: la deuda con el Estado y las transferencias recibidas desde el año de inicio,
-            mostradas juntas pero identificadas por separado: la primera es un pasivo que hay que
-            devolver y las segundas son un flujo que no se devuelve. Qué no es: no es la cantidad
-            que el Estado haya desembolsado en total (la deuda incluye préstamos anteriores al año
-            de inicio y las transferencias empiezan en él), no es una cifra oficial y la suma cambia
-            con el año de inicio. Si el inicio es anterior a {anioRuptura}, las transferencias
-            acumuladas cruzan la ruptura de serie y suman cifras de dos documentos distintos.
-          </p>
-        </ComoLeerlo>
       </div>
 
       <h3 id="suma-conjunta">Opción: suma conjunta del Fondo, la deuda y las transferencias</h3>
@@ -425,21 +429,23 @@ export function SeccionPosicion() {
                   (liquidación y ejecución), indicado en la última columna de la tabla.
                 </>
               }
+              comoLeerlo={
+                <>
+                  <p>
+                    {ultimaSuma === undefined || ultimaSuma.suma === null
+                      ? 'Con ningún componente marcado, la línea no se dibuja.'
+                      : `Con los componentes marcados y el inicio en ${anioInicio}, la suma de ${ultimaSuma.anio} es de ${millonesEuros(ultimaSuma.suma)}.`}
+                  </p>
+                  <p>
+                    Qué es la línea: la suma, año a año, de los componentes que se marquen, tomados
+                    de los ficheros de origen. Qué no es: no es una cifra oficial, no es el déficit
+                    ni la deuda total de la Seguridad Social, no mide el coste de las pensiones y no
+                    es una magnitud aditiva en sentido contable: suma un activo, un pasivo y un
+                    flujo. Depende del año de inicio y de qué componentes se incluyan.
+                  </p>
+                </>
+              }
             />
-            <ComoLeerlo>
-              <p>
-                {ultimaSuma === undefined || ultimaSuma.suma === null
-                  ? 'Con ningún componente marcado, la línea no se dibuja.'
-                  : `Con los componentes marcados y el inicio en ${anioInicio}, la suma de ${ultimaSuma.anio} es de ${millonesEuros(ultimaSuma.suma)}.`}
-              </p>
-              <p>
-                Qué es la línea: la suma, año a año, de los componentes que se marquen, tomados de
-                los ficheros de origen. Qué no es: no es una cifra oficial, no es el déficit ni la
-                deuda total de la Seguridad Social, no mide el coste de las pensiones y no es una
-                magnitud aditiva en sentido contable: suma un activo, un pasivo y un flujo. Depende
-                del año de inicio y de qué componentes se incluyan.
-              </p>
-            </ComoLeerlo>
           </div>
         </>
       ) : null}
@@ -501,7 +507,10 @@ export function SeccionPosicion() {
           ]}
           filas={filasAnotaciones}
         />
-        <SourceLine datos={anotaciones.map((a) => a.dato)} />
+        <SourceLine
+          datos={anotaciones.map((a) => a.dato)}
+          titulo="Anotaciones de la serie de deuda"
+        />
       </div>
     </section>
   );

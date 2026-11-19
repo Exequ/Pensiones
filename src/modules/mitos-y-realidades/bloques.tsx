@@ -8,14 +8,17 @@ import type { Dato } from '../../engine/esquema-datos';
 export function FuentesDesplegables({
   datos,
   resumen,
+  titulo,
 }: {
   readonly datos: readonly Dato[];
   readonly resumen: string;
+  /** Qué serie acompañan (nombre accesible del botón «Fuentes»). */
+  readonly titulo: string;
 }) {
   return (
     <details className="mito-fuentes">
       <summary>{resumen}</summary>
-      <SourceLine datos={datos} />
+      <SourceLine datos={datos} titulo={titulo} />
     </details>
   );
 }

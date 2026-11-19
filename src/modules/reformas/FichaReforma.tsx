@@ -136,7 +136,7 @@ export function FichaReforma({ reforma }: { readonly reforma: ReformaVista }) {
                             <span className="ref-etiqueta">Después:</span> {t.despues}
                           </li>
                         </ul>
-                        <TablaReforma tabla={t} />
+                        <TablaReforma tabla={t} norma={reforma.nombre} />
                       </>
                     )}
                   </div>
@@ -160,7 +160,7 @@ export function FichaReforma({ reforma }: { readonly reforma: ReformaVista }) {
       ) : (
         reforma.tablas
           .filter((t) => t.tipo === 'calendario')
-          .map((t) => <TablaReforma key={t.clave} tabla={t} />)
+          .map((t) => <TablaReforma key={t.clave} tabla={t} norma={reforma.nombre} />)
       )}
 
       <h3 id={`${id}-enlaces`}>Dónde se explica en esta web</h3>
@@ -176,7 +176,7 @@ export function FichaReforma({ reforma }: { readonly reforma: ReformaVista }) {
         </ul>
       )}
 
-      <SourceLine datos={reforma.fuente} />
+      <SourceLine datos={reforma.fuente} titulo={reforma.nombre} />
     </article>
   );
 }

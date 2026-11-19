@@ -195,7 +195,7 @@ export function FinancieroSaldos({ d }: { d: DatosFinanciero }) {
         ]}
         filas={filasSaldo}
       />
-      <SourceLine datos={[d.m4.dato]} />
+      <SourceLine datos={[d.m4.dato]} titulo="Definición de las tres medidas de saldo del modelo" />
       <p>
         Estas tres medidas no son idénticas a las que se muestran en la página{' '}
         <Link to="/financiacion-y-deficit">«Financiación y déficit»</Link> (saldo presupuestario no

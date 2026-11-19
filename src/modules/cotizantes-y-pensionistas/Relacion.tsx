@@ -100,6 +100,7 @@ export function Relacion() {
             relacion.porPensionUltimoDia.dato,
             relacion.porPensionistaUltimoDia.dato,
           ]}
+          titulo="Definiciones de la relación entre afiliados y pensiones o pensionistas"
         />
       </div>
 

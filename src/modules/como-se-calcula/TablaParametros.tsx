@@ -38,7 +38,7 @@ export function TablaParametros({
           </>
         }
       />
-      <SourceLine datos={resueltos.map((r) => r.dato)} />
+      <SourceLine datos={resueltos.map((r) => r.dato)} titulo={titulo} />
     </div>
   );
 }

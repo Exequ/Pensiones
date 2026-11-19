@@ -92,7 +92,7 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
             </Definition>
           );
         })}
-        <SourceLine datos={d.definiciones.map((x) => x.dato)} />
+        <SourceLine datos={d.definiciones.map((x) => x.dato)} titulo="Definiciones del saldo" />
       </div>
       <MarginNote etiqueta="Ruptura de serie">
         <p>
@@ -272,7 +272,10 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
               },
             ]}
           />
-          <SourceLine datos={[estimacion.dato]} />
+          <SourceLine
+            datos={[estimacion.dato]}
+            titulo={`Gastos impropios: estimación de ${anioEstimacion ?? ''}, no dato observado`}
+          />
           <p className="como-leerlo-texto">
             Es una estimación de {anioEstimacion ?? ''} de la AIReF y del Ministerio, anterior al
             ejercicio al que se refiere, citada por un artículo de la Revista de la Seguridad

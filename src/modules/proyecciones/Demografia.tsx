@@ -261,7 +261,10 @@ export function Demografia() {
           ]}
           filas={filasDiferencias}
         />
-        <SourceLine datos={fuentesContraste} />
+        <SourceLine
+          datos={fuentesContraste}
+          titulo={`Diferencias por año entre la proyección del modelo ${MODELO.m1} y la del INE`}
+        />
       </details>
 
       <h3 id="proy-backtest">Prueba hacia atrás: el modelo frente a lo observado</h3>
@@ -405,7 +408,10 @@ export function Demografia() {
           );
         })}
       </p>
-      <SourceLine datos={[escenarios.dato]} />
+      <SourceLine
+        datos={[escenarios.dato]}
+        titulo={`Escenarios demográficos de ${MODELO.m1} en los años de referencia`}
+      />
 
       <ComoFunciona>
         <p>

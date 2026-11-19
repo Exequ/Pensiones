@@ -132,6 +132,7 @@ export function TarjetaIpc({ mito, indice, total }: TarjetaProps) {
       />
       <FuentesDesplegables
         datos={d.revalorizacion.datos}
+        titulo="Normas de la revalorización de cada año"
         resumen={`Ver las normas de cada año de la revalorización (${d.revalorizacion.datos.length} datos)`}
       />
 
@@ -195,7 +196,10 @@ export function TarjetaIpc({ mito, indice, total }: TarjetaProps) {
           está en la norma de ese año, no en una serie de los datos.
         </p>
       </ComoLeerlo>
-      <SourceLine datos={[d.meses.dato, d.ultimoMes.dato, d.suelo.dato]} />
+      <SourceLine
+        datos={[d.meses.dato, d.ultimoMes.dato, d.suelo.dato]}
+        titulo="Regla vigente de revalorización"
+      />
     </Afirmacion>
   );
 }

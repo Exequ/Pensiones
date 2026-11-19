@@ -189,6 +189,7 @@ export function SeccionEdad({ seleccion }: { readonly seleccion: ReadonlySet<str
         />
         <SourceLine
           datos={[edadOcde.dato, edadPropia.dato, carrera65.dato, carreraCompleta.dato]}
+          titulo="Edad de jubilación de España según la OCDE y según la normativa propia"
         />
       </div>
     </section>

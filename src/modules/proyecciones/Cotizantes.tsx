@@ -292,7 +292,10 @@ export function Cotizantes() {
           ]}
           filas={filasDif}
         />
-        <SourceLine datos={fuentesContraste} />
+        <SourceLine
+          datos={fuentesContraste}
+          titulo="Diferencia entre el índice de afiliados por pensión del modelo y el de cotizantes por pensionista del Ageing Report"
+        />
       </details>
 
       <ComoFunciona>

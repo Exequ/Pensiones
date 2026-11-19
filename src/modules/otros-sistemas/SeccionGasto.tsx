@@ -192,7 +192,10 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
           ]}
           pie="Los datos consultados no permiten reconciliar las tres cifras partida a partida; la nota de definición de cada gráfico recoge lo que consta de cada delimitación."
         />
-        <SourceLine datos={[datoOcde, datoEurostat, propio.dato]} />
+        <SourceLine
+          datos={[datoOcde, datoEurostat, propio.dato]}
+          titulo="Gasto sobre el PIB de España en el año elegido, según tres delimitaciones"
+        />
       </div>
 
       <h3 id="gasto-evolucion">Cómo ha evolucionado</h3>

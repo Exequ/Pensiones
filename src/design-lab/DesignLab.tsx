@@ -226,7 +226,7 @@ export default function DesignLab() {
             <p>Se destaca el caso que coincide con los años elegidos arriba, si lo hay.</p>
           </MarginNote>
 
-          <SourceLine datos={MUESTRA.fuentes} />
+          <SourceLine datos={MUESTRA.fuentes} titulo="Tres casos ficticios" />
         </div>
       </article>
 
@@ -282,8 +282,14 @@ export default function DesignLab() {
 
           <section className="catalogo-bloque" aria-labelledby="cat-fuente">
             <h3 id="cat-fuente">Línea de fuente</h3>
-            <SourceLine datos={MUESTRA.fuentes[1] ?? MUESTRA.fuentes} />
-            <SourceLine datos={MUESTRA.fuentes} />
+            <SourceLine
+              datos={MUESTRA.fuentes[1] ?? MUESTRA.fuentes}
+              titulo="Línea de fuente con una fuente (ejemplo ficticio)"
+            />
+            <SourceLine
+              datos={MUESTRA.fuentes}
+              titulo="Línea de fuente con varias fuentes (ejemplo ficticio)"
+            />
           </section>
 
           <section className="catalogo-bloque" aria-labelledby="cat-detalle">

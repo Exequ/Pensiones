@@ -91,7 +91,10 @@ export function FichaPrestacion({ ficha }: { readonly ficha: DatosFicha }) {
               </li>
             ))}
           </ul>
-          <SourceLine datos={ficha.porcentajes.map((f) => f.dato)} />
+          <SourceLine
+            datos={ficha.porcentajes.map((f) => f.dato)}
+            titulo={`Porcentajes de la base reguladora: ${config.titulo}`}
+          />
         </>
       ) : null}
       <p className="tipos-pie">Límites: {p.limites}</p>
@@ -149,7 +152,12 @@ export function FichaPrestacion({ ficha }: { readonly ficha: DatosFicha }) {
           pie="La cuantía real depende de las rentas de la persona y de su unidad económica; la íntegra es el importe de referencia que fija cada año la norma de revalorización."
         />
       ) : null}
-      {fuentesCuantias.length > 0 ? <SourceLine datos={fuentesCuantias} /> : null}
+      {fuentesCuantias.length > 0 ? (
+        <SourceLine
+          datos={fuentesCuantias}
+          titulo={`Cuantías mínimas y máximas vigentes: ${config.titulo}`}
+        />
+      ) : null}
 
       <h4>Cuántas hay y cuánto cobran de media</h4>
       <DataTable
@@ -170,7 +178,10 @@ export function FichaPrestacion({ ficha }: { readonly ficha: DatosFicha }) {
             : 'La pensión media de la nómina es el importe bruto de la nómina entre el número de pensiones del mes, no el importe reconocido. El perfil del pensionista es otro fichero del IMSERSO y su cifra no coincide con la de la nómina; los datos consultados no explican la diferencia.'
         }
       />
-      <SourceLine datos={ficha.enVigor.map((f) => f.dato)} />
+      <SourceLine
+        datos={ficha.enVigor.map((f) => f.dato)}
+        titulo={`Número y pensión media: ${config.titulo}`}
+      />
 
       {config.tuPension ? (
         <p className="tipos-enlace">
@@ -178,7 +189,7 @@ export function FichaPrestacion({ ficha }: { readonly ficha: DatosFicha }) {
         </p>
       ) : null}
 
-      <SourceLine datos={ficha.datoNorma} />
+      <SourceLine datos={ficha.datoNorma} titulo={`Norma de la prestación: ${config.titulo}`} />
     </article>
   );
 }

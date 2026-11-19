@@ -122,6 +122,7 @@ export function TarjetaPobreza({ mito, indice, total }: TarjetaProps) {
       />
       <FuentesDesplegables
         datos={[...d.minimaJubilacion.datos, ...d.pnc.datos]}
+        titulo="Normas de la pensión mínima de jubilación y de la pensión no contributiva de cada año"
         resumen={`Ver las normas de cada año (${d.minimaJubilacion.datos.length + d.pnc.datos.length} datos)`}
       />
     </Afirmacion>
