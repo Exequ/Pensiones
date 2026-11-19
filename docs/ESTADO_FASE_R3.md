@@ -31,7 +31,12 @@ Rama `feat/r3-navegacion`, creada desde `origin/main` (`9bc997ec24f03a5dab9f6a91
 
 ## Batería local
 
-PENDIENTE
+- `npm run lint` (ESLint, Prettier, estilos, contraste y `validate:data`: 163 ficheros) en verde.
+- `npx tsc -b --force` (sin caché incremental, con los ficheros de test) sin errores.
+- `npm test`: 144 ficheros y 3.084 pruebas en verde (antes de la fase, 139 y 3.030).
+- `npm run build` correcto. Trozo principal `index-*.js`: 279.950 bytes (88.214 comprimidos con `gzip -c`; antes 277.230 bytes): el menú agrupado, los grupos y el índice de la portada. El índice común va en su propio trozo compartido (`OnThisPage-*.js`, 2.804 bytes, y su CSS, 4,36 kB), que solo cargan las páginas que lo usan.
+- Playwright completo en local, dos pasadas (la segunda sobre el código final): 670 en verde y 8 en rojo, **los mismos ocho de `e2e/sitio.spec.ts`** («sin sombras, degradados, radios > 2 px…» en `/diseno`, `/cotizantes-y-pensionistas`, `/financiacion-y-deficit` y `/hucha`, escritorio y móvil), con `INPUT border-radius 50%` como única causa, propia del Chromium local. La primera pasada encontró un fallo de la fase en tres de ellos: el botón «En esta página», oculto en escritorio, tenía los colores por defecto del navegador porque su estilo solo se definía en móvil; se corrigió (estilo siempre definido) y en la segunda pasada ya no aparece. El menú, el índice y el detalle técnico no infringen radios ni sombras (lo comprueba además `e2e/navegacion.spec.ts` con el grupo, el índice y el detalle abiertos). Ninguna prueba tarda más de la mitad de su límite.
+- Capturas a 1360 y 390 px revisadas: portada (índice agrupado), menú con un grupo abierto (barra y acordeón), «La hucha» (índice fijo al desplazarse, apartado marcado), «Metodología» con el índice móvil abierto, «Otros sistemas» (índice en línea) y el detalle técnico desplegado en `/diseno`: sin desbordes ni solapes.
 
 ## CI y despliegue
 
