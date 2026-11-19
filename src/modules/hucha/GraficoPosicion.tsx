@@ -47,6 +47,8 @@ interface GraficoPosicionProps {
   readonly etiquetaSinResultado?: string;
   readonly fuentes: readonly Dato[];
   readonly nota: ReactNode;
+  /** «Cómo leerlo» del gráfico (se pinta después de la figura y en el gráfico ampliado). */
+  readonly comoLeerlo: ReactNode;
   readonly alto?: number;
   /**
    * Rupturas de serie por cambio de documento de origen de uno de los componentes: años desde los
@@ -81,6 +83,7 @@ export function GraficoPosicion({
   etiquetaSinResultado = 'Ningún componente seleccionado',
   fuentes,
   nota,
+  comoLeerlo,
   alto = 380,
   rupturas = SIN_RUPTURAS,
   columnaOrigen,
@@ -236,6 +239,7 @@ export function GraficoPosicion({
       tabla={{ titulo, columnas: tabla.columnas, filas: tabla.filas }}
       fuentes={fuentes}
       nota={nota}
+      comoLeerlo={comoLeerlo}
     />
   );
 }

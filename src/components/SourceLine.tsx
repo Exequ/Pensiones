@@ -1,7 +1,8 @@
-import { useEffect, useId, useRef, useState } from 'react';
+import { useId, useRef } from 'react';
 import type { Dato } from '../engine/esquema-datos';
 import { ETIQUETA_NATURALEZA, etiquetasNaturaleza, fuentesUnicas } from './fuentes';
 import type { ReferenciaFuente } from './fuentes';
+import { crearGrupoDialogos, useDialogoModal, useDialogoUnico } from './dialogoModal';
 import './SourceLine.css';
 
 interface SourceLineProps {
@@ -14,11 +15,8 @@ interface SourceLineProps {
   titulo?: string;
 }
 
-/** Instancia con el desplegable abierto, si la hay: solo uno a la vez. */
-interface Instancia {
-  readonly cerrar: () => void;
-}
-let abiertoActual: Instancia | null = null;
+/** Desplegables de fuentes: solo uno abierto a la vez. */
+const GRUPO_FUENTES = crearGrupoDialogos();
 
 /**
  * Línea de fuente generada a partir de los datos: la palabra «Fuentes» (o «Fuente») como botón que
@@ -33,44 +31,8 @@ let abiertoActual: Instancia | null = null;
 export function SourceLine({ datos, titulo }: SourceLineProps) {
   const lista: readonly Dato[] = Array.isArray(datos) ? datos : [datos as Dato];
   const fuentes = fuentesUnicas(lista);
-  const [abierto, setAbierto] = useState(false);
   const boton = useRef<HTMLButtonElement>(null);
-  const habiaAbierto = useRef(false);
-
-  // Al cerrar, el foco vuelve al botón (con el diálogo modal abierto, el resto de la página es inerte,
-  // así que solo se puede hacer una vez desmontado).
-  useEffect(() => {
-    if (abierto) {
-      habiaAbierto.current = true;
-    } else if (habiaAbierto.current) {
-      habiaAbierto.current = false;
-      boton.current?.focus();
-    }
-  }, [abierto]);
-
-  const [instancia] = useState<Instancia>(() => ({
-    cerrar: () => {
-      setAbierto(false);
-    },
-  }));
-
-  useEffect(
-    () => () => {
-      if (abiertoActual === instancia) abiertoActual = null;
-    },
-    [instancia],
-  );
-
-  function cerrar() {
-    if (abiertoActual === instancia) abiertoActual = null;
-    setAbierto(false);
-  }
-
-  function abrir() {
-    if (abiertoActual !== null && abiertoActual !== instancia) abiertoActual.cerrar();
-    abiertoActual = instancia;
-    setAbierto(true);
-  }
+  const { abierto, abrir, cerrar } = useDialogoUnico(GRUPO_FUENTES, boton);
 
   if (fuentes.length === 0) return null;
   const etiquetaBoton = fuentes.length === 1 ? 'Fuente' : 'Fuentes';
@@ -117,71 +79,7 @@ function DialogoFuentes({
   const idTitulo = useId();
   const dialogo = useRef<HTMLDialogElement>(null);
   const cerrarBoton = useRef<HTMLButtonElement>(null);
-  // Siempre la última versión de onCerrar, sin volver a montar los oyentes en cada pintado.
-  const alCerrar = useRef(onCerrar);
-  useEffect(() => {
-    alCerrar.current = onCerrar;
-  });
-
-  useEffect(() => {
-    const nodo = dialogo.current;
-    if (!nodo) return;
-    // jsdom no implementa showModal: sin él se abre como diálogo no modal (la prueba real, en el
-    // navegador, usa el modal nativo, con fondo inerte).
-    if (typeof nodo.showModal === 'function') {
-      if (!nodo.open) nodo.showModal();
-    } else {
-      nodo.setAttribute('open', '');
-    }
-    cerrarBoton.current?.focus();
-
-    // Oyentes nativos (y no props de React): un <dialog> no es un elemento interactivo para las
-    // reglas de accesibilidad del lint, y el comportamiento es el mismo con y sin showModal.
-    let empezoFuera: boolean | null = null;
-    const alCancelar = (evento: Event) => {
-      evento.preventDefault();
-      alCerrar.current();
-    };
-    const alPulsar = (evento: KeyboardEvent) => {
-      if (evento.key === 'Escape') {
-        evento.preventDefault();
-        alCerrar.current();
-      } else if (evento.key === 'Tab') {
-        // El modal nativo deja salir el foco hacia el navegador al pasar del último control: se
-        // cierra el circuito para que el foco no se pierda.
-        const controles = [...nodo.querySelectorAll<HTMLElement>('button, a[href]')];
-        const primero = controles[0];
-        const ultimo = controles.at(-1);
-        if (!primero || !ultimo) return;
-        if (evento.shiftKey && document.activeElement === primero) {
-          evento.preventDefault();
-          ultimo.focus();
-        } else if (!evento.shiftKey && document.activeElement === ultimo) {
-          evento.preventDefault();
-          primero.focus();
-        }
-      }
-    };
-    const alBajarElPuntero = (evento: Event) => {
-      empezoFuera = evento.target === nodo;
-    };
-    const alHacerClic = (evento: Event) => {
-      // El fondo del modal es el propio <dialog>: un clic que empieza y acaba ahí es «fuera».
-      const fuera = evento.target === nodo && empezoFuera !== false;
-      empezoFuera = null;
-      if (fuera) alCerrar.current();
-    };
-    nodo.addEventListener('cancel', alCancelar);
-    nodo.addEventListener('keydown', alPulsar);
-    nodo.addEventListener('pointerdown', alBajarElPuntero);
-    nodo.addEventListener('click', alHacerClic);
-    return () => {
-      nodo.removeEventListener('cancel', alCancelar);
-      nodo.removeEventListener('keydown', alPulsar);
-      nodo.removeEventListener('pointerdown', alBajarElPuntero);
-      nodo.removeEventListener('click', alHacerClic);
-    };
-  }, []);
+  useDialogoModal(dialogo, cerrarBoton, onCerrar);
 
   return (
     <dialog ref={dialogo} className="fuentes-dialogo" aria-labelledby={idTitulo}>

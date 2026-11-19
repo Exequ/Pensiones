@@ -140,9 +140,9 @@ export function GraficoBarrasPaises({
           <p className="hist-aviso">
             Ninguno de los países elegidos tiene dato en esta medida y año.
           </p>
+          <ComoLeerlo>{comoLeerlo}</ComoLeerlo>
         </>
-      ) : null}
-      {conDato.length === 0 ? null : (
+      ) : (
         <Chart
           titulo={titulo}
           descripcion={descripcion}
@@ -151,9 +151,9 @@ export function GraficoBarrasPaises({
           tabla={{ titulo, columnas, filas }}
           fuentes={fuentes}
           {...(nota === undefined ? {} : { nota })}
+          comoLeerlo={comoLeerlo}
         />
       )}
-      <ComoLeerlo>{comoLeerlo}</ComoLeerlo>
     </div>
   );
 }
@@ -321,6 +321,7 @@ export function GraficoLineasPaises({
         <>
           <p className="grafico-titulo">{titulo}</p>
           <p className="hist-aviso">Ninguno de los países elegidos tiene dato en esta medida.</p>
+          <ComoLeerlo>{comoLeerlo}</ComoLeerlo>
         </>
       ) : (
         <Chart
@@ -331,9 +332,9 @@ export function GraficoLineasPaises({
           tabla={{ titulo, columnas, filas }}
           fuentes={fuentes}
           {...(nota === undefined ? {} : { nota })}
+          comoLeerlo={comoLeerlo}
         />
       )}
-      <ComoLeerlo>{comoLeerlo}</ComoLeerlo>
     </div>
   );
 }

@@ -7,7 +7,6 @@ import type { Dato } from '../../engine/esquema-datos';
 import { formatearNumero } from '../../engine/formato';
 import type { PuntoAnual } from '../../engine/series-historicas';
 import { GLIFOS_LINEA, TRAZO_ANOTACION, TRAZOS, ticksAnuales, tramoDelEje } from './grafico-series';
-import { ComoLeerlo } from './ComoLeerlo';
 
 export interface SerieGrafico {
   /** Clave estable (columna de la tabla de datos). */
@@ -326,8 +325,8 @@ export function GraficoSeries({
         tabla={{ titulo, columnas, filas }}
         fuentes={fuentes}
         {...(nota === undefined ? {} : { nota })}
+        comoLeerlo={comoLeerlo}
       />
-      <ComoLeerlo>{comoLeerlo}</ComoLeerlo>
     </div>
   );
 }
