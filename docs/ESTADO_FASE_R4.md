@@ -36,4 +36,6 @@ Rama `feat/r4-graficos-ampliables`, creada desde `origin/main` (`7e3438907ef0c05
 
 ## CI y despliegue
 
-PENDIENTE_CI
+- **CI del PR** ([Exequ/Pensiones#52](https://github.com/Exequ/Pensiones/pull/52)): run 135 en verde sobre `87f8818e519cfbe59ac4c37dff2d75b20b6a7f3b` (todo el código de la fase): «Lint, tipos, tests, datos y compilación» y «Interfaz (Playwright)» completo, incluidas las ocho pruebas de `e2e/sitio.spec.ts` que fallan en el Chromium local. Playwright tardó 13 min 37 s en el CI, dentro de su límite de 35 min. El commit siguiente solo añade esta sección; su CI se comprueba antes de fusionar.
+- **Despliegue de la compilación del PR** («Despliegue en GitHub Pages», run 135, evento `pull_request`): en verde («Desplegar» se omite en los PR por diseño).
+- **Despliegue de `main` tras la fusión** y comprobación de la URL publicada (código HTTP, rutas tocadas a 1360 y 390 px, un gráfico ampliado en dos rutas publicadas): solo existen después de fusionar; constan en el informe final de la sesión (decisión en `DECISIONES.md`).
