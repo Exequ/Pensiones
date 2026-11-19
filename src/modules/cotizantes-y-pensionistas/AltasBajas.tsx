@@ -6,6 +6,7 @@ import { CLASES_PENSION } from '../../engine/sistema-historico';
 import { GraficoSeries } from '../historico/GraficoSeries';
 import { decimal1, entero, ETIQUETA_CLASE } from '../historico/formatos';
 import { datosCotizantes } from '../historico/datos-cotizantes';
+import { APARTADOS } from './apartados';
 
 const OPCIONES_CLASE = ['total', ...CLASES_PENSION] as const;
 type ClaseOTotal = (typeof OPCIONES_CLASE)[number];
@@ -41,8 +42,10 @@ export function AltasBajas() {
   const etiquetaClase = (ETIQUETA_CLASE[clase] ?? clase).toLowerCase();
 
   return (
-    <section className="seccion prosa" aria-labelledby="altas-bajas">
-      <h2 id="altas-bajas">Altas y bajas de pensiones</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.altasBajas.destino}>
+      <h2 id={APARTADOS.altasBajas.destino} tabIndex={-1}>
+        {APARTADOS.altasBajas.titulo}
+      </h2>
       <p>
         El número de pensiones en vigor cambia cada año por las altas iniciales (pensiones que se
         reconocen por primera vez) y las bajas definitivas (pensiones que se extinguen). La fuente

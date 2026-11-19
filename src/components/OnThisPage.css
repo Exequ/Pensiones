@@ -1,0 +1,173 @@
+/*
+ * Índice «En esta página». En línea y a todo el ancho de la rejilla por defecto; en escritorio y
+ * con la variante fija, en la columna de notas: el marco se posiciona en absoluto sobre el área de
+ * rejilla de esa columna, desde la segunda fila (bajo la nota de la cabecera) hasta el final del
+ * artículo, y el índice se pega arriba mientras se desplaza la página.
+ */
+
+.articulo > .indice-pagina-marco {
+  grid-column: 1 / -1;
+}
+
+.indice-pagina {
+  display: grid;
+  gap: var(--espacio-3);
+  padding-top: var(--espacio-4);
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+}
+
+.indice-pagina-titulo {
+  font-size: var(--texto-etiqueta-s);
+  font-weight: var(--peso-semi);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-tinta-2);
+}
+
+.indice-pagina-boton {
+  display: none;
+}
+
+.indice-pagina-lista {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: indice-pagina;
+}
+
+.indice-pagina-elemento {
+  counter-increment: indice-pagina;
+  border-top: var(--grosor-filete) solid var(--color-filete);
+}
+
+.indice-pagina-elemento::before {
+  content: counter(indice-pagina) '.';
+  display: inline-block;
+  min-width: 2.25rem;
+  color: var(--color-apagado);
+  font-variant-numeric: tabular-nums;
+}
+
+.indice-pagina-enlace {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--objetivo-tactil);
+  padding-block: var(--espacio-1);
+  color: var(--color-acento);
+}
+
+.indice-pagina-enlace:hover {
+  color: var(--color-acento-oscuro);
+}
+
+.indice-pagina-enlace[aria-current='location'] {
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta);
+}
+
+.indice-pagina-resumen {
+  color: var(--color-tinta-2);
+}
+
+@media (width >= 960px) {
+  .articulo {
+    position: relative;
+  }
+
+  .articulo > .indice-pagina-marco--fijo {
+    position: absolute;
+    inset: 0;
+    grid-column: 2 / 3;
+    grid-row: 2;
+    pointer-events: none;
+  }
+
+  .indice-pagina-marco--fijo .indice-pagina {
+    position: sticky;
+    top: var(--espacio-5);
+    max-height: calc(100vh - 2 * var(--espacio-5));
+    overflow-y: auto;
+    pointer-events: auto;
+  }
+
+  /* En la columna estrecha, el número a la izquierda y el resumen bajo el título. */
+  .indice-pagina-marco--fijo .indice-pagina-elemento {
+    display: grid;
+    grid-template-columns: 1.75rem minmax(0, 1fr);
+    padding-bottom: var(--espacio-2);
+  }
+
+  .indice-pagina-marco--fijo .indice-pagina-elemento::before {
+    min-width: 0;
+    padding-top: var(--espacio-3);
+  }
+
+  .indice-pagina-marco--fijo .indice-pagina-enlace {
+    grid-column: 2;
+  }
+
+  .indice-pagina-marco--fijo .indice-pagina-resumen {
+    grid-column: 2;
+    font-size: var(--texto-etiqueta-s);
+  }
+}
+
+@media (width < 960px) {
+  /* En móvil el título lo da el botón, que pliega y despliega la lista. */
+  .indice-pagina {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .indice-pagina-titulo {
+    display: none;
+  }
+
+  .indice-pagina-boton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: var(--objetivo-tactil);
+    padding-inline: var(--espacio-4);
+    border: var(--grosor-filete) solid var(--color-tinta);
+    border-radius: var(--radio);
+    background: var(--color-papel);
+    font-family: var(--fuente-interfaz);
+    font-size: var(--texto-etiqueta);
+    font-weight: var(--peso-semi);
+    text-align: left;
+    cursor: pointer;
+  }
+
+  /* Indicador de estado (plegado o desplegado): no es decorativo. */
+  .indice-pagina-boton::after {
+    content: '';
+    width: 0.45em;
+    height: 0.45em;
+    margin-top: -0.25em;
+    border-right: var(--grosor-filete) solid currentcolor;
+    border-bottom: var(--grosor-filete) solid currentcolor;
+    transform: rotate(45deg);
+  }
+
+  .indice-pagina-boton:hover,
+  .indice-pagina-boton[aria-expanded='true'] {
+    background: var(--color-tinta);
+    color: var(--color-papel);
+  }
+
+  .indice-pagina-boton[aria-expanded='true']::after {
+    margin-top: 0.25em;
+    transform: rotate(-135deg);
+  }
+
+  .indice-pagina[data-abierto='no'] .indice-pagina-lista {
+    display: none;
+  }
+}

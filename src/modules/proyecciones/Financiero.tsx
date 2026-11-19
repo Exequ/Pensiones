@@ -12,6 +12,7 @@ import { FinancieroSaldos } from './FinancieroSaldos';
 import { FinancieroSensibilidades } from './FinancieroSensibilidades';
 import { MODELO } from './ids-datos';
 import { ANCLA_FINANCIERO, ESCENARIO_BASE } from './ids-financiero';
+import { APARTADOS } from './apartados';
 
 /**
  * Bloque «Sistema financiero (M4)» de la página «Proyecciones» (Fase 5-B2). Se carga bajo demanda
@@ -36,8 +37,8 @@ export default function Financiero() {
 
   return (
     <section className="seccion prosa" aria-labelledby={ANCLA_FINANCIERO}>
-      <h2 id={ANCLA_FINANCIERO} tabIndex={-1}>
-        Sistema financiero (modelo {MODELO.m4})
+      <h2 id={APARTADOS.financiero.destino} tabIndex={-1}>
+        {APARTADOS.financiero.titulo}
       </h2>
       <p>
         El modelo {MODELO.m4} junta la población ({MODELO.m1}), los cotizantes y las bases de

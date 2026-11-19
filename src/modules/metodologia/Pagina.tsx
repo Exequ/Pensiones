@@ -5,8 +5,7 @@ import { MarginNote } from '../../components/MarginNote';
 import { ContenidoPagina } from '../historico/ContenidoPagina';
 import '../historico/Historico.css';
 import { antetituloSeccion, buscarSeccion } from '../secciones';
-import { APARTADOS_INDICE } from './apartados';
-import { Indice } from './Indice';
+import { INDICE } from './apartados';
 import './Metodologia.css';
 import { SeccionComprobaciones } from './SeccionComprobaciones';
 import { SeccionConfianza } from './SeccionConfianza';
@@ -16,6 +15,7 @@ import { SeccionLimites } from './SeccionLimites';
 import { SeccionModelos } from './SeccionModelos';
 import { SeccionNeutralidad } from './SeccionNeutralidad';
 import { SeccionReproducir } from './SeccionReproducir';
+import { OnThisPage } from '../../components/OnThisPage';
 
 const seccion = buscarSeccion('metodologia');
 
@@ -44,7 +44,7 @@ export default function Metodologia() {
           Esta página describe cómo se hace la web y en qué estado está su revisión. No defiende los
           resultados de la web ni los de ningún modelo.
         </p>
-        <Indice entradas={APARTADOS_INDICE} />
+        <OnThisPage entradas={INDICE} />
         <SeccionDatos />
         <SeccionComprobaciones />
         <SeccionConfianza />

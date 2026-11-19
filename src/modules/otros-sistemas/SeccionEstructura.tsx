@@ -3,6 +3,7 @@ import { SourceLine } from '../../components/SourceLine';
 import { datosSistemas } from './datos-sistemas';
 import { RASGOS_EXCLUIDOS } from './ids-datos';
 import { CODIGOS_PAISES, esAgregado, nombrePais } from './paises';
+import { APARTADOS } from './apartados';
 
 /**
  * Estructura del sistema de cada país elegido, con la cita literal de la fuente. Las medias de la
@@ -14,8 +15,13 @@ export function SeccionEstructura({ seleccion }: { readonly seleccion: ReadonlyS
   const agregadosElegidos = CODIGOS_PAISES.some((c) => seleccion.has(c) && esAgregado(c));
 
   return (
-    <section className="seccion prosa sistemas-seccion" aria-labelledby="estructura">
-      <h2 id="estructura">Cómo se organizan los sistemas</h2>
+    <section
+      className="seccion prosa sistemas-seccion"
+      aria-labelledby={APARTADOS.estructura.destino}
+    >
+      <h2 id={APARTADOS.estructura.destino} tabIndex={-1}>
+        {APARTADOS.estructura.titulo}
+      </h2>
       <p>
         Las fuentes describen cada sistema con las mismas palabras clave: reparto, capitalización,
         cuentas nocionales y pilares. Una pensión pública puede combinar varios de esos elementos, y

@@ -9,6 +9,7 @@ import {
 import { GraficoSeries, type SerieGrafico } from '../historico/GraficoSeries';
 import { decimal1, puntosAPorcentaje } from '../historico/formatos';
 import { datosFinanciacion } from '../historico/datos-financiacion';
+import { APARTADOS } from './apartados';
 
 type VarianteComplemento = 'con' | 'sin' | 'ambas';
 
@@ -49,8 +50,10 @@ export function GastoPib() {
   ];
 
   return (
-    <section className="seccion prosa" aria-labelledby="gasto-pib">
-      <h2 id="gasto-pib">El gasto en pensiones sobre el PIB: varias formas de medirlo</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.gastoPib.destino}>
+      <h2 id={APARTADOS.gastoPib.destino} tabIndex={-1}>
+        {APARTADOS.gastoPib.titulo}
+      </h2>
       <p>
         Para comparar el gasto en pensiones a lo largo del tiempo se suele dividir entre el PIB. El
         resultado cambia según qué prestaciones se incluyan en el numerador: solo las pensiones

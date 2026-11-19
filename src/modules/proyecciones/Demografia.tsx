@@ -11,6 +11,7 @@ import { GraficoProyeccion } from './GraficoProyeccion';
 import type { SerieProyectada } from './grafico-proyeccion';
 import { COL, MODELO } from './ids-datos';
 import { puntosDeColumna, valoresDe } from './series';
+import { APARTADOS } from './apartados';
 
 const descripcionDe = (tabla: TablaModelo, id: string): string =>
   tabla.archivo.columnas.find((c) => c.id === id)?.descripcion ?? id;
@@ -166,8 +167,10 @@ export function Demografia() {
   ];
 
   return (
-    <section className="seccion prosa" aria-labelledby="proy-demografia">
-      <h2 id="proy-demografia">Demografía (modelo {MODELO.m1})</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.demografia.destino}>
+      <h2 id={APARTADOS.demografia.destino} tabIndex={-1}>
+        {APARTADOS.demografia.titulo}
+      </h2>
       <p>
         El modelo {MODELO.m1} proyecta la población por sexo y edad con las hipótesis de fecundidad,
         mortalidad y migración de las proyecciones del INE. Aquí se compara con la propia proyección

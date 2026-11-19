@@ -11,6 +11,7 @@ import {
 import { entero, millonesEuros, variacionRelativa, ETIQUETA_CLASE } from '../historico/formatos';
 import { datosFinanciacion } from '../historico/datos-financiacion';
 import { UnidadFinanciera, type Unidad } from './unidad';
+import { APARTADOS } from './apartados';
 
 /** Ingresos y gastos no financieros, composición de los ingresos y gasto en pensiones por clase. */
 export function Ejecucion({ unidad }: { unidad: Unidad }) {
@@ -55,8 +56,10 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
   const ultimoComplemento = complemento.at(-1);
 
   return (
-    <section className="seccion prosa" aria-labelledby="ejecucion">
-      <h2 id="ejecucion">Ingresos, gastos y gasto en pensiones</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.ejecucion.destino}>
+      <h2 id={APARTADOS.ejecucion.destino} tabIndex={-1}>
+        {APARTADOS.ejecucion.titulo}
+      </h2>
       <p>
         El Sistema de la Seguridad Social presenta su presupuesto con una clasificación económica de
         ingresos y gastos. Las cifras de cada año son las de la ejecución a fin de ejercicio:

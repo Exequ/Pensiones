@@ -1,5 +1,5 @@
 import { Definition } from '../../components/Definition';
-import { ID_TERMINOS } from './IndiceSecciones';
+import { ID_TERMINOS, TITULO_TERMINOS } from './apartados';
 
 /**
  * Términos que se usan en toda la página, definidos antes de la primera vez que aparecen. Sin cifras:
@@ -60,7 +60,7 @@ export function Terminos() {
       aria-labelledby={`${ID_TERMINOS}-titulo`}
     >
       <h2 id={`${ID_TERMINOS}-titulo`} tabIndex={-1}>
-        Los términos de esta página
+        {TITULO_TERMINOS}
       </h2>
       <p>
         Antes de empezar, estas son las palabras que se repiten en las cuatro prestaciones. Cada una

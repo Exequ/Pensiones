@@ -2,7 +2,7 @@
  * Página «Metodología»: estructura, índice accesible, respaldo de cada apartado, recuentos
  * mostrados, modelos con fiabilidad y límites, pendientes sin esconder y neutralidad del texto.
  */
-import { render, within } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { beforeAll, describe, expect, it, vi } from 'vitest';
@@ -101,19 +101,24 @@ describe('estructura de la página', () => {
 describe('índice accesible y navegación con teclado', () => {
   it('el índice es una navegación con un enlace por apartado', () => {
     const { container } = pintar();
-    const nav = container.querySelector('nav.met-indice');
-    expect(nav?.getAttribute('aria-labelledby')).toBe('met-indice-titulo');
-    const enlaces = [...(nav?.querySelectorAll('a') ?? [])];
+    const nav = screen.getByRole('navigation', { name: 'En esta página' });
+    expect(nav.contains(container.querySelector('.indice-pagina'))).toBe(true);
+    const enlaces = [...nav.querySelectorAll('a')];
     expect(enlaces.map((a) => a.textContent)).toEqual(APARTADOS_INDICE.map((e) => e.titulo));
-    expect(enlaces.map((a) => a.getAttribute('href'))).toEqual(
-      APARTADOS_INDICE.map((e) => `#${e.id}`),
+    // Cada enlace lleva al encabezado de su apartado sin cambiar de ruta (`InternalLink`).
+    expect(enlaces.map((a) => a.dataset.destino)).toEqual(
+      APARTADOS_INDICE.map((e) => `${e.id}-titulo`),
     );
+    // El `href` es la propia página (la ruta del `MemoryRouter` de la prueba), no un «#id».
+    for (const a of enlaces) expect(a.getAttribute('href')).toBe('/');
   });
 
   it('con el teclado, Intro en un enlace del índice lleva el foco al encabezado del apartado', async () => {
     const usuario = userEvent.setup();
     const { container } = pintar();
-    const enlace = container.querySelector<HTMLAnchorElement>('.met-indice a[href="#met-modelos"]');
+    const enlace = container.querySelector<HTMLAnchorElement>(
+      '.indice-pagina a[data-destino="met-modelos-titulo"]',
+    );
     expect(enlace).not.toBeNull();
     enlace?.focus();
     await usuario.keyboard('{Enter}');

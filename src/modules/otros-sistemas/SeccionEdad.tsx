@@ -9,6 +9,7 @@ import { cifraSuelta, datosSistemas } from './datos-sistemas';
 import { GraficoBarrasPaises, GraficoLineasPaises } from './GraficoPaises';
 import { CONTRASTE, MEDIDA, SUPUESTO_DEFINICION } from './ids-datos';
 import { CODIGOS_PAISES, CODIGO_ESPANA } from './paises';
+import { APARTADOS } from './apartados';
 
 type Sexo = 'hombres' | 'mujeres';
 
@@ -50,8 +51,13 @@ export function SeccionEdad({ seleccion }: { readonly seleccion: ReadonlySet<str
   const definicionEfectiva = d.supuesto(SUPUESTO_DEFINICION.edadEfectiva);
 
   return (
-    <section className="seccion prosa sistemas-seccion ancho-completo" aria-labelledby="edad">
-      <h2 id="edad">Edad de jubilación</h2>
+    <section
+      className="seccion prosa sistemas-seccion ancho-completo"
+      aria-labelledby={APARTADOS.edad.destino}
+    >
+      <h2 id={APARTADOS.edad.destino} tabIndex={-1}>
+        {APARTADOS.edad.titulo}
+      </h2>
       <p>
         Hay al menos tres edades distintas que suelen llamarse «edad de jubilación»: la que fija la
         norma de cada país, la que modela la OCDE para una carrera sin interrupciones y la edad a la

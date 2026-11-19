@@ -2,6 +2,7 @@ import { formatearNumero } from '../../engine/formato';
 import { recuentos } from './recuentos';
 import { REPOSITORIO } from './respaldo';
 import { Respaldo } from './Respaldo';
+import { tituloApartado } from './apartados';
 
 /** Apartado «Cómo reproducirlo». */
 export function SeccionReproducir() {
@@ -13,7 +14,7 @@ export function SeccionReproducir() {
       aria-labelledby="met-reproducir-titulo"
     >
       <h2 id="met-reproducir-titulo" tabIndex={-1}>
-        Cómo reproducirlo
+        {tituloApartado('met-reproducir')}
       </h2>
       <p>
         El código, los datos y la documentación están en el{' '}

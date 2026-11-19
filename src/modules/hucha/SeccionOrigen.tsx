@@ -6,6 +6,7 @@ import { datosHucha } from '../historico/datos-hucha';
 import { millonesEuros } from '../historico/formatos';
 import { ID, ID23 } from './ids-datos';
 import { rangoDeId } from './rango';
+import { APARTADOS } from './apartados';
 
 type FilaClasificacion = {
   clasificacion: string;
@@ -159,8 +160,10 @@ export function SeccionOrigen() {
   ].filter((x): x is Dato => x !== undefined);
 
   return (
-    <section className="seccion prosa" aria-labelledby="origen">
-      <h2 id="origen">De dónde procede el dinero: transferencias, préstamos y gastos impropios</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.origen.destino}>
+      <h2 id={APARTADOS.origen.destino} tabIndex={-1}>
+        {APARTADOS.origen.titulo}
+      </h2>
       <p>
         Tres expresiones aparecen juntas en este debate y designan cosas distintas. Las fuentes las
         clasifican de formas diferentes y esta página recoge lo que dice cada una, sin elegir una

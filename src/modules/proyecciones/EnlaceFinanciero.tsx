@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ANCLA_FINANCIERO, RUTA_PROYECCIONES } from './ids-financiero';
+import { apartadoEnlaceFinanciero } from './apartados';
 
 type Origen = 'hucha' | 'financiacion';
 
@@ -9,10 +10,11 @@ type Origen = 'hucha' | 'financiacion';
  * ancla viaja en el estado de la navegación porque el enrutador usa el fragmento de la dirección.
  */
 export function EnlaceFinanciero({ origen }: { origen: Origen }) {
+  const apartado = apartadoEnlaceFinanciero(origen);
   return (
-    <section className="seccion prosa" aria-labelledby={`enlace-financiero-${origen}`}>
-      <h2 id={`enlace-financiero-${origen}`}>
-        Lo que calcula un modelo con estos mismos conceptos
+    <section className="seccion prosa" aria-labelledby={apartado.destino}>
+      <h2 id={apartado.destino} tabIndex={-1}>
+        {apartado.titulo}
       </h2>
       {origen === 'hucha' ? (
         <p>

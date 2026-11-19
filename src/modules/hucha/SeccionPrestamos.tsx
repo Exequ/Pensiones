@@ -9,6 +9,7 @@ import { GraficoSeries } from '../historico/GraficoSeries';
 import { ID23 } from './ids-datos';
 import { anioDeId, periodoDeId } from './rango';
 import { etiquetaTramo } from './tramos';
+import { APARTADOS } from './apartados';
 
 /**
  * «Préstamos del Estado y Fondo de Reserva según el Tribunal de Cuentas»: préstamos concedidos por
@@ -93,8 +94,10 @@ export function SeccionPrestamos() {
   ]);
 
   return (
-    <section className="seccion prosa" aria-labelledby="prestamos">
-      <h2 id="prestamos">Préstamos del Estado y Fondo de Reserva según el Tribunal de Cuentas</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.prestamos.destino}>
+      <h2 id={APARTADOS.prestamos.destino} tabIndex={-1}>
+        {APARTADOS.prestamos.titulo}
+      </h2>
       <p>
         La declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de{' '}
         {anioDeclaracion} incluye, en su {anexo}, cada préstamo concedido por el Estado a la

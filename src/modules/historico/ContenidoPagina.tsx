@@ -8,8 +8,8 @@ interface ContenidoPaginaProps {
 /** Cierre de página: qué cubre y qué queda fuera, y enlace de vuelta al índice. */
 export function ContenidoPagina({ contenidos }: ContenidoPaginaProps) {
   return (
-    <section className="seccion prosa" aria-labelledby="contenido">
-      <h2 id="contenido">Qué cubre esta página y qué queda fuera</h2>
+    <section className="seccion prosa" aria-labelledby="contenido-pagina">
+      <h2 id="contenido-pagina">Qué cubre esta página y qué queda fuera</h2>
       <ul className="hist-estado-lista">
         {contenidos.map((c) => (
           <li key={c}>{c}</li>

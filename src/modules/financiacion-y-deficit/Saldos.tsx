@@ -16,6 +16,7 @@ import {
   ID_NOTA_SANIDAD,
 } from '../historico/datos-financiacion';
 import { UnidadFinanciera, type Unidad } from './unidad';
+import { APARTADOS } from './apartados';
 
 /** Rótulo del saldo no financiero menos las transferencias corrientes (cálculo propio, sin otra etiqueta). */
 export const ROTULO_SALDO_SIN_TRANSFERENCIAS =
@@ -70,8 +71,10 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
   const principales = Object.keys(ROTULO_DEFINICION);
 
   return (
-    <section className="seccion prosa" aria-labelledby="saldos">
-      <h2 id="saldos">Déficit y saldo: definiciones disponibles</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.saldos.destino}>
+      <h2 id={APARTADOS.saldos.destino} tabIndex={-1}>
+        {APARTADOS.saldos.titulo}
+      </h2>
       <p>
         «Déficit de la Seguridad Social» puede referirse a magnitudes distintas según qué ingresos y
         gastos se cuenten. Las fuentes consultadas ofrecen tres definiciones; se muestran lado a

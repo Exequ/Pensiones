@@ -12,6 +12,8 @@ import { datosTipos } from './datos-tipos';
 import { FichaPrestacion } from './FichaPrestacion';
 import { SeccionComplementos } from './SeccionComplementos';
 import './TiposDePension.css';
+import { APARTADOS, INDICE } from './apartados';
+import { OnThisPage } from '../../components/OnThisPage';
 
 const seccion = buscarSeccion('tipos-de-pension');
 
@@ -54,9 +56,12 @@ export default function TiposDePension() {
           cuantías son suficientes ni calcula la pensión de nadie. Para estimar una pensión de
           jubilación o de incapacidad permanente, está «Tu pensión».
         </p>
+        <OnThisPage entradas={INDICE} />
 
-        <section className="seccion prosa" aria-labelledby="panorama">
-          <h2 id="panorama">Cuántas pensiones hay de cada tipo</h2>
+        <section className="seccion prosa" aria-labelledby={APARTADOS.panorama.destino}>
+          <h2 id={APARTADOS.panorama.destino} tabIndex={-1}>
+            {APARTADOS.panorama.titulo}
+          </h2>
           <p>
             Las contributivas se cuentan en diciembre del último año publicado y las no
             contributivas, en la nómina del último mes de la fuente. Los dos recuentos son de
@@ -79,8 +84,10 @@ export default function TiposDePension() {
           <SourceLine datos={d.fichas.flatMap((f) => (f.enVigor[0] ? [f.enVigor[0].dato] : []))} />
         </section>
 
-        <section className="seccion prosa" aria-labelledby="fichas">
-          <h2 id="fichas">Las prestaciones, una a una</h2>
+        <section className="seccion prosa" aria-labelledby={APARTADOS.fichas.destino}>
+          <h2 id={APARTADOS.fichas.destino} tabIndex={-1}>
+            {APARTADOS.fichas.titulo}
+          </h2>
           <p>
             Cada ficha resume qué es la prestación, quién puede cobrarla y qué exige, con el
             artículo de la norma y el enlace al texto del BOE en la línea de fuente. Las cuantías

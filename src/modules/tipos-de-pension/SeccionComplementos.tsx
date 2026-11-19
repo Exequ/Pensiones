@@ -6,6 +6,7 @@ import { ComoLeerlo } from '../historico/ComoLeerlo';
 import { entero } from '../historico/formatos';
 import type { Complemento, FilaTerritorio, Sexo } from './complementos';
 import { datosTipos } from './datos-tipos';
+import { APARTADOS } from './apartados';
 
 const NOMBRE: Readonly<Record<Complemento, string>> = {
   brecha: 'Complemento para la reducción de la brecha de género',
@@ -85,8 +86,10 @@ export function SeccionComplementos() {
     }));
 
   return (
-    <section className="seccion prosa" aria-labelledby="complementos">
-      <h2 id="complementos">Complementos por hijos: cuántas pensiones los llevan y dónde</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.complementos.destino}>
+      <h2 id={APARTADOS.complementos.destino} tabIndex={-1}>
+        {APARTADOS.complementos.titulo}
+      </h2>
       <p>
         Una parte de las pensiones contributivas en vigor lleva un complemento ligado al número de
         hijos: el complemento para la reducción de la brecha de género y el complemento por

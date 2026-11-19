@@ -3,6 +3,7 @@ import { Definition } from '../../components/Definition';
 import { formatearNumero } from '../../engine/formato';
 import { recuentos } from './recuentos';
 import { Respaldo } from './Respaldo';
+import { tituloApartado } from './apartados';
 
 /** Apartado «Cómo se comprueban». */
 export function SeccionComprobaciones() {
@@ -14,7 +15,7 @@ export function SeccionComprobaciones() {
       aria-labelledby="met-comprobaciones-titulo"
     >
       <h2 id="met-comprobaciones-titulo" tabIndex={-1}>
-        Cómo se comprueban
+        {tituloApartado('met-comprobaciones')}
       </h2>
       <p>
         Una cifra no se publica solo porque tenga fuente: antes pasa por comprobaciones automáticas

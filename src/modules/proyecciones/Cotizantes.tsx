@@ -9,6 +9,7 @@ import { GraficoProyeccion } from './GraficoProyeccion';
 import type { SerieProyectada } from './grafico-proyeccion';
 import { COL, MODELO } from './ids-datos';
 import { puntosDeColumna } from './series';
+import { APARTADOS } from './apartados';
 
 const MILLON = 1_000_000;
 const descripcionDe = (tabla: TablaModelo, id: string): string =>
@@ -135,8 +136,10 @@ export function Cotizantes() {
   const fuentesContraste = [relacion.dato, d.ageing.apoyo.dato];
 
   return (
-    <section className="seccion prosa" aria-labelledby="proy-cotizantes">
-      <h2 id="proy-cotizantes">Cotizantes y bases (modelo {MODELO.m2})</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.cotizantes.destino}>
+      <h2 id={APARTADOS.cotizantes.destino} tabIndex={-1}>
+        {APARTADOS.cotizantes.titulo}
+      </h2>
       <p>
         El modelo {MODELO.m2} aplica a la población proyectada por {MODELO.m1} las tasas de
         afiliación y de cotización del último año observado, que mantiene constantes, y hace crecer

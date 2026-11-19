@@ -4,6 +4,8 @@ import { Definition } from '../../components/Definition';
 import { formatearNumero } from '../../engine/formato';
 import { recuentos } from './recuentos';
 import { Respaldo } from './Respaldo';
+import { tituloApartado } from './apartados';
+import { InternalLink } from '../../components/InternalLink';
 
 /** Apartado «Qué significa la confianza y la revisión actuarial». */
 export function SeccionConfianza() {
@@ -17,7 +19,7 @@ export function SeccionConfianza() {
       aria-labelledby="met-confianza-titulo"
     >
       <h2 id="met-confianza-titulo" tabIndex={-1}>
-        Qué significa la confianza y la revisión actuarial
+        {tituloApartado('met-confianza')}
       </h2>
       <p>
         Hay dos niveles de control distintos: la confianza de la fuente de cada dato y la revisión
@@ -165,18 +167,7 @@ export function SeccionConfianza() {
         {formatearNumero(afirmaciones.pendientesPosterioresATanda3)} se añadieron con posterioridad.
         Se listan todas, una a una y con su pregunta; las pruebas automáticas fijan un tope de
         pendientes y no admiten agruparlas. Las lecturas pendientes del motor se ven en el apartado{' '}
-        <a
-          href="#met-lecturas"
-          onClick={(e) => {
-            e.preventDefault();
-            const titulo = document.getElementById('met-lecturas-titulo');
-            titulo?.scrollIntoView();
-            titulo?.focus({ preventScroll: true });
-          }}
-        >
-          Lecturas del motor
-        </a>
-        .
+        <InternalLink destino="met-lecturas-titulo">{tituloApartado('met-lecturas')}</InternalLink>.
       </p>
       <DataTable
         titulo="Afirmaciones con revisión actuarial pendiente"

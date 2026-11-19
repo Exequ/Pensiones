@@ -1,5 +1,6 @@
 import { EnlaceFichero } from './Respaldo';
 import { LIMITES } from './respaldo';
+import { tituloApartado } from './apartados';
 
 /** Apartado «Qué no hace esta web». */
 export function SeccionLimites() {
@@ -10,7 +11,7 @@ export function SeccionLimites() {
       aria-labelledby="met-limites-titulo"
     >
       <h2 id="met-limites-titulo" tabIndex={-1}>
-        Qué no hace esta web
+        {tituloApartado('met-limites')}
       </h2>
       <p>
         Estos son los límites de la web que constan en el repositorio, con el fichero donde se

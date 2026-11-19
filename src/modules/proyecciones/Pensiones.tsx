@@ -12,6 +12,7 @@ import { GraficoProyeccion } from './GraficoProyeccion';
 import type { SerieProyectada } from './grafico-proyeccion';
 import { COL, MODELO } from './ids-datos';
 import { aniosDe, pensionesPorEdadYSexo, puntosDeColumna, totalDeClase } from './series';
+import { APARTADOS } from './apartados';
 
 const OPCIONES_CLASE = ['total', ...CLASES_PENSION] as const;
 type ClaseOTotal = (typeof OPCIONES_CLASE)[number];
@@ -92,8 +93,10 @@ export function Pensiones() {
   const fuentesContraste = [resumen.dato, d.ageing.pensionistas.dato];
 
   return (
-    <section className="seccion prosa" aria-labelledby="proy-pensiones">
-      <h2 id="proy-pensiones">Pensiones en vigor (modelo {MODELO.m3})</h2>
+    <section className="seccion prosa" aria-labelledby={APARTADOS.pensiones.destino}>
+      <h2 id={APARTADOS.pensiones.destino} tabIndex={-1}>
+        {APARTADOS.pensiones.titulo}
+      </h2>
       <p>
         El modelo {MODELO.m3} cuenta cuántas pensiones contributivas habrá cada año si la proporción
         de personas de cada edad y sexo que cobra cada clase de pensión se mantiene como en la foto

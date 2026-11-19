@@ -12,6 +12,8 @@ import { Ejecucion } from './Ejecucion';
 import { GastoPib } from './GastoPib';
 import { Saldos } from './Saldos';
 import type { Unidad } from './unidad';
+import { OnThisPage } from '../../components/OnThisPage';
+import { INDICE } from './apartados';
 
 const seccion = buscarSeccion('financiacion-y-deficit');
 
@@ -37,6 +39,7 @@ export default function FinanciacionYDeficit() {
           Esta página describe qué se mide, cómo evoluciona y qué definiciones existen. No contiene
           proyecciones ni valora si las cifras son altas, bajas o sostenibles.
         </p>
+        <OnThisPage entradas={INDICE} />
         <div className="hist-selector">
           <SegmentedPills
             leyenda="Importes de los gráficos de ingresos, gastos y saldos"

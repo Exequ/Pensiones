@@ -7,9 +7,10 @@ import '../historico/Historico.css';
 import { antetituloSeccion, buscarSeccion } from '../secciones';
 import './ComoSeCalcula.css';
 import { ESQUEMAS } from './esquemas';
-import { IndiceSecciones } from './IndiceSecciones';
+import { INDICE } from './apartados';
 import { SeccionPrestacion } from './SeccionPrestacion';
 import { Terminos } from './Terminos';
+import { OnThisPage } from '../../components/OnThisPage';
 
 const seccion = buscarSeccion('como-se-calcula');
 
@@ -38,7 +39,7 @@ export default function ComoSeCalcula() {
           Esta página explica cómo funciona la norma; no valora si es adecuada ni recomienda ninguna
           decisión personal. Para estimar un caso propio, está «Tu pensión».
         </p>
-        <IndiceSecciones />
+        <OnThisPage entradas={INDICE} />
         <Terminos />
         {ESQUEMAS.map((e) => (
           <SeccionPrestacion key={e.id} esquema={e} />

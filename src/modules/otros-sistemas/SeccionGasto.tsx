@@ -8,6 +8,7 @@ import { datosSistemas } from './datos-sistemas';
 import { GraficoBarrasPaises, GraficoLineasPaises } from './GraficoPaises';
 import { CONTRASTE, INDICADOR_EUROSTAT_GASTO, MEDIDA, UNIDAD_EUROSTAT_PIB } from './ids-datos';
 import { CODIGOS_PAISES, CODIGO_ESPANA, CODIGO_REINO_UNIDO, CODIGO_UE } from './paises';
+import { APARTADOS } from './apartados';
 
 const FILTRO_OCDE = { medida: MEDIDA.gasto } as const;
 const FILTRO_EUROSTAT = {
@@ -77,8 +78,13 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
   )?.anio;
 
   return (
-    <section className="seccion prosa sistemas-seccion ancho-completo" aria-labelledby="gasto">
-      <h2 id="gasto">Gasto público en pensiones sobre el PIB</h2>
+    <section
+      className="seccion prosa sistemas-seccion ancho-completo"
+      aria-labelledby={APARTADOS.gasto.destino}
+    >
+      <h2 id={APARTADOS.gasto.destino} tabIndex={-1}>
+        {APARTADOS.gasto.titulo}
+      </h2>
       <p>
         Cuánto gasta el sector público en pensiones, en proporción a lo que produce la economía, lo
         miden la OCDE y Eurostat con delimitaciones propias, y el perímetro de cada una no consta en
