@@ -20,7 +20,7 @@ import { calcularOrfandad, calcularSupervivencia, calcularViudedad } from './rep
 import type { BeneficiarioViudedad, Causante } from './tipos.ts';
 
 const P = parametrosSupervivenciaDelRepositorio();
-const r = (id: string): number => Number(reglaSV(P, id));
+const r = (id: string): number => reglaSV(P, id);
 
 const causante = (baseMensual: number): Causante => ({
   fechaFallecimiento: '2026-03-15',

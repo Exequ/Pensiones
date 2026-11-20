@@ -6,6 +6,7 @@
  */
 export const FICHEROS_TIPOS_DE_PENSION = [
   'data/normativa/prestaciones.json',
+  'data/parametros/lagunas-integracion-brecha-genero.json',
   'data/parametros/pension-maxima.json',
   'data/parametros/pension-minima-incapacidad.json',
   'data/parametros/pension-minima-jubilacion.json',
@@ -14,6 +15,7 @@ export const FICHEROS_TIPOS_DE_PENSION = [
   'data/parametros/pnc-importe-anual.json',
   'data/parametros/pnc-reglas.json',
   'data/parametros/supervivencia-reglas.json',
+  'data/sistema/altas-bajas-anual-clase-sexo.json',
   'data/sistema/complementos-genero-indicadores.json',
   'data/sistema/complementos-genero-territorio.json',
   'data/sistema/imserso-pnc-evolucion.json',

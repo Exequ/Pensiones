@@ -45,7 +45,7 @@ export const SECCIONES = [
       'Requisitos principales de cada prestación, con su artículo y el enlace al texto del BOE (disponible).',
       'Cuantías mínimas y máxima vigentes, con el importe mensual en catorce pagas como cálculo derivado (disponible).',
       'Número de pensiones en vigor y pensión media de cada tipo (disponible).',
-      'Complementos por brecha de género y por maternidad: número de pensiones en vigor que los llevan e importe medio, por comunidad, provincia, sexo y número de hijos, en una fecha (disponible). No incluye la brecha de género de las pensiones de jubilación publicada por año (pendiente de datos).',
+      'Complementos por brecha de género y por maternidad: número de pensiones en vigor que los llevan e importe medio, por comunidad, provincia, sexo y número de hijos, en una fecha (disponible). La brecha de género de las pensiones de jubilación que usa la ley no se publica por año en las fuentes consultadas; se muestra la calculada con la pensión media de las altas iniciales de jubilación del último año completo (disponible).',
       'Complementos a mínimos como ficha propia, Clases Pasivas y número de pensiones por grado de incapacidad o por modalidad de jubilación: pendientes de datos.',
     ],
   },
