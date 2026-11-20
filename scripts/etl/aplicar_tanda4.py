@@ -44,6 +44,10 @@ def main():
         for campo in ('texto', 'notas'):
             if campo in f:
                 c[campo] = f[campo]
+    # Afirmaciones cuyo estado no cambia: solo se actualizan las notas.
+    for f in json.load(open(APLICACION, encoding='utf-8')).get('notas', []):
+        if f['destino'] == 'claims-web':
+            por_id[f['id']]['notas'] = f['notas']
     with open(WEB, 'w', encoding='utf-8') as s:
         json.dump(web, s, ensure_ascii=False, indent=2)
         s.write('\n')

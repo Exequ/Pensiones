@@ -2962,7 +2962,7 @@
       "fetchedAt": "2026-11-17",
       "estado": "verificada",
       "revisionActuarial": "no-requiere",
-      "notas": "Contraste de la descripción de la lectura jubilacion.opcion25EnUltimoDia2040 de src/engine/lecturas.ts y de textos-lecturas.ts («un periodo más largo»): con la ventana de la opción (el valor de opcion-25-anos-ventana) y la de la regla general de 2026 (el valor de periodo-calculo-base-reguladora#2026), la opción usa menos meses. La página muestra un texto propio; la discrepancia consta en docs/DISCREPANCIAS.md."
+      "notas": "Contraste de la descripción de la lectura jubilacion.opcion25EnUltimoDia2040 con la ventana de la opción (el valor de opcion-25-anos-ventana) y la de la regla general de 2026 (el valor de periodo-calculo-base-reguladora#2026): la opción usa menos meses. Corregido en los Ajustes actuariales 4: el registro de lecturas, los textos del selector y la página dicen ahora que la opción usa un periodo más corto o igual, con las cifras de /data (src/modules/tu-pension/texto-opcion25.ts); «Cómo se calcula» ya no necesita un texto propio."
     },
     {
       "id": "web-como-ip-calculo",
