@@ -20,7 +20,7 @@ import { calcularOrfandad, calcularSupervivencia, calcularViudedad } from './rep
 import type { BeneficiarioViudedad, Causante } from './tipos.ts';
 
 const P = parametrosSupervivenciaDelRepositorio();
-const r = (id: string) => reglaSV(P, id);
+const r = (id: string): number => Number(reglaSV(P, id));
 
 const causante = (baseMensual: number): Causante => ({
   fechaFallecimiento: '2026-03-15',
@@ -53,7 +53,7 @@ function medir(baseMensual: number, n: number): Medida {
   );
   const pasoLimite = conjunto.pasos.find((p) => p.id === 'limite-conjunto');
   if (pasoLimite === undefined) throw new Error('sin paso del límite conjunto');
-  const limite = pasoLimite.valor;
+  const limite = Number(pasoLimite.valor);
 
   // Orden B: cada pensión con su complemento a mínimos, calculada sola (antes del límite).
   const viudedad = calcularViudedad(cau, [CONYUGE]).viudedad[0];

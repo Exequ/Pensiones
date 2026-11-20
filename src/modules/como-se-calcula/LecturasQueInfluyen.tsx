@@ -7,28 +7,6 @@ import {
 } from '../tu-pension/lecturas-jubilacion-en-incapacidad';
 import type { EfectosLectura, EjemploCalculado } from './ejemplos';
 
-/**
- * Texto propio de una lectura cuyo texto del registro (`textos-lecturas.ts`) no coincide con la norma
- * descargada: la opción de la disposición transitoria cuarta aplica la redacción anterior del artículo
- * sobre la base reguladora, y esa redacción toma una ventana más corta que la de la regla general desde
- * que rige (no «más larga»). El texto del registro no se modifica (fuera del alcance de esta fase;
- * `docs/DISCREPANCIAS.md`); aquí se muestra uno que sí coincide con el texto de la norma.
- */
-const TEXTOS_PROPIOS: Readonly<
-  Record<string, { titulo: string; valores: Readonly<Record<string, string>> }>
-> = {
-  'jubilacion.opcion25EnUltimoDia2040': {
-    titulo:
-      'Último día en que rige la opción transitoria de calcular la base reguladora con la redacción anterior del artículo',
-    valores: {
-      incluida:
-        'Quien se jubila ese último día puede calcular la base reguladora con la redacción anterior del artículo, y se aplica el resultado más favorable entre ese cálculo y la regla general.',
-      excluida:
-        'Quien se jubila ese último día no puede usar la redacción anterior y se le aplica la regla general. Solo afecta a una jubilación en esa fecha exacta.',
-    },
-  },
-};
-
 const ORDEN_ESTADO = { pendiente: 0, provisional: 1, decidida: 2 } as const;
 
 interface FilaLectura {
@@ -98,7 +76,7 @@ export function LecturasQueInfluyen({
       <ul className="como-lecturas-lista">
         {filas.map(({ lectura: l, efectos }) => (
           <li key={l.id} className={`como-lectura como-lectura-${l.estado}`}>
-            <h4>{TEXTOS_PROPIOS[l.id]?.titulo ?? l.titulo}</h4>
+            <h4>{l.titulo}</h4>
             <dl className="como-lectura-datos">
               <div>
                 <dt>Estado</dt>
@@ -126,8 +104,7 @@ export function LecturasQueInfluyen({
                     {l.opciones.map((o) => (
                       <li key={o.valor}>
                         <strong>{o.etiqueta}</strong>
-                        {o.esPorDefecto ? ' (valor por defecto)' : ''}.{' '}
-                        {TEXTOS_PROPIOS[l.id]?.valores[o.valor] ?? o.queCambia}
+                        {o.esPorDefecto ? ' (valor por defecto)' : ''}. {o.queCambia}
                       </li>
                     ))}
                   </ul>

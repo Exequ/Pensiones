@@ -18,7 +18,8 @@ import {
   importePrincipal,
 } from '../../engine/comparar-lecturas';
 import { type LecturaAbierta } from '../../engine/lecturas';
-import { TEXTOS_LECTURAS } from './textos-lecturas';
+import { ID_LECTURA_OPCION25, textoLecturaOpcion25 } from './texto-opcion25';
+import { TEXTOS_LECTURAS, type TextoLectura } from './textos-lecturas';
 
 export type EstadoLecturaVista = LecturaAbierta['estado'];
 
@@ -67,8 +68,16 @@ export function lecturasDeJubilacion(): readonly LecturaAbierta[] {
   return lecturasOfrecidas();
 }
 
+/**
+ * Textos de una lectura: los de `textos-lecturas.ts` (sin cifras) o, para la opción de la DT 4.ª.7,
+ * los construidos con las cifras de /data (`texto-opcion25.ts`).
+ */
+export function textosDeLectura(id: string): TextoLectura | undefined {
+  return id === ID_LECTURA_OPCION25 ? textoLecturaOpcion25() : TEXTOS_LECTURAS[id];
+}
+
 const etiquetaDe = (id: string, valor: string): string =>
-  TEXTOS_LECTURAS[id]?.valores[valor]?.etiqueta ?? valor;
+  textosDeLectura(id)?.valores[valor]?.etiqueta ?? valor;
 
 const euros = (v: number): string => formatearEuros(v, { decimales: 2, conSigno: true });
 const eurosSinSigno = (v: number): string => formatearEuros(v, { decimales: 2 });
@@ -146,7 +155,7 @@ export function filasDelPanel(
   const valores = valoresElegidos(elegidas, motorLecturas);
   return lecturasOfrecidas(motorLecturas).map((l) => {
     const e = efectos?.get(l.id);
-    const textos = TEXTOS_LECTURAS[l.id];
+    const textos = textosDeLectura(l.id);
     const valorActual = valores[l.id] ?? l.porDefecto;
     return {
       id: l.id,
