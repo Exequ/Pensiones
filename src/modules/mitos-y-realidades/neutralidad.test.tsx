@@ -17,6 +17,7 @@ import {
 import { buscarSeccion } from '../secciones';
 import { catalogo } from './datos-mitos';
 import MitosYRealidades from './Pagina';
+import { textoSinInterpretaciones } from '../../test/interpretaciones';
 
 const seccion = buscarSeccion('mitos-y-realidades');
 
@@ -53,7 +54,7 @@ describe('neutralidad de la página «Mitos y realidades»', () => {
         <MitosYRealidades />
       </MemoryRouter>,
     );
-    let texto = container.textContent;
+    let texto = textoSinInterpretaciones(container);
     expect(texto.length).toBeGreaterThan(5000);
     // Las afirmaciones, tal como circulan, se comprueban aparte.
     for (const m of mitos) texto = texto.replaceAll(m.enunciado, '');

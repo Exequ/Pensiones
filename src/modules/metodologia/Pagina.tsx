@@ -11,6 +11,7 @@ import { SeccionComprobaciones } from './SeccionComprobaciones';
 import { SeccionConfianza } from './SeccionConfianza';
 import { SeccionDatos } from './SeccionDatos';
 import { SeccionLecturas } from './SeccionLecturas';
+import { SeccionInterpretaciones } from './SeccionInterpretaciones';
 import { SeccionLimites } from './SeccionLimites';
 import { SeccionModelos } from './SeccionModelos';
 import { SeccionNeutralidad } from './SeccionNeutralidad';
@@ -50,6 +51,7 @@ export default function Metodologia() {
         <SeccionConfianza />
         <SeccionLecturas />
         <SeccionModelos />
+        <SeccionInterpretaciones />
         <SeccionNeutralidad />
         <SeccionLimites />
         <SeccionReproducir />

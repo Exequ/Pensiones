@@ -35,6 +35,11 @@ export const APARTADOS_INDICE: readonly ApartadoMetodologia[] = [
     resumen: 'Qué responde cada uno, qué supone y qué límites tiene.',
   },
   {
+    id: 'met-interpretaciones',
+    titulo: 'Las cajas «Interpretación»',
+    resumen: 'Qué son, sus dos tipos, sus reglas y su grado de confianza.',
+  },
+  {
     id: 'met-neutralidad',
     titulo: 'Neutralidad y verificación',
     resumen: 'La política y las pruebas que la comprueban.',

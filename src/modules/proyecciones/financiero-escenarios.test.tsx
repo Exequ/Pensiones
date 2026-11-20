@@ -14,6 +14,7 @@ import { datosFinanciero } from './datos-financiero';
 import Financiero from './Financiero';
 import { COL4 } from './ids-financiero';
 import { columnaM4, comparacionEscenarios } from './series-financiero';
+import { textoSinInterpretaciones } from '../../test/interpretaciones';
 
 const base = datosFinanciero();
 
@@ -261,7 +262,7 @@ describe('textos del bloque con los escenarios', () => {
     const { container } = pintar();
     for (const e of base.escenarios) {
       await usuario.click(within(selector()).getByRole('radio', { name: e.etiqueta }));
-      const texto = container.textContent;
+      const texto = textoSinInterpretaciones(container);
       expect(valoracionesEn(texto), e.id).toEqual([]);
       expect(texto, e.id).not.toMatch(/NaN|undefined|Infinity|\[object/);
     }

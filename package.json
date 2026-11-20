@@ -12,14 +12,15 @@
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b",
-    "lint": "eslint . && prettier --check . && npm run check:estilos && npm run check:contraste && npm run validate:data",
+    "lint": "eslint . && prettier --check . && npm run check:estilos && npm run check:contraste && npm run validate:data && npm run validate:interpretaciones",
     "check:estilos": "tsx scripts/check-styles.ts",
     "check:contraste": "tsx scripts/check-contrast.ts",
     "format": "prettier --write .",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test --trace off",
-    "validate:data": "tsx scripts/validate-data.ts"
+    "validate:data": "tsx scripts/validate-data.ts",
+    "validate:interpretaciones": "tsx scripts/validate-interpretaciones.ts"
   },
   "dependencies": {
     "@fontsource-variable/newsreader": "^5.3.0",

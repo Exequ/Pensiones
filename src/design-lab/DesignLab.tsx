@@ -16,7 +16,10 @@ import { Kicker } from '../components/Kicker';
 import { Lead } from '../components/Lead';
 import { MarginNote } from '../components/MarginNote';
 import { SegmentedPills } from '../components/SegmentedPills';
+import { InterpretationBox } from '../components/InterpretationBox';
 import { SourceLine } from '../components/SourceLine';
+import { INTERPRETACIONES } from '../contenido/interpretaciones';
+import type { ResolverDato } from '../engine/interpretaciones';
 import { formatearPorcentaje } from '../engine/formato';
 import { MUESTRA, porcentajeFicticio } from './muestra';
 import './DesignLab.css';
@@ -42,6 +45,15 @@ const FILAS_PORCENTAJE = MUESTRA.porcentajePorAnios.map((t) => ({
 const PUNTOS_SERIES = MUESTRA.series.flatMap((s, indice) =>
   s.valores.map((valor, periodo) => ({ serie: s.serie, indice, periodo: periodo + 1, valor })),
 );
+
+/** Registros de ejemplo de las cajas «Interpretación» (los únicos que admite esta página). */
+const EJEMPLOS_INTERPRETACION = INTERPRETACIONES.filter((r) => r.ejemplo === true);
+
+/** Las cajas de ejemplo se sostienen en las fuentes ficticias de la muestra (`muestra#n`). */
+const resolverMuestra: ResolverDato = (ref) => {
+  const m = /^muestra#(\d+)$/.exec(ref);
+  return m?.[1] === undefined ? undefined : MUESTRA.fuentes[Number(m[1])];
+};
 
 const FILAS_SERIES = MUESTRA.series.map((s) => ({
   serie: s.serie,
@@ -315,6 +327,33 @@ export default function DesignLab() {
                 fuentes={MUESTRA.fuentes.slice(0, 1)}
               />
             </TechnicalDetail>
+          </section>
+
+          <section className="catalogo-bloque" aria-labelledby="cat-interpretacion">
+            <h3 id="cat-interpretacion">Caja «Interpretación»</h3>
+            <p>
+              Una caja va siempre después del gráfico, la tabla o la cifra que interpreta. Los dos
+              registros de este bloque son ejemplos ficticios: no son interpretaciones publicadas y
+              solo pueden usarse en esta página.
+            </p>
+            <div id="diseno-interpretado">
+              <DataTable
+                titulo="Bases reguladoras de los casos ficticios que interpretan las cajas de ejemplo"
+                columnas={[
+                  { clave: 'caso', titulo: 'Caso' },
+                  { clave: 'base', titulo: 'Base reguladora (euros/mes)', tipo: 'euros' },
+                ]}
+                filas={MUESTRA.casos.map((c) => ({ caso: c.caso, base: c.baseReguladora }))}
+                pie="Datos ficticios."
+              />
+              <SourceLine
+                datos={MUESTRA.fuentes}
+                titulo="Bases reguladoras de los casos ficticios que interpretan las cajas de ejemplo"
+              />
+            </div>
+            {EJEMPLOS_INTERPRETACION.map((r) => (
+              <InterpretationBox key={r.id} interpretacion={r} resolver={resolverMuestra} />
+            ))}
           </section>
 
           <section className="catalogo-bloque" aria-labelledby="cat-banner">

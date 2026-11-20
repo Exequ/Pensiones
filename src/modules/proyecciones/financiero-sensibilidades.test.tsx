@@ -13,6 +13,7 @@ import { textoDeFuentes } from '../../test/fuentes';
 import { datosFinanciero } from './datos-financiero';
 import Financiero from './Financiero';
 import { aniosSensibilidades, rotuloPalanca, tablaSensibilidades } from './series-financiero';
+import { textoSinInterpretaciones } from '../../test/interpretaciones';
 
 const d = datosFinanciero();
 const s = d.sensibilidades;
@@ -236,7 +237,7 @@ describe('textos de las sensibilidades', () => {
     const selector = screen.getByRole('combobox', { name: 'Año de las sensibilidades' });
     for (const anio of anios) {
       await usuario.selectOptions(selector, String(anio));
-      const texto = container.textContent;
+      const texto = textoSinInterpretaciones(container);
       expect(valoracionesEn(texto), String(anio)).toEqual([]);
       expect(texto, String(anio)).not.toMatch(/NaN|undefined|Infinity|\[object/);
     }

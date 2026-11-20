@@ -1,0 +1,22 @@
+{
+  "id": "ejemplo-autor",
+  "ejemplo": true,
+  "tipo": "autor",
+  "titulo": "Ejemplo de caja del autor",
+  "pagina": "/diseno",
+  "ancla": "diseno-interpretado",
+  "texto": "Texto de ejemplo para el laboratorio de diseño; no es una interpretación publicada. Con la base reguladora ficticia del caso A, {{baseCasoA}}, una caja del autor podría hablar de «tensión financiera»: el término de valoración lleva debajo su criterio, verificable con los datos que sostienen la caja.",
+  "marcadores": {
+    "baseCasoA": { "ref": "muestra#1", "formato": "euros" }
+  },
+  "criterios": [
+    {
+      "termino": "tensión financiera",
+      "definicion": "Criterio de ejemplo: en una interpretación real, una condición comprobable con los datos que la sostienen, como que los gastos superen a los ingresos durante varios ejercicios seguidos."
+    }
+  ],
+  "datosQueLaSostienen": ["muestra#1"],
+  "grado": "juicio-autor",
+  "estadoRevision": "pendiente-de-revision",
+  "fechaRedaccion": "2026-11-20"
+}

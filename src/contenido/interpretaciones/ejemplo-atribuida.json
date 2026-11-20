@@ -1,0 +1,46 @@
+{
+  "id": "ejemplo-atribuida",
+  "ejemplo": true,
+  "tipo": "atribuida",
+  "titulo": "Ejemplo de caja atribuida a una publicación",
+  "pagina": "/diseno",
+  "ancla": "diseno-interpretado",
+  "texto": "Según la publicación ficticia de este ejemplo, el gasto llegaría a {{gastoEstudio}} con sus supuestos, y la autoría lo califica de «insostenible» con el criterio que figura debajo. La caja resume lo que dice la publicación; no es una interpretación publicada.",
+  "marcadores": {
+    "gastoEstudio": { "atribucion": true, "formato": "porcentaje", "decimales": 1 }
+  },
+  "criterios": [
+    {
+      "termino": "insostenible",
+      "definicion": "Criterio de ejemplo atribuido a la publicación: el gasto proyectado supera el umbral que la propia publicación fija con sus supuestos."
+    }
+  ],
+  "datosQueLaSostienen": ["muestra#0"],
+  "atribucion": {
+    "autores": "Autoría ficticia",
+    "anio": 2025,
+    "titulo": "Publicación ficticia para el laboratorio de diseño",
+    "publicacion": "Revista de ejemplo (ficticia)",
+    "dato": {
+      "value": 12.5,
+      "unit": "% del PIB (cifra ficticia)",
+      "period": "2050",
+      "source": {
+        "title": "Publicación ficticia para el laboratorio de diseño (ejemplo)",
+        "publisher": "Editorial de ejemplo (ficticia)",
+        "url": "https://example.org/publicacion-ficticia"
+      },
+      "fetchedAt": "2026-11-20",
+      "confidence": "media",
+      "notes": "Dato inventado para el laboratorio de diseño: no procede de ninguna publicación real."
+    },
+    "fuentePrimaria": "Fuente primaria ficticia que cita la publicación de ejemplo"
+  },
+  "proyeccion": {
+    "hipotesis": "La de la publicación de ejemplo: legislación congelada y sin otras sensibilidades.",
+    "sensibilidades": false
+  },
+  "grado": "respaldada",
+  "estadoRevision": "pendiente-de-revision",
+  "fechaRedaccion": "2026-11-20"
+}

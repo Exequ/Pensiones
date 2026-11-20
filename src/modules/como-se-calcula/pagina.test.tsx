@@ -22,6 +22,7 @@ import { ejemplosCalculo } from './datos-como';
 import { ejemplosCalculados, ejemplosDe, type IdSeccion } from './ejemplos';
 import { ESQUEMAS } from './esquemas';
 import ComoSeCalcula from './Pagina';
+import { textoSinInterpretaciones } from '../../test/interpretaciones';
 
 const seccion = buscarSeccion('como-se-calcula');
 const IDS: readonly IdSeccion[] = ['jubilacion', 'incapacidad', 'viudedad', 'orfandad'];
@@ -265,7 +266,7 @@ describe('neutralidad de la página', () => {
     await waitFor(() => {
       expect(container.textContent).not.toContain('Calculando el efecto');
     });
-    let texto = container.textContent;
+    let texto = textoSinInterpretaciones(container);
     expect(texto.length).toBeGreaterThan(20000);
     // Los motivos de las lecturas se muestran tal como están en el registro (no son texto de esta
     // página): se comprueban aparte, porque describen la decisión sobre la lectura («confirmada»).

@@ -213,8 +213,35 @@ export const EstadoRevisionActuarial = z.enum([
 export const PATRON_RESPUESTA_ACTUARIAL =
   /^(?:Tanda [1-9], parte [A-C], n\.º [1-9]\d*|Revisión del 14-11-2026)(?:\. .+)?$/;
 
+/**
+ * Atribución de una interpretación a un documento publicado (fase RI). Excepción de fuentes del autor
+ * (docs/DECISIONES.md, 20-11-2026): la cifra o la definición se publica citando la publicación, con su
+ * Dato (url o DOI, fecha en que el autor la aporta y confianza como máximo «media»), sin descargar
+ * las fuentes primarias en que se basa, que se anotan como texto.
+ */
+export const AtribucionPublicacion = z.strictObject({
+  autores: z.string().trim().min(1),
+  anio: z.number().int().min(1900).max(2100),
+  titulo: z.string().trim().min(1),
+  publicacion: z.string().trim().min(1),
+  dato: Dato,
+  fuentePrimaria: z.string().trim().min(1).optional(),
+});
+
+/** Estado de revisión de una interpretación: se guarda; no se muestra en cada caja. */
+export const ESTADOS_REVISION_INTERPRETACION = [
+  'pendiente-de-revision',
+  'revisada',
+  'retirada',
+] as const;
+export const EstadoRevisionInterpretacion = z.enum(ESTADOS_REVISION_INTERPRETACION);
+
+/** Referencia a lo que sostiene una interpretación: `data/…json#id` o `motor:nombre`. */
+export const PATRON_REF_SOSTEN =
+  /^(?:data\/[a-z0-9-]+\/[a-z0-9-]+\.json#[A-Za-z0-9._-]+|motor:[a-zA-Z][a-zA-Z0-9]*)$/;
+
 /** Afirmación factual del texto de la web y sus fuentes (docs/claims.json). */
-export const Afirmacion = z.strictObject({
+const CamposAfirmacion = z.strictObject({
   id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
   texto: textoObligatorio('texto'),
   ubicacion: textoObligatorio('ubicacion'),
@@ -245,6 +272,58 @@ export const Afirmacion = z.strictObject({
     })
     .optional(),
   notas: z.string().trim().min(1).optional(),
+  /**
+   * Categoría de la afirmación (fase RI). Sin categoría, es una afirmación factual. «interpretacion»:
+   * la lectura de una caja «Interpretación» (`interpretacion` es el id de su registro), que necesita
+   * los datos que la sostienen y su estado de revisión, y su atribución si resume una publicación.
+   */
+  categoria: z.enum(['interpretacion']).optional(),
+  interpretacion: z.string().regex(PATRON_ID).optional(),
+  datosQueLaSostienen: z.array(z.string().regex(PATRON_REF_SOSTEN)).optional(),
+  atribucion: AtribucionPublicacion.optional(),
+  estadoRevisionInterpretacion: EstadoRevisionInterpretacion.optional(),
+});
+
+export const Afirmacion = CamposAfirmacion.superRefine((c, ctx) => {
+  if (c.categoria === 'interpretacion') {
+    if (c.interpretacion === undefined)
+      ctx.addIssue({
+        code: 'custom',
+        message: `${c.id}: una interpretación necesita el id de su registro`,
+        path: ['interpretacion'],
+      });
+    if (c.datosQueLaSostienen === undefined || c.datosQueLaSostienen.length === 0)
+      ctx.addIssue({
+        code: 'custom',
+        message: `${c.id}: una interpretación necesita datosQueLaSostienen`,
+        path: ['datosQueLaSostienen'],
+      });
+    if (c.estadoRevisionInterpretacion === undefined)
+      ctx.addIssue({
+        code: 'custom',
+        message: `${c.id}: una interpretación necesita su estado de revisión`,
+        path: ['estadoRevisionInterpretacion'],
+      });
+    if (c.atribucion?.dato.confidence === 'alta')
+      ctx.addIssue({
+        code: 'custom',
+        message: `${c.id}: una fuente atribuida lleva confianza como máximo «media»`,
+        path: ['atribucion'],
+      });
+  } else {
+    for (const campo of [
+      'interpretacion',
+      'datosQueLaSostienen',
+      'atribucion',
+      'estadoRevisionInterpretacion',
+    ] as const)
+      if (c[campo] !== undefined)
+        ctx.addIssue({
+          code: 'custom',
+          message: `${c.id}: ${campo} solo en la categoría «interpretacion»`,
+          path: [campo],
+        });
+  }
 });
 
 export const RegistroAfirmaciones = z

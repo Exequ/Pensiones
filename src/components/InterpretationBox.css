@@ -1,0 +1,90 @@
+/*
+ * Caja «Interpretación» (fase RI): separada de los datos por un marco de filete en tinta y un rótulo
+ * en acento; el texto de la interpretación, en cursiva de lectura. Sin sombras, sin radios, sin
+ * borde lateral de color y sin colores de semáforo: el grado de confianza es una etiqueta neutra.
+ */
+.interpretacion {
+  margin-top: var(--espacio-5);
+  border: var(--grosor-filete) solid var(--color-tinta);
+  padding: var(--espacio-4) var(--espacio-5) var(--espacio-3);
+  max-width: var(--ancho-texto);
+  overflow-wrap: anywhere;
+}
+
+.interpretacion-rotulo {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta-s);
+  font-weight: var(--peso-semi);
+  line-height: var(--interlineado-etiqueta);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-acento);
+}
+
+.interpretacion-titulo {
+  margin-top: var(--espacio-2);
+  font-size: var(--texto-h3);
+  font-weight: var(--peso-semi);
+  line-height: var(--interlineado-h2);
+}
+
+.interpretacion-texto {
+  margin-top: var(--espacio-3);
+  font-style: italic;
+}
+
+.interpretacion-hipotesis,
+.interpretacion-primaria {
+  margin-top: var(--espacio-3);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-tinta-2);
+}
+
+.interpretacion-campo {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta);
+}
+
+.interpretacion-criterios {
+  margin-top: var(--espacio-4);
+  border-top: var(--grosor-filete) solid var(--color-filete);
+  padding-top: var(--espacio-3);
+}
+
+.interpretacion-criterios dl {
+  margin-top: var(--espacio-2);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+}
+
+.interpretacion-criterios dt {
+  font-weight: var(--peso-semi);
+}
+
+.interpretacion-criterios dd {
+  margin: 0 0 var(--espacio-2);
+  color: var(--color-tinta-2);
+}
+
+.interpretacion-grado {
+  margin-top: var(--espacio-3);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+}
+
+.interpretacion-etiqueta {
+  display: inline-block;
+  border: var(--grosor-filete) solid var(--color-tinta-2);
+  padding: 0 var(--espacio-2);
+  color: var(--color-tinta);
+}
+
+.interpretacion .linea-fuente {
+  margin-top: var(--espacio-3);
+}

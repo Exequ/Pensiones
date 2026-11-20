@@ -15,6 +15,7 @@ import Financiero from '../proyecciones/Financiero';
 import OtrosSistemas from '../otros-sistemas/Pagina';
 import Proyecciones from '../proyecciones/Pagina';
 import TiposDePension from '../tipos-de-pension/Pagina';
+import { textoSinInterpretaciones } from '../../test/interpretaciones';
 
 describe.each([
   { nombre: 'Hucha', Pagina: Hucha },
@@ -33,6 +34,6 @@ describe.each([
       </MemoryRouter>,
     );
     expect(container.textContent.length).toBeGreaterThan(1000);
-    expect(valoracionesEn(container.textContent)).toEqual([]);
+    expect(valoracionesEn(textoSinInterpretaciones(container))).toEqual([]);
   });
 });
