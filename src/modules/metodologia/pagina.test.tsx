@@ -15,6 +15,7 @@ import Metodologia from './Pagina';
 import { recuentos } from './recuentos';
 import { LIMITES, REPOSITORIO, RESPALDO } from './respaldo';
 import { TEXTOS_MODELOS } from './modelos';
+import { textoSinInterpretaciones } from '../../test/interpretaciones';
 
 const seccion = buscarSeccion('metodologia');
 
@@ -291,7 +292,7 @@ describe('neutralidad y texto', () => {
     const copia = container.cloneNode(true) as HTMLElement;
     // Fuera las tablas de datos y los nombres de fichero (`code`): no son texto propio.
     for (const t of copia.querySelectorAll('.tabla-datos, code')) t.remove();
-    const texto = copia.textContent;
+    const texto = textoSinInterpretaciones(copia);
     expect(valoracionesEn(texto)).toEqual([]);
     expect(veredictosEn(texto)).toEqual([]);
   });

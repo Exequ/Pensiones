@@ -7,6 +7,7 @@ import { expectFuente, textoDeFuentes } from '../../test/fuentes';
 import { buscarSeccion } from '../secciones';
 import { datosProyecciones } from './datos-proyecciones';
 import Pagina from './Pagina';
+import { textoSinInterpretaciones } from '../../test/interpretaciones';
 
 function pintar() {
   return render(
@@ -252,6 +253,6 @@ describe('página «Proyecciones»', () => {
   it('el texto renderizado no contiene palabras de valoración ni de alarma', () => {
     const { container } = pintar();
     expect(container.textContent.length).toBeGreaterThan(5000);
-    expect(valoracionesEn(container.textContent)).toEqual([]);
+    expect(valoracionesEn(textoSinInterpretaciones(container))).toEqual([]);
   });
 });

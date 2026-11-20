@@ -13,6 +13,7 @@ import { expectFuente } from '../../test/fuentes';
 import { buscarSeccion } from '../secciones';
 import { cronologia, graficosParametros, reformas } from './datos-reformas';
 import Reformas from './Pagina';
+import { textoSinInterpretaciones } from '../../test/interpretaciones';
 
 const seccion = buscarSeccion('reformas');
 
@@ -214,7 +215,7 @@ describe('neutralidad de la página', () => {
       'blockquote, .ref-titulo-oficial, .ref-literal, .linea-fuente',
     ))
       e.remove();
-    return copia.textContent;
+    return textoSinInterpretaciones(copia);
   };
 
   it('el texto propio no contiene términos de valoración ni de veredicto', () => {

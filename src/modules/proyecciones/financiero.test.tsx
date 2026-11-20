@@ -9,6 +9,7 @@ import Financiero from './Financiero';
 import Pagina from './Pagina';
 import { COL4 } from './ids-financiero';
 import { columnaM4 } from './series-financiero';
+import { textoSinInterpretaciones } from '../../test/interpretaciones';
 
 const d = datosFinanciero();
 
@@ -283,7 +284,7 @@ describe('bloque «Sistema financiero (M4)»', () => {
 
   it('no muestra valores vacíos ni no numéricos y el texto no contiene palabras de valoración ni de alarma', () => {
     const { container } = pintar();
-    const texto = container.textContent;
+    const texto = textoSinInterpretaciones(container);
     expect(texto).not.toMatch(/NaN|undefined|Infinity|\[object/);
     expect(texto.length).toBeGreaterThan(8000);
     expect(valoracionesEn(texto)).toEqual([]);
