@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { InternalLink } from '../../components/InternalLink';
 import { DataTable } from '../../components/DataTable';
 import { formatearNumero } from '../../engine/formato';
 import { EnlaceFichero, Respaldo } from './Respaldo';
@@ -51,8 +52,12 @@ export function SeccionModelos() {
         }))}
       />
       <p>
-        El nivel de confianza de las salidas es una decisión del autor que debe confirmar el
-        actuario (queda anotada como pendiente).
+        El nivel de confianza de las salidas sigue el criterio del apartado{' '}
+        <InternalLink destino="met-confianza-titulo">
+          {tituloApartado('met-confianza')}
+        </InternalLink>
+        , que ha confirmado la revisión actuarial: «media» solo si el contraste externo tiene una
+        tolerancia escrita.
       </p>
 
       {modelos.map((m) => {

@@ -83,7 +83,7 @@ export const TEXTOS_MODELOS: Readonly<Record<string, TextoModelo>> = {
       'Está calibrado con la ejecución presupuestaria del último año observado. Hay escenarios de crecimiento salarial y de precios, y sensibilidades que cambian una palanca cada vez.',
     ],
     fiabilidad:
-      'Su descripción indica una fiabilidad media y que hereda la incertidumbre del modelo de cotizantes (fiabilidad baja), del demográfico y del de pensiones; la calibración fija el punto de partida, no la trayectoria.',
+      'Su descripción indica una fiabilidad media y que hereda la incertidumbre del modelo de cotizantes (fiabilidad baja), del demográfico y del de pensiones; la calibración fija el punto de partida, no la trayectoria. Con el criterio de esta página sus ficheros llevan confianza baja: el contraste con la proyección de la Comisión Europea no tiene una tolerancia escrita.',
     limites: [
       'Legislación congelada y sin ciclo económico.',
       'El PIB es un indicador aproximado, no una previsión macroeconómica.',

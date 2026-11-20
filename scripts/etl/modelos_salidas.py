@@ -193,7 +193,7 @@ FICHEROS = [
         ],
     },
     {
-        'modelo': 'm4', 'csv': 'm4/m4_financiero.csv', 'id': 'm4-financiero', 'confidence': 'media',
+        'modelo': 'm4', 'csv': 'm4/m4_financiero.csv', 'id': 'm4-financiero', 'confidence': 'baja',
         'title': 'M4 · Modelo financiero del sistema: gasto en pensiones, ingresos, saldos y Fondo de Reserva (2026-2050)',
         'description': (
             'Gasto en pensiones contributivas (pensiones de cada clase por pensión media y catorce pagas), cotizaciones, Mecanismo de Equidad '
@@ -214,7 +214,8 @@ FICHEROS = [
             'menos resto de gastos, es decir, sin las transferencias del Estado ni otros ingresos; «saldo_no_financiero» es ese saldo más '
             '«transferencias_y_otros» (se comprueba en el mismo test). El Fondo de Reserva parte de un valor a precio de adquisición a fin del '
             'último año observado y crece con una rentabilidad nominal constante (la descripción da el valor), más la dotación y menos la '
-            'disposición: no es valor de mercado. La fiabilidad asignada a esta salida es media porque M4 hereda la incertidumbre de M2, que es baja.'
+            'disposición: no es valor de mercado. La fiabilidad asignada a esta salida es baja (criterio de la cuarta revisión actuarial): su '
+            'contraste con el Ageing Report 2024 no tiene una tolerancia escrita y M4 usa salidas de M2, de confianza baja.'
         ),
         'columnas': [
             ('anio', 'numero', 'Año', None),

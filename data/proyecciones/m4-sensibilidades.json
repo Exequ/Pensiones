@@ -22,7 +22,7 @@
     "url": "https://github.com/Exequ/Pensiones/blob/09f6e066253cb65052d2754229797811980a0bd9/modelos/m4/m4_sensibilidades.py"
   },
   "fetchedAt": "2026-11-16",
-  "confidence": "media",
+  "confidence": "baja",
   "origen": {
     "csv": "data-raw/modelos-salidas/m4/m4_sensibilidades.csv",
     "sha256": "2263a0d2f09c3d92987ddbc4f9c0681fe2da88ad2b8d706f78b9fe2a89a87385",

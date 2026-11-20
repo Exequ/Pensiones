@@ -141,6 +141,16 @@ export const RESPALDO: Readonly<Record<IdApartado, readonly Respaldo[]>> = {
   confianza: [
     {
       fichero: 'docs/DECISIONES.md',
+      para: 'Criterio de confianza en tres conceptos separados (dato, lectura de la norma y salidas de los modelos), confirmado por la cuarta revisión actuarial.',
+      contiene: 'Criterio de confianza en tres conceptos',
+    },
+    {
+      fichero: 'docs/AUDITORIA_CONFIANZA.md',
+      para: 'Auditoría de la confianza de los datos con ese criterio: casos corregidos y casos dudosos.',
+      contiene: 'Auditoría de la confianza',
+    },
+    {
+      fichero: 'docs/DECISIONES.md',
       para: 'La confianza mide la fiabilidad de la fuente; criterio aplicado a los modelos.',
       contiene: 'en el resto de /data mide la fiabilidad de la fuente',
     },
@@ -240,7 +250,7 @@ export const RESPALDO: Readonly<Record<IdApartado, readonly Respaldo[]>> = {
     },
     {
       fichero: 'docs/DECISIONES.md',
-      para: 'Criterio de la confianza de los modelos y su carácter de decisión pendiente de confirmar.',
+      para: 'Criterio inicial de la confianza de los modelos, confirmado y precisado después por la cuarta revisión actuarial.',
       contiene: 'media` = modelo con comprobaciones documentadas',
     },
     {
