@@ -56,7 +56,7 @@ export function SeccionModelos() {
         <InternalLink destino="met-confianza-titulo">
           {tituloApartado('met-confianza')}
         </InternalLink>
-        , que ha confirmado la revisión actuarial: «media» solo si el contraste externo tiene una
+        , que aprobó la revisión actuarial: «media» solo si el contraste externo tiene una
         tolerancia escrita.
       </p>
 

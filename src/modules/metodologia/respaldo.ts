@@ -141,7 +141,7 @@ export const RESPALDO: Readonly<Record<IdApartado, readonly Respaldo[]>> = {
   confianza: [
     {
       fichero: 'docs/DECISIONES.md',
-      para: 'Criterio de confianza en tres conceptos separados (dato, lectura de la norma y salidas de los modelos), confirmado por la cuarta revisión actuarial.',
+      para: 'Criterio de confianza en tres conceptos separados (dato, lectura de la norma y salidas de los modelos), aprobado por la cuarta revisión actuarial.',
       contiene: 'Criterio de confianza en tres conceptos',
     },
     {
@@ -250,7 +250,7 @@ export const RESPALDO: Readonly<Record<IdApartado, readonly Respaldo[]>> = {
     },
     {
       fichero: 'docs/DECISIONES.md',
-      para: 'Criterio inicial de la confianza de los modelos, confirmado y precisado después por la cuarta revisión actuarial.',
+      para: 'Criterio inicial de la confianza de los modelos, aprobado y precisado después por la cuarta revisión actuarial.',
       contiene: 'media` = modelo con comprobaciones documentadas',
     },
     {

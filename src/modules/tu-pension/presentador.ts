@@ -6,6 +6,7 @@
  * lagunas) se leen de /data mediante la referencia que cada paso del motor ya trae.
  */
 import type { ResultadoOk } from '../../engine/fachada';
+import type { DosLecturasDT34 } from '../../engine/jubilacion/salvaguarda-dt34';
 import {
   formatearDuracion,
   formatearEuros,
@@ -82,6 +83,25 @@ export interface ContextoPresentacion {
   readonly leerReferencia: LeerReferencia;
   /** Valor actual de la lectura `jubilacion.actualizacionFactorMinimo`. */
   readonly factorMinimo: string;
+  /**
+   * Pensión con las dos lecturas de la salvaguarda de la DT 34.ª (solo en la anticipada voluntaria
+   * por encima de la máxima; `dosLecturasDT34` del motor). Si difieren, el resultado se da como rango.
+   */
+  readonly dosLecturasDT34?: DosLecturasDT34;
+}
+
+/** Frase que acompaña al rango de la DT 34.ª (Ajustes actuariales 4, punto 4). */
+export const FRASE_DT34 =
+  'La norma no precisa con qué pensión máxima se compara; falta un criterio de la entidad gestora.';
+
+/** «entre X (lectura B) y Y (lectura A)», o `undefined` si las dos lecturas dan lo mismo. */
+export function rangoDT34(
+  d: DosLecturasDT34 | undefined,
+  formato: (v: number) => string,
+  factor = 1,
+): string | undefined {
+  if (d === undefined || Math.abs(d.lecturaA - d.lecturaB) < 0.005) return undefined;
+  return `entre ${formato(d.lecturaB * factor)} (lectura B) y ${formato(d.lecturaA * factor)} (lectura A)`;
 }
 
 const TEXTO_ESTADO: Record<EstadoVista, string> = {
@@ -315,12 +335,20 @@ export function presentarResultado(
   const cumple = d.cumpleRequisitos;
   const edadLegal = numeroDe(paso(pasos, 'edad-legal'));
   const cifras: Cifra[] = [];
+  const rangoMensual = rangoDT34(ctx.dosLecturasDT34, euros);
+  const rangoAnual = rangoDT34(ctx.dosLecturasDT34, euros, d.pagas);
   if (cumple) {
     cifras.push(
-      { etiqueta: 'Pensión mensual bruta (por paga)', valor: euros(d.pensionMensual) },
+      rangoMensual === undefined
+        ? { etiqueta: 'Pensión mensual bruta (por paga)', valor: euros(d.pensionMensual) }
+        : {
+            etiqueta: 'Pensión mensual bruta (por paga)',
+            valor: rangoMensual,
+            detalle: FRASE_DT34,
+          },
       {
         etiqueta: 'Pensión anual bruta',
-        valor: euros(d.pensionAnual),
+        valor: rangoAnual ?? euros(d.pensionAnual),
         detalle: `${formatearNumero(d.pagas)} pagas`,
       },
     );
@@ -350,7 +378,9 @@ export function presentarResultado(
       id: 'resultado',
       titulo: 'Pensión inicial',
       parrafos: [
-        `${eurosMes(d.pensionMensual)} en cada una de las ${formatearNumero(d.pagas)} pagas, es decir, ${euros(d.pensionAnual)} al año, en euros del año de la jubilación.`,
+        rangoMensual === undefined || rangoAnual === undefined
+          ? `${eurosMes(d.pensionMensual)} en cada una de las ${formatearNumero(d.pagas)} pagas, es decir, ${euros(d.pensionAnual)} al año, en euros del año de la jubilación.`
+          : `Según la lectura de la salvaguarda de la disposición transitoria trigésima cuarta, ${rangoMensual} en cada una de las ${formatearNumero(d.pagas)} pagas, es decir, ${rangoAnual} al año, en euros del año de la jubilación. ${FRASE_DT34}`,
       ],
       articulo: 'art. 210 TRLGSS',
     });

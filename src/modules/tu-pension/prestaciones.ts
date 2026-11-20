@@ -16,6 +16,11 @@ import type {
   Motor,
   ResultadoOk,
 } from '../../engine/fachada';
+import {
+  afectaSalvaguardaDT34,
+  dosLecturasDT34,
+  type DosLecturasDT34,
+} from '../../engine/jubilacion/salvaguarda-dt34';
 import { LECTURAS_ABIERTAS } from '../../engine/lecturas';
 import { calcularConReceta, type Dependencias, type Receta, type RespuestaCalculo } from './receta';
 import { ETIQUETAS_JUBILACION, type EtiquetasComparacion } from './comparacion-texto';
@@ -53,16 +58,45 @@ const recetaJubilacion: Receta<EntradaJubilacion, ResultadoOk<'jubilacion'>> = {
   importeEfecto: () => 'la pensión mensual',
   mapear: (f, catalogo) => formularioAEntrada(f, catalogo),
   ejecutar: ejecutarJubilacion,
-  presentar: (r, f, deps) =>
-    presentarResultado(r, {
+  presentar: (r, f, deps) => {
+    const dosLecturas = afectaSalvaguardaDT34(r.detalle.pasos) ? lecturasDT34(f, deps) : undefined;
+    return presentarResultado(r, {
       sexo: f.sexo === 'mujer' ? 'mujer' : 'hombre',
       aplicarMinimos: f.aplicarMinimos,
       aplicarPensionMaxima: f.aplicarPensionMaxima,
       leerReferencia: deps.leerReferencia,
       factorMinimo: lecturaPorDefecto('jubilacion.actualizacionFactorMinimo'),
-    }),
+      ...(dosLecturas === undefined ? {} : { dosLecturasDT34: dosLecturas }),
+    });
+  },
   bases: (r) => r.detalle.basesPeriodo,
 };
+
+/**
+ * Pensión con las dos lecturas de la salvaguarda de la DT 34.ª, con el resto de la configuración del
+ * formulario igual (solo cambia esa lectura). Solo se llama si el resultado está afectado.
+ */
+export function lecturasDT34(
+  f: FormularioTuPension,
+  deps: Dependencias,
+): DosLecturasDT34 | undefined {
+  const m = formularioAEntrada(f, deps.catalogo);
+  if (!m.ok) return undefined;
+  try {
+    return dosLecturasDT34((lectura) => {
+      const r = deps
+        .fabricaMotor({
+          ...m.configuracion,
+          lecturas: { ...m.configuracion.lecturas, 'jubilacion.salvaguardaDT34': lectura },
+        })
+        .jubilacion(m.entrada);
+      if (!r.ok) throw new Error(r.error.mensaje);
+      return r.detalle;
+    });
+  } catch {
+    return undefined;
+  }
+}
 
 const recetaIncapacidad: Receta<EntradaIncapacidad, ResultadoOk<'incapacidad-permanente'>> = {
   id: 'incapacidad',
