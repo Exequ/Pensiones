@@ -166,8 +166,9 @@
         "La respuesta depende del descuento, de la inclusión de la cotización de la empresa y de qué prestaciones se cuentan (viudedad, mínimos)."
       ],
       "faltan": ["Historiales de cotización por cohorte (Muestra Continua de Vidas Laborales)."],
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Definir el cociente valor actual de prestaciones / valor actual de cotizaciones por cohorte (tipo de descuento, mortalidad de data/demografia, cotización de trabajador y de empresa) y decidir qué datos de historiales de cotización harían falta; comparar con la riqueza de pensiones de la OCDE."
+      "revisionActuarial": "revisada",
+      "preguntaActuarial": "Definir el cociente valor actual de prestaciones / valor actual de cotizaciones por cohorte (tipo de descuento, mortalidad de data/demografia, cotización de trabajador y de empresa) y decidir qué datos de historiales de cotización harían falta; comparar con la riqueza de pensiones de la OCDE.",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Texto sin cifras correcto"
     },
     {
       "id": "sistema-en-deficit",
@@ -409,8 +410,9 @@
         "Que el gasto sea alto o bajo «para España»: depende de la definición, del PIB y de la estructura de edades; los datos no ajustan por envejecimiento ni por tasa de reposición.",
         "La media europea depende de qué países entran (UE-27, OCDE, los once de la muestra)."
       ],
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar la comparabilidad de las definiciones de gasto (ESSPROS vejez y supervivencia, gasto público en pensiones de la OCDE, pensiones contributivas del Sistema) y plantear una comparación ajustada por estructura de edades (por ejemplo, gasto por mayor de 65 años o relativo al PIB por trabajador)."
+      "revisionActuarial": "revisada",
+      "preguntaActuarial": "Comprobar la comparabilidad de las definiciones de gasto (ESSPROS vejez y supervivencia, gasto público en pensiones de la OCDE, pensiones contributivas del Sistema) y plantear una comparación ajustada por estructura de edades (por ejemplo, gasto por mayor de 65 años o relativo al PIB por trabajador).",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Verificada sin perímetro"
     },
     {
       "id": "pensiones-siempre-con-el-ipc",

@@ -124,7 +124,7 @@ export const LECTURAS_ABIERTAS: readonly LecturaAbierta[] = [
   lectura(
     'jubilacion',
     'opcion25EnUltimoDia2040',
-    'Si el último día en que rige la opción de calcular la base reguladora con un periodo más largo de los últimos años queda dentro o fuera de ella.',
+    'Si el último día en que rige la opción de calcular la base reguladora con la redacción anterior del artículo (todas las bases de un periodo más corto o igual que el de la regla general, sin descartar ninguna) queda dentro o fuera de ella.',
     ['incluida', 'excluida'],
     S_2A,
     '(c) opción de 25 años el 31/12/2040',

@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
-import { formatearEuros, formatearNumero } from '../../engine/formato';
+import { formatearEuros, formatearNumero, formatearPorcentaje } from '../../engine/formato';
 import { leerFuentes, textoDeFuentes } from '../../test/fuentes';
 import { buscarSeccion } from '../secciones';
 import { datosTipos } from './datos-tipos';
@@ -197,7 +197,15 @@ describe('«Tipos de pensión»: complementos por brecha de género y por matern
     expect(fuente).not.toMatch(/descargad|2026-11-16|confianza/i);
     const como = s.querySelector('.como-leerlo')?.textContent ?? '';
     expect(como).toMatch(/No miden la brecha de género de las pensiones de jubilación/);
-    expect(como).toMatch(/Tampoco dividen por la población/);
+    expect(como).toMatch(/tampoco dividen por la población/);
+    // Ajustes actuariales 4: la brecha de la DA 37.ª, calculada con las altas iniciales de jubilación
+    // (fórmula del motor, brecha-da37.ts) y comparada con el umbral de /data; ninguna cifra a mano.
+    const b = datosTipos().brechaDA37;
+    expect(como).toContain(
+      `fue del ${formatearPorcentaje(b.ultima.brecha, { decimales: 1 })} en ${String(b.ultima.anio)}`,
+    );
+    expect(como).toContain(`superior al ${formatearPorcentaje(b.umbral, { decimales: 0 })}`);
+    expect(como).toMatch(/la norma no precisa si el importe medio incluye complementos/);
   });
 
   it('la tabla por comunidad empieza por el total nacional y suma las comunidades', () => {
@@ -280,9 +288,11 @@ describe('«Tipos de pensión»: complementos por brecha de género y por matern
     );
   });
 
-  it('lo previsto de la sección dice que la brecha anual sigue pendiente de datos', () => {
-    expect(buscarSeccion('tipos-de-pension').previsto.join(' ')).toMatch(
-      /brecha de género de las pensiones de jubilación publicada por año \(pendiente de datos\)/,
+  it('lo previsto de la sección dice que la brecha anual no se publica y que se muestra la calculada con las altas iniciales', () => {
+    const previsto = buscarSeccion('tipos-de-pension').previsto.join(' ');
+    expect(previsto).toMatch(
+      /brecha de género de las pensiones de jubilación que usa la ley no se publica por año/,
     );
+    expect(previsto).toMatch(/calculada con la pensión media de las altas iniciales de jubilación/);
   });
 });

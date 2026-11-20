@@ -38,7 +38,7 @@
       "valor": "integrar",
       "estado": "provisional",
       "fecha": "2026-11-14",
-      "motivo": "Confianza media. El art. 209.1.b integra los «meses sin obligación de cotizar» sin excluir los anteriores a la primera alta. Confirmada el 14-11-2026 con confianza del 65 al 70 %.",
+      "motivo": "Confianza media. El art. 209.1.b integra los «meses sin obligación de cotizar» sin excluir los anteriores a la primera alta. Confirmada el 14-11-2026 con confianza del 65 al 70 %. Cuarta tanda (19-11-2026): sigue provisional. Norma: art. 209.1.b TRLGSS («meses durante los cuales no hubiese existido obligación de cotizar», sin excluir los anteriores a la primera alta). Alternativa visible: ignorarlos.",
       "pregunta": "param-lagunas-integracion"
     },
     {
@@ -54,7 +54,7 @@
       "valor": "suelo-1",
       "estado": "provisional",
       "fecha": "2026-11-14",
-      "motivo": "Confianza media. Cambia el valor por defecto (antes sin-suelo): criterio de gestión observado en los nueve informes del autocálculo; el art. 209.1.d no lo dice; efecto de céntimos. Confirmada el 14-11-2026 con confianza del 70 %.",
+      "motivo": "Confianza media. Cambia el valor por defecto (antes sin-suelo): criterio de gestión observado en los nueve informes del autocálculo; el art. 209.1.d no lo dice; efecto de céntimos. Confirmada el 14-11-2026 con confianza del 70 %. Cuarta tanda (19-11-2026): sigue provisional. Apoyo: la práctica de los informes del autocálculo de la Seguridad Social; el art. 209.1.d TRLGSS solo habla de la evolución del IPC. Alternativa visible: sin suelo.",
       "pregunta": "param-actualizacion-bases"
     },
     {
@@ -93,7 +93,7 @@
       "valor": "meses",
       "estado": "provisional",
       "fecha": "2026-11-14",
-      "motivo": "Decisión del 14-11-2026, con confianza del 60 al 70 %. El art. 197.1.b habla de «los años que le resten», pero la escala del art. 210.1 es por meses.",
+      "motivo": "Decisión del 14-11-2026, con confianza del 60 al 70 %. El art. 197.1.b habla de «los años que le resten», pero la escala del art. 210.1 es por meses. Cuarta tanda (19-11-2026): sigue provisional. Norma: art. 197.1.b TRLGSS («los años que le resten») frente a la escala por meses del art. 210.1. Alternativa visible: años completos.",
       "pregunta": "param-incapacidad-permanente-reglas"
     },
     {
@@ -109,15 +109,15 @@
       "valor": "sin-integrar",
       "estado": "provisional",
       "fecha": "2026-11-16",
-      "motivo": "Decisión del 16-11-2026, con confianza del 60 %. El reglamento de 1985 deja la base reguladora de la total, la absoluta y la gran invalidez por accidente no laboral en alta en las normas anteriores a la Ley 26/1985 (art. 5.4, párrafo 2.º, del RD 1799/1985), y el art. 7.1 del Decreto 1646/1972 no menciona lagunas. El art. 5.5 del mismo reglamento integra las lagunas en otras pensiones, y esa lectura queda como alternativa.",
+      "motivo": "Decisión del 16-11-2026, con confianza del 60 %. El reglamento de 1985 deja la base reguladora de la total, la absoluta y la gran invalidez por accidente no laboral en alta en las normas anteriores a la Ley 26/1985 (art. 5.4, párrafo 2.º, del RD 1799/1985), y el art. 7.1 del Decreto 1646/1972 no menciona lagunas. El art. 5.5 del mismo reglamento integra las lagunas en otras pensiones, y esa lectura queda como alternativa. Cuarta tanda (19-11-2026): sigue provisional. Normas: RD 1799/1985, art. 5.4, párrafo segundo, y Decreto 1646/1972, art. 7.1. Alternativa visible: integrar las lagunas por el art. 5.5 del RD 1799/1985.",
       "pregunta": "param-incapacidad-permanente-reglas"
     },
     {
       "id": "incapacidad.redondeoEdadCarencia",
       "valor": "sin-redondeo",
-      "estado": "provisional",
-      "fecha": "2026-11-14",
-      "motivo": "Decisión del 14-11-2026, con confianza del 60 al 70 %. El art. 195.3 habla del «tiempo transcurrido», sin redondeo.",
+      "estado": "decidida",
+      "fecha": "2026-11-19",
+      "motivo": "Decisión del 19-11-2026 (cuarta tanda). El art. 195.3 TRLGSS mide el periodo exigido con el «tiempo transcurrido» entre fechas, sin redondeo a medios años; el redondeo del art. 4.1 del RD 1799/1985 era de las reglas que el art. 195 sustituyó. Antes, provisional desde el 14-11-2026.",
       "pregunta": "param-incapacidad-permanente-reglas-carencia"
     },
     {
@@ -125,7 +125,7 @@
       "valor": "naturales",
       "estado": "provisional",
       "fecha": "2026-11-14",
-      "motivo": "Decisión del 14-11-2026, con confianza del 60 al 70 %. La vida laboral cuenta días de alta, es decir, días naturales.",
+      "motivo": "Decisión del 14-11-2026, con confianza del 60 al 70 %. La vida laboral cuenta días de alta, es decir, días naturales. Cuarta tanda (19-11-2026): sigue provisional. Norma: art. 195.2 TRLGSS (periodo mínimo en días). Alternativa visible: treinta días por mes.",
       "pregunta": "param-incapacidad-permanente-reglas-carencia"
     },
     {
@@ -141,7 +141,7 @@
       "valor": "naturales",
       "estado": "provisional",
       "fecha": "2026-11-14",
-      "motivo": "Decisión del 14-11-2026, con confianza del 60 al 70 %. La vida laboral cuenta días de alta, es decir, días naturales.",
+      "motivo": "Decisión del 14-11-2026, con confianza del 60 al 70 %. La vida laboral cuenta días de alta, es decir, días naturales. Cuarta tanda (19-11-2026): sigue provisional. Norma: art. 219.1 TRLGSS (periodo de cotización en días). Alternativa visible: treinta días por mes.",
       "pregunta": "param-supervivencia-reglas"
     },
     {
@@ -157,7 +157,7 @@
       "valor": "exigir",
       "estado": "provisional",
       "fecha": "2026-11-14",
-      "motivo": "Confianza baja. El art. 226.1 remite solo al art. 219.1, párr. 2.º; la Orden de 1967 solo exime el accidente de trabajo y la enfermedad profesional. Confirmada el 14-11-2026 con confianza del 70 %.",
+      "motivo": "Confianza baja. El art. 226.1 remite solo al art. 219.1, párr. 2.º; la Orden de 1967 solo exime el accidente de trabajo y la enfermedad profesional. Confirmada el 14-11-2026 con confianza del 70 %. Cuarta tanda (19-11-2026): sigue provisional. Normas: art. 226.1 TRLGSS (remite al párrafo segundo del art. 219.1) y art. 22.1 de la Orden de 13/02/1967. Alternativa visible: exenta.",
       "pregunta": "param-supervivencia-reglas"
     },
     {
@@ -173,7 +173,7 @@
       "valor": "anual",
       "estado": "provisional",
       "fecha": "2026-11-14",
-      "motivo": "Confianza baja. La viudedad de catorce pagas y la compensatoria de doce se comparan por lo cobrado al año; sin criterio publicado del INSS. Confirmada el 14-11-2026 con confianza del 65 %.",
+      "motivo": "Confianza baja. La viudedad de catorce pagas y la compensatoria de doce se comparan por lo cobrado al año; sin criterio publicado del INSS. Confirmada el 14-11-2026 con confianza del 65 %. Cuarta tanda (19-11-2026): sigue provisional. Norma: art. 220.1 TRLGSS (la viudedad se disminuye hasta la cuantía de la compensatoria). Alternativa visible: comparación mensual.",
       "pregunta": "param-supervivencia-reglas-cuantia"
     },
     {
@@ -189,7 +189,7 @@
       "valor": "orfandad",
       "estado": "provisional",
       "fecha": "2026-11-14",
-      "motivo": "Confianza baja. El art. 18 de la Orden de 1967 no dice qué se reduce; el art. 17 tampoco (texto incorporado en la Fase 2-E); apoyo solo en el art. 229.3. Confirmada el 14-11-2026 con confianza del 65 %.",
+      "motivo": "Confianza baja. El art. 18 de la Orden de 1967 no dice qué se reduce; el art. 17 tampoco (texto incorporado en la Fase 2-E); apoyo solo en el art. 229.3. Confirmada el 14-11-2026 con confianza del 65 %. Cuarta tanda (19-11-2026): sigue provisional. Normas: art. 229.3 TRLGSS y art. 18 de la Orden de 13/02/1967. Alternativa visible: reducción proporcional.",
       "pregunta": "param-supervivencia-reglas-limites"
     },
     {
@@ -221,7 +221,7 @@
       "valor": "con-complemento",
       "estado": "provisional",
       "fecha": "2026-11-14",
-      "motivo": "Confianza baja. El texto del art. 363.1.d apunta a sin complemento; el valor se apoya solo en la guía del IMSERSO. Confirmada el 14-11-2026 con confianza del 55 %. Se prevé cerrarla con el real decreto de revalorización de 2026.",
+      "motivo": "Confianza baja. El texto del art. 363.1.d apunta a sin complemento; el valor se apoya solo en la guía del IMSERSO. Confirmada el 14-11-2026 con confianza del 55 %. Se prevé cerrarla con el real decreto de revalorización de 2026. Cuarta tanda (19-11-2026): sigue provisional. Apoyo: la guía del IMSERSO; el art. 363.1.d TRLGSS remite al art. 364.1, más cerca de la alternativa. Alternativa visible: sin complemento.",
       "pregunta": "param-pnc-reglas"
     },
     {

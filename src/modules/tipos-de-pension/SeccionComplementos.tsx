@@ -3,6 +3,7 @@ import { DataTable, type Columna } from '../../components/DataTable';
 import { SegmentedPills } from '../../components/SegmentedPills';
 import { SourceLine } from '../../components/SourceLine';
 import { ComoLeerlo } from '../historico/ComoLeerlo';
+import { formatearPorcentaje } from '../../engine/formato';
 import { entero } from '../historico/formatos';
 import type { Complemento, FilaTerritorio, Sexo } from './complementos';
 import { datosTipos } from './datos-tipos';
@@ -53,6 +54,8 @@ const COLUMNAS_IMPORTE: readonly Columna<FilaTabla>[] = [
  */
 export function SeccionComplementos() {
   const d = datosTipos().complementos;
+  const brecha = datosTipos().brechaDA37;
+  const brechaSupera = brecha.ultima.brecha > brecha.umbral;
   const [complemento, setComplemento] = useState<Complemento>('brecha');
   const filas = d.filas[complemento];
   const total = filas.find((f) => f.nivel === 'total');
@@ -184,11 +187,21 @@ export function SeccionComplementos() {
         <p>
           No miden la brecha de género de las pensiones de jubilación causadas cada año, que es la
           diferencia entre el importe medio de las pensiones de mujeres y de hombres que usa la ley
-          como umbral: esa brecha, publicada por año, no está en este fichero. Tampoco dividen por
-          la población ni por el total de pensiones de cada territorio, por lo que las diferencias
-          entre comunidades reflejan también su tamaño y la composición de sus pensiones. El importe
-          medio del complemento no es el importe de la pensión.
+          como umbral: esa brecha no se publica por año en las fuentes consultadas. Calculada con la
+          pensión media de las altas iniciales de jubilación (la de los hombres menos la de las
+          mujeres, dividida entre la de los hombres), fue del{' '}
+          {formatearPorcentaje(brecha.ultima.brecha, { decimales: 1 })} en {brecha.ultima.anio} (
+          {brechaSupera ? 'superior' : 'igual o inferior'} al{' '}
+          {formatearPorcentaje(brecha.umbral, { decimales: 0 })}); la norma no precisa si el importe
+          medio incluye complementos. Las tablas tampoco dividen por la población ni por el total de
+          pensiones de cada territorio, por lo que las diferencias entre comunidades reflejan
+          también su tamaño y la composición de sus pensiones. El importe medio del complemento no
+          es el importe de la pensión.
         </p>
+        <SourceLine
+          datos={[brecha.datoAltas, brecha.datoUmbral]}
+          titulo="Brecha de género de las pensiones de jubilación calculada con las altas iniciales"
+        />
         <p>
           Las dos tablas son recuentos distintos y la fuente no indica si una misma pensión figura
           en las dos, por lo que sus números no se suman.

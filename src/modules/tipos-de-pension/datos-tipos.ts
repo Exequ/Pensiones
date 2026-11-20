@@ -3,6 +3,7 @@
  * página; `FICHEROS_TIPOS_DE_PENSION` los lista para el test de procedencia.
  */
 import prestacionesJson from '../../../data/normativa/prestaciones.json';
+import lagunasBrechaJson from '../../../data/parametros/lagunas-integracion-brecha-genero.json';
 import maximaJson from '../../../data/parametros/pension-maxima.json';
 import minimaIncapacidadJson from '../../../data/parametros/pension-minima-incapacidad.json';
 import minimaJubilacionJson from '../../../data/parametros/pension-minima-jubilacion.json';
@@ -11,6 +12,8 @@ import minimaViudedadJson from '../../../data/parametros/pension-minima-viudedad
 import pncImporteJson from '../../../data/parametros/pnc-importe-anual.json';
 import pncReglasJson from '../../../data/parametros/pnc-reglas.json';
 import supervivenciaJson from '../../../data/parametros/supervivencia-reglas.json';
+import altasBajasCsv from '../../../data/sistema/altas-bajas-anual-clase-sexo.csv?raw';
+import altasBajasJson from '../../../data/sistema/altas-bajas-anual-clase-sexo.json';
 import complementosIndicadoresCsv from '../../../data/sistema/complementos-genero-indicadores.csv?raw';
 import complementosIndicadoresJson from '../../../data/sistema/complementos-genero-indicadores.json';
 import complementosTerritorioCsv from '../../../data/sistema/complementos-genero-territorio.csv?raw';
@@ -20,6 +23,7 @@ import imsersoJson from '../../../data/sistema/imserso-pnc-evolucion.json';
 import perfilJson from '../../../data/sistema/imserso-pnc-perfil-2025.json';
 import numeroJson from '../../../data/sistema/pensiones-vigor-numero.json';
 import mediaJson from '../../../data/sistema/pensiones-vigor-pension-media.json';
+import { brechasAnualesDA37, type BrechaAnual } from '../../engine/brecha-da37';
 import {
   ArchivoPrestaciones,
   Dato,
@@ -132,6 +136,17 @@ export interface DatosTipos {
   readonly fichas: readonly DatosFicha[];
   /** Complementos por brecha de género y por maternidad en vigor (Fase 5-A4). */
   readonly complementos: DatosComplementos;
+  /**
+   * Brecha de la DA 37.ª.1 TRLGSS calculada con la pensión media de las altas iniciales de jubilación
+   * del último año completo (Ajustes actuariales 4), con el umbral del 5 % de la ley.
+   */
+  readonly brechaDA37: {
+    readonly ultima: BrechaAnual;
+    readonly datoAltas: Dato;
+    /** Umbral en fracción (0,05). */
+    readonly umbral: number;
+    readonly datoUmbral: Dato;
+  };
 }
 
 /** Los datos de cuantía son numéricos; los de regla de texto se descartan. */
@@ -341,5 +356,39 @@ export const datosTipos = memorizar((): DatosTipos => {
     complementosIndicadoresJson,
   );
 
-  return { vigenteA: archivoPrestaciones.vigenteA, anioCuantias, fichas, complementos };
+  const tablaAltas = validarTabla(altasBajasJson);
+  const brechas = brechasAnualesDA37(
+    filasCsv(altasBajasCsv).map((f) => ({
+      anio: Number(f['anio']),
+      movimiento: f['movimiento'] ?? '',
+      clase: f['clase'] ?? '',
+      sexo: f['sexo'] ?? '',
+      pensionMedia: numeroCsv(f['pension_media_eur_mes']),
+    })),
+  );
+  const ultima = brechas.at(-1);
+  if (!ultima) throw new Error('Sin altas iniciales de jubilación por sexo');
+  const archivoUmbral = validarArchivo(lagunasBrechaJson);
+  const idUmbral = (archivoUmbral.data ?? [])
+    .map((d) => d.id)
+    .filter((id) => id.endsWith('-umbral-brecha-pct'))
+    .sort()
+    .at(-1);
+  if (idUmbral === undefined) throw new Error('Sin umbral de la brecha de género');
+  const datoUmbral = datoDeArchivo(archivoUmbral, idUmbral);
+  if (typeof datoUmbral.value !== 'number') throw new Error('Umbral de la brecha no numérico');
+  const brechaDA37 = {
+    ultima,
+    datoAltas: datoDeTabla(tablaAltas, String(ultima.anio)),
+    umbral: datoUmbral.value / 100,
+    datoUmbral,
+  };
+
+  return {
+    vigenteA: archivoPrestaciones.vigenteA,
+    anioCuantias,
+    fichas,
+    complementos,
+    brechaDA37,
+  };
 });

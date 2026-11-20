@@ -22,33 +22,51 @@ export function SeccionConfianza() {
         {tituloApartado('met-confianza')}
       </h2>
       <p>
-        Hay dos niveles de control distintos: la confianza de la fuente de cada dato y la revisión
-        actuarial de las afirmaciones y de las reglas de cálculo. No son lo mismo y se muestran por
-        separado.
+        Hay tres conceptos distintos que no se mezclan: la confianza de cada dato, el estado de cada
+        lectura de la norma y la confianza de las salidas de los modelos. Aparte está la revisión
+        actuarial de las afirmaciones y de las reglas de cálculo. Cada uno se registra por separado.
+        El criterio es profesional, sin una norma que lo fije, y ningún nivel de confianza expresa
+        una probabilidad de acierto.
       </p>
 
-      <h3>Confianza de la fuente</h3>
-      <Definition termino="Confianza (alta, media o baja)">
-        Nivel que acompaña a cada dato y mide la fiabilidad de su fuente. Se registra en los datos;
-        la web no lo muestra junto a cada fuente. No hay una definición general escrita de cada
-        nivel: el criterio aplicado consta junto a cada decisión, y la falta de una definición única
-        queda anotada como pendiente.
+      <h3>Confianza del dato</h3>
+      <Definition termino="Confianza del dato (alta, media o baja)">
+        Nivel que acompaña a cada dato. Se registra en los datos; la web no lo muestra junto a cada
+        fuente.
       </Definition>
-      <p>Los criterios que constan en la documentación del proyecto son estos:</p>
       <ul>
         <li>
-          Los datos que calcula el propio proyecto a partir de otros (medias anuales, cocientes) se
-          marcan con confianza «media», con el cálculo en sus notas.
+          Alta: cifra copiada sin transformar de una fuente oficial primaria (BOE, INE, Seguridad
+          Social, IGAE, Eurostat, OCDE, Tribunal de Cuentas), o recalculada desde datos de confianza
+          alta con una operación exacta que comprueba una prueba automática.
         </li>
         <li>
-          Los textos obtenidos por reconocimiento de caracteres se marcan con confianza «media».
+          Media: documento oficial que no es la fuente primaria; dato derivado con un supuesto
+          (interpolación, enlace de series, reparto o conversión de periodo); fuente primaria con
+          una discrepancia menor sin resolver; o texto leído por reconocimiento de caracteres.
         </li>
         <li>
-          Las salidas de un modelo llevan confianza «media» si su descripción documenta
-          comprobaciones (un contraste externo y pruebas) y «baja» si es una versión preliminar
-          según su propia descripción. Es una decisión del autor que debe confirmar el actuario.
+          Baja: valor deducido sin una fuente que lo diga, estimación con supuestos fuertes,
+          convención ilustrativa o fuente no oficial.
         </li>
       </ul>
+
+      <h3>Estado de la lectura de la norma</h3>
+      <p>
+        Las lecturas del motor son dudas de interpretación de la norma y se marcan como decididas,
+        provisionales o pendientes. Es otro concepto: una cifra del BOE tiene confianza alta aunque
+        la lectura que la usa sea provisional. Se describen en el apartado{' '}
+        <InternalLink destino="met-lecturas-titulo">{tituloApartado('met-lecturas')}</InternalLink>.
+      </p>
+
+      <h3>Confianza de las salidas de los modelos</h3>
+      <p>
+        Ninguna proyección lleva confianza alta. Lleva «media» si sus entradas tienen confianza alta
+        o media, si su contraste con una fuente externa está documentado con una tolerancia escrita
+        y si tiene pruebas automáticas; «baja» si falta algo de eso o si el modelo es una versión
+        preliminar. Toda salida es una proyección condicionada a sus supuestos y se lee junto a sus
+        sensibilidades cuando las hay.
+      </p>
 
       <h3>Estado de cada afirmación</h3>
       <p>

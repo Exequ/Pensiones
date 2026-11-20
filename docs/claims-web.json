@@ -1969,9 +1969,9 @@
       ],
       "fetchedAt": "2026-11-16",
       "estado": "pendiente",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "¿Qué prestaciones incluye cada medida de gasto sobre el PIB (Eurostat: vejez y supervivencia de ESSPROS; OCDE: prestaciones monetarias)? Descargar los metadatos de las dos antes de afirmar el perímetro de cada una (docs/DESCARGAS_MANUALES.md).",
-      "notas": "Separada de web-sis-comparabilidad en los Ajustes actuariales 3 (tanda 3, parte C, n.º 68, punto 1; confianza baja del revisor). Antes iba agrupada en una sola pregunta (docs/DECISIONES.md)."
+      "revisionActuarial": "revisada",
+      "notas": "Separada de web-sis-comparabilidad en los Ajustes actuariales 3. Cerrada en la cuarta tanda como «verificada sin perímetro»: el texto no afirma qué incluye cada medida; la descarga de los metadatos sigue anotada en docs/DESCARGAS_MANUALES.md.",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Verificada sin perímetro"
     },
     {
       "id": "web-fin-saldos-diferencia",
@@ -2374,9 +2374,9 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Definir el cociente valor actual de prestaciones / valor actual de cotizaciones por cohorte (mortalidad del INE por sexo; tipo de descuento: crecimiento de la masa salarial, con el bono a diez años como sensibilidad; solo la parte del tipo de contingencias comunes que financia la jubilación) y decidir qué historiales de cotización harían falta (Muestra Continua de Vidas Laborales). La riqueza de pensiones de la OCDE es valor actual entre salario, no entre cotizaciones: no es directamente comparable.",
-      "notas": "Solo el marco, sin cifras: faltan los historiales de cotización (Muestra Continua de Vidas Laborales). Revisión del revisor: confirma el marco, método sin datos, confianza baja."
+      "revisionActuarial": "revisada",
+      "notas": "Solo el marco, sin cifras: faltan los historiales de cotización (Muestra Continua de Vidas Laborales). Revisión del revisor: confirma el marco, método sin datos, confianza baja.",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Texto sin cifras correcto"
     },
     {
       "id": "web-mitos-saldo",
@@ -2587,9 +2587,9 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar en los metadatos de Eurostat y de la OCDE qué incluye cada medida de gasto (prestaciones en especie, Clases Pasivas, no contributivas) y si existe un agregado de gasto en pensiones de Eurostat más adecuado que vejez más supervivencia; ajuste por estructura de edades.",
-      "notas": "La serie de la Unión Europea procede de la tabla eurostat-indicadores (indicador gasto-old-srv, unidad PC_GDP, área EU27). El ajuste por estructura de edades exigiría la población de 65 o más años de cada área (descarga no realizada)."
+      "revisionActuarial": "revisada",
+      "notas": "La serie de la Unión Europea procede de la tabla eurostat-indicadores (indicador gasto-old-srv, unidad PC_GDP, área EU27). El ajuste por estructura de edades exigiría la población de 65 o más años de cada área (descarga no realizada).",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Verificada sin perímetro"
     },
     {
       "id": "web-mitos-ipc",
@@ -2962,7 +2962,7 @@
       "fetchedAt": "2026-11-17",
       "estado": "verificada",
       "revisionActuarial": "no-requiere",
-      "notas": "Contraste de la descripción de la lectura jubilacion.opcion25EnUltimoDia2040 de src/engine/lecturas.ts y de textos-lecturas.ts («un periodo más largo»): con la ventana de la opción (el valor de opcion-25-anos-ventana) y la de la regla general de 2026 (el valor de periodo-calculo-base-reguladora#2026), la opción usa menos meses. La página muestra un texto propio; la discrepancia consta en docs/DISCREPANCIAS.md."
+      "notas": "Contraste de la descripción de la lectura jubilacion.opcion25EnUltimoDia2040 con la ventana de la opción (el valor de opcion-25-anos-ventana) y la de la regla general de 2026 (el valor de periodo-calculo-base-reguladora#2026): la opción usa menos meses. Corregido en los Ajustes actuariales 4: el registro de lecturas, los textos del selector y la página dicen ahora que la opción usa un periodo más corto o igual, con las cifras de /data (src/modules/tu-pension/texto-opcion25.ts); «Cómo se calcula» ya no necesita un texto propio."
     },
     {
       "id": "web-como-ip-calculo",
@@ -3145,9 +3145,9 @@
       ],
       "fetchedAt": "2026-11-17",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "¿Se aplica el límite conjunto del art. 229 TRLGSS (la suma de las pensiones derivadas de una persona fallecida no supera su base reguladora) antes de completar cada pensión con el complemento a mínimos del art. 59, como hace el motor, o el complemento a mínimos se calcula antes de comprobar el límite? Comprobar el orden con el texto de los dos artículos y con la práctica de la Seguridad Social, y medir si cambia el resultado en los casos con varias orfandades.",
-      "notas": "Orden verificado en el código del motor (src/engine/supervivencia/calculo.ts: el límite conjunto se resuelve antes del complemento a mínimos), no en un texto normativo. Pendiente con pregunta reducida."
+      "revisionActuarial": "revisada",
+      "notas": "Orden verificado en el código del motor (src/engine/supervivencia/calculo.ts: el límite conjunto se resuelve antes del complemento a mínimos). Se deduce de los arts. 229.1 y 59.1 TRLGSS; ningún artículo lo fija expresamente (cuarta tanda actuarial, punto 2). El efecto del orden inverso con 3, 4 y 5 orfandades no es nulo (docs/MOTOR_SUPERVIVENCIA.md).",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 2"
     },
     {
       "id": "web-reformas-alcance",
@@ -3446,7 +3446,7 @@
     },
     {
       "id": "web-metodologia-confianza-modelos",
-      "texto": "Las salidas de los modelos M1, M3 y M4 llevan confianza media y las de M2, confianza baja; el criterio es del autor (media si el modelo documenta un contraste externo y pruebas; baja si es una versión preliminar) y está pendiente de confirmación por el actuario.",
+      "texto": "Las salidas de los modelos M1 y M3 llevan confianza media y las de M2 y M4, confianza baja. Ninguna proyección lleva confianza alta; una salida lleva «media» si sus entradas tienen confianza alta o media, si su contraste con una fuente externa está documentado con una tolerancia escrita y si tiene pruebas automáticas, y «baja» si falta algo de eso o el modelo es preliminar. El criterio es profesional, sin una norma que lo fije, y la confianza no expresa una probabilidad de acierto.",
       "ubicacion": "Página «Metodología»: apartados «Qué significa la confianza y la revisión actuarial» y «Los modelos de proyección» (Fase «Metodología»)",
       "datos": [
         "proyecciones/m1-backtest.json#m1-backtest",
@@ -3478,9 +3478,9 @@
       ],
       "fetchedAt": "2026-11-17",
       "estado": "pendiente",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "¿Confirma el criterio con el que se asigna la confianza a las salidas de los modelos (media si el modelo documenta un contraste externo y pruebas; baja si es una versión preliminar) y su aplicación a M1, M2, M3 y M4?",
-      "notas": "Criterio registrado en docs/DECISIONES.md (fases 5-B1 y 5-B2) y en docs/PENDIENTE_DATOS.md como decisión del autor pendiente del actuario. La página lo dice y no lo presenta como definición general."
+      "revisionActuarial": "revisada",
+      "notas": "Criterio de la cuarta revisión actuarial (punto 1), escrito en docs/DECISIONES.md («Criterio de confianza en tres conceptos»). M4 pasa de media a baja: su contraste con el Ageing Report 2024 no tiene una tolerancia escrita y usa salidas de M2 (docs/AUDITORIA_CONFIANZA.md).",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 1"
     }
   ]
 }

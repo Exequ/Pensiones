@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { DataTable } from '../../components/DataTable';
 import { SegmentedPills } from '../../components/SegmentedPills';
 import { SourceLine } from '../../components/SourceLine';
+import { diferenciaAcumuladaMei } from '../../engine/mei-conciliacion';
 import { ComoLeerlo } from '../historico/ComoLeerlo';
 import { datosHucha, type FilaContraste2025 } from '../historico/datos-hucha';
 import { decimal2, entero } from '../historico/formatos';
@@ -77,6 +78,7 @@ export function SeccionContraste() {
     dotacion: m.dotacion,
     diferencia: m.derechos - m.dotacion,
   }));
+  const difMei = diferenciaAcumuladaMei(c.mei);
 
   return (
     <section className="seccion prosa" aria-labelledby={APARTADOS.contraste.destino}>
@@ -156,11 +158,13 @@ export function SeccionContraste() {
           esta página: entre ellas no hay ejercicio común y la ruptura de serie sigue rotulada.
         </p>
         <p>
-          Los derechos reconocidos se contabilizan al nacer el derecho de cobro; las dotaciones al
-          Fondo son una cifra de otra publicación y de otro concepto. Por eso la tabla del Mecanismo
-          de Equidad Intergeneracional enfrenta dos magnitudes distintas: no es un error de una de
-          ellas, y esta página no muestra la recaudación de caja de cada mes porque no figura en las
-          fuentes consultadas.
+          Los derechos reconocidos del Mecanismo de Equidad Intergeneracional y las dotaciones al
+          Fondo con cargo a ese mecanismo no coinciden: la diferencia acumulada es de{' '}
+          {decimal2(difMei.diferencia)} millones de euros en {difMei.desde}-{difMei.hasta}. Los
+          derechos reconocidos se contabilizan al nacer el derecho de cobro; la ley integra en el
+          Fondo lo recaudado, no lo reconocido, y las fuentes consultadas no publican la recaudación
+          mensual que permitiría conciliar las dos cifras. Por eso la tabla enfrenta dos magnitudes
+          distintas: no es un error de una de ellas.
         </p>
       </ComoLeerlo>
     </section>

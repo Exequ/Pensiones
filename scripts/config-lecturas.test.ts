@@ -81,8 +81,9 @@ describe('configuración única de las lecturas abiertas', () => {
     const estados = LECTURAS_ABIERTAS.map((l) => l.estado);
     // Revisión actuarial del 14-11-2026 (Ajustes actuariales 1) y del 16-11-2026 (tanda 3: las lagunas del
     // accidente no laboral pasan de pendiente a provisional).
-    expect(estados.filter((e) => e === 'decidida')).toHaveLength(17);
-    expect(estados.filter((e) => e === 'provisional')).toHaveLength(11);
+    // Cuarta tanda (19-11-2026): el redondeo de la edad de la carencia pasa de provisional a decidida.
+    expect(estados.filter((e) => e === 'decidida')).toHaveLength(18);
+    expect(estados.filter((e) => e === 'provisional')).toHaveLength(10);
     expect(estados.filter((e) => e === 'pendiente')).toHaveLength(1);
     expect(lecturaPorId('jubilacion.salvaguardaDT34')?.estado).toBe('pendiente');
     expect(lecturaPorId('jubilacion.interpolacionIPC')?.estado).toBe('decidida');
@@ -124,7 +125,6 @@ describe('configuración única de las lecturas abiertas', () => {
     ] as const;
     const provisionales = [
       ['incapacidad.computoFiccion', 'meses'],
-      ['incapacidad.redondeoEdadCarencia', 'sin-redondeo'],
       ['incapacidad.diasCotizadosParcial', 'naturales'],
       ['supervivencia.diasCotizados', 'naturales'],
     ] as const;
@@ -152,6 +152,20 @@ describe('configuración única de las lecturas abiertas', () => {
     expect(entradaDeLectura('no-contributivas.limiteConTerceraPersona').motivo).toContain(
       'real decreto de revalorización de 2026',
     );
+  });
+
+  it('cuarta tanda (19-11-2026): el redondeo de la edad de la carencia se decide sin cambiar el valor, y cada provisional cita su norma y su alternativa', () => {
+    const e = entradaDeLectura('incapacidad.redondeoEdadCarencia');
+    expect([e.estado, e.valor, e.fecha]).toEqual(['decidida', 'sin-redondeo', '2026-11-19']);
+    expect(e.motivo).toContain('art. 195.3');
+    const provisionales = LECTURAS_ABIERTAS.filter((l) => l.estado === 'provisional');
+    expect(provisionales).toHaveLength(10);
+    for (const l of provisionales) {
+      expect(l.motivo, l.id).toContain('Cuarta tanda (19-11-2026): sigue provisional.');
+      expect(l.motivo, l.id).toContain('Alternativa visible:');
+      // La alternativa citada existe en el registro (es la que no es por defecto).
+      expect(l.alternativas.filter((a) => a !== l.porDefecto).length, l.id).toBeGreaterThan(0);
+    }
   });
 
   it('el registro de decisiones (docs/DECISIONES_ACTUARIALES.md) lista todas las lecturas y su estado', () => {

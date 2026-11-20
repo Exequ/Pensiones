@@ -22,7 +22,7 @@
     "url": "https://github.com/Exequ/Pensiones/blob/b0b7c31d8443bceb34ff5e4761f0697df8c19de2/modelos/m4/m4_escenarios.py"
   },
   "fetchedAt": "2026-11-15",
-  "confidence": "media",
+  "confidence": "baja",
   "origen": {
     "csv": "data-raw/modelos-salidas/m4/m4_escenarios.csv",
     "sha256": "0a79951da7cd1d9544da0d7d52e987c1ee8a0f5fba3ffb549572734001c44c71",

@@ -1682,8 +1682,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "pendiente",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Definir el cociente valor actual de prestaciones / valor actual de cotizaciones por cohorte (mortalidad del INE por sexo; tipo de descuento: crecimiento de la masa salarial, con el bono a diez años como sensibilidad; solo la parte del tipo de contingencias comunes que financia la jubilación) y decidir qué historiales de cotización harían falta (Muestra Continua de Vidas Laborales). La riqueza de pensiones de la OCDE es valor actual entre salario, no entre cotizaciones: no es directamente comparable."
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Texto sin cifras correcto"
     },
     {
       "id": "mito-sistema-en-deficit",
@@ -1824,8 +1824,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "pendiente",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar en los metadatos de Eurostat y de la OCDE qué incluye cada medida de gasto (prestaciones en especie, Clases Pasivas, no contributivas) y si existe un agregado de gasto en pensiones de Eurostat más adecuado que vejez más supervivencia; ajuste por estructura de edades."
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Verificada sin perímetro"
     },
     {
       "id": "mito-pensiones-siempre-con-el-ipc",
@@ -2443,8 +2443,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "El enlace de 2001 (índice obtenido de las variaciones anuales de 2002 del INE, confianza media) no coincide a siete decimales con los factores de 2001 de los informes del autocálculo de la Seguridad Social (desviación de hasta 0,04 %, efecto de céntimos); desde 2002 sí coinciden. ¿Se sustituyen los meses de 2001 por los índices implícitos de los informes (solo cubren de junio a diciembre) o se mantiene el enlace? El suelo de uno (lectura actualizacionFactorMinimo, provisional) es una decisión de gestión derivada de esos informes, no del art. 209."
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 5"
     },
     {
       "id": "param-base-maxima-incremento-futuro",
@@ -2730,8 +2730,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "(b) «los años que le resten» de la edad ordinaria: ¿meses completos (por defecto) o años completos? (d) Accidente no laboral en alta: el RD 1799/1985, art. 5.4, párr. 2.º, remite a las normas anteriores a la Ley 26/1985 (Decreto 1646/1972, art. 7.1, sin integración de lagunas); confianza actuarial del 60 % en sin-integrar: ¿es firme la lectura frente al art. 5.5 del mismo RD?"
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 7"
     },
     {
       "id": "param-incapacidad-permanente-reglas-carencia",
@@ -2753,8 +2753,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "(a) ¿Sigue aplicándose el redondeo de la edad a medios años del art. 4.1 del RD 1799/1985 con la regla del art. 195 TRLGSS? (por defecto, no: meses cumplidos). (c) El motor toma el hecho causante como fecha de extinción de la incapacidad temporal: es una simplificación que debe quedar escrita."
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 7"
     },
     {
       "id": "param-incapacidad-permanente-reglas-cuantia",
@@ -2941,7 +2941,7 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Decidir qué lectura del apartado 1 de la DT 34.ª es la correcta: (A, por defecto en el motor) comparar con la pensión que habría correspondido con las normas de 2021, calculada con la pensión máxima que solo sube con el IPC (sin el incremento adicional de 0,115 puntos) y reducida un 0,50 % por trimestre; (B) no comparar (equivale a comparar con la pensión máxima nominal de 2021, que nunca actúa). La norma dice que la pensión no ha de resultar «en ningún caso inferior a la que habría correspondido con la aplicación de las normas vigentes en 2021», pero no dice con qué pensión máxima se compara; la exposición de motivos de la Ley 21/2021 (ya en el repo) no lo aclara: falta un criterio del INSS. El motor no calcula 2022-2023 (rige la redacción original del art. 210.3)."
+      "preguntaActuarial": "Qué lectura del apartado 1 de la DT 34.ª aplica la entidad gestora: (A, por defecto) comparar con la pensión de las normas de 2021 calculada con la máxima que solo sube con la revalorización y reducida un 0,50 % por trimestre; (B) comparar con la cuantía de 2021, que no llega a actuar. Ni la norma ni la exposición de motivos de la Ley 21/2021 lo precisan: falta un criterio de la entidad gestora. Mientras tanto, el simulador muestra las dos."
     },
     {
       "id": "param-jubilacion-coeficientes-voluntaria",
@@ -2974,8 +2974,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "En la opción de tanto alzado y en la mixta, ¿la «pensión inicial anual» incluye el porcentaje adicional del 4 % de la parte mixta, limitada a la máxima? El art. 2.1.b del RD 371/2023 solo dice que, si la pensión reconocida supera la máxima, se toma como pensión inicial anual la cuantía de la pensión máxima; la inclusión del 4 % es lectura nuestra."
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Lectura propia rotulada"
     },
     {
       "id": "param-jubilacion-edad-65",
@@ -3022,7 +3022,7 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "(2) ¿Se aplica la DT 41.ª también a la opción de 25 años de la DT 4.ª.7 (que aplica la redacción de 2023 del art. 209) aunque salga menos favorable? (3) ¿Sigue la brecha de la DA 37.ª por encima del 5 % en cada año? El fichero descargado el 2026-11-16 («Brecha de género.pdf») es el recuento de complementos por brecha de género y por maternidad a 1 de octubre de 2026, no la brecha de la DA 37.ª; sigue faltando la brecha publicada por año (DESCARGAS_MANUALES.md)."
+      "preguntaActuarial": "(2) ¿Se aplica la DT 41.ª también a la opción de 25 años de la DT 4.ª.7 (que aplica la redacción de 2023 del art. 209) aunque salga menos favorable? La parte (3) se cerró en la cuarta tanda con la brecha calculada con las altas iniciales de jubilación; la brecha publicada por año sigue sin descargar."
     },
     {
       "id": "param-lagunas-integracion",
@@ -3074,8 +3074,8 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Explicar la diferencia entre los derechos reconocidos del MEI y las dotaciones anuales al Fondo con cargo al MEI (data/sistema/fondo-reserva-series): hipótesis a comprobar: se dota lo recaudado y no los derechos, con desfase de un mes. Los derechos reconocidos de 2024 y 2025 se han contrastado con la liquidación de 2025 y coinciden con la ejecución; sigue faltando la recaudación de caja por mes del MEI, que la liquidación no da."
+      "revisionActuarial": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 6"
     },
     {
       "id": "param-mei-reglas",
@@ -3429,7 +3429,7 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "(d) Art. 363.2: con derecho al complemento de tercera persona, ¿el límite de acumulación de recursos se calcula con el complemento o solo sobre la cuantía íntegra? La guía del IMSERSO lo calcula con el complemento; el texto de la ley no lo dice."
+      "preguntaActuarial": "(d) Con derecho al complemento de tercera persona, ¿el límite de acumulación de recursos se calcula con el complemento o solo sobre la cuantía íntegra? La guía del IMSERSO lo calcula con el complemento; el art. 363.1.d remite al art. 364.1, más cerca de la cuantía sin complemento. Lectura provisional; falta el criterio publicado (real decreto de revalorización o resolución del IMSERSO)."
     },
     {
       "id": "param-prestamos-estado-seguridad-social",
@@ -3594,7 +3594,7 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "(b) La pensión de un excónyuge limitada por la compensatoria, ¿recibe el complemento a mínimos? Falta un criterio del INSS. (c) Confirmar que el apoyo del incremento de familiares es el art. 23.2 de la Orden de 1967 (remite al 17.2, vigente) y no el art. 39 del Decreto 3158/1966."
+      "preguntaActuarial": "(b) La pensión de un excónyuge limitada por la compensatoria, ¿recibe el complemento a mínimos? Falta un criterio del INSS. La parte (c) se cerró en la cuarta tanda (art. 23.2 de la Orden de 1967, que remite al art. 17.2)."
     },
     {
       "id": "param-supervivencia-reglas-limites",
@@ -3619,7 +3619,7 @@
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "pendiente",
-      "preguntaActuarial": "(a) La norma no dice qué pensión se reduce cuando viudedad y orfandad superan la base reguladora: el motor mantiene la viudedad y reduce las orfandades (alternativa proporcional); falta un criterio. (e) El desarrollo reglamentario del art. 226.2 (hijos y hermanos de pensionistas mayores de 45 años) no se ha localizado."
+      "preguntaActuarial": "(e) El desarrollo reglamentario del art. 226.2 (hijos y hermanos de pensionistas mayores de 45 años) no se ha localizado. La parte (a) queda como lectura provisional con su alternativa (cuarta tanda)."
     },
     {
       "id": "param-tipo-cc-empresa",
@@ -5909,9 +5909,9 @@
       ],
       "fetchedAt": "2026-11-16",
       "estado": "pendiente",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "¿Qué prestaciones incluye cada medida de gasto sobre el PIB (Eurostat: vejez y supervivencia de ESSPROS; OCDE: prestaciones monetarias)? Descargar los metadatos de las dos antes de afirmar el perímetro de cada una (docs/DESCARGAS_MANUALES.md).",
-      "notas": "Separada de web-sis-comparabilidad en los Ajustes actuariales 3 (tanda 3, parte C, n.º 68, punto 1; confianza baja del revisor). Antes iba agrupada en una sola pregunta (docs/DECISIONES.md)."
+      "revisionActuarial": "revisada",
+      "notas": "Separada de web-sis-comparabilidad en los Ajustes actuariales 3. Cerrada en la cuarta tanda como «verificada sin perímetro»: el texto no afirma qué incluye cada medida; la descarga de los metadatos sigue anotada en docs/DESCARGAS_MANUALES.md.",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Verificada sin perímetro"
     },
     {
       "id": "web-fin-saldos-diferencia",
@@ -6314,9 +6314,9 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Definir el cociente valor actual de prestaciones / valor actual de cotizaciones por cohorte (mortalidad del INE por sexo; tipo de descuento: crecimiento de la masa salarial, con el bono a diez años como sensibilidad; solo la parte del tipo de contingencias comunes que financia la jubilación) y decidir qué historiales de cotización harían falta (Muestra Continua de Vidas Laborales). La riqueza de pensiones de la OCDE es valor actual entre salario, no entre cotizaciones: no es directamente comparable.",
-      "notas": "Solo el marco, sin cifras: faltan los historiales de cotización (Muestra Continua de Vidas Laborales). Revisión del revisor: confirma el marco, método sin datos, confianza baja."
+      "revisionActuarial": "revisada",
+      "notas": "Solo el marco, sin cifras: faltan los historiales de cotización (Muestra Continua de Vidas Laborales). Revisión del revisor: confirma el marco, método sin datos, confianza baja.",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Texto sin cifras correcto"
     },
     {
       "id": "web-mitos-saldo",
@@ -6527,9 +6527,9 @@
       ],
       "fetchedAt": "2026-11-11",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "Comprobar en los metadatos de Eurostat y de la OCDE qué incluye cada medida de gasto (prestaciones en especie, Clases Pasivas, no contributivas) y si existe un agregado de gasto en pensiones de Eurostat más adecuado que vejez más supervivencia; ajuste por estructura de edades.",
-      "notas": "La serie de la Unión Europea procede de la tabla eurostat-indicadores (indicador gasto-old-srv, unidad PC_GDP, área EU27). El ajuste por estructura de edades exigiría la población de 65 o más años de cada área (descarga no realizada)."
+      "revisionActuarial": "revisada",
+      "notas": "La serie de la Unión Europea procede de la tabla eurostat-indicadores (indicador gasto-old-srv, unidad PC_GDP, área EU27). El ajuste por estructura de edades exigiría la población de 65 o más años de cada área (descarga no realizada).",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Verificada sin perímetro"
     },
     {
       "id": "web-mitos-ipc",
@@ -6902,7 +6902,7 @@
       "fetchedAt": "2026-11-17",
       "estado": "verificada",
       "revisionActuarial": "no-requiere",
-      "notas": "Contraste de la descripción de la lectura jubilacion.opcion25EnUltimoDia2040 de src/engine/lecturas.ts y de textos-lecturas.ts («un periodo más largo»): con la ventana de la opción (el valor de opcion-25-anos-ventana) y la de la regla general de 2026 (el valor de periodo-calculo-base-reguladora#2026), la opción usa menos meses. La página muestra un texto propio; la discrepancia consta en docs/DISCREPANCIAS.md."
+      "notas": "Contraste de la descripción de la lectura jubilacion.opcion25EnUltimoDia2040 con la ventana de la opción (el valor de opcion-25-anos-ventana) y la de la regla general de 2026 (el valor de periodo-calculo-base-reguladora#2026): la opción usa menos meses. Corregido en los Ajustes actuariales 4: el registro de lecturas, los textos del selector y la página dicen ahora que la opción usa un periodo más corto o igual, con las cifras de /data (src/modules/tu-pension/texto-opcion25.ts); «Cómo se calcula» ya no necesita un texto propio."
     },
     {
       "id": "web-como-ip-calculo",
@@ -7085,9 +7085,9 @@
       ],
       "fetchedAt": "2026-11-17",
       "estado": "verificada",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "¿Se aplica el límite conjunto del art. 229 TRLGSS (la suma de las pensiones derivadas de una persona fallecida no supera su base reguladora) antes de completar cada pensión con el complemento a mínimos del art. 59, como hace el motor, o el complemento a mínimos se calcula antes de comprobar el límite? Comprobar el orden con el texto de los dos artículos y con la práctica de la Seguridad Social, y medir si cambia el resultado en los casos con varias orfandades.",
-      "notas": "Orden verificado en el código del motor (src/engine/supervivencia/calculo.ts: el límite conjunto se resuelve antes del complemento a mínimos), no en un texto normativo. Pendiente con pregunta reducida."
+      "revisionActuarial": "revisada",
+      "notas": "Orden verificado en el código del motor (src/engine/supervivencia/calculo.ts: el límite conjunto se resuelve antes del complemento a mínimos). Se deduce de los arts. 229.1 y 59.1 TRLGSS; ningún artículo lo fija expresamente (cuarta tanda actuarial, punto 2). El efecto del orden inverso con 3, 4 y 5 orfandades no es nulo (docs/MOTOR_SUPERVIVENCIA.md).",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 2"
     },
     {
       "id": "web-reformas-alcance",
@@ -7386,7 +7386,7 @@
     },
     {
       "id": "web-metodologia-confianza-modelos",
-      "texto": "Las salidas de los modelos M1, M3 y M4 llevan confianza media y las de M2, confianza baja; el criterio es del autor (media si el modelo documenta un contraste externo y pruebas; baja si es una versión preliminar) y está pendiente de confirmación por el actuario.",
+      "texto": "Las salidas de los modelos M1 y M3 llevan confianza media y las de M2 y M4, confianza baja. Ninguna proyección lleva confianza alta; una salida lleva «media» si sus entradas tienen confianza alta o media, si su contraste con una fuente externa está documentado con una tolerancia escrita y si tiene pruebas automáticas, y «baja» si falta algo de eso o el modelo es preliminar. El criterio es profesional, sin una norma que lo fije, y la confianza no expresa una probabilidad de acierto.",
       "ubicacion": "Página «Metodología»: apartados «Qué significa la confianza y la revisión actuarial» y «Los modelos de proyección» (Fase «Metodología»)",
       "datos": [
         "proyecciones/m1-backtest.json#m1-backtest",
@@ -7418,9 +7418,9 @@
       ],
       "fetchedAt": "2026-11-17",
       "estado": "pendiente",
-      "revisionActuarial": "pendiente",
-      "preguntaActuarial": "¿Confirma el criterio con el que se asigna la confianza a las salidas de los modelos (media si el modelo documenta un contraste externo y pruebas; baja si es una versión preliminar) y su aplicación a M1, M2, M3 y M4?",
-      "notas": "Criterio registrado en docs/DECISIONES.md (fases 5-B1 y 5-B2) y en docs/PENDIENTE_DATOS.md como decisión del autor pendiente del actuario. La página lo dice y no lo presenta como definición general."
+      "revisionActuarial": "revisada",
+      "notas": "Criterio de la cuarta revisión actuarial (punto 1), escrito en docs/DECISIONES.md («Criterio de confianza en tres conceptos»). M4 pasa de media a baja: su contraste con el Ageing Report 2024 no tiene una tolerancia escrita y usa salidas de M2 (docs/AUDITORIA_CONFIANZA.md).",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 1"
     }
   ]
 }

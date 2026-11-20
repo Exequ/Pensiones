@@ -1196,8 +1196,9 @@ describe('registro de afirmaciones (C3): revisión actuarial', () => {
       (c) => (c.revisionActuarial ?? registro.revisionActuarialPorDefecto) === 'pendiente',
     );
     // Tope superior sin cambios (70). El mínimo baja de 18 a 10 porque la tercera tanda de la revisión actuarial
-    // (Ajustes actuariales 3) pasó la mayoría de las afirmaciones a «revisada»: el número de pendientes baja.
-    expect(pendientes.length).toBeGreaterThanOrEqual(10);
+    // (Ajustes actuariales 3) pasó la mayoría de las afirmaciones a «revisada», y de 10 a 5 porque la cuarta
+    // (Ajustes actuariales 4) cerró doce más: quedan nueve.
+    expect(pendientes.length).toBeGreaterThanOrEqual(5);
     expect(pendientes.length).toBeLessThanOrEqual(70);
     for (const c of pendientes) expect(c.preguntaActuarial?.length).toBeGreaterThan(40);
     expect(registro.claims.some((c) => c.revisionActuarial === undefined)).toBe(true);

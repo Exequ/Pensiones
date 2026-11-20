@@ -856,7 +856,7 @@ export function calcularJubilacionConParametros(
         '%',
         REFS_DEMORA.mixta,
         'art. 3 RD 371/2023',
-        `${reparto.aniosPorcentaje} años a porcentaje, ${aniosTA} a tanto alzado (${pagoUnico.toFixed(2)} euros).`,
+        `${reparto.aniosPorcentaje} años a porcentaje, ${aniosTA} a tanto alzado (${pagoUnico.toFixed(2)} euros). Lectura propia: la pensión inicial anual del pago único incluye el porcentaje adicional de la parte mixta, limitada a la máxima; el art. 2.1.b del RD 371/2023 no lo fija.`,
       );
     }
   } else {

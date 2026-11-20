@@ -1,6 +1,7 @@
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
+import { diferenciaAcumuladaMei } from '../../engine/mei-conciliacion';
 import { describe, expect, it } from 'vitest';
 import { formatearNumero } from '../../engine/formato';
 import {
@@ -544,6 +545,14 @@ describe('página «Hucha»: liquidación frente a ejecución (Fase 5-A4)', () =
     expect(f).toHaveLength(2);
     expect(f[1]?.[1]).toBe(formatearNumero(mei[1]?.derechos ?? Number.NaN, { decimales: 2 }));
     expect(t?.closest('section')?.textContent).toMatch(/no atribuye la diferencia a ninguna causa/);
-    expect(s.textContent).toMatch(/no muestra la recaudación de caja de cada mes/);
+    // Ajustes actuariales 4 (n.º 46): diferencia acumulada calculada desde /data (motor,
+    // mei-conciliacion.ts), sin afirmar ningún desfase temporal.
+    const d = diferenciaAcumuladaMei(mei);
+    expect(s.textContent).toContain(
+      `la diferencia acumulada es de ${formatearNumero(d.diferencia, { decimales: 2 })} millones de euros en ${String(d.desde)}-${String(d.hasta)}`,
+    );
+    expect(s.textContent).toMatch(/la ley integra en el\s+Fondo lo recaudado, no lo reconocido/);
+    expect(s.textContent).toMatch(/no publican la\s+recaudación mensual/);
+    expect(s.textContent).not.toMatch(/desfase/);
   });
 });

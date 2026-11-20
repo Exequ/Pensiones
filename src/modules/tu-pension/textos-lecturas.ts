@@ -68,17 +68,17 @@ export const TEXTOS_LECTURAS: Readonly<Record<string, TextoLectura>> = {
   },
   'jubilacion.opcion25EnUltimoDia2040': {
     titulo:
-      'Último día de la ventana en que rige la opción de calcular la base reguladora con un periodo más largo',
+      'Último día en que rige la opción de calcular la base reguladora con la redacción anterior del artículo (disposición transitoria cuarta, apartado séptimo)',
     valores: {
       incluida: {
         etiqueta: 'El último día queda dentro de la opción',
         queCambia:
-          'Quien se jubila ese último día puede calcular la base reguladora con un periodo más largo de los últimos años, y se aplica el resultado más favorable entre ese cálculo y la regla general.',
+          'Quien se jubila ese último día puede calcular la base reguladora con la redacción anterior del artículo: todas las bases de un periodo más corto o igual que el de la regla general, sin descartar ninguna. Se aplica el resultado más favorable entre ese cálculo y la regla general.',
       },
       excluida: {
         etiqueta: 'El último día queda fuera de la opción',
         queCambia:
-          'Quien se jubila ese último día no puede usar el periodo más largo y se le aplica la regla general. Solo afecta a una jubilación en esa fecha exacta.',
+          'Quien se jubila ese último día no puede usar la opción y se le aplica la regla general. Solo afecta a una jubilación en esa fecha exacta.',
       },
     },
   },

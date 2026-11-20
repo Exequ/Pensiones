@@ -3,7 +3,7 @@
  * permanente (ajustes actuariales 1). El motor de incapacidad comparte con la jubilación el contexto
  * (IPC mensual y límites de base y de pensión máxima: `jubilacion/contexto.ts`) y la base reguladora
  * por ventana (`comun/base-reguladora.ts`: lagunas y actualización de las bases). No le afectan la
- * opción de periodo más largo ni la demora, que solo existen en la jubilación.
+ * opción de la DT 4.ª.7 (redacción anterior del art. 209.1) ni la demora, que solo existen en la jubilación.
  *
  * La lista está comprobada contra el código del motor por `scripts/lecturas-jubilacion-incapacidad.test.ts`
  * (qué lecturas lee el motor de incapacidad). En la incapacidad esas lecturas no se pueden cambiar: se
