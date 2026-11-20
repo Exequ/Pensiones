@@ -31,3 +31,8 @@ Rama `feat/ri-interpretaciones`, creada desde `origin/main` (`30f3e7a33a0744de29
 - `npm run build` correcto. Trozo principal `index-*.js`: 280.262 bytes (88.335 comprimidos con `gzip -c`); en `main`, 280.218: +44 bytes. Las cajas y los registros van en los trozos de `/diseno` y de «Metodología».
 - Capturas a 1360 y 390 px de `/diseno` (bloque de las cajas) y del apartado de «Metodología» revisadas: sin desbordes ni errores de consola.
 - Playwright completo en local: 710 en verde y 8 en rojo, **los mismos ocho de `e2e/sitio.spec.ts`** (con `INPUT border-radius 50%` como única causa, también en `/diseno`: la caja nueva no añade ninguna). Spec nuevo `e2e/interpretaciones.spec.ts` (4 pruebas, 1360 y 390 px, con axe) en verde.
+
+## CI y despliegue
+
+- **CI del PR** ([Exequ/Pensiones#54](https://github.com/Exequ/Pensiones/pull/54)): run 141 en verde sobre `4fa24c8b57d7749dbd930fa4afbc2734755138bd` (todo el código de la fase): «Lint, tipos, tests, datos y compilación» e «Interfaz (Playwright)». «Despliegue en GitHub Pages» del PR (run 141), en verde.
+- **Despliegue de `main` tras la fusión** y comprobación de la URL publicada (`/diseno` y `/metodologia` a 1360 y 390 px): constan en el informe final de la sesión (como en R3, R4 y RA).
