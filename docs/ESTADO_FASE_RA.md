@@ -41,3 +41,8 @@ Ninguno cambia. El único cambio en un texto del motor es el detalle del paso `d
 - `npm run build` correcto. Trozo principal `index-*.js`: 280.218 bytes (88.321 comprimidos con `gzip -c`); en `main`, 279.990: +228 bytes.
 - Playwright completo en local: 704 en verde y 8 en rojo, **los mismos ocho de `e2e/sitio.spec.ts`** («sin sombras, degradados, radios > 2 px…» en `/diseno`, `/cotizantes-y-pensionistas`, `/financiacion-y-deficit` y `/hucha`, escritorio y móvil). Spec nuevo `e2e/ajustes-actuariales-4.spec.ts` (8 pruebas, 1360 y 390 px) en verde.
 - Capturas a 1360 y 390 px revisadas: panel de la opción de 25 años en «Tu pensión», lectura en «Cómo se calcula», brecha en «Tipos de pensión», MEI en «La hucha» y confianza en «Metodología». Sin desbordes ni errores de consola.
+
+## CI y despliegue
+
+- **CI del PR** ([Exequ/Pensiones#53](https://github.com/Exequ/Pensiones/pull/53)): run 138 en verde sobre `80eb16d6c88854b1a482eb2633277feda8892010` (todo el código de la fase): «Lint, tipos, tests, datos y compilación» e «Interfaz (Playwright)». «Despliegue en GitHub Pages» del PR (run 138), en verde.
+- **Despliegue de `main` tras la fusión** y comprobación de la URL publicada: constan en el informe final de la sesión (como en R3 y R4).
