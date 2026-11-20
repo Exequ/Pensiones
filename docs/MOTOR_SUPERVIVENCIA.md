@@ -87,6 +87,32 @@ La redacción de 2016 exigía además, en el apartado 1, que los ingresos del so
 
 **Orfandad absoluta (B-59 c)**. El porcentaje de viudedad no asignado (art. 38.1.2.º del Decreto 3158/1966: «el porcentaje de pensión de viudedad que no hubiera sido asignado») incrementa solo la orfandad absoluta, repartido a partes iguales entre los huérfanos con derecho (art. 38.1.4.º). El motor lo hace solo con `orfandadAbsoluta: true`; sin esa opción la orfandad es el 20 % de la base reguladora (test `el porcentaje de incremento solo se suma en la orfandad absoluta`).
 
+## Orden entre el límite conjunto y el complemento a mínimos (Ajustes actuariales 4)
+
+El motor aplica primero el límite conjunto y después el complemento a mínimos. **Se deduce de los arts. 229.1 y 59.1 TRLGSS; ningún artículo lo fija expresamente** (lectura sistemática): el art. 229.1 limita «la suma de las cuantías de las pensiones por muerte y supervivencia» en «la determinación inicial de las expresadas cuantías», y el art. 59.1 reconoce después «los complementos necesarios para alcanzar la cuantía mínima»; el art. 18 de la Orden de 13/02/1967 habla también de la suma de las pensiones de viudedad y orfandad, y el art. 60.1.e suma el complemento de brecha a la cuantía mínima ya reconocida. Textos en `data-raw/boe/trlgss-2015-consolidado.txt` y `data-raw/boe/orden-1967-arts-17-18.txt`.
+
+Efecto del orden, medido sin cambiar el motor (`src/engine/supervivencia/orden-limites.test.ts`): causante en alta por enfermedad común fallecido el 15/03/2026 con base constante desde 2010, cónyuge viudo de menos de 60 años (52 %) y 3, 4 o 5 huérfanos. Orden A: el del motor. Orden B: cada pensión se completa hasta su mínima y después la suma (con los complementos) se limita a la base reguladora reduciendo la orfandad. Suma mensual de viudedad y orfandad (euros por paga, 2026):
+
+| Base mensual | Orfandades | Límite (base reguladora) | Orden A (motor) |  Orden B |     B − A |
+| -----------: | ---------: | -----------------------: | --------------: | -------: | --------: |
+|        1.000 |          3 |                   857,14 |        1.568,90 |   857,14 |   −711,76 |
+|        1.000 |          4 |                   857,14 |        1.855,40 |   857,14 |   −998,26 |
+|        1.000 |          5 |                   857,14 |        2.141,90 |   857,14 | −1.284,76 |
+|        1.200 |          3 |                 1.028,57 |        1.568,90 | 1.028,57 |   −540,33 |
+|        1.200 |          4 |                 1.028,57 |        1.855,40 | 1.028,57 |   −826,83 |
+|        1.200 |          5 |                 1.028,57 |        2.141,90 | 1.028,57 | −1.113,33 |
+|        1.500 |          3 |                 1.285,71 |        1.568,90 | 1.285,71 |   −283,19 |
+|        1.500 |          4 |                 1.285,71 |        1.855,40 | 1.285,71 |   −569,69 |
+|        1.500 |          5 |                 1.285,71 |        2.141,90 | 1.285,71 |   −856,19 |
+|        2.000 |          3 |                 1.714,29 |        1.750,93 | 1.714,29 |    −36,64 |
+|        2.000 |          4 |                 1.714,29 |        2.037,43 | 1.714,29 |   −323,14 |
+|        2.000 |          5 |                 1.714,29 |        2.323,93 | 1.714,29 |   −609,64 |
+|        3.000 |          3 |                 2.571,43 |        2.571,43 | 2.571,43 |      0,00 |
+|        3.000 |          4 |                 2.571,43 |        2.571,43 | 2.571,43 |      0,00 |
+|        3.000 |          5 |                 2.571,43 |        2.769,64 | 2.571,43 |   −198,21 |
+
+**El efecto no es nulo**: con el orden B la suma no supera nunca la base reguladora y, con bases bajas, la mínima de la viudedad ocupa casi todo el límite y deja la orfandad en céntimos; con el orden A, cada pensión limitada se completa después hasta su mínima y la suma puede superar la base reguladora. Solo coinciden cuando, tras el límite, ninguna pensión queda por debajo de su mínima (base de 3.000 euros con tres o cuatro huérfanos). La tabla es de comprobación interna (`docs/`), no de la web.
+
 ## Lecturas abiertas (opciones del motor, `lecturasSupervivencia`)
 
 | Opción                                 | Por defecto              | Alternativa         | Pregunta                                 |
