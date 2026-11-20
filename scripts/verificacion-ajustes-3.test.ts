@@ -60,6 +60,15 @@ interface Fila {
   cambio: string;
 }
 const tabla = (leer('docs/revision-actuarial/aplicacion-tanda3.json') as { filas: Fila[] }).filas;
+/** Cuarta tanda (Ajustes actuariales 4): afirmaciones que cambian de estado después de la tercera. */
+const tanda4 = (
+  leer('docs/revision-actuarial/aplicacion-tanda4.json') as {
+    afirmaciones: { id: string; estado: string; respuestaActuarial?: string }[];
+  }
+).afirmaciones;
+const revisadasT4 = new Map(
+  tanda4.filter((f) => f.estado === 'revisada').map((f) => [f.id, f.respuestaActuarial]),
+);
 const claims = RegistroAfirmaciones.parse(leer('docs/claims.json'));
 
 describe('tabla de aplicación (docs/revision-actuarial/aplicacion-tanda3.json)', () => {
@@ -84,6 +93,15 @@ describe('tabla de aplicación (docs/revision-actuarial/aplicacion-tanda3.json)'
     for (const f of tabla) {
       const c = porId.get(f.id);
       expect(c, `n.º ${f.n}: ${f.id}`).toBeDefined();
+      // Las que la cuarta tanda cerró después llevan su respuesta (Tanda 4) y ninguna pregunta.
+      const t4 = revisadasT4.get(f.id);
+      if (t4 !== undefined) {
+        expect(f.estado, `n.º ${f.n}: ${f.id}`).toBe('pendiente');
+        expect(c?.revisionActuarial, `n.º ${f.n}: ${f.id}`).toBe('revisada');
+        expect(c?.respuestaActuarial, f.id).toBe(t4);
+        expect(c?.preguntaActuarial, f.id).toBeUndefined();
+        continue;
+      }
       expect(c?.revisionActuarial, `n.º ${f.n}: ${f.id}`).toBe(f.estado);
       if (f.estado === 'revisada') {
         expect(c?.respuestaActuarial).toBe(f.respuestaActuarial);
@@ -113,9 +131,13 @@ describe('tabla de aplicación (docs/revision-actuarial/aplicacion-tanda3.json)'
       'web-como-sv-orden-limites',
       'web-metodologia-confianza-modelos',
     ];
+    // Cuarta tanda: salen de la lista las que cerró (docs/revision-actuarial/aplicacion-tanda4.json).
     expect(pendientes.map((c) => c.id).sort()).toEqual(
-      [...tabla.filter((f) => f.estado === 'pendiente').map((f) => f.id), ...web].sort(),
+      [...tabla.filter((f) => f.estado === 'pendiente').map((f) => f.id), ...web]
+        .filter((id) => !revisadasT4.has(id))
+        .sort(),
     );
+    expect(revisadasT4.size).toBe(12);
   });
 
   it('las preguntas pendientes reducidas no repiten las de las respuestas ya aceptadas', () => {

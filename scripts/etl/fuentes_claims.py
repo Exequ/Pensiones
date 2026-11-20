@@ -339,6 +339,20 @@ for _id, _f in APLICACION.items():
         REVISADAS_T3[_id] = _f['respuestaActuarial']
     elif _id in REVISION:
         REVISION[_id] = _f['preguntaReducida']
+# Ajustes actuariales 4: estados de la cuarta tanda (docs/revision-actuarial/aplicacion-tanda4.json, lista
+# «afirmaciones»). Las de /data (destino «claims») y las del catálogo de mitos (destino «mitos») se aplican aquí;
+# las de docs/claims-web.json las escribe scripts/etl/aplicar_tanda4.py en ese fichero y llegan por REVISION_WEB.
+APLICACION_T4 = [f for f in json.load(open(f'{REPO}/docs/revision-actuarial/aplicacion-tanda4.json', encoding='utf-8'))['afirmaciones']
+                 if f['destino'] in ('claims', 'mitos')]
+REVISADAS_T4 = {}
+for _f in APLICACION_T4:
+    if _f['estado'] == 'revisada':
+        REVISION.pop(_f['id'], None)
+        REVISADAS_T3.pop(_f['id'], None)
+        REVISADAS_T4[_f['id']] = _f['respuestaActuarial']
+    else:
+        assert _f['id'] in REVISION, _f['id']
+        REVISION[_f['id']] = _f['preguntaReducida']
 # Afirmaciones de los textos de la web (Fase 3-A): se mantienen a mano en docs/claims-web.json
 _ruta_web = f'{REPO}/docs/claims-web.json'
 # Revisión actuarial declarada en claims-web.json (revisada, rechazada, pendiente o no-requiere): se respeta.
@@ -357,6 +371,10 @@ for c in claims:
     elif c['id'] in REVISADAS_T3:
         c['revisionActuarial'] = 'revisada'
         c['respuestaActuarial'] = REVISADAS_T3[c['id']]
+        c.pop('preguntaActuarial', None)
+    elif c['id'] in REVISADAS_T4:
+        c['revisionActuarial'] = 'revisada'
+        c['respuestaActuarial'] = REVISADAS_T4[c['id']]
         c.pop('preguntaActuarial', None)
     elif c['id'] in REVISION_WEB:
         c['revisionActuarial'] = REVISION_WEB[c['id']]   # la declarada a mano en claims-web.json
@@ -403,6 +421,14 @@ md += ['## Revisadas con la tercera tanda de la revisión actuarial', '',
        'qué se comprobó y qué cambió consta en `docs/ESTADO_AJUSTES_ACTUARIALES_3.md` y en `docs/revision-actuarial/aplicacion-tanda3.json`.', '',
        '| Afirmación | Respuesta actuarial |', '| ---------- | ------------------- |']
 for c in sorted((c for c in claims if c.get('revisionActuarial') == 'revisada' and c.get('respuestaActuarial', '').startswith('Tanda 3')), key=lambda c: c['id']):
+    md.append(f"| `{c['id']}` | {c['respuestaActuarial']} |")
+md.append('')
+# Ajustes actuariales 4: afirmaciones revisadas con la cuarta tanda (de /data, del catálogo y de los textos de la web)
+md += ['## Revisadas con la cuarta tanda de la revisión actuarial', '',
+       'Afirmaciones cerradas en los Ajustes actuariales 4 (respuestas del 19-11-2026, bloque A, `docs/revision-actuarial/respuestas-tanda4-A.md`). '
+       'Qué se comprobó en cada una consta en `docs/revision-actuarial/aplicacion-tanda4.json` y en `docs/ESTADO_FASE_RA.md`.', '',
+       '| Afirmación | Respuesta actuarial |', '| ---------- | ------------------- |']
+for c in sorted((c for c in claims if c.get('revisionActuarial') == 'revisada' and c.get('respuestaActuarial', '').startswith('Tanda 4')), key=lambda c: c['id']):
     md.append(f"| `{c['id']}` | {c['respuestaActuarial']} |")
 md.append('')
 with open(f'{SALIDA}/REVISION_ACTUARIAL.md', 'w', encoding='utf-8') as f:

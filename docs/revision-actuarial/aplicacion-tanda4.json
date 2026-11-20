@@ -1,0 +1,381 @@
+{
+  "version": 1,
+  "descripcion": "Aplicación de la cuarta tanda de revisión actuarial, bloque A (docs/revision-actuarial/respuestas-tanda4-A.md, opinión experta, no fuente). «puntos»: por cada punto, qué se aplica, con qué norma o cálculo se verificó (fichero y ubicación en el repo) y qué no se aplica y por qué. «afirmaciones»: estado de cada afirmación tras la tanda; lo leen scripts/etl/fuentes_claims.py (docs/claims.json) y scripts/etl/aplicar_tanda4.py (docs/claims-web.json y data/mitos/afirmaciones-circulantes.json). Las cifras del revisor no se copian: se recalculan desde /data o no se usan.",
+  "puntos": [
+    {
+      "punto": 1,
+      "tema": "Niveles de confianza (dato, lectura normativa, salidas de modelos)",
+      "aplica": "Criterio escrito en docs/DECISIONES.md («Criterio de confianza en tres conceptos») y descrito en «Metodología» (SeccionConfianza y SeccionModelos, respaldo actualizado). Salidas de modelos: M1 y M3 en media, M2 en baja y M4 de media a baja (data/proyecciones/m4-*.json y su generador). Auditoría del resto de /data en docs/AUDITORIA_CONFIANZA.md.",
+      "verificado": [
+        {
+          "fichero": "modelos/m1/test_m1.py",
+          "ubicacion": "test_contraste_con_ine_dentro_de_tolerancia y test_backtest_total_dentro_de_tolerancia",
+          "que": "tolerancias escritas del contraste de M1 con el INE (población total por debajo del 1 %)"
+        },
+        {
+          "fichero": "modelos/m3/test_m3.py",
+          "ubicacion": "test_contraste_ageing_en_banda",
+          "que": "banda de diez puntos frente al Ageing Report 2024"
+        },
+        {
+          "fichero": "modelos/m4/test_m4.py",
+          "ubicacion": "test_contraste_ageing_tendencia",
+          "que": "solo comprueba la tendencia (índice creciente y por encima de 115 en 2050): sin tolerancia escrita"
+        },
+        {
+          "fichero": "data/proyecciones/m4-financiero.json",
+          "ubicacion": "columnas de entrada (afiliados de M2)",
+          "que": "M4 usa salidas de M2, de confianza baja"
+        }
+      ],
+      "noAplica": "M4 no queda en media aunque el revisor lo aprobara: su contraste externo no tiene tolerancia escrita y usa entradas de confianza baja (manda la verificación). En el resto de /data no hay casos inequívocos fuera de M4: ningún dato por OCR ni de elaboración propia en alta. La serie de préstamos por año de concesión (año inferido, en alta) no se corrige: es del perímetro de los préstamos (bloque B, R13 y R14). Los dudosos quedan listados para Sergio."
+    },
+    {
+      "punto": 2,
+      "tema": "Orden entre el límite conjunto y el complemento a mínimos",
+      "aplica": "Redacción «se deduce de los arts. 229.1 y 59.1; ningún artículo lo fija expresamente» (docs/MOTOR_SUPERVIVENCIA.md). Efecto medido con 3, 4 y 5 orfandades sin cambiar el orden del motor: no es nulo (13 de 15 casos dan menos con el orden inverso).",
+      "verificado": [
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "art. 229.1",
+          "que": "«La suma de las cuantías de las pensiones por muerte y supervivencia no podrá exceder del importe de la base reguladora» y «se aplicará a la determinación inicial»"
+        },
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "art. 59.1",
+          "que": "«los complementos necesarios para alcanzar la cuantía mínima de las pensiones»"
+        },
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "art. 60.3.e",
+          "que": "el complemento de brecha se suma a la cuantía mínima reconocida (el revisor lo cita como art. 60.1.e; en el texto consolidado es la letra e del apartado 3)"
+        },
+        {
+          "fichero": "data-raw/boe/orden-1967-arts-17-18.txt",
+          "ubicacion": "art. 18.1 y 18.2",
+          "que": "límite de la suma de viudedad y orfandad y nuevo cálculo al extinguirse un derecho"
+        },
+        {
+          "fichero": "src/engine/supervivencia/orden-limites.test.ts",
+          "ubicacion": "todo el fichero",
+          "que": "efecto de los dos órdenes con 3, 4 y 5 orfandades y cinco bases"
+        }
+      ],
+      "noAplica": "El orden del motor no cambia (el encargo no lo pide). Que la lectura tenga confianza media-alta es opinión del revisor: no se publica como cifra."
+    },
+    {
+      "punto": 3,
+      "tema": "Opción de 25 años (DT 4.ª.7)",
+      "aplica": "«Periodo más largo» corregido en src/engine/lecturas.ts, src/modules/tu-pension/textos-lecturas.ts y lecturas-jubilacion-en-incapacidad.ts; texto con cifras de /data en src/modules/tu-pension/texto-opcion25.ts (panel de lecturas de «Tu pensión» y «Cómo se calcula»); rótulo del revisor para jubilacion.opcion25EnUltimoDia2040.",
+      "verificado": [
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "DT 4.ª.7",
+          "que": "«aplicará en su integridad lo previsto en el artículo 209.1 en su redacción vigente el día 1 de enero de 2023 cuando dicho cálculo resulte más favorable»; 306 entre 357 en 2041, 312 entre 364 en 2042 y 318 entre 371 en 2043"
+        },
+        {
+          "fichero": "data/parametros/opcion-25-anos-ventana.json, opcion-25-anos-divisor.json, opcion-25-anos-aplicable.json",
+          "ubicacion": "2026 a 2044",
+          "que": "300 meses entre 350 hasta 2040, transición 2041-2043, sin opción en 2044"
+        },
+        {
+          "fichero": "src/engine/jubilacion/opcion25.test.ts",
+          "ubicacion": "todo el fichero",
+          "que": "la opción usa un periodo más corto o igual que el de la regla general en todos los años con opción; motor de 2040 a 2044"
+        }
+      ],
+      "noAplica": "Nada: las cifras de /data coinciden con el texto propuesto. docs/DISCREPANCIAS.md conserva la anotación histórica (el encargo solo permite añadir discrepancias nuevas)."
+    },
+    {
+      "punto": 4,
+      "tema": "Salvaguarda de la DT 34.ª",
+      "aplica": "Sigue pendiente con A por defecto. El motor calcula A y B juntas (src/engine/jubilacion/salvaguarda-dt34.ts); el resultado de «Tu pensión» se da como rango con la frase del revisor en la anticipada voluntaria por encima de la máxima.",
+      "verificado": [
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "DT 34.ª.1",
+          "que": "«absorba completamente el efecto» y «no resulte en ningún caso inferior a la que habría correspondido con la aplicación de las normas vigentes en 2021»"
+        },
+        {
+          "fichero": "data-raw/boe/trlgss-2015-versiones.txt",
+          "ubicacion": "art. 210.3, redacción de 2015",
+          "que": "«reducir el tope máximo de pensión en un 0,50 por ciento por cada trimestre o fracción de trimestre de anticipación»"
+        },
+        {
+          "fichero": "src/engine/jubilacion/casos-oro-motor.test.ts",
+          "ubicacion": "caso de oro 7",
+          "que": "A y B sin cambios"
+        }
+      ],
+      "noAplica": "El formulario de «Tu pensión» solo ofrece la jubilación ordinaria: el rango no puede aparecer hoy en la página (se prueba con la entrada del motor); añadir la modalidad cambiaría el diseño."
+    },
+    {
+      "punto": 5,
+      "tema": "Meses de 2001 del IPC",
+      "aplica": "Se mantiene el enlace actual (variaciones anuales de 2002, IPC290750). Prueba hecha: las variaciones mes a mes de los factores de 2001 de los informes del autocálculo no coinciden con la serie de base 1992.",
+      "verificado": [
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "art. 209.1.d y art. 197.1.a, regla 2.ª",
+          "que": "actualización «de acuerdo con la evolución que haya experimentado el Índice de Precios de Consumo», sin fijar la serie"
+        },
+        {
+          "fichero": "data-raw/ine/ipc-mensual/IPC2401.json",
+          "ubicacion": "2001-06 a 2001-12",
+          "que": "serie de base 1992"
+        },
+        {
+          "fichero": "scripts/ipc-2001-informes.test.ts",
+          "ubicacion": "todo el fichero",
+          "que": "diez variaciones de tres informes: ninguna coincide a siete decimales con IPC2401 (diferencias de más del 1 %); el enlace actual queda por debajo del 0,05 %"
+        }
+      ],
+      "noAplica": "No se usa IPC2401 para 2001: la prueba no se cumple. Descarga del criterio de la Seguridad Social en docs/DESCARGAS_MANUALES.md."
+    },
+    {
+      "punto": 6,
+      "tema": "N.º 44 (brecha de la DA 37.ª) y n.º 46 (MEI)",
+      "aplica": "Brecha calculada en el motor (src/engine/brecha-da37.ts) con las altas iniciales de jubilación y mostrada en «Tipos de pensión» con su fuente. MEI: diferencia acumulada calculada en el motor (src/engine/mei-conciliacion.ts) y texto de «La hucha» reformulado.",
+      "verificado": [
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "DA 37.ª.1 y 37.ª.4",
+          "que": "definición de la brecha («la diferencia entre el importe medio de las pensiones de jubilación contributiva causadas en un año por las mujeres respecto del importe de las pensiones causadas por los hombres»); mantenimiento mientras supere el 5 por ciento; proyecto de ley al bajar de ese umbral"
+        },
+        {
+          "fichero": "data/sistema/altas-bajas-anual-clase-sexo.csv",
+          "ubicacion": "alta-inicial, jubilacion, hombres y mujeres, 2021-2025",
+          "que": "pensión media mensual de las altas iniciales"
+        },
+        {
+          "fichero": "src/engine/brecha-da37.test.ts",
+          "ubicacion": "todo el fichero",
+          "que": "fórmula y valor de 2025 recalculado"
+        },
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "art. 120.2 y art. 118.4",
+          "que": "«El importe que se recaude en concepto de cotización finalista» y «Los ingresos obtenidos de la cotización finalista»"
+        },
+        {
+          "fichero": "data/sistema/liquidacion-ss-2025-contraste.csv y data/sistema/fondo-reserva-series.json",
+          "ubicacion": "MEI 2024 y 2025; dotaciones-mei-anuales",
+          "que": "derechos reconocidos y dotaciones"
+        }
+      ],
+      "noAplica": "No se afirma el desfase de diciembre a enero (hipótesis sin dato). La parte (2) del n.º 44 (DT 41.ª y opción de 25 años) sigue abierta."
+    },
+    {
+      "punto": 7,
+      "tema": "Lecturas provisionales y decidida",
+      "aplica": "Motivo de las diez provisionales con su norma y su alternativa (src/engine/config/lecturas-por-defecto.json); incapacidad.redondeoEdadCarencia pasa a decidida.",
+      "verificado": [
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "art. 209.1.b",
+          "que": "«meses durante los cuales no hubiese existido obligación de cotizar»"
+        },
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "art. 197.1.b y art. 210.1",
+          "que": "«los años que le resten» y la escala «por cada mes adicional de cotización»"
+        },
+        {
+          "fichero": "data-raw/boe/rd-1799-1985.txt",
+          "ubicacion": "art. 5.4, párrafo 2.º, y art. 5.5",
+          "que": "remisión a las normas anteriores a la Ley 26/1985 e integración de lagunas"
+        },
+        {
+          "fichero": "data-raw/boe/decreto-1646-1972.txt",
+          "ubicacion": "art. séptimo, 1",
+          "que": "base del accidente no laboral sin mención de lagunas"
+        },
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "art. 195.2 y art. 195.3",
+          "que": "«mil ochocientos días» y «tiempo transcurrido»"
+        },
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "art. 219.1, art. 220.1 y art. 226.1",
+          "que": "«quinientos días»; la viudedad «se disminuirá hasta alcanzar la cuantía» de la compensatoria; remisión del art. 226.1 al párrafo segundo del art. 219.1"
+        },
+        {
+          "fichero": "data-raw/boe/orden-13-02-1967.txt",
+          "ubicacion": "art. 22.1",
+          "que": "período de cotización de quinientos días salvo accidente de trabajo o enfermedad profesional"
+        },
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "art. 229.3",
+          "que": "excepción con viudedad de más del 52 por ciento"
+        },
+        {
+          "fichero": "data-raw/boe/trlgss-2015-consolidado.txt",
+          "ubicacion": "art. 363.1.d",
+          "que": "«la prestación a que se refiere el apartado 1 del artículo siguiente»"
+        }
+      ],
+      "noAplica": "Ningún valor por defecto cambia. La interfaz ya muestra la alternativa de cada provisional (no se cambia su diseño)."
+    },
+    {
+      "punto": 8,
+      "tema": "Cierre de afirmaciones",
+      "aplica": "Estados de la lista «afirmaciones» de este fichero, que aplican scripts/etl/fuentes_claims.py (docs/claims.json) y scripts/etl/aplicar_tanda4.py (docs/claims-web.json y data/mitos/afirmaciones-circulantes.json).",
+      "verificado": [
+        {
+          "fichero": "src/modules/otros-sistemas/SeccionGasto.tsx, src/modules/mitos-y-realidades/TarjetasComparacion.tsx y TarjetasPersonas.tsx",
+          "ubicacion": "textos visibles",
+          "que": "no afirman perímetro de las medidas de gasto ni ninguna cifra de lo cotizado frente a lo cobrado"
+        }
+      ],
+      "noAplica": "Siguen abiertas la DT 34.ª, supervivencia (b) y (e), la parte (2) del n.º 44, pnc-reglas (d), el recálculo del censo de 2021, la política fiscal constante de la OCDE y la pobreza (dependen de criterios o descargas que no están en el repo)."
+    }
+  ],
+  "afirmaciones": [
+    {
+      "id": "web-como-sv-orden-limites",
+      "destino": "claims-web",
+      "punto": 2,
+      "estado": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 2",
+      "comprobado": "Arts. 229.1 y 59.1 TRLGSS (data-raw/boe/trlgss-2015-consolidado.txt): lectura sistemática; ningún artículo fija el orden. Efecto medido en src/engine/supervivencia/orden-limites.test.ts.",
+      "notas": "Orden verificado en el código del motor (src/engine/supervivencia/calculo.ts: el límite conjunto se resuelve antes del complemento a mínimos). Se deduce de los arts. 229.1 y 59.1 TRLGSS; ningún artículo lo fija expresamente (cuarta tanda actuarial, punto 2). El efecto del orden inverso con 3, 4 y 5 orfandades no es nulo (docs/MOTOR_SUPERVIVENCIA.md)."
+    },
+    {
+      "id": "web-metodologia-confianza-modelos",
+      "destino": "claims-web",
+      "punto": 1,
+      "estado": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 1",
+      "comprobado": "Tolerancias del contraste en modelos/m1/test_m1.py y modelos/m3/test_m3.py; el de M4 (modelos/m4/test_m4.py) solo comprueba la tendencia. Confianza de data/proyecciones: M1 y M3 media, M2 y M4 baja.",
+      "texto": "Las salidas de los modelos M1 y M3 llevan confianza media y las de M2 y M4, confianza baja. Ninguna proyección lleva confianza alta; una salida lleva «media» si sus entradas tienen confianza alta o media, si su contraste con una fuente externa está documentado con una tolerancia escrita y si tiene pruebas automáticas, y «baja» si falta algo de eso o el modelo es preliminar. El criterio es profesional, sin una norma que lo fije, y la confianza no expresa una probabilidad de acierto.",
+      "notas": "Criterio de la cuarta revisión actuarial (punto 1), escrito en docs/DECISIONES.md («Criterio de confianza en tres conceptos»). M4 pasa de media a baja: su contraste con el Ageing Report 2024 no tiene una tolerancia escrita y usa salidas de M2 (docs/AUDITORIA_CONFIANZA.md)."
+    },
+    {
+      "id": "web-sis-perimetro-gasto",
+      "destino": "claims-web",
+      "punto": 8,
+      "estado": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Verificada sin perímetro",
+      "comprobado": "El texto de «Otros sistemas» (SeccionGasto.tsx) no afirma el perímetro de ninguna de las dos medidas: dice que no consta en las fuentes consultadas y no elige ninguna.",
+      "notas": "Separada de web-sis-comparabilidad en los Ajustes actuariales 3. Cerrada en la cuarta tanda como «verificada sin perímetro»: el texto no afirma qué incluye cada medida; la descarga de los metadatos sigue anotada en docs/DESCARGAS_MANUALES.md."
+    },
+    {
+      "id": "web-mitos-gasto-europa",
+      "destino": "claims-web",
+      "mito": "espana-gasta-mas-que-europa",
+      "punto": 8,
+      "estado": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Verificada sin perímetro",
+      "comprobado": "La tarjeta (TarjetasComparacion.tsx) dice que las cuatro medidas tienen perímetros distintos y que el de Eurostat y la OCDE no está verificado: no afirma ningún perímetro."
+    },
+    {
+      "id": "web-mitos-jubilados-marco",
+      "destino": "claims-web",
+      "mito": "jubilados-cobran-mas-de-lo-cotizado",
+      "punto": 8,
+      "estado": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Texto sin cifras correcto",
+      "comprobado": "La tarjeta (TarjetasPersonas.tsx) no contiene ninguna cifra de lo cotizado ni de lo cobrado y describe solo el marco del cálculo."
+    },
+    {
+      "id": "mito-espana-gasta-mas-que-europa",
+      "destino": "mitos",
+      "mito": "espana-gasta-mas-que-europa",
+      "punto": 8,
+      "estado": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Verificada sin perímetro",
+      "comprobado": "Las definiciones del catálogo (data/mitos/afirmaciones-circulantes.json) no afirman qué incluyen las medidas de Eurostat y de la OCDE («su delimitación es la de la OCDE»)."
+    },
+    {
+      "id": "mito-jubilados-cobran-mas-de-lo-cotizado",
+      "destino": "mitos",
+      "mito": "jubilados-cobran-mas-de-lo-cotizado",
+      "punto": 8,
+      "estado": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Texto sin cifras correcto",
+      "comprobado": "El catálogo no da ninguna cifra de lo cotizado frente a lo cobrado y dice que no se puede comparar sin historiales de cotización."
+    },
+    {
+      "id": "param-actualizacion-bases",
+      "destino": "claims",
+      "punto": 5,
+      "estado": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 5",
+      "comprobado": "Art. 209.1.d TRLGSS: «evolución que haya experimentado el Índice de Precios de Consumo», sin fijar la serie. Se mantiene el enlace de 2001 (IPC290750); la prueba con IPC2401 no se cumple (scripts/ipc-2001-informes.test.ts). El suelo de uno sigue como lectura provisional (actualizacionFactorMinimo)."
+    },
+    {
+      "id": "param-jubilacion-demora-reglas",
+      "destino": "claims",
+      "punto": 8,
+      "estado": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 8. Lectura propia rotulada",
+      "comprobado": "RD 371/2023, art. 2.1.b (data-raw/boe/rd-371-2023.txt): «se tomará como pensión inicial anual la cuantía de la pensión máxima»; no fija si el porcentaje adicional de la parte mixta entra en la pensión inicial anual. El paso demora-mixta del motor lo rotula como lectura propia."
+    },
+    {
+      "id": "param-incapacidad-permanente-reglas",
+      "destino": "claims",
+      "punto": 7,
+      "estado": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 7",
+      "comprobado": "(b) Art. 197.1.b («los años que le resten») frente a la escala por meses del art. 210.1: provisional, alternativa años completos. (d) RD 1799/1985, art. 5.4, párr. 2.º, y Decreto 1646/1972, art. 7.1: provisional con las dos lecturas (alternativa: integrar por el art. 5.5)."
+    },
+    {
+      "id": "param-incapacidad-permanente-reglas-carencia",
+      "destino": "claims",
+      "punto": 7,
+      "estado": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 7",
+      "comprobado": "(a) Art. 195.3 TRLGSS, «tiempo transcurrido»: sin redondeo (lectura decidida). (c) La simplificación está escrita: el motor avisa de que toma el hecho causante como fecha de extinción de la incapacidad temporal (src/engine/incapacidad/calculo.ts)."
+    },
+    {
+      "id": "param-mei-destino",
+      "destino": "claims",
+      "punto": 6,
+      "estado": "revisada",
+      "respuestaActuarial": "Tanda 4, parte A, n.º 6",
+      "comprobado": "Art. 120.2 («El importe que se recaude») y art. 118.4 («Los ingresos obtenidos») TRLGSS: la ley integra lo recaudado. «La hucha» muestra la diferencia acumulada entre derechos reconocidos y dotaciones calculada en el motor (src/engine/mei-conciliacion.ts) y no afirma ningún desfase temporal."
+    },
+    {
+      "id": "param-lagunas-integracion-brecha-genero",
+      "destino": "claims",
+      "punto": 6,
+      "estado": "pendiente",
+      "comprobado": "(3) cerrada: la brecha de la DA 37.ª calculada con las altas iniciales de jubilación (src/engine/brecha-da37.ts) supera el 5 % en todos los años de la tabla (2021-2025).",
+      "preguntaReducida": "(2) ¿Se aplica la DT 41.ª también a la opción de 25 años de la DT 4.ª.7 (que aplica la redacción de 2023 del art. 209) aunque salga menos favorable? La parte (3) se cerró en la cuarta tanda con la brecha calculada con las altas iniciales de jubilación; la brecha publicada por año sigue sin descargar."
+    },
+    {
+      "id": "param-supervivencia-reglas-cuantia",
+      "destino": "claims",
+      "punto": 8,
+      "estado": "pendiente",
+      "comprobado": "(c) cerrada: el art. 23.2 de la Orden de 13/02/1967 (data-raw/boe/orden-13-02-1967.txt) remite al «número 2 del artículo 17», que consta en el texto consolidado (data-raw/boe/orden-1967-arts-17-18.txt).",
+      "preguntaReducida": "(b) La pensión de un excónyuge limitada por la compensatoria, ¿recibe el complemento a mínimos? Falta un criterio del INSS. La parte (c) se cerró en la cuarta tanda (art. 23.2 de la Orden de 1967, que remite al art. 17.2)."
+    },
+    {
+      "id": "param-supervivencia-reglas-limites",
+      "destino": "claims",
+      "punto": 7,
+      "estado": "pendiente",
+      "comprobado": "(a) aprobada como provisional (supervivencia.reduccionLimiteConjunto: orfandad; art. 229.3 TRLGSS y art. 18 de la Orden de 1967; alternativa proporcional).",
+      "preguntaReducida": "(e) El desarrollo reglamentario del art. 226.2 (hijos y hermanos de pensionistas mayores de 45 años) no se ha localizado. La parte (a) queda como lectura provisional con su alternativa (cuarta tanda)."
+    },
+    {
+      "id": "param-jubilacion-coeficientes-voluntaria-limite",
+      "destino": "claims",
+      "punto": 4,
+      "estado": "pendiente",
+      "comprobado": "DT 34.ª.1 TRLGSS: la norma no precisa con qué pensión máxima se compara. El motor calcula las dos lecturas y el resultado de la anticipada voluntaria por encima de la máxima se da como rango.",
+      "preguntaReducida": "Qué lectura del apartado 1 de la DT 34.ª aplica la entidad gestora: (A, por defecto) comparar con la pensión de las normas de 2021 calculada con la máxima que solo sube con la revalorización y reducida un 0,50 % por trimestre; (B) comparar con la cuantía de 2021, que no llega a actuar. Ni la norma ni la exposición de motivos de la Ley 21/2021 lo precisan: falta un criterio de la entidad gestora. Mientras tanto, el simulador muestra las dos."
+    },
+    {
+      "id": "param-pnc-reglas",
+      "destino": "claims",
+      "punto": 7,
+      "estado": "pendiente",
+      "comprobado": "Art. 363.1.d TRLGSS remite al art. 364.1; la lectura no-contributivas.limiteConTerceraPersona queda provisional (con complemento, guía del IMSERSO; alternativa sin complemento).",
+      "preguntaReducida": "(d) Con derecho al complemento de tercera persona, ¿el límite de acumulación de recursos se calcula con el complemento o solo sobre la cuantía íntegra? La guía del IMSERSO lo calcula con el complemento; el art. 363.1.d remite al art. 364.1, más cerca de la cuantía sin complemento. Lectura provisional; falta el criterio publicado (real decreto de revalorización o resolución del IMSERSO)."
+    }
+  ]
+}

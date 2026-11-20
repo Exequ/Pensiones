@@ -137,14 +137,28 @@ describe('catálogo de afirmaciones y tarjetas', () => {
         expect(m?.revisionActuarial, `n.º ${f.n}`).toBe('revisada');
       }
     }
-    // Las tres pendientes (21, 25 y 27) conservan su estado en el catálogo.
+    // De las tres pendientes de la tanda 3 (21, 25 y 27), la cuarta tanda cerró la 21 y la 27
+    // (docs/revision-actuarial/aplicacion-tanda4.json); la 25 sigue pendiente en el catálogo.
+    const tanda4 = (
+      JSON.parse(leer('docs/revision-actuarial/aplicacion-tanda4.json')) as {
+        afirmaciones: { mito?: string; estado: string; respuestaActuarial?: string }[];
+      }
+    ).afirmaciones.filter((f) => f.mito !== undefined && f.estado === 'revisada');
+    const cerradasT4 = new Map(tanda4.map((f) => [f.mito, f.respuestaActuarial]));
+    for (const [id, respuesta] of cerradasT4) {
+      const m = catalogo.mitos.find((x) => x.id === id);
+      expect(m?.revisionActuarial, id).toBe('revisada');
+      expect(m?.respuestaActuarial, id).toBe(respuesta);
+    }
     const pendientes = catalogo.mitos.filter((m) => m.revisionActuarial === 'pendiente');
     expect(pendientes.map((m) => m.id).sort()).toEqual(
       filas
         .filter((f) => f.estado === 'pendiente')
         .map((f) => f.id.replace(/^mito-/, ''))
+        .filter((id) => !cerradasT4.has(id))
         .sort(),
     );
+    expect(pendientes.map((m) => m.id)).toEqual(['mayores-en-pobreza']);
   });
 });
 
