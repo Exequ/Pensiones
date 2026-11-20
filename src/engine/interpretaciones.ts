@@ -10,7 +10,11 @@
  * cada caja; la autoría consta en «Metodología») y la atribuida a un estudio o informe publicado.
  */
 import { z } from 'zod';
-import { Dato, type Dato as DatoTipo } from './esquema-datos.ts';
+import {
+  AtribucionPublicacion,
+  ESTADOS_REVISION_INTERPRETACION,
+  type Dato as DatoTipo,
+} from './esquema-datos.ts';
 import { formatearEuros, formatearNumero, formatearPorcentaje } from './formato.ts';
 
 export const TIPOS_INTERPRETACION = ['autor', 'atribuida'] as const;
@@ -37,12 +41,7 @@ export function etiquetaGrado(grado: GradoInterpretacion): string {
   return g.etiqueta;
 }
 
-/** Estado de revisión: se guarda en el registro y se lista en «Metodología»; no se muestra en la caja. */
-export const ESTADOS_REVISION_INTERPRETACION = [
-  'pendiente-de-revision',
-  'revisada',
-  'retirada',
-] as const;
+export { ESTADOS_REVISION_INTERPRETACION };
 export type EstadoRevisionInterpretacion = (typeof ESTADOS_REVISION_INTERPRETACION)[number];
 
 export const FORMATOS_MARCADOR = ['numero', 'euros', 'porcentaje', 'fraccion-porcentaje'] as const;
@@ -84,16 +83,7 @@ export const Criterio = z.strictObject({
 });
 
 /** Atribución de una interpretación a un documento publicado (excepción de fuentes del autor). */
-export const Atribucion = z.strictObject({
-  autores: z.string().trim().min(1),
-  anio: z.number().int().min(1900).max(2100),
-  titulo: z.string().trim().min(1),
-  publicacion: z.string().trim().min(1),
-  /** El Dato de la publicación: url (o DOI), fecha en que el autor la aporta y confianza como máximo media. */
-  dato: Dato,
-  /** Fuente primaria que cita la publicación, como texto (sin descarga). */
-  fuentePrimaria: z.string().trim().min(1).optional(),
-});
+export const Atribucion = AtribucionPublicacion;
 export type Atribucion = z.infer<typeof Atribucion>;
 
 export const Proyeccion = z.strictObject({

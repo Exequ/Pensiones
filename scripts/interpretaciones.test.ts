@@ -215,3 +215,49 @@ describe('términos políticos (scripts/lib/politica.ts)', () => {
     expect(TERMINOS_POLITICOS.length).toBeGreaterThan(30);
   });
 });
+
+describe('categoría «interpretacion» de docs/claims-web.json (esquema de afirmaciones)', () => {
+  const base = {
+    id: 'web-interpretacion-de-prueba',
+    texto: 'Afirmación de prueba.',
+    ubicacion: 'Página de prueba',
+    datos: ['parametros/pension-maxima.json#2026'],
+    fuentes: [{ title: 'Fuente', publisher: 'BOE', url: 'https://www.boe.es/' }],
+    fetchedAt: '2026-11-20',
+    estado: 'pendiente',
+    revisionActuarial: 'no-requiere',
+  };
+  it('admite la categoría con sus campos y la exige completa', async () => {
+    const { Afirmacion } = await import('../src/engine/esquema-datos.ts');
+    const completa = {
+      ...base,
+      categoria: 'interpretacion',
+      interpretacion: 'prueba-valida',
+      datosQueLaSostienen: ['data/parametros/pension-maxima.json#2026'],
+      estadoRevisionInterpretacion: 'pendiente-de-revision',
+    };
+    expect(Afirmacion.safeParse(completa).success).toBe(true);
+    expect(Afirmacion.safeParse({ ...completa, atribucion: ATRIBUCION }).success).toBe(true);
+    expect(Afirmacion.safeParse({ ...completa, datosQueLaSostienen: [] }).success).toBe(false);
+    expect(
+      Afirmacion.safeParse({ ...completa, estadoRevisionInterpretacion: undefined }).success,
+    ).toBe(false);
+    expect(
+      Afirmacion.safeParse({
+        ...completa,
+        atribucion: { ...ATRIBUCION, dato: { ...ATRIBUCION.dato, confidence: 'alta' } },
+      }).success,
+    ).toBe(false);
+    // Los campos de interpretación solo valen en esa categoría; las afirmaciones de siempre no cambian.
+    expect(Afirmacion.safeParse(base).success).toBe(true);
+    expect(Afirmacion.safeParse({ ...base, datosQueLaSostienen: ['motor:x'] }).success).toBe(false);
+  });
+
+  it('docs/claims-web.json no tiene todavía ninguna afirmación de esa categoría', async () => {
+    const { readFileSync } = await import('node:fs');
+    const web = JSON.parse(readFileSync('docs/claims-web.json', 'utf8')) as {
+      claims: { categoria?: string }[];
+    };
+    expect(web.claims.filter((c) => c.categoria === 'interpretacion')).toEqual([]);
+  });
+});

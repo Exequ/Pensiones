@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1, 3-B2, 5-A, 5-C, 3-C2 y Ajustes de M4, «Cómo se calcula», «Reformas» y «Metodología»). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md).",
+  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1, 3-B2, 5-A, 5-C, 3-C2 y Ajustes de M4, «Cómo se calcula», «Reformas» y «Metodología»). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md). Fase RI: una afirmación puede llevar categoria «interpretacion» (lectura de una caja «Interpretación»), con interpretacion (id del registro de src/contenido/interpretaciones), datosQueLaSostienen, estadoRevisionInterpretacion y, si resume una publicación, atribucion; el esquema (src/engine/esquema-datos.ts, Afirmacion) los exige juntos. Hoy no hay ninguna.",
   "claims": [
     {
       "id": "web-tu-pension-base-sugerida",
