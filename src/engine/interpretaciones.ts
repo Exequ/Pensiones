@@ -61,7 +61,10 @@ const Ref = z
   .string()
   .refine(
     (r) => PATRON_REF_DATA.test(r) || PATRON_REF_MOTOR.test(r) || PATRON_REF_MUESTRA.test(r),
-    { error: 'referencia no válida (data/…json#id, motor:nombre o muestra#n)' },
+    {
+      error:
+        'referencia no válida (un dato, una función del motor o una fuente ficticia del laboratorio)',
+    },
   );
 
 const Formato = z.enum(FORMATOS_MARCADOR);

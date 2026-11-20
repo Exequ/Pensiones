@@ -21,6 +21,7 @@ export const APARTADOS = [
   'confianza',
   'lecturas',
   'modelos',
+  'interpretaciones',
   'neutralidad',
   'limites',
   'reproducir',
@@ -302,6 +303,38 @@ export const RESPALDO: Readonly<Record<IdApartado, readonly Respaldo[]>> = {
     },
   ],
   limites: [],
+  interpretaciones: [
+    {
+      fichero: 'docs/INTERPRETACIONES.md',
+      para: 'Qué es una caja «Interpretación», sus dos tipos, sus reglas, el formato del registro y cómo se añade y se revisa una.',
+      contiene: 'Cómo se añade una interpretación',
+    },
+    {
+      fichero: 'src/engine/interpretaciones.ts',
+      para: 'Formato del registro y escala provisional del grado de confianza.',
+      contiene: 'GRADOS_INTERPRETACION',
+    },
+    {
+      fichero: 'scripts/lib/interpretaciones.ts',
+      para: 'Reglas que comprueban las pruebas: criterio de cada valoración, cifras, partidos, proyecciones, datos y atribución.',
+      contiene: 'export function infraccionesDe',
+    },
+    {
+      fichero: 'scripts/lib/politica.ts',
+      para: 'Lista ampliable de términos de partidos, programas, voto y propuestas políticas.',
+      contiene: 'export const PARTIDOS',
+    },
+    {
+      fichero: 'src/components/InterpretationBox.tsx',
+      para: 'Componente de la caja: rótulo, criterios, grado y fuente.',
+      contiene: "ATRIBUTO_INTERPRETACION = 'data-interpretacion'",
+    },
+    {
+      fichero: 'docs/DECISIONES.md',
+      para: 'Decisiones de la fase: autoría, excepción de fuentes y excepción acotada de las pruebas de valoraciones.',
+      contiene: 'Fase RI «Interpretaciones»',
+    },
+  ],
   reproducir: [
     {
       fichero: 'docs/DECISIONES.md',

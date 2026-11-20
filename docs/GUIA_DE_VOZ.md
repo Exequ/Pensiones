@@ -72,3 +72,7 @@ describen qué hay dentro, sin cifras ni valoraciones:
 Los enlaces del menú usan el título corto de cada sección (`tituloNav`). El índice de cada página se
 llama «En esta página» (en «Mitos y realidades», «Afirmaciones») y sus entradas repiten exactamente el
 texto de cada encabezado.
+
+## Cajas «Interpretación» (fase RI)
+
+La guía de voz se aplica también dentro de las cajas «Interpretación», sin exenciones (ni la de «Metodología»). Lo único que cambia dentro de una caja es la lista de términos de valoración: se admiten, pero cada uno lleva su criterio definido debajo del texto (`docs/INTERPRETACIONES.md`). Fuera de las cajas, las pruebas de valoraciones y de veredictos no cambian.
