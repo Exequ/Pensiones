@@ -43,7 +43,12 @@ Ninguno es un duplicado exacto del módulo; sustituirlos obliga a reescribir tex
 
 ## Batería local
 
-<!-- se completa al cierre -->
+- `npm run lint` (ESLint, Prettier, estilos, contraste, `validate:data` con 163 ficheros y `validate:interpretaciones`) en verde.
+- `npx tsc -b --force` (sin caché incremental, con los ficheros de test) sin errores.
+- `npm test`: 166 ficheros y 3.362 pruebas en verde (antes de la fase, 163 y 3.309).
+- `npm run build` correcto. Trozo principal `index-*.js`: 280.729 bytes (88.530 comprimidos con `gzip -c`); en `main`, 280.691 y 88.504: +38 bytes. Trozo de «Financiación y déficit» (`Pagina-*.js`): 40.329 bytes (10.534 comprimidos); en `main`, 23.441 (7.243): crece con las trece definiciones del módulo (se cargan juntas) y el componente. `Formula` sigue en su trozo (`formulas-*.js`, 8.052 bytes), que ahora carga también esta página.
+- Playwright completo en local: 741 en verde y 9 en rojo: **los mismos ocho de `e2e/sitio.spec.ts`** (`INPUT border-radius 50%` de `SegmentedPills`, propio del Chromium local, en `/diseno`, `/cotizantes-y-pensionistas`, `/financiacion-y-deficit` y `/hucha`, escritorio y móvil; ninguna otra causa) y una de `e2e/fuentes.spec.ts`, que esperaba un único «Fuentes» para las tres definiciones del saldo: se actualizó para abrir el de cada definición (sin quitar comprobaciones) y pasa en los dos proyectos. `e2e/financiacion-r7.spec.ts` (8 pruebas, 1360 y 390 px, con axe) en verde; la más lenta tarda 2,9 s (límite: 90 s).
+- Capturas a 1360 y 390 px revisadas: definición del saldo no financiero con su fórmula y leyenda, definición del gasto contributivo con complemento (perímetro y criterio) y «Fuentes» del saldo total abierto con el par de rótulos. Sin desbordes de página.
 
 ## CI y despliegue
 
