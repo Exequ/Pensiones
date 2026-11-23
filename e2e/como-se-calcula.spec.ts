@@ -1,5 +1,9 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
+import {
+  DESTINO_MODALIDADES,
+  ID_MODALIDADES,
+} from '../src/modules/como-se-calcula/anclas-modalidades.ts';
 import { ESQUEMAS } from '../src/modules/como-se-calcula/esquemas.ts';
 import { abrirIndice, esperarPagina, url, vigilar } from './utilidades.ts';
 
@@ -15,7 +19,8 @@ async function abrirPagina(page: Page): Promise<void> {
   await page.goto(url(RUTA));
   await esperarPagina(page);
   await page.waitForLoadState('networkidle');
-  await expect(page.locator('section.como-seccion')).toHaveCount(ESQUEMAS.length);
+  // Una sección por prestación y, tras la jubilación, el apartado de modalidades (Fase R6).
+  await expect(page.locator('section.como-seccion')).toHaveCount(ESQUEMAS.length + 1);
 }
 
 async function abrirTodo(page: Page): Promise<void> {
@@ -47,7 +52,11 @@ test.describe('página «Cómo se calcula»', () => {
     await abrirPagina(page);
     await expect(page.getByRole('heading', { level: 1, name: 'Cómo se calcula' })).toBeVisible();
     const ids = await page.locator('section.como-seccion').evaluateAll((n) => n.map((e) => e.id));
-    expect(ids).toEqual(ESQUEMAS.map((e) => `como-${e.ancla}`));
+    expect(ids).toEqual([
+      'como-jubilacion',
+      ID_MODALIDADES,
+      ...ESQUEMAS.slice(1).map((e) => `como-${e.ancla}`),
+    ]);
     await expect(page.locator('#como-jubilacion figure.grafico').first()).toBeVisible();
     expect(registro.errores, 'errores de consola').toEqual([]);
     expect(registro.externas, 'peticiones a dominios externos').toEqual([]);
@@ -83,7 +92,7 @@ test.describe('página «Cómo se calcula»', () => {
     await abrirPagina(page);
     const indice = await abrirIndice(page);
     const enlaces = indice.getByRole('link');
-    await expect(enlaces).toHaveCount(ESQUEMAS.length + 1);
+    await expect(enlaces).toHaveCount(ESQUEMAS.length + 2);
     await enlaces.first().focus();
     await expect(enlaces.first()).toBeFocused();
     for (let i = 1; i < 3; i++) {
@@ -91,7 +100,8 @@ test.describe('página «Cómo se calcula»', () => {
       await expect(enlaces.nth(i)).toBeFocused();
     }
     await page.keyboard.press('Enter');
-    await expect(page.locator(`#como-${ESQUEMAS[1]!.ancla}-titulo`)).toBeFocused();
+    // Tras «Los términos» y «Jubilación» viene el apartado de modalidades.
+    await expect(page.locator(`#${DESTINO_MODALIDADES}`)).toBeFocused();
     await expect(page).toHaveURL(/#\/como-se-calcula$/);
   });
 

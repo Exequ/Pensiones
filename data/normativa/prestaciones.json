@@ -290,6 +290,141 @@
         "baseReguladora": "La de la jubilación ordinaria (art. 209 y DT 40.ª).",
         "porcentaje": "Porcentaje por años cotizados del art. 210.1 (y DT 9.ª), al que se aplica un coeficiente reductor por cada mes o fracción de mes de anticipación respecto a la edad legal que correspondería al trabajador de haber seguido cotizando hasta cumplirla, según el cuadro del art. 207.2 (48 meses máximo; p. ej. 48 meses: 30,00 % con menos de 38 años y 6 meses cotizados; 28,00 % de 38a6m a <41a6m; 26,00 % de 41a6m a <44a6m; 24,00 % con 44a6m o más; 1 mes: 0,63 / 0,58 / 0,54 / 0,50 %).",
         "formula": "Pensión = min[ BR × %años × (1 − coef. reductor art. 207.2/100) ; pensión máxima × (1 − 0,50 % × nº de trimestres o fracción de anticipación) ]. Los coeficientes se aplican sobre el importe resultante de aplicar a la BR el porcentaje por meses cotizados (art. 210.4).",
+        "formulaEstructurada": {
+          "titulo": "Pensión de la jubilación anticipada por causa no imputable a la persona trabajadora",
+          "alcance": "completa",
+          "ecuaciones": [
+            {
+              "izquierda": {
+                "tipo": "simbolo",
+                "id": "pension-sin-tope"
+              },
+              "derecha": {
+                "tipo": "producto",
+                "factores": [
+                  {
+                    "tipo": "simbolo",
+                    "id": "base-reguladora"
+                  },
+                  {
+                    "tipo": "simbolo",
+                    "id": "porcentaje"
+                  },
+                  {
+                    "tipo": "grupo",
+                    "cuerpo": {
+                      "tipo": "resta",
+                      "minuendo": {
+                        "tipo": "unidad"
+                      },
+                      "sustraendo": {
+                        "tipo": "simbolo",
+                        "id": "coeficiente-reductor"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "izquierda": {
+                "tipo": "simbolo",
+                "id": "tope"
+              },
+              "derecha": {
+                "tipo": "producto",
+                "factores": [
+                  {
+                    "tipo": "simbolo",
+                    "id": "pension-maxima"
+                  },
+                  {
+                    "tipo": "grupo",
+                    "cuerpo": {
+                      "tipo": "resta",
+                      "minuendo": {
+                        "tipo": "unidad"
+                      },
+                      "sustraendo": {
+                        "tipo": "producto",
+                        "factores": [
+                          {
+                            "tipo": "numero",
+                            "ref": {
+                              "fichero": "jubilacion-anticipada-reglas",
+                              "id": "involuntaria-tope-pension-pct-trimestre"
+                            },
+                            "etiqueta": "Reducción del tope de la pensión máxima por cada trimestre o fracción de anticipación",
+                            "como": "porcentaje"
+                          },
+                          {
+                            "tipo": "simbolo",
+                            "id": "trimestres"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "simbolos": [
+            {
+              "id": "pension-sin-tope",
+              "notacion": "Pensión_sin tope",
+              "nombre": "Pensión antes del tope",
+              "significado": "Importe mensual que resulta de aplicar el coeficiente reductor a la pensión calculada con la base reguladora y el porcentaje por años cotizados.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "tope",
+              "notacion": "Tope",
+              "nombre": "Tope de la pensión",
+              "significado": "Pensión máxima reducida por los trimestres de anticipación.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "pension-maxima",
+              "notacion": "Pensión_máx",
+              "nombre": "Pensión máxima",
+              "significado": "Límite de la cuantía inicial de las pensiones del año del hecho causante.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "trimestres",
+              "notacion": "T",
+              "nombre": "Trimestres de anticipación",
+              "significado": "Número de trimestres o fracción de trimestre en que se anticipa la jubilación.",
+              "unidad": "trimestres"
+            },
+            {
+              "id": "base-reguladora",
+              "notacion": "BR",
+              "nombre": "Base reguladora",
+              "significado": "Importe mensual sobre el que se aplica el porcentaje de la pensión.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "porcentaje",
+              "notacion": "P",
+              "nombre": "Porcentaje por cotización",
+              "significado": "Porcentaje de la base reguladora que corresponde a los años cotizados, según la escala de la norma.",
+              "unidad": "% de la base reguladora"
+            },
+            {
+              "id": "coeficiente-reductor",
+              "notacion": "C",
+              "nombre": "Coeficiente reductor",
+              "significado": "Parte de la pensión que se descuenta por anticipar la jubilación, en tanto por uno: depende de los meses o fracción de mes de anticipación y de la cotización acumulada, según el cuadro de la norma.",
+              "unidad": "tanto por uno (el porcentaje del cuadro dividido entre cien)"
+            }
+          ],
+          "notas": [
+            "La pensión es la menor de estas dos cantidades: la pensión antes del tope y el tope.",
+            "El coeficiente reductor se aplica sobre el importe que resulta de aplicar a la base reguladora el porcentaje por meses cotizados."
+          ]
+        },
         "articulos": "arts. 207.2, 209, 210.1 y 210.4 TRLGSS"
       },
       "limites": "Tras aplicar los coeficientes, la pensión no puede superar el tope máximo de pensión reducido en un 0,50 % por cada trimestre o fracción de trimestre de anticipación (art. 210.4); este 0,50 % no se aplica a anticipaciones por arts. 206 y 206 bis (art. 210.5). Límite máximo del art. 57. Complemento a mínimos según art. 59 (la cuantía mínima concreta la fija la LPGE).",
@@ -353,6 +488,79 @@
         "baseReguladora": "La de la jubilación ordinaria (art. 209 y DT 40.ª).",
         "porcentaje": "Porcentaje por años cotizados (art. 210.1, DT 9.ª) reducido por cada mes o fracción de mes de anticipación según el cuadro del art. 208.2 (24 meses: 21,00 % con menos de 38a6m cotizados; 19,00 % de 38a6m a <41a6m; 17,00 % de 41a6m a <44a6m; 13,00 % con 44a6m o más; 1 mes: 3,26 / 3,11 / 2,96 / 2,81 %). Si al acogerse el trabajador percibe el subsidio por desempleo del art. 274 durante al menos 3 meses, se aplican los coeficientes de la jubilación involuntaria (art. 208.3).",
         "formula": "Pensión = BR × %años × (1 − coef. art. 208.2/100). Si BR × %años supera el límite del art. 57, los coeficientes se aplican sobre dicho límite (art. 210.3, párrafo 2.º), con aplicación gradual 2024-2033 según la DT 34.ª. En el caso del art. 208.3, además tope: pensión máxima reducida un 0,50 % por trimestre o fracción de anticipación (art. 210.4).",
+        "formulaEstructurada": {
+          "titulo": "Pensión de la jubilación anticipada por voluntad de la persona",
+          "alcance": "completa",
+          "ecuaciones": [
+            {
+              "izquierda": {
+                "tipo": "simbolo",
+                "id": "pension"
+              },
+              "derecha": {
+                "tipo": "producto",
+                "factores": [
+                  {
+                    "tipo": "simbolo",
+                    "id": "base-reguladora"
+                  },
+                  {
+                    "tipo": "simbolo",
+                    "id": "porcentaje"
+                  },
+                  {
+                    "tipo": "grupo",
+                    "cuerpo": {
+                      "tipo": "resta",
+                      "minuendo": {
+                        "tipo": "unidad"
+                      },
+                      "sustraendo": {
+                        "tipo": "simbolo",
+                        "id": "coeficiente-reductor"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "simbolos": [
+            {
+              "id": "pension",
+              "notacion": "Pensión",
+              "nombre": "Cuantía de la pensión",
+              "significado": "Importe mensual de la pensión de jubilación anticipada voluntaria que resulta de reducir la pensión con el coeficiente.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "base-reguladora",
+              "notacion": "BR",
+              "nombre": "Base reguladora",
+              "significado": "Importe mensual sobre el que se aplica el porcentaje de la pensión.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "porcentaje",
+              "notacion": "P",
+              "nombre": "Porcentaje por cotización",
+              "significado": "Porcentaje de la base reguladora que corresponde a los años cotizados, según la escala de la norma.",
+              "unidad": "% de la base reguladora"
+            },
+            {
+              "id": "coeficiente-reductor",
+              "notacion": "C",
+              "nombre": "Coeficiente reductor",
+              "significado": "Parte de la pensión que se descuenta por anticipar la jubilación, en tanto por uno: depende de los meses o fracción de mes de anticipación y de la cotización acumulada, según el cuadro de la norma.",
+              "unidad": "tanto por uno (el porcentaje del cuadro dividido entre cien)"
+            }
+          ],
+          "notas": [
+            "El coeficiente reductor se aplica sobre el importe que resulta de aplicar a la base reguladora el porcentaje por años cotizados.",
+            "Si ese importe supera el límite de la pensión máxima, los coeficientes se aplican sobre el límite, con una aplicación gradual que fija una disposición transitoria.",
+            "En determinados supuestos que prevé la norma rige además un tope de la pensión máxima reducida por cada trimestre o fracción de anticipación."
+          ]
+        },
         "articulos": "arts. 208.2, 208.3, 210.3, 210.4 TRLGSS; DT 34.ª TRLGSS"
       },
       "limites": "Límite máximo del art. 57. No cabe complemento a mínimos en la práctica de acceso, ya que la pensión debe superar la mínima a los 65 años (art. 208.1.c). Coeficiente del 0,50 % por trimestre (art. 210.4) solo en el supuesto del art. 208.3.",
@@ -416,6 +624,313 @@
         "baseReguladora": "La de la jubilación ordinaria (art. 209).",
         "porcentaje": "a) Porcentaje adicional: 4 % por cada año completo cotizado tras la edad ordinaria; a partir del segundo año completo, 2 % por periodos de más de 6 meses y menos de un año. Se suma al porcentaje por años cotizados (art. 210.1) y puede superar el 100 %, con el límite del art. 57; si la pensión alcanza el límite, se abona anualmente una cantidad = pensión máxima × porcentaje adicional no utilizado (redondeada a la unidad más próxima por exceso), en 14 pagas, sin que pensión + cantidad superen en cómputo anual el tope máximo de la base de cotización. b) Cantidad a tanto alzado por cada año completo de demora (0,5 veces la cuantía por periodos de más de 6 meses y menos de un año a partir del segundo año). c) Opción mixta (RD 371/2023, art. 3, redacción desde 28/08/2026): con entre 2 y 8 años y 6 meses cotizados tras la edad ordinaria, los años completos se dividen en dos partes: por la parte entera, 4 % adicional; por los años restantes, cantidad a tanto alzado; un semestre completo se computa en la cantidad a tanto alzado (×0,5). Con 9 o más años: cantidad a tanto alzado por 5 años + 4 % adicional por cada uno de los años restantes (2 % por semestre completo).",
         "formula": "Tanto alzado por año completo de demora: Pago único = 800 × (Pensión inicial anual / 500)^(1/1,65) si se han cotizado menos de 44 años y 6 meses; Pago único = 880 × (Pensión inicial anual / 500)^(1/1,65) si se han cotizado al menos 44 años y 6 meses (cifra anterior +10 %). Complemento total = Pago único × nº de años completos de demora (+ 0,5 × Pago único por un periodo de más de 6 meses e inferior a un año, desde el 2.º año). Si la pensión supera el límite del art. 57, se toma como pensión inicial anual la pensión máxima (art. 2.1.b RD 371/2023). Porcentaje adicional: Pensión = BR × (%años + 4 % × años de demora [+2 % por fracción > 6 meses desde el 2.º año]) ≤ pensión máxima.",
+        "formulaEstructurada": {
+          "titulo": "Complemento por demora: porcentaje adicional y pago único",
+          "alcance": "completa",
+          "ecuaciones": [
+            {
+              "izquierda": {
+                "tipo": "simbolo",
+                "id": "pension-adicional"
+              },
+              "derecha": {
+                "tipo": "producto",
+                "factores": [
+                  {
+                    "tipo": "simbolo",
+                    "id": "base-reguladora"
+                  },
+                  {
+                    "tipo": "grupo",
+                    "cuerpo": {
+                      "tipo": "suma",
+                      "terminos": [
+                        {
+                          "tipo": "simbolo",
+                          "id": "porcentaje"
+                        },
+                        {
+                          "tipo": "producto",
+                          "factores": [
+                            {
+                              "tipo": "simbolo",
+                              "id": "anios-demora"
+                            },
+                            {
+                              "tipo": "numero",
+                              "ref": {
+                                "fichero": "jubilacion-demora-reglas",
+                                "id": "porcentaje-adicional-anual"
+                              },
+                              "etiqueta": "Porcentaje adicional de la base reguladora por cada año completo de demora",
+                              "como": "porcentaje"
+                            }
+                          ]
+                        },
+                        {
+                          "tipo": "producto",
+                          "factores": [
+                            {
+                              "tipo": "simbolo",
+                              "id": "fraccion"
+                            },
+                            {
+                              "tipo": "numero",
+                              "ref": {
+                                "fichero": "jubilacion-demora-reglas",
+                                "id": "porcentaje-adicional-semestre"
+                              },
+                              "etiqueta": "Porcentaje adicional por la fracción de año que se computa",
+                              "como": "porcentaje"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "izquierda": {
+                "tipo": "simbolo",
+                "id": "pago-unico-inferior"
+              },
+              "derecha": {
+                "tipo": "producto",
+                "factores": [
+                  {
+                    "tipo": "numero",
+                    "ref": {
+                      "fichero": "jubilacion-demora-reglas",
+                      "id": "tanto-alzado-base-menos-44-6"
+                    },
+                    "etiqueta": "Importe base del pago único con cotización inferior al umbral, en euros"
+                  },
+                  {
+                    "tipo": "potencia",
+                    "base": {
+                      "tipo": "grupo",
+                      "cuerpo": {
+                        "tipo": "cociente",
+                        "numerador": {
+                          "tipo": "simbolo",
+                          "id": "pension-inicial"
+                        },
+                        "denominador": {
+                          "tipo": "numero",
+                          "ref": {
+                            "fichero": "jubilacion-demora-reglas",
+                            "id": "tanto-alzado-divisor-pension"
+                          },
+                          "etiqueta": "Divisor de la pensión inicial anual en la fórmula del pago único, en euros"
+                        }
+                      }
+                    },
+                    "exponente": {
+                      "tipo": "cociente",
+                      "numerador": {
+                        "tipo": "unidad"
+                      },
+                      "denominador": {
+                        "tipo": "numero",
+                        "ref": {
+                          "fichero": "jubilacion-demora-reglas",
+                          "id": "tanto-alzado-exponente-divisor"
+                        },
+                        "etiqueta": "Divisor del exponente de la fórmula del pago único"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "izquierda": {
+                "tipo": "simbolo",
+                "id": "pago-unico-superior"
+              },
+              "derecha": {
+                "tipo": "producto",
+                "factores": [
+                  {
+                    "tipo": "numero",
+                    "ref": {
+                      "fichero": "jubilacion-demora-reglas",
+                      "id": "tanto-alzado-base-44-6-o-mas"
+                    },
+                    "etiqueta": "Importe base del pago único con cotización igual o superior al umbral, en euros"
+                  },
+                  {
+                    "tipo": "potencia",
+                    "base": {
+                      "tipo": "grupo",
+                      "cuerpo": {
+                        "tipo": "cociente",
+                        "numerador": {
+                          "tipo": "simbolo",
+                          "id": "pension-inicial"
+                        },
+                        "denominador": {
+                          "tipo": "numero",
+                          "ref": {
+                            "fichero": "jubilacion-demora-reglas",
+                            "id": "tanto-alzado-divisor-pension"
+                          },
+                          "etiqueta": "Divisor de la pensión inicial anual en la fórmula del pago único, en euros"
+                        }
+                      }
+                    },
+                    "exponente": {
+                      "tipo": "cociente",
+                      "numerador": {
+                        "tipo": "unidad"
+                      },
+                      "denominador": {
+                        "tipo": "numero",
+                        "ref": {
+                          "fichero": "jubilacion-demora-reglas",
+                          "id": "tanto-alzado-exponente-divisor"
+                        },
+                        "etiqueta": "Divisor del exponente de la fórmula del pago único"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "izquierda": {
+                "tipo": "simbolo",
+                "id": "complemento"
+              },
+              "derecha": {
+                "tipo": "producto",
+                "factores": [
+                  {
+                    "tipo": "simbolo",
+                    "id": "pago-unico"
+                  },
+                  {
+                    "tipo": "grupo",
+                    "cuerpo": {
+                      "tipo": "suma",
+                      "terminos": [
+                        {
+                          "tipo": "simbolo",
+                          "id": "anios-demora"
+                        },
+                        {
+                          "tipo": "producto",
+                          "factores": [
+                            {
+                              "tipo": "numero",
+                              "ref": {
+                                "fichero": "jubilacion-demora-reglas",
+                                "id": "tanto-alzado-factor-semestre"
+                              },
+                              "etiqueta": "Parte del pago único que corresponde a la fracción de año que se computa"
+                            },
+                            {
+                              "tipo": "simbolo",
+                              "id": "fraccion"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "simbolos": [
+            {
+              "id": "pension-adicional",
+              "notacion": "Pensión",
+              "nombre": "Pensión con porcentaje adicional",
+              "significado": "Importe mensual de la pensión cuando el complemento por demora se abona como porcentaje adicional.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "base-reguladora",
+              "notacion": "BR",
+              "nombre": "Base reguladora",
+              "significado": "Importe mensual sobre el que se aplica el porcentaje de la pensión.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "porcentaje",
+              "notacion": "P",
+              "nombre": "Porcentaje por cotización",
+              "significado": "Porcentaje de la base reguladora que corresponde a los años cotizados, según la escala de la norma.",
+              "unidad": "% de la base reguladora"
+            },
+            {
+              "id": "anios-demora",
+              "notacion": "A",
+              "nombre": "Años completos de demora",
+              "significado": "Años completos cotizados entre el cumplimiento de la edad ordinaria y el hecho causante.",
+              "unidad": "años"
+            },
+            {
+              "id": "fraccion",
+              "notacion": "F",
+              "nombre": "Fracción de año computable",
+              "significado": "Uno si hay una fracción de año de demora que la norma computa y cero en caso contrario.",
+              "unidad": "indicador"
+            },
+            {
+              "id": "pago-unico-inferior",
+              "notacion": "PU_inf",
+              "nombre": "Pago único por año, cotización inferior al umbral",
+              "significado": "Importe a tanto alzado por cada año completo de demora cuando la cotización acumulada es inferior al umbral de la leyenda de cifras.",
+              "unidad": "euros"
+            },
+            {
+              "id": "pago-unico-superior",
+              "notacion": "PU_sup",
+              "nombre": "Pago único por año, cotización igual o superior al umbral",
+              "significado": "Importe a tanto alzado por cada año completo de demora cuando la cotización acumulada alcanza o supera el umbral de la leyenda de cifras.",
+              "unidad": "euros"
+            },
+            {
+              "id": "pension-inicial",
+              "notacion": "Pensión_inicial",
+              "nombre": "Pensión inicial anual",
+              "significado": "Pensión inicial anual sin el complemento por demora; si la pensión supera el límite de la pensión máxima, se toma como pensión inicial anual la pensión máxima.",
+              "unidad": "euros al año"
+            },
+            {
+              "id": "pago-unico",
+              "notacion": "PU",
+              "nombre": "Pago único por año",
+              "significado": "El pago único por año completo que corresponda de los dos anteriores, según la cotización acumulada.",
+              "unidad": "euros"
+            },
+            {
+              "id": "complemento",
+              "notacion": "Complemento",
+              "nombre": "Complemento total por demora",
+              "significado": "Cantidad total a tanto alzado por la demora.",
+              "unidad": "euros"
+            }
+          ],
+          "cifrasAuxiliares": [
+            {
+              "ref": {
+                "fichero": "jubilacion-demora-reglas",
+                "id": "tanto-alzado-umbral-cotizacion-meses"
+              },
+              "etiqueta": "Cotización acumulada que separa los dos importes del pago único",
+              "como": "duracion"
+            }
+          ],
+          "notas": [
+            "El porcentaje adicional y el pago único son dos formas de abonar el complemento; la norma admite también combinarlas.",
+            "Con el porcentaje adicional, la pensión no puede superar la pensión máxima."
+          ]
+        },
         "articulos": "art. 210.2 TRLGSS; arts. 2, 3 y 5 RD 371/2023"
       },
       "limites": "Porcentaje adicional: pensión no superior al límite del art. 57; exceso compensado con cantidad anual, con tope de la base máxima de cotización en cómputo anual. Tanto alzado: si la pensión supera el límite del art. 57 se usa la pensión máxima como pensión inicial anual; en concurrencia de pensiones, la pensión ya minorada.",
@@ -634,6 +1149,68 @@
         "baseReguladora": "La de la pensión de jubilación según las normas generales (art. 209 TRLGSS); en pluriempleo solo las bases del trabajo objeto de reducción (art. 12.3 RD 1131/2002).",
         "porcentaje": "Se aplica el porcentaje de reducción de jornada al importe de pensión que correspondería según los años cotizados; antes de la edad ordinaria no se aplican coeficientes reductores por edad (art. 12.1 RD 1131/2002).",
         "formula": "Pensión parcial = (BR × % por años cotizados) × % de reducción de jornada; mínimo: % de reducción de jornada × pensión mínima vigente para jubilados mayores de 65 años según circunstancias familiares (art. 12.1 RD 1131/2002).",
+        "formulaEstructurada": {
+          "titulo": "Pensión de la jubilación parcial",
+          "alcance": "parcial",
+          "ecuaciones": [
+            {
+              "izquierda": {
+                "tipo": "simbolo",
+                "id": "pension-parcial"
+              },
+              "derecha": {
+                "tipo": "producto",
+                "factores": [
+                  {
+                    "tipo": "simbolo",
+                    "id": "base-reguladora"
+                  },
+                  {
+                    "tipo": "simbolo",
+                    "id": "porcentaje"
+                  },
+                  {
+                    "tipo": "simbolo",
+                    "id": "reduccion-jornada"
+                  }
+                ]
+              }
+            }
+          ],
+          "simbolos": [
+            {
+              "id": "pension-parcial",
+              "notacion": "Pensión_parcial",
+              "nombre": "Pensión de la jubilación parcial",
+              "significado": "Importe mensual de la pensión mientras dura la jubilación parcial, antes de aplicar la pensión mínima de esta modalidad.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "base-reguladora",
+              "notacion": "BR",
+              "nombre": "Base reguladora",
+              "significado": "Importe mensual sobre el que se aplica el porcentaje de la pensión.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "porcentaje",
+              "notacion": "P",
+              "nombre": "Porcentaje por cotización",
+              "significado": "Porcentaje de la base reguladora que corresponde a los años cotizados, según la escala de la norma.",
+              "unidad": "% de la base reguladora"
+            },
+            {
+              "id": "reduccion-jornada",
+              "notacion": "J",
+              "nombre": "Reducción de jornada",
+              "significado": "Reducción de la jornada de la persona, en tanto por uno de la jornada completa.",
+              "unidad": "tanto por uno de la jornada"
+            }
+          ],
+          "notas": [
+            "La norma fija además una pensión mínima proporcional a la reducción de jornada."
+          ]
+        },
         "articulos": "art. 215 TRLGSS; art. 12 RD 1131/2002"
       },
       "limites": "No da derecho al complemento por demora (art. 210.2) ni al complemento de brecha de género hasta el acceso a la jubilación plena (art. 60.4).",

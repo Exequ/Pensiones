@@ -229,3 +229,44 @@ export const N = {
   rd900_3: 'rd900-3',
   rd371_2: 'rd371-2',
 } as const;
+
+/**
+ * Cómo se reconoce la norma de una ubicación («art. 31 Decreto 3158/1966») y de qué fichero de
+ * `data/parametros` se toma su fuente (título, organismo, URL, fecha de descarga y confianza). Solo
+ * identificadores y patrones: la fuente sale del primer dato del fichero cuyo título la nombra.
+ */
+export interface FuenteDeNorma {
+  /** Nombre de la norma tal como aparece en una ubicación. */
+  readonly patron: RegExp;
+  /** Fichero de `data/parametros` (sin extensión) con un dato de esa fuente. */
+  readonly fichero: string;
+  /** Texto que identifica el título de la fuente dentro de ese fichero. */
+  readonly titulo: RegExp;
+}
+
+export const FUENTES_DE_NORMA: readonly FuenteDeNorma[] = [
+  {
+    patron: /Decreto 3158\/1966/,
+    fichero: 'incapacidad-permanente-reglas',
+    titulo: /3158\/1966/,
+  },
+  {
+    patron: /Decreto 1646\/1972/,
+    fichero: 'incapacidad-permanente-reglas',
+    titulo: /1646\/1972/,
+  },
+  {
+    patron: /Orden de 15\/04\/1969/,
+    fichero: 'incapacidad-permanente-reglas',
+    titulo: /15 de abril de 1969/,
+  },
+  { patron: /RD 1799\/1985/, fichero: 'incapacidad-permanente-reglas', titulo: /1799\/1985/ },
+  { patron: /RD 900\/2018/, fichero: 'supervivencia-reglas', titulo: /900\/2018/ },
+  { patron: /RD 371\/2023/, fichero: 'jubilacion-demora-reglas', titulo: /371\/2023/ },
+  { patron: /Ley 21\/2021/, fichero: 'jubilacion-demora-reglas', titulo: /21\/2021/ },
+  {
+    patron: /TRLGSS/,
+    fichero: 'jubilacion-coeficientes-voluntaria',
+    titulo: /texto refundido de la Ley General de la Seguridad Social/,
+  },
+];

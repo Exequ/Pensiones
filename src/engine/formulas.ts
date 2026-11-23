@@ -11,7 +11,7 @@ import type {
   RefParametro,
   SimboloFormula,
 } from './esquema-datos.ts';
-import { formatearNumero, formatearPorcentaje } from './formato.ts';
+import { formatearDuracion, formatearNumero, formatearPorcentaje } from './formato.ts';
 
 /** Dato numérico al que apunta una referencia. */
 export interface ValorReferencia {
@@ -30,6 +30,8 @@ export type NodoMath =
   | { readonly tipo: 'numero'; readonly texto: string }
   | { readonly tipo: 'suma'; readonly terminos: readonly NodoMath[] }
   | { readonly tipo: 'producto'; readonly factores: readonly NodoMath[] }
+  | { readonly tipo: 'resta'; readonly minuendo: NodoMath; readonly sustraendo: NodoMath }
+  | { readonly tipo: 'potencia'; readonly base: NodoMath; readonly exponente: NodoMath }
   | { readonly tipo: 'cociente'; readonly numerador: NodoMath; readonly denominador: NodoMath }
   | {
       readonly tipo: 'sumatorio';
@@ -81,11 +83,16 @@ function hijos(expr: ExprFormula): readonly ExprFormula[] {
     case 'simbolo':
       return expr.subindice ? [expr.subindice] : [];
     case 'numero':
+    case 'unidad':
       return [];
     case 'suma':
       return expr.terminos;
     case 'producto':
       return expr.factores;
+    case 'resta':
+      return [expr.minuendo, expr.sustraendo];
+    case 'potencia':
+      return [expr.base, expr.exponente];
     case 'cociente':
       return [expr.numerador, expr.denominador];
     case 'sumatorio':
@@ -122,11 +129,22 @@ export function simbolosUsados(f: FormulaEstructurada): string[] {
 /** Referencias a datos de la fórmula, en orden de aparición y sin repetir. */
 export function referenciasUsadas(f: FormulaEstructurada): ExprNumero[] {
   const vistas: ExprNumero[] = [];
+  const anotar = (e: ExprNumero) => {
+    if (!vistas.some((v) => v.ref.fichero === e.ref.fichero && v.ref.id === e.ref.id))
+      vistas.push(e);
+  };
   for (const expr of expresionesDe(f)) {
     recorrer(expr, (e) => {
-      if (e.tipo !== 'numero') return;
-      if (!vistas.some((v) => v.ref.fichero === e.ref.fichero && v.ref.id === e.ref.id))
-        vistas.push(e);
+      if (e.tipo === 'numero') anotar(e);
+    });
+  }
+  // Las cifras auxiliares se tratan como cifras de la fórmula: se muestran en la leyenda de cifras.
+  for (const a of f.cifrasAuxiliares ?? []) {
+    anotar({
+      tipo: 'numero',
+      ref: a.ref,
+      etiqueta: a.etiqueta,
+      ...(a.como === undefined ? {} : { como: a.como }),
     });
   }
   return vistas;
@@ -177,9 +195,9 @@ function capitalizar(texto: string): string {
 }
 
 function textoCifra(e: ExprNumero, v: ValorReferencia): string {
-  return e.como === 'porcentaje'
-    ? formatearPorcentaje(v.valor / 100, { maxDecimales: 2 })
-    : formatearNumero(v.valor);
+  if (e.como === 'porcentaje') return formatearPorcentaje(v.valor / 100, { maxDecimales: 2 });
+  if (e.como === 'duracion') return formatearDuracion(v.valor);
+  return formatearNumero(v.valor);
 }
 
 /**
@@ -220,10 +238,16 @@ export function resolverFormula(
         };
       case 'numero':
         return { tipo: 'numero', texto: textoCifra(e, valor(e)) };
+      case 'unidad':
+        return { tipo: 'numero', texto: formatearNumero(1) };
       case 'suma':
         return { tipo: 'suma', terminos: e.terminos.map(nodo) };
       case 'producto':
         return { tipo: 'producto', factores: e.factores.map(nodo) };
+      case 'resta':
+        return { tipo: 'resta', minuendo: nodo(e.minuendo), sustraendo: nodo(e.sustraendo) };
+      case 'potencia':
+        return { tipo: 'potencia', base: nodo(e.base), exponente: nodo(e.exponente) };
       case 'cociente':
         return { tipo: 'cociente', numerador: nodo(e.numerador), denominador: nodo(e.denominador) };
       case 'sumatorio':
@@ -253,10 +277,16 @@ export function resolverFormula(
       }
       case 'numero':
         return textoCifra(e, valor(e));
+      case 'unidad':
+        return 'uno';
       case 'suma':
         return e.terminos.map(lectura).join(' más ');
       case 'producto':
         return e.factores.map(lectura).join(' por ');
+      case 'resta':
+        return `${lectura(e.minuendo)} menos ${lectura(e.sustraendo)}`;
+      case 'potencia':
+        return `${lectura(e.base)} elevado a ${lectura(e.exponente)}`;
       case 'cociente':
         return `${lectura(e.numerador)} dividido entre ${lectura(e.denominador)}`;
       case 'sumatorio': {

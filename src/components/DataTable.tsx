@@ -11,6 +11,8 @@ export interface Columna<F extends Record<string, ValorCelda>> {
   readonly tipo?: TipoColumna;
   /** Decimales fijos para números, euros y porcentajes. */
   readonly decimales?: number;
+  /** Muestra también el signo «+» en los valores positivos (variaciones). */
+  readonly conSigno?: boolean;
 }
 
 interface DataTableProps<F extends Record<string, ValorCelda>> {
@@ -73,6 +75,7 @@ export function DataTable<F extends Record<string, ValorCelda>>({
                     fila[columna.clave] ?? null,
                     tipo,
                     columna.decimales,
+                    columna.conSigno,
                   );
                   const clase = tipo === 'texto' ? undefined : 'num';
                   return j === 0 ? (

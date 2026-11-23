@@ -1,7 +1,8 @@
+import { quitarCitas } from '../../engine/citas-normativas';
 import { DataTable } from '../../components/DataTable';
 import { SourceLine } from '../../components/SourceLine';
 import { formatearEuros, formatearNumero } from '../../engine/formato';
-import { ejemplosCalculo } from './datos-como';
+import { datosDeUbicacion, ejemplosCalculo } from './datos-como';
 import { ETIQUETA_ESTADO_PENSION, type EjemploCalculado } from './ejemplos';
 import type { Esquema } from './esquemas';
 import { valorConUnidad } from './formato-pasos';
@@ -29,7 +30,16 @@ export function EjemploPasoAPaso({
 }) {
   const idBase = `ejemplo-${ejemplo.id}`;
   const referencias = ejemplo.pasos.flatMap((p) => p.parametros.map((r) => ({ paso: p, ref: r })));
-  const datosFuente = referencias.flatMap(({ ref }) => (ref.dato === undefined ? [] : [ref.dato]));
+  const datosFuente = referencias.flatMap(({ paso, ref }) =>
+    ref.dato === undefined ? [] : [{ ...ref.dato, rotulo: quitarCitas(paso.titulo) }],
+  );
+  // Las normas de cada requisito y de cada paso no se ven en las tablas: van a su «Fuentes».
+  const normasRequisitos = ejemplo.requisitos.flatMap((r) =>
+    datosDeUbicacion(quitarCitas(r.descripcion), r.articulo),
+  );
+  const normasPasos = ejemplo.pasos.flatMap((p) =>
+    datosDeUbicacion(quitarCitas(p.titulo), p.articulo),
+  );
   return (
     <details className="como-ejemplo" id={idBase} {...(abierto ? { open: true } : {})}>
       <summary>
@@ -66,15 +76,17 @@ export function EjemploPasoAPaso({
             { clave: 'valor', titulo: 'Acredita' },
             { clave: 'exigido', titulo: 'Se exige' },
             { clave: 'cumple', titulo: '¿Cumple?' },
-            { clave: 'articulo', titulo: 'Norma' },
           ]}
           filas={ejemplo.requisitos.map((r) => ({
-            descripcion: r.descripcion,
-            valor: r.valor,
-            exigido: r.exigido,
+            descripcion: quitarCitas(r.descripcion),
+            valor: quitarCitas(r.valor),
+            exigido: quitarCitas(r.exigido),
             cumple: r.cumple ? 'Sí' : 'No',
-            articulo: r.articulo,
           }))}
+        />
+        <SourceLine
+          datos={normasRequisitos}
+          titulo={`Normas de los requisitos: ${ejemplo.titulo}`}
         />
 
         <h5>Cálculo paso a paso</h5>
@@ -85,14 +97,16 @@ export function EjemploPasoAPaso({
             { clave: 'esquema', titulo: 'Paso del esquema' },
             { clave: 'paso', titulo: 'Paso del motor' },
             { clave: 'resultado', titulo: 'Resultado' },
-            { clave: 'articulo', titulo: 'Norma' },
           ]}
           filas={ejemplo.pasos.map((p) => ({
             esquema: pasosDelEsquema(esquema, p.id),
-            paso: p.detalle === undefined ? p.titulo : `${p.titulo}. ${p.detalle}`,
-            resultado: p.valor,
-            articulo: p.articulo,
+            paso: quitarCitas(p.detalle === undefined ? p.titulo : `${p.titulo}. ${p.detalle}`),
+            resultado: quitarCitas(p.valor),
           }))}
+        />
+        <SourceLine
+          datos={normasPasos}
+          titulo={`Normas de los pasos del cálculo: ${ejemplo.titulo}`}
         />
 
         <details className="como-parametros-paso">
@@ -100,9 +114,9 @@ export function EjemploPasoAPaso({
           <ul className="como-lista-parametros">
             {referencias.map(({ paso, ref }) => (
               <li key={`${paso.id}-${ref.referencia}`}>
-                <span className="como-etiqueta">{paso.titulo}:</span> {ref.fichero} · {ref.id}
+                <span className="como-etiqueta">{quitarCitas(paso.titulo)}:</span> {ref.fichero} ·{' '}
+                {ref.id}
                 {ref.valor === undefined ? '' : ` = ${valorConUnidad(ref.valor, ref.unidad ?? '')}`}
-                {ref.ubicacion === undefined ? '' : ` (${ref.ubicacion})`}
               </li>
             ))}
           </ul>
@@ -122,7 +136,7 @@ export function EjemploPasoAPaso({
             <h5>Avisos del motor</h5>
             <ul className="como-avisos">
               {ejemplo.avisos.map((a) => (
-                <li key={a}>{a}</li>
+                <li key={a}>{quitarCitas(a)}</li>
               ))}
             </ul>
           </>

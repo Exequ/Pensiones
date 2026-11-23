@@ -5,12 +5,23 @@
  * Cada fichero se valida con el esquema de /data al cargarlo.
  */
 import ejemplosJson from '../../../data/ejemplos/como-se-calcula.json';
+import prestacionesJson from '../../../data/normativa/prestaciones.json';
+import type { DatoRotulado } from '../../components/fuentes';
+import { datoDeBloque, quitarCitas } from '../../engine/citas-normativas';
 import {
   ArchivoDatos,
   ArchivoEjemplosCalculo,
-  type Dato,
+  ArchivoPrestaciones,
+  Dato,
   type DatoConId,
+  type Prestacion,
 } from '../../engine/esquema-datos';
+import {
+  resolverFormula,
+  type FormulaResuelta,
+  type ResolverReferencia,
+  type ValorReferencia,
+} from '../../engine/formulas';
 import {
   formatearDuracion,
   formatearEuros,
@@ -20,7 +31,8 @@ import {
 import { leerParametroDeRepositorio } from '../../engine/jubilacion/parametros-datos';
 import { memorizar } from '../historico/cargar';
 import { FICHEROS_COMO_SE_CALCULA } from './ficheros';
-import type { FormatoParametro, ParametroConfig } from './ids-datos';
+import { MODALIDADES_JUBILACION, type FormatoParametro, type ParametroConfig } from './ids-datos';
+import { FUENTES_DE_NORMA, type FuenteDeNorma } from './normas';
 
 export { FICHEROS_COMO_SE_CALCULA };
 
@@ -146,5 +158,189 @@ export function resolverReferencia(referencia: string): ReferenciaResuelta {
     valor: d?.value,
     unidad: d?.unit,
     dato: d,
+  };
+}
+
+/** Año de los datos, en texto, como periodo de los datos que se construyen para «Fuentes». */
+const periodoVigente = (): string => String(anioVigente());
+
+/** Norma de una ubicación suelta («art. 31 Decreto 3158/1966»): la que se nombra antes en el texto. */
+export function normaDeUbicacion(parte: string): FuenteDeNorma | undefined {
+  let elegida: { readonly f: FuenteDeNorma; readonly posicion: number } | undefined;
+  for (const f of FUENTES_DE_NORMA) {
+    const posicion = parte.search(f.patron);
+    if (posicion >= 0 && (elegida === undefined || posicion < elegida.posicion))
+      elegida = { f, posicion };
+  }
+  return elegida?.f;
+}
+
+/** Partes de una ubicación que no nombran ninguna norma de las que tienen fuente en los datos. */
+export function partesSinNorma(ubicacion: string): string[] {
+  return ubicacion
+    .split(';')
+    .map((x) => x.trim())
+    .filter((x) => x !== '' && normaDeUbicacion(x) === undefined);
+}
+
+const fuenteDe = (() => {
+  const cache = new Map<string, Dato | undefined>();
+  return (f: FuenteDeNorma): Dato | undefined => {
+    const clave = f.patron.source;
+    if (!cache.has(clave))
+      cache.set(
+        clave,
+        elementosDe(f.fichero).find((d) => f.titulo.test(d.source.title)),
+      );
+    return cache.get(clave);
+  };
+})();
+
+/**
+ * Datos para el desplegable de «Fuentes» a partir de una ubicación normativa («art. 205 TRLGSS; DT
+ * 7.ª TRLGSS»): un dato por fuente, con la fuente, la fecha de descarga y la confianza del dato de
+ * `data/parametros` que la contiene, el rótulo («Se refiere a») y las ubicaciones de esa norma como
+ * `location`. Las partes cuya norma no tiene fuente en los datos no se incluyen (`partesSinNorma`).
+ */
+export function datosDeUbicacion(rotulo: string, ubicacion: string): DatoRotulado[] {
+  const porFuente = new Map<string, { readonly fuente: Dato; readonly partes: string[] }>();
+  for (const parte of ubicacion.split(';').map((x) => x.trim())) {
+    const f = parte === '' ? undefined : normaDeUbicacion(parte);
+    const fuente = f === undefined ? undefined : fuenteDe(f);
+    if (f === undefined || fuente === undefined) continue;
+    const grupo = porFuente.get(f.patron.source) ?? { fuente, partes: [] };
+    grupo.partes.push(parte);
+    porFuente.set(f.patron.source, grupo);
+  }
+  return [...porFuente.values()].map(({ fuente, partes }) => ({
+    ...Dato.parse({
+      value: rotulo,
+      unit: 'ubicación en la norma',
+      period: periodoVigente(),
+      source: fuente.source,
+      fetchedAt: fuente.fetchedAt,
+      confidence: fuente.confidence,
+      location: partes.join('; '),
+    }),
+    rotulo,
+  }));
+}
+
+const archivoPrestaciones = memorizar(() => ArchivoPrestaciones.parse(prestacionesJson));
+
+/** Texto de una modalidad sin las citas (que van a sus desplegables de fuentes). */
+export interface DatosModalidad {
+  readonly id: string;
+  readonly nombre: string;
+  readonly textos: {
+    readonly aQuienCubre: string;
+    readonly requisitos: readonly {
+      readonly tipo: Prestacion['requisitos'][number]['tipo'];
+      readonly descripcion: string;
+    }[];
+    readonly duracion: string;
+    readonly compatibilidades: string;
+    readonly formula: string;
+    readonly limites: string;
+  };
+  readonly fuentes: {
+    readonly quien: readonly DatoRotulado[];
+    readonly requisitos: readonly DatoRotulado[];
+    readonly calculo: readonly DatoRotulado[];
+    readonly norma: readonly DatoRotulado[];
+  };
+  /** Fórmula estructurada resuelta, si la norma da una fórmula cerrada con cifras en los datos. */
+  readonly formula: FormulaResuelta | null;
+}
+
+const esNumero = (v: unknown): v is number => typeof v === 'number';
+
+/** Dato numérico de un parámetro de `data/parametros`; `undefined` si no existe o no es numérico. */
+export const resolverReferenciaParametro: ResolverReferencia = ({
+  fichero,
+  id,
+}): ValorReferencia | undefined => {
+  const d = elementosDe(fichero).find((x) => x.id === id);
+  return d !== undefined && esNumero(d.value)
+    ? { valor: d.value, unidad: d.unit, periodo: d.period }
+    : undefined;
+};
+
+/** Modalidades de la jubilación (todas menos la ordinaria), en el orden de `MODALIDADES_JUBILACION`. */
+export const modalidadesJubilacion = memorizar((): readonly DatosModalidad[] => {
+  const a = archivoPrestaciones();
+  const periodo = a.vigenteA.slice(0, 4);
+  return MODALIDADES_JUBILACION.map((id): DatosModalidad => {
+    const p = a.prestaciones.find((x) => x.id === id);
+    if (p === undefined) throw new Error(`Falta la modalidad «${id}» en los datos de la web`);
+    const textos = {
+      aQuienCubre: quitarCitas(p.aQuienCubre),
+      requisitos: p.requisitos.map((r) => ({
+        tipo: r.tipo,
+        descripcion: quitarCitas(r.descripcion),
+      })),
+      duracion: quitarCitas(p.duracion),
+      compatibilidades: quitarCitas(p.compatibilidades),
+      formula: quitarCitas(p.calculo.formula),
+      limites: quitarCitas(p.limites),
+    };
+    const f = p.calculo.formulaEstructurada;
+    return {
+      id,
+      nombre: p.nombre,
+      textos,
+      fuentes: {
+        quien: [datoDeBloque(p, periodo, 'A quién cubre', p.aQuienCubre)],
+        requisitos: [
+          ...p.requisitos.map((r, i) =>
+            datoDeBloque(
+              p,
+              periodo,
+              textos.requisitos[i]?.descripcion ?? r.descripcion,
+              r.descripcion,
+              r.articulo,
+            ),
+          ),
+          datoDeBloque(p, periodo, 'Duración', p.duracion),
+          datoDeBloque(p, periodo, 'Compatibilidades', p.compatibilidades),
+        ],
+        calculo: [
+          datoDeBloque(p, periodo, 'Fórmula de la cuantía', p.calculo.formula, p.calculo.articulos),
+          datoDeBloque(p, periodo, 'Límites', p.limites),
+        ],
+        norma: [
+          datoDeBloque(p, periodo, 'Norma de la modalidad', p.nombre, p.articulos.join('; ')),
+        ],
+      },
+      formula:
+        f === undefined
+          ? null
+          : resolverFormula(f, resolverReferenciaParametro, {
+              anioVigente: anioVigente(),
+              resolverSerie: (fichero, idDato) =>
+                resolverReferenciaParametro({ fichero, id: idDato }),
+            }),
+    };
+  });
+});
+
+/**
+ * Dato de un cuadro de parámetros para «Fuentes» sin la cita de su primera fila: la fuente, la fecha
+ * de descarga, la confianza y la ubicación del primer dato del fichero, con el rótulo del cuadro.
+ */
+export function datoDeCuadro(fichero: string, rotulo: string): DatoRotulado {
+  const d = elementosDe(fichero)[0];
+  if (d === undefined) throw new Error(`Sin datos en ${fichero}`);
+  return {
+    ...Dato.parse({
+      value: rotulo,
+      unit: 'cuadro de parámetros',
+      period: d.period,
+      source: d.source,
+      fetchedAt: d.fetchedAt,
+      confidence: d.confidence,
+      ...(d.location === undefined ? {} : { location: d.location }),
+    }),
+    rotulo,
   };
 }

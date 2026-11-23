@@ -7,6 +7,7 @@
  */
 export const FICHEROS_COMO_SE_CALCULA = [
   'data/ejemplos/como-se-calcula.json',
+  'data/normativa/prestaciones.json',
   'data/parametros/actualizacion-bases.json',
   'data/parametros/base-maxima-rg.json',
   'data/parametros/base-minima-rg.json',

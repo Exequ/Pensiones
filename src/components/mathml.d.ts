@@ -27,6 +27,7 @@ declare module 'react' {
       mo: AtributosMath;
       mfrac: AtributosMath;
       msub: AtributosMath;
+      msup: AtributosMath;
       munderover: AtributosMath;
       mtext: AtributosMath;
     }

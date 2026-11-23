@@ -96,4 +96,42 @@ describe('Formula', () => {
     expect(container.querySelectorAll('dl.formula-leyenda')).toHaveLength(1);
     expect(container.querySelector('.formula-notas li')?.textContent).toBe(formula.notas[0]);
   });
+
+  it('dibuja la resta y la potencia con MathML (Fase R6)', () => {
+    const f = {
+      ...formula,
+      ecuaciones: [
+        {
+          izquierda: { tipo: 'simbolo', texto: 'X' },
+          derecha: {
+            tipo: 'producto',
+            factores: [
+              {
+                tipo: 'grupo',
+                delimitador: 'parentesis',
+                cuerpo: {
+                  tipo: 'resta',
+                  minuendo: { tipo: 'numero', texto: formatearNumero(1) },
+                  sustraendo: { tipo: 'simbolo', texto: 'C' },
+                },
+              },
+              {
+                tipo: 'potencia',
+                base: { tipo: 'simbolo', texto: 'Y' },
+                exponente: { tipo: 'numero', texto: formatearNumero(2) },
+              },
+            ],
+          },
+          lectura: 'X es igual a uno menos C por Y elevado a dos.',
+        },
+      ],
+    } as const;
+    const { container } = render(<Formula formula={f} />);
+    const ecuacion = container.querySelector('math[display="block"]');
+    expect(ecuacion?.querySelector('msup')).not.toBeNull();
+    expect(ecuacion?.querySelector('msup')?.namespaceURI).toBe(
+      'http://www.w3.org/1998/Math/MathML',
+    );
+    expect([...(ecuacion?.querySelectorAll('mo') ?? [])].map((o) => o.textContent)).toContain('−');
+  });
 });

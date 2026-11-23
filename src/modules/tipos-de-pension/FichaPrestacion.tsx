@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom';
 import { DataTable } from '../../components/DataTable';
 import { Formula } from '../../components/Formula';
+import { InternalLink } from '../../components/InternalLink';
 import { SourceLine } from '../../components/SourceLine';
 import type { DatoRotulado } from '../../components/fuentes';
 import { formatearEuros, formatearNumero, formatearPorcentaje } from '../../engine/formato';
+import {
+  DESTINO_MODALIDADES,
+  RUTA_COMO_SE_CALCULA,
+  TITULO_MODALIDADES,
+} from '../como-se-calcula/anclas-modalidades';
 import { PAGAS_CONTRIBUTIVAS, fechaEnTexto } from './cuantias';
 import type { DatosFicha } from './datos-tipos';
 import { ETIQUETA_REQUISITO } from './ids-datos';
@@ -45,9 +51,12 @@ export function FichaPrestacion({ ficha }: { readonly ficha: DatosFicha }) {
       <p>{ficha.textos.aQuienCubre}</p>
       {config.remiteAModalidades ? (
         <p>
-          Esta ficha describe la modalidad ordinaria. Cómo se ajusta la cuantía en la jubilación
-          anticipada y en la demorada se explica en{' '}
-          <Link to="/como-se-calcula">Cómo se calcula</Link>.
+          Esta ficha describe la modalidad ordinaria. Qué exige cada una de las demás modalidades de
+          jubilación y cómo se ajusta la cuantía se explica en{' '}
+          <InternalLink pagina={RUTA_COMO_SE_CALCULA} destino={DESTINO_MODALIDADES}>
+            «{TITULO_MODALIDADES}»
+          </InternalLink>
+          , en «Cómo se calcula».
         </p>
       ) : null}
       <SourceLine datos={ficha.fuentes.quien} titulo={`Quién puede cobrarla: ${config.titulo}`} />

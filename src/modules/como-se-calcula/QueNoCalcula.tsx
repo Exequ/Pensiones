@@ -1,3 +1,4 @@
+import { quitarCitas } from '../../engine/citas-normativas';
 import { LIMITACIONES_MOTOR } from '../../engine/limitaciones';
 import type { Esquema } from './esquemas';
 
@@ -14,11 +15,11 @@ export function QueNoCalcula({ esquema }: { readonly esquema: Esquema }) {
   return (
     <ul className="como-no-calcula">
       {esquema.noCalcula.map((t) => (
-        <li key={t}>{t}</li>
+        <li key={t}>{quitarCitas(t)}</li>
       ))}
       {limitaciones.map((l) => (
         <li key={l.regla}>
-          <strong>{l.regla}.</strong> {l.motivo}
+          <strong>{quitarCitas(l.regla)}.</strong> {quitarCitas(l.motivo)}
         </li>
       ))}
     </ul>

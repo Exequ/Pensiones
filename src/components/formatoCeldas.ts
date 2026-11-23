@@ -6,10 +6,18 @@ export type ValorCelda = string | number | null;
 
 const SIN_DATO = '—';
 
-export function formatearCelda(valor: ValorCelda, tipo: TipoColumna, decimales?: number): string {
+export function formatearCelda(
+  valor: ValorCelda,
+  tipo: TipoColumna,
+  decimales?: number,
+  conSigno = false,
+): string {
   if (valor === null) return SIN_DATO;
   if (typeof valor === 'string') return valor;
-  const opciones = decimales === undefined ? {} : { decimales };
+  const opciones = {
+    ...(decimales === undefined ? {} : { decimales }),
+    ...(conSigno ? { conSigno } : {}),
+  };
   switch (tipo) {
     case 'euros':
       return formatearEuros(valor, opciones);
