@@ -9,14 +9,16 @@ import {
   type PuntoAnual,
 } from '../../engine/series-historicas';
 import { entero, millonesEuros, variacionRelativa, ETIQUETA_CLASE } from '../historico/formatos';
-import { datosFinanciacion } from '../historico/datos-financiacion';
+import { datosFilasEjecucion, datosFinanciacion } from '../historico/datos-financiacion';
 import { UnidadFinanciera, type Unidad } from './unidad';
 import { APARTADOS } from './apartados';
+import { DefinicionFinanciacion } from './DefinicionFinanciacion';
 
 /** Ingresos y gastos no financieros, composición de los ingresos y gasto en pensiones por clase. */
 export function Ejecucion({ unidad }: { unidad: Unidad }) {
   const d = datosFinanciacion();
   const { presupuesto, ejecucion, pib } = d;
+  const filas = datosFilasEjecucion();
   const u = UnidadFinanciera(unidad);
   const conv = (p: readonly PuntoAnual[]) =>
     unidad === 'porcentaje' ? porcentajeDelPib(p, pib.puntos) : p;
@@ -62,12 +64,15 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
       </h2>
       <p>
         El Sistema de la Seguridad Social presenta su presupuesto con una clasificación económica de
-        ingresos y gastos. Las cifras de cada año son las de la ejecución a fin de ejercicio:
-        derechos reconocidos netos (ingresos) y obligaciones reconocidas (gastos) por operaciones no
-        financieras, es decir, sin activos ni pasivos financieros. Son importes reconocidos en la
-        contabilidad presupuestaria, no cobros ni pagos: la fuente publica aparte la recaudación y
-        los pagos, que no se usan en esta página.
+        ingresos y gastos. Las cifras de cada año son las de la ejecución a fin de ejercicio por
+        operaciones no financieras, es decir, sin activos ni pasivos financieros. Son importes
+        reconocidos en la contabilidad presupuestaria, no cobros ni pagos, y el gasto y su
+        financiación se presentan por separado:
       </p>
+      <div className="hist-definiciones">
+        <DefinicionFinanciacion id="derechos-reconocidos-netos" />
+        <DefinicionFinanciacion id="gasto-frente-a-financiacion" />
+      </div>
 
       <GraficoSeries
         titulo="Ingresos y gastos no financieros del Sistema"
@@ -170,8 +175,8 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
         unidadEje="Miles de millones de euros"
         divisorEje={1000}
         decimales={0}
-        fuentes={ejecucion.sumaPensiones.dato}
-        nota="No se incluyen Clases Pasivas ni pensiones no contributivas. En la ejecución, el complemento a mínimos de las pensiones contributivas se anota en el capítulo de transferencias corrientes, en el bloque «pensiones no contributivas y complementos a mínimos de pensiones contributivas», en una fila propia («complemento a mínimos pensiones contributivas»); no forma parte de la fila «suma de pensiones» y por eso no está en estas barras."
+        fuentes={[filas.sumaPensiones, filas.complementoMinimos]}
+        nota="No se incluyen Clases Pasivas ni pensiones no contributivas. En la ejecución, el complemento a mínimos de las pensiones contributivas se anota en el capítulo de transferencias corrientes, en una fila propia del bloque de las pensiones no contributivas y los complementos a mínimos; no forma parte de la fila que suma las pensiones de las cinco clases y por eso no está en estas barras. El nombre de cada fila en la fuente está en «Fuentes»."
         comoLeerlo={
           <>
             <p>
@@ -184,9 +189,10 @@ export function Ejecucion({ unidad }: { unidad: Unidad }) {
               {millonesEuros(conComplemento.at(-1)?.valor ?? 0)}.
             </p>
             <p>
-              Las obligaciones reconocidas son el gasto devengado del año, no la suma de las nóminas
-              mensuales. El total depende de si se incluye o no el complemento a mínimos: ambas
-              versiones se usan después para medir el gasto como porcentaje del PIB.
+              Las obligaciones reconocidas son el gasto que la ejecución imputa al año, no los pagos
+              realizados, que la fuente publica aparte. El total depende de si se incluye o no el
+              complemento a mínimos: ambas versiones se usan después para medir el gasto como
+              porcentaje del PIB.
             </p>
           </>
         }

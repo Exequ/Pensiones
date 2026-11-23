@@ -1,0 +1,17 @@
+{
+  "id": "gasto-pensiones-contributivas-con-complemento",
+  "grupo": "gasto-en-pensiones",
+  "termino": "Gasto en pensiones contributivas del Sistema, con complemento a mínimos",
+  "texto": [
+    "Suma de las obligaciones reconocidas por las pensiones contributivas del Sistema de la Seguridad Social (la fila de la ejecución que suma las cinco clases) y del complemento a mínimos de esas pensiones, que la ejecución anota en una fila propia. Es la referencia de esta web para el gasto contributivo porque el complemento se abona como parte de la pensión; es una convención de la web, no una definición oficial."
+  ],
+  "perimetro": {
+    "incluye": [
+      "Pensiones contributivas de jubilación, incapacidad permanente, viudedad, orfandad y en favor de familiares.",
+      "El complemento a mínimos de las pensiones contributivas."
+    ],
+    "noIncluye": ["Las pensiones no contributivas.", "Las pensiones de Clases Pasivas."]
+  },
+  "criterio": "Contabilidad presupuestaria: obligaciones reconocidas del ejercicio, no pagos de caja. La suma de las dos filas es un cálculo de esta web.",
+  "datos": ["sistema/presupuesto-ss-ejecucion.json"]
+}

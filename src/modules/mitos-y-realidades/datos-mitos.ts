@@ -46,7 +46,7 @@ import {
   type PuntoAnual,
 } from '../../engine/series-historicas';
 import { gastoAproximadoPensiones, mesesDeGasto } from '../../engine/sistema-historico';
-import { cargarSerie, memorizar, validarArchivo } from '../historico/cargar';
+import { cargarSerie, cargarSerieConCita, memorizar, validarArchivo } from '../historico/cargar';
 import { datosCotizantes } from '../historico/datos-cotizantes';
 import { datosFinanciacion } from '../historico/datos-financiacion';
 import { datosHucha } from '../historico/datos-hucha';
@@ -193,8 +193,8 @@ export const datosMitos = memorizar(() => {
 
   // 6. Edad: legal (meses → años), altas, salida efectiva de la OCDE.
   const edadLegalMeses = serieDeDatos(edadOrdinaria);
-  const ocdeSalidaHombres = cargarSerie(ocde, OCDE.edadSalidaHombres);
-  const ocdeSalidaMujeres = cargarSerie(ocde, OCDE.edadSalidaMujeres);
+  const ocdeSalidaHombres = cargarSerieConCita(ocde, OCDE.edadSalidaHombres);
+  const ocdeSalidaMujeres = cargarSerieConCita(ocde, OCDE.edadSalidaMujeres);
 
   // 7. Sostenibilidad: gasto del Ageing Report, balance, OCDE y criterio de la DA 2.ª.
   const gastoAgeing = cargarSerie(ageing, AGEING.gastoPensiones);
@@ -330,9 +330,9 @@ export const datosMitos = memorizar(() => {
     },
     pobreza: {
       arope: cargarSerie(eurostat, EUROSTAT.pobrezaMayores),
-      oaip: cargarSerie(ocde, OCDE.pobrezaMayores),
-      oaipHombres: cargarSerie(ocde, OCDE.pobrezaMayoresHombres),
-      oaipMujeres: cargarSerie(ocde, OCDE.pobrezaMayoresMujeres),
+      oaip: cargarSerieConCita(ocde, OCDE.pobrezaMayores),
+      oaipHombres: cargarSerieConCita(ocde, OCDE.pobrezaMayoresHombres),
+      oaipMujeres: cargarSerieConCita(ocde, OCDE.pobrezaMayoresMujeres),
       minimaJubilacion,
       pnc,
     },

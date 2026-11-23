@@ -1,0 +1,15 @@
+{
+  "id": "gasto-pensiones-ocde",
+  "grupo": "gasto-en-pensiones",
+  "termino": "Gasto público en pensiones (OCDE)",
+  "texto": [
+    "Gasto público en pensiones que publica la OCDE en su serie de indicadores de pensiones, en porcentaje del PIB. El nombre del indicador en la fuente está en «Fuentes»."
+  ],
+  "perimetro": {
+    "incluye": [],
+    "noIncluye": [],
+    "sinDetalle": "Los datos consultados no detallan qué prestaciones ni qué regímenes incluye la medida, por lo que esta web no lo afirma."
+  },
+  "criterio": "Indicador publicado por la OCDE, en porcentaje del PIB.",
+  "datos": ["internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq"]
+}

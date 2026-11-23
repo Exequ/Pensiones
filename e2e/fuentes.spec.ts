@@ -181,24 +181,36 @@ test.describe('contenido del desplegable', () => {
   }) => {
     await page.goto(url('/financiacion-y-deficit'));
     await esperarPagina(page);
-    const linea = page
-      .locator('section[aria-labelledby="saldos"] .hist-definiciones .linea-fuente')
-      .first();
-    await linea.scrollIntoViewIfNeeded();
-    await linea.getByRole('button', { name: /^Fuentes?\b/ }).click();
-    const dialogo = linea.getByRole('dialog');
-    await expect(dialogo).toBeVisible();
-    // Los literales que R1 quitó del cuerpo se ven aquí, tal como constan en los datos.
-    await expect(dialogo).toContainText('SUMA DE OPERACIONES NO FINANCIERAS');
-    await expect(dialogo).toContainText('TOTAL INGRESOS');
-    await expect(dialogo).toContainText(
-      'The difference between total revenue and total expenditure equals net lending/net borrowing (B.9).',
-    );
-    await expect(dialogo).toContainText('Cita');
-    await expect(dialogo).toContainText('Ubicación en el documento');
-    await expect(dialogo).not.toContainText(FECHA_O_CONFIANZA);
-    // Tiene más de una fuente y el contenido se puede desplazar dentro del desplegable.
-    expect(await dialogo.getByRole('link').count()).toBeGreaterThan(1);
+    // Fase R7: cada definición del módulo tiene su propio «Fuentes»; los literales que R1 quitó del
+    // cuerpo se ven en el de su definición, tal como constan en los datos (el saldo total, con el par
+    // completo de rótulos).
+    const casos = [
+      { id: 'saldo-presupuestario-no-financiero', literal: 'SUMA DE OPERACIONES NO FINANCIERAS' },
+      { id: 'saldo-presupuestario-total', literal: 'TOTAL INGRESOS / TOTAL GASTOS' },
+      {
+        id: 'capacidad-necesidad-financiacion-sec',
+        literal:
+          'The difference between total revenue and total expenditure equals net lending/net borrowing (B.9).',
+      },
+    ];
+    for (const { id, literal } of casos) {
+      const linea = page.locator(
+        `section[aria-labelledby="saldos"] .hist-definiciones #definicion-${id} .linea-fuente`,
+      );
+      await linea.scrollIntoViewIfNeeded();
+      await linea.getByRole('button', { name: /^Fuentes?\b/ }).click();
+      const dialogo = linea.getByRole('dialog');
+      await expect(dialogo).toBeVisible();
+      await expect(dialogo).toContainText(literal);
+      await expect(dialogo).toContainText('Cita');
+      await expect(dialogo).toContainText('Ubicación en el documento');
+      await expect(dialogo).not.toContainText(FECHA_O_CONFIANZA);
+      // La de contabilidad nacional tiene más de una fuente (metadatos y datos de Eurostat).
+      if (id === 'capacidad-necesidad-financiacion-sec')
+        expect(await dialogo.getByRole('link').count()).toBeGreaterThan(1);
+      await dialogo.getByRole('button', { name: 'Cerrar' }).click();
+      await expect(dialogo).toBeHidden();
+    }
   });
 
   test('«Proyecciones»: la naturaleza se ve sin abrir y el desplegable la repite', async ({

@@ -1,0 +1,20 @@
+{
+  "id": "gasto-pensiones-esspros-vejez-supervivientes",
+  "grupo": "gasto-en-pensiones",
+  "termino": "Gasto en prestaciones de vejez y supervivientes (Eurostat, ESSPROS)",
+  "texto": [
+    "Suma de las funciones «vejez» y «supervivientes» de la estadística europea de protección social (ESSPROS) que publica Eurostat, en porcentaje del PIB. La suma de las dos series es un cálculo de esta web."
+  ],
+  "perimetro": {
+    "incluye": [
+      "Las prestaciones que la estadística asigna a las funciones «vejez» y «supervivientes»."
+    ],
+    "noIncluye": [],
+    "sinDetalle": "Los metadatos consultados no delimitan qué administraciones o regímenes entran en las series, por lo que esta web no lo afirma."
+  },
+  "criterio": "Estadística de protección social publicada por Eurostat, en porcentaje del PIB.",
+  "datos": [
+    "internacional/eurostat-espana.json#gasto-old-no-aplica-no-aplica-pc-gdp",
+    "internacional/eurostat-espana.json#gasto-srv-no-aplica-no-aplica-pc-gdp"
+  ]
+}

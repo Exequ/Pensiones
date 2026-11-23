@@ -125,7 +125,9 @@ describe('tabla de aplicación (docs/revision-actuarial/aplicacion-tanda3.json)'
     // Más la de la página «Cómo se calcula» (orden del límite conjunto y del complemento a mínimos)
     // y la de «Metodología» (criterio de confianza de las salidas de los modelos, por confirmar),
     // más la de la tabla del efecto de los meses de «Cómo se calcula» (cambio de la pensión por la
-    // demora respecto del máximo de la escala y lectura de la fracción de año; Fase R6).
+    // demora respecto del máximo de la escala y lectura de la fracción de año; Fase R6), más la del
+    // subsector de los fondos de la Seguridad Social sin Clases Pasivas (respuesta actuarial del
+    // 19-11-2026 sin respaldo en las fuentes del repositorio; Fase R7).
     const web = [
       'web-mitos-jubilados-marco',
       'web-mitos-pobreza',
@@ -133,6 +135,7 @@ describe('tabla de aplicación (docs/revision-actuarial/aplicacion-tanda3.json)'
       'web-como-sv-orden-limites',
       'web-como-efecto-meses-demora',
       'web-metodologia-confianza-modelos',
+      'web-def-sec-sin-clases-pasivas',
     ];
     // Cuarta tanda: salen de la lista las que cerró (docs/revision-actuarial/aplicacion-tanda4.json).
     expect(pendientes.map((c) => c.id).sort()).toEqual(

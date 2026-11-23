@@ -2,9 +2,10 @@ import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
-import { datosFinanciacion } from '../historico/datos-financiacion';
+import { leerFuentes } from '../../test/fuentes';
+import { CONCEPTO, datosFinanciacion } from '../historico/datos-financiacion';
 import Financiacion from './Pagina';
-import { ROTULO_SALDO_SIN_TRANSFERENCIAS } from './Saldos';
+import { ROTULO_SALDO_SIN_TRANSFERENCIAS } from './definiciones-pagina';
 
 function pintar() {
   return render(
@@ -43,11 +44,18 @@ describe('«Financiación y déficit»: ingresos', () => {
     expect(texto).toMatch(/no se pueden conciliar una a una/);
   });
 
-  it('describe la fila del complemento a mínimos según la ejecución', () => {
+  it('describe la fila del complemento a mínimos según la ejecución, con los rótulos de la fuente en «Fuentes»', () => {
     const { container } = pintar();
     const f = figura(container, 'Gasto en pensiones contributivas por clase');
     expect(f.textContent).toMatch(/fila propia/);
-    expect(f.textContent).toMatch(/no forma parte de la fila «suma de pensiones»/);
+    expect(f.textContent).toMatch(/no forma parte de la fila que suma las pensiones/);
+    // Fase R7: el rótulo literal de las filas no está en el cuerpo, sino en el desplegable.
+    expect(container.textContent).not.toMatch(/«suma de pensiones»|SUMA DE PENSIONES/i);
+    expect(container.textContent).not.toMatch(/COMPL\. A MÍNIMOS/);
+    const fuentes = leerFuentes(f).texto;
+    expect(fuentes).toContain(CONCEPTO.sumaPensiones);
+    expect(fuentes).toContain(CONCEPTO.complementoMinimos);
+    expect(fuentes).toContain(CONCEPTO.bloqueNoContributivas);
   });
 });
 
@@ -121,10 +129,10 @@ describe('«Financiación y déficit»: gasto sobre el PIB', () => {
     expect(cab).toContain('Contributivas con complemento (referencia)');
     expect(cab).not.toContain('Contributivas sin complemento');
     const texto = container.textContent;
-    expect(texto).toMatch(/No es comparable con el gasto contributivo propio/);
+    expect(texto).toMatch(/no son comparables con el gasto contributivo propio/);
     expect(texto).toMatch(/incapacidad permanente/);
     expect(texto).toMatch(/no delimitan qué administraciones o regímenes entran en la serie/);
-    expect(texto).toMatch(/fila propia del\s+capítulo de transferencias corrientes/);
+    expect(texto).toMatch(/fila propia del bloque de las pensiones no contributivas/);
 
     const grupo = screen.getByRole('group', {
       name: 'Gasto contributivo propio (obligaciones reconocidas)',

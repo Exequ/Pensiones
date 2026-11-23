@@ -1,0 +1,62 @@
+{
+  "id": "saldo-presupuestario-no-financiero",
+  "grupo": "deficit",
+  "termino": "Saldo presupuestario no financiero",
+  "texto": [
+    "Diferencia entre los ingresos y los gastos no financieros del Sistema de la Seguridad Social en un año, según la ejecución de su presupuesto: derechos reconocidos netos menos obligaciones reconocidas en los capítulos que no son activos ni pasivos financieros.",
+    "Cuenta como ingreso las transferencias del Estado y deja fuera los préstamos, que son operaciones financieras. La Seguridad Social publica las dos sumas de operaciones no financieras, pero no un saldo con este nombre: la diferencia es un cálculo de esta web."
+  ],
+  "criterio": "Contabilidad presupuestaria: derechos y obligaciones reconocidos, no cobros ni pagos.",
+  "datos": [
+    "sistema/deficit-definiciones.json#saldo-presupuestario-no-financiero",
+    "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-no-financiero",
+    "sistema/deficit-presupuestario-seguridad-social.json#derechos-no-financieros",
+    "sistema/deficit-presupuestario-seguridad-social.json#obligaciones-no-financieras"
+  ],
+  "formula": {
+    "titulo": "Saldo presupuestario no financiero",
+    "alcance": "completa",
+    "ecuaciones": [
+      {
+        "izquierda": {
+          "tipo": "simbolo",
+          "id": "s-nf"
+        },
+        "derecha": {
+          "tipo": "resta",
+          "minuendo": {
+            "tipo": "simbolo",
+            "id": "i-nf"
+          },
+          "sustraendo": {
+            "tipo": "simbolo",
+            "id": "g-nf"
+          }
+        }
+      }
+    ],
+    "simbolos": [
+      {
+        "id": "s-nf",
+        "notacion": "S_nf",
+        "nombre": "Saldo no financiero",
+        "significado": "Saldo presupuestario no financiero del año; si es negativo, los gastos superan a los ingresos.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "i-nf",
+        "notacion": "I_nf",
+        "nombre": "Ingresos no financieros",
+        "significado": "Derechos reconocidos netos por operaciones no financieras, con las transferencias del Estado.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "g-nf",
+        "notacion": "G_nf",
+        "nombre": "Gastos no financieros",
+        "significado": "Obligaciones reconocidas por operaciones no financieras: pensiones y resto de gastos.",
+        "unidad": "millones de euros"
+      }
+    ]
+  }
+}

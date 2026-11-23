@@ -1,0 +1,14 @@
+{
+  "id": "derechos-reconocidos-netos",
+  "grupo": "contabilidad",
+  "termino": "Derechos y obligaciones reconocidos, frente a recaudación y pagos",
+  "texto": [
+    "La ejecución del presupuesto de la Seguridad Social publica dos cifras para cada concepto de ingreso, los derechos reconocidos netos y la recaudación neta, y dos para cada concepto de gasto, las obligaciones reconocidas y los pagos realizados. Las dos cifras de cada par no coinciden.",
+    "Esta web usa los derechos y las obligaciones reconocidos: son importes reconocidos en la contabilidad presupuestaria, no la recaudación ni los pagos de caja. Las transferencias del Estado que se muestran son, por tanto, derechos reconocidos netos. Las fuentes consultadas no definen en qué momento se reconoce un derecho o una obligación."
+  ],
+  "criterio": "Contabilidad presupuestaria de la ejecución del presupuesto.",
+  "datos": [
+    "sistema/presupuesto-ss-ejecucion.json",
+    "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+  ]
+}

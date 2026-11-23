@@ -42,7 +42,11 @@ describe.each(PAGINAS)('página «$nombre»', ({ slug, Pagina, minimo }) => {
 
   it('cada gráfico lleva título, imagen con nombre, tabla de datos, fuente y «Cómo leerlo»', () => {
     const { container } = pintar(Pagina);
-    const figuras = [...container.querySelectorAll('figure')];
+    // Fase R7: las fórmulas también son `<figure>` (clase `formula`); los gráficos son `figure.grafico`
+    // y no hay ninguna otra figura.
+    const todas = [...container.querySelectorAll('figure')];
+    const figuras = todas.filter((f) => f.classList.contains('grafico'));
+    expect(todas.every((f) => f.matches('.grafico, .formula'))).toBe(true);
     expect(figuras.length).toBeGreaterThanOrEqual(minimo);
     for (const figura of figuras) {
       const titulo = figura.querySelector('figcaption .grafico-titulo')?.textContent ?? '';

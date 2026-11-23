@@ -1,0 +1,59 @@
+{
+  "id": "saldo-no-financiero-menos-transferencias",
+  "grupo": "deficit",
+  "termino": "Saldo no financiero menos transferencias corrientes del Estado y OO. AA. (cálculo propio)",
+  "texto": [
+    "Resta al saldo presupuestario no financiero las transferencias corrientes que el Sistema recibe del Estado y de sus organismos autónomos. Es un cálculo de esta web que no equivale a ninguna definición publicada ni al saldo de un subconjunto de prestaciones."
+  ],
+  "criterio": "Diferencia de dos series de la ejecución del presupuesto (derechos y obligaciones reconocidos).",
+  "datos": [
+    "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-no-financiero",
+    "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+  ],
+  "formula": {
+    "titulo": "Saldo no financiero menos transferencias corrientes del Estado",
+    "alcance": "completa",
+    "ecuaciones": [
+      {
+        "izquierda": {
+          "tipo": "simbolo",
+          "id": "s-t"
+        },
+        "derecha": {
+          "tipo": "resta",
+          "minuendo": {
+            "tipo": "simbolo",
+            "id": "s-nf"
+          },
+          "sustraendo": {
+            "tipo": "simbolo",
+            "id": "t"
+          }
+        }
+      }
+    ],
+    "simbolos": [
+      {
+        "id": "s-t",
+        "notacion": "S_t",
+        "nombre": "Saldo menos transferencias",
+        "significado": "Saldo no financiero tras restar las transferencias corrientes del Estado y de sus organismos autónomos; cálculo propio.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "s-nf",
+        "notacion": "S_nf",
+        "nombre": "Saldo no financiero",
+        "significado": "Saldo presupuestario no financiero del año.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "t",
+        "notacion": "T",
+        "nombre": "Transferencias corrientes",
+        "significado": "Derechos reconocidos netos por transferencias corrientes del Estado y de sus organismos autónomos.",
+        "unidad": "millones de euros"
+      }
+    ]
+  }
+}
