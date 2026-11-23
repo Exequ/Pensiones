@@ -43,6 +43,9 @@ describe('quitarCitas', () => {
     expect(quitarCitas('Salvaguarda de la DT 34.ª.1 (no inferior).')).toBe(
       'Salvaguarda de la disposición transitoria (no inferior).',
     );
+    expect(quitarCitas('ni en la jubilación flexible del art. 213.1 párrafo 2.º, ni cuando')).toBe(
+      'ni en la jubilación flexible, ni cuando',
+    );
     // El nombre de la norma como hecho se conserva.
     expect(quitarCitas('el divisor lo fija el RD 1799/1985')).toBe(
       'el divisor lo fija el RD 1799/1985',

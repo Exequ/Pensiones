@@ -85,7 +85,7 @@ export function quitarCitas(texto: string): string {
   // Citas dentro de la frase: «del art. 165.1», «según DT 7.ª», «, art. 220)».
   t = t.replace(
     new RegExp(
-      String.raw`\s+(?:del?|al?|en|según|por)\s+(?:el\s+|la\s+|los\s+|las\s+)?${CITA}`,
+      String.raw`\s+(?:del?|al?|en|según|por)\s+(?:el\s+|la\s+|los\s+|las\s+)?${CITA}(?:\s+párr(?:afo|\.)\s+\d+\.º)?`,
       'g',
     ),
     '',

@@ -135,8 +135,11 @@ export function TablaEfectoMeses() {
               </InternalLink>
               ). Si la pensión supera el límite de la pensión máxima, la anticipada voluntaria
               aplica otros coeficientes sobre ese límite, de forma gradual hasta el año{' '}
-              {formatearNumero(gradual.ultimo, { agruparCuatroCifras: false })}; esa regla no está
-              en la tabla.
+              {formatearNumero(gradual.ultimo, { agruparCuatroCifras: false })}
+              {efecto.anio >= gradual.primero && efecto.anio <= gradual.ultimo
+                ? `; en el año ${String(efecto.anio)} rige el escalón de ese año`
+                : ''}
+              ; esa regla no está en la tabla.
             </p>
             <p>
               <strong>Vigencia.</strong> Valores vigentes en el año {efecto.anio}: el cuadro de la
