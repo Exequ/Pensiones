@@ -42,7 +42,7 @@ export const SECCIONES = [
       'Qué prestaciones existen, quién puede cobrarlas, qué requisitos exige cada una, cuáles son sus cuantías mínimas y máximas vigentes y cuántas pensiones hay de cada tipo, tanto en la modalidad contributiva como en la no contributiva.',
     previsto: [
       'Una ficha por prestación: jubilación, incapacidad permanente, viudedad, orfandad, en favor de familiares y las pensiones no contributivas de jubilación y de invalidez (disponible).',
-      'Requisitos principales de cada prestación, con su artículo y el enlace al texto del BOE (disponible).',
+      'Requisitos principales de cada prestación, con sus artículos y el enlace al texto del BOE en «Fuentes» (disponible).',
       'Cuantías mínimas y máxima vigentes, con el importe mensual en catorce pagas como cálculo derivado (disponible).',
       'Número de pensiones en vigor y pensión media de cada tipo (disponible).',
       'Complementos por brecha de género y por maternidad: número de pensiones en vigor que los llevan e importe medio, por comunidad, provincia, sexo y número de hijos, en una fecha (disponible). La brecha de género de las pensiones de jubilación que usa la ley no se publica por año en las fuentes consultadas; se muestra la calculada con la pensión media de las altas iniciales de jubilación del último año completo (disponible).',

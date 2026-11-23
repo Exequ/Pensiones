@@ -1,13 +1,13 @@
 import { useId, useRef } from 'react';
 import type { Dato } from '../engine/esquema-datos';
 import { ETIQUETA_NATURALEZA, etiquetasNaturaleza, fuentesUnicas } from './fuentes';
-import type { ReferenciaFuente } from './fuentes';
+import type { DatoRotulado, ReferenciaFuente } from './fuentes';
 import { crearGrupoDialogos, useDialogoModal, useDialogoUnico } from './dialogoModal';
 import './SourceLine.css';
 
 interface SourceLineProps {
   /** Uno o varios datos; las fuentes repetidas se muestran una sola vez. */
-  datos: Dato | readonly Dato[];
+  datos: DatoRotulado | readonly DatoRotulado[];
   /**
    * Título del gráfico, la tabla o el bloque al que pertenece la fuente. Si se indica, el botón
    * tiene un nombre accesible único («Fuentes: título») y el desplegable lo repite.
@@ -29,7 +29,7 @@ const GRUPO_FUENTES = crearGrupoDialogos();
  * con `npm run validate:data`, pero la interfaz no las muestra, ni siquiera a los lectores de pantalla.
  */
 export function SourceLine({ datos, titulo }: SourceLineProps) {
-  const lista: readonly Dato[] = Array.isArray(datos) ? datos : [datos as Dato];
+  const lista: readonly DatoRotulado[] = Array.isArray(datos) ? datos : [datos as Dato];
   const fuentes = fuentesUnicas(lista);
   const boton = useRef<HTMLButtonElement>(null);
   const { abierto, abrir, cerrar } = useDialogoUnico(GRUPO_FUENTES, boton);
@@ -122,6 +122,12 @@ function DialogoFuentes({
                 ) : null}
                 {fuente.citas.map((c, i) => (
                   <div key={i}>
+                    {c.rotulo === undefined ? null : (
+                      <>
+                        <dt>Se refiere a</dt>
+                        <dd className="fuentes-dialogo-rotulo">{c.rotulo}</dd>
+                      </>
+                    )}
                     {c.cita === undefined ? null : (
                       <>
                         <dt>Cita</dt>

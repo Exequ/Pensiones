@@ -18,8 +18,8 @@ import { OnThisPage } from '../../components/OnThisPage';
 const seccion = buscarSeccion('tipos-de-pension');
 
 /**
- * Módulo «tipos-de-pension»: una ficha por prestación (qué es, quién puede cobrarla, requisitos con
- * su norma, cuantías mínimas y máximas vigentes y cuántas hay). Los textos normativos y las cifras
+ * Módulo «tipos-de-pension»: una ficha por prestación (qué es, quién puede cobrarla, requisitos,
+ * cuantías mínimas y máximas vigentes y cuántas hay; las normas, en «Fuentes»). Los textos normativos y las cifras
  * proceden de /data; la página no los escribe.
  */
 export default function TiposDePension() {
@@ -47,8 +47,9 @@ export default function TiposDePension() {
         </header>
         <MarginNote>
           <p>
-            Los requisitos, los artículos y las cuantías son los que figuran en las normas
-            consultadas; cada ficha lleva su fuente. Los importes por paga son un cálculo derivado.
+            Los requisitos y las cuantías son los que figuran en las normas consultadas; los
+            artículos y las citas están en «Fuentes», en cada bloque de cada ficha. Los importes por
+            paga son un cálculo derivado.
           </p>
         </MarginNote>
         <p className="hist-aviso">
@@ -92,9 +93,9 @@ export default function TiposDePension() {
             {APARTADOS.fichas.titulo}
           </h2>
           <p>
-            Cada ficha resume qué es la prestación, quién puede cobrarla y qué exige, con el
-            artículo de la norma y el enlace al texto del BOE en la línea de fuente. Las cuantías
-            mínimas y máximas son las vigentes en {d.anioCuantias}.
+            Cada ficha resume qué es la prestación, quién puede cobrarla y qué exige. Las normas,
+            con sus artículos y el enlace al texto del BOE, están en «Fuentes», debajo de cada
+            bloque. Las cuantías mínimas y máximas son las vigentes en {d.anioCuantias}.
           </p>
           {d.fichas.map((f) => (
             <FichaPrestacion key={f.config.id} ficha={f} />

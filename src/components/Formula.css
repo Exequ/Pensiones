@@ -1,0 +1,89 @@
+/* Fórmula con notación matemática y leyenda (Fase R5): solo tokens de src/styles/tokens.css. */
+
+.formula {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-3);
+  margin: var(--espacio-4) 0;
+  padding: var(--espacio-4) 0;
+  border-top: var(--grosor-filete) solid var(--color-tinta);
+  border-bottom: var(--grosor-filete) solid var(--color-filete);
+}
+
+.formula-titulo {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta);
+}
+
+/* La fórmula se desplaza dentro de su caja: nunca ensancha la página. */
+.formula-caja {
+  display: grid;
+  gap: var(--espacio-4);
+  max-width: 100%;
+  overflow-x: auto;
+  padding: var(--espacio-2) 0;
+}
+
+.formula-ecuacion {
+  font-family: var(--fuente-lectura);
+  font-size: var(--texto-h3);
+  color: var(--color-tinta);
+  text-align: left;
+  /* Sin esto el bloque MathML se centra y se corta por la izquierda al desbordar. */
+  justify-self: start;
+  min-width: max-content;
+}
+
+.formula-leyenda-titulo {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-tinta-2);
+}
+
+.formula-leyenda {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-3);
+  margin: 0;
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-tinta-2);
+}
+
+.formula-leyenda > div {
+  display: grid;
+  grid-template-columns: minmax(3.5rem, max-content) minmax(0, 1fr);
+  gap: var(--espacio-3);
+  align-items: baseline;
+}
+
+.formula-leyenda dt {
+  font-family: var(--fuente-lectura);
+  font-size: var(--texto-cuerpo);
+  color: var(--color-tinta);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.formula-leyenda dd {
+  margin: 0;
+}
+
+.formula-leyenda strong {
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta);
+}
+
+.formula-notas {
+  margin: 0;
+  padding-left: var(--espacio-5);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-tinta-2);
+}

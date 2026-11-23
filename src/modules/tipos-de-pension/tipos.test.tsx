@@ -2,7 +2,8 @@ import { render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import { formatearEuros, formatearNumero, formatearPorcentaje } from '../../engine/formato';
-import { leerFuentes, textoDeFuentes } from '../../test/fuentes';
+import { abrirFuente, cerrarFuente, leerFuentes, textoDeFuentes } from '../../test/fuentes';
+import { quitarCitas } from '../../engine/citas-normativas';
 import { buscarSeccion } from '../secciones';
 import { datosTipos } from './datos-tipos';
 import { FICHAS } from './ids-datos';
@@ -33,6 +34,20 @@ function tabla(f: HTMLElement, titulo: RegExp): HTMLElement {
   return t;
 }
 
+/** Artículos, normas abreviadas y citas que no deben verse en el cuerpo de la página. */
+const RESIDUO_CITA =
+  /\barts?\.|\bartículos?\s+\d|\bDT\s*\d|\bTRLGSS\b|disposición transitoria|\bDecreto\b|\bOrden de\b|\bRD\s*\d|\bAnexo I\b|BOE-A-/;
+
+/** Línea de fuente cuyo botón tiene ese nombre accesible. */
+function lineaDe(contenedor: HTMLElement, nombre: RegExp): HTMLElement {
+  const boton = [...contenedor.querySelectorAll('.linea-fuente-boton')].find((b) =>
+    nombre.test(b.getAttribute('aria-label') ?? ''),
+  );
+  const linea = boton?.closest('.linea-fuente');
+  if (!(linea instanceof HTMLElement)) throw new Error(`Sin línea de fuente ${nombre}`);
+  return linea;
+}
+
 const filas = (t: HTMLElement) =>
   [...t.querySelectorAll('tbody tr')].map((tr) =>
     [...tr.querySelectorAll('th, td')].map((c) => c.textContent),
@@ -56,15 +71,19 @@ describe('página «Tipos de pensión»', () => {
     expect(container.querySelectorAll('.tipos-ficha').length).toBe(FICHAS.length);
   });
 
-  it('cada ficha trae requisitos con artículo, cuantías, número de pensiones y fuente con enlace', () => {
+  it('cada ficha trae requisitos (sin columna de norma), número de pensiones y fuente con enlace', () => {
     const { container } = pintar();
     for (const c of FICHAS) {
       const f = ficha(container, c.ancla);
       const requisitos = tabla(f, /Requisitos principales/);
       expect(filas(requisitos).length).toBeGreaterThan(0);
-      for (const fila of filas(requisitos)) {
-        expect(fila[2], `norma de un requisito de ${c.titulo}`).toMatch(/art|DT|disposición/i);
-      }
+      // Fase R5: la tabla solo tiene el tipo de requisito y lo que exige; el artículo va en «Fuentes».
+      const cabeceras = [...requisitos.querySelectorAll('thead th')].map((th) => th.textContent);
+      expect(cabeceras, `cabeceras de los requisitos de ${c.titulo}`).toEqual([
+        'Requisito',
+        'Qué exige',
+      ]);
+      for (const fila of filas(requisitos)) expect(fila).toHaveLength(2);
       expect(filas(tabla(f, /Número y pensión media/)).length).toBeGreaterThan(0);
       // La fuente se abre con «Fuente(s)»: título con enlace y organismo; ni fecha ni confianza.
       const { texto, enlaces } = leerFuentes(f);
@@ -127,14 +146,38 @@ describe('página «Tipos de pensión»', () => {
     ).toBeNull();
   });
 
-  it('la viudedad y la orfandad muestran el porcentaje del reglamento con su cita literal', () => {
+  it('la viudedad y la orfandad muestran el porcentaje del reglamento, y su cita literal está en «Fuentes»', () => {
     const { container } = pintar();
+    const d = datosTipos();
     for (const ancla of ['viudedad', 'orfandad']) {
       const f = ficha(container, ancla);
-      const citas = f.querySelectorAll('.tipos-citas blockquote');
-      expect(citas.length).toBeGreaterThan(0);
+      const datos = d.fichas.find((x) => x.config.ancla === ancla);
+      expect(datos?.porcentajes.length).toBeGreaterThan(0);
+      // En el cuerpo: el porcentaje y la situación a la que se aplica; ni la cita ni la ubicación.
+      expect(f.querySelectorAll('blockquote')).toHaveLength(0);
       expect(f.textContent).toMatch(/% de la base reguladora/);
-      expect(leerFuentes(f).enlaces.some((e) => e.includes('BOE-A-1966'))).toBe(true);
+      for (const p of datos?.porcentajes ?? []) {
+        expect(f.textContent).toContain(p.rotulo);
+        expect(f.textContent).not.toContain(p.dato.quote ?? 'sin cita');
+        expect(f.textContent).not.toContain(p.dato.location ?? 'sin ubicación');
+      }
+      // En el desplegable de los porcentajes: la cita, la ubicación y la situación.
+      const linea = lineaDe(
+        f,
+        new RegExp(`Porcentajes de la base reguladora: ${datos?.config.titulo}`),
+      );
+      const abierta = abrirFuente(linea);
+      const texto = abierta.textContent;
+      for (const p of datos?.porcentajes ?? []) {
+        expect(texto).toContain(p.dato.quote ?? 'sin cita');
+        expect(texto).toContain(p.dato.location ?? 'sin ubicación');
+        expect(texto).toContain(p.rotulo);
+      }
+      const enlaces = [...abierta.querySelectorAll('dialog a[href]')].map((a) =>
+        a.getAttribute('href'),
+      );
+      expect(enlaces.some((e) => e?.includes('BOE-A-1966'))).toBe(true);
+      cerrarFuente(linea);
     }
   });
 
@@ -147,12 +190,167 @@ describe('página «Tipos de pensión»', () => {
     }
   });
 
-  it('la ficha de jubilación nombra las demás modalidades, sin mostrar su confianza', () => {
+  it('la ficha de jubilación no lista modalidades y remite a «Cómo se calcula»', () => {
     const { container } = pintar();
     const f = ficha(container, 'jubilacion');
-    expect(f.querySelectorAll('li').length).toBeGreaterThanOrEqual(6);
-    expect(f.textContent).toMatch(/Jubilación parcial/);
+    for (const nombre of [
+      /Jubilación parcial/,
+      /Jubilación flexible/,
+      /Jubilación activa/,
+      /anticipada involuntaria/i,
+      /anticipada voluntaria/i,
+      /Jubilación demorada/,
+    ]) {
+      expect(f.textContent).not.toMatch(nombre);
+    }
+    // Ninguna lista de modalidades (las notas de la fórmula son otra lista).
+    expect(f.querySelectorAll('ul:not(.formula-notas) li')).toHaveLength(0);
+    const enlace = within(f).getByRole('link', { name: 'Cómo se calcula' });
+    expect(enlace.getAttribute('href')).toBe('/como-se-calcula');
+    expect(f.textContent).toMatch(/anticipada y en la demorada se explica en Cómo se calcula/);
     expect(f.textContent).not.toMatch(/confianza/i);
+    // Solo la ficha de jubilación remite.
+    expect(container.querySelectorAll('a[href="/como-se-calcula"]')).toHaveLength(1);
+  });
+
+  it('ninguna ficha muestra en el cuerpo artículos, normas abreviadas, citas ni ubicaciones (solo en «Fuentes»)', () => {
+    const { container } = pintar();
+    const d = datosTipos();
+    for (const x of d.fichas) {
+      const cuerpo = ficha(container, x.config.ancla).textContent;
+      expect(cuerpo, x.config.titulo).not.toMatch(RESIDUO_CITA);
+      // Los textos de la norma salen de /data sin sus citas, y no se pierde nada más.
+      expect(cuerpo).toContain(x.textos.aQuienCubre);
+      expect(cuerpo).toContain(x.textos.duracion);
+      expect(cuerpo).toContain(x.textos.limites);
+      expect(cuerpo).toContain(x.textos.compatibilidades);
+      for (const r of x.textos.requisitos) expect(cuerpo).toContain(r.descripcion);
+      // Las citas y ubicaciones de los datos que llegan al desplegable no están en el cuerpo. Las
+      // filas de las cuantías mínimas conservan solo su rótulo (identifica el importe): su cita
+      // completa, con los importes, y su ubicación en el anexo están en «Fuentes».
+      for (const p of x.porcentajes) {
+        expect(cuerpo).not.toContain(p.dato.quote ?? 'sin cita');
+        expect(cuerpo).not.toContain(p.dato.location ?? 'sin ubicación');
+      }
+      for (const dato of x.datosCuantias) {
+        expect(cuerpo).not.toContain(dato.location ?? 'sin ubicación');
+      }
+    }
+    // Ni las notas, ni los textos de la página, ni el pie de la página.
+    expect(container.textContent).not.toMatch(RESIDUO_CITA);
+    expect(container.textContent).not.toMatch(/Concepto \(literal del Anexo I\)/);
+  });
+
+  it('el texto sin citas es el de /data sin los artículos: nada más cambia', () => {
+    const d = datosTipos();
+    for (const x of d.fichas) {
+      const p = x.prestacion;
+      expect(x.textos.aQuienCubre).toBe(quitarCitas(p.aQuienCubre));
+      expect(x.textos.requisitos.map((r) => r.descripcion)).toEqual(
+        p.requisitos.map((r) => quitarCitas(r.descripcion)),
+      );
+      // Los datos conservan las citas íntegras.
+      expect(p.requisitos.every((r) => r.articulo.length > 0)).toBe(true);
+      expect(p.calculo.articulos.length).toBeGreaterThan(0);
+    }
+  });
+
+  it('las citas de cada bloque están en el desplegable «Fuentes» de ese bloque', () => {
+    const { container } = pintar();
+    const d = datosTipos();
+    for (const x of d.fichas) {
+      const f = ficha(container, x.config.ancla);
+      const p = x.prestacion;
+      // Requisitos: el artículo de cada requisito, con la descripción del requisito como rótulo.
+      const requisitos = abrirFuente(
+        lineaDe(f, new RegExp(`^Fuentes?: Requisitos principales: ${x.config.titulo}$`)),
+      );
+      for (const [i, r] of p.requisitos.entries()) {
+        expect(requisitos.textContent, `${x.config.titulo}: ${r.articulo}`).toContain(r.articulo);
+        expect(requisitos.textContent).toContain(x.textos.requisitos[i]?.descripcion ?? 'falta');
+      }
+      expect(requisitos.textContent).toMatch(/Se refiere a/);
+      cerrarFuente(requisitos);
+      // Quién puede cobrarla, y el cálculo con sus artículos.
+      const quien = abrirFuente(
+        lineaDe(f, new RegExp(`^Fuentes?: Quién puede cobrarla: ${x.config.titulo}$`)),
+      );
+      expect(quien.textContent).toContain('A quién cubre');
+      expect(quien.textContent).toMatch(/art\./);
+      cerrarFuente(quien);
+      const calculo = abrirFuente(
+        lineaDe(f, new RegExp(`^Fuentes?: Cálculo de la cuantía y límites: ${x.config.titulo}$`)),
+      );
+      expect(calculo.textContent).toContain(p.calculo.articulos);
+      expect(calculo.textContent).toContain('Límites');
+      cerrarFuente(calculo);
+    }
+  });
+
+  it('la jubilación muestra la fórmula con notación matemática, su leyenda y las cifras de /data', () => {
+    const { container } = pintar();
+    const d = datosTipos();
+    const x = d.fichas.find((y) => y.config.ancla === 'jubilacion');
+    if (!x?.formula) throw new Error('la jubilación debe tener fórmula estructurada');
+    const f = ficha(container, 'jubilacion');
+    const figura = f.querySelector('figure.formula');
+    if (!(figura instanceof HTMLElement)) throw new Error('sin fórmula');
+    // MathML nativo con nombre accesible (la lectura en palabras de cada ecuación).
+    const ecuaciones = [...figura.querySelectorAll('math[display="block"]')];
+    expect(ecuaciones).toHaveLength(x.formula.ecuaciones.length);
+    expect(ecuaciones[0]?.getAttribute('aria-label')).toBe(x.formula.ecuaciones[0]?.lectura);
+    expect(figura.querySelector('mfrac')).not.toBeNull();
+    expect(figura.querySelector('munderover')).not.toBeNull();
+    // Cada cifra de la fórmula es la del dato referenciado.
+    const textoMath = ecuaciones.map((e) => e.textContent).join(' ');
+    for (const c of x.formula.cifras) expect(textoMath).toContain(c.texto);
+    // Leyenda: cada símbolo con su nombre, su significado y su unidad.
+    const leyenda = figura.querySelectorAll('dl.formula-leyenda')[0];
+    expect(leyenda?.querySelectorAll('dt')).toHaveLength(x.formula.simbolos.length);
+    for (const s of x.formula.simbolos) {
+      expect(leyenda?.textContent).toContain(s.nombre);
+      expect(leyenda?.textContent).toContain(s.significado);
+    }
+    // El texto libre con cifras ya no se muestra: lo sustituye la fórmula.
+    expect(f.textContent).not.toContain(x.textos.formula);
+    // La caja se desplaza dentro de sí misma y se alcanza con el teclado.
+    const caja = figura.querySelector('.formula-caja');
+    expect(caja?.getAttribute('tabindex')).toBe('0');
+    expect(caja?.getAttribute('role')).toBe('region');
+  });
+
+  it('la incapacidad permanente muestra el texto y la fórmula del complemento de la gran incapacidad', () => {
+    const { container } = pintar();
+    const d = datosTipos();
+    const x = d.fichas.find((y) => y.config.ancla === 'incapacidad');
+    expect(x?.formula?.alcance).toBe('parcial');
+    const f = ficha(container, 'incapacidad');
+    expect(f.querySelectorAll('figure.formula')).toHaveLength(1);
+    expect(f.textContent).toContain(x?.textos.formula ?? 'falta');
+    expect(f.querySelector('figure.formula')?.textContent).toContain(
+      'Complemento de la gran incapacidad',
+    );
+  });
+
+  it('las prestaciones sin fórmula cerrada en la norma siguen mostrando la regla en texto', () => {
+    const { container } = pintar();
+    const d = datosTipos();
+    for (const ancla of ['viudedad', 'orfandad', 'familiares', 'pnc-jubilacion', 'pnc-invalidez']) {
+      const x = d.fichas.find((y) => y.config.ancla === ancla);
+      expect(x?.formula, ancla).toBeNull();
+      const f = ficha(container, ancla);
+      expect(f.querySelector('figure.formula'), ancla).toBeNull();
+      expect(f.textContent).toContain(x?.textos.formula ?? 'falta');
+    }
+  });
+
+  it('las líneas de fuente de cada ficha tienen nombre accesible único', () => {
+    const { container } = pintar();
+    const nombres = [...container.querySelectorAll('.linea-fuente-boton')].map((b) =>
+      b.getAttribute('aria-label'),
+    );
+    expect(nombres.every((n) => n !== null && n.length > 0)).toBe(true);
+    expect(new Set(nombres).size).toBe(nombres.length);
   });
 
   it('el cuadro resumen lista todas las prestaciones con su número y su pensión media', () => {

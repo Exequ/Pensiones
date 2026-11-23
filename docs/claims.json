@@ -5617,7 +5617,7 @@
     },
     {
       "id": "web-tipos-requisitos",
-      "texto": "Para cada prestación (jubilación, incapacidad permanente, viudedad, orfandad, en favor de familiares y pensiones no contributivas de jubilación y de invalidez), la página recoge a quién cubre y sus requisitos principales con el artículo del texto refundido de la Ley General de la Seguridad Social, tal como constan en el texto consolidado descargado; las modalidades de jubilación se nombran sin detallar sus requisitos y la jubilación parcial tiene confianza media.",
+      "texto": "Para cada prestación (jubilación, incapacidad permanente, viudedad, orfandad, en favor de familiares y pensiones no contributivas de jubilación y de invalidez), la página recoge a quién cubre y sus requisitos principales, tal como constan en el texto consolidado de la Ley General de la Seguridad Social consultado; el artículo de cada requisito, la duración, las compatibilidades y los límites no se ven en el cuerpo de la ficha, sino en el desplegable «Fuentes» de cada bloque, que conserva el artículo de la norma. La ficha de jubilación describe la modalidad ordinaria y remite a «Cómo se calcula» para las modalidades anticipada y demorada.",
       "ubicacion": "Página «Tipos de pensión» (Fase 5-C): requisitos",
       "datos": [
         "normativa/prestaciones.json#jubilacion-ordinaria",
@@ -5626,8 +5626,7 @@
         "normativa/prestaciones.json#orfandad",
         "normativa/prestaciones.json#favor-de-familiares",
         "normativa/prestaciones.json#pnc-jubilacion",
-        "normativa/prestaciones.json#pnc-incapacidad",
-        "normativa/prestaciones.json#jubilacion-parcial"
+        "normativa/prestaciones.json#pnc-incapacidad"
       ],
       "fuentes": [
         {
@@ -5643,7 +5642,7 @@
     },
     {
       "id": "web-tipos-cuantias",
-      "texto": "Las cuantías mínimas de 2026 son las filas literales del Anexo I del Real Decreto 241/2026, la cuantía máxima de las pensiones públicas es de 3.359,60 euros al mes en 14 pagas (Real Decreto-ley 3/2026) y la pensión no contributiva íntegra es de 8.803,20 euros al año, con una cuantía mínima del 25 % de esa cuantía; los importes por paga y el anual de la máxima son cálculos derivados.",
+      "texto": "Las cuantías mínimas de 2026 son las del Anexo I del Real Decreto 241/2026, rotuladas con el nombre de cada fila del anexo (su cita completa y su ubicación están en «Fuentes»), la cuantía máxima de las pensiones públicas es de 3.359,60 euros al mes en 14 pagas (Real Decreto-ley 3/2026) y la pensión no contributiva íntegra es de 8.803,20 euros al año, con una cuantía mínima del 25 % de esa cuantía; los importes por paga y el anual de la máxima son cálculos derivados.",
       "ubicacion": "Página «Tipos de pensión» (Fase 5-C): cuantías",
       "datos": [
         "parametros/pension-minima-jubilacion.json#2026-jub65-unipersonal",
@@ -5674,7 +5673,7 @@
     },
     {
       "id": "web-tipos-porcentajes",
-      "texto": "La pensión de viudedad es el 52 % de la base reguladora (60 % para pensionistas con 65 o más años que cumplen los requisitos del Real Decreto 900/2018 y 70 % con cargas familiares) y la de orfandad, el 20 % por huérfano, con un incremento del 52 % en la orfandad absoluta, según el reglamento citado en cada caso.",
+      "texto": "La pensión de viudedad es el 52 % de la base reguladora (60 % para pensionistas con 65 o más años que cumplen los requisitos del Real Decreto 900/2018 y 70 % con cargas familiares) y la de orfandad, el 20 % por huérfano, con un incremento del 52 % en la orfandad absoluta; la cita literal y el reglamento de cada porcentaje están en «Fuentes».",
       "ubicacion": "Página «Tipos de pensión» (Fase 5-C): porcentajes de la base reguladora",
       "datos": [
         "parametros/supervivencia-reglas.json#viudedad-pct",
@@ -5691,6 +5690,52 @@
         }
       ],
       "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-tipos-formula-jubilacion",
+      "texto": "La base reguladora de la pensión de jubilación es la suma de las 24 bases de cotización más recientes, sin actualizar, y de las bases de los meses 25 a 348 actualizadas con el índice de precios del mes 25 y el de cada mes, dividida entre 378, y la pensión es la base reguladora multiplicada por el porcentaje que corresponde a los años cotizados; el divisor y el número de meses siguen un calendario transitorio hasta 2037 (en 2026, 352,33 y 304). La fórmula se muestra con notación matemática y cada cifra sale del dato referenciado.",
+      "ubicacion": "Página «Tipos de pensión» (Fase R5): fórmula de la jubilación",
+      "datos": [
+        "normativa/prestaciones.json#jubilacion-ordinaria",
+        "parametros/actualizacion-bases.json#2026-meses-nominales",
+        "parametros/actualizacion-bases.json#2026-mes-indice-referencia",
+        "parametros/periodo-calculo-base-reguladora.json#2037",
+        "parametros/periodo-calculo-base-reguladora.json#2026",
+        "parametros/divisor-base-reguladora.json#2037",
+        "parametros/divisor-base-reguladora.json#2026"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-tipos-formula-gran-incapacidad",
+      "texto": "En la gran incapacidad, la pensión vitalicia se completa con un complemento equivalente a la suma del 45 % de la base mínima de cotización vigente en el hecho causante y el 30 % de la última base de cotización de la persona trabajadora por contingencias comunes; la norma no da una fórmula de cuantía para los demás grados, que remite al desarrollo reglamentario.",
+      "ubicacion": "Página «Tipos de pensión» (Fase R5): fórmula del complemento de la gran incapacidad",
+      "datos": [
+        "normativa/prestaciones.json#incapacidad-permanente",
+        "parametros/incapacidad-permanente-reglas.json#gran-incapacidad-complemento-pct-base-minima",
+        "parametros/incapacidad-permanente-reglas.json#gran-incapacidad-complemento-pct-ultima-base"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
       "estado": "verificada",
       "revisionActuarial": "no-requiere"
     },

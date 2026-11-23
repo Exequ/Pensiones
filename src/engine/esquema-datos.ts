@@ -537,6 +537,117 @@ export const ArchivoCronologia = z.strictObject({
   normas: z.array(Norma).min(1),
 });
 
+/**
+ * Referencia a un dato numérico de `data/parametros/<fichero>.json` (Fase R5): toda cifra de una
+ * fórmula estructurada es una referencia, nunca un número escrito.
+ */
+export const RefParametro = z.strictObject({
+  fichero: z.string().regex(PATRON_ID, { error: 'fichero con formato no válido' }),
+  id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
+});
+
+/**
+ * Expresión de una fórmula (Fase R5), en un lenguaje acotado que la interfaz traduce a MathML:
+ * símbolo (con subíndice opcional), cifra (referencia a un parámetro), suma, producto, cociente,
+ * sumatorio y grupo con delimitadores. En el sumatorio, si falta `desde` el índice empieza en 1.
+ */
+export type ExprFormula =
+  | { readonly tipo: 'simbolo'; readonly id: string; readonly subindice?: ExprFormula | undefined }
+  | {
+      readonly tipo: 'numero';
+      readonly ref: z.infer<typeof RefParametro>;
+      /** Qué es la cifra, en una frase y sin números, para la leyenda. */
+      readonly etiqueta?: string | undefined;
+      /** Cómo se escribe el valor del dato: número (por defecto) o porcentaje (el dato va en %). */
+      readonly como?: 'numero' | 'porcentaje' | undefined;
+      /** Serie anual (`data/parametros/<fichero>.json`, id = año) con el valor del calendario transitorio. */
+      readonly transitorio?: string | undefined;
+    }
+  | { readonly tipo: 'suma'; readonly terminos: readonly ExprFormula[] }
+  | { readonly tipo: 'producto'; readonly factores: readonly ExprFormula[] }
+  | {
+      readonly tipo: 'cociente';
+      readonly numerador: ExprFormula;
+      readonly denominador: ExprFormula;
+    }
+  | {
+      readonly tipo: 'sumatorio';
+      readonly variable: string;
+      readonly desde?: ExprFormula | undefined;
+      readonly hasta: ExprFormula;
+      readonly cuerpo: ExprFormula;
+    }
+  | {
+      readonly tipo: 'grupo';
+      readonly cuerpo: ExprFormula;
+      readonly delimitador?: 'parentesis' | 'corchetes' | undefined;
+    };
+
+export const ExprFormula: z.ZodType<ExprFormula> = z.lazy(() =>
+  z.discriminatedUnion('tipo', [
+    z.strictObject({
+      tipo: z.literal('simbolo'),
+      id: z.string().regex(PATRON_ID),
+      subindice: ExprFormula.optional(),
+    }),
+    z.strictObject({
+      tipo: z.literal('numero'),
+      ref: RefParametro,
+      etiqueta: z.string().trim().min(1).optional(),
+      como: z.enum(['numero', 'porcentaje']).optional(),
+      transitorio: z.string().regex(PATRON_ID).optional(),
+    }),
+    z.strictObject({ tipo: z.literal('suma'), terminos: z.array(ExprFormula).min(2) }),
+    z.strictObject({ tipo: z.literal('producto'), factores: z.array(ExprFormula).min(2) }),
+    z.strictObject({
+      tipo: z.literal('cociente'),
+      numerador: ExprFormula,
+      denominador: ExprFormula,
+    }),
+    z.strictObject({
+      tipo: z.literal('sumatorio'),
+      variable: z.string().regex(PATRON_ID),
+      desde: ExprFormula.optional(),
+      hasta: ExprFormula,
+      cuerpo: ExprFormula,
+    }),
+    z.strictObject({
+      tipo: z.literal('grupo'),
+      cuerpo: ExprFormula,
+      delimitador: z.enum(['parentesis', 'corchetes']).optional(),
+    }),
+  ]),
+);
+
+/** Símbolo de una fórmula estructurada, para la leyenda: cómo se escribe, qué es y en qué unidad. */
+export const SimboloFormula = z.strictObject({
+  id: z.string().regex(PATRON_ID, { error: 'id con formato no válido' }),
+  notacion: textoObligatorio('simbolo.notacion'),
+  nombre: textoObligatorio('simbolo.nombre'),
+  /** Qué significa, en una frase y sin cifras (las cifras salen de las referencias). */
+  significado: textoObligatorio('simbolo.significado'),
+  unidad: z.string().trim().min(1).nullable(),
+});
+
+/**
+ * Fórmula de la cuantía en forma estructurada (Fase R5), junto al texto original (`formula`), que se
+ * conserva tal cual por trazabilidad. Solo para las prestaciones con una fórmula cerrada en la norma.
+ */
+export const FormulaEstructurada = z.strictObject({
+  titulo: textoObligatorio('formulaEstructurada.titulo'),
+  /**
+   * `completa`: la fórmula cubre toda la cuantía y sustituye al texto; `parcial`: solo una parte (el
+   * resto de la regla sigue en el texto de `formula`).
+   */
+  alcance: z.enum(['completa', 'parcial']),
+  ecuaciones: z
+    .array(z.strictObject({ izquierda: ExprFormula, derecha: ExprFormula }))
+    .min(1, { error: 'La fórmula necesita al menos una ecuación' }),
+  simbolos: z.array(SimboloFormula).min(1),
+  /** Aclaraciones en texto, sin cifras (las cifras salen de las referencias). */
+  notas: z.array(z.string().trim().min(1)).optional(),
+});
+
 export const Requisito = z.strictObject({
   tipo: z.enum(['edad', 'carencia', 'alta', 'cotizacion-previa', 'rentas', 'residencia', 'otros']),
   descripcion: textoObligatorio('descripcion'),
@@ -561,6 +672,8 @@ export const Prestacion = z.strictObject({
     baseReguladora: z.string().trim().min(1).optional(),
     porcentaje: z.string().trim().min(1).optional(),
     formula: textoObligatorio('calculo.formula'),
+    /** Misma fórmula en forma estructurada; solo si la norma da una fórmula cerrada (Fase R5). */
+    formulaEstructurada: FormulaEstructurada.optional(),
     articulos: textoObligatorio('calculo.articulos'),
   }),
   limites: textoObligatorio('limites'),
@@ -1121,4 +1234,7 @@ export type Contraste = z.infer<typeof Contraste>;
 export type Norma = z.infer<typeof Norma>;
 export type ArchivoCronologia = z.infer<typeof ArchivoCronologia>;
 export type Prestacion = z.infer<typeof Prestacion>;
+export type FormulaEstructurada = z.infer<typeof FormulaEstructurada>;
+export type SimboloFormula = z.infer<typeof SimboloFormula>;
+export type RefParametro = z.infer<typeof RefParametro>;
 export type ArchivoPrestaciones = z.infer<typeof ArchivoPrestaciones>;

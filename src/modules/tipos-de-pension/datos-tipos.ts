@@ -3,8 +3,12 @@
  * página; `FICHEROS_TIPOS_DE_PENSION` los lista para el test de procedencia.
  */
 import prestacionesJson from '../../../data/normativa/prestaciones.json';
+import actualizacionBasesJson from '../../../data/parametros/actualizacion-bases.json';
+import divisorJson from '../../../data/parametros/divisor-base-reguladora.json';
+import incapacidadReglasJson from '../../../data/parametros/incapacidad-permanente-reglas.json';
 import lagunasBrechaJson from '../../../data/parametros/lagunas-integracion-brecha-genero.json';
 import maximaJson from '../../../data/parametros/pension-maxima.json';
+import periodoCalculoJson from '../../../data/parametros/periodo-calculo-base-reguladora.json';
 import minimaIncapacidadJson from '../../../data/parametros/pension-minima-incapacidad.json';
 import minimaJubilacionJson from '../../../data/parametros/pension-minima-jubilacion.json';
 import minimaOrfandadJson from '../../../data/parametros/pension-minima-orfandad-familiares.json';
@@ -23,7 +27,15 @@ import imsersoJson from '../../../data/sistema/imserso-pnc-evolucion.json';
 import perfilJson from '../../../data/sistema/imserso-pnc-perfil-2025.json';
 import numeroJson from '../../../data/sistema/pensiones-vigor-numero.json';
 import mediaJson from '../../../data/sistema/pensiones-vigor-pension-media.json';
+import type { DatoRotulado } from '../../components/fuentes';
 import { brechasAnualesDA37, type BrechaAnual } from '../../engine/brecha-da37';
+import { quitarCitas, ubicacionDeBloque } from '../../engine/citas-normativas';
+import {
+  resolverFormula,
+  type FormulaResuelta,
+  type ResolverReferencia,
+  type ValorReferencia,
+} from '../../engine/formulas';
 import {
   ArchivoPrestaciones,
   Dato,
@@ -83,9 +95,31 @@ export interface FilaPorcentaje {
   readonly id: string;
   readonly valor: number;
   readonly unidad: string;
-  readonly cita: string;
-  readonly ubicacion: string;
-  readonly dato: Dato;
+  /** Situación a la que se aplica el porcentaje. La cita y la ubicación viajan en `dato`. */
+  readonly rotulo: string;
+  readonly dato: DatoRotulado;
+}
+
+/** Texto de una ficha sin las citas normativas (que van a los desplegables de fuentes). */
+export interface TextosFicha {
+  readonly aQuienCubre: string;
+  readonly requisitos: readonly {
+    readonly tipo: Prestacion['requisitos'][number]['tipo'];
+    readonly descripcion: string;
+  }[];
+  readonly duracion: string;
+  readonly compatibilidades: string;
+  readonly formula: string;
+  readonly limites: string;
+}
+
+/** Datos con las citas de cada bloque de la ficha, para su línea de fuentes. */
+export interface FuentesFicha {
+  readonly quien: readonly DatoRotulado[];
+  /** Un dato por requisito (rótulo: su descripción), más la duración y las compatibilidades. */
+  readonly requisitos: readonly DatoRotulado[];
+  /** La fórmula y los límites. */
+  readonly calculo: readonly DatoRotulado[];
 }
 
 export interface FilaNumero {
@@ -119,7 +153,10 @@ export interface DatosFicha {
   readonly prestacion: Prestacion;
   /** Norma de la que procede la ficha (BOE) para la línea de fuente. */
   readonly datoNorma: Dato;
-  readonly modalidades: readonly Prestacion[];
+  readonly textos: TextosFicha;
+  readonly fuentes: FuentesFicha;
+  /** Fórmula estructurada de la cuantía, si la norma da una fórmula cerrada (Fase R5). */
+  readonly formula: FormulaResuelta | null;
   readonly cuantias: readonly FilaCuantia[];
   readonly datosCuantias: readonly Dato[];
   readonly maxima: CuantiaMaxima | null;
@@ -166,11 +203,51 @@ function datoPrestacion(p: Prestacion, vigenteA: string): Dato {
   });
 }
 
+/**
+ * Dato de un bloque de texto de la ficha (quién puede cobrarla, un requisito, los límites…): lleva
+ * la fuente de la prestación y, como ubicación, los artículos que cita el bloque. El texto original,
+ * con sus citas, queda en `value`; la ficha muestra el texto sin ellas.
+ */
+function datoDeBloque(
+  p: Prestacion,
+  vigenteA: string,
+  rotulo: string,
+  texto: string,
+  declarada?: string,
+): DatoRotulado {
+  const ubicacion = ubicacionDeBloque(texto, declarada);
+  const dato = Dato.parse({
+    value: texto,
+    unit: 'regla de la prestación',
+    period: vigenteA.slice(0, 4),
+    source: p.source,
+    fetchedAt: p.fetchedAt,
+    confidence: p.confidence,
+    ...(ubicacion === undefined ? {} : { location: ubicacion }),
+  });
+  return { ...dato, rotulo };
+}
+
 function valorMasReciente(serie: SerieCargada): { anio: number; valor: number } {
   const ultimo = serie.puntos.at(-1);
   if (!ultimo) throw new Error(`La serie ${serie.serie.id} no tiene puntos`);
   return { anio: ultimo.anio, valor: ultimo.valor };
 }
+
+/** Parámetros a los que apuntan las cifras de las fórmulas estructuradas (`data/parametros`). */
+const PARAMETROS_FORMULAS: Readonly<Record<string, ArchivoDatos>> = {
+  'actualizacion-bases': validarArchivo(actualizacionBasesJson),
+  'divisor-base-reguladora': validarArchivo(divisorJson),
+  'incapacidad-permanente-reglas': validarArchivo(incapacidadReglasJson),
+  'periodo-calculo-base-reguladora': validarArchivo(periodoCalculoJson),
+};
+
+/** Dato numérico de un parámetro: valor, unidad y periodo; `undefined` si no existe o no es numérico. */
+const resolverReferencia: ResolverReferencia = ({ fichero, id }): ValorReferencia | undefined => {
+  const dato = PARAMETROS_FORMULAS[fichero]?.data?.find((d) => d.id === id);
+  if (!dato || !esNumero(dato.value)) return undefined;
+  return { valor: dato.value, unidad: dato.unit, periodo: dato.period };
+};
 
 /** Datos validados con el esquema de /data y memorizados: se leen y validan una sola vez. */
 export const datosTipos = memorizar((): DatosTipos => {
@@ -267,8 +344,8 @@ export const datosTipos = memorizar((): DatosTipos => {
       };
     }
 
-    // Porcentajes de la base reguladora (reglamento).
-    const porcentajes = config.porcentajes.map((id): FilaPorcentaje => {
+    // Porcentajes de la base reguladora (reglamento). La cita y la ubicación van en el dato.
+    const porcentajes = config.porcentajes.map(({ id, rotulo }): FilaPorcentaje => {
       const d = supervivencia.data?.find((x) => x.id === id);
       if (!d || !esNumero(d.value) || d.quote === undefined || d.location === undefined) {
         throw new Error(`Falta el porcentaje «${id}» con su cita`);
@@ -277,9 +354,8 @@ export const datosTipos = memorizar((): DatosTipos => {
         id,
         valor: d.value,
         unidad: d.unit,
-        cita: d.quote,
-        ubicacion: d.location,
-        dato: datoDeArchivo(supervivencia, id),
+        rotulo,
+        dato: { ...datoDeArchivo(supervivencia, id), rotulo },
       };
     });
 
@@ -334,11 +410,61 @@ export const datosTipos = memorizar((): DatosTipos => {
       }
     }
 
+    // Textos sin citas y datos con las citas de cada bloque (Fase R5).
+    const vigenteA = archivoPrestaciones.vigenteA;
+    const textos: TextosFicha = {
+      aQuienCubre: quitarCitas(prestacion.aQuienCubre),
+      requisitos: prestacion.requisitos.map((r) => ({
+        tipo: r.tipo,
+        descripcion: quitarCitas(r.descripcion),
+      })),
+      duracion: quitarCitas(prestacion.duracion),
+      compatibilidades: quitarCitas(prestacion.compatibilidades),
+      formula: quitarCitas(prestacion.calculo.formula),
+      limites: quitarCitas(prestacion.limites),
+    };
+    const fuentes: FuentesFicha = {
+      quien: [datoDeBloque(prestacion, vigenteA, 'A quién cubre', prestacion.aQuienCubre)],
+      requisitos: [
+        ...prestacion.requisitos.map((r, i) =>
+          datoDeBloque(
+            prestacion,
+            vigenteA,
+            textos.requisitos[i]?.descripcion ?? r.descripcion,
+            r.descripcion,
+            r.articulo,
+          ),
+        ),
+        datoDeBloque(prestacion, vigenteA, 'Duración', prestacion.duracion),
+        datoDeBloque(prestacion, vigenteA, 'Compatibilidades', prestacion.compatibilidades),
+      ],
+      calculo: [
+        datoDeBloque(
+          prestacion,
+          vigenteA,
+          'Fórmula de la cuantía',
+          prestacion.calculo.formula,
+          prestacion.calculo.articulos,
+        ),
+        datoDeBloque(prestacion, vigenteA, 'Límites', prestacion.limites),
+      ],
+    };
+    const formulaEstructurada = prestacion.calculo.formulaEstructurada;
+    const formula =
+      formulaEstructurada === undefined
+        ? null
+        : resolverFormula(formulaEstructurada, resolverReferencia, {
+            anioVigente: anioCuantias,
+            resolverSerie: (fichero, id) => resolverReferencia({ fichero, id }),
+          });
+
     return {
       config,
       prestacion,
       datoNorma: datoPrestacion(prestacion, archivoPrestaciones.vigenteA),
-      modalidades: config.modalidades.map(prestacionPorId),
+      textos,
+      fuentes,
+      formula,
       cuantias,
       datosCuantias,
       maxima: maximaFicha,

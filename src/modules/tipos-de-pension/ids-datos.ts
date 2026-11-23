@@ -21,12 +21,18 @@ export interface ConfigFicha {
   readonly clasePnc: 'jubilacion' | 'invalidez' | null;
   /** Cuantías mínimas del Anexo I: fichero y patrón del identificador (año-clase-situación). */
   readonly minimas: { readonly fichero: FicheroMinimas; readonly patron: RegExp } | null;
-  /** Elementos de `supervivencia-reglas` con el porcentaje de la base reguladora. */
-  readonly porcentajes: readonly string[];
+  /** Elementos de `supervivencia-reglas` con el porcentaje de la base reguladora y su rótulo. */
+  readonly porcentajes: readonly PorcentajeFicha[];
   /** La ficha enlaza a «Tu pensión» solo si el simulador admite la prestación. */
   readonly tuPension: boolean;
-  /** Otras modalidades (identificadores de prestaciones) que se listan dentro de la ficha. */
-  readonly modalidades: readonly string[];
+  /** La ficha remite a «Cómo se calcula» para las modalidades que ajustan la cuantía (Fase R5). */
+  readonly remiteAModalidades: boolean;
+}
+
+/** Porcentaje de la base reguladora que fija el reglamento y la situación a la que se aplica (sin cifras). */
+export interface PorcentajeFicha {
+  readonly id: string;
+  readonly rotulo: string;
 }
 
 export const FICHAS: readonly ConfigFicha[] = [
@@ -40,14 +46,7 @@ export const FICHAS: readonly ConfigFicha[] = [
     minimas: { fichero: 'jubilacion', patron: /^\d{4}-jub/ },
     porcentajes: [],
     tuPension: true,
-    modalidades: [
-      'jubilacion-anticipada-involuntaria',
-      'jubilacion-anticipada-voluntaria',
-      'jubilacion-demorada',
-      'jubilacion-activa',
-      'jubilacion-flexible',
-      'jubilacion-parcial',
-    ],
+    remiteAModalidades: true,
   },
   {
     id: 'incapacidad-permanente',
@@ -59,7 +58,7 @@ export const FICHAS: readonly ConfigFicha[] = [
     minimas: { fichero: 'incapacidad', patron: /^\d{4}-ip-/ },
     porcentajes: [],
     tuPension: true,
-    modalidades: [],
+    remiteAModalidades: false,
   },
   {
     id: 'viudedad',
@@ -69,9 +68,21 @@ export const FICHAS: readonly ConfigFicha[] = [
     clase: 'viudedad',
     clasePnc: null,
     minimas: { fichero: 'viudedad', patron: /^\d{4}-viud-/ },
-    porcentajes: ['viudedad-pct', 'viudedad-65-pct', 'viudedad-cargas-pct'],
+    porcentajes: [
+      { id: 'viudedad-pct', rotulo: 'Regla general' },
+      {
+        id: 'viudedad-65-pct',
+        rotulo:
+          'Mejora para determinadas personas viudas de edad avanzada que cumplen los requisitos del reglamento que la regula',
+      },
+      {
+        id: 'viudedad-cargas-pct',
+        rotulo:
+          'Con cargas familiares, cuando la pensión es la principal o única fuente de ingresos',
+      },
+    ],
     tuPension: false,
-    modalidades: [],
+    remiteAModalidades: false,
   },
   {
     id: 'orfandad',
@@ -81,9 +92,15 @@ export const FICHAS: readonly ConfigFicha[] = [
     clase: 'orfandad',
     clasePnc: null,
     minimas: { fichero: 'orfandad-familiares', patron: /^\d{4}-(orf|prest-orf)-/ },
-    porcentajes: ['orfandad-pct', 'orfandad-absoluta-incremento-pct'],
+    porcentajes: [
+      { id: 'orfandad-pct', rotulo: 'Pensión de orfandad' },
+      {
+        id: 'orfandad-absoluta-incremento-pct',
+        rotulo: 'Incremento cuando no hay beneficiario de pensión de viudedad',
+      },
+    ],
     tuPension: false,
-    modalidades: [],
+    remiteAModalidades: false,
   },
   {
     id: 'favor-de-familiares',
@@ -95,7 +112,7 @@ export const FICHAS: readonly ConfigFicha[] = [
     minimas: { fichero: 'orfandad-familiares', patron: /^\d{4}-fam/ },
     porcentajes: [],
     tuPension: false,
-    modalidades: [],
+    remiteAModalidades: false,
   },
   {
     id: 'pnc-jubilacion',
@@ -107,7 +124,7 @@ export const FICHAS: readonly ConfigFicha[] = [
     minimas: null,
     porcentajes: [],
     tuPension: false,
-    modalidades: [],
+    remiteAModalidades: false,
   },
   {
     id: 'pnc-incapacidad',
@@ -119,7 +136,7 @@ export const FICHAS: readonly ConfigFicha[] = [
     minimas: null,
     porcentajes: [],
     tuPension: false,
-    modalidades: [],
+    remiteAModalidades: false,
   },
 ];
 
