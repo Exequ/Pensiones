@@ -4,7 +4,15 @@ import type { Dato } from '../engine/esquema-datos';
 export interface CitaFuente {
   readonly cita: string | undefined;
   readonly ubicacion: string | undefined;
+  /** A qué parte del bloque se refiere la cita (p. ej., el requisito de una tabla), si se indica. */
+  readonly rotulo?: string | undefined;
 }
+
+/**
+ * Dato con un rótulo opcional (Fase R5): permite que el desplegable de fuentes diga a qué parte del
+ * bloque corresponde cada cita o ubicación. El rótulo no forma parte del esquema de `/data`.
+ */
+export type DatoRotulado = Dato & { readonly rotulo?: string | undefined };
 
 export interface ReferenciaFuente {
   readonly clave: string;
@@ -31,7 +39,7 @@ export const ETIQUETA_NATURALEZA = {
  * confianza (`fetchedAt`, `confidence`) siguen en los datos, pero no forman parte de la referencia
  * que muestra la interfaz.
  */
-export function fuentesUnicas(datos: readonly Dato[]): ReferenciaFuente[] {
+export function fuentesUnicas(datos: readonly DatoRotulado[]): ReferenciaFuente[] {
   const vistas = new Map<string, Omit<ReferenciaFuente, 'citas'> & { citas: CitaFuente[] }>();
   for (const dato of datos) {
     const clave = [
@@ -56,9 +64,15 @@ export function fuentesUnicas(datos: readonly Dato[]): ReferenciaFuente[] {
     }
     if (dato.quote !== undefined || dato.location !== undefined) {
       const repetida = fuente.citas.some(
-        (c) => c.cita === dato.quote && c.ubicacion === dato.location,
+        (c) => c.cita === dato.quote && c.ubicacion === dato.location && c.rotulo === dato.rotulo,
       );
-      if (!repetida) fuente.citas.push({ cita: dato.quote, ubicacion: dato.location });
+      if (!repetida) {
+        fuente.citas.push({
+          cita: dato.quote,
+          ubicacion: dato.location,
+          ...(dato.rotulo === undefined ? {} : { rotulo: dato.rotulo }),
+        });
+      }
     }
   }
   return [...vistas.values()];

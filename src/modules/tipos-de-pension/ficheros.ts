@@ -6,8 +6,12 @@
  */
 export const FICHEROS_TIPOS_DE_PENSION = [
   'data/normativa/prestaciones.json',
+  'data/parametros/actualizacion-bases.json',
+  'data/parametros/divisor-base-reguladora.json',
+  'data/parametros/incapacidad-permanente-reglas.json',
   'data/parametros/lagunas-integracion-brecha-genero.json',
   'data/parametros/pension-maxima.json',
+  'data/parametros/periodo-calculo-base-reguladora.json',
   'data/parametros/pension-minima-incapacidad.json',
   'data/parametros/pension-minima-jubilacion.json',
   'data/parametros/pension-minima-orfandad-familiares.json',

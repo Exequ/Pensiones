@@ -47,5 +47,129 @@
       "fetchedAt": "2025-02-03T10:00:00Z",
       "confidence": "media"
     }
-  ]
+  ],
+  "formula": {
+    "parametros": [
+      {
+        "id": "meses",
+        "valor": 6,
+        "unidad": "meses ficticios",
+        "periodo": "2000"
+      },
+      {
+        "id": "divisor",
+        "valor": 8,
+        "unidad": "divisor ficticio",
+        "periodo": "2000"
+      },
+      {
+        "id": "porcentaje",
+        "valor": 60,
+        "unidad": "% ficticio",
+        "periodo": "2000"
+      }
+    ],
+    "estructurada": {
+      "titulo": "Pensión ficticia a partir de una base ficticia",
+      "alcance": "completa",
+      "ecuaciones": [
+        {
+          "izquierda": {
+            "tipo": "simbolo",
+            "id": "base"
+          },
+          "derecha": {
+            "tipo": "cociente",
+            "numerador": {
+              "tipo": "grupo",
+              "delimitador": "corchetes",
+              "cuerpo": {
+                "tipo": "sumatorio",
+                "variable": "mes",
+                "hasta": {
+                  "tipo": "numero",
+                  "ref": {
+                    "fichero": "muestra",
+                    "id": "meses"
+                  },
+                  "etiqueta": "Meses ficticios que se suman"
+                },
+                "cuerpo": {
+                  "tipo": "simbolo",
+                  "id": "ingreso",
+                  "subindice": {
+                    "tipo": "simbolo",
+                    "id": "mes"
+                  }
+                }
+              }
+            },
+            "denominador": {
+              "tipo": "numero",
+              "ref": {
+                "fichero": "muestra",
+                "id": "divisor"
+              },
+              "etiqueta": "Divisor ficticio"
+            }
+          }
+        },
+        {
+          "izquierda": {
+            "tipo": "simbolo",
+            "id": "pension"
+          },
+          "derecha": {
+            "tipo": "producto",
+            "factores": [
+              {
+                "tipo": "simbolo",
+                "id": "base"
+              },
+              {
+                "tipo": "numero",
+                "ref": {
+                  "fichero": "muestra",
+                  "id": "porcentaje"
+                },
+                "como": "porcentaje",
+                "etiqueta": "Porcentaje ficticio que se aplica a la base"
+              }
+            ]
+          }
+        }
+      ],
+      "simbolos": [
+        {
+          "id": "base",
+          "notacion": "Base",
+          "nombre": "Base ficticia",
+          "significado": "Importe ficticio sobre el que se aplica el porcentaje.",
+          "unidad": "euros ficticios al mes"
+        },
+        {
+          "id": "ingreso",
+          "notacion": "X",
+          "nombre": "Ingreso ficticio",
+          "significado": "Ingreso ficticio de cada mes que se suma.",
+          "unidad": "euros ficticios al mes"
+        },
+        {
+          "id": "mes",
+          "notacion": "m",
+          "nombre": "Índice del mes",
+          "significado": "Número de orden de cada mes ficticio.",
+          "unidad": "mes"
+        },
+        {
+          "id": "pension",
+          "notacion": "Pensión",
+          "nombre": "Pensión ficticia",
+          "significado": "Resultado ficticio de aplicar el porcentaje a la base.",
+          "unidad": "euros ficticios al mes"
+        }
+      ],
+      "notas": ["Ejemplo ficticio del componente: no corresponde a ninguna norma."]
+    }
+  }
 }

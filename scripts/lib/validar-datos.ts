@@ -18,6 +18,7 @@ import {
   RegistroAfirmaciones,
   type ArchivoExtraccionPdf as TipoExtraccionPdf,
 } from '../../src/engine/esquema-datos.ts';
+import { comprobarFormula, type ValorReferencia } from '../../src/engine/formulas.ts';
 
 export interface ErrorValidacion {
   readonly fichero: string;
@@ -324,6 +325,71 @@ export async function validarCsvHermano(
   return [];
 }
 
+/**
+ * Fase R5: comprueba las fórmulas estructuradas de un fichero de prestaciones contra
+ * `parametros/` (hermano de `normativa/` dentro del directorio de datos): cada cifra apunta a un dato
+ * numérico existente y cada símbolo de la fórmula está en la leyenda, y al revés.
+ */
+export async function validarFormulas(
+  json: unknown,
+  relativo: string,
+  directorioDatos: string,
+): Promise<ErrorValidacion[]> {
+  const archivo = ArchivoPrestaciones.safeParse(json);
+  if (!archivo.success) return []; // el esquema ya lo ha señalado
+  const errores: ErrorValidacion[] = [];
+  const cache = new Map<string, Map<string, ValorReferencia> | null>();
+  const cargar = async (fichero: string) => {
+    if (!cache.has(fichero)) {
+      const ruta = path.join(directorioDatos, 'parametros', `${fichero}.json`);
+      const leido = existsSync(ruta) ? await leerJson(ruta, ruta) : null;
+      const datos = new Map<string, ValorReferencia>();
+      if (leido !== null && 'json' in leido) {
+        const archivoDatos = ArchivoDatos.safeParse(leido.json);
+        if (archivoDatos.success) {
+          for (const d of archivoDatos.data.data ?? []) {
+            if (typeof d.value === 'number') {
+              datos.set(d.id, { valor: d.value, unidad: d.unit, periodo: d.period });
+            }
+          }
+        }
+        cache.set(fichero, datos);
+      } else cache.set(fichero, null);
+    }
+    return cache.get(fichero) ?? null;
+  };
+  // Se cargan antes de comprobar para poder usar resolutores síncronos.
+  const referencias = new Set<string>();
+  const recoger = (valor: unknown): void => {
+    if (Array.isArray(valor)) valor.forEach(recoger);
+    else if (esObjeto(valor)) {
+      const ref = valor['ref'];
+      if (esObjeto(ref) && typeof ref['fichero'] === 'string') referencias.add(ref['fichero']);
+      if (typeof valor['transitorio'] === 'string') referencias.add(valor['transitorio']);
+      Object.values(valor).forEach(recoger);
+    }
+  };
+  for (const p of archivo.data.prestaciones) recoger(p.calculo.formulaEstructurada);
+  for (const fichero of referencias) await cargar(fichero);
+  const resolver = (fichero: string, id: string) => cache.get(fichero)?.get(id);
+  for (const [i, p] of archivo.data.prestaciones.entries()) {
+    const formula = p.calculo.formulaEstructurada;
+    if (formula === undefined) continue;
+    for (const problema of comprobarFormula(
+      formula,
+      (ref) => resolver(ref.fichero, ref.id),
+      resolver,
+    )) {
+      errores.push({
+        fichero: relativo,
+        ruta: `prestaciones[${i}].calculo.formulaEstructurada`,
+        mensaje: problema,
+      });
+    }
+  }
+  return errores;
+}
+
 /** Valida todos los JSON de un directorio (recursivo). */
 export async function validarDirectorio(
   directorio: string,
@@ -340,6 +406,9 @@ export async function validarDirectorio(
     }
     errores.push(...validarContenido(leido.json, relativo));
     errores.push(...(await validarCsvHermano(leido.json, fichero, relativo)));
+    if (esObjeto(leido.json) && leido.json['tipo'] === 'prestaciones') {
+      errores.push(...(await validarFormulas(leido.json, relativo, directorio)));
+    }
   }
   // Todo CSV de /data necesita su JSON hermano con la procedencia.
   const entradas = await readdir(directorio, { withFileTypes: true, recursive: true });

@@ -76,3 +76,7 @@ texto de cada encabezado.
 ## Cajas «Interpretación» (fase RI)
 
 La guía de voz se aplica también dentro de las cajas «Interpretación», sin exenciones (ni la de «Metodología»). Lo único que cambia dentro de una caja es la lista de términos de valoración: se admiten, pero cada uno lleva su criterio definido debajo del texto (`docs/INTERPRETACIONES.md`). Fuera de las cajas, las pruebas de valoraciones y de veredictos no cambian.
+
+## Citas de artículos y fórmulas (fase R5)
+
+Los números de artículo, las abreviaturas de normas («TRLGSS», «DT»), las citas literales y las ubicaciones no se ven en el cuerpo ni en las tablas de «Tipos de pensión»: están en el desplegable «Fuentes» de cada bloque, que las muestra bajo «Se refiere a» (el fragmento al que corresponde) y «Ubicación en el documento». El nombre de una norma sí puede constar cuando es el hecho («el mínimo anual de la Ley de PGE»). Un texto que remite a otra parte lo hace con palabras («se explica en «Cómo se calcula»»), no con un artículo. En una fórmula, cada símbolo lleva nombre, significado en una frase y unidad en la leyenda, sin cifras escritas a mano: las cifras salen de los datos.

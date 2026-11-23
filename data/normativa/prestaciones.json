@@ -32,7 +32,184 @@
         "baseReguladora": "Texto vigente (desde 01/01/2026): cociente de dividir entre 378 la suma de las 324 bases de cotización de mayor importe elegidas de oficio de entre los 348 meses consecutivos inmediatamente anteriores al mes previo al del hecho causante. Las 24 bases más recientes se computan en valor nominal; las restantes se actualizan con el IPC. Lagunas (meses sin obligación de cotizar): las primeras 48 mensualidades se integran con la base mínima del Régimen General del mes respectivo y el resto con el 50 % de dicha base mínima (art. 209.1.b; para mujeres —y hombres que cumplan reglas 1.ª o 2.ª del art. 60.1.b)— la DT 41.ª eleva la integración al 100 % de la base mínima de la mensualidad 49 a la 60 y al 80 % de la 61 a la 84, mientras la brecha de género supere el 5 %). Régimen transitorio (DT 40.ª): en 2026 se divide entre 352,33 la suma de las 302 bases de mayor importe dentro de los 304 meses anteriores; en 2027, 354,67 / 304 bases / 308 meses; 2028, 357,00 / 306 / 312; 2029, 359,33 / 308 / 316; 2030, 361,67 / 310 / 320; 2031, 364 / 312 / 324; 2032, 366,33 / 314 / 328; 2033, 368,67 / 316 / 332; 2034, 371,00 / 318 / 336; 2035, 373,33 / 320 / 340; 2036, 375,67 / 322 / 344; desde 2037, art. 209.1 en su integridad. Además, para hechos causantes entre el 31/12/2025 y el 31/12/2040 se aplica el art. 209.1 en su redacción vigente el 1 de enero de 2023 si resulta más favorable; en 2041: 306 meses entre 357; 2042: 312 entre 364; 2043: 318 entre 371; desde 2044 solo la redacción vigente desde 2026 (DT 4.ª.7).",
         "porcentaje": "Por los primeros 15 años cotizados, 50 %. A partir del año 16, por cada mes adicional entre los meses 1 y 248, 0,19 %, y por cada mes que rebase el 248, 0,18 %, sin superar el 100 % (salvo demora, art. 210.2). Escala transitoria (DT 9.ª): 2023 a 2026: 0,21 % por cada mes adicional entre los meses 1 y 49 y 0,19 % por cada uno de los 209 meses siguientes; a partir de 2027: 0,19 % meses 1 a 248 y 0,18 % los 16 meses siguientes.",
         "formula": "BR (art. 209.1, texto vigente) = [ Σ(i=1..24) B_i + Σ(i=25..348) B_i · I_25 / I_i ] / 378, donde las 24 bases descartadas (las de menor importe) toman valor 0. Pensión = BR × porcentaje por años cotizados (art. 210.1), con límite máximo del art. 57 y, en su caso, complemento a mínimos (art. 59).",
-        "articulos": "arts. 209, 210.1 TRLGSS; DT 4.ª.7, 9.ª, 40.ª y 41.ª TRLGSS"
+        "articulos": "arts. 209, 210.1 TRLGSS; DT 4.ª.7, 9.ª, 40.ª y 41.ª TRLGSS",
+        "formulaEstructurada": {
+          "titulo": "Base reguladora y cuantía de la pensión de jubilación",
+          "alcance": "completa",
+          "ecuaciones": [
+            {
+              "izquierda": {
+                "tipo": "simbolo",
+                "id": "base-reguladora"
+              },
+              "derecha": {
+                "tipo": "cociente",
+                "numerador": {
+                  "tipo": "grupo",
+                  "delimitador": "corchetes",
+                  "cuerpo": {
+                    "tipo": "suma",
+                    "terminos": [
+                      {
+                        "tipo": "sumatorio",
+                        "variable": "indice-mes",
+                        "hasta": {
+                          "tipo": "numero",
+                          "ref": {
+                            "fichero": "actualizacion-bases",
+                            "id": "2026-meses-nominales"
+                          },
+                          "etiqueta": "Meses más recientes del periodo, que se computan sin actualizar"
+                        },
+                        "cuerpo": {
+                          "tipo": "simbolo",
+                          "id": "base-cotizacion",
+                          "subindice": {
+                            "tipo": "simbolo",
+                            "id": "indice-mes"
+                          }
+                        }
+                      },
+                      {
+                        "tipo": "sumatorio",
+                        "variable": "indice-mes",
+                        "desde": {
+                          "tipo": "numero",
+                          "ref": {
+                            "fichero": "actualizacion-bases",
+                            "id": "2026-mes-indice-referencia"
+                          },
+                          "etiqueta": "Mes de referencia cuyo índice de precios se usa para actualizar las bases"
+                        },
+                        "hasta": {
+                          "tipo": "numero",
+                          "ref": {
+                            "fichero": "periodo-calculo-base-reguladora",
+                            "id": "2037"
+                          },
+                          "etiqueta": "Meses del periodo de cálculo de la base reguladora",
+                          "transitorio": "periodo-calculo-base-reguladora"
+                        },
+                        "cuerpo": {
+                          "tipo": "producto",
+                          "factores": [
+                            {
+                              "tipo": "simbolo",
+                              "id": "base-cotizacion",
+                              "subindice": {
+                                "tipo": "simbolo",
+                                "id": "indice-mes"
+                              }
+                            },
+                            {
+                              "tipo": "cociente",
+                              "numerador": {
+                                "tipo": "simbolo",
+                                "id": "indice-precios",
+                                "subindice": {
+                                  "tipo": "numero",
+                                  "ref": {
+                                    "fichero": "actualizacion-bases",
+                                    "id": "2026-mes-indice-referencia"
+                                  },
+                                  "etiqueta": "Mes de referencia cuyo índice de precios se usa para actualizar las bases"
+                                }
+                              },
+                              "denominador": {
+                                "tipo": "simbolo",
+                                "id": "indice-precios",
+                                "subindice": {
+                                  "tipo": "simbolo",
+                                  "id": "indice-mes"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "denominador": {
+                  "tipo": "numero",
+                  "ref": {
+                    "fichero": "divisor-base-reguladora",
+                    "id": "2037"
+                  },
+                  "etiqueta": "Divisor de la suma de las bases",
+                  "transitorio": "divisor-base-reguladora"
+                }
+              }
+            },
+            {
+              "izquierda": {
+                "tipo": "simbolo",
+                "id": "pension"
+              },
+              "derecha": {
+                "tipo": "producto",
+                "factores": [
+                  {
+                    "tipo": "simbolo",
+                    "id": "base-reguladora"
+                  },
+                  {
+                    "tipo": "simbolo",
+                    "id": "porcentaje"
+                  }
+                ]
+              }
+            }
+          ],
+          "simbolos": [
+            {
+              "id": "base-reguladora",
+              "notacion": "BR",
+              "nombre": "Base reguladora",
+              "significado": "Importe mensual sobre el que se aplica el porcentaje de la pensión.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "base-cotizacion",
+              "notacion": "B",
+              "nombre": "Base de cotización",
+              "significado": "Base de cotización de cada mes del periodo de cálculo, contado hacia atrás desde el mes previo al del hecho causante. Las bases descartadas, las de menor importe, valen cero.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "indice-precios",
+              "notacion": "I",
+              "nombre": "Índice de precios al consumo",
+              "significado": "Índice de precios del mes que indica el subíndice; actualiza las bases de los meses más antiguos.",
+              "unidad": "índice"
+            },
+            {
+              "id": "indice-mes",
+              "notacion": "i",
+              "nombre": "Índice del mes",
+              "significado": "Número de orden de cada mes del periodo, contado hacia atrás desde el mes previo al del hecho causante.",
+              "unidad": "mes"
+            },
+            {
+              "id": "porcentaje",
+              "notacion": "P",
+              "nombre": "Porcentaje por cotización",
+              "significado": "Porcentaje de la base reguladora que corresponde a los años cotizados, según la escala de la norma.",
+              "unidad": "% de la base reguladora"
+            },
+            {
+              "id": "pension",
+              "notacion": "Pensión",
+              "nombre": "Cuantía de la pensión",
+              "significado": "Importe mensual de la pensión de jubilación que resulta de aplicar el porcentaje a la base reguladora.",
+              "unidad": "euros al mes"
+            }
+          ],
+          "notas": [
+            "La cuantía está sujeta al límite máximo y, si procede, al complemento a mínimos.",
+            "El divisor y el número de meses del periodo de cálculo siguen un calendario transitorio hasta la plena aplicación del texto de la norma; la leyenda de cifras indica el valor de cada uno en el año de los datos."
+          ]
+        }
       },
       "limites": "Importe inicial limitado a la cuantía íntegra mensual máxima que fije cada año la Ley de Presupuestos Generales del Estado (art. 57); entre 2025 y 2050 esa cuantía máxima se incrementa cada año en la revalorización del art. 58.2 más 0,115 puntos porcentuales acumulativos (DT 39.ª). La BR no puede rebasar el tope máximo de la base de cotización (art. 161.2). Complemento a mínimos si procede (art. 59). Las cuantías anuales concretas se fijan en la LPGE/normas de revalorización (no recogidas en este bloque).",
       "duracion": "Vitalicia. El derecho al reconocimiento es imprescriptible; en jubilación desde alta, los efectos se retrotraen como máximo a 3 meses antes de la solicitud (art. 212).",
@@ -529,7 +706,86 @@
         "baseReguladora": "Enfermedad común: cociente de dividir por 112 las bases de cotización de los 96 meses anteriores al mes previo al hecho causante (24 meses en valor nominal y el resto actualizado con el IPC).",
         "porcentaje": "Porcentaje según años de cotización con la escala del artículo 210.1 (para la pensión derivada de enfermedad común).",
         "formula": "Parcial: cantidad a tanto alzado. Total: pensión vitalicia (con posible incremento por dificultad de empleo y, en enfermedad común, importe no inferior al mínimo anual fijado en la Ley de PGE). Absoluta: pensión vitalicia. Gran incapacidad: pensión vitalicia más un complemento equivalente a la suma del 45 % de la base mínima de cotización vigente en el hecho causante y el 30 % de la última base de cotización de la persona trabajadora por contingencias comunes (art. 196.4); porcentajes del grado y baremo, por desarrollo reglamentario.",
-        "articulos": "arts. 194, 196 y 197 TRLGSS"
+        "articulos": "arts. 194, 196 y 197 TRLGSS",
+        "formulaEstructurada": {
+          "titulo": "Complemento de la gran incapacidad",
+          "alcance": "parcial",
+          "ecuaciones": [
+            {
+              "izquierda": {
+                "tipo": "simbolo",
+                "id": "complemento"
+              },
+              "derecha": {
+                "tipo": "suma",
+                "terminos": [
+                  {
+                    "tipo": "producto",
+                    "factores": [
+                      {
+                        "tipo": "numero",
+                        "ref": {
+                          "fichero": "incapacidad-permanente-reglas",
+                          "id": "gran-incapacidad-complemento-pct-base-minima"
+                        },
+                        "etiqueta": "Parte de la base mínima de cotización que se suma al complemento",
+                        "como": "porcentaje"
+                      },
+                      {
+                        "tipo": "simbolo",
+                        "id": "base-minima"
+                      }
+                    ]
+                  },
+                  {
+                    "tipo": "producto",
+                    "factores": [
+                      {
+                        "tipo": "numero",
+                        "ref": {
+                          "fichero": "incapacidad-permanente-reglas",
+                          "id": "gran-incapacidad-complemento-pct-ultima-base"
+                        },
+                        "etiqueta": "Parte de la última base de cotización que se suma al complemento",
+                        "como": "porcentaje"
+                      },
+                      {
+                        "tipo": "simbolo",
+                        "id": "ultima-base"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "simbolos": [
+            {
+              "id": "complemento",
+              "notacion": "C",
+              "nombre": "Complemento de la gran incapacidad",
+              "significado": "Importe que se suma a la pensión vitalicia de la gran incapacidad.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "base-minima",
+              "notacion": "B_mín",
+              "nombre": "Base mínima de cotización",
+              "significado": "Base mínima de cotización vigente en el momento del hecho causante.",
+              "unidad": "euros al mes"
+            },
+            {
+              "id": "ultima-base",
+              "notacion": "B_últ",
+              "nombre": "Última base de cotización",
+              "significado": "Última base de cotización de la persona trabajadora por contingencias comunes.",
+              "unidad": "euros al mes"
+            }
+          ],
+          "notas": [
+            "Los porcentajes del grado y el baremo de las demás situaciones se fijan por desarrollo reglamentario, y la norma no da para ellas una fórmula de cuantía."
+          ]
+        }
       },
       "limites": "La cuantía de la pensión de incapacidad permanente total derivada de enfermedad común no puede ser inferior al mínimo anual de la Ley de PGE para titulares menores de sesenta años con cónyuge no a cargo (art. 196.2). La lista de enfermedades y la valoración de los grados se desarrollan por reglamento (art. 194.3).",
       "duracion": "Total, absoluta y gran incapacidad: pensión vitalicia; la total puede sustituirse excepcionalmente por una indemnización a tanto alzado si el beneficiario es menor de sesenta años. Parcial: pago único (art. 196).",

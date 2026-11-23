@@ -16,12 +16,13 @@ import { Kicker } from '../components/Kicker';
 import { Lead } from '../components/Lead';
 import { MarginNote } from '../components/MarginNote';
 import { SegmentedPills } from '../components/SegmentedPills';
+import { Formula } from '../components/Formula';
 import { InterpretationBox } from '../components/InterpretationBox';
 import { SourceLine } from '../components/SourceLine';
 import { INTERPRETACIONES } from '../contenido/interpretaciones';
 import type { ResolverDato } from '../engine/interpretaciones';
 import { formatearPorcentaje } from '../engine/formato';
-import { MUESTRA, porcentajeFicticio } from './muestra';
+import { MUESTRA, formulaFicticia, porcentajeFicticio } from './muestra';
 import './DesignLab.css';
 
 const OPCIONES_ANIOS = MUESTRA.porcentajePorAnios.map(({ anios }) => anios);
@@ -290,6 +291,16 @@ export default function DesignLab() {
               }}
               nota="Datos ficticios."
             />
+          </section>
+
+          <section className="catalogo-bloque" aria-labelledby="cat-formula">
+            <h3 id="cat-formula">Fórmula con leyenda</h3>
+            <p>
+              Notación matemática en MathML nativo y, debajo, la leyenda de cada símbolo y de cada
+              cifra. La fórmula se desplaza dentro de su caja en pantallas estrechas. Fórmula y
+              cifras ficticias.
+            </p>
+            <Formula formula={formulaFicticia()} />
           </section>
 
           <section className="catalogo-bloque" aria-labelledby="cat-fuente">
