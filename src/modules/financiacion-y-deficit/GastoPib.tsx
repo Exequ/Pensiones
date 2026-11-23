@@ -10,6 +10,9 @@ import { GraficoSeries, type SerieGrafico } from '../historico/GraficoSeries';
 import { decimal1, puntosAPorcentaje } from '../historico/formatos';
 import { datosFinanciacion } from '../historico/datos-financiacion';
 import { APARTADOS } from './apartados';
+import { DefinicionFinanciacion } from './DefinicionFinanciacion';
+
+import { DEFINICIONES_GASTO } from './definiciones-pagina';
 
 type VarianteComplemento = 'con' | 'sin' | 'ambas';
 
@@ -62,21 +65,17 @@ export function GastoPib() {
         gasto público en pensiones que recoge la OCDE.
       </p>
       <p>
-        La referencia por defecto para el gasto contributivo propio es la de obligaciones
-        reconocidas con complemento a mínimos, porque ese complemento se abona como parte de la
-        pensión; es una convención de esta página, no una definición oficial. La variante sin
-        complemento está disponible. En la ejecución, el complemento se anota en una fila propia del
-        capítulo de transferencias corrientes (bloque de pensiones no contributivas y complementos a
-        mínimos de pensiones contributivas), distinta de la fila «suma de pensiones».
+        La referencia por defecto para el gasto contributivo propio es la que incluye el complemento
+        a mínimos; la variante sin complemento está disponible en el selector. Las medidas de
+        Eurostat no son comparables con el gasto contributivo propio: este incluye la clase
+        «incapacidad permanente», que no figura entre las series de Eurostat consultadas. Qué
+        incluye cada medida:
       </p>
-      <p>
-        La serie de Eurostat es de ESSPROS (siglas de la fuente, en inglés): gasto registrado en
-        prestaciones de protección social, clasificado por función. Aquí se usan las funciones
-        «vejez» y «supervivientes». No es comparable con el gasto contributivo propio: este incluye
-        la clase «incapacidad permanente», que no está entre las series de Eurostat consultadas, y
-        los metadatos consultados no delimitan qué administraciones o regímenes entran en la serie,
-        por lo que esta página no lo afirma.
-      </p>
+      <div className="hist-definiciones">
+        {DEFINICIONES_GASTO.map((id) => (
+          <DefinicionFinanciacion key={id} id={id} />
+        ))}
+      </div>
       <div className="hist-selector">
         <SegmentedPills
           leyenda="Gasto contributivo propio (obligaciones reconocidas)"

@@ -11,7 +11,8 @@ import deficitSecJson from '../../../data/sistema/deficit-sec-fondos-seguridad-s
 import gastosImpropiosJson from '../../../data/sistema/gastos-impropios.json';
 import ejecucionCsv from '../../../data/sistema/presupuesto-ss-ejecucion.csv?raw';
 import ejecucionJson from '../../../data/sistema/presupuesto-ss-ejecucion.json';
-import type { Dato } from '../../engine/esquema-datos';
+import type { DatoRotulado } from '../../components/fuentes';
+import { Dato } from '../../engine/esquema-datos';
 import { datoDeArchivo, type PuntoAnual } from '../../engine/series-historicas';
 import {
   leerEjecucion,
@@ -22,6 +23,7 @@ import {
 import { FICHEROS_FINANCIACION } from './ficheros';
 import {
   cargarSerie,
+  cargarSerieConCita,
   datoDeTabla,
   memorizar,
   validarArchivo,
@@ -34,6 +36,17 @@ export const ID_DEFINICION_SEC = 'necesidad-financiacion-sec-s1314';
 export const ID_NOTA_SANIDAD = 'nota-espana-sanidad-2002';
 /** Única cifra de gastos impropios que muestra la página: una estimación, no un dato observado. */
 export const ID_ESTIMACION_GASTOS_IMPROPIOS = 'gastos-impropios-previstos-2023';
+
+/**
+ * Conceptos de la ejecución (tal como los nombra la fuente) que la página lee o cita. Los rótulos no
+ * se ven en el cuerpo: van como cita al desplegable «Fuentes» (fase R7).
+ */
+export const CONCEPTO = {
+  cotizaciones: '1. COTIZACIONES SOCIALES',
+  sumaPensiones: 'SUMA DE PENSIONES',
+  complementoMinimos: 'COMPL. A MÍNIMOS PENSIONES CONTRIBUTIVAS',
+  bloqueNoContributivas: 'SUMA DE PENSIONES NO CONTR. Y COMPL. A MÍNIMOS DE PENSIONES CONTR.',
+} as const;
 
 /** Primer y último ejercicio con cifra de fin de año en la ejecución (2017 es la comparativa de 2018). */
 export const PRIMER_EJERCICIO = 2017;
@@ -148,9 +161,9 @@ export const datosFinanciacion = memorizar((): DatosFinanciacion => {
     ejecucion: {
       cotizaciones: serieDeEjecucion(filas, dato, {
         tabla: 'ingresos',
-        concepto: '1. COTIZACIONES SOCIALES',
+        concepto: CONCEPTO.cotizaciones,
       }),
-      sumaPensiones: cap4('SUMA DE PENSIONES'),
+      sumaPensiones: cap4(CONCEPTO.sumaPensiones),
       jubilacion: cap4('JUBILACIÓN'),
       incapacidad: cap4(['INVALIDEZ', 'INCAPACIDAD PERMANENTE']),
       viudedad: cap4('VIUDEDAD'),
@@ -158,13 +171,13 @@ export const datosFinanciacion = memorizar((): DatosFinanciacion => {
       favorFamiliares: cap4('A FAVOR DE FAMILIARES'),
       complementoMinimos: serieDeEjecucion(filas, dato, {
         tabla: 'gastos-cap4-no-contributivas',
-        concepto: 'COMPL. A MÍNIMOS PENSIONES CONTRIBUTIVAS',
+        concepto: CONCEPTO.complementoMinimos,
       }),
     },
     gastoSobrePib: {
       eurostatVejez: cargarSerie(eurostat, 'gasto-old-no-aplica-no-aplica-pc-gdp'),
       eurostatSupervivencia: cargarSerie(eurostat, 'gasto-srv-no-aplica-no-aplica-pc-gdp'),
-      ocde: cargarSerie(ocde, 'pep-no-aplica-z-z-pt-b1gq'),
+      ocde: cargarSerieConCita(ocde, 'pep-no-aplica-z-z-pt-b1gq'),
     },
     definiciones: (definiciones.data ?? []).map((d) => ({
       id: d.id,
@@ -182,5 +195,103 @@ export const datosFinanciacion = memorizar((): DatosFinanciacion => {
     })),
   };
 });
+
+/** Rótulo («Se refiere a») de la cita de cada registro de `deficit-definiciones` en «Fuentes». */
+const ROTULO_CITA_DEFINICION: Readonly<Record<string, string>> = {
+  'saldo-presupuestario-no-financiero': 'Rótulo de la fuente para las operaciones no financieras',
+  'saldo-presupuestario-total': 'Rótulos de la fuente para los totales de ingresos y gastos',
+  [ID_DEFINICION_SEC]: 'Definición del saldo en los metadatos de Eurostat',
+  [ID_NOTA_SANIDAD]: 'Nota de Eurostat sobre el cambio de perímetro del subsector',
+};
+
+/**
+ * Datos de las filas de la ejecución que la página nombra: la fuente es la de la tabla y la cita, el
+ * rótulo del concepto en la fuente (fase R7).
+ */
+export function datosFilasEjecucion(): {
+  readonly sumaPensiones: DatoRotulado;
+  readonly complementoMinimos: DatoRotulado;
+} {
+  const { dato } = ejecucionDelPresupuesto();
+  const fila = (concepto: string, location: string, rotulo: string): DatoRotulado => ({
+    ...Dato.parse({ ...dato, quote: concepto, location }),
+    rotulo,
+  });
+  return {
+    sumaPensiones: fila(
+      CONCEPTO.sumaPensiones,
+      'Ejecución de gastos, detalle del capítulo de transferencias corrientes (pensiones por clase)',
+      'Fila que suma las pensiones contributivas de las cinco clases',
+    ),
+    complementoMinimos: fila(
+      CONCEPTO.complementoMinimos,
+      `Ejecución de gastos, capítulo de transferencias corrientes, bloque «${CONCEPTO.bloqueNoContributivas}»`,
+      'Fila del complemento a mínimos de las pensiones contributivas',
+    ),
+  };
+}
+
+/**
+ * Fuentes de las definiciones del módulo de definiciones que muestra la página (fase R7): da el
+ * `Dato` de cada referencia con los ficheros que la página ya carga. En las definiciones de
+ * `deficit-definiciones`, la cita es el literal completo del registro (`value`), que incluye los dos
+ * rótulos del saldo total. Devuelve `undefined` si la referencia no es de esta página.
+ */
+export function fuentesDefinicionFinanciacion(
+  referencia: string,
+  idDefinicion: string,
+): DatoRotulado | readonly DatoRotulado[] | undefined {
+  const d = datosFinanciacion();
+  const { dato: ejecucion } = ejecucionDelPresupuesto();
+  const filas = datosFilasEjecucion();
+  const [fichero, id] = referencia.split('#');
+  switch (fichero) {
+    case 'sistema/deficit-definiciones.json': {
+      const def = d.definiciones.find((x) => x.id === id);
+      if (def === undefined) return undefined;
+      return {
+        ...Dato.parse({ ...def.dato, quote: def.literal }),
+        rotulo: ROTULO_CITA_DEFINICION[def.id] ?? def.id,
+      };
+    }
+    case 'sistema/deficit-presupuestario-seguridad-social.json': {
+      const p = d.presupuesto;
+      const porId: Readonly<Record<string, SerieCargada>> = {
+        'saldo-presupuestario-no-financiero': p.saldoNoFinanciero,
+        'derechos-no-financieros': p.derechosNoFinancieros,
+        'obligaciones-no-financieras': p.obligacionesNoFinancieras,
+        'saldo-presupuestario-total': p.saldoTotal,
+        'derechos-totales': p.derechosTotales,
+        'obligaciones-totales': p.obligacionesTotales,
+        'transferencias-estado-corrientes': p.transferenciasEstado,
+      };
+      return id === undefined ? undefined : porId[id]?.dato;
+    }
+    case 'sistema/deficit-sec-fondos-seguridad-social.json':
+      return id === 'b9-mio-eur'
+        ? d.saldoSec.millones.dato
+        : id === 'b9-pc-gdp'
+          ? d.saldoSec.porcentajePib.dato
+          : undefined;
+    case 'sistema/presupuesto-ss-ejecucion.json':
+      if (idDefinicion === 'gasto-pensiones-contributivas-sin-complemento')
+        return [filas.sumaPensiones];
+      if (idDefinicion === 'gasto-pensiones-contributivas-con-complemento')
+        return [filas.sumaPensiones, filas.complementoMinimos];
+      return ejecucion;
+    case 'internacional/eurostat-espana.json':
+      return id === 'gasto-old-no-aplica-no-aplica-pc-gdp'
+        ? d.gastoSobrePib.eurostatVejez.dato
+        : id === 'gasto-srv-no-aplica-no-aplica-pc-gdp'
+          ? d.gastoSobrePib.eurostatSupervivencia.dato
+          : undefined;
+    case 'internacional/ocde-espana.json':
+      return id === 'pep-no-aplica-z-z-pt-b1gq' ? d.gastoSobrePib.ocde.dato : undefined;
+    case 'macro/pib-ine.json':
+      return id === 'pib-corriente' ? d.pib.dato : undefined;
+    default:
+      return undefined;
+  }
+}
 
 export { FICHEROS_FINANCIACION };

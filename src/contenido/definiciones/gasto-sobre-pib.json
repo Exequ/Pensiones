@@ -1,0 +1,57 @@
+{
+  "id": "gasto-sobre-pib",
+  "grupo": "gasto-en-pensiones",
+  "termino": "Gasto en pensiones sobre el PIB",
+  "texto": [
+    "Cociente entre el gasto en pensiones de una medida y el producto interior bruto a precios corrientes del mismo año, expresado en porcentaje. Para las medidas de la ejecución del presupuesto, el cociente es un cálculo de esta web con el PIB del INE; Eurostat y la OCDE publican directamente el porcentaje.",
+    "El resultado depende de qué prestaciones entren en el numerador y de la evolución del PIB en el denominador."
+  ],
+  "criterio": "Cálculo propio a partir de las obligaciones reconocidas y del PIB a precios corrientes.",
+  "datos": ["sistema/presupuesto-ss-ejecucion.json", "macro/pib-ine.json#pib-corriente"],
+  "formula": {
+    "titulo": "Gasto en pensiones sobre el PIB",
+    "alcance": "completa",
+    "ecuaciones": [
+      {
+        "izquierda": {
+          "tipo": "simbolo",
+          "id": "g"
+        },
+        "derecha": {
+          "tipo": "cociente",
+          "numerador": {
+            "tipo": "simbolo",
+            "id": "gasto"
+          },
+          "denominador": {
+            "tipo": "simbolo",
+            "id": "pib"
+          }
+        }
+      }
+    ],
+    "simbolos": [
+      {
+        "id": "g",
+        "notacion": "g",
+        "nombre": "Gasto sobre el PIB",
+        "significado": "Gasto en pensiones de la medida elegida dividido entre el PIB del mismo año; se lee en tanto por cien.",
+        "unidad": "porcentaje del PIB"
+      },
+      {
+        "id": "gasto",
+        "notacion": "G",
+        "nombre": "Gasto en pensiones",
+        "significado": "Obligaciones reconocidas en el año por las pensiones de la medida, con o sin complemento a mínimos.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "pib",
+        "notacion": "Y",
+        "nombre": "PIB",
+        "significado": "Producto interior bruto a precios corrientes del mismo año, según el INE.",
+        "unidad": "millones de euros"
+      }
+    ]
+  }
+}

@@ -12,6 +12,7 @@ import {
 } from '../../engine/esquema-datos';
 import {
   datoDeSerie,
+  datoDeSerieConCita,
   encontrarSerie,
   puntosAnuales,
   type PuntoAnual,
@@ -35,6 +36,15 @@ export function validarTabla(json: unknown): ArchivoTabla {
 export function cargarSerie(archivo: ArchivoDatos, id: string): SerieCargada {
   const serie = encontrarSerie(archivo, id);
   return { serie, puntos: puntosAnuales(serie), dato: datoDeSerie(serie) };
+}
+
+/**
+ * Como `cargarSerie`, pero el `Dato` lleva como cita el nombre literal del indicador, que la fuente
+ * da en el título de la serie (indicadores de la OCDE; fase R7).
+ */
+export function cargarSerieConCita(archivo: ArchivoDatos, id: string): SerieCargada {
+  const serie = encontrarSerie(archivo, id);
+  return { serie, puntos: puntosAnuales(serie), dato: datoDeSerieConCita(serie) };
 }
 
 /** `Dato` para `SourceLine` de una tabla (CSV + JSON hermano). */

@@ -1,0 +1,13 @@
+{
+  "id": "gasto-frente-a-financiacion",
+  "grupo": "gasto-en-pensiones",
+  "termino": "Gasto en pensiones y financiación de las pensiones",
+  "texto": [
+    "El gasto en pensiones responde a cuánto se paga en pensiones en un año. La financiación responde a otra pregunta: de dónde sale el dinero con el que se pagan ese gasto y el resto de gastos del sistema (cotizaciones, transferencias del Estado y otros ingresos).",
+    "La ejecución del presupuesto de la Seguridad Social presenta las dos cosas por separado: los gastos, por lo que se paga (entre ellos, cada clase de pensión), y los ingresos, por su origen. Con esa clasificación no se puede decir qué parte de las pensiones paga cada ingreso: un gasto en pensiones más alto no dice por sí solo de dónde sale el dinero, y un ingreso no indica a qué gasto se destina."
+  ],
+  "datos": [
+    "sistema/presupuesto-ss-ejecucion.json",
+    "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+  ]
+}

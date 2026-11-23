@@ -1,5 +1,4 @@
 import { DataTable } from '../../components/DataTable';
-import { Definition } from '../../components/Definition';
 import { MarginNote } from '../../components/MarginNote';
 import { SourceLine } from '../../components/SourceLine';
 import {
@@ -17,26 +16,8 @@ import {
 } from '../historico/datos-financiacion';
 import { UnidadFinanciera, type Unidad } from './unidad';
 import { APARTADOS } from './apartados';
-
-/** Rótulo del saldo no financiero menos las transferencias corrientes (cálculo propio, sin otra etiqueta). */
-export const ROTULO_SALDO_SIN_TRANSFERENCIAS =
-  'Saldo no financiero menos transferencias corrientes del Estado y OO. AA. (cálculo propio)';
-
-const ROTULO_DEFINICION: Readonly<Record<string, string>> = {
-  'saldo-presupuestario-no-financiero': 'Saldo presupuestario no financiero',
-  'saldo-presupuestario-total': 'Saldo presupuestario total',
-  'necesidad-financiacion-sec-s1314':
-    'Capacidad o necesidad de financiación (contabilidad nacional)',
-};
-
-const EXPLICACION_DEFINICION: Readonly<Record<string, string>> = {
-  'saldo-presupuestario-no-financiero':
-    'Derechos reconocidos menos obligaciones reconocidas por operaciones no financieras (capítulos de ingresos y gastos que no son activos ni pasivos financieros). Incluye las transferencias del Estado como ingreso y excluye los préstamos.',
-  'saldo-presupuestario-total':
-    'Total de ingresos menos total de gastos de la ejecución, incluidas las operaciones financieras: entre ellas, los préstamos que la Tesorería recibe del Estado figuran como ingreso (pasivos financieros).',
-  'necesidad-financiacion-sec-s1314':
-    'Diferencia entre ingresos y gastos totales del subsector «fondos de la Seguridad Social» según el sistema europeo de cuentas (SEC), publicada por Eurostat a partir de la transmisión de cada país; Eurostat indica que las convenciones contables son las del sistema europeo de cuentas. Los metadatos consultados no detallan las entidades que componen el subsector, por lo que esta página no afirma que su perímetro coincida con el del presupuesto ni describe en qué se diferencia.',
-};
+import { DefinicionFinanciacion } from './DefinicionFinanciacion';
+import { DEFINICIONES_SALDO, ROTULO_SALDO_SIN_TRANSFERENCIAS } from './definiciones-pagina';
 
 /** Definiciones de saldo, gastos impropios y lectura del saldo con y sin transferencias. */
 export function Saldos({ unidad }: { unidad: Unidad }) {
@@ -68,7 +49,9 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
       estimacion?.notas ?? '',
     )?.[1];
 
-  const principales = Object.keys(ROTULO_DEFINICION);
+  // Año del cambio de perímetro del subsector: sale de la nota de la fuente, no se escribe a mano.
+  const notaSanidad = d.definiciones.find((x) => x.id === ID_NOTA_SANIDAD);
+  const anioSanidad = /\b(\d{4})\.?$/.exec(notaSanidad?.literal ?? '')?.[1];
 
   return (
     <section className="seccion prosa" aria-labelledby={APARTADOS.saldos.destino}>
@@ -78,28 +61,30 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
       <p>
         «Déficit de la Seguridad Social» puede referirse a magnitudes distintas según qué ingresos y
         gastos se cuenten. Las fuentes consultadas ofrecen tres definiciones; se muestran lado a
-        lado, con su literal, sin elegir ninguna como la correcta. Un saldo negativo significa que
-        los gastos superan a los ingresos de esa definición (necesidad de financiación).
+        lado, sin elegir ninguna como la correcta, y la cita de cada fuente está en «Fuentes». Un
+        saldo negativo significa que los gastos superan a los ingresos de esa definición (necesidad
+        de financiación).
       </p>
 
       <div className="hist-definiciones">
-        {principales.map((id) => {
-          const def = d.definiciones.find((x) => x.id === id);
-          if (!def) return null;
-          return (
-            <Definition key={id} termino={ROTULO_DEFINICION[id] ?? id}>
-              <span className="hist-literal">{EXPLICACION_DEFINICION[id] ?? ''}</span>
-            </Definition>
-          );
-        })}
-        <SourceLine datos={d.definiciones.map((x) => x.dato)} titulo="Definiciones del saldo" />
+        {DEFINICIONES_SALDO.map((id) => (
+          <DefinicionFinanciacion key={id} id={id} />
+        ))}
       </div>
-      <MarginNote etiqueta="Ruptura de serie">
-        <p>
-          {d.definiciones.find((x) => x.id === ID_NOTA_SANIDAD)?.literal ?? ''} Por eso las cifras
-          de contabilidad nacional anteriores a ese cambio no son comparables con las posteriores.
-        </p>
-      </MarginNote>
+      {notaSanidad === undefined ? null : (
+        <MarginNote etiqueta="Ruptura de serie">
+          <p>
+            Hasta {anioSanidad ?? ''}, las competencias de sanidad formaban parte del subsector de
+            los fondos de la Seguridad Social; ese año pasaron a otro subsector de las
+            administraciones públicas. Por eso las cifras de contabilidad nacional anteriores a ese
+            cambio no son comparables con las posteriores.
+          </p>
+          <SourceLine
+            datos={[notaSanidad.dato]}
+            titulo="Cambio de perímetro de los fondos de la Seguridad Social"
+          />
+        </MarginNote>
+      )}
 
       <GraficoSeries
         titulo="Saldo según tres definiciones"
@@ -193,11 +178,7 @@ export function Saldos({ unidad }: { unidad: Unidad }) {
       <h3 id="saldo-sin-transferencias">
         Saldo no financiero menos las transferencias corrientes del Estado
       </h3>
-      <p>
-        Restar al saldo no financiero las transferencias corrientes del Estado y organismos
-        autónomos es un cálculo propio que no equivale a ninguna definición publicada. Se muestra
-        con este rótulo: «{ROTULO_SALDO_SIN_TRANSFERENCIAS}».
-      </p>
+      <DefinicionFinanciacion id="saldo-no-financiero-menos-transferencias" />
       <p className="hist-aviso">
         Advertencia: la resta quita también la financiación de partidas que no son pensiones
         contributivas (por ejemplo, las prestaciones que la ley clasifica como de naturaleza no

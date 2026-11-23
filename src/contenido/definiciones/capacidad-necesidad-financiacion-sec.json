@@ -1,0 +1,16 @@
+{
+  "id": "capacidad-necesidad-financiacion-sec",
+  "grupo": "deficit",
+  "termino": "Capacidad o necesidad de financiación de los fondos de la Seguridad Social (contabilidad nacional)",
+  "texto": [
+    "Diferencia entre los ingresos y los gastos totales del subsector «fondos de la Seguridad Social» de las administraciones públicas, según el sistema europeo de cuentas (SEC). La publica Eurostat con los datos que transmite cada país. Si es positiva hay capacidad de financiación; si es negativa, necesidad.",
+    "Es el saldo de todo el subsector, no solo de las pensiones: entran todos sus ingresos y todos sus gastos. Eurostat indica que las convenciones contables son las del sistema europeo de cuentas. Los metadatos consultados no detallan qué entidades componen el subsector en España, por lo que esta web no afirma que su perímetro coincida con el del presupuesto del Sistema ni describe en qué se diferencia; con las fuentes consultadas tampoco se puede conciliar con el saldo presupuestario."
+  ],
+  "criterio": "Contabilidad nacional (sistema europeo de cuentas), publicada por Eurostat.",
+  "datos": [
+    "sistema/deficit-definiciones.json#necesidad-financiacion-sec-s1314",
+    "sistema/deficit-definiciones.json#nota-espana-sanidad-2002",
+    "sistema/deficit-sec-fondos-seguridad-social.json#b9-mio-eur",
+    "sistema/deficit-sec-fondos-seguridad-social.json#b9-pc-gdp"
+  ]
+}

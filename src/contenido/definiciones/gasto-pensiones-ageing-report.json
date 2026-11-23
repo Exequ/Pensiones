@@ -1,0 +1,22 @@
+{
+  "id": "gasto-pensiones-ageing-report",
+  "grupo": "gasto-en-pensiones",
+  "termino": "Gasto bruto en pensiones públicas proyectado (Ageing Report de la Comisión Europea)",
+  "texto": [
+    "Gasto bruto en pensiones públicas en porcentaje del PIB que proyecta el Ageing Report de la Comisión Europea en su escenario de referencia. La fuente publica además, por separado, el gasto en pensiones de vejez y anticipadas, de incapacidad, de supervivencia y otras.",
+    "Es una proyección publicada con su propia definición, no una cifra observada: no se une a las series de la ejecución del presupuesto del Sistema ni se presenta como su continuación."
+  ],
+  "perimetro": {
+    "incluye": [],
+    "noIncluye": [],
+    "sinDetalle": "Los datos consultados no detallan qué regímenes entran en la medida, por lo que esta web no afirma que coincida con la del Sistema."
+  },
+  "criterio": "Proyección publicada por la fuente, en porcentaje del PIB.",
+  "datos": [
+    "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-64",
+    "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-65",
+    "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-66",
+    "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-67",
+    "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-68"
+  ]
+}

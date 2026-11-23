@@ -1,0 +1,20 @@
+{
+  "id": "gasto-pensiones-contributivas-sin-complemento",
+  "grupo": "gasto-en-pensiones",
+  "termino": "Gasto en pensiones contributivas del Sistema, sin complemento a mínimos",
+  "texto": [
+    "Obligaciones reconocidas en el año por las pensiones contributivas del Sistema de la Seguridad Social, según la ejecución de su presupuesto: la fila de la ejecución que suma las pensiones de las cinco clases."
+  ],
+  "perimetro": {
+    "incluye": [
+      "Pensiones contributivas de jubilación, incapacidad permanente, viudedad, orfandad y en favor de familiares."
+    ],
+    "noIncluye": [
+      "El complemento a mínimos de esas pensiones, que la ejecución anota en otra fila, junto a las pensiones no contributivas.",
+      "Las pensiones no contributivas.",
+      "Las pensiones de Clases Pasivas."
+    ]
+  },
+  "criterio": "Contabilidad presupuestaria: obligaciones reconocidas del ejercicio, no pagos de caja.",
+  "datos": ["sistema/presupuesto-ss-ejecucion.json"]
+}

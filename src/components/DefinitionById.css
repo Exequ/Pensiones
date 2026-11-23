@@ -1,0 +1,31 @@
+/*
+ * Definición del módulo de definiciones (fase R7): el bloque `Definition` con el perímetro como lista
+ * de definición en letra de interfaz. Sin sombras, radios ni colores fuera de los tokens.
+ */
+.definicion-modulo + .definicion-modulo {
+  margin-top: var(--espacio-5);
+}
+
+.definicion-texto > p + p {
+  margin-top: var(--espacio-2);
+}
+
+.definicion-modulo-perimetro {
+  margin-top: var(--espacio-3);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  color: var(--color-tinta-2);
+}
+
+.definicion-modulo-perimetro > div + div {
+  margin-top: var(--espacio-2);
+}
+
+.definicion-modulo-perimetro dt {
+  font-weight: var(--peso-semi);
+  color: var(--color-tinta);
+}
+
+.definicion-modulo-perimetro dd {
+  margin-top: var(--espacio-1);
+}

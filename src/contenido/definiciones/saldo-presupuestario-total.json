@@ -1,0 +1,62 @@
+{
+  "id": "saldo-presupuestario-total",
+  "grupo": "deficit",
+  "termino": "Saldo presupuestario total",
+  "texto": [
+    "Diferencia entre el total de ingresos y el total de gastos de la ejecución del presupuesto del Sistema de la Seguridad Social, incluidas las operaciones financieras.",
+    "Entre esas operaciones están los préstamos que la Tesorería recibe del Estado, que figuran como ingreso (pasivos financieros). La diferencia entre los dos totales es un cálculo de esta web."
+  ],
+  "criterio": "Contabilidad presupuestaria: derechos y obligaciones reconocidos, no cobros ni pagos.",
+  "datos": [
+    "sistema/deficit-definiciones.json#saldo-presupuestario-total",
+    "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-total",
+    "sistema/deficit-presupuestario-seguridad-social.json#derechos-totales",
+    "sistema/deficit-presupuestario-seguridad-social.json#obligaciones-totales"
+  ],
+  "formula": {
+    "titulo": "Saldo presupuestario total",
+    "alcance": "completa",
+    "ecuaciones": [
+      {
+        "izquierda": {
+          "tipo": "simbolo",
+          "id": "s-total"
+        },
+        "derecha": {
+          "tipo": "resta",
+          "minuendo": {
+            "tipo": "simbolo",
+            "id": "i-total"
+          },
+          "sustraendo": {
+            "tipo": "simbolo",
+            "id": "g-total"
+          }
+        }
+      }
+    ],
+    "simbolos": [
+      {
+        "id": "s-total",
+        "notacion": "S",
+        "nombre": "Saldo total",
+        "significado": "Saldo presupuestario total del año, con las operaciones financieras.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "i-total",
+        "notacion": "I",
+        "nombre": "Ingresos totales",
+        "significado": "Total de derechos reconocidos netos, incluidos los activos y pasivos financieros.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "g-total",
+        "notacion": "G",
+        "nombre": "Gastos totales",
+        "significado": "Total de obligaciones reconocidas, incluidos los activos y pasivos financieros.",
+        "unidad": "millones de euros"
+      }
+    ]
+  }
+}

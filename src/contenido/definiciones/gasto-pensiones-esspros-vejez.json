@@ -1,0 +1,15 @@
+{
+  "id": "gasto-pensiones-esspros-vejez",
+  "grupo": "gasto-en-pensiones",
+  "termino": "Gasto en prestaciones de vejez (Eurostat, ESSPROS)",
+  "texto": [
+    "Gasto en prestaciones de protección social de la función «vejez» según la estadística europea de protección social (ESSPROS, siglas de la fuente en inglés), que publica Eurostat en porcentaje del PIB. La estadística clasifica las prestaciones por su función, es decir, por la necesidad que cubren."
+  ],
+  "perimetro": {
+    "incluye": ["Las prestaciones que la estadística asigna a la función «vejez»."],
+    "noIncluye": ["Las prestaciones de la función «supervivientes», que la fuente publica aparte."],
+    "sinDetalle": "Los metadatos consultados no delimitan qué administraciones o regímenes entran en la serie, por lo que esta web no lo afirma."
+  },
+  "criterio": "Estadística de protección social publicada por Eurostat, en porcentaje del PIB.",
+  "datos": ["internacional/eurostat-espana.json#gasto-old-no-aplica-no-aplica-pc-gdp"]
+}

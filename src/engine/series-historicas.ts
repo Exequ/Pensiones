@@ -269,6 +269,24 @@ export function datoDeSerie(serie: Serie, periodo?: string): Dato {
   });
 }
 
+/**
+ * Nombre del indicador tal como lo escribe la fuente, sacado del título de la serie: los títulos de
+ * la OCDE son «Literal del indicador (España; sexo: …; unidad: …)» y el paréntesis final lo añade la
+ * extracción. Si el título no tiene ese paréntesis, se devuelve entero.
+ */
+export function literalDelTitulo(titulo: string): string {
+  const i = titulo.lastIndexOf(' (España;');
+  return i > 0 && titulo.endsWith(')') ? titulo.slice(0, i) : titulo;
+}
+
+/**
+ * `Dato` de una serie con el nombre literal del indicador como cita (fase R7): el literal vive en
+ * `Serie.title`, y así se ve en el desplegable «Fuentes» sin cambiar los ficheros de datos.
+ */
+export function datoDeSerieConCita(serie: Serie, periodo?: string): Dato {
+  return Dato.parse({ ...datoDeSerie(serie, periodo), quote: literalDelTitulo(serie.title) });
+}
+
 /** `Dato` de un dato suelto (`data`) de un fichero, por su `id`. */
 export function datoDeArchivo(archivo: ArchivoDatos, id: string): Dato {
   const dato = archivo.data?.find((d) => d.id === id);
