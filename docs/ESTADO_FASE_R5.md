@@ -24,3 +24,12 @@ Rama `feat/r5-tipos-de-pension`, creada desde `origin/main` (`c82922bcee3ef3f525
 - **Descargas manuales**: ninguna.
 - **Modelos**: ninguno.
 - **Otros**: decidir el rótulo de las filas de las cuantías mínimas (hoy, el nombre de la fila del anexo); R6 debe corregir la frase de «Cómo se calcula» que remite a «Tipos de pensión» para «qué exige cada modalidad» y puede añadir un ancla de modalidades; si se vuelve a ejecutar `scripts/etl/prestaciones.py`, `formulaEstructurada` hay que reinsertarla.
+
+## Batería local
+
+- `npm run lint` (ESLint, Prettier, estilos, contraste, `validate:data` con la comprobación de las fórmulas y `validate:interpretaciones`) en verde.
+- `npx tsc -b --force` (sin caché incremental, con los ficheros de test) sin errores.
+- `npm test`: 161 ficheros y 3.245 pruebas en verde (antes de la fase, 157 y 3.200).
+- `npm run build` correcto. Trozo principal `index-*.js`: 280.403 bytes (88.406 comprimidos con `gzip -c`); en `main`, 280.262 bytes: +141 bytes. `Formula` y el motor de fórmulas van en un trozo propio (`formulas-*.js`, 7.108 bytes, y su CSS, 1.685 bytes) que cargan las páginas que lo usan.
+- Playwright completo en local: 720 en verde y 8 en rojo, **los mismos ocho de `e2e/sitio.spec.ts`** (`INPUT border-radius 50%` en `SegmentedPills`, propio del Chromium local, en `/diseno`, `/cotizantes-y-pensionistas`, `/financiacion-y-deficit` y `/hucha`, escritorio y móvil). El spec nuevo `e2e/tipos-fuentes-formula.spec.ts` (10 pruebas, 1360 y 390 px, con axe) en verde.
+- Capturas a 1360 y 390 px de la ficha de jubilación (cuerpo, fórmula con leyenda y «Fuentes» de los requisitos abierto) revisadas: sin desbordes; la caja de la fórmula mide lo que la columna de texto.
