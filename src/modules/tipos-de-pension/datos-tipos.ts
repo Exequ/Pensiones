@@ -29,7 +29,7 @@ import numeroJson from '../../../data/sistema/pensiones-vigor-numero.json';
 import mediaJson from '../../../data/sistema/pensiones-vigor-pension-media.json';
 import type { DatoRotulado } from '../../components/fuentes';
 import { brechasAnualesDA37, type BrechaAnual } from '../../engine/brecha-da37';
-import { quitarCitas, ubicacionDeBloque } from '../../engine/citas-normativas';
+import { datoDeBloque as datoDeBloqueEngine, quitarCitas } from '../../engine/citas-normativas';
 import {
   resolverFormula,
   type FormulaResuelta,
@@ -203,31 +203,6 @@ function datoPrestacion(p: Prestacion, vigenteA: string): Dato {
   });
 }
 
-/**
- * Dato de un bloque de texto de la ficha (quién puede cobrarla, un requisito, los límites…): lleva
- * la fuente de la prestación y, como ubicación, los artículos que cita el bloque. El texto original,
- * con sus citas, queda en `value`; la ficha muestra el texto sin ellas.
- */
-function datoDeBloque(
-  p: Prestacion,
-  vigenteA: string,
-  rotulo: string,
-  texto: string,
-  declarada?: string,
-): DatoRotulado {
-  const ubicacion = ubicacionDeBloque(texto, declarada);
-  const dato = Dato.parse({
-    value: texto,
-    unit: 'regla de la prestación',
-    period: vigenteA.slice(0, 4),
-    source: p.source,
-    fetchedAt: p.fetchedAt,
-    confidence: p.confidence,
-    ...(ubicacion === undefined ? {} : { location: ubicacion }),
-  });
-  return { ...dato, rotulo };
-}
-
 function valorMasReciente(serie: SerieCargada): { anio: number; valor: number } {
   const ultimo = serie.puntos.at(-1);
   if (!ultimo) throw new Error(`La serie ${serie.serie.id} no tiene puntos`);
@@ -248,6 +223,17 @@ const resolverReferencia: ResolverReferencia = ({ fichero, id }): ValorReferenci
   if (!dato || !esNumero(dato.value)) return undefined;
   return { valor: dato.value, unidad: dato.unit, periodo: dato.period };
 };
+
+/** Dato de un bloque de la ficha: la fuente de la prestación y las citas del bloque como ubicación. */
+function datoDeBloque(
+  p: Prestacion,
+  vigenteA: string,
+  rotulo: string,
+  texto: string,
+  declarada?: string,
+): DatoRotulado {
+  return datoDeBloqueEngine(p, vigenteA.slice(0, 4), rotulo, texto, declarada);
+}
 
 /** Datos validados con el esquema de /data y memorizados: se leen y validan una sola vez. */
 export const datosTipos = memorizar((): DatosTipos => {

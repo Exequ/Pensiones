@@ -20,7 +20,9 @@ import { calcularSupervivencia } from '../../engine/supervivencia/repositorio';
 import { buscarSeccion } from '../secciones';
 import { ejemplosCalculo } from './datos-como';
 import { ejemplosCalculados, ejemplosDe, type IdSeccion } from './ejemplos';
+import { DESTINO_MODALIDADES, ID_MODALIDADES, TITULO_MODALIDADES } from './anclas-modalidades';
 import { ESQUEMAS } from './esquemas';
+import { sinCitasDeLectura } from './lecturas-sin-citas';
 import ComoSeCalcula from './Pagina';
 import { textoSinInterpretaciones } from '../../test/interpretaciones';
 
@@ -44,7 +46,14 @@ describe('estructura de la página', () => {
   it('hay una sección por prestación, en el orden previsto', () => {
     const { container } = pintar();
     const secciones = [...container.querySelectorAll<HTMLElement>('section.como-seccion')];
-    expect(secciones.map((s) => s.id)).toEqual(IDS.map((i) => `como-${i}`));
+    // Las modalidades de la jubilación van justo después de la jubilación (Fase R6).
+    expect(secciones.map((s) => s.id)).toEqual([
+      'como-jubilacion',
+      ID_MODALIDADES,
+      'como-incapacidad',
+      'como-viudedad',
+      'como-orfandad',
+    ]);
   });
 
   it.each(IDS)('la sección %s tiene todos sus bloques', (id) => {
@@ -84,13 +93,16 @@ describe('estructura de la página', () => {
     expect(enlaces).toContain('/tu-pension');
   });
 
-  it('el esquema de cada sección lista sus pasos en orden con su norma', () => {
+  it('el esquema de cada sección lista sus pasos en orden; sus normas están en «Fuentes», no en el cuerpo', () => {
     const { container } = pintar();
     for (const e of ESQUEMAS) {
       const s = container.querySelector<HTMLElement>(`#como-${e.ancla}`)!;
       const pasos = s.querySelectorAll('ol.como-pasos > li');
       expect(pasos).toHaveLength(e.pasos.length);
-      for (const p of pasos) expect(p.textContent).toMatch(/Norma:/);
+      for (const p of pasos) expect(p.textContent).not.toMatch(/Norma:|art\.|TRLGSS/);
+      expect(
+        within(s).getByRole('button', { name: `Fuentes: Normas de cada paso: ${e.titulo}` }),
+      ).toBeInTheDocument();
     }
   });
 
@@ -153,11 +165,13 @@ describe('navegación', () => {
     const usuario = userEvent.setup();
     const indice = within(within(container).getByRole('navigation', { name: 'En esta página' }));
     const enlaces = indice.getAllByRole('link');
-    expect(enlaces).toHaveLength(IDS.length + 1);
+    expect(enlaces).toHaveLength(IDS.length + 2);
     for (const e of ESQUEMAS) {
       await usuario.click(indice.getByRole('link', { name: e.titulo }));
       expect(document.activeElement?.id).toBe(`como-${e.ancla}-titulo`);
     }
+    await usuario.click(indice.getByRole('link', { name: TITULO_MODALIDADES }));
+    expect(document.activeElement?.id).toBe(DESTINO_MODALIDADES);
     await usuario.click(indice.getByRole('link', { name: 'Los términos de esta página' }));
     expect(document.activeElement?.id).toBe('como-terminos-titulo');
   });
@@ -271,7 +285,9 @@ describe('neutralidad de la página', () => {
     // Los motivos de las lecturas se muestran tal como están en el registro (no son texto de esta
     // página): se comprueban aparte, porque describen la decisión sobre la lectura («confirmada»).
     for (const l of LECTURAS_ABIERTAS)
-      if (l.motivo !== null) texto = texto.replaceAll(l.motivo, '');
+      if (l.motivo !== null) {
+        texto = texto.replaceAll(l.motivo, '').replaceAll(sinCitasDeLectura(l.motivo), '');
+      }
     expect(veredictosEn(texto)).toEqual([]);
     expect(valoracionesEn(texto)).toEqual([]);
   });

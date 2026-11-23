@@ -6,6 +6,7 @@
  * Neutralidad: se explica cómo funciona la norma; no se valora si es justa o adecuada. Cada
  * afirmación normativa remite a un artículo cuyo texto está descargado (`normas.ts`).
  */
+import { TITULO_MODALIDADES } from './anclas-modalidades.ts';
 import { N } from './normas.ts';
 import { ID_PASO_OPCION25 } from './pasos-motor.ts';
 
@@ -65,8 +66,7 @@ export const ESQUEMAS: readonly Esquema[] = [
     titulo: 'Jubilación',
     ancla: 'jubilacion',
     resumen: 'De la carrera de cotización a la pensión de jubilación contributiva.',
-    quien:
-      'La jubilación contributiva la cobran las personas que cumplen una edad mínima y han cotizado un periodo mínimo. Qué exige cada modalidad (ordinaria, anticipada, demorada o parcial), cuántas pensiones hay y cuál es su cuantía media está en «Tipos de pensión»; aquí solo se explica cómo se obtiene la cuantía cuando se cumplen los requisitos.',
+    quien: `La jubilación contributiva la cobran las personas que cumplen una edad mínima y han cotizado un periodo mínimo. Quién puede cobrarla en la modalidad ordinaria, cuántas pensiones hay y cuál es su cuantía media está en «Tipos de pensión»; qué exige cada una de las demás modalidades (anticipada, demorada, activa, flexible y parcial) se explica en el apartado «${TITULO_MODALIDADES}», más abajo; aquí solo se explica cómo se obtiene la cuantía cuando se cumplen los requisitos.`,
     pasos: [
       {
         id: 'requisitos',

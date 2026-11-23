@@ -66,7 +66,7 @@ describe('procedencia de los ficheros que usa la página', () => {
   const importesDeData = (ruta: string) =>
     [...leer(ruta).matchAll(/from\s+'([^']*\/data\/[^']+)'/g)].map((m) => m[1]!);
 
-  it('solo datos-como.ts importa /data, y solo el fichero de ejemplos', () => {
+  it('solo datos-como.ts importa /data, y solo el fichero de ejemplos y el de prestaciones', () => {
     for (const ruta of fuentesDe) {
       if (ruta.endsWith('/datos-como.ts')) continue;
       expect(importesDeData(ruta), ruta).toEqual([]);
@@ -74,7 +74,10 @@ describe('procedencia de los ficheros que usa la página', () => {
     const importados = importesDeData(`${DIR}/datos-como.ts`).map((r) =>
       r.replace(/^(\.\.\/)+/, 'data/'.replace('data/', '')),
     );
-    expect(importados).toEqual(['data/ejemplos/como-se-calcula.json']);
+    expect(importados).toEqual([
+      'data/ejemplos/como-se-calcula.json',
+      'data/normativa/prestaciones.json',
+    ]);
   });
 });
 
@@ -82,7 +85,14 @@ describe('sin cifras escritas a mano en los textos de la página', () => {
   // Estos módulos solo contienen identificadores (números de artículo, años en ids de /data,
   // nombres de pasos y de opciones del motor); los rótulos de `ids-datos.ts` se revisan en
   // `datos-como.test.ts`.
-  const EXENTOS = ['normas.ts', 'ids-datos.ts', 'ficheros.ts', 'pasos-motor.ts'];
+  // `lecturas-sin-citas.ts` solo contiene patrones de búsqueda de citas (no texto visible).
+  const EXENTOS = [
+    'normas.ts',
+    'ids-datos.ts',
+    'ficheros.ts',
+    'pasos-motor.ts',
+    'lecturas-sin-citas.ts',
+  ];
   const ficheros = fuentesDe.filter((r) => !EXENTOS.some((e) => r.endsWith(`/${e}`)));
   it('hay ficheros que revisar', () => {
     expect(ficheros.length).toBeGreaterThan(10);

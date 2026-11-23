@@ -8,7 +8,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { ArchivoDatos, ArchivoPrestaciones } from '../src/engine/esquema-datos.ts';
-import { formatearNumero, formatearPorcentaje } from '../src/engine/formato.ts';
+import { formatearDuracion, formatearNumero, formatearPorcentaje } from '../src/engine/formato.ts';
 import {
   comprobarFormula,
   referenciasUsadas,
@@ -39,15 +39,23 @@ const resolver = (ref: { fichero: string; id: string }) => dato(ref.fichero, ref
 const sinEspaciosDuros = (t: string) => t.replaceAll(String.fromCharCode(160), ' ');
 
 describe('fórmulas estructuradas de las prestaciones', () => {
-  it('hay fórmula estructurada en la jubilación ordinaria y en la incapacidad permanente (gran incapacidad)', () => {
+  it('hay fórmula estructurada en la jubilación ordinaria, en la gran incapacidad y en las modalidades con fórmula cerrada y cifras en los parámetros', () => {
     expect(conFormula.map((p) => p.id).sort()).toEqual([
       'incapacidad-permanente',
+      'jubilacion-anticipada-involuntaria',
+      'jubilacion-anticipada-voluntaria',
+      'jubilacion-demorada',
       'jubilacion-ordinaria',
+      'jubilacion-parcial',
     ]);
   });
 
   it('las prestaciones sin fórmula cerrada en la norma no llevan fórmula estructurada', () => {
     for (const id of [
+      // Sus cifras (cantidades y porcentajes de la jubilación activa y de la flexible) no constan en
+      // `data/parametros`: no se estructura una fórmula que no pueda referenciarlas.
+      'jubilacion-activa',
+      'jubilacion-flexible',
       'viudedad',
       'orfandad',
       'favor-de-familiares',
@@ -94,14 +102,24 @@ describe('fórmulas estructuradas de las prestaciones', () => {
         const esperado =
           nodo.como === 'porcentaje'
             ? formatearPorcentaje(d.valor / 100, { maxDecimales: 2 })
-            : formatearNumero(d.valor);
+            : nodo.como === 'duracion'
+              ? formatearDuracion(d.valor)
+              : formatearNumero(d.valor);
         expect(resuelta.cifras[i]?.texto).toBe(esperado);
         expect(resuelta.cifras[i]?.valor).toBe(d.valor);
-        // La cifra consta también en el texto original de la fórmula (trazabilidad).
-        const original = p.calculo.formula;
-        expect(sinEspaciosDuros(original), `${esperado} en el texto de ${p.id}`).toContain(
-          sinEspaciosDuros(esperado),
-        );
+        // La cifra consta también en el texto original de la fórmula (trazabilidad), con o sin ceros
+        // decimales finales («0,5 %» o «0,50 %»).
+        const original = sinEspaciosDuros(p.calculo.formula);
+        const variantes = [
+          esperado,
+          ...(nodo.como === 'porcentaje'
+            ? [formatearPorcentaje(d.valor / 100, { decimales: 2 })]
+            : []),
+        ].map(sinEspaciosDuros);
+        expect(
+          variantes.some((v) => original.includes(v)),
+          `${esperado} en el texto de ${p.id}`,
+        ).toBe(true);
       }
     },
   );
@@ -120,6 +138,21 @@ describe('fórmulas estructuradas de las prestaciones', () => {
       for (const t of textos) expect(t, t).not.toMatch(/\d/);
     },
   );
+
+  it('las fórmulas de las modalidades usan solo cifras de parámetros de la propia modalidad', () => {
+    const permitidos: Record<string, string[]> = {
+      'jubilacion-anticipada-voluntaria': [],
+      'jubilacion-anticipada-involuntaria': ['jubilacion-anticipada-reglas'],
+      'jubilacion-demorada': ['jubilacion-demora-reglas'],
+      'jubilacion-parcial': [],
+    };
+    for (const [id, ficheros] of Object.entries(permitidos)) {
+      const f = conFormula.find((p) => p.id === id)?.calculo.formulaEstructurada;
+      if (!f) throw new Error(`sin fórmula ${id}`);
+      for (const n of referenciasUsadas(f))
+        expect(ficheros, `${id}: ${n.ref.fichero}`).toContain(n.ref.fichero);
+    }
+  });
 
   it('el calendario transitorio de las cifras que lo tienen sale de la misma serie anual', () => {
     const jub = conFormula.find((p) => p.id === 'jubilacion-ordinaria')?.calculo

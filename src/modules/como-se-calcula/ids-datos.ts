@@ -439,3 +439,13 @@ export const PARAMETROS_SUPERVIVENCIA: readonly ParametroConfig[] = [
   p('pension-maxima', 'pension-maxima', '@anio', 'Pensión máxima por paga', 'euros-mes'),
   p('smi', 'smi-anual', '@anio', 'Salario mínimo interprofesional anual', 'euros-anio'),
 ];
+
+/** Modalidades de la jubilación que explica la página (identificadores de `prestaciones.json`), en este orden. */
+export const MODALIDADES_JUBILACION = [
+  'jubilacion-anticipada-voluntaria',
+  'jubilacion-anticipada-involuntaria',
+  'jubilacion-demorada',
+  'jubilacion-activa',
+  'jubilacion-flexible',
+  'jubilacion-parcial',
+] as const;

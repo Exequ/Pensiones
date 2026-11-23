@@ -1,3 +1,4 @@
+import { TITULO_MODALIDADES } from '../como-se-calcula/anclas-modalidades';
 import { render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
@@ -205,9 +206,13 @@ describe('página «Tipos de pensión»', () => {
     }
     // Ninguna lista de modalidades (las notas de la fórmula son otra lista).
     expect(f.querySelectorAll('ul:not(.formula-notas) li')).toHaveLength(0);
-    const enlace = within(f).getByRole('link', { name: 'Cómo se calcula' });
+    // El enlace lleva al apartado de modalidades de «Cómo se calcula» (Fase R6), con el título del
+    // apartado como texto y la ruta de la página; el ancla viaja en el estado de la navegación.
+    const enlace = within(f).getByRole('link', { name: `«${TITULO_MODALIDADES}»` });
     expect(enlace.getAttribute('href')).toBe('/como-se-calcula');
-    expect(f.textContent).toMatch(/anticipada y en la demorada se explica en Cómo se calcula/);
+    expect(f.textContent).toMatch(
+      new RegExp(`se explica en «${TITULO_MODALIDADES}», en «Cómo se calcula»`),
+    );
     expect(f.textContent).not.toMatch(/confianza/i);
     // Solo la ficha de jubilación remite.
     expect(container.querySelectorAll('a[href="/como-se-calcula"]')).toHaveLength(1);

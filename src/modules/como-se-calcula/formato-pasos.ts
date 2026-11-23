@@ -3,6 +3,7 @@
  * requisitos según su unidad, y los números que el motor escribe dentro de sus textos («29999.72»).
  * No calcula nada: solo da formato es-ES (formato.ts).
  */
+import { quitarCitas } from '../../engine/citas-normativas';
 import {
   formatearDuracion,
   formatearEuros,
@@ -46,6 +47,7 @@ export function valorConUnidad(valor: number | string | boolean, unidad: string)
         ? formatearDuracion(valor)
         : `${formatearNumero(valor, { maxDecimales: 2 })} meses`;
     default:
-      return `${formatearNumero(valor, { maxDecimales: 4 })} ${unidad}`.trim();
+      // La unidad de un dato puede nombrar su artículo: va a «Fuentes», no al texto.
+      return `${formatearNumero(valor, { maxDecimales: 4 })} ${quitarCitas(unidad)}`.trim();
   }
 }

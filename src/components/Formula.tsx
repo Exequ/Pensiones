@@ -58,6 +58,25 @@ function Expresion({ nodo }: { readonly nodo: NodoMath }): ReactNode {
           ))}
         </mrow>
       );
+    case 'resta':
+      return (
+        <mrow>
+          <Expresion nodo={nodo.minuendo} />
+          <mo>−</mo>
+          <Expresion nodo={nodo.sustraendo} />
+        </mrow>
+      );
+    case 'potencia':
+      return (
+        <msup>
+          <mrow>
+            <Expresion nodo={nodo.base} />
+          </mrow>
+          <mrow>
+            <Expresion nodo={nodo.exponente} />
+          </mrow>
+        </msup>
+      );
     case 'cociente':
       return (
         <mfrac>

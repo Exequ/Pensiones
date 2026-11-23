@@ -3,7 +3,7 @@ import { SourceLine } from '../../components/SourceLine';
 import { anioVigente, resolverParametro } from './datos-como';
 import type { ParametroConfig } from './ids-datos';
 
-/** Parámetros vigentes de /data que intervienen en el cálculo, con su ubicación en la norma y su fuente. */
+/** Parámetros vigentes de /data que intervienen en el cálculo, con su fuente; la ubicación en la norma está en «Fuentes». */
 export function TablaParametros({
   titulo,
   parametros,
@@ -23,13 +23,11 @@ export function TablaParametros({
           { clave: 'parametro', titulo: 'Parámetro' },
           { clave: 'valor', titulo: 'Valor' },
           { clave: 'desde', titulo: 'Versión de la norma' },
-          { clave: 'ubicacion', titulo: 'Dónde está en la norma' },
         ]}
         filas={resueltos.map((r) => ({
           parametro: r.rotulo,
           valor: r.valor,
           desde: r.periodo,
-          ubicacion: r.ubicacion ?? '',
         }))}
         pie={
           <>
@@ -38,7 +36,7 @@ export function TablaParametros({
           </>
         }
       />
-      <SourceLine datos={resueltos.map((r) => r.dato)} titulo={titulo} />
+      <SourceLine datos={resueltos.map((r) => ({ ...r.dato, rotulo: r.rotulo }))} titulo={titulo} />
     </div>
   );
 }

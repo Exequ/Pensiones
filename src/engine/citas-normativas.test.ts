@@ -14,6 +14,41 @@ describe('quitarCitas', () => {
     expect(quitarCitas('Pago único (art. 216.1.e)')).toBe('Pago único');
   });
 
+  it('quita también la cita con el nombre de la norma dentro del paréntesis (Fase R6)', () => {
+    expect(quitarCitas('según circunstancias familiares (art. 12.1 RD 1131/2002).')).toBe(
+      'según circunstancias familiares.',
+    );
+    expect(quitarCitas('Sin complemento a mínimos (art. 6.4 RD 416/2026). Otra frase.')).toBe(
+      'Sin complemento a mínimos. Otra frase.',
+    );
+    // Varias citas, números con «bis» y rangos, párrafos y normas sin número de decreto.
+    expect(
+      quitarCitas(
+        'Jubilación anticipada por actividades penosas (arts. 206, 206 bis; DT 4.ª.2). Otra.',
+      ),
+    ).toBe('Jubilación anticipada por actividades penosas. Otra.');
+    expect(quitarCitas('Subsidio (arts. 25 a 27 de la Orden de 1967). Otra.')).toBe(
+      'Subsidio. Otra.',
+    );
+    expect(quitarCitas('Incremento (art. 36.Uno, párr. 2.º, Decreto 3158/1966) y tope.')).toBe(
+      'Incremento y tope.',
+    );
+    expect(quitarCitas('Límite (art. 209.2-4). Depende del convenio.')).toBe(
+      'Límite. Depende del convenio.',
+    );
+    // Cuando la cita es parte del sentido, se reescribe con lo que dicen los propios textos.
+    expect(quitarCitas('sin aplicar coeficientes reductores de los arts. 206 y 206 bis.')).toBe(
+      'sin aplicar los coeficientes reductores de la edad por actividad.',
+    );
+    expect(quitarCitas('Salvaguarda de la DT 34.ª.1 (no inferior).')).toBe(
+      'Salvaguarda de la disposición transitoria (no inferior).',
+    );
+    // El nombre de la norma como hecho se conserva.
+    expect(quitarCitas('el divisor lo fija el RD 1799/1985')).toBe(
+      'el divisor lo fija el RD 1799/1985',
+    );
+  });
+
   it('quita las citas que forman parte de la frase sin dejar preposiciones sueltas', () => {
     expect(quitarCitas('Condición general del artículo 165.1 (alta o situación asimilada).')).toBe(
       'Condición general (alta o situación asimilada).',

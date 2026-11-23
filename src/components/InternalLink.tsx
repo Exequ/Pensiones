@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { useHref, useLocation } from 'react-router-dom';
+import { Link, useHref, useLocation } from 'react-router-dom';
 import { irAEncabezado } from './anclas';
 
 interface InternalLinkProps {
@@ -8,17 +8,36 @@ interface InternalLinkProps {
   readonly children: ReactNode;
   readonly className?: string;
   readonly 'aria-current'?: 'location';
+  /**
+   * Ruta de otra página que contiene el destino. El enlace navega a ella y el destino viaja en el
+   * estado de la navegación (no en la dirección): la página de destino se desplaza a sí misma con
+   * `useAnclaPendiente`. No cambia el query del hash.
+   */
+  readonly pagina?: string;
 }
 
 /**
- * Enlace a un apartado de la misma página. Con `HashRouter` un ancla «#id» cambiaría de ruta: el
- * clic mueve el desplazamiento y el foco al encabezado a mano (`irAEncabezado`) y no toca la
- * dirección. El `href` es la propia página con su query, de modo que abrirlo en otra pestaña lleva a
- * la misma página y no a una ruta inexistente.
+ * Enlace a un apartado de la misma página, o de otra con `pagina`. Con `HashRouter` un ancla «#id»
+ * cambiaría de ruta: el clic mueve el desplazamiento y el foco al encabezado a mano
+ * (`irAEncabezado`) y no toca la dirección. El `href` es la propia página con su query, de modo que
+ * abrirlo en otra pestaña lleva a la misma página y no a una ruta inexistente.
  */
-export function InternalLink({ destino, children, className, ...resto }: InternalLinkProps) {
+export function InternalLink({
+  destino,
+  children,
+  className,
+  pagina,
+  ...resto
+}: InternalLinkProps) {
   const { pathname, search } = useLocation();
   const href = useHref({ pathname, search });
+  if (pagina !== undefined) {
+    return (
+      <Link to={pagina} state={{ ancla: destino }} {...(className ? { className } : {})}>
+        {children}
+      </Link>
+    );
+  }
   return (
     <a
       href={href}

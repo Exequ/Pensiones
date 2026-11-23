@@ -180,4 +180,83 @@ describe('fórmulas estructuradas', () => {
       }).success,
     ).toBe(false);
   });
+
+  describe('unidad, resta, potencia y cifras auxiliares (Fase R6)', () => {
+    const ficticia: FormulaEstructurada = EsquemaFormula.parse({
+      titulo: 'Fórmula ficticia con resta y potencia',
+      alcance: 'parcial',
+      ecuaciones: [
+        {
+          izquierda: { tipo: 'simbolo', id: 'total' },
+          derecha: {
+            tipo: 'producto',
+            factores: [
+              { tipo: 'simbolo', id: 'media' },
+              {
+                tipo: 'grupo',
+                cuerpo: {
+                  tipo: 'resta',
+                  minuendo: { tipo: 'unidad' },
+                  sustraendo: { tipo: 'simbolo', id: 'coef' },
+                },
+              },
+              {
+                tipo: 'potencia',
+                base: { tipo: 'simbolo', id: 'media' },
+                exponente: {
+                  tipo: 'cociente',
+                  numerador: { tipo: 'unidad' },
+                  denominador: { tipo: 'numero', ref: { fichero: 'muestra', id: 'divisor' } },
+                },
+              },
+            ],
+          },
+        },
+      ],
+      simbolos: [
+        { id: 'total', notacion: 'T', nombre: 'Total', significado: 'Total.', unidad: null },
+        { id: 'media', notacion: 'M', nombre: 'Media', significado: 'Media.', unidad: null },
+        {
+          id: 'coef',
+          notacion: 'C',
+          nombre: 'Coeficiente',
+          significado: 'Coeficiente.',
+          unidad: null,
+        },
+      ],
+      cifrasAuxiliares: [
+        {
+          ref: { fichero: 'muestra', id: 'meses' },
+          etiqueta: 'Umbral ficticio',
+          como: 'duracion',
+        },
+      ],
+    });
+
+    it('resuelve la unidad como el uno y lee la resta y la potencia en palabras', () => {
+      const r = resolverFormula(ficticia, resolver);
+      expect(r.ecuaciones[0]?.lectura).toBe(
+        'Total es igual a media por (uno menos coeficiente) por media elevado a uno dividido entre 1.234,5.',
+      );
+      const derecha = r.ecuaciones[0]?.derecha;
+      expect(derecha?.tipo).toBe('producto');
+      const tipos = derecha?.tipo === 'producto' ? derecha.factores.map((f) => f.tipo) : [];
+      expect(tipos).toEqual(['simbolo', 'grupo', 'potencia']);
+    });
+
+    it('la cifra auxiliar sale en la leyenda de cifras, con su duración, aunque no esté en la ecuación', () => {
+      const r = resolverFormula(ficticia, resolver);
+      expect(referenciasUsadas(ficticia).map((n) => n.ref.id)).toEqual(['divisor', 'meses']);
+      expect(r.cifras.map((c) => c.texto)).toEqual(['1.234,5', '6 meses']);
+      expect(r.cifras[1]?.descripcion).toBe('Umbral ficticio');
+    });
+
+    it('comprueba que la cifra auxiliar apunte a un dato existente', () => {
+      const rota: FormulaEstructurada = {
+        ...ficticia,
+        cifrasAuxiliares: [{ ref: { fichero: 'muestra', id: 'no-existe' }, etiqueta: 'Nada' }],
+      };
+      expect(comprobarFormula(rota, resolver).join('|')).toMatch(/muestra#no-existe/);
+    });
+  });
 });

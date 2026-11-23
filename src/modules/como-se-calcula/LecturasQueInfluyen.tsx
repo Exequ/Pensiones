@@ -1,11 +1,19 @@
 import { useEffect, useMemo, useState } from 'react';
+import { SourceLine } from '../../components/SourceLine';
 import type { MotorOfrecido } from '../../engine/comparar-lecturas';
 import { filasDelPanel, type LecturaVista } from '../tu-pension/supuestos';
 import {
   filasLecturasJubilacionEnIncapacidad,
   LECTURAS_JUBILACION_EN_SUPERVIVENCIA,
 } from '../tu-pension/lecturas-jubilacion-en-incapacidad';
+import { idLectura } from './apartados';
+import { datosDeUbicacion } from './datos-como';
 import type { EfectosLectura, EjemploCalculado } from './ejemplos';
+import { sinCitasDeLectura, ubicacionDeLectura } from './lecturas-sin-citas';
+
+/** Todo el texto de una lectura que puede llevar citas de la norma (para su desplegable «Fuentes»). */
+const textoDeLectura = (l: LecturaVista): string =>
+  [l.titulo, l.motivo ?? '', l.explicacionEstado, ...l.opciones.map((o) => o.queCambia)].join(' ');
 
 const ORDEN_ESTADO = { pendiente: 0, provisional: 1, decidida: 2 } as const;
 
@@ -76,13 +84,15 @@ export function LecturasQueInfluyen({
       <ul className="como-lecturas-lista">
         {filas.map(({ lectura: l, efectos }) => (
           <li key={l.id} className={`como-lectura como-lectura-${l.estado}`}>
-            <h4>{l.titulo}</h4>
+            <h4 id={idLectura(motor, l.id)} tabIndex={-1}>
+              {sinCitasDeLectura(l.titulo)}
+            </h4>
             <dl className="como-lectura-datos">
               <div>
                 <dt>Estado</dt>
                 <dd>
                   <span className="como-etiqueta-estado">{l.etiquetaEstado}.</span>{' '}
-                  {l.explicacionEstado}
+                  {sinCitasDeLectura(l.explicacionEstado)}
                 </dd>
               </div>
               <div>
@@ -92,7 +102,8 @@ export function LecturasQueInfluyen({
                     'Sin decidir todavía.'
                   ) : (
                     <>
-                      {l.motivo} (<time dateTime={l.fechaEstado}>{l.fechaEstado}</time>)
+                      {sinCitasDeLectura(l.motivo)} (
+                      <time dateTime={l.fechaEstado}>{l.fechaEstado}</time>)
                     </>
                   )}
                 </dd>
@@ -104,7 +115,8 @@ export function LecturasQueInfluyen({
                     {l.opciones.map((o) => (
                       <li key={o.valor}>
                         <strong>{o.etiqueta}</strong>
-                        {o.esPorDefecto ? ' (valor por defecto)' : ''}. {o.queCambia}
+                        {o.esPorDefecto ? ' (valor por defecto)' : ''}.{' '}
+                        {sinCitasDeLectura(o.queCambia)}
                       </li>
                     ))}
                   </ul>
@@ -129,6 +141,13 @@ export function LecturasQueInfluyen({
                 </dd>
               </div>
             </dl>
+            <SourceLine
+              datos={datosDeUbicacion(
+                sinCitasDeLectura(l.titulo),
+                ubicacionDeLectura(textoDeLectura(l)),
+              )}
+              titulo={`Normas de la lectura: ${sinCitasDeLectura(l.titulo)} (${motor})`}
+            />
           </li>
         ))}
       </ul>
@@ -143,7 +162,8 @@ export function LecturasQueInfluyen({
           <ul className="como-opciones">
             {aplicadasDeJubilacion.map((f) => (
               <li key={f.id}>
-                <strong>{f.titulo}.</strong> Valor aplicado: {f.valorAplicado}. Estado:{' '}
+                <strong>{sinCitasDeLectura(f.titulo)}.</strong> Valor aplicado: {f.valorAplicado}.
+                Estado:{' '}
                 {f.estado === 'decidida'
                   ? 'decidida'
                   : f.estado === 'provisional'

@@ -9,8 +9,8 @@ import { formatearDuracion } from '../../engine/formato';
 import { tiempoDemora, porcentajeAdicional } from '../../engine/jubilacion/demora';
 import { parametrosDelRepositorio } from '../../engine/jubilacion/parametros-datos';
 import { mesesPara100, porcentajeEscala } from '../../engine/jubilacion/porcentajes';
-import { LECTURAS_ABIERTAS } from '../../engine/lecturas';
 import { elementosDe } from './datos-como';
+import { fraccionDemoraPorDefecto } from './datos-efecto';
 import type { SerieGrafico } from '../historico/GraficoSeries';
 
 export interface DatosGrafico {
@@ -85,8 +85,7 @@ export function datosAnticipo(cuadro: CuadroAnticipo): DatosGrafico {
 /** Porcentaje adicional de la demora por tiempo cotizado después de la edad ordinaria. */
 export function datosDemora(maximoMeses = 120, paso = 3): DatosGrafico {
   const reglas = parametrosDelRepositorio().reglasDemora;
-  const lectura = LECTURAS_ABIERTAS.find((l) => l.id === 'jubilacion.fraccionDemora')?.porDefecto;
-  const fraccion = lectura === 'desde-primer-anio' ? 'desde-primer-anio' : 'desde-segundo-anio';
+  const fraccion = fraccionDemoraPorDefecto();
   const meses = Array.from({ length: maximoMeses / paso + 1 }, (_, i) => i * paso);
   return {
     series: [

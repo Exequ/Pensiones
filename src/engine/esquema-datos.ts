@@ -558,13 +558,20 @@ export type ExprFormula =
       readonly ref: z.infer<typeof RefParametro>;
       /** Qué es la cifra, en una frase y sin números, para la leyenda. */
       readonly etiqueta?: string | undefined;
-      /** Cómo se escribe el valor del dato: número (por defecto) o porcentaje (el dato va en %). */
-      readonly como?: 'numero' | 'porcentaje' | undefined;
+      /**
+       * Cómo se escribe el valor del dato: número (por defecto), porcentaje (el dato va en %) o
+       * duración (el dato va en meses y se escribe «44 años y 6 meses»).
+       */
+      readonly como?: 'numero' | 'porcentaje' | 'duracion' | undefined;
       /** Serie anual (`data/parametros/<fichero>.json`, id = año) con el valor del calendario transitorio. */
       readonly transitorio?: string | undefined;
     }
   | { readonly tipo: 'suma'; readonly terminos: readonly ExprFormula[] }
   | { readonly tipo: 'producto'; readonly factores: readonly ExprFormula[] }
+  /** La unidad (el uno de «1 − x» o de «1/n»): constante matemática, no un dato. */
+  | { readonly tipo: 'unidad' }
+  | { readonly tipo: 'resta'; readonly minuendo: ExprFormula; readonly sustraendo: ExprFormula }
+  | { readonly tipo: 'potencia'; readonly base: ExprFormula; readonly exponente: ExprFormula }
   | {
       readonly tipo: 'cociente';
       readonly numerador: ExprFormula;
@@ -594,11 +601,22 @@ export const ExprFormula: z.ZodType<ExprFormula> = z.lazy(() =>
       tipo: z.literal('numero'),
       ref: RefParametro,
       etiqueta: z.string().trim().min(1).optional(),
-      como: z.enum(['numero', 'porcentaje']).optional(),
+      como: z.enum(['numero', 'porcentaje', 'duracion']).optional(),
       transitorio: z.string().regex(PATRON_ID).optional(),
     }),
     z.strictObject({ tipo: z.literal('suma'), terminos: z.array(ExprFormula).min(2) }),
     z.strictObject({ tipo: z.literal('producto'), factores: z.array(ExprFormula).min(2) }),
+    z.strictObject({ tipo: z.literal('unidad') }),
+    z.strictObject({
+      tipo: z.literal('resta'),
+      minuendo: ExprFormula,
+      sustraendo: ExprFormula,
+    }),
+    z.strictObject({
+      tipo: z.literal('potencia'),
+      base: ExprFormula,
+      exponente: ExprFormula,
+    }),
     z.strictObject({
       tipo: z.literal('cociente'),
       numerador: ExprFormula,
@@ -644,6 +662,19 @@ export const FormulaEstructurada = z.strictObject({
     .array(z.strictObject({ izquierda: ExprFormula, derecha: ExprFormula }))
     .min(1, { error: 'La fórmula necesita al menos una ecuación' }),
   simbolos: z.array(SimboloFormula).min(1),
+  /**
+   * Cifras que fijan una condición de la fórmula sin aparecer en una ecuación (p. ej., el umbral de
+   * cotización que decide qué importe se aplica): se muestran en la leyenda de cifras.
+   */
+  cifrasAuxiliares: z
+    .array(
+      z.strictObject({
+        ref: RefParametro,
+        etiqueta: textoObligatorio('cifrasAuxiliares.etiqueta'),
+        como: z.enum(['numero', 'porcentaje', 'duracion']).optional(),
+      }),
+    )
+    .optional(),
   /** Aclaraciones en texto, sin cifras (las cifras salen de las referencias). */
   notas: z.array(z.string().trim().min(1)).optional(),
 });

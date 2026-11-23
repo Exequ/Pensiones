@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { useTituloPagina } from '../../app/useTituloPagina';
 import { Kicker } from '../../components/Kicker';
 import { Lead } from '../../components/Lead';
@@ -10,6 +11,8 @@ import { ESQUEMAS } from './esquemas';
 import { INDICE } from './apartados';
 import { SeccionPrestacion } from './SeccionPrestacion';
 import { Terminos } from './Terminos';
+import { Modalidades } from './Modalidades';
+import { useAnclaPendiente } from '../../components/useAnclaPendiente';
 import { OnThisPage } from '../../components/OnThisPage';
 
 const seccion = buscarSeccion('como-se-calcula');
@@ -21,6 +24,7 @@ const seccion = buscarSeccion('como-se-calcula');
  */
 export default function ComoSeCalcula() {
   useTituloPagina(seccion.titulo);
+  useAnclaPendiente();
   return (
     <article className="contenedor pagina como-pagina">
       <div className="articulo">
@@ -31,8 +35,9 @@ export default function ComoSeCalcula() {
         </header>
         <MarginNote>
           <p>
-            Cada paso cita el artículo de la norma, y cada parámetro lleva su fuente. Los ejemplos
-            son supuestos ilustrativos y sus resultados los calcula el motor de la web.
+            Cada parámetro lleva su fuente; los artículos de cada paso están en «Fuentes», en cada
+            bloque. Los ejemplos son supuestos ilustrativos y sus resultados los calcula el motor de
+            la web.
           </p>
         </MarginNote>
         <p className="hist-aviso">
@@ -42,7 +47,10 @@ export default function ComoSeCalcula() {
         <OnThisPage entradas={INDICE} />
         <Terminos />
         {ESQUEMAS.map((e) => (
-          <SeccionPrestacion key={e.id} esquema={e} />
+          <Fragment key={e.id}>
+            <SeccionPrestacion esquema={e} />
+            {e.id === 'jubilacion' ? <Modalidades /> : null}
+          </Fragment>
         ))}
         <ContenidoPagina contenidos={seccion.previsto} />
       </div>
