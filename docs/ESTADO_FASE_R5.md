@@ -33,3 +33,8 @@ Rama `feat/r5-tipos-de-pension`, creada desde `origin/main` (`c82922bcee3ef3f525
 - `npm run build` correcto. Trozo principal `index-*.js`: 280.403 bytes (88.406 comprimidos con `gzip -c`); en `main`, 280.262 bytes: +141 bytes. `Formula` y el motor de fórmulas van en un trozo propio (`formulas-*.js`, 7.108 bytes, y su CSS, 1.685 bytes) que cargan las páginas que lo usan.
 - Playwright completo en local: 720 en verde y 8 en rojo, **los mismos ocho de `e2e/sitio.spec.ts`** (`INPUT border-radius 50%` en `SegmentedPills`, propio del Chromium local, en `/diseno`, `/cotizantes-y-pensionistas`, `/financiacion-y-deficit` y `/hucha`, escritorio y móvil). El spec nuevo `e2e/tipos-fuentes-formula.spec.ts` (10 pruebas, 1360 y 390 px, con axe) en verde.
 - Capturas a 1360 y 390 px de la ficha de jubilación (cuerpo, fórmula con leyenda y «Fuentes» de los requisitos abierto) revisadas: sin desbordes; la caja de la fórmula mide lo que la columna de texto.
+
+## CI y despliegue
+
+- **CI del PR** ([Exequ/Pensiones#55](https://github.com/Exequ/Pensiones/pull/55)): run 144 en verde sobre `03043dada43929129193d5ddb0411bb1b7c6d140` (todo el código de la fase): «Lint, tipos, tests, datos y compilación» e «Interfaz (Playwright)» completo. El commit siguiente solo añade este apartado. «Despliegue en GitHub Pages» del PR (run 144, evento `pull_request`): en verde.
+- **Despliegue de `main` tras la fusión** y comprobación de la URL publicada (`/tipos-de-pension` a 1360 y 390 px, «Fuentes» de una tabla y la fórmula): constan en el informe final de la sesión (como en R3, R4, RA y RI).
