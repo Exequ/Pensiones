@@ -44,7 +44,7 @@ export const Definicion = z.strictObject({
   /** Datos que la sostienen; su fuente se abre en «Fuentes». */
   datos: z
     .array(z.string().regex(PATRON_REF_DEFINICION, { error: 'Referencia con formato no válido' }))
-    .min(1, { error: 'Cada definición se apoya en al menos un dato de /data' }),
+    .min(1, { error: 'Cada definición se apoya en al menos un dato' }),
   /** Fórmula del cálculo propio, solo con símbolos (sin cifras escritas). */
   formula: FormulaEstructurada.optional(),
 });

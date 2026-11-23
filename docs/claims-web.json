@@ -3659,6 +3659,185 @@
       "revisionActuarial": "pendiente",
       "preguntaActuarial": "¿Es correcto presentar el cambio de la pensión por la demora como los puntos adicionales de la base reguladora divididos entre el máximo de la escala (equivalente a un porcentaje por años cotizados del cien por cien), y la lectura de la fracción de año de demora que usa la tabla (desde el segundo año completo) es la que debe mostrarse, o conviene añadir columnas con otros porcentajes por años cotizados?",
       "notas": "El porcentaje adicional es el del art. 210.2.a TRLGSS calculado con tiempoDemora y porcentajeAdicional del motor y la lectura por defecto de jubilacion.fraccionDemora. El cambio relativo es un cálculo derivado (puntos adicionales entre el máximo de la escala del año de los datos) que no consta en la norma."
+    },
+    {
+      "id": "web-def-gasto-frente-financiacion",
+      "texto": "El gasto en pensiones (cuánto se paga en pensiones) y la financiación (de dónde sale el dinero) son magnitudes distintas: la ejecución del presupuesto de la Seguridad Social clasifica los gastos por lo que se paga, entre ellos cada clase de pensión, y los ingresos por su origen, de modo que no permite decir qué parte de las pensiones paga cada ingreso.",
+      "ubicacion": "Página «Financiación y déficit» y módulo de definiciones (src/contenido/definiciones), definición «gasto-frente-a-financiacion» (Fase R7)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#obligaciones-no-financieras",
+        "sistema/deficit-presupuestario-seguridad-social.json#derechos-no-financieros",
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Coincide con el criterio de la respuesta actuarial del 19-11-2026 (tanda B), recogido en el encargo de la fase R7, y se apoya en las fuentes citadas."
+    },
+    {
+      "id": "web-def-gasto-contributivo",
+      "texto": "El gasto en pensiones contributivas del Sistema son las obligaciones reconocidas de la fila de la ejecución que suma las cinco clases (jubilación, incapacidad permanente, viudedad, orfandad y en favor de familiares); no incluye el complemento a mínimos, que la ejecución anota en una fila propia junto a las pensiones no contributivas, ni las pensiones no contributivas ni las de Clases Pasivas. La medida con complemento suma esa fila y la del complemento a mínimos; es la referencia de la web por convención, no una definición oficial.",
+      "ubicacion": "Página «Financiación y déficit» y módulo de definiciones (src/contenido/definiciones), definición «gasto-pensiones-contributivas-sin-complemento» y «gasto-pensiones-contributivas-con-complemento» (Fase R7)",
+      "datos": ["sistema/deficit-presupuestario-seguridad-social.json#obligaciones-no-financieras"],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Filas «SUMA DE PENSIONES» (detalle del capítulo 4 de gastos) y «COMPL. A MÍNIMOS PENSIONES CONTRIBUTIVAS» (bloque «SUMA DE PENSIONES NO CONTR. Y COMPL. A MÍNIMOS DE PENSIONES CONTR.») de data/sistema/presupuesto-ss-ejecucion.csv; los rótulos se muestran en «Fuentes»."
+    },
+    {
+      "id": "web-def-gasto-esspros-ocde",
+      "texto": "Las medidas de Eurostat (estadística de protección social ESSPROS, funciones de vejez y de supervivientes) y de la OCDE (gasto público en pensiones) se publican en porcentaje del PIB; los datos consultados no delimitan qué administraciones, regímenes o prestaciones incluyen, y la incapacidad permanente no figura entre las series de Eurostat consultadas. Las medidas no son comparables entre sí sin conciliar su perímetro.",
+      "ubicacion": "Página «Financiación y déficit» y módulo de definiciones (src/contenido/definiciones), definición «gasto-pensiones-esspros-vejez», «gasto-pensiones-esspros-vejez-supervivientes» y «gasto-pensiones-ocde» (Fase R7)",
+      "datos": [
+        "internacional/eurostat-espana.json#gasto-old-no-aplica-no-aplica-pc-gdp",
+        "internacional/eurostat-espana.json#gasto-srv-no-aplica-no-aplica-pc-gdp",
+        "internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq"
+      ],
+      "fuentes": [
+        {
+          "title": "Expenditure on social benefits by function (spr_exp_func)",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en",
+          "docId": "eurostat-spr_exp_func"
+        },
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD",
+          "docId": "OECD-DSD_PAG-DF_PAG"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere"
+    },
+    {
+      "id": "web-def-gasto-ageing-report",
+      "texto": "El gasto bruto en pensiones públicas sobre el PIB del Ageing Report de la Comisión Europea es una proyección publicada con su propia definición (la fuente publica además por separado el gasto en pensiones de vejez y anticipadas, de incapacidad, de supervivencia y otras); no se une a las series de la ejecución del presupuesto del Sistema ni se presenta como su continuación.",
+      "ubicacion": "Módulo de definiciones (src/contenido/definiciones), definición «gasto-pensiones-ageing-report» (Fase R7); no se muestra todavía en ninguna página",
+      "datos": [
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-64",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-65",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-66",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-67",
+        "demografia/ageing-report-2024-espana.json#ageing-report-2024-ii-1-68"
+      ],
+      "fuentes": [
+        {
+          "title": "The 2024 Ageing Report: Economic and Budgetary Projections for the EU Member States (2022-2070), Statistical annex: cross-country tables",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/publications/2024-ageing-report-economic-and-budgetary-projections-eu-member-states-2022-2070_en",
+          "docId": "ip279"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Coincide con el criterio de la respuesta actuarial del 19-11-2026 (tanda B), recogido en el encargo de la fase R7, y se apoya en las fuentes citadas."
+    },
+    {
+      "id": "web-def-saldos-presupuestarios",
+      "texto": "El saldo presupuestario no financiero es la diferencia entre los derechos reconocidos netos y las obligaciones reconocidas por operaciones no financieras (incluye las transferencias del Estado como ingreso y deja fuera los préstamos), y el saldo presupuestario total, la diferencia entre el total de ingresos y el total de gastos, con las operaciones financieras (los préstamos del Estado figuran como ingreso). La Seguridad Social publica las sumas, no los saldos: ambos son diferencias calculadas por la web, que se muestran como fórmulas (S_nf = I_nf − G_nf; S = I − G), igual que el saldo no financiero menos las transferencias corrientes del Estado (S_t = S_nf − T) y el gasto sobre el PIB (g = G / Y).",
+      "ubicacion": "Página «Financiación y déficit» y módulo de definiciones (src/contenido/definiciones), definición «saldo-presupuestario-no-financiero», «saldo-presupuestario-total», «saldo-no-financiero-menos-transferencias» y «gasto-sobre-pib» (Fase R7)",
+      "datos": [
+        "sistema/deficit-definiciones.json#saldo-presupuestario-no-financiero",
+        "sistema/deficit-definiciones.json#saldo-presupuestario-total",
+        "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-no-financiero",
+        "sistema/deficit-presupuestario-seguridad-social.json#saldo-presupuestario-total",
+        "sistema/deficit-presupuestario-seguridad-social.json#derechos-totales",
+        "sistema/deficit-presupuestario-seguridad-social.json#obligaciones-totales",
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes",
+        "macro/pib-ine.json#pib-corriente"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "La coherencia de cada fórmula con las series la comprueba src/modules/financiacion-y-deficit/r7.test.tsx."
+    },
+    {
+      "id": "web-def-sec-subsector",
+      "texto": "La capacidad o necesidad de financiación de los fondos de la Seguridad Social en contabilidad nacional es el saldo de todo el subsector (todos sus ingresos y gastos), no solo de las pensiones. Los metadatos consultados no detallan qué entidades componen el subsector en España, por lo que la web no afirma que su perímetro coincida con el del presupuesto del Sistema ni lo concilia con el saldo presupuestario.",
+      "ubicacion": "Página «Financiación y déficit» y módulo de definiciones (src/contenido/definiciones), definición «capacidad-necesidad-financiacion-sec» (Fase R7)",
+      "datos": [
+        "sistema/deficit-definiciones.json#necesidad-financiacion-sec-s1314",
+        "sistema/deficit-definiciones.json#nota-espana-sanidad-2002",
+        "sistema/deficit-sec-fondos-seguridad-social.json#b9-mio-eur"
+      ],
+      "fuentes": [
+        {
+          "title": "Government revenue, expenditure and main aggregates (gov_10a_main): metadatos de referencia (ESMS)",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/cache/metadata/en/gov_10a_main_esms.htm"
+        },
+        {
+          "title": "Government revenue, expenditure and main aggregates (gov_10a_main), sector S.1314 Social security funds, España",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Coincide con el criterio de la respuesta actuarial del 19-11-2026 (tanda B), recogido en el encargo de la fase R7, y se apoya en las fuentes citadas."
+    },
+    {
+      "id": "web-def-sec-sin-clases-pasivas",
+      "texto": "El subsector «fondos de la Seguridad Social» (S.1314) de la contabilidad nacional no incluye Clases Pasivas.",
+      "ubicacion": "Módulo de definiciones, definición «capacidad-necesidad-financiacion-sec» (Fase R7): no se muestra en la web hasta tener respaldo en una fuente",
+      "datos": ["sistema/deficit-definiciones.json#necesidad-financiacion-sec-s1314"],
+      "fuentes": [
+        {
+          "title": "Government revenue, expenditure and main aggregates (gov_10a_main): metadatos de referencia (ESMS)",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/cache/metadata/en/gov_10a_main_esms.htm"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "La respuesta actuarial del 19-11-2026 (tanda B) afirma que el subsector S.1314 no incluye Clases Pasivas. Los metadatos ESMS de gov_10a_main descargados no enumeran las unidades del subsector en España. ¿Qué fuente oficial (IGAE, inventario de entes del sector público, notas metodológicas de las cuentas de las administraciones públicas) lo respalda, para poder mostrarlo en la definición?",
+      "notas": "Afirmación atribuida a la respuesta actuarial del 19-11-2026 (tanda B), recogida en el encargo de la fase R7; sin respaldo en las fuentes del repositorio (docs/DECISIONES_ACTUARIALES.md, «Fase R7»)."
+    },
+    {
+      "id": "web-def-derechos-reconocidos",
+      "texto": "La ejecución del presupuesto de la Seguridad Social publica para cada ingreso los derechos reconocidos netos y la recaudación neta, y para cada gasto las obligaciones reconocidas y los pagos realizados, que no coinciden. La web usa los derechos y las obligaciones reconocidos: las transferencias del Estado que muestra son derechos reconocidos netos, no recaudación ni pagos de caja. Las fuentes consultadas no definen en qué momento se reconoce un derecho o una obligación.",
+      "ubicacion": "Página «Financiación y déficit» y módulo de definiciones (src/contenido/definiciones), definición «derechos-reconocidos-netos» (Fase R7)",
+      "datos": [
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes",
+        "sistema/deficit-presupuestario-seguridad-social.json#derechos-no-financieros"
+      ],
+      "fuentes": [
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Coincide con el criterio de la respuesta actuarial del 19-11-2026 (tanda B), recogido en el encargo de la fase R7, y se apoya en las fuentes citadas. Columnas «derechos_u_obligaciones_meur» y «recaudacion_o_pagos_meur» de data/sistema/presupuesto-ss-ejecucion.csv (p. ej., ingresos no financieros de 2025: 232.882,47 frente a 231.108,37 millones). La definición del momento del reconocimiento queda pendiente de fuente (docs/PENDIENTE_DATOS.md)."
     }
   ]
 }
