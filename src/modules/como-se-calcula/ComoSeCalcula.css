@@ -66,7 +66,6 @@
   font-variant-numeric: tabular-nums;
 }
 
-.como-normas,
 .como-pie-ejemplo,
 .como-ilustrativo,
 .como-avisos,
@@ -235,4 +234,41 @@
   display: inline-flex;
   align-items: center;
   min-height: var(--objetivo-tactil);
+}
+
+/* Modalidades de la jubilación y tabla del efecto de los meses (Fase R6). */
+.como-modalidad,
+.como-efecto {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-4);
+  padding-top: var(--espacio-5);
+  border-top: var(--grosor-filete) solid var(--color-filete);
+  margin-top: var(--espacio-6);
+}
+
+.como-efecto {
+  border-top-color: var(--color-tinta);
+}
+
+.como-modalidad h4 {
+  margin-top: var(--espacio-3);
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  font-weight: var(--peso-semi);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-tinta-2);
+}
+
+.como-pie-modalidad {
+  font-family: var(--fuente-interfaz);
+  font-size: var(--texto-etiqueta);
+  line-height: var(--interlineado-etiqueta);
+  color: var(--color-tinta-2);
+}
+
+.como-efecto .tabla-datos-pie {
+  display: grid;
+  gap: var(--espacio-2);
 }

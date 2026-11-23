@@ -189,10 +189,14 @@ describe('afirmaciones, fuentes e inventario', () => {
           series?: { id: string }[];
           data?: { id: string }[];
           ejemplos?: { id: string }[];
+          prestaciones?: { id: string }[];
         };
-        const ids = [...(json.series ?? []), ...(json.data ?? []), ...(json.ejemplos ?? [])].map(
-          (e) => e.id,
-        );
+        const ids = [
+          ...(json.series ?? []),
+          ...(json.data ?? []),
+          ...(json.ejemplos ?? []),
+          ...(json.prestaciones ?? []),
+        ].map((e) => e.id);
         expect(ids, `${c.id}: ${ref}`).toContain(id);
       }
     }

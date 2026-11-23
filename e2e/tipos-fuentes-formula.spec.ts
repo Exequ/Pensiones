@@ -8,6 +8,10 @@
  */
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
+import {
+  DESTINO_MODALIDADES,
+  TITULO_MODALIDADES,
+} from '../src/modules/como-se-calcula/anclas-modalidades.ts';
 import { esperarPagina, url, vigilar } from './utilidades.ts';
 
 const FICHAS = [
@@ -58,14 +62,15 @@ test.describe('«Tipos de pensión»: citas en «Fuentes» y fórmula', () => {
     expect(registro.externas, 'peticiones a dominios externos').toEqual([]);
   });
 
-  test('la ficha de jubilación no lista modalidades y enlaza a «Cómo se calcula»', async ({
+  test('la ficha de jubilación no lista modalidades y enlaza al apartado de modalidades de «Cómo se calcula»', async ({
     page,
   }) => {
     await abrirPagina(page);
     const ficha = page.locator('#ficha-jubilacion');
     await expect(ficha).not.toContainText(/Jubilación parcial|Jubilación flexible/);
-    await ficha.getByRole('link', { name: 'Cómo se calcula' }).click();
+    await ficha.getByRole('link', { name: `«${TITULO_MODALIDADES}»` }).click();
     await expect(page.getByRole('heading', { level: 1, name: 'Cómo se calcula' })).toBeVisible();
+    await expect(page.locator(`#${DESTINO_MODALIDADES}`)).toBeFocused();
   });
 
   test('la fórmula de la jubilación es visible, tiene leyenda y no desborda', async ({ page }) => {

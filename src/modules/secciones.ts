@@ -58,6 +58,7 @@ export const SECCIONES = [
     previsto: [
       'Una sección por prestación: quién la cobra, el esquema de cálculo por pasos con su norma, los parámetros vigentes con su fuente, ejemplos calculados paso a paso, las lecturas que influyen y lo que la web no calcula (disponible).',
       'Gráficos de la jubilación: escala de porcentajes por meses cotizados, coeficientes reductores de la jubilación anticipada y porcentaje adicional de la demora, con su tabla de datos (disponible).',
+      'Modalidades de la jubilación (anticipada, demorada, activa, flexible y parcial): qué exige cada una, su fórmula con leyenda cuando la norma da una fórmula cerrada y una tabla del efecto de adelantar o retrasar la jubilación (disponible).',
       'Definición de los términos que se repiten: hecho causante, base reguladora, carencia, coeficientes, pensión máxima y complemento a mínimos (disponible).',
       'La revalorización anual de las pensiones en curso: no se explica en esta página (pendiente).',
       'La prestación en favor de familiares y las pensiones no contributivas: no calculadas aquí todavía.',

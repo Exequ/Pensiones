@@ -36,7 +36,7 @@ function ModalidadJubilacion({ m }: { readonly m: DatosModalidad }) {
           descripcion: r.descripcion,
         }))}
       />
-      <p className="tipos-pie">
+      <p className="como-pie-modalidad">
         Duración: {m.textos.duracion} Compatibilidades: {m.textos.compatibilidades}
       </p>
       <SourceLine datos={m.fuentes.requisitos} titulo={`Requisitos de la modalidad: ${m.nombre}`} />
@@ -44,7 +44,7 @@ function ModalidadJubilacion({ m }: { readonly m: DatosModalidad }) {
       <h4>Cómo se calcula la cuantía</h4>
       {m.formula?.alcance === 'completa' ? null : <p>{m.textos.formula}</p>}
       {m.formula ? <Formula formula={m.formula} /> : null}
-      <p className="tipos-pie">Límites: {m.textos.limites}</p>
+      <p className="como-pie-modalidad">Límites: {m.textos.limites}</p>
       <SourceLine datos={m.fuentes.calculo} titulo={`Cálculo y límites: ${m.nombre}`} />
       <SourceLine datos={m.fuentes.norma} titulo={`Norma de la modalidad: ${m.nombre}`} />
     </article>

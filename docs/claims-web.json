@@ -2936,7 +2936,7 @@
     {
       "id": "web-como-jub-modalidades",
       "texto": "En la jubilación anticipada se aplica un coeficiente reductor a la pensión resultante, que depende del tiempo de anticipación y de la cotización acumulada, con un cuadro para la modalidad voluntaria y otro para la anticipada por causa no imputable a la persona trabajadora; en la jubilación demorada se reconoce un porcentaje adicional por cada año completo de demora, una cantidad a tanto alzado o una combinación de ambas.",
-      "ubicacion": "Página «Cómo se calcula»: jubilación, paso 7 del esquema y gráficos de coeficientes y de demora (Fase «Cómo se calcula»)",
+      "ubicacion": "Página «Cómo se calcula»: jubilación, paso 7 del esquema, modalidades de la jubilación y gráficos de coeficientes y de demora (Fases «Cómo se calcula» y R6)",
       "datos": [
         "parametros/jubilacion-coeficientes-voluntaria.json#t3-12",
         "parametros/jubilacion-coeficientes-involuntaria.json#t2-24",
@@ -3526,6 +3526,139 @@
       "revisionActuarial": "revisada",
       "notas": "Criterio de la cuarta revisión actuarial (punto 1), escrito en docs/DECISIONES.md («Criterio de confianza en tres conceptos»). M4 pasa de media a baja: su contraste con el Ageing Report 2024 no tiene una tolerancia escrita y usa salidas de M2 (docs/AUDITORIA_CONFIANZA.md).",
       "respuestaActuarial": "Tanda 4, parte A, n.º 1"
+    },
+    {
+      "id": "web-como-modalidades-anticipada",
+      "texto": "En la jubilación anticipada por voluntad de la persona, la pensión es la base reguladora multiplicada por el porcentaje por años cotizados y por uno menos el coeficiente reductor del cuadro del art. 208.2 TRLGSS (hasta 24 meses de anticipación y cuatro tramos de cotización acumulada); en la anticipada por causa no imputable a la persona trabajadora rige el cuadro del art. 207.2 (hasta 48 meses), con un tope igual a la pensión máxima reducida el 0,5 % por trimestre o fracción de anticipación (art. 210.4). La página muestra las dos fórmulas con su leyenda.",
+      "ubicacion": "Página «Cómo se calcula»: modalidades de la jubilación, fórmulas de la anticipada voluntaria y de la anticipada por causa no imputable (Fase R6)",
+      "datos": [
+        "normativa/prestaciones.json#jubilacion-anticipada-voluntaria",
+        "normativa/prestaciones.json#jubilacion-anticipada-involuntaria",
+        "parametros/jubilacion-coeficientes-voluntaria.json#t1-24",
+        "parametros/jubilacion-coeficientes-involuntaria.json#t1-48",
+        "parametros/jubilacion-anticipada-reglas.json#involuntaria-tope-pension-pct-trimestre"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción del texto de calculo.formula de prestaciones.json (arts. 207.2, 208.2, 210.3 y 210.4 TRLGSS). La fórmula estructurada no incluye la regla de los coeficientes sobre el límite de la pensión máxima ni la salvaguarda de la DT 34.ª.1, que es una lectura pendiente (jubilacion.salvaguardaDT34); la página lo dice en una nota de la fórmula."
+    },
+    {
+      "id": "web-como-modalidades-demora",
+      "texto": "En la jubilación demorada, el complemento puede abonarse como porcentaje adicional de la base reguladora (el 4 % por cada año completo de demora y el 2 % por la fracción de año que la norma computa) o como pago único por año completo: 800 × (pensión inicial anual / 500)^(1/1,65) euros si la cotización es inferior a 44 años y 6 meses y 880 × (pensión inicial anual / 500)^(1/1,65) euros si es igual o superior (art. 210.2 TRLGSS y RD 371/2023); el complemento total es el pago único por los años completos más la mitad por la fracción computable. La página muestra las fórmulas con su leyenda; las cifras salen de los parámetros.",
+      "ubicacion": "Página «Cómo se calcula»: modalidades de la jubilación, fórmula de la jubilación demorada (Fase R6)",
+      "datos": [
+        "normativa/prestaciones.json#jubilacion-demorada",
+        "parametros/jubilacion-demora-reglas.json#porcentaje-adicional-anual",
+        "parametros/jubilacion-demora-reglas.json#porcentaje-adicional-semestre",
+        "parametros/jubilacion-demora-reglas.json#tanto-alzado-base-menos-44-6",
+        "parametros/jubilacion-demora-reglas.json#tanto-alzado-base-44-6-o-mas",
+        "parametros/jubilacion-demora-reglas.json#tanto-alzado-divisor-pension",
+        "parametros/jubilacion-demora-reglas.json#tanto-alzado-exponente-divisor",
+        "parametros/jubilacion-demora-reglas.json#tanto-alzado-umbral-cotizacion-meses",
+        "parametros/jubilacion-demora-reglas.json#tanto-alzado-factor-semestre"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        },
+        {
+          "title": "Ley 21/2021, de 28 de diciembre, de garantía del poder adquisitivo de las pensiones y de otras medidas de refuerzo de la sostenibilidad financiera y social del sistema público de pensiones (PDF oficial del BOE)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/boe/dias/2021/12/29/pdfs/BOE-A-2021-21652.pdf"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción del texto de calculo.formula de prestaciones.json (art. 210.2 TRLGSS, art. 1.Ocho de la Ley 21/2021 y arts. 2, 3 y 5 del RD 371/2023). La opción mixta del art. 3 del RD 371/2023 no se estructura."
+    },
+    {
+      "id": "web-como-modalidades-parcial",
+      "texto": "En la jubilación parcial, la pensión es la base reguladora multiplicada por el porcentaje por años cotizados y por el porcentaje de reducción de jornada, con un mínimo proporcional a esa reducción. La página muestra la fórmula con su leyenda y mantiene en texto las de la jubilación activa y la flexible, porque sus cifras no constan en los parámetros de la web.",
+      "ubicacion": "Página «Cómo se calcula»: modalidades de la jubilación, fórmula de la jubilación parcial y modalidades sin fórmula estructurada (Fase R6)",
+      "datos": [
+        "normativa/prestaciones.json#jubilacion-parcial",
+        "normativa/prestaciones.json#jubilacion-activa",
+        "normativa/prestaciones.json#jubilacion-flexible"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+          "docId": "BOE-A-2015-11724"
+        },
+        {
+          "title": "Real Decreto 416/2026, de 27 de mayo, por el que se regula el régimen jurídico de la jubilación flexible y otros aspectos comunes a las modalidades de compatibilidad de la pensión contributiva de jubilación con el trabajo, y se modifica el régimen de la jubilación demorada",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-11474",
+          "docId": "BOE-A-2026-11474"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Transcripción de calculo.formula (art. 215 TRLGSS y art. 12 del RD 1131/2002). Las cifras de la activa (porcentaje de la escala, 5 puntos cada 12 meses) y de la flexible (25 % y 15 %) están en el texto y no en data/parametros: no se estructura una fórmula que no pueda referenciarlas (pendiente anotada en docs/ESTADO_FASE_R6.md)."
+    },
+    {
+      "id": "web-como-efecto-meses-anticipada",
+      "texto": "La tabla del efecto de los meses muestra, para cada número de meses de anticipación (hasta 24 en la voluntaria y hasta 48 en la involuntaria) y cada tramo de cotización acumulada (menos de 38 años y 6 meses; de 38 años y 6 meses a menos de 41 años y 6 meses; de 41 años y 6 meses a menos de 44 años y 6 meses; 44 años y 6 meses o más), el coeficiente reductor del cuadro de la norma como cambio de la pensión, en negativo y sobre la pensión que resulta de la base reguladora y del porcentaje por años cotizados. Los cuadros rigen desde 2022 y no incluyen la interacción con la pensión máxima, el complemento a mínimos ni la salvaguarda de la DT 34.ª.",
+      "ubicacion": "Página «Cómo se calcula»: modalidades de la jubilación, tabla del efecto de adelantar o retrasar la jubilación, columnas de la anticipada (Fase R6)",
+      "datos": [
+        "parametros/jubilacion-coeficientes-voluntaria.json#t1-24",
+        "parametros/jubilacion-coeficientes-voluntaria.json#t4-1",
+        "parametros/jubilacion-coeficientes-voluntaria.json#umbral-t2",
+        "parametros/jubilacion-coeficientes-voluntaria.json#umbral-t3",
+        "parametros/jubilacion-coeficientes-voluntaria.json#umbral-t4",
+        "parametros/jubilacion-coeficientes-involuntaria.json#t1-48",
+        "parametros/jubilacion-coeficientes-involuntaria.json#t4-1"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Cada celda es el valor del cuadro (art. 208.2 y art. 207.2 TRLGSS) con signo negativo, leído con coeficienteReductor del motor; src/modules/como-se-calcula/r6.test.tsx comprueba que coincide con la función del motor, con el cálculo completo del motor en varios casos y con las figuras de coeficientes. El tramo se elige con los umbrales de cada cuadro (462, 498 y 534 meses)."
+    },
+    {
+      "id": "web-como-efecto-meses-demora",
+      "texto": "La tabla del efecto de los meses muestra, para la demora, el porcentaje adicional de la base reguladora (el 4 % por año completo y el 2 % por la fracción de año que computa la lectura por defecto) y el cambio de la pensión si el porcentaje por años cotizados es el máximo de la escala vigente (el 100 %): esos puntos entre ese máximo. Con un porcentaje menor el mismo adicional supone un cambio relativo mayor. Es un cálculo propio a partir de los parámetros; no incluye el pago único ni la opción mixta.",
+      "ubicacion": "Página «Cómo se calcula»: modalidades de la jubilación, tabla del efecto de adelantar o retrasar la jubilación, columnas de la demora (Fase R6)",
+      "datos": [
+        "parametros/jubilacion-demora-reglas.json#porcentaje-adicional-anual",
+        "parametros/jubilacion-demora-reglas.json#porcentaje-adicional-semestre",
+        "parametros/jubilacion-demora-reglas.json#fraccion-minima-meses",
+        "parametros/escala-jubilacion-tramos.json#2023-maximo-pct"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (texto consolidado, última actualización publicada el 21/10/2026)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "¿Es correcto presentar el cambio de la pensión por la demora como los puntos adicionales de la base reguladora divididos entre el máximo de la escala (equivalente a un porcentaje por años cotizados del cien por cien), y la lectura de la fracción de año de demora que usa la tabla (desde el segundo año completo) es la que debe mostrarse, o conviene añadir columnas con otros porcentajes por años cotizados?",
+      "notas": "El porcentaje adicional es el del art. 210.2.a TRLGSS calculado con tiempoDemora y porcentajeAdicional del motor y la lectura por defecto de jubilacion.fraccionDemora. El cambio relativo es un cálculo derivado (puntos adicionales entre el máximo de la escala del año de los datos) que no consta en la norma."
     }
   ]
 }
