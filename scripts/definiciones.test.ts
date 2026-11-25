@@ -43,6 +43,15 @@ const IDS_ESTABLES = [
   'capacidad-necesidad-financiacion-sec',
   'saldo-no-financiero-menos-transferencias',
   'derechos-reconocidos-netos',
+  // Fase R8 («La hucha»).
+  'fondo-de-reserva',
+  'fondo-de-reserva-limite-de-desembolso',
+  'prestamos-del-estado-a-la-seguridad-social',
+  'transferencias-corrientes-del-estado',
+  'fondo-menos-deuda',
+  'deuda-mas-transferencias-acumuladas',
+  'fondo-en-meses-de-gasto',
+  'fondo-en-meses-de-transferencias',
 ] as const;
 
 /** Todos los textos visibles de una definición (término, párrafos, perímetro, criterio y fórmula). */
@@ -74,11 +83,16 @@ describe('módulo de definiciones', () => {
     expect(new Set(DEFINICIONES.map((d) => d.id)).size).toBe(DEFINICIONES.length);
   });
 
-  it('los ids estables existen (gasto en pensiones, déficit y contabilidad)', () => {
+  it('los ids estables existen (gasto en pensiones, déficit, contabilidad y Fondo de Reserva)', () => {
     const ids = DEFINICIONES.map((d) => d.id);
     for (const id of IDS_ESTABLES) expect(ids, id).toContain(id);
     const grupos = new Set(DEFINICIONES.map((d) => d.grupo));
-    expect([...grupos].sort()).toEqual(['contabilidad', 'deficit', 'gasto-en-pensiones']);
+    expect([...grupos].sort()).toEqual([
+      'contabilidad',
+      'deficit',
+      'fondo-de-reserva',
+      'gasto-en-pensiones',
+    ]);
   });
 
   it('el id inexistente falla con un mensaje claro que lista los ids válidos', () => {
@@ -124,6 +138,10 @@ describe('módulo de definiciones', () => {
   it('las fórmulas son coherentes y no llevan ninguna cifra', () => {
     const conFormula = DEFINICIONES.filter((d) => d.formula !== undefined);
     expect(conFormula.map((d) => d.id).sort()).toEqual([
+      'deuda-mas-transferencias-acumuladas',
+      'fondo-en-meses-de-gasto',
+      'fondo-en-meses-de-transferencias',
+      'fondo-menos-deuda',
       'gasto-sobre-pib',
       'saldo-no-financiero-menos-transferencias',
       'saldo-presupuestario-no-financiero',

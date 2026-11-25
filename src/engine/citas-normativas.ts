@@ -12,9 +12,9 @@ import { Dato, type Fuente } from './esquema-datos.ts';
 const NUMERO = String.raw`\d+(?:\.(?:\d+\.º|\d+|[a-z]\)?|Uno|Dos|Tres|Cuatro))*(?:\s+(?:bis|ter|quáter))?(?:-\d+)?`;
 const LISTA = String.raw`${NUMERO}(?:\s*(?:,|y|a|e)\s*${NUMERO})*`;
 /** «art. 205», «arts. 217 y 219», «artículo 221», opcionalmente con «TRLGSS» o «apartados siguientes». */
-const ARTICULO = String.raw`(?:\barts?\.|\bartículos?)\s*${LISTA}(?:\s+apartados\s+siguientes)?(?:\s+(?:TRLGSS|ET))?`;
-/** «DT 7.ª», «DT 4.ª.7»: disposición transitoria abreviada. */
-const DISPOSICION = String.raw`\bDT\s*\d+\.ª(?:\.\d+)?`;
+const ARTICULO = String.raw`(?:\barts?\.|\bartículos?)\s*(?:${LISTA}|únic[oa])(?:\s+apartados\s+siguientes)?(?:\s+(?:TRLGSS|ET))?`;
+/** «DT 7.ª», «DT 4.ª.7», «DA 2.ª», «D.A. 9ª»: disposición transitoria o adicional abreviada. */
+const DISPOSICION = String.raw`\b(?:DT|DA|D\.A\.|D\.T\.)\s*\d+\.?\s?ª(?:\.\d+)?`;
 const CITA = String.raw`(?:${ARTICULO}|${DISPOSICION})`;
 /** Cita con su párrafo y el nombre de la norma detrás: «art. 36.Uno, párr. 2.º, Decreto 3158/1966». */
 const CITA_EXTENDIDA = String.raw`${CITA}(?:,\s*párr(?:afo|\.)\s*[^,;()]+)?(?:,?\s*(?:de la\s+)?(?:Orden de|RDL?|Decreto|Ley)\s*[\d/]+)?`;

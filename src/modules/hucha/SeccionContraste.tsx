@@ -160,11 +160,12 @@ export function SeccionContraste() {
         <p>
           Los derechos reconocidos del Mecanismo de Equidad Intergeneracional y las dotaciones al
           Fondo con cargo a ese mecanismo no coinciden: la diferencia acumulada es de{' '}
-          {decimal2(difMei.diferencia)} millones de euros en {difMei.desde}-{difMei.hasta}. Los
-          derechos reconocidos se contabilizan al nacer el derecho de cobro; la ley integra en el
-          Fondo lo recaudado, no lo reconocido, y las fuentes consultadas no publican la recaudación
-          mensual que permitiría conciliar las dos cifras. Por eso la tabla enfrenta dos magnitudes
-          distintas: no es un error de una de ellas.
+          {decimal2(difMei.diferencia)} millones de euros en {difMei.desde}-{difMei.hasta}. Las dos
+          cifras miden magnitudes distintas: los derechos reconocidos netos (definidos en «
+          {APARTADOS.transferencias.titulo}») no son la recaudación, y la norma integra en el Fondo
+          lo que se recauda por esa cotización. La ejecución no publica la recaudación de esta
+          cotización, de modo que con los datos consultados no se puede conciliar una cifra con
+          otra.
         </p>
       </ComoLeerlo>
     </section>

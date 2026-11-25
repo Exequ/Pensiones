@@ -1,15 +1,26 @@
 import { DataTable } from '../../components/DataTable';
 import { SourceLine } from '../../components/SourceLine';
-import type { Dato } from '../../engine/esquema-datos';
+import { citasDeTexto, quitarCitas } from '../../engine/citas-normativas';
+import type { DatoRotulado } from '../../components/fuentes';
+import { Dato } from '../../engine/esquema-datos';
+import { estadoDePlazos } from '../../engine/fondo-reserva';
 import { extremos, maximo, valorEn } from '../../engine/series-historicas';
 import { ComoLeerlo } from '../historico/ComoLeerlo';
 import { datosHucha } from '../historico/datos-hucha';
 import { millonesEuros } from '../historico/formatos';
 import { GraficoSeries } from '../historico/GraficoSeries';
-import { ID23 } from './ids-datos';
+import { ID, ID23 } from './ids-datos';
 import { anioDeId, periodoDeId } from './rango';
 import { etiquetaTramo } from './tramos';
 import { APARTADOS } from './apartados';
+
+/**
+ * Nombre de la norma de una línea del anexo, sin los artículos ni las disposiciones (van a «Fuentes»)
+ * y sin la cola de la rúbrica cuando el anexo la trunca («… por el que se adoptan medidas…»).
+ */
+function nombreDeNorma(norma: string): string {
+  return quitarCitas(norma).split(/\s+por el que\s+/)[0] ?? norma;
+}
 
 /**
  * «Préstamos del Estado y Fondo de Reserva según el Tribunal de Cuentas»: préstamos concedidos por
@@ -35,8 +46,10 @@ export function SeccionPrestamos() {
   const mayorPrestamo = maximo(prestamos);
   const pasivosConImporteLiquidacion = pasivosLiquidacion.filter((p) => p.valor > 0);
   const anioDeclaracion = anioDeId(ID23.saldoDeuda);
-  const anexo = d.anexoPrestamos.nombre;
+  // La ubicación («Anexo 10») consta en «Fuentes»; en el cuerpo se nombra por su contenido.
+  const anexo = 'anexo de préstamos';
 
+  const lineasPrestamo = d.anexoPrestamos.filas.filter((f) => f.tipo === 'prestamo');
   const filasAnexo = d.anexoPrestamos.filas.map((f) => ({
     tipo:
       f.tipo === 'prestamo'
@@ -45,12 +58,42 @@ export function SeccionPrestamos() {
           ? 'Subtotal del bloque'
           : 'Total del anexo',
     bloque: f.bloque,
-    norma: f.norma,
+    norma: nombreDeNorma(f.norma),
     importe: f.importe,
     vencimiento: f.vencimiento,
     concesion: f.anioConcesion === null ? '' : String(f.anioConcesion),
   }));
+  // Los artículos y disposiciones de cada línea pasan a «Fuentes», con el rótulo de la línea.
+  const datosLineas: DatoRotulado[] = lineasPrestamo.flatMap((f) => {
+    const citas = citasDeTexto(f.norma);
+    if (citas.length === 0) return [];
+    return [
+      {
+        ...Dato.parse({
+          ...d.anexoPrestamos.dato,
+          location: [d.anexoPrestamos.nombre, ...citas].join('; '),
+        }),
+        rotulo: nombreDeNorma(f.norma),
+      },
+    ];
+  });
+  const plazos = estadoDePlazos(
+    lineasPrestamo.map((f) => ({ vencimiento: f.vencimiento, anioConcesion: f.anioConcesion })),
+    anioDeId(ID23.saldoDeuda),
+  );
 
+  const textoPlazos = [
+    plazos.recientes === null || plazos.primerVencimientoReciente === null
+      ? ''
+      : `A fin de ${anioDeclaracion}, fecha de la declaración, ${
+          plazos.ningunoRecienteVencido
+            ? `ninguno de los préstamos concedidos entre ${plazos.recientes.desde} y ${plazos.recientes.hasta} había llegado al fin de su plazo máximo: el del primero de ellos termina en ${plazos.primerVencimientoReciente}.`
+            : `alguno de los préstamos concedidos entre ${plazos.recientes.desde} y ${plazos.recientes.hasta} ya había llegado al fin de su plazo máximo.`
+        }`,
+    `De los préstamos anteriores, ${plazos.antiguosVencidos} habían superado su plazo a esa fecha y ${plazos.antiguosSinPlazo} no indican plazo en el anexo. Según el Tribunal de Cuentas, los préstamos antiguos no se han devuelto: los que tienen plazo se han prorrogado y los que no lo tienen siguen sin reintegrarse.`,
+  ]
+    .filter((t) => t !== '')
+    .join(' ');
   const valorFondo = valorEn(d.valor.puntos, anioDeclaracion);
   const reserva = cifra(ID23.reservaFondo);
   const filasFondo = [
@@ -80,11 +123,13 @@ export function SeccionPrestamos() {
       d.tribunal2023[id] === undefined ? [] : [d.tribunal2023[id].dato],
     ),
   ]);
+  const sinDevolver = d.tribunal[ID.tcPrestamosSinDevolver]?.dato;
   const datosPrestamos: Dato[] = unicos([
     d.prestamosPorAnio.dato,
     d.liquidacion.pasivosFinancieros.dato,
     d.transferencias.pasivosFinancieros.dato,
     d.anexoPrestamos.dato,
+    ...(sinDevolver === undefined ? [] : [sinDevolver]),
     ...[
       ID23.saldoDeuda,
       ID23.prestamosAntiguos,
@@ -188,7 +233,7 @@ export function SeccionPrestamos() {
           filas={filasAnexo}
         />
         <SourceLine
-          datos={datosPrestamos}
+          datos={[...datosPrestamos, ...datosLineas]}
           titulo={`Préstamos otorgados por el Estado a la Seguridad Social (${anexo} de la declaración del Tribunal de Cuentas)`}
         />
         <ComoLeerlo>
@@ -203,6 +248,7 @@ export function SeccionPrestamos() {
             La tabla no dice si un préstamo se ha devuelto, prorrogado o cancelado: en el anexo solo
             figuran el vencimiento previsto y, para los antiguos, la norma que amplía el plazo.
           </p>
+          <p>{textoPlazos}</p>
         </ComoLeerlo>
       </div>
 

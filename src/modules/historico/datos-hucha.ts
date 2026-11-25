@@ -57,6 +57,7 @@ import {
   puntosTrimestrales,
   type PuntoTrimestral,
 } from '../../engine/transferencias';
+import type { FilaDotacionAcumulada } from '../../engine/fondo-reserva';
 import { FICHEROS_HUCHA } from './ficheros';
 import {
   cargarSerie,
@@ -146,6 +147,8 @@ export interface FlujoAnualFondo {
   readonly dotaciones: number | null;
   readonly dotacionesMei: number | null;
   readonly disposiciones: number | null;
+  /** Dotaciones acumuladas por componente y totales, y disposiciones acumuladas (fase R8). */
+  readonly acumuladas: FilaDotacionAcumulada;
 }
 
 /** Una partida de la liquidación de 2025 frente a la ejecución del mismo ejercicio (Fase 5-A4). */
@@ -259,6 +262,14 @@ export const datosHucha = memorizar((): DatosHucha => {
     dotaciones: numeroCsv(f['dotaciones_anuales_meur']),
     dotacionesMei: numeroCsv(f['dotaciones_mei_anuales_meur']),
     disposiciones: numeroCsv(f['disposiciones_anuales_meur']),
+    acumuladas: {
+      anio: Number(f['anio']),
+      entidades: numeroCsv(f['dotaciones_excedentes_entidades_acum_meur']),
+      mutuas: numeroCsv(f['dotaciones_excedentes_mutuas_acum_meur']),
+      mei: numeroCsv(f['dotaciones_mei_acum_meur']),
+      total: numeroCsv(f['dotaciones_acumuladas_meur']),
+      disposiciones: numeroCsv(f['disposiciones_acum_meur']),
+    },
   }));
 
   const clases = (archivo: ReturnType<typeof validarArchivo>) =>
@@ -413,6 +424,9 @@ export const datosHucha = memorizar((): DatosHucha => {
         source: anexo.source,
         fetchedAt: anexo.fetchedAt,
         confidence: anexo.confidence,
+        ...(filasCsv(anexoPrestamosCsv)[0]?.['tabla'] === undefined
+          ? {}
+          : { location: filasCsv(anexoPrestamosCsv)[0]?.['tabla'] }),
         ...(anexo.notes === undefined ? {} : { notes: anexo.notes }),
       }),
     },

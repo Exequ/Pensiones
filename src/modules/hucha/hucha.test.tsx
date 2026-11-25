@@ -551,8 +551,16 @@ describe('página «Hucha»: liquidación frente a ejecución (Fase 5-A4)', () =
     expect(s.textContent).toContain(
       `la diferencia acumulada es de ${formatearNumero(d.diferencia, { decimales: 2 })} millones de euros en ${String(d.desde)}-${String(d.hasta)}`,
     );
-    expect(s.textContent).toMatch(/la ley integra en el\s+Fondo lo recaudado, no lo reconocido/);
-    expect(s.textContent).toMatch(/no publican la\s+recaudación mensual/);
+    // Fase R8: los derechos reconocidos netos no son la recaudación y la norma integra en el Fondo lo
+    // que se recauda; la ejecución no publica la recaudación del MEI (se comprueba en r8.test.tsx).
+    expect(s.textContent).toMatch(
+      /los derechos reconocidos netos \(definidos en «[^»]+»\) no son la\s+recaudación/,
+    );
+    expect(s.textContent).toMatch(
+      /la norma integra en el Fondo lo que se\s+recauda por esa cotización/,
+    );
+    expect(s.textContent).toMatch(/La ejecución no\s+publica la recaudación de esta cotización/);
+    expect(s.textContent).not.toMatch(/al nacer el derecho de cobro/);
     expect(s.textContent).not.toMatch(/desfase/);
   });
 });

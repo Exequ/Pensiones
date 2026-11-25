@@ -121,3 +121,32 @@ describe('citasDeTexto y ubicacionDeBloque', () => {
     );
   });
 });
+
+describe('disposiciones adicionales abreviadas (fase R8)', () => {
+  it('quita «D.A. 9ª», «DA 2.ª» y los artículos de los nombres de norma del anexo del Tribunal', () => {
+    expect(
+      quitarCitas('Ley 3/2017, de Presupuestos Generales del Estado para 2017 (D.A. 9ª).'),
+    ).toBe('Ley 3/2017, de Presupuestos Generales del Estado para 2017.');
+    expect(
+      quitarCitas('Ley 31/2022 de Presupuestos Generales del Estado para 2023 (D.A. 3ª)'),
+    ).toBe('Ley 31/2022 de Presupuestos Generales del Estado para 2023');
+    expect(
+      quitarCitas('Ley 39/1992, de Presupuestos Generales del Estado para 1993 (artículo 11).'),
+    ).toBe('Ley 39/1992, de Presupuestos Generales del Estado para 1993.');
+    expect(
+      quitarCitas('Ley 21/1993, de Presupuestos Generales del Estado para 1994 (artículo 11.4).'),
+    ).toBe('Ley 21/1993, de Presupuestos Generales del Estado para 1994.');
+  });
+
+  it('quita «(artículo único)» de una norma de un solo artículo', () => {
+    expect(quitarCitas('Real Decreto-Ley 17/1996, de 22 de noviembre (artículo único).')).toBe(
+      'Real Decreto-Ley 17/1996, de 22 de noviembre.',
+    );
+  });
+
+  it('las cita en orden de aparición', () => {
+    expect(citasDeTexto('Ley 6/2018 (D.A. 4ª)')).toEqual(['D.A. 4ª']);
+    expect(citasDeTexto('Ley 12/1996 (artículo 11.3).')).toEqual(['artículo 11.3']);
+    expect(citasDeTexto('Aplica la DA 2.ª y la DT 7.ª')).toEqual(['DA 2.ª', 'DT 7.ª']);
+  });
+});

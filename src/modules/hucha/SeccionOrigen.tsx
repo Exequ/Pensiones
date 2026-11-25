@@ -1,9 +1,11 @@
 import { DataTable } from '../../components/DataTable';
+import { Definition } from '../../components/Definition';
 import { SourceLine } from '../../components/SourceLine';
 import type { Dato } from '../../engine/esquema-datos';
 import { datosFinanciacion } from '../historico/datos-financiacion';
 import { datosHucha } from '../historico/datos-hucha';
 import { millonesEuros } from '../historico/formatos';
+import { DefinicionHucha } from './DefinicionHucha';
 import { ID, ID23 } from './ids-datos';
 import { rangoDeId } from './rango';
 import { APARTADOS } from './apartados';
@@ -14,9 +16,6 @@ type FilaClasificacion = {
   importe: number;
   fuente: string;
 };
-
-/** Texto de un dato suelto (para las citas literales). */
-const texto = (v: number | string): string => (typeof v === 'string' ? v : String(v));
 
 /** Suma de los valores de una serie anual entre dos años, ambos incluidos. */
 function sumaEntre(
@@ -41,7 +40,6 @@ export function SeccionOrigen() {
     if (typeof v !== 'number') throw new Error(`Falta la cifra «${id}» del Tribunal de Cuentas`);
     return v;
   };
-  const cita = (id: string): string => texto(tc[id]?.valor ?? '');
   const cifra23 = (id: string): number => {
     const v = d.tribunal2023[id]?.valor;
     if (typeof v !== 'number') throw new Error(`Falta la cifra «${id}» del Tribunal de Cuentas`);
@@ -169,53 +167,19 @@ export function SeccionOrigen() {
         clasifican de formas diferentes y esta página recoge lo que dice cada una, sin elegir una
         clasificación como la correcta.
       </p>
-      <dl className="hucha-definiciones">
-        <div>
-          <dt>Transferencias del Estado a la Seguridad Social</dt>
-          <dd>
-            <p>
-              El texto refundido de la Ley General de la Seguridad Social cuenta entre los recursos
-              del sistema «{texto(trlgss['aportaciones-estado-presupuestos']?.valor ?? '')}»
-              (artículo de recursos generales). Dispone también que «
-              {texto(trlgss['no-contributiva-aportaciones-estado']?.valor ?? '')}», y clasifica
-              entre las prestaciones no contributivas, entre otras, los complementos por mínimos de
-              las pensiones.
-            </p>
-            <p>
-              En la ejecución del presupuesto de la Seguridad Social figuran como ingresos por
-              transferencias corrientes, distinguidas por el organismo de origen.
-            </p>
-          </dd>
-        </div>
-        <div>
-          <dt>Préstamos del Estado a la Seguridad Social</dt>
-          <dd>
-            <p>
-              El Tribunal de Cuentas describe que «{cita('origen-prestamos-gestion-ordinaria')}».
-              Sobre sus condiciones, indica que «{cita('condiciones-prestamos-recientes')}».
-            </p>
-            <p>
-              No son transferencias: en la ejecución del presupuesto se contabilizan como pasivos
-              financieros y el Banco de España los recoge en la deuda de la Seguridad Social, sin
-              efecto en la deuda del conjunto de las Administraciones Públicas por ser operaciones
-              entre subsectores.
-            </p>
-          </dd>
-        </div>
-        <div>
-          <dt>Gastos impropios</dt>
-          <dd>
-            <p>
-              No hay una definición única en las fuentes consultadas. El Tribunal de Cuentas recoge,
-              del Informe de Evaluación y Reforma del Pacto de Toledo, la constatación de que «
-              {cita('definicion-costes-impropios-pacto-toledo')}».
-              {enumeracionImpropios === undefined
-                ? ''
-                : ` La Revista de la Seguridad Social (fuente secundaria) emplea la expresión para: ${enumeracionImpropios}.`}
-            </p>
-          </dd>
-        </div>
-      </dl>
+      <DefinicionHucha id="transferencias-corrientes-del-estado" />
+      <DefinicionHucha id="prestamos-del-estado-a-la-seguridad-social" />
+      <Definition termino="Gastos impropios">
+        <p>
+          No hay una definición única en las fuentes consultadas. El Tribunal de Cuentas recoge, del
+          Informe de Evaluación y Reforma del Pacto de Toledo, la constatación de que parte de los
+          gastos que sufragan las cotizaciones no pertenece estrictamente al ámbito de la Seguridad
+          Social y debería financiarse con la fiscalidad general.
+          {enumeracionImpropios === undefined
+            ? ''
+            : ` La Revista de la Seguridad Social (fuente secundaria) emplea la expresión para: ${enumeracionImpropios}.`}
+        </p>
+      </Definition>
 
       <h3 id="origen-tabla">Cuánto cambia la cifra según la clasificación</h3>
       <p>
@@ -253,8 +217,8 @@ export function SeccionOrigen() {
       </div>
       <p className="hucha-pie">
         Cifras del Tribunal de Cuentas para el último año de su periodo: aportaciones del Estado de
-        naturaleza no contributiva de {millonesEuros(cifra(ID.tcAportacionesNoContributivas))},
-        citadas por el Tribunal «además» de las transferencias de la fila correspondiente.
+        naturaleza no contributiva de {millonesEuros(cifra(ID.tcAportacionesNoContributivas))}, que
+        el Tribunal cita aparte de las transferencias de la fila correspondiente.
       </p>
     </section>
   );

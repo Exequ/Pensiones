@@ -1,0 +1,90 @@
+{
+  "id": "fondo-en-meses-de-transferencias",
+  "grupo": "fondo-de-reserva",
+  "termino": "Fondo en meses de transferencias del Estado (cálculo propio)",
+  "texto": [
+    "Cálculo de esta web que expresa el valor del Fondo de Reserva a fin de año en meses de transferencias del Estado a la Seguridad Social: divide el valor del Fondo entre la transferencia media de un mes del periodo elegido. La medida principal usa las transferencias de todo el año y la secundaria, las del último trimestre del año. El resultado en trimestres es el resultado en meses dividido entre los meses que tiene un trimestre."
+  ],
+  "criterio": "Valor del Fondo a precio de adquisición y transferencias corrientes del Estado y organismos autónomos en derechos reconocidos netos; los flujos trimestrales son diferencias entre acumulados de la ejecución.",
+  "datos": [
+    "sistema/fondo-reserva-series.json#valor-fin-ano",
+    "sistema/presupuesto-ss-ejecucion.json"
+  ],
+  "formula": {
+    "titulo": "Fondo en meses de transferencias",
+    "alcance": "completa",
+    "ecuaciones": [
+      {
+        "izquierda": {
+          "tipo": "simbolo",
+          "id": "m-t"
+        },
+        "derecha": {
+          "tipo": "cociente",
+          "numerador": {
+            "tipo": "simbolo",
+            "id": "f"
+          },
+          "denominador": {
+            "tipo": "simbolo",
+            "id": "tm"
+          }
+        }
+      },
+      {
+        "izquierda": {
+          "tipo": "simbolo",
+          "id": "tm"
+        },
+        "derecha": {
+          "tipo": "cociente",
+          "numerador": {
+            "tipo": "simbolo",
+            "id": "tr"
+          },
+          "denominador": {
+            "tipo": "simbolo",
+            "id": "n"
+          }
+        }
+      }
+    ],
+    "simbolos": [
+      {
+        "id": "m-t",
+        "notacion": "M_t",
+        "nombre": "Fondo en meses de transferencias",
+        "significado": "Número de meses de transferencias a los que equivale el valor del Fondo; cálculo propio.",
+        "unidad": "meses"
+      },
+      {
+        "id": "f",
+        "notacion": "F_t",
+        "nombre": "Valor del Fondo",
+        "significado": "Valor del Fondo de Reserva a fin de año, a precio de adquisición.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "tm",
+        "notacion": "t_m",
+        "nombre": "Transferencia media mensual",
+        "significado": "Transferencias del periodo divididas entre los meses del periodo.",
+        "unidad": "millones de euros por mes"
+      },
+      {
+        "id": "tr",
+        "notacion": "T_p",
+        "nombre": "Transferencias del periodo",
+        "significado": "Transferencias corrientes del Estado y de sus organismos autónomos del año completo o del último trimestre del año, en derechos reconocidos netos.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "n",
+        "notacion": "n",
+        "nombre": "Meses del periodo",
+        "significado": "Número de meses que tiene el periodo con el que se miden las transferencias.",
+        "unidad": "meses"
+      }
+    ]
+  }
+}

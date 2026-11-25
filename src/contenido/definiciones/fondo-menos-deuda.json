@@ -1,0 +1,59 @@
+{
+  "id": "fondo-menos-deuda",
+  "grupo": "fondo-de-reserva",
+  "termino": "Fondo menos deuda (cálculo propio)",
+  "texto": [
+    "Cálculo de esta web, sin equivalente oficial: resta a fin de cada año la deuda de las Administraciones de Seguridad Social, según el Banco de España, al valor del Fondo de Reserva. Compara un activo con un pasivo. Es positivo si el Fondo supera a la deuda y negativo si la deuda supera al Fondo. No es un patrimonio neto contable ni el déficit de la Seguridad Social."
+  ],
+  "criterio": "Dos saldos de fin de año de fuentes distintas y con criterios distintos: el Fondo a precio de adquisición y la deuda a valor nominal.",
+  "datos": [
+    "sistema/fondo-reserva-series.json#valor-fin-ano",
+    "sistema/deuda-pde-seguridad-social.json#deuda-pde-fin-ano"
+  ],
+  "formula": {
+    "titulo": "Fondo menos deuda",
+    "alcance": "completa",
+    "ecuaciones": [
+      {
+        "izquierda": {
+          "tipo": "simbolo",
+          "id": "p"
+        },
+        "derecha": {
+          "tipo": "resta",
+          "minuendo": {
+            "tipo": "simbolo",
+            "id": "f"
+          },
+          "sustraendo": {
+            "tipo": "simbolo",
+            "id": "d"
+          }
+        }
+      }
+    ],
+    "simbolos": [
+      {
+        "id": "p",
+        "notacion": "P_t",
+        "nombre": "Fondo menos deuda",
+        "significado": "Valor del Fondo menos saldo de la deuda a fin de año; cálculo propio. Es negativo si la deuda supera al Fondo.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "f",
+        "notacion": "F_t",
+        "nombre": "Valor del Fondo",
+        "significado": "Valor del Fondo de Reserva a fin de año, a precio de adquisición.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "d",
+        "notacion": "D_t",
+        "nombre": "Deuda",
+        "significado": "Saldo a fin de año de la deuda de las Administraciones de Seguridad Social, según el Banco de España.",
+        "unidad": "millones de euros"
+      }
+    ]
+  }
+}

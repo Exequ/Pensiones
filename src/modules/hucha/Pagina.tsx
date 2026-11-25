@@ -5,6 +5,9 @@ import { Lead } from '../../components/Lead';
 import { MarginNote } from '../../components/MarginNote';
 import { SourceLine } from '../../components/SourceLine';
 import { Dato } from '../../engine/esquema-datos';
+import type { DatoRotulado } from '../../components/fuentes';
+import { componentesDotacion } from '../../engine/fondo-reserva';
+import { definicionPorId } from '../../contenido/definiciones';
 import {
   extremos,
   mayorCaida,
@@ -16,6 +19,8 @@ import {
 } from '../../engine/series-historicas';
 import { gastoAproximadoPensiones, mesesDeGasto } from '../../engine/sistema-historico';
 import { etiquetaTramo } from './tramos';
+import { DefinicionHucha } from './DefinicionHucha';
+import { reglaSinLiterales } from './normas';
 import { datosHucha } from '../historico/datos-hucha';
 import { ContenidoPagina } from '../historico/ContenidoPagina';
 import { EnlaceFinanciero } from '../proyecciones/EnlaceFinanciero';
@@ -92,20 +97,43 @@ export default function Hucha() {
   const limite = d.limiteDesembolso.puntos;
   const { primero: primerLimite, ultimo: ultimoLimite } = extremos(limite);
 
-  const datoNorma = (n: (typeof d.normas)[number]): Dato =>
-    Dato.parse({
-      value: n.titulo,
-      unit: 'norma',
-      period: n.fecha.slice(0, 4),
-      source: n.source,
-      fetchedAt: n.fetchedAt,
-      confidence: n.confidence,
-    });
+  const dotacion = componentesDotacion(d.flujos.filas.map((f) => f.acumuladas));
+  const primerAnioLimite = primerLimite.anio;
+  const disposicionesAntes = dotacion.aniosConDisposicion.filter((a) => a < primerAnioLimite);
+  const tramoDeAnios = ([desde, hasta]: readonly [number, number]) =>
+    desde === hasta ? `en ${desde}` : `entre ${desde} y ${hasta}`;
+  const textoMutuas =
+    dotacion.tramosSinMutuas.length === 0
+      ? 'las aportaciones de las mutuas se producen todos los años'
+      : `las aportaciones de las mutuas no se producen todos los años: no hay ninguna ${dotacion.tramosSinMutuas.map(tramoDeAnios).join(' ni ')}`;
+
+  const regla = (n: (typeof d.normas)[number]) => {
+    const original = n.cambios.find((c) => c.parametro === 'fondo-reserva');
+    return {
+      ...reglaSinLiterales(original?.despues ?? ''),
+      articulos: original?.articulos ?? '',
+    };
+  };
+  const datoNorma = (n: (typeof d.normas)[number]): DatoRotulado => {
+    const r = regla(n);
+    return {
+      ...Dato.parse({
+        value: n.titulo,
+        unit: 'norma',
+        period: n.fecha.slice(0, 4),
+        source: n.source,
+        fetchedAt: n.fetchedAt,
+        confidence: n.confidence,
+        ...(r.articulos === '' ? {} : { location: r.articulos }),
+        ...(r.literales.length === 0 ? {} : { quote: r.literales.join('; ') }),
+      }),
+      rotulo: n.titulo,
+    };
+  };
   const filasNormas = d.normas.map((n) => ({
     fecha: n.fecha,
     norma: n.titulo,
-    regla: n.cambios.find((c) => c.parametro === 'fondo-reserva')?.despues ?? '',
-    articulos: n.cambios.find((c) => c.parametro === 'fondo-reserva')?.articulos ?? '',
+    regla: regla(n).texto,
   }));
 
   return (
@@ -132,12 +160,12 @@ export default function Hucha() {
           <h2 id={APARTADOS.valor.destino} tabIndex={-1}>
             {APARTADOS.valor.titulo}
           </h2>
+          <DefinicionHucha id="fondo-de-reserva" />
           <p>
-            El Fondo de Reserva de la Seguridad Social se nutre de dotaciones (excedentes de
-            cotizaciones y, desde que existe, la cotización del Mecanismo de Equidad
-            Intergeneracional) y de los rendimientos de sus inversiones, y disminuye con las
-            disposiciones. Su valor se publica a fecha de cierre de cada año, a precio de
-            adquisición.
+            Según los datos, los excedentes de las entidades gestoras dotan el Fondo hasta{' '}
+            {dotacion.ultimoAnioEntidades}; {textoMutuas}; y la cotización del Mecanismo de Equidad
+            Intergeneracional lo dota desde {dotacion.primerAnioMei}. El valor del Fondo se publica
+            a fecha de cierre de cada año.
           </p>
           <GraficoSeries
             titulo="Valor del Fondo de Reserva al cierre de cada año"
@@ -210,11 +238,12 @@ export default function Hucha() {
           <p>
             Una forma de medir el tamaño del Fondo es compararlo con el gasto: cuántos meses de
             gasto en pensiones contributivas equivale su valor. El resultado depende de cómo se mida
-            el gasto. La referencia son las obligaciones reconocidas de la ejecución del presupuesto
-            con el complemento a mínimos, que se abona como parte de la pensión; como contraste se
-            muestra un cálculo aproximado a partir del número de pensiones, de la pensión media y de
-            catorce pagas.
+            el gasto. La referencia es el gasto contributivo con complemento a mínimos; como
+            contraste se muestra un cálculo aproximado a partir del número de pensiones, de la
+            pensión media y de catorce pagas.
           </p>
+          <DefinicionHucha id="gasto-pensiones-contributivas-con-complemento" />
+          <DefinicionHucha id="fondo-en-meses-de-gasto" />
           <p className="hist-aviso">
             El Fondo se valora a precio de adquisición, no a valor de mercado: los meses de gasto
             que se obtienen con ese valor no reflejan lo que se obtendría al venderlo.
@@ -259,7 +288,7 @@ export default function Hucha() {
               d.numeroPorClase.jubilacion.dato,
               d.pensionMediaPorClase.jubilacion.dato,
             ]}
-            nota={`Cálculos propios. Referencia: valor del Fondo ÷ ((obligaciones reconocidas de «suma de pensiones» + complemento a mínimos de pensiones contributivas) ÷ doce). La referencia tiene dos tramos con la misma definición pero distinto documento de origen: las liquidaciones del presupuesto y la ejecución del presupuesto; no se han podido contrastar entre sí porque no comparten ningún ejercicio. En las liquidaciones, el complemento a mínimos está incluido en las cinco clases de pensión hasta ${d.liquidacion.primerAnioComplementoAparte - 1} y figura aparte desde ${d.liquidacion.primerAnioComplementoAparte}, de modo que desde ese año se suma (la reclasificación se comprueba con la cifra de ${d.liquidacion.primerAnioComplementoAparte - 1} que reaparece en el PDF siguiente; que las clases incluyan el complemento en los ejercicios anteriores es una deducción, porque los PDF no reclasifican esos años, y no consta en una nota de la fuente). Contraste: valor del Fondo ÷ (suma de las cinco clases de número de pensiones × pensión media mensual × catorce pagas ÷ doce); no incluye atrasos ni efectos de calendario y no coincide con la referencia. El Fondo está a precio de adquisición.`}
+            nota={`Cálculos propios, con la fórmula de «${definicionPorId('fondo-en-meses-de-gasto').termino}». La referencia tiene dos tramos con la misma definición pero distinto documento de origen: las liquidaciones del presupuesto y la ejecución del presupuesto; no se han podido contrastar entre sí porque no comparten ningún ejercicio. En las liquidaciones, el complemento a mínimos está incluido en las cinco clases de pensión hasta ${d.liquidacion.primerAnioComplementoAparte - 1} y figura aparte desde ${d.liquidacion.primerAnioComplementoAparte}, de modo que desde ese año se suma (la reclasificación se comprueba con la cifra de ${d.liquidacion.primerAnioComplementoAparte - 1} que reaparece en el PDF siguiente; que las clases incluyan el complemento en los ejercicios anteriores es una deducción, porque los PDF no reclasifican esos años, y no consta en una nota de la fuente). Contraste: el mismo cociente con un gasto aproximado, que suma por clase de pensión el número de pensiones por la pensión media mensual y por el número de pagas anuales; no incluye atrasos ni efectos de calendario y no coincide con la referencia. El Fondo está a precio de adquisición.`}
             comoLeerlo={
               <>
                 <p>
@@ -288,9 +317,8 @@ export default function Hucha() {
             {APARTADOS.reglas.titulo}
           </h2>
           <p>
-            La norma ha cambiado con el tiempo. Estas son las leyes que, según la cronología
-            normativa del proyecto, establecen o modifican el régimen del Fondo, con el texto de la
-            fuente:
+            La norma ha cambiado con el tiempo. La tabla recoge las leyes que establecen o modifican
+            el régimen del Fondo y resume lo que establece cada una.
           </p>
           <div className="hist-definiciones">
             <DataTable
@@ -299,7 +327,6 @@ export default function Hucha() {
                 { clave: 'fecha', titulo: 'Fecha' },
                 { clave: 'norma', titulo: 'Norma' },
                 { clave: 'regla', titulo: 'Qué establece' },
-                { clave: 'articulos', titulo: 'Artículos' },
               ]}
               filas={filasNormas}
             />
@@ -309,19 +336,17 @@ export default function Hucha() {
             />
           </div>
 
-          <p>
-            {d.limiteDesembolso.nota} {d.destinoMei.nota}
-          </p>
+          <DefinicionHucha id="fondo-de-reserva-limite-de-desembolso" />
           <GraficoSeries
             titulo="Límite máximo del desembolso anual del Fondo"
-            descripcion="Límite del desembolso de cada año como porcentaje del PIB, según el artículo indicado. Unidad: porcentaje del PIB."
+            descripcion="Límite del desembolso de cada año como porcentaje del PIB de ese año. Unidad: porcentaje del PIB."
             tipo="barras-apiladas"
             series={[{ clave: 'limite', etiqueta: 'Límite máximo del desembolso', puntos: limite }]}
             unidadEje="% del PIB"
             decimales={2}
             decimalesEje={2}
             fuentes={d.limiteDesembolso.dato}
-            nota={`Fuente normativa: ${d.limiteDesembolso.articulo}.`}
+            nota="Límite máximo del desembolso anual, expresado en porcentaje del PIB del propio año."
             comoLeerlo={
               <>
                 <p>
@@ -337,13 +362,12 @@ export default function Hucha() {
                   Es un tope, no una previsión de uso: cada año la ley de presupuestos fija el
                   desembolso dentro de ese límite. El gráfico no traduce el porcentaje a euros
                   porque eso exigiría un PIB futuro, que no forma parte de esta página.
+                  {disposicionesAntes.length === 0
+                    ? ''
+                    : ` Los datos del Fondo registran disposiciones entre ${disposicionesAntes[0] ?? ''} y ${disposicionesAntes.at(-1) ?? ''}, antes del primer año con límite.`}
                 </p>
               </>
             }
-          />
-          <SourceLine
-            datos={[d.limiteDesembolso.dato, d.destinoMei.dato]}
-            titulo={APARTADOS.reglas.titulo}
           />
         </section>
         <SeccionOrigen />

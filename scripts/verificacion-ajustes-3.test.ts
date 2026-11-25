@@ -127,7 +127,9 @@ describe('tabla de aplicación (docs/revision-actuarial/aplicacion-tanda3.json)'
     // más la de la tabla del efecto de los meses de «Cómo se calcula» (cambio de la pensión por la
     // demora respecto del máximo de la escala y lectura de la fracción de año; Fase R6), más la del
     // subsector de los fondos de la Seguridad Social sin Clases Pasivas (respuesta actuarial del
-    // 19-11-2026 sin respaldo en las fuentes del repositorio; Fase R7).
+    // 19-11-2026 sin respaldo en las fuentes del repositorio; Fase R7), más la de las mutuas que
+    // aportan al Fondo de Reserva «cada año» (la misma respuesta, contradicha por los datos de 2019
+    // a 2022; Fase R8).
     const web = [
       'web-mitos-jubilados-marco',
       'web-mitos-pobreza',
@@ -136,6 +138,7 @@ describe('tabla de aplicación (docs/revision-actuarial/aplicacion-tanda3.json)'
       'web-como-efecto-meses-demora',
       'web-metodologia-confianza-modelos',
       'web-def-sec-sin-clases-pasivas',
+      'web-def-mutuas-cada-anio',
     ];
     // Cuarta tanda: salen de la lista las que cerró (docs/revision-actuarial/aplicacion-tanda4.json).
     expect(pendientes.map((c) => c.id).sort()).toEqual(

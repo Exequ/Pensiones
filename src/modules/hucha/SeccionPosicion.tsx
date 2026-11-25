@@ -1,6 +1,5 @@
 import { useId, useMemo, useState } from 'react';
 import { DataTable } from '../../components/DataTable';
-import { Definition } from '../../components/Definition';
 import { SourceLine } from '../../components/SourceLine';
 import type { Dato } from '../../engine/esquema-datos';
 import { extremos } from '../../engine/series-historicas';
@@ -17,6 +16,7 @@ import { datosHucha, type DatoCargado, type DatosHucha } from '../historico/dato
 import { GraficoSeries, type AnotacionGrafico } from '../historico/GraficoSeries';
 import { millonesEuros } from '../historico/formatos';
 import { COMPONENTE, componenteGrafico } from './componentes';
+import { DefinicionHucha } from './DefinicionHucha';
 import { GraficoPosicion, type FilaGrafico } from './GraficoPosicion';
 import { ID } from './ids-datos';
 import { anioDeId, rangoDeId } from './rango';
@@ -77,7 +77,7 @@ function construirAnotaciones(d: DatosHucha): Anotacion[] {
     },
     {
       anio: anioTribunal,
-      hecho: `El Tribunal de Cuentas recuerda su recomendación de que el Estado asuma la amortización de tres préstamos antiguos, por ${millonesEuros(importe(tc[ID.tcPrestamosInsalud], ID.tcPrestamosInsalud))} («bien por condonación o por la concesión de transferencias»). Es una recomendación: en las fuentes consultadas no consta que se haya aplicado.`,
+      hecho: `El Tribunal de Cuentas recuerda su recomendación de que el Estado asuma la amortización de tres préstamos antiguos, por ${millonesEuros(importe(tc[ID.tcPrestamosInsalud], ID.tcPrestamosInsalud))} (por condonación o mediante transferencias). Es una recomendación: en las fuentes consultadas no consta que se haya aplicado.`,
       fuente: 'Tribunal de Cuentas',
       dato: dato(tc[ID.tcRecomendacionInsalud]),
     },
@@ -260,12 +260,7 @@ export function SeccionPosicion() {
       </p>
 
       <h3 id="fondo-menos-deuda">Primera lectura: Fondo menos deuda</h3>
-      <Definition termino="Fondo menos deuda (posición neta)">
-        Valor del Fondo de Reserva a fin de año menos el saldo a fin de año de la deuda de las
-        Administraciones de Seguridad Social (Banco de España). Compara un activo con un pasivo.
-        Signo: positivo si el Fondo supera a la deuda; negativo si la deuda supera al Fondo. No es
-        un patrimonio neto contable ni una cifra oficial.
-      </Definition>
+      <DefinicionHucha id="fondo-menos-deuda" />
       <div className="bloque-grafico">
         <GraficoPosicion
           titulo="Fondo menos deuda: valor del Fondo de Reserva menos deuda con el Estado, a fin de cada año"
@@ -299,13 +294,7 @@ export function SeccionPosicion() {
       <h3 id="apoyo-financiero">
         Segunda lectura: deuda más transferencias acumuladas (apoyo financiero del Estado)
       </h3>
-      <Definition termino="Apoyo financiero del Estado (deuda más transferencias acumuladas)">
-        Saldo a fin de año de la deuda con el Estado (un pasivo a devolver) más las transferencias
-        corrientes del Estado y organismos autónomos acumuladas desde el año de inicio que se elija
-        (un flujo no reembolsable). Las dos partidas se muestran juntas pero son de naturaleza
-        distinta y se identifican por separado en el gráfico y en la tabla. Signo: siempre positivo
-        (suma dos importes positivos). No es una cifra oficial.
-      </Definition>
+      <DefinicionHucha id="deuda-mas-transferencias-acumuladas" />
       <SelectorAnioInicio
         etiqueta="Año de inicio de las transferencias acumuladas"
         ayuda="El resultado depende del año en que se empiece a acumular; la deuda es siempre el saldo total de cada año."

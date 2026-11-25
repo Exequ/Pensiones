@@ -1,0 +1,99 @@
+{
+  "id": "deuda-mas-transferencias-acumuladas",
+  "grupo": "fondo-de-reserva",
+  "termino": "Deuda más transferencias acumuladas, o apoyo financiero del Estado (cálculo propio)",
+  "texto": [
+    "Cálculo de esta web, sin equivalente oficial: suma, a fin de cada año, el saldo de la deuda con el Estado, un pasivo que hay que devolver, y las transferencias corrientes del Estado y de sus organismos autónomos acumuladas desde un año de inicio que elige quien consulta, un flujo que no se devuelve. Las dos partidas se muestran juntas pero son de naturaleza distinta y el gráfico y la tabla las identifican por separado.",
+    "El resultado es siempre positivo y cambia con el año de inicio. No es la cantidad total que el Estado ha desembolsado: la deuda incluye préstamos anteriores al año de inicio y las transferencias empiezan en él."
+  ],
+  "criterio": "Un saldo de fin de año y un flujo acumulado, que no son partidas aditivas en sentido contable.",
+  "datos": [
+    "sistema/deuda-pde-seguridad-social.json#deuda-pde-fin-ano",
+    "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+  ],
+  "formula": {
+    "titulo": "Deuda más transferencias acumuladas",
+    "alcance": "completa",
+    "ecuaciones": [
+      {
+        "izquierda": {
+          "tipo": "simbolo",
+          "id": "a-t"
+        },
+        "derecha": {
+          "tipo": "suma",
+          "terminos": [
+            {
+              "tipo": "simbolo",
+              "id": "d"
+            },
+            {
+              "tipo": "sumatorio",
+              "variable": "s",
+              "desde": {
+                "tipo": "simbolo",
+                "id": "a"
+              },
+              "hasta": {
+                "tipo": "simbolo",
+                "id": "t"
+              },
+              "cuerpo": {
+                "tipo": "simbolo",
+                "id": "tr",
+                "subindice": {
+                  "tipo": "simbolo",
+                  "id": "s"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "simbolos": [
+      {
+        "id": "a-t",
+        "notacion": "A_t",
+        "nombre": "Deuda más transferencias acumuladas",
+        "significado": "Saldo de la deuda a fin de año más las transferencias acumuladas desde el año de inicio; cálculo propio.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "d",
+        "notacion": "D_t",
+        "nombre": "Deuda",
+        "significado": "Saldo a fin de año de la deuda de las Administraciones de Seguridad Social, según el Banco de España.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "tr",
+        "notacion": "T",
+        "nombre": "Transferencias anuales",
+        "significado": "Transferencias corrientes del Estado y de sus organismos autónomos del año s, en derechos reconocidos netos.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "s",
+        "notacion": "s",
+        "nombre": "Año que se suma",
+        "significado": "Cada año desde el de inicio hasta el año del resultado.",
+        "unidad": "año"
+      },
+      {
+        "id": "a",
+        "notacion": "a",
+        "nombre": "Año de inicio",
+        "significado": "Primer año de las transferencias acumuladas, que elige quien consulta.",
+        "unidad": "año"
+      },
+      {
+        "id": "t",
+        "notacion": "t",
+        "nombre": "Año del resultado",
+        "significado": "Año al que se refiere el resultado, con la deuda a fin de ese año.",
+        "unidad": "año"
+      }
+    ]
+  }
+}

@@ -63,3 +63,19 @@ export const TABLA_CONTRASTE = {
   gastos: 'gastos',
   gastosCapitulo: 'gastos-cap4',
 } as const;
+
+/**
+ * Rótulos de la fuente que la página nombra y que, por la regla de «Fuentes», no se escriben en el
+ * cuerpo: van como cita del desplegable (fase R8). Están tal como los publican las fuentes.
+ */
+export const ROTULO_FUENTE = {
+  /** Concepto de las transferencias del Estado en la ejecución del presupuesto. */
+  transferenciasEjecucion: 'DEL ESTADO Y ORG.AUTÓNOMOS',
+  /** Las dos partidas que se suman en las liquidaciones del presupuesto. */
+  transferenciasLiquidacion: 'Del Estado; De Organismos Autónomos administrativos',
+  /** Concepto del MEI en la ejecución del presupuesto. */
+  meiEjecucion: 'MECANISMO DE EQUIDAD INTERGENERACIONAL',
+} as const;
+
+/** Ficheros de /data que citan las definiciones y llevan un año en el nombre. */
+export const FICHERO_PLAZO_AMPLIADO = 'parametros/prestamos-plazo-ampliado-2026.json';

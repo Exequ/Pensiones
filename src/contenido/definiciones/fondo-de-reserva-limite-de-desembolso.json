@@ -1,0 +1,11 @@
+{
+  "id": "fondo-de-reserva-limite-de-desembolso",
+  "grupo": "fondo-de-reserva",
+  "termino": "Disposición del Fondo de Reserva y límite anual del desembolso",
+  "texto": [
+    "La disposición de los activos del Fondo se destina en exclusiva a financiar las pensiones contributivas.",
+    "A partir de un año que fija el texto refundido, la ley de presupuestos establece para cada ejercicio el desembolso anual del Fondo, como un porcentaje del PIB con un límite máximo que la norma da para cada año. Ese año marca el comienzo de los desembolsos anuales con tope: no es el año en que el Fondo se quede sin recursos ni un año a partir del cual pueda usarse sin límite. El límite es un tope y no una previsión de uso."
+  ],
+  "criterio": "Límite máximo del desembolso anual de cada año, en porcentaje del PIB de ese mismo año.",
+  "datos": ["parametros/fondo-reserva-desembolso-maximo.json"]
+}

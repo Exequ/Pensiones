@@ -1,0 +1,25 @@
+{
+  "id": "transferencias-corrientes-del-estado",
+  "grupo": "fondo-de-reserva",
+  "termino": "Transferencias corrientes del Estado a la Seguridad Social",
+  "texto": [
+    "Son aportaciones del presupuesto del Estado al presupuesto de la Seguridad Social y no se devuelven. La ejecución del presupuesto las registra como ingresos por transferencias corrientes y las clasifica por el organismo de origen: el Estado y sus organismos autónomos.",
+    "El texto refundido de la Ley General de la Seguridad Social incluye entre los recursos del sistema las aportaciones del Estado consignadas en los presupuestos generales. Dispone que la modalidad no contributiva se financia con aportaciones del Estado y que las prestaciones contributivas se financian básicamente con cotizaciones y otros recursos propios, y, en su caso, con aportaciones del Estado para atenciones específicas. Clasifica entre las prestaciones no contributivas los complementos por mínimos de las pensiones."
+  ],
+  "perimetro": {
+    "incluye": ["Transferencias corrientes cuyo origen es el Estado y sus organismos autónomos."],
+    "noIncluye": [
+      "Los préstamos del Estado, que son pasivos financieros.",
+      "Las transferencias de capital, que la fuente solo da en total y de cualquier origen."
+    ]
+  },
+  "criterio": "Derechos reconocidos netos de la ejecución del presupuesto, por organismo de origen; el Tribunal de Cuentas las cifra por su finalidad.",
+  "datos": [
+    "normativa/trlgss-financiacion.json#aportaciones-estado-presupuestos",
+    "normativa/trlgss-financiacion.json#no-contributiva-aportaciones-estado",
+    "normativa/trlgss-financiacion.json#contributivas-financiacion-basica",
+    "normativa/trlgss-financiacion.json#naturaleza-no-contributiva-minimos",
+    "sistema/presupuesto-ss-ejecucion.json",
+    "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+  ]
+}
