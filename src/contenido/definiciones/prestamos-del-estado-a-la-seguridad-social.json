@@ -1,0 +1,20 @@
+{
+  "id": "prestamos-del-estado-a-la-seguridad-social",
+  "grupo": "fondo-de-reserva",
+  "termino": "Préstamos del Estado a la Seguridad Social",
+  "texto": [
+    "Son préstamos que el Estado concede a la Tesorería General de la Seguridad Social. Según el Tribunal de Cuentas, se concedieron para cubrir gastos de gestión ordinaria cuando los recursos propios no bastaban. No son transferencias: la ejecución del presupuesto de la Seguridad Social los contabiliza como pasivos financieros de ingresos y el Banco de España los recoge en la deuda de la Seguridad Social, sin efecto en la deuda del conjunto de las Administraciones Públicas por ser operaciones entre subsectores.",
+    "Los concedidos con las leyes de presupuestos recientes no devengan intereses y se cancelan en un plazo máximo que se cuenta desde el año siguiente al de su concesión. Los años concretos de cada préstamo están en el anexo de préstamos del Tribunal de Cuentas.",
+    "Los préstamos más antiguos no se han devuelto, según el Tribunal de Cuentas: los que no tienen plazo de vencimiento siguen sin reintegrarse y los que lo tienen se han prorrogado de forma reiterada. Un real decreto-ley posterior concede un nuevo plazo de cancelación a varios de ellos. En las fuentes consultadas no consta ninguna cancelación ni conversión de estos préstamos en transferencias; constan una recomendación del Tribunal de Cuentas y la ampliación de plazo."
+  ],
+  "criterio": "Pasivo a devolver, distinto de las transferencias, que son un flujo no reembolsable.",
+  "datos": [
+    "sistema/prestamos-transferencias-tribunal-cuentas.json#origen-prestamos-gestion-ordinaria",
+    "sistema/prestamos-transferencias-tribunal-cuentas.json#condiciones-prestamos-recientes",
+    "sistema/prestamos-transferencias-tribunal-cuentas.json#prestamos-sin-devolver-y-prorrogados",
+    "parametros/prestamos-estado-seguridad-social.json#2021-plazo-maximo-anios",
+    "parametros/prestamos-plazo-ampliado-2026.json#apartado-1-plazo-anios",
+    "sistema/deuda-pde-seguridad-social.json#deuda-pde-fin-ano",
+    "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+  ]
+}

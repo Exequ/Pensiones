@@ -1,0 +1,90 @@
+{
+  "id": "fondo-en-meses-de-gasto",
+  "grupo": "fondo-de-reserva",
+  "termino": "Fondo en meses de gasto en pensiones (cálculo propio)",
+  "texto": [
+    "Cálculo de esta web que expresa el valor del Fondo de Reserva a fin de año en meses de gasto en pensiones contributivas: divide el valor del Fondo entre el gasto medio de un mes del mismo año. Es una comparación de tamaños en un año concreto, con el Fondo a precio de adquisición; no dice cuánto tiempo podría sostener el Fondo las pensiones, porque el gasto no es constante."
+  ],
+  "criterio": "El resultado depende de la medida del gasto: la referencia es el gasto contributivo con complemento a mínimos y el contraste, un cálculo aproximado con el número de pensiones y la pensión media.",
+  "datos": [
+    "sistema/fondo-reserva-series.json#valor-fin-ano",
+    "sistema/presupuesto-ss-ejecucion.json"
+  ],
+  "formula": {
+    "titulo": "Fondo en meses de gasto en pensiones",
+    "alcance": "completa",
+    "ecuaciones": [
+      {
+        "izquierda": {
+          "tipo": "simbolo",
+          "id": "m-g"
+        },
+        "derecha": {
+          "tipo": "cociente",
+          "numerador": {
+            "tipo": "simbolo",
+            "id": "f"
+          },
+          "denominador": {
+            "tipo": "simbolo",
+            "id": "g"
+          }
+        }
+      },
+      {
+        "izquierda": {
+          "tipo": "simbolo",
+          "id": "g"
+        },
+        "derecha": {
+          "tipo": "cociente",
+          "numerador": {
+            "tipo": "simbolo",
+            "id": "gasto"
+          },
+          "denominador": {
+            "tipo": "simbolo",
+            "id": "n"
+          }
+        }
+      }
+    ],
+    "simbolos": [
+      {
+        "id": "m-g",
+        "notacion": "M_t",
+        "nombre": "Fondo en meses de gasto",
+        "significado": "Número de meses de gasto en pensiones a los que equivale el valor del Fondo; cálculo propio.",
+        "unidad": "meses"
+      },
+      {
+        "id": "f",
+        "notacion": "F_t",
+        "nombre": "Valor del Fondo",
+        "significado": "Valor del Fondo de Reserva a fin de año, a precio de adquisición.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "g",
+        "notacion": "g_t",
+        "nombre": "Gasto medio mensual",
+        "significado": "Gasto en pensiones contributivas del año dividido entre los meses del año.",
+        "unidad": "millones de euros por mes"
+      },
+      {
+        "id": "gasto",
+        "notacion": "G_t",
+        "nombre": "Gasto anual",
+        "significado": "Gasto en pensiones contributivas del año, según la medida elegida.",
+        "unidad": "millones de euros"
+      },
+      {
+        "id": "n",
+        "notacion": "n",
+        "nombre": "Meses del periodo",
+        "significado": "Número de meses que tiene el periodo con el que se mide el gasto.",
+        "unidad": "meses"
+      }
+    ]
+  }
+}

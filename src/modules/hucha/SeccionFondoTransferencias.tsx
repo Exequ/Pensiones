@@ -6,6 +6,9 @@ import { mesesDeFlujo } from '../../engine/transferencias';
 import { datosHucha } from '../historico/datos-hucha';
 import { GraficoSeries } from '../historico/GraficoSeries';
 import { decimal2, millonesEuros } from '../historico/formatos';
+import { definicionPorId } from '../../contenido/definiciones';
+import { DefinicionHucha } from './DefinicionHucha';
+import { datosFilasHucha } from './fuentes-hucha';
 import { etiquetaTramo } from './tramos';
 import { APARTADOS } from './apartados';
 
@@ -16,6 +19,7 @@ export function SeccionFondoTransferencias() {
   const d = datosHucha();
   const [unidad, setUnidad] = useState<Unidad>('meses');
   const t = d.transferencias;
+  const filasFuente = datosFilasHucha();
 
   const empalme = d.transferenciasAnuales;
   const porAnio = useMemo(
@@ -53,12 +57,14 @@ export function SeccionFondoTransferencias() {
         muestran dos definiciones: las transferencias de todo el año, que es la medida principal, y
         las del último trimestre del año, que es la secundaria.
       </p>
+      <DefinicionHucha id="fondo-en-meses-de-transferencias" />
       <p className="hist-aviso">
         Los flujos trimestrales no son un dato publicado por trimestre: son diferencias entre
-        acumulados de la ejecución (derechos reconocidos netos). Los derechos reconocidos de cada
-        trimestre no se reparten por igual a lo largo del año (véase el gráfico por trimestre de la
-        sección anterior), de modo que un trimestre aislado puede no ser representativo del resto.
-        El Fondo se valora a precio de adquisición.
+        acumulados de la ejecución (derechos reconocidos netos, definidos en «
+        {APARTADOS.transferencias.titulo}»). Los derechos reconocidos de cada trimestre no se
+        reparten por igual a lo largo del año (véase el gráfico por trimestre de la sección
+        anterior), de modo que un trimestre aislado puede no ser representativo del resto. El Fondo
+        se valora a precio de adquisición.
       </p>
       <div className="hist-selector">
         <SegmentedPills
@@ -87,8 +93,13 @@ export function SeccionFondoTransferencias() {
         incluirCero
         decimales={2}
         decimalesEje={1}
-        fuentes={[d.valor.dato, d.liquidacion.delEstado.dato, t.delEstado.dato, t.datoTrimestral]}
-        nota="Cálculos propios. Medida principal (año completo): valor del Fondo a fin de año ÷ (transferencias del año ÷ doce). Medida secundaria (cuarto trimestre): valor del Fondo a fin de año ÷ (transferencias del cuarto trimestre del mismo año ÷ tres). Un trimestre equivale a tres meses. Los flujos trimestrales son diferencias entre acumulados. Las transferencias son las corrientes del Estado y organismos autónomos de la liquidación del presupuesto (hasta el último año de ese tramo) y de la ejecución (desde el año de la ruptura de serie); el Fondo está a precio de adquisición. La medida secundaria solo existe para la ejecución: las liquidaciones no dan acumulados trimestrales."
+        fuentes={[
+          d.valor.dato,
+          filasFuente.transferenciasLiquidacion,
+          filasFuente.transferenciasEjecucion,
+          t.datoTrimestral,
+        ]}
+        nota={`Cálculos propios, con la fórmula de «${definicionPorId('fondo-en-meses-de-transferencias').termino}». La medida principal usa las transferencias del año completo y la secundaria, las del cuarto trimestre del mismo año. Los flujos trimestrales son diferencias entre acumulados. Las transferencias son las corrientes del Estado y organismos autónomos de la liquidación del presupuesto (hasta el último año de ese tramo) y de la ejecución (desde el año de la ruptura de serie); el Fondo está a precio de adquisición. La medida secundaria solo existe para la ejecución: las liquidaciones no dan acumulados trimestrales.`}
         comoLeerlo={
           <>
             <p>

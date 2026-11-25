@@ -9,6 +9,8 @@ import { datosHucha } from '../historico/datos-hucha';
 import { ComoLeerlo } from '../historico/ComoLeerlo';
 import { GraficoSeries } from '../historico/GraficoSeries';
 import { millonesEuros } from '../historico/formatos';
+import { DefinicionHucha } from './DefinicionHucha';
+import { datosFilasHucha } from './fuentes-hucha';
 import { ID, ID23 } from './ids-datos';
 import { anioDeId, periodoDeId } from './rango';
 import { SelectorAnioInicio } from './SelectorAnioInicio';
@@ -158,6 +160,7 @@ export function SeccionTransferencias() {
     ].flatMap((id) => (d.tribunal2023[id] === undefined ? [] : [d.tribunal2023[id].dato])),
   ];
   const ultimaCapital = t.capital.puntos.at(-1);
+  const filasFuente = datosFilasHucha();
 
   return (
     <section className="seccion prosa" aria-labelledby={APARTADOS.transferencias.destino}>
@@ -165,22 +168,22 @@ export function SeccionTransferencias() {
         {APARTADOS.transferencias.titulo}
       </h2>
       <p>
-        Las transferencias son aportaciones del presupuesto del Estado al de la Seguridad Social. La
-        cifra que se usa aquí son los derechos reconocidos netos de transferencias corrientes cuyo
-        origen es el Estado y sus organismos autónomos. Proceden de dos documentos de la Seguridad
-        Social: las liquidaciones del presupuesto de cada ejercicio (en PDF) y la ejecución del
-        presupuesto, de la que se toma la cifra de cierre de cada año. Los datos de la ejecución son
-        anuales y, dentro de cada año, acumulados a la fecha de cierre de cada trimestre; los flujos
-        trimestrales de esta página son la diferencia entre dos acumulados consecutivos. En las
-        fuentes consultadas no consta la pauta con que el Estado efectúa las transferencias
-        (mensual, trimestral u otra), por lo que esta página no la afirma.
+        La cifra que se usa aquí son los derechos reconocidos netos de transferencias corrientes
+        cuyo origen es el Estado y sus organismos autónomos. Proceden de dos documentos de la
+        Seguridad Social: las liquidaciones del presupuesto de cada ejercicio (en PDF) y la
+        ejecución del presupuesto, de la que se toma la cifra de cierre de cada año. Los datos de la
+        ejecución son anuales y, dentro de cada año, acumulados a la fecha de cierre de cada
+        trimestre; los flujos trimestrales de esta página son la diferencia entre dos acumulados
+        consecutivos. En las fuentes consultadas no consta la pauta con que el Estado efectúa las
+        transferencias (mensual, trimestral u otra), por lo que esta página no la afirma.
       </p>
+      <DefinicionHucha id="derechos-reconocidos-netos" />
       <p className="hist-aviso">
         Ruptura de serie: hasta {ultimaLiquidacion} la cifra es la de la liquidación y desde{' '}
         {anioRuptura}, la de la ejecución. Los dos documentos rotulan la partida de forma distinta
-        («Del Estado» más «De Organismos Autónomos administrativos» en la liquidación; «Del Estado y
-        Org. Autónomos» en la ejecución) y no comparten ningún ejercicio, de modo que no se ha
-        podido contrastar que midan lo mismo. Por eso se dibujan y se tabulan como dos tramos, y los
+        (la liquidación suma la del Estado y la de sus organismos autónomos administrativos; la
+        ejecución da una sola) y no comparten ningún ejercicio, de modo que no se ha podido
+        contrastar que midan lo mismo. Por eso se dibujan y se tabulan como dos tramos, y los
         cálculos que cruzan la ruptura lo indican.
       </p>
 
@@ -196,16 +199,17 @@ export function SeccionTransferencias() {
         divisorEje={1000}
         decimales={0}
         decimalesEje={0}
-        fuentes={[d.liquidacion.delEstado.dato, t.delEstado.dato]}
+        fuentes={[filasFuente.transferenciasLiquidacion, filasFuente.transferenciasEjecucion]}
         nota={
           <>
             Definición: transferencias corrientes con origen en el Estado y sus organismos
             autónomos. Ruptura de serie en {anioRuptura}: los dos colores son dos documentos
             distintos (liquidación del ejercicio y ejecución del presupuesto), con rótulos
             distintos, y no se han podido contrastar entre sí. En el tramo de la liquidación la
-            cifra es la suma de «Del Estado» y «De Organismos Autónomos administrativos». No incluye
-            los préstamos del Estado (que son pasivos financieros) ni las transferencias de capital:
-            la fuente solo da estas últimas en total y de cualquier origen
+            cifra es la suma de la partida del Estado y la de sus organismos autónomos
+            administrativos. No incluye los préstamos del Estado (que son pasivos financieros) ni
+            las transferencias de capital: la fuente solo da estas últimas en total y de cualquier
+            origen
             {ultimaCapital === undefined
               ? ''
               : `, con ${millonesEuros(ultimaCapital.valor)} en ${ultimaCapital.anio}`}
@@ -291,7 +295,7 @@ export function SeccionTransferencias() {
         decimales={0}
         decimalesEje={0}
         incluirCero
-        fuentes={[d.liquidacion.delEstado.dato, t.delEstado.dato]}
+        fuentes={[filasFuente.transferenciasLiquidacion, filasFuente.transferenciasEjecucion]}
         nota={`Dato derivado: suma de las transferencias anuales del gráfico anterior. Año de inicio por defecto: ${primero.anio}, el primero con datos. Ruptura de serie: si el año de inicio es anterior a ${anioRuptura}, la suma incorpora importes de dos documentos distintos (liquidación y ejecución); el color indica el documento del que procede el último año sumado.`}
         comoLeerlo={
           <>
@@ -317,7 +321,7 @@ export function SeccionTransferencias() {
         clasifican por el organismo de origen. El Tribunal de Cuentas, en cambio, las cifra por su
         finalidad en dos declaraciones sobre la Cuenta General del Estado, la de{' '}
         {anioDeId(ID.tcSaldoDeuda)} y la de {anioDeId(ID23.saldoDeuda)}, con un concepto de
-        «transferencias corrientes aportadas por el Estado» que no coincide con el de la ejecución
+        transferencias corrientes aportadas por el Estado que no coincide con el de la ejecución
         (véase la sección anterior). Las dos declaraciones se muestran por separado porque cubren
         periodos distintos; el desglose anual por finalidad figura como pendiente de datos.
       </p>
@@ -345,7 +349,7 @@ export function SeccionTransferencias() {
           Definición: la ejecución del presupuesto clasifica las transferencias por su origen (el
           Estado y sus organismos autónomos) y el Tribunal de Cuentas las cifra por su finalidad.
           Las filas «de ellas» son partes del total de su misma declaración; la fila de aportaciones
-          no contributivas el Tribunal la cita aparte, «además» de las anteriores.
+          no contributivas el Tribunal la cita aparte, como importe adicional a las anteriores.
         </p>
         <ComoLeerlo>
           <p>

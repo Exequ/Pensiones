@@ -1,0 +1,27 @@
+{
+  "id": "fondo-de-reserva",
+  "grupo": "fondo-de-reserva",
+  "termino": "Fondo de Reserva de la Seguridad Social",
+  "texto": [
+    "Fondo que se constituye en la Tesorería General de la Seguridad Social para atender las necesidades financieras de las prestaciones contributivas. Es uno solo: no existe un fondo separado para el Mecanismo de Equidad Intergeneracional, cuya cotización aporta recursos al mismo Fondo de Reserva.",
+    "La dotación del Fondo tiene tres componentes: los excedentes de ingresos de las entidades gestoras y servicios comunes que financian las prestaciones contributivas, las aportaciones de las mutuas colaboradoras con la Seguridad Social y lo que se recauda por la cotización finalista del Mecanismo de Equidad Intergeneracional. Cada componente se dota en años distintos y las aportaciones de las mutuas no se producen todos los años. Los rendimientos de las inversiones se integran en el Fondo y la serie los recoge aparte de las dotaciones.",
+    "El valor del Fondo que muestra esta web es el que publican los informes a las Cortes Generales, a precio de adquisición y no a valor de mercado."
+  ],
+  "perimetro": {
+    "incluye": [
+      "Excedentes de ingresos de las entidades gestoras y servicios comunes.",
+      "Aportaciones de las mutuas colaboradoras con la Seguridad Social.",
+      "Recaudación de la cotización finalista del Mecanismo de Equidad Intergeneracional."
+    ],
+    "noIncluye": [
+      "Los rendimientos de las inversiones, que la serie registra aparte de las dotaciones.",
+      "Un fondo propio del Mecanismo de Equidad Intergeneracional: sus recursos se integran en el Fondo de Reserva."
+    ]
+  },
+  "criterio": "Valor a fin de año a precio de adquisición, tal como lo publican los informes a las Cortes Generales; dotaciones acumuladas por componente.",
+  "datos": [
+    "sistema/fondo-reserva-anual.json",
+    "sistema/fondo-reserva-series.json#valor-fin-ano",
+    "parametros/mei-destino.json#destino-fondo-reserva"
+  ]
+}

@@ -11,7 +11,12 @@ import { z } from 'zod';
 import { FormulaEstructurada, PATRON_ID } from './esquema-datos.ts';
 
 /** Grupo de la definición: para listarlas y para ampliar el módulo sin tocar las páginas. */
-export const GRUPOS_DEFINICION = ['gasto-en-pensiones', 'deficit', 'contabilidad'] as const;
+export const GRUPOS_DEFINICION = [
+  'gasto-en-pensiones',
+  'deficit',
+  'contabilidad',
+  'fondo-de-reserva',
+] as const;
 export type GrupoDefinicion = (typeof GRUPOS_DEFINICION)[number];
 
 /**
