@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1, 3-B2, 5-A, 5-C, 3-C2 y Ajustes de M4, «Cómo se calcula», «Reformas» y «Metodología»). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md). Fase RI: una afirmación puede llevar categoria «interpretacion» (lectura de una caja «Interpretación»), con interpretacion (id del registro de src/contenido/interpretaciones), datosQueLaSostienen, estadoRevisionInterpretacion y, si resume una publicación, atribucion; el esquema (src/engine/esquema-datos.ts, Afirmacion) los exige juntos. Hoy no hay ninguna.",
+  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1, 3-B2, 5-A, 5-C, 3-C2 y Ajustes de M4, «Cómo se calcula», «Reformas», «Metodología», las definiciones de gasto y déficit y «La hucha»). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md). Fase RI: una afirmación puede llevar categoria «interpretacion» (lectura de una caja «Interpretación»), con interpretacion (id del registro de src/contenido/interpretaciones), datosQueLaSostienen, estadoRevisionInterpretacion y, si resume una publicación, atribucion; el esquema (src/engine/esquema-datos.ts, Afirmacion) los exige juntos. Hoy no hay ninguna.",
   "claims": [
     {
       "id": "web-tu-pension-base-sugerida",
@@ -3838,6 +3838,265 @@
       "estado": "verificada",
       "revisionActuarial": "no-requiere",
       "notas": "Coincide con el criterio de la respuesta actuarial del 19-11-2026 (tanda B), recogido en el encargo de la fase R7, y se apoya en las fuentes citadas. Columnas «derechos_u_obligaciones_meur» y «recaudacion_o_pagos_meur» de data/sistema/presupuesto-ss-ejecucion.csv (p. ej., ingresos no financieros de 2025: 232.882,47 frente a 231.108,37 millones). La definición del momento del reconocimiento queda pendiente de fuente (docs/PENDIENTE_DATOS.md)."
+    },
+    {
+      "id": "web-def-fondo-uno-solo",
+      "texto": "El Fondo de Reserva de la Seguridad Social es uno solo: no existe un fondo separado para el Mecanismo de Equidad Intergeneracional, cuya cotización finalista aporta recursos al mismo Fondo de Reserva.",
+      "ubicacion": "Página «La hucha» y módulo de definiciones (src/contenido/definiciones), definición «fondo-de-reserva» (Fase R8)",
+      "datos": [
+        "parametros/mei-destino.json#destino-fondo-reserva",
+        "sistema/fondo-reserva-series.json#dotaciones-mei-anuales"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        },
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Criterio 1 de la respuesta actuarial del 19-11-2026 (tanda B), verificado: la cotización «nutrirá el Fondo de Reserva» (art. 127 bis.1 TRLGSS); la tabla del Fondo tiene una sola columna de valor y el MEI figura como columna de dotaciones; el art. 118.4 y el 120.2 (data-raw/boe/trlgss-2015-consolidado.txt) integran lo recaudado por esa cotización en el Fondo de Reserva."
+    },
+    {
+      "id": "web-def-fondo-componentes",
+      "texto": "La dotación del Fondo de Reserva tiene tres componentes: los excedentes de ingresos de las entidades gestoras y servicios comunes, las aportaciones de las mutuas colaboradoras y la cotización finalista del Mecanismo de Equidad Intergeneracional. Según los datos, los excedentes de las entidades dotan el Fondo hasta 2010 y después no varían; las aportaciones de las mutuas no se producen todos los años (no hay ninguna entre 2019 y 2022); y la cotización del Mecanismo de Equidad Intergeneracional dota el Fondo desde 2023.",
+      "ubicacion": "Página «La hucha» y módulo de definiciones (src/contenido/definiciones), definición «fondo-de-reserva» (Fase R8)",
+      "datos": [
+        "sistema/fondo-reserva-series.json#valor-fin-ano",
+        "sistema/fondo-reserva-series.json#dotaciones-mei-anuales",
+        "parametros/mei-destino.json#destino-fondo-reserva"
+      ],
+      "fuentes": [
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        },
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Criterio 3 de la respuesta actuarial del 19-11-2026 (tanda B), verificado en parte. La dotación acumulada de la tabla (data/sistema/fondo-reserva-anual.csv) es la suma de los tres componentes en todos los años (±1 de redondeo), y el art. 118 (apartados 1 a 4) de la norma descargada (data-raw/boe/trlgss-2015-consolidado.txt) declara esos tres. Entidades: el último aumento es el de 2010; MEI: la primera aportación es la de 2023. «Mutuas cada año» lo contradicen los datos: la variación anual es cero entre 2019 y 2022 (y de 2 y 1 millones en 2017 y 2018); por la regla «verificación manda» la web dice «no se producen todos los años» (véase web-def-mutuas-cada-anio). Los años de la página se calculan de los datos (src/engine/fondo-reserva.ts) y los comprueba src/modules/hucha/r8.test.tsx."
+    },
+    {
+      "id": "web-def-mutuas-cada-anio",
+      "texto": "Las mutuas colaboradoras con la Seguridad Social aportan al Fondo de Reserva cada año.",
+      "ubicacion": "Página «La hucha» y módulo de definiciones (src/contenido/definiciones), definición «fondo-de-reserva» (Fase R8)",
+      "datos": ["sistema/fondo-reserva-series.json#valor-fin-ano"],
+      "fuentes": [
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "La respuesta actuarial del 19-11-2026 (tanda B) afirma que las mutuas aportan al Fondo de Reserva cada año. Los informes a las Cortes Generales recogen dotaciones de las mutuas acumuladas sin variación en 2019, 2020, 2021 y 2022 (y de uno o dos millones de euros en 2017 y 2018). ¿Se refiere la afirmación a la obligación legal de ingresar el excedente cada año (que puede ser cero), o hay una dotación de esos años que los informes no recogen? Con la respuesta se podrá decir si la afirmación es compatible con los datos.",
+      "notas": "Afirmación atribuida a la respuesta actuarial del 19-11-2026 (tanda B), recogida en el encargo de la fase R8. No se muestra en la web porque los datos la contradicen: las dotaciones acumuladas de las mutuas (data/sistema/fondo-reserva-anual.csv) no varían entre 2018 y 2022 (variación anual cero en 2019, 2020, 2021 y 2022). La web dice que no se producen todos los años (docs/DECISIONES_ACTUARIALES.md, «Fase R8»)."
+    },
+    {
+      "id": "web-def-fondo-limite-desembolso",
+      "texto": "A partir de 2033, la ley de presupuestos fija cada año el desembolso del Fondo de Reserva, como un porcentaje del PIB con un límite máximo que da el texto refundido para cada año de 2033 a 2053; la disposición de los activos se destina en exclusiva a las pensiones contributivas. Es un tope anual del desembolso, no una fecha de agotamiento del Fondo ni una fecha de uso libre; los datos del Fondo registran disposiciones entre 2012 y 2019, anteriores a ese año.",
+      "ubicacion": "Página «La hucha» y módulo de definiciones (src/contenido/definiciones), definición «fondo-de-reserva-limite-de-desembolso» (Fase R8)",
+      "datos": [
+        "parametros/fondo-reserva-desembolso-maximo.json#2033",
+        "sistema/fondo-reserva-series.json#disposiciones-anuales"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        },
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Criterio 2 de la respuesta actuarial del 19-11-2026 (tanda B), verificado: el art. 121.2 de la norma descargada (data-raw/boe/trlgss-2015-consolidado.txt) dice «desde 2033, el desembolso anual… con el límite máximo que se establece seguidamente» y el 121.1, que la disposición se destina «con carácter exclusivo» a las pensiones contributivas. La frase del dato «el RDL 2/2023 impide disposiciones hasta 2033 (según el informe del Fondo de Reserva de 2025, sección 4.3)» procede de un informe que no está en el repositorio y no se escribe en el cuerpo (consta en el dato)."
+    },
+    {
+      "id": "web-def-prestamos-recientes-no-vencidos",
+      "texto": "A fin de 2023, fecha de la declaración del Tribunal de Cuentas, ninguno de los préstamos que el Estado concedió a la Seguridad Social entre 2017 y 2023 había llegado al fin de su plazo máximo de cancelación, que es de diez años contados desde el año siguiente al de la concesión; el plazo máximo del primero de ellos termina en 2027.",
+      "ubicacion": "Página «La hucha» y módulo de definiciones (src/contenido/definiciones), definición «prestamos-del-estado-a-la-seguridad-social» (Fase R8)",
+      "datos": [
+        "sistema/tribunal-cuentas-cge2023-ss.json#condiciones-prestamos-tc2023",
+        "parametros/prestamos-estado-seguridad-social.json#2021-plazo-maximo-anios"
+      ],
+      "fuentes": [
+        {
+          "title": "Declaración sobre la Cuenta General del Estado del ejercicio 2023 (N.º 1.617), aprobada por el Pleno del Tribunal de Cuentas el 28 de abril de 2025",
+          "publisher": "Tribunal de Cuentas, publicada por las Cortes Generales (Congreso de los Diputados)",
+          "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/250-6.pdf"
+        },
+        {
+          "title": "Ley 11/2020, de 30 de diciembre, de Presupuestos Generales del Estado para el año 2021",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17339"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Criterio 4 (primera parte) de la respuesta actuarial del 19-11-2026 (tanda B), verificado con otra base que la indicada en el encargo: el fichero de plazo ampliado (RDL 3/2026) se refiere a préstamos de 1992, 1994 y 1995, no a los de 2017 a 2023; los vencimientos de estos están en el anexo de préstamos del Tribunal de Cuentas (data/sistema/tribunal-cuentas-cge2023-prestamos.csv: «10 años a partir de 2018» para el de 2017, y siguientes) y en las leyes de presupuestos. Se afirma solo a fin de 2023 (fecha de la declaración)."
+    },
+    {
+      "id": "web-def-prestamos-antiguos-sin-devolver",
+      "texto": "Según el Tribunal de Cuentas, los préstamos antiguos del Estado a la Seguridad Social no se han devuelto: los que carecen de plazo de vencimiento continúan sin reintegrarse y los que lo tienen se han prorrogado de forma reiterada. Un real decreto-ley de 2026 concede un nuevo plazo de cancelación de diez años a préstamos de 1992, 1994 y 1995. En las fuentes consultadas no consta ninguna cancelación ni conversión en transferencias.",
+      "ubicacion": "Página «La hucha» y módulo de definiciones (src/contenido/definiciones), definición «prestamos-del-estado-a-la-seguridad-social» (Fase R8)",
+      "datos": [
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#prestamos-sin-devolver-y-prorrogados",
+        "parametros/prestamos-plazo-ampliado-2026.json#apartado-1-plazo-anios"
+      ],
+      "fuentes": [
+        {
+          "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+          "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090"
+        },
+        {
+          "title": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-2548"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Criterio 4 (segunda parte) de la respuesta actuarial del 19-11-2026 (tanda B), verificado en la declaración del Tribunal de Cuentas sobre la Cuenta General de 2022 (apartado 4.28): «no han sido devueltos, ya que los que carecen de plazo de vencimiento continúan sin ser reintegrados y los que sí lo tienen han sido sistemáticamente prorrogados»."
+    },
+    {
+      "id": "web-def-transferencias-estado-recursos",
+      "texto": "El texto refundido de la Ley General de la Seguridad Social incluye entre los recursos del sistema las aportaciones del Estado consignadas en los presupuestos generales; dispone que la modalidad no contributiva se financia con aportaciones del Estado y que las prestaciones contributivas se financian básicamente con cotizaciones y otros recursos propios y, en su caso, con aportaciones del Estado para atenciones específicas; y clasifica entre las prestaciones no contributivas los complementos por mínimos de las pensiones. La ejecución del presupuesto clasifica las transferencias corrientes por el organismo de origen.",
+      "ubicacion": "Página «La hucha» y módulo de definiciones (src/contenido/definiciones), definición «transferencias-corrientes-del-estado» (Fase R8)",
+      "datos": [
+        "normativa/trlgss-financiacion.json#aportaciones-estado-presupuestos",
+        "normativa/trlgss-financiacion.json#no-contributiva-aportaciones-estado",
+        "normativa/trlgss-financiacion.json#contributivas-financiacion-basica",
+        "normativa/trlgss-financiacion.json#naturaleza-no-contributiva-minimos",
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        },
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Texto de la definición sin artículos ni citas literales; los literales y las ubicaciones constan en «Fuentes» de cada dato."
+    },
+    {
+      "id": "web-def-prestamos-pasivos-financieros",
+      "texto": "Los préstamos del Estado a la Seguridad Social no son transferencias: la ejecución del presupuesto los contabiliza como pasivos financieros de ingresos y el Banco de España los recoge en la deuda de la Seguridad Social, sin efecto en la deuda del conjunto de las Administraciones Públicas por ser operaciones entre subsectores. Según el Tribunal de Cuentas, se concedieron para cubrir gastos de gestión ordinaria cuando los recursos propios no bastaban; los recientes no devengan intereses.",
+      "ubicacion": "Página «La hucha» y módulo de definiciones (src/contenido/definiciones), definición «prestamos-del-estado-a-la-seguridad-social» (Fase R8)",
+      "datos": [
+        "sistema/deuda-pde-seguridad-social.json#deuda-pde-fin-ano",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#origen-prestamos-gestion-ordinaria",
+        "sistema/prestamos-transferencias-tribunal-cuentas.json#condiciones-prestamos-recientes"
+      ],
+      "fuentes": [
+        {
+          "title": "Boletín Estadístico: Deuda PDE. Admón. Seguridad Social (DTNPDE2010_P00000_PS_ASG), serie trimestral",
+          "publisher": "Banco de España",
+          "url": "https://app.bde.es/bie_www?SERIE=DTNPDE2010_P00000_PS_ASG"
+        },
+        {
+          "title": "Resolución de 20 de noviembre de 2024 (publicación del Dictamen de la Comisión Mixta y de la Declaración del Tribunal de Cuentas sobre la Cuenta General del Estado de 2022)",
+          "publisher": "Boletín Oficial del Estado (BOE), Cortes Generales",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25090"
+        },
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Frases ya presentes en la página antes de la fase R8 (sección «De dónde procede el dinero»), ahora en el módulo de definiciones."
+    },
+    {
+      "id": "web-def-mei-derechos-recaudacion",
+      "texto": "Los derechos reconocidos netos del Mecanismo de Equidad Intergeneracional no son la recaudación, y la norma integra en el Fondo de Reserva lo que se recauda por esa cotización. La ejecución del presupuesto no publica la recaudación de esta cotización (la columna de recaudación está vacía en todas las filas de ese concepto), de modo que no se puede conciliar con las dotaciones.",
+      "ubicacion": "Página «La hucha» y módulo de definiciones (src/contenido/definiciones), definición «derechos-reconocidos-netos» (Fase R8)",
+      "datos": [
+        "parametros/mei-destino.json#destino-fondo-reserva",
+        "sistema/fondo-reserva-series.json#dotaciones-mei-anuales"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        },
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-11",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Sustituye en «Un ejercicio con las dos fuentes» la frase sobre «el momento en que nace el derecho de cobro», que no tenía fuente descargada (Fase R8). Comprobado: art. 120.2 TRLGSS (data-raw/boe/trlgss-2015-consolidado.txt: «el importe que se recaude…»); columna recaudacion_o_pagos_meur de data/sistema/presupuesto-ss-ejecucion.csv vacía en todas las filas del concepto MECANISMO DE EQUIDAD INTERGENERACIONAL (de 2023 a 2026)."
+    },
+    {
+      "id": "web-def-lecturas-propias-hucha",
+      "texto": "«Fondo menos deuda» (valor del Fondo de Reserva menos la deuda de las Administraciones de Seguridad Social, a fin de año), «deuda más transferencias acumuladas» (la deuda más las transferencias del Estado acumuladas desde un año de inicio), «Fondo en meses de gasto en pensiones» y «Fondo en meses de transferencias» (valor del Fondo dividido entre el gasto, o las transferencias, medio mensual del periodo) son cálculos propios de esta web, sin equivalente oficial.",
+      "ubicacion": "Página «La hucha» y módulo de definiciones (src/contenido/definiciones), definición «fondo-menos-deuda» (Fase R8)",
+      "datos": [
+        "sistema/fondo-reserva-series.json#valor-fin-ano",
+        "sistema/deuda-pde-seguridad-social.json#deuda-pde-fin-ano",
+        "sistema/deficit-presupuestario-seguridad-social.json#transferencias-estado-corrientes"
+      ],
+      "fuentes": [
+        {
+          "title": "Fondo de Reserva de la Seguridad Social: informes anuales a las Cortes Generales (tabla «Reserve Fund general performance» y «FRSS performance»)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/FondoReserva/39728/1726/1727"
+        },
+        {
+          "title": "Boletín Estadístico: Deuda PDE. Admón. Seguridad Social (DTNPDE2010_P00000_PS_ASG), serie trimestral",
+          "publisher": "Banco de España",
+          "url": "https://app.bde.es/bie_www?SERIE=DTNPDE2010_P00000_PS_ASG"
+        },
+        {
+          "title": "Resumen Ejecución del Presupuesto de la Seguridad Social (Sistema de la Seguridad Social)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionEconomicoFinanciera/393/394"
+        }
+      ],
+      "fetchedAt": "2026-11-14",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Las cuatro fórmulas de las definiciones reproducen los cálculos de la página con los datos (src/modules/hucha/r8.test.tsx, «fórmulas de los cálculos propios coherentes con los datos»)."
     }
   ]
 }
