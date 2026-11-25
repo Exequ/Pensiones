@@ -88,7 +88,8 @@ test.describe('Ajustes actuariales 4', () => {
     await expect(main).toContainText(
       'la diferencia acumulada es de 715,03 millones de euros en 2024-2025',
     );
-    await expect(main).toContainText('lo recaudado, no lo reconocido');
+    await expect(main).toContainText('no son la recaudación');
+    await expect(main).toContainText('lo que se recauda por esa cotización');
     await sinDesborde(page);
     expect(registro.errores, 'errores de consola').toEqual([]);
     expect(registro.externas, 'peticiones a dominios externos').toEqual([]);
