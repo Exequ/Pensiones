@@ -1,0 +1,29 @@
+# Estado de la fase R8 «La hucha»
+
+Rama `feat/r8-hucha`, creada desde `origin/main` (`e84514e60617aece26ec956761d46f306035edf1`, PR [Exequ/Pensiones#57](https://github.com/Exequ/Pensiones/pull/57), fase R7; «CI» y «Despliegue en GitHub Pages» de ese commit en verde). Inventario: `docs/INVENTARIO_R8_HUCHA.md`. Decisiones: `docs/DECISIONES.md` («Fase R8») y `docs/DECISIONES_ACTUARIALES.md` («Fase R8»). No toca «Reformas», «Mitos y realidades», «Otros sistemas», «Proyecciones», `modelos/`, `docs/modelos/`, `data-raw/`, `docs/DISCREPANCIAS.md` ni ningún fichero de `/data`; sin interpretaciones, sin descargas, sin ampliar el lenguaje de fórmulas y sin dependencias nuevas.
+
+## Qué se hizo
+
+- **Citas, artículos y rótulos a «Fuentes»**: la columna «Artículos» de la tabla de normas, el párrafo que pegaba las notas de los datos del límite y del destino del MEI, la nota «Fuente normativa», el rótulo «suma de pensiones», las citas literales del texto refundido y del Tribunal de Cuentas, los rótulos de la liquidación y de la ejecución, «Anexo 10» y los artículos y disposiciones de la columna «Norma que lo autoriza» salen del cuerpo y de las tablas. Van como cita y ubicación del `Dato` de cada bloque (`fuentes-hucha.ts`, `normas.ts`, `citas-normativas.ts`), sin cambiar los datos.
+- **Definiciones del módulo**: ocho nuevas (`fondo-de-reserva`, `fondo-de-reserva-limite-de-desembolso`, `prestamos-del-estado-a-la-seguridad-social`, `transferencias-corrientes-del-estado`, `fondo-menos-deuda`, `deuda-mas-transferencias-acumuladas`, `fondo-en-meses-de-gasto`, `fondo-en-meses-de-transferencias`) y un grupo nuevo (`fondo-de-reserva`). Sustituyen los duplicados que R7 listó para esta página (gasto con complemento, derechos reconocidos) y las definiciones escritas en `SeccionOrigen` y `SeccionPosicion`.
+- **Fórmulas** con `Formula` y leyenda, sin cifras: Fondo menos deuda; deuda más transferencias acumuladas (con sumatorio de símbolos); Fondo en meses de gasto en pensiones; Fondo en meses de transferencias. Caben todas en el lenguaje existente.
+- **Criterios actuariales del 19-11-2026** (detalle en `docs/DECISIONES_ACTUARIALES.md`): verificados el 1 (no hay «Fondo MEI»), el 2 («desde» el primer año de la tabla, desembolsos anuales con tope) y el 4 (préstamos de 2017 a 2023 sin vencer y antiguos sin devolver; con otra base que la del encargo); el 3 (tres componentes) verificado salvo «mutuas cada año», contradicho por los datos (sin aportación entre 2019 y 2022).
+- **Lo corregido por verificación**: «los derechos reconocidos se contabilizan al nacer el derecho de cobro» (sin fuente), «las fuentes no publican la recaudación mensual» (ahora: la ejecución no publica la recaudación de esa cotización, comprobado) y «no es un error de una de ellas» (causa no verificada); la frase «el RDL 2/2023 impide disposiciones hasta 2033», que depende de un informe que no está en el repositorio, no se escribe en el cuerpo.
+- **Afirmaciones**: diez nuevas en `docs/claims-web.json` (nueve verificadas y una pendiente, `web-def-mutuas-cada-anio`); `docs/claims.json` regenerado por su generador, que solo las añade.
+- **Pruebas**: `src/modules/hucha/r8.test.tsx` (sin artículos, anexos ni rótulos en el cuerpo; ninguna cita literal de los datos en el cuerpo; el literal y la ubicación en «Fuentes»; cada definición una vez; los cuatro criterios contra los CSV y la norma; las cuatro fórmulas contra las series y el motor; sin «Fondo MEI»), `src/engine/fondo-reserva.test.ts` (componentes de dotación y plazos), ampliación de `src/engine/citas-normativas.test.ts` y `e2e/hucha-r8.spec.ts` (8 pruebas, 1360 y 390 px, con axe). Actualizadas sin quitar comprobaciones: `hucha.test.tsx`, `scripts/definiciones.test.ts`, `scripts/verificacion-ajustes-3.test.ts` (una pendiente más) y, por la regla de cifras, el nombre de un fichero con año vive en `ids-datos.ts`.
+
+## Qué quedó fuera y por qué
+
+- **Comparación con fondos de otros países, gráficos históricos de activos netos y de deuda**: no hay datos en el repositorio; fuera por encargo (R10).
+- **«Gastos impropios»**: se conserva como definición de la página (sin definición única en las fuentes y sin cálculo propio); su literal pasó a paráfrasis.
+- **Contraste de catorce pagas**: no está entre los cálculos pedidos; conserva su nota sin fórmula. Las expresiones «catorce pagas» de la etiqueta de la serie y del párrafo de apertura, anteriores a la fase, no se tocan.
+- **Mutuas «cada año»**: no se escribe (los datos lo contradicen); queda como afirmación pendiente.
+- **«El RDL 2/2023 impide disposiciones hasta 2033»**: depende del informe a las Cortes de 2025 (sección 4.3), que no está en el repositorio; consta en el dato y no se escribe en el cuerpo.
+- **Duplicados de otras páginas** (los de la tabla de `docs/ESTADO_FASE_R7.md` que no son de esta página): no se tocan; siguen para R10, R11 y la fase de proyecciones.
+
+## Pendientes para Sergio
+
+- **Actuariales**: (1) la pregunta de `web-def-mutuas-cada-anio` (¿«cada año» se refiere a la obligación legal de ingresar el excedente, que puede ser cero?); (2) confirmar la redacción de las ocho definiciones nuevas y la de «a fin de {año}, fecha de la declaración» para los préstamos de 2017 a 2023; (3) confirmar que el criterio 4 se acepta verificado con el anexo del Tribunal de Cuentas y las leyes de presupuestos y no con el fichero de plazo ampliado, que es de los préstamos de 1992 a 1995; (4) sigue pendiente el de R7 (`web-def-sec-sin-clases-pasivas`).
+- **Descargas manuales**: el informe del Fondo de Reserva a las Cortes de 2025 (sección 4.3), si se quiere sostener en el cuerpo que el RDL 2/2023 impide disposiciones hasta 2033; una norma o instrucción contable que defina el reconocimiento de derechos (ya pendiente desde R7).
+- **Modelos**: ninguno.
+- **Otros**: ninguno nuevo.
