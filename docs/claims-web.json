@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1, 3-B2, 5-A, 5-C, 3-C2 y Ajustes de M4, «Cómo se calcula», «Reformas», «Metodología», las definiciones de gasto y déficit y «La hucha»). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md). Fase RI: una afirmación puede llevar categoria «interpretacion» (lectura de una caja «Interpretación»), con interpretacion (id del registro de src/contenido/interpretaciones), datosQueLaSostienen, estadoRevisionInterpretacion y, si resume una publicación, atribucion; el esquema (src/engine/esquema-datos.ts, Afirmacion) los exige juntos. Hoy no hay ninguna.",
+  "descripcion": "Afirmaciones factuales de los textos de la página «Tu pensión» (Fases 3-A, 3-B1, 3-B2, 5-A, 5-C, 3-C2 y Ajustes de M4, «Cómo se calcula», «Reformas», «Metodología», las definiciones de gasto y déficit, «La hucha» y «Otros sistemas»). scripts/etl/fuentes_claims.py las añade a docs/claims.json; cada una se apoya en un dato de /data. No requieren revisión actuarial propia: explican reglas ya registradas en /data (las lecturas abiertas tienen sus preguntas en docs/REVISION_ACTUARIAL.md). Fase RI: una afirmación puede llevar categoria «interpretacion» (lectura de una caja «Interpretación»), con interpretacion (id del registro de src/contenido/interpretaciones), datosQueLaSostienen, estadoRevisionInterpretacion y, si resume una publicación, atribucion; el esquema (src/engine/esquema-datos.ts, Afirmacion) los exige juntos. Hoy no hay ninguna.",
   "claims": [
     {
       "id": "web-tu-pension-base-sugerida",
@@ -4097,6 +4097,513 @@
       "estado": "verificada",
       "revisionActuarial": "no-requiere",
       "notas": "Las cuatro fórmulas de las definiciones reproducen los cálculos de la página con los datos (src/modules/hucha/r8.test.tsx, «fórmulas de los cálculos propios coherentes con los datos»)."
+    },
+    {
+      "id": "web-def-edad-normal-ocde",
+      "texto": "La edad normal de jubilación de la OCDE es la edad de acceso a todos los componentes obligatorios del sistema de pensiones, para una persona que entra en el mercado laboral a la edad de entrada del cálculo y tiene una carrera ininterrumpida; la OCDE la publica en una versión actual y otra futura y por separado para hombres y mujeres. No es la edad ordinaria de jubilación de la normativa española, que depende de los años cotizados.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «edad-normal-de-jubilacion-ocde» (Fase R10)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-definicion-edad-normal-jubilacion",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-carrera-completa"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en"
+        },
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Sustituye en «Edad de jubilación» la nota «Definición de la OCDE: …» que copiaba el texto del dato y los párrafos «Cómo leerlo» sobre la edad normal (Fase R10). Comprobado: definición y nota del dato `ocde-pag-2025-definicion-edad-normal-jubilacion` («no es la edad ordinaria de jubilación de la normativa española, que depende de los años cotizados») y literales CRPLF22 y FRPLF22 de `ocde-pag-codigos`; hay series por sexo en `ocde-pag`."
+    },
+    {
+      "id": "web-def-elmea-ocde",
+      "texto": "La edad efectiva de salida del mercado laboral de la OCDE (medida ELMEA) es la edad media a la que las personas trabajadoras de 40 o más años salen de la población activa, estimada con los cambios en las tasas de actividad de cohortes sintéticas por grupos de edad; la fuente advierte de que las cifras absolutas de un país deben interpretarse con cautela y de que son robustas las comparaciones entre países o en el tiempo dentro de un país.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «edad-efectiva-de-salida-del-mercado-laboral-ocde» (Fase R10)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-definicion-edad-efectiva-salida"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "El literal de la medida («Effective labour market exit age») sale del cuerpo y de la descripción del gráfico y queda en «Fuentes» (Fase R10). Comprobado en el dato y su nota: definición para trabajadores de 40 o más años, estimación con los cambios en las tasas de actividad por cohorte sintética en grupos de cinco años y advertencia de la fuente. El método completo se remite a un documento que no está en el repositorio."
+    },
+    {
+      "id": "web-def-elmea-no-es-edad-de-cobro",
+      "texto": "La edad efectiva de salida del mercado laboral de la OCDE se refiere a la salida de la población activa: no es la edad a la que se empieza a cobrar una pensión ni una edad que fije una norma.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «edad-efectiva-de-salida-del-mercado-laboral-ocde» (Fase R10)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-definicion-edad-efectiva-salida"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Se deduce de la definición de la fuente («average age of exit from the labour force for workers aged 40 and over»), que no habla de acceso a una pensión. Sustituye a la frase «la diferencia con la edad normal depende de las vías de salida (jubilación anticipada, incapacidad, desempleo o trabajo después de la edad normal)», sin fuente en el repositorio: los datos consultados no detallan las vías de salida y la frase no se escribe (Fase R10)."
+    },
+    {
+      "id": "web-def-tasa-reposicion-bruta-ocde",
+      "texto": "La tasa de reposición teórica bruta de la OCDE es la pensión bruta de una persona modelo en porcentaje de sus ingresos brutos individuales antes de jubilarse, para un nivel de ingresos expresado como múltiplo del salario medio. La persona modelo es una persona trabajadora soltera con carrera completa y un salario que crece como el salario medio; la carrera dura hasta la edad normal de jubilación del país; los supuestos económicos y de mortalidad los fija la OCDE. No es la pensión de ninguna persona real.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «tasa-de-reposicion-teorica-bruta-ocde» (Fase R10)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-trabajador-que-entra-en-2024",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-carrera-completa",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-duracion-carrera",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-salario-relativo-constante",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-salario-medio-definicion"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en"
+        },
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Sustituye a los párrafos «La tasa de reposición compara la primera pensión con el salario previo…» (la «primera pensión» no estaba en la fuente; se dice «la pensión de una persona con sus ingresos individuales antes de jubilarse») (Fase R10). La unidad de la medida es «Percentage of gross pre-retirement earnings at the same income level» (`ocde-pag-codigos`, UNIT_MEASURE)."
+    },
+    {
+      "id": "web-def-tasa-reposicion-neta-ocde",
+      "texto": "La tasa de reposición teórica neta de la OCDE es el valor neto de la pensión de la persona modelo en porcentaje de sus ingresos netos individuales antes de jubilarse, tras descontar los impuestos personales sobre la renta y las cotizaciones sociales que pagan las personas trabajadoras y las pensionistas; por lo demás se mide como la tasa bruta.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «tasa-de-reposicion-teorica-neta-ocde» (Fase R10)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tasa-neta-definicion",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-politica-fiscal-constante"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Sustituye a la nota «Definición de la OCDE: …» del gráfico (Fase R10). Comprobado en el dato `ocde-pag-2025-tasa-neta-definicion`."
+    },
+    {
+      "id": "web-def-tasa-neta-mayor-o-menor-que-bruta",
+      "texto": "La tasa de reposición neta de la OCDE puede ser mayor o menor que la bruta.",
+      "ubicacion": "Página «Otros sistemas», «Cómo leerlo» de la tasa neta (Fase R10)",
+      "datos": [
+        "internacional/ocde-espana.json#gprr100-hombres-z-m-pt-earn-g-pre-ret-inc-2024",
+        "internacional/ocde-espana.json#nprr100-hombres-z-m-pt-earn-n-pre-ret-inc-2024"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Comprobado con `data/internacional/ocde-pag.csv`: de las comparaciones por país, sexo, tipo de planes y nivel de salario, la neta es mayor en la mayoría y menor en seis (España e Italia con la mitad del salario medio). Se elimina la causa «según la fiscalidad de cada país», que la propia frase contradecía al decir que no hay datos de los impuestos y cotizaciones de los pensionistas de cada país (Fase R10)."
+    },
+    {
+      "id": "web-def-tasa-neta-impuestos-pensionistas-sin-detalle",
+      "texto": "El detalle de los impuestos y de las cotizaciones que pagan las personas pensionistas de cada país figura, según la OCDE, en fichas por país en línea y no en el informe, de modo que los datos consultados no permiten atribuir la diferencia entre la tasa bruta y la neta a una causa.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «tasa-de-reposicion-teorica-neta-ocde» (Fase R10)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-impuestos-pensionistas-en-perfiles"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Comprobado en el dato `ocde-pag-2025-impuestos-pensionistas-en-perfiles` («Country Profiles» en línea, no en el informe); el hueco está en docs/PENDIENTE_DATOS.md. Pendiente para la fase R10b."
+    },
+    {
+      "id": "web-def-glosario-reparto",
+      "texto": "Las fichas de los países describen como de reparto sistemas públicos de pensiones financiados con las cotizaciones de las personas trabajadoras y de las empresas, y una misma ficha puede describir un sistema de reparto junto a un componente de capitalización.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «reparto» (Fase R10)",
+      "datos": [
+        "internacional/paises-sistemas.json#sistema-esp-1",
+        "internacional/paises-sistemas.json#sistema-fra-1",
+        "internacional/paises-sistemas.json#sistema-deu-1",
+        "internacional/paises-sistemas.json#sistema-swe-1"
+      ],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for España",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/392994f2-c025-4066-bea8-f65cf4bcd411_en?filename=2024-ageing-report-country-fiche-Spain.pdf"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Francia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/e412927a-ea31-406d-bb6c-c925914123e9_en?filename=2024-ageing-report-country-fiche-France.pdf"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Alemania",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/e8f41d38-6d27-45b4-8919-c9348720fcfc_en?filename=2024-ageing-report-country-fiche-Germany.pdf"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Suecia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/1a05f725-4231-411e-bcde-7d567ddd7689_en?filename=2024-ageing-report-country-fiche-Sweden.pdf"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Verifica el uso del término en las fichas del Ageing Report 2024 (Francia: «pay-as-you-go public system financed by contributions from both workers and employers»; Suecia: «NDC pay-as-you-go component and a fully funded, defined contribution (DC) pension component»). No verifica la definición general del concepto (véase `web-def-glosario-conceptos-generales`). Sustituye al texto del glosario (Fase R10)."
+    },
+    {
+      "id": "web-def-glosario-capitalizacion",
+      "texto": "Las fichas de los países describen como de capitalización el segundo pilar de empleo de los Países Bajos, el componente obligatorio de aportación definida de Suecia y un régimen público voluntario de Portugal; para los planes de capitalización de aportación definida la OCDE supone una rentabilidad real de las inversiones y que la prestación se paga como una renta vitalicia indexada a los precios.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «capitalizacion» (Fase R10)",
+      "datos": [
+        "internacional/paises-sistemas.json#sistema-nld-2",
+        "internacional/paises-sistemas.json#sistema-swe-1",
+        "internacional/paises-sistemas.json#sistema-prt-2",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-renta-vitalicia-indexada",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-rentabilidad-real-fdc-base"
+      ],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Países Bajos",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/610eea99-d6a4-4f2b-8d00-6fe0467c3b37_en?filename=2024-ageing-report-country-fiche-Netherlands.pdf"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Suecia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/1a05f725-4231-411e-bcde-7d567ddd7689_en?filename=2024-ageing-report-country-fiche-Sweden.pdf"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Portugal",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/0617eec0-e5ba-4635-9443-c71a953fb0cc_en?filename=2024-ageing-report-country-fiche-Portugal.pdf"
+        },
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Verifica el uso del término («occupational pension (private, funded)», «fully funded, defined contribution», «works on a capitalised base») y los dos supuestos de la OCDE; no verifica la definición general del concepto (véase `web-def-glosario-conceptos-generales`) (Fase R10)."
+    },
+    {
+      "id": "web-def-glosario-cuentas-nocionales",
+      "texto": "Las fichas de los países describen un componente de aportación definida nocional, no financiero, que distinguen del componente financiero o de capitalización: en Suecia es un componente de reparto ligado a los ingresos, en Polonia es la parte no financiera del sistema obligatorio y en Italia la reforma que lo adopta prevé la revisión periódica de los coeficientes de acumulación implícitos.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «cuentas-nocionales» (Fase R10)",
+      "datos": [
+        "internacional/paises-sistemas.json#sistema-swe-1",
+        "internacional/paises-sistemas.json#sistema-pol-1",
+        "internacional/paises-sistemas.json#sistema-ita-1"
+      ],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Suecia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/1a05f725-4231-411e-bcde-7d567ddd7689_en?filename=2024-ageing-report-country-fiche-Sweden.pdf"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Polonia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/568baf8e-3a50-4859-8507-f0d963411213_en?filename=2024-ageing-report-country-fiche-Poland.pdf"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Italia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/82b762d7-21ce-4992-aa97-888fd2c66205_en?filename=2024-ageing-report-country-fiche-Italy.pdf"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Verifica el uso del término en las fichas («notionally defined contribution (NDC) pay-as-you-go component»; «non-financial (NDC) and financial (FDC)»; «Notional Defined Contribution (NDC) scheme, with periodic revisions of the implicit accrual rates»). No verifica la definición general (véase `web-def-glosario-conceptos-generales`) (Fase R10)."
+    },
+    {
+      "id": "web-def-glosario-pilares",
+      "texto": "El contenido de cada pilar no es el mismo en todos los países según las fichas: en Dinamarca el primer pilar incluye un pequeño régimen de capitalización además de una pensión pública de prestación definida; en Polonia los dos pilares de la parte obligatoria son el nocional y el de capitalización; en Alemania el primer pilar es el sistema público de reparto ligado a los ingresos; en Francia hay un segundo pilar de reparto para las personas empleadas del sector privado y en los Países Bajos un segundo pilar de pensión de empleo privada de capitalización.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «pilares-de-un-sistema-de-pensiones» (Fase R10)",
+      "datos": [
+        "internacional/paises-sistemas.json#sistema-dnk-1",
+        "internacional/paises-sistemas.json#sistema-dnk-2",
+        "internacional/paises-sistemas.json#sistema-pol-1",
+        "internacional/paises-sistemas.json#sistema-deu-1",
+        "internacional/paises-sistemas.json#sistema-fra-2",
+        "internacional/paises-sistemas.json#sistema-nld-2"
+      ],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Dinamarca",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/93eeaeab-e2bf-4e62-9cc9-bbb42c2f091e_en?filename=2024-ageing-report-country-fiche-Denmark.pdf"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Polonia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/568baf8e-3a50-4859-8507-f0d963411213_en?filename=2024-ageing-report-country-fiche-Poland.pdf"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Alemania",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/e8f41d38-6d27-45b4-8919-c9348720fcfc_en?filename=2024-ageing-report-country-fiche-Germany.pdf"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Francia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/e412927a-ea31-406d-bb6c-c925914123e9_en?filename=2024-ageing-report-country-fiche-France.pdf"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Países Bajos",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/610eea99-d6a4-4f2b-8d00-6fe0467c3b37_en?filename=2024-ageing-report-country-fiche-Netherlands.pdf"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Comprobado con las citas de las fichas (Fase R10). Sustituye a «el mismo término no significa exactamente lo mismo en todos los países», que solo se verifica para los pilares."
+    },
+    {
+      "id": "web-def-glosario-dos-ejes",
+      "texto": "Las fichas de los países combinan dos criterios para describir un sistema, cómo se financia (reparto o capitalización) y cómo se determina la prestación (prestación definida o aportación definida): Portugal, prestación definida con financiación de reparto; Suecia, un componente de aportación definida de capitalización y otro de aportación definida nocional de reparto.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «ejes-de-clasificacion-de-los-sistemas» (Fase R10)",
+      "datos": [
+        "internacional/paises-sistemas.json#sistema-prt-1",
+        "internacional/paises-sistemas.json#sistema-swe-1"
+      ],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Portugal",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/0617eec0-e5ba-4635-9443-c71a953fb0cc_en?filename=2024-ageing-report-country-fiche-Portugal.pdf"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Suecia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/1a05f725-4231-411e-bcde-7d567ddd7689_en?filename=2024-ageing-report-country-fiche-Sweden.pdf"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Se deduce del uso de los términos en las dos fichas («defined benefit (DB) system, working on a pay-as-you-go (PAYG) financing basis»; «NDC pay-as-you-go component and a fully funded, defined contribution (DC) pension component»). Sustituye a la definición «Dos ejes de clasificación» del glosario, que además decía que las cuentas nocionales son un sistema de reparto con aportación definida (Fase R10)."
+    },
+    {
+      "id": "web-def-glosario-conceptos-generales",
+      "texto": "Reparto: las cotizaciones de quienes trabajan en un periodo financian las pensiones que se pagan en ese mismo periodo. Capitalización: las aportaciones se acumulan en un fondo con sus rendimientos y ese fondo financia la pensión de quien aportó. Cuentas nocionales: la pensión se calcula a partir de un saldo teórico que acumula las cotizaciones de cada persona y se convierte en renta con criterios actuariales.",
+      "ubicacion": "Glosario que mostraba la página «Otros sistemas» antes de la Fase R10 (retirado)",
+      "datos": [
+        "internacional/paises-sistemas.json#sistema-fra-1",
+        "internacional/paises-sistemas.json#sistema-swe-1"
+      ],
+      "fuentes": [
+        {
+          "title": "2024 Ageing Report, country fiche for Francia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/e412927a-ea31-406d-bb6c-c925914123e9_en?filename=2024-ageing-report-country-fiche-France.pdf"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Suecia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/1a05f725-4231-411e-bcde-7d567ddd7689_en?filename=2024-ageing-report-country-fiche-Sweden.pdf"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "pendiente",
+      "revisionActuarial": "pendiente",
+      "preguntaActuarial": "¿Se acepta que la web defina reparto, capitalización y cuentas nocionales solo con el uso que hacen las fuentes consultadas, o se incorpora una fuente que defina los tres conceptos (por ejemplo, una publicación de la OCDE, de la Comisión Europea o del Banco Mundial sobre tipos de sistemas de pensiones) para escribir la definición general?",
+      "notas": "Las definiciones generales de los tres conceptos no están en ninguna fuente del repositorio: las fichas del Ageing Report y «Pensions at a Glance» usan los términos, no los definen. Por «verificación manda» no se escriben en la web; el módulo de definiciones recoge solo lo que dicen las fuentes y declara en su criterio que no hay en ellas una definición general (Fase R10)."
+    },
+    {
+      "id": "web-def-diferencia-con-espana",
+      "texto": "En las tablas de los gráficos de países, la diferencia de un país con España es su valor menos el de España en la misma medida y el mismo año; es un cálculo propio de esta web con los valores publicados por cada fuente.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «diferencia-con-espana» (Fase R10)",
+      "datos": [
+        "internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq",
+        "internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD"
+        },
+        {
+          "title": "Eurostat: spr_exp_func, ilc_peps01n, lfsi_emp_a y lfsi_dwl_a",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "La fórmula reproduce lo que muestra la tabla (src/modules/otros-sistemas/r10.test.tsx, «Diferencia con España = valor del país − valor de España»). Sustituye al encabezado «Diferencia con España» sin definición (Fase R10)."
+    },
+    {
+      "id": "web-def-cociente-pension-media-salario-medio",
+      "texto": "Los cocientes entre la pensión media de jubilación (de las altas iniciales o de las pensiones en vigor), multiplicada por el número de pagas anuales, y el salario medio anual según cuatro definiciones son un cálculo propio de esta web; no son una tasa de reposición, porque comparan medias de colectivos distintos con carreras de distinta duración, no siguen a una persona ni a una carrera completa y no descuentan impuestos ni cotizaciones.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «cociente-pension-media-salario-medio» (Fase R10)",
+      "datos": [
+        "internacional/contraste-espana.json#pension-altas-sobre-salario-eaes",
+        "internacional/contraste-espana.json#pension-vigor-sobre-salario-eaes"
+      ],
+      "fuentes": [
+        {
+          "title": "Altas y bajas de pensiones contributivas: evolución 2022-2026 (fichero EVO)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST44"
+        },
+        {
+          "title": "Estadísticas de pensiones: pensiones contributivas en vigor (número y cuantía por sexo, régimen y clase, a 1 de diciembre)",
+          "publisher": "Seguridad Social (Ministerio de Inclusión, Seguridad Social y Migraciones)",
+          "url": "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST23/EST24"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Comprobado en las notas de las series de `contraste-espana` («NO es una tasa de reposición…»). La fórmula reproduce las series con la pensión media de las altas y de las pensiones en vigor y el salario medio de la Encuesta Anual de Estructura Salarial (src/modules/otros-sistemas/r10.test.tsx). Se quitan «pensiones mínimas y topes» como causa, que no consta en las notas de los datos, y las etiquetas con «× 14 pagas» y los códigos de las definiciones de salario (Fase R10)."
+    },
+    {
+      "id": "web-def-carrera-ininterrumpida-edad-menor",
+      "texto": "Una carrera ininterrumpida desde la edad de entrada en el mercado laboral que supone la OCDE hasta la edad menor de jubilación de la normativa española tiene más meses que los meses cotizados que la normativa exige para jubilarse ordinariamente a esa edad, por lo que la edad de España en la OCDE y la edad ordinaria de la normativa responden a carreras distintas y no se contradicen.",
+      "ubicacion": "Página «Otros sistemas» y módulo de definiciones (src/contenido/definiciones), definición «carrera-ininterrumpida-hasta-la-edad-menor» (Fase R10)",
+      "datos": [
+        "internacional/contraste-espana.json#meses-carrera-completa-desde-22-hasta-65",
+        "internacional/contraste-espana.json#carrera-jubilacion-65-propia-2025",
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-entrada-mercado-laboral-22"
+      ],
+      "fuentes": [
+        {
+          "title": "Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (texto consolidado)",
+          "publisher": "Boletín Oficial del Estado (BOE)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+        },
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD"
+        },
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "La fórmula (edad menor − edad de entrada) × meses por año reproduce el dato de `contraste-espana` (src/modules/otros-sistemas/r10.test.tsx). Los artículos que respaldan los meses cotizados están en el desplegable «Fuentes» (Fase R10)."
+    },
+    {
+      "id": "web-def-medidas-gasto-ocde-eurostat-distintas",
+      "texto": "La OCDE y Eurostat publican cada una su propia medida del gasto en pensiones sobre el PIB, con delimitaciones propias: no son dos estimaciones de la misma cifra y el perímetro exacto de cada una no consta en las fuentes consultadas.",
+      "ubicacion": "Página «Otros sistemas», apartado de gasto, y módulo de definiciones, definiciones «gasto-pensiones-ocde» y «gasto-pensiones-esspros-vejez-supervivientes» (Fase R10)",
+      "datos": [
+        "internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq",
+        "internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD"
+        },
+        {
+          "title": "Eurostat: spr_exp_func, ilc_peps01n, lfsi_emp_a y lfsi_dwl_a",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Criterio de la tanda B (19-11-2026) verificado: en los datos las dos series de España difieren en cada año con dato de ambas (por ejemplo, en 2020 la medida de la OCDE es 12,8 % del PIB y la suma de vejez y supervivencia de Eurostat, 13,81 %); la web no las une en una misma serie (cada gráfico toma una sola fuente: r10.test.tsx) y no usa el Ageing Report. Sustituye a «Cuánto gasta el sector público en pensiones… lo miden la OCDE y Eurostat», que las presentaba como dos medidas de lo mismo, y a los encabezados que las llamaban «gasto público en pensiones» (Fase R10). El perímetro del manual ESSPROS y de la «Table 9» del Ageing Report no está descargado: pendiente para la fase R10b."
+    },
+    {
+      "id": "web-def-escenario-alternativo-tres-paises",
+      "texto": "Los datos de esta web recogen la tasa bruta de la OCDE con el escenario alternativo solo para España, el Reino Unido y Estados Unidos.",
+      "ubicacion": "Página «Otros sistemas», «Cuánto cambia la tasa bruta con el escenario alternativo» (Fase R10)",
+      "datos": [
+        "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tasa-bruta-reposicion-alternativo-esp"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance 2025: OECD and G20 Indicators",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://doi.org/10.1787/e40274c1-en"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Corrige «La OCDE publica la tasa bruta con el escenario alternativo solo para tres países»: la tabla del informe puede traer más países y el repositorio solo recoge tres; lo comprobado es lo que hay en los datos de la web."
+    },
+    {
+      "id": "web-otros-sistemas-no-comparables",
+      "texto": "Los países no son directamente comparables: cada fuente delimita lo que mide de forma distinta (qué prestaciones y regímenes entran en el gasto, o qué persona modela una tasa de reposición), los sistemas combinan elementos de reparto, de capitalización y de cuentas nocionales con reglas de cálculo distintas, y los cocientes sobre el PIB cambian con el numerador y con el denominador.",
+      "ubicacion": "Página «Otros sistemas», apartado «Qué países se comparan y por qué no son directamente comparables» (Fase R10)",
+      "datos": [
+        "internacional/paises-sistemas.json#sistema-swe-1",
+        "internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq",
+        "internacional/eurostat-espana.json#gasto-old-srv-no-aplica-no-aplica-pc-gdp"
+      ],
+      "fuentes": [
+        {
+          "title": "Pensions at a Glance: flujo SDMX DSD_PAG@DF_PAG (OECD.ELS.SPD), edición vigente",
+          "publisher": "OECD (Organización para la Cooperación y el Desarrollo Económicos)",
+          "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDataExplorer&df[id]=DSD_PAG%40DF_PAG&df[ag]=OECD.ELS.SPD"
+        },
+        {
+          "title": "Eurostat: spr_exp_func, ilc_peps01n, lfsi_emp_a y lfsi_dwl_a",
+          "publisher": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/spr_exp_func/default/table?lang=en"
+        },
+        {
+          "title": "2024 Ageing Report, country fiche for Suecia",
+          "publisher": "Comisión Europea (DG ECFIN) y Comité de Política Económica (Grupo de Trabajo sobre Envejecimiento)",
+          "url": "https://economy-finance.ec.europa.eu/document/download/1a05f725-4231-411e-bcde-7d567ddd7689_en?filename=2024-ageing-report-country-fiche-Sweden.pdf"
+        }
+      ],
+      "fetchedAt": "2026-11-12",
+      "estado": "verificada",
+      "revisionActuarial": "no-requiere",
+      "notas": "Primera razón: las medidas de la OCDE y de Eurostat difieren (`web-def-medidas-gasto-ocde-eurostat-distintas`). Segunda: la ficha de Suecia combina un componente nocional de reparto con otro de capitalización; las fichas de España y de Estados Unidos recogen periodos de cálculo distintos (mejores años de la carrera). Tercera: es aritmética de un cociente. Frase de apertura, sin cambios de fondo."
     }
   ]
 }

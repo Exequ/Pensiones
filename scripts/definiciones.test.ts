@@ -52,6 +52,19 @@ const IDS_ESTABLES = [
   'deuda-mas-transferencias-acumuladas',
   'fondo-en-meses-de-gasto',
   'fondo-en-meses-de-transferencias',
+  // Fase R10 («Otros sistemas»).
+  'edad-normal-de-jubilacion-ocde',
+  'edad-efectiva-de-salida-del-mercado-laboral-ocde',
+  'tasa-de-reposicion-teorica-bruta-ocde',
+  'tasa-de-reposicion-teorica-neta-ocde',
+  'reparto',
+  'capitalizacion',
+  'cuentas-nocionales',
+  'pilares-de-un-sistema-de-pensiones',
+  'ejes-de-clasificacion-de-los-sistemas',
+  'diferencia-con-espana',
+  'cociente-pension-media-salario-medio',
+  'carrera-ininterrumpida-hasta-la-edad-menor',
 ] as const;
 
 /** Todos los textos visibles de una definición (término, párrafos, perímetro, criterio y fórmula). */
@@ -88,6 +101,7 @@ describe('módulo de definiciones', () => {
     for (const id of IDS_ESTABLES) expect(ids, id).toContain(id);
     const grupos = new Set(DEFINICIONES.map((d) => d.grupo));
     expect([...grupos].sort()).toEqual([
+      'comparacion-internacional',
       'contabilidad',
       'deficit',
       'fondo-de-reserva',
@@ -138,7 +152,10 @@ describe('módulo de definiciones', () => {
   it('las fórmulas son coherentes y no llevan ninguna cifra', () => {
     const conFormula = DEFINICIONES.filter((d) => d.formula !== undefined);
     expect(conFormula.map((d) => d.id).sort()).toEqual([
+      'carrera-ininterrumpida-hasta-la-edad-menor',
+      'cociente-pension-media-salario-medio',
       'deuda-mas-transferencias-acumuladas',
+      'diferencia-con-espana',
       'fondo-en-meses-de-gasto',
       'fondo-en-meses-de-transferencias',
       'fondo-menos-deuda',
