@@ -28,7 +28,7 @@ test.describe('«Otros sistemas»: definiciones, «Fuentes» y fórmulas', () =>
   }) => {
     const registro = vigilar(page);
     await abrirPagina(page);
-    const cuerpo = page.locator('article');
+    const cuerpo = page.locator('article.pagina');
     await expect(cuerpo).not.toContainText('Effective labour market exit age');
     await expect(cuerpo).not.toContainText('Public expenditure on pensions');
     await expect(cuerpo).not.toContainText('spr_exp_func');
