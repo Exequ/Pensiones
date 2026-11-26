@@ -1,0 +1,16 @@
+{
+  "id": "capitalizacion",
+  "grupo": "comparacion-internacional",
+  "termino": "Capitalización",
+  "texto": [
+    "Término con el que las fichas de los países describen los planes cuyas prestaciones se pagan con un fondo acumulado, privado o público. Aparece en el segundo pilar de los Países Bajos, en el componente obligatorio de Suecia, con aportación definida, y en un régimen voluntario de Portugal. Para estos planes la OCDE supone una rentabilidad real de las inversiones y que la prestación se paga como una renta vitalicia indexada a los precios."
+  ],
+  "criterio": "Término tal como lo usan las fuentes consultadas; no hay en ellas una definición general del concepto.",
+  "datos": [
+    "internacional/paises-sistemas.json#sistema-nld-2",
+    "internacional/paises-sistemas.json#sistema-swe-1",
+    "internacional/paises-sistemas.json#sistema-prt-2",
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-renta-vitalicia-indexada",
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-rentabilidad-real-fdc-base"
+  ]
+}

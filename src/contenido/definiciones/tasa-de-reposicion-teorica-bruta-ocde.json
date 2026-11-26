@@ -1,0 +1,27 @@
+{
+  "id": "tasa-de-reposicion-teorica-bruta-ocde",
+  "grupo": "comparacion-internacional",
+  "termino": "Tasa de reposición teórica bruta (OCDE)",
+  "texto": [
+    "Pensión bruta de una persona modelo, en porcentaje de sus ingresos brutos individuales antes de jubilarse, para un nivel de ingresos expresado como múltiplo del salario medio. Es un cálculo teórico de la OCDE, no la pensión de ninguna persona real.",
+    "La persona modelo es una persona trabajadora soltera que entra en el sistema en el año de referencia a la edad de entrada que fija el cálculo y se jubila tras una carrera completa, con un salario que crece como el salario medio de la economía. La carrera dura desde esa edad hasta la edad normal de jubilación del país, de modo que su duración cambia de un país a otro. Los parámetros del sistema son los legislados y los supuestos económicos y de mortalidad los fija la OCDE."
+  ],
+  "perimetro": {
+    "incluye": [
+      "Los componentes obligatorios del sistema de pensiones.",
+      "En una versión aparte, también los planes voluntarios."
+    ],
+    "noIncluye": [
+      "Las carreras con interrupciones, las pensiones reales y los impuestos y cotizaciones de las personas pensionistas, que sí descuenta la tasa neta."
+    ]
+  },
+  "criterio": "Tasa teórica de la OCDE con los supuestos de su edición vigente; no equivale a un cociente entre pensiones y salarios observados.",
+  "datos": [
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-trabajador-que-entra-en-2024",
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-carrera-completa",
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-duracion-carrera",
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-salario-relativo-constante",
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-salario-medio-definicion",
+    "internacional/ocde-pag.json"
+  ]
+}

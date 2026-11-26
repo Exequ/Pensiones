@@ -1,0 +1,76 @@
+{
+  "id": "cociente-pension-media-salario-medio",
+  "grupo": "comparacion-internacional",
+  "termino": "Cociente entre pensión media y salario medio (cálculo propio)",
+  "texto": [
+    "Cálculo de esta web con datos de España: la pensión media mensual de jubilación, multiplicada por el número de pagas anuales, dividida entre el salario medio anual según una de las cuatro definiciones de salario medio que se muestran. La pensión media es la de las altas iniciales del año o la de las pensiones en vigor a primero de diciembre, de ambos sexos.",
+    "No es una tasa de reposición: compara medias de colectivos distintos (personas pensionistas o nuevas personas jubiladas, con carreras de duración diversa, frente a todas las personas trabajadoras del ámbito de cada fuente), no sigue a una persona ni a una carrera completa y no descuenta impuestos ni cotizaciones. Varía según la definición de salario medio."
+  ],
+  "criterio": "Cálculo propio con datos observados; se compara con la tasa teórica de la OCDE solo como orden de magnitud.",
+  "datos": [
+    "internacional/contraste-espana.json#pension-altas-sobre-salario-eaes",
+    "internacional/contraste-espana.json#pension-vigor-sobre-salario-eaes"
+  ],
+  "formula": {
+    "titulo": "Cociente entre pensión media y salario medio",
+    "alcance": "completa",
+    "ecuaciones": [
+      {
+        "izquierda": {
+          "tipo": "simbolo",
+          "id": "r"
+        },
+        "derecha": {
+          "tipo": "cociente",
+          "numerador": {
+            "tipo": "producto",
+            "factores": [
+              {
+                "tipo": "simbolo",
+                "id": "p"
+              },
+              {
+                "tipo": "simbolo",
+                "id": "n"
+              }
+            ]
+          },
+          "denominador": {
+            "tipo": "simbolo",
+            "id": "s"
+          }
+        }
+      }
+    ],
+    "simbolos": [
+      {
+        "id": "r",
+        "notacion": "r",
+        "nombre": "Cociente",
+        "significado": "Pensión media anualizada dividida entre el salario medio anual; cálculo propio. Se muestra en tanto por cien.",
+        "unidad": "razón"
+      },
+      {
+        "id": "p",
+        "notacion": "P",
+        "nombre": "Pensión media mensual",
+        "significado": "Pensión media mensual de jubilación de las altas iniciales del año o de las pensiones en vigor, de ambos sexos.",
+        "unidad": "euros al mes"
+      },
+      {
+        "id": "n",
+        "notacion": "n",
+        "nombre": "Número de pagas",
+        "significado": "Número de pagas anuales con las que se anualiza la pensión media mensual.",
+        "unidad": "pagas al año"
+      },
+      {
+        "id": "s",
+        "notacion": "S",
+        "nombre": "Salario medio anual",
+        "significado": "Salario medio anual según la definición de salario medio elegida.",
+        "unidad": "euros al año"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "edad-normal-de-jubilacion-ocde",
+  "grupo": "comparacion-internacional",
+  "termino": "Edad normal de jubilación (OCDE)",
+  "texto": [
+    "Edad a la que, según el cálculo de la OCDE, una persona accede a todos los componentes obligatorios del sistema de pensiones de su país, suponiendo que entra en el mercado laboral a la edad de entrada que fija el cálculo y que su carrera es ininterrumpida. La OCDE la publica en una versión actual y en otra futura, y por separado para hombres y para mujeres."
+  ],
+  "perimetro": {
+    "incluye": [
+      "La edad de acceso a todos los componentes obligatorios del sistema, para una persona modelo con carrera completa."
+    ],
+    "noIncluye": [
+      "La edad ordinaria de jubilación de la normativa de cada país: en España, esa edad depende de los años cotizados y no coincide con la edad modelo de la OCDE."
+    ]
+  },
+  "criterio": "Edad modelo de la OCDE para una carrera ininterrumpida, no una edad observada.",
+  "datos": [
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-definicion-edad-normal-jubilacion",
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-carrera-completa",
+    "internacional/ocde-pag.json"
+  ]
+}

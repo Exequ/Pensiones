@@ -9,7 +9,7 @@ export const APARTADOS = {
     destino: 'comparar',
     titulo: 'Qué países se comparan y por qué no son directamente comparables',
   },
-  gasto: { destino: 'gasto', titulo: 'Gasto público en pensiones sobre el PIB' },
+  gasto: { destino: 'gasto', titulo: 'Gasto en pensiones sobre el PIB según cada fuente' },
   edad: { destino: 'edad', titulo: 'Edad de jubilación' },
   reposicion: { destino: 'reposicion', titulo: 'Tasa de reposición teórica' },
   estructura: { destino: 'estructura', titulo: 'Cómo se organizan los sistemas' },

@@ -1,0 +1,14 @@
+{
+  "id": "cuentas-nocionales",
+  "grupo": "comparacion-internacional",
+  "termino": "Cuentas nocionales",
+  "texto": [
+    "Componente que las fichas de los países describen como de aportación definida nocional, es decir, no financiera, y que distinguen del componente financiero o de capitalización. En Suecia es un componente de reparto ligado a los ingresos; en Polonia es la parte no financiera del sistema obligatorio, junto a otra de capitalización; en Italia, la reforma que lo adopta prevé la revisión periódica de los coeficientes de acumulación implícitos."
+  ],
+  "criterio": "Término tal como lo usan las fuentes consultadas; no hay en ellas una definición general del concepto.",
+  "datos": [
+    "internacional/paises-sistemas.json#sistema-swe-1",
+    "internacional/paises-sistemas.json#sistema-pol-1",
+    "internacional/paises-sistemas.json#sistema-ita-1"
+  ]
+}

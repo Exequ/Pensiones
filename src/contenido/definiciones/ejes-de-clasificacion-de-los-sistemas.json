@@ -1,0 +1,13 @@
+{
+  "id": "ejes-de-clasificacion-de-los-sistemas",
+  "grupo": "comparacion-internacional",
+  "termino": "Dos ejes para describir un sistema",
+  "texto": [
+    "Las fichas de los países combinan dos criterios para describir un sistema: cómo se financia (reparto o capitalización) y cómo se determina la prestación (prestación definida o aportación definida). Los dos son independientes: una ficha describe un sistema de prestación definida con financiación de reparto (Portugal) y otra, un componente de aportación definida de capitalización junto a otro de aportación definida nocional de reparto (Suecia)."
+  ],
+  "criterio": "Clasificación que se deduce del uso de los términos en las fuentes consultadas.",
+  "datos": [
+    "internacional/paises-sistemas.json#sistema-prt-1",
+    "internacional/paises-sistemas.json#sistema-swe-1"
+  ]
+}

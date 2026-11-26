@@ -1,0 +1,15 @@
+{
+  "id": "reparto",
+  "grupo": "comparacion-internacional",
+  "termino": "Reparto",
+  "texto": [
+    "Término con el que las fichas de los países describen un sistema de pensiones financiado con las cotizaciones de las personas trabajadoras y de las empresas. Las fuentes lo aplican a sistemas públicos de varios países y lo combinan con otros elementos: una misma ficha puede describir un sistema de reparto junto a un componente de capitalización."
+  ],
+  "criterio": "Término tal como lo usan las fuentes consultadas; no hay en ellas una definición general del concepto.",
+  "datos": [
+    "internacional/paises-sistemas.json#sistema-esp-1",
+    "internacional/paises-sistemas.json#sistema-fra-1",
+    "internacional/paises-sistemas.json#sistema-deu-1",
+    "internacional/paises-sistemas.json#sistema-swe-1"
+  ]
+}

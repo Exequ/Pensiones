@@ -6,8 +6,9 @@ import { seleccionarPaises, valorEnAnio } from '../../engine/comparativa-interna
 import { formatearDuracion } from '../../engine/formato';
 import { aniosOcde, serieOcde, valoresOcde } from './consultas';
 import { cifraSuelta, datosSistemas } from './datos-sistemas';
+import { DefinicionesSistemas } from './DefinicionSistemas';
 import { GraficoBarrasPaises, GraficoLineasPaises } from './GraficoPaises';
-import { CONTRASTE, MEDIDA, SUPUESTO_DEFINICION } from './ids-datos';
+import { CONTRASTE, MEDIDA } from './ids-datos';
 import { CODIGOS_PAISES, CODIGO_ESPANA } from './paises';
 import { APARTADOS } from './apartados';
 
@@ -42,13 +43,14 @@ export function SeccionEdad({ seleccion }: { readonly seleccion: ReadonlySet<str
     [d, sexo, seleccion],
   );
 
-  const datoOcde = d.ocde.dato(String(anio));
+  const anioSalida = aniosOcde(d.ocde.observaciones, { medida: MEDIDA.edadSalida, sexo }).at(-1);
+  const datoActual = d.ocde.datoMedida(String(anio), MEDIDA.edadActual);
+  const datoFutura = d.ocde.datoMedida(String(anio), MEDIDA.edadFutura);
+  const datoSalida = d.ocde.datoMedida(String(anioSalida ?? anio), MEDIDA.edadSalida);
   const edadOcde = cifraSuelta(CONTRASTE.edadOcde);
   const edadPropia = cifraSuelta(CONTRASTE.edadPropia);
   const carrera65 = cifraSuelta(CONTRASTE.carrera65);
   const carreraCompleta = cifraSuelta(CONTRASTE.carreraCompleta);
-  const definicionNormal = d.supuesto(SUPUESTO_DEFINICION.edadNormal);
-  const definicionEfectiva = d.supuesto(SUPUESTO_DEFINICION.edadEfectiva);
 
   return (
     <section
@@ -59,11 +61,15 @@ export function SeccionEdad({ seleccion }: { readonly seleccion: ReadonlySet<str
         {APARTADOS.edad.titulo}
       </h2>
       <p>
-        Hay al menos tres edades distintas que suelen llamarse «edad de jubilación»: la que fija la
-        norma de cada país, la que modela la OCDE para una carrera sin interrupciones y la edad a la
-        que la gente deja de trabajar en la práctica. Aquí se muestran las de la OCDE, cada una con
-        su definición, y se contrasta la de España con la de su propia normativa.
+        Esta sección muestra tres edades distintas: la edad normal de jubilación que modela la OCDE
+        para una carrera sin interrupciones, en su versión actual y en la futura, y la edad efectiva
+        de salida del mercado laboral, que es una medida estadística de la OCDE y no una edad fijada
+        por una norma. Cada una se define debajo. Al final se contrasta la edad de España en la OCDE
+        con la de su propia normativa.
       </p>
+      <DefinicionesSistemas
+        ids={['edad-normal-de-jubilacion-ocde', 'edad-efectiva-de-salida-del-mercado-laboral-ocde']}
+      />
       <div className="sistemas-controles">
         <SegmentedPills<Sexo>
           leyenda="Sexo (las edades legales de algunos países difieren entre hombres y mujeres)"
@@ -79,14 +85,13 @@ export function SeccionEdad({ seleccion }: { readonly seleccion: ReadonlySet<str
       <div className="paneles-dos">
         <GraficoBarrasPaises
           titulo={`Edad normal de jubilación actual con carrera completa, según la OCDE, ${anio}`}
-          descripcion={`Años. Medida «${d.ocde.literalMedida(MEDIDA.edadActual)}».`}
+          descripcion="Años."
           unidadEje="años"
           decimales={1}
           valores={actual}
           valorEspana={referencia(MEDIDA.edadActual)}
           tituloDiferencia="Diferencia con España (años)"
-          fuentes={datoOcde}
-          nota={<>Definición de la OCDE: {String(definicionNormal.valor)}</>}
+          fuentes={datoActual}
           comoLeerlo={
             <>
               <p>
@@ -104,14 +109,13 @@ export function SeccionEdad({ seleccion }: { readonly seleccion: ReadonlySet<str
         />
         <GraficoBarrasPaises
           titulo={`Edad de jubilación futura con carrera completa, según la OCDE, ${anio}`}
-          descripcion={`Años. Medida «${d.ocde.literalMedida(MEDIDA.edadFutura)}».`}
+          descripcion="Años."
           unidadEje="años"
           decimales={1}
           valores={futura}
           valorEspana={referencia(MEDIDA.edadFutura)}
           tituloDiferencia="Diferencia con España (años)"
-          fuentes={datoOcde}
-          nota={<>Definición de la OCDE de la edad normal: {String(definicionNormal.valor)}</>}
+          fuentes={datoFutura}
           comoLeerlo={
             <>
               <p>
@@ -130,23 +134,23 @@ export function SeccionEdad({ seleccion }: { readonly seleccion: ReadonlySet<str
 
       <GraficoLineasPaises
         titulo="Edad efectiva de salida del mercado laboral, según la OCDE"
-        descripcion={`Años. Medida «${d.ocde.literalMedida(MEDIDA.edadSalida)}».`}
+        descripcion="Años."
         unidadEje="años"
         decimales={1}
         series={salida}
-        fuentes={datoOcde}
-        nota={<>Definición de la OCDE: {String(definicionEfectiva.valor)}</>}
+        fuentes={datoSalida}
         comoLeerlo={
           <>
             <p>
-              Cada línea es la edad media a la que los trabajadores de edad avanzada dejan de formar
-              parte de la población activa, año a año. No es la edad a la que se empieza a cobrar la
-              pensión ni la edad legal.
+              Cada línea es la edad media a la que las personas trabajadoras de edad avanzada salen
+              de la población activa, año a año. Se refiere a la salida de la población activa: no
+              es la edad a la que se empieza a cobrar una pensión ni una edad legal.
             </p>
             <p>
-              Puede ser menor o mayor que la edad normal de jubilación; la diferencia depende de las
-              vías de salida del mercado laboral de cada país (jubilación anticipada, incapacidad,
-              desempleo o trabajo después de la edad normal), que esta medida no distingue.
+              No se compara con la edad normal de jubilación para atribuir una causa a la
+              diferencia: los datos consultados no detallan las vías de salida de cada país. La
+              fuente advierte de que las cifras absolutas de un país deben interpretarse con
+              cautela.
             </p>
           </>
         }
@@ -192,6 +196,7 @@ export function SeccionEdad({ seleccion }: { readonly seleccion: ReadonlySet<str
           titulo="Edad de jubilación de España según la OCDE y según la normativa propia"
         />
       </div>
+      <DefinicionesSistemas ids={['carrera-ininterrumpida-hasta-la-edad-menor']} />
     </section>
   );
 }

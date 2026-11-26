@@ -1,0 +1,56 @@
+{
+  "id": "diferencia-con-espana",
+  "grupo": "comparacion-internacional",
+  "termino": "Diferencia con España (cálculo propio)",
+  "texto": [
+    "En la tabla de cada gráfico de países, la diferencia de un país es su valor menos el de España en la misma medida y el mismo año, con la unidad de la propia medida: puntos del PIB, años o puntos porcentuales. Un valor positivo significa que el país está por encima de España en esa medida; no dice cuál de los dos valores es preferible. La diferencia no se calcula si falta el dato de alguno de los dos."
+  ],
+  "criterio": "Cálculo propio de esta web con los valores publicados por cada fuente; no se mezclan medidas de fuentes distintas.",
+  "datos": ["internacional/ocde-pag.json", "internacional/eurostat-indicadores.json"],
+  "formula": {
+    "titulo": "Diferencia con España",
+    "alcance": "completa",
+    "ecuaciones": [
+      {
+        "izquierda": {
+          "tipo": "simbolo",
+          "id": "d"
+        },
+        "derecha": {
+          "tipo": "resta",
+          "minuendo": {
+            "tipo": "simbolo",
+            "id": "v-pais"
+          },
+          "sustraendo": {
+            "tipo": "simbolo",
+            "id": "v-esp"
+          }
+        }
+      }
+    ],
+    "simbolos": [
+      {
+        "id": "d",
+        "notacion": "d",
+        "nombre": "Diferencia con España",
+        "significado": "Valor del país menos valor de España, en la misma medida y el mismo año; cálculo propio.",
+        "unidad": "unidad de la medida"
+      },
+      {
+        "id": "v-pais",
+        "notacion": "v_p",
+        "nombre": "Valor del país",
+        "significado": "Valor que publica la fuente para el país o el agregado en esa medida y año.",
+        "unidad": "unidad de la medida"
+      },
+      {
+        "id": "v-esp",
+        "notacion": "v_E",
+        "nombre": "Valor de España",
+        "significado": "Valor que publica la misma fuente para España en esa medida y año.",
+        "unidad": "unidad de la medida"
+      }
+    ]
+  }
+}

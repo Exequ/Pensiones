@@ -1,0 +1,22 @@
+{
+  "id": "tasa-de-reposicion-teorica-neta-ocde",
+  "grupo": "comparacion-internacional",
+  "termino": "Tasa de reposición teórica neta (OCDE)",
+  "texto": [
+    "Valor neto de la pensión de la persona modelo, en porcentaje de sus ingresos netos individuales antes de jubilarse, una vez descontados los impuestos personales sobre la renta y las cotizaciones sociales que pagan las personas trabajadoras y las pensionistas. Por lo demás se mide como la tasa bruta."
+  ],
+  "perimetro": {
+    "incluye": [
+      "Los impuestos personales y las cotizaciones sociales de la persona trabajadora y de la pensionista, con la política fiscal que la OCDE supone constante."
+    ],
+    "noIncluye": [],
+    "sinDetalle": "El detalle de los impuestos y de las cotizaciones que pagan las personas pensionistas de cada país figura, según la fuente, en fichas por país en línea y no en el informe, de modo que los datos consultados no permiten atribuir la diferencia con la tasa bruta a una causa."
+  },
+  "criterio": "Tasa teórica de la OCDE con los supuestos de su edición vigente.",
+  "datos": [
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-tasa-neta-definicion",
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-politica-fiscal-constante",
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-impuestos-pensionistas-en-perfiles",
+    "internacional/ocde-pag.json"
+  ]
+}

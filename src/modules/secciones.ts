@@ -153,10 +153,10 @@ export const SECCIONES = [
     resumen:
       'Cómo se organizan y qué miden las pensiones en otros países: gasto público sobre el PIB, edad de jubilación, tasa de reposición teórica y estructura de los sistemas (reparto, capitalización, cuentas nocionales y pilares), con datos de la OCDE, Eurostat y la Comisión Europea y las definiciones de cada medida.',
     previsto: [
-      'Gasto público en pensiones sobre el PIB según la OCDE y según Eurostat, lado a lado, por país y en su evolución (disponible).',
+      'Gasto en pensiones sobre el PIB según la OCDE y según Eurostat, como medidas distintas mostradas lado a lado, por país y en su evolución (disponible).',
       'Edad normal de jubilación de la OCDE, actual y futura, y edad efectiva de salida del mercado laboral, con el contraste de la edad de la normativa española (disponible).',
       'Tasa de reposición teórica bruta y neta de la OCDE por país, con los supuestos del cálculo, el escenario alternativo y el contraste de España con cocientes propios (disponible).',
-      'Estructura de los sistemas de los países de la muestra, con la cita de la fuente y un glosario de reparto, capitalización y cuentas nocionales (disponible).',
+      'Estructura de los sistemas de los países de la muestra, con su cita en «Fuentes» y las definiciones de reparto, capitalización, cuentas nocionales y pilares (disponible).',
       'Perímetro del gasto de cada fuente, impuestos y cotizaciones de los pensionistas y fichas detalladas de Reino Unido y Estados Unidos: pendientes de datos.',
     ],
   },
