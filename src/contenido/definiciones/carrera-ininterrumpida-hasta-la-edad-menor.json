@@ -1,0 +1,79 @@
+{
+  "id": "carrera-ininterrumpida-hasta-la-edad-menor",
+  "grupo": "comparacion-internacional",
+  "termino": "Carrera ininterrumpida hasta la edad menor de la normativa (cálculo propio)",
+  "texto": [
+    "Meses que tendría una carrera sin interrupciones desde la edad de entrada en el mercado laboral que supone la OCDE hasta la edad menor de jubilación de la normativa española. Se compara con los meses cotizados que la normativa exige para jubilarse ordinariamente a esa edad menor: la edad de España en la OCDE y la edad ordinaria de la normativa responden a carreras distintas y por eso no se contradicen."
+  ],
+  "criterio": "Cálculo propio con la edad de entrada que supone la OCDE y la edad menor de jubilación ordinaria de la normativa española.",
+  "datos": [
+    "internacional/contraste-espana.json#meses-carrera-completa-desde-22-hasta-65",
+    "internacional/contraste-espana.json#carrera-jubilacion-65-propia-2025",
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-entrada-mercado-laboral-22"
+  ],
+  "formula": {
+    "titulo": "Meses de una carrera ininterrumpida",
+    "alcance": "completa",
+    "ecuaciones": [
+      {
+        "izquierda": {
+          "tipo": "simbolo",
+          "id": "c"
+        },
+        "derecha": {
+          "tipo": "producto",
+          "factores": [
+            {
+              "tipo": "grupo",
+              "cuerpo": {
+                "tipo": "resta",
+                "minuendo": {
+                  "tipo": "simbolo",
+                  "id": "e"
+                },
+                "sustraendo": {
+                  "tipo": "simbolo",
+                  "id": "a"
+                }
+              }
+            },
+            {
+              "tipo": "simbolo",
+              "id": "m"
+            }
+          ]
+        }
+      }
+    ],
+    "simbolos": [
+      {
+        "id": "c",
+        "notacion": "C",
+        "nombre": "Meses de carrera ininterrumpida",
+        "significado": "Meses de una carrera sin interrupciones entre la edad de entrada y la edad menor de jubilación; cálculo propio.",
+        "unidad": "meses"
+      },
+      {
+        "id": "e",
+        "notacion": "E",
+        "nombre": "Edad menor de jubilación",
+        "significado": "Edad menor de jubilación ordinaria de la normativa española: la que se aplica a quien acredita el periodo cotizado exigido para ella.",
+        "unidad": "años"
+      },
+      {
+        "id": "a",
+        "notacion": "A",
+        "nombre": "Edad de entrada",
+        "significado": "Edad a la que la OCDE supone que la persona modelo entra en el mercado laboral.",
+        "unidad": "años"
+      },
+      {
+        "id": "m",
+        "notacion": "m",
+        "nombre": "Meses por año",
+        "significado": "Número de meses de un año, para pasar de años a meses.",
+        "unidad": "meses por año"
+      }
+    ]
+  }
+}

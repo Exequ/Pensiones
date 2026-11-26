@@ -3,11 +3,12 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import { formatearNumero } from '../../engine/formato';
-import { expectFuente } from '../../test/fuentes';
+import { anclaDefinicion } from '../../engine/definiciones';
+import { expectFuente, leerFuentes } from '../../test/fuentes';
 import { buscarSeccion } from '../secciones';
 import { serieEurostat, serieOcde } from './consultas';
 import { datosSistemas } from './datos-sistemas';
-import { MEDIDA } from './ids-datos';
+import { MEDIDA, RASGOS_EXCLUIDOS } from './ids-datos';
 import OtrosSistemas from './Pagina';
 import { nombrePais, PAISES } from './paises';
 
@@ -48,7 +49,8 @@ describe('página «Otros sistemas»', () => {
 
   it('cada gráfico lleva título, imagen con nombre, tabla, fuente y «Cómo leerlo»', () => {
     const { container } = pintar();
-    const figuras = [...container.querySelectorAll('figure')];
+    // Las fórmulas de las definiciones también son «figure»: aquí solo los gráficos.
+    const figuras = [...container.querySelectorAll('figure.grafico')];
     expect(figuras.length).toBeGreaterThanOrEqual(7);
     for (const f of figuras) {
       const titulo = f.querySelector('figcaption .grafico-titulo')?.textContent ?? '';
@@ -79,8 +81,11 @@ describe('página «Otros sistemas»', () => {
   it('el perímetro no verificado consta en las notas del gasto', () => {
     const { container } = pintar();
     const gasto = container.querySelector('#gasto')?.closest('section')?.textContent ?? '';
-    expect(gasto).toMatch(/no verificado en las fuentes consultadas/);
-    expect(gasto).toMatch(/Public expenditure on pensions/);
+    expect(gasto).toMatch(/los datos consultados no detallan qué regímenes y prestaciones/);
+    expect(gasto).toMatch(/no detallan qué administraciones o regímenes/);
+    expect(gasto).toMatch(/no son dos estimaciones de la\s+misma cifra/);
+    // El literal de la medida en la fuente ya no está en el cuerpo (fase R10): está en «Fuentes».
+    expect(gasto).not.toMatch(/Public expenditure on pensions/);
   });
 
   it('muestra en la tabla los países ordenados de mayor a menor valor y España con su diferencia', () => {
@@ -195,7 +200,7 @@ describe('página «Otros sistemas»', () => {
     });
   });
 
-  it('la estructura de cada país lleva la cita literal y la localización, sin la confianza', () => {
+  it('la estructura de cada país lleva sus rasgos en español y la cita literal solo en «Fuentes», sin la confianza', () => {
     const { container } = pintar();
     const espana = [...container.querySelectorAll('.sistemas-pais')].find(
       (a) => a.getAttribute('aria-label') === 'España',
@@ -204,15 +209,31 @@ describe('página «Otros sistemas»', () => {
     const rasgos = espana?.querySelectorAll('.sistemas-rasgo') ?? [];
     expect(rasgos.length).toBeGreaterThan(0);
     for (const r of rasgos) {
-      expect(r.querySelector('blockquote')?.getAttribute('lang')).toBe('en');
+      expect(r.querySelector('blockquote')).toBeNull();
       expect(r.textContent).not.toMatch(/confianza/i);
     }
     expect(espana?.querySelector('.linea-fuente')).not.toBeNull();
+    const fuentes = leerFuentes(espana ?? null).texto;
+    for (const r of datosSistemas().rasgos.filter((x) => x.pais === 'ESP')) {
+      if (!RASGOS_EXCLUIDOS.includes(r.id)) expect(fuentes, r.id).toContain(r.cita);
+    }
+    expect(fuentes).not.toMatch(/confianza/i);
   });
 
-  it('el glosario se declara como explicación conceptual y no como dato', () => {
+  it('el glosario son definiciones del módulo, cada una con su fuente', () => {
     const { container } = pintar();
-    expect(container.textContent).toMatch(/no procede de una\s+fuente consultada/);
+    for (const id of [
+      'reparto',
+      'capitalizacion',
+      'cuentas-nocionales',
+      'pilares-de-un-sistema-de-pensiones',
+      'ejes-de-clasificacion-de-los-sistemas',
+    ]) {
+      const bloque = container.querySelector(`#${anclaDefinicion(id)}`);
+      expect(bloque, id).not.toBeNull();
+      expectFuente(bloque, `fuente de «${id}»`);
+    }
+    expect(container.textContent).not.toMatch(/no procede de una\s+fuente consultada/);
   });
 
   it('no muestra valores vacíos ni no numéricos', () => {

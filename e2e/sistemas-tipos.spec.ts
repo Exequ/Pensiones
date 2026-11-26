@@ -28,7 +28,7 @@ test.describe('página «Otros sistemas»', () => {
     await page.waitForLoadState('networkidle');
     for (const nombre of [
       /Qué países se comparan/,
-      /Gasto público en pensiones sobre el PIB/,
+      /Gasto en pensiones sobre el PIB según cada fuente/,
       /Edad de jubilación/,
       /Tasa de reposición teórica/,
       /Cómo se organizan los sistemas/,

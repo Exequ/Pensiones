@@ -129,7 +129,8 @@ describe('tabla de aplicación (docs/revision-actuarial/aplicacion-tanda3.json)'
     // subsector de los fondos de la Seguridad Social sin Clases Pasivas (respuesta actuarial del
     // 19-11-2026 sin respaldo en las fuentes del repositorio; Fase R7), más la de las mutuas que
     // aportan al Fondo de Reserva «cada año» (la misma respuesta, contradicha por los datos de 2019
-    // a 2022; Fase R8).
+    // a 2022; Fase R8), más la de las definiciones generales de reparto, capitalización y cuentas
+    // nocionales, que ninguna fuente del repositorio define (Fase R10).
     const web = [
       'web-mitos-jubilados-marco',
       'web-mitos-pobreza',
@@ -139,6 +140,7 @@ describe('tabla de aplicación (docs/revision-actuarial/aplicacion-tanda3.json)'
       'web-metodologia-confianza-modelos',
       'web-def-sec-sin-clases-pasivas',
       'web-def-mutuas-cada-anio',
+      'web-def-glosario-conceptos-generales',
     ];
     // Cuarta tanda: salen de la lista las que cerró (docs/revision-actuarial/aplicacion-tanda4.json).
     expect(pendientes.map((c) => c.id).sort()).toEqual(

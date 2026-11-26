@@ -11,6 +11,7 @@ import ocdeCsv from '../../../data/internacional/ocde-pag.csv?raw';
 import ocdeJson from '../../../data/internacional/ocde-pag.json';
 import supuestosJson from '../../../data/internacional/ocde-supuestos-reposicion.json';
 import sistemasJson from '../../../data/internacional/paises-sistemas.json';
+import type { DatoRotulado } from '../../components/fuentes';
 import { Dato, type ArchivoDatos, type DatoConId } from '../../engine/esquema-datos';
 import { datoDeArchivo, filasCsv } from '../../engine/series-historicas';
 import {
@@ -28,6 +29,7 @@ import {
   type ObsOcde,
 } from './consultas';
 import { FICHEROS_OTROS_SISTEMAS } from './ficheros';
+import { INDICADOR_EUROSTAT_GASTO } from './ids-datos';
 
 export { FICHEROS_OTROS_SISTEMAS };
 
@@ -42,6 +44,11 @@ export interface RasgoSistema {
   readonly ubicacion: string;
   readonly confianza: Dato['confidence'];
   readonly dato: Dato;
+  /**
+   * El mismo dato con su etiqueta en español como rótulo («Se refiere a»): la cita en inglés y su
+   * ubicación se ven solo en el desplegable «Fuentes» de cada país.
+   */
+  readonly datoCitado: DatoRotulado;
 }
 
 /** Un supuesto de la tasa de reposición teórica de la OCDE. */
@@ -69,10 +76,17 @@ export interface DatosSistemas {
     /** Literal en inglés de la medida, tal como lo da la fuente (`ocde-pag-codigos`). */
     readonly literalMedida: (codigo: string) => string;
     readonly datoCodigos: Dato;
+    /**
+     * Dato de la tabla con el literal de la medida como cita y el flujo y el código como ubicación
+     * (fase R10): ni el literal ni el código se escriben en el cuerpo, solo en «Fuentes».
+     */
+    readonly datoMedida: (periodo: string, codigo: string) => DatoRotulado;
   };
   readonly eurostat: {
     readonly observaciones: readonly ObsEurostat[];
     readonly dato: (periodo: string) => Dato;
+    /** Dato de la tabla con la base de datos y las funciones que suma el indicador de gasto como ubicación. */
+    readonly datoGasto: (periodo: string) => DatoRotulado;
   };
   readonly rasgos: readonly RasgoSistema[];
   readonly supuesto: (id: string) => Supuesto;
@@ -107,6 +121,7 @@ function rasgo(archivo: ArchivoDatos, d: DatoConId): RasgoSistema {
     ubicacion: d.location,
     confianza: d.confidence,
     dato: datoDeArchivo(archivo, d.id),
+    datoCitado: { ...datoDeArchivo(archivo, d.id), rotulo: d.value },
   };
 }
 
@@ -140,10 +155,29 @@ export const datosSistemas = memorizar((): DatosSistemas => {
         return l;
       },
       datoCodigos: datoDeTabla(codigosTabla, '2024'),
+      datoMedida: (periodo, codigo) => {
+        const literal = literales.get(codigo);
+        if (literal === undefined) throw new Error(`Sin literal para la medida ${codigo}`);
+        return {
+          ...Dato.parse({
+            ...datoDeTabla(ocdeTabla, periodo),
+            quote: literal,
+            location: `Flujo DSD_PAG@DF_PAG de «Pensions at a Glance», medida ${codigo}`,
+          }),
+          rotulo: 'Nombre de la medida en la fuente',
+        };
+      },
     },
     eurostat: {
       observaciones: observacionesEurostat(filasCsv(eurostatCsv)),
       dato: (periodo) => datoDeTabla(eurostatTabla, periodo),
+      datoGasto: (periodo) => ({
+        ...Dato.parse({
+          ...datoDeTabla(eurostatTabla, periodo),
+          location: `Base de datos spr_exp_func (gasto en prestaciones de protección social por función), indicador ${INDICADOR_EUROSTAT_GASTO}: funciones de vejez y de supervivencia, en porcentaje del PIB`,
+        }),
+        rotulo: 'Base de datos y funciones que suma el indicador',
+      }),
     },
     rasgos: (sistemas.data ?? []).map((d) => rasgo(sistemas, d)),
     supuesto: (id) => {

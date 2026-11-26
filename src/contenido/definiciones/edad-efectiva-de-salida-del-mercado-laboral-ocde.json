@@ -1,0 +1,20 @@
+{
+  "id": "edad-efectiva-de-salida-del-mercado-laboral-ocde",
+  "grupo": "comparacion-internacional",
+  "termino": "Edad efectiva de salida del mercado laboral (OCDE)",
+  "texto": [
+    "Edad media a la que las personas trabajadoras de edad avanzada salen de la población activa, según la OCDE. La estima con los cambios en las tasas de actividad de cohortes sintéticas por grupos de edad, no con los niveles. Se refiere a la salida de la población activa y no a la edad en que se empieza a cobrar una pensión ni a una edad que fije una norma."
+  ],
+  "perimetro": {
+    "incluye": [
+      "La salida de la población activa de las personas trabajadoras a partir de una edad mínima que fija la definición."
+    ],
+    "noIncluye": [],
+    "sinDetalle": "Los datos consultados no detallan las vías por las que se sale de la población activa ni el método completo, que la fuente remite a otro documento que no consta en esta web."
+  },
+  "criterio": "Medida estadística de la OCDE; la propia fuente advierte de que las cifras absolutas de un país deben interpretarse con cautela y de que son robustas las comparaciones entre países o a lo largo del tiempo dentro de un país.",
+  "datos": [
+    "internacional/ocde-supuestos-reposicion.json#ocde-pag-2025-definicion-edad-efectiva-salida",
+    "internacional/ocde-pag.json"
+  ]
+}

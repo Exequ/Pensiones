@@ -5,6 +5,7 @@ import { SourceLine } from '../../components/SourceLine';
 import { seleccionarPaises, valorEnAnio } from '../../engine/comparativa-internacional';
 import { aniosOcde, serieEurostat, serieOcde, valoresEurostat, valoresOcde } from './consultas';
 import { datosSistemas } from './datos-sistemas';
+import { DefinicionesSistemas } from './DefinicionSistemas';
 import { GraficoBarrasPaises, GraficoLineasPaises } from './GraficoPaises';
 import { CONTRASTE, INDICADOR_EUROSTAT_GASTO, MEDIDA, UNIDAD_EUROSTAT_PIB } from './ids-datos';
 import { CODIGOS_PAISES, CODIGO_ESPANA, CODIGO_REINO_UNIDO, CODIGO_UE } from './paises';
@@ -16,7 +17,7 @@ const FILTRO_EUROSTAT = {
   unidad: UNIDAD_EUROSTAT_PIB,
 } as const;
 
-/** Gasto público en pensiones sobre el PIB: dos medidas del mismo concepto, lado a lado. */
+/** Gasto en pensiones sobre el PIB: dos medidas distintas, la de la OCDE y la de Eurostat, lado a lado. */
 export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<string> }) {
   const d = datosSistemas();
   const anios = useMemo(() => aniosOcde(d.ocde.observaciones, FILTRO_OCDE), [d]);
@@ -70,8 +71,8 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
   const propio = d.contraste.serie(CONTRASTE.gastoPropio);
   const espanaPropio = valorEnAnio(propio.puntos, anio);
 
-  const datoOcde = d.ocde.dato(String(anio));
-  const datoEurostat = d.eurostat.dato(String(anio));
+  const datoOcde = d.ocde.datoMedida(String(anio), MEDIDA.gasto);
+  const datoEurostat = d.eurostat.datoGasto(String(anio));
   const primeraUE = serieEurostat(d.eurostat.observaciones, FILTRO_EUROSTAT, CODIGO_UE)[0]?.anio;
   const ultimaGBR = serieEurostat(d.eurostat.observaciones, FILTRO_EUROSTAT, CODIGO_REINO_UNIDO).at(
     -1,
@@ -86,12 +87,21 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
         {APARTADOS.gasto.titulo}
       </h2>
       <p>
-        Cuánto gasta el sector público en pensiones, en proporción a lo que produce la economía, lo
-        miden la OCDE y Eurostat con delimitaciones propias, y el perímetro de cada una no consta en
-        las fuentes consultadas. Aquí se muestran las dos, cada una ordenada por sus propios
-        valores, y no se elige ninguna como la correcta. España, en el color de resaltado; las
-        medias, con contorno.
+        La OCDE y Eurostat publican cada una su propia medida del gasto en pensiones en proporción
+        al PIB. Son medidas distintas, con delimitaciones propias: no son dos estimaciones de la
+        misma cifra y el perímetro de cada una no consta en las fuentes consultadas. Aquí se
+        muestran las dos, cada una ordenada por sus propios valores, sin mezclarlas en una misma
+        serie y sin elegir ninguna como la correcta. España, en el color de resaltado; las medias,
+        con contorno. El gasto en pensiones tampoco es la financiación de las pensiones: responden a
+        preguntas distintas.
       </p>
+      <DefinicionesSistemas
+        ids={[
+          'gasto-pensiones-ocde',
+          'gasto-pensiones-esspros-vejez-supervivientes',
+          'gasto-frente-a-financiacion',
+        ]}
+      />
       <div className="sistemas-controles">
         <SegmentedPills
           leyenda="Año de la comparación entre países"
@@ -104,20 +114,15 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
       <div className="paneles-dos">
         <GraficoBarrasPaises
           titulo={`Gasto público en pensiones sobre el PIB, según la OCDE, ${anio}`}
-          descripcion="Porcentaje del PIB. Medida «Public expenditure on pensions» de la OCDE."
+          descripcion="Porcentaje del PIB. Gasto público en pensiones de la OCDE."
           unidadEje="% del PIB"
           decimales={1}
           valores={ocde}
           valorEspana={espanaOcde}
           tituloDiferencia="Diferencia con España (puntos de PIB)"
           fuentes={datoOcde}
-          nota={
-            <>
-              Literal de la medida en la fuente: «{d.ocde.literalMedida(MEDIDA.gasto)}». Perímetro:
-              no verificado en las fuentes consultadas (no consta qué regímenes y prestaciones
-              incluye).
-            </>
-          }
+          nota="Perímetro: los datos consultados no detallan qué regímenes y prestaciones incluye la medida."
+
           comoLeerlo={
             <>
               <p>
@@ -135,7 +140,7 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
         />
         <GraficoBarrasPaises
           titulo={`Gasto en prestaciones de vejez y supervivencia sobre el PIB, según Eurostat, ${anio}`}
-          descripcion="Porcentaje del PIB. Prestaciones de vejez y de supervivencia (ESSPROS, spr_exp_func)."
+          descripcion="Porcentaje del PIB. Prestaciones de vejez y de supervivencia de la estadística europea de protección social (ESSPROS)."
           unidadEje="% del PIB"
           decimales={1}
           valores={eurostat}
@@ -144,10 +149,10 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
           fuentes={datoEurostat}
           nota={
             <>
-              Perímetro de la serie de Eurostat: no verificado en las fuentes consultadas (los
-              metadatos solo dicen que es gasto en prestaciones de protección social por función).
-              Eurostat no publica Estados Unidos; publica la Unión Europea desde {primeraUE} y el
-              Reino Unido hasta {ultimaGBR}.
+              Perímetro: los metadatos consultados no detallan qué administraciones o regímenes
+              entran en la serie; solo dicen que es gasto en prestaciones de protección social por
+              función. Eurostat no publica Estados Unidos; publica la Unión Europea desde{' '}
+              {primeraUE} y el Reino Unido hasta {ultimaGBR}.
             </>
           }
           comoLeerlo={
@@ -170,9 +175,9 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
       <h3 id="gasto-espana">España según cada delimitación</h3>
       <p>
         Para el año elegido, el gasto sobre el PIB de España no es una única cifra: depende de qué
-        se cuente. La tercera fila es el cociente propio entre las obligaciones reconocidas por
-        pensiones contributivas del Sistema de la Seguridad Social y el PIB (cálculo derivado de los
-        datos de la sección «Financiación y déficit»).
+        se cuente. La tercera fila es un cálculo propio de esta web, el gasto en pensiones
+        contributivas del Sistema sobre el PIB, con los datos que se muestran en la página
+        «Financiación y déficit».
       </p>
       <div className="sistemas-tabla">
         <DataTable
@@ -186,17 +191,20 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
             { medida: 'Eurostat: prestaciones de vejez y de supervivencia', valor: espanaEurostat },
             {
               medida:
-                'Propia: pensiones contributivas del Sistema (sin Clases Pasivas ni no contributivas)',
+                'Cálculo propio: pensiones contributivas del Sistema, sin complemento a mínimos',
               valor: espanaPropio,
             },
           ]}
-          pie="Los datos consultados no permiten reconciliar las tres cifras partida a partida; la nota de definición de cada gráfico recoge lo que consta de cada delimitación."
+          pie="Los datos consultados no permiten reconciliar las tres cifras partida a partida; cada delimitación se define arriba y debajo."
         />
         <SourceLine
           datos={[datoOcde, datoEurostat, propio.dato]}
           titulo="Gasto sobre el PIB de España en el año elegido, según tres delimitaciones"
         />
       </div>
+      <DefinicionesSistemas
+        ids={['gasto-pensiones-contributivas-sin-complemento', 'gasto-sobre-pib']}
+      />
 
       <h3 id="gasto-evolucion">Cómo ha evolucionado</h3>
       <p>

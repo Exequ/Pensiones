@@ -16,6 +16,7 @@ export const GRUPOS_DEFINICION = [
   'deficit',
   'contabilidad',
   'fondo-de-reserva',
+  'comparacion-internacional',
 ] as const;
 export type GrupoDefinicion = (typeof GRUPOS_DEFINICION)[number];
 

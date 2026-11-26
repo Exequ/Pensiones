@@ -4,6 +4,7 @@ import { Kicker } from '../../components/Kicker';
 import { Lead } from '../../components/Lead';
 import { MarginNote } from '../../components/MarginNote';
 import { ContenidoPagina } from '../historico/ContenidoPagina';
+import { DefinicionesSistemas } from './DefinicionSistemas';
 import '../historico/Historico.css';
 import { antetituloSeccion, buscarSeccion } from '../secciones';
 import './OtrosSistemas.css';
@@ -37,8 +38,8 @@ export default function OtrosSistemas() {
         </header>
         <MarginNote>
           <p>
-            Cada gráfico lleva su tabla de datos y su fuente. Las dos medidas de cada magnitud se
-            muestran lado a lado.
+            Cada gráfico lleva su tabla de datos y su fuente. Cuando la OCDE y Eurostat publican dos
+            medidas, se muestran lado a lado.
           </p>
         </MarginNote>
         <p className="hist-aviso">
@@ -68,8 +69,14 @@ export default function OtrosSistemas() {
             sistemas combinan elementos de reparto, de capitalización y de cuentas nocionales con
             reglas de cálculo distintas. Tercera, las poblaciones y las economías difieren, y los
             cocientes sobre el PIB cambian con el numerador y con el denominador. Cuando una medida
-            tiene dos versiones, se muestran las dos.
+            tiene dos versiones, se muestran las dos, y las medidas de fuentes distintas no se
+            mezclan en una misma serie.
           </p>
+          <p>
+            Cada tabla de los gráficos de países incluye la diferencia de cada país con España en la
+            misma medida, que se define aquí.
+          </p>
+          <DefinicionesSistemas ids={['diferencia-con-espana']} />
         </section>
 
         <SeccionGasto seleccion={seleccion} />

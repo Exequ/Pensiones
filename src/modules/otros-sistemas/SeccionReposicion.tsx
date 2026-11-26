@@ -7,6 +7,7 @@ import type { Dato } from '../../engine/esquema-datos';
 import { formatearNumero } from '../../engine/formato';
 import { aniosOcde, serieOcde, valoresOcde } from './consultas';
 import { datosSistemas } from './datos-sistemas';
+import { DefinicionesSistemas } from './DefinicionSistemas';
 import { GraficoBarrasPaises } from './GraficoPaises';
 import {
   CONTRASTE,
@@ -40,6 +41,26 @@ const ETIQUETA_SUPUESTO: Readonly<Record<string, string>> = {
   'ocde-pag-2025-tasa-neta-definicion': 'Tasa neta',
   'ocde-pag-2025-cotizaciones-pensionistas-general': 'Cotizaciones de los pensionistas',
   'ocde-pag-2025-impuestos-pensionistas-en-perfiles': 'Impuestos de los pensionistas',
+};
+
+/** Etiqueta de cada cociente propio de España: la pensión media y la definición de salario medio. */
+const ETIQUETA_COCIENTE: Readonly<Record<string, string>> = {
+  'pension-altas-sobre-salario-eaes':
+    'Cálculo propio: pensión media de las altas iniciales de jubilación entre el salario medio de la Encuesta Anual de Estructura Salarial',
+  'pension-altas-sobre-salario-etcl-x12':
+    'Cálculo propio: pensión media de las altas iniciales de jubilación entre el salario medio de la Encuesta Trimestral de Coste Laboral',
+  'pension-altas-sobre-salario-cn-puesto':
+    'Cálculo propio: pensión media de las altas iniciales de jubilación entre el salario medio de la Contabilidad Nacional (remuneración por asalariado)',
+  'pension-altas-sobre-salario-base-media-x12':
+    'Cálculo propio: pensión media de las altas iniciales de jubilación entre la base media de cotización del Régimen General',
+  'pension-vigor-sobre-salario-eaes':
+    'Cálculo propio: pensión media de jubilación en vigor entre el salario medio de la Encuesta Anual de Estructura Salarial',
+  'pension-vigor-sobre-salario-etcl-x12':
+    'Cálculo propio: pensión media de jubilación en vigor entre el salario medio de la Encuesta Trimestral de Coste Laboral',
+  'pension-vigor-sobre-salario-cn-puesto':
+    'Cálculo propio: pensión media de jubilación en vigor entre el salario medio de la Contabilidad Nacional (remuneración por asalariado)',
+  'pension-vigor-sobre-salario-base-media-x12':
+    'Cálculo propio: pensión media de jubilación en vigor entre la base media de cotización del Régimen General',
 };
 
 /** Tasa de reposición teórica de la OCDE: bruta y neta lado a lado, con sus supuestos a la vista. */
@@ -80,16 +101,16 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
   );
   const espanaNeta = valorEnAnio(serieOcde(d.ocde.observaciones, filtroNeta, CODIGO_ESPANA), anio);
 
-  const datoOcde = d.ocde.dato(String(anio));
+  const datoBruta = d.ocde.datoMedida(String(anio), medidaReposicion('bruta', nivel));
+  const datoNeta = d.ocde.datoMedida(String(anio), medidaReposicion('neta', nivel));
   const textoNivel = `${formatearNumero(veces)} ${veces === 1 ? 'vez' : 'veces'} el salario medio`;
-  const definicionNeta = d.supuesto(SUPUESTO_DEFINICION.tasaNeta);
-  const fuenteSupuestos = d.supuesto(SUPUESTOS_TEXTO[0]).dato.source.title;
   const sinMujeresVoluntaria = sexo === 'mujeres' && obligatoriedad === 'MV';
 
   // Tabla de supuestos
   const filasTexto = SUPUESTOS_TEXTO.map((id) => {
     const s = d.supuesto(id);
-    return { supuesto: ETIQUETA_SUPUESTO[id] ?? id, valor: String(s.valor), dato: s.dato };
+    const supuesto = ETIQUETA_SUPUESTO[id] ?? id;
+    return { supuesto, valor: String(s.valor), dato: { ...s.dato, rotulo: supuesto } };
   });
   const filasNumericas = SUPUESTOS_NUMERICOS.map((fila) => {
     const base = d.supuesto(fila.base);
@@ -99,7 +120,10 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
       base: typeof base.valor === 'number' ? base.valor : null,
       alternativo: typeof alt.valor === 'number' ? alt.valor : null,
       unidad: base.unidad,
-      datos: [base.dato, alt.dato],
+      datos: [
+        { ...base.dato, rotulo: `${fila.concepto}: escenario base` },
+        { ...alt.dato, rotulo: `${fila.concepto}: escenario alternativo` },
+      ],
     };
   });
   const datosSupuestos: Dato[] = [
@@ -132,7 +156,7 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
       base,
       alternativo: valorAlt,
       diferencia: base === null || valorAlt === null ? null : valorAlt - base,
-      dato: alt.dato,
+      dato: { ...alt.dato, rotulo: `Escenario alternativo: ${nombrePais(pais)}` },
     };
   });
 
@@ -142,7 +166,7 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
     { medida: 'OCDE: tasa bruta teórica', valor: espanaBruta, anio: String(anio) },
     { medida: 'OCDE: tasa neta teórica', valor: espanaNeta, anio: String(anio) },
     ...cocientes.map((c) => ({
-      medida: c.titulo,
+      medida: ETIQUETA_COCIENTE[c.id] ?? c.id,
       valor: c.valor * 100,
       anio: String(c.anio),
     })),
@@ -157,11 +181,14 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
         {APARTADOS.reposicion.titulo}
       </h2>
       <p>
-        La tasa de reposición compara la primera pensión con el salario previo a la jubilación. La
-        OCDE la calcula de forma teórica para una persona modelo y publica dos versiones del mismo
-        concepto: sobre ingresos brutos y sobre ingresos netos de impuestos y cotizaciones. Se
+        La tasa de reposición compara la pensión de una persona con sus ingresos individuales antes
+        de jubilarse. La OCDE la calcula de forma teórica para una persona modelo y publica dos
+        versiones: sobre ingresos brutos y sobre ingresos netos de impuestos y cotizaciones. Se
         muestran las dos, lado a lado, sin elegir una.
       </p>
+      <DefinicionesSistemas
+        ids={['tasa-de-reposicion-teorica-bruta-ocde', 'tasa-de-reposicion-teorica-neta-ocde']}
+      />
       <div className="sistemas-controles">
         <SegmentedPills<CodigoNivel>
           leyenda="Nivel de salario de la persona modelo"
@@ -205,13 +232,13 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
       <div className="paneles-dos">
         <GraficoBarrasPaises
           titulo={`Tasa de reposición bruta teórica, ${textoNivel}, ${anio}`}
-          descripcion={`Porcentaje de los ingresos brutos previos a la jubilación. Medida «${d.ocde.literalMedida(medidaReposicion('bruta', nivel))}».`}
+          descripcion="Porcentaje de los ingresos brutos previos a la jubilación."
           unidadEje="% de los ingresos brutos"
           decimales={1}
           valores={bruta}
           valorEspana={espanaBruta}
           tituloDiferencia="Diferencia con España (puntos porcentuales)"
-          fuentes={datoOcde}
+          fuentes={datoBruta}
           nota="Parámetros de pensiones de la edición vigente de la OCDE; los supuestos están en la tabla de más abajo."
           comoLeerlo={
             <>
@@ -232,14 +259,13 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
         />
         <GraficoBarrasPaises
           titulo={`Tasa de reposición neta teórica, ${textoNivel}, ${anio}`}
-          descripcion={`Porcentaje de los ingresos netos previos a la jubilación. Medida «${d.ocde.literalMedida(medidaReposicion('neta', nivel))}».`}
+          descripcion="Porcentaje de los ingresos netos previos a la jubilación."
           unidadEje="% de los ingresos netos"
           decimales={1}
           valores={neta}
           valorEspana={espanaNeta}
           tituloDiferencia="Diferencia con España (puntos porcentuales)"
-          fuentes={datoOcde}
-          nota={<>Definición de la OCDE: {String(definicionNeta.valor)}</>}
+          fuentes={datoNeta}
           comoLeerlo={
             <>
               <p>
@@ -248,10 +274,10 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
                 El orden es de mayor a menor en esta medida.
               </p>
               <p>
-                La tasa neta puede ser mayor o menor que la bruta según la fiscalidad de cada país:
-                los impuestos y cotizaciones concretos que se aplican a los pensionistas de cada
-                país no están en los datos consultados. Por eso la diferencia entre la tasa bruta y
-                la neta no se puede atribuir a una causa con estos datos.
+                La tasa neta puede ser mayor o menor que la bruta. Los impuestos y cotizaciones
+                concretos que se aplican a los pensionistas de cada país no están en los datos
+                consultados, por lo que la diferencia entre la tasa bruta y la neta no se puede
+                atribuir a una causa con estos datos.
               </p>
             </>
           }
@@ -260,9 +286,9 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
 
       <h3 id="reposicion-supuestos">Supuestos de la OCDE a la vista</h3>
       <p>
-        Estos son los supuestos con los que la OCDE calcula las tasas anteriores, tal como constan
-        en «{fuenteSupuestos}». El escenario alternativo se usa solo para comprobar cómo cambia el
-        resultado con otros supuestos económicos.
+        Estos son los supuestos con los que la OCDE calcula las tasas anteriores, tal como los
+        publica en su informe sobre pensiones. El escenario alternativo se usa solo para comprobar
+        cómo cambia el resultado con otros supuestos económicos.
       </p>
       <div className="sistemas-tabla">
         <DataTable
@@ -296,9 +322,10 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
 
       <h3 id="reposicion-sensibilidad">Cuánto cambia la tasa bruta con el escenario alternativo</h3>
       <p>
-        La OCDE publica la tasa bruta con el escenario alternativo solo para tres países. La cifra
-        de cada país depende de cómo revaloriza los ingresos pasados y, por tanto, de los supuestos
-        de crecimiento. {String(d.supuesto(SUPUESTO_DEFINICION.sensibilidadEspana).valor)}
+        Los datos de esta web recogen la tasa bruta con el escenario alternativo solo para tres
+        países. La cifra de cada país depende de cómo revaloriza los ingresos pasados y, por tanto,
+        de los supuestos de crecimiento.{' '}
+        {String(d.supuesto(SUPUESTO_DEFINICION.sensibilidadEspana).valor)}
       </p>
       <div className="sistemas-tabla">
         <DataTable
@@ -332,7 +359,10 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
           }))}
         />
         <SourceLine
-          datos={[datoOcde, ...filasEscenario.map((f) => f.dato)]}
+          datos={[
+            d.ocde.datoMedida(String(anio), medidaReposicion('bruta', baseNivel)),
+            ...filasEscenario.map((f) => f.dato),
+          ]}
           titulo="Tasa bruta de reposición del escenario base y del alternativo, hombres, carrera completa al salario medio"
         />
       </div>
@@ -342,10 +372,9 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
       </h3>
       <p>
         La tasa teórica de la OCDE no equivale a los cocientes que se pueden calcular con datos
-        reales de España (pensión media por catorce pagas entre salario medio): estos mezclan
-        colectivos con carreras de distinta duración, pensiones mínimas y topes, y varían según la
-        definición de salario medio. Se ponen juntos para ver el orden de magnitud, no para decidir
-        cuál de ellas es la tasa de reposición.
+        reales de España: estos comparan medias de colectivos distintos, con carreras de distinta
+        duración, y varían según la definición de salario medio. Se ponen juntos para ver el orden
+        de magnitud, no para decidir cuál de ellas es la tasa de reposición.
       </p>
       <div className="sistemas-tabla">
         <DataTable
@@ -359,10 +388,11 @@ export function SeccionReposicion({ seleccion }: { readonly seleccion: ReadonlyS
           pie="Los valores de la OCDE son los del sexo, el nivel de salario y los planes elegidos arriba; los cocientes propios son de ambos sexos. Los datos consultados no permiten descomponer la diferencia entre ellos."
         />
         <SourceLine
-          datos={[datoOcde, ...cocientes.map((c) => c.dato)]}
+          datos={[datoBruta, datoNeta, ...cocientes.map((c) => c.dato)]}
           titulo="Tasa de reposición de la OCDE para España y cocientes entre pensión media y salario medio de datos propios"
         />
       </div>
+      <DefinicionesSistemas ids={['cociente-pension-media-salario-medio']} />
     </section>
   );
 }

@@ -1,0 +1,17 @@
+{
+  "id": "pilares-de-un-sistema-de-pensiones",
+  "grupo": "comparacion-internacional",
+  "termino": "Pilares de un sistema de pensiones",
+  "texto": [
+    "Capas en las que las fichas de los países agrupan los regímenes de un sistema de pensiones. El contenido de cada pilar no es el mismo en todos los países: en Dinamarca el primer pilar incluye un pequeño régimen de capitalización además de una pensión pública de prestación definida; en Polonia, los dos pilares de la parte obligatoria son el nocional y el de capitalización; en Alemania, el primer pilar es el sistema público de reparto ligado a los ingresos; en Francia hay un segundo pilar de reparto para las personas empleadas del sector privado y en los Países Bajos, un segundo pilar de pensión de empleo privada de capitalización."
+  ],
+  "criterio": "Término tal como lo usan las fuentes consultadas; el número y el contenido de los pilares dependen de cada país.",
+  "datos": [
+    "internacional/paises-sistemas.json#sistema-dnk-1",
+    "internacional/paises-sistemas.json#sistema-dnk-2",
+    "internacional/paises-sistemas.json#sistema-pol-1",
+    "internacional/paises-sistemas.json#sistema-deu-1",
+    "internacional/paises-sistemas.json#sistema-fra-2",
+    "internacional/paises-sistemas.json#sistema-nld-2"
+  ]
+}
