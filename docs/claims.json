@@ -8472,7 +8472,7 @@
     },
     {
       "id": "web-def-medidas-gasto-ocde-eurostat-distintas",
-      "texto": "La OCDE y Eurostat publican cada una su propia medida del gasto en pensiones sobre el PIB, con delimitaciones propias: no son dos estimaciones de la misma cifra y el perímetro exacto de cada una no consta en las fuentes consultadas.",
+      "texto": "La OCDE y Eurostat publican cada una su propia medida del gasto en pensiones sobre el PIB, con delimitaciones propias: no son dos estimaciones de la misma cifra y el perímetro de cada una no consta en las fuentes consultadas.",
       "ubicacion": "Página «Otros sistemas», apartado de gasto, y módulo de definiciones, definiciones «gasto-pensiones-ocde» y «gasto-pensiones-esspros-vejez-supervivientes» (Fase R10)",
       "datos": [
         "internacional/ocde-espana.json#pep-no-aplica-z-z-pt-b1gq",

@@ -89,7 +89,7 @@ export function SeccionGasto({ seleccion }: { readonly seleccion: ReadonlySet<st
       <p>
         La OCDE y Eurostat publican cada una su propia medida del gasto en pensiones en proporción
         al PIB. Son medidas distintas, con delimitaciones propias: no son dos estimaciones de la
-        misma cifra y el perímetro exacto de cada una no consta en las fuentes consultadas. Aquí se
+        misma cifra y el perímetro de cada una no consta en las fuentes consultadas. Aquí se
         muestran las dos, cada una ordenada por sus propios valores, sin mezclarlas en una misma
         serie y sin elegir ninguna como la correcta. España, en el color de resaltado; las medias,
         con contorno. El gasto en pensiones tampoco es la financiación de las pensiones: responden a

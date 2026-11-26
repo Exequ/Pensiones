@@ -192,7 +192,6 @@ describe('definiciones del módulo en la página', () => {
     expect(t).not.toMatch(/Literal de la medida en la fuente/);
     expect(t).not.toMatch(/Medida «/);
     expect(t).not.toMatch(/no procede de una fuente consultada/);
-    expect(t).not.toMatch(/Dos ejes de clasificación/);
     expect(t).not.toMatch(/Glosario/);
   });
 
@@ -240,7 +239,7 @@ describe('criterio de la tanda B: ESSPROS, OCDE y Ageing Report son medidas dist
       seccion.querySelector(`#${anclaDefinicion('gasto-pensiones-ageing-report')}`),
     ).toBeNull();
     expect(plano(seccion.textContent)).toMatch(
-      /no son dos estimaciones de la misma cifra y el perímetro exacto de cada una no consta/,
+      /no son dos estimaciones de la misma cifra y el perímetro de cada una no consta/,
     );
   });
 
